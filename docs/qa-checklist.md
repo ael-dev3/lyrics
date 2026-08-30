@@ -86,6 +86,27 @@
 - [ ] Random animation is seeded and deterministic.
 - [ ] Final fade reaches the intended colour and opacity.
 
+## Pixel-perfect visual pipeline
+
+- [ ] The visual manifest records canvas, fps, render scale, colour contract, tool versions, and SHA-256 for every asset and font.
+- [ ] Every raster has enough native pixels for its maximum on-screen size, maximum scale, and the 2× reference raster, or has a documented intentional-softness exemption.
+- [ ] Every production glyph, including Cyrillic, punctuation, numerals, and units, comes from a bundled loaded font face.
+- [ ] No system fallback or synthetic font weight/style is permitted; `font-synthesis: none` is active.
+- [ ] Static core geometry aligns to the final-output grid and critical strokes are at least two final luma pixels.
+- [ ] SVG uses stable view boxes; any Canvas/WebGL backing bitmap follows `usePixelDensity()` at 2×.
+- [ ] Lyrics, titles, ticks, numbers, and measured marks have a sharp core separate from glow, blur, grain, or chromatic fringe.
+- [ ] Alpha edges pass black, white, teal, and magenta background tests without matte fringe.
+- [ ] Gradients pass the dark-ramp test without visible bands, crushed range, or unintended hue shifts.
+- [ ] Thin red/teal marks and small text survive the exact 4:2:0 delivery path.
+- [ ] Randomness and any dither/noise are seeded; two selected-frame render runs produce identical PNG hashes.
+- [ ] Master browser frames use PNG, not JPEG, and colour conversion is explicitly pinned to BT.709.
+- [ ] A 2× 4:4:4 visual reference is frozen before compact encoding.
+- [ ] The selected downsampling kernel wins the project test-card bake-off without objectionable softness, aliasing, or ringing.
+- [ ] A codec ladder is compared after decoding; the smallest candidate is selected only after the worst frames pass.
+- [ ] PSNR/SSIM/VMAF are supporting evidence only; native-size visual and temporal review still pass.
+- [ ] No blocking, mosquito noise, chroma bleed, banding, alpha fringe, dirty glow, shimmer, flicker, or duplicate/drop defect is visible.
+- [ ] The full [pixel-perfect visual workflow](pixel-perfect-visual-workflow.md) has no blocking failure.
+
 ## Preview review
 
 - [ ] Watch every reported line at normal speed.
@@ -98,15 +119,20 @@
 - [ ] Review a complete full-length playback, not only isolated clips.
 - [ ] Compare selected rendered values against the frozen analysis artifact frame by frame.
 - [ ] Inspect one-pixel grids, bars, and numerals in the final encoded master at native resolution.
+- [ ] Watch the preflight card and high-risk clips in at least two independent decoders with enhancement and frame interpolation disabled.
+- [ ] Inspect diagnostic zooms with nearest-neighbour scaling; do not judge sharpness through a smoothing viewer.
 
 ## Technical delivery
 
 - [ ] The final duration matches the locked audio.
 - [ ] The decoded frame count matches `duration × fps`.
 - [ ] Video dimensions, pixel format, frame rate, and codec are correct.
+- [ ] Sample aspect ratio, colour range, BT.709 primaries, transfer, matrix, and chroma location are correct and explicit.
 - [ ] HEVC delivery uses the `hvc1` tag when required for Apple compatibility.
 - [ ] `faststart` metadata is enabled for progressive playback.
 - [ ] The entire file decodes without errors.
+- [ ] Decoded frame count has no unexplained duplicate or dropped frame.
+- [ ] Selected decoded frames and per-frame metric logs match the frozen visual-reference comparison run.
 - [ ] Copied source audio has a matching stream MD5.
 - [ ] The final file checksum is recorded.
 - [ ] The delivered copy matches the audited master byte-for-byte.

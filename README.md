@@ -33,6 +33,7 @@ The goal is a repeatable production system that:
 - preserves source audio quality while delivering a compact final file;
 - separates calibrated audio measurements from artistic audio-reactive motion;
 - reports analysis resolution, video cadence, units, transforms, and uncertainty honestly;
+- controls source resolution, font loading, raster scale, colour conversion, chroma, and codec artifacts through measurable visual gates;
 - records remaining uncertainty honestly so the next render can improve.
 
 ## Current case study
@@ -106,6 +107,12 @@ The current equalizer is truthfully audio-reactive but not a calibrated analyzer
 
 The approved claim is **“millisecond-resolved analysis with frame-accurate visualization.”** At the proposed 60 fps, the image updates every `16.667 ms`; stored events may be reported to 1 ms without pretending the video itself refreshes every millisecond. The [scientific audio-visualization specification](docs/scientific-audio-visualization.md) defines the architecture, visual language, numerical tolerances, references, and pass/fail rubric.
 
+### 10/10 pixel-perfect visual target
+
+The vNext visual contract now controls the entire raster-to-delivery path: sufficiently resolved assets, bundled font coverage, final-grid geometry, 2× PNG rendering, explicit BT.709 conversion, 4:4:4 reference frames, 4:2:0 stress tests, one documented downsample, a codec-quality ladder, decoded-frame comparisons, and temporal artifact review.
+
+The current source audit exposed four specific blockers before a new master can claim 10/10 visual quality: the render script permits JPEG intermediates, Remotion 4 colour conversion is not explicitly pinned to BT.709, the zoomed 1080px artwork is under-resolved for a 2× reference, and the Russian title uses a host-dependent system font. The [pixel-perfect visual workflow](docs/pixel-perfect-visual-workflow.md) records the evidence, fixes, commands, preflight card, acceptance rubric, and blocking failures.
+
 ## Repository map
 
 ```text
@@ -116,6 +123,7 @@ audits/
   tanisea-ksviety-remix.json       machine-readable current/recommended cue map
 docs/
   first-project-retrospective.md    scorecard and non-linear highlighting design
+  pixel-perfect-visual-workflow.md  deterministic raster, colour, chroma, and artifact contract
   production-workflow.md           end-to-end production method
   qa-checklist.md                  editorial, audiovisual, and delivery QA
   scientific-audio-visualization.md 10/10 measurement and display target
@@ -138,7 +146,7 @@ npx remotion compositions src/index.jsx
 npm run render
 ```
 
-The checked-in project reproduces today's production source snapshot. Before making a vNext master, apply the timing recommendations from the audit and refactor visual entrance/exit windows away from vocal cue boundaries.
+The checked-in `npm run render` command reproduces today's production source snapshot; it is not the vNext pixel-perfect master path. Before making a vNext master, apply the timing recommendations, refactor visual entrance/exit windows away from vocal cue boundaries, and follow the [2× PNG/BT.709 reference and decoded-delivery workflow](docs/pixel-perfect-visual-workflow.md).
 
 ## Working principles
 
@@ -151,7 +159,8 @@ The checked-in project reproduces today's production source snapshot. Before mak
 7. Make every section feel native to the same design system.
 8. Prefer an honest title state over invented lyrics when the vocal becomes unclear or heavily processed.
 9. Review the actual audiovisual clip; contact sheets alone cannot prove sync.
-10. Re-render the entire composition and verify the delivered master end to end.
+10. Compare the decoded delivery to a locked high-quality visual reference; the Studio preview cannot prove encoded quality.
+11. Re-render the entire composition and verify the delivered master end to end.
 
 ## Documentation
 
@@ -159,6 +168,7 @@ The checked-in project reproduces today's production source snapshot. Before mak
 | --- | --- |
 | [First-project retrospective](docs/first-project-retrospective.md) | How strong was the first result, what prevents a 10/10 score, and how should non-linear bilingual highlighting work? |
 | [Scientific audio target](docs/scientific-audio-visualization.md) | What would make the audio visualization scientifically defensible, testable, sharp, and worthy of the internal 10/10 target? |
+| [Pixel-perfect visual workflow](docs/pixel-perfect-visual-workflow.md) | How do we preserve sharp geometry, deterministic type, BT.709 colour, gradients, chroma, motion, and decoded codec quality without visual artifacts? |
 | [Production workflow](docs/production-workflow.md) | How do we take a soundtrack from lyric authority through timing, animation, rendering, and delivery? |
 | [QA checklist](docs/qa-checklist.md) | What must pass before a lyric film is production-ready? |
 | [Tanisea timing audit](audits/tanisea-ksviety-remix.md) | Where does the current film still differ from the performed audio or source meaning? |
@@ -172,6 +182,7 @@ The checked-in project reproduces today's production source snapshot. Before mak
 - [x] Audit all 24 displayed lines.
 - [x] Publish source, reference export, production master, and documentation.
 - [x] Define the 10/10 scientific audio-visualization contract and verification rubric.
+- [x] Define the 10/10 pixel-perfect visual contract, current-source risk audit, and artifact gates.
 - [ ] Separate vocal windows from visual animation windows.
 - [ ] Restore the audited vNext cue map.
 - [ ] Implement semantic cue targets that support intentional backward, repeated, and simultaneous activation.
@@ -179,6 +190,9 @@ The checked-in project reproduces today's production source snapshot. Before mak
 - [ ] Build the deterministic multi-resolution stereo analysis pipeline and fixture suite.
 - [ ] Replace the artistic 56-bar baseline with a calibrated 64-band, 60 fps instrument rail.
 - [ ] Validate loudness, true peak, spectrum, stereo behavior, event timing, and rendered values independently.
+- [ ] Replace the host-dependent Cyrillic title font and recover artwork at `2700×2700` minimum.
+- [ ] Pin PNG intermediates and BT.709, then build the 2× preflight card and repeat-frame hash tests.
+- [ ] Complete a downsampling bake-off, codec ladder, decoded-frame diff, and temporal artifact audit.
 - [ ] Render and publish the vNext production master.
 
 ## Media and rights

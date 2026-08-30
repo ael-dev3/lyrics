@@ -140,6 +140,8 @@ Master fade
 
 Keep global layers alive across state changes. A title outro should inherit the artwork motion, particles, halo, equalizer, colour treatment, and frame chrome. This makes it feel like the next state of the film rather than a card pasted over an export.
 
+Treat visual fidelity as a source-to-decoder system, not as a final codec switch. The complete [pixel-perfect visual workflow](pixel-perfect-visual-workflow.md) defines asset-resolution preflight, deterministic fonts, 2× rasterization, BT.709 conversion, chroma-safe geometry, downsampling, codec candidates, frame differences, and the internal 10/10 rubric.
+
 Use seeded randomness for particles so every render is deterministic. Drive reactive motion from the same audio file used by the rendered soundtrack.
 
 ```jsx
@@ -204,6 +206,8 @@ npx remotion render src/index.jsx LyricFilm preview.mp4 \
   --crf=18 \
   --audio-codec=aac \
   --audio-bitrate=192k \
+  --image-format=png \
+  --color-space=bt709 \
   --pixel-format=yuv420p
 ```
 
@@ -215,9 +219,9 @@ Validate the composition before the production render:
 npx remotion compositions src/index.jsx
 ```
 
-For broad compatibility, use H.264. For a smaller Mac- and modern-device-friendly delivery, use HEVC and tag the stream as `hvc1` during the final mux.
+For broad compatibility, use H.264. For a smaller Mac- and modern-device-friendly delivery, use HEVC and tag the stream as `hvc1` during the final mux. In either case, pin PNG browser frames and BT.709; otherwise the render may introduce a lossy JPEG generation and the wrong implicit colour conversion before codec compression.
 
-High-quality compact render:
+Direct high-quality compact review render:
 
 ```sh
 npx remotion render src/index.jsx LyricFilm render-hevc.mp4 \
@@ -225,8 +229,12 @@ npx remotion render src/index.jsx LyricFilm render-hevc.mp4 \
   --crf=18 \
   --audio-codec=aac \
   --audio-bitrate=192k \
+  --image-format=png \
+  --color-space=bt709 \
   --pixel-format=yuv420p
 ```
+
+This direct render is an 8-bit review baseline, not the complete 10/10 path. The visual master must first render a 2× 4:4:4 reference, choose a downsampling kernel using the project test card, encode through the validated external Main-10 path, compare a codec ladder to that reference, and inspect decoded worst frames. Use the commands and gates in the [pixel-perfect visual workflow](pixel-perfect-visual-workflow.md). Always probe the resulting stream; requested CLI settings are not evidence of the decoded pixel format or complete colour metadata.
 
 If the source soundtrack is already AAC, re-encoding it at a higher bitrate does not restore quality. Replace the temporary render audio with the original compressed stream:
 
@@ -249,14 +257,17 @@ The final file—not only previews—must pass:
 
 - expected duration and frame count;
 - expected dimensions and frame rate;
+- expected pixel format, sample aspect ratio, BT.709 primaries, transfer, matrix, range, and chroma location;
 - full decode without errors;
+- matching hashes for repeated selected reference-frame renders;
+- decoded-delivery comparison against the frozen visual reference;
 - visual inspection of every high-risk window;
 - source-audio identity when copied without re-encoding;
 - final file checksum recorded with the audit.
 
 ```sh
 ffprobe -v error -count_frames \
-  -show_entries stream=codec_name,codec_tag_string,width,height,r_frame_rate,duration,nb_read_frames \
+  -show_entries stream=codec_name,codec_tag_string,pix_fmt,width,height,sample_aspect_ratio,r_frame_rate,duration,nb_read_frames,color_range,color_space,color_transfer,color_primaries,chroma_location \
   -show_entries format=duration,size \
   -of json production-master.mp4
 
@@ -278,5 +289,8 @@ A lyric film is production-ready only when:
 - all animation states share one art direction;
 - every displayed audio measurement has a defined unit, algorithm, time window, and verified source;
 - raw measurements remain separate from artistic motion envelopes;
+- visual masters use lossless browser-frame intermediates and an explicit BT.709 path;
+- bundled fonts, source resolution, final-grid geometry, chroma safety, and repeat-render determinism pass preflight;
+- the decoded delivery has no unintended visible artifacts against the frozen visual reference;
 - no edit is a patch over a previously encoded video;
 - the final full-length file passes technical and audiovisual QA.

@@ -245,6 +245,8 @@ The playhead time updates on video frames. Exact event timestamps may show milli
 - Check contrast against the brightest and darkest artwork frames.
 - Inspect the final encoded master, because compression can soften one-pixel lines.
 
+The instrument rail must also pass the repository's [pixel-perfect visual workflow](pixel-perfect-visual-workflow.md): 2× rasterization, BT.709 conversion, chroma stress fixtures, one documented downsample, decoded-frame comparison, and temporal artifact review.
+
 Use progressive information density:
 
 - **Lyrics:** compact spectrum, time, true peak, and one loudness value.

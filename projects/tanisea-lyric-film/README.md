@@ -29,6 +29,8 @@ Render the source snapshot:
 npm run render
 ```
 
+This command preserves the historical production snapshot. It is not the vNext pixel-perfect render path: it does not yet pin PNG browser frames or BT.709 and it does not create the required 2× 4:4:4 reference. Follow the repository's [pixel-perfect visual workflow](../../docs/pixel-perfect-visual-workflow.md) for a new master.
+
 ## Composition
 
 | Property | Value |
@@ -73,12 +75,13 @@ Before creating a new master:
 3. separate vocal timing from visual entrance and exit windows;
 4. implement the [non-linear semantic-highlighting model](../../docs/first-project-retrospective.md) so source cues can target English meaning groups independently of display order;
 5. implement and validate the [scientific audio-analysis and instrument-rail target](../../docs/scientific-audio-visualization.md);
-6. preview and listen to the high-risk windows;
-7. perform a complete real-time audiovisual review.
+6. replace the system Cyrillic fallback, recover sufficiently resolved artwork, and pass the [pixel-perfect visual contract](../../docs/pixel-perfect-visual-workflow.md);
+7. preview and listen to the high-risk windows;
+8. perform a complete real-time audiovisual review.
 
 ## Production export
 
-The release master was rendered as high-quality HEVC and then remuxed with the untouched original AAC stream. See the repository's [production workflow](../../docs/production-workflow.md) for the full command sequence and verification method.
+The release master was rendered as high-quality HEVC and then remuxed with the untouched original AAC stream. See the repository's [production workflow](../../docs/production-workflow.md) for the overall sequence and the [pixel-perfect visual workflow](../../docs/pixel-perfect-visual-workflow.md) for the stricter vNext reference, colour, downsampling, and artifact gates.
 
 ## Media and rights
 
