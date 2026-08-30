@@ -1,0 +1,28 @@
+export const lyrics = [
+  {start: 20.0, end: 24.9, text: "I'll erase the horizon", section: 'build'},
+  {start: 24.9, end: 29.8, text: 'And split it in two', section: 'build'},
+  {start: 29.8, end: 33.0, text: "I'll bend every mountain peak", section: 'build'},
+  {start: 33.0, end: 36.28, text: 'And raise the ocean', section: 'build'},
+  {start: 36.28, end: 39.95, text: "I'll scream to the whole world", section: 'chorus'},
+  {start: 39.95, end: 43.28, text: 'Let the earth tremble', section: 'chorus'},
+  {start: 43.28, end: 47.35, text: 'And through apartment walls', section: 'chorus'},
+  {start: 47.35, end: 52.0, text: "I'll sweep like a wave of fire", section: 'chorus'},
+
+  {start: 60.0, end: 67.0, text: 'Night freezes helplessly in silence', section: 'verse'},
+  {start: 67.0, end: 70.0, text: 'The sky hangs low, a mute ceiling', section: 'verse'},
+  {start: 70.0, end: 73.0, text: 'I remember it all; these questions gnaw at me', section: 'verse'},
+  {start: 73.0, end: 76.0, text: 'Who am I? Where from? Where is my home?', section: 'verse'},
+  {start: 76.0, end: 79.0, text: 'My soul has walked along the edge', section: 'verse'},
+  {start: 79.0, end: 82.0, text: 'My hands shook beneath the weight of years', section: 'verse'},
+  {start: 82.0, end: 86.0, text: 'Some spoke; the others stayed silent', section: 'verse'},
+  {start: 86.0, end: 91.0, text: "Behind my back, some couldn't hide their laughter", section: 'verse'},
+
+  {start: 91.0, end: 94.0, text: "I'll erase the horizon", section: 'build'},
+  {start: 94.0, end: 96.0, text: 'And split it in two', section: 'build'},
+  {start: 96.0, end: 100.0, text: "I'll bend every mountain peak", section: 'build'},
+  {start: 100.0, end: 104.0, text: 'And raise the ocean', section: 'build'},
+  {start: 104.0, end: 107.0, text: "I'll scream to the whole world", section: 'chorus'},
+  {start: 107.0, end: 110.0, text: 'Let the earth tremble', section: 'chorus'},
+  {start: 110.0, end: 113.0, text: 'And through apartment walls', section: 'chorus'},
+  {start: 113.0, end: 116.0, text: "I'll sweep like a wave of fire", section: 'chorus'},
+];
