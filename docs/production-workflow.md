@@ -43,6 +43,12 @@ Create a source-language line list first. Create the English translation in a se
 
 For bilingual karaoke, align English **semantic groups** to the corresponding performed source-language phrase. Do not force every English word onto a Russian syllable when the grammar differs.
 
+Do not assume those English groups must activate from left to right. When natural English and source-language performance order differ, keep the English sentence in natural reading order and let chronological source cues target semantic groups in any display position. A target may move backwards, repeat, or activate alongside another target when the meaning requires it.
+
+Use an independent focus treatment—not a reversible cumulative progress fill—so a backward target reads as semantic emphasis rather than a playback error. See the [first-project retrospective and semantic-highlighting proposal](first-project-retrospective.md) for the data model, interaction rules, and validation requirements.
+
+A general line-duration bar may remain monotonic because it measures elapsed line time. Do not reverse that bar; non-linear behavior belongs only to the semantic word-group focus.
+
 ## 3. Build a reference transcription
 
 Automatic recognition is useful for locating candidate boundaries, especially when it produces token timestamps. It is not a final lyric authority.
@@ -99,6 +105,8 @@ The timing model should not use one `start` and `end` pair for every purpose. St
 ```
 
 The line should normally be fully legible by `vocalStart`. Cue highlighting begins at the performed phrase, not at the visual entrance.
+
+For non-linear bilingual mapping, keep visual segments in natural reading order and cue events in chronological performance order. Validate the cue timeline, but do not require target positions to increase. This supports source-to-translation mappings such as `B → A → C`, repeated activation, and one cue targeting several translated groups.
 
 Likewise, do not start fading a line before its final performed word ends. Begin the exit at `vocalEnd`; crossfade with the incoming line only if the design calls for it.
 

@@ -16,6 +16,9 @@
 - [ ] Continuous clear vocals do not have unexplained lyric gaps.
 - [ ] Repeated choruses are timed independently; do not copy offsets blindly.
 - [ ] Source-language word groups are mapped to English semantic groups.
+- [ ] Cue events are chronological, while target display positions may be intentionally non-monotonic.
+- [ ] Every cue target references an existing, stable semantic-group ID.
+- [ ] Repeated, simultaneous, overlapping, and backward activations are marked intentionally.
 - [ ] Low-confidence processed vocals are marked explicitly.
 - [ ] Automatic transcription has been checked by a human listener.
 
@@ -23,6 +26,10 @@
 
 - [ ] The line is fully legible by vocal onset.
 - [ ] Cue highlighting starts on the performed phrase.
+- [ ] Non-linear cues use independent focus states rather than a reversible cumulative progress fill.
+- [ ] Any line-duration indicator remains distinct from semantic word-group activation.
+- [ ] Backward focus changes read as semantic emphasis, not a rewind or playback error.
+- [ ] Segment positions remain stable while focus moves between them.
 - [ ] The line remains legible through its final word.
 - [ ] Entrance blur and motion do not create perceptual lag.
 - [ ] Exit fades do not begin before `vocalEnd`.
@@ -33,6 +40,8 @@
 
 - [ ] Spelling, punctuation, and contractions are final.
 - [ ] English is grammatical when read without the source language.
+- [ ] Natural English reading order is preserved even when semantic activation order differs.
+- [ ] A fluent bilingual reviewer has approved every non-linear semantic mapping.
 - [ ] Literal and poetic translations have been distinguished.
 - [ ] Repeated lines use consistent wording unless a deliberate variation exists.
 - [ ] Ambiguous translations have a note and owner for final approval.
@@ -53,6 +62,8 @@
 - [ ] Watch every reported line around `0.5×` speed.
 - [ ] Review `±1 s` around every line boundary.
 - [ ] Review first-chorus and repeated-chorus timing separately.
+- [ ] Review every backward, repeated, overlapping, or simultaneous cue at normal playback speed.
+- [ ] Rewrite or restructure lines whose non-linear activation causes excessive visual travel.
 - [ ] Review the last lyric-to-outro transition at dense frame intervals.
 - [ ] Review a complete full-length playback, not only isolated clips.
 

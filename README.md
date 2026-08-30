@@ -89,6 +89,12 @@ The current production master is visually coherent and technically verified. A d
 
 Nothing is hidden behind “close enough.” The [human-readable audit](audits/tanisea-ksviety-remix.md) explains every line, and the [machine-readable audit](audits/tanisea-ksviety-remix.json) contains the restored vNext cue windows.
 
+### Honest first-project assessment
+
+The audited result scores **8/10 overall as a first project of this type**. Art direction, technical mastering, and reproducibility are already strong; lyric synchronization and bilingual editorial alignment are the limiting areas. Because synchronization is a core function of a lyric film, the major first-verse and second-chorus misses prevent the higher-scoring production strengths from making this a 10/10 master.
+
+The [full retrospective and semantic-highlighting proposal](docs/first-project-retrospective.md) records the scorecard, improvement order, and a vNext design that allows English meaning groups to activate forwards, backwards, repeatedly, or simultaneously when Russian and English phrase order differs.
+
 ## Repository map
 
 ```text
@@ -98,6 +104,7 @@ audits/
   tanisea-ksviety-remix.md         complete timing and translation review
   tanisea-ksviety-remix.json       machine-readable current/recommended cue map
 docs/
+  first-project-retrospective.md    scorecard and non-linear highlighting design
   production-workflow.md           end-to-end production method
   qa-checklist.md                  editorial, audiovisual, and delivery QA
 projects/
@@ -127,7 +134,7 @@ The checked-in project reproduces today's production source snapshot. Before mak
 2. Lock the exact soundtrack before timing anything.
 3. Verify the exact remix structure; do not assume repeated choruses share timing.
 4. Use automatic speech recognition as evidence, never as the final authority.
-5. Align translated meaning in semantic groups rather than forcing false one-to-one word timing.
+5. Align translated meaning in semantic groups rather than forcing false one-to-one word timing or artificial left-to-right progress.
 6. Make every section feel native to the same design system.
 7. Prefer an honest title state over invented lyrics when the vocal becomes unclear or heavily processed.
 8. Review the actual audiovisual clip; contact sheets alone cannot prove sync.
@@ -137,6 +144,7 @@ The checked-in project reproduces today's production source snapshot. Before mak
 
 | Document | What it answers |
 | --- | --- |
+| [First-project retrospective](docs/first-project-retrospective.md) | How strong was the first result, what prevents a 10/10 score, and how should non-linear bilingual highlighting work? |
 | [Production workflow](docs/production-workflow.md) | How do we take a soundtrack from lyric authority through timing, animation, rendering, and delivery? |
 | [QA checklist](docs/qa-checklist.md) | What must pass before a lyric film is production-ready? |
 | [Tanisea timing audit](audits/tanisea-ksviety-remix.md) | Where does the current film still differ from the performed audio or source meaning? |
@@ -151,6 +159,7 @@ The checked-in project reproduces today's production source snapshot. Before mak
 - [x] Publish source, reference export, production master, and documentation.
 - [ ] Separate vocal windows from visual animation windows.
 - [ ] Restore the audited vNext cue map.
+- [ ] Implement semantic cue targets that support intentional backward, repeated, and simultaneous activation.
 - [ ] Complete a fluent Russian/English editorial approval pass.
 - [ ] Render and publish the vNext production master.
 

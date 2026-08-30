@@ -65,8 +65,9 @@ Before creating a new master:
 1. read the [full timing audit](../../audits/tanisea-ksviety-remix.md);
 2. apply the [machine-readable vNext cue map](../../audits/tanisea-ksviety-remix.json);
 3. separate vocal timing from visual entrance and exit windows;
-4. preview and listen to the high-risk windows;
-5. perform a complete real-time audiovisual review.
+4. implement the [non-linear semantic-highlighting model](../../docs/first-project-retrospective.md) so source cues can target English meaning groups independently of display order;
+5. preview and listen to the high-risk windows;
+6. perform a complete real-time audiovisual review.
 
 ## Production export
 
