@@ -46,6 +46,28 @@
 - [ ] Repeated lines use consistent wording unless a deliberate variation exists.
 - [ ] Ambiguous translations have a note and owner for final approval.
 
+## Scientific audio analysis
+
+- [ ] The analyzed soundtrack checksum matches the composition soundtrack.
+- [ ] Decode sample count, sample rate, channel layout, and time-zero alignment are recorded.
+- [ ] Both stereo channels are retained and tested; no channel is silently discarded.
+- [ ] Spectrum analysis uses the declared FFT length, periodic window, hop, scaling, and timestamp convention.
+- [ ] Transient timing uses a separate short-window or sample-indexed path rather than claiming long-window STFT precision.
+- [ ] Every visible frequency band has a unique and published filter response, range, effective bandwidth, and timing support.
+- [ ] Low-frequency band group delay and longer time support are compensated and never described as millisecond transient sensitivity.
+- [ ] Every visible quantity has the correct unit and documented calculation.
+- [ ] Scientific values contain no undocumented gain, compression, weighting, smoothing, clipping, or peak hold.
+- [ ] Artistic animation controls are stored separately from calibrated measurements.
+- [ ] Sample peak, true peak, LUFS, and LRA names are used only for their defined measurements.
+- [ ] Loudness and true peak pass the applicable ITU-R BS.1770 / EBU Tech 3341 reference checks.
+- [ ] Synthetic impulses pass the `±1 ms` onset-timing target.
+- [ ] Synthetic bin-centred tones pass the frequency and `±0.25 dB` magnitude targets.
+- [ ] Instrument-band test tones match the published filter responses without duplicated low-band behavior.
+- [ ] Left-only, right-only, centred, anti-phase, and decorrelated stereo fixtures pass.
+- [ ] A second implementation independently confirms selected spectral and loudness results.
+- [ ] Analysis reruns produce byte-identical feature artifacts and matching checksums.
+- [ ] The manifest records source identity, versions, parameters, units, uncertainty, and artifact hashes.
+
 ## Visual system
 
 - [ ] Artwork, particles, equalizer, frame chrome, and colour treatment continue across states.
@@ -53,6 +75,14 @@
 - [ ] Typography stays inside safe areas at full resolution.
 - [ ] Long lines do not clip, collide, or create accidental widows.
 - [ ] Motion remains readable on high-energy peaks.
+- [ ] Scientific scales, ticks, units, and values remain readable against every artwork state.
+- [ ] Bars use crisp solid cores; glow and bloom do not obscure measured height.
+- [ ] Critical marks remain at least two output pixels thick and retain luminance contrast after 4:2:0 encoding.
+- [ ] Waveforms preserve per-pixel extrema and spectrograms use a fixed, labelled dB colour scale.
+- [ ] Numerical fields use stable tabular spacing and do not jump horizontally.
+- [ ] The display states analysis resolution and video cadence without implying a 1 ms visual refresh.
+- [ ] Compact lyric-state data does not enter the lyric safe area.
+- [ ] Expanded intro, break, and outro data remains subordinate to the authored composition.
 - [ ] Random animation is seeded and deterministic.
 - [ ] Final fade reaches the intended colour and opacity.
 
@@ -66,6 +96,8 @@
 - [ ] Rewrite or restructure lines whose non-linear activation causes excessive visual travel.
 - [ ] Review the last lyric-to-outro transition at dense frame intervals.
 - [ ] Review a complete full-length playback, not only isolated clips.
+- [ ] Compare selected rendered values against the frozen analysis artifact frame by frame.
+- [ ] Inspect one-pixel grids, bars, and numerals in the final encoded master at native resolution.
 
 ## Technical delivery
 

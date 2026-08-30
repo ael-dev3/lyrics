@@ -16,6 +16,12 @@ The assessment is tied to the production master with SHA-256 `78e14d9afd84ed8290
 | Translation and editorial quality | 7.5/10 | The English is generally meaningful, but a fluent Russian/English pass is still required for natural phrasing and precise semantic grouping. |
 | Lyric and highlight synchronization | 6.5/10 | The first verse is about four seconds late, the second chorus develops progressive drift, the outro begins late, and the shared visual envelope creates additional perceived lag. |
 
+### Scientific audio-visualization assessment
+
+The current audio-reactive layer is assessed separately at approximately **5/10 scientific fidelity**. It uses real soundtrack-derived FFT data and correct low-to-high ordering, but it is uncalibrated, left-channel-only, low-resolution in the bass, non-linear in magnitude, partly duplicated in its band mapping, temporally peak-held, and displayed without units or measurement scales.
+
+The [10/10 scientific audio-visualization target](scientific-audio-visualization.md) replaces cosmetic “science” with a measurable workflow: multi-resolution stereo analysis, calibrated spectrum, standard loudness and true peak, sample-indexed events, 60 fps rendering, published uncertainty, independent reference tests, and a sharper instrument rail.
+
 ## What succeeded
 
 - The failed ending was rebuilt from the original Remotion source instead of being covered with a patch.

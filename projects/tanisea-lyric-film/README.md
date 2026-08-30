@@ -56,6 +56,12 @@ The film is rendered as one composition with persistent layers:
 
 The outro is not an overlay on an encoded video. It runs inside the same live artwork, audio-reactive, atmospheric, and framing system as the rest of the film.
 
+## Scientific visualization status
+
+The checked-in 56-bar equalizer is a deterministic artistic visualization built from real FFT data. It is not a calibrated analyzer: it reads one stereo channel, uses a short unwindowed transform, applies non-linear gain and clipping, includes duplicate low-frequency band ranges, and has no frequency or level scale.
+
+The current baseline is assessed at approximately **5/10 scientific fidelity**. Before calling a future version scientifically accurate, implement and pass the repository's [10/10 scientific audio-visualization specification](../../docs/scientific-audio-visualization.md). Its key distinction is **millisecond-resolved analysis with frame-accurate 60 fps visualization**, not a false claim of 1 ms video refresh.
+
 ## Important timing status
 
 This is the exact production-source snapshot from 2026-08-30, not the proposed vNext implementation. The subsequent audit identified timing regressions in the first verse and second chorus, plus a structural issue where lyric entrance/exit animation shares the vocal start/end values.
@@ -66,8 +72,9 @@ Before creating a new master:
 2. apply the [machine-readable vNext cue map](../../audits/tanisea-ksviety-remix.json);
 3. separate vocal timing from visual entrance and exit windows;
 4. implement the [non-linear semantic-highlighting model](../../docs/first-project-retrospective.md) so source cues can target English meaning groups independently of display order;
-5. preview and listen to the high-risk windows;
-6. perform a complete real-time audiovisual review.
+5. implement and validate the [scientific audio-analysis and instrument-rail target](../../docs/scientific-audio-visualization.md);
+6. preview and listen to the high-risk windows;
+7. perform a complete real-time audiovisual review.
 
 ## Production export
 

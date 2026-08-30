@@ -31,6 +31,8 @@ The goal is a repeatable production system that:
 - builds intros, verses, choruses, breaks, and outros inside one visual language;
 - regenerates the complete film from source after every meaningful change;
 - preserves source audio quality while delivering a compact final file;
+- separates calibrated audio measurements from artistic audio-reactive motion;
+- reports analysis resolution, video cadence, units, transforms, and uncertainty honestly;
 - records remaining uncertainty honestly so the next render can improve.
 
 ## Current case study
@@ -61,11 +63,14 @@ The first project is a 153-second English lyric film rebuilt from its local Remo
 ```mermaid
 flowchart LR
     A[Locked soundtrack] --> B[Verified source lyrics]
+    A --> M[Calibrated audio feature package]
+    M --> N[Scientific reference tests]
     B --> C[English translation]
     A --> D[Word and phrase timing]
     C --> E[Semantic cue map]
     D --> E
     E --> F[Remotion composition]
+    N --> F
     A --> F
     F --> G[Section previews]
     G --> H[Timing and visual QA]
@@ -73,7 +78,7 @@ flowchart LR
     H -->|approve| I[Full source render]
     I --> J[Original-audio remux]
     J --> K[Production master]
-    K --> L[Full decode and checksum audit]
+    K --> L[Full decode, data, and checksum audit]
 ```
 
 The important distinction is between **vocal time** and **visual time**. A lyric can have the correct timestamp and still feel late if its blur and opacity animation only begins when the singer starts. The line should normally be fully legible at vocal onset, while word-group highlighting remains locked to the performance.
@@ -95,6 +100,12 @@ The audited result scores **8/10 overall as a first project of this type**. Art 
 
 The [full retrospective and semantic-highlighting proposal](docs/first-project-retrospective.md) records the scorecard, improvement order, and a vNext design that allows English meaning groups to activate forwards, backwards, repeatedly, or simultaneously when Russian and English phrase order differs.
 
+### 10/10 scientific audio target
+
+The current equalizer is truthfully audio-reactive but not a calibrated analyzer; its scientific fidelity is assessed at approximately **5/10**. The vNext goal is a documented **10/10 internal engineering target**: stereo, windowed and calibrated spectral analysis; sample-indexed transient events; ITU/EBU loudness and true peak; published units and band edges; deterministic artifacts; reference-signal tests; and a sharper 60 fps instrument display.
+
+The approved claim is **“millisecond-resolved analysis with frame-accurate visualization.”** At the proposed 60 fps, the image updates every `16.667 ms`; stored events may be reported to 1 ms without pretending the video itself refreshes every millisecond. The [scientific audio-visualization specification](docs/scientific-audio-visualization.md) defines the architecture, visual language, numerical tolerances, references, and pass/fail rubric.
+
 ## Repository map
 
 ```text
@@ -107,6 +118,7 @@ docs/
   first-project-retrospective.md    scorecard and non-linear highlighting design
   production-workflow.md           end-to-end production method
   qa-checklist.md                  editorial, audiovisual, and delivery QA
+  scientific-audio-visualization.md 10/10 measurement and display target
 projects/
   tanisea-lyric-film/              reproducible Remotion source snapshot
 ```
@@ -135,16 +147,18 @@ The checked-in project reproduces today's production source snapshot. Before mak
 3. Verify the exact remix structure; do not assume repeated choruses share timing.
 4. Use automatic speech recognition as evidence, never as the final authority.
 5. Align translated meaning in semantic groups rather than forcing false one-to-one word timing or artificial left-to-right progress.
-6. Make every section feel native to the same design system.
-7. Prefer an honest title state over invented lyrics when the vocal becomes unclear or heavily processed.
-8. Review the actual audiovisual clip; contact sheets alone cannot prove sync.
-9. Re-render the entire composition and verify the delivered master end to end.
+6. Keep calibrated measurements separate from documented artistic transforms.
+7. Make every section feel native to the same design system.
+8. Prefer an honest title state over invented lyrics when the vocal becomes unclear or heavily processed.
+9. Review the actual audiovisual clip; contact sheets alone cannot prove sync.
+10. Re-render the entire composition and verify the delivered master end to end.
 
 ## Documentation
 
 | Document | What it answers |
 | --- | --- |
 | [First-project retrospective](docs/first-project-retrospective.md) | How strong was the first result, what prevents a 10/10 score, and how should non-linear bilingual highlighting work? |
+| [Scientific audio target](docs/scientific-audio-visualization.md) | What would make the audio visualization scientifically defensible, testable, sharp, and worthy of the internal 10/10 target? |
 | [Production workflow](docs/production-workflow.md) | How do we take a soundtrack from lyric authority through timing, animation, rendering, and delivery? |
 | [QA checklist](docs/qa-checklist.md) | What must pass before a lyric film is production-ready? |
 | [Tanisea timing audit](audits/tanisea-ksviety-remix.md) | Where does the current film still differ from the performed audio or source meaning? |
@@ -157,10 +171,14 @@ The checked-in project reproduces today's production source snapshot. Before mak
 - [x] Preserve the original soundtrack in the compact master.
 - [x] Audit all 24 displayed lines.
 - [x] Publish source, reference export, production master, and documentation.
+- [x] Define the 10/10 scientific audio-visualization contract and verification rubric.
 - [ ] Separate vocal windows from visual animation windows.
 - [ ] Restore the audited vNext cue map.
 - [ ] Implement semantic cue targets that support intentional backward, repeated, and simultaneous activation.
 - [ ] Complete a fluent Russian/English editorial approval pass.
+- [ ] Build the deterministic multi-resolution stereo analysis pipeline and fixture suite.
+- [ ] Replace the artistic 56-bar baseline with a calibrated 64-band, 60 fps instrument rail.
+- [ ] Validate loudness, true peak, spectrum, stereo behavior, event timing, and rendered values independently.
 - [ ] Render and publish the vNext production master.
 
 ## Media and rights

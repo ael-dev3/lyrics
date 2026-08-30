@@ -121,7 +121,7 @@ Use these as review thresholds, not as excuses to skip listening:
 | `0.26–0.75 s` | noticeable | Correct before final delivery. |
 | `> 0.75 s` | major | Treat as a blocking sync error. |
 
-At 30 fps, one frame is `0.0333` seconds. Obvious vocal attacks should usually land within two frames.
+At 30 fps, one frame is `0.0333` seconds. Obvious vocal attacks should usually land within two frames. The scientific vNext target is 60 fps, where one frame is `0.016667` seconds; analysis events may retain sample-indexed timestamps even though their visible response is quantized to or interpolated across video frames.
 
 ## 5. Design the composition as one visual system
 
@@ -155,6 +155,20 @@ const spectrum = visualizeAudio({
 ```
 
 Avoid excessive audio-driven displacement. Use energy for subtle scale, glow, line width, and contrast; retain stable typography and safe areas.
+
+### Scientific instrument layer
+
+The direct 512-sample visualization above describes the current artistic baseline, not the 10/10 scientific target. For a measurement-faithful instrument layer, precompute and validate multi-resolution stereo features before rendering:
+
+- a calibrated 4,096-point periodic-Hann STFT for the spectrogram and spectral statistics;
+- a separate 64-band variable-resolution logarithmic filter bank for scientifically distinct instrument bars;
+- a separate short-window, sample-indexed transient detector;
+- ITU-R BS.1770 / EBU Mode loudness and true-peak measurements;
+- 64 unique bands with published frequency edges and explicit units;
+- raw scientific features separated from compressed artistic animation controls;
+- a manifest containing source checksums, parameters, versions, units, and artifact hashes.
+
+The video may report event timestamps to the millisecond while rendering at 60 fps, but it must state the distinction as **millisecond-resolved analysis, frame-accurate visualization**. Follow the complete [scientific audio-visualization specification](scientific-audio-visualization.md), including its fixtures, numerical tolerances, independent cross-checks, display rules, and 10/10 acceptance rubric.
 
 ## 6. Choose the right content state
 
@@ -262,5 +276,7 @@ A lyric film is production-ready only when:
 - the final word is not faded or replaced early;
 - unclear vocals use an intentional non-literal state;
 - all animation states share one art direction;
+- every displayed audio measurement has a defined unit, algorithm, time window, and verified source;
+- raw measurements remain separate from artistic motion envelopes;
 - no edit is a patch over a previously encoded video;
 - the final full-length file passes technical and audiovisual QA.
