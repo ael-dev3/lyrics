@@ -3,10 +3,10 @@ import {LyricFilm} from './LyricFilm';
 
 export const RemotionRoot = () => (
   <Composition
-    id="LyricFilm"
+    id="LyricFilmVNext"
     component={LyricFilm}
-    durationInFrames={4590}
-    fps={30}
+    durationInFrames={9180}
+    fps={60}
     width={1080}
     height={1080}
   />

@@ -95,24 +95,32 @@ const lyricLine = {
   id: 'V1-01',
   section: 'verse',
   text: 'Night in the silence freezes helplessly;',
-  vocalStart: 60.09,
-  vocalEnd: 67.0,
-  visualInStart: 59.77,
-  visualInComplete: 60.09,
-  visualOutStart: 67.0,
-  visualOutEnd: 67.24,
-  confidence: 'high',
+  measurements: {
+    timecodedLyricOnset: 64.09,
+    waveformAttackOnset: 64.03,
+  },
+  vocalStart: 64.06,
+  vocalEnd: 67.13,
+  visualInStart: 63.82,
+  visualInComplete: 64.01,
+  visualOutStart: 67.13,
+  visualOutEnd: 67.18,
+  confidence: 'two-audit consensus',
   cues: [
-    {text: 'Night', vocalStart: 60.09, vocalEnd: 61.8},
-    {text: 'in', vocalStart: 61.8, vocalEnd: 62.25},
-    {text: 'the silence', vocalStart: 62.25, vocalEnd: 65.0},
-    {text: 'freezes', vocalStart: 65.0, vocalEnd: 65.99},
-    {text: 'helplessly;', vocalStart: 65.99, vocalEnd: 67.0}
+    {text: 'Night', vocalStart: 64.06, vocalEnd: 64.83},
+    {text: 'in', vocalStart: 64.83, vocalEnd: 65.10},
+    {text: 'the silence', vocalStart: 65.10, vocalEnd: 66.02},
+    {text: 'freezes', vocalStart: 66.02, vocalEnd: 66.55},
+    {text: 'helplessly;', vocalStart: 66.55, vocalEnd: 67.13}
   ]
 } as const;
 ```
 
 The line should normally be fully legible by `vocalStart`. Cue highlighting begins at the performed phrase, not at the visual entrance.
+
+Every `vocalStart` must be an absolute anchor against the locked soundtrack. Never compute line 7 by adding six preceding card durations; cumulative errors are exactly how a regular phrase grid can drift by `0.7–1.2 s`. It is acceptable to infer an exit from the next absolute onset, but never infer the next onset from the previous exit.
+
+When independent audits use different onset definitions, store every measurement, method, and uncertainty. Reconcile them explicitly—by human review or a documented fusion rule—and retain the spread. Do not silently replace one table or report a midpoint as sample-accurate truth.
 
 For non-linear bilingual mapping, keep visual segments in natural reading order and cue events in chronological performance order. Validate the cue timeline, but do not require target positions to increase. This supports source-to-translation mappings such as `B → A → C`, repeated activation, and one cue targeting several translated groups.
 
@@ -193,7 +201,7 @@ Use normal lyrics while the vocal phrase is clear and verified. Use an integrate
 
 The transition should begin at the first frame of the changed vocal state. Do not leave the prior lyric on screen merely to cover an animation entrance.
 
-For the Tanisea case, the clean final chorus ends around `116.00`, and a repeated title phrase begins around `116.05`. The title outro should therefore begin at `116.05`, with its visual entrance pre-rolling slightly so the title is legible on the first repeat.
+For the Tanisea case, independent audits place the final fire-line attack between `113.64` and `113.98`, while the structural original-title transition lands around `118.20–118.25`. The vNext lyric resolves by `118.08` and the integrated title entrance begins just before `118.20`; no unrelated lyric animation is invented over the instrumental outro.
 
 ## 7. Preview the difficult windows
 

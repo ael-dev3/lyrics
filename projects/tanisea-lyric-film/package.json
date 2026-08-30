@@ -4,12 +4,17 @@
   "private": true,
   "scripts": {
     "dev": "remotion studio src/index.ts",
+    "build:tools": "tsc --project tsconfig.tools.json",
+    "features": "npm run build:tools && node .tools-dist/generate-audio-features.js",
+    "encode": "npm run build:tools && node .tools-dist/encode-delivery.js",
+    "platform": "npm run build:tools && node .tools-dist/make-platform-delivery.js",
+    "verify": "npm run build:tools && node .tools-dist/verify-delivery.js",
     "compositions": "remotion compositions src/index.ts",
     "typecheck": "tsc --noEmit",
     "check": "npm run typecheck && npm run compositions",
-    "still": "remotion still src/index.ts LyricFilm",
+    "still": "remotion still src/index.ts LyricFilmVNext",
     "prerender": "npm run typecheck",
-    "render": "remotion render src/index.ts LyricFilm output/Tanisea-Lyric-Film.mp4 --codec=h264 --crf=16 --audio-codec=aac --audio-bitrate=320k --pixel-format=yuv420p"
+    "render": "remotion render src/index.ts LyricFilmVNext output/Tanisea-Lyric-Film-vNext-reference-2x.mov --scale=2 --codec=prores --prores-profile=4444 --pixel-format=yuv444p10le --image-format=png --color-space=bt709 --concurrency=8 --muted"
   },
   "dependencies": {
     "@remotion/cli": "4.0.518",
@@ -20,6 +25,7 @@
     "remotion": "4.0.518"
   },
   "devDependencies": {
+    "@types/node": "26.4.0",
     "@types/react": "19.2.18",
     "@types/react-dom": "19.2.5",
     "typescript": "7.0.2"

@@ -96,9 +96,9 @@ export type LyricLine = Readonly<{
 
 export const line = {
   id: 'V1-01',
-  vocalStart: 60.09,
+  vocalStart: 64.06,
   vocalEnd: 67,
-  cues: [{text: 'Night', start: 60.09, end: 61.8}],
+  cues: [{text: 'Night', start: 64.06, end: 64.83}],
 } satisfies LyricLine;
 ```
 

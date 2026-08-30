@@ -1,5 +1,7 @@
 # Tanisea “Закричу на весь мир (ksviety Remix)” timing audit
 
+> **Superseded timing evidence:** this early source-recovery audit remains for provenance, but its provisional `60.09 s` verse interpretation and `116.05 s` outro interpretation are not used by vNext. Two later full-master audits independently place the verse near `64.03–64.09 s` and the original-title transition near `118.20–118.25 s`. Use the [reconciled vNext record](tanisea-vnext-qc-implementation.md) and [schema v2 cue data](tanisea-vnext-qc-implementation.json) for production.
+
 ## Audited master
 
 | Property | Value |

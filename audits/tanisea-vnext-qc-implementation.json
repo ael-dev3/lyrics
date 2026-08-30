@@ -1,0 +1,395 @@
+{
+  "schemaVersion": 2,
+  "project": "Tanisea — I'll Scream to the Whole World",
+  "sourceReports": [
+    {
+      "path": "audits/Tanisea_Lyric_Film_Sync_QC_Report.md",
+      "sha256": "dc943ccd29510e8e6d72f5900681d2dc4bf871b67a226a41e751a7fbeec5b87c",
+      "method": "time-coded remix lyric track cross-checked against waveform and onset envelope",
+      "timingPrecisionSeconds": 0.1
+    },
+    {
+      "path": "audits/Tanisea_Lyric_Film_Timing_QA_Audit.md",
+      "sha256": "c9a4494db80fc54a86c6d7f7da4c7939b1af197938e843a46435d0c4d697970b",
+      "method": "waveform, onset-strength, spectrogram, and 0.25-second visual sampling",
+      "timingPrecisionSeconds": 0.15,
+      "detectedTempoBpm": 152
+    }
+  ],
+  "reconciliation": {
+    "policy": "rounded arithmetic midpoint of two independent phrase-onset measurements",
+    "reason": "The audits agree on every structural correction but differ by 10–450 ms in onset definition. The midpoint minimizes worst-case visual error; report ranges remain preserved for future listening review.",
+    "maximumMeasurementSpreadMilliseconds": 450,
+    "visualTolerancePolicy": "fully legible 50 ms before consensus; active semantic state begins on consensus; no outgoing card remains after the next consensus onset",
+    "noGlobalOffset": true
+  },
+  "implementation": {
+    "frameRate": 60,
+    "durationSeconds": 153,
+    "globalAudioOffsetSeconds": 0,
+    "visualEntranceLeadSeconds": 0.24,
+    "fullLegibilityLeadSeconds": 0.05,
+    "activeHighlightLeadSeconds": 0,
+    "standardOutgoingFadeSeconds": 0.05,
+    "finalOutroHandoffSeconds": 0.12,
+    "repeatedChorusPolicy": "one normalized Russian-stress semantic marker stack anchored to each absolute consensus phrase onset",
+    "newSemanticStressAnchorsSeconds": [
+      25.62,
+      28.83,
+      38.43
+    ],
+    "sourceLanguageModel": "Russian sung phrase/stress -> corresponding English meaning chunk -> visual emphasis"
+  },
+  "cueMap": [
+    {
+      "id": "C1-01",
+      "measurements": {
+        "timecodedLyricOnset": 24.4,
+        "waveformAttackOnset": 24.18,
+        "spreadMilliseconds": 220
+      },
+      "vocalStart": 24.29,
+      "vocalEnd": 27.36,
+      "visualInStart": 24.05,
+      "fullyLegibleAt": 24.24,
+      "activeHighlightAt": 24.29,
+      "text": "And I'll erase the horizon"
+    },
+    {
+      "id": "C1-02",
+      "measurements": {
+        "timecodedLyricOnset": 27.58,
+        "waveformAttackOnset": 27.24,
+        "spreadMilliseconds": 340
+      },
+      "vocalStart": 27.41,
+      "vocalEnd": 30.51,
+      "visualInStart": 27.17,
+      "fullyLegibleAt": 27.36,
+      "activeHighlightAt": 27.41,
+      "text": "And shatter it in two"
+    },
+    {
+      "id": "C1-03",
+      "measurements": {
+        "timecodedLyricOnset": 30.68,
+        "waveformAttackOnset": 30.43,
+        "spreadMilliseconds": 250
+      },
+      "vocalStart": 30.56,
+      "vocalEnd": 33.7,
+      "visualInStart": 30.32,
+      "fullyLegibleAt": 30.51,
+      "activeHighlightAt": 30.56,
+      "text": "I'll fold the peaks of every mountain"
+    },
+    {
+      "id": "C1-04",
+      "measurements": {
+        "timecodedLyricOnset": 33.87,
+        "waveformAttackOnset": 33.63,
+        "spreadMilliseconds": 240
+      },
+      "vocalStart": 33.75,
+      "vocalEnd": 36.98,
+      "visualInStart": 33.51,
+      "fullyLegibleAt": 33.7,
+      "activeHighlightAt": 33.75,
+      "text": "And raise the ocean"
+    },
+    {
+      "id": "C1-05",
+      "measurements": {
+        "timecodedLyricOnset": 37.05,
+        "waveformAttackOnset": 37,
+        "spreadMilliseconds": 50
+      },
+      "vocalStart": 37.03,
+      "vocalEnd": 40.08,
+      "visualInStart": 36.79,
+      "fullyLegibleAt": 36.98,
+      "activeHighlightAt": 37.03,
+      "text": "I'll scream to the whole world"
+    },
+    {
+      "id": "C1-06",
+      "measurements": {
+        "timecodedLyricOnset": 40.23,
+        "waveformAttackOnset": 40.03,
+        "spreadMilliseconds": 200
+      },
+      "vocalStart": 40.13,
+      "vocalEnd": 43.35,
+      "visualInStart": 39.89,
+      "fullyLegibleAt": 40.08,
+      "activeHighlightAt": 40.13,
+      "text": "Let the earth tremble"
+    },
+    {
+      "id": "C1-07",
+      "measurements": {
+        "timecodedLyricOnset": 43.56,
+        "waveformAttackOnset": 43.24,
+        "spreadMilliseconds": 320
+      },
+      "vocalStart": 43.4,
+      "vocalEnd": 46.53,
+      "visualInStart": 43.16,
+      "fullyLegibleAt": 43.35,
+      "activeHighlightAt": 43.4,
+      "text": "Through apartment walls"
+    },
+    {
+      "id": "C1-08",
+      "measurements": {
+        "timecodedLyricOnset": 46.71,
+        "waveformAttackOnset": 46.44,
+        "spreadMilliseconds": 270
+      },
+      "vocalStart": 46.58,
+      "vocalEnd": 50.05,
+      "visualInStart": 46.34,
+      "fullyLegibleAt": 46.53,
+      "activeHighlightAt": 46.58,
+      "text": "I'll sweep through like a wave of fire"
+    },
+    {
+      "id": "V1-01",
+      "measurements": {
+        "timecodedLyricOnset": 64.09,
+        "waveformAttackOnset": 64.03,
+        "spreadMilliseconds": 60
+      },
+      "vocalStart": 64.06,
+      "vocalEnd": 67.13,
+      "visualInStart": 63.82,
+      "fullyLegibleAt": 64.01,
+      "activeHighlightAt": 64.06,
+      "text": "Night in the silence freezes helplessly;"
+    },
+    {
+      "id": "V1-02",
+      "measurements": {
+        "timecodedLyricOnset": 67.14,
+        "waveformAttackOnset": 67.22,
+        "spreadMilliseconds": 80
+      },
+      "vocalStart": 67.18,
+      "vocalEnd": 70.38,
+      "visualInStart": 66.94,
+      "fullyLegibleAt": 67.13,
+      "activeHighlightAt": 67.18,
+      "text": "The sky hangs low, a silent ceiling"
+    },
+    {
+      "id": "V1-03",
+      "measurements": {
+        "timecodedLyricOnset": 70.42,
+        "waveformAttackOnset": 70.43,
+        "spreadMilliseconds": 10
+      },
+      "vocalStart": 70.43,
+      "vocalEnd": 73.54,
+      "visualInStart": 70.19,
+      "fullyLegibleAt": 70.38,
+      "activeHighlightAt": 70.43,
+      "text": "I remember what happened; questions gnaw at me"
+    },
+    {
+      "id": "V1-04",
+      "measurements": {
+        "timecodedLyricOnset": 73.56,
+        "waveformAttackOnset": 73.62,
+        "spreadMilliseconds": 60
+      },
+      "vocalStart": 73.59,
+      "vocalEnd": 76.78,
+      "visualInStart": 73.35,
+      "fullyLegibleAt": 73.54,
+      "activeHighlightAt": 73.59,
+      "text": "Who am I? Where am I from? Where is my home?"
+    },
+    {
+      "id": "V1-05",
+      "measurements": {
+        "timecodedLyricOnset": 76.81,
+        "waveformAttackOnset": 76.84,
+        "spreadMilliseconds": 30
+      },
+      "vocalStart": 76.83,
+      "vocalEnd": 79.94,
+      "visualInStart": 76.59,
+      "fullyLegibleAt": 76.78,
+      "activeHighlightAt": 76.83,
+      "text": "My soul walked along the edge"
+    },
+    {
+      "id": "V1-06",
+      "measurements": {
+        "timecodedLyricOnset": 79.94,
+        "waveformAttackOnset": 80.03,
+        "spreadMilliseconds": 90
+      },
+      "vocalStart": 79.99,
+      "vocalEnd": 83.13,
+      "visualInStart": 79.75,
+      "fullyLegibleAt": 79.94,
+      "activeHighlightAt": 79.99,
+      "text": "My hands shook from the weight of years"
+    },
+    {
+      "id": "V1-07",
+      "measurements": {
+        "timecodedLyricOnset": 83.14,
+        "waveformAttackOnset": 83.22,
+        "spreadMilliseconds": 80
+      },
+      "vocalStart": 83.18,
+      "vocalEnd": 86.35,
+      "visualInStart": 82.94,
+      "fullyLegibleAt": 83.13,
+      "activeHighlightAt": 83.18,
+      "text": "Some spoke; others stayed silent"
+    },
+    {
+      "id": "V1-08",
+      "measurements": {
+        "timecodedLyricOnset": 86.36,
+        "waveformAttackOnset": 86.43,
+        "spreadMilliseconds": 70
+      },
+      "vocalStart": 86.4,
+      "vocalEnd": 91.41,
+      "visualInStart": 86.16,
+      "fullyLegibleAt": 86.35,
+      "activeHighlightAt": 86.4,
+      "text": "Behind my back, someone couldn't hold back a laugh"
+    },
+    {
+      "id": "C2-01",
+      "measurements": {
+        "timecodedLyricOnset": 91.55,
+        "waveformAttackOnset": 91.37,
+        "spreadMilliseconds": 180
+      },
+      "vocalStart": 91.46,
+      "vocalEnd": 94.6,
+      "visualInStart": 91.22,
+      "fullyLegibleAt": 91.41,
+      "activeHighlightAt": 91.46,
+      "text": "And I'll erase the horizon"
+    },
+    {
+      "id": "C2-02",
+      "measurements": {
+        "timecodedLyricOnset": 94.87,
+        "waveformAttackOnset": 94.42,
+        "spreadMilliseconds": 450
+      },
+      "vocalStart": 94.65,
+      "vocalEnd": 97.69,
+      "visualInStart": 94.41,
+      "fullyLegibleAt": 94.6,
+      "activeHighlightAt": 94.65,
+      "text": "And shatter it in two"
+    },
+    {
+      "id": "C2-03",
+      "measurements": {
+        "timecodedLyricOnset": 97.83,
+        "waveformAttackOnset": 97.64,
+        "spreadMilliseconds": 190
+      },
+      "vocalStart": 97.74,
+      "vocalEnd": 100.84,
+      "visualInStart": 97.5,
+      "fullyLegibleAt": 97.69,
+      "activeHighlightAt": 97.74,
+      "text": "I'll fold the peaks of every mountain"
+    },
+    {
+      "id": "C2-04",
+      "measurements": {
+        "timecodedLyricOnset": 100.95,
+        "waveformAttackOnset": 100.83,
+        "spreadMilliseconds": 120
+      },
+      "vocalStart": 100.89,
+      "vocalEnd": 104.21,
+      "visualInStart": 100.65,
+      "fullyLegibleAt": 100.84,
+      "activeHighlightAt": 100.89,
+      "text": "And raise the ocean"
+    },
+    {
+      "id": "C2-05",
+      "measurements": {
+        "timecodedLyricOnset": 104.31,
+        "waveformAttackOnset": 104.2,
+        "spreadMilliseconds": 110
+      },
+      "vocalStart": 104.26,
+      "vocalEnd": 107.32,
+      "visualInStart": 104.02,
+      "fullyLegibleAt": 104.21,
+      "activeHighlightAt": 104.26,
+      "text": "I'll scream to the whole world"
+    },
+    {
+      "id": "C2-06",
+      "measurements": {
+        "timecodedLyricOnset": 107.49,
+        "waveformAttackOnset": 107.24,
+        "spreadMilliseconds": 250
+      },
+      "vocalStart": 107.37,
+      "vocalEnd": 110.52,
+      "visualInStart": 107.13,
+      "fullyLegibleAt": 107.32,
+      "activeHighlightAt": 107.37,
+      "text": "Let the earth tremble"
+    },
+    {
+      "id": "C2-07",
+      "measurements": {
+        "timecodedLyricOnset": 110.7,
+        "waveformAttackOnset": 110.43,
+        "spreadMilliseconds": 270
+      },
+      "vocalStart": 110.57,
+      "vocalEnd": 113.76,
+      "visualInStart": 110.33,
+      "fullyLegibleAt": 110.52,
+      "activeHighlightAt": 110.57,
+      "text": "Through apartment walls"
+    },
+    {
+      "id": "C2-08",
+      "measurements": {
+        "timecodedLyricOnset": 113.98,
+        "waveformAttackOnset": 113.64,
+        "spreadMilliseconds": 340
+      },
+      "vocalStart": 113.81,
+      "vocalEnd": 118.08,
+      "visualInStart": 113.57,
+      "fullyLegibleAt": 113.76,
+      "activeHighlightAt": 113.81,
+      "text": "I'll sweep through like a wave of fire"
+    }
+  ],
+  "editorialPrecedence": {
+    "retainedUserApprovedLines": [
+      "Night in the silence freezes helplessly;",
+      "I'll fold the peaks of every mountain",
+      "And raise the ocean"
+    ],
+    "primaryEnglishTitle": "I'll Scream to the Whole World",
+    "outroTranslationSubtitle": "I'll Scream for the Whole World to Hear"
+  },
+  "deliveryPolicy": {
+    "archivalMaster": "10-bit HEVC video with untouched source AAC",
+    "platformCopy": "same verified video with 4 dB audio attenuation and AAC re-encode, targeting about -10 LUFS and no more than -1 dBTP",
+    "audioGainInCompositionDb": 0
+  }
+}

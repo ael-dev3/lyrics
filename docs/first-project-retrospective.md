@@ -1,5 +1,7 @@
 # First-project retrospective and semantic highlighting proposal
 
+> This scorecard is historical and remains tied to the checksum below. Its provisional timing diagnosis has been superseded by two later full-master audits and the [vNext reconciliation](../audits/tanisea-vnext-qc-implementation.md); its design and non-linear semantic-highlighting lessons remain applicable.
+
 ## Assessment
 
 **Overall assessment: 8/10 for the first project of this type.**

@@ -26,6 +26,8 @@
 ## Timing data
 
 - [ ] Every line has a stable ID.
+- [ ] Every line start is an absolute timestamp against the locked soundtrack, never a chain of preceding card durations.
+- [ ] Multiple timing measurements retain their method, uncertainty, and spread; any consensus rule is explicit and reproducible.
 - [ ] Every cue is contained inside its line's vocal window.
 - [ ] Cues are ordered and do not overlap accidentally.
 - [ ] Continuous clear vocals do not have unexplained lyric gaps.
@@ -36,6 +38,7 @@
 - [ ] Repeated, simultaneous, overlapping, and backward activations are marked intentionally.
 - [ ] Low-confidence processed vocals are marked explicitly.
 - [ ] Automatic transcription has been checked by a human listener.
+- [ ] Russian/source-language stress markers, not English word counts, determine semantic chunk changes.
 
 ## Animation timing
 
@@ -50,6 +53,7 @@
 - [ ] Exit fades do not begin before `vocalEnd`.
 - [ ] Break cards end before the next vocal begins.
 - [ ] The outro starts on the first outro vocal or musical state change.
+- [ ] A 2–4 fps timecoded contact sheet and normal-speed/half-speed audiovisual clips cover every high-risk handoff.
 
 ## Text and translation
 
@@ -168,6 +172,8 @@
 - [ ] The entire file decodes without errors.
 - [ ] Decoded frame count has no unexplained duplicate or dropped frame.
 - [ ] Selected decoded frames and per-frame metric logs match the frozen visual-reference comparison run.
-- [ ] Copied source audio has a matching stream MD5.
+- [ ] The archival master's copied source AAC has a matching encoded-packet SHA-256.
+- [ ] Any platform-safe copy is a separately named derivative, preserves the verified video bitstream, and records its exact audio transform.
+- [ ] The platform-safe copy measures within its declared LUFS window and at or below its true-peak ceiling after final AAC encoding.
 - [ ] The final file checksum is recorded.
 - [ ] The delivered copy matches the audited master byte-for-byte.

@@ -1,7 +1,11 @@
-import {useMemo} from 'react';
+import {useEffect, useMemo, useState} from 'react';
+import {Audio} from '@remotion/media';
 import {
   AbsoluteFill,
   Img,
+  cancelRender,
+  continueRender,
+  delayRender,
   interpolate,
   random,
   spring,
@@ -9,452 +13,1067 @@ import {
   useCurrentFrame,
   useVideoConfig,
 } from 'remotion';
-import {Audio} from '@remotion/media';
-import {useAudioData, visualizeAudio} from '@remotion/media-utils';
+import {useAudioFeatures} from './audio-features';
+import type {AudioFeatureFrame} from './audio-features';
 import {lyrics} from './timed-lyrics';
 import type {LyricLine} from './timed-lyrics';
 
-const teal = '#10e0cc';
-const mint = '#b8fff4';
-const wine = '#330810';
-const ember = '#ff5368';
+const teal = '#16e6d1';
+const mint = '#c9fff7';
+const wine = '#310711';
+const ink = '#090106';
+const ember = '#ff5b70';
+const white = '#fffdfd';
 
-type TimeEnergyProps = Readonly<{time: number; energy: number}>;
-type AtmosphereProps = Readonly<{frame: number; energy: number}>;
-type TimeProps = Readonly<{time: number}>;
-type EqualizerProps = Readonly<{
-  bands: readonly number[];
-  bass: number;
-  mids: number;
-  highs: number;
-}>;
-type IntroProps = Readonly<{time: number; frame: number; fps: number}>;
-type SplitTextProps = Readonly<{line: LyricLine; time: number}>;
-type OutroProps = Readonly<{
-  time: number;
-  frame: number;
-  fps: number;
-  masterLevel: number;
-  bass: number;
-}>;
+const clamp = (value: number, minimum = 0, maximum = 1): number =>
+  Math.min(maximum, Math.max(minimum, value));
 
-const frameCorners = [
-  [30, 30],
-  [1050, 30],
-  [30, 1050],
-  [1050, 1050],
-] as const;
-
-const clamp = (value: number, min = 0, max = 1): number =>
-  Math.min(max, Math.max(min, value));
-
-const fade = (time: number, start: number, end: number, edge = 0.45): number => {
-  const enter = clamp((time - start) / edge);
-  const exit = clamp((end - time) / edge);
-  return Math.min(enter, exit);
+const smoothstep = (edge0: number, edge1: number, value: number): number => {
+  if (edge1 <= edge0) return value >= edge1 ? 1 : 0;
+  const normalized = clamp((value - edge0) / (edge1 - edge0));
+  return normalized * normalized * (3 - 2 * normalized);
 };
 
-const mean = (items: readonly number[]): number =>
-  items.reduce((sum, value) => sum + value, 0) / Math.max(1, items.length);
+const fadeWindow = (
+  time: number,
+  start: number,
+  end: number,
+  enterDuration = 0.45,
+  exitDuration = 0.45,
+): number =>
+  smoothstep(start, start + enterDuration, time) *
+  (1 - smoothstep(end - exitDuration, end, time));
 
-const spectrumToBands = (spectrum: readonly number[], count = 56): number[] => {
-  if (!spectrum.length) return Array.from({length: count}, () => 0);
-  const lowBin = 1;
-  const highBin = spectrum.length - 1;
-  const ratio = highBin / lowBin;
+const formatTime = (time: number): string => {
+  const minutes = Math.floor(time / 60);
+  const seconds = Math.floor(time % 60);
+  const centiseconds = Math.floor((time % 1) * 100);
+  return `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}.${String(centiseconds).padStart(2, '0')}`;
+};
 
-  return Array.from({length: count}, (_, index) => {
-    const startFloat = lowBin * Math.pow(ratio, index / count);
-    const endFloat = lowBin * Math.pow(ratio, (index + 1) / count);
-    const start = Math.max(lowBin, Math.floor(startFloat));
-    const end = Math.min(highBin + 1, Math.max(start + 1, Math.ceil(endFloat)));
-    const slice = spectrum.slice(start, end);
-    const peak = Math.max(...slice, 0);
-    const average = mean(slice);
-    const frequencyPosition = index / Math.max(1, count - 1);
-    const gain = 2.2 + frequencyPosition * 5.2;
-    return clamp(Math.pow((peak * 0.72 + average * 0.4) * gain, 0.58));
-  });
+let fontPromise: Promise<void> | null = null;
+
+const loadFonts = (): Promise<void> => {
+  if (!fontPromise) {
+    const faces = [
+      new FontFace(
+        'Space Grotesk',
+        `url(${staticFile('SpaceGrotesk.ttf')})`,
+        {weight: '300 700'},
+      ),
+      new FontFace(
+        'Bebas Neue',
+        `url(${staticFile('BebasNeue.ttf')})`,
+        {weight: '400'},
+      ),
+      new FontFace(
+        'Playfair',
+        `url(${staticFile('Playfair.ttf')})`,
+        {weight: '400 900'},
+      ),
+    ];
+
+    fontPromise = Promise.all(faces.map((face) => face.load())).then(
+      (loadedFaces) => {
+        for (const face of loadedFaces) document.fonts.add(face);
+      },
+    );
+  }
+  return fontPromise;
+};
+
+const useProductionFonts = (): boolean => {
+  const [ready, setReady] = useState(false);
+  const [renderHandle] = useState(() =>
+    delayRender('Loading bundled production fonts'),
+  );
+
+  useEffect(() => {
+    let cancelled = false;
+    loadFonts()
+      .then(() => {
+        if (!cancelled) setReady(true);
+        continueRender(renderHandle);
+      })
+      .catch((error: unknown) => {
+        cancelRender(
+          error instanceof Error ? error : new Error(String(error)),
+        );
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [renderHandle]);
+
+  return ready;
 };
 
 const GlobalStyles = () => (
   <style>{`
-    @font-face {font-family: 'Space Grotesk'; src: url('${staticFile('SpaceGrotesk.ttf')}') format('truetype'); font-weight: 300 700;}
-    @font-face {font-family: 'Bebas Neue'; src: url('${staticFile('BebasNeue.ttf')}') format('truetype'); font-weight: 400;}
-    * {box-sizing: border-box;}
+    * {
+      box-sizing: border-box;
+      font-synthesis: none;
+      text-rendering: geometricPrecision;
+    }
+    body {
+      margin: 0;
+      background: ${ink};
+    }
   `}</style>
 );
 
-const Artwork = ({time, energy}: TimeEnergyProps) => {
-  const zoom = 1.075 + time * 0.0003 + Math.sin(time * 0.16) * 0.016 + energy * 0.018;
-  const x = Math.sin(time * 0.085) * 10;
-  const y = Math.cos(time * 0.071) * 9;
-  const shock = energy > 0.16 ? (energy - 0.16) * 28 : 0;
+type BackgroundProps = Readonly<{
+  time: number;
+  feature: AudioFeatureFrame;
+}>;
+
+const Background = ({time, feature}: BackgroundProps) => {
+  const pulse = feature.pressure * 0.09 + feature.impact * 0.07;
+  const warm = feature.brightness * 0.08;
+  const haloX = 48 + Math.round(Math.sin(time * 0.11) * 4);
+  const haloY = 41 + Math.round(Math.cos(time * 0.09) * 3);
 
   return (
-    <AbsoluteFill style={{overflow: 'hidden', background: wine}}>
+    <AbsoluteFill style={{backgroundColor: wine, overflow: 'hidden'}}>
       <Img
         src={staticFile('artwork.png')}
         style={{
-          width: '100%',
-          height: '100%',
+          width: 1080,
+          height: 1080,
           objectFit: 'cover',
-          transform: `translate(${x}px, ${y}px) scale(${zoom})`,
-          filter: `contrast(${1.07 + energy * 0.7}) saturate(${0.92 + energy * 0.8}) brightness(${0.62 + energy * 0.45})`,
-        }}
-      />
-      <Img
-        src={staticFile('artwork.png')}
-        style={{
-          position: 'absolute',
-          inset: 0,
-          width: '100%',
-          height: '100%',
-          objectFit: 'cover',
-          transform: `translate(${x + shock}px, ${y}px) scale(${zoom})`,
-          mixBlendMode: 'screen',
-          opacity: clamp((energy - 0.13) * 1.8, 0, 0.18),
-          filter: 'saturate(1.8) hue-rotate(16deg)',
+          filter: `contrast(${1.08 + pulse}) saturate(${0.92 + warm}) brightness(${0.57 + pulse * 0.7})`,
         }}
       />
       <AbsoluteFill
         style={{
-          background: 'radial-gradient(circle at 43% 42%, transparent 12%, rgba(15,1,8,.12) 48%, rgba(19,0,8,.78) 100%)',
+          background: `radial-gradient(circle at ${haloX}% ${haloY}%, rgba(16,224,204,${0.06 + feature.pressure * 0.09}) 0%, transparent 34%), radial-gradient(circle at 67% 66%, rgba(255,83,104,${0.035 + feature.emotion * 0.08}) 0%, transparent 38%)`,
         }}
       />
       <AbsoluteFill
         style={{
-          background: 'linear-gradient(180deg, rgba(36,2,9,.08) 30%, rgba(28,1,8,.86) 100%)',
+          background:
+            'radial-gradient(circle at 50% 45%, transparent 13%, rgba(18,1,8,.18) 50%, rgba(9,0,5,.84) 100%)',
+        }}
+      />
+      <AbsoluteFill
+        style={{
+          background:
+            'linear-gradient(180deg, rgba(18,1,7,.18) 0%, rgba(20,1,8,.08) 40%, rgba(12,0,6,.72) 100%)',
         }}
       />
     </AbsoluteFill>
   );
 };
 
-const Atmosphere = ({frame, energy}: AtmosphereProps) => {
+type AtmosphereProps = Readonly<{
+  frame: number;
+  feature: AudioFeatureFrame;
+}>;
+
+const Atmosphere = ({frame, feature}: AtmosphereProps) => {
   const particles = useMemo(
-    () => Array.from({length: 42}, (_, i) => ({
-      x: random(`px-${i}`) * 1080,
-      y: random(`py-${i}`) * 1080,
-      size: 1 + random(`ps-${i}`) * 4,
-      speed: 0.25 + random(`pv-${i}`) * 0.8,
-      phase: random(`pp-${i}`) * 300,
-    })),
+    () =>
+      Array.from({length: 30}, (_, index) => ({
+        x: Math.round(42 + random(`particle-x-${index}`) * 996),
+        y: Math.round(random(`particle-y-${index}`) * 1180),
+        size: 2 + Math.round(random(`particle-size-${index}`) * 2),
+        speed: 0.12 + random(`particle-speed-${index}`) * 0.3,
+        phase: Math.round(random(`particle-phase-${index}`) * 600),
+      })),
     [],
   );
 
   return (
     <AbsoluteFill style={{overflow: 'hidden', pointerEvents: 'none'}}>
-      <svg width="1080" height="1080" style={{position: 'absolute', inset: 0, opacity: 0.34 + energy}}>
-        {particles.map((p, i) => {
-          const y = (p.y - (frame + p.phase) * p.speed + 1300) % 1300 - 100;
-          const pulse = 0.5 + Math.sin(frame * 0.045 + i) * 0.5;
-          return <circle key={i} cx={p.x} cy={y} r={p.size + energy * 5} fill={i % 4 === 0 ? ember : teal} opacity={0.12 + pulse * 0.42} />;
+      <svg width={1080} height={1080} style={{position: 'absolute', inset: 0}}>
+        {particles.map((particle, index) => {
+          const y =
+            Math.round(
+              particle.y - (frame + particle.phase) * particle.speed + 1300,
+            ) %
+              1300 -
+            110;
+          const emphasis = clamp(
+            0.16 + feature.pressure * 0.28 + feature.impact * 0.32,
+          );
+          return (
+            <circle
+              key={index}
+              cx={particle.x}
+              cy={y}
+              r={particle.size}
+              fill={index % 5 === 0 ? ember : teal}
+              opacity={emphasis * (index % 3 === 0 ? 0.7 : 0.42)}
+            />
+          );
         })}
       </svg>
       <AbsoluteFill
         style={{
-          opacity: 0.13,
-          backgroundImage: 'repeating-linear-gradient(0deg, transparent 0px, transparent 3px, rgba(184,255,244,.16) 4px)',
-          mixBlendMode: 'screen',
-        }}
-      />
-      <AbsoluteFill
-        style={{
-          opacity: 0.17,
-          backgroundImage: 'radial-gradient(rgba(255,255,255,.5) .55px, transparent .65px)',
-          backgroundSize: '5px 5px',
-          transform: `translate(${frame % 5}px, ${(frame * 0.57) % 5}px)`,
-          mixBlendMode: 'overlay',
+          opacity: 0.09,
+          backgroundImage:
+            'repeating-linear-gradient(0deg, transparent 0px, transparent 3px, rgba(201,255,247,.15) 4px)',
         }}
       />
     </AbsoluteFill>
   );
 };
 
-const ReactiveHalo = ({energy, time}: TimeEnergyProps) => (
+type MotionLineProps = Readonly<{
+  feature: AudioFeatureFrame;
+  top: number;
+  emphasis?: number;
+}>;
+
+const AudioMotionLine = ({
+  feature,
+  top,
+  emphasis = 1,
+}: MotionLineProps) => {
+  const rawWidth = 520 + 300 * feature.reach + 100 * feature.hero;
+  const width = Math.min(920, 2 * Math.round(rawWidth / 2));
+  const left = Math.round((1080 - width) / 2);
+  const right = 1080 - left;
+  const centreGap = 22;
+  const coreThickness = 2 + Math.round(2 * feature.lowEnd);
+  const intensity = clamp(
+    0.24 + feature.pressure * 0.27 + feature.impact * 0.28 + feature.hero * 0.2,
+  );
+  const endpoint = 4 + Math.round(feature.impact * 4);
+
+  return (
+    <svg
+      width={1080}
+      height={28}
+      viewBox="0 0 1080 28"
+      style={{
+        position: 'absolute',
+        left: 0,
+        top,
+        overflow: 'visible',
+        pointerEvents: 'none',
+        opacity: emphasis,
+      }}
+      shapeRendering="geometricPrecision"
+    >
+      <g
+        stroke={teal}
+        strokeWidth={10}
+        opacity={0.055 + feature.hero * 0.09}
+        style={{filter: 'blur(6px)'}}
+      >
+        <line x1={left} y1={14} x2={540 - centreGap} y2={14} />
+        <line x1={540 + centreGap} y1={14} x2={right} y2={14} />
+      </g>
+      <line
+        x1={left}
+        y1={14}
+        x2={540 - centreGap}
+        y2={14}
+        stroke={teal}
+        strokeWidth={coreThickness}
+        opacity={intensity}
+      />
+      <line
+        x1={540 + centreGap}
+        y1={14}
+        x2={right}
+        y2={14}
+        stroke={feature.hero > 0.38 ? white : ember}
+        strokeWidth={coreThickness}
+        opacity={intensity}
+      />
+      <rect
+        x={left - endpoint / 2}
+        y={14 - endpoint / 2}
+        width={endpoint}
+        height={endpoint}
+        fill={mint}
+        opacity={0.45 + feature.impact * 0.5}
+      />
+      <rect
+        x={right - endpoint / 2}
+        y={14 - endpoint / 2}
+        width={endpoint}
+        height={endpoint}
+        fill={feature.hero > 0.38 ? white : ember}
+        opacity={0.45 + feature.impact * 0.5}
+      />
+      <rect
+        x={536}
+        y={10}
+        width={8}
+        height={8}
+        transform="rotate(45 540 14)"
+        fill={mint}
+        opacity={0.42 + feature.emotion * 0.52}
+      />
+    </svg>
+  );
+};
+
+type SpectrumRailProps = Readonly<{
+  feature: AudioFeatureFrame;
+}>;
+
+const frequencyTicks = [
+  {frequency: 20, label: '20'},
+  {frequency: 60, label: '60'},
+  {frequency: 250, label: '250'},
+  {frequency: 1000, label: '1K'},
+  {frequency: 4000, label: '4K'},
+  {frequency: 20_000, label: '20K'},
+] as const;
+
+const frequencyX = (frequency: number): number =>
+  Math.round(
+    (Math.log(frequency / 20) / Math.log(20_000 / 20)) * 960,
+  );
+
+const SpectrumRail = ({feature}: SpectrumRailProps) => (
   <div
     style={{
       position: 'absolute',
-      left: '50%',
-      top: '46%',
-      width: 690 + energy * 760,
-      height: 690 + energy * 760,
-      borderRadius: '50%',
-      transform: `translate(-50%, -50%) rotate(${time * 3}deg)`,
-      border: `${1 + energy * 8}px solid rgba(16,224,204,${0.09 + energy * 0.28})`,
-      boxShadow: `0 0 ${80 + energy * 230}px rgba(16,224,204,${0.05 + energy * 0.22}), inset 0 0 90px rgba(255,83,104,.08)`,
+      left: 60,
+      bottom: 68,
+      width: 960,
+      height: 70,
+      color: mint,
+      fontFamily: 'Space Grotesk',
+      pointerEvents: 'none',
     }}
-  />
-);
-
-const FrameChrome = ({time}: TimeProps) => (
-  <AbsoluteFill style={{pointerEvents: 'none', color: mint, fontFamily: 'Space Grotesk'}}>
-    <div style={{position: 'absolute', inset: 30, border: '1px solid rgba(184,255,244,.24)'}} />
-    {frameCorners.map(([x, y], i) => (
-      <div key={i} style={{position: 'absolute', left: x - (x > 500 ? 32 : 0), top: y - (y > 500 ? 32 : 0), width: 32, height: 32, borderLeft: x < 500 ? `3px solid ${teal}` : 'none', borderRight: x > 500 ? `3px solid ${teal}` : 'none', borderTop: y < 500 ? `3px solid ${teal}` : 'none', borderBottom: y > 500 ? `3px solid ${teal}` : 'none'}} />
-    ))}
-    <div style={{position: 'absolute', left: 48, top: 48, fontSize: 15, letterSpacing: 4, fontWeight: 600}}>TANISEA // KSVIETY</div>
-    <div style={{position: 'absolute', right: 48, top: 48, fontSize: 15, letterSpacing: 3, opacity: 0.7}}>EN LYRIC FILM</div>
-    <div style={{position: 'absolute', left: 48, bottom: 48, fontSize: 14, letterSpacing: 3, opacity: 0.62}}>TRACK 01 · REMIX</div>
-    <div style={{position: 'absolute', right: 48, bottom: 48, fontVariantNumeric: 'tabular-nums', fontSize: 14, letterSpacing: 3, opacity: 0.62}}>{String(Math.floor(time / 60)).padStart(2, '0')}:{String(Math.floor(time % 60)).padStart(2, '0')}</div>
-  </AbsoluteFill>
-);
-
-const Equalizer = ({bands, bass, mids, highs}: EqualizerProps) => (
-  <div style={{position: 'absolute', left: 64, right: 64, bottom: 76, height: 50, fontFamily: 'Space Grotesk', pointerEvents: 'none'}}>
-    <div style={{position: 'absolute', inset: '0 0 10px', display: 'flex', gap: 3, alignItems: 'flex-end', borderBottom: '1px solid rgba(184,255,244,.18)'}}>
-      {bands.map((value, index) => {
-        const position = index / Math.max(1, bands.length - 1);
-        const color = position < 0.24 ? ember : position < 0.72 ? teal : mint;
+  >
+    <div
+      style={{
+        position: 'absolute',
+        left: 0,
+        top: 0,
+        fontSize: 9,
+        fontWeight: 600,
+        letterSpacing: 2.2,
+        color: 'rgba(201,255,247,.58)',
+      }}
+    >
+      STEREO · 64 LOG BANDS · HANN · 20 HZ—20 KHZ
+    </div>
+    <svg
+      width={960}
+      height={52}
+      viewBox="0 0 960 52"
+      style={{position: 'absolute', left: 0, bottom: 0}}
+      shapeRendering="crispEdges"
+    >
+      <line
+        x1={0}
+        y1={41}
+        x2={960}
+        y2={41}
+        stroke="rgba(201,255,247,.24)"
+        strokeWidth={2}
+      />
+      {Array.from(feature.bands).map((byte, band) => {
+        const normalized = clamp((byte - 24) / 231);
+        const height = Math.max(
+          2,
+          Math.round(2 + normalized ** 1.65 * 34),
+        );
+        const color = band <= 20 ? ember : band <= 47 ? teal : mint;
         return (
-          <div key={index} style={{position: 'relative', flex: 1, height: '100%', display: 'flex', alignItems: 'flex-end'}}>
-            <div style={{width: '100%', minHeight: 2, height: 2 + value * 38, background: color, borderRadius: '2px 2px 0 0', opacity: 0.38 + value * 0.62, boxShadow: `0 0 ${3 + value * 14}px ${color}`, transform: `scaleY(${0.94 + value * 0.06})`, transformOrigin: 'bottom'}} />
-            <div style={{position: 'absolute', left: 0, right: 0, bottom: 2 + value * 38, height: 1, background: '#fff', opacity: value * 0.65}} />
-          </div>
+          <g key={band}>
+            <rect
+              x={band * 15 + 3}
+              y={41 - height}
+              width={9}
+              height={height}
+              fill={color}
+              opacity={0.4 + normalized * 0.55}
+            />
+            <rect
+              x={band * 15 + 3}
+              y={Math.max(2, 39 - height)}
+              width={9}
+              height={1}
+              fill={white}
+              opacity={normalized * 0.72}
+            />
+          </g>
         );
       })}
-    </div>
-    <div style={{position: 'absolute', left: 0, right: 0, bottom: -2, display: 'flex', justifyContent: 'space-between', fontSize: 8, letterSpacing: 2.5, color: 'rgba(184,255,244,.45)'}}>
-      <span style={{opacity: 0.45 + bass * 0.55}}>SUB / BASS</span>
-      <span style={{opacity: 0.45 + mids * 0.55}}>VOCAL / MID</span>
-      <span style={{opacity: 0.45 + highs * 0.55}}>AIR</span>
-    </div>
+      {frequencyTicks.map(({frequency, label}) => {
+        const x = frequencyX(frequency);
+        return (
+          <g key={frequency}>
+            <line
+              x1={x}
+              y1={42}
+              x2={x}
+              y2={47}
+              stroke="rgba(201,255,247,.48)"
+              strokeWidth={1}
+            />
+            <text
+              x={x}
+              y={51}
+              textAnchor={
+                frequency === 20
+                  ? 'start'
+                  : frequency === 20_000
+                    ? 'end'
+                    : 'middle'
+              }
+              fill="rgba(201,255,247,.52)"
+              fontFamily="Space Grotesk"
+              fontSize={7}
+              fontWeight={600}
+            >
+              {label}
+            </text>
+          </g>
+        );
+      })}
+    </svg>
   </div>
 );
 
-const Intro = ({time, frame, fps}: IntroProps) => {
-  if (time >= 20) return null;
-  const artist = fade(time, 0.5, 7.2, 0.8);
-  const title = fade(time, 3.0, 16.0, 1.0);
-  const sub = fade(time, 10.5, 19.7, 0.8);
-  const titleSpring = spring({frame: Math.max(0, frame - 90), fps, config: {damping: 18, stiffness: 92}});
+type ChromeProps = Readonly<{
+  time: number;
+  feature: AudioFeatureFrame;
+}>;
 
-  return (
-    <AbsoluteFill style={{justifyContent: 'center', padding: 86, fontFamily: 'Space Grotesk', color: '#fff'}}>
-      <div style={{opacity: artist, transform: `translateY(${(1 - artist) * 25}px)`, letterSpacing: 10, fontSize: 20, fontWeight: 650, color: teal, marginBottom: 24}}>TANISEA × KSVIETY</div>
-      <div style={{opacity: title, transform: `scale(${0.92 + titleSpring * 0.08})`, transformOrigin: 'left center'}}>
-        <div style={{fontFamily: 'Bebas Neue', fontSize: 150, lineHeight: 0.82, letterSpacing: 3, textShadow: '0 12px 45px rgba(0,0,0,.6)'}}>I'LL SCREAM</div>
-        <div style={{fontFamily: 'Bebas Neue', fontSize: 112, lineHeight: 1.02, color: mint, WebkitTextStroke: '1px rgba(16,224,204,.55)', textShadow: `0 0 40px rgba(16,224,204,.38)`}}>TO THE WHOLE WORLD</div>
-      </div>
-      <div style={{opacity: sub, marginTop: 38, width: 420, height: 2, background: `linear-gradient(90deg, ${teal}, transparent)`}} />
-      <div style={{opacity: sub, marginTop: 18, fontSize: 16, letterSpacing: 7, fontWeight: 500}}>ENGLISH LYRIC FILM · 2024 REMIX</div>
-    </AbsoluteFill>
-  );
-};
-
-const SplitText = ({line, time}: SplitTextProps) => {
-  const chorus = line.section === 'chorus';
-
-  return (
-    <div style={{display: 'flex', flexWrap: 'wrap', gap: chorus ? '0 20px' : '0 14px', justifyContent: chorus ? 'center' : 'flex-start', alignItems: 'baseline'}}>
-      {line.cues.map((item, i) => {
-        const local = clamp((time - item.start) / Math.max(0.001, item.end - item.start));
-        const active = time >= item.start && time < item.end;
-        const complete = time >= item.end;
-        return (
-          <span
-            key={`${item.text}-${i}`}
-            style={{
-              display: 'inline-block',
-              color: complete ? mint : active ? '#fff' : 'rgba(255,255,255,.38)',
-              transform: `translateY(${active ? -7 * Math.sin(local * Math.PI) : 0}px) scale(${active ? 1.045 + Math.sin(local * Math.PI) * 0.018 : 1})`,
-              textShadow: active ? `0 0 ${24 + 22 * Math.sin(local * Math.PI)}px ${teal}, 0 5px 18px rgba(0,0,0,.72)` : '0 5px 18px rgba(0,0,0,.65)',
-              WebkitTextStroke: active && chorus ? '1px rgba(255,255,255,.34)' : '0 transparent',
-            }}
-          >
-            {item.text}
-          </span>
-        );
-      })}
-    </div>
-  );
-};
-
-const LyricDisplay = ({time}: TimeProps) => {
-  const index = lyrics.findIndex((line) => time >= line.start && time < line.end);
-  if (index < 0) return null;
-  const line = lyrics[index];
-  if (!line) return null;
-  const next = lyrics[index + 1];
-  const opacity = fade(time, line.start, line.end, 0.32);
-  const entry = clamp((time - line.start) / 0.5);
-  const progress = clamp((time - line.start) / (line.end - line.start));
-  const chorus = line.section === 'chorus';
-  const verse = line.section === 'verse';
-  const size = chorus ? (line.text.length > 27 ? 76 : 88) : verse ? (line.text.length > 42 ? 48 : 57) : (line.text.length > 26 ? 62 : 72);
-
-  return (
-    <AbsoluteFill style={{justifyContent: chorus ? 'center' : 'flex-end', alignItems: chorus ? 'center' : 'stretch', padding: chorus ? '180px 80px 210px' : '0 76px 178px', fontFamily: 'Space Grotesk', color: '#fff'}}>
-      {chorus && [1, 2].map((n) => (
-        <div key={n} style={{position: 'absolute', width: '100%', textAlign: 'center', fontFamily: 'Bebas Neue', fontSize: size + n * 27, letterSpacing: n * 7, color: 'transparent', WebkitTextStroke: `1px rgba(16,224,204,${0.16 / n})`, transform: `translate(${n * 8}px, ${n * 12}px)`, opacity}}>{line.text.toUpperCase()}</div>
-      ))}
-      <div style={{position: 'relative', opacity, transform: `translateY(${(1 - entry) * 46}px)`, filter: `blur(${(1 - entry) * 12}px)`, maxWidth: chorus ? 930 : 900, alignSelf: chorus ? 'center' : 'flex-start'}}>
-        <div style={{display: 'flex', alignItems: 'center', gap: 14, marginBottom: 18, color: teal, fontSize: 14, letterSpacing: 5, fontWeight: 650}}>
-          <span>{String(index + 1).padStart(2, '0')}</span>
-          <span style={{height: 1, width: 72, background: teal}} />
-          <span>{line.section.toUpperCase()}</span>
-        </div>
-        <div style={{fontSize: size, fontWeight: chorus ? 680 : 620, lineHeight: chorus ? 0.98 : 1.08, letterSpacing: chorus ? -3 : -2, textTransform: chorus ? 'uppercase' : 'none', textAlign: chorus ? 'center' : 'left'}}>
-          <SplitText line={line} time={time} />
-        </div>
-        <div style={{marginTop: 24, height: 3, width: chorus ? '100%' : 520, maxWidth: '100%', background: 'rgba(255,255,255,.12)', overflow: 'hidden'}}>
-          <div style={{height: '100%', width: `${progress * 100}%`, background: `linear-gradient(90deg, ${teal}, ${mint}, ${ember})`, boxShadow: `0 0 22px ${teal}`}} />
-        </div>
-        {next && next.start - line.end < 1 && (
-          <div style={{marginTop: 17, fontSize: 19, letterSpacing: 1.5, fontWeight: 450, opacity: 0.34, textAlign: chorus ? 'center' : 'left'}}>{next.text}</div>
-        )}
-      </div>
-    </AbsoluteFill>
-  );
-};
-
-const BreakCard = ({time}: TimeProps) => {
-  if (time < 50 || time >= 64) return null;
-  const p = fade(time, 50, 64, 0.7);
-  return (
-    <AbsoluteFill style={{justifyContent: 'center', alignItems: 'center', color: mint, fontFamily: 'Bebas Neue', opacity: p}}>
-      <div style={{fontSize: 34, letterSpacing: 18, color: teal}}>TANISEA</div>
-      <div style={{fontSize: 112, letterSpacing: 6, lineHeight: 1, color: 'transparent', WebkitTextStroke: '2px rgba(184,255,244,.82)'}}>REMIX // 01</div>
-      <div style={{marginTop: 24, width: 360, height: 2, background: `linear-gradient(90deg, transparent, ${ember}, transparent)`}} />
-    </AbsoluteFill>
-  );
-};
-
-const Outro = ({time, frame, fps, masterLevel, bass}: OutroProps) => {
-  if (time < 118) return null;
-  const reveal = clamp(spring({
-    frame: Math.max(0, frame - Math.round(118 * fps)),
-    fps,
-    config: {damping: 22, stiffness: 72, mass: 1.1},
-  }));
-  const outroTime = time - 118;
-  const pulse = clamp(masterLevel * 0.7 + bass * 0.45, 0, 0.5);
-  const drift = Math.sin(outroTime * 0.22) * 3;
-  const lineWidth = 520 + reveal * 150 + pulse * 120;
-  const titleScale = 0.965 + reveal * 0.035 + pulse * 0.012;
-  const titleGlow = 20 + pulse * 95;
-
-  return (
-    <AbsoluteFill style={{justifyContent: 'center', alignItems: 'center', padding: '0 76px 150px', color: '#fff', overflow: 'hidden'}}>
+const FrameChrome = ({time, feature}: ChromeProps) => (
+  <AbsoluteFill
+    style={{
+      color: mint,
+      fontFamily: 'Space Grotesk',
+      pointerEvents: 'none',
+    }}
+  >
+    <div
+      style={{
+        position: 'absolute',
+        inset: 30,
+        border: '2px solid rgba(201,255,247,.2)',
+      }}
+    />
+    {[
+      [30, 30, '0 0'],
+      [1050, 30, '-100% 0'],
+      [30, 1050, '0 -100%'],
+      [1050, 1050, '-100% -100%'],
+    ].map(([x, y, translate], index) => (
       <div
+        key={index}
         style={{
           position: 'absolute',
-          width: 820 + pulse * 260,
-          height: 420 + pulse * 160,
-          borderRadius: '50%',
-          background: `radial-gradient(ellipse, rgba(16,224,204,${0.07 + pulse * 0.16}) 0%, rgba(255,83,104,${0.035 + pulse * 0.08}) 42%, transparent 72%)`,
-          filter: `blur(${20 + pulse * 22}px)`,
-          transform: `translateY(${drift}px) scale(${0.92 + reveal * 0.08})`,
-          opacity: reveal,
+          left: x,
+          top: y,
+          width: 32,
+          height: 32,
+          transform: `translate(${translate})`,
+          borderLeft: index % 2 === 0 ? `4px solid ${teal}` : undefined,
+          borderRight: index % 2 === 1 ? `4px solid ${teal}` : undefined,
+          borderTop: index < 2 ? `4px solid ${teal}` : undefined,
+          borderBottom: index >= 2 ? `4px solid ${teal}` : undefined,
+        }}
+      />
+    ))}
+    <div
+      style={{
+        position: 'absolute',
+        left: 48,
+        top: 47,
+        fontSize: 14,
+        letterSpacing: 3.6,
+        fontWeight: 650,
+      }}
+    >
+      TANISEA // KSVIETY
+    </div>
+    <div
+      style={{
+        position: 'absolute',
+        right: 48,
+        top: 46,
+        display: 'flex',
+        gap: 18,
+        fontSize: 10,
+        letterSpacing: 1.8,
+        fontWeight: 600,
+        fontVariantNumeric: 'tabular-nums',
+        color: 'rgba(201,255,247,.7)',
+      }}
+    >
+      <span>RMS {feature.momentaryDbfs.toFixed(1)} dBFS</span>
+      <span>PK {feature.samplePeakDbfs.toFixed(1)} dBFS</span>
+      <span>60 FPS</span>
+    </div>
+    <div
+      style={{
+        position: 'absolute',
+        left: 48,
+        bottom: 43,
+        fontSize: 10,
+        letterSpacing: 2.4,
+        fontWeight: 600,
+        color: 'rgba(201,255,247,.54)',
+      }}
+    >
+      TRACK 01 · ENGLISH LYRIC FILM · VNEXT
+    </div>
+    <div
+      style={{
+        position: 'absolute',
+        right: 48,
+        bottom: 41,
+        fontSize: 12,
+        letterSpacing: 2.2,
+        fontWeight: 650,
+        fontVariantNumeric: 'tabular-nums',
+        color: 'rgba(201,255,247,.68)',
+      }}
+    >
+      {formatTime(time)}
+    </div>
+  </AbsoluteFill>
+);
+
+type IntroProps = Readonly<{
+  time: number;
+  frame: number;
+  fps: number;
+  feature: AudioFeatureFrame;
+}>;
+
+const Intro = ({time, frame, fps, feature}: IntroProps) => {
+  if (time >= 23.75) return null;
+  const opacity = fadeWindow(time, 0.45, 23.72, 0.7, 0.62);
+  const settle = spring({
+    frame: Math.max(0, frame - Math.round(1.1 * fps)),
+    fps,
+    config: {damping: 24, stiffness: 84, mass: 1.1},
+  });
+  const titleOpacity = smoothstep(1.15, 2.5, time);
+  const subOpacity = smoothstep(6.4, 7.3, time);
+
+  return (
+    <AbsoluteFill
+      style={{
+        justifyContent: 'center',
+        padding: '110px 78px 190px',
+        fontFamily: 'Space Grotesk',
+        color: white,
+        opacity,
+      }}
+    >
+      <AudioMotionLine feature={feature} top={122} emphasis={0.9} />
+      <div
+        style={{
+          fontSize: 16,
+          letterSpacing: 9,
+          fontWeight: 650,
+          color: teal,
+          marginBottom: 25,
+          opacity: smoothstep(0.55, 1.35, time),
+        }}
+      >
+        TANISEA × KSVIETY
+      </div>
+      <div
+        style={{
+          opacity: titleOpacity,
+          transform: `translateY(${Math.round((1 - settle) * 22)}px)`,
+          transformOrigin: 'left center',
+        }}
+      >
+        <div
+          style={{
+            fontFamily: 'Bebas Neue',
+            fontSize: 160,
+            lineHeight: 0.78,
+            letterSpacing: 2,
+            textShadow: '0 10px 34px rgba(0,0,0,.62)',
+          }}
+        >
+          I'LL SCREAM
+        </div>
+        <div
+          style={{
+            fontFamily: 'Bebas Neue',
+            fontSize: 108,
+            lineHeight: 1.03,
+            letterSpacing: 2,
+            color: mint,
+            textShadow: `0 0 ${18 + feature.emotion * 22}px rgba(22,230,209,.28)`,
+          }}
+        >
+          TO THE WHOLE WORLD
+        </div>
+      </div>
+      <div
+        style={{
+          marginTop: 34,
+          width: 420,
+          height: 2,
+          background: `linear-gradient(90deg, ${teal}, rgba(22,230,209,0))`,
+          opacity: subOpacity,
         }}
       />
       <div
         style={{
-          position: 'absolute',
-          fontFamily: "Georgia, 'Times New Roman', serif",
-          fontWeight: 700,
-          fontSize: 72,
-          letterSpacing: -1.5,
-          whiteSpace: 'nowrap',
-          color: 'transparent',
-          WebkitTextStroke: `1px rgba(184,255,244,${0.05 + pulse * 0.1})`,
-          transform: `translateY(${drift + 4}px) scale(${titleScale * 1.055})`,
-          opacity: reveal,
+          marginTop: 17,
+          fontSize: 14,
+          letterSpacing: 5.5,
+          fontWeight: 550,
+          color: 'rgba(255,255,255,.82)',
+          opacity: subOpacity,
         }}
       >
-        ЗАКРИЧУ НА ВЕСЬ МИР
+        ENGLISH SEMANTIC LYRIC FILM · 60 FPS
+      </div>
+    </AbsoluteFill>
+  );
+};
+
+const cueFocus = (
+  line: LyricLine,
+  segmentId: string,
+  time: number,
+): number =>
+  line.cueEvents.reduce((maximum, event) => {
+    if (!event.targets.includes(segmentId)) return maximum;
+    // The state change is sample-timed in the data and quantized only by the
+    // 60 fps display. No pre-onset white fill is introduced by animation.
+    const active = time >= event.start && time < event.end ? 1 : 0;
+    return Math.max(maximum, active);
+  }, 0);
+
+type LyricLineViewProps = Readonly<{
+  line: LyricLine;
+  time: number;
+}>;
+
+const LyricLineView = ({line, time}: LyricLineViewProps) => {
+  const enter = smoothstep(line.visualInStart, line.visualInComplete, time);
+  const exit = smoothstep(line.visualOutStart, line.visualOutEnd, time);
+  const opacity = enter * (1 - exit);
+  const chorus = line.section === 'chorus';
+  const verse = line.section === 'verse';
+  const fontSize = chorus
+    ? line.text.length > 31
+      ? 66
+      : 80
+    : verse
+      ? line.text.length > 45
+        ? 45
+        : 53
+      : line.text.length > 36
+        ? 53
+        : 62;
+  const progress = clamp(
+    (time - line.vocalStart) / (line.vocalEnd - line.vocalStart),
+  );
+
+  return (
+    <AbsoluteFill
+      style={{
+        justifyContent: chorus ? 'center' : 'flex-end',
+        alignItems: chorus ? 'center' : 'stretch',
+        padding: chorus ? '180px 76px 205px' : '0 74px 238px',
+        color: white,
+        fontFamily: 'Space Grotesk',
+        opacity,
+        transform: `translateY(${Math.round((1 - enter) * 18 - exit * 10)}px)`,
+      }}
+    >
+      <div
+        style={{
+          width: '100%',
+          maxWidth: chorus ? 940 : 920,
+          alignSelf: chorus ? 'center' : 'flex-start',
+        }}
+      >
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: chorus ? 'center' : 'flex-start',
+            alignItems: 'center',
+            gap: 13,
+            marginBottom: 17,
+            fontSize: 12,
+            letterSpacing: 4.2,
+            fontWeight: 650,
+            color: teal,
+          }}
+        >
+          <span>{line.id}</span>
+          <span style={{height: 2, width: 58, background: teal}} />
+          <span>{line.section.toUpperCase()}</span>
+        </div>
+        <div
+          style={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            justifyContent: chorus ? 'center' : 'flex-start',
+            alignItems: 'baseline',
+            columnGap: chorus ? 18 : 13,
+            rowGap: 8,
+            fontSize,
+            lineHeight: chorus ? 1.02 : 1.1,
+            letterSpacing: chorus ? -1.8 : -1.1,
+            textAlign: chorus ? 'center' : 'left',
+            textTransform: chorus ? 'uppercase' : 'none',
+          }}
+        >
+          {line.segments.map((segment) => {
+            const focus = cueFocus(line, segment.id, time);
+            return (
+              <span
+                key={segment.id}
+                style={{
+                  display: 'inline-block',
+                  position: 'relative',
+                  whiteSpace: 'nowrap',
+                  color: `rgba(255,255,255,${0.62 + focus * 0.38})`,
+                  fontWeight: Math.round((chorus ? 610 : 540) + focus * 150),
+                  textShadow:
+                    focus > 0.01
+                      ? `0 0 ${Math.round(8 + focus * 15)}px rgba(22,230,209,${0.18 + focus * 0.42}), 0 4px 16px rgba(0,0,0,.68)`
+                      : '0 4px 16px rgba(0,0,0,.68)',
+                  backgroundImage: `linear-gradient(90deg, ${teal}, ${mint})`,
+                  backgroundRepeat: 'no-repeat',
+                  backgroundPosition: 'center bottom',
+                  backgroundSize: `${Math.round(focus * 100)}% 3px`,
+                  paddingBottom: 5,
+                }}
+              >
+                {segment.text}
+              </span>
+            );
+          })}
+        </div>
+        <div
+          style={{
+            marginTop: 24,
+            marginLeft: chorus ? 'auto' : 0,
+            marginRight: chorus ? 'auto' : 0,
+            width: chorus ? 760 : 560,
+            maxWidth: '100%',
+            height: 4,
+            background: 'rgba(255,255,255,.12)',
+          }}
+        >
+          <div
+            style={{
+              width: `${Math.round(progress * 1000) / 10}%`,
+              height: 4,
+              background: `linear-gradient(90deg, ${teal}, ${mint}, ${ember})`,
+            }}
+          />
+        </div>
+      </div>
+    </AbsoluteFill>
+  );
+};
+
+type LyricDisplayProps = Readonly<{time: number}>;
+
+const LyricDisplay = ({time}: LyricDisplayProps) => (
+  <>
+    {lyrics
+      .filter(
+        (line) => time >= line.visualInStart && time < line.visualOutEnd,
+      )
+      .map((line) => (
+        <LyricLineView key={line.id} line={line} time={time} />
+      ))}
+  </>
+);
+
+type BreakCardProps = Readonly<{
+  time: number;
+  feature: AudioFeatureFrame;
+}>;
+
+const BreakCard = ({time, feature}: BreakCardProps) => {
+  if (time < 49.98 || time >= 64.02) return null;
+  const opacity = fadeWindow(time, 49.98, 64.02, 0.3, 0.48);
+  const development = smoothstep(56.1, 57.05, time);
+  return (
+    <AbsoluteFill
+      style={{
+        justifyContent: 'center',
+        alignItems: 'center',
+        paddingBottom: 132,
+        color: mint,
+        fontFamily: 'Space Grotesk',
+        opacity,
+      }}
+    >
+      <div
+        style={{
+          fontSize: 12,
+          letterSpacing: 7,
+          fontWeight: 650,
+          color: teal,
+          marginBottom: 17,
+        }}
+      >
+        {development < 0.5
+          ? 'INTERLUDE // SIGNAL HOLD'
+          : 'INTERLUDE // PHASE 02'}
       </div>
       <div
         style={{
-          position: 'relative',
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          width: '100%',
-          transform: `translateY(${(1 - reveal) * 34 + drift}px) scale(${titleScale})`,
-          opacity: reveal,
+          fontFamily: 'Bebas Neue',
+          fontSize: Math.round(106 - development * 18),
+          letterSpacing: 7 + development * 2,
+          lineHeight: 0.95,
+          color: white,
+          transform: `translateY(${Math.round(-development * 17)}px)`,
         }}
       >
-        <div style={{display: 'flex', alignItems: 'center', gap: 18, width: lineWidth, maxWidth: '84%', marginBottom: 23}}>
-          <div style={{height: 2, flex: 1, background: `linear-gradient(90deg, transparent, ${teal})`, boxShadow: `0 0 ${10 + pulse * 24}px ${teal}`}} />
-          <div style={{width: 7, height: 7, transform: 'rotate(45deg)', background: mint, boxShadow: `0 0 ${12 + pulse * 30}px ${teal}`}} />
-          <div style={{height: 2, flex: 1, background: `linear-gradient(90deg, ${ember}, transparent)`, boxShadow: `0 0 ${10 + pulse * 24}px ${ember}`}} />
-        </div>
-        <div style={{fontFamily: 'Space Grotesk', fontSize: 14, color: teal, letterSpacing: 8, fontWeight: 650, marginBottom: 18}}>ORIGINAL TITLE</div>
+        TANISEA
+      </div>
+      <div
+        style={{
+          marginTop: 13,
+          fontFamily: 'Bebas Neue',
+          fontSize: 50,
+          letterSpacing: 10,
+          color: mint,
+          opacity: development,
+          transform: `translateY(${Math.round((1 - development) * 12)}px)`,
+        }}
+      >
+        KSVIETY REMIX
+      </div>
+      <AudioMotionLine
+        feature={feature}
+        top={548 + Math.round(development * 44)}
+        emphasis={0.86}
+      />
+      <div
+        style={{
+          marginTop: 44 - development * 10,
+          fontSize: 12,
+          letterSpacing: 4,
+          color: 'rgba(201,255,247,.68)',
+        }}
+      >
+        VERSE IN · 01:04.06 · 64 LOG BANDS
+      </div>
+    </AbsoluteFill>
+  );
+};
+
+type OutroProps = Readonly<{
+  time: number;
+  feature: AudioFeatureFrame;
+}>;
+
+const Outro = ({time, feature}: OutroProps) => {
+  if (time < 117.98) return null;
+  const reveal = smoothstep(117.98, 118.4, time);
+  const translationStage = smoothstep(125.45, 126.3, time);
+  const deconstructionStage = smoothstep(135.7, 136.8, time);
+  const endCardStage = smoothstep(144.55, 145.45, time);
+  const primaryOpacity = reveal * (1 - smoothstep(144.35, 145.25, time));
+  const translationOpacity =
+    translationStage * (1 - smoothstep(143.95, 145.05, time));
+  const drift = Math.round(Math.sin((time - 118.2) * 0.18) * 2);
+  const titleGlow = 14 + Math.round(feature.emotion * 24 + feature.hero * 28);
+
+  return (
+    <AbsoluteFill
+      style={{
+        justifyContent: 'center',
+        alignItems: 'center',
+        padding: '0 52px 148px',
+        color: white,
+      }}
+    >
+      <div
+        style={{
+          position: 'absolute',
+          width: 870,
+          height: 430,
+          borderRadius: '50%',
+          background: `radial-gradient(ellipse, rgba(22,230,209,${0.06 + feature.pressure * 0.08 + feature.hero * 0.08}) 0%, rgba(255,91,112,${0.025 + feature.emotion * 0.055}) 45%, transparent 72%)`,
+          filter: 'blur(22px)',
+          opacity: reveal,
+        }}
+      />
+      <AudioMotionLine
+        feature={feature}
+        top={390 - Math.round(deconstructionStage * 34) + Math.round(endCardStage * 42)}
+        emphasis={0.5 + reveal * 0.5}
+      />
+      <div
+        style={{
+          position: 'absolute',
+          left: 52,
+          right: 52,
+          top: 386,
+          textAlign: 'center',
+          fontFamily: 'Space Grotesk',
+          opacity: primaryOpacity,
+          transform: `translateY(${Math.round((1 - reveal) * 16 - deconstructionStage * 16 + drift)}px) scale(${1 - deconstructionStage * 0.035})`,
+        }}
+      >
         <div
           style={{
-            width: '100%',
-            textAlign: 'center',
-            fontFamily: "Georgia, 'Times New Roman', serif",
-            fontWeight: 700,
-            fontSize: 72,
-            letterSpacing: -1.5,
-            lineHeight: 1.06,
+            fontSize: 12,
+            letterSpacing: 7,
+            fontWeight: 650,
+            color: teal,
+            marginBottom: 22,
+          }}
+        >
+          ORIGINAL TITLE // VERIFIED OUTRO STATE
+        </div>
+        <div
+          style={{
+            fontFamily: 'Playfair',
+            fontSize: 74,
+            fontWeight: 740,
+            lineHeight: 1.04,
+            letterSpacing: 0.5 + deconstructionStage * 1.8,
             whiteSpace: 'nowrap',
-            clipPath: `inset(0 ${(1 - reveal) * 100}% 0 0)`,
-            textShadow: `0 7px 26px rgba(0,0,0,.78), 0 0 ${titleGlow}px rgba(16,224,204,${0.18 + pulse * 0.4})`,
+            color: white,
+            textShadow: `0 7px 24px rgba(0,0,0,.74), 0 0 ${titleGlow}px rgba(22,230,209,${0.16 + feature.hero * 0.2})`,
+            display: 'flex',
+            justifyContent: 'center',
+            gap: 17 + deconstructionStage * 26,
+          }}
+        >
+          <span
+            style={{
+              transform: `translateX(${Math.round(-deconstructionStage * 10)}px)`,
+            }}
+          >
+            ЗАКРИЧУ
+          </span>
+          <span
+            style={{
+              transform: `translateX(${Math.round(deconstructionStage * 10)}px)`,
+            }}
+          >
+            НА ВЕСЬ МИР
+          </span>
+        </div>
+        <div
+          style={{
+            marginTop: 22,
+            fontSize: 13,
+            letterSpacing: 4.1,
+            fontWeight: 580,
+            color: mint,
+            opacity: translationOpacity,
+          }}
+        >
+          I’LL SCREAM FOR THE WHOLE WORLD TO HEAR
+        </div>
+      </div>
+      <div
+        style={{
+          position: 'absolute',
+          left: 52,
+          right: 52,
+          top: 344,
+          textAlign: 'center',
+          fontFamily: 'Space Grotesk',
+          opacity: endCardStage,
+          transform: `translateY(${Math.round((1 - endCardStage) * 18)}px)`,
+        }}
+      >
+        <div
+          style={{
+            fontSize: 12,
+            letterSpacing: 7.2,
+            fontWeight: 650,
+            color: teal,
+            marginBottom: 17,
+          }}
+        >
+          ARTIST // REMIX // ORIGINAL TITLE
+        </div>
+        <div
+          style={{
+            fontFamily: 'Bebas Neue',
+            fontSize: 104,
+            lineHeight: 0.92,
+            letterSpacing: 7,
+            color: white,
+            textShadow: '0 8px 28px rgba(0,0,0,.72)',
+          }}
+        >
+          TANISEA
+        </div>
+        <div
+          style={{
+            marginTop: 18,
+            fontFamily: 'Playfair',
+            fontSize: 31,
+            fontWeight: 700,
+            letterSpacing: 1.4,
+            color: mint,
           }}
         >
           ЗАКРИЧУ НА ВЕСЬ МИР
         </div>
-        <div style={{fontFamily: 'Space Grotesk', fontSize: 18, letterSpacing: 5, color: mint, marginTop: 19, fontWeight: 520}}>TANISEA × KSVIETY · REMIX</div>
-        <div style={{marginTop: 30, width: 170 + pulse * 110, height: 2, background: `linear-gradient(90deg, transparent, rgba(184,255,244,.9), transparent)`, boxShadow: `0 0 ${12 + pulse * 28}px ${teal}`}} />
+        <div
+          style={{
+            marginTop: 20,
+            fontSize: 12,
+            fontWeight: 600,
+            letterSpacing: 4.4,
+            color: 'rgba(201,255,247,.72)',
+          }}
+        >
+          KSVIETY REMIX · 153.000 S · 60 FPS
+        </div>
       </div>
     </AbsoluteFill>
   );
 };
 
-const EndFade = ({time}: TimeProps) => {
-  const opacity = interpolate(time, [151.4, 153], [0, 1], {
+const EndFade = ({time}: Readonly<{time: number}>) => {
+  const opacity = interpolate(time, [151.35, 153], [0, 1], {
     extrapolateLeft: 'clamp',
     extrapolateRight: 'clamp',
+    easing: (value) => smoothstep(0, 1, value),
   });
-  return <AbsoluteFill style={{backgroundColor: '#090106', opacity, pointerEvents: 'none'}} />;
+  return (
+    <AbsoluteFill
+      style={{backgroundColor: ink, opacity, pointerEvents: 'none'}}
+    />
+  );
 };
 
 export const LyricFilm = () => {
   const frame = useCurrentFrame();
   const {fps} = useVideoConfig();
   const time = frame / fps;
-  const audioData = useAudioData(staticFile('soundtrack.m4a'));
-  const emptySpectrum = Array.from({length: 256}, () => 0);
-  const spectrumNow = audioData
-    ? visualizeAudio({fps, frame, audioData, numberOfSamples: 256, smoothing: false, optimizeFor: 'accuracy'})
-    : emptySpectrum;
-  const spectrumPrevious = audioData
-    ? visualizeAudio({fps, frame: frame - 1, audioData, numberOfSamples: 256, smoothing: false, optimizeFor: 'accuracy'})
-    : emptySpectrum;
-  const spectrumPreviousTwo = audioData
-    ? visualizeAudio({fps, frame: frame - 2, audioData, numberOfSamples: 256, smoothing: false, optimizeFor: 'accuracy'})
-    : emptySpectrum;
-  const responsiveSpectrum = spectrumNow.map((value, index) => Math.max(
-    value,
-    (spectrumPrevious[index] ?? 0) * 0.62,
-    (spectrumPreviousTwo[index] ?? 0) * 0.36,
-  ));
-  const spectralRms = Math.sqrt(mean(responsiveSpectrum.map((value) => value * value)));
-  const amplitudeGate = clamp((spectralRms - 0.002) / 0.018);
-  const bands = spectrumToBands(responsiveSpectrum, 56).map((value) => value * (0.12 + amplitudeGate * 0.88));
-  const bass = mean(bands.slice(0, 14));
-  const mids = mean(bands.slice(14, 40));
-  const highs = mean(bands.slice(40));
-  const masterLevel = clamp(bass * 0.44 + mids * 0.38 + highs * 0.18);
-  const energy = clamp(masterLevel * 0.34, 0, 0.34);
+  const fontsReady = useProductionFonts();
+  const audioFeatures = useAudioFeatures();
+
+  if (!fontsReady || !audioFeatures) return null;
+
+  const feature = audioFeatures.getFrame(frame);
 
   return (
-    <AbsoluteFill style={{backgroundColor: wine, overflow: 'hidden'}}>
+    <AbsoluteFill style={{backgroundColor: ink, overflow: 'hidden'}}>
       <GlobalStyles />
       <Audio src={staticFile('soundtrack.m4a')} />
-      <Artwork time={time} energy={energy} />
-      <ReactiveHalo time={time} energy={energy} />
-      <Atmosphere frame={frame} energy={energy} />
-      <Intro time={time} frame={frame} fps={fps} />
-      <BreakCard time={time} />
+      <Background time={time} feature={feature} />
+      <Atmosphere frame={frame} feature={feature} />
+      <AudioMotionLine feature={feature} top={112} emphasis={0.72} />
+      <Intro time={time} frame={frame} fps={fps} feature={feature} />
+      <BreakCard time={time} feature={feature} />
       <LyricDisplay time={time} />
-      <Outro time={time} frame={frame} fps={fps} masterLevel={masterLevel} bass={bass} />
-      <Equalizer bands={bands} bass={bass} mids={mids} highs={highs} />
-      <FrameChrome time={time} />
+      <Outro time={time} feature={feature} />
+      <SpectrumRail feature={feature} />
+      <FrameChrome time={time} feature={feature} />
       <EndFade time={time} />
     </AbsoluteFill>
   );

@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "source": {
+    "path": "public/soundtrack.m4a",
+    "sha256": "93084f293d491da1519732f3fa3cf6416c783d04e8ca18b5569c7608a8d4540d",
+    "sampleRate": 44100,
+    "decodedSamplesPerChannel": 6747584,
+    "channels": 2,
+    "durationSeconds": 153
+  },
+  "analysis": {
+    "frameRate": 60,
+    "frameCount": 9180,
+    "bandCount": 64,
+    "frequencyScale": "logarithmic",
+    "frequencyRangeHz": [
+      20,
+      20000
+    ],
+    "spectrumChannels": "combined stereo",
+    "spectrumWindow": "periodic Hann via FFmpeg showspectrumpic",
+    "spectrumScale": "logarithmic intensity, 80 dB display range",
+    "pressureWindowMilliseconds": 400,
+    "transientLevelWindowMilliseconds": 25,
+    "transientVisualPrerollMilliseconds": 33.333,
+    "pressureAttackMilliseconds": 80,
+    "pressureReleaseMilliseconds": 360
+  },
+  "percentiles": {
+    "momentaryDbfs": {
+      "p50": -8.031,
+      "p60": -7.808,
+      "p85": -7.186,
+      "p95": -6.507,
+      "p96": -6.466,
+      "p99": -6.264
+    },
+    "spectralFlux": {
+      "p80": 0.042831,
+      "p99": 0.12005
+    },
+    "lowBand": {
+      "p50": 0.817291,
+      "p98": 0.967455
+    },
+    "brightness": {
+      "p20": 0.064901,
+      "p95": 0.139262
+    }
+  },
+  "motion": {
+    "accents": [
+      {
+        "id": "chorus-title-01",
+        "start": 37.03,
+        "apex": 38.43,
+        "end": 40.08,
+        "intensity": 0.84,
+        "reason": "First complete title phrase"
+      },
+      {
+        "id": "verse-night",
+        "start": 64.06,
+        "apex": 65.98,
+        "end": 67.13,
+        "intensity": 0.34,
+        "reason": "Quiet emotional hold without fabricated loudness"
+      },
+      {
+        "id": "chorus-title-02",
+        "start": 104.26,
+        "apex": 105.67,
+        "end": 107.32,
+        "intensity": 0.98,
+        "reason": "Repeated title phrase and principal vocal peak"
+      },
+      {
+        "id": "outro-handoff",
+        "start": 113.81,
+        "apex": 116.05,
+        "end": 118.2,
+        "intensity": 0.9,
+        "reason": "Final clear lyric resolving into the original-title state"
+      },
+      {
+        "id": "original-title-reveal",
+        "start": 117.98,
+        "apex": 118.2,
+        "end": 119.1,
+        "intensity": 0.72,
+        "reason": "Original Russian title transition on the reviewed outro accent"
+      }
+    ],
+    "transientEventCount": 365,
+    "strongestTransientEvents": [
+      {
+        "timeSeconds": 2.633,
+        "strength": 1
+      },
+      {
+        "timeSeconds": 2.95,
+        "strength": 1
+      },
+      {
+        "timeSeconds": 3.2,
+        "strength": 1
+      },
+      {
+        "timeSeconds": 3.5,
+        "strength": 1
+      },
+      {
+        "timeSeconds": 4.4,
+        "strength": 1
+      },
+      {
+        "timeSeconds": 4.6,
+        "strength": 1
+      },
+      {
+        "timeSeconds": 4.75,
+        "strength": 1
+      },
+      {
+        "timeSeconds": 4.95,
+        "strength": 1
+      },
+      {
+        "timeSeconds": 5.117,
+        "strength": 1
+      },
+      {
+        "timeSeconds": 5.333,
+        "strength": 1
+      },
+      {
+        "timeSeconds": 6.067,
+        "strength": 1
+      },
+      {
+        "timeSeconds": 6.217,
+        "strength": 1
+      },
+      {
+        "timeSeconds": 8.4,
+        "strength": 1
+      },
+      {
+        "timeSeconds": 8.85,
+        "strength": 1
+      },
+      {
+        "timeSeconds": 10.083,
+        "strength": 1
+      },
+      {
+        "timeSeconds": 15.983,
+        "strength": 1
+      },
+      {
+        "timeSeconds": 24.817,
+        "strength": 1
+      },
+      {
+        "timeSeconds": 24.983,
+        "strength": 1
+      },
+      {
+        "timeSeconds": 25.55,
+        "strength": 1
+      },
+      {
+        "timeSeconds": 25.7,
+        "strength": 1
+      }
+    ],
+    "accentSnapshots": [
+      {
+        "id": "chorus-title-01",
+        "timeSeconds": 38.43,
+        "pressure": 0.2822,
+        "impact": 0.7515,
+        "emotion": 0.84,
+        "hero": 0,
+        "lineWidthPx": 758
+      },
+      {
+        "id": "verse-night",
+        "timeSeconds": 65.98,
+        "pressure": 0,
+        "impact": 0.0949,
+        "emotion": 0.34,
+        "hero": 0,
+        "lineWidthPx": 598
+      },
+      {
+        "id": "chorus-title-02",
+        "timeSeconds": 105.67,
+        "pressure": 0.3643,
+        "impact": 0.5647,
+        "emotion": 0.98,
+        "hero": 0.6,
+        "lineWidthPx": 866
+      },
+      {
+        "id": "outro-handoff",
+        "timeSeconds": 116.05,
+        "pressure": 0.9777,
+        "impact": 0,
+        "emotion": 0.9,
+        "hero": 1,
+        "lineWidthPx": 920
+      },
+      {
+        "id": "original-title-reveal",
+        "timeSeconds": 118.2,
+        "pressure": 0.3404,
+        "impact": 0,
+        "emotion": 0.72,
+        "hero": 0,
+        "lineWidthPx": 716
+      }
+    ],
+    "lineWidthPercentilesPx": {
+      "p50": 542,
+      "p85": 714,
+      "p95": 796.0999999999985,
+      "p99": 824,
+      "maximum": 920
+    },
+    "majorFrameFraction": 0.004793,
+    "heroFrameFraction": 0.001198,
+    "widthFormula": "min(920, 2 * round((520 + 300 * reach + 100 * hero) / 2))"
+  },
+  "artifact": {
+    "path": "public/audio-features.bin",
+    "bytes": 688532,
+    "sha256": "0a0f32526c89ea7c65e925f78d40f8c48ca9b865e2ce39991c256045abb4a683",
+    "headerBytes": 32,
+    "recordBytes": 75,
+    "recordLayout": {
+      "bandsUint8": [
+        0,
+        63
+      ],
+      "pressureUint8": 64,
+      "impactUint8": 65,
+      "lowEndUint8": 66,
+      "brightnessUint8": 67,
+      "emotionUint8": 68,
+      "heroUint8": 69,
+      "reachUint8": 70,
+      "momentaryDbfsInt16x100": [
+        71,
+        72
+      ],
+      "samplePeakDbfsInt16x100": [
+        73,
+        74
+      ]
+    }
+  }
+}

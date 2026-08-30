@@ -7,13 +7,13 @@
     ·
     <a href="projects/tanisea-lyric-film">Browse the source</a>
     ·
-    <a href="audits/tanisea-ksviety-remix.md">Read the timing audit</a>
+    <a href="audits/tanisea-vnext-qc-implementation.md">Read the QC implementation</a>
   </p>
   <p>
     <code>Remotion 4</code>
     <code>TypeScript 7.0.2</code>
     <code>1080 × 1080</code>
-    <code>30 fps</code>
+    <code>60 fps</code>
     <code>153 seconds</code>
     <code>HEVC hvc1</code>
   </p>
@@ -57,9 +57,12 @@ The first project is a 153-second English lyric film rebuilt from its local Remo
 - Removed the late wild-chant sequence that did not correspond cleanly to the performed words.
 - Designed a native original-title outro rather than covering the old export with a replacement image.
 - Retained live artwork motion, deterministic particles, spectrum-driven animation, and frame chrome through the ending.
-- Rendered all 4,590 frames as one continuous composition.
-- Delivered a 66.2 MB HEVC master with `hvc1`, `faststart`, and the original AAC stream copied bit-for-bit.
-- Audited every displayed line and stored a machine-readable cue map for the next timing pass.
+- Rebuilt all 9,180 frames at 60 fps as one continuous composition.
+- Applied all 24 externally measured phrase onsets with separate vocal, entrance, legibility, highlight, and exit windows.
+- Replaced the duplicated hand-timed chorus with one normalized semantic marker stack.
+- Added deterministic stereo audio features, a sharper 64-band instrument rail, and bounded emotional line reach.
+- Preserved the original AAC stream without gain or normalization in the compact HEVC delivery path.
+- Stored the complete external report, exact implemented cue map, and decision record in the repository.
 
 ## Production model
 
@@ -88,14 +91,11 @@ The important distinction is between **vocal time** and **visual time**. A lyric
 
 ## Audit status and vNext
 
-The current production master is visually coherent and technically verified. A deeper timing audit also found specific sync debt that should be addressed in the next source render:
+Two independent 30 fps audits found no global stream offset, but measured line-level errors as large as `0.74 s` early and `1.17 s` late. Their onset definitions differ by `10–450 ms`, so vNext preserves both tables and uses their rounded midpoint rather than claiming false sample accuracy. Consensus anchors place the verse at `01:04.06`, the critical second “And raise the ocean” at `01:40.89`, and the final fire line at `01:53.81` before the original-title transition at `01:58.20`.
 
-- the first verse vocal begins around `60.09`, while the current break-card handoff waits until `64.08`;
-- several second-chorus lines drift between `0.25` and `1.53` seconds late;
-- the final clear chorus line remains until `118.00`, although the repeated title vocal begins around `116.05`;
-- the current lyric component adds `0.32–0.50` seconds of perceived entrance lag through its visual envelope.
+The 60 fps source makes every lyric fully legible three frames before its measured onset and switches semantic focus on the onset. Adjacent cards finish their handoff by the next onset, eliminating both blank gaps and double-text states. Runtime assertions block regressions in cue bounds, targets, adjacent handoffs, and repeated-chorus structure.
 
-Nothing is hidden behind “close enough.” The [human-readable audit](audits/tanisea-ksviety-remix.md) explains every line, and the [machine-readable audit](audits/tanisea-ksviety-remix.json) contains the restored vNext cue windows.
+Nothing is hidden behind “close enough.” Read the [supplied synchronization report](audits/Tanisea_Lyric_Film_Sync_QC_Report.md), the independent [timing QA audit](audits/Tanisea_Lyric_Film_Timing_QA_Audit.md), the [reconciliation record](audits/tanisea-vnext-qc-implementation.md), and the [exact machine-readable cue map](audits/tanisea-vnext-qc-implementation.json).
 
 ### Honest first-project assessment
 
@@ -105,15 +105,13 @@ The [full retrospective and semantic-highlighting proposal](docs/first-project-r
 
 ### 10/10 scientific audio target
 
-The current equalizer is truthfully audio-reactive but not a calibrated analyzer; its scientific fidelity is assessed at approximately **5/10**. The vNext goal is a documented **10/10 internal engineering target**: stereo, windowed and calibrated spectral analysis; sample-indexed transient events; ITU/EBU loudness and true peak; published units and band edges; deterministic artifacts; reference-signal tests; and a sharper 60 fps instrument display.
+The earlier equalizer was truthfully audio-reactive but not a calibrated analyzer and was assessed at approximately **5/10**. vNext now stores a deterministic 60 fps stereo feature package with 64 logarithmic Hann-windowed bands, published 20 Hz–20 kHz limits, an 80 dB display range, dBFS values, pressure, transient impact, low-end weight, brightness, authored emotional accents, and checksum-backed artifacts. Full ITU/EBU loudness, oversampled true peak, calibration fixtures, and independent numerical validation remain required before making a literal scientific-accuracy claim.
 
 The approved claim is **“millisecond-resolved analysis with frame-accurate visualization.”** At the proposed 60 fps, the image updates every `16.667 ms`; stored events may be reported to 1 ms without pretending the video itself refreshes every millisecond. The [scientific audio-visualization specification](docs/scientific-audio-visualization.md) defines the architecture, visual language, numerical tolerances, references, and pass/fail rubric.
 
 ### 10/10 pixel-perfect visual target
 
-The vNext visual contract now controls the entire raster-to-delivery path: sufficiently resolved assets, bundled font coverage, final-grid geometry, 2× PNG rendering, explicit BT.709 conversion, 4:4:4 reference frames, 4:2:0 stress tests, one documented downsample, a codec-quality ladder, decoded-frame comparisons, and temporal artifact review.
-
-The current source audit exposed four specific blockers before a new master can claim 10/10 visual quality: the render script permits JPEG intermediates, Remotion 4 colour conversion is not explicitly pinned to BT.709, the zoomed 1080px artwork is under-resolved for a 2× reference, and the Russian title uses a host-dependent system font. The [pixel-perfect visual workflow](docs/pixel-perfect-visual-workflow.md) records the evidence, fixes, commands, preflight card, acceptance rubric, and blocking failures.
+The vNext visual contract controls the raster-to-delivery path: bundled font coverage, native-grid artwork, pixel-aligned geometry, 2× PNG rendering, explicit BT.709 metadata, a 4:4:4 reference, one documented downsample, 10-bit HEVC delivery, decoded-frame inspection, and temporal artifact review. Host-dependent Cyrillic fallback and JPEG browser intermediates have been removed; Playfair is bundled under the SIL OFL.
 
 ### Cleaner emotional audio-reactive motion
 
@@ -127,8 +125,12 @@ For the central title rails, the initial range runs from a calm `520–580 px` t
 assets/
   tanisea-original-title.jpg       README hero captured from the final master
 audits/
+  Tanisea_Lyric_Film_Sync_QC_Report.md supplied full-master synchronization report
+  Tanisea_Lyric_Film_Timing_QA_Audit.md independent timing, animation, lyric, and workflow audit
   tanisea-ksviety-remix.md         complete timing and translation review
   tanisea-ksviety-remix.json       machine-readable current/recommended cue map
+  tanisea-vnext-qc-implementation.md applied decisions and verification gates
+  tanisea-vnext-qc-implementation.json exact 60 fps cue contract
 docs/
   emotional-audio-reactive-motion.md clean sound contact and bounded emotional line reach
   first-project-retrospective.md    scorecard and non-linear highlighting design
@@ -146,6 +148,7 @@ projects/
 ```sh
 cd projects/tanisea-lyric-film
 npm ci
+npm run features
 npm run dev
 ```
 
@@ -156,7 +159,7 @@ npm run check
 npm run render
 ```
 
-The checked-in `npm run render` command reproduces today's production source snapshot; it is not the vNext pixel-perfect master path. Before making a vNext master, apply the timing recommendations, refactor visual entrance/exit windows away from vocal cue boundaries, and follow the [2× PNG/BT.709 reference and decoded-delivery workflow](docs/pixel-perfect-visual-workflow.md).
+The checked-in render command creates the vNext 2× PNG/BT.709 4:4:4 reference. The release workflow downsamples that reference once to 1080×1080, encodes 10-bit HEVC, copies the locked AAC stream, and performs full decode and metadata checks.
 
 ## Working principles
 
@@ -184,8 +187,12 @@ The checked-in `npm run render` command reproduces today's production source sna
 | [TypeScript-first workflow](docs/typescript-first-workflow.md) | How are current and future projects kept on strict, latest-stable, exactly pinned TypeScript instead of JavaScript? |
 | [Production workflow](docs/production-workflow.md) | How do we take a soundtrack from lyric authority through timing, animation, rendering, and delivery? |
 | [QA checklist](docs/qa-checklist.md) | What must pass before a lyric film is production-ready? |
-| [Tanisea timing audit](audits/tanisea-ksviety-remix.md) | Where does the current film still differ from the performed audio or source meaning? |
-| [Tanisea cue data](audits/tanisea-ksviety-remix.json) | What exact timestamps should a future implementation restore? |
+| [Historical source-recovery audit](audits/tanisea-ksviety-remix.md) | What did the first provisional audit infer, and which findings were later superseded? |
+| [Historical cue data](audits/tanisea-ksviety-remix.json) | What provisional timestamps were retained for provenance before the two full-master reports? |
+| [Supplied full-master QC report](audits/Tanisea_Lyric_Film_Sync_QC_Report.md) | What line-level, wording, pacing, readability, audio, and export issues were measured in the previous master? |
+| [Independent timing QA audit](audits/Tanisea_Lyric_Film_Timing_QA_Audit.md) | Which waveform attacks, semantic stresses, cumulative-drift patterns, BPM estimate, and platform-audio risks were independently detected? |
+| [vNext QC implementation](audits/tanisea-vnext-qc-implementation.md) | Which report findings were applied, which user-approved wording prevailed, and what must pass before release? |
+| [vNext exact cue contract](audits/tanisea-vnext-qc-implementation.json) | What 24 onsets, inferred ends, visual leads, wording, and repeated-section policy are rendered now? |
 
 ## Roadmap
 
@@ -199,17 +206,17 @@ The checked-in `npm run render` command reproduces today's production source sna
 - [x] Define the clean emotional-motion envelope, line-reach mapping, impact budget, and sync gates.
 - [x] Migrate the current Remotion source from JavaScript/JSX to strict TypeScript/TSX and pin TypeScript `7.0.2`.
 - [x] Define the TypeScript-first policy and controlled stable-compiler upgrade gate for future projects.
-- [ ] Separate vocal windows from visual animation windows.
-- [ ] Restore the audited vNext cue map.
-- [ ] Implement semantic cue targets that support intentional backward, repeated, and simultaneous activation.
+- [x] Separate vocal windows from visual animation windows.
+- [x] Apply all 24 measured QC onsets and store the exact vNext cue map.
+- [x] Implement semantic cue targets that support intentional backward, repeated, and simultaneous activation.
 - [ ] Complete a fluent Russian/English editorial approval pass.
 - [ ] Build the deterministic multi-resolution stereo analysis pipeline and fixture suite.
-- [ ] Replace the artistic 56-bar baseline with a calibrated 64-band, 60 fps instrument rail.
+- [x] Replace the artistic 56-bar baseline with a documented 64-band, 60 fps instrument rail.
 - [ ] Validate loudness, true peak, spectrum, stereo behavior, event timing, and rendered values independently.
-- [ ] Generate the deterministic sustained-pressure, transient-impact, and emotional-accent motion envelope.
-- [ ] Replace duplicated local line formulas with one reusable, pixel-aligned `AudioMotionLine` component.
-- [ ] Replace the host-dependent Cyrillic title font and recover artwork at `2700×2700` minimum.
-- [ ] Pin PNG intermediates and BT.709, then build the 2× preflight card and repeat-frame hash tests.
+- [x] Generate the deterministic sustained-pressure, transient-impact, and emotional-accent motion envelope.
+- [x] Replace duplicated local line formulas with one reusable, pixel-aligned `AudioMotionLine` component.
+- [x] Replace the host-dependent Cyrillic title font and remove the under-resolved artwork zoom.
+- [x] Pin PNG intermediates and BT.709 in the 2× reference path.
 - [ ] Complete a downsampling bake-off, codec ladder, decoded-frame diff, and temporal artifact audit.
 - [ ] Render and publish the vNext production master.
 
