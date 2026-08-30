@@ -82,8 +82,28 @@ requireValue(audio?.channels === 2, `Expected stereo, got ${audio?.channels} cha
 
 const duration = Number(probe.format?.duration);
 const startTime = Number(probe.format?.start_time);
+const videoDuration = Number(video?.duration);
+const videoStartTime = Number(video?.start_time);
+const audioDuration = Number(audio?.duration);
+const audioStartTime = Number(audio?.start_time);
 requireValue(Math.abs(duration - 153) <= 0.001, `Expected 153.000 s, got ${duration}`);
 requireValue(Math.abs(startTime) <= 0.001, `Expected zero start time, got ${startTime}`);
+requireValue(
+  Math.abs(videoDuration - 153) <= 0.001,
+  `Expected 153.000 s video stream, got ${videoDuration}`,
+);
+requireValue(
+  Math.abs(videoStartTime) <= 0.001,
+  `Expected zero video start time, got ${videoStartTime}`,
+);
+requireValue(
+  Math.abs(audioDuration - 153) <= 0.001,
+  `Expected 153.000 s audio stream, got ${audioDuration}`,
+);
+requireValue(
+  Math.abs(audioStartTime) <= 0.001,
+  `Expected zero audio start time, got ${audioStartTime}`,
+);
 
 const streamHash = (path: string): string =>
   execFileSync(
@@ -200,6 +220,8 @@ process.stdout.write(
       mebibytes: Number((size / 1024 / 1024).toFixed(2)),
       sha256: checksum,
       durationSeconds: duration,
+      videoDurationSeconds: videoDuration,
+      audioDurationSeconds: audioDuration,
       frameCount: Number(video?.nb_frames),
       frameRate: video?.avg_frame_rate,
       dimensions: `${video?.width}x${video?.height}`,

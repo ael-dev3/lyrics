@@ -46,6 +46,7 @@ The first project is a 153-second English lyric film rebuilt from its local Remo
 
 | Deliverable | Purpose | Link |
 | --- | --- | --- |
+| vNext platform delivery | The exact 60 fps HEVC/AAC MP4 accompanying this source snapshot | [Browse MP4](deliverables/Tanisea-Lyric-Film-vNext-60fps-Final.mp4) |
 | Production master | Compact, full-length HEVC delivery with the untouched original AAC soundtrack | [Download MP4](https://github.com/ael-dev3/lyrics/releases/latest/download/Tanisea-Lyric-Film-Production-Master.mp4) |
 | Source-reference export | The earlier synced H.264 render used for visual and timing comparison | [Download MP4](https://github.com/ael-dev3/lyrics/releases/latest/download/Tanisea-Lyric-Film-Source-Reference.mp4) |
 | Reproducible source archive | Remotion project, artwork, fonts, soundtrack, package lock, and timing data | [Download ZIP](https://github.com/ael-dev3/lyrics/releases/latest/download/Tanisea-Lyric-Film-Source-v1.0.0.zip) |
