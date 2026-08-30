@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "auditId": "tanisea-ksviety-remix-production-master-2026-08-30",
+  "auditedAsset": {
+    "filename": "Tanisea - I'll Scream to the Whole World [English Lyric Film - Production Master].mp4",
+    "sha256": "78e14d9afd84ed8290ac5e91e0419e725d920ba959e2ceca54e91a63c564833b",
+    "durationSeconds": 153.0,
+    "fps": 30,
+    "frameCount": 4590,
+    "width": 1080,
+    "height": 1080,
+    "videoCodec": "hevc",
+    "videoTag": "hvc1",
+    "audioCodec": "aac",
+    "audioSampleRate": 44100,
+    "audioStreamMd5": "d7bc6720b532a4a1c6b3035c65eed91c",
+    "sizeBytes": 66221023
+  },
+  "evidence": {
+    "soundtrackSha256": "93084f293d491da1519732f3fa3cf6416c783d04e8ca18b5569c7608a8d4540d",
+    "currentTimingSourceSha256": "54d17a525feb91aa836b1a8500593658aeb1f7e1acd61845e0832f4654b13bc1",
+    "referenceTimingSourceSha256": "86c4a7720817826480158978f570bc1ed6cc0f699643855df9c90acad5661ad2",
+    "currentCompositionSourceSha256": "f837ad16fe867c7bdb5af04267fda93ba428161749a2e0e8f630cfd989442226",
+    "speechModel": "whisper.cpp large-v3-turbo multilingual",
+    "publishedLyricReference": "https://www.shazam.com/song/1759983214/d0b7d0b0d0bad180d0b8d187d183-d0bdd0b0-d0b2d0b5d181d18c-d0bcd0b8d180-ksviety-remix",
+    "referencePolicy": "Automatic transcription proposes timing evidence only. The recommended map restores the earlier hand-aligned source where it agrees with the soundtrack structure."
+  },
+  "deltaDefinition": "current minus recommended; positive is late and negative is early",
+  "severityThresholdsSeconds": {
+    "passMaximum": 0.1,
+    "minorMaximum": 0.25,
+    "noticeableMaximum": 0.75,
+    "majorMinimumExclusive": 0.75
+  },
+  "stateAudit": [
+    {
+      "id": "break-card",
+      "current": {"start": 50.0, "end": 64.0},
+      "recommended": {"start": 50.0, "end": 60.0},
+      "severity": "major",
+      "note": "The clear verse vocal begins around 60.09."
+    },
+    {
+      "id": "title-outro",
+      "current": {"start": 118.0, "end": 153.0},
+      "recommended": {"start": 116.05, "end": 153.0},
+      "startDelta": 1.95,
+      "severity": "major",
+      "note": "The repeated title vocal begins around 116.05."
+    }
+  ],
+  "lineAudit": [
+    {"id":"C1-01","text":"And I'll erase the horizon","current":[24.0,27.34],"recommended":[24.0,27.34],"delta":[0.0,0.0],"severity":"pass","confidence":"medium"},
+    {"id":"C1-02","text":"And split it in half","current":[27.34,30.09],"recommended":[27.34,30.36],"delta":[0.0,-0.27],"severity":"noticeable","confidence":"medium"},
+    {"id":"C1-03","text":"I'll fold the peaks of every mountain","current":[30.09,32.95],"recommended":[30.36,33.0],"delta":[-0.27,-0.05],"severity":"noticeable","confidence":"high"},
+    {"id":"C1-04","text":"And raise the ocean","current":[32.95,36.51],"recommended":[33.0,36.05],"delta":[-0.05,0.46],"severity":"noticeable","confidence":"high"},
+    {"id":"C1-05","text":"I'll scream to the whole world","current":[36.51,40.2],"recommended":[36.05,40.2],"delta":[0.46,0.0],"severity":"noticeable","confidence":"high"},
+    {"id":"C1-06","text":"Let the earth tremble","current":[40.27,43.0],"recommended":[40.27,43.0],"delta":[0.0,0.0],"severity":"pass","confidence":"high"},
+    {"id":"C1-07","text":"And through the walls of apartments","current":[43.05,46.37],"recommended":[43.05,46.37],"delta":[0.0,0.0],"severity":"pass","confidence":"high"},
+    {"id":"C1-08","text":"I'll pass through as a wave of fire","current":[46.37,50.0],"recommended":[46.37,50.0],"delta":[0.0,0.0],"severity":"pass","confidence":"high"},
+    {"id":"V1-01","text":"Night in the silence freezes helplessly;","current":[64.08,66.61],"recommended":[60.09,67.0],"delta":[3.99,-0.39],"severity":"major","confidence":"high"},
+    {"id":"V1-02","text":"The sky sagged a silent ceiling","current":[66.61,70.0],"recommended":[67.05,70.0],"delta":[-0.44,0.0],"severity":"noticeable","confidence":"high"},
+    {"id":"V1-03","text":"I remember what happened and questions gnaw at me","current":[70.05,73.0],"recommended":[70.05,73.0],"delta":[0.0,0.0],"severity":"pass","confidence":"high"},
+    {"id":"V1-04","text":"Who am I? Where from? And where is my home?","current":[73.08,76.0],"recommended":[73.08,76.0],"delta":[0.0,0.0],"severity":"pass","confidence":"high","textReview":true},
+    {"id":"V1-05","text":"My essence walked along the edge","current":[76.05,79.0],"recommended":[76.05,79.0],"delta":[0.0,0.0],"severity":"pass","confidence":"high"},
+    {"id":"V1-06","text":"My hands shook from the weight of years","current":[79.05,82.0],"recommended":[79.05,82.0],"delta":[0.0,0.0],"severity":"pass","confidence":"high"},
+    {"id":"V1-07","text":"Some spoke; others stayed silent","current":[82.06,86.0],"recommended":[82.06,86.0],"delta":[0.0,0.0],"severity":"pass","confidence":"high"},
+    {"id":"V1-08","text":"And someone behind my back couldn't hold back laughter","current":[86.05,90.2],"recommended":[86.05,90.2],"delta":[0.0,0.0],"severity":"pass","confidence":"high"},
+    {"id":"C2-01","text":"And I'll erase the horizon","current":[91.05,94.3],"recommended":[91.05,94.0],"delta":[0.0,0.3],"severity":"noticeable","confidence":"high"},
+    {"id":"C2-02","text":"And split it in half","current":[94.3,97.0],"recommended":[94.05,96.0],"delta":[0.25,1.0],"severity":"major","confidence":"high"},
+    {"id":"C2-03","text":"I'll fold the peaks of every mountain","current":[97.09,101.53],"recommended":[96.06,100.0],"delta":[1.03,1.53],"severity":"major","confidence":"high"},
+    {"id":"C2-04","text":"And raise the ocean","current":[101.53,104.0],"recommended":[100.06,104.0],"delta":[1.47,0.0],"severity":"major","confidence":"high"},
+    {"id":"C2-05","text":"I'll scream to the whole world","current":[104.0,107.0],"recommended":[104.05,106.2],"delta":[-0.05,0.8],"severity":"major","confidence":"high"},
+    {"id":"C2-06","text":"Let the earth tremble","current":[107.05,110.7],"recommended":[106.36,110.0],"delta":[0.69,0.7],"severity":"noticeable","confidence":"high"},
+    {"id":"C2-07","text":"And through the walls of apartments","current":[110.7,114.25],"recommended":[110.05,112.88],"delta":[0.65,1.37],"severity":"major","confidence":"high"},
+    {"id":"C2-08","text":"I'll pass through as a wave of fire","current":[114.25,118.0],"recommended":[112.88,116.0],"delta":[1.37,2.0],"severity":"major","confidence":"high"}
+  ],
+  "recommendedCueMap": [
+    {"id":"C1-02","line":[27.34,30.36],"cues":[["And",27.34,27.51],["split",27.51,28.74],["it in half",28.74,30.36]]},
+    {"id":"C1-03","line":[30.36,33.0],"cues":[["I'll fold",30.36,31.04],["the peaks",31.04,32.09],["of every mountain",32.09,33.0]]},
+    {"id":"C1-04","line":[33.0,36.05],"cues":[["And",33.0,33.23],["raise",33.23,34.84],["the ocean",34.84,36.05]]},
+    {"id":"C1-05","line":[36.05,40.2],"cues":[["I'll",36.05,36.23],["scream",36.23,37.85],["to",37.85,38.32],["the whole",38.32,38.95],["world",38.95,40.0]]},
+    {"id":"V1-01","line":[60.09,67.0],"cues":[["Night",60.09,61.8],["in",61.8,62.25],["the silence",62.25,65.0],["freezes",65.0,65.99],["helplessly;",65.99,67.0]]},
+    {"id":"V1-02","line":[67.05,70.0],"cues":[["The sky",67.05,67.44],["sagged",67.44,68.32],["a silent",68.54,69.09],["ceiling",69.09,70.0]]},
+    {"id":"C2-01","line":[91.05,94.0],"cues":[["And",91.05,91.21],["I'll",91.21,91.42],["erase",91.42,92.47],["the horizon",92.47,94.0]]},
+    {"id":"C2-02","line":[94.05,96.0],"cues":[["And",94.05,94.14],["split",94.14,95.12],["it in half",95.12,96.0]]},
+    {"id":"C2-03","line":[96.06,100.0],"cues":[["I'll fold",96.06,97.05],["the peaks",97.1,98.64],["of every mountain",98.64,100.0]]},
+    {"id":"C2-04","line":[100.06,104.0],"cues":[["And",100.06,100.31],["raise",100.31,102.45],["the ocean",102.45,104.0]]},
+    {"id":"C2-05","line":[104.05,106.2],"cues":[["I'll",104.05,104.11],["scream",104.11,104.91],["to",104.91,105.14],["the whole",105.14,105.5],["world",105.5,106.0]]},
+    {"id":"C2-06","line":[106.36,110.0],"cues":[["Let",106.36,107.26],["the earth",107.26,108.88],["tremble",108.88,110.0]]},
+    {"id":"C2-07","line":[110.05,112.88],"cues":[["And",110.05,110.18],["through",110.18,111.08],["the walls",111.08,111.98],["of apartments",111.98,112.88]]},
+    {"id":"C2-08","line":[112.88,116.0],"cues":[["I'll pass through",112.88,114.14],["as a wave",114.14,115.22],["of fire",115.22,116.0]]}
+  ],
+  "renderingArchitectureFinding": {
+    "currentOpacityEnterSeconds": 0.32,
+    "currentMotionAndBlurEnterSeconds": 0.5,
+    "currentPreEndFadeSeconds": 0.32,
+    "severity": "major-systemic",
+    "recommendation": "Separate vocal and visual windows. Complete the visual entrance by vocalStart and begin the visual exit at or after vocalEnd."
+  }
+}
