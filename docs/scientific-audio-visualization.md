@@ -100,6 +100,8 @@ flowchart LR
 
 The scientific instrument rail consumes calibrated values. The cinematic layers consume a separate normalized envelope derived from those values. Artistic gain, compression, glow, colour, and peak hold must never modify the stored scientific measurements.
 
+Implement the extractor, schemas, artifact readers, validators, and Remotion instrument components in strict TypeScript under the [TypeScript-first workflow](typescript-first-workflow.md). Binary DSP kernels may use a reviewed native or WebAssembly dependency, but the production boundary remains typed, versioned, and runtime-validated; a TypeScript interface alone is not evidence that an external artifact is valid.
+
 ## Measurement contract
 
 ### 1. Source integrity
@@ -174,6 +176,8 @@ Store two separate streams:
 2. **Display controls** — normalized values with explicitly versioned attack, release, compression, and limits.
 
 The analyzer may show an instantaneous bar core plus a clearly distinguishable peak marker. Any hold or decay constant must be recorded. The previous implementation's unlabelled maximum of current and prior frames must not be used in the scientific stream.
+
+The cinematic interpretation is specified separately in [clean emotional audio-reactive motion](emotional-audio-reactive-motion.md). It may use track-relative percentiles, shaped attack/release, transient anticipation, manual emotional accents, and bounded line overreach, but those transforms live only in the artistic envelope and never alter the calibrated feature artifact.
 
 ### 7. Reproducible artifacts
 
@@ -344,7 +348,7 @@ An internal **10/10** requires full credit in every category and no blocking fai
 
 ## vNext implementation order
 
-1. Build the deterministic offline analysis extractor and manifest schema.
+1. Build the deterministic, strictly typed offline analysis extractor, manifest schema, and runtime artifact validator.
 2. Add generated fixtures and reference-value tests before changing the visualizer.
 3. Produce and validate the Tanisea scientific feature package.
 4. Convert the composition from 30 fps to 60 fps and confirm all duration math.

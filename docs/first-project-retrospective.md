@@ -84,8 +84,8 @@ If a line requires several long jumps across the display, treat that as an edito
 
 Keep English segments in natural visual order. Store cue events independently in chronological performance order and let each event target any segment ID.
 
-```js
-{
+```ts
+const semanticLine = {
   id: 'line-01',
   sourceText: 'Verified source-language line',
   text: 'Natural English translation',
@@ -125,7 +125,7 @@ Keep English segments in natural visual order. Store cue events independently in
       confidence: 'medium'
     }
   ]
-}
+} as const;
 ```
 
 `cueEvents` must be chronological. The order of their target positions must **not** be required to increase. This distinction is what allows natural English and accurate Russian timing to coexist.
@@ -150,6 +150,8 @@ The renderer should support:
 - several source cues targeting the same English group;
 - overlapping cue events when the performance overlaps;
 - no lyric target for an explicitly documented unclear or non-literal vocal state.
+
+Implement this model as strict TypeScript types plus runtime validation for imported or generated data. Follow the [TypeScript-first workflow](typescript-first-workflow.md); compiler types improve authored code, while runtime validation still protects JSON and analysis artifacts at trust boundaries.
 
 ## Validation rules
 

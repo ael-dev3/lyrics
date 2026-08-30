@@ -8,6 +8,21 @@
 - [ ] Confirm the lyric reference is for the exact soundtrack version.
 - [ ] Record translation decisions and any artist-requested wording.
 
+## TypeScript source
+
+- [ ] The npm registry's stable `latest` TypeScript tag was checked at the planned upgrade point; beta, RC, `next`, and nightly channels were excluded from production.
+- [ ] `package.json` and the lockfile exact-pin the same reviewed stable compiler version.
+- [ ] Authored application, analysis, rendering, validation, and reusable component source uses `.ts` or `.tsx`, with no new `.js` or `.jsx` modules.
+- [ ] Strict checking, checked indexed access, exact optional properties, isolated modules, and no emit remain enabled.
+- [ ] No broad `any`, `@ts-ignore`, unchecked cast, or non-null assertion conceals uncertain timing, analysis, geometry, or manifest data.
+- [ ] Imported JSON and generated artifacts pass runtime validation before typed production use.
+- [ ] `npm ci` and `npm run typecheck` pass from the committed lockfile in a clean environment.
+- [ ] Remotion discovers every expected composition from the `.ts` entry point.
+- [ ] Timing, analysis, motion, and deterministic fixture suites still pass after a compiler upgrade.
+- [ ] Representative intro, verse, chorus, analyzer, and outro renders remain visually and temporally equivalent unless an intentional change is documented.
+- [ ] The release manifest records TypeScript, Node.js, npm, Remotion, Chromium, FFmpeg, and lockfile identity.
+- [ ] The full [TypeScript-first workflow](typescript-first-workflow.md) has no blocking failure.
+
 ## Timing data
 
 - [ ] Every line has a stable ID.
@@ -85,6 +100,26 @@
 - [ ] Expanded intro, break, and outro data remains subordinate to the authored composition.
 - [ ] Random animation is seeded and deterministic.
 - [ ] Final fade reaches the intended colour and opacity.
+
+## Emotional audio-reactive motion
+
+- [ ] Sustained pressure, transient impact, low-end weight, spectral brightness, and editorial emotion are separate controls.
+- [ ] Artistic controls are derived from the frozen scientific feature package without modifying its raw values.
+- [ ] Loudness and transient normalization use frozen track-relative percentiles rather than per-frame or per-line renormalization.
+- [ ] The transient line-reach apex lands within half a 60fps frame of the stored event or reviewed emotional apex.
+- [ ] Sustained loudness has documented attack/release and does not create fake repeated transients.
+- [ ] Quiet passages remain visibly calmer than builds and choruses.
+- [ ] At least `98%` of active frames remain below hero reach.
+- [ ] Only reviewed exceptional events enter the `900–920 px` title-rail range.
+- [ ] Line width is hard-capped, quantized symmetrically, and never crosses the safe frame or collides with text.
+- [ ] The solid line core remains `2–4` final pixels; glow is a separate subordinate layer.
+- [ ] Bass adds bounded weight rather than moving lyrics or scientific labels.
+- [ ] Dense beats do not produce one-frame chatter or make every kick a maximum-width event.
+- [ ] Every manual emotional accent has an owner, reason, bounded intensity, target, and reviewed timing.
+- [ ] Two motion-envelope generations are byte-identical and their manifest hashes match.
+- [ ] Silence, crescendo, impulse, sustained-loud, repeated-kick, bass-only, high-transient, clipped, and quiet-manual-accent fixtures pass.
+- [ ] The first chorus, second build, repeated chorus, and title outro have been reviewed with audio at normal speed.
+- [ ] The full [clean emotional audio-reactive motion specification](emotional-audio-reactive-motion.md) has no blocking failure.
 
 ## Pixel-perfect visual pipeline
 

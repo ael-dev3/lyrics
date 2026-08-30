@@ -11,6 +11,7 @@
   </p>
   <p>
     <code>Remotion 4</code>
+    <code>TypeScript 7.0.2</code>
     <code>1080 × 1080</code>
     <code>30 fps</code>
     <code>153 seconds</code>
@@ -30,6 +31,7 @@ The goal is a repeatable production system that:
 - keeps lyric timing separate from animation entrance and exit timing;
 - builds intros, verses, choruses, breaks, and outros inside one visual language;
 - regenerates the complete film from source after every meaningful change;
+- uses strict, exactly pinned TypeScript for all authored source and reusable workflow code;
 - preserves source audio quality while delivering a compact final file;
 - separates calibrated audio measurements from artistic audio-reactive motion;
 - reports analysis resolution, video cadence, units, transforms, and uncertainty honestly;
@@ -113,6 +115,12 @@ The vNext visual contract now controls the entire raster-to-delivery path: suffi
 
 The current source audit exposed four specific blockers before a new master can claim 10/10 visual quality: the render script permits JPEG intermediates, Remotion 4 colour conversion is not explicitly pinned to BT.709, the zoomed 1080px artwork is under-resolved for a 2× reference, and the Russian title uses a host-dependent system font. The [pixel-perfect visual workflow](docs/pixel-perfect-visual-workflow.md) records the evidence, fixes, commands, preflight card, acceptance rubric, and blocking failures.
 
+### Cleaner emotional audio-reactive motion
+
+The vNext cinematic visualisation now has a separate motion-design contract. Sustained track-relative pressure controls broad line reach; sample-indexed transients create brief overreach whose apex lands on the sound; bass adds bounded weight; and human-authored accents preserve emotional meaning that loudness alone cannot infer.
+
+For the central title rails, the initial range runs from a calm `520–580 px` to a hard-capped `900–920 px` hero state. Hero reach is reserved for roughly the top `1–2%` of musical energy or a reviewed emotional apex, keeping the overall film cleaner while making the loudest moments materially more powerful. The [clean emotional audio-reactive motion specification](docs/emotional-audio-reactive-motion.md) defines the signal architecture, equations, timing, Tanisea loudness baseline, line geometry, impact budget, fixtures, and pass/fail gates.
+
 ## Repository map
 
 ```text
@@ -122,11 +130,13 @@ audits/
   tanisea-ksviety-remix.md         complete timing and translation review
   tanisea-ksviety-remix.json       machine-readable current/recommended cue map
 docs/
+  emotional-audio-reactive-motion.md clean sound contact and bounded emotional line reach
   first-project-retrospective.md    scorecard and non-linear highlighting design
   pixel-perfect-visual-workflow.md  deterministic raster, colour, chroma, and artifact contract
   production-workflow.md           end-to-end production method
   qa-checklist.md                  editorial, audiovisual, and delivery QA
   scientific-audio-visualization.md 10/10 measurement and display target
+  typescript-first-workflow.md      strict source, compiler, migration, and upgrade policy
 projects/
   tanisea-lyric-film/              reproducible Remotion source snapshot
 ```
@@ -142,7 +152,7 @@ npm run dev
 Validate and render:
 
 ```sh
-npx remotion compositions src/index.jsx
+npm run check
 npm run render
 ```
 
@@ -151,16 +161,17 @@ The checked-in `npm run render` command reproduces today's production source sna
 ## Working principles
 
 1. Work from animation source—not from a previously encoded video.
-2. Lock the exact soundtrack before timing anything.
-3. Verify the exact remix structure; do not assume repeated choruses share timing.
-4. Use automatic speech recognition as evidence, never as the final authority.
-5. Align translated meaning in semantic groups rather than forcing false one-to-one word timing or artificial left-to-right progress.
-6. Keep calibrated measurements separate from documented artistic transforms.
-7. Make every section feel native to the same design system.
-8. Prefer an honest title state over invented lyrics when the vocal becomes unclear or heavily processed.
-9. Review the actual audiovisual clip; contact sheets alone cannot prove sync.
-10. Compare the decoded delivery to a locked high-quality visual reference; the Studio preview cannot prove encoded quality.
-11. Re-render the entire composition and verify the delivered master end to end.
+2. Author application, analysis, render, and reusable workflow code in strict TypeScript; pin the verified latest stable compiler exactly.
+3. Lock the exact soundtrack before timing anything.
+4. Verify the exact remix structure; do not assume repeated choruses share timing.
+5. Use automatic speech recognition as evidence, never as the final authority.
+6. Align translated meaning in semantic groups rather than forcing false one-to-one word timing or artificial left-to-right progress.
+7. Keep calibrated measurements separate from documented artistic transforms.
+8. Make every section feel native to the same design system.
+9. Prefer an honest title state over invented lyrics when the vocal becomes unclear or heavily processed.
+10. Review the actual audiovisual clip; contact sheets alone cannot prove sync.
+11. Compare the decoded delivery to a locked high-quality visual reference; the Studio preview cannot prove encoded quality.
+12. Re-render the entire composition and verify the delivered master end to end.
 
 ## Documentation
 
@@ -169,6 +180,8 @@ The checked-in `npm run render` command reproduces today's production source sna
 | [First-project retrospective](docs/first-project-retrospective.md) | How strong was the first result, what prevents a 10/10 score, and how should non-linear bilingual highlighting work? |
 | [Scientific audio target](docs/scientific-audio-visualization.md) | What would make the audio visualization scientifically defensible, testable, sharp, and worthy of the internal 10/10 target? |
 | [Pixel-perfect visual workflow](docs/pixel-perfect-visual-workflow.md) | How do we preserve sharp geometry, deterministic type, BT.709 colour, gradients, chroma, motion, and decoded codec quality without visual artifacts? |
+| [Emotional audio-reactive motion](docs/emotional-audio-reactive-motion.md) | How should clean lines, glow, weight, and reach sit on the soundtrack and expand farther only on genuinely loud or emotionally authored moments? |
+| [TypeScript-first workflow](docs/typescript-first-workflow.md) | How are current and future projects kept on strict, latest-stable, exactly pinned TypeScript instead of JavaScript? |
 | [Production workflow](docs/production-workflow.md) | How do we take a soundtrack from lyric authority through timing, animation, rendering, and delivery? |
 | [QA checklist](docs/qa-checklist.md) | What must pass before a lyric film is production-ready? |
 | [Tanisea timing audit](audits/tanisea-ksviety-remix.md) | Where does the current film still differ from the performed audio or source meaning? |
@@ -183,6 +196,9 @@ The checked-in `npm run render` command reproduces today's production source sna
 - [x] Publish source, reference export, production master, and documentation.
 - [x] Define the 10/10 scientific audio-visualization contract and verification rubric.
 - [x] Define the 10/10 pixel-perfect visual contract, current-source risk audit, and artifact gates.
+- [x] Define the clean emotional-motion envelope, line-reach mapping, impact budget, and sync gates.
+- [x] Migrate the current Remotion source from JavaScript/JSX to strict TypeScript/TSX and pin TypeScript `7.0.2`.
+- [x] Define the TypeScript-first policy and controlled stable-compiler upgrade gate for future projects.
 - [ ] Separate vocal windows from visual animation windows.
 - [ ] Restore the audited vNext cue map.
 - [ ] Implement semantic cue targets that support intentional backward, repeated, and simultaneous activation.
@@ -190,6 +206,8 @@ The checked-in `npm run render` command reproduces today's production source sna
 - [ ] Build the deterministic multi-resolution stereo analysis pipeline and fixture suite.
 - [ ] Replace the artistic 56-bar baseline with a calibrated 64-band, 60 fps instrument rail.
 - [ ] Validate loudness, true peak, spectrum, stereo behavior, event timing, and rendered values independently.
+- [ ] Generate the deterministic sustained-pressure, transient-impact, and emotional-accent motion envelope.
+- [ ] Replace duplicated local line formulas with one reusable, pixel-aligned `AudioMotionLine` component.
 - [ ] Replace the host-dependent Cyrillic title font and recover artwork at `2700×2700` minimum.
 - [ ] Pin PNG intermediates and BT.709, then build the 2× preflight card and repeat-frame hash tests.
 - [ ] Complete a downsampling bake-off, codec ladder, decoded-frame diff, and temporal artifact audit.

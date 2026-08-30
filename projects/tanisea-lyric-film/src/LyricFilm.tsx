@@ -1,4 +1,4 @@
-import React, {useMemo} from 'react';
+import {useMemo} from 'react';
 import {
   AbsoluteFill,
   Img,
@@ -12,22 +12,52 @@ import {
 import {Audio} from '@remotion/media';
 import {useAudioData, visualizeAudio} from '@remotion/media-utils';
 import {lyrics} from './timed-lyrics';
+import type {LyricLine} from './timed-lyrics';
 
 const teal = '#10e0cc';
 const mint = '#b8fff4';
 const wine = '#330810';
 const ember = '#ff5368';
 
-const clamp = (value, min = 0, max = 1) => Math.min(max, Math.max(min, value));
-const fade = (time, start, end, edge = 0.45) => {
+type TimeEnergyProps = Readonly<{time: number; energy: number}>;
+type AtmosphereProps = Readonly<{frame: number; energy: number}>;
+type TimeProps = Readonly<{time: number}>;
+type EqualizerProps = Readonly<{
+  bands: readonly number[];
+  bass: number;
+  mids: number;
+  highs: number;
+}>;
+type IntroProps = Readonly<{time: number; frame: number; fps: number}>;
+type SplitTextProps = Readonly<{line: LyricLine; time: number}>;
+type OutroProps = Readonly<{
+  time: number;
+  frame: number;
+  fps: number;
+  masterLevel: number;
+  bass: number;
+}>;
+
+const frameCorners = [
+  [30, 30],
+  [1050, 30],
+  [30, 1050],
+  [1050, 1050],
+] as const;
+
+const clamp = (value: number, min = 0, max = 1): number =>
+  Math.min(max, Math.max(min, value));
+
+const fade = (time: number, start: number, end: number, edge = 0.45): number => {
   const enter = clamp((time - start) / edge);
   const exit = clamp((end - time) / edge);
   return Math.min(enter, exit);
 };
 
-const mean = (items) => items.reduce((sum, value) => sum + value, 0) / Math.max(1, items.length);
+const mean = (items: readonly number[]): number =>
+  items.reduce((sum, value) => sum + value, 0) / Math.max(1, items.length);
 
-const spectrumToBands = (spectrum, count = 56) => {
+const spectrumToBands = (spectrum: readonly number[], count = 56): number[] => {
   if (!spectrum.length) return Array.from({length: count}, () => 0);
   const lowBin = 1;
   const highBin = spectrum.length - 1;
@@ -55,7 +85,7 @@ const GlobalStyles = () => (
   `}</style>
 );
 
-const Artwork = ({time, energy}) => {
+const Artwork = ({time, energy}: TimeEnergyProps) => {
   const zoom = 1.075 + time * 0.0003 + Math.sin(time * 0.16) * 0.016 + energy * 0.018;
   const x = Math.sin(time * 0.085) * 10;
   const y = Math.cos(time * 0.071) * 9;
@@ -101,7 +131,7 @@ const Artwork = ({time, energy}) => {
   );
 };
 
-const Atmosphere = ({frame, energy}) => {
+const Atmosphere = ({frame, energy}: AtmosphereProps) => {
   const particles = useMemo(
     () => Array.from({length: 42}, (_, i) => ({
       x: random(`px-${i}`) * 1080,
@@ -142,7 +172,7 @@ const Atmosphere = ({frame, energy}) => {
   );
 };
 
-const ReactiveHalo = ({energy, time}) => (
+const ReactiveHalo = ({energy, time}: TimeEnergyProps) => (
   <div
     style={{
       position: 'absolute',
@@ -158,10 +188,10 @@ const ReactiveHalo = ({energy, time}) => (
   />
 );
 
-const FrameChrome = ({time}) => (
+const FrameChrome = ({time}: TimeProps) => (
   <AbsoluteFill style={{pointerEvents: 'none', color: mint, fontFamily: 'Space Grotesk'}}>
     <div style={{position: 'absolute', inset: 30, border: '1px solid rgba(184,255,244,.24)'}} />
-    {[[30, 30], [1050, 30], [30, 1050], [1050, 1050]].map(([x, y], i) => (
+    {frameCorners.map(([x, y], i) => (
       <div key={i} style={{position: 'absolute', left: x - (x > 500 ? 32 : 0), top: y - (y > 500 ? 32 : 0), width: 32, height: 32, borderLeft: x < 500 ? `3px solid ${teal}` : 'none', borderRight: x > 500 ? `3px solid ${teal}` : 'none', borderTop: y < 500 ? `3px solid ${teal}` : 'none', borderBottom: y > 500 ? `3px solid ${teal}` : 'none'}} />
     ))}
     <div style={{position: 'absolute', left: 48, top: 48, fontSize: 15, letterSpacing: 4, fontWeight: 600}}>TANISEA // KSVIETY</div>
@@ -171,7 +201,7 @@ const FrameChrome = ({time}) => (
   </AbsoluteFill>
 );
 
-const Equalizer = ({bands, bass, mids, highs}) => (
+const Equalizer = ({bands, bass, mids, highs}: EqualizerProps) => (
   <div style={{position: 'absolute', left: 64, right: 64, bottom: 76, height: 50, fontFamily: 'Space Grotesk', pointerEvents: 'none'}}>
     <div style={{position: 'absolute', inset: '0 0 10px', display: 'flex', gap: 3, alignItems: 'flex-end', borderBottom: '1px solid rgba(184,255,244,.18)'}}>
       {bands.map((value, index) => {
@@ -193,7 +223,7 @@ const Equalizer = ({bands, bass, mids, highs}) => (
   </div>
 );
 
-const Intro = ({time, frame, fps}) => {
+const Intro = ({time, frame, fps}: IntroProps) => {
   if (time >= 20) return null;
   const artist = fade(time, 0.5, 7.2, 0.8);
   const title = fade(time, 3.0, 16.0, 1.0);
@@ -213,7 +243,7 @@ const Intro = ({time, frame, fps}) => {
   );
 };
 
-const SplitText = ({line, time}) => {
+const SplitText = ({line, time}: SplitTextProps) => {
   const chorus = line.section === 'chorus';
 
   return (
@@ -241,10 +271,11 @@ const SplitText = ({line, time}) => {
   );
 };
 
-const LyricDisplay = ({time}) => {
+const LyricDisplay = ({time}: TimeProps) => {
   const index = lyrics.findIndex((line) => time >= line.start && time < line.end);
   if (index < 0) return null;
   const line = lyrics[index];
+  if (!line) return null;
   const next = lyrics[index + 1];
   const opacity = fade(time, line.start, line.end, 0.32);
   const entry = clamp((time - line.start) / 0.5);
@@ -278,7 +309,7 @@ const LyricDisplay = ({time}) => {
   );
 };
 
-const BreakCard = ({time}) => {
+const BreakCard = ({time}: TimeProps) => {
   if (time < 50 || time >= 64) return null;
   const p = fade(time, 50, 64, 0.7);
   return (
@@ -290,7 +321,7 @@ const BreakCard = ({time}) => {
   );
 };
 
-const Outro = ({time, frame, fps, masterLevel, bass}) => {
+const Outro = ({time, frame, fps, masterLevel, bass}: OutroProps) => {
   if (time < 118) return null;
   const reveal = clamp(spring({
     frame: Math.max(0, frame - Math.round(118 * fps)),
@@ -374,7 +405,7 @@ const Outro = ({time, frame, fps, masterLevel, bass}) => {
   );
 };
 
-const EndFade = ({time}) => {
+const EndFade = ({time}: TimeProps) => {
   const opacity = interpolate(time, [151.4, 153], [0, 1], {
     extrapolateLeft: 'clamp',
     extrapolateRight: 'clamp',
@@ -399,8 +430,8 @@ export const LyricFilm = () => {
     : emptySpectrum;
   const responsiveSpectrum = spectrumNow.map((value, index) => Math.max(
     value,
-    spectrumPrevious[index] * 0.62,
-    spectrumPreviousTwo[index] * 0.36,
+    (spectrumPrevious[index] ?? 0) * 0.62,
+    (spectrumPreviousTwo[index] ?? 0) * 0.36,
   ));
   const spectralRms = Math.sqrt(mean(responsiveSpectrum.map((value) => value * value)));
   const amplitudeGate = clamp((spectralRms - 0.002) / 0.018);

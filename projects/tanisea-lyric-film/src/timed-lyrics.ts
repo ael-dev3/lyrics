@@ -1,6 +1,31 @@
-const cue = (text, start, end) => ({text, start, end});
+export type LyricSection = 'build' | 'chorus' | 'verse';
 
-const line = (start, end, section, cues) => ({
+export type LyricCue = Readonly<{
+  text: string;
+  start: number;
+  end: number;
+}>;
+
+export type LyricLine = Readonly<{
+  start: number;
+  end: number;
+  section: LyricSection;
+  cues: readonly LyricCue[];
+  text: string;
+}>;
+
+const cue = (text: string, start: number, end: number): LyricCue => ({
+  text,
+  start,
+  end,
+});
+
+const line = (
+  start: number,
+  end: number,
+  section: LyricSection,
+  cues: readonly LyricCue[],
+): LyricLine => ({
   start,
   end,
   section,
@@ -10,7 +35,7 @@ const line = (start, end, section, cues) => ({
 
 // Cue boundaries are anchored to the performed Russian words. Multi-word English
 // groups stay together when one Russian word or phrase carries the same meaning.
-export const lyrics = [
+export const lyrics: readonly LyricLine[] = [
   line(24.0, 27.34, 'build', [
     cue('And', 24.0, 24.21),
     cue("I'll", 24.21, 24.42),

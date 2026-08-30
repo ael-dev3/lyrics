@@ -1,4 +1,17 @@
-export const lyrics = [
+import type {LyricSection} from './timed-lyrics';
+
+export type DraftLyricLine = Readonly<{
+  start: number;
+  end: number;
+  text: string;
+  section: LyricSection;
+}>;
+
+/**
+ * Historical rough line map retained for audit provenance.
+ * Production rendering uses the semantic cue map in timed-lyrics.ts.
+ */
+export const lyrics: readonly DraftLyricLine[] = [
   {start: 20.0, end: 24.9, text: "I'll erase the horizon", section: 'build'},
   {start: 24.9, end: 29.8, text: 'And split it in two', section: 'build'},
   {start: 29.8, end: 33.0, text: "I'll bend every mountain peak", section: 'build'},

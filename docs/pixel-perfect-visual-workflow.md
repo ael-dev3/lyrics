@@ -37,7 +37,7 @@ The current release remains a reproducible record of the first production. These
 | --- | --- | --- | --- |
 | Browser-frame format is not pinned | The current [`render` script](../projects/tanisea-lyric-film/package.json) omits `--image-format`; Remotion 4 defaults to JPEG and the browser default quality is 80. | A lossy generation may be introduced before video encoding. | Every visual master uses `--image-format=png`. |
 | Colour conversion is not pinned | The same script omits `--color-space`; in the installed Remotion `4.0.518` line, `default` maps to BT.601. | HD SDR colours may be converted with the wrong matrix. | Pin `--color-space=bt709` and verify tags plus decoded colour. |
-| Artwork is under-resolved for the camera move | [`artwork.png`](../projects/tanisea-lyric-film/public/artwork.png) is `1080×1080`; [`Artwork`](../projects/tanisea-lyric-film/src/LyricFilm.jsx) can reach approximately `1.143×` scale. | The image needs about `1235×1235` pixels for one-source-pixel-per-final-pixel and about `2470×2470` to populate the 2× reference grid. Supersampling cannot recreate missing texture. | Replace from the original artwork at no less than `2700×2700`; prefer `3240×3240` for crop and motion headroom. |
+| Artwork is under-resolved for the camera move | [`artwork.png`](../projects/tanisea-lyric-film/public/artwork.png) is `1080×1080`; [`Artwork`](../projects/tanisea-lyric-film/src/LyricFilm.tsx) can reach approximately `1.143×` scale. | The image needs about `1235×1235` pixels for one-source-pixel-per-final-pixel and about `2470×2470` to populate the 2× reference grid. Supersampling cannot recreate missing texture. | Replace from the original artwork at no less than `2700×2700`; prefer `3240×3240` for crop and motion headroom. |
 | The Cyrillic title uses a system fallback | The outro requests `Georgia, 'Times New Roman', serif` instead of a bundled file. | Glyph design, kerning, line width, and fallback can differ by host. | Bundle and hash an approved Cyrillic-capable font and load its exact face before render. |
 | Some details are intentionally chroma- and motion-sensitive | The source includes one-pixel borders and peak marks, subpixel dot texture, broad glow, and fractional motion. | 4:2:0 delivery may soften colour-only lines; moving subpixel texture may shimmer or consume bitrate. | Classify each effect as critical or decorative, keep critical cores at least two final pixels, and test the actual encoded motion. |
 | Requested codec settings are not proof of delivered settings | A local Remotion HEVC validation requested `yuv420p10le`, but the decoded stream reported 8-bit `yuv420p`, `hev1`, and unspecified primaries/transfer. | A command can look correct while the bundled encoder or container writes a different result. | Use the validated external Main-10 path for final delivery and gate the actual file with `ffprobe`. |
@@ -58,6 +58,8 @@ The proposed command path was exercised against Remotion `4.0.518` and system FF
 - the direct Remotion HEVC test did **not** meet that final contract, which is why probing and the external delivery stage are mandatory.
 
 These hashes prove same-environment repeatability for those frames only. They do not excuse the host-font fallback or replace full-frame, cross-machine, and decoded-master QA.
+
+All renderer, analysis, validation, and component source follows the repository's [TypeScript-first workflow](typescript-first-workflow.md). The strict typecheck must pass before visual-reference rendering, and the exact compiler version belongs in the same frozen toolchain manifest as Remotion, Chromium, and FFmpeg.
 
 ## Target render contract
 
@@ -100,6 +102,7 @@ Create a visual manifest containing:
     {"path": "public/Display-Cyrillic.woff2", "sha256": "...", "weight": 700}
   ],
   "toolchain": {
+    "typescript": "exact stable version",
     "remotion": "exact version",
     "chromium": "exact revision",
     "ffmpeg": "exact version and build configuration"
@@ -186,6 +189,8 @@ Rules:
 
 For gradients, declare the intended interpolation behaviour and freeze the Chromium version. CSS colour interpolation can produce materially different paths depending on its interpolation colour space. Use a test wedge to choose the gradient, then validate the decoded output for banding and hue shifts rather than trusting the source declaration alone.
 
+Audio-driven line expansion follows the [clean emotional audio-reactive motion specification](emotional-audio-reactive-motion.md). Its changing endpoints must retain the same solid core, even-pixel symmetry, safe-frame cap, 4:2:0 resilience, and temporal artifact gates as every other critical mark.
+
 ## 6. Design for 4:2:0, not only RGB
 
 Compact video normally shares one Cb and one Cr sample across each `2×2` group of luma pixels. Saturated, colour-only detail is therefore less stable than luminance detail.
@@ -236,7 +241,7 @@ Render risk frames twice from the locked environment:
 ```sh
 mkdir -p qa
 
-npx remotion render src/index.jsx LyricFilm qa/reference-a \
+npx remotion render src/index.ts LyricFilm qa/reference-a \
   --frames=0,1200,2999,3540,4200,4589 \
   --sequence \
   --image-format=png \
@@ -244,7 +249,7 @@ npx remotion render src/index.jsx LyricFilm qa/reference-a \
   --color-space=bt709 \
   --overwrite=false
 
-npx remotion render src/index.jsx LyricFilm qa/reference-b \
+npx remotion render src/index.ts LyricFilm qa/reference-b \
   --frames=0,1200,2999,3540,4200,4589 \
   --sequence \
   --image-format=png \
@@ -260,7 +265,7 @@ SHA-256 hashes for corresponding PNGs must match. If they do not, stop and find 
 Use high-bit-depth 4:4:4 ProRes as a practical video mezzanine while retaining selected authoritative PNG frames:
 
 ```sh
-npx remotion render src/index.jsx LyricFilm qa/visual-reference-2160-raw.mov \
+npx remotion render src/index.ts LyricFilm qa/visual-reference-2160-raw.mov \
   --codec=prores \
   --prores-profile=4444 \
   --pixel-format=yuv444p10le \
@@ -415,7 +420,7 @@ The repository need not store a multi-gigabyte mezzanine, but it must store enou
 
 ## Implementation order for this project
 
-1. Add the visual manifest and automated asset-resolution/font-coverage preflight.
+1. Pass the strict TypeScript gate, then add the visual manifest and automated asset-resolution/font-coverage preflight.
 2. Replace the system Cyrillic fallback with a bundled, approved face.
 3. Recover artwork at `2700×2700` minimum, preferably `3240×3240`.
 4. Pin PNG intermediates and BT.709 in all master render commands.

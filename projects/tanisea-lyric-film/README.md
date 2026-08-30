@@ -8,6 +8,7 @@ Requirements:
 
 - Node.js 20 or newer;
 - npm;
+- the lockfile-pinned TypeScript compiler (`7.0.2`, installed by `npm ci`);
 - a Chromium-compatible environment supported by Remotion.
 
 Install and open Remotion Studio:
@@ -20,7 +21,7 @@ npm run dev
 Validate the composition:
 
 ```sh
-npx remotion compositions src/index.jsx
+npm run check
 ```
 
 Render the source snapshot:
@@ -40,8 +41,16 @@ This command preserves the historical production snapshot. It is not the vNext p
 | Frame rate | 30 fps |
 | Duration | 4,590 frames / 153 seconds |
 | Audio | `public/soundtrack.m4a` |
-| Main composition | `src/LyricFilm.jsx` |
-| Timing source | `src/timed-lyrics.js` |
+| Entry point | `src/index.ts` |
+| Main composition | `src/LyricFilm.tsx` |
+| Timing source | `src/timed-lyrics.ts` |
+| Compiler | TypeScript `7.0.2`, strict and exact-pinned |
+
+## TypeScript source contract
+
+All authored project modules use `.ts` or `.tsx`; the earlier JavaScript/JSX source has been migrated without intentionally changing timing, animation, audio, or visual output. `npm run typecheck` is a blocking pre-render gate, and `npm run check` combines strict typechecking with Remotion composition discovery.
+
+Future source, analysis generators, cue validators, and reusable motion components must follow the repository's [TypeScript-first workflow](../../docs/typescript-first-workflow.md). Upgrade the exact compiler pin only after the documented strict checks, fixtures, and representative render comparisons pass.
 
 ## Visual architecture
 
@@ -64,6 +73,8 @@ The checked-in 56-bar equalizer is a deterministic artistic visualization built 
 
 The current baseline is assessed at approximately **5/10 scientific fidelity**. Before calling a future version scientifically accurate, implement and pass the repository's [10/10 scientific audio-visualization specification](../../docs/scientific-audio-visualization.md). Its key distinction is **millisecond-resolved analysis with frame-accurate 60 fps visualization**, not a false claim of 1 ms video refresh.
 
+The current cinematic response also compresses multiple audio behaviors into one `masterLevel`, while soundtrack energy adds only a small amount to the outro line width. The vNext [clean emotional audio-reactive motion specification](../../docs/emotional-audio-reactive-motion.md) separates sustained pressure, transient impact, low-end weight, and human emotional accents so lines remain restrained most of the time and reach much farther on exceptional musical peaks.
+
 ## Important timing status
 
 This is the exact production-source snapshot from 2026-08-30, not the proposed vNext implementation. The subsequent audit identified timing regressions in the first verse and second chorus, plus a structural issue where lyric entrance/exit animation shares the vocal start/end values.
@@ -75,9 +86,10 @@ Before creating a new master:
 3. separate vocal timing from visual entrance and exit windows;
 4. implement the [non-linear semantic-highlighting model](../../docs/first-project-retrospective.md) so source cues can target English meaning groups independently of display order;
 5. implement and validate the [scientific audio-analysis and instrument-rail target](../../docs/scientific-audio-visualization.md);
-6. replace the system Cyrillic fallback, recover sufficiently resolved artwork, and pass the [pixel-perfect visual contract](../../docs/pixel-perfect-visual-workflow.md);
-7. preview and listen to the high-risk windows;
-8. perform a complete real-time audiovisual review.
+6. generate and validate the [clean emotional audio-reactive motion envelope](../../docs/emotional-audio-reactive-motion.md);
+7. replace the system Cyrillic fallback, recover sufficiently resolved artwork, and pass the [pixel-perfect visual contract](../../docs/pixel-perfect-visual-workflow.md);
+8. preview and listen to the high-risk windows;
+9. perform a complete real-time audiovisual review.
 
 ## Production export
 

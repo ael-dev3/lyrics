@@ -1,5 +1,13 @@
 # Production workflow
 
+## 0. Lock the typed toolchain
+
+All authored application, analysis, rendering, validation, and reusable workflow code uses strict TypeScript: `.ts` for data and logic, `.tsx` for React/Remotion components, and no new `.js` or `.jsx` source. Verify the npm registry's stable `latest` tag, exact-pin that compiler in the project and lockfile, and run the local compiler rather than a global installation.
+
+For the current project, the verified stable baseline on 2026-08-30 is TypeScript `7.0.2`. Follow the [TypeScript-first workflow](typescript-first-workflow.md) for project structure, strict settings, typed production-data rules, required commands, controlled upgrades, and exceptions.
+
+Typechecking is a blocking pre-render gate, but it does not replace runtime schema validation, lyric review, audio-reference fixtures, motion QA, or decoded-video inspection.
+
 ## 1. Define the deliverable before animating
 
 Record the following in a small production manifest:
@@ -82,8 +90,8 @@ Model timestamps can be coarse at segment edges. Word attacks, phrase endings, a
 
 The timing model should not use one `start` and `end` pair for every purpose. Store at least:
 
-```js
-{
+```ts
+const lyricLine = {
   id: 'V1-01',
   section: 'verse',
   text: 'Night in the silence freezes helplessly;',
@@ -101,7 +109,7 @@ The timing model should not use one `start` and `end` pair for every purpose. St
     {text: 'freezes', vocalStart: 65.0, vocalEnd: 65.99},
     {text: 'helplessly;', vocalStart: 65.99, vocalEnd: 67.0}
   ]
-}
+} as const;
 ```
 
 The line should normally be fully legible by `vocalStart`. Cue highlighting begins at the performed phrase, not at the visual entrance.
@@ -144,7 +152,7 @@ Treat visual fidelity as a source-to-decoder system, not as a final codec switch
 
 Use seeded randomness for particles so every render is deterministic. Drive reactive motion from the same audio file used by the rendered soundtrack.
 
-```jsx
+```tsx
 const audioData = useAudioData(staticFile('soundtrack.m4a'));
 const spectrum = visualizeAudio({
   fps,
@@ -157,6 +165,8 @@ const spectrum = visualizeAudio({
 ```
 
 Avoid excessive audio-driven displacement. Use energy for subtle scale, glow, line width, and contrast; retain stable typography and safe areas.
+
+For cinematic motion, do not drive every property from one compressed FFT average. Use the separate [clean emotional audio-reactive motion specification](emotional-audio-reactive-motion.md): track-relative sustained pressure sets broad line reach, sample-indexed transients create short overreach with the visual apex on the sound, and reviewed editorial cues handle emotional importance that loudness cannot infer. Keep the solid line core sharp, reserve `900–920 px` title-rail reach for exceptional peaks, and let most active frames remain materially below maximum.
 
 ### Scientific instrument layer
 
@@ -200,7 +210,7 @@ Render dense frame contacts at `2–4 fps` for animation continuity, but also wa
 Example Remotion preview:
 
 ```sh
-npx remotion render src/index.jsx LyricFilm preview.mp4 \
+npx remotion render src/index.ts LyricFilm preview.mp4 \
   --frames=2730-3599 \
   --codec=h264 \
   --crf=18 \
@@ -216,7 +226,7 @@ npx remotion render src/index.jsx LyricFilm preview.mp4 \
 Validate the composition before the production render:
 
 ```sh
-npx remotion compositions src/index.jsx
+npm run check
 ```
 
 For broad compatibility, use H.264. For a smaller Mac- and modern-device-friendly delivery, use HEVC and tag the stream as `hvc1` during the final mux. In either case, pin PNG browser frames and BT.709; otherwise the render may introduce a lossy JPEG generation and the wrong implicit colour conversion before codec compression.
@@ -224,7 +234,7 @@ For broad compatibility, use H.264. For a smaller Mac- and modern-device-friendl
 Direct high-quality compact review render:
 
 ```sh
-npx remotion render src/index.jsx LyricFilm render-hevc.mp4 \
+npx remotion render src/index.ts LyricFilm render-hevc.mp4 \
   --codec=h265 \
   --crf=18 \
   --audio-codec=aac \
