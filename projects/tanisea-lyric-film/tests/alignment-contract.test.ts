@@ -206,6 +206,24 @@ describe('alignment manifest runtime validation', () => {
     expect(() => validateAlignmentManifest(manifest)).toThrow(/manual-review/);
   });
 
+  test('requires referenced-token manual review above 25 ms cue uncertainty', () => {
+    const manifest = makeValidManifest();
+    manifest.lines[0]!.cues[0]!.uncertaintySamples = 1_103;
+    expect(() => validateAlignmentManifest(manifest)).toThrow(/manual-review/);
+  });
+
+  test('accepts reviewed source tokens above 25 ms cue uncertainty', () => {
+    const manifest = makeValidManifest();
+    const token = manifest.lines[0]!.tokens[0]!;
+    manifest.lines[0]!.cues[0]!.uncertaintySamples = 1_103;
+    token.evidence.push({
+      method: 'manual-review',
+      sampleIndex: token.startSample,
+      note: 'reviewed semantic boundary',
+    });
+    expect(() => validateAlignmentManifest(manifest)).not.toThrow();
+  });
+
   test('enforces an inclusive 50 ms uncertainty ceiling', () => {
     const accepted = makeValidManifest();
     accepted.lines[0]!.tokens[0]!.uncertaintySamples = 2_205;

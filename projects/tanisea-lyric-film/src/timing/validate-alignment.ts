@@ -154,6 +154,7 @@ const validateLine = (
   }
 
   const tokenIds = new Set<string>();
+  const manuallyReviewedTokenIds = new Set<string>();
   let previousTokenEndSample: number | undefined;
 
   for (const [tokenIndex, tokenValue] of tokens.entries()) {
@@ -228,6 +229,9 @@ const validateLine = (
         `${tokenLabel} uncertainty over 25 ms requires manual-review evidence`,
       );
     }
+    if (hasManualReview) {
+      manuallyReviewedTokenIds.add(tokenId);
+    }
   }
 
   const segmentIds = new Set<string>();
@@ -265,7 +269,10 @@ const validateLine = (
 
     requireEnumValue(cue.activation, ACTIVATION_VALUES, `${cueLabel}.activation`);
     requireEnumValue(cue.confidence, CONFIDENCE_VALUES, `${cueLabel}.confidence`);
-    requireUncertainty(cue.uncertaintySamples, `${cueLabel}.uncertaintySamples`);
+    const uncertaintySamples = requireUncertainty(
+      cue.uncertaintySamples,
+      `${cueLabel}.uncertaintySamples`,
+    );
     requireNonEmptyString(cue.mappingNote, `${cueLabel}.mappingNote`);
 
     const sourceTokenIds = requireArray(
@@ -275,6 +282,7 @@ const validateLine = (
     if (sourceTokenIds.length === 0) {
       throw new Error(`${cueLabel} must reference at least one source token`);
     }
+    let hasUnreviewedSourceToken = false;
     for (const [sourceIndex, sourceValue] of sourceTokenIds.entries()) {
       const sourceId = requireNonEmptyString(
         sourceValue,
@@ -283,6 +291,15 @@ const validateLine = (
       if (!tokenIds.has(sourceId)) {
         throw new Error(`${cueLabel} references unknown source token ${sourceId}`);
       }
+      hasUnreviewedSourceToken ||= !manuallyReviewedTokenIds.has(sourceId);
+    }
+    if (
+      uncertaintySamples > MANUAL_REVIEW_THRESHOLD_SAMPLES &&
+      hasUnreviewedSourceToken
+    ) {
+      throw new Error(
+        `${cueLabel} uncertainty over 25 ms requires manual-review evidence on every referenced source token`,
+      );
     }
 
     const targets = requireArray(cue.targets, `${cueLabel}.targets`);
