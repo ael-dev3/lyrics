@@ -1,8 +1,14 @@
 import {execFileSync, spawnSync} from 'node:child_process';
 import {
+  existsSync,
+  linkSync,
   mkdtempSync,
+  mkdirSync,
   readFileSync,
+  realpathSync,
   rmSync,
+  statSync,
+  symlinkSync,
   writeFileSync,
 } from 'node:fs';
 import {tmpdir} from 'node:os';
@@ -52,6 +58,26 @@ const withTemporaryDirectory = <Result>(
       throw new Error(`Refusing unsafe temporary cleanup: ${resolvedDirectory}`);
     }
     rmSync(resolvedDirectory, {recursive: true, force: true});
+  }
+};
+
+const createSymbolicLinkIfPermitted = (
+  target: string,
+  path: string,
+  type: 'file' | 'dir',
+): boolean => {
+  try {
+    symlinkSync(target, path, type);
+    return true;
+  } catch (error) {
+    const code = (error as NodeJS.ErrnoException).code;
+    if (process.platform === 'win32' && (code === 'EPERM' || code === 'EACCES')) {
+      process.stderr.write(
+        `[render-contract] ${type} symlink coverage unavailable: ${code}\n`,
+      );
+      return false;
+    }
+    throw error;
   }
 };
 
@@ -694,6 +720,30 @@ describe('proof render and remux contract', () => {
       );
     }));
 
+  test('rejects dot-segment aliases before deletion', () =>
+    withTemporaryDirectory('tanisea-proof-paths-', (directory) => {
+      const sourceDirectory = join(directory, 'source');
+      const entryPoint = join(sourceDirectory, 'index.ts');
+      const soundtrackPath = join(directory, 'soundtrack.m4a');
+      const outputPath = join(sourceDirectory, '..', 'source', 'index.ts');
+      mkdirSync(sourceDirectory);
+      writeFileSync(entryPoint, 'dot-protected entry point');
+      writeFileSync(soundtrackPath, 'protected soundtrack');
+      const plan = createProofRenderPlan({
+        entryPoint,
+        soundtrackPath,
+        outputPath,
+        frameRange: {start: 0, end: 0},
+      });
+
+      expect(() =>
+        prepareProofRenderPaths({entryPoint, soundtrackPath, plan}),
+      ).toThrow(/muted output.*protected entry point/i);
+      expect(readFileSync(entryPoint, 'utf8')).toBe(
+        'dot-protected entry point',
+      );
+    }));
+
   test('rejects a normalized temporary output collision before any deletion', () =>
     withTemporaryDirectory('tanisea-proof-paths-', (directory) => {
       const outputPath = join(directory, 'proof.mp4');
@@ -715,6 +765,275 @@ describe('proof render and remux contract', () => {
       expect(readFileSync(outputPath, 'utf8')).toBe('existing proof output');
       expect(readFileSync(entryPoint, 'utf8')).toBe(
         'protected normalized-path entry point',
+      );
+    }));
+
+  test('rejects a real directory-junction output alias before deleting protected files', () =>
+    withTemporaryDirectory('tanisea-proof-paths-', (directory) => {
+      const realDirectory = join(directory, 'real');
+      const aliasDirectory = join(directory, 'alias');
+      const entryPoint = join(directory, 'index.ts');
+      const soundtrackPath = join(realDirectory, 'soundtrack.m4a');
+      const outputPath = join(aliasDirectory, 'soundtrack.m4a');
+      const mutedOutputPath = join(aliasDirectory, 'soundtrack.video-only.m4a');
+      mkdirSync(realDirectory);
+      symlinkSync(realDirectory, aliasDirectory, 'junction');
+      writeFileSync(entryPoint, 'protected entry point');
+      writeFileSync(soundtrackPath, 'protected junction soundtrack');
+      writeFileSync(mutedOutputPath, 'existing muted output');
+
+      expect(resolve(outputPath)).not.toBe(resolve(soundtrackPath));
+      expect(realpathSync.native(outputPath)).toBe(
+        realpathSync.native(soundtrackPath),
+      );
+
+      const plan = createProofRenderPlan({
+        entryPoint,
+        soundtrackPath,
+        outputPath,
+        frameRange: null,
+      });
+      let rejection: unknown;
+      try {
+        prepareProofRenderPaths({entryPoint, soundtrackPath, plan});
+      } catch (error) {
+        rejection = error;
+      }
+
+      expect({
+        rejection:
+          rejection instanceof Error ? rejection.message : null,
+        soundtrack: existsSync(soundtrackPath)
+          ? readFileSync(soundtrackPath, 'utf8')
+          : null,
+        mutedOutput: existsSync(mutedOutputPath)
+          ? readFileSync(mutedOutputPath, 'utf8')
+          : null,
+      }).toEqual({
+        rejection: expect.stringMatching(
+          /final output.*protected soundtrack/i,
+        ),
+        soundtrack: 'protected junction soundtrack',
+        mutedOutput: 'existing muted output',
+      });
+    }));
+
+  test('rejects an existing hardlink output before deleting any target', () =>
+    withTemporaryDirectory('tanisea-proof-paths-', (directory) => {
+      const entryPoint = join(directory, 'index.ts');
+      const soundtrackPath = join(directory, 'soundtrack.m4a');
+      const outputPath = join(directory, 'proof.mp4');
+      const mutedOutputPath = join(directory, 'proof.video-only.mp4');
+      writeFileSync(entryPoint, 'protected entry point');
+      writeFileSync(soundtrackPath, 'protected hardlink soundtrack');
+      linkSync(soundtrackPath, outputPath);
+      writeFileSync(mutedOutputPath, 'existing muted output');
+
+      expect(realpathSync.native(outputPath)).not.toBe(
+        realpathSync.native(soundtrackPath),
+      );
+      expect({
+        dev: statSync(outputPath).dev,
+        ino: statSync(outputPath).ino,
+      }).toEqual({
+        dev: statSync(soundtrackPath).dev,
+        ino: statSync(soundtrackPath).ino,
+      });
+
+      const plan = createProofRenderPlan({
+        entryPoint,
+        soundtrackPath,
+        outputPath,
+        frameRange: null,
+      });
+      let rejection: unknown;
+      try {
+        prepareProofRenderPaths({entryPoint, soundtrackPath, plan});
+      } catch (error) {
+        rejection = error;
+      }
+
+      expect({
+        rejection:
+          rejection instanceof Error ? rejection.message : null,
+        soundtrack: readFileSync(soundtrackPath, 'utf8'),
+        output: existsSync(outputPath)
+          ? readFileSync(outputPath, 'utf8')
+          : null,
+        mutedOutput: existsSync(mutedOutputPath)
+          ? readFileSync(mutedOutputPath, 'utf8')
+          : null,
+      }).toEqual({
+        rejection: expect.stringMatching(
+          /final output.*protected soundtrack/i,
+        ),
+        soundtrack: 'protected hardlink soundtrack',
+        output: 'protected hardlink soundtrack',
+        mutedOutput: 'existing muted output',
+      });
+    }));
+
+  test('rejects a future output alias through its nearest real junction ancestor before mkdir', () =>
+    withTemporaryDirectory('tanisea-proof-paths-', (directory) => {
+      const realDirectory = join(directory, 'real');
+      const aliasDirectory = join(directory, 'alias');
+      const entryPoint = join(directory, 'index.ts');
+      const futureDirectory = join(realDirectory, 'future');
+      const soundtrackPath = join(futureDirectory, 'proof.mp4');
+      const outputPath = join(aliasDirectory, 'future', 'proof.mp4');
+      mkdirSync(realDirectory);
+      symlinkSync(realDirectory, aliasDirectory, 'junction');
+      writeFileSync(entryPoint, 'protected entry point');
+
+      expect(resolve(outputPath)).not.toBe(resolve(soundtrackPath));
+      expect(existsSync(futureDirectory)).toBe(false);
+      const plan = createProofRenderPlan({
+        entryPoint,
+        soundtrackPath,
+        outputPath,
+        frameRange: {start: 0, end: 0},
+      });
+
+      expect(() =>
+        prepareProofRenderPaths({entryPoint, soundtrackPath, plan}),
+      ).toThrow(/muted output.*protected soundtrack/i);
+      expect(existsSync(futureDirectory)).toBe(false);
+      expect(readFileSync(entryPoint, 'utf8')).toBe('protected entry point');
+    }));
+
+  test('rejects a BT.709 normalized output alias through a directory junction', () =>
+    withTemporaryDirectory('tanisea-proof-paths-', (directory) => {
+      const realDirectory = join(directory, 'real');
+      const aliasDirectory = join(directory, 'alias');
+      const outputPath = join(aliasDirectory, 'proof.mp4');
+      const entryPoint = join(realDirectory, 'proof.bt709-normalized.mp4');
+      const soundtrackPath = join(directory, 'soundtrack.m4a');
+      mkdirSync(realDirectory);
+      symlinkSync(realDirectory, aliasDirectory, 'junction');
+      writeFileSync(outputPath, 'existing proof output');
+      writeFileSync(entryPoint, 'protected normalized entry point');
+      writeFileSync(soundtrackPath, 'protected soundtrack');
+      const plan = createProofRenderPlan({
+        entryPoint,
+        soundtrackPath,
+        outputPath,
+        frameRange: {start: 0, end: 0},
+      });
+
+      expect(() =>
+        prepareProofRenderPaths({entryPoint, soundtrackPath, plan}),
+      ).toThrow(/BT\.709 normalized output.*protected entry point/i);
+      expect(readFileSync(outputPath, 'utf8')).toBe('existing proof output');
+      expect(readFileSync(entryPoint, 'utf8')).toBe(
+        'protected normalized entry point',
+      );
+    }));
+
+  test('rejects an output file-symlink alias before deletion when supported', () =>
+    withTemporaryDirectory('tanisea-proof-paths-', (directory) => {
+      const entryPoint = join(directory, 'index.ts');
+      const soundtrackPath = join(directory, 'soundtrack.m4a');
+      const outputPath = join(directory, 'proof.mp4');
+      const mutedOutputPath = join(directory, 'proof.video-only.mp4');
+      writeFileSync(entryPoint, 'protected entry point');
+      writeFileSync(soundtrackPath, 'protected symlink soundtrack');
+      writeFileSync(mutedOutputPath, 'existing muted output');
+      if (!createSymbolicLinkIfPermitted(soundtrackPath, outputPath, 'file')) {
+        return;
+      }
+      const plan = createProofRenderPlan({
+        entryPoint,
+        soundtrackPath,
+        outputPath,
+        frameRange: null,
+      });
+
+      expect(() =>
+        prepareProofRenderPaths({entryPoint, soundtrackPath, plan}),
+      ).toThrow(/final output.*protected soundtrack/i);
+      expect(readFileSync(soundtrackPath, 'utf8')).toBe(
+        'protected symlink soundtrack',
+      );
+      expect(readFileSync(outputPath, 'utf8')).toBe(
+        'protected symlink soundtrack',
+      );
+      expect(readFileSync(mutedOutputPath, 'utf8')).toBe(
+        'existing muted output',
+      );
+    }));
+
+  test('rejects a real output when its protected input uses a directory symlink', () =>
+    withTemporaryDirectory('tanisea-proof-paths-', (directory) => {
+      const realDirectory = join(directory, 'real');
+      const protectedAliasDirectory = join(directory, 'protected-alias');
+      const entryPoint = join(directory, 'index.ts');
+      const outputPath = join(realDirectory, 'soundtrack.m4a');
+      const soundtrackPath = join(protectedAliasDirectory, 'soundtrack.m4a');
+      const mutedOutputPath = join(realDirectory, 'soundtrack.video-only.m4a');
+      mkdirSync(realDirectory);
+      writeFileSync(entryPoint, 'protected entry point');
+      writeFileSync(outputPath, 'protected directory-symlink soundtrack');
+      writeFileSync(mutedOutputPath, 'existing muted output');
+      if (
+        !createSymbolicLinkIfPermitted(
+          realDirectory,
+          protectedAliasDirectory,
+          'dir',
+        )
+      ) {
+        return;
+      }
+      const plan = createProofRenderPlan({
+        entryPoint,
+        soundtrackPath,
+        outputPath,
+        frameRange: null,
+      });
+
+      expect(() =>
+        prepareProofRenderPaths({entryPoint, soundtrackPath, plan}),
+      ).toThrow(/final output.*protected soundtrack/i);
+      expect(readFileSync(outputPath, 'utf8')).toBe(
+        'protected directory-symlink soundtrack',
+      );
+      expect(readFileSync(soundtrackPath, 'utf8')).toBe(
+        'protected directory-symlink soundtrack',
+      );
+      expect(readFileSync(mutedOutputPath, 'utf8')).toBe(
+        'existing muted output',
+      );
+    }));
+
+  test('cleans arbitrary distinct short-proof targets without touching protected inputs', () =>
+    withTemporaryDirectory('tanisea-proof-paths-', (directory) => {
+      const entryPoint = join(directory, 'index.ts');
+      const soundtrackPath = join(directory, 'soundtrack.m4a');
+      const outputDirectory = join(directory, 'arbitrary', 'nested');
+      const outputPath = join(outputDirectory, 'proof.custom.mp4');
+      const normalizedOutputPath = join(
+        outputDirectory,
+        'proof.custom.bt709-normalized.mp4',
+      );
+      mkdirSync(outputDirectory, {recursive: true});
+      writeFileSync(entryPoint, 'protected entry point');
+      writeFileSync(soundtrackPath, 'protected soundtrack');
+      writeFileSync(outputPath, 'stale output');
+      writeFileSync(normalizedOutputPath, 'stale normalized output');
+      const plan = createProofRenderPlan({
+        entryPoint,
+        soundtrackPath,
+        outputPath,
+        frameRange: {start: 0, end: 0},
+      });
+
+      expect(
+        prepareProofRenderPaths({entryPoint, soundtrackPath, plan}),
+      ).toBe(normalizedOutputPath);
+      expect(existsSync(outputPath)).toBe(false);
+      expect(existsSync(normalizedOutputPath)).toBe(false);
+      expect(readFileSync(entryPoint, 'utf8')).toBe('protected entry point');
+      expect(readFileSync(soundtrackPath, 'utf8')).toBe(
+        'protected soundtrack',
       );
     }));
 

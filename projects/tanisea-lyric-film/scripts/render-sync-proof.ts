@@ -5,11 +5,12 @@ import {
   openSync,
   closeSync,
   readSync,
+  realpathSync,
   renameSync,
   rmSync,
   statSync,
 } from 'node:fs';
-import {dirname, extname, resolve} from 'node:path';
+import {basename, dirname, extname, resolve} from 'node:path';
 
 const COMPOSITION_ID = 'LyricFilmSyncProof';
 const PROOF_FPS = 120;
@@ -144,8 +145,48 @@ const withBt709NormalizedSuffix = (path: string): string => {
     : `${path.slice(0, -extension.length)}.bt709-normalized${extension}`;
 };
 
-const canonicalWindowsPath = (path: string): string =>
-  resolve(path).replaceAll('/', '\\').toLocaleLowerCase('en-US');
+const canonicalWindowsPath = (path: string): string => {
+  const unresolvedSegments: string[] = [];
+  let existingAncestor = resolve(path);
+  while (!existsSync(existingAncestor)) {
+    const parent = dirname(existingAncestor);
+    requireValue(
+      parent !== existingAncestor,
+      `Unable to resolve an existing ancestor for ${path}`,
+    );
+    unresolvedSegments.push(basename(existingAncestor));
+    existingAncestor = parent;
+  }
+
+  const filesystemPath = resolve(
+    realpathSync.native(existingAncestor),
+    ...unresolvedSegments.reverse(),
+  );
+  return filesystemPath
+    .replaceAll('/', '\\')
+    .toLocaleLowerCase('en-US');
+};
+
+type ExistingFileIdentity = Readonly<{
+  device: bigint;
+  inode: bigint;
+}>;
+
+const existingFileIdentity = (path: string): ExistingFileIdentity | null => {
+  if (!existsSync(path)) return null;
+  const statistics = statSync(path, {bigint: true});
+  return {device: statistics.dev, inode: statistics.ino};
+};
+
+const sameExistingFile = (
+  left: ExistingFileIdentity | null,
+  right: ExistingFileIdentity | null,
+): boolean =>
+  left !== null &&
+  right !== null &&
+  left.inode !== 0n &&
+  left.device === right.device &&
+  left.inode === right.inode;
 
 export const createProofRenderPlan = ({
   entryPoint,
@@ -231,6 +272,7 @@ export const prepareProofRenderPaths = ({
   ].map((input) => ({
     ...input,
     canonicalPath: canonicalWindowsPath(input.path),
+    fileIdentity: existingFileIdentity(input.path),
   }));
   const deletionTargets = [
     {label: 'muted output', path: plan.mutedOutputPath},
@@ -239,11 +281,15 @@ export const prepareProofRenderPaths = ({
   ].map((target) => ({
     ...target,
     canonicalPath: canonicalWindowsPath(target.path),
+    fileIdentity: existingFileIdentity(target.path),
   }));
 
   for (const target of deletionTargets) {
     for (const input of protectedInputs) {
-      if (target.canonicalPath === input.canonicalPath) {
+      if (
+        target.canonicalPath === input.canonicalPath ||
+        sameExistingFile(target.fileIdentity, input.fileIdentity)
+      ) {
         throw new Error(
           `Refusing destructive path collision: ${target.label} ${target.path} aliases ${input.label} ${input.path}`,
         );
