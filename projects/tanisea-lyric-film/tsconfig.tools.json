@@ -6,12 +6,16 @@
     "moduleResolution": "NodeNext",
     "strict": true,
     "outDir": ".tools-dist",
-    "rootDir": "scripts",
+    "rootDir": ".",
     "types": ["node"],
     "noUncheckedIndexedAccess": true,
     "exactOptionalPropertyTypes": true,
     "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true
   },
-  "include": ["scripts/**/*.ts"]
+  "include": [
+    "scripts/**/*.ts",
+    "src/timing/alignment-types.ts",
+    "src/timing/validate-alignment.ts"
+  ]
 }
