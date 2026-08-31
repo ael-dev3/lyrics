@@ -13,6 +13,7 @@
     "alignment:import": "npm run build:tools && node .tools-dist/scripts/import-alignment-evidence.js",
     "alignment:verify": "npm run build:tools && node .tools-dist/scripts/verify-alignment.js",
     "layout:verify": "npm run build:tools && node .tools-dist/scripts/verify-lyric-layout.js",
+    "proof": "npm run build:tools && node .tools-dist/scripts/render-sync-proof.js",
     "test": "vitest",
     "test:run": "vitest run",
     "compositions": "remotion compositions src/index.ts",

@@ -18,6 +18,7 @@ import type {AudioFeatureFrame} from './audio-features';
 import {FrameChrome} from './components/FrameChrome';
 import {LyricDisplay} from './components/LyricDisplay';
 import {SpectrumRail} from './components/SpectrumRail';
+import {featureFrameForTime} from './feature-frame';
 
 const teal = '#16e6d1';
 const mint = '#c9fff7';
@@ -675,7 +676,8 @@ export const LyricFilm = () => {
 
   if (!fontsReady || !audioFeatures) return null;
 
-  const feature = audioFeatures.getFrame(frame);
+  const featureFrame = featureFrameForTime(frame, fps, audioFeatures.fps);
+  const feature = audioFeatures.getFrame(featureFrame);
 
   return (
     <AbsoluteFill style={{backgroundColor: ink, overflow: 'hidden'}}>

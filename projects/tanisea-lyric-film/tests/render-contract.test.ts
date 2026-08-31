@@ -1,0 +1,551 @@
+import {
+  Children,
+  createElement,
+  type ReactElement,
+  type ReactNode,
+} from 'react';
+import {renderToStaticMarkup} from 'react-dom/server';
+import {describe, expect, test} from 'vitest';
+import {
+  createProofRenderPlan,
+  parseInclusiveFrameRange,
+  verifyAudioPacketIdentity,
+  verifyProofProbe,
+} from '../scripts/render-sync-proof';
+import {LyricFilm} from '../src/LyricFilm';
+import {RemotionRoot} from '../src/Root';
+import {
+  featureFrameForTime,
+  ProofDiagnosticOverlay,
+  proofFrameState,
+  SyncProof,
+  SyncProofFrame,
+} from '../src/SyncProof';
+import {
+  frameForSample,
+  SAMPLE_RATE,
+} from '../src/timing/alignment-types';
+import {taniseaAlignment} from '../src/timing/tanisea-alignment';
+
+const activeStateAtCueStart = (lineId: string, cueIndex: number) => {
+  const line = taniseaAlignment.lines.find(({id}) => id === lineId);
+  if (!line) throw new Error(`Missing reviewed line ${lineId}`);
+  const cue = line.cues[cueIndex];
+  if (!cue) throw new Error(`Missing reviewed cue ${lineId}[${cueIndex}]`);
+
+  const state = proofFrameState(
+    lineId,
+    120,
+    frameForSample(cue.startSample, 120),
+  );
+  if (state.status !== 'active') {
+    throw new Error(`Expected active proof state for ${cue.id}`);
+  }
+  return state;
+};
+
+describe('cadence-independent audio-feature lookup', () => {
+  test('samples the committed 60 fps package by composition time', () => {
+    expect(featureFrameForTime(2_400, 120, 60)).toBe(1_200);
+    expect(featureFrameForTime(1_200, 60, 60)).toBe(1_200);
+    expect(featureFrameForTime(2_401, 120, 60)).toBe(1_201);
+  });
+
+  test.each([-1, Number.NaN, Number.POSITIVE_INFINITY])(
+    'rejects invalid composition frame %s',
+    (frame) => {
+      expect(() => featureFrameForTime(frame, 120, 60)).toThrow();
+    },
+  );
+
+  test.each([0, -1, Number.NaN, Number.POSITIVE_INFINITY])(
+    'rejects invalid composition fps %s',
+    (fps) => {
+      expect(() => featureFrameForTime(0, fps, 60)).toThrow();
+    },
+  );
+
+  test.each([0, -1, Number.NaN, Number.POSITIVE_INFINITY])(
+    'rejects invalid feature fps %s',
+    (fps) => {
+      expect(() => featureFrameForTime(0, 120, fps)).toThrow();
+    },
+  );
+});
+
+describe('pure synchronization-proof state', () => {
+  test('returns an explicit idle state without stale authority identifiers', () => {
+    const state = proofFrameState('V1-03', 120, 0);
+
+    expect(state).toEqual({
+      status: 'idle',
+      compositionFps: 120,
+      proofFrame: 0,
+      proofTimeSeconds: 0,
+      proofTimeMilliseconds: 0,
+    });
+    for (const forbidden of [
+      'lineId',
+      'cueId',
+      'sourceTokenIds',
+      'sourceTokens',
+      'targetIds',
+      'targets',
+    ]) {
+      expect(forbidden in state).toBe(false);
+    }
+  });
+
+  test('reports every reviewed active-state field from authority data', () => {
+    const state = activeStateAtCueStart('V1-08', 1);
+
+    expect(state).toMatchObject({
+      status: 'active',
+      lineId: 'V1-08',
+      cueId: 'V1-08-C02',
+      activation: 'backward',
+      sourceTokenIds: ['V1-08-R03', 'V1-08-R04'],
+      sourceTokens: [
+        {id: 'V1-08-R03', text: 'за'},
+        {id: 'V1-08-R04', text: 'спиною'},
+      ],
+      sourceText: 'за спиною',
+      targetIds: ['V1-08-S01'],
+      targets: [{id: 'V1-08-S01', text: 'Behind my back,'}],
+      targetText: 'Behind my back,',
+      selectedSample: 3_819_545,
+      confidence: 'high',
+      uncertaintySamples: 441,
+      compositionFps: 120,
+      proofFrame: 10_393,
+      nearestFrame: 10_393,
+      matchingCueIds: ['V1-08/V1-08-C02'],
+    });
+    expect(state.selectedMilliseconds).toBeCloseTo(
+      (3_819_545 / SAMPLE_RATE) * 1_000,
+      9,
+    );
+    expect(state.uncertaintyMilliseconds).toBe(10);
+    expect(state.frameErrorMilliseconds).toBeCloseTo(-2.664399, 6);
+    expect(state.absoluteFrameErrorMilliseconds).toBeCloseTo(2.664399, 6);
+  });
+
+  test('keeps every reviewed cue within the 120 fps nearest-frame bound', () => {
+    for (const line of taniseaAlignment.lines) {
+      for (const cue of line.cues) {
+        const state = proofFrameState(
+          line.id,
+          120,
+          frameForSample(cue.startSample, 120),
+        );
+        expect(state.status, cue.id).toBe('active');
+        if (state.status === 'active') {
+          expect(
+            state.absoluteFrameErrorMilliseconds,
+            cue.id,
+          ).toBeLessThanOrEqual(4.167);
+        }
+      }
+    }
+  });
+
+  test('preserves the exact V1-03 source-to-target order and backward contact', () => {
+    expect(
+      [0, 1, 2].map((cueIndex) => {
+        const state = activeStateAtCueStart('V1-03', cueIndex);
+        return {
+          cueId: state.cueId,
+          sourceTokenIds: state.sourceTokenIds,
+          targetIds: state.targetIds,
+          activation: state.activation,
+          nearestFrame: state.nearestFrame,
+        };
+      }),
+    ).toEqual([
+      {
+        cueId: 'V1-03-C01',
+        sourceTokenIds: [
+          'V1-03-R01',
+          'V1-03-R02',
+          'V1-03-R03',
+          'V1-03-R04',
+        ],
+        targetIds: ['V1-03-S01'],
+        activation: 'forward',
+        nearestFrame: 8_448,
+      },
+      {
+        cueId: 'V1-03-C02',
+        sourceTokenIds: ['V1-03-R05'],
+        targetIds: ['V1-03-S03'],
+        activation: 'forward',
+        nearestFrame: 8_636,
+      },
+      {
+        cueId: 'V1-03-C03',
+        sourceTokenIds: ['V1-03-R06'],
+        targetIds: ['V1-03-S02'],
+        activation: 'backward',
+        nearestFrame: 8_710,
+      },
+    ]);
+  });
+
+  test('preserves the exact V1-08 order and two-source backward S01 contact', () => {
+    expect(
+      [0, 1, 2, 3].map((cueIndex) => {
+        const state = activeStateAtCueStart('V1-08', cueIndex);
+        return {
+          cueId: state.cueId,
+          sourceTokenIds: state.sourceTokenIds,
+          targetIds: state.targetIds,
+          activation: state.activation,
+          nearestFrame: state.nearestFrame,
+        };
+      }),
+    ).toEqual([
+      {
+        cueId: 'V1-08-C01',
+        sourceTokenIds: ['V1-08-R02'],
+        targetIds: ['V1-08-S02'],
+        activation: 'forward',
+        nearestFrame: 10_360,
+      },
+      {
+        cueId: 'V1-08-C02',
+        sourceTokenIds: ['V1-08-R03', 'V1-08-R04'],
+        targetIds: ['V1-08-S01'],
+        activation: 'backward',
+        nearestFrame: 10_393,
+      },
+      {
+        cueId: 'V1-08-C03',
+        sourceTokenIds: ['V1-08-R05', 'V1-08-R06'],
+        targetIds: ['V1-08-S03'],
+        activation: 'forward',
+        nearestFrame: 10_530,
+      },
+      {
+        cueId: 'V1-08-C04',
+        sourceTokenIds: ['V1-08-R07'],
+        targetIds: ['V1-08-S04'],
+        activation: 'forward',
+        nearestFrame: 10_646,
+      },
+    ]);
+  });
+
+  test('covers the concrete V1-03 and V1-08 proof regression windows', () => {
+    const v103Backward = proofFrameState('V1-03', 120, 8_710);
+    expect(v103Backward).toMatchObject({
+      status: 'active',
+      cueId: 'V1-03-C03',
+      targetIds: ['V1-03-S02'],
+      activation: 'backward',
+    });
+
+    const v108Backward = proofFrameState('V1-08', 120, 10_394);
+    expect(v108Backward).toMatchObject({
+      status: 'active',
+      cueId: 'V1-08-C02',
+      sourceTokenIds: ['V1-08-R03', 'V1-08-R04'],
+      targetIds: ['V1-08-S01'],
+      activation: 'backward',
+      nearestFrame: 10_393,
+    });
+
+    for (const state of [v103Backward, v108Backward]) {
+      expect(state.proofFrame).toBeGreaterThanOrEqual(
+        state === v103Backward ? 8_448 : 10_360,
+      );
+      expect(state.proofFrame).toBeLessThanOrEqual(
+        state === v103Backward ? 8_806 : 10_746,
+      );
+    }
+  });
+
+  test.each([
+    ['V1-03', 120, -1],
+    ['V1-03', 0, 0],
+    ['V1-03', Number.NaN, 0],
+    ['V1-03', 120, Number.POSITIVE_INFINITY],
+  ] as const)('rejects invalid proof input %s/%s/%s', (lineId, fps, frame) => {
+    expect(() => proofFrameState(lineId, fps, frame)).toThrow();
+  });
+
+  test('rejects an unknown reviewed line', () => {
+    expect(() => proofFrameState('missing-line', 120, 0)).toThrow(
+      /Unknown reviewed line/,
+    );
+  });
+});
+
+describe('diagnostic-only proof composition', () => {
+  test('renders the accepted public film once beneath a proof-only overlay', () => {
+    const element = SyncProofFrame({frame: 8_710, fps: 120}) as ReactElement<{
+      children?: ReactNode;
+    }>;
+    const children = Children.toArray(element.props.children).filter(
+      (child): child is ReactElement => typeof child === 'object' && child !== null,
+    );
+
+    expect(children).toHaveLength(2);
+    expect(children[0]?.type).toBe(LyricFilm);
+    expect(children[1]?.type).toBe(ProofDiagnosticOverlay);
+  });
+
+  test('renders stable active and idle proof identifiers and audit text', () => {
+    const active = activeStateAtCueStart('V1-08', 1);
+    const activeMarkup = renderToStaticMarkup(
+      createElement(ProofDiagnosticOverlay, {state: active}),
+    );
+    expect(activeMarkup).toContain('data-sync-proof-overlay="true"');
+    expect(activeMarkup).toContain('data-sync-proof-status="active"');
+    expect(activeMarkup).toContain('data-sync-proof-line-id="V1-08"');
+    expect(activeMarkup).toContain('V1-08-C02');
+    expect(activeMarkup).toContain('V1-08-R03 + V1-08-R04');
+    expect(activeMarkup).toContain('за спиною');
+    expect(activeMarkup).toContain('V1-08-S01');
+    expect(activeMarkup).toContain('Behind my back,');
+    expect(activeMarkup).toContain('3819545');
+    expect(activeMarkup).toContain('HIGH');
+    expect(activeMarkup).toContain('441 samples');
+    expect(activeMarkup).toContain('10393');
+
+    const idleMarkup = renderToStaticMarkup(
+      createElement(ProofDiagnosticOverlay, {
+        state: proofFrameState('V1-08', 120, 0),
+      }),
+    );
+    expect(idleMarkup).toContain('data-sync-proof-status="idle"');
+    expect(idleMarkup).toContain('IDLE — NO REVIEWED CUE ACTIVE');
+    expect(idleMarkup).not.toContain('V1-08-C02');
+  });
+
+  test('registers exact public and proof composition contracts', () => {
+    const root = RemotionRoot() as ReactElement<{children?: ReactNode}>;
+    const compositions = Children.toArray(root.props.children).filter(
+      (child): child is ReactElement<Record<string, unknown>> =>
+        typeof child === 'object' && child !== null,
+    );
+
+    expect(
+      compositions.map(({props}) => ({
+        id: props.id,
+        component: props.component,
+        durationInFrames: props.durationInFrames,
+        fps: props.fps,
+        width: props.width,
+        height: props.height,
+      })),
+    ).toEqual([
+      {
+        id: 'LyricFilmVNext',
+        component: LyricFilm,
+        durationInFrames: 9_180,
+        fps: 60,
+        width: 1_080,
+        height: 1_080,
+      },
+      {
+        id: 'LyricFilmSyncProof',
+        component: SyncProof,
+        durationInFrames: 18_360,
+        fps: 120,
+        width: 1_080,
+        height: 1_080,
+      },
+    ]);
+    expect(9_180 / 60).toBe(153);
+    expect(18_360 / 120).toBe(153);
+  });
+});
+
+describe('proof render and remux contract', () => {
+  test('plans an arbitrary inclusive short range as a muted H.264 proof', () => {
+    const plan = createProofRenderPlan({
+      entryPoint: 'src/index.ts',
+      soundtrackPath: 'public/soundtrack.m4a',
+      outputPath: 'work/V1-03.mp4',
+      frameRange: {start: 8_448, end: 8_806},
+    });
+
+    expect(plan).toEqual({
+      compositionId: 'LyricFilmSyncProof',
+      frameRange: {start: 8_448, end: 8_806},
+      expectedFrameCount: 359,
+      expectedDurationSeconds: 359 / 120,
+      mutedOutputPath: 'work/V1-03.mp4',
+      finalOutputPath: 'work/V1-03.mp4',
+      renderArguments: [
+        'render',
+        'src/index.ts',
+        'LyricFilmSyncProof',
+        'work/V1-03.mp4',
+        '--codec=h264',
+        '--crf=12',
+        '--pixel-format=yuv420p',
+        '--color-space=bt709',
+        '--muted',
+        '--overwrite',
+        '--frames=8448-8806',
+      ],
+      remuxArguments: null,
+    });
+  });
+
+  test('plans the full proof and packet-copy remux without audio re-encoding', () => {
+    const plan = createProofRenderPlan({
+      entryPoint: 'src/index.ts',
+      soundtrackPath: 'public/soundtrack.m4a',
+      outputPath: 'output/Tanisea-Lyric-Film-Sync-Proof-120fps.mp4',
+      frameRange: null,
+    });
+
+    expect(plan.expectedFrameCount).toBe(18_360);
+    expect(plan.expectedDurationSeconds).toBe(153);
+    expect(plan.mutedOutputPath).toBe(
+      'output/Tanisea-Lyric-Film-Sync-Proof-120fps.video-only.mp4',
+    );
+    expect(plan.renderArguments).toEqual([
+      'render',
+      'src/index.ts',
+      'LyricFilmSyncProof',
+      'output/Tanisea-Lyric-Film-Sync-Proof-120fps.video-only.mp4',
+      '--codec=h264',
+      '--crf=12',
+      '--pixel-format=yuv420p',
+      '--color-space=bt709',
+      '--muted',
+      '--overwrite',
+    ]);
+    expect(plan.remuxArguments).toEqual([
+      '-hide_banner',
+      '-i',
+      'output/Tanisea-Lyric-Film-Sync-Proof-120fps.video-only.mp4',
+      '-i',
+      'public/soundtrack.m4a',
+      '-map',
+      '0:v:0',
+      '-map',
+      '1:a:0',
+      '-c:v',
+      'copy',
+      '-c:a',
+      'copy',
+      '-tag:v',
+      'avc1',
+      '-movflags',
+      '+faststart',
+      '-y',
+      'output/Tanisea-Lyric-Film-Sync-Proof-120fps.mp4',
+    ]);
+  });
+
+  test.each([
+    ['8448-8806', {start: 8_448, end: 8_806}],
+    ['10360-10746', {start: 10_360, end: 10_746}],
+  ] as const)('parses inclusive frame range %s', (value, expected) => {
+    expect(parseInclusiveFrameRange(value)).toEqual(expected);
+  });
+
+  test.each(['', '8448', '8806-8448', '-1-4', '1.5-4', '1-NaN'])(
+    'rejects invalid inclusive frame range %s',
+    (value) => {
+      expect(() => parseInclusiveFrameRange(value)).toThrow();
+    },
+  );
+
+  test('accepts exact full-proof probe metadata and exposes counted packets', () => {
+    const summary = verifyProofProbe(
+      {
+        streams: [
+          {
+            codec_type: 'video',
+            codec_name: 'h264',
+            codec_tag_string: 'avc1',
+            width: 1_080,
+            height: 1_080,
+            pix_fmt: 'yuv420p',
+            color_range: 'tv',
+            color_space: 'bt709',
+            color_transfer: 'bt709',
+            color_primaries: 'bt709',
+            avg_frame_rate: '120/1',
+            r_frame_rate: '120/1',
+            start_time: '0.000000',
+            duration: '153.000000',
+            nb_read_frames: '18360',
+          },
+          {
+            codec_type: 'audio',
+            codec_name: 'aac',
+            sample_rate: '44100',
+            channels: 2,
+            start_time: '0.000000',
+            duration: '153.000000',
+            nb_read_packets: '6590',
+          },
+        ],
+        format: {duration: '153.000000', start_time: '0.000000'},
+      },
+      {
+        expectedFrameCount: 18_360,
+        expectedDurationSeconds: 153,
+        requireAudio: true,
+      },
+    );
+
+    expect(summary).toMatchObject({
+      frameCount: 18_360,
+      frameRate: '120/1',
+      dimensions: '1080x1080',
+      audioPacketCount: 6_590,
+    });
+  });
+
+  test('rejects a stale or incomplete proof probe', () => {
+    expect(() =>
+      verifyProofProbe(
+        {
+          streams: [
+            {
+              codec_type: 'video',
+              codec_name: 'h264',
+              codec_tag_string: 'avc1',
+              width: 1_080,
+              height: 1_080,
+              pix_fmt: 'yuv420p',
+              color_range: 'tv',
+              color_space: 'bt709',
+              color_transfer: 'bt709',
+              color_primaries: 'bt709',
+              avg_frame_rate: '120/1',
+              r_frame_rate: '120/1',
+              start_time: '0.000000',
+              duration: '152.991667',
+              nb_read_frames: '18359',
+            },
+          ],
+          format: {duration: '152.991667', start_time: '0.000000'},
+        },
+        {
+          expectedFrameCount: 18_360,
+          expectedDurationSeconds: 153,
+          requireAudio: true,
+        },
+      ),
+    ).toThrow(/18,360 decoded video frames/);
+  });
+
+  test('requires unchanged AAC packet count and packet-stream hash', () => {
+    const identity = {packetCount: 6_590, streamHash: 'SHA256=abc123'};
+    expect(() => verifyAudioPacketIdentity(identity, identity)).not.toThrow();
+    expect(() =>
+      verifyAudioPacketIdentity(identity, {...identity, packetCount: 6_589}),
+    ).toThrow(/packet count mismatch/);
+    expect(() =>
+      verifyAudioPacketIdentity(identity, {...identity, streamHash: 'SHA256=def456'}),
+    ).toThrow(/packet hash mismatch/);
+  });
+});
