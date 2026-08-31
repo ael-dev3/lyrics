@@ -238,16 +238,26 @@ V1-08-R07 -> V1-08-S04 (forward)
 
 ## Independent chorus evidence
 
-The repeated choruses were reviewed as separate performances. Literal first-line token intervals are:
+The repeated choruses were reviewed as separate performances. Each literal below is `token ID: selected onset–offset [manual-review onset, offset]`; the evidence samples are concrete selected-boundary `manual-review` records, not inferred identifiers.
 
-- `C1-01`: `[1066955–1070483, 1073129–1077539, 1081067–1097825, 1100471–1124991]`
-- `C2-01`: `[4031225–4033871, 4035635–4039163, 4040045–4061213, 4062977–4169743]`
+| Pair | First performance (C1) | Second performance (C2) |
+|---|---|---|
+| 01 | `C1-01-R01: 1066955–1070483 [1066955, 1070483]`; `C1-01-R02: 1073129–1077539 [1073129, 1077539]`; `C1-01-R03: 1081067–1097825 [1081067, 1097825]`; `C1-01-R04: 1100471–1124991 [1100471, 1124991]` | `C2-01-R01: 4031225–4033871 [4031225, 4033871]`; `C2-01-R02: 4035635–4039163 [4035635, 4039163]`; `C2-01-R03: 4040045–4061213 [4040045, 4061213]`; `C2-01-R04: 4062977–4169743 [4062977, 4169743]` |
+| 02 | `C1-02-R01: 1219674–1224966 [1219674, 1224966]`; `C1-02-R02: 1225848–1241724 [1225848, 1241724]`; `C1-02-R03: 1243488–1332702 [1243488, 1332702]` | `C2-02-R01: 4175917–4178563 [4175917, 4178563]`; `C2-02-R02: 4181209–4204185 [4181209, 4204185]`; `C2-02-R03: 4205949–4307423 [4205949, 4307423]` |
+| 03 | `C1-03-R01: 1346638–1372700 [1346638, 1372700]`; `C1-03-R02: 1372700–1398764 [1372700, 1398764]`; `C1-03-R03: 1400528–1405820 [1400528, 1405820]`; `C1-03-R04: 1407584–1487052 [1407584, 1487052]` | `C2-03-R01: 4310069–4321535 [4310069, 4321535]`; `C2-03-R02: 4323299–4333883 [4323299, 4333883]`; `C2-03-R03: 4334765–4339175 [4334765, 4339175]`; `C2-03-R04: 4340057–4449249 [4340057, 4449249]` |
+| 04 | `C1-04-R01: 1491462–1494108 [1491462, 1494108]`; `C1-04-R02: 1497636–1525904 [1497636, 1525904]`; `C1-04-R03: 1528550–1628348 [1528550, 1628348]` | `C2-04-R01: 4449249–4461818 [4449249, 4461818]`; `C2-04-R02: 4462700–4486514 [4462700, 4486514]`; `C2-04-R03: 4491806–4590634 [4491806, 4590634]` |
+| 05 | `C1-05-R01: 1631876–1638932 [1631876, 1638932]`; `C1-05-R02: 1639814–1659263 [1639814, 1659263]`; `C1-05-R03: 1660145–1672492 [1660145, 1672492]`; `C1-05-R04: 1674257–1698000 [1674257, 1698000]`; `C1-05-R05: 1698000–1795223 [1698000, 1795223]` | `C2-05-R01: 4595926–4599498 [4595926, 4599498]`; `C2-05-R02: 4603026–4623312 [4603026, 4623312]`; `C2-05-R03: 4624194–4626500 [4624194, 4626500]`; `C2-05-R04: 4626500–4630368 [4626500, 4630368]`; `C2-05-R05: 4630368–4757420 [4630368, 4757420]` |
+| 06 | `C1-06-R01: 1796987–1814671 [1796987, 1814671]`; `C1-06-R02: 1818199–1931227 [1818199, 1931227]`; `C1-06-R03: 1936519–1971843 [1936519, 1971843]` | `C2-06-R01: 4760948–4777706 [4760948, 4777706]`; `C2-06-R02: 4778588–4791818 [4778588, 4791818]`; `C2-06-R03: 4793582–4875652 [4793582, 4875652]` |
+| 07 | `C1-07-R01: 1974489–1975371 [1974489, 1975371]`; `C1-07-R02: 1978017–2012459 [1978017, 2012459]`; `C1-07-R03: 2013341–2046020 [2013341, 2046020]`; `C1-07-R04: 2046902–2063660 [2046902, 2063660]` | `C2-07-R01: 4878298–4884472 [4878298, 4884472]`; `C2-07-R02: 4886236–4901230 [4886236, 4901230]`; `C2-07-R03: 4903876–4927734 [4903876, 4927734]`; `C2-07-R04: 4935672–5017742 [4935672, 5017742]` |
+| 08 | `C1-08-R01: 2064542–2078698 [2064542, 2078698]`; `C1-08-R02: 2080462–2096338 [2080462, 2096338]`; `C1-08-R03: 2098102–2171396 [2098102, 2171396]` | `C2-08-R01: 5019506–5036264 [5019506, 5036264]`; `C2-08-R02: 5037146–5045966 [5037146, 5045966]`; `C2-08-R03: 5048612–5171254 [5048612, 5171254]` |
 
-All eight C1/C2 line pairs have distinct line-relative token timelines; no chorus timing was reused.
+These fixtures cover 58 chorus tokens and 116 selected-boundary manual-review evidence records. All eight C1/C2 line pairs also have distinct line-relative token timelines; no chorus timing was reused.
 
 ## Resolved review and rendering bounds
 
 The mandatory MFA-missing manual-review lines are `C1-06`, `C1-07`, `V1-08`, `C2-06`, and `C2-07` (21 tokens). Every token in these lines has WhisperX acoustic evidence plus original-mix/vocal-stem waveform, spectrogram, and manual-review evidence; substitutions are explicitly labeled rather than treated as text matches. All seven `V1-08` boundaries received this treatment.
+
+The blocking verifier derives onset/offset candidate spread from the two MFA and two WhisperX evidence records for each of 81 MFA-backed tokens. It reports 80 tokens above the 1,102.5-sample (25 ms) threshold and requires selected onset plus offset waveform, spectrogram, and manual-review records for each. It separately enforces the exact 21-token no-MFA set, zero MFA records for those tokens, and 42 selected-boundary records for each of waveform, spectrogram, and manual review. Across all 102 tokens, each selected-boundary method has 204 records.
 
 Open review items: **0**. Unresolved uncertainties above 50 ms: **0**. Unknown source IDs: **0**. Unknown targets: **0**. Proportional timing evidence: **0**. Every one of the 74 English targets is activated exactly once.
 
