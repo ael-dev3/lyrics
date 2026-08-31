@@ -137,6 +137,16 @@ const withVideoOnlySuffix = (path: string): string => {
     : `${path.slice(0, -extension.length)}.video-only${extension}`;
 };
 
+const withBt709NormalizedSuffix = (path: string): string => {
+  const extension = extname(path);
+  return extension.length === 0
+    ? `${path}.bt709-normalized`
+    : `${path.slice(0, -extension.length)}.bt709-normalized${extension}`;
+};
+
+const canonicalWindowsPath = (path: string): string =>
+  resolve(path).replaceAll('/', '\\').toLocaleLowerCase('en-US');
+
 export const createProofRenderPlan = ({
   entryPoint,
   soundtrackPath,
@@ -201,6 +211,56 @@ export const createProofRenderPlan = ({
           outputPath,
         ],
   };
+};
+
+export const prepareProofRenderPaths = ({
+  entryPoint,
+  soundtrackPath,
+  plan,
+}: Readonly<{
+  entryPoint: string;
+  soundtrackPath: string;
+  plan: Pick<ProofRenderPlan, 'mutedOutputPath' | 'finalOutputPath'>;
+}>): string => {
+  const normalizedMutedOutputPath = withBt709NormalizedSuffix(
+    plan.mutedOutputPath,
+  );
+  const protectedInputs = [
+    {label: 'protected entry point', path: entryPoint},
+    {label: 'protected soundtrack', path: soundtrackPath},
+  ].map((input) => ({
+    ...input,
+    canonicalPath: canonicalWindowsPath(input.path),
+  }));
+  const deletionTargets = [
+    {label: 'muted output', path: plan.mutedOutputPath},
+    {label: 'final output', path: plan.finalOutputPath},
+    {label: 'BT.709 normalized output', path: normalizedMutedOutputPath},
+  ].map((target) => ({
+    ...target,
+    canonicalPath: canonicalWindowsPath(target.path),
+  }));
+
+  for (const target of deletionTargets) {
+    for (const input of protectedInputs) {
+      if (target.canonicalPath === input.canonicalPath) {
+        throw new Error(
+          `Refusing destructive path collision: ${target.label} ${target.path} aliases ${input.label} ${input.path}`,
+        );
+      }
+    }
+  }
+
+  const uniqueDeletionTargets = new Map(
+    deletionTargets.map(({canonicalPath, path}) => [canonicalPath, path]),
+  );
+  for (const path of uniqueDeletionTargets.values()) {
+    mkdirSync(dirname(path), {recursive: true});
+  }
+  for (const path of uniqueDeletionTargets.values()) {
+    rmSync(path, {force: true});
+  }
+  return normalizedMutedOutputPath;
 };
 
 const numberFromProbe = (value: string | undefined): number => Number(value);
@@ -419,12 +479,13 @@ const verifyFastStart = (path: string): void => {
   }
 };
 
-const decodeProof = (path: string, requireAudio: boolean): void => {
+export const decodeProof = (path: string, requireAudio: boolean): void => {
   execFileSync(
     'ffmpeg',
     [
       '-v',
       'error',
+      '-xerror',
       '-i',
       path,
       '-map',
@@ -438,12 +499,10 @@ const decodeProof = (path: string, requireAudio: boolean): void => {
   );
 };
 
-const normalizeBt709Metadata = (path: string): void => {
-  const extension = extname(path);
-  const normalizedPath = extension.length === 0
-    ? `${path}.bt709-normalized`
-    : `${path.slice(0, -extension.length)}.bt709-normalized${extension}`;
-  rmSync(normalizedPath, {force: true});
+const normalizeBt709Metadata = (
+  path: string,
+  normalizedPath: string,
+): void => {
   execFileSync(
     'ffmpeg',
     [
@@ -574,12 +633,11 @@ const run = (): void => {
     outputPath,
     frameRange: options.frameRange,
   });
-  mkdirSync(dirname(plan.mutedOutputPath), {recursive: true});
-  mkdirSync(dirname(plan.finalOutputPath), {recursive: true});
-  rmSync(plan.mutedOutputPath, {force: true});
-  if (plan.finalOutputPath !== plan.mutedOutputPath) {
-    rmSync(plan.finalOutputPath, {force: true});
-  }
+  const normalizedMutedOutputPath = prepareProofRenderPaths({
+    entryPoint,
+    soundtrackPath,
+    plan,
+  });
 
   const remotionExecutable = resolve(
     root,
@@ -600,7 +658,7 @@ const run = (): void => {
     existsSync(plan.mutedOutputPath) && statSync(plan.mutedOutputPath).size > 0,
     `Proof render was not created: ${plan.mutedOutputPath}`,
   );
-  normalizeBt709Metadata(plan.mutedOutputPath);
+  normalizeBt709Metadata(plan.mutedOutputPath, normalizedMutedOutputPath);
 
   const mutedSummary = verifyProofProbe(probeFile(plan.mutedOutputPath), {
     expectedFrameCount: plan.expectedFrameCount,

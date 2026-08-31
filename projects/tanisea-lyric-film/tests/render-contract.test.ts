@@ -1,3 +1,12 @@
+import {execFileSync, spawnSync} from 'node:child_process';
+import {
+  mkdtempSync,
+  readFileSync,
+  rmSync,
+  writeFileSync,
+} from 'node:fs';
+import {tmpdir} from 'node:os';
+import {basename, dirname, join, resolve} from 'node:path';
 import {
   Children,
   createElement,
@@ -8,7 +17,9 @@ import {renderToStaticMarkup} from 'react-dom/server';
 import {describe, expect, test} from 'vitest';
 import {
   createProofRenderPlan,
+  decodeProof,
   parseInclusiveFrameRange,
+  prepareProofRenderPaths,
   verifyAudioPacketIdentity,
   verifyProofProbe,
 } from '../scripts/render-sync-proof';
@@ -21,11 +32,162 @@ import {
   SyncProof,
   SyncProofFrame,
 } from '../src/SyncProof';
-import {
-  frameForSample,
-  SAMPLE_RATE,
-} from '../src/timing/alignment-types';
 import {taniseaAlignment} from '../src/timing/tanisea-alignment';
+
+const withTemporaryDirectory = <Result>(
+  prefix: string,
+  use: (directory: string) => Result,
+): Result => {
+  const temporaryRoot = resolve(tmpdir());
+  const directory = mkdtempSync(join(temporaryRoot, prefix));
+  try {
+    return use(directory);
+  } finally {
+    const resolvedDirectory = resolve(directory);
+    if (
+      dirname(resolvedDirectory).toLocaleLowerCase('en-US') !==
+        temporaryRoot.toLocaleLowerCase('en-US') ||
+      !basename(resolvedDirectory).startsWith(prefix)
+    ) {
+      throw new Error(`Refusing unsafe temporary cleanup: ${resolvedDirectory}`);
+    }
+    rmSync(resolvedDirectory, {recursive: true, force: true});
+  }
+};
+
+type PacketProbe = Readonly<{
+  packets?: readonly Readonly<{
+    pos?: string;
+    size?: string;
+    flags?: string;
+  }>[];
+}>;
+
+const createDecodeFixtures = (
+  directory: string,
+): Readonly<{cleanPath: string; damagedPath: string}> => {
+  const cleanPath = join(directory, 'clean.mp4');
+  const damagedPath = join(directory, 'damaged.mp4');
+  execFileSync(
+    'ffmpeg',
+    [
+      '-v',
+      'error',
+      '-f',
+      'lavfi',
+      '-i',
+      'testsrc2=size=96x96:rate=30:duration=2',
+      '-f',
+      'lavfi',
+      '-i',
+      'sine=frequency=1000:sample_rate=44100:duration=2',
+      '-map',
+      '0:v:0',
+      '-map',
+      '1:a:0',
+      '-c:v',
+      'libx264',
+      '-preset',
+      'ultrafast',
+      '-g',
+      '30',
+      '-keyint_min',
+      '30',
+      '-sc_threshold',
+      '0',
+      '-pix_fmt',
+      'yuv420p',
+      '-c:a',
+      'aac',
+      '-shortest',
+      '-movflags',
+      '+faststart',
+      '-y',
+      cleanPath,
+    ],
+    {stdio: 'pipe'},
+  );
+
+  const probe = JSON.parse(
+    execFileSync(
+      'ffprobe',
+      [
+        '-v',
+        'error',
+        '-select_streams',
+        'v:0',
+        '-show_packets',
+        '-show_entries',
+        'packet=pos,size,flags',
+        '-of',
+        'json',
+        cleanPath,
+      ],
+      {encoding: 'utf8'},
+    ),
+  ) as PacketProbe;
+  const packet = probe.packets?.find(
+    ({flags, size}) => !flags?.includes('K') && Number(size) >= 256,
+  );
+  if (!packet?.pos || !packet.size) {
+    throw new Error('Generated fixture has no suitable non-key H.264 packet');
+  }
+
+  const packetPosition = Number(packet.pos);
+  const packetSize = Number(packet.size);
+  const damageStart = packetPosition + 12;
+  const damageLength = Math.min(128, packetSize - 16);
+  const bytes = readFileSync(cleanPath);
+  bytes.fill(0, damageStart, damageStart + damageLength);
+  writeFileSync(damagedPath, bytes);
+  return {cleanPath, damagedPath};
+};
+
+const INDEPENDENT_SAMPLE_RATE = 44_100;
+const INDEPENDENT_PROOF_FPS = 120;
+
+const independentlyNearestFrame = (sample: number): number =>
+  Math.round(
+    (sample * INDEPENDENT_PROOF_FPS) / INDEPENDENT_SAMPLE_RATE,
+  );
+
+type ReviewedLine = (typeof taniseaAlignment.lines)[number];
+type ReviewedCue = ReviewedLine['cues'][number];
+
+type IndependentCueCandidate = Readonly<{
+  line: ReviewedLine;
+  cue: ReviewedCue;
+  startFrame: number;
+  endFrame: number;
+}>;
+
+const independentCandidateOrder = (
+  left: IndependentCueCandidate,
+  right: IndependentCueCandidate,
+): number =>
+  right.cue.startSample - left.cue.startSample ||
+  left.cue.endSample - right.cue.endSample ||
+  left.line.id.localeCompare(right.line.id) ||
+  left.cue.id.localeCompare(right.cue.id);
+
+const independentlyActiveCandidates = (
+  lineId: string | null,
+  frame: number,
+): readonly IndependentCueCandidate[] =>
+  taniseaAlignment.lines
+    .filter((line) => lineId === null || line.id === lineId)
+    .flatMap((line) =>
+      line.cues.map((cue) => ({
+        line,
+        cue,
+        startFrame: independentlyNearestFrame(cue.startSample),
+        endFrame: independentlyNearestFrame(cue.endSample),
+      })),
+    )
+    .filter(({startFrame, endFrame}) =>
+      frame >= startFrame && frame < endFrame
+    )
+    .sort(independentCandidateOrder);
 
 const activeStateAtCueStart = (lineId: string, cueIndex: number) => {
   const line = taniseaAlignment.lines.find(({id}) => id === lineId);
@@ -35,8 +197,8 @@ const activeStateAtCueStart = (lineId: string, cueIndex: number) => {
 
   const state = proofFrameState(
     lineId,
-    120,
-    frameForSample(cue.startSample, 120),
+    INDEPENDENT_PROOF_FPS,
+    independentlyNearestFrame(cue.startSample),
   );
   if (state.status !== 'active') {
     throw new Error(`Expected active proof state for ${cue.id}`);
@@ -122,7 +284,7 @@ describe('pure synchronization-proof state', () => {
       matchingCueIds: ['V1-08/V1-08-C02'],
     });
     expect(state.selectedMilliseconds).toBeCloseTo(
-      (3_819_545 / SAMPLE_RATE) * 1_000,
+      (3_819_545 / INDEPENDENT_SAMPLE_RATE) * 1_000,
       9,
     );
     expect(state.uncertaintyMilliseconds).toBe(10);
@@ -130,20 +292,93 @@ describe('pure synchronization-proof state', () => {
     expect(state.absoluteFrameErrorMilliseconds).toBeCloseTo(2.664399, 6);
   });
 
-  test('keeps every reviewed cue within the 120 fps nearest-frame bound', () => {
+  test('independently proves every reviewed cue and 120 fps frame error', () => {
     for (const line of taniseaAlignment.lines) {
       for (const cue of line.cues) {
+        const nearestFrame = Math.round(
+          (cue.startSample * 120) / 44_100,
+        );
+        const signedErrorMilliseconds =
+          (nearestFrame / 120 - cue.startSample / 44_100) * 1_000;
+        const absoluteErrorMilliseconds = Math.abs(signedErrorMilliseconds);
         const state = proofFrameState(
           line.id,
           120,
-          frameForSample(cue.startSample, 120),
+          nearestFrame,
         );
         expect(state.status, cue.id).toBe('active');
         if (state.status === 'active') {
+          expect(state.lineId, cue.id).toBe(line.id);
+          expect(state.cueId, cue.id).toBe(cue.id);
+          expect(state.selectedSample, cue.id).toBe(cue.startSample);
+          expect(state.nearestFrame, cue.id).toBe(nearestFrame);
+          expect(state.frameErrorMilliseconds, cue.id).toBeCloseTo(
+            signedErrorMilliseconds,
+            12,
+          );
+          expect(state.absoluteFrameErrorMilliseconds, cue.id).toBeCloseTo(
+            absoluteErrorMilliseconds,
+            12,
+          );
+          expect(absoluteErrorMilliseconds, cue.id).toBeLessThanOrEqual(4.167);
+          expect(state.absoluteFrameErrorMilliseconds, cue.id).toBeLessThanOrEqual(
+            4.167,
+          );
+        }
+      }
+    }
+  });
+
+  test('applies start-inclusive and end-exclusive selection at every cue boundary', () => {
+    for (const line of taniseaAlignment.lines) {
+      for (const cue of line.cues) {
+        const startFrame = independentlyNearestFrame(cue.startSample);
+        const endFrame = independentlyNearestFrame(cue.endSample);
+        const boundaries = [
+          {label: 'startFrame - 1', frame: startFrame - 1, includesCue: false},
+          {label: 'startFrame', frame: startFrame, includesCue: true},
+          {label: 'endFrame - 1', frame: endFrame - 1, includesCue: true},
+          {label: 'endFrame', frame: endFrame, includesCue: false},
+        ] as const;
+
+        for (const boundary of boundaries) {
+          if (boundary.frame < 0) continue;
+          const expectedCandidates = independentlyActiveCandidates(
+            null,
+            boundary.frame,
+          );
+          const expectedMatchingCueIds = expectedCandidates.map(
+            ({line: candidateLine, cue: candidateCue}) =>
+              `${candidateLine.id}/${candidateCue.id}`,
+          );
           expect(
-            state.absoluteFrameErrorMilliseconds,
-            cue.id,
-          ).toBeLessThanOrEqual(4.167);
+            expectedMatchingCueIds.includes(`${line.id}/${cue.id}`),
+            `${cue.id} at ${boundary.label}`,
+          ).toBe(boundary.includesCue);
+
+          const state = proofFrameState(
+            null,
+            INDEPENDENT_PROOF_FPS,
+            boundary.frame,
+          );
+          const selected = expectedCandidates[0];
+          if (!selected) {
+            expect(state.status, `${cue.id} at ${boundary.label}`).toBe('idle');
+            continue;
+          }
+
+          expect(state.status, `${cue.id} at ${boundary.label}`).toBe('active');
+          if (state.status === 'active') {
+            expect(state.lineId, `${cue.id} at ${boundary.label}`).toBe(
+              selected.line.id,
+            );
+            expect(state.cueId, `${cue.id} at ${boundary.label}`).toBe(
+              selected.cue.id,
+            );
+            expect(state.matchingCueIds, `${cue.id} at ${boundary.label}`).toEqual(
+              expectedMatchingCueIds,
+            );
+          }
         }
       }
     }
@@ -362,6 +597,127 @@ describe('diagnostic-only proof composition', () => {
 });
 
 describe('proof render and remux contract', () => {
+  test('accepts clean generated media in muted and full decode modes', () =>
+    withTemporaryDirectory('tanisea-proof-decode-', (directory) => {
+      const {cleanPath} = createDecodeFixtures(directory);
+
+      expect(() => decodeProof(cleanPath, false)).not.toThrow();
+      expect(() => decodeProof(cleanPath, true)).not.toThrow();
+    }), 30_000);
+
+  test('rejects recoverable H.264 corruption in muted and full decode modes', () =>
+    withTemporaryDirectory('tanisea-proof-decode-', (directory) => {
+      const {damagedPath} = createDecodeFixtures(directory);
+      const ordinaryDecode = spawnSync(
+        'ffmpeg',
+        [
+          '-v',
+          'error',
+          '-i',
+          damagedPath,
+          '-map',
+          '0:v:0',
+          '-f',
+          'null',
+          '-',
+        ],
+        {encoding: 'utf8'},
+      );
+
+      expect(ordinaryDecode.status).toBe(0);
+      expect(ordinaryDecode.stderr).toMatch(/error|invalid|corrupt/i);
+      expect(() => decodeProof(damagedPath, false)).toThrow();
+      expect(() => decodeProof(damagedPath, true)).toThrow();
+    }), 30_000);
+
+  test('rejects a full output that aliases the soundtrack before deleting any target', () =>
+    withTemporaryDirectory('tanisea-proof-paths-', (directory) => {
+      const entryPoint = join(directory, 'index.ts');
+      const soundtrackPath = join(directory, 'soundtrack.m4a');
+      const mutedOutputPath = join(directory, 'soundtrack.video-only.m4a');
+      writeFileSync(entryPoint, 'protected entry point');
+      writeFileSync(soundtrackPath, 'protected soundtrack');
+      writeFileSync(mutedOutputPath, 'existing muted output');
+      const plan = createProofRenderPlan({
+        entryPoint,
+        soundtrackPath,
+        outputPath: soundtrackPath,
+        frameRange: null,
+      });
+
+      expect(() =>
+        prepareProofRenderPaths({entryPoint, soundtrackPath, plan}),
+      ).toThrow(/final output.*protected soundtrack/i);
+      expect(readFileSync(soundtrackPath, 'utf8')).toBe('protected soundtrack');
+      expect(readFileSync(mutedOutputPath, 'utf8')).toBe(
+        'existing muted output',
+      );
+    }));
+
+  test('rejects a short output that aliases the entry point before deletion', () =>
+    withTemporaryDirectory('tanisea-proof-paths-', (directory) => {
+      const entryPoint = join(directory, 'index.ts');
+      const soundtrackPath = join(directory, 'soundtrack.m4a');
+      writeFileSync(entryPoint, 'protected entry point');
+      writeFileSync(soundtrackPath, 'protected soundtrack');
+      const plan = createProofRenderPlan({
+        entryPoint,
+        soundtrackPath,
+        outputPath: entryPoint,
+        frameRange: {start: 0, end: 0},
+      });
+
+      expect(() =>
+        prepareProofRenderPaths({entryPoint, soundtrackPath, plan}),
+      ).toThrow(/muted output.*protected entry point/i);
+      expect(readFileSync(entryPoint, 'utf8')).toBe('protected entry point');
+    }));
+
+  test('rejects case-only Windows aliases before deletion', () =>
+    withTemporaryDirectory('tanisea-proof-paths-', (directory) => {
+      const entryPoint = join(directory, 'MixedCaseEntry.ts');
+      const soundtrackPath = join(directory, 'soundtrack.m4a');
+      writeFileSync(entryPoint, 'case-protected entry point');
+      writeFileSync(soundtrackPath, 'protected soundtrack');
+      const plan = createProofRenderPlan({
+        entryPoint,
+        soundtrackPath,
+        outputPath: entryPoint.toUpperCase(),
+        frameRange: {start: 0, end: 0},
+      });
+
+      expect(() =>
+        prepareProofRenderPaths({entryPoint, soundtrackPath, plan}),
+      ).toThrow(/muted output.*protected entry point/i);
+      expect(readFileSync(entryPoint, 'utf8')).toBe(
+        'case-protected entry point',
+      );
+    }));
+
+  test('rejects a normalized temporary output collision before any deletion', () =>
+    withTemporaryDirectory('tanisea-proof-paths-', (directory) => {
+      const outputPath = join(directory, 'proof.mp4');
+      const entryPoint = join(directory, 'proof.bt709-normalized.mp4');
+      const soundtrackPath = join(directory, 'soundtrack.m4a');
+      writeFileSync(outputPath, 'existing proof output');
+      writeFileSync(entryPoint, 'protected normalized-path entry point');
+      writeFileSync(soundtrackPath, 'protected soundtrack');
+      const plan = createProofRenderPlan({
+        entryPoint,
+        soundtrackPath,
+        outputPath,
+        frameRange: {start: 0, end: 0},
+      });
+
+      expect(() =>
+        prepareProofRenderPaths({entryPoint, soundtrackPath, plan}),
+      ).toThrow(/BT\.709 normalized output.*protected entry point/i);
+      expect(readFileSync(outputPath, 'utf8')).toBe('existing proof output');
+      expect(readFileSync(entryPoint, 'utf8')).toBe(
+        'protected normalized-path entry point',
+      );
+    }));
+
   test('plans an arbitrary inclusive short range as a muted H.264 proof', () => {
     const plan = createProofRenderPlan({
       entryPoint: 'src/index.ts',
