@@ -40,7 +40,9 @@ The selected architecture combines a latency-checked vocal stem, a verified Russ
 
 ### Locked audio authority
 
-The checked-in `public/soundtrack.m4a` remains the sole time authority. The pipeline decodes it once to stereo 44.1 kHz PCM without resampling. All derived stems and analysis files must retain exactly 6,747,584 decoded samples per channel or record and compensate a measured latency relative to that source.
+The checked-in `public/soundtrack.m4a` remains the sole time authority. Its container and stream timeline is 153.000 seconds (6,747,300 samples at 44.1 kHz). Its full PCM decode is 6,747,584 samples per channel (153.006440 seconds), retaining the 284-sample AAC tail. Public playback and rendering are clipped to the 153.000-second container timeline, while analysis preserves the full decode geometry.
+
+The pipeline decodes the source once to stereo 44.1 kHz PCM without resampling. All derived stems and analysis files must retain exactly 6,747,584 decoded samples per channel or record and compensate a measured latency relative to that source.
 
 A sample index is the canonical timestamp. Milliseconds are presentation values only:
 

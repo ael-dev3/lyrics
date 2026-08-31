@@ -19,6 +19,8 @@ export type ImportedWord = Readonly<{
 export type LagObservation = Readonly<{
   sourceSample: number;
   lagSamples: number;
+  correlationScore: number;
+  peakProminence: number;
 }>;
 
 export type FrameLagOptions = Readonly<{
@@ -30,6 +32,10 @@ export type MfaCoverage = Readonly<{
   availableIds: readonly string[];
   missingIds: readonly string[];
 }>;
+
+const MIN_LAG_CORRELATION_SCORE = 0.2;
+const MIN_LAG_PEAK_PROMINENCE = 0.05;
+const LAG_PEAK_EXCLUSION_SAMPLES = 4;
 
 const secondsToSamples = (seconds: number): number =>
   Math.round(seconds * 44_100);
@@ -124,6 +130,7 @@ export const observeFrameLag = (
 
   let bestLag = 0;
   let bestScore = Number.NEGATIVE_INFINITY;
+  const lagScores: {lag: number; score: number}[] = [];
   for (
     let lag = -options.maxLagSamples;
     lag <= options.maxLagSamples;
@@ -139,6 +146,7 @@ export const observeFrameLag = (
     }
     if (stemPower <= 1e-12) continue;
     const score = dot / Math.sqrt(sourcePower * stemPower);
+    lagScores.push({lag, score});
     if (
       score > bestScore + Number.EPSILON ||
       (Math.abs(score - bestScore) <= Number.EPSILON &&
@@ -151,7 +159,41 @@ export const observeFrameLag = (
   if (!Number.isFinite(bestScore)) {
     throw new Error(`Stem-lag window at ${sourceSample} has no usable stem`);
   }
-  return {sourceSample, lagSamples: bestLag};
+  if (Math.abs(bestLag) === options.maxLagSamples) {
+    throw new Error(
+      `Stem-lag peak at ${sourceSample} reached search boundary ${options.maxLagSamples}`,
+    );
+  }
+  if (bestScore < MIN_LAG_CORRELATION_SCORE) {
+    throw new Error(
+      `Stem-lag correlation at ${sourceSample} is below ${MIN_LAG_CORRELATION_SCORE}`,
+    );
+  }
+  const comparisonScore = lagScores
+    .filter(
+      ({lag}) => Math.abs(lag - bestLag) > LAG_PEAK_EXCLUSION_SAMPLES,
+    )
+    .reduce(
+      (highest, {score}) => Math.max(highest, score),
+      Number.NEGATIVE_INFINITY,
+    );
+  if (!Number.isFinite(comparisonScore)) {
+    throw new Error(
+      `Stem-lag peak at ${sourceSample} has no distinct comparison lag`,
+    );
+  }
+  const peakProminence = bestScore - comparisonScore;
+  if (peakProminence < MIN_LAG_PEAK_PROMINENCE) {
+    throw new Error(
+      `Stem-lag peak prominence at ${sourceSample} is below ${MIN_LAG_PEAK_PROMINENCE}`,
+    );
+  }
+  return {
+    sourceSample,
+    lagSamples: bestLag,
+    correlationScore: bestScore,
+    peakProminence,
+  };
 };
 
 export const measureFrameLag = (
@@ -597,11 +639,21 @@ const main = (): void => {
       lagMethod: 'normalized cross-correlation against locked source mix',
       lagWindowSamples: LAG_WINDOW_SAMPLES,
       maxSearchedLagSamples: MAX_LAG_SAMPLES,
+      minimumCorrelationScore: MIN_LAG_CORRELATION_SCORE,
+      minimumPeakProminence: MIN_LAG_PEAK_PROMINENCE,
+      peakProminenceExclusionSamples: LAG_PEAK_EXCLUSION_SAMPLES,
+      boundaryPeaksAccepted: false,
       lagToleranceSamples: 220,
-      observationAnchors: LAG_ANCHORS.map((anchor, index) => ({
-        ...anchor,
-        lagSamples: lagObservations[index]?.lagSamples,
-      })),
+      observationAnchors: LAG_ANCHORS.map((anchor, index) => {
+        const observation = lagObservations[index];
+        if (!observation) throw new Error(`Missing lag observation ${anchor.id}`);
+        return {
+          ...anchor,
+          lagSamples: observation.lagSamples,
+          correlationScore: observation.correlationScore,
+          peakProminence: observation.peakProminence,
+        };
+      }),
       latencySamples: stemLatencySamples,
       sourceRelativeCompensationSamples: -stemLatencySamples,
       commands: {
@@ -640,7 +692,12 @@ const main = (): void => {
   process.stdout.write(
     [
       `Stem samples/channel: ${stemProbe.durationSamples}`,
-      `Stem lag observations: ${lagObservations.map(({lagSamples}) => lagSamples).join(', ')}`,
+      `Stem lag observations: ${lagObservations
+        .map(
+          ({lagSamples, correlationScore, peakProminence}) =>
+            `${lagSamples} (score ${correlationScore}, prominence ${peakProminence})`,
+        )
+        .join(', ')}`,
       `Applied stem latency compensation: ${-stemLatencySamples} samples`,
       `Imported MFA TextGrids: ${textGridFiles.length}`,
       `Missing MFA line IDs: ${mfaCoverage.missingIds.join(', ') || 'none'}`,

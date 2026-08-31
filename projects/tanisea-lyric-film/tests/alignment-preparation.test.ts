@@ -47,6 +47,16 @@ const WHISPERX_FIXTURE = {
   ],
 };
 
+const deterministicNoise = (length: number, seed: number): Float32Array => {
+  const samples = new Float32Array(length);
+  let state = seed >>> 0;
+  for (let index = 0; index < length; index++) {
+    state = (Math.imul(state, 1_664_525) + 1_013_904_223) >>> 0;
+    samples[index] = (state / 4_294_967_295) * 2 - 1;
+  }
+  return samples;
+};
+
 describe('alignment evidence import', () => {
   test('parses MFA word intervals into source-relative samples', () => {
     const words = parseTextGridWords(MFA_FIXTURE, 1_020_000);
@@ -91,9 +101,24 @@ describe('alignment evidence import', () => {
   test('returns the median latency when stem lag is constant', () => {
     expect(
       measureFrameLag([
-        {sourceSample: 1_000_000, lagSamples: 64},
-        {sourceSample: 2_500_000, lagSamples: 71},
-        {sourceSample: 4_000_000, lagSamples: 89},
+        {
+          sourceSample: 1_000_000,
+          lagSamples: 64,
+          correlationScore: 0.8,
+          peakProminence: 0.2,
+        },
+        {
+          sourceSample: 2_500_000,
+          lagSamples: 71,
+          correlationScore: 0.8,
+          peakProminence: 0.2,
+        },
+        {
+          sourceSample: 4_000_000,
+          lagSamples: 89,
+          correlationScore: 0.8,
+          peakProminence: 0.2,
+        },
       ]),
     ).toBe(71);
   });
@@ -108,20 +133,85 @@ describe('alignment evidence import', () => {
       stem[sample + 5] = source[sample] ?? 0;
     }
 
-    expect(
-      observeFrameLag(source, stem, 64, {
-        windowSamples: 48,
+    const observation = observeFrameLag(source, stem, 64, {
+      windowSamples: 48,
+      maxLagSamples: 8,
+    });
+
+    expect(observation).toMatchObject({sourceSample: 64, lagSamples: 5});
+    expect(observation.correlationScore).toBeCloseTo(1, 12);
+    expect(observation.peakProminence).toBeGreaterThan(0.2);
+  });
+
+  test('rejects an unrelated noisy stem with low correlation', () => {
+    const source = deterministicNoise(2_048, 0x12345678);
+    const stem = deterministicNoise(2_048, 0x9abcdef0);
+
+    expect(() =>
+      observeFrameLag(source, stem, 1_024, {
+        windowSamples: 1_024,
+        maxLagSamples: 32,
+      }),
+    ).toThrow('Stem-lag correlation at 1024 is below 0.2');
+  });
+
+  test('rejects an ambiguous periodic lag with inadequate prominence', () => {
+    const source = new Float32Array(256);
+    const stem = new Float32Array(256);
+    for (let sample = 0; sample < source.length; sample += 16) {
+      source[sample] = 1;
+    }
+    for (let sample = 0; sample < source.length - 3; sample++) {
+      stem[sample + 3] = source[sample] ?? 0;
+    }
+
+    expect(() =>
+      observeFrameLag(source, stem, 128, {
+        windowSamples: 128,
+        maxLagSamples: 20,
+      }),
+    ).toThrow('Stem-lag peak prominence at 128 is below 0.05');
+  });
+
+  test('rejects a unique pulse shifted beyond the search boundary', () => {
+    const source = new Float32Array(256);
+    const stem = new Float32Array(256);
+    for (let sample = 0; sample < source.length; sample++) {
+      source[sample] = Math.max(0, 1 - Math.abs(sample - 112) / 24);
+    }
+    for (let sample = 0; sample < source.length - 12; sample++) {
+      stem[sample + 12] = source[sample] ?? 0;
+    }
+
+    expect(() =>
+      observeFrameLag(source, stem, 128, {
+        windowSamples: 96,
         maxLagSamples: 8,
       }),
-    ).toEqual({sourceSample: 64, lagSamples: 5});
+    ).toThrow('Stem-lag peak at 128 reached search boundary 8');
   });
 
   test('rejects a stem with time-varying lag', () => {
     expect(() =>
       measureFrameLag([
-        {sourceSample: 1_000_000, lagSamples: 64},
-        {sourceSample: 2_500_000, lagSamples: 71},
-        {sourceSample: 4_000_000, lagSamples: 911},
+        {
+          sourceSample: 1_000_000,
+          lagSamples: 64,
+          correlationScore: 0.8,
+          peakProminence: 0.2,
+        },
+        {
+          sourceSample: 2_500_000,
+          lagSamples: 71,
+          correlationScore: 0.8,
+          peakProminence: 0.2,
+        },
+        {
+          sourceSample: 4_000_000,
+          lagSamples: 911,
+          correlationScore: 0.8,
+          peakProminence: 0.2,
+        },
       ]),
     ).toThrow(/inconsistent stem latency/);
   });
