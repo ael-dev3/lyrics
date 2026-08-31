@@ -12,11 +12,12 @@
     "alignment:prepare": "npm run build:tools && node .tools-dist/scripts/prepare-alignment.js",
     "alignment:import": "npm run build:tools && node .tools-dist/scripts/import-alignment-evidence.js",
     "alignment:verify": "npm run build:tools && node .tools-dist/scripts/verify-alignment.js",
+    "layout:verify": "npm run build:tools && node .tools-dist/scripts/verify-lyric-layout.js",
     "test": "vitest",
     "test:run": "vitest run",
     "compositions": "remotion compositions src/index.ts",
     "typecheck": "tsc --noEmit",
-    "check": "npm run typecheck && npm run test:run && npm run compositions",
+    "check": "npm run typecheck && npm run test:run && npm run layout:verify && npm run compositions",
     "still": "remotion still src/index.ts LyricFilmVNext",
     "prerender": "npm run typecheck",
     "render": "remotion render src/index.ts LyricFilmVNext output/Tanisea-Lyric-Film-vNext-reference-2x.mov --scale=2 --codec=prores --prores-profile=4444 --pixel-format=yuv444p10le --image-format=png --color-space=bt709 --concurrency=8 --muted"

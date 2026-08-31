@@ -638,12 +638,13 @@ type BreakCardProps = Readonly<{
   feature: AudioFeatureFrame;
 }>;
 
-const BreakCard = ({time, feature}: BreakCardProps) => {
+export const BreakCard = ({time, feature}: BreakCardProps) => {
   if (time < 49.98 || time >= 64.02) return null;
   const opacity = fadeWindow(time, 49.98, 64.02, 0.3, 0.48);
   const development = smoothstep(56.1, 57.05, time);
   return (
     <AbsoluteFill
+      data-presentation-layer="break-card"
       style={{
         justifyContent: 'center',
         alignItems: 'center',
@@ -715,7 +716,7 @@ type OutroProps = Readonly<{
   feature: AudioFeatureFrame;
 }>;
 
-const Outro = ({time, feature}: OutroProps) => {
+export const Outro = ({time, feature}: OutroProps) => {
   if (time < 117.98) return null;
   const reveal = smoothstep(117.98, 118.4, time);
   const translationStage = smoothstep(125.45, 126.3, time);
@@ -737,6 +738,7 @@ const Outro = ({time, feature}: OutroProps) => {
       }}
     >
       <div
+        data-presentation-layer="outro-reveal"
         style={{
           position: 'absolute',
           width: 870,

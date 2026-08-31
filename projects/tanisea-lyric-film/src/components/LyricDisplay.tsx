@@ -57,6 +57,7 @@ const LyricLineView = ({line, frame, fps}: LyricLineViewProps) => {
 
   return (
     <AbsoluteFill
+      data-lyric-line-id={line.id}
       style={{
         justifyContent: chorus ? 'center' : 'flex-end',
         alignItems: chorus ? 'center' : 'stretch',
@@ -75,6 +76,7 @@ const LyricLineView = ({line, frame, fps}: LyricLineViewProps) => {
         }}
       >
         <div
+          data-lyric-row-id={line.id}
           style={{
             display: 'flex',
             justifyContent: chorus ? 'center' : 'flex-start',
@@ -115,30 +117,53 @@ const LyricLineView = ({line, frame, fps}: LyricLineViewProps) => {
             );
             const underlineWidth = focus.contact ? 100 : 0;
             const baseWeight = chorus ? 610 : 540;
+            const emphasisWeightRange = chorus ? 90 : 150;
 
             return (
               <span
                 key={segment.id}
+                data-lyric-segment-id={segment.id}
                 style={{
                   display: 'inline-block',
                   position: 'relative',
                   whiteSpace: 'nowrap',
-                  color: `rgba(255,255,255,${0.62 + focus.emphasis * 0.38})`,
-                  fontWeight: Math.round(
-                    baseWeight + focus.emphasis * 150,
-                  ),
-                  textShadow:
-                    focus.emphasis > 0.01
-                      ? `0 0 ${Math.round(8 + focus.emphasis * 15)}px rgba(22,230,209,${0.18 + focus.emphasis * 0.42}), 0 4px 16px rgba(0,0,0,.68)`
-                      : '0 4px 16px rgba(0,0,0,.68)',
-                  backgroundImage: `linear-gradient(90deg, ${teal}, ${mint})`,
-                  backgroundRepeat: 'no-repeat',
-                  backgroundPosition: 'center bottom',
-                  backgroundSize: `${underlineWidth}% 3px`,
+                  fontWeight: 700,
                   paddingBottom: 5,
                 }}
               >
-                {segment.text}
+                <span
+                  aria-hidden="true"
+                  data-lyric-placeholder-id={segment.id}
+                  style={{
+                    display: 'block',
+                    visibility: 'hidden',
+                    fontWeight: 700,
+                  }}
+                >
+                  {segment.text}
+                </span>
+                <span
+                  data-lyric-glyph-id={segment.id}
+                  style={{
+                    display: 'block',
+                    position: 'absolute',
+                    inset: 0,
+                    color: `rgba(255,255,255,${0.62 + focus.emphasis * 0.38})`,
+                    fontWeight: Math.round(
+                      baseWeight + focus.emphasis * emphasisWeightRange,
+                    ),
+                    textShadow:
+                      focus.emphasis > 0.01
+                        ? `0 0 ${Math.round(8 + focus.emphasis * 15)}px rgba(22,230,209,${0.18 + focus.emphasis * 0.42}), 0 4px 16px rgba(0,0,0,.68)`
+                        : '0 4px 16px rgba(0,0,0,.68)',
+                    backgroundImage: `linear-gradient(90deg, ${teal}, ${mint})`,
+                    backgroundRepeat: 'no-repeat',
+                    backgroundPosition: 'center bottom',
+                    backgroundSize: `${underlineWidth}% 3px`,
+                  }}
+                >
+                  {segment.text}
+                </span>
               </span>
             );
           })}

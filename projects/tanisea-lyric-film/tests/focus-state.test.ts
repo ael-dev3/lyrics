@@ -22,13 +22,20 @@ const focusSnapshot = (lineId: string, frame: number, fps = 60) => {
   }));
 };
 
-const segmentStyle = (markup: string, text: string): string => {
-  const textIndex = markup.indexOf(`>${text}</span>`);
-  if (textIndex < 0) throw new Error(`Rendered lyric is missing ${text}`);
-  const tagStart = markup.lastIndexOf('<span', textIndex);
-  const openingTag = markup.slice(tagStart, textIndex);
+const dataStyle = (
+  markup: string,
+  attribute: string,
+  identifier: string,
+): string => {
+  const attributeIndex = markup.indexOf(`${attribute}="${identifier}"`);
+  if (attributeIndex < 0) {
+    throw new Error(`Rendered lyric is missing ${attribute}=${identifier}`);
+  }
+  const tagStart = markup.lastIndexOf('<span', attributeIndex);
+  const tagEnd = markup.indexOf('>', attributeIndex);
+  const openingTag = markup.slice(tagStart, tagEnd);
   const style = /style="([^"]*)"/.exec(openingTag)?.[1];
-  if (!style) throw new Error(`Rendered lyric segment ${text} has no style`);
+  if (!style) throw new Error(`Rendered lyric ${identifier} has no style`);
   return style;
 };
 
@@ -118,6 +125,81 @@ describe('sample-indexed segment focus', () => {
       contact: 1,
       emphasis: 1 / 3,
     });
+  });
+
+  test('aggregates repeated, overlapping, unsorted, and multi-target cues by maximum state', () => {
+    const cues = [
+      {startSample: 8_820, endSample: 13_230, targets: ['S01', 'S02']},
+      {startSample: 7_350, endSample: 11_025, targets: ['S01']},
+      {startSample: 8_820, endSample: 13_230, targets: ['S01', 'S02']},
+    ] as const;
+    const reordered = [cues[1], cues[2], cues[0]] as const;
+
+    for (const frame of [9, 10, 11, 12, 13, 14, 15, 17, 18, 19, 20]) {
+      for (const segmentId of ['S01', 'S02', 'unmapped']) {
+        expect(
+          getSegmentFocusState(cues, segmentId, frame, 60),
+        ).toEqual(getSegmentFocusState(reordered, segmentId, frame, 60));
+      }
+    }
+
+    expect(getSegmentFocusState(cues, 'S01', 12, 60)).toEqual({
+      contact: 1,
+      emphasis: 1,
+    });
+    expect(getSegmentFocusState(cues, 'S02', 12, 60)).toEqual({
+      contact: 1,
+      emphasis: 1 / 3,
+    });
+  });
+
+  test('accepts frame zero and a cue beginning at sample zero', () => {
+    expect(
+      getSegmentFocusState(
+        [{startSample: 0, endSample: 735, targets: ['S01']}],
+        'S01',
+        0,
+        60,
+      ),
+    ).toEqual({contact: 1, emphasis: 1 / 3});
+  });
+
+  test.each([-1, Number.NaN, Number.POSITIVE_INFINITY])(
+    'rejects invalid frame %s',
+    (frame) => {
+      expect(() =>
+        getSegmentFocusState([], 'S01', frame, 60),
+      ).toThrow();
+    },
+  );
+
+  test.each([0, -1, Number.NaN, Number.POSITIVE_INFINITY])(
+    'rejects invalid fps %s',
+    (fps) => {
+      expect(() => getSegmentFocusState([], 'S01', 0, fps)).toThrow();
+    },
+  );
+
+  test.each([
+    [-1, 735],
+    [0.5, 735],
+    [Number.NaN, 735],
+    [Number.POSITIVE_INFINITY, 735],
+    [0, -1],
+    [0, 735.5],
+    [0, Number.NaN],
+    [0, Number.POSITIVE_INFINITY],
+    [735, 735],
+    [736, 735],
+  ])('rejects invalid cue interval %s..%s', (startSample, endSample) => {
+    expect(() =>
+      getSegmentFocusState(
+        [{startSample, endSample, targets: ['S01']}],
+        'S01',
+        0,
+        60,
+      ),
+    ).toThrow();
   });
 });
 
@@ -304,7 +386,7 @@ describe('production lyric view model', () => {
     );
   });
 
-  test('derives deterministic section styles and fixed visual windows from reviewed vocal samples', () => {
+  test('derives deterministic section styles and fixed visual leads from reviewed vocal samples', () => {
     for (const line of lyrics) {
       const expectedSection = line.id.startsWith('V1-')
         ? 'verse'
@@ -319,10 +401,6 @@ describe('production lyric view model', () => {
         line.vocalStartSample - line.visualInCompleteSample,
         line.id,
       ).toBe(2_205);
-      expect(line.visualOutStartSample, line.id).toBe(line.vocalEndSample);
-      expect(line.visualOutEndSample - line.vocalEndSample, line.id).toBe(
-        2_205,
-      );
     }
   });
 
@@ -371,7 +449,7 @@ describe('production lyric view model', () => {
 });
 
 describe('LyricDisplay rendering', () => {
-  test('keeps segment order while contact and residual emphasis drive independent styles', () => {
+  test('keeps stable segment layers while contact and residual emphasis drive visible glyph styles', () => {
     const contactMarkup = renderToStaticMarkup(
       createElement(LyricDisplay, {frame: 4355, fps: 60}),
     );
@@ -386,24 +464,62 @@ describe('LyricDisplay rendering', () => {
         .map((text) => contactMarkup.indexOf(text))
         .sort((left, right) => left - right),
     );
-    expect(segmentStyle(contactMarkup, 'questions')).toContain(
+    expect(
+      dataStyle(contactMarkup, 'data-lyric-glyph-id', 'V1-03-S02'),
+    ).toContain(
       'background-size:100% 3px',
     );
-    expect(segmentStyle(contactMarkup, 'questions')).toContain(
+    expect(
+      dataStyle(contactMarkup, 'data-lyric-glyph-id', 'V1-03-S02'),
+    ).toContain(
       'font-weight:590',
+    );
+    expect(
+      dataStyle(contactMarkup, 'data-lyric-placeholder-id', 'V1-03-S02'),
+    ).toContain('font-weight:700');
+    expect(contactMarkup).toContain('data-lyric-line-id="V1-03"');
+    expect(contactMarkup).toContain(
+      'data-lyric-segment-id="V1-03-S02"',
     );
 
     const releaseMarkup = renderToStaticMarkup(
       createElement(LyricDisplay, {frame: 4403, fps: 60}),
     );
-    expect(segmentStyle(releaseMarkup, 'questions')).toContain(
+    expect(
+      dataStyle(releaseMarkup, 'data-lyric-glyph-id', 'V1-03-S02'),
+    ).toContain(
       'background-size:0% 3px',
     );
-    expect(segmentStyle(releaseMarkup, 'questions')).toContain(
+    expect(
+      dataStyle(releaseMarkup, 'data-lyric-glyph-id', 'V1-03-S02'),
+    ).toContain(
       'font-weight:690',
     );
-    expect(segmentStyle(releaseMarkup, 'questions')).toContain(
+    expect(
+      dataStyle(releaseMarkup, 'data-lyric-glyph-id', 'V1-03-S02'),
+    ).toContain(
       'text-shadow:0 0 23px',
     );
+  });
+
+  test('keeps chorus visible glyph weights within the loaded Space Grotesk range', () => {
+    const line = findLine('C1-05');
+    const cue = line.cues[0];
+    if (!cue) throw new Error('Missing C1-05 cue');
+    const markup = renderToStaticMarkup(
+      createElement(LyricDisplay, {
+        frame: frameForSample(cue.startSample, 60) + 2,
+        fps: 60,
+      }),
+    );
+    const style = dataStyle(
+      markup,
+      'data-lyric-glyph-id',
+      cue.targets[0] ?? '',
+    );
+    const weight = Number(/font-weight:([^;]+)/.exec(style)?.[1]);
+
+    expect(weight).toBeLessThanOrEqual(700);
+    expect(weight).toBe(700);
   });
 });
