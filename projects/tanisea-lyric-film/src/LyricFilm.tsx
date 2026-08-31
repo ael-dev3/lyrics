@@ -15,7 +15,9 @@ import {
 } from 'remotion';
 import {useAudioFeatures} from './audio-features';
 import type {AudioFeatureFrame} from './audio-features';
+import {FrameChrome} from './components/FrameChrome';
 import {LyricDisplay} from './components/LyricDisplay';
+import {SpectrumRail} from './components/SpectrumRail';
 
 const teal = '#16e6d1';
 const mint = '#c9fff7';
@@ -42,13 +44,6 @@ const fadeWindow = (
 ): number =>
   smoothstep(start, start + enterDuration, time) *
   (1 - smoothstep(end - exitDuration, end, time));
-
-const formatTime = (time: number): string => {
-  const minutes = Math.floor(time / 60);
-  const seconds = Math.floor(time % 60);
-  const centiseconds = Math.floor((time % 1) * 100);
-  return `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}.${String(centiseconds).padStart(2, '0')}`;
-};
 
 let fontPromise: Promise<void> | null = null;
 
@@ -310,231 +305,6 @@ const AudioMotionLine = ({
     </svg>
   );
 };
-
-type SpectrumRailProps = Readonly<{
-  feature: AudioFeatureFrame;
-}>;
-
-const frequencyTicks = [
-  {frequency: 20, label: '20'},
-  {frequency: 60, label: '60'},
-  {frequency: 250, label: '250'},
-  {frequency: 1000, label: '1K'},
-  {frequency: 4000, label: '4K'},
-  {frequency: 20_000, label: '20K'},
-] as const;
-
-const frequencyX = (frequency: number): number =>
-  Math.round(
-    (Math.log(frequency / 20) / Math.log(20_000 / 20)) * 960,
-  );
-
-const SpectrumRail = ({feature}: SpectrumRailProps) => (
-  <div
-    style={{
-      position: 'absolute',
-      left: 60,
-      bottom: 68,
-      width: 960,
-      height: 70,
-      color: mint,
-      fontFamily: 'Space Grotesk',
-      pointerEvents: 'none',
-    }}
-  >
-    <div
-      style={{
-        position: 'absolute',
-        left: 0,
-        top: 0,
-        fontSize: 9,
-        fontWeight: 600,
-        letterSpacing: 2.2,
-        color: 'rgba(201,255,247,.58)',
-      }}
-    >
-      STEREO · 64 LOG BANDS · HANN · 20 HZ—20 KHZ
-    </div>
-    <svg
-      width={960}
-      height={52}
-      viewBox="0 0 960 52"
-      style={{position: 'absolute', left: 0, bottom: 0}}
-      shapeRendering="crispEdges"
-    >
-      <line
-        x1={0}
-        y1={41}
-        x2={960}
-        y2={41}
-        stroke="rgba(201,255,247,.24)"
-        strokeWidth={2}
-      />
-      {Array.from(feature.bands).map((byte, band) => {
-        const normalized = clamp((byte - 24) / 231);
-        const height = Math.max(
-          2,
-          Math.round(2 + normalized ** 1.65 * 34),
-        );
-        const color = band <= 20 ? ember : band <= 47 ? teal : mint;
-        return (
-          <g key={band}>
-            <rect
-              x={band * 15 + 3}
-              y={41 - height}
-              width={9}
-              height={height}
-              fill={color}
-              opacity={0.4 + normalized * 0.55}
-            />
-            <rect
-              x={band * 15 + 3}
-              y={Math.max(2, 39 - height)}
-              width={9}
-              height={1}
-              fill={white}
-              opacity={normalized * 0.72}
-            />
-          </g>
-        );
-      })}
-      {frequencyTicks.map(({frequency, label}) => {
-        const x = frequencyX(frequency);
-        return (
-          <g key={frequency}>
-            <line
-              x1={x}
-              y1={42}
-              x2={x}
-              y2={47}
-              stroke="rgba(201,255,247,.48)"
-              strokeWidth={1}
-            />
-            <text
-              x={x}
-              y={51}
-              textAnchor={
-                frequency === 20
-                  ? 'start'
-                  : frequency === 20_000
-                    ? 'end'
-                    : 'middle'
-              }
-              fill="rgba(201,255,247,.52)"
-              fontFamily="Space Grotesk"
-              fontSize={7}
-              fontWeight={600}
-            >
-              {label}
-            </text>
-          </g>
-        );
-      })}
-    </svg>
-  </div>
-);
-
-type ChromeProps = Readonly<{
-  time: number;
-  feature: AudioFeatureFrame;
-}>;
-
-const FrameChrome = ({time, feature}: ChromeProps) => (
-  <AbsoluteFill
-    style={{
-      color: mint,
-      fontFamily: 'Space Grotesk',
-      pointerEvents: 'none',
-    }}
-  >
-    <div
-      style={{
-        position: 'absolute',
-        inset: 30,
-        border: '2px solid rgba(201,255,247,.2)',
-      }}
-    />
-    {[
-      [30, 30, '0 0'],
-      [1050, 30, '-100% 0'],
-      [30, 1050, '0 -100%'],
-      [1050, 1050, '-100% -100%'],
-    ].map(([x, y, translate], index) => (
-      <div
-        key={index}
-        style={{
-          position: 'absolute',
-          left: x,
-          top: y,
-          width: 32,
-          height: 32,
-          transform: `translate(${translate})`,
-          borderLeft: index % 2 === 0 ? `4px solid ${teal}` : undefined,
-          borderRight: index % 2 === 1 ? `4px solid ${teal}` : undefined,
-          borderTop: index < 2 ? `4px solid ${teal}` : undefined,
-          borderBottom: index >= 2 ? `4px solid ${teal}` : undefined,
-        }}
-      />
-    ))}
-    <div
-      style={{
-        position: 'absolute',
-        left: 48,
-        top: 47,
-        fontSize: 14,
-        letterSpacing: 3.6,
-        fontWeight: 650,
-      }}
-    >
-      TANISEA // KSVIETY
-    </div>
-    <div
-      style={{
-        position: 'absolute',
-        right: 48,
-        top: 46,
-        display: 'flex',
-        gap: 18,
-        fontSize: 10,
-        letterSpacing: 1.8,
-        fontWeight: 600,
-        fontVariantNumeric: 'tabular-nums',
-        color: 'rgba(201,255,247,.7)',
-      }}
-    >
-      <span>RMS {feature.momentaryDbfs.toFixed(1)} dBFS</span>
-      <span>PK {feature.samplePeakDbfs.toFixed(1)} dBFS</span>
-      <span>60 FPS</span>
-    </div>
-    <div
-      style={{
-        position: 'absolute',
-        left: 48,
-        bottom: 43,
-        fontSize: 10,
-        letterSpacing: 2.4,
-        fontWeight: 600,
-        color: 'rgba(201,255,247,.54)',
-      }}
-    >
-      TRACK 01 · ENGLISH LYRIC FILM · VNEXT
-    </div>
-    <div
-      style={{
-        position: 'absolute',
-        right: 48,
-        bottom: 41,
-        fontSize: 12,
-        letterSpacing: 2.2,
-        fontWeight: 650,
-        fontVariantNumeric: 'tabular-nums',
-        color: 'rgba(201,255,247,.68)',
-      }}
-    >
-      {formatTime(time)}
-    </div>
-  </AbsoluteFill>
-);
 
 type IntroProps = Readonly<{
   time: number;
@@ -913,13 +683,12 @@ export const LyricFilm = () => {
       <Audio src={staticFile('soundtrack.m4a')} />
       <Background time={time} feature={feature} />
       <Atmosphere frame={frame} feature={feature} />
-      <AudioMotionLine feature={feature} top={112} emphasis={0.72} />
       <Intro time={time} frame={frame} fps={fps} feature={feature} />
       <BreakCard time={time} feature={feature} />
       <LyricDisplay frame={frame} fps={fps} />
       <Outro time={time} feature={feature} />
       <SpectrumRail feature={feature} />
-      <FrameChrome time={time} feature={feature} />
+      <FrameChrome time={time} />
       <EndFade time={time} />
     </AbsoluteFill>
   );

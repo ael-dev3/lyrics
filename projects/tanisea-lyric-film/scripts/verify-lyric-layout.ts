@@ -9,6 +9,9 @@ import {openBrowser} from '@remotion/renderer';
 const SAMPLE_RATE = 44_100;
 const VIEWPORT = 1080;
 const TOLERANCE_PX = 0.05;
+const MAXIMUM_LYRIC_BOTTOM_PX = 844;
+const MAXIMUM_SPECTRUM_CAP_TOP_PX = 880;
+const MINIMUM_SAFE_AREA_PX = 36;
 
 type SegmentFixture = Readonly<{id: string; text: string}>;
 type LineFixture = Readonly<{
@@ -59,6 +62,21 @@ type Rectangle = Readonly<{
 type Snapshot = Readonly<{
   stableIdentifiers: boolean;
   rectangles: Readonly<Record<string, Rectangle>>;
+}>;
+
+type EntryFrames = Readonly<{
+  lineId: string;
+  frames: readonly number[];
+}>;
+
+type PublicLayoutSnapshot = Readonly<{
+  lineIds: readonly string[];
+  lyricBottom: number;
+  capTop: number;
+  separation: number;
+  spectrumClipped: boolean;
+  tickBottom: number;
+  lowerChromeTop: number;
 }>;
 
 const frameForSample = (sample: number, fps: number): number =>
@@ -180,6 +198,100 @@ const measure = async (
   },
 );
 
+const getEntryFrames = async (
+  page: Awaited<ReturnType<Awaited<ReturnType<typeof openBrowser>>['newPage']>>,
+  fps: number,
+): Promise<readonly EntryFrames[]> => page.evaluate((requestedFps: number) => {
+  const getter = (window as Window & {
+    __getLyricEntryFrames?: (fps: number) => readonly EntryFrames[];
+  }).__getLyricEntryFrames;
+  if (!getter) throw new Error('Lyric entry-frame getter is unavailable');
+  return getter(requestedFps);
+}, fps);
+
+const measurePublicLayout = async (
+  page: Awaited<ReturnType<Awaited<ReturnType<typeof openBrowser>>['newPage']>>,
+  frame: number,
+  fps: number,
+): Promise<PublicLayoutSnapshot> => page.evaluate(
+  async (payload: {requestedFrame: number; requestedFps: number}) => {
+    const setter = (window as Window & {
+      __setLyricLayoutFrame?: (frame: number, fps: number) => Promise<void>;
+    }).__setLyricLayoutFrame;
+    if (!setter) throw new Error('Lyric layout setter is unavailable');
+    await setter(payload.requestedFrame, payload.requestedFps);
+
+    const lineElements = [...document.querySelectorAll<HTMLElement>(
+      '[data-lyric-line-id]',
+    )];
+    const contentRectangles = lineElements.map((line) => {
+      const content = line.firstElementChild;
+      if (!(content instanceof HTMLElement)) {
+        throw new Error('Rendered lyric line is missing its content element');
+      }
+      return content.getBoundingClientRect();
+    });
+    if (contentRectangles.length === 0) {
+      throw new Error(`No lyric content at frame ${payload.requestedFrame}`);
+    }
+
+    const spectrum = document.querySelector<HTMLElement>(
+      '[data-spectrum-rail="public"]',
+    );
+    const caps = [...document.querySelectorAll<SVGRectElement>(
+      '[data-spectrum-impact-band]',
+    )];
+    const measured = [...document.querySelectorAll<SVGRectElement>(
+      '[data-spectrum-measured-band]',
+    )];
+    const ticks = [...document.querySelectorAll<SVGTextElement>(
+      '[data-spectrum-tick]',
+    )];
+    const lowerChrome = [...document.querySelectorAll<HTMLElement>(
+      '[data-frame-chrome-slot="track-label"], [data-frame-chrome-slot="timecode"]',
+    )];
+    if (!spectrum || caps.length !== 64 || measured.length !== 64) {
+      throw new Error('Peak spectrum fixture did not render all public bands');
+    }
+    if (ticks.length === 0 || lowerChrome.length !== 2) {
+      throw new Error('Public ticks or lower chrome are unavailable');
+    }
+
+    const spectrumRect = spectrum.getBoundingClientRect();
+    const capRectangles = caps.map((cap) => cap.getBoundingClientRect());
+    const barRectangles = [...measured, ...caps].map((bar) =>
+      bar.getBoundingClientRect(),
+    );
+    const lyricBottom = Math.max(...contentRectangles.map(({bottom}) => bottom));
+    const capTop = Math.min(...capRectangles.map(({top}) => top));
+    const tickBottom = Math.max(
+      ...ticks.map((tick) => tick.getBoundingClientRect().bottom),
+    );
+    const lowerChromeTop = Math.min(
+      ...lowerChrome.map((element) => element.getBoundingClientRect().top),
+    );
+
+    return {
+      lineIds: lineElements.map((line) =>
+        line.getAttribute('data-lyric-line-id') ?? 'unknown',
+      ),
+      lyricBottom,
+      capTop,
+      separation: capTop - lyricBottom,
+      spectrumClipped: barRectangles.some(
+        ({top, right, bottom, left}) =>
+          top < spectrumRect.top - 0.01 ||
+          right > spectrumRect.right + 0.01 ||
+          bottom > spectrumRect.bottom + 0.01 ||
+          left < spectrumRect.left - 0.01,
+      ),
+      tickBottom,
+      lowerChromeTop,
+    };
+  },
+  {requestedFrame: frame, requestedFps: fps},
+);
+
 const main = async (): Promise<void> => {
   const directory = await mkdtemp(join(tmpdir(), 'tanisea-layout-'));
   let browser: Awaited<ReturnType<typeof openBrowser>> | null = null;
@@ -196,7 +308,7 @@ const main = async (): Promise<void> => {
     });
     await writeFile(
       join(directory, 'index.html'),
-      '<!doctype html><html><head><meta charset="utf-8"><style>html,body,#root{margin:0;width:1080px;height:1080px;overflow:hidden}</style></head><body><div id="root"></div><script src="/bundle.js"></script></body></html>',
+      '<!doctype html><html><head><meta charset="utf-8"><style>*{box-sizing:border-box;font-synthesis:none;text-rendering:geometricPrecision}html,body,#root{margin:0;width:1080px;height:1080px;overflow:hidden}</style></head><body><div id="root"></div><script src="/bundle.js"></script></body></html>',
     );
     server = await listen(directory);
     browser = await openBrowser('chrome', {
@@ -250,6 +362,47 @@ const main = async (): Promise<void> => {
         summaries.push({fps, lineId: fixture.id, frames: frames.length, identifiersStable});
       }
     }
+    const entryFrames = await getEntryFrames(page, 60);
+    let publicFramesMeasured = 0;
+    let worstPublicLayout: (PublicLayoutSnapshot & {frame: number}) | null = null;
+    let spectrumClipped = false;
+    let minimumLowerChromeClearancePx = Number.POSITIVE_INFINITY;
+    for (const entry of entryFrames) {
+      for (const frame of entry.frames) {
+        const snapshot = await measurePublicLayout(page, frame, 60);
+        publicFramesMeasured++;
+        spectrumClipped = spectrumClipped || snapshot.spectrumClipped;
+        minimumLowerChromeClearancePx = Math.min(
+          minimumLowerChromeClearancePx,
+          snapshot.lowerChromeTop - snapshot.tickBottom,
+        );
+        if (!worstPublicLayout || snapshot.separation < worstPublicLayout.separation) {
+          worstPublicLayout = {...snapshot, frame};
+        }
+      }
+    }
+    if (!worstPublicLayout) throw new Error('No public lyric entry frames measured');
+    if (worstPublicLayout.lyricBottom > MAXIMUM_LYRIC_BOTTOM_PX) {
+      failures.push(
+        `public lyric bottom ${worstPublicLayout.lyricBottom.toFixed(3)}px exceeds ${MAXIMUM_LYRIC_BOTTOM_PX}px at frame ${worstPublicLayout.frame} (${worstPublicLayout.lineIds.join(', ')})`,
+      );
+    }
+    if (Math.abs(worstPublicLayout.capTop - MAXIMUM_SPECTRUM_CAP_TOP_PX) > TOLERANCE_PX) {
+      failures.push(
+        `peak spectrum cap top ${worstPublicLayout.capTop.toFixed(3)}px differs from ${MAXIMUM_SPECTRUM_CAP_TOP_PX}px`,
+      );
+    }
+    if (worstPublicLayout.separation < MINIMUM_SAFE_AREA_PX) {
+      failures.push(
+        `public lyric/spectrum separation ${worstPublicLayout.separation.toFixed(3)}px is below ${MINIMUM_SAFE_AREA_PX}px at frame ${worstPublicLayout.frame}`,
+      );
+    }
+    if (spectrumClipped) failures.push('peak spectrum geometry is clipped');
+    if (minimumLowerChromeClearancePx <= 0) {
+      failures.push(
+        `lower chrome overlaps spectrum ticks by ${Math.abs(minimumLowerChromeClearancePx).toFixed(3)}px`,
+      );
+    }
     if (failures.length > 0) {
       throw new Error(`Lyric geometry is not stationary:\n${failures.slice(0, 30).join('\n')}`);
     }
@@ -258,6 +411,16 @@ const main = async (): Promise<void> => {
       tolerancePx: TOLERANCE_PX,
       maximumDeltaPx,
       summaries,
+      publicSafeArea: {
+        framesMeasured: publicFramesMeasured,
+        maximumLyricBottomPx: worstPublicLayout.lyricBottom,
+        spectrumCapTopPx: worstPublicLayout.capTop,
+        minimumSeparationPx: worstPublicLayout.separation,
+        worstFrame: worstPublicLayout.frame,
+        worstLineIds: worstPublicLayout.lineIds,
+        spectrumClipped,
+        minimumLowerChromeClearancePx,
+      },
     }, null, 2));
     await page.close();
   } finally {

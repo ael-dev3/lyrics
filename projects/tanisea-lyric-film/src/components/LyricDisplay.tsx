@@ -51,6 +51,7 @@ const LyricLineView = ({line, frame, fps}: LyricLineViewProps) => {
         : 62;
   const vocalStartFrame = frameForSample(line.vocalStartSample, fps);
   const vocalEndFrame = frameForSample(line.vocalEndSample, fps);
+  const entranceTranslation = chorus ? 18 : 2;
   const progress = clamp(
     (frame - vocalStartFrame) / (vocalEndFrame - vocalStartFrame),
   );
@@ -65,7 +66,7 @@ const LyricLineView = ({line, frame, fps}: LyricLineViewProps) => {
         color: white,
         fontFamily: 'Space Grotesk',
         opacity,
-        transform: `translateY(${Math.round((1 - enter) * 18 - exit * 10)}px)`,
+        transform: `translateY(${Math.round((1 - enter) * entranceTranslation - exit * 10)}px)`,
       }}
     >
       <div
