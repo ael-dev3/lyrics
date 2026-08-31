@@ -5,7 +5,7 @@ import {
   PUBLIC_FPS,
   SAMPLE_RATE,
   type AlignmentManifest,
-} from './alignment-types.js';
+} from './alignment-types';
 
 const LOCKED_SOURCE_SHA256 =
   '93084f293d491da1519732f3fa3cf6416c783d04e8ca18b5569c7608a8d4540d';

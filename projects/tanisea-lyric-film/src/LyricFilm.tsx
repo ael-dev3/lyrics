@@ -15,8 +15,7 @@ import {
 } from 'remotion';
 import {useAudioFeatures} from './audio-features';
 import type {AudioFeatureFrame} from './audio-features';
-import {lyrics} from './timed-lyrics';
-import type {LyricLine} from './timed-lyrics';
+import {LyricDisplay} from './components/LyricDisplay';
 
 const teal = '#16e6d1';
 const mint = '#c9fff7';
@@ -634,161 +633,6 @@ const Intro = ({time, frame, fps, feature}: IntroProps) => {
   );
 };
 
-const cueFocus = (
-  line: LyricLine,
-  segmentId: string,
-  time: number,
-): number =>
-  line.cueEvents.reduce((maximum, event) => {
-    if (!event.targets.includes(segmentId)) return maximum;
-    // The state change is sample-timed in the data and quantized only by the
-    // 60 fps display. No pre-onset white fill is introduced by animation.
-    const active = time >= event.start && time < event.end ? 1 : 0;
-    return Math.max(maximum, active);
-  }, 0);
-
-type LyricLineViewProps = Readonly<{
-  line: LyricLine;
-  time: number;
-}>;
-
-const LyricLineView = ({line, time}: LyricLineViewProps) => {
-  const enter = smoothstep(line.visualInStart, line.visualInComplete, time);
-  const exit = smoothstep(line.visualOutStart, line.visualOutEnd, time);
-  const opacity = enter * (1 - exit);
-  const chorus = line.section === 'chorus';
-  const verse = line.section === 'verse';
-  const fontSize = chorus
-    ? line.text.length > 31
-      ? 66
-      : 80
-    : verse
-      ? line.text.length > 45
-        ? 45
-        : 53
-      : line.text.length > 36
-        ? 53
-        : 62;
-  const progress = clamp(
-    (time - line.vocalStart) / (line.vocalEnd - line.vocalStart),
-  );
-
-  return (
-    <AbsoluteFill
-      style={{
-        justifyContent: chorus ? 'center' : 'flex-end',
-        alignItems: chorus ? 'center' : 'stretch',
-        padding: chorus ? '180px 76px 205px' : '0 74px 238px',
-        color: white,
-        fontFamily: 'Space Grotesk',
-        opacity,
-        transform: `translateY(${Math.round((1 - enter) * 18 - exit * 10)}px)`,
-      }}
-    >
-      <div
-        style={{
-          width: '100%',
-          maxWidth: chorus ? 940 : 920,
-          alignSelf: chorus ? 'center' : 'flex-start',
-        }}
-      >
-        <div
-          style={{
-            display: 'flex',
-            justifyContent: chorus ? 'center' : 'flex-start',
-            alignItems: 'center',
-            gap: 13,
-            marginBottom: 17,
-            fontSize: 12,
-            letterSpacing: 4.2,
-            fontWeight: 650,
-            color: teal,
-          }}
-        >
-          <span>{line.id}</span>
-          <span style={{height: 2, width: 58, background: teal}} />
-          <span>{line.section.toUpperCase()}</span>
-        </div>
-        <div
-          style={{
-            display: 'flex',
-            flexWrap: 'wrap',
-            justifyContent: chorus ? 'center' : 'flex-start',
-            alignItems: 'baseline',
-            columnGap: chorus ? 18 : 13,
-            rowGap: 8,
-            fontSize,
-            lineHeight: chorus ? 1.02 : 1.1,
-            letterSpacing: chorus ? -1.8 : -1.1,
-            textAlign: chorus ? 'center' : 'left',
-            textTransform: chorus ? 'uppercase' : 'none',
-          }}
-        >
-          {line.segments.map((segment) => {
-            const focus = cueFocus(line, segment.id, time);
-            return (
-              <span
-                key={segment.id}
-                style={{
-                  display: 'inline-block',
-                  position: 'relative',
-                  whiteSpace: 'nowrap',
-                  color: `rgba(255,255,255,${0.62 + focus * 0.38})`,
-                  fontWeight: Math.round((chorus ? 610 : 540) + focus * 150),
-                  textShadow:
-                    focus > 0.01
-                      ? `0 0 ${Math.round(8 + focus * 15)}px rgba(22,230,209,${0.18 + focus * 0.42}), 0 4px 16px rgba(0,0,0,.68)`
-                      : '0 4px 16px rgba(0,0,0,.68)',
-                  backgroundImage: `linear-gradient(90deg, ${teal}, ${mint})`,
-                  backgroundRepeat: 'no-repeat',
-                  backgroundPosition: 'center bottom',
-                  backgroundSize: `${Math.round(focus * 100)}% 3px`,
-                  paddingBottom: 5,
-                }}
-              >
-                {segment.text}
-              </span>
-            );
-          })}
-        </div>
-        <div
-          style={{
-            marginTop: 24,
-            marginLeft: chorus ? 'auto' : 0,
-            marginRight: chorus ? 'auto' : 0,
-            width: chorus ? 760 : 560,
-            maxWidth: '100%',
-            height: 4,
-            background: 'rgba(255,255,255,.12)',
-          }}
-        >
-          <div
-            style={{
-              width: `${Math.round(progress * 1000) / 10}%`,
-              height: 4,
-              background: `linear-gradient(90deg, ${teal}, ${mint}, ${ember})`,
-            }}
-          />
-        </div>
-      </div>
-    </AbsoluteFill>
-  );
-};
-
-type LyricDisplayProps = Readonly<{time: number}>;
-
-const LyricDisplay = ({time}: LyricDisplayProps) => (
-  <>
-    {lyrics
-      .filter(
-        (line) => time >= line.visualInStart && time < line.visualOutEnd,
-      )
-      .map((line) => (
-        <LyricLineView key={line.id} line={line} time={time} />
-      ))}
-  </>
-);
-
 type BreakCardProps = Readonly<{
   time: number;
   feature: AudioFeatureFrame;
@@ -1070,7 +914,7 @@ export const LyricFilm = () => {
       <AudioMotionLine feature={feature} top={112} emphasis={0.72} />
       <Intro time={time} frame={frame} fps={fps} feature={feature} />
       <BreakCard time={time} feature={feature} />
-      <LyricDisplay time={time} />
+      <LyricDisplay frame={frame} fps={fps} />
       <Outro time={time} feature={feature} />
       <SpectrumRail feature={feature} />
       <FrameChrome time={time} feature={feature} />
