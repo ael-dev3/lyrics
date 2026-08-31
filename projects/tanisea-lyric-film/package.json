@@ -9,6 +9,8 @@
     "encode": "npm run build:tools && node .tools-dist/scripts/encode-delivery.js",
     "platform": "npm run build:tools && node .tools-dist/scripts/make-platform-delivery.js",
     "verify": "npm run build:tools && node .tools-dist/scripts/verify-delivery.js",
+    "alignment:prepare": "npm run build:tools && node .tools-dist/scripts/prepare-alignment.js",
+    "alignment:import": "npm run build:tools && node .tools-dist/scripts/import-alignment-evidence.js",
     "test": "vitest",
     "test:run": "vitest run",
     "compositions": "remotion compositions src/index.ts",
