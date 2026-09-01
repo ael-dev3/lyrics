@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "status": "passed-prepublication",
+  "status": "passed-publication",
   "boundedClaim": "sample-indexed alignment with frame-bounded rendering",
   "fullMediaExecuted": true,
   "requirementMatrix": {
@@ -169,14 +169,14 @@
       {
         "id": 11,
         "title": "Release assets and documentation readiness",
-        "status": "pending-publication",
+        "status": "proved",
         "evidence": [
           {
             "id": "criterion-11-evidence-01",
-            "kind": "publication-readiness",
-            "artifact": "projects/tanisea-lyric-film/output/Tanisea-Lyric-Film-vNext-60fps-Archival-Master.mp4",
-            "sha256": "41c8bb4f0474e43ff308165a01c5ed4a8940cdc1063ca230bb40f9c89395058b",
-            "value": "criterion 11 publication readiness verified locally"
+            "kind": "release-url",
+            "artifact": "https://github.com/ael-dev3/lyrics/releases/tag/v2.1.0",
+            "sha256": "",
+            "value": "v2.1.0 release assets and checksums matched after remote download"
           }
         ]
       }
@@ -4856,5 +4856,54 @@
     "recordPath": "projects/tanisea-lyric-film/work/qa/run-2/run-comparison.json",
     "unexplainedDrift": [],
     "recordSha256": "2c0d5fe5e46d565263caa2d15bee3bc81fc1fa0e738dcae973d9f4c571b754ed"
+  },
+  "publication": {
+    "sourceCommit": "ec23f3dece96f7998ddc40fcb15865af4ec9e786",
+    "tag": "v2.1.0",
+    "releaseUrl": "https://github.com/ael-dev3/lyrics/releases/tag/v2.1.0",
+    "checksumsUrl": "https://github.com/ael-dev3/lyrics/releases/download/v2.1.0/CHECKSUMS.sha256",
+    "assets": [
+      {
+        "name": "Tanisea-Lyric-Film-Production-Master-vNext.mp4",
+        "url": "https://github.com/ael-dev3/lyrics/releases/download/v2.1.0/Tanisea-Lyric-Film-Production-Master-vNext.mp4",
+        "sizeBytes": 19534813,
+        "sha256": "41c8bb4f0474e43ff308165a01c5ed4a8940cdc1063ca230bb40f9c89395058b"
+      },
+      {
+        "name": "Tanisea-Lyric-Film-Sync-Proof-120fps.mp4",
+        "url": "https://github.com/ael-dev3/lyrics/releases/download/v2.1.0/Tanisea-Lyric-Film-Sync-Proof-120fps.mp4",
+        "sizeBytes": 163501905,
+        "sha256": "bc52d6b934294f3d8b9388f860b98e922c0975ff15047155ff29f2a688d14fed"
+      },
+      {
+        "name": "tanisea-vnext-hero.png",
+        "url": "https://github.com/ael-dev3/lyrics/releases/download/v2.1.0/tanisea-vnext-hero.png",
+        "sizeBytes": 4116580,
+        "sha256": "7ebbbf4792aba1ad75c71d044d261d1d4b8e94b540c911c04e353022c4e28ee3"
+      },
+      {
+        "name": "Tanisea-Lyric-Film-Source-vNext.zip",
+        "url": "https://github.com/ael-dev3/lyrics/releases/download/v2.1.0/Tanisea-Lyric-Film-Source-vNext.zip",
+        "sizeBytes": 5177285,
+        "sha256": "777be53c0701d3429ba3da2f20106367a1ed8a9e77148e00debfd45a174877f1"
+      },
+      {
+        "name": "tanisea-word-alignment-v3.json",
+        "url": "https://github.com/ael-dev3/lyrics/releases/download/v2.1.0/tanisea-word-alignment-v3.json",
+        "sizeBytes": 351148,
+        "sha256": "06fe6c8d6ad4db5131ab4f9ab98be91ea87064fdeea58017c6b8c21ed8530f0b"
+      },
+      {
+        "name": "tanisea-word-alignment-v3.md",
+        "url": "https://github.com/ael-dev3/lyrics/releases/download/v2.1.0/tanisea-word-alignment-v3.md",
+        "sizeBytes": 41152,
+        "sha256": "f83b9d685b6b6a36dd74075e563cc30961d6103a794aba86ac11892abbb764c5"
+      }
+    ],
+    "checksumVerification": {
+      "algorithm": "SHA-256",
+      "entryCount": 8,
+      "result": "matched-after-download"
+    }
   }
 }
