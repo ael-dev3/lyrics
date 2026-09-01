@@ -41,8 +41,6 @@ const VISUAL_LEAD_SAMPLES = Math.round(SAMPLE_RATE * 0.24);
 const VISUAL_SETTLE_LEAD_SAMPLES = Math.round(SAMPLE_RATE * 0.05);
 const PRESENTATION_CROSSFADE_SAMPLES =
   VISUAL_LEAD_SAMPLES - VISUAL_SETTLE_LEAD_SAMPLES;
-const PRECISION_VISUAL_LEAD_SAMPLES = Math.round(SAMPLE_RATE / 120);
-const PRECISION_HANDOFF_SAMPLES = PRECISION_VISUAL_LEAD_SAMPLES;
 const SEMANTIC_RELEASE_HOLD_SAMPLES = Math.round(SAMPLE_RATE / 30);
 
 const continuousEnglishTargets = new Map<string, readonly string[]>([
@@ -103,21 +101,17 @@ const sectionForLineId = (lineId: string): LyricSection => {
 };
 
 const lyricDrafts = taniseaAlignment.lines.map((line) => {
-  const precision = line.id.startsWith('C1-');
   return {
     id: line.id,
     section: sectionForLineId(line.id),
-    focusProfile: (precision ? 'precision' : 'cinematic') as FocusProfile,
+    focusProfile: 'cinematic' as const,
     vocalStartSample: line.vocalStartSample,
     vocalEndSample: line.vocalEndSample,
-    visualInStartSample: Math.max(
+    visualInStartSample: Math.max(0, line.vocalStartSample - VISUAL_LEAD_SAMPLES),
+    visualInCompleteSample: Math.max(
       0,
-      line.vocalStartSample -
-        (precision ? PRECISION_VISUAL_LEAD_SAMPLES : VISUAL_LEAD_SAMPLES),
+      line.vocalStartSample - VISUAL_SETTLE_LEAD_SAMPLES,
     ),
-    visualInCompleteSample: precision
-      ? line.vocalStartSample
-      : Math.max(0, line.vocalStartSample - VISUAL_SETTLE_LEAD_SAMPLES),
     segments: line.segments,
     cues: line.cues,
     text: line.segments.map(({text}) => text).join(' '),
@@ -162,16 +156,8 @@ export const lyrics: readonly LyricLine[] = lyricDrafts.map((line) => {
     );
     const cinematicOutEndSample =
       cinematicOutStartSample + PRESENTATION_CROSSFADE_SAMPLES;
-    if (line.focusProfile === 'precision') {
-      visualOutEndSample = next.vocalStartSample;
-      visualOutStartSample = Math.max(
-        line.vocalEndSample,
-        visualOutEndSample - PRECISION_HANDOFF_SAMPLES,
-      );
-    } else {
-      visualOutStartSample = cinematicOutStartSample;
-      visualOutEndSample = cinematicOutEndSample;
-    }
+    visualOutStartSample = cinematicOutStartSample;
+    visualOutEndSample = cinematicOutEndSample;
   }
 
   return {

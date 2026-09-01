@@ -60,14 +60,13 @@ describe('public frame chrome', () => {
 });
 
 describe('public spectrum rail', () => {
-  test('renders 64 measured bars and separate lighter impact caps on the 960x150 rail', () => {
+  test('renders 64 continuous lines with no separate impact dots on the 960x150 rail', () => {
     const markup = renderToStaticMarkup(
       createElement(SpectrumRail, {feature: peakFeature}),
     );
     const root = openingTagFor(markup, 'data-spectrum-rail', 'public');
     const svg = openingTagFor(markup, 'data-spectrum-svg', 'bands');
-    const measured = valuesFor(markup, 'data-spectrum-measured-band');
-    const caps = valuesFor(markup, 'data-spectrum-impact-band');
+    const lines = valuesFor(markup, 'data-spectrum-line-band');
 
     expect(root).toContain('left:60px');
     expect(root).toContain('bottom:68px');
@@ -75,28 +74,23 @@ describe('public spectrum rail', () => {
     expect(root).toContain('height:150px');
     expect(svg).toContain('width="960"');
     expect(svg).toContain('height="150"');
-    expect(measured).toEqual(Array.from({length: 64}, (_, index) => String(index)));
-    expect(caps).toEqual(measured);
+    expect(lines).toEqual(Array.from({length: 64}, (_, index) => String(index)));
+    expect(markup).not.toContain('data-spectrum-impact-band');
+    expect(markup).not.toContain('<rect');
 
-    const peakMeasured = openingTagFor(markup, 'data-spectrum-measured-band', '0');
-    const peakCap = openingTagFor(markup, 'data-spectrum-impact-band', '0');
-    expect(peakMeasured).toContain('x="4"');
-    expect(peakMeasured).toContain('y="36"');
-    expect(peakMeasured).toContain('width="7"');
-    expect(peakMeasured).toContain('height="96"');
-    expect(peakMeasured).toContain('rx="3"');
-    expect(peakMeasured).toContain('fill="#ff5b70"');
-    expect(peakCap).toContain('x="4"');
-    expect(peakCap).toContain('y="18"');
-    expect(peakCap).toContain('width="7"');
-    expect(peakCap).toContain('height="18"');
-    expect(peakCap).toContain('rx="3"');
-    expect(peakCap).toContain('fill="#ff5b70"');
+    const peakLine = openingTagFor(markup, 'data-spectrum-line-band', '0');
+    expect(peakLine).toContain('x1="7.5"');
+    expect(peakLine).toContain('x2="7.5"');
+    expect(peakLine).toContain('y1="132"');
+    expect(peakLine).toContain('y2="18"');
+    expect(peakLine).toContain('stroke-width="4"');
+    expect(peakLine).toContain('stroke-linecap="butt"');
+    expect(peakLine).toContain('stroke="#ff5b70"');
 
-    const quietMeasured = openingTagFor(markup, 'data-spectrum-measured-band', '1');
-    expect(quietMeasured).toContain('x="19"');
-    expect(quietMeasured).toContain('y="130"');
-    expect(quietMeasured).toContain('height="2"');
+    const quietLine = openingTagFor(markup, 'data-spectrum-line-band', '1');
+    expect(quietLine).toContain('x1="22.5"');
+    expect(quietLine).toContain('y1="132"');
+    expect(quietLine).toContain('y2="112"');
   });
 
   test('preserves the baseline and logarithmic ticks with a two-tone bar palette', () => {
@@ -106,11 +100,11 @@ describe('public spectrum rail', () => {
 
     expect(openingTagFor(markup, 'data-spectrum-baseline', 'public')).toContain('y1="132"');
     expect(markup).not.toContain('<linearGradient');
-    expect(openingTagFor(markup, 'data-spectrum-measured-band', '17')).toContain('fill="#ff5b70"');
-    expect(openingTagFor(markup, 'data-spectrum-measured-band', '18')).toContain('fill="#16e6d1"');
-    expect(openingTagFor(markup, 'data-spectrum-measured-band', '51')).toContain('fill="#16e6d1"');
-    expect(openingTagFor(markup, 'data-spectrum-measured-band', '52')).toContain('fill="#16e6d1"');
-    expect(openingTagFor(markup, 'data-spectrum-measured-band', '63')).toContain('fill="#16e6d1"');
+    expect(openingTagFor(markup, 'data-spectrum-line-band', '17')).toContain('stroke="#ff5b70"');
+    expect(openingTagFor(markup, 'data-spectrum-line-band', '18')).toContain('stroke="#16e6d1"');
+    expect(openingTagFor(markup, 'data-spectrum-line-band', '51')).toContain('stroke="#16e6d1"');
+    expect(openingTagFor(markup, 'data-spectrum-line-band', '52')).toContain('stroke="#16e6d1"');
+    expect(openingTagFor(markup, 'data-spectrum-line-band', '63')).toContain('stroke="#16e6d1"');
     expect(valuesFor(markup, 'data-spectrum-tick')).toEqual([
       '20',
       '60',

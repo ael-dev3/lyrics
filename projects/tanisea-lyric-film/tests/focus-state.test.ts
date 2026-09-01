@@ -14,6 +14,12 @@ const findLine = (lineId: string) => {
   return line;
 };
 
+const firstIntervalHandoffs = [
+  ['C1-05', 'C1-06'],
+  ['C1-06', 'C1-07'],
+  ['C1-07', 'C1-08'],
+] as const;
+
 const focusSnapshot = (lineId: string, frame: number, fps = 60) => {
   const line = findLine(lineId);
   return line.segments.map(({id, text}) => ({
@@ -459,21 +465,17 @@ describe('production lyric view model', () => {
           ? 'build'
           : 'chorus';
       expect(line.section, line.id).toBe(expectedSection);
-      expect(line.vocalStartSample - line.visualInStartSample, line.id).toBe(
-        line.focusProfile === 'precision' ? 368 : 10_584,
-      );
+      expect(line.vocalStartSample - line.visualInStartSample, line.id).toBe(10_584);
       expect(
         line.vocalStartSample - line.visualInCompleteSample,
         line.id,
-      ).toBe(line.focusProfile === 'precision' ? 0 : 2_205);
+      ).toBe(2_205);
     }
   });
 
-  test('assigns immediate precision focus only to the first vocal act', () => {
+  test('assigns the approved cinematic focus profile to both repeated choruses', () => {
     for (const line of lyrics) {
-      expect(line.focusProfile, line.id).toBe(
-        line.id.startsWith('C1-') ? 'precision' : 'cinematic',
-      );
+      expect(line.focusProfile, line.id).toBe('cinematic');
     }
   });
 
@@ -523,13 +525,11 @@ describe('production lyric view model', () => {
 
 describe('LyricDisplay rendering', () => {
   test.each([60, 120])(
-    'keeps every outgoing C1 line present until the frame before incoming contact at %i fps',
+    'keeps the 40–50 second passage outgoing line present until the frame before incoming contact at %i fps',
     (fps) => {
-      const firstAct = lyrics.filter(({id}) => id.startsWith('C1-'));
-      for (let index = 1; index < firstAct.length; index++) {
-        const outgoing = firstAct[index - 1];
-        const incoming = firstAct[index];
-        if (!outgoing || !incoming) throw new Error('Missing C1 handoff fixture');
+      for (const [outgoingId, incomingId] of firstIntervalHandoffs) {
+        const outgoing = findLine(outgoingId);
+        const incoming = findLine(incomingId);
         const frameBeforeContact =
           frameForSample(incoming.vocalStartSample, fps) - 1;
         const markup = renderToStaticMarkup(
@@ -555,7 +555,7 @@ describe('LyricDisplay rendering', () => {
   );
 
   test.each([60, 120])(
-    'keeps every incoming C1 line visually absent until its exact contact at %i fps',
+    'settles every incoming C1 line before its exact contact at %i fps',
     (fps) => {
       const firstAct = lyrics.filter(({id}) => id.startsWith('C1-'));
       for (let index = 1; index < firstAct.length; index++) {
@@ -567,14 +567,14 @@ describe('LyricDisplay rendering', () => {
           createElement(LyricDisplay, {frame: frameBeforeContact, fps}),
         );
 
-        if (!markup.includes(`data-lyric-line-id="${incoming.id}"`)) continue;
+        expect(markup).toContain(`data-lyric-line-id="${incoming.id}"`);
         const incomingTag = dataOpeningTag(
           markup,
           'data-lyric-line-id',
           incoming.id,
         );
         const opacity = Number(/(?:^|;)opacity:([^;"]+)/.exec(incomingTag)?.[1]);
-        expect(opacity, `${incoming.id} before contact`).toBe(0);
+        expect(opacity, `${incoming.id} before contact`).toBe(1);
       }
     },
   );
@@ -605,24 +605,22 @@ describe('LyricDisplay rendering', () => {
           fps,
           line.focusProfile,
         ),
-      ).toEqual({contact: 1, emphasis: 1});
+      ).toEqual({contact: 1, emphasis: 1 / 3});
     },
   );
 
   test.each([60, 120])(
-    'removes every outgoing C1 line on the incoming contact frame at %i fps',
+    'keeps cinematic C1 overlap on the incoming contact frame at %i fps',
     (fps) => {
-      const firstAct = lyrics.filter(({id}) => id.startsWith('C1-'));
-      for (let index = 1; index < firstAct.length; index++) {
-        const outgoing = firstAct[index - 1];
-        const incoming = firstAct[index];
-        if (!outgoing || !incoming) throw new Error('Missing C1 handoff fixture');
+      for (const [outgoingId, incomingId] of firstIntervalHandoffs) {
+        const outgoing = findLine(outgoingId);
+        const incoming = findLine(incomingId);
         const contactFrame = frameForSample(incoming.vocalStartSample, fps);
         const markup = renderToStaticMarkup(
           createElement(LyricDisplay, {frame: contactFrame, fps}),
         );
 
-        expect(markup, `${outgoing.id} at ${incoming.id} contact`).not.toContain(
+        expect(markup, `${outgoing.id} at ${incoming.id} contact`).toContain(
           `data-lyric-line-id="${outgoing.id}"`,
         );
         expect(markup).toContain(`data-lyric-line-id="${incoming.id}"`);
@@ -635,6 +633,15 @@ describe('LyricDisplay rendering', () => {
           Number(/(?:^|;)opacity:([^;"]+)/.exec(incomingTag)?.[1]),
           `${incoming.id} opacity on contact`,
         ).toBe(1);
+        const outgoingTag = dataOpeningTag(
+          markup,
+          'data-lyric-line-id',
+          outgoing.id,
+        );
+        expect(
+          Number(/(?:^|;)opacity:([^;"]+)/.exec(outgoingTag)?.[1]),
+          `${outgoing.id} opacity on ${incoming.id} contact`,
+        ).toBeGreaterThan(0);
       }
     },
   );
@@ -675,7 +682,7 @@ describe('LyricDisplay rendering', () => {
           dataStyle(markup, 'data-lyric-glyph-id', segment.id),
           `${lineId} ${seconds}s ${segment.id}`,
         ).toContain(
-          `background-size:${segment.id === expectedSegmentId ? 100 : 0}% 4px`,
+          `background-size:${segment.id === expectedSegmentId ? 100 : 0}% 3px`,
         );
       }
     },
@@ -694,7 +701,7 @@ describe('LyricDisplay rendering', () => {
     for (const segment of line.segments) {
       expect(
         dataStyle(markup, 'data-lyric-glyph-id', segment.id),
-      ).toContain('background-size:0% 4px');
+      ).toContain('background-size:0% 3px');
     }
   });
 
@@ -727,6 +734,16 @@ describe('LyricDisplay rendering', () => {
               line.focusProfile,
             ),
             `${cue.id} on exclusive end`,
+          ).toEqual({contact: 0, emphasis: 1});
+          expect(
+            getSegmentFocusState(
+              line.presentationCues,
+              target,
+              endFrame + 2,
+              fps,
+              line.focusProfile,
+            ),
+            `${cue.id} after cinematic release`,
           ).toEqual({contact: 0, emphasis: 0});
         }
       }
@@ -790,10 +807,10 @@ describe('LyricDisplay rendering', () => {
     },
   );
 
-  test('renders C1 precision contact with immediate high contrast and a tight underline', () => {
+  test('renders C1 contact with the same eased cinematic treatment as C2', () => {
     const c1 = findLine('C1-04');
     const c1Cue = c1.cues[0];
-    if (!c1Cue) throw new Error('Missing C1-04 precision cue');
+    if (!c1Cue) throw new Error('Missing C1-04 cinematic cue');
     const c1Markup = renderToStaticMarkup(
       createElement(LyricDisplay, {
         frame: frameForSample(c1Cue.startSample, 60),
@@ -811,12 +828,12 @@ describe('LyricDisplay rendering', () => {
       'C1-04-S02',
     );
 
-    expect(c1Markup).toContain('data-focus-profile="precision"');
-    expect(activeStyle).toContain('color:rgba(255,255,255,1)');
-    expect(activeStyle).toContain('font-weight:690');
-    expect(activeStyle).toContain('text-shadow:0 0 14px');
-    expect(activeStyle).toContain('background-size:100% 4px');
-    expect(inactiveStyle).toContain('color:rgba(255,255,255,0.48)');
+    expect(c1Markup).toContain('data-focus-profile="cinematic"');
+    expect(activeStyle).toContain('color:rgba(255,255,255,0.7466666666666666)');
+    expect(activeStyle).toContain('font-weight:590');
+    expect(activeStyle).toContain('text-shadow:0 0 13px');
+    expect(activeStyle).toContain('background-size:100% 3px');
+    expect(inactiveStyle).toContain('color:rgba(255,255,255,0.62)');
 
     const c2 = findLine('C2-04');
     const c2Cue = c2.cues[0];
@@ -830,7 +847,7 @@ describe('LyricDisplay rendering', () => {
     expect(c2Markup).toContain('data-focus-profile="cinematic"');
     expect(
       dataStyle(c2Markup, 'data-lyric-glyph-id', 'C2-04-S01'),
-    ).toContain('background-size:100% 3px');
+    ).toEqual(activeStyle);
   });
 
   test('keeps stable segment layers while contact and residual emphasis drive visible glyph styles', () => {

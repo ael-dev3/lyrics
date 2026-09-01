@@ -1936,7 +1936,7 @@ const QA_REPORT_ALIGNMENT_SUMMARY = {
   ],
 } as const;
 
-const QA_PUBLICATION_TAG = 'v2.3.0';
+const QA_PUBLICATION_TAG = 'v2.4.0';
 const QA_PUBLICATION_ASSET_NAMES = [
   'Tanisea-Lyric-Film-Production-Master-vNext.mp4',
   'Tanisea-Lyric-Film-Sync-Proof-120fps.mp4',
@@ -2150,7 +2150,10 @@ const verifyQaReportSummaries = (
   verifyQaReportExactRecord(candidate, 'layoutSummary', {
     spectrumBandCount: 64,
     spectrumMeasuredCorePx: 96,
-    spectrumMaximumCapPx: 18,
+    spectrumMaximumTransientExtensionPx: 18,
+    spectrumMaximumLineTravelPx: 114,
+    spectrumLineWidthPx: 4,
+    spectrumSeparateImpactCapsAbsent: true,
     minimumLyricGapPx: 36,
     lowerChromeClearancePx: 11,
     publicUpperTelemetryAbsent: true,

@@ -1267,6 +1267,18 @@ describe('neutral publication acceptance scan', () => {
         'first-act-semantic-sync-v2.3-implementation.md',
       ),
     ],
+    [
+      'docs/cinematic-parity-v2.4-implementation.md',
+      resolve(
+        repositoryRoot,
+        'docs',
+        'cinematic-parity-v2.4-implementation.md',
+      ),
+    ],
+    [
+      'docs/first-pass-song-workflow.md',
+      resolve(repositoryRoot, 'docs', 'first-pass-song-workflow.md'),
+    ],
   ] as const;
 
   test.each(documents)('accepts neutral public document %s', (label, path) => {
@@ -2106,7 +2118,10 @@ const validQaReport = () => {
     layoutSummary: {
       spectrumBandCount: 64,
       spectrumMeasuredCorePx: 96,
-      spectrumMaximumCapPx: 18,
+      spectrumMaximumTransientExtensionPx: 18,
+      spectrumMaximumLineTravelPx: 114,
+      spectrumLineWidthPx: 4,
+      spectrumSeparateImpactCapsAbsent: true,
       minimumLyricGapPx: 36,
       lowerChromeClearancePx: 11,
       publicUpperTelemetryAbsent: true,
@@ -2143,7 +2158,7 @@ const PUBLISHED_ASSET_NAMES = [
 ] as const;
 
 const validPublicationEvidence = () => {
-  const tag = 'v2.3.0';
+  const tag = 'v2.4.0';
   const downloadRoot =
     `https://github.com/ael-dev3/lyrics/releases/download/${tag}`;
   return {
@@ -5628,7 +5643,10 @@ describe('Task 7 pure-gate review Fix Round B2 complete QA report', () => {
     test.each([
       ['spectrumBandCount', 63],
       ['spectrumMeasuredCorePx', 95],
-      ['spectrumMaximumCapPx', 19],
+      ['spectrumMaximumTransientExtensionPx', 19],
+      ['spectrumMaximumLineTravelPx', 113],
+      ['spectrumLineWidthPx', 5],
+      ['spectrumSeparateImpactCapsAbsent', false],
       ['minimumLyricGapPx', 35],
       ['lowerChromeClearancePx', 10],
       ['publicUpperTelemetryAbsent', false],

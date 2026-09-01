@@ -50,21 +50,21 @@ The observed maximum semantic-cue boundary errors are `8.321995 ms` at 60 fps an
 
 English words remain in fixed positions. The render computes focus from active semantic cues rather than rebuilding the line as progress text. This allows forward, backward, repeated, and simultaneous activation while keeping layout stationary.
 
-The first vocal act uses a `precision` presentation profile: its target is inactive before the nearest cue frame, fully emphasized on contact, and inactive at the exclusive cue end. C1 entrances use a one-proof-frame lead and are fully visible on vocal contact without a visible precontact stack. `C1-06`, `C1-07`, and `C1-08` mirror the reviewed semantic target order and exact cue releases, including backward contact where Russian and English concept order differ. `C1-01` retains its approved contiguous English-order presentation. The horizontal rail advances by cue stage and pauses in reviewed inter-word gaps instead of drifting across the broad line envelope. The original `cues` remain unchanged for alignment auditability. V1 and C2 retain the approved `cinematic` three-frame attack, two-frame release, and visual handoffs. The same presentation rules drive the 120 fps proof.
+All public lyric acts use the same cinematic presentation profile. Each line begins its entrance 10,584 samples (240 ms) before the reviewed vocal start and settles 2,205 samples (50 ms) before contact. Internal handoffs crossfade for 8,379 samples (190 ms). Semantic emphasis attacks over three frames and releases over two while the reviewed cue sample remains the authority. `C1-06`, `C1-07`, and `C1-08` retain their reviewed semantic target order and exact exclusive cue releases, including backward contact where Russian and English concept order differ. `C1-01` retains its contiguous English-order presentation. The horizontal rail advances by cue stage and pauses in reviewed inter-word gaps. The original `cues` remain unchanged for alignment auditability, and the same sample authority drives the 120 fps proof.
 
 ## Audio features and spectrum
 
 `public/audio-features.bin` stores 9,180 fixed-size records generated from `public/soundtrack.m4a`. Each record includes 64 logarithmic bands, sustained pressure, transient impact, low-end weight, brightness, emotional emphasis, line reach, momentary dBFS, and sample peak dBFS. `public/audio-features.manifest.json` records generation settings and hashes.
 
-The public spectrum separates measurement from emphasis:
+The public spectrum integrates measurement and transient emphasis into one line per band:
 
 - a symmetric `[1, 2, 3, 2, 1]` kernel smooths adjacent frames and bands without phase delay;
-- 7 px rounded bars, a restrained ember/teal split with no neutral interpolation, and softer chrome reduce visual chatter;
-- the measured core has at least 96 px of travel at the verified peak;
-- the lighter transient cap extends the display by at most 18 px;
-- the cap does not alter the measured magnitude;
-- browser geometry checks preserve at least 36 px between lyrics and the maximum cap;
-- all 64 measured bands and 64 caps remain inside the public safe area.
+- 64 flat-ended 4 px SVG lines and a restrained ember/teal split reduce visual mass and chatter;
+- the measured component has 96 px of travel at the verified peak;
+- transient emphasis extends the same continuous line by at most 18 px, for 114 px maximum travel;
+- no separate cap, rounded tip, circle, or dot is rendered;
+- browser geometry checks preserve at least 36 px between lyrics and the maximum line;
+- all 64 lines remain inside the public safe area.
 
 ## Commands
 
@@ -120,7 +120,7 @@ The release matrix verifies:
 10. repeated QA with no unexplained artifact drift;
 11. publication assets, checksums, and documentation.
 
-See the [final QA report](../../audits/tanisea-final-qa-vnext.md), [v2.3 implementation report](../../docs/first-act-semantic-sync-v2.3-implementation.md), [v2.2 implementation report](../../docs/first-act-polish-v2.2-implementation.md), [v2.1 implementation report](../../docs/first-act-precision-v2.1-implementation.md), [full-system implementation report](../../docs/precision-sync-vnext-implementation.md), and [workflow evidence guide](../../docs/workflow-evidence.md). The supplemental release archive preserves the generated alignment provenance, both canonical QA runs, QA media, and final visual-review artifacts that remain excluded from source control.
+See the [final QA report](../../audits/tanisea-final-qa-vnext.md), [v2.4 implementation report](../../docs/cinematic-parity-v2.4-implementation.md), [first-pass song workflow](../../docs/first-pass-song-workflow.md), [v2.3 implementation report](../../docs/first-act-semantic-sync-v2.3-implementation.md), [full-system implementation report](../../docs/precision-sync-vnext-implementation.md), and [workflow evidence guide](../../docs/workflow-evidence.md). The supplemental release archive preserves the generated alignment provenance, both canonical QA runs, QA media, and final visual-review artifacts that remain excluded from source control.
 
 ## Source layout
 

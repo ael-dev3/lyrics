@@ -68,32 +68,21 @@ export const SpectrumRail = ({feature}: SpectrumRailProps) => (
       {Array.from(feature.bands).map((byte, band) => {
         const normalized = clamp((byte - 24) / 231);
         const geometry = getSpectrumBarGeometry(byte, feature.impact);
-        const measuredY = BASELINE_Y - geometry.measuredHeight;
-        const capY = measuredY - geometry.impactExtension;
+        const x = band * 15 + 7.5;
         const fill = spectrumBandColor(band);
         return (
-          <g key={band}>
-            <rect
-              data-spectrum-measured-band={band}
-              x={band * 15 + 4}
-              y={measuredY}
-              width={7}
-              height={geometry.measuredHeight}
-              rx={3}
-              fill={fill}
-              opacity={Number((0.34 + normalized * 0.5).toFixed(2))}
-            />
-            <rect
-              data-spectrum-impact-band={band}
-              x={band * 15 + 4}
-              y={capY}
-              width={7}
-              height={geometry.impactExtension}
-              rx={3}
-              fill={fill}
-              opacity={Number((0.38 + normalized * 0.34).toFixed(2))}
-            />
-          </g>
+          <line
+            key={band}
+            data-spectrum-line-band={band}
+            x1={x}
+            y1={BASELINE_Y}
+            x2={x}
+            y2={BASELINE_Y - geometry.totalHeight}
+            stroke={fill}
+            strokeWidth={4}
+            strokeLinecap="butt"
+            opacity={Number((0.3 + normalized * 0.44).toFixed(2))}
+          />
         );
       })}
       {frequencyTicks.map(({frequency, label}) => {
