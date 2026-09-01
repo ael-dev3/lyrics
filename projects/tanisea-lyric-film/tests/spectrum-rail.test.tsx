@@ -22,7 +22,7 @@ const openingTagFor = (
 };
 
 describe('calm spectrum rail rendering', () => {
-  test('uses rounded 7 px bars, precise geometry, and a continuous colour progression', () => {
+  test('uses rounded 7 px bars, precise geometry, and a restrained two-tone palette', () => {
     const markup = renderToStaticMarkup(
       createElement(SpectrumRail, {feature: spectrum}),
     );
@@ -31,22 +31,27 @@ describe('calm spectrum rail rendering', () => {
     const cap = openingTagFor(markup, 'data-spectrum-impact-band', '0');
 
     expect(svg).toContain('shape-rendering="geometricPrecision"');
-    expect(markup).toContain('id="spectrum-band-gradient"');
-    expect(markup).toContain('offset="0%" stop-color="#ff5b70"');
-    expect(markup).toContain('offset="52%" stop-color="#16e6d1"');
-    expect(markup).toContain('offset="100%" stop-color="#c9fff7"');
+    expect(markup).not.toContain('<linearGradient');
     expect(measured).toContain('x="4"');
     expect(measured).toContain('width="7"');
     expect(measured).toContain('rx="3"');
-    expect(measured).toContain('fill="url(#spectrum-band-gradient)"');
-    expect(measured).toContain('opacity="0.78"');
+    expect(measured).toContain('fill="#ff5b70"');
+    expect(measured).toContain('opacity="0.84"');
     expect(cap).toContain('x="4"');
     expect(cap).toContain('width="7"');
     expect(cap).toContain('rx="3"');
-    expect(cap).toContain('opacity="0.52"');
+    expect(cap).toContain('fill="#ff5b70"');
+    expect(cap).toContain('opacity="0.72"');
+    expect(
+      openingTagFor(markup, 'data-spectrum-measured-band', '1'),
+    ).toContain('opacity="0.34"');
+    expect(
+      openingTagFor(markup, 'data-spectrum-impact-band', '1'),
+    ).toContain('opacity="0.38"');
+    expect(markup).not.toContain('#fffdfd');
   });
 
-  test('keeps all measured bars and caps while softening baseline and tick contrast', () => {
+  test('keeps all rail geometry while tinting every line and label with the approved palette', () => {
     const markup = renderToStaticMarkup(
       createElement(SpectrumRail, {feature: spectrum}),
     );
@@ -55,7 +60,32 @@ describe('calm spectrum rail rendering', () => {
     expect(markup.match(/data-spectrum-impact-band=/g)).toHaveLength(64);
     expect(
       openingTagFor(markup, 'data-spectrum-baseline', 'public'),
-    ).toContain('stroke="rgba(201,255,247,.14)"');
-    expect(markup).toContain('fill="rgba(201,255,247,.34)"');
+    ).toContain('stroke="#16e6d1"');
+    expect(
+      openingTagFor(markup, 'data-spectrum-baseline', 'public'),
+    ).toContain('opacity="0.24"');
+    expect(
+      openingTagFor(markup, 'data-spectrum-tick-mark', '20'),
+    ).toContain('stroke="#16e6d1"');
+    expect(openingTagFor(markup, 'data-spectrum-tick', '20')).toContain(
+      'fill="#c9fff7"',
+    );
+    for (const band of [0, 17]) {
+      expect(
+        openingTagFor(markup, 'data-spectrum-measured-band', String(band)),
+      ).toContain('fill="#ff5b70"');
+      expect(
+        openingTagFor(markup, 'data-spectrum-impact-band', String(band)),
+      ).toContain('fill="#ff5b70"');
+    }
+    for (const band of [18, 51, 52, 63]) {
+      expect(
+        openingTagFor(markup, 'data-spectrum-measured-band', String(band)),
+      ).toContain('fill="#16e6d1"');
+      expect(
+        openingTagFor(markup, 'data-spectrum-impact-band', String(band)),
+      ).toContain('fill="#16e6d1"');
+    }
+    expect(markup).not.toMatch(/(?:fill|stroke)="(?:#fffdfd|rgba\(255,255,255)/);
   });
 });

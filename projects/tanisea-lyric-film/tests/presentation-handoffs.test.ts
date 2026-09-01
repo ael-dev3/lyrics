@@ -82,9 +82,7 @@ describe('absolute-sample presentation handoffs', () => {
         next.visualInStartSample,
       );
       const cinematicEnd = cinematicStart + CROSSFADE_SAMPLES;
-      const contactBounded =
-        current.focusProfile === 'precision' &&
-        cinematicEnd > next.vocalStartSample;
+      const contactBounded = current.focusProfile === 'precision';
       const expectedEnd = contactBounded
         ? next.vocalStartSample
         : cinematicEnd;

@@ -508,6 +508,28 @@ describe('production lyric view model', () => {
 
 describe('LyricDisplay rendering', () => {
   test.each([60, 120])(
+    'keeps every outgoing C1 line present until the frame before incoming contact at %i fps',
+    (fps) => {
+      const firstAct = lyrics.filter(({id}) => id.startsWith('C1-'));
+      for (let index = 1; index < firstAct.length; index++) {
+        const outgoing = firstAct[index - 1];
+        const incoming = firstAct[index];
+        if (!outgoing || !incoming) throw new Error('Missing C1 handoff fixture');
+        const frameBeforeContact =
+          frameForSample(incoming.vocalStartSample, fps) - 1;
+        const markup = renderToStaticMarkup(
+          createElement(LyricDisplay, {frame: frameBeforeContact, fps}),
+        );
+
+        expect(
+          markup,
+          `${outgoing.id} before ${incoming.id} contact`,
+        ).toContain(`data-lyric-line-id="${outgoing.id}"`);
+      }
+    },
+  );
+
+  test.each([60, 120])(
     'removes every outgoing C1 line on the incoming contact frame at %i fps',
     (fps) => {
       const firstAct = lyrics.filter(({id}) => id.startsWith('C1-'));
@@ -540,6 +562,60 @@ describe('LyricDisplay rendering', () => {
     expect(markup).toContain('data-lyric-line-id="C2-03"');
     expect(markup).toContain('data-lyric-line-id="C2-04"');
   });
+
+  test.each([
+    ['C1-01', 27.0, 'C1-01-S02'],
+    ['C1-06', 42.0, 'C1-06-S02'],
+    ['C1-06', 44.2, 'C1-06-S03'],
+    ['C1-07', 46.0, 'C1-07-S02'],
+    ['C1-07', 46.6, 'C1-07-S03'],
+    ['C1-08', 49.6, 'C1-08-S03'],
+  ] as const)(
+    'keeps the flagged first-act phrase %s on its natural English focus at %s seconds',
+    (lineId, seconds, expectedSegmentId) => {
+      const line = findLine(lineId);
+      const markup = renderToStaticMarkup(
+        createElement(LyricDisplay, {
+          frame: Math.round(seconds * 60),
+          fps: 60,
+        }),
+      );
+
+      for (const segment of line.segments) {
+        expect(
+          dataStyle(markup, 'data-lyric-glyph-id', segment.id),
+          `${lineId} ${seconds}s ${segment.id}`,
+        ).toContain(
+          `background-size:${segment.id === expectedSegmentId ? 100 : 0}% 4px`,
+        );
+      }
+    },
+  );
+
+  test.each([
+    ['C2-06', 108.5, 'C2-06-S03'],
+    ['C2-07', 111.5, 'C2-07-S03'],
+  ] as const)(
+    'preserves the approved second-act semantic focus for %s at %s seconds',
+    (lineId, seconds, expectedSegmentId) => {
+      const line = findLine(lineId);
+      const markup = renderToStaticMarkup(
+        createElement(LyricDisplay, {
+          frame: Math.round(seconds * 60),
+          fps: 60,
+        }),
+      );
+
+      for (const segment of line.segments) {
+        expect(
+          dataStyle(markup, 'data-lyric-glyph-id', segment.id),
+          `${lineId} ${seconds}s ${segment.id}`,
+        ).toContain(
+          `background-size:${segment.id === expectedSegmentId ? 100 : 0}% 3px`,
+        );
+      }
+    },
+  );
 
   test('renders C1 precision contact with immediate high contrast and a tight underline', () => {
     const c1 = findLine('C1-04');

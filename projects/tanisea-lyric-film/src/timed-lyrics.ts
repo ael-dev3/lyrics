@@ -21,6 +21,7 @@ export type LyricLine = Readonly<{
   visualOutEndSample: number;
   segments: readonly LyricSegment[];
   cues: readonly SemanticCue[];
+  presentationCues: readonly SemanticCue[];
   text: string;
   /** Sample-derived seconds retained for alignment preparation tooling. */
   vocalStart: number;
@@ -34,6 +35,46 @@ const PRESENTATION_CROSSFADE_SAMPLES =
   VISUAL_LEAD_SAMPLES - VISUAL_SETTLE_LEAD_SAMPLES;
 const PRECISION_HANDOFF_SAMPLES = Math.round(SAMPLE_RATE * 0.05);
 const SEMANTIC_RELEASE_HOLD_SAMPLES = Math.round(SAMPLE_RATE / 30);
+
+const continuousEnglishTargets = new Map<string, readonly string[]>([
+  ['C1-01', ['C1-01-S01', 'C1-01-S02']],
+  ['C1-06', ['C1-06-S01', 'C1-06-S02', 'C1-06-S03']],
+  ['C1-07', ['C1-07-S01', 'C1-07-S02', 'C1-07-S03']],
+  ['C1-08', ['C1-08-S01', 'C1-08-S02', 'C1-08-S03']],
+]);
+
+const presentationCuesForLine = (
+  lineId: string,
+  cues: readonly SemanticCue[],
+  releaseSample: number,
+): readonly SemanticCue[] => {
+  const targets = continuousEnglishTargets.get(lineId);
+  if (!targets) return cues;
+  if (targets.length !== cues.length) {
+    throw new Error(
+      `${lineId} continuous presentation requires one target per reviewed cue`,
+    );
+  }
+
+  return cues.map((cue, index) => {
+    const target = targets[index];
+    if (!target) throw new Error(`${lineId} presentation target ${index} is missing`);
+    const nextCue = cues[index + 1];
+    const endSample = nextCue?.startSample ?? releaseSample;
+    if (endSample <= cue.startSample) {
+      throw new Error(`${lineId} presentation cue ${cue.id} has no duration`);
+    }
+    return {
+      ...cue,
+      endSample,
+      targets: [target],
+      activation: 'forward',
+      mappingNote:
+        `Continuous English-order presentation for ${lineId}; ` +
+        `reviewed source semantics remain in alignment/tanisea-word-alignment-v3.json.`,
+    };
+  });
+};
 
 export const presentationMilestones = {
   breakCardRevealStartSample: 2_204_118,
@@ -92,27 +133,28 @@ const nextPresentationLineId = (lineId: string): string | null => {
 export const lyrics: readonly LyricLine[] = lyricDrafts.map((line) => {
   let visualOutStartSample: number;
   let visualOutEndSample: number;
+  let presentationReleaseSample: number;
 
   if (line.id === 'C1-08') {
     visualOutStartSample = presentationMilestones.breakCardRevealStartSample;
     visualOutEndSample = presentationMilestones.breakCardRevealCompleteSample;
+    presentationReleaseSample = presentationMilestones.breakCardRevealStartSample;
   } else if (line.id === 'C2-08') {
     visualOutStartSample = presentationMilestones.outroRevealStartSample;
     visualOutEndSample = presentationMilestones.outroRevealCompleteSample;
+    presentationReleaseSample = line.vocalEndSample;
   } else {
     const nextId = nextPresentationLineId(line.id);
     const next = nextId ? draftById.get(nextId) : undefined;
     if (!next) throw new Error(`Missing presentation successor for ${line.id}`);
+    presentationReleaseSample = next.vocalStartSample;
     const cinematicOutStartSample = Math.max(
       line.vocalEndSample + SEMANTIC_RELEASE_HOLD_SAMPLES,
       next.visualInStartSample,
     );
     const cinematicOutEndSample =
       cinematicOutStartSample + PRESENTATION_CROSSFADE_SAMPLES;
-    if (
-      line.focusProfile === 'precision' &&
-      cinematicOutEndSample > next.vocalStartSample
-    ) {
+    if (line.focusProfile === 'precision') {
       visualOutEndSample = next.vocalStartSample;
       visualOutStartSample = Math.max(
         line.vocalEndSample,
@@ -124,7 +166,16 @@ export const lyrics: readonly LyricLine[] = lyricDrafts.map((line) => {
     }
   }
 
-  return {...line, visualOutStartSample, visualOutEndSample};
+  return {
+    ...line,
+    presentationCues: presentationCuesForLine(
+      line.id,
+      line.cues,
+      presentationReleaseSample,
+    ),
+    visualOutStartSample,
+    visualOutEndSample,
+  };
 });
 
 export const qcVocalOnsets = lyrics.map(({id, vocalStart}) => ({

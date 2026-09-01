@@ -38,6 +38,7 @@ import {
   SyncProof,
   SyncProofFrame,
 } from '../src/SyncProof';
+import {lyrics} from '../src/timed-lyrics';
 import {taniseaAlignment} from '../src/timing/tanisea-alignment';
 
 const withTemporaryDirectory = <Result>(
@@ -180,6 +181,12 @@ const independentlyNearestFrame = (sample: number): number =>
 type ReviewedLine = (typeof taniseaAlignment.lines)[number];
 type ReviewedCue = ReviewedLine['cues'][number];
 
+const presentationProofLines = lyrics.map((presentationLine) => {
+  const line = taniseaAlignment.lines.find(({id}) => id === presentationLine.id);
+  if (!line) throw new Error(`Missing reviewed line ${presentationLine.id}`);
+  return {line, cues: presentationLine.presentationCues};
+});
+
 type IndependentCueCandidate = Readonly<{
   line: ReviewedLine;
   cue: ReviewedCue;
@@ -200,10 +207,10 @@ const independentlyActiveCandidates = (
   lineId: string | null,
   frame: number,
 ): readonly IndependentCueCandidate[] =>
-  taniseaAlignment.lines
-    .filter((line) => lineId === null || line.id === lineId)
-    .flatMap((line) =>
-      line.cues.map((cue) => ({
+  presentationProofLines
+    .filter(({line}) => lineId === null || line.id === lineId)
+    .flatMap(({line, cues}) =>
+      cues.map((cue) => ({
         line,
         cue,
         startFrame: independentlyNearestFrame(cue.startSample),
@@ -216,10 +223,10 @@ const independentlyActiveCandidates = (
     .sort(independentCandidateOrder);
 
 const activeStateAtCueStart = (lineId: string, cueIndex: number) => {
-  const line = taniseaAlignment.lines.find(({id}) => id === lineId);
-  if (!line) throw new Error(`Missing reviewed line ${lineId}`);
-  const cue = line.cues[cueIndex];
-  if (!cue) throw new Error(`Missing reviewed cue ${lineId}[${cueIndex}]`);
+  const line = lyrics.find(({id}) => id === lineId);
+  if (!line) throw new Error(`Missing presentation line ${lineId}`);
+  const cue = line.presentationCues[cueIndex];
+  if (!cue) throw new Error(`Missing presentation cue ${lineId}[${cueIndex}]`);
 
   const state = proofFrameState(
     lineId,
@@ -318,6 +325,25 @@ describe('pure synchronization-proof state', () => {
     expect(state.absoluteFrameErrorMilliseconds).toBeCloseTo(2.664399, 6);
   });
 
+  test.each([
+    ['C1-01', 27.0, 'C1-01-S02'],
+    ['C1-06', 42.0, 'C1-06-S02'],
+    ['C1-06', 44.2, 'C1-06-S03'],
+    ['C1-07', 46.0, 'C1-07-S02'],
+    ['C1-07', 46.6, 'C1-07-S03'],
+    ['C1-08', 49.6, 'C1-08-S03'],
+  ] as const)(
+    'mirrors the public presentation target for %s at %s seconds',
+    (lineId, seconds, expectedTargetId) => {
+      const state = proofFrameState(lineId, 120, Math.round(seconds * 120));
+
+      expect(state.status).toBe('active');
+      if (state.status === 'active') {
+        expect(state.targetIds).toEqual([expectedTargetId]);
+      }
+    },
+  );
+
   test('independently proves every reviewed cue and 120 fps frame error', () => {
     for (const line of taniseaAlignment.lines) {
       for (const cue of line.cues) {
@@ -355,9 +381,9 @@ describe('pure synchronization-proof state', () => {
     }
   });
 
-  test('applies start-inclusive and end-exclusive selection at every cue boundary', () => {
-    for (const line of taniseaAlignment.lines) {
-      for (const cue of line.cues) {
+  test('applies start-inclusive and end-exclusive selection at every presentation cue boundary', () => {
+    for (const {line, cues} of presentationProofLines) {
+      for (const cue of cues) {
         const startFrame = independentlyNearestFrame(cue.startSample);
         const endFrame = independentlyNearestFrame(cue.endSample);
         const boundaries = [

@@ -4,9 +4,13 @@ import type {SmoothedSpectrumState} from '../spectrum-smoothing';
 const teal = '#16e6d1';
 const mint = '#c9fff7';
 const ember = '#ff5b70';
-const white = '#fffdfd';
 
 const BASELINE_Y = 132;
+
+const spectrumBandColor = (band: number): string => {
+  if (band < 18) return ember;
+  return teal;
+};
 
 const clamp = (value: number, minimum = 0, maximum = 1): number =>
   Math.min(maximum, Math.max(minimum, value));
@@ -51,27 +55,14 @@ export const SpectrumRail = ({feature}: SpectrumRailProps) => (
       style={{position: 'absolute', inset: 0}}
       shapeRendering="geometricPrecision"
     >
-      <defs>
-        <linearGradient
-          id="spectrum-band-gradient"
-          gradientUnits="userSpaceOnUse"
-          x1={0}
-          y1={0}
-          x2={960}
-          y2={0}
-        >
-          <stop offset="0%" stopColor={ember} />
-          <stop offset="52%" stopColor={teal} />
-          <stop offset="100%" stopColor={mint} />
-        </linearGradient>
-      </defs>
       <line
         data-spectrum-baseline="public"
         x1={0}
         y1={BASELINE_Y}
         x2={960}
         y2={BASELINE_Y}
-        stroke="rgba(201,255,247,.14)"
+        stroke={teal}
+        opacity={0.24}
         strokeWidth={1}
       />
       {Array.from(feature.bands).map((byte, band) => {
@@ -79,6 +70,7 @@ export const SpectrumRail = ({feature}: SpectrumRailProps) => (
         const geometry = getSpectrumBarGeometry(byte, feature.impact);
         const measuredY = BASELINE_Y - geometry.measuredHeight;
         const capY = measuredY - geometry.impactExtension;
+        const fill = spectrumBandColor(band);
         return (
           <g key={band}>
             <rect
@@ -88,8 +80,8 @@ export const SpectrumRail = ({feature}: SpectrumRailProps) => (
               width={7}
               height={geometry.measuredHeight}
               rx={3}
-              fill="url(#spectrum-band-gradient)"
-              opacity={0.26 + normalized * 0.52}
+              fill={fill}
+              opacity={Number((0.34 + normalized * 0.5).toFixed(2))}
             />
             <rect
               data-spectrum-impact-band={band}
@@ -98,8 +90,8 @@ export const SpectrumRail = ({feature}: SpectrumRailProps) => (
               width={7}
               height={geometry.impactExtension}
               rx={3}
-              fill={white}
-              opacity={0.16 + normalized * 0.36}
+              fill={fill}
+              opacity={Number((0.38 + normalized * 0.34).toFixed(2))}
             />
           </g>
         );
@@ -109,11 +101,13 @@ export const SpectrumRail = ({feature}: SpectrumRailProps) => (
         return (
           <g key={frequency}>
             <line
+              data-spectrum-tick-mark={label}
               x1={x}
               y1={BASELINE_Y + 1}
               x2={x}
               y2={BASELINE_Y + 6}
-              stroke="rgba(201,255,247,.3)"
+              stroke={teal}
+              opacity={0.38}
               strokeWidth={1}
             />
             <text
@@ -127,7 +121,8 @@ export const SpectrumRail = ({feature}: SpectrumRailProps) => (
                     ? 'end'
                     : 'middle'
               }
-              fill="rgba(201,255,247,.34)"
+              fill={mint}
+              opacity={0.52}
               fontFamily="Space Grotesk"
               fontSize={7}
               fontWeight={600}

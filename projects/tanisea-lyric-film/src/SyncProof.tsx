@@ -1,5 +1,6 @@
 import {AbsoluteFill, useCurrentFrame, useVideoConfig} from 'remotion';
 import {LyricFilm} from './LyricFilm';
+import {lyrics} from './timed-lyrics';
 import {
   frameErrorMs,
   frameForSample,
@@ -93,22 +94,28 @@ export const proofFrameState = (
 ): ProofFrameState => {
   validateFrameContext(fps, frame);
 
-  const lines = lineId === null
-    ? taniseaAlignment.lines
-    : taniseaAlignment.lines.filter(({id}) => id === lineId);
-  if (lineId !== null && lines.length === 0) {
+  const presentationLines = lineId === null
+    ? lyrics
+    : lyrics.filter(({id}) => id === lineId);
+  if (lineId !== null && presentationLines.length === 0) {
     throw new Error(`Unknown reviewed line: ${lineId}`);
   }
 
-  const activeCandidates = lines
-    .flatMap((line) =>
-      line.cues.map((cue) => ({
+  const activeCandidates = presentationLines
+    .flatMap((presentationLine) => {
+      const line = taniseaAlignment.lines.find(
+        ({id}) => id === presentationLine.id,
+      );
+      if (!line) {
+        throw new Error(`Reviewed line ${presentationLine.id} is missing`);
+      }
+      return presentationLine.presentationCues.map((cue) => ({
         line,
         cue,
         startFrame: frameForSample(cue.startSample, fps),
         endFrame: frameForSample(cue.endSample, fps),
-      })),
-    )
+      }));
+    })
     .filter(({startFrame, endFrame}) => frame >= startFrame && frame < endFrame)
     .sort(candidateOrder);
 

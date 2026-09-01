@@ -113,7 +113,7 @@ const LyricLineView = ({line, frame, fps}: LyricLineViewProps) => {
         >
           {line.segments.map((segment) => {
             const focus = getSegmentFocusState(
-              line.cues,
+              line.presentationCues,
               segment.id,
               frame,
               fps,
