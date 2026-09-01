@@ -80,29 +80,36 @@ describe('public spectrum rail', () => {
 
     const peakMeasured = openingTagFor(markup, 'data-spectrum-measured-band', '0');
     const peakCap = openingTagFor(markup, 'data-spectrum-impact-band', '0');
-    expect(peakMeasured).toContain('x="3"');
+    expect(peakMeasured).toContain('x="4"');
     expect(peakMeasured).toContain('y="36"');
+    expect(peakMeasured).toContain('width="7"');
     expect(peakMeasured).toContain('height="96"');
-    expect(peakMeasured).toContain('fill="#ff5b70"');
-    expect(peakCap).toContain('x="3"');
+    expect(peakMeasured).toContain('rx="3"');
+    expect(peakMeasured).toContain('fill="url(#spectrum-band-gradient)"');
+    expect(peakCap).toContain('x="4"');
     expect(peakCap).toContain('y="18"');
+    expect(peakCap).toContain('width="7"');
     expect(peakCap).toContain('height="18"');
+    expect(peakCap).toContain('rx="3"');
     expect(peakCap).toContain('fill="#fffdfd"');
 
     const quietMeasured = openingTagFor(markup, 'data-spectrum-measured-band', '1');
-    expect(quietMeasured).toContain('x="18"');
+    expect(quietMeasured).toContain('x="19"');
     expect(quietMeasured).toContain('y="130"');
     expect(quietMeasured).toContain('height="2"');
   });
 
-  test('preserves the baseline, band palette, and logarithmic ticks without the old heading', () => {
+  test('preserves the baseline and logarithmic ticks with a continuous band palette', () => {
     const markup = renderToStaticMarkup(
       createElement(SpectrumRail, {feature: peakFeature}),
     );
 
     expect(openingTagFor(markup, 'data-spectrum-baseline', 'public')).toContain('y1="132"');
-    expect(openingTagFor(markup, 'data-spectrum-measured-band', '21')).toContain('fill="#16e6d1"');
-    expect(openingTagFor(markup, 'data-spectrum-measured-band', '48')).toContain('fill="#c9fff7"');
+    expect(markup).toContain('offset="0%" stop-color="#ff5b70"');
+    expect(markup).toContain('offset="52%" stop-color="#16e6d1"');
+    expect(markup).toContain('offset="100%" stop-color="#c9fff7"');
+    expect(openingTagFor(markup, 'data-spectrum-measured-band', '21')).toContain('fill="url(#spectrum-band-gradient)"');
+    expect(openingTagFor(markup, 'data-spectrum-measured-band', '48')).toContain('fill="url(#spectrum-band-gradient)"');
     expect(valuesFor(markup, 'data-spectrum-tick')).toEqual([
       '20',
       '60',

@@ -19,6 +19,7 @@ import {FrameChrome} from './components/FrameChrome';
 import {LyricDisplay} from './components/LyricDisplay';
 import {SpectrumRail} from './components/SpectrumRail';
 import {featureFrameForTime} from './feature-frame';
+import {getSmoothedSpectrumState} from './spectrum-smoothing';
 
 const teal = '#16e6d1';
 const mint = '#c9fff7';
@@ -673,10 +674,18 @@ export const LyricFilm = () => {
   const time = frame / fps;
   const fontsReady = useProductionFonts();
   const audioFeatures = useAudioFeatures();
+  const featureFrame = audioFeatures
+    ? featureFrameForTime(frame, fps, audioFeatures.fps)
+    : 0;
+  const spectrumFeature = useMemo(
+    () => audioFeatures
+      ? getSmoothedSpectrumState(audioFeatures, featureFrame)
+      : null,
+    [audioFeatures, featureFrame],
+  );
 
-  if (!fontsReady || !audioFeatures) return null;
+  if (!fontsReady || !audioFeatures || !spectrumFeature) return null;
 
-  const featureFrame = featureFrameForTime(frame, fps, audioFeatures.fps);
   const feature = audioFeatures.getFrame(featureFrame);
 
   return (
@@ -689,7 +698,7 @@ export const LyricFilm = () => {
       <BreakCard time={time} feature={feature} />
       <LyricDisplay frame={frame} fps={fps} />
       <Outro time={time} feature={feature} />
-      <SpectrumRail feature={feature} />
+      <SpectrumRail feature={spectrumFeature} />
       <FrameChrome time={time} />
       <EndFade time={time} />
     </AbsoluteFill>
