@@ -21,6 +21,10 @@ for (const requiredPath of [referencePath, soundtrackPath]) {
   }
 }
 
+// Keep the complete 9,180-frame visual timeline authoritative. FFmpeg's
+// `-shortest` stopped four frames early at this AAC stream's final packet
+// boundary even though both inputs report 153.000 seconds.
+
 execFileSync(
   'ffmpeg',
   [...createArchivalDeliveryArguments({referencePath, soundtrackPath, outputPath})],

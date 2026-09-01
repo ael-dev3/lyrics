@@ -61,6 +61,7 @@ The [reviewed alignment report](audits/tanisea-word-alignment-v3.md) lists every
 | [Alignment JSON](https://github.com/ael-dev3/lyrics/releases/download/v2.0.0/tanisea-word-alignment-v3.json) | Reviewed sample-indexed timing and semantic mapping |
 | [QA JSON](https://github.com/ael-dev3/lyrics/releases/download/v2.0.0/tanisea-final-qa-vnext.json) | Machine-readable build, media, layout, and repeatability evidence |
 | [Checksums](https://github.com/ael-dev3/lyrics/releases/download/v2.0.0/CHECKSUMS.sha256) | SHA-256 values for the release package |
+| [Earlier platform snapshot](deliverables/Tanisea-Lyric-Film-vNext-60fps-Final.mp4) | Previously published attenuated-AAC delivery retained with its original checksum |
 
 ## Build the source
 

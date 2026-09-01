@@ -35,11 +35,15 @@ execFileSync(
     '-tag:v',
     'hvc1',
     '-af',
-    'volume=-4dB',
+    'volume=-4dB,atrim=start=0:end=153,asetpts=PTS-STARTPTS',
     '-c:a',
     'aac',
     '-b:a',
     '256k',
+    // Bound the mux explicitly so AAC encoder padding cannot extend the
+    // platform MP4 beyond the authoritative 153.000-second video timeline.
+    '-t',
+    '153',
     '-movflags',
     '+faststart',
     '-metadata',
