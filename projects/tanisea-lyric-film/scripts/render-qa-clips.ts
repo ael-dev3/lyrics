@@ -51,7 +51,7 @@ export type ReviewRange = Readonly<{
 
 export type ContactFrame = Readonly<{
   id: string;
-  lineId: 'V1-03' | 'V1-08';
+  lineId: 'C1-04' | 'V1-03' | 'V1-08';
   cueId: string;
   cueStartSample: number;
   cadenceFps: 60 | 120;
@@ -63,7 +63,7 @@ export type ContactFrame = Readonly<{
 
 export type ContactSheet = Readonly<{
   id: string;
-  lineId: 'V1-03' | 'V1-08';
+  lineId: 'C1-04' | 'V1-03' | 'V1-08';
   cadenceFps: 60 | 120;
   path: string;
   contactIds: readonly string[];
@@ -122,8 +122,11 @@ const SOURCE_MEDIA_PATHS = {
   reference: 'output/Tanisea-Lyric-Film-vNext-reference-2x.mov',
 } as const satisfies Readonly<Record<QaMediaSource, string>>;
 
-const HIGH_RISK_LINE_IDS = ['V1-03', 'V1-08'] as const;
+const HIGH_RISK_LINE_IDS = ['C1-04', 'V1-03', 'V1-08'] as const;
 const EXPECTED_HIGH_RISK_CUE_IDS = [
+  'C1-04-C01',
+  'C1-04-C02',
+  'C1-04-C03',
   'V1-03-C01',
   'V1-03-C02',
   'V1-03-C03',
@@ -323,7 +326,7 @@ const sheetCommand = (
 
 const createContacts = (): readonly ContactFrame[] => {
   const highRiskLines = taniseaAlignment.lines.filter(
-    ({id}) => id === 'V1-03' || id === 'V1-08',
+    ({id}) => id === 'C1-04' || id === 'V1-03' || id === 'V1-08',
   );
   const cues = highRiskLines.flatMap((line) =>
     line.cues.map((cue) => ({
@@ -335,7 +338,7 @@ const createContacts = (): readonly ContactFrame[] => {
   requireValue(
     JSON.stringify(cues.map(({cueId}) => cueId)) ===
       JSON.stringify(EXPECTED_HIGH_RISK_CUE_IDS),
-    'Reviewed V1-03/V1-08 cue authority has drifted',
+    'Reviewed C1-04/V1-03/V1-08 cue authority has drifted',
   );
 
   return cues.flatMap(({lineId, cueId, cueStartSample}) =>

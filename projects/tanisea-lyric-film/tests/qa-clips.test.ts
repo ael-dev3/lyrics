@@ -83,7 +83,7 @@ type ReviewRange = Readonly<{
 
 type ContactFrame = Readonly<{
   id: string;
-  lineId: 'V1-03' | 'V1-08';
+  lineId: 'C1-04' | 'V1-03' | 'V1-08';
   cueId: string;
   cueStartSample: number;
   cadenceFps: 60 | 120;
@@ -94,7 +94,7 @@ type ContactFrame = Readonly<{
 
 type ContactSheet = Readonly<{
   id: string;
-  lineId: 'V1-03' | 'V1-08';
+  lineId: 'C1-04' | 'V1-03' | 'V1-08';
   cadenceFps: 60 | 120;
   path: string;
   contactIds: readonly string[];
@@ -178,10 +178,10 @@ const requireApi = <Name extends keyof QaMediaApi>(
 const createPlan = (): QaMediaPlan => requireApi('createQaMediaPlan')();
 
 const highRiskCueAuthorities = taniseaAlignment.lines
-  .filter(({id}) => id === 'V1-03' || id === 'V1-08')
+  .filter(({id}) => id === 'C1-04' || id === 'V1-03' || id === 'V1-08')
   .flatMap(({id, cues}) =>
     cues.map((cue) => ({
-      lineId: id as 'V1-03' | 'V1-08',
+      lineId: id as 'C1-04' | 'V1-03' | 'V1-08',
       cueId: cue.id,
       startSample: cue.startSample,
     })),
@@ -363,8 +363,11 @@ describe('QA-media authority plan', () => {
 });
 
 describe('cue-contact and sheet plan', () => {
-  test('derives seven high-risk cues from the reviewed alignment', () => {
+  test('derives ten high-risk cues from the reviewed alignment', () => {
     expect(highRiskCueAuthorities.map(({cueId}) => cueId)).toEqual([
+      'C1-04-C01',
+      'C1-04-C02',
+      'C1-04-C03',
       'V1-03-C01',
       'V1-03-C02',
       'V1-03-C03',
@@ -375,9 +378,9 @@ describe('cue-contact and sheet plan', () => {
     ]);
   });
 
-  test('emits exactly 56 cadence-specific contact PNGs at offsets -1 through +2', () => {
+  test('emits exactly 80 cadence-specific contact PNGs at offsets -1 through +2', () => {
     const contacts = createPlan().contacts;
-    expect(contacts).toHaveLength(56);
+    expect(contacts).toHaveLength(80);
 
     for (const cue of highRiskCueAuthorities) {
       for (const cadenceFps of [PUBLIC_FPS, PROOF_FPS] as const) {
@@ -422,9 +425,24 @@ describe('cue-contact and sheet plan', () => {
     });
   });
 
-  test('emits exactly four contact sheets with authoritative paths', () => {
+  test('retains the exact shortest-cue C1-04 public contact authority', () => {
+    const representative = createPlan().contacts.find(
+      ({cueId, cadenceFps, offsetFrames}) =>
+        cueId === 'C1-04-C01' &&
+        cadenceFps === PUBLIC_FPS &&
+        offsetFrames === 0,
+    );
+    expect(representative).toMatchObject({
+      frame: 2029,
+      path: 'contacts/c1-04/public/frame-002029.png',
+    });
+  });
+
+  test('emits exactly six contact sheets with authoritative paths', () => {
     const sheets = createPlan().contactSheets;
     expect(sheets.map(({path}) => path).sort()).toEqual([
+      'contact-sheets/c1-04-proof.png',
+      'contact-sheets/c1-04-public.png',
       'contact-sheets/v1-03-proof.png',
       'contact-sheets/v1-03-public.png',
       'contact-sheets/v1-08-proof.png',
@@ -499,10 +517,11 @@ describe('canonical QA-media manifest', () => {
     }));
   };
 
-  test('enumerates exactly 129 unique generated artifacts', () => {
+  test('enumerates exactly 155 unique generated artifacts', () => {
     const paths = requireApi('qaMediaOutputPaths')(createPlan());
-    expect(paths).toHaveLength(129);
+    expect(paths).toHaveLength(155);
     expect(new Set(paths).size).toBe(paths.length);
+    expect(paths).toContain('contacts/c1-04/public/frame-002029.png');
     expect(paths).toContain('contacts/v1-03/public/frame-004224.png');
     for (const still of expectedStillAuthorities) expect(paths).toContain(still.path);
   });
@@ -515,7 +534,7 @@ describe('canonical QA-media manifest', () => {
     const sortedPaths = records.map(({path}) => path).sort();
 
     expect(manifest.schemaVersion).toBe(1);
-    expect(manifest.artifactCount).toBe(129);
+    expect(manifest.artifactCount).toBe(155);
     expect(manifest.artifacts.map(({path}) => path)).toEqual(sortedPaths);
     expect(manifest.artifacts.every(({sha256}) => /^[0-9a-f]{64}$/.test(sha256)))
       .toBe(true);

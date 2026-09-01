@@ -330,6 +330,9 @@ const QA_COVERAGE_EXPECTED: Readonly<Record<string, unknown>> = {
   ],
   proofRanges: ['v1-03', 'v1-08'],
   cueIds: [
+    'C1-04-C01',
+    'C1-04-C02',
+    'C1-04-C03',
     'V1-03-C01',
     'V1-03-C02',
     'V1-03-C03',

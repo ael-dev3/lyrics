@@ -1620,6 +1620,9 @@ const QA_DEDICATED_RANGES = [
 ] as const;
 const QA_PROOF_RANGES = ['v1-03', 'v1-08'] as const;
 const QA_CUE_IDS = [
+  'C1-04-C01',
+  'C1-04-C02',
+  'C1-04-C03',
   'V1-03-C01',
   'V1-03-C02',
   'V1-03-C03',
