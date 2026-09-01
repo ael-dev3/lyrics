@@ -698,6 +698,41 @@ describe('LyricDisplay rendering', () => {
     }
   });
 
+  test.each([60, 120])(
+    'applies every corrected 40–50 second exclusive release at %i fps',
+    (fps) => {
+      for (const lineId of ['C1-06', 'C1-07', 'C1-08'] as const) {
+        const line = findLine(lineId);
+        for (const cue of line.presentationCues) {
+          const target = cue.targets[0];
+          if (!target) throw new Error(`Missing target for ${cue.id}`);
+          const endFrame = frameForSample(cue.endSample, fps);
+
+          expect(
+            getSegmentFocusState(
+              line.presentationCues,
+              target,
+              endFrame - 1,
+              fps,
+              line.focusProfile,
+            ),
+            `${cue.id} before exclusive end`,
+          ).toEqual({contact: 1, emphasis: 1});
+          expect(
+            getSegmentFocusState(
+              line.presentationCues,
+              target,
+              endFrame,
+              fps,
+              line.focusProfile,
+            ),
+            `${cue.id} on exclusive end`,
+          ).toEqual({contact: 0, emphasis: 0});
+        }
+      }
+    },
+  );
+
   test('advances the horizontal rail by semantic cue and holds during word gaps', () => {
     const cues = [
       {startSample: 44_100, endSample: 66_150},

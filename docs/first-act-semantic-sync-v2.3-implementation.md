@@ -30,6 +30,6 @@ The horizontal rail no longer interpolates across the broad vocal envelope. It a
 
 Regression coverage proves the corrected semantic targets at `42.0`, `44.2`, `46.0`, `46.6`, and `48.0` seconds; inactive release at `49.6` seconds; cue-stage progress and gap holds; exact C1 precontact/contact opacity at 60 and 120 fps; and preservation of all reviewed source cues.
 
-Generated QA now adds a soundtrack-bearing `39.5–50.5 s` range at normal and pitch-preserved half speed. The contact authority expands to 19 high-risk cues, including every cue in `C1-06`, `C1-07`, and `C1-08`, with offsets `-1`, `0`, `+1`, and `+2` at both 60 and 120 fps. This produces 152 exact contact frames and 12 labeled contact sheets in the canonical QA-media package.
+Generated QA now adds a soundtrack-bearing `39.5–50.5 s` range at normal and pitch-preserved half speed. The contact authority expands to 19 high-risk cues, including every cue in `C1-06`, `C1-07`, and `C1-08`, with offsets `-1`, `0`, `+1`, and `+2` at both 60 and 120 fps. This produces 152 exact contact frames and 12 labeled contact sheets. The nine corrected semantic cues also receive 72 exclusive-end frames and six labeled release sheets at the same two cadences and four boundary offsets, bringing the canonical QA-media package to 313 generated artifacts.
 
 Final full-media hashes, repeated QA records, publication evidence, and the generated visual review are maintained in [`audits/tanisea-final-qa-vnext.md`](../audits/tanisea-final-qa-vnext.md) and the supplemental workflow evidence package.

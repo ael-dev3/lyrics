@@ -89,6 +89,8 @@ type HighRiskLineId =
   | 'V1-03'
   | 'V1-08';
 
+type CorrectedReleaseLineId = 'C1-06' | 'C1-07' | 'C1-08';
+
 type ContactFrame = Readonly<{
   id: string;
   lineId: HighRiskLineId;
@@ -106,6 +108,27 @@ type ContactSheet = Readonly<{
   cadenceFps: 60 | 120;
   path: string;
   contactIds: readonly string[];
+  labels: readonly string[];
+  command: CommandPlan;
+}>;
+
+type ReleaseFrame = Readonly<{
+  id: string;
+  lineId: CorrectedReleaseLineId;
+  cueId: string;
+  cueEndSample: number;
+  cadenceFps: 60 | 120;
+  offsetFrames: -1 | 0 | 1 | 2;
+  frame: number;
+  path: string;
+}>;
+
+type ReleaseSheet = Readonly<{
+  id: string;
+  lineId: CorrectedReleaseLineId;
+  cadenceFps: 60 | 120;
+  path: string;
+  releaseIds: readonly string[];
   labels: readonly string[];
   command: CommandPlan;
 }>;
@@ -131,6 +154,8 @@ type QaMediaPlan = Readonly<{
   proofRanges: readonly ReviewRange[];
   contacts: readonly ContactFrame[];
   contactSheets: readonly ContactSheet[];
+  releases: readonly ReleaseFrame[];
+  releaseSheets: readonly ReleaseSheet[];
   selectedStills: readonly SelectedStill[];
 }>;
 
@@ -194,6 +219,16 @@ const highRiskCueAuthorities = taniseaAlignment.lines
       lineId: id as HighRiskLineId,
       cueId: cue.id,
       startSample: cue.startSample,
+    })),
+  );
+
+const correctedReleaseCueAuthorities = taniseaAlignment.lines
+  .filter(({id}) => ['C1-06', 'C1-07', 'C1-08'].includes(id))
+  .flatMap(({id, cues}) =>
+    cues.map((cue) => ({
+      lineId: id as CorrectedReleaseLineId,
+      cueId: cue.id,
+      endSample: cue.endSample,
     })),
   );
 
@@ -509,6 +544,96 @@ describe('cue-contact and sheet plan', () => {
     }
   });
 
+  test('derives all nine corrected exclusive-release authorities', () => {
+    expect(correctedReleaseCueAuthorities.map(({cueId}) => cueId)).toEqual([
+      'C1-06-C01',
+      'C1-06-C02',
+      'C1-06-C03',
+      'C1-07-C01',
+      'C1-07-C02',
+      'C1-07-C03',
+      'C1-08-C01',
+      'C1-08-C02',
+      'C1-08-C03',
+    ]);
+  });
+
+  test('emits 72 cadence-specific release PNGs at offsets -1 through +2', () => {
+    const releases = createPlan().releases;
+    expect(releases).toHaveLength(72);
+
+    for (const cue of correctedReleaseCueAuthorities) {
+      for (const cadenceFps of [PUBLIC_FPS, PROOF_FPS] as const) {
+        const cueReleases = releases.filter(
+          (release) =>
+            release.cueId === cue.cueId &&
+            release.cadenceFps === cadenceFps,
+        );
+        expect(cueReleases.map(({offsetFrames}) => offsetFrames)).toEqual([
+          -1,
+          0,
+          1,
+          2,
+        ]);
+        for (const release of cueReleases) {
+          const expectedFrame =
+            frameForSample(cue.endSample, cadenceFps) + release.offsetFrames;
+          const cadence = cadenceFps === PUBLIC_FPS ? 'public' : 'proof';
+          expect(release.lineId).toBe(cue.lineId);
+          expect(release.cueEndSample).toBe(cue.endSample);
+          expect(release.frame).toBe(expectedFrame);
+          expect(release.path).toBe(
+            `releases/${cue.lineId.toLowerCase()}/${cadence}/` +
+              `frame-${String(expectedFrame).padStart(6, '0')}.png`,
+          );
+        }
+      }
+    }
+  });
+
+  test('retains the exact C1-08 final release authority', () => {
+    const release = createPlan().releases.find(
+      ({cueId, cadenceFps, offsetFrames}) =>
+        cueId === 'C1-08-C03' &&
+        cadenceFps === PUBLIC_FPS &&
+        offsetFrames === 0,
+    );
+    expect(release).toMatchObject({
+      cueEndSample: 2_171_396,
+      frame: 2954,
+      path: 'releases/c1-08/public/frame-002954.png',
+    });
+  });
+
+  test('emits six labeled release sheets for the corrected passage', () => {
+    const plan = createPlan();
+    expect(plan.releaseSheets.map(({path}) => path).sort()).toEqual([
+      'release-sheets/c1-06-proof.png',
+      'release-sheets/c1-06-public.png',
+      'release-sheets/c1-07-proof.png',
+      'release-sheets/c1-07-public.png',
+      'release-sheets/c1-08-proof.png',
+      'release-sheets/c1-08-public.png',
+    ]);
+
+    const releasesById = new Map(
+      plan.releases.map((release) => [release.id, release] as const),
+    );
+    for (const sheet of plan.releaseSheets) {
+      expect(sheet.releaseIds).toHaveLength(sheet.labels.length);
+      for (const [index, releaseId] of sheet.releaseIds.entries()) {
+        const release = releasesById.get(releaseId);
+        const label = sheet.labels[index];
+        expect(release, releaseId).toBeDefined();
+        expect(label).toContain(release!.cueId);
+        expect(label).toContain('end');
+        expect(label).toContain(`${release!.cadenceFps}fps`);
+        expect(label).toContain(`frame ${release!.frame}`);
+        expect(label).toContain(`offset ${release!.offsetFrames}`);
+      }
+    }
+  });
+
   test('uses the tracked Space Grotesk font for deterministic sheet labels', () => {
     for (const sheet of createPlan().contactSheets) {
       const filterIndex = sheet.command.arguments.indexOf('-filter_complex');
@@ -556,13 +681,14 @@ describe('canonical QA-media manifest', () => {
     }));
   };
 
-  test('enumerates exactly 235 unique generated artifacts', () => {
+  test('enumerates exactly 313 unique generated artifacts', () => {
     const paths = requireApi('qaMediaOutputPaths')(createPlan());
-    expect(paths).toHaveLength(235);
+    expect(paths).toHaveLength(313);
     expect(new Set(paths).size).toBe(paths.length);
     expect(paths).toContain('contacts/c1-04/public/frame-002029.png');
     expect(paths).toContain('contacts/c1-06/public/frame-002445.png');
     expect(paths).toContain('clips/public/first-act-40-50-normal.mp4');
+    expect(paths).toContain('releases/c1-08/public/frame-002954.png');
     expect(paths).toContain('contacts/v1-03/public/frame-004224.png');
     for (const still of expectedStillAuthorities) expect(paths).toContain(still.path);
   });
@@ -575,7 +701,7 @@ describe('canonical QA-media manifest', () => {
     const sortedPaths = records.map(({path}) => path).sort();
 
     expect(manifest.schemaVersion).toBe(1);
-    expect(manifest.artifactCount).toBe(235);
+    expect(manifest.artifactCount).toBe(313);
     expect(manifest.artifacts.map(({path}) => path)).toEqual(sortedPaths);
     expect(manifest.artifacts.every(({sha256}) => /^[0-9a-f]{64}$/.test(sha256)))
       .toBe(true);

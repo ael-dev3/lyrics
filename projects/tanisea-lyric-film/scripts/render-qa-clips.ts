@@ -37,6 +37,8 @@ type HighRiskLineId =
   | 'V1-03'
   | 'V1-08';
 
+type CorrectedReleaseLineId = 'C1-06' | 'C1-07' | 'C1-08';
+
 export type CommandPlan = Readonly<{
   executable: 'ffmpeg';
   arguments: readonly string[];
@@ -79,6 +81,28 @@ export type ContactSheet = Readonly<{
   command: CommandPlan;
 }>;
 
+export type ReleaseFrame = Readonly<{
+  id: string;
+  lineId: CorrectedReleaseLineId;
+  cueId: string;
+  cueEndSample: number;
+  cadenceFps: 60 | 120;
+  offsetFrames: -1 | 0 | 1 | 2;
+  frame: number;
+  path: string;
+  command: CommandPlan;
+}>;
+
+export type ReleaseSheet = Readonly<{
+  id: string;
+  lineId: CorrectedReleaseLineId;
+  cadenceFps: 60 | 120;
+  path: string;
+  releaseIds: readonly string[];
+  labels: readonly string[];
+  command: CommandPlan;
+}>;
+
 export type SelectedStill = Readonly<{
   id: string;
   source: QaMediaSource;
@@ -100,6 +124,8 @@ export type QaMediaPlan = Readonly<{
   proofRanges: readonly ReviewRange[];
   contacts: readonly ContactFrame[];
   contactSheets: readonly ContactSheet[];
+  releases: readonly ReleaseFrame[];
+  releaseSheets: readonly ReleaseSheet[];
   selectedStills: readonly SelectedStill[];
 }>;
 
@@ -158,6 +184,22 @@ const EXPECTED_HIGH_RISK_CUE_IDS = [
   'V1-08-C02',
   'V1-08-C03',
   'V1-08-C04',
+] as const;
+const CORRECTED_RELEASE_LINE_IDS = [
+  'C1-06',
+  'C1-07',
+  'C1-08',
+] as const satisfies readonly CorrectedReleaseLineId[];
+const EXPECTED_CORRECTED_RELEASE_CUE_IDS = [
+  'C1-06-C01',
+  'C1-06-C02',
+  'C1-06-C03',
+  'C1-07-C01',
+  'C1-07-C02',
+  'C1-07-C03',
+  'C1-08-C01',
+  'C1-08-C02',
+  'C1-08-C03',
 ] as const;
 const CONTACT_CADENCES = [PUBLIC_FPS, PROOF_FPS] as const;
 const CONTACT_OFFSETS = [-1, 0, 1, 2] as const;
@@ -317,7 +359,7 @@ const contactCommand = (
 ): CommandPlan => stillCommand(source, frame, outputPath);
 
 const sheetCommand = (
-  contacts: readonly ContactFrame[],
+  contacts: readonly Readonly<{path: string}>[],
   labels: readonly string[],
   outputPath: string,
 ): CommandPlan => {
@@ -388,7 +430,7 @@ const createContacts = (): readonly ContactFrame[] => {
   requireValue(
     JSON.stringify(cues.map(({cueId}) => cueId)) ===
       JSON.stringify(EXPECTED_HIGH_RISK_CUE_IDS),
-    'Reviewed C1-04/V1-03/V1-08 cue authority has drifted',
+    'Reviewed high-risk cue authority has drifted',
   );
 
   return cues.flatMap(({lineId, cueId, cueStartSample}) =>
@@ -407,6 +449,50 @@ const createContacts = (): readonly ContactFrame[] => {
           lineId,
           cueId,
           cueStartSample,
+          cadenceFps,
+          offsetFrames,
+          frame,
+          path,
+          command: contactCommand(cadence, frame, path),
+        };
+      });
+    }),
+  );
+};
+
+const createReleases = (): readonly ReleaseFrame[] => {
+  const correctedLines = taniseaAlignment.lines.filter(({id}) =>
+    CORRECTED_RELEASE_LINE_IDS.some((correctedId) => correctedId === id),
+  );
+  const cues = correctedLines.flatMap((line) =>
+    line.cues.map((cue) => ({
+      lineId: line.id as CorrectedReleaseLineId,
+      cueId: cue.id,
+      cueEndSample: cue.endSample,
+    })),
+  );
+  requireValue(
+    JSON.stringify(cues.map(({cueId}) => cueId)) ===
+      JSON.stringify(EXPECTED_CORRECTED_RELEASE_CUE_IDS),
+    'Reviewed corrected-release cue authority has drifted',
+  );
+
+  return cues.flatMap(({lineId, cueId, cueEndSample}) =>
+    CONTACT_CADENCES.flatMap((cadenceFps) => {
+      const cadence = cadenceFps === PUBLIC_FPS ? 'public' : 'proof';
+      const baseFrame = frameForSample(cueEndSample, cadenceFps);
+      return CONTACT_OFFSETS.map((offsetFrames) => {
+        const frame = baseFrame + offsetFrames;
+        const path =
+          `releases/${lineId.toLowerCase()}/${cadence}/` +
+          `frame-${String(frame).padStart(6, '0')}.png`;
+        return {
+          id:
+            `${cueId}-end-${cadenceFps}fps-offset-` +
+            `${offsetFrames < 0 ? 'minus' : 'plus'}${Math.abs(offsetFrames)}`,
+          lineId,
+          cueId,
+          cueEndSample,
           cadenceFps,
           offsetFrames,
           frame,
@@ -442,6 +528,34 @@ const createContactSheets = (
         contactIds: sheetContacts.map(({id}) => id),
         labels,
         command: sheetCommand(sheetContacts, labels, path),
+      };
+    }),
+  );
+
+const createReleaseSheets = (
+  releases: readonly ReleaseFrame[],
+): readonly ReleaseSheet[] =>
+  CORRECTED_RELEASE_LINE_IDS.flatMap((lineId) =>
+    CONTACT_CADENCES.map((cadenceFps) => {
+      const cadence = cadenceFps === PUBLIC_FPS ? 'public' : 'proof';
+      const sheetReleases = releases.filter(
+        (release) =>
+          release.lineId === lineId && release.cadenceFps === cadenceFps,
+      );
+      const labels = sheetReleases.map(
+        ({cueId, frame, offsetFrames}) =>
+          `${cueId} end ${cadenceFps}fps frame ${frame} offset ${offsetFrames}`,
+      );
+      const path =
+        `release-sheets/${lineId.toLowerCase()}-${cadence}.png`;
+      return {
+        id: `${lineId.toLowerCase()}-${cadence}-release-sheet`,
+        lineId,
+        cadenceFps,
+        path,
+        releaseIds: sheetReleases.map(({id}) => id),
+        labels,
+        command: sheetCommand(sheetReleases, labels, path),
       };
     }),
   );
@@ -492,6 +606,8 @@ export const createQaMediaPlan = (): QaMediaPlan => {
   ];
   const contacts = createContacts();
   const contactSheets = createContactSheets(contacts);
+  const releases = createReleases();
+  const releaseSheets = createReleaseSheets(releases);
   const selectedStills = [
     selectedStill(
       'chrome',
@@ -562,6 +678,8 @@ export const createQaMediaPlan = (): QaMediaPlan => {
     proofRanges,
     contacts,
     contactSheets,
+    releases,
+    releaseSheets,
     selectedStills,
   };
 };
@@ -577,6 +695,8 @@ export const qaMediaOutputPaths = (
   ),
   ...plan.contacts.map(({path}) => path),
   ...plan.contactSheets.map(({path}) => path),
+  ...plan.releases.map(({path}) => path),
+  ...plan.releaseSheets.map(({path}) => path),
   ...plan.selectedStills.map(({path}) => path),
 ];
 
@@ -790,6 +910,8 @@ const allCommands = (plan: QaMediaPlan): readonly CommandPlan[] => [
   ),
   ...plan.contacts.map(({command}) => command),
   ...plan.contactSheets.map(({command}) => command),
+  ...plan.releases.map(({command}) => command),
+  ...plan.releaseSheets.map(({command}) => command),
   ...plan.selectedStills.map(({command}) => command),
 ];
 
