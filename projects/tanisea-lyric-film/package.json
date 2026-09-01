@@ -6,6 +6,7 @@
     "dev": "remotion studio src/index.ts",
     "build:tools": "tsc --project tsconfig.tools.json",
     "features": "npm run build:tools && node .tools-dist/scripts/generate-audio-features.js",
+    "reference:normalize": "npm run build:tools && node .tools-dist/scripts/normalize-reference.js",
     "encode": "npm run build:tools && node .tools-dist/scripts/encode-delivery.js",
     "platform": "npm run build:tools && node .tools-dist/scripts/make-platform-delivery.js",
     "verify": "npm run build:tools && node .tools-dist/scripts/verify-delivery.js",
@@ -14,6 +15,8 @@
     "alignment:verify": "npm run build:tools && node .tools-dist/scripts/verify-alignment.js",
     "layout:verify": "npm run build:tools && node .tools-dist/scripts/verify-lyric-layout.js",
     "proof": "npm run build:tools && node .tools-dist/scripts/render-sync-proof.js",
+    "qa:clips": "npm run build:tools && node .tools-dist/scripts/render-qa-clips.js",
+    "qa:run": "npm run build:tools && node .tools-dist/scripts/run-release-qa.js",
     "test": "vitest",
     "test:run": "vitest run",
     "compositions": "remotion compositions src/index.ts",
@@ -21,7 +24,7 @@
     "check": "npm run typecheck && npm run test:run && npm run layout:verify && npm run compositions",
     "still": "remotion still src/index.ts LyricFilmVNext",
     "prerender": "npm run typecheck",
-    "render": "remotion render src/index.ts LyricFilmVNext output/Tanisea-Lyric-Film-vNext-reference-2x.mov --scale=2 --codec=prores --prores-profile=4444 --pixel-format=yuv444p10le --image-format=png --color-space=bt709 --concurrency=8 --muted"
+    "render": "remotion render src/index.ts LyricFilmVNext output/Tanisea-Lyric-Film-vNext-reference-2x.mov --scale=2 --codec=prores --prores-profile=4444 --pixel-format=yuv444p10le --image-format=png --color-space=bt709 --concurrency=8 --muted && npm run reference:normalize"
   },
   "dependencies": {
     "@remotion/cli": "4.0.518",

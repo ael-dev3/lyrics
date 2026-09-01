@@ -7,7 +7,13 @@ import {
   writeFileSync,
 } from 'node:fs';
 import {tmpdir} from 'node:os';
-import {join, resolve} from 'node:path';
+import {join} from 'node:path';
+import {
+  assertLockedAudioFeatureArtifact,
+  buildAudioFeaturePcmArgs,
+  buildAudioFeatureSpectrumArgs,
+} from './audio-feature-commands.js';
+import {projectRootFromScriptDirectory} from './project-root.js';
 
 const FPS = 60;
 const DURATION_SECONDS = 153;
@@ -103,7 +109,7 @@ const percentile = (values: readonly number[], proportion: number): number => {
 const sha256 = (data: Uint8Array): string =>
   createHash('sha256').update(data).digest('hex');
 
-const root = resolve(__dirname, '..');
+const root = projectRootFromScriptDirectory(__dirname);
 const audioPath = join(root, 'public', 'soundtrack.m4a');
 const outputPath = join(root, 'public', 'audio-features.bin');
 const manifestPath = join(root, 'public', 'audio-features.manifest.json');
@@ -114,55 +120,13 @@ const spectrumPath = join(temporaryDirectory, 'spectrum.gray');
 try {
   execFileSync(
     'ffmpeg',
-    [
-      '-v',
-      'error',
-      '-i',
-      audioPath,
-      '-f',
-      'f32le',
-      '-acodec',
-      'pcm_f32le',
-      '-ac',
-      '2',
-      '-ar',
-      String(SAMPLE_RATE),
-      pcmPath,
-      '-y',
-    ],
+    [...buildAudioFeaturePcmArgs(audioPath, pcmPath)],
     {stdio: ['ignore', 'ignore', 'inherit']},
   );
 
   execFileSync(
     'ffmpeg',
-    [
-      '-v',
-      'error',
-      '-i',
-      audioPath,
-      '-lavfi',
-      [
-        `showspectrumpic=s=${FRAME_COUNT}x${BAND_COUNT}`,
-        'mode=combined',
-        'color=intensity',
-        'scale=log',
-        'fscale=log',
-        'win_func=hann',
-        'legend=0',
-        `start=${FREQUENCY_MIN}`,
-        `stop=${FREQUENCY_MAX}`,
-        'drange=80',
-        'limit=0',
-      ].join(':'),
-      '-frames:v',
-      '1',
-      '-pix_fmt',
-      'gray',
-      '-f',
-      'rawvideo',
-      spectrumPath,
-      '-y',
-    ],
+    [...buildAudioFeatureSpectrumArgs(audioPath, spectrumPath)],
     {stdio: ['ignore', 'ignore', 'inherit']},
   );
 
@@ -426,8 +390,9 @@ try {
     if (width >= 850) majorFrames++;
   }
 
-  writeFileSync(outputPath, output);
   const outputHash = sha256(output);
+  assertLockedAudioFeatureArtifact(sampleCount, outputHash);
+  writeFileSync(outputPath, output);
   const strongestEvents = [...transientEvents]
     .sort((a, b) => b.strength - a.strength)
     .slice(0, 20)

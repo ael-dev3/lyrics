@@ -1,8 +1,9 @@
 import {execFileSync} from 'node:child_process';
 import {existsSync, statSync} from 'node:fs';
 import {resolve} from 'node:path';
+import {projectRootFromScriptDirectory} from './project-root.js';
 
-const root = resolve(__dirname, '..');
+const root = projectRootFromScriptDirectory(__dirname);
 const archivalPath = resolve(
   process.argv[2] ??
     resolve(root, 'output', 'Tanisea-Lyric-Film-vNext-60fps-Archival-Master.mp4'),
