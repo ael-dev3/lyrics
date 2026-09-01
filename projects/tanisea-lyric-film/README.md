@@ -80,6 +80,7 @@ The public spectrum separates measurement from emphasis:
 | `npm run verify` | Full-decode and inspect a delivery artifact |
 | `npm run qa:clips` | Generate deterministic contact sheets, clips, and selected frames |
 | `npm run qa:run` | Execute and record the complete release matrix |
+| `npm run qa:publish` | Finalize criterion 11 from verified remote release evidence |
 | `npm run check` | Run source, test, layout, and composition gates |
 
 Scripts that accept artifact paths take them after `--`. Their defaults target the checked project layout and `output/`.

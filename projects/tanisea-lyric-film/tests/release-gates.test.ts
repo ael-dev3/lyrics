@@ -1657,6 +1657,11 @@ const qaReleaseGates = releaseGates as unknown as Readonly<{
   verifyQaRunRecord: (run: unknown) => void;
   verifyQaRunPair: (run1: unknown, run2: unknown) => void;
   verifyQaReport: (report: unknown) => void;
+  createPublishedQaReport?: (
+    report: unknown,
+    publication: unknown,
+  ) => unknown;
+  verifyPublishedQaReport?: (report: unknown) => void;
 }>;
 
 const qaCommandSpecs = [
@@ -2087,6 +2092,53 @@ const validQaReport = () => {
   };
 };
 
+const PUBLISHED_ASSET_NAMES = [
+  'Tanisea-Lyric-Film-Production-Master-vNext.mp4',
+  'Tanisea-Lyric-Film-Sync-Proof-120fps.mp4',
+  'tanisea-vnext-hero.png',
+  'Tanisea-Lyric-Film-Source-vNext.zip',
+  'tanisea-word-alignment-v3.json',
+  'tanisea-word-alignment-v3.md',
+] as const;
+
+const validPublicationEvidence = () => {
+  const tag = 'v2.0.0';
+  const downloadRoot =
+    `https://github.com/ael-dev3/lyrics/releases/download/${tag}`;
+  return {
+    sourceCommit: 'f'.repeat(40),
+    tag,
+    releaseUrl: `https://github.com/ael-dev3/lyrics/releases/tag/${tag}`,
+    checksumsUrl: `${downloadRoot}/CHECKSUMS.sha256`,
+    assets: PUBLISHED_ASSET_NAMES.map((name, index) => ({
+      name,
+      url: `${downloadRoot}/${name}`,
+      sizeBytes: 1_000 + index,
+      sha256: (index + 1).toString(16).repeat(64),
+    })),
+    checksumVerification: {
+      algorithm: 'SHA-256',
+      entryCount: 8,
+      result: 'matched-after-download',
+    },
+  };
+};
+
+const publicationReportApis = () => {
+  expect(
+    qaReleaseGates.createPublishedQaReport,
+    'release-gates must export createPublishedQaReport',
+  ).toBeTypeOf('function');
+  expect(
+    qaReleaseGates.verifyPublishedQaReport,
+    'release-gates must export verifyPublishedQaReport',
+  ).toBeTypeOf('function');
+  return {
+    create: qaReleaseGates.createPublishedQaReport!,
+    verify: qaReleaseGates.verifyPublishedQaReport!,
+  };
+};
+
 describe('QA run and report release gates', () => {
   test('accepts a complete full-media QA run record', () => {
     expect(() =>
@@ -2102,6 +2154,86 @@ describe('QA run and report release gates', () => {
 
   test('accepts a neutral passed-prepublication QA report', () => {
     expect(() => qaReleaseGates.verifyQaReport(validQaReport())).not.toThrow();
+  });
+
+  test('creates and verifies a final report without mutating the embedded prepublication evidence', () => {
+    const source = validQaReport();
+    const sourceSnapshot = structuredClone(source);
+    const publication = validPublicationEvidence();
+    const {create, verify} = publicationReportApis();
+
+    const report = create(source, publication) as ReturnType<typeof validQaReport> & {
+      status: string;
+      publication: ReturnType<typeof validPublicationEvidence>;
+    };
+
+    expect(() => verify(report)).not.toThrow();
+    expect(source).toEqual(sourceSnapshot);
+    expect(report.status).toBe('passed-publication');
+    expect(criterion(report.requirementMatrix, 11)).toMatchObject({
+      status: 'proved',
+      evidence: [
+        {
+          kind: 'release-url',
+          artifact: publication.releaseUrl,
+          sha256: '',
+        },
+      ],
+    });
+    expect(report.authoritativeRun.requirementMatrix).toEqual(
+      sourceSnapshot.authoritativeRun.requirementMatrix,
+    );
+    expect(report.publication).toEqual(publication);
+  });
+
+  test.each([
+    ['source commit', (publication: ReturnType<typeof validPublicationEvidence>) => {
+      publication.sourceCommit = 'not-a-commit';
+    }, /sourceCommit/i],
+    ['tag', (publication: ReturnType<typeof validPublicationEvidence>) => {
+      publication.tag = 'latest';
+    }, /tag/i],
+    ['release URL', (publication: ReturnType<typeof validPublicationEvidence>) => {
+      publication.releaseUrl = 'https://github.com/example/lyrics/releases/tag/v2.0.0';
+    }, /releaseUrl/i],
+    ['checksums URL', (publication: ReturnType<typeof validPublicationEvidence>) => {
+      publication.checksumsUrl = 'https://example.com/CHECKSUMS.sha256';
+    }, /checksumsUrl/i],
+    ['asset URL', (publication: ReturnType<typeof validPublicationEvidence>) => {
+      publication.assets[0]!.url = 'https://example.com/master.mp4';
+    }, /assets\[0\]\.url/i],
+    ['asset size', (publication: ReturnType<typeof validPublicationEvidence>) => {
+      publication.assets[0]!.sizeBytes = 0;
+    }, /assets\[0\]\.sizeBytes/i],
+    ['asset hash', (publication: ReturnType<typeof validPublicationEvidence>) => {
+      publication.assets[0]!.sha256 = 'not-a-hash';
+    }, /assets\[0\]\.sha256/i],
+    ['duplicate asset', (publication: ReturnType<typeof validPublicationEvidence>) => {
+      publication.assets[1]!.name = publication.assets[0]!.name;
+    }, /assets.*exactly|duplicate/i],
+    ['checksum result', (publication: ReturnType<typeof validPublicationEvidence>) => {
+      publication.checksumVerification.result = 'not-checked';
+    }, /checksumVerification\.result/i],
+  ] as const)(
+    'rejects malformed publication evidence: %s',
+    (_label, mutate, expected) => {
+      const publication = validPublicationEvidence();
+      mutate(publication);
+      const {create} = publicationReportApis();
+
+      expect(() => create(validQaReport(), publication)).toThrow(expected);
+    },
+  );
+
+  test('rejects drift in a final criterion already proved by the authoritative run', () => {
+    const {create, verify} = publicationReportApis();
+    const report = create(
+      validQaReport(),
+      validPublicationEvidence(),
+    ) as ReturnType<typeof validQaReport>;
+    criterion(report.requirementMatrix, 4).title = 'Changed after QA';
+
+    expect(() => verify(report)).toThrow(/criterion 4.*authoritative/i);
   });
 
   test.each([

@@ -17,6 +17,7 @@
     "proof": "npm run build:tools && node .tools-dist/scripts/render-sync-proof.js",
     "qa:clips": "npm run build:tools && node .tools-dist/scripts/render-qa-clips.js",
     "qa:run": "npm run build:tools && node .tools-dist/scripts/run-release-qa.js",
+    "qa:publish": "npm run build:tools && node .tools-dist/scripts/finalize-publication.js",
     "test": "vitest",
     "test:run": "vitest run",
     "compositions": "remotion compositions src/index.ts",

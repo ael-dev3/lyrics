@@ -1923,6 +1923,17 @@ const QA_REPORT_ALIGNMENT_SUMMARY = {
   ],
 } as const;
 
+const QA_PUBLICATION_TAG = 'v2.0.0';
+const QA_PUBLICATION_ASSET_NAMES = [
+  'Tanisea-Lyric-Film-Production-Master-vNext.mp4',
+  'Tanisea-Lyric-Film-Sync-Proof-120fps.mp4',
+  'tanisea-vnext-hero.png',
+  'Tanisea-Lyric-Film-Source-vNext.zip',
+  'tanisea-word-alignment-v3.json',
+  'tanisea-word-alignment-v3.md',
+] as const;
+const QA_PUBLICATION_CHECKSUM_ENTRY_COUNT = 8;
+
 const qaReportValuesEqual = (first: unknown, second: unknown): boolean => {
   if (Object.is(first, second)) return true;
   if (Array.isArray(first)) {
@@ -2388,6 +2399,269 @@ export const verifyQaReport = (candidate: unknown): void => {
     );
   }
   verifyQaReportNeutralText(candidate, '', new WeakMap<object, number>());
+};
+
+const qaPublicationError = (detail: string): never => {
+  throw new Error(`QA publication: ${detail}`);
+};
+
+const requireExactRecordFields = (
+  candidate: UnknownRecord,
+  location: string,
+  expectedFields: readonly string[],
+): void => {
+  const actualFields = Object.keys(candidate);
+  if (
+    actualFields.length !== expectedFields.length ||
+    actualFields.some((field) => !expectedFields.includes(field))
+  ) {
+    qaPublicationError(
+      `${location} must contain exactly ${expectedFields.join(', ')}`,
+    );
+  }
+};
+
+const verifyQaPublicationEvidence = (
+  candidate: unknown,
+): UnknownRecord => {
+  if (!isRecord(candidate)) {
+    qaPublicationError('publication must be an object');
+  }
+  const publication = candidate as UnknownRecord;
+  requireExactRecordFields(publication, 'publication', [
+    'sourceCommit',
+    'tag',
+    'releaseUrl',
+    'checksumsUrl',
+    'assets',
+    'checksumVerification',
+  ]);
+
+  if (
+    typeof publication.sourceCommit !== 'string' ||
+    !GIT_COMMIT_PATTERN.test(publication.sourceCommit)
+  ) {
+    qaPublicationError('publication.sourceCommit must be a 40-character lowercase Git commit');
+  }
+  if (publication.tag !== QA_PUBLICATION_TAG) {
+    qaPublicationError(`publication.tag must be exactly ${QA_PUBLICATION_TAG}`);
+  }
+
+  const releaseUrl =
+    `https://github.com/ael-dev3/lyrics/releases/tag/${QA_PUBLICATION_TAG}`;
+  const downloadRoot =
+    `https://github.com/ael-dev3/lyrics/releases/download/${QA_PUBLICATION_TAG}`;
+  if (publication.releaseUrl !== releaseUrl) {
+    qaPublicationError(`publication.releaseUrl must be exactly ${releaseUrl}`);
+  }
+  if (publication.checksumsUrl !== `${downloadRoot}/CHECKSUMS.sha256`) {
+    qaPublicationError(
+      `publication.checksumsUrl must be exactly ${downloadRoot}/CHECKSUMS.sha256`,
+    );
+  }
+
+  if (
+    !Array.isArray(publication.assets) ||
+    publication.assets.length !== QA_PUBLICATION_ASSET_NAMES.length
+  ) {
+    qaPublicationError(
+      `publication.assets must list exactly ${QA_PUBLICATION_ASSET_NAMES.length} stable release assets`,
+    );
+  }
+  const assets = publication.assets as unknown[];
+  for (const [index, expectedName] of QA_PUBLICATION_ASSET_NAMES.entries()) {
+    const asset = assets[index];
+    const location = `publication.assets[${index}]`;
+    if (!isRecord(asset)) {
+      qaPublicationError(`${location} must be an object`);
+    }
+    const assetRecord = asset as UnknownRecord;
+    requireExactRecordFields(assetRecord, location, [
+      'name',
+      'url',
+      'sizeBytes',
+      'sha256',
+    ]);
+    if (assetRecord.name !== expectedName) {
+      qaPublicationError(
+        `publication.assets must list the approved names exactly; ${location}.name must be ${expectedName}`,
+      );
+    }
+    if (assetRecord.url !== `${downloadRoot}/${expectedName}`) {
+      qaPublicationError(
+        `${location}.url must be exactly ${downloadRoot}/${expectedName}`,
+      );
+    }
+    if (!Number.isSafeInteger(assetRecord.sizeBytes) || (assetRecord.sizeBytes as number) <= 0) {
+      qaPublicationError(`${location}.sizeBytes must be a positive safe integer`);
+    }
+    if (
+      typeof assetRecord.sha256 !== 'string' ||
+      !SHA256_PATTERN.test(assetRecord.sha256)
+    ) {
+      qaPublicationError(
+        `${location}.sha256 must be 64 lowercase hexadecimal characters`,
+      );
+    }
+  }
+
+  const checksumVerification = publication.checksumVerification;
+  if (!isRecord(checksumVerification)) {
+    qaPublicationError('publication.checksumVerification must be an object');
+  }
+  const checksumRecord = checksumVerification as UnknownRecord;
+  requireExactRecordFields(
+    checksumRecord,
+    'publication.checksumVerification',
+    ['algorithm', 'entryCount', 'result'],
+  );
+  if (checksumRecord.algorithm !== 'SHA-256') {
+    qaPublicationError(
+      'publication.checksumVerification.algorithm must be exactly SHA-256',
+    );
+  }
+  if (checksumRecord.entryCount !== QA_PUBLICATION_CHECKSUM_ENTRY_COUNT) {
+    qaPublicationError(
+      `publication.checksumVerification.entryCount must be exactly ${QA_PUBLICATION_CHECKSUM_ENTRY_COUNT}`,
+    );
+  }
+  if (checksumRecord.result !== 'matched-after-download') {
+    qaPublicationError(
+      'publication.checksumVerification.result must be exactly matched-after-download',
+    );
+  }
+  return publication;
+};
+
+const cloneQaJson = <T>(value: T): T =>
+  JSON.parse(JSON.stringify(value)) as T;
+
+const qaCriterionById = (
+  matrix: UnknownRecord,
+  criterionId: number,
+): UnknownRecord => {
+  const criteria = matrix.criteria;
+  if (!Array.isArray(criteria)) {
+    qaReportError('requirementMatrix.criteria must be an array');
+  }
+  const criterion = criteria.find(
+    (entry) => isRecord(entry) && entry.id === criterionId,
+  );
+  if (!isRecord(criterion)) {
+    qaReportError(`requirementMatrix criterion ${criterionId} must exist`);
+  }
+  return criterion;
+};
+
+export const verifyPublishedQaReport = (candidate: unknown): void => {
+  if (!isRecord(candidate)) {
+    qaReportError('published report must be an object');
+  }
+  if (candidate.status !== 'passed-publication') {
+    qaReportError('status must be exactly passed-publication');
+  }
+  const publication = verifyQaPublicationEvidence(candidate.publication);
+
+  const authoritativeRun = candidate.authoritativeRun;
+  if (!isRecord(authoritativeRun) || !isRecord(authoritativeRun.requirementMatrix)) {
+    qaReportError('authoritativeRun requirement matrix must be an object');
+  }
+
+  const prepublicationReport = cloneQaJson(candidate);
+  delete prepublicationReport.publication;
+  prepublicationReport.status = 'passed-prepublication';
+  prepublicationReport.requirementMatrix = cloneQaJson(
+    authoritativeRun.requirementMatrix,
+  );
+  verifyQaReport(prepublicationReport);
+
+  const finalMatrix = candidate.requirementMatrix;
+  if (!isRecord(finalMatrix)) {
+    qaReportError('requirementMatrix must be an object');
+  }
+  try {
+    verifyRequirementMatrix(finalMatrix, 'final');
+  } catch (error) {
+    qaReportError(
+      `requirementMatrix: ${error instanceof Error ? error.message : String(error)}`,
+    );
+  }
+
+  for (let criterionId = 1; criterionId <= 10; criterionId += 1) {
+    const finalCriterion = qaCriterionById(finalMatrix, criterionId);
+    const authoritativeCriterion = qaCriterionById(
+      authoritativeRun.requirementMatrix,
+      criterionId,
+    );
+    if (!qaReportValuesEqual(finalCriterion, authoritativeCriterion)) {
+      qaReportError(
+        `requirementMatrix criterion ${criterionId} must exactly equal authoritativeRun`,
+      );
+    }
+  }
+
+  const finalCriterion11 = qaCriterionById(finalMatrix, 11);
+  const authoritativeCriterion11 = qaCriterionById(
+    authoritativeRun.requirementMatrix,
+    11,
+  );
+  if (finalCriterion11.title !== authoritativeCriterion11.title) {
+    qaReportError('requirementMatrix criterion 11 title must equal authoritativeRun');
+  }
+  const expectedCriterion11Evidence = [
+    {
+      id: 'criterion-11-evidence-01',
+      kind: 'release-url',
+      artifact: publication.releaseUrl,
+      sha256: '',
+      value:
+        `${publication.tag} release assets and checksums matched after remote download`,
+    },
+  ];
+  if (
+    finalCriterion11.status !== 'proved' ||
+    !qaReportValuesEqual(
+      finalCriterion11.evidence,
+      expectedCriterion11Evidence,
+    )
+  ) {
+    qaReportError(
+      'requirementMatrix criterion 11 must exactly match publication evidence',
+    );
+  }
+};
+
+export const createPublishedQaReport = (
+  candidate: unknown,
+  publicationCandidate: unknown,
+): UnknownRecord => {
+  verifyQaReport(candidate);
+  if (!isRecord(candidate)) {
+    qaReportError('report must be an object');
+  }
+  const publication = verifyQaPublicationEvidence(publicationCandidate);
+  const published = cloneQaJson(candidate);
+  const finalMatrix = cloneQaJson(published.requirementMatrix);
+  if (!isRecord(finalMatrix)) {
+    qaReportError('requirementMatrix must be an object');
+  }
+  const criterion11 = qaCriterionById(finalMatrix, 11);
+  criterion11.status = 'proved';
+  criterion11.evidence = [
+    {
+      id: 'criterion-11-evidence-01',
+      kind: 'release-url',
+      artifact: publication.releaseUrl,
+      sha256: '',
+      value:
+        `${publication.tag} release assets and checksums matched after remote download`,
+    },
+  ];
+  published.status = 'passed-publication';
+  published.requirementMatrix = finalMatrix;
+  published.publication = cloneQaJson(publication);
+  verifyPublishedQaReport(published);
+  return published;
 };
 
 function malformedPublicMarkup(): never {

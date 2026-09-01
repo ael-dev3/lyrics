@@ -22,4 +22,10 @@ describe('release QA package entrypoints', () => {
       'npm run build:tools && node .tools-dist/scripts/run-release-qa.js',
     );
   });
+
+  test('builds tools before finalizing remote publication evidence', () => {
+    expect(packageJson.scripts['qa:publish']).toBe(
+      'npm run build:tools && node .tools-dist/scripts/finalize-publication.js',
+    );
+  });
 });
