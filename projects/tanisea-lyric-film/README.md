@@ -50,7 +50,7 @@ The observed maximum semantic-cue boundary errors are `8.321995 ms` at 60 fps an
 
 English words remain in fixed positions. The render computes focus from active semantic cues rather than rebuilding the line as progress text. This allows forward, backward, repeated, and simultaneous activation while keeping layout stationary.
 
-The first vocal act uses a `precision` presentation profile: its target is inactive before the nearest cue frame, fully emphasized on contact, and inactive at the exclusive cue end. C1 handoffs end on the next vocal contact without changing the reviewed sample authority. Four requested phrases—`C1-01`, `C1-06`, `C1-07`, and `C1-08`—use a separate contiguous English-order presentation layer whose intervals begin at the reviewed cue onsets and hold the final target to the next line or authored break. The original `cues` remain unchanged for alignment auditability. V1 and C2 retain the approved `cinematic` three-frame attack and two-frame release. The same presentation rules drive the 120 fps proof.
+The first vocal act uses a `precision` presentation profile: its target is inactive before the nearest cue frame, fully emphasized on contact, and inactive at the exclusive cue end. C1 entrances use a one-proof-frame lead and are fully visible on vocal contact without a visible precontact stack. `C1-06`, `C1-07`, and `C1-08` mirror the reviewed semantic target order and exact cue releases, including backward contact where Russian and English concept order differ. `C1-01` retains its approved contiguous English-order presentation. The horizontal rail advances by cue stage and pauses in reviewed inter-word gaps instead of drifting across the broad line envelope. The original `cues` remain unchanged for alignment auditability. V1 and C2 retain the approved `cinematic` three-frame attack, two-frame release, and visual handoffs. The same presentation rules drive the 120 fps proof.
 
 ## Audio features and spectrum
 
@@ -120,7 +120,7 @@ The release matrix verifies:
 10. repeated QA with no unexplained artifact drift;
 11. publication assets, checksums, and documentation.
 
-See the [final QA report](../../audits/tanisea-final-qa-vnext.md), [v2.2 implementation report](../../docs/first-act-polish-v2.2-implementation.md), [v2.1 implementation report](../../docs/first-act-precision-v2.1-implementation.md), [full-system implementation report](../../docs/precision-sync-vnext-implementation.md), and [workflow evidence guide](../../docs/workflow-evidence.md). The supplemental release archive preserves the generated alignment provenance, both canonical QA runs, QA media, and final visual-review artifacts that remain excluded from source control.
+See the [final QA report](../../audits/tanisea-final-qa-vnext.md), [v2.3 implementation report](../../docs/first-act-semantic-sync-v2.3-implementation.md), [v2.2 implementation report](../../docs/first-act-polish-v2.2-implementation.md), [v2.1 implementation report](../../docs/first-act-precision-v2.1-implementation.md), [full-system implementation report](../../docs/precision-sync-vnext-implementation.md), and [workflow evidence guide](../../docs/workflow-evidence.md). The supplemental release archive preserves the generated alignment provenance, both canonical QA runs, QA media, and final visual-review artifacts that remain excluded from source control.
 
 ## Source layout
 

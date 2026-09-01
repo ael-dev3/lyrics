@@ -8,7 +8,7 @@ import {lyrics} from '../src/timed-lyrics';
 import {frameForSample, SAMPLE_RATE} from '../src/timing/alignment-types';
 
 const CROSSFADE_SAMPLES = 8_379;
-const PRECISION_HANDOFF_SAMPLES = 2_205;
+const PRECISION_HANDOFF_SAMPLES = 368;
 const SEMANTIC_RELEASE_HOLD_SAMPLES = 1_470;
 const BREAK_CARD_START_SAMPLE = 2_204_118;
 const BREAK_CARD_COMPLETE_SAMPLE = 2_217_348;
@@ -132,13 +132,14 @@ describe('absolute-sample presentation handoffs', () => {
   });
 
   test.each([60, 120])(
-    'renders overlap at every lyric-to-lyric handoff at %i fps',
+    'renders overlap at every cinematic lyric-to-lyric handoff at %i fps',
     (fps) => {
       for (const [currentId, nextId] of [
         ...internalPairs,
         ['V1-08', 'C2-01'] as const,
       ]) {
         const current = findLine(currentId);
+        if (current.focusProfile === 'precision') continue;
         const sample = Math.round(
           (current.visualOutStartSample + current.visualOutEndSample) / 2,
         );

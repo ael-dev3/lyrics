@@ -199,21 +199,6 @@ const transformedPresentationCues = new Map<
     {id: 'C1-01-C01-P', sourceCueId: 'C1-01-C01', startSample: 1_066_955, endSample: 1_100_471, targets: ['C1-01-S01'], reviewedTargets: ['C1-01-S01'], reviewedActivation: 'forward'},
     {id: 'C1-01-C02-P', sourceCueId: 'C1-01-C02', startSample: 1_100_471, endSample: 1_219_674, targets: ['C1-01-S02'], reviewedTargets: ['C1-01-S02'], reviewedActivation: 'forward'},
   ]],
-  ['C1-06', [
-    {id: 'C1-06-C01-P', sourceCueId: 'C1-06-C01', startSample: 1_796_987, endSample: 1_818_199, targets: ['C1-06-S01'], reviewedTargets: ['C1-06-S01'], reviewedActivation: 'forward'},
-    {id: 'C1-06-C02-P', sourceCueId: 'C1-06-C02', startSample: 1_818_199, endSample: 1_936_519, targets: ['C1-06-S02'], reviewedTargets: ['C1-06-S03'], reviewedActivation: 'forward'},
-    {id: 'C1-06-C03-P', sourceCueId: 'C1-06-C03', startSample: 1_936_519, endSample: 1_974_489, targets: ['C1-06-S03'], reviewedTargets: ['C1-06-S02'], reviewedActivation: 'backward'},
-  ]],
-  ['C1-07', [
-    {id: 'C1-07-C01-P', sourceCueId: 'C1-07-C01', startSample: 1_974_489, endSample: 2_013_341, targets: ['C1-07-S01'], reviewedTargets: ['C1-07-S01'], reviewedActivation: 'forward'},
-    {id: 'C1-07-C02-P', sourceCueId: 'C1-07-C02', startSample: 2_013_341, endSample: 2_046_902, targets: ['C1-07-S02'], reviewedTargets: ['C1-07-S03'], reviewedActivation: 'forward'},
-    {id: 'C1-07-C03-P', sourceCueId: 'C1-07-C03', startSample: 2_046_902, endSample: 2_064_542, targets: ['C1-07-S03'], reviewedTargets: ['C1-07-S02'], reviewedActivation: 'backward'},
-  ]],
-  ['C1-08', [
-    {id: 'C1-08-C01-P', sourceCueId: 'C1-08-C01', startSample: 2_064_542, endSample: 2_080_462, targets: ['C1-08-S01'], reviewedTargets: ['C1-08-S01'], reviewedActivation: 'forward'},
-    {id: 'C1-08-C02-P', sourceCueId: 'C1-08-C02', startSample: 2_080_462, endSample: 2_098_102, targets: ['C1-08-S02'], reviewedTargets: ['C1-08-S02'], reviewedActivation: 'forward'},
-    {id: 'C1-08-C03-P', sourceCueId: 'C1-08-C03', startSample: 2_098_102, endSample: 2_204_118, targets: ['C1-08-S03'], reviewedTargets: ['C1-08-S03'], reviewedActivation: 'forward'},
-  ]],
 ]);
 
 const expectedPresentationCuesForLine = (
@@ -391,13 +376,13 @@ describe('pure synchronization-proof state', () => {
 
   test.each([
     ['C1-01', 27.0, 'C1-01-S02'],
-    ['C1-06', 42.0, 'C1-06-S02'],
-    ['C1-06', 44.2, 'C1-06-S03'],
-    ['C1-07', 46.0, 'C1-07-S02'],
-    ['C1-07', 46.6, 'C1-07-S03'],
-    ['C1-08', 49.6, 'C1-08-S03'],
+    ['C1-06', 42.0, 'C1-06-S03'],
+    ['C1-06', 44.2, 'C1-06-S02'],
+    ['C1-07', 46.0, 'C1-07-S03'],
+    ['C1-07', 46.6, 'C1-07-S02'],
+    ['C1-08', 48.0, 'C1-08-S03'],
   ] as const)(
-    'mirrors the public presentation target for %s at %s seconds',
+    'mirrors the sample-reviewed semantic target for %s at %s seconds',
     (lineId, seconds, expectedTargetId) => {
       const state = proofFrameState(lineId, 120, Math.round(seconds * 120));
 

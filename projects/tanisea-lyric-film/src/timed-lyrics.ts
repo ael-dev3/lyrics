@@ -41,14 +41,12 @@ const VISUAL_LEAD_SAMPLES = Math.round(SAMPLE_RATE * 0.24);
 const VISUAL_SETTLE_LEAD_SAMPLES = Math.round(SAMPLE_RATE * 0.05);
 const PRESENTATION_CROSSFADE_SAMPLES =
   VISUAL_LEAD_SAMPLES - VISUAL_SETTLE_LEAD_SAMPLES;
-const PRECISION_HANDOFF_SAMPLES = Math.round(SAMPLE_RATE * 0.05);
+const PRECISION_VISUAL_LEAD_SAMPLES = Math.round(SAMPLE_RATE / 120);
+const PRECISION_HANDOFF_SAMPLES = PRECISION_VISUAL_LEAD_SAMPLES;
 const SEMANTIC_RELEASE_HOLD_SAMPLES = Math.round(SAMPLE_RATE / 30);
 
 const continuousEnglishTargets = new Map<string, readonly string[]>([
   ['C1-01', ['C1-01-S01', 'C1-01-S02']],
-  ['C1-06', ['C1-06-S01', 'C1-06-S02', 'C1-06-S03']],
-  ['C1-07', ['C1-07-S01', 'C1-07-S02', 'C1-07-S03']],
-  ['C1-08', ['C1-08-S01', 'C1-08-S02', 'C1-08-S03']],
 ]);
 
 const presentationCuesForLine = (
@@ -104,28 +102,29 @@ const sectionForLineId = (lineId: string): LyricSection => {
   return lineIndex <= 4 ? 'build' : 'chorus';
 };
 
-const lyricDrafts = taniseaAlignment.lines.map((line) => ({
+const lyricDrafts = taniseaAlignment.lines.map((line) => {
+  const precision = line.id.startsWith('C1-');
+  return {
     id: line.id,
     section: sectionForLineId(line.id),
-    focusProfile: (
-      line.id.startsWith('C1-') ? 'precision' : 'cinematic'
-    ) as FocusProfile,
+    focusProfile: (precision ? 'precision' : 'cinematic') as FocusProfile,
     vocalStartSample: line.vocalStartSample,
     vocalEndSample: line.vocalEndSample,
     visualInStartSample: Math.max(
       0,
-      line.vocalStartSample - VISUAL_LEAD_SAMPLES,
+      line.vocalStartSample -
+        (precision ? PRECISION_VISUAL_LEAD_SAMPLES : VISUAL_LEAD_SAMPLES),
     ),
-    visualInCompleteSample: Math.max(
-      0,
-      line.vocalStartSample - VISUAL_SETTLE_LEAD_SAMPLES,
-    ),
+    visualInCompleteSample: precision
+      ? line.vocalStartSample
+      : Math.max(0, line.vocalStartSample - VISUAL_SETTLE_LEAD_SAMPLES),
     segments: line.segments,
     cues: line.cues,
     text: line.segments.map(({text}) => text).join(' '),
     vocalStart: line.vocalStartSample / SAMPLE_RATE,
     vocalEnd: line.vocalEndSample / SAMPLE_RATE,
-  }));
+  };
+});
 
 const draftById = new Map(lyricDrafts.map((line) => [line.id, line]));
 

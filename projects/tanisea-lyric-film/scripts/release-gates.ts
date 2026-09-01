@@ -326,6 +326,7 @@ const QA_COVERAGE_EXPECTED: Readonly<Record<string, unknown>> = {
     'v1-08',
     'chorus-1',
     'chorus-2',
+    'first-act-40-50',
     'final-handoff',
   ],
   proofRanges: ['v1-03', 'v1-08'],
@@ -333,6 +334,15 @@ const QA_COVERAGE_EXPECTED: Readonly<Record<string, unknown>> = {
     'C1-04-C01',
     'C1-04-C02',
     'C1-04-C03',
+    'C1-06-C01',
+    'C1-06-C02',
+    'C1-06-C03',
+    'C1-07-C01',
+    'C1-07-C02',
+    'C1-07-C03',
+    'C1-08-C01',
+    'C1-08-C02',
+    'C1-08-C03',
     'V1-03-C01',
     'V1-03-C02',
     'V1-03-C03',
@@ -1926,7 +1936,7 @@ const QA_REPORT_ALIGNMENT_SUMMARY = {
   ],
 } as const;
 
-const QA_PUBLICATION_TAG = 'v2.2.0';
+const QA_PUBLICATION_TAG = 'v2.3.0';
 const QA_PUBLICATION_ASSET_NAMES = [
   'Tanisea-Lyric-Film-Production-Master-vNext.mp4',
   'Tanisea-Lyric-Film-Sync-Proof-120fps.mp4',

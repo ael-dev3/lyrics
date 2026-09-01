@@ -3,6 +3,7 @@ import {renderToStaticMarkup} from 'react-dom/server';
 import {describe, expect, test} from 'vitest';
 import {LyricDisplay} from '../src/components/LyricDisplay';
 import {getSegmentFocusState} from '../src/focus-state';
+import {getPresentationProgress} from '../src/presentation-progress';
 import {lyrics} from '../src/timed-lyrics';
 import {frameForSample} from '../src/timing/alignment-types';
 import {taniseaAlignment} from '../src/timing/tanisea-alignment';
@@ -459,12 +460,12 @@ describe('production lyric view model', () => {
           : 'chorus';
       expect(line.section, line.id).toBe(expectedSection);
       expect(line.vocalStartSample - line.visualInStartSample, line.id).toBe(
-        10_584,
+        line.focusProfile === 'precision' ? 368 : 10_584,
       );
       expect(
         line.vocalStartSample - line.visualInCompleteSample,
         line.id,
-      ).toBe(2_205);
+      ).toBe(line.focusProfile === 'precision' ? 0 : 2_205);
     }
   });
 
@@ -554,6 +555,31 @@ describe('LyricDisplay rendering', () => {
   );
 
   test.each([60, 120])(
+    'keeps every incoming C1 line visually absent until its exact contact at %i fps',
+    (fps) => {
+      const firstAct = lyrics.filter(({id}) => id.startsWith('C1-'));
+      for (let index = 1; index < firstAct.length; index++) {
+        const incoming = firstAct[index];
+        if (!incoming) throw new Error('Missing C1 handoff fixture');
+        const frameBeforeContact =
+          frameForSample(incoming.vocalStartSample, fps) - 1;
+        const markup = renderToStaticMarkup(
+          createElement(LyricDisplay, {frame: frameBeforeContact, fps}),
+        );
+
+        if (!markup.includes(`data-lyric-line-id="${incoming.id}"`)) continue;
+        const incomingTag = dataOpeningTag(
+          markup,
+          'data-lyric-line-id',
+          incoming.id,
+        );
+        const opacity = Number(/(?:^|;)opacity:([^;"]+)/.exec(incomingTag)?.[1]);
+        expect(opacity, `${incoming.id} before contact`).toBe(0);
+      }
+    },
+  );
+
+  test.each([60, 120])(
     'contacts C1-07 / Through on the reviewed 44.773-second onset at %i fps',
     (fps) => {
       const line = findLine('C1-07');
@@ -600,6 +626,15 @@ describe('LyricDisplay rendering', () => {
           `data-lyric-line-id="${outgoing.id}"`,
         );
         expect(markup).toContain(`data-lyric-line-id="${incoming.id}"`);
+        const incomingTag = dataOpeningTag(
+          markup,
+          'data-lyric-line-id',
+          incoming.id,
+        );
+        expect(
+          Number(/(?:^|;)opacity:([^;"]+)/.exec(incomingTag)?.[1]),
+          `${incoming.id} opacity on contact`,
+        ).toBe(1);
       }
     },
   );
@@ -619,13 +654,13 @@ describe('LyricDisplay rendering', () => {
 
   test.each([
     ['C1-01', 27.0, 'C1-01-S02'],
-    ['C1-06', 42.0, 'C1-06-S02'],
-    ['C1-06', 44.2, 'C1-06-S03'],
-    ['C1-07', 46.0, 'C1-07-S02'],
-    ['C1-07', 46.6, 'C1-07-S03'],
-    ['C1-08', 49.6, 'C1-08-S03'],
+    ['C1-06', 42.0, 'C1-06-S03'],
+    ['C1-06', 44.2, 'C1-06-S02'],
+    ['C1-07', 46.0, 'C1-07-S03'],
+    ['C1-07', 46.6, 'C1-07-S02'],
+    ['C1-08', 48.0, 'C1-08-S03'],
   ] as const)(
-    'keeps the flagged first-act phrase %s on its natural English focus at %s seconds',
+    'keeps the 40–50 second passage on its reviewed semantic focus for %s at %s seconds',
     (lineId, seconds, expectedSegmentId) => {
       const line = findLine(lineId);
       const markup = renderToStaticMarkup(
@@ -645,6 +680,55 @@ describe('LyricDisplay rendering', () => {
       }
     },
   );
+
+  test('releases the final first-act word when the vocal ends', () => {
+    const line = findLine('C1-08');
+    const markup = renderToStaticMarkup(
+      createElement(LyricDisplay, {
+        frame: Math.round(49.6 * 60),
+        fps: 60,
+      }),
+    );
+
+    expect(markup).toContain('data-lyric-line-id="C1-08"');
+    for (const segment of line.segments) {
+      expect(
+        dataStyle(markup, 'data-lyric-glyph-id', segment.id),
+      ).toContain('background-size:0% 4px');
+    }
+  });
+
+  test('advances the horizontal rail by semantic cue and holds during word gaps', () => {
+    const cues = [
+      {startSample: 44_100, endSample: 66_150},
+      {startSample: 70_560, endSample: 105_840},
+    ] as const;
+
+    expect(getPresentationProgress(cues, 119, 120)).toBe(0);
+    expect(getPresentationProgress(cues, 120, 120)).toBe(0);
+    expect(getPresentationProgress(cues, 150, 120)).toBeCloseTo(0.25, 12);
+    expect(getPresentationProgress(cues, 180, 120)).toBe(0.5);
+    expect(getPresentationProgress(cues, 191, 120)).toBe(0.5);
+    expect(getPresentationProgress(cues, 192, 120)).toBe(0.5);
+    expect(getPresentationProgress(cues, 240, 120)).toBeCloseTo(0.75, 12);
+    expect(getPresentationProgress(cues, 288, 120)).toBe(1);
+  });
+
+  test('renders the cue-synchronous rail milestone in the first-act word gap', () => {
+    const line = findLine('C1-06');
+    const firstCue = line.cues[0];
+    if (!firstCue) throw new Error('Missing C1-06 cue');
+    const markup = renderToStaticMarkup(
+      createElement(LyricDisplay, {
+        frame: frameForSample(firstCue.endSample, 60),
+        fps: 60,
+      }),
+    );
+
+    expect(
+      dataOpeningTag(markup, 'data-lyric-progress-id', line.id),
+    ).toContain('width:33.3%');
+  });
 
   test.each([
     ['C2-06', 108.5, 'C2-06-S03'],

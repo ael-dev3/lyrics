@@ -29,6 +29,14 @@ import {
 
 export type QaMediaSource = 'public' | 'proof' | 'reference';
 
+type HighRiskLineId =
+  | 'C1-04'
+  | 'C1-06'
+  | 'C1-07'
+  | 'C1-08'
+  | 'V1-03'
+  | 'V1-08';
+
 export type CommandPlan = Readonly<{
   executable: 'ffmpeg';
   arguments: readonly string[];
@@ -51,7 +59,7 @@ export type ReviewRange = Readonly<{
 
 export type ContactFrame = Readonly<{
   id: string;
-  lineId: 'C1-04' | 'V1-03' | 'V1-08';
+  lineId: HighRiskLineId;
   cueId: string;
   cueStartSample: number;
   cadenceFps: 60 | 120;
@@ -63,7 +71,7 @@ export type ContactFrame = Readonly<{
 
 export type ContactSheet = Readonly<{
   id: string;
-  lineId: 'C1-04' | 'V1-03' | 'V1-08';
+  lineId: HighRiskLineId;
   cadenceFps: 60 | 120;
   path: string;
   contactIds: readonly string[];
@@ -122,11 +130,27 @@ const SOURCE_MEDIA_PATHS = {
   reference: 'output/Tanisea-Lyric-Film-vNext-reference-2x.mov',
 } as const satisfies Readonly<Record<QaMediaSource, string>>;
 
-const HIGH_RISK_LINE_IDS = ['C1-04', 'V1-03', 'V1-08'] as const;
+const HIGH_RISK_LINE_IDS = [
+  'C1-04',
+  'C1-06',
+  'C1-07',
+  'C1-08',
+  'V1-03',
+  'V1-08',
+] as const satisfies readonly HighRiskLineId[];
 const EXPECTED_HIGH_RISK_CUE_IDS = [
   'C1-04-C01',
   'C1-04-C02',
   'C1-04-C03',
+  'C1-06-C01',
+  'C1-06-C02',
+  'C1-06-C03',
+  'C1-07-C01',
+  'C1-07-C02',
+  'C1-07-C03',
+  'C1-08-C01',
+  'C1-08-C02',
+  'C1-08-C03',
   'V1-03-C01',
   'V1-03-C02',
   'V1-03-C03',
@@ -219,6 +243,32 @@ const createReviewRange = (
     };
   };
 
+  return {
+    id,
+    source,
+    centerSample,
+    startSample,
+    endSample,
+    variants: [variant('normal'), variant('half')],
+  };
+};
+
+const createFixedReviewRange = (
+  id: string,
+  source: 'public' | 'proof',
+  startSample: number,
+  endSample: number,
+): ReviewRange => {
+  requireValue(endSample > startSample, `${id} review range must be ordered`);
+  const centerSample = Math.round((startSample + endSample) / 2);
+  const variant = (speed: 'normal' | 'half'): ClipVariant => {
+    const path = `clips/${source}/${id}-${speed}.mp4`;
+    return {
+      speed,
+      path,
+      command: clipCommand(source, startSample, endSample, speed, path),
+    };
+  };
   return {
     id,
     source,
@@ -326,7 +376,7 @@ const sheetCommand = (
 
 const createContacts = (): readonly ContactFrame[] => {
   const highRiskLines = taniseaAlignment.lines.filter(
-    ({id}) => id === 'C1-04' || id === 'V1-03' || id === 'V1-08',
+    ({id}) => HIGH_RISK_LINE_IDS.some((highRiskId) => highRiskId === id),
   );
   const cues = highRiskLines.flatMap((line) =>
     line.cues.map((cue) => ({
@@ -424,6 +474,12 @@ export const createQaMediaPlan = (): QaMediaPlan => {
     createReviewRange('v1-08', 'public', lineStartSample('V1-08')),
     createReviewRange('chorus-1', 'public', lineStartSample('C1-05')),
     createReviewRange('chorus-2', 'public', lineStartSample('C2-05')),
+    createFixedReviewRange(
+      'first-act-40-50',
+      'public',
+      Math.round(SAMPLE_RATE * 39.5),
+      Math.round(SAMPLE_RATE * 50.5),
+    ),
     createReviewRange(
       'final-handoff',
       'public',

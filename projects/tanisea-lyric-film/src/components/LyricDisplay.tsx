@@ -1,5 +1,6 @@
 import {AbsoluteFill} from 'remotion';
 import {getSegmentFocusState} from '../focus-state';
+import {getPresentationProgress} from '../presentation-progress';
 import {lyrics} from '../timed-lyrics';
 import type {LyricLine} from '../timed-lyrics';
 import {frameForSample} from '../timing/alignment-types';
@@ -50,12 +51,8 @@ const LyricLineView = ({line, frame, fps}: LyricLineViewProps) => {
       : line.text.length > 36
         ? 53
         : 62;
-  const vocalStartFrame = frameForSample(line.vocalStartSample, fps);
-  const vocalEndFrame = frameForSample(line.vocalEndSample, fps);
   const entranceTranslation = chorus ? 18 : 2;
-  const progress = clamp(
-    (frame - vocalStartFrame) / (vocalEndFrame - vocalStartFrame),
-  );
+  const progress = getPresentationProgress(line.presentationCues, frame, fps);
 
   return (
     <AbsoluteFill
@@ -176,6 +173,7 @@ const LyricLineView = ({line, frame, fps}: LyricLineViewProps) => {
           })}
         </div>
         <div
+          data-lyric-progress-track-id={line.id}
           style={{
             marginTop: 24,
             marginLeft: chorus ? 'auto' : 0,
@@ -187,6 +185,7 @@ const LyricLineView = ({line, frame, fps}: LyricLineViewProps) => {
           }}
         >
           <div
+            data-lyric-progress-id={line.id}
             style={{
               width: `${Math.round(progress * 1000) / 10}%`,
               height: 4,

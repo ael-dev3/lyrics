@@ -1259,6 +1259,14 @@ describe('neutral publication acceptance scan', () => {
         'first-act-polish-v2.2-implementation.md',
       ),
     ],
+    [
+      'docs/first-act-semantic-sync-v2.3-implementation.md',
+      resolve(
+        repositoryRoot,
+        'docs',
+        'first-act-semantic-sync-v2.3-implementation.md',
+      ),
+    ],
   ] as const;
 
   test.each(documents)('accepts neutral public document %s', (label, path) => {
@@ -1636,6 +1644,7 @@ const QA_DEDICATED_RANGES = [
   'v1-08',
   'chorus-1',
   'chorus-2',
+  'first-act-40-50',
   'final-handoff',
 ] as const;
 const QA_PROOF_RANGES = ['v1-03', 'v1-08'] as const;
@@ -1643,6 +1652,15 @@ const QA_CUE_IDS = [
   'C1-04-C01',
   'C1-04-C02',
   'C1-04-C03',
+  'C1-06-C01',
+  'C1-06-C02',
+  'C1-06-C03',
+  'C1-07-C01',
+  'C1-07-C02',
+  'C1-07-C03',
+  'C1-08-C01',
+  'C1-08-C02',
+  'C1-08-C03',
   'V1-03-C01',
   'V1-03-C02',
   'V1-03-C03',
@@ -2125,7 +2143,7 @@ const PUBLISHED_ASSET_NAMES = [
 ] as const;
 
 const validPublicationEvidence = () => {
-  const tag = 'v2.2.0';
+  const tag = 'v2.3.0';
   const downloadRoot =
     `https://github.com/ael-dev3/lyrics/releases/download/${tag}`;
   return {
