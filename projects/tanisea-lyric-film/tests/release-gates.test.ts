@@ -1,4 +1,6 @@
 import {createHash} from 'node:crypto';
+import {existsSync, readFileSync} from 'node:fs';
+import {resolve} from 'node:path';
 import {createElement} from 'react';
 import {renderToStaticMarkup} from 'react-dom/server';
 import {describe, expect, test} from 'vitest';
@@ -9,6 +11,24 @@ import {
 } from '../scripts/release-gates';
 import * as releaseGates from '../scripts/release-gates';
 import {FrameChrome} from '../src/components/FrameChrome';
+
+type NeutralPublicationVerifier = (
+  source: unknown,
+  label: string,
+) => void;
+
+const neutralPublicationVerifier = (): NeutralPublicationVerifier => {
+  const verifier = (
+    releaseGates as unknown as {
+      verifyNeutralPublicationText?: NeutralPublicationVerifier;
+    }
+  ).verifyNeutralPublicationText;
+  expect(
+    verifier,
+    'release-gates must export verifyNeutralPublicationText',
+  ).toBeTypeOf('function');
+  return verifier!;
+};
 
 const SHA256 = 'a'.repeat(64);
 const QA_COMPARISON_RECORD = {
@@ -1204,6 +1224,46 @@ describe('public-markup release gate', () => {
         `${publicFrameMarkup}<div data-spectrum-rail="public" style="position:absolute;bottom:68px"></div>`,
       ),
     ).not.toThrow();
+  });
+});
+
+describe('neutral publication acceptance scan', () => {
+  const repositoryRoot = resolve(__dirname, '..', '..', '..');
+  const documents = [
+    ['README.md', resolve(repositoryRoot, 'README.md')],
+    [
+      'projects/tanisea-lyric-film/README.md',
+      resolve(repositoryRoot, 'projects', 'tanisea-lyric-film', 'README.md'),
+    ],
+    [
+      'docs/precision-sync-vnext-implementation.md',
+      resolve(repositoryRoot, 'docs', 'precision-sync-vnext-implementation.md'),
+    ],
+  ] as const;
+
+  test.each(documents)('accepts neutral public document %s', (label, path) => {
+    expect(existsSync(path), `${label} must exist`).toBe(true);
+    const source = existsSync(path) ? readFileSync(path, 'utf8') : '';
+
+    expect(() => neutralPublicationVerifier()(source, label)).not.toThrow();
+  });
+
+  test.each([
+    ['Windows path', String.raw`Built at C:\Users\name\project`],
+    ['UNC path', String.raw`Copied from \\server\private\report`],
+    ['POSIX home', 'Built at /home/name/project'],
+    ['ChatGPT provenance', 'ChatGPT selected this wording.'],
+    ['Codex provenance', 'Codex generated the release package.'],
+    ['workflow name', 'The superpowers workflow approved this.'],
+    ['approval provenance', 'This is the user-approved wording.'],
+    ['report provenance', 'The supplied report determined the timing.'],
+    ['prompt excerpt', 'The prompt said: make it perfect.'],
+    ['unsupported precision', 'The result is millisecond-perfect.'],
+    ['unsupported certainty', 'Every phoneme has zero uncertainty.'],
+  ] as const)('rejects %s', (label, source) => {
+    expect(() => neutralPublicationVerifier()(source, 'fixture.md')).toThrow(
+      new RegExp(label, 'i'),
+    );
   });
 });
 

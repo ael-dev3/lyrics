@@ -220,6 +220,22 @@ const QA_REPORT_PRIVATE_TEXT_PATTERNS = [
   /\bagent\b/i,
   /\bworker\s+process\b|\borchestrat(?:e|ed|es|ing|ion)\b/i,
 ] as const;
+const NEUTRAL_PUBLICATION_PATTERNS = [
+  ['Windows path', /(?:^|[\s"'(])(?:[a-z]:[\\/])/i],
+  ['UNC path', /\\\\[^\\/\s]+[\\/]/],
+  ['POSIX home', /(?:^|[\s"'(])\/(?:Users|home)\//i],
+  ['ChatGPT provenance', /\bChatGPT\b/i],
+  ['Codex provenance', /\bCodex\b/i],
+  ['workflow name', /\bsuperpowers\b/i],
+  ['approval provenance', /\buser[\s_-]*approved\b/i],
+  [
+    'report provenance',
+    /\bsupplied(?:\s+[\w/-]+){0,3}\s+report\b/i,
+  ],
+  ['prompt excerpt', /\bprompt(?:ed|ing|s)?\b/i],
+  ['unsupported precision', /\bmillisecond[\s-]*perfect\b/i],
+  ['unsupported certainty', /\bzero\s+uncertainty\b/i],
+] as const;
 const QA_SELECTED_FRAME_COMPOSITIONS = new Set([
   'LyricFilmVNext',
   'LyricFilmSyncProof',
@@ -411,6 +427,23 @@ const qaJsonSha256 = (value: unknown): string =>
 
 const isNonemptyString = (value: unknown): value is string =>
   typeof value === 'string' && value.trim().length > 0;
+
+export const verifyNeutralPublicationText = (
+  source: unknown,
+  label: string,
+): void => {
+  if (!isNonemptyString(label)) {
+    throw new Error('Publication document label must be a nonempty string');
+  }
+  if (!isNonemptyString(source)) {
+    throw new Error(`${label}: document must be a nonempty string`);
+  }
+  for (const [finding, pattern] of NEUTRAL_PUBLICATION_PATTERNS) {
+    if (pattern.test(source)) {
+      throw new Error(`${label}: ${finding}`);
+    }
+  }
+};
 
 const isRepositoryRelativePath = (value: unknown): value is string =>
   isNonemptyString(value) &&
