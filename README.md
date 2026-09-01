@@ -9,6 +9,8 @@
     ·
     <a href="projects/tanisea-lyric-film">Source project</a>
     ·
+    <a href="https://github.com/ael-dev3/lyrics/releases/download/v2.0.0/Tanisea-Lyric-Film-Workflow-Evidence-vNext.zip">Workflow evidence</a>
+    ·
     <a href="audits/tanisea-final-qa-vnext.md">Final QA</a>
   </p>
   <p>
@@ -61,6 +63,9 @@ The [reviewed alignment report](audits/tanisea-word-alignment-v3.md) lists every
 | [Alignment JSON](https://github.com/ael-dev3/lyrics/releases/download/v2.0.0/tanisea-word-alignment-v3.json) | Reviewed sample-indexed timing and semantic mapping |
 | [QA JSON](https://github.com/ael-dev3/lyrics/releases/download/v2.0.0/tanisea-final-qa-vnext.json) | Machine-readable build, media, layout, and repeatability evidence |
 | [Checksums](https://github.com/ael-dev3/lyrics/releases/download/v2.0.0/CHECKSUMS.sha256) | SHA-256 values for the release package |
+| [Workflow evidence](https://github.com/ael-dev3/lyrics/releases/download/v2.0.0/Tanisea-Lyric-Film-Workflow-Evidence-vNext.zip) | Canonical alignment provenance, both QA executions, generated QA media, and visual-review artifacts |
+| [Workflow manifest](https://github.com/ael-dev3/lyrics/releases/download/v2.0.0/tanisea-workflow-evidence-vnext.json) | Per-file SHA-256 and byte size for the supplemental workflow archive |
+| [Workflow checksums](https://github.com/ael-dev3/lyrics/releases/download/v2.0.0/WORKFLOW-EVIDENCE.sha256) | SHA-256 values for the workflow archive and standalone manifest |
 | [Earlier platform snapshot](deliverables/Tanisea-Lyric-Film-vNext-60fps-Final.mp4) | Previously published attenuated-AAC delivery retained with its original checksum |
 
 ## Build the source
@@ -81,7 +86,7 @@ npm run dev
 npm run render
 ```
 
-Delivery and QA commands are documented in the [project README](projects/tanisea-lyric-film/README.md). The [implementation report](docs/precision-sync-vnext-implementation.md) connects the data model, render architecture, media outputs, and verification evidence.
+Delivery and QA commands are documented in the [project README](projects/tanisea-lyric-film/README.md). The [implementation report](docs/precision-sync-vnext-implementation.md) connects the data model, render architecture, media outputs, and verification evidence. The [workflow evidence guide](docs/workflow-evidence.md) inventories the supplemental generated evidence and its deliberate exclusions.
 
 ## Repository map
 
@@ -89,7 +94,9 @@ Delivery and QA commands are documented in the [project README](projects/tanisea
 assets/                              lossless repository hero
 audits/tanisea-word-alignment-v3.md reviewed timing evidence
 audits/tanisea-final-qa-vnext.*     final human- and machine-readable QA
+audits/tanisea-workflow-evidence-vnext.json
 docs/precision-sync-vnext-implementation.md
+docs/workflow-evidence.md
 projects/tanisea-lyric-film/
   alignment/                         render-authoritative sample data
   public/                            locked media, fonts, audio features
@@ -100,7 +107,7 @@ projects/tanisea-lyric-film/
 
 ## QA status
 
-The release gate covers strict typechecking, 1,000+ assertions, browser-measured layout, composition discovery, full media decode, codec and colour metadata, AAC packet identity, selected encoded frames, generated QA media, and two independent executions of the final matrix. Publication evidence and immutable asset URLs are recorded in the [final QA report](audits/tanisea-final-qa-vnext.md).
+The release gate covers strict typechecking, 1,000+ assertions, browser-measured layout, composition discovery, full media decode, codec and colour metadata, AAC packet identity, selected encoded frames, generated QA media, and two independent executions of the final matrix. Publication evidence and immutable asset URLs are recorded in the [final QA report](audits/tanisea-final-qa-vnext.md). The generated alignment, run, media, and visual-review evidence is preserved in the supplemental workflow archive.
 
 ## Media and rights
 

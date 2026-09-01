@@ -116,7 +116,7 @@ The release matrix verifies:
 10. repeated QA with no unexplained artifact drift;
 11. publication assets, checksums, and documentation.
 
-See the [final QA report](../../audits/tanisea-final-qa-vnext.md) and [implementation report](../../docs/precision-sync-vnext-implementation.md).
+See the [final QA report](../../audits/tanisea-final-qa-vnext.md), [implementation report](../../docs/precision-sync-vnext-implementation.md), and [workflow evidence guide](../../docs/workflow-evidence.md). The supplemental release archive preserves the generated alignment provenance, both canonical QA runs, QA media, and final visual-review artifacts that remain excluded from source control.
 
 ## Source layout
 
