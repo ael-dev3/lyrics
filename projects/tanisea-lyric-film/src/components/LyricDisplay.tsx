@@ -38,6 +38,7 @@ const LyricLineView = ({line, frame, fps}: LyricLineViewProps) => {
   const opacity = enter * (1 - exit);
   const chorus = line.section === 'chorus';
   const verse = line.section === 'verse';
+  const precisionFocus = line.focusProfile === 'precision';
   const fontSize = chorus
     ? line.text.length > 31
       ? 66
@@ -59,6 +60,7 @@ const LyricLineView = ({line, frame, fps}: LyricLineViewProps) => {
   return (
     <AbsoluteFill
       data-lyric-line-id={line.id}
+      data-focus-profile={line.focusProfile}
       style={{
         justifyContent: chorus ? 'center' : 'flex-end',
         alignItems: chorus ? 'center' : 'stretch',
@@ -115,10 +117,13 @@ const LyricLineView = ({line, frame, fps}: LyricLineViewProps) => {
               segment.id,
               frame,
               fps,
+              line.focusProfile,
             );
             const underlineWidth = focus.contact ? 100 : 0;
+            const underlineHeight = precisionFocus ? 4 : 3;
             const baseWeight = chorus ? 610 : 540;
             const emphasisWeightRange = chorus ? 90 : 150;
+            const inactiveOpacity = precisionFocus ? 0.48 : 0.62;
 
             return (
               <span
@@ -149,18 +154,19 @@ const LyricLineView = ({line, frame, fps}: LyricLineViewProps) => {
                     display: 'block',
                     position: 'absolute',
                     inset: 0,
-                    color: `rgba(255,255,255,${0.62 + focus.emphasis * 0.38})`,
+                    color: `rgba(255,255,255,${inactiveOpacity + focus.emphasis * (1 - inactiveOpacity)})`,
                     fontWeight: Math.round(
                       baseWeight + focus.emphasis * emphasisWeightRange,
                     ),
-                    textShadow:
-                      focus.emphasis > 0.01
-                        ? `0 0 ${Math.round(8 + focus.emphasis * 15)}px rgba(22,230,209,${0.18 + focus.emphasis * 0.42}), 0 4px 16px rgba(0,0,0,.68)`
-                        : '0 4px 16px rgba(0,0,0,.68)',
+                    textShadow: focus.emphasis > 0.01
+                      ? precisionFocus
+                        ? `0 0 ${Math.round(5 + focus.emphasis * 9)}px rgba(22,230,209,${0.12 + focus.emphasis * 0.32}), 0 4px 16px rgba(0,0,0,.68)`
+                        : `0 0 ${Math.round(8 + focus.emphasis * 15)}px rgba(22,230,209,${0.18 + focus.emphasis * 0.42}), 0 4px 16px rgba(0,0,0,.68)`
+                      : '0 4px 16px rgba(0,0,0,.68)',
                     backgroundImage: `linear-gradient(90deg, ${teal}, ${mint})`,
                     backgroundRepeat: 'no-repeat',
                     backgroundPosition: 'center bottom',
-                    backgroundSize: `${underlineWidth}% 3px`,
+                    backgroundSize: `${underlineWidth}% ${underlineHeight}px`,
                   }}
                 >
                   {segment.text}

@@ -6,6 +6,8 @@ export type SegmentFocusState = Readonly<{
   emphasis: number;
 }>;
 
+export type FocusProfile = 'precision' | 'cinematic';
+
 type FocusCue = Pick<SemanticCue, 'startSample' | 'endSample' | 'targets'>;
 
 const clamp = (value: number): number => Math.min(1, Math.max(0, value));
@@ -46,6 +48,7 @@ export const getSegmentFocusState = (
   segmentId: string,
   frame: number,
   fps: number,
+  profile: FocusProfile = 'cinematic',
 ): SegmentFocusState => {
   validateInputs(cues, frame, fps);
 
@@ -63,12 +66,14 @@ export const getSegmentFocusState = (
       contact = 1;
       emphasis = Math.max(
         emphasis,
-        clamp((frame - startFrame + 1) / 3),
+        profile === 'precision'
+          ? 1
+          : clamp((frame - startFrame + 1) / 3),
       );
       continue;
     }
 
-    if (frame >= endFrame) {
+    if (profile === 'cinematic' && frame >= endFrame) {
       emphasis = Math.max(
         emphasis,
         clamp(1 - (frame - endFrame) / 2),

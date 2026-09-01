@@ -1,5 +1,6 @@
 import {taniseaAlignment} from './timing/tanisea-alignment';
 import {SAMPLE_RATE} from './timing/alignment-types';
+import type {FocusProfile} from './focus-state';
 import type {
   LyricSegment as ReviewedLyricSegment,
   SemanticCue,
@@ -11,6 +12,7 @@ export type LyricSegment = ReviewedLyricSegment;
 export type LyricLine = Readonly<{
   id: string;
   section: LyricSection;
+  focusProfile: FocusProfile;
   vocalStartSample: number;
   vocalEndSample: number;
   visualInStartSample: number;
@@ -54,6 +56,9 @@ const sectionForLineId = (lineId: string): LyricSection => {
 const lyricDrafts = taniseaAlignment.lines.map((line) => ({
     id: line.id,
     section: sectionForLineId(line.id),
+    focusProfile: (
+      line.id.startsWith('C1-') ? 'precision' : 'cinematic'
+    ) as FocusProfile,
     vocalStartSample: line.vocalStartSample,
     vocalEndSample: line.vocalEndSample,
     visualInStartSample: Math.max(

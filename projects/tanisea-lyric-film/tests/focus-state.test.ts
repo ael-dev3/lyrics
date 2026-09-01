@@ -99,6 +99,56 @@ describe('sample-indexed segment focus', () => {
     },
   );
 
+  test.each([60, 120])(
+    'makes a precision cue fully visible on contact and absent at its exclusive end at %i fps',
+    (fps) => {
+      const cue = {
+        startSample: 1_491_462,
+        endSample: 1_494_108,
+        targets: ['C1-04-S01'],
+      } as const;
+      const startFrame = frameForSample(cue.startSample, fps);
+      const endFrame = frameForSample(cue.endSample, fps);
+
+      expect(
+        getSegmentFocusState(
+          [cue],
+          'C1-04-S01',
+          startFrame - 1,
+          fps,
+          'precision',
+        ),
+      ).toEqual({contact: 0, emphasis: 0});
+      expect(
+        getSegmentFocusState(
+          [cue],
+          'C1-04-S01',
+          startFrame,
+          fps,
+          'precision',
+        ),
+      ).toEqual({contact: 1, emphasis: 1});
+      expect(
+        getSegmentFocusState(
+          [cue],
+          'C1-04-S01',
+          endFrame - 1,
+          fps,
+          'precision',
+        ),
+      ).toEqual({contact: 1, emphasis: 1});
+      expect(
+        getSegmentFocusState(
+          [cue],
+          'C1-04-S01',
+          endFrame,
+          fps,
+          'precision',
+        ),
+      ).toEqual({contact: 0, emphasis: 0});
+    },
+  );
+
   test('releases the old target completely across a gap before a new target contacts', () => {
     const cues = [
       {startSample: 7_350, endSample: 9_555, targets: ['left']},
@@ -404,6 +454,14 @@ describe('production lyric view model', () => {
     }
   });
 
+  test('assigns immediate precision focus only to the first vocal act', () => {
+    for (const line of lyrics) {
+      expect(line.focusProfile, line.id).toBe(
+        line.id.startsWith('C1-') ? 'precision' : 'cinematic',
+      );
+    }
+  });
+
   test('keeps both chorus performances on independent reviewed samples', () => {
     for (let index = 1; index <= 8; index++) {
       const suffix = String(index).padStart(2, '0');
@@ -449,6 +507,49 @@ describe('production lyric view model', () => {
 });
 
 describe('LyricDisplay rendering', () => {
+  test('renders C1 precision contact with immediate high contrast and a tight underline', () => {
+    const c1 = findLine('C1-04');
+    const c1Cue = c1.cues[0];
+    if (!c1Cue) throw new Error('Missing C1-04 precision cue');
+    const c1Markup = renderToStaticMarkup(
+      createElement(LyricDisplay, {
+        frame: frameForSample(c1Cue.startSample, 60),
+        fps: 60,
+      }),
+    );
+    const activeStyle = dataStyle(
+      c1Markup,
+      'data-lyric-glyph-id',
+      'C1-04-S01',
+    );
+    const inactiveStyle = dataStyle(
+      c1Markup,
+      'data-lyric-glyph-id',
+      'C1-04-S02',
+    );
+
+    expect(c1Markup).toContain('data-focus-profile="precision"');
+    expect(activeStyle).toContain('color:rgba(255,255,255,1)');
+    expect(activeStyle).toContain('font-weight:690');
+    expect(activeStyle).toContain('text-shadow:0 0 14px');
+    expect(activeStyle).toContain('background-size:100% 4px');
+    expect(inactiveStyle).toContain('color:rgba(255,255,255,0.48)');
+
+    const c2 = findLine('C2-04');
+    const c2Cue = c2.cues[0];
+    if (!c2Cue) throw new Error('Missing C2-04 cinematic cue');
+    const c2Markup = renderToStaticMarkup(
+      createElement(LyricDisplay, {
+        frame: frameForSample(c2Cue.startSample, 60),
+        fps: 60,
+      }),
+    );
+    expect(c2Markup).toContain('data-focus-profile="cinematic"');
+    expect(
+      dataStyle(c2Markup, 'data-lyric-glyph-id', 'C2-04-S01'),
+    ).toContain('background-size:100% 3px');
+  });
+
   test('keeps stable segment layers while contact and residual emphasis drive visible glyph styles', () => {
     const contactMarkup = renderToStaticMarkup(
       createElement(LyricDisplay, {frame: 4355, fps: 60}),
