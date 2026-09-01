@@ -70,6 +70,15 @@ describe('calm spectrum rail rendering', () => {
     expect(openingTagFor(markup, 'data-spectrum-tick', '20')).toContain(
       'fill="#c9fff7"',
     );
+    const allBarTags = [
+      ...markup.matchAll(
+        /<rect data-spectrum-(?:measured|impact)-band="\d+"[^>]*>/g,
+      ),
+    ].map(([tag]) => tag);
+    expect(allBarTags).toHaveLength(128);
+    for (const tag of allBarTags) {
+      expect(tag).toMatch(/fill="(?:#ff5b70|#16e6d1)"/);
+    }
     for (const band of [0, 17]) {
       expect(
         openingTagFor(markup, 'data-spectrum-measured-band', String(band)),

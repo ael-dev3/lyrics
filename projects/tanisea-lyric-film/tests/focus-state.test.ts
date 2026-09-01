@@ -39,6 +39,20 @@ const dataStyle = (
   return style;
 };
 
+const dataOpeningTag = (
+  markup: string,
+  attribute: string,
+  identifier: string,
+): string => {
+  const attributeIndex = markup.indexOf(`${attribute}="${identifier}"`);
+  if (attributeIndex < 0) {
+    throw new Error(`Rendered lyric is missing ${attribute}=${identifier}`);
+  }
+  const tagStart = markup.lastIndexOf('<', attributeIndex);
+  const tagEnd = markup.indexOf('>', attributeIndex);
+  return markup.slice(tagStart, tagEnd + 1);
+};
+
 describe('sample-indexed segment focus', () => {
   test.each([60, 120])(
     'contacts on the nearest start frame and eases emphasis over three frames at %i fps',
@@ -525,7 +539,47 @@ describe('LyricDisplay rendering', () => {
           markup,
           `${outgoing.id} before ${incoming.id} contact`,
         ).toContain(`data-lyric-line-id="${outgoing.id}"`);
+        const outgoingTag = dataOpeningTag(
+          markup,
+          'data-lyric-line-id',
+          outgoing.id,
+        );
+        const opacity = Number(/(?:^|;)opacity:([^;"]+)/.exec(outgoingTag)?.[1]);
+        expect(
+          opacity,
+          `${outgoing.id} visible before ${incoming.id} contact`,
+        ).toBeGreaterThan(0);
       }
+    },
+  );
+
+  test.each([60, 120])(
+    'contacts C1-07 / Through on the reviewed 44.773-second onset at %i fps',
+    (fps) => {
+      const line = findLine('C1-07');
+      const cue = line.presentationCues[0];
+      if (!cue) throw new Error('Missing C1-07 presentation onset');
+      expect(cue.startSample).toBe(1_974_489);
+      const contactFrame = frameForSample(1_974_489, fps);
+
+      expect(
+        getSegmentFocusState(
+          line.presentationCues,
+          'C1-07-S01',
+          contactFrame - 1,
+          fps,
+          line.focusProfile,
+        ),
+      ).toEqual({contact: 0, emphasis: 0});
+      expect(
+        getSegmentFocusState(
+          line.presentationCues,
+          'C1-07-S01',
+          contactFrame,
+          fps,
+          line.focusProfile,
+        ),
+      ).toEqual({contact: 1, emphasis: 1});
     },
   );
 

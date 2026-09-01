@@ -181,15 +181,63 @@ const independentlyNearestFrame = (sample: number): number =>
 type ReviewedLine = (typeof taniseaAlignment.lines)[number];
 type ReviewedCue = ReviewedLine['cues'][number];
 
-const presentationProofLines = lyrics.map((presentationLine) => {
-  const line = taniseaAlignment.lines.find(({id}) => id === presentationLine.id);
-  if (!line) throw new Error(`Missing reviewed line ${presentationLine.id}`);
-  return {line, cues: presentationLine.presentationCues};
-});
+type ExpectedPresentationCue = Readonly<{
+  id: string;
+  sourceCueId: string;
+  startSample: number;
+  endSample: number;
+  targets: readonly string[];
+  reviewedTargets: readonly string[];
+  reviewedActivation: ReviewedCue['activation'];
+}>;
+
+const transformedPresentationCues = new Map<
+  string,
+  readonly ExpectedPresentationCue[]
+>([
+  ['C1-01', [
+    {id: 'C1-01-C01-P', sourceCueId: 'C1-01-C01', startSample: 1_066_955, endSample: 1_100_471, targets: ['C1-01-S01'], reviewedTargets: ['C1-01-S01'], reviewedActivation: 'forward'},
+    {id: 'C1-01-C02-P', sourceCueId: 'C1-01-C02', startSample: 1_100_471, endSample: 1_219_674, targets: ['C1-01-S02'], reviewedTargets: ['C1-01-S02'], reviewedActivation: 'forward'},
+  ]],
+  ['C1-06', [
+    {id: 'C1-06-C01-P', sourceCueId: 'C1-06-C01', startSample: 1_796_987, endSample: 1_818_199, targets: ['C1-06-S01'], reviewedTargets: ['C1-06-S01'], reviewedActivation: 'forward'},
+    {id: 'C1-06-C02-P', sourceCueId: 'C1-06-C02', startSample: 1_818_199, endSample: 1_936_519, targets: ['C1-06-S02'], reviewedTargets: ['C1-06-S03'], reviewedActivation: 'forward'},
+    {id: 'C1-06-C03-P', sourceCueId: 'C1-06-C03', startSample: 1_936_519, endSample: 1_974_489, targets: ['C1-06-S03'], reviewedTargets: ['C1-06-S02'], reviewedActivation: 'backward'},
+  ]],
+  ['C1-07', [
+    {id: 'C1-07-C01-P', sourceCueId: 'C1-07-C01', startSample: 1_974_489, endSample: 2_013_341, targets: ['C1-07-S01'], reviewedTargets: ['C1-07-S01'], reviewedActivation: 'forward'},
+    {id: 'C1-07-C02-P', sourceCueId: 'C1-07-C02', startSample: 2_013_341, endSample: 2_046_902, targets: ['C1-07-S02'], reviewedTargets: ['C1-07-S03'], reviewedActivation: 'forward'},
+    {id: 'C1-07-C03-P', sourceCueId: 'C1-07-C03', startSample: 2_046_902, endSample: 2_064_542, targets: ['C1-07-S03'], reviewedTargets: ['C1-07-S02'], reviewedActivation: 'backward'},
+  ]],
+  ['C1-08', [
+    {id: 'C1-08-C01-P', sourceCueId: 'C1-08-C01', startSample: 2_064_542, endSample: 2_080_462, targets: ['C1-08-S01'], reviewedTargets: ['C1-08-S01'], reviewedActivation: 'forward'},
+    {id: 'C1-08-C02-P', sourceCueId: 'C1-08-C02', startSample: 2_080_462, endSample: 2_098_102, targets: ['C1-08-S02'], reviewedTargets: ['C1-08-S02'], reviewedActivation: 'forward'},
+    {id: 'C1-08-C03-P', sourceCueId: 'C1-08-C03', startSample: 2_098_102, endSample: 2_204_118, targets: ['C1-08-S03'], reviewedTargets: ['C1-08-S03'], reviewedActivation: 'forward'},
+  ]],
+]);
+
+const expectedPresentationCuesForLine = (
+  line: ReviewedLine,
+): readonly ExpectedPresentationCue[] =>
+  transformedPresentationCues.get(line.id) ?? line.cues.map((cue) => ({
+    id: `${cue.id}-P`,
+    sourceCueId: cue.id,
+    startSample: cue.startSample,
+    endSample: cue.endSample,
+    targets: [...cue.targets],
+    reviewedTargets: [...cue.targets],
+    reviewedActivation: cue.activation,
+  }));
+
+const presentationProofLines = taniseaAlignment.lines.map((line) => ({
+  line,
+  cues: expectedPresentationCuesForLine(line),
+}));
 
 type IndependentCueCandidate = Readonly<{
   line: ReviewedLine;
-  cue: ReviewedCue;
+  cue: ExpectedPresentationCue;
+  reviewedCue: ReviewedCue;
   startFrame: number;
   endFrame: number;
 }>;
@@ -210,12 +258,17 @@ const independentlyActiveCandidates = (
   presentationProofLines
     .filter(({line}) => lineId === null || line.id === lineId)
     .flatMap(({line, cues}) =>
-      cues.map((cue) => ({
-        line,
-        cue,
-        startFrame: independentlyNearestFrame(cue.startSample),
-        endFrame: independentlyNearestFrame(cue.endSample),
-      })),
+      cues.map((cue) => {
+        const reviewedCue = line.cues.find(({id}) => id === cue.sourceCueId);
+        if (!reviewedCue) throw new Error(`Missing reviewed cue ${cue.sourceCueId}`);
+        return {
+          line,
+          cue,
+          reviewedCue,
+          startFrame: independentlyNearestFrame(cue.startSample),
+          endFrame: independentlyNearestFrame(cue.endSample),
+        };
+      }),
     )
     .filter(({startFrame, endFrame}) =>
       frame >= startFrame && frame < endFrame
@@ -223,9 +276,9 @@ const independentlyActiveCandidates = (
     .sort(independentCandidateOrder);
 
 const activeStateAtCueStart = (lineId: string, cueIndex: number) => {
-  const line = lyrics.find(({id}) => id === lineId);
-  if (!line) throw new Error(`Missing presentation line ${lineId}`);
-  const cue = line.presentationCues[cueIndex];
+  const line = presentationProofLines.find(({line}) => line.id === lineId);
+  if (!line) throw new Error(`Missing expected presentation line ${lineId}`);
+  const cue = line.cues[cueIndex];
   if (!cue) throw new Error(`Missing presentation cue ${lineId}[${cueIndex}]`);
 
   const state = proofFrameState(
@@ -282,10 +335,13 @@ describe('pure synchronization-proof state', () => {
     for (const forbidden of [
       'lineId',
       'cueId',
+      'presentationCueId',
       'sourceTokenIds',
       'sourceTokens',
       'targetIds',
       'targets',
+      'presentationTargetIds',
+      'presentationTargets',
     ]) {
       expect(forbidden in state).toBe(false);
     }
@@ -299,6 +355,7 @@ describe('pure synchronization-proof state', () => {
       lineId: 'V1-08',
       cueId: 'V1-08-C02',
       activation: 'backward',
+      presentationCueId: 'V1-08-C02-P',
       sourceTokenIds: ['V1-08-R03', 'V1-08-R04'],
       sourceTokens: [
         {id: 'V1-08-R03', text: 'за'},
@@ -308,6 +365,12 @@ describe('pure synchronization-proof state', () => {
       targetIds: ['V1-08-S01'],
       targets: [{id: 'V1-08-S01', text: 'Behind my back,'}],
       targetText: 'Behind my back,',
+      presentationTargetIds: ['V1-08-S01'],
+      presentationTargets: [{id: 'V1-08-S01', text: 'Behind my back,'}],
+      presentationTargetText: 'Behind my back,',
+      presentationStartSample: 3_819_545,
+      presentationEndSample: 3_868_099,
+      presentationHeldBeyondReviewedCue: false,
       selectedSample: 3_819_545,
       confidence: 'high',
       uncertaintySamples: 441,
@@ -315,6 +378,7 @@ describe('pure synchronization-proof state', () => {
       proofFrame: 10_393,
       nearestFrame: 10_393,
       matchingCueIds: ['V1-08/V1-08-C02'],
+      matchingPresentationCueIds: ['V1-08/V1-08-C02-P'],
     });
     expect(state.selectedMilliseconds).toBeCloseTo(
       (3_819_545 / INDEPENDENT_SAMPLE_RATE) * 1_000,
@@ -339,10 +403,67 @@ describe('pure synchronization-proof state', () => {
 
       expect(state.status).toBe('active');
       if (state.status === 'active') {
-        expect(state.targetIds).toEqual([expectedTargetId]);
+        expect(state.presentationTargetIds).toEqual([expectedTargetId]);
       }
     },
   );
+
+  test('keeps transformed presentation scheduling distinct from reviewed semantic evidence', () => {
+    for (const [lineId, expectedCues] of transformedPresentationCues) {
+      const productionLine = lyrics.find(({id}) => id === lineId);
+      const reviewedLine = taniseaAlignment.lines.find(({id}) => id === lineId);
+      if (!productionLine || !reviewedLine) {
+        throw new Error(`Missing transformed line ${lineId}`);
+      }
+
+      expect(productionLine.presentationCues).toEqual(
+        expectedCues.map(({reviewedTargets: _targets, reviewedActivation: _activation, ...cue}) => cue),
+      );
+
+      for (const expected of expectedCues) {
+        const reviewedCue = reviewedLine.cues.find(
+          ({id}) => id === expected.sourceCueId,
+        );
+        if (!reviewedCue) throw new Error(`Missing ${expected.sourceCueId}`);
+        expect(reviewedCue.targets).toEqual(expected.reviewedTargets);
+        expect(reviewedCue.activation).toBe(expected.reviewedActivation);
+
+        const state = proofFrameState(
+          lineId,
+          INDEPENDENT_PROOF_FPS,
+          independentlyNearestFrame(expected.startSample),
+        );
+        expect(state.status, expected.id).toBe('active');
+        if (state.status === 'active') {
+          expect(state.cueId).toBe(expected.sourceCueId);
+          expect(state.activation).toBe(expected.reviewedActivation);
+          expect(state.targetIds).toEqual(expected.reviewedTargets);
+          expect(state.presentationCueId).toBe(expected.id);
+          expect(state.presentationTargetIds).toEqual(expected.targets);
+          expect(state.presentationStartSample).toBe(expected.startSample);
+          expect(state.presentationEndSample).toBe(expected.endSample);
+        }
+      }
+    }
+  });
+
+  test('keeps unaffected presentation schedules identical to reviewed intervals and targets', () => {
+    for (const reviewedLine of taniseaAlignment.lines) {
+      if (transformedPresentationCues.has(reviewedLine.id)) continue;
+      const productionLine = lyrics.find(({id}) => id === reviewedLine.id);
+      if (!productionLine) throw new Error(`Missing ${reviewedLine.id}`);
+
+      expect(productionLine.presentationCues).toEqual(
+        reviewedLine.cues.map((cue) => ({
+          id: `${cue.id}-P`,
+          sourceCueId: cue.id,
+          startSample: cue.startSample,
+          endSample: cue.endSample,
+          targets: [...cue.targets],
+        })),
+      );
+    }
+  });
 
   test('independently proves every reviewed cue and 120 fps frame error', () => {
     for (const line of taniseaAlignment.lines) {
@@ -362,6 +483,7 @@ describe('pure synchronization-proof state', () => {
         if (state.status === 'active') {
           expect(state.lineId, cue.id).toBe(line.id);
           expect(state.cueId, cue.id).toBe(cue.id);
+          expect(state.presentationCueId, cue.id).toBe(`${cue.id}-P`);
           expect(state.selectedSample, cue.id).toBe(cue.startSample);
           expect(state.nearestFrame, cue.id).toBe(nearestFrame);
           expect(state.frameErrorMilliseconds, cue.id).toBeCloseTo(
@@ -400,11 +522,15 @@ describe('pure synchronization-proof state', () => {
             boundary.frame,
           );
           const expectedMatchingCueIds = expectedCandidates.map(
+            ({line: candidateLine, reviewedCue}) =>
+              `${candidateLine.id}/${reviewedCue.id}`,
+          );
+          const expectedMatchingPresentationCueIds = expectedCandidates.map(
             ({line: candidateLine, cue: candidateCue}) =>
               `${candidateLine.id}/${candidateCue.id}`,
           );
           expect(
-            expectedMatchingCueIds.includes(`${line.id}/${cue.id}`),
+            expectedMatchingPresentationCueIds.includes(`${line.id}/${cue.id}`),
             `${cue.id} at ${boundary.label}`,
           ).toBe(boundary.includesCue);
 
@@ -425,11 +551,21 @@ describe('pure synchronization-proof state', () => {
               selected.line.id,
             );
             expect(state.cueId, `${cue.id} at ${boundary.label}`).toBe(
+              selected.reviewedCue.id,
+            );
+            expect(
+              state.presentationCueId,
+              `${cue.id} at ${boundary.label}`,
+            ).toBe(
               selected.cue.id,
             );
             expect(state.matchingCueIds, `${cue.id} at ${boundary.label}`).toEqual(
               expectedMatchingCueIds,
             );
+            expect(
+              state.matchingPresentationCueIds,
+              `${cue.id} at ${boundary.label}`,
+            ).toEqual(expectedMatchingPresentationCueIds);
           }
         }
       }
@@ -590,6 +726,9 @@ describe('diagnostic-only proof composition', () => {
     expect(activeMarkup).toContain('data-sync-proof-status="active"');
     expect(activeMarkup).toContain('data-sync-proof-line-id="V1-08"');
     expect(activeMarkup).toContain('V1-08-C02');
+    expect(activeMarkup).toContain('V1-08-C02-P');
+    expect(activeMarkup).toContain('REVIEWED ENGLISH');
+    expect(activeMarkup).toContain('PUBLIC ENGLISH');
     expect(activeMarkup).toContain('V1-08-R03 + V1-08-R04');
     expect(activeMarkup).toContain('за спиною');
     expect(activeMarkup).toContain('V1-08-S01');
@@ -605,7 +744,7 @@ describe('diagnostic-only proof composition', () => {
       }),
     );
     expect(idleMarkup).toContain('data-sync-proof-status="idle"');
-    expect(idleMarkup).toContain('IDLE — NO REVIEWED CUE ACTIVE');
+    expect(idleMarkup).toContain('IDLE — NO PRESENTATION CUE ACTIVE');
     expect(idleMarkup).not.toContain('V1-08-C02');
   });
 

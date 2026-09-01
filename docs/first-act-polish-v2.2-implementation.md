@@ -27,6 +27,6 @@ The measured 96 px core travel, 18 px maximum cap, 64 measured bars, 64 caps, 36
 
 ## Verification
 
-Regression coverage locks the four requested phrase states, every C1 handoff at both cadences, preservation of reviewed cue samples, selected second-act focus states, proof/public agreement, and the two-tone bar palette. The complete source check passes 1,188 tests across 20 files, strict typechecking, browser layout measurement, and composition discovery for 9,180 public frames and 18,360 proof frames.
+Regression coverage locks the four requested phrase states, every C1 handoff at both cadences, preservation of reviewed cue samples, selected second-act focus states, proof/public agreement, and every one of the 128 measured/cap bar fills. The complete source check passes 1,192 tests across 20 files, strict typechecking, browser layout measurement, and composition discovery for 9,180 public frames and 18,360 proof frames.
 
 Rendered review includes a soundtrack-bearing 23–51 second first-act clip, encoded boundary samples for all four phrases, the two-tone spectrum peak, and second-act control frames. Final full-media hashes, repeated QA records, and publication evidence are maintained in [`audits/tanisea-final-qa-vnext.md`](../audits/tanisea-final-qa-vnext.md); supplemental generated artifacts are inventoried in [`docs/workflow-evidence.md`](workflow-evidence.md).

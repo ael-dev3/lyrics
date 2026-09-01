@@ -9,6 +9,14 @@ import type {
 export type LyricSection = 'build' | 'chorus' | 'verse';
 export type LyricSegment = ReviewedLyricSegment;
 
+export type PresentationCue = Readonly<{
+  id: string;
+  sourceCueId: string;
+  startSample: number;
+  endSample: number;
+  targets: readonly string[];
+}>;
+
 export type LyricLine = Readonly<{
   id: string;
   section: LyricSection;
@@ -21,7 +29,7 @@ export type LyricLine = Readonly<{
   visualOutEndSample: number;
   segments: readonly LyricSegment[];
   cues: readonly SemanticCue[];
-  presentationCues: readonly SemanticCue[];
+  presentationCues: readonly PresentationCue[];
   text: string;
   /** Sample-derived seconds retained for alignment preparation tooling. */
   vocalStart: number;
@@ -47,31 +55,32 @@ const presentationCuesForLine = (
   lineId: string,
   cues: readonly SemanticCue[],
   releaseSample: number,
-): readonly SemanticCue[] => {
+): readonly PresentationCue[] => {
   const targets = continuousEnglishTargets.get(lineId);
-  if (!targets) return cues;
-  if (targets.length !== cues.length) {
+  if (targets && targets.length !== cues.length) {
     throw new Error(
       `${lineId} continuous presentation requires one target per reviewed cue`,
     );
   }
 
   return cues.map((cue, index) => {
-    const target = targets[index];
-    if (!target) throw new Error(`${lineId} presentation target ${index} is missing`);
+    const target = targets?.[index];
+    if (targets && !target) {
+      throw new Error(`${lineId} presentation target ${index} is missing`);
+    }
     const nextCue = cues[index + 1];
-    const endSample = nextCue?.startSample ?? releaseSample;
+    const endSample = targets
+      ? (nextCue?.startSample ?? releaseSample)
+      : cue.endSample;
     if (endSample <= cue.startSample) {
       throw new Error(`${lineId} presentation cue ${cue.id} has no duration`);
     }
     return {
-      ...cue,
+      id: `${cue.id}-P`,
+      sourceCueId: cue.id,
+      startSample: cue.startSample,
       endSample,
-      targets: [target],
-      activation: 'forward',
-      mappingNote:
-        `Continuous English-order presentation for ${lineId}; ` +
-        `reviewed source semantics remain in alignment/tanisea-word-alignment-v3.json.`,
+      targets: target ? [target] : [...cue.targets],
     };
   });
 };

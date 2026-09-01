@@ -1,6 +1,6 @@
 import {AbsoluteFill, useCurrentFrame, useVideoConfig} from 'remotion';
 import {LyricFilm} from './LyricFilm';
-import {lyrics} from './timed-lyrics';
+import {lyrics, type PresentationCue} from './timed-lyrics';
 import {
   frameErrorMs,
   frameForSample,
@@ -31,12 +31,21 @@ export type ActiveProofFrameState = Readonly<{
   lineId: string;
   cueId: string;
   activation: SemanticCue['activation'];
+  presentationCueId: string;
   sourceTokenIds: readonly string[];
   sourceTokens: readonly ProofTextItem[];
   sourceText: string;
   targetIds: readonly string[];
   targets: readonly ProofTextItem[];
   targetText: string;
+  presentationTargetIds: readonly string[];
+  presentationTargets: readonly ProofTextItem[];
+  presentationTargetText: string;
+  presentationStartSample: number;
+  presentationEndSample: number;
+  presentationStartMilliseconds: number;
+  presentationEndMilliseconds: number;
+  presentationHeldBeyondReviewedCue: boolean;
   selectedSample: number;
   selectedMilliseconds: number;
   confidence: Confidence;
@@ -50,13 +59,15 @@ export type ActiveProofFrameState = Readonly<{
   frameErrorMilliseconds: number;
   absoluteFrameErrorMilliseconds: number;
   matchingCueIds: readonly string[];
+  matchingPresentationCueIds: readonly string[];
 }>;
 
 export type ProofFrameState = IdleProofFrameState | ActiveProofFrameState;
 
 type ActiveCandidate = Readonly<{
   line: AlignedLyricLine;
-  cue: SemanticCue;
+  cue: PresentationCue;
+  reviewedCue: SemanticCue;
   startFrame: number;
   endFrame: number;
 }>;
@@ -109,12 +120,24 @@ export const proofFrameState = (
       if (!line) {
         throw new Error(`Reviewed line ${presentationLine.id} is missing`);
       }
-      return presentationLine.presentationCues.map((cue) => ({
-        line,
-        cue,
-        startFrame: frameForSample(cue.startSample, fps),
-        endFrame: frameForSample(cue.endSample, fps),
-      }));
+      return presentationLine.presentationCues.map((cue) => {
+        const reviewedCue = line.cues.find(({id}) => id === cue.sourceCueId);
+        if (!reviewedCue) {
+          throw new Error(`Reviewed cue ${cue.sourceCueId} is missing`);
+        }
+        if (reviewedCue.startSample !== cue.startSample) {
+          throw new Error(
+            `Presentation cue ${cue.id} must retain reviewed onset ${reviewedCue.startSample}`,
+          );
+        }
+        return {
+          line,
+          cue,
+          reviewedCue,
+          startFrame: frameForSample(cue.startSample, fps),
+          endFrame: frameForSample(cue.endSample, fps),
+        };
+      });
     })
     .filter(({startFrame, endFrame}) => frame >= startFrame && frame < endFrame)
     .sort(candidateOrder);
@@ -134,28 +157,55 @@ export const proofFrameState = (
 
   // Most recently started contact wins; ties use shortest end, line ID, then
   // cue ID. All simultaneous matches remain visible through matchingCueIds.
-  const {line, cue} = selected;
-  const sourceTokens = textItems(cue.sourceTokenIds, line.tokens, 'source token');
-  const targets = textItems(cue.targets, line.segments, 'target segment');
-  const nearestFrame = frameForSample(cue.startSample, fps);
-  const signedFrameError = frameErrorMs(cue.startSample, nearestFrame, fps);
+  const {line, cue, reviewedCue} = selected;
+  const sourceTokens = textItems(
+    reviewedCue.sourceTokenIds,
+    line.tokens,
+    'source token',
+  );
+  const targets = textItems(
+    reviewedCue.targets,
+    line.segments,
+    'reviewed target segment',
+  );
+  const presentationTargets = textItems(
+    cue.targets,
+    line.segments,
+    'presentation target segment',
+  );
+  const nearestFrame = frameForSample(reviewedCue.startSample, fps);
+  const signedFrameError = frameErrorMs(
+    reviewedCue.startSample,
+    nearestFrame,
+    fps,
+  );
 
   return {
     status: 'active',
     lineId: line.id,
-    cueId: cue.id,
-    activation: cue.activation,
-    sourceTokenIds: [...cue.sourceTokenIds],
+    cueId: reviewedCue.id,
+    activation: reviewedCue.activation,
+    presentationCueId: cue.id,
+    sourceTokenIds: [...reviewedCue.sourceTokenIds],
     sourceTokens,
     sourceText: sourceTokens.map(({text}) => text).join(' '),
-    targetIds: [...cue.targets],
+    targetIds: [...reviewedCue.targets],
     targets,
     targetText: targets.map(({text}) => text).join(' '),
-    selectedSample: cue.startSample,
-    selectedMilliseconds: (cue.startSample / SAMPLE_RATE) * 1_000,
-    confidence: cue.confidence,
-    uncertaintySamples: cue.uncertaintySamples,
-    uncertaintyMilliseconds: (cue.uncertaintySamples / SAMPLE_RATE) * 1_000,
+    presentationTargetIds: [...cue.targets],
+    presentationTargets,
+    presentationTargetText: presentationTargets.map(({text}) => text).join(' '),
+    presentationStartSample: cue.startSample,
+    presentationEndSample: cue.endSample,
+    presentationStartMilliseconds: (cue.startSample / SAMPLE_RATE) * 1_000,
+    presentationEndMilliseconds: (cue.endSample / SAMPLE_RATE) * 1_000,
+    presentationHeldBeyondReviewedCue: cue.endSample > reviewedCue.endSample,
+    selectedSample: reviewedCue.startSample,
+    selectedMilliseconds: (reviewedCue.startSample / SAMPLE_RATE) * 1_000,
+    confidence: reviewedCue.confidence,
+    uncertaintySamples: reviewedCue.uncertaintySamples,
+    uncertaintyMilliseconds:
+      (reviewedCue.uncertaintySamples / SAMPLE_RATE) * 1_000,
     compositionFps: fps,
     proofFrame: frame,
     proofTimeSeconds,
@@ -164,6 +214,10 @@ export const proofFrameState = (
     frameErrorMilliseconds: signedFrameError,
     absoluteFrameErrorMilliseconds: Math.abs(signedFrameError),
     matchingCueIds: activeCandidates.map(
+      ({line: candidateLine, reviewedCue: candidateCue}) =>
+        `${candidateLine.id}/${candidateCue.id}`,
+    ),
+    matchingPresentationCueIds: activeCandidates.map(
       ({line: candidateLine, cue: candidateCue}) =>
         `${candidateLine.id}/${candidateCue.id}`,
     ),
@@ -224,12 +278,12 @@ export const ProofDiagnosticOverlay = ({
     </div>
     {state.status === 'idle' ? (
       <div style={{...valueStyle, paddingTop: 44, textAlign: 'center'}}>
-        IDLE — NO REVIEWED CUE ACTIVE
+        IDLE — NO PRESENTATION CUE ACTIVE
       </div>
     ) : (
       <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '6px 24px'}}>
         <div>
-          LINE / CUE / TYPE ·{' '}
+          REVIEWED LINE / CUE / TYPE ·{' '}
           <span style={valueStyle}>
             {state.lineId} · {state.cueId} · {state.activation.toUpperCase()}
           </span>
@@ -261,7 +315,8 @@ export const ProofDiagnosticOverlay = ({
           </span>
         </div>
         <div>
-          ENGLISH IDS · <span style={valueStyle}>{state.targetIds.join(' + ')}</span>
+          REVIEWED ENGLISH IDS ·{' '}
+          <span style={valueStyle}>{state.targetIds.join(' + ')}</span>
         </div>
         <div>
           SIGNED / ABS ERROR ·{' '}
@@ -272,7 +327,22 @@ export const ProofDiagnosticOverlay = ({
           </span>
         </div>
         <div style={{gridColumn: '1 / -1'}}>
-          ENGLISH · <span style={valueStyle}>{state.targetText}</span>
+          REVIEWED ENGLISH · <span style={valueStyle}>{state.targetText}</span>
+        </div>
+        <div style={{gridColumn: '1 / -1'}}>
+          PRESENTATION CUE / INTERVAL ·{' '}
+          <span style={valueStyle}>
+            {state.presentationCueId} · {state.presentationStartSample}..
+            {state.presentationEndSample} ·{' '}
+            {state.presentationHeldBeyondReviewedCue ? 'EXTENDED HOLD' : 'REVIEWED END'}
+          </span>
+        </div>
+        <div style={{gridColumn: '1 / -1'}}>
+          PUBLIC ENGLISH IDS / TEXT ·{' '}
+          <span style={valueStyle}>
+            {state.presentationTargetIds.join(' + ')} ·{' '}
+            {state.presentationTargetText}
+          </span>
         </div>
       </div>
     )}
