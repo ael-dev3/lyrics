@@ -157,9 +157,19 @@ Do not use a review MP4 as an intermediate for final encoding.
 
 Run the canonical matrix in two empty immutable run directories:
 
+POSIX shells:
+
 ```sh
-npm run qa:run -- --run-id=run-1
-npm run qa:run -- --run-id=run-2
+TANISEA_QA_RUN=run-1 npm run qa:run
+TANISEA_QA_RUN=run-2 npm run qa:run
+```
+
+PowerShell:
+
+```powershell
+$env:TANISEA_QA_RUN = 'run-1'; npm run qa:run
+$env:TANISEA_QA_RUN = 'run-2'; npm run qa:run
+Remove-Item Env:TANISEA_QA_RUN
 ```
 
 Both runs must verify:
@@ -208,4 +218,3 @@ Only then update the public workflow index.
 ## Definition of done
 
 The next song is release-ready when all sample authority is reviewed, the style-lock prototype covers the highest-risk behavior, focused and full tests pass, paired visual evidence has no unresolved discrepancy, final media strictly decodes, two complete QA runs match, and every remote release byte matches its checksum.
-
