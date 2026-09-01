@@ -115,9 +115,9 @@ const requirementEvidence = (
     return {
       id: 'criterion-11-evidence-01',
       kind: 'release-url',
-      artifact: 'https://github.com/ael-dev3/lyrics/releases/tag/v2.0.0',
+      artifact: 'https://github.com/ael-dev3/lyrics/releases/tag/v2.1.0',
       sha256: '',
-      value: 'v2.0.0 release publication verified',
+      value: 'v2.1.0 release publication verified',
     };
   }
 
@@ -1239,6 +1239,18 @@ describe('neutral publication acceptance scan', () => {
       'docs/precision-sync-vnext-implementation.md',
       resolve(repositoryRoot, 'docs', 'precision-sync-vnext-implementation.md'),
     ],
+    [
+      'docs/first-act-precision-v2.1-design.md',
+      resolve(repositoryRoot, 'docs', 'first-act-precision-v2.1-design.md'),
+    ],
+    [
+      'docs/first-act-precision-v2.1-implementation.md',
+      resolve(
+        repositoryRoot,
+        'docs',
+        'first-act-precision-v2.1-implementation.md',
+      ),
+    ],
   ] as const;
 
   test.each(documents)('accepts neutral public document %s', (label, path) => {
@@ -1498,8 +1510,8 @@ describe('requirement-matrix release gate', () => {
     const matrix = requirementMatrix('prepublication');
     Object.assign(criterion(matrix, 11).evidence[0]!, {
       kind: 'release-url',
-      artifact: 'https://github.com/ael-dev3/lyrics/releases/tag/v2.0.0',
-      value: 'v2.0.0 release publication verified',
+      artifact: 'https://github.com/ael-dev3/lyrics/releases/tag/v2.1.0',
+      value: 'v2.1.0 release publication verified',
     });
 
     expect(() => verifyRequirementMatrix(matrix, 'prepublication')).toThrow(
@@ -1510,7 +1522,7 @@ describe('requirement-matrix release gate', () => {
   test('accepts a published release URL for criterion 11 in final mode', () => {
     const matrix = requirementMatrix('final');
     criterion(matrix, 11).evidence[0]!.artifact =
-      'https://github.com/ael-dev3/lyrics/releases/tag/v2.0.0';
+      'https://github.com/ael-dev3/lyrics/releases/tag/v2.1.0';
 
     expect(() => verifyRequirementMatrix(matrix, 'final')).not.toThrow();
   });
@@ -2105,7 +2117,7 @@ const PUBLISHED_ASSET_NAMES = [
 ] as const;
 
 const validPublicationEvidence = () => {
-  const tag = 'v2.0.0';
+  const tag = 'v2.1.0';
   const downloadRoot =
     `https://github.com/ael-dev3/lyrics/releases/download/${tag}`;
   return {
@@ -2197,7 +2209,7 @@ describe('QA run and report release gates', () => {
       publication.tag = 'latest';
     }, /tag/i],
     ['release URL', (publication: ReturnType<typeof validPublicationEvidence>) => {
-      publication.releaseUrl = 'https://github.com/example/lyrics/releases/tag/v2.0.0';
+      publication.releaseUrl = 'https://github.com/example/lyrics/releases/tag/v2.1.0';
     }, /releaseUrl/i],
     ['checksums URL', (publication: ReturnType<typeof validPublicationEvidence>) => {
       publication.checksumsUrl = 'https://example.com/CHECKSUMS.sha256';
@@ -4845,8 +4857,8 @@ describe('Task 7 pure-gate review Fix Round A', () => {
       const matrix = requirementMatrix('prepublication');
       Object.assign(criterion(matrix, 11).evidence[0]!, {
         kind: 'release-url',
-        artifact: 'https://github.com/ael-dev3/lyrics/releases/tag/v2.0.0',
-        value: 'v2.0.0 published',
+        artifact: 'https://github.com/ael-dev3/lyrics/releases/tag/v2.1.0',
+        value: 'v2.1.0 published',
       });
 
       expect(() => verifyRequirementMatrix(matrix, 'prepublication')).toThrow(
@@ -4857,7 +4869,7 @@ describe('Task 7 pure-gate review Fix Round A', () => {
     test('requires final release-url authority to use HTTPS GitHub release identity', () => {
       const matrix = requirementMatrix('final');
       criterion(matrix, 11).evidence[0]!.artifact =
-        'http://github.com/ael-dev3/lyrics/releases/tag/v2.0.0';
+        'http://github.com/ael-dev3/lyrics/releases/tag/v2.1.0';
 
       expect(() => verifyRequirementMatrix(matrix, 'final')).toThrow(
         'Criterion 11 evidence[0]: release-url artifact must be an HTTPS GitHub release URL for ael-dev3/lyrics',
@@ -5849,9 +5861,9 @@ describe('Task 7 pure-gate final independent-review fixes', () => {
       'https://github.com/ael-dev3/lyrics/releases/tag/%23fake',
       'https://github.com/ael-dev3/lyrics/releases/tag/%253Ffake',
       'https://github.com/ael-dev3/lyrics/releases/tag/%2523fake',
-      'https://github.com/ael-dev3/lyrics/releases/download/v2.0.0/..',
-      'https://github.com/ael-dev3/lyrics/releases/download/v2.0.0/%252Fasset.mp4',
-      'https://github.com@evil.example/ael-dev3/lyrics/releases/tag/v2.0.0',
+      'https://github.com/ael-dev3/lyrics/releases/download/v2.1.0/..',
+      'https://github.com/ael-dev3/lyrics/releases/download/v2.1.0/%252Fasset.mp4',
+      'https://github.com@evil.example/ael-dev3/lyrics/releases/tag/v2.1.0',
     ])('rejects non-release or dot-segment URL %s', (artifact) => {
       const matrix = requirementMatrix('final');
       criterion(matrix, 11).evidence[0] = {

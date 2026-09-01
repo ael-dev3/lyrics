@@ -50,7 +50,7 @@ The observed maximum semantic-cue boundary errors are `8.321995 ms` at 60 fps an
 
 English words remain in fixed positions. The render computes focus from active semantic cues rather than rebuilding the line as progress text. This allows forward, backward, repeated, and simultaneous activation while keeping layout stationary.
 
-On the nearest cue frame, each active target receives an immediate contact mark. Luminance, weight, and glow settle over the next two public frames, while outgoing targets release over two frames. The same cue samples drive the 120 fps proof.
+The first vocal act uses a `precision` presentation profile: its target is inactive before the nearest cue frame, fully emphasized on contact, and inactive at the exclusive cue end. C1 handoffs that would cover the next contact are shortened to that contact without changing the reviewed sample authority. V1 and C2 retain the approved `cinematic` three-frame attack and two-frame release. The same cue samples and profile rules drive the 120 fps proof.
 
 ## Audio features and spectrum
 
@@ -58,6 +58,8 @@ On the nearest cue frame, each active target receives an immediate contact mark.
 
 The public spectrum separates measurement from emphasis:
 
+- a symmetric `[1, 2, 3, 2, 1]` kernel smooths adjacent frames and bands without phase delay;
+- 7 px rounded bars, a continuous ember–teal–mint palette, and softer chrome reduce visual chatter;
 - the measured core has at least 96 px of travel at the verified peak;
 - the lighter transient cap extends the display by at most 18 px;
 - the cap does not alter the measured magnitude;
@@ -91,7 +93,9 @@ Scripts that accept artifact paths take them after `--`. Their defaults target t
 npm run render
 npm run encode
 npm run proof
-npm run verify
+npm run verify -- --kind reference
+npm run verify -- --kind public
+npm run verify -- --kind proof
 npm run qa:clips
 npm run qa:run
 ```
@@ -116,7 +120,7 @@ The release matrix verifies:
 10. repeated QA with no unexplained artifact drift;
 11. publication assets, checksums, and documentation.
 
-See the [final QA report](../../audits/tanisea-final-qa-vnext.md), [implementation report](../../docs/precision-sync-vnext-implementation.md), and [workflow evidence guide](../../docs/workflow-evidence.md). The supplemental release archive preserves the generated alignment provenance, both canonical QA runs, QA media, and final visual-review artifacts that remain excluded from source control.
+See the [final QA report](../../audits/tanisea-final-qa-vnext.md), [v2.1 implementation report](../../docs/first-act-precision-v2.1-implementation.md), [full-system implementation report](../../docs/precision-sync-vnext-implementation.md), and [workflow evidence guide](../../docs/workflow-evidence.md). The supplemental release archive preserves the generated alignment provenance, both canonical QA runs, QA media, and final visual-review artifacts that remain excluded from source control.
 
 ## Source layout
 
