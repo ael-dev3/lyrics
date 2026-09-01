@@ -17,6 +17,7 @@ The spectrum receives 64 raw per-frame band bytes and raw impact directly. It ha
 Keep the reviewed alignment authority unchanged. Add a presentation-only focus profile to each lyric line:
 
 - C1 lines use `precision`: full emphasis on the nearest cue-start frame, no emphasis before that frame, contact and emphasis both end on the exclusive cue-end frame, and no post-cue tail.
+- When an outgoing C1 line would otherwise remain visible on the next C1 contact frame, its presentation-only handoff ends exactly at that contact. The fade begins after the outgoing vocal ends and lasts at most 50 ms; later-act cinematic overlaps remain unchanged.
 - V1 and C2 lines use `cinematic`: retain the existing three-frame attack and two-frame release exactly.
 - C1 inactive text receives slightly lower luminance and its active state uses a tighter, less diffuse glow, making the active segment easier to identify without changing layout or text positions.
 
@@ -34,15 +35,17 @@ Render the smoothed values as 7 px rounded bars with more space, lower baseline/
 ## Components and data flow
 
 1. `timed-lyrics.ts` derives a `focusProfile` from the reviewed line ID.
-2. `LyricDisplay.tsx` passes that profile to `getSegmentFocusState` and selects profile-specific visual contrast.
-3. `focus-state.ts` computes either the existing cinematic envelope or the exact precision envelope from the same reviewed cue samples.
-4. `spectrum-smoothing.ts` reads neighboring deterministic feature frames and returns smoothed bands and impact.
-5. `LyricFilm.tsx` computes one smoothed spectrum state per feature frame and passes it only to `SpectrumRail`; all other visual layers retain the raw feature frame.
-6. `SpectrumRail.tsx` renders the calmer geometry without changing the safe-area footprint or measured maximum travel.
+2. `timed-lyrics.ts` also shortens only the C1 handoffs that would overlap the next reviewed vocal contact.
+3. `LyricDisplay.tsx` passes that profile to `getSegmentFocusState` and selects profile-specific visual contrast.
+4. `focus-state.ts` computes either the existing cinematic envelope or the exact precision envelope from the same reviewed cue samples.
+5. `spectrum-smoothing.ts` reads neighboring deterministic feature frames and returns smoothed bands and impact.
+6. `LyricFilm.tsx` computes one smoothed spectrum state per feature frame and passes it only to `SpectrumRail`; all other visual layers retain the raw feature frame.
+7. `SpectrumRail.tsx` renders the calmer geometry without changing the safe-area footprint or measured maximum travel.
 
 ## Verification
 
 - Tests prove every C1 cue is inactive one frame before contact, fully emphasized on contact, and inactive at its exclusive end.
+- Render tests prove no outgoing C1 line survives on the incoming contact frame at either cadence, while the approved C2 overlap remains present.
 - Existing V1/C2 cinematic focus snapshots remain byte-for-byte equivalent.
 - Smoothing tests prove constant signals are preserved, impulses remain centered, edge access is clamped, integer bounds remain 0–255, and spatial roughness falls on alternating-band input.
 - Markup tests prove 64 measured bars and 64 impact caps remain present with rounded 7 px geometry.

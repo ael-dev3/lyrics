@@ -32,6 +32,7 @@ const VISUAL_LEAD_SAMPLES = Math.round(SAMPLE_RATE * 0.24);
 const VISUAL_SETTLE_LEAD_SAMPLES = Math.round(SAMPLE_RATE * 0.05);
 const PRESENTATION_CROSSFADE_SAMPLES =
   VISUAL_LEAD_SAMPLES - VISUAL_SETTLE_LEAD_SAMPLES;
+const PRECISION_HANDOFF_SAMPLES = Math.round(SAMPLE_RATE * 0.05);
 const SEMANTIC_RELEASE_HOLD_SAMPLES = Math.round(SAMPLE_RATE / 30);
 
 export const presentationMilestones = {
@@ -102,12 +103,25 @@ export const lyrics: readonly LyricLine[] = lyricDrafts.map((line) => {
     const nextId = nextPresentationLineId(line.id);
     const next = nextId ? draftById.get(nextId) : undefined;
     if (!next) throw new Error(`Missing presentation successor for ${line.id}`);
-    visualOutStartSample = Math.max(
+    const cinematicOutStartSample = Math.max(
       line.vocalEndSample + SEMANTIC_RELEASE_HOLD_SAMPLES,
       next.visualInStartSample,
     );
-    visualOutEndSample =
-      visualOutStartSample + PRESENTATION_CROSSFADE_SAMPLES;
+    const cinematicOutEndSample =
+      cinematicOutStartSample + PRESENTATION_CROSSFADE_SAMPLES;
+    if (
+      line.focusProfile === 'precision' &&
+      cinematicOutEndSample > next.vocalStartSample
+    ) {
+      visualOutEndSample = next.vocalStartSample;
+      visualOutStartSample = Math.max(
+        line.vocalEndSample,
+        visualOutEndSample - PRECISION_HANDOFF_SAMPLES,
+      );
+    } else {
+      visualOutStartSample = cinematicOutStartSample;
+      visualOutEndSample = cinematicOutEndSample;
+    }
   }
 
   return {...line, visualOutStartSample, visualOutEndSample};

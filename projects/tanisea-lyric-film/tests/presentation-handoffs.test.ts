@@ -8,6 +8,7 @@ import {lyrics} from '../src/timed-lyrics';
 import {frameForSample, SAMPLE_RATE} from '../src/timing/alignment-types';
 
 const CROSSFADE_SAMPLES = 8_379;
+const PRECISION_HANDOFF_SAMPLES = 2_205;
 const SEMANTIC_RELEASE_HOLD_SAMPLES = 1_470;
 const BREAK_CARD_START_SAMPLE = 2_204_118;
 const BREAK_CARD_COMPLETE_SAMPLE = 2_217_348;
@@ -69,22 +70,33 @@ const opacityFor = (
 };
 
 describe('absolute-sample presentation handoffs', () => {
-  test('uses a fixed release hold and crossfade anchored to reviewed vocals and the next visual lead', () => {
+  test('uses fixed cinematic crossfades and contact-bounded C1 precision handoffs', () => {
     for (const [currentId, nextId] of [
       ...internalPairs,
       ['V1-08', 'C2-01'] as const,
     ]) {
       const current = findLine(currentId);
       const next = findLine(nextId);
-      const expectedStart = Math.max(
+      const cinematicStart = Math.max(
         current.vocalEndSample + SEMANTIC_RELEASE_HOLD_SAMPLES,
         next.visualInStartSample,
       );
+      const cinematicEnd = cinematicStart + CROSSFADE_SAMPLES;
+      const contactBounded =
+        current.focusProfile === 'precision' &&
+        cinematicEnd > next.vocalStartSample;
+      const expectedEnd = contactBounded
+        ? next.vocalStartSample
+        : cinematicEnd;
+      const expectedStart = contactBounded
+        ? Math.max(
+            current.vocalEndSample,
+            expectedEnd - PRECISION_HANDOFF_SAMPLES,
+          )
+        : cinematicStart;
 
       expect(current.visualOutStartSample, currentId).toBe(expectedStart);
-      expect(current.visualOutEndSample, currentId).toBe(
-        expectedStart + CROSSFADE_SAMPLES,
-      );
+      expect(current.visualOutEndSample, currentId).toBe(expectedEnd);
     }
   });
 

@@ -507,6 +507,40 @@ describe('production lyric view model', () => {
 });
 
 describe('LyricDisplay rendering', () => {
+  test.each([60, 120])(
+    'removes every outgoing C1 line on the incoming contact frame at %i fps',
+    (fps) => {
+      const firstAct = lyrics.filter(({id}) => id.startsWith('C1-'));
+      for (let index = 1; index < firstAct.length; index++) {
+        const outgoing = firstAct[index - 1];
+        const incoming = firstAct[index];
+        if (!outgoing || !incoming) throw new Error('Missing C1 handoff fixture');
+        const contactFrame = frameForSample(incoming.vocalStartSample, fps);
+        const markup = renderToStaticMarkup(
+          createElement(LyricDisplay, {frame: contactFrame, fps}),
+        );
+
+        expect(markup, `${outgoing.id} at ${incoming.id} contact`).not.toContain(
+          `data-lyric-line-id="${outgoing.id}"`,
+        );
+        expect(markup).toContain(`data-lyric-line-id="${incoming.id}"`);
+      }
+    },
+  );
+
+  test('retains the approved cinematic overlap in the later act', () => {
+    const incoming = findLine('C2-04');
+    const markup = renderToStaticMarkup(
+      createElement(LyricDisplay, {
+        frame: frameForSample(incoming.vocalStartSample, 60),
+        fps: 60,
+      }),
+    );
+
+    expect(markup).toContain('data-lyric-line-id="C2-03"');
+    expect(markup).toContain('data-lyric-line-id="C2-04"');
+  });
+
   test('renders C1 precision contact with immediate high contrast and a tight underline', () => {
     const c1 = findLine('C1-04');
     const c1Cue = c1.cues[0];
