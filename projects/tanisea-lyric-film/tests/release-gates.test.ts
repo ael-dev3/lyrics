@@ -1251,6 +1251,14 @@ describe('neutral publication acceptance scan', () => {
         'first-act-precision-v2.1-implementation.md',
       ),
     ],
+    [
+      'docs/first-act-polish-v2.2-implementation.md',
+      resolve(
+        repositoryRoot,
+        'docs',
+        'first-act-polish-v2.2-implementation.md',
+      ),
+    ],
   ] as const;
 
   test.each(documents)('accepts neutral public document %s', (label, path) => {
@@ -2117,7 +2125,7 @@ const PUBLISHED_ASSET_NAMES = [
 ] as const;
 
 const validPublicationEvidence = () => {
-  const tag = 'v2.1.0';
+  const tag = 'v2.2.0';
   const downloadRoot =
     `https://github.com/ael-dev3/lyrics/releases/download/${tag}`;
   return {

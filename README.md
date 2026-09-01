@@ -3,13 +3,13 @@
   <h1>Tanisea — Precision-Synced English Lyric Film</h1>
   <p><strong>Sample-indexed Russian vocal alignment, semantic English focus, and verified frame-bounded rendering.</strong></p>
   <p>
-    <a href="https://github.com/ael-dev3/lyrics/releases/download/v2.1.0/Tanisea-Lyric-Film-Production-Master-vNext.mp4">Production master</a>
+    <a href="https://github.com/ael-dev3/lyrics/releases/download/v2.2.0/Tanisea-Lyric-Film-Production-Master-vNext.mp4">Production master</a>
     ·
-    <a href="https://github.com/ael-dev3/lyrics/releases/download/v2.1.0/Tanisea-Lyric-Film-Sync-Proof-120fps.mp4">120 fps sync proof</a>
+    <a href="https://github.com/ael-dev3/lyrics/releases/download/v2.2.0/Tanisea-Lyric-Film-Sync-Proof-120fps.mp4">120 fps sync proof</a>
     ·
     <a href="projects/tanisea-lyric-film">Source project</a>
     ·
-    <a href="https://github.com/ael-dev3/lyrics/releases/download/v2.1.0/Tanisea-Lyric-Film-Workflow-Evidence-vNext.zip">Workflow evidence</a>
+    <a href="https://github.com/ael-dev3/lyrics/releases/download/v2.2.0/Tanisea-Lyric-Film-Workflow-Evidence-vNext.zip">Workflow evidence</a>
     ·
     <a href="audits/tanisea-final-qa-vnext.md">Final QA</a>
   </p>
@@ -24,7 +24,7 @@
 
 ## What this release demonstrates
 
-Tanisea is a complete 9,180-frame Remotion lyric film built against a locked 153-second soundtrack. Russian vocal boundaries are stored as integer sample indices. Each reviewed source group activates the English phrase carrying the same meaning, including backward activation where source and translation order differ. Version 2.1 adds immediate-contact focus and contact-clean handoffs to the first vocal act while preserving the approved later-act timing design.
+Tanisea is a complete 9,180-frame Remotion lyric film built against a locked 153-second soundtrack. Russian vocal boundaries are stored as integer sample indices. Each reviewed source group activates the English phrase carrying the same meaning, including backward activation where source and translation order differ. Version 2.2 adds contiguous English-order presentation for four reviewed first-act phrases and a neutral-free two-tone spectrum rail while preserving the approved V1/C2 timing design and the underlying alignment evidence.
 
 The public composition keeps diagnostics out of the picture. A separate 120 fps proof exposes source tokens, target segments, sample indices, confidence, uncertainty, and frame error for inspection.
 
@@ -33,7 +33,7 @@ The implementation includes:
 - 24 reviewed vocal lines, 102 source tokens, 74 English segments, and 74 semantic cues;
 - a deterministic 64-band audio feature package with one record per 60 fps frame;
 - semantic focus that supports forward, backward, repeated, and simultaneous targets, with a precision profile for C1 and the original cinematic profile for V1/C2;
-- a zero-phase temporally and spatially smoothed bottom spectrum with at least 96 px of measured core travel and a distinct transient cap of up to 18 px;
+- a zero-phase temporally and spatially smoothed bottom spectrum with a restrained ember/teal bar palette, at least 96 px of measured core travel, and a distinct transient cap of up to 18 px;
 - a clean upper field, mobile-safe lyric geometry, persistent frame chrome, and a native original-title outro;
 - 4:4:4 reference rendering followed by one controlled 1080×1080 delivery conversion;
 - packet-identical AAC audio in the production master and synchronization proof.
@@ -57,15 +57,15 @@ The [reviewed alignment report](audits/tanisea-word-alignment-v3.md) lists every
 
 | Artifact | Purpose |
 | --- | --- |
-| [Production master](https://github.com/ael-dev3/lyrics/releases/download/v2.1.0/Tanisea-Lyric-Film-Production-Master-vNext.mp4) | 1080×1080, 60 fps, 10-bit HEVC `hvc1`, original AAC |
-| [Synchronization proof](https://github.com/ael-dev3/lyrics/releases/download/v2.1.0/Tanisea-Lyric-Film-Sync-Proof-120fps.mp4) | 1080×1080, 120 fps diagnostic render, original AAC |
-| [Source archive](https://github.com/ael-dev3/lyrics/releases/download/v2.1.0/Tanisea-Lyric-Film-Source-vNext.zip) | Tracked Remotion project files at the release source revision |
-| [Alignment JSON](https://github.com/ael-dev3/lyrics/releases/download/v2.1.0/tanisea-word-alignment-v3.json) | Reviewed sample-indexed timing and semantic mapping |
-| [QA JSON](https://github.com/ael-dev3/lyrics/releases/download/v2.1.0/tanisea-final-qa-vnext.json) | Machine-readable build, media, layout, and repeatability evidence |
-| [Checksums](https://github.com/ael-dev3/lyrics/releases/download/v2.1.0/CHECKSUMS.sha256) | SHA-256 values for the release package |
-| [Workflow evidence](https://github.com/ael-dev3/lyrics/releases/download/v2.1.0/Tanisea-Lyric-Film-Workflow-Evidence-vNext.zip) | Canonical alignment provenance, both QA executions, generated QA media, and visual-review artifacts |
-| [Workflow manifest](https://github.com/ael-dev3/lyrics/releases/download/v2.1.0/tanisea-workflow-evidence-vnext.json) | Per-file SHA-256 and byte size for the supplemental workflow archive |
-| [Workflow checksums](https://github.com/ael-dev3/lyrics/releases/download/v2.1.0/WORKFLOW-EVIDENCE.sha256) | SHA-256 values for the workflow archive and standalone manifest |
+| [Production master](https://github.com/ael-dev3/lyrics/releases/download/v2.2.0/Tanisea-Lyric-Film-Production-Master-vNext.mp4) | 1080×1080, 60 fps, 10-bit HEVC `hvc1`, original AAC |
+| [Synchronization proof](https://github.com/ael-dev3/lyrics/releases/download/v2.2.0/Tanisea-Lyric-Film-Sync-Proof-120fps.mp4) | 1080×1080, 120 fps diagnostic render, original AAC |
+| [Source archive](https://github.com/ael-dev3/lyrics/releases/download/v2.2.0/Tanisea-Lyric-Film-Source-vNext.zip) | Tracked Remotion project files at the release source revision |
+| [Alignment JSON](https://github.com/ael-dev3/lyrics/releases/download/v2.2.0/tanisea-word-alignment-v3.json) | Reviewed sample-indexed timing and semantic mapping |
+| [QA JSON](https://github.com/ael-dev3/lyrics/releases/download/v2.2.0/tanisea-final-qa-vnext.json) | Machine-readable build, media, layout, and repeatability evidence |
+| [Checksums](https://github.com/ael-dev3/lyrics/releases/download/v2.2.0/CHECKSUMS.sha256) | SHA-256 values for the release package |
+| [Workflow evidence](https://github.com/ael-dev3/lyrics/releases/download/v2.2.0/Tanisea-Lyric-Film-Workflow-Evidence-vNext.zip) | Canonical alignment provenance, both QA executions, generated QA media, and visual-review artifacts |
+| [Workflow manifest](https://github.com/ael-dev3/lyrics/releases/download/v2.2.0/tanisea-workflow-evidence-vnext.json) | Per-file SHA-256 and byte size for the supplemental workflow archive |
+| [Workflow checksums](https://github.com/ael-dev3/lyrics/releases/download/v2.2.0/WORKFLOW-EVIDENCE.sha256) | SHA-256 values for the workflow archive and standalone manifest |
 | [Earlier platform snapshot](deliverables/Tanisea-Lyric-Film-vNext-60fps-Final.mp4) | Previously published attenuated-AAC delivery retained with its original checksum |
 
 ## Build the source
@@ -86,7 +86,7 @@ npm run dev
 npm run render
 ```
 
-Delivery and QA commands are documented in the [project README](projects/tanisea-lyric-film/README.md). The [v2.1 implementation report](docs/first-act-precision-v2.1-implementation.md) records the first-act and visualizer revision; the [original implementation report](docs/precision-sync-vnext-implementation.md) connects the full data model, render architecture, media outputs, and verification evidence. The [workflow evidence guide](docs/workflow-evidence.md) inventories the supplemental generated evidence and its deliberate exclusions.
+Delivery and QA commands are documented in the [project README](projects/tanisea-lyric-film/README.md). The [v2.2 implementation report](docs/first-act-polish-v2.2-implementation.md) records the phrase-continuity and two-tone-rail revision; the [v2.1 implementation report](docs/first-act-precision-v2.1-implementation.md) records the preceding contact-focus revision. The [original implementation report](docs/precision-sync-vnext-implementation.md) connects the full data model, render architecture, media outputs, and verification evidence. The [workflow evidence guide](docs/workflow-evidence.md) inventories the supplemental generated evidence and its deliberate exclusions.
 
 ## Repository map
 
@@ -97,6 +97,7 @@ audits/tanisea-final-qa-vnext.*     final human- and machine-readable QA
 audits/tanisea-workflow-evidence-vnext.json
 docs/precision-sync-vnext-implementation.md
 docs/first-act-precision-v2.1-implementation.md
+docs/first-act-polish-v2.2-implementation.md
 docs/workflow-evidence.md
 projects/tanisea-lyric-film/
   alignment/                         render-authoritative sample data

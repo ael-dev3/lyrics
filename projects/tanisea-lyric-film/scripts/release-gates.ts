@@ -1926,7 +1926,7 @@ const QA_REPORT_ALIGNMENT_SUMMARY = {
   ],
 } as const;
 
-const QA_PUBLICATION_TAG = 'v2.1.0';
+const QA_PUBLICATION_TAG = 'v2.2.0';
 const QA_PUBLICATION_ASSET_NAMES = [
   'Tanisea-Lyric-Film-Production-Master-vNext.mp4',
   'Tanisea-Lyric-Film-Sync-Proof-120fps.mp4',
