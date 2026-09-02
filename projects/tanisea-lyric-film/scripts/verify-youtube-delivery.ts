@@ -130,7 +130,10 @@ const validateVideo = (
     stream.sample_aspect_ratio === undefined || stream.sample_aspect_ratio === '1:1',
     `${options.label}.sample_aspect_ratio must be square or implicit, got ${JSON.stringify(stream.sample_aspect_ratio)}`,
   );
-  exact(stream, 'display_aspect_ratio', '16:9', options.label);
+  requireValue(
+    stream.display_aspect_ratio === undefined || stream.display_aspect_ratio === '16:9',
+    `${options.label}.display_aspect_ratio must be 16:9 or implicit, got ${JSON.stringify(stream.display_aspect_ratio)}`,
+  );
   exact(stream, 'r_frame_rate', options.fps, options.label);
   exact(stream, 'avg_frame_rate', options.fps, options.label);
   exact(stream, 'color_range', 'tv', options.label);
