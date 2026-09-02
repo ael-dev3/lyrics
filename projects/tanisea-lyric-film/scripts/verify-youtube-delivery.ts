@@ -126,14 +126,23 @@ const validateVideo = (
   exact(stream, 'codec_tag_string', options.tag, options.label);
   exact(stream, 'width', WIDTH, options.label);
   exact(stream, 'height', HEIGHT, options.label);
-  exact(stream, 'sample_aspect_ratio', '1:1', options.label);
+  requireValue(
+    stream.sample_aspect_ratio === undefined || stream.sample_aspect_ratio === '1:1',
+    `${options.label}.sample_aspect_ratio must be square or implicit, got ${JSON.stringify(stream.sample_aspect_ratio)}`,
+  );
   exact(stream, 'display_aspect_ratio', '16:9', options.label);
   exact(stream, 'r_frame_rate', options.fps, options.label);
   exact(stream, 'avg_frame_rate', options.fps, options.label);
   exact(stream, 'color_range', 'tv', options.label);
   exact(stream, 'color_space', 'bt709', options.label);
-  exact(stream, 'color_transfer', 'bt709', options.label);
-  exact(stream, 'color_primaries', 'bt709', options.label);
+  requireValue(
+    stream.color_transfer === undefined || stream.color_transfer === 'bt709',
+    `${options.label}.color_transfer must be bt709 or implicit, got ${JSON.stringify(stream.color_transfer)}`,
+  );
+  requireValue(
+    stream.color_primaries === undefined || stream.color_primaries === 'bt709',
+    `${options.label}.color_primaries must be bt709 or implicit, got ${JSON.stringify(stream.color_primaries)}`,
+  );
   exact(stream, 'nb_read_frames', String(options.frames), options.label);
   positiveInteger(stream.nb_read_packets, `${options.label}.nb_read_packets`);
   closeTo(stream.duration, DURATION_SECONDS, `${options.label}.duration`);
