@@ -20,6 +20,7 @@
     "youtube:render": "npm run youtube:reference && npm run youtube:encode",
     "youtube:proof": "npm run build:tools && node .tools-dist/scripts/render-youtube-sync-proof.js",
     "youtube:verify": "npm run build:tools && node .tools-dist/scripts/verify-youtube-delivery.js",
+    "youtube:verify:delivery": "npm run build:tools && node .tools-dist/scripts/verify-youtube-delivery.js --skip-proof",
     "qa:clips": "npm run build:tools && node .tools-dist/scripts/render-qa-clips.js",
     "qa:run": "npm run build:tools && node .tools-dist/scripts/run-release-qa.js",
     "qa:publish": "npm run build:tools && node .tools-dist/scripts/finalize-publication.js",

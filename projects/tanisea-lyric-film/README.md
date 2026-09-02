@@ -97,7 +97,8 @@ phase-delaying visual smoothing.
 | `npm run youtube:encode`    | Encode the 1920×1080 H.264/AAC YouTube upload delivery            |
 | `npm run youtube:render`    | Run the 16:9 reference and delivery stages                        |
 | `npm run youtube:proof`     | Render and remux the 1920×1080 120 fps sync proof                 |
-| `npm run youtube:verify`    | Strictly verify 16:9 media and write its local audit              |
+| `npm run youtube:verify:delivery` | Strictly verify the 16:9 master and upload delivery          |
+| `npm run youtube:verify`    | Strictly verify master, delivery, and optional 120 fps proof      |
 | `npm run verify`            | Full-decode and inspect a delivery artifact                       |
 | `npm run qa:clips`          | Generate deterministic contact sheets, clips, and selected frames |
 | `npm run qa:run`            | Execute one named release-matrix run (`TANISEA_QA_RUN=run-1|run-2`) |
@@ -129,13 +130,15 @@ the square release:
 ```sh
 npm run youtube:reference
 npm run youtube:encode
-npm run youtube:proof
-npm run youtube:verify
+npm run youtube:verify:delivery
 ```
 
 It renders a muted 1920×1080 ProRes 4444 reference, encodes a 60 fps H.264/AVC
-upload delivery with 4 dB platform-safety attenuation, and makes a 120 fps
-proof with the original AAC packet stream. Its detailed record is in the
+upload delivery with 4 dB platform-safety attenuation, and verifies the two
+delivery artifacts with a full decode. The optional 120 fps diagnostic proof
+can be rendered and included in a fuller audit with `npm run youtube:proof`
+followed by `npm run youtube:verify`; it remuxes the original AAC packet stream.
+The detailed implementation record is in the
 [v2.5.0 landscape implementation note](../../docs/youtube-16x9-v2.5.0-implementation.md).
 
 Delivery verification checks container duration, dimensions, cadence, frame count, codec, pixel format, colour metadata, strict full decode, `moov` placement, audio stream geometry, packet identity, and exact timeline geometry.

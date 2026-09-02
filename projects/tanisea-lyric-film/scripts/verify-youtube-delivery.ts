@@ -17,6 +17,8 @@ const DURATION_SECONDS = 153;
 const WIDTH = 1_920;
 const HEIGHT = 1_080;
 const SHA256_PATTERN = /^[0-9a-f]{64}$/;
+const GIT_SHA_PATTERN = /^[0-9a-f]{40}$/;
+const skipProof = process.argv.includes('--skip-proof');
 
 const root = projectRootFromScriptDirectory(__dirname);
 const outputDirectory = resolve(root, 'output');
@@ -184,14 +186,21 @@ const sha256 = (path: string): Promise<string> =>
   });
 
 const run = async (): Promise<void> => {
-  for (const [label, path] of Object.entries(files)) {
+  const requiredFiles = skipProof
+    ? {
+        reference: files.reference,
+        final: files.final,
+        soundtrack: files.soundtrack,
+      }
+    : files;
+  for (const [label, path] of Object.entries(requiredFiles)) {
     requireValue(existsSync(path), `Missing ${label}: ${path}`);
   }
   requireValue(!existsSync(auditPath), `Refusing to overwrite audit: ${auditPath}`);
 
   const reference = probe(files.reference);
   const final = probe(files.final);
-  const proof = probe(files.proof);
+  const proof = skipProof ? null : probe(files.proof);
 
   validateVideo(videoStream(reference, 'reference'), {
     label: 'reference.video',
@@ -216,32 +225,48 @@ const run = async (): Promise<void> => {
   });
   exact(audioStream(final, 'final'), 'codec_name', 'aac', 'final.audio');
 
-  validateVideo(videoStream(proof, 'proof'), {
-    label: 'proof.video',
-    codec: 'h264',
-    tag: 'avc1',
-    fps: '120/1',
-    frames: PROOF_FRAME_COUNT,
-  });
-  exact(audioStream(proof, 'proof'), 'codec_name', 'aac', 'proof.audio');
+  if (proof) {
+    validateVideo(videoStream(proof, 'proof'), {
+      label: 'proof.video',
+      codec: 'h264',
+      tag: 'avc1',
+      fps: '120/1',
+      frames: PROOF_FRAME_COUNT,
+    });
+    exact(audioStream(proof, 'proof'), 'codec_name', 'aac', 'proof.audio');
+  }
 
-  for (const path of [files.reference, files.final, files.proof]) strictDecode(path);
+  for (const path of [
+    files.reference,
+    files.final,
+    ...(proof ? [files.proof] : []),
+  ]) {
+    strictDecode(path);
+  }
 
   const sourceAudioPacketSha256 = packetHash(files.soundtrack);
-  const proofAudioPacketSha256 = packetHash(files.proof);
-  requireValue(
-    sourceAudioPacketSha256 === proofAudioPacketSha256,
-    'proof audio packet hash differs from source soundtrack',
-  );
+  const proofAudioPacketSha256 = proof ? packetHash(files.proof) : null;
+  if (proofAudioPacketSha256) {
+    requireValue(
+      sourceAudioPacketSha256 === proofAudioPacketSha256,
+      'proof audio packet hash differs from source soundtrack',
+    );
+  }
 
   const sourceCommit = execFileSync('git', ['rev-parse', 'HEAD'], {
     cwd: root,
     encoding: 'utf8',
   }).trim();
+  const renderSourceCommit =
+    process.env.TANISEA_RENDER_SOURCE_COMMIT ?? sourceCommit;
+  requireValue(
+    GIT_SHA_PATTERN.test(renderSourceCommit),
+    `renderSourceCommit must be a full Git SHA, got ${JSON.stringify(renderSourceCommit)}`,
+  );
   const [referenceSha256, finalSha256, proofSha256] = await Promise.all([
     sha256(files.reference),
     sha256(files.final),
-    sha256(files.proof),
+    proof ? sha256(files.proof) : Promise.resolve(null),
   ]);
   const artifact = (path: string, hash: string) => ({
     path: path.replace(`${root}/`, ''),
@@ -252,17 +277,29 @@ const run = async (): Promise<void> => {
     schemaVersion: 1,
     status: 'passed',
     sourceCommit,
+    renderSourceCommit,
     composition: 'LyricFilmYouTube',
-    proofComposition: 'LyricFilmYouTubeSyncProof',
     dimensions: `${WIDTH}x${HEIGHT}`,
     durationSeconds: DURATION_SECONDS,
     finalFrameCount: FRAME_COUNT,
-    proofFrameCount: PROOF_FRAME_COUNT,
-    proofAudioPacketSha256,
+    proof: proof
+      ? {
+          status: 'verified',
+          composition: 'LyricFilmYouTubeSyncProof',
+          frameCount: PROOF_FRAME_COUNT,
+          audioPacketSha256: proofAudioPacketSha256,
+        }
+      : {
+          status: 'not-rendered',
+          reason:
+            'Optional 120 fps diagnostic proof was not required for the delivery audit.',
+        },
     artifacts: {
       reference: artifact(files.reference, referenceSha256),
       final: artifact(files.final, finalSha256),
-      proof: artifact(files.proof, proofSha256),
+      ...(proof && proofSha256
+        ? {proof: artifact(files.proof, proofSha256)}
+        : {}),
     },
   };
   writeFileSync(auditPath, `${JSON.stringify(report, null, 2)}\n`, 'utf8');

@@ -38,6 +38,13 @@ npm run check
 npm run alignment:verify
 npm run youtube:reference
 npm run youtube:encode
+npm run youtube:verify:delivery
+```
+
+The 120 fps proof is available as an optional diagnostic rather than a
+prerequisite for a regular upload delivery:
+
+```sh
 npm run youtube:proof
 npm run youtube:verify
 ```
@@ -50,12 +57,12 @@ release outputs:
 | `output/Tanisea-Lyric-Film-YouTube-1920x1080-Reference.mov` | Muted 1920×1080 ProRes 4444, 60 fps render authority |
 | `output/Tanisea-Lyric-Film-YouTube-1920x1080-Final.mp4` | YouTube-ready 1920×1080 H.264/AVC, 60 fps MP4 |
 | `output/Tanisea-Lyric-Film-YouTube-Sync-Proof-120fps.mp4` | 1920×1080 120 fps diagnostic proof with the locked AAC stream |
-| `audits/tanisea-youtube-1920x1080-v2.5.0.json` | Strict-decode, frame-count, BT.709, geometry, checksum, and proof-audio identity report |
+| `audits/tanisea-youtube-1920x1080-v2.5.0.json` | Strict-decode, frame-count, BT.709, geometry, and checksum report; includes proof-audio identity when the optional proof is present |
 
 The final upload delivery applies the same 4 dB platform-safety attenuation as
-the existing platform file and encodes AAC at 256 kb/s. The proof remuxes the
-locked source AAC unchanged; its audio packet SHA-256 must equal the soundtrack
-before the verifier emits an audit.
+the existing platform file and encodes AAC at 256 kb/s. The optional proof
+remuxes the locked source AAC unchanged; when it is present, its audio packet
+SHA-256 must equal the soundtrack before the fuller verifier emits an audit.
 
 ## Review points
 
