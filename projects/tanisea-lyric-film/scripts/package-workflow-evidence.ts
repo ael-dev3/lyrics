@@ -24,7 +24,7 @@ type CategorySummary = Readonly<{
   sizeBytes: number;
 }>;
 
-const RELEASE_TAG = 'v2.4.0';
+const RELEASE_TAG = 'v2.4.1';
 const ARCHIVE_NAME = 'Tanisea-Lyric-Film-Workflow-Evidence-vNext.zip';
 const MANIFEST_NAME = 'tanisea-workflow-evidence-vnext.json';
 const CHECKSUM_NAME = 'WORKFLOW-EVIDENCE.sha256';
@@ -284,7 +284,7 @@ const runPackageWorkflowEvidenceCli = (): void => {
   }
 
   const archiveGuide = [
-    '# Tanisea v2.4 workflow evidence',
+    '# Tanisea v2.4.1 workflow evidence',
     '',
     `Release tag: ${RELEASE_TAG}`,
     `Source revision: ${releaseSourceCommit}`,
@@ -303,7 +303,7 @@ const runPackageWorkflowEvidenceCli = (): void => {
   const files = listPayloadFiles(stageRoot);
   const manifest = {
     schemaVersion: 1,
-    title: 'Tanisea v2.4 workflow evidence',
+    title: 'Tanisea v2.4.1 workflow evidence',
     releaseTag: RELEASE_TAG,
     releaseTagCommit: gitText(['rev-parse', 'HEAD'], repositoryRoot),
     sourceArchiveRevision: releaseSourceCommit,
@@ -322,7 +322,7 @@ const runPackageWorkflowEvidenceCli = (): void => {
       'Superseded review iterations and failed or intentionally invalid QA runs',
       'Duplicate downloaded release assets',
       'The reproducible 2x ProRes reference render recorded in final QA',
-      'Final media and source assets published separately on the v2.4.0 release',
+      'Final media and source assets published separately on the v2.4.1 release',
     ],
     files,
   } as const;

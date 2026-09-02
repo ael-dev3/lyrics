@@ -144,7 +144,7 @@ The release matrix verifies:
 10. repeated QA with no unexplained artifact drift;
 11. publication assets, checksums, and documentation.
 
-See the [final QA report](../../audits/tanisea-final-qa-vnext.md), [v2.4 implementation report](../../docs/first-act-and-outro-polish-v2.4-implementation.md), [v2.3 implementation report](../../docs/first-act-semantic-sync-v2.3-implementation.md), [v2.2 implementation report](../../docs/first-act-polish-v2.2-implementation.md), [v2.1 implementation report](../../docs/first-act-precision-v2.1-implementation.md), [full-system implementation report](../../docs/precision-sync-vnext-implementation.md), and [workflow evidence guide](../../docs/workflow-evidence.md). The supplemental release archive preserves the generated alignment provenance, both canonical QA runs, QA media, and final visual-review artifacts that remain excluded from source control.
+See the [final QA report](../../audits/tanisea-final-qa-vnext.md), [v2.4.1 correction record](../../docs/first-act-and-outro-polish-v2.4-implementation.md), [v2.4.0 historical baseline](../../docs/cinematic-parity-v2.4-implementation.md), [v2.3 implementation report](../../docs/first-act-semantic-sync-v2.3-implementation.md), [v2.2 implementation report](../../docs/first-act-polish-v2.2-implementation.md), [v2.1 implementation report](../../docs/first-act-precision-v2.1-implementation.md), [full-system implementation report](../../docs/precision-sync-vnext-implementation.md), and [workflow evidence guide](../../docs/workflow-evidence.md). The supplemental release archive preserves the generated alignment provenance, both canonical QA runs, QA media, and final visual-review artifacts that remain excluded from source control.
 
 ## Source layout
 

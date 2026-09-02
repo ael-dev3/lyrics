@@ -1,5 +1,27 @@
 # Workflow evidence
 
+## v2.4.1 correction and release workflow
+
+`v2.4.1` is a corrective release for the first repeated chorus. It leaves the locked soundtrack and the reviewed C1 cue table untouched, then derives a separate visible schedule for `C1-05`–`C1-08` from the proven `C2-05`–`C2-08` choreography. At 44,100 Hz, every C2 visual sample `s` is mapped into the C1 window by:
+
+```text
+round(1,631,876 + (s - 4,595,926) × 539,520 / 575,328)
+```
+
+The mapping covers word attack, release, inter-word gaps, entrance, settle, and ordinary handoffs. The `C1-08` exit remains tied to its break-card milestone. The source keeps the reviewed schedule in `cues` and records the derived visible schedule in `presentationCues`, allowing the proof and QA records to show both without conflating them.
+
+The reproducible release sequence is:
+
+1. Run `npm run check` and `npm run alignment:verify` on the tagged source revision.
+2. Render the 2× reference, create the 1080×1080 public master and 120 fps proof, then strictly verify all three files.
+3. Run the two isolated QA matrices, create the source archive from the immutable source commit, and verify downloaded release assets against `CHECKSUMS.sha256`.
+4. Record the release URL, asset hashes, and checksum result in `work/release-publication.json`; then finalize the publication QA report.
+5. Build the sanitized workflow archive with `TANISEA_RELEASE_SOURCE_COMMIT=<release-commit> npm run workflow:package`, upload it with its manifest/checksum, and verify those downloads as well.
+
+The separate `v2.4.1` tag preserves the already-published `v2.4.0` release as historical evidence rather than altering its immutable assets.
+
+## v2.4.0 historical evidence
+
 The `v2.4.0` release includes a supplemental public evidence package for the generated workflow and results behind the cinematic-parity and line-only visualizer revision.
 
 ## Downloads

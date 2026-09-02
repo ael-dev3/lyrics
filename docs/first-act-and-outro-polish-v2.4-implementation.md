@@ -1,12 +1,12 @@
-# First-act parity and outro polish v2.4
+# C1 highlight-parity and outro polish v2.4.1
 
 ## Scope
 
-Version `v2.4.0` responds to the visual review of the repeated chorus and the original-title outro. It preserves the locked soundtrack, reviewed sample-indexed alignment, semantic cue order, artwork, typography, and delivery contracts.
+Version `v2.4.1` responds to the approved visual review of the repeated chorus and the original-title outro. It supersedes the v2.4.0 C1 visual schedule while preserving the locked soundtrack, reviewed sample-indexed alignment, semantic cue order, artwork, typography, and delivery contracts.
 
 ## Repeated chorus parity
 
-The `00:40–00:50` review range falls within the repeated first-chorus window (`C1-05` through `C1-08`), which matches the later chorus (`C2-05` through `C2-08`). The earlier window previously retained the special precision treatment on `C1-05`: immediate full emphasis, a one-proof-frame entrance, and contact-bounded handoffs. The later window used the visually stronger cinematic treatment throughout.
+The `00:40–00:50` review range falls within the repeated first-chorus window (`C1-05` through `C1-08`), which matches the later chorus (`C2-05` through `C2-08`). The earlier window previously used an independently evolved C1 presentation schedule; the later window used the visually approved C2 choreography.
 
 ### Exact issue and root cause
 
@@ -41,7 +41,7 @@ The transient extension remains separate from the measured core and is omitted e
 
 The original-title outro previously entered a deconstruction phase that increased the title flex gap from 17 px to 43 px, added letter spacing, and translated the two title groups in opposite directions. That treatment pulled `ЗАКРИЧУ` and `НА ВЕСЬ МИР` apart without improving comprehension.
 
-The v2.4 outro replaces that motion with a restrained centered settle:
+The v2.4.1 outro replaces that motion with a restrained centered settle:
 
 - the title gap remains 17 px;
 - title letter spacing remains fixed at 0.5 px;
@@ -61,4 +61,4 @@ The source gates cover the new behavior directly:
 - zero-height transient extensions produce no element;
 - the outro test rejects the previous 43 px gap and opposite horizontal translations.
 
-The full render, delivery, synchronization-proof, layout, strict-decode, repeated-QA, publication, and checksum gates remain required for the 2.4.0 package.
+The full render, delivery, synchronization-proof, layout, strict-decode, repeated-QA, publication, and checksum gates remain required for the v2.4.1 package.

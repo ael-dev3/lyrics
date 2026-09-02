@@ -41,6 +41,8 @@ const VISUAL_LEAD_SAMPLES = Math.round(SAMPLE_RATE * 0.24);
 const VISUAL_SETTLE_LEAD_SAMPLES = Math.round(SAMPLE_RATE * 0.05);
 const PRESENTATION_CROSSFADE_SAMPLES =
   VISUAL_LEAD_SAMPLES - VISUAL_SETTLE_LEAD_SAMPLES;
+const PRECISION_VISUAL_LEAD_SAMPLES = Math.round(SAMPLE_RATE / 120);
+const PRECISION_HANDOFF_SAMPLES = PRECISION_VISUAL_LEAD_SAMPLES;
 const SEMANTIC_RELEASE_HOLD_SAMPLES = Math.round(SAMPLE_RATE / 30);
 
 // C1-05..08 repeat the complete later chorus. Keep the reviewed sample
@@ -128,11 +130,17 @@ const lyricDrafts = taniseaAlignment.lines.map((line) => {
     focusProfile: (precision ? "precision" : "cinematic") as FocusProfile,
     vocalStartSample: line.vocalStartSample,
     vocalEndSample: line.vocalEndSample,
-    visualInStartSample: Math.max(0, line.vocalStartSample - VISUAL_LEAD_SAMPLES),
-    visualInCompleteSample: Math.max(
+    visualInStartSample: Math.max(
       0,
-      line.vocalStartSample - VISUAL_SETTLE_LEAD_SAMPLES,
+      line.vocalStartSample -
+        (precision ? PRECISION_VISUAL_LEAD_SAMPLES : VISUAL_LEAD_SAMPLES),
     ),
+    visualInCompleteSample: precision
+      ? line.vocalStartSample
+      : Math.max(
+          0,
+          line.vocalStartSample - VISUAL_SETTLE_LEAD_SAMPLES,
+        ),
     segments: line.segments,
     cues: line.cues,
     text: line.segments.map(({ text }) => text).join(" "),
