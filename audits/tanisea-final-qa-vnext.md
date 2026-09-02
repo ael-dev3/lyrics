@@ -1,0 +1,7901 @@
+# Tanisea final QA
+
+Status and bounded claim are preserved in the embedded machine report.
+
+```json
+{
+  "schemaVersion": 1,
+  "status": "passed-prepublication",
+  "boundedClaim": "sample-indexed alignment with frame-bounded rendering",
+  "fullMediaExecuted": true,
+  "requirementMatrix": {
+    "criteria": [
+      {
+        "id": 1,
+        "title": "Locked source audio authority",
+        "status": "proved",
+        "evidence": [
+          {
+            "id": "criterion-01-evidence-01",
+            "kind": "source-audio",
+            "artifact": "projects/tanisea-lyric-film/public/soundtrack.m4a",
+            "sha256": "93084f293d491da1519732f3fa3cf6416c783d04e8ca18b5569c7608a8d4540d",
+            "value": "criterion 1 verified"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Complete build and test verification",
+        "status": "proved",
+        "evidence": [
+          {
+            "id": "criterion-02-evidence-01",
+            "kind": "test-result",
+            "artifact": "projects/tanisea-lyric-film/work/qa/run-2/logs/check.log",
+            "sha256": "f35f736a79f3503b8f3258f558a8256f0f5329a797f562673a945fd2bdc579be",
+            "value": "criterion 2 verified"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Sample-indexed alignment authority",
+        "status": "proved",
+        "evidence": [
+          {
+            "id": "criterion-03-evidence-01",
+            "kind": "alignment-manifest",
+            "artifact": "projects/tanisea-lyric-film/alignment/tanisea-word-alignment-v3.json",
+            "sha256": "06fe6c8d6ad4db5131ab4f9ab98be91ea87064fdeea58017c6b8c21ed8530f0b",
+            "value": "criterion 3 verified"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "Measured timing uncertainty bounds",
+        "status": "proved",
+        "evidence": [
+          {
+            "id": "criterion-04-evidence-01",
+            "kind": "alignment-manifest",
+            "artifact": "projects/tanisea-lyric-film/alignment/tanisea-word-alignment-v3.json",
+            "sha256": "06fe6c8d6ad4db5131ab4f9ab98be91ea87064fdeea58017c6b8c21ed8530f0b",
+            "value": "criterion 4 verified"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "title": "Reviewed semantic source-to-target mapping",
+        "status": "proved",
+        "evidence": [
+          {
+            "id": "criterion-05-evidence-01",
+            "kind": "semantic-map",
+            "artifact": "projects/tanisea-lyric-film/alignment/tanisea-word-alignment-v3.json",
+            "sha256": "06fe6c8d6ad4db5131ab4f9ab98be91ea87064fdeea58017c6b8c21ed8530f0b",
+            "value": "criterion 5 verified"
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "title": "Backward activation and repeated-chorus semantics",
+        "status": "proved",
+        "evidence": [
+          {
+            "id": "criterion-06-evidence-01",
+            "kind": "semantic-map",
+            "artifact": "projects/tanisea-lyric-film/alignment/tanisea-word-alignment-v3.json",
+            "sha256": "06fe6c8d6ad4db5131ab4f9ab98be91ea87064fdeea58017c6b8c21ed8530f0b",
+            "value": "criterion 6 verified"
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "title": "Public and proof cadence verification",
+        "status": "proved",
+        "evidence": [
+          {
+            "id": "criterion-07-evidence-01",
+            "kind": "cadence-verification",
+            "artifact": "projects/tanisea-lyric-film/work/qa/run-2/logs/verify-public.log",
+            "sha256": "aae97bc53267189ec859dc880404ffcab61004559233475b61a060e4337afd33",
+            "value": "public cadence verified"
+          },
+          {
+            "id": "criterion-07-evidence-02",
+            "kind": "cadence-verification",
+            "artifact": "projects/tanisea-lyric-film/work/qa/run-2/logs/verify-proof.log",
+            "sha256": "c914f87dd8bce8d319ae31ab0f0e9db23233d06263ad4478367950c598fae0c8",
+            "value": "proof cadence verified"
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "title": "Public chrome and upper-rail removal",
+        "status": "proved",
+        "evidence": [
+          {
+            "id": "criterion-08-evidence-01",
+            "kind": "public-markup",
+            "artifact": "projects/tanisea-lyric-film/work/qa/run-2/logs/verify-public-markup.log",
+            "sha256": "b5c39e447be8584bd86ddc2039a04149d0973c12f9ef8bdef6420f2a9974fbf3",
+            "value": "criterion 8 verified"
+          },
+          {
+            "id": "criterion-08-evidence-02",
+            "kind": "encoded-frame",
+            "artifact": "projects/tanisea-lyric-film/work/qa/run-2/selected-frames/chrome.png",
+            "sha256": "6b88beff7cd8542202e1a261be60be700b68d54882d7da74f7ef9c50d048fd7a",
+            "value": "public chrome encoded frame verified"
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "title": "Lyric, spectrum, and safe-area layout",
+        "status": "proved",
+        "evidence": [
+          {
+            "id": "criterion-09-evidence-01",
+            "kind": "layout-verification",
+            "artifact": "projects/tanisea-lyric-film/work/qa/run-2/logs/layout-verify.log",
+            "sha256": "a2685c1b22d5a015f010a578f169fa47b9264873366e73de233e42a9cca169d6",
+            "value": "criterion 9 verified"
+          },
+          {
+            "id": "criterion-09-evidence-02",
+            "kind": "encoded-frame",
+            "artifact": "projects/tanisea-lyric-film/work/qa/run-2/selected-frames/safe-area.png",
+            "sha256": "ff782cd844af1906a760b239f5182b62433dfa69017d0c697c0bcdde420c707b",
+            "value": "public safe-area encoded frame verified"
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "title": "Repeated QA with no unexplained drift",
+        "status": "proved",
+        "evidence": [
+          {
+            "id": "criterion-10-evidence-01",
+            "kind": "qa-run-comparison",
+            "artifact": "projects/tanisea-lyric-film/work/qa/run-2/run-comparison.json",
+            "sha256": "2c0d5fe5e46d565263caa2d15bee3bc81fc1fa0e738dcae973d9f4c571b754ed",
+            "value": "criterion 10 verified"
+          }
+        ]
+      },
+      {
+        "id": 11,
+        "title": "Release assets and documentation readiness",
+        "status": "pending-publication",
+        "evidence": [
+          {
+            "id": "criterion-11-evidence-01",
+            "kind": "publication-readiness",
+            "artifact": "projects/tanisea-lyric-film/output/Tanisea-Lyric-Film-vNext-60fps-Archival-Master.mp4",
+            "sha256": "c9d0e882715661a706da617a2ffe397343af480b5bdb4a3580fcc1882ce77482",
+            "value": "criterion 11 publication readiness verified locally"
+          }
+        ]
+      }
+    ]
+  },
+  "artifactReferences": [
+    {
+      "id": "source-audio",
+      "path": "projects/tanisea-lyric-film/public/soundtrack.m4a",
+      "sha256": "93084f293d491da1519732f3fa3cf6416c783d04e8ca18b5569c7608a8d4540d"
+    },
+    {
+      "id": "alignment-manifest",
+      "path": "projects/tanisea-lyric-film/alignment/tanisea-word-alignment-v3.json",
+      "sha256": "06fe6c8d6ad4db5131ab4f9ab98be91ea87064fdeea58017c6b8c21ed8530f0b"
+    },
+    {
+      "id": "audio-features",
+      "path": "projects/tanisea-lyric-film/public/audio-features.bin",
+      "sha256": "c9453f8c6fb3de3f16e691b51b4155c5db7e313f5aac1cc7942904754d29b7cf"
+    },
+    {
+      "id": "reference-render",
+      "path": "projects/tanisea-lyric-film/output/Tanisea-Lyric-Film-vNext-reference-2x.mov",
+      "sha256": "664feb2fe9e7336c84602dd35c82de21197729949bee93e6bbe164ee87044895"
+    },
+    {
+      "id": "public-master",
+      "path": "projects/tanisea-lyric-film/output/Tanisea-Lyric-Film-vNext-60fps-Archival-Master.mp4",
+      "sha256": "c9d0e882715661a706da617a2ffe397343af480b5bdb4a3580fcc1882ce77482"
+    },
+    {
+      "id": "sync-proof",
+      "path": "projects/tanisea-lyric-film/output/Tanisea-Lyric-Film-Sync-Proof-120fps.mp4",
+      "sha256": "6a6600c5b8ef7ccc4421022c13b6fa2c8824ec309e0c22c23fc8dc13ab3236a6"
+    },
+    {
+      "id": "qa-media-manifest",
+      "path": "projects/tanisea-lyric-film/work/qa/media/qa-media-manifest.json",
+      "sha256": "5192a5dfa967612a7a609f1046918cfa595723c3fc8ce2c6cbd269ad9149ff3d"
+    },
+    {
+      "id": "v1-03-public-contact",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-03/public/frame-004224.png",
+      "sha256": "bb584c6c756b038ba4e2c98fa234c4b944e448a2044b5df1bfc0c056b1c1f699"
+    },
+    {
+      "id": "v1-03-public-contact-sheet",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contact-sheets/v1-03-public.png",
+      "sha256": "6a32582c3c2c009b4bec155b95d9a0aa142c3f32183d6a9f5011c4cdc95efa1c"
+    },
+    {
+      "id": "v1-03-proof-contact-sheet",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contact-sheets/v1-03-proof.png",
+      "sha256": "8b83bca5b0925eb92d387a7c472c9089c0cb02bf99147df280413417df049597"
+    },
+    {
+      "id": "v1-08-public-contact-sheet",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contact-sheets/v1-08-public.png",
+      "sha256": "ff438ba58e3ac7e16b534932595689e9271e6d71ca6e8a09b43d2598608eee2e"
+    },
+    {
+      "id": "v1-08-proof-contact-sheet",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contact-sheets/v1-08-proof.png",
+      "sha256": "a4b8b2fbb348514fa4c81c264f1a037353d7f356450ee6def8ec4ce6e479886b"
+    },
+    {
+      "id": "public-chrome-still",
+      "path": "projects/tanisea-lyric-film/work/qa/media/stills/public-chrome.png",
+      "sha256": "6b88beff7cd8542202e1a261be60be700b68d54882d7da74f7ef9c50d048fd7a"
+    },
+    {
+      "id": "public-handoff-still",
+      "path": "projects/tanisea-lyric-film/work/qa/media/stills/public-handoff.png",
+      "sha256": "bd1f5d453cfec14661d3a1bad0e042892cd9e6af5624c1dd7836d4c9e47cf126"
+    },
+    {
+      "id": "public-focus-still",
+      "path": "projects/tanisea-lyric-film/work/qa/media/stills/public-focus.png",
+      "sha256": "12bb2ed0671be9c927669666e7a4fdd726e37b40958bdba60fca69d53ece7361"
+    },
+    {
+      "id": "public-safe-area-still",
+      "path": "projects/tanisea-lyric-film/work/qa/media/stills/public-safe-area.png",
+      "sha256": "ff782cd844af1906a760b239f5182b62433dfa69017d0c697c0bcdde420c707b"
+    },
+    {
+      "id": "public-spectrum-peak-still",
+      "path": "projects/tanisea-lyric-film/work/qa/media/stills/public-spectrum-peak.png",
+      "sha256": "97c4fcc034eb82d4498697450f38dd25f54b8b9fae36b3889601d8fb0808aef2"
+    },
+    {
+      "id": "proof-backward-contact-still",
+      "path": "projects/tanisea-lyric-film/work/qa/media/stills/proof-backward-contact.png",
+      "sha256": "7830f22491ed4023cecd0aeafada4696ac99b33341f3ba099aefef9e67823be4"
+    },
+    {
+      "id": "reference-transition-still",
+      "path": "projects/tanisea-lyric-film/work/qa/media/stills/reference-final-transition.png",
+      "sha256": "5fe287c4c5a501950efc039dffda85fe8997e52f4d8d63e489eba48e39c8dc57"
+    },
+    {
+      "id": "qa-media-artifact-001",
+      "path": "projects/tanisea-lyric-film/work/qa/media/clips/proof/v1-03-half.mp4",
+      "sha256": "49330ee686dc59b290f95e46c57817c337740e5c1e120080daca1bf08eb19bc2"
+    },
+    {
+      "id": "qa-media-artifact-002",
+      "path": "projects/tanisea-lyric-film/work/qa/media/clips/proof/v1-03-normal.mp4",
+      "sha256": "4c55faf1a6c2cae2e73354ac74532d22900cb56cc655714db316078a513f4e70"
+    },
+    {
+      "id": "qa-media-artifact-003",
+      "path": "projects/tanisea-lyric-film/work/qa/media/clips/proof/v1-08-half.mp4",
+      "sha256": "f54bbfc6f7fd58f3ad6ae0c36ac9ad1faba5fc326c110d994b258641d8dc7a06"
+    },
+    {
+      "id": "qa-media-artifact-004",
+      "path": "projects/tanisea-lyric-film/work/qa/media/clips/proof/v1-08-normal.mp4",
+      "sha256": "f315d3d84c78ef908c04d9e3e60d4668b650169716e3e965b738787c430d0b6f"
+    },
+    {
+      "id": "qa-media-artifact-005",
+      "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/chorus-1-half.mp4",
+      "sha256": "0db3f48eca36e15d0f92540b401a193b29bd3f49ac745a2971233ad2c073da61"
+    },
+    {
+      "id": "qa-media-artifact-006",
+      "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/chorus-1-normal.mp4",
+      "sha256": "16527f6929102ebe6829ca029cc59b4b9ff03a6e347e0f0974de2bd8df6a5b92"
+    },
+    {
+      "id": "qa-media-artifact-007",
+      "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/chorus-2-half.mp4",
+      "sha256": "4ba84f06f8845bfc7e17f6b649aae6076b429b607431c578a4b348b67a7d958e"
+    },
+    {
+      "id": "qa-media-artifact-008",
+      "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/chorus-2-normal.mp4",
+      "sha256": "528b4a831ba03732b3032b76f534a5b7d9302cf1cf2c4008e4c581b027f95c8a"
+    },
+    {
+      "id": "qa-media-artifact-009",
+      "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/final-handoff-half.mp4",
+      "sha256": "09c984f9460beae0f44dc6f20f9757a42dd07bb9da6d91c2f69fa99aed7ad353"
+    },
+    {
+      "id": "qa-media-artifact-010",
+      "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/final-handoff-normal.mp4",
+      "sha256": "ce6ee1e9ef3f00b1188b021c3bd01bfd5678a384b22071490e27fd220a3aeb79"
+    },
+    {
+      "id": "qa-media-artifact-011",
+      "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/first-act-40-50-half.mp4",
+      "sha256": "727747eca57315140de6fefd3bfeec7af9fec6c12256b83e0ce8c359026fbbfb"
+    },
+    {
+      "id": "qa-media-artifact-012",
+      "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/first-act-40-50-normal.mp4",
+      "sha256": "44d157f67a0819df816ff2c0bf823e344d55979083268082981624beb753cf63"
+    },
+    {
+      "id": "qa-media-artifact-013",
+      "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c1-01-half.mp4",
+      "sha256": "57e855248be4deb2b7a95a255ad02a4a5d561cf2b252ca2283c5c18050ff9756"
+    },
+    {
+      "id": "qa-media-artifact-014",
+      "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c1-01-normal.mp4",
+      "sha256": "f276e52bed0a035b0c796ff00eb002cafa9e058a1c032f76a5df194e9081a71c"
+    },
+    {
+      "id": "qa-media-artifact-015",
+      "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c1-02-half.mp4",
+      "sha256": "8df63298a7bfdc4a5ce8b08185241687e811547b2bb8aaeba2b96da21a857def"
+    },
+    {
+      "id": "qa-media-artifact-016",
+      "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c1-02-normal.mp4",
+      "sha256": "ecb9b29bbd87ef735c880e48bd018fabe94087b57d5fbe3ede78b9f4e800981f"
+    },
+    {
+      "id": "qa-media-artifact-017",
+      "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c1-03-half.mp4",
+      "sha256": "f10414f09406602a27e29cd74dc55b5ea1d136fb857d65280315e373c539e222"
+    },
+    {
+      "id": "qa-media-artifact-018",
+      "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c1-03-normal.mp4",
+      "sha256": "9a1e67c20824796ccaf0f5af11e15a05ee95d2a91e5e1e7c2413a5a3c9becdbf"
+    },
+    {
+      "id": "qa-media-artifact-019",
+      "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c1-04-half.mp4",
+      "sha256": "811e599760e74958f9ffb615a3794746ba655c12a2fddbbb6f889900a780fdd1"
+    },
+    {
+      "id": "qa-media-artifact-020",
+      "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c1-04-normal.mp4",
+      "sha256": "061b6a7b4e12d8065b6dd9477e08a94975a38023619d24e2996062462b98f8f5"
+    },
+    {
+      "id": "qa-media-artifact-021",
+      "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c1-05-half.mp4",
+      "sha256": "0db3f48eca36e15d0f92540b401a193b29bd3f49ac745a2971233ad2c073da61"
+    },
+    {
+      "id": "qa-media-artifact-022",
+      "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c1-05-normal.mp4",
+      "sha256": "16527f6929102ebe6829ca029cc59b4b9ff03a6e347e0f0974de2bd8df6a5b92"
+    },
+    {
+      "id": "qa-media-artifact-023",
+      "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c1-06-half.mp4",
+      "sha256": "47e599c7f5e91337d6b4af1740217c70a46f21861e47a7360beb505339e9661a"
+    },
+    {
+      "id": "qa-media-artifact-024",
+      "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c1-06-normal.mp4",
+      "sha256": "9b09c1e00be6e40e67226ac9b159ab537ec58e326dd0f4b17fae94fc9f859f07"
+    },
+    {
+      "id": "qa-media-artifact-025",
+      "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c1-07-half.mp4",
+      "sha256": "de76438c6e3bf93c53361fa5da02c1540bbad00d3bb6ba839e8d16cc7b4c23db"
+    },
+    {
+      "id": "qa-media-artifact-026",
+      "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c1-07-normal.mp4",
+      "sha256": "1667dd403285f5cdadd4c9a39560de5a8a543b03c0b608dd4145f203b4eb22d4"
+    },
+    {
+      "id": "qa-media-artifact-027",
+      "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c1-08-half.mp4",
+      "sha256": "a7d7702e1ae7d21ed3450cc20d6a622c650b651a43e01c017ccabe44a36b6dea"
+    },
+    {
+      "id": "qa-media-artifact-028",
+      "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c1-08-normal.mp4",
+      "sha256": "074e4fc657daadd0a2aa22adfd20ed7a70dd079b71bc14a0e3a72eb760c8a400"
+    },
+    {
+      "id": "qa-media-artifact-029",
+      "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c2-01-half.mp4",
+      "sha256": "642b33689a01434f46a272ad1917217a3268b7bcb2b6515e5d61271c9cc8e9d4"
+    },
+    {
+      "id": "qa-media-artifact-030",
+      "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c2-01-normal.mp4",
+      "sha256": "2f66e41d13a331e76caf0689261e282de32a829395bd65797983d8ed055f19a5"
+    },
+    {
+      "id": "qa-media-artifact-031",
+      "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c2-02-half.mp4",
+      "sha256": "b24c3665f57fab6ffe843d0f4d710efeea509d126800b5b8152266779e75d404"
+    },
+    {
+      "id": "qa-media-artifact-032",
+      "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c2-02-normal.mp4",
+      "sha256": "e1fd4c3a0eea03f8975947753d76729f1e9f515d54e8f922b396bc0a323efe6d"
+    },
+    {
+      "id": "qa-media-artifact-033",
+      "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c2-03-half.mp4",
+      "sha256": "b47367e8d69e10901561e5002db8d0f833f718bdd768a530e8f9847e2ae15c9d"
+    },
+    {
+      "id": "qa-media-artifact-034",
+      "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c2-03-normal.mp4",
+      "sha256": "6160a6969035ec06c4288a7c4336fc66af24007aa53e1f15dd7fcc84330b23fc"
+    },
+    {
+      "id": "qa-media-artifact-035",
+      "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c2-04-half.mp4",
+      "sha256": "354ddcadef8264a7717e09daeed6232f675bbdf519b113b50883fce5b208ad1e"
+    },
+    {
+      "id": "qa-media-artifact-036",
+      "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c2-04-normal.mp4",
+      "sha256": "82f13618ce7c552fd789b6e0f41015f1f3b261ac1b164bd38ee6ea812c41701b"
+    },
+    {
+      "id": "qa-media-artifact-037",
+      "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c2-05-half.mp4",
+      "sha256": "4ba84f06f8845bfc7e17f6b649aae6076b429b607431c578a4b348b67a7d958e"
+    },
+    {
+      "id": "qa-media-artifact-038",
+      "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c2-05-normal.mp4",
+      "sha256": "528b4a831ba03732b3032b76f534a5b7d9302cf1cf2c4008e4c581b027f95c8a"
+    },
+    {
+      "id": "qa-media-artifact-039",
+      "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c2-06-half.mp4",
+      "sha256": "1f3264090c1c492026479ce096e7db4621006df0c70eb01f3b856014c423a0bd"
+    },
+    {
+      "id": "qa-media-artifact-040",
+      "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c2-06-normal.mp4",
+      "sha256": "6f6599dae66a68fda3c3fd595694ba6b28c051a882cc2ff5ea058e180fdd6aa5"
+    },
+    {
+      "id": "qa-media-artifact-041",
+      "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c2-07-half.mp4",
+      "sha256": "c5702d0411ed3a38e7f10e90c05e51df7d8d8018c4f94b112550a1016a5c12a3"
+    },
+    {
+      "id": "qa-media-artifact-042",
+      "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c2-07-normal.mp4",
+      "sha256": "009b431802c5140f3878586a1b4337ed443b9ef2d78434efaad97581ab32a07e"
+    },
+    {
+      "id": "qa-media-artifact-043",
+      "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c2-08-half.mp4",
+      "sha256": "099f086651c05634acaaa32550cde0af40b4a04fcc7803e5b0f827a515dfc2d8"
+    },
+    {
+      "id": "qa-media-artifact-044",
+      "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c2-08-normal.mp4",
+      "sha256": "9d83121309d24f9230f5b604e7d72a9e0e8b57e2f0007207fb1794d2d48099e6"
+    },
+    {
+      "id": "qa-media-artifact-045",
+      "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-v1-01-half.mp4",
+      "sha256": "69e5f2bde061bb8c35f737abba5eb7a9da6ce24bc4f2be5db7cbe3b38df7939c"
+    },
+    {
+      "id": "qa-media-artifact-046",
+      "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-v1-01-normal.mp4",
+      "sha256": "b1ea84d2ab630422de645750e91e689646f610401a12b8c95e908afcbec196db"
+    },
+    {
+      "id": "qa-media-artifact-047",
+      "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-v1-02-half.mp4",
+      "sha256": "5faab3a030f25653d8f22171e604f7fa634ab05b4d7d0794cabc47d27ae1dbd9"
+    },
+    {
+      "id": "qa-media-artifact-048",
+      "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-v1-02-normal.mp4",
+      "sha256": "ddf7d49c15b1d3fe66232fbba3faf8e306ea733cca58d19acb93f05d30b22e6c"
+    },
+    {
+      "id": "qa-media-artifact-049",
+      "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-v1-03-half.mp4",
+      "sha256": "64738f696d08c21cd2a8f8bb16e67cd80b49a3a05a7f7ffc3a711ae5e7b8cc5c"
+    },
+    {
+      "id": "qa-media-artifact-050",
+      "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-v1-03-normal.mp4",
+      "sha256": "26bd58350ceb18eca68c74879d57618878cd76853d3cd9ca5d13c4c682ff9143"
+    },
+    {
+      "id": "qa-media-artifact-051",
+      "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-v1-04-half.mp4",
+      "sha256": "509502b8cd4ab27ef919974f1aa0ea12fd17d09eb85c0172529a0909e3e6746c"
+    },
+    {
+      "id": "qa-media-artifact-052",
+      "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-v1-04-normal.mp4",
+      "sha256": "e0a4b6f21a4304ae1631865c9ccc6819ed683b54ce737f9e9280fbbb03ffd57e"
+    },
+    {
+      "id": "qa-media-artifact-053",
+      "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-v1-05-half.mp4",
+      "sha256": "b35196744fd26c7e3149ec78ecb5a557355aa99c230d4a5389220f1a77ea701e"
+    },
+    {
+      "id": "qa-media-artifact-054",
+      "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-v1-05-normal.mp4",
+      "sha256": "f2b293f04c8bd730d6aa9cec1711aa8fe23107d9fbdde2160619d47e1232781c"
+    },
+    {
+      "id": "qa-media-artifact-055",
+      "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-v1-06-half.mp4",
+      "sha256": "e7ff8749bf829cc09ff2663d733913889a838bb72efbed923ddc75578ddf5ef1"
+    },
+    {
+      "id": "qa-media-artifact-056",
+      "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-v1-06-normal.mp4",
+      "sha256": "15ae56c284ad92aca0dafe785f927055194a23671199eae1de19cd55828bdbbc"
+    },
+    {
+      "id": "qa-media-artifact-057",
+      "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-v1-07-half.mp4",
+      "sha256": "d46cb571ae0ccad2e92cda75fbc0727b4a1c60a8969eb2a9a6e2953a932dd467"
+    },
+    {
+      "id": "qa-media-artifact-058",
+      "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-v1-07-normal.mp4",
+      "sha256": "a794c715a0a45b77e77803d254036c2827964f2d97c202cbe895faf15148ef07"
+    },
+    {
+      "id": "qa-media-artifact-059",
+      "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-v1-08-half.mp4",
+      "sha256": "7ec459cdd86791186f8ea5173044e77df8411e8ce5e7b5ad68ea8c2c2062d739"
+    },
+    {
+      "id": "qa-media-artifact-060",
+      "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-v1-08-normal.mp4",
+      "sha256": "3a618a5888e8d27e0c11cf7ac889785296085a53e1d4ef9f46f5a7b3ca33b26e"
+    },
+    {
+      "id": "qa-media-artifact-061",
+      "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/v1-03-half.mp4",
+      "sha256": "64738f696d08c21cd2a8f8bb16e67cd80b49a3a05a7f7ffc3a711ae5e7b8cc5c"
+    },
+    {
+      "id": "qa-media-artifact-062",
+      "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/v1-03-normal.mp4",
+      "sha256": "26bd58350ceb18eca68c74879d57618878cd76853d3cd9ca5d13c4c682ff9143"
+    },
+    {
+      "id": "qa-media-artifact-063",
+      "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/v1-08-half.mp4",
+      "sha256": "7ec459cdd86791186f8ea5173044e77df8411e8ce5e7b5ad68ea8c2c2062d739"
+    },
+    {
+      "id": "qa-media-artifact-064",
+      "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/v1-08-normal.mp4",
+      "sha256": "3a618a5888e8d27e0c11cf7ac889785296085a53e1d4ef9f46f5a7b3ca33b26e"
+    },
+    {
+      "id": "qa-media-artifact-065",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contact-sheets/c1-04-proof.png",
+      "sha256": "4ce4b843cb4abcdf092f96394f7c472deb398a6d41b0eafa300fd1f160d3aa4a"
+    },
+    {
+      "id": "qa-media-artifact-066",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contact-sheets/c1-04-public.png",
+      "sha256": "8a5700f69079e709d961ca055f165376b5c36d09a331b048a58b0d531ce29f7e"
+    },
+    {
+      "id": "qa-media-artifact-067",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contact-sheets/c1-06-proof.png",
+      "sha256": "882e0662f7ceae2c0e3ae697f20d2dfd5c22d0b3fbb452041531d276caf6d0d1"
+    },
+    {
+      "id": "qa-media-artifact-068",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contact-sheets/c1-06-public.png",
+      "sha256": "ca571a0c8fbcd10b6e856b85a6a610a6d4eba9f5a9ecce19edf46475584d2b0d"
+    },
+    {
+      "id": "qa-media-artifact-069",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contact-sheets/c1-07-proof.png",
+      "sha256": "e2fb10fe13c6966184c0f9447d44a0898be29aafda4a6527888a6a5a2524ecd8"
+    },
+    {
+      "id": "qa-media-artifact-070",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contact-sheets/c1-07-public.png",
+      "sha256": "97435dd916c2990efb747a684b951367894b791c03ba761de20bd777d140356b"
+    },
+    {
+      "id": "qa-media-artifact-071",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contact-sheets/c1-08-proof.png",
+      "sha256": "9a545761f08ced0fd33b388900a5cbcbf22ff0d3c4b54da93d73346336b9364d"
+    },
+    {
+      "id": "qa-media-artifact-072",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contact-sheets/c1-08-public.png",
+      "sha256": "6e47db44d750ce328f64b995aeb9c10130eb0b2a26de030630c40b6d797fef0d"
+    },
+    {
+      "id": "qa-media-artifact-073",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-04/proof/frame-004057.png",
+      "sha256": "b481aa9e2578a00d1c46cd814011c718419f8ec61351587d2961aeb066a8976e"
+    },
+    {
+      "id": "qa-media-artifact-074",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-04/proof/frame-004058.png",
+      "sha256": "d216a51fe812f53c5d9262e3f98cd5c46f240fb8598cfa537014baac082dd62a"
+    },
+    {
+      "id": "qa-media-artifact-075",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-04/proof/frame-004059.png",
+      "sha256": "17028057892c7a95fe43711bacae0bf9a30dd355eafeb5b754355889cb029516"
+    },
+    {
+      "id": "qa-media-artifact-076",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-04/proof/frame-004060.png",
+      "sha256": "b5e0d29a9940ed867e2f428ec043ddf00bff9a3782bc984fab063f29b7b67c2b"
+    },
+    {
+      "id": "qa-media-artifact-077",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-04/proof/frame-004074.png",
+      "sha256": "8ac1b9801e3d3eccde1af996374e949038e779c305a05eccddd8a3185a3b5bd0"
+    },
+    {
+      "id": "qa-media-artifact-078",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-04/proof/frame-004075.png",
+      "sha256": "771e052b9a78206702c538624109097bf50211be87b4c7c59ecbeaea5927c167"
+    },
+    {
+      "id": "qa-media-artifact-079",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-04/proof/frame-004076.png",
+      "sha256": "90de0be4a724715ba00b7f7d70f95c96186b4a63bd63f8113bb5df148972d349"
+    },
+    {
+      "id": "qa-media-artifact-080",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-04/proof/frame-004077.png",
+      "sha256": "729e77b0e3bb1b3b5af4b0612f01b8b57cb15670ab792225b20ccfd6558186bf"
+    },
+    {
+      "id": "qa-media-artifact-081",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-04/proof/frame-004158.png",
+      "sha256": "532f87b7a4da25fdc16da85b23ab689229d10186241f3a2e80215bd92d0cd17a"
+    },
+    {
+      "id": "qa-media-artifact-082",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-04/proof/frame-004159.png",
+      "sha256": "ec770bbf25f4dd84b8937a0a0c0736486a968361fc0ae6253baf16b2ddd19d2d"
+    },
+    {
+      "id": "qa-media-artifact-083",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-04/proof/frame-004160.png",
+      "sha256": "670daf0d1baa083dd6f5815f35cc7ebd65644d4784bfe1cf0ffeb4f3ad532a63"
+    },
+    {
+      "id": "qa-media-artifact-084",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-04/proof/frame-004161.png",
+      "sha256": "0631f395d88b06272cd79cb82fd863b1effc147349b476ddad98291d5222097d"
+    },
+    {
+      "id": "qa-media-artifact-085",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-04/public/frame-002028.png",
+      "sha256": "18c42dee0c325f2cdc7292ebbffd695eba236f7a194bb3a1a3097243a9d2bf30"
+    },
+    {
+      "id": "qa-media-artifact-086",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-04/public/frame-002029.png",
+      "sha256": "0bd338458bcb3844152f8111dbbc07dbbfd0f70e8758c1a389b817a72eb26f40"
+    },
+    {
+      "id": "qa-media-artifact-087",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-04/public/frame-002030.png",
+      "sha256": "0beb36a591551b6965c4aa510828e14d53638fe3b62d5dbb5066d352cc7833e3"
+    },
+    {
+      "id": "qa-media-artifact-088",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-04/public/frame-002031.png",
+      "sha256": "7c3c7ba72e2ec2987475a55c5bf2017aad184656bfaaf8e3a54ece735eadb350"
+    },
+    {
+      "id": "qa-media-artifact-089",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-04/public/frame-002037.png",
+      "sha256": "709fe209acedf650da0eb0f6ba6435accfec92f28373b1edc936d4398b4351b3"
+    },
+    {
+      "id": "qa-media-artifact-090",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-04/public/frame-002038.png",
+      "sha256": "6ec6becb7aabf90fadaf6e427722613889568d0f845eb3e546c6accc82ecabc0"
+    },
+    {
+      "id": "qa-media-artifact-091",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-04/public/frame-002039.png",
+      "sha256": "f92344162c2f6d0dc4df233d691aedce40b1fb597ccdccb98b3344a2c79d79f6"
+    },
+    {
+      "id": "qa-media-artifact-092",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-04/public/frame-002040.png",
+      "sha256": "a8b25775572a9d1452010efc37b54ba5189499f279420ac2cb93e2604188bfbd"
+    },
+    {
+      "id": "qa-media-artifact-093",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-04/public/frame-002079.png",
+      "sha256": "2b7be2ffce52a9cedbf116fef149c546cdd585878fd4935ef0e837de0e60f305"
+    },
+    {
+      "id": "qa-media-artifact-094",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-04/public/frame-002080.png",
+      "sha256": "ecd48f735fdbf7c2d2eec3b9645346312018dbd63fd4652e5ca4dd3c9473fd61"
+    },
+    {
+      "id": "qa-media-artifact-095",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-04/public/frame-002081.png",
+      "sha256": "fdb9c9134aa639bc97c86eb3e7aee7039cfa5aaa16b6e26b42651a6a3d993493"
+    },
+    {
+      "id": "qa-media-artifact-096",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-04/public/frame-002082.png",
+      "sha256": "4366a9c8358377eba8f1621942720814c11b8d07080e6f695f890525b6326727"
+    },
+    {
+      "id": "qa-media-artifact-097",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-06/proof/frame-004889.png",
+      "sha256": "03f4495afb2391f6a72b3049c1124bafea8db589ff2f33983dcc21f2314eac64"
+    },
+    {
+      "id": "qa-media-artifact-098",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-06/proof/frame-004890.png",
+      "sha256": "23a7a1843648d1827996098c020f4f51b515c79c79bef90fe724f7319a5cfa06"
+    },
+    {
+      "id": "qa-media-artifact-099",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-06/proof/frame-004891.png",
+      "sha256": "95e20e5fd4245574f49795cf435792bfb961ca21cf6d2a82dacdea9ef2a197a9"
+    },
+    {
+      "id": "qa-media-artifact-100",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-06/proof/frame-004892.png",
+      "sha256": "1aa41912877bbfe6fe35fa587fe857a55a32cee06ee4e66761e6060672f4259d"
+    },
+    {
+      "id": "qa-media-artifact-101",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-06/proof/frame-004946.png",
+      "sha256": "87d78b4f7c07d9d16992a88f5202f0d868db7c6d9ad17c9505cc9815c9225fa8"
+    },
+    {
+      "id": "qa-media-artifact-102",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-06/proof/frame-004947.png",
+      "sha256": "eb7ddf7af0238c9c5920ee0a20008114feef303f6544a1ef068147e3ef1a64a7"
+    },
+    {
+      "id": "qa-media-artifact-103",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-06/proof/frame-004948.png",
+      "sha256": "60887350390d30cfbc1b8f35c8ee394e175c90f6811c0442eb63cb12b6bcf3de"
+    },
+    {
+      "id": "qa-media-artifact-104",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-06/proof/frame-004949.png",
+      "sha256": "01df7485bfdffbae8ac2c7a9f25bb07b89bba625317b18f620ad6c21ef279309"
+    },
+    {
+      "id": "qa-media-artifact-105",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-06/proof/frame-005268.png",
+      "sha256": "2785d4693f975d442864dfd8b68f3042610288eaaafd445d3234b37b1d4e925d"
+    },
+    {
+      "id": "qa-media-artifact-106",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-06/proof/frame-005269.png",
+      "sha256": "4471aa6764eae03b15fee9e3139daadb602edc2fbff915661b8081df024cc604"
+    },
+    {
+      "id": "qa-media-artifact-107",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-06/proof/frame-005270.png",
+      "sha256": "e0c7163e1156608452d17246922e62441ffdbd6145899ec173da28a11103abac"
+    },
+    {
+      "id": "qa-media-artifact-108",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-06/proof/frame-005271.png",
+      "sha256": "433b9c3a1e38c68e5823746c972fa96e6309129432047c6a900de13a6f9a7a0e"
+    },
+    {
+      "id": "qa-media-artifact-109",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-06/public/frame-002444.png",
+      "sha256": "916944e42898e4886072acbb927dfcf68c92ebb619da14010e6654db442d335f"
+    },
+    {
+      "id": "qa-media-artifact-110",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-06/public/frame-002445.png",
+      "sha256": "e181b3331fd4f307247d4e3a792b1d39e1e0a10ab67a11adebbe1a97689cb1b0"
+    },
+    {
+      "id": "qa-media-artifact-111",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-06/public/frame-002446.png",
+      "sha256": "9ac5d9b4eb896a0e8c6c942eca72180895d46e3a75a6d2ef35bb8478a4e35515"
+    },
+    {
+      "id": "qa-media-artifact-112",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-06/public/frame-002447.png",
+      "sha256": "8df25f6cec24dec95a1e9bbb2cebe341ad29fbe72f7ed7f91c46febb75d48295"
+    },
+    {
+      "id": "qa-media-artifact-113",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-06/public/frame-002473.png",
+      "sha256": "5208bed7213cdef822c3e438b66362a5070864a0611db1cf0cb83f7df3e4f6bc"
+    },
+    {
+      "id": "qa-media-artifact-114",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-06/public/frame-002474.png",
+      "sha256": "7fc4f689c5363d47acb3ee0f57ae1bd96339e992feefded37f1d12fd30e14b56"
+    },
+    {
+      "id": "qa-media-artifact-115",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-06/public/frame-002475.png",
+      "sha256": "1a66eb3190a1ff396710970c3aa20a9c869ae3eb6b33a7be83233ba644c43169"
+    },
+    {
+      "id": "qa-media-artifact-116",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-06/public/frame-002476.png",
+      "sha256": "27ddde083672b39aa768fc035d60c51c7da0a2f181e8435740adfe3015694696"
+    },
+    {
+      "id": "qa-media-artifact-117",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-06/public/frame-002634.png",
+      "sha256": "387b59ffff128dfe407ba6eff98c3f3ce83930506ab2cbc8b8cb8912f6610e01"
+    },
+    {
+      "id": "qa-media-artifact-118",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-06/public/frame-002635.png",
+      "sha256": "e95fa612cd118ce131e829b4bb227c24c9dc688d560dc980866e2ae38d7fc112"
+    },
+    {
+      "id": "qa-media-artifact-119",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-06/public/frame-002636.png",
+      "sha256": "376a1e2d436de4620620e21851af67005c65512002bc8e1042bd4d7a4db200b9"
+    },
+    {
+      "id": "qa-media-artifact-120",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-06/public/frame-002637.png",
+      "sha256": "bf98103b2e14034e425c92222edb594f996d08546eb98d9a00a61f6a5d6eb5a5"
+    },
+    {
+      "id": "qa-media-artifact-121",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-07/proof/frame-005372.png",
+      "sha256": "a82c9eab1e7f81f68f13c19e079eb2125c9230602f87b719fe63bccac247a33d"
+    },
+    {
+      "id": "qa-media-artifact-122",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-07/proof/frame-005373.png",
+      "sha256": "566c46664a688435dc71fa6fc3d4af90d9a58905cd146720e8191036f7137116"
+    },
+    {
+      "id": "qa-media-artifact-123",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-07/proof/frame-005374.png",
+      "sha256": "12e1357a14078b5365a1aebc4c073f32f7d219da58b994d8c5a25fd0c339e70e"
+    },
+    {
+      "id": "qa-media-artifact-124",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-07/proof/frame-005375.png",
+      "sha256": "69bbf88782fe3f0d63fcd3cd1dcab924a0ee144a81b73f2ecee66730595a6157"
+    },
+    {
+      "id": "qa-media-artifact-125",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-07/proof/frame-005477.png",
+      "sha256": "af482d604efad02e9c92674d7ec392e263070bcc181bec45dbec505a4b556ba8"
+    },
+    {
+      "id": "qa-media-artifact-126",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-07/proof/frame-005478.png",
+      "sha256": "a89fb47f18b46566f40363b038a3dc50af2167f9ed4982872424585eebbdf25b"
+    },
+    {
+      "id": "qa-media-artifact-127",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-07/proof/frame-005479.png",
+      "sha256": "ece7461de09fe611c1f5f3ee63be010203a4ba22b5d526c36d50ba5b2330473f"
+    },
+    {
+      "id": "qa-media-artifact-128",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-07/proof/frame-005480.png",
+      "sha256": "c1d0023fda5b0c662cd8517fe2788e6476e4e930bf0aa53e2876c8525c74484c"
+    },
+    {
+      "id": "qa-media-artifact-129",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-07/proof/frame-005569.png",
+      "sha256": "bead79d5c2fbbeacd806c6f9e450b1c772c9652a3624bef8532e7208de23a119"
+    },
+    {
+      "id": "qa-media-artifact-130",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-07/proof/frame-005570.png",
+      "sha256": "0fcb25bb77b41578401995cc54439ae60616c7f1b101d7ce43cafb82218ec468"
+    },
+    {
+      "id": "qa-media-artifact-131",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-07/proof/frame-005571.png",
+      "sha256": "a07d1597095566eed2e5675a0a3edd8bf0743b8a4b17ef54a2fe38967598c987"
+    },
+    {
+      "id": "qa-media-artifact-132",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-07/proof/frame-005572.png",
+      "sha256": "608800d0e89e2a7d543dfd3997348af11f431d9ebaeb4d322f3dc43c335d45c4"
+    },
+    {
+      "id": "qa-media-artifact-133",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-07/public/frame-002685.png",
+      "sha256": "bb65313130f2cfcffcbce81f204478c5943fe9183de96b5a6b0f61984dea9b36"
+    },
+    {
+      "id": "qa-media-artifact-134",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-07/public/frame-002686.png",
+      "sha256": "acdb4204f4a557eb476f359c352c9fec05d445a807eadc4de41a34070f4520f9"
+    },
+    {
+      "id": "qa-media-artifact-135",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-07/public/frame-002687.png",
+      "sha256": "8175295a280a121b10b94d71922d1162e45bd0b8259690782b5860a8e0a82e87"
+    },
+    {
+      "id": "qa-media-artifact-136",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-07/public/frame-002688.png",
+      "sha256": "961aefde7d358413c5a8e9966ead8615d3ecfa4e7bb0c2d79b71cb50965c6f45"
+    },
+    {
+      "id": "qa-media-artifact-137",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-07/public/frame-002738.png",
+      "sha256": "b0d0606b20563a44b897eb2540da3f3a307a93b1d3824dc58b6aa956a488b95e"
+    },
+    {
+      "id": "qa-media-artifact-138",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-07/public/frame-002739.png",
+      "sha256": "59172cd70f2c775f8b8da1ceff474d7d3d0efce6bdc19d0ed7163d76a5b2bc09"
+    },
+    {
+      "id": "qa-media-artifact-139",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-07/public/frame-002740.png",
+      "sha256": "a70acbc5924c956cd90eb31faced4ca341d58e8f9b281de6aa78a3f12977d4cf"
+    },
+    {
+      "id": "qa-media-artifact-140",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-07/public/frame-002741.png",
+      "sha256": "90597aa39280c508dc2dd175c96b0f3e7047d4faa157e7a2907ac5873555c783"
+    },
+    {
+      "id": "qa-media-artifact-141",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-07/public/frame-002784.png",
+      "sha256": "4da27520cf8f65188674846dae5fa8b052c605436a914535ea931a18d7d12086"
+    },
+    {
+      "id": "qa-media-artifact-142",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-07/public/frame-002785.png",
+      "sha256": "3725bc2488d19051e1dda0efa427de86682d72399fca0d7e7aa02200ec9050ea"
+    },
+    {
+      "id": "qa-media-artifact-143",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-07/public/frame-002786.png",
+      "sha256": "0d26386c68829750e0cc039cce7d6e6cec64ea6eb0ceb214cf0e3dbe554d1102"
+    },
+    {
+      "id": "qa-media-artifact-144",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-07/public/frame-002787.png",
+      "sha256": "79fb2e4dc0175729da74b566138c45a149b8f8c37dd6397d2b5d4ff31ff9f9a5"
+    },
+    {
+      "id": "qa-media-artifact-145",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-08/proof/frame-005617.png",
+      "sha256": "c16ee7904e74f1a52690e60deb03b53cbb7f52493519e51d89c9912dab593671"
+    },
+    {
+      "id": "qa-media-artifact-146",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-08/proof/frame-005618.png",
+      "sha256": "55ac3caa063177922b5d06d17fc7a0a52b428211a7d0646336733ed81fe681c3"
+    },
+    {
+      "id": "qa-media-artifact-147",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-08/proof/frame-005619.png",
+      "sha256": "f15e130d51253187dc8fa2c85aefcff680f97b3b0a657030e2a3cf872198fc72"
+    },
+    {
+      "id": "qa-media-artifact-148",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-08/proof/frame-005620.png",
+      "sha256": "e025e75ee0cb90051bd12457b974e089c48749745423af46484848324b0fafd8"
+    },
+    {
+      "id": "qa-media-artifact-149",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-08/proof/frame-005660.png",
+      "sha256": "34f9f2e635e9ac2bf3b0aa26171d25fc20f5ae4ae1926414a1617076f951cc2e"
+    },
+    {
+      "id": "qa-media-artifact-150",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-08/proof/frame-005661.png",
+      "sha256": "6f16afad42b2f486476c53cb7b6aa7ddb7142c51c80ed6a37fae6fd880f3857e"
+    },
+    {
+      "id": "qa-media-artifact-151",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-08/proof/frame-005662.png",
+      "sha256": "21d2ea2afe33d3293f2ca993d6d9d5d8de6a42d641f0c18e467c7ca757583d9c"
+    },
+    {
+      "id": "qa-media-artifact-152",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-08/proof/frame-005663.png",
+      "sha256": "3ef867cff5004a2061584ed369492d3e42c1324af19917ef9c7d5b46441eb090"
+    },
+    {
+      "id": "qa-media-artifact-153",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-08/proof/frame-005708.png",
+      "sha256": "749679605f7510018676844216096c43f02d65e3de34ea7ddbeed950b49ecdfe"
+    },
+    {
+      "id": "qa-media-artifact-154",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-08/proof/frame-005709.png",
+      "sha256": "1e104e0924ddd8c3b9042c8171867c359e7f3f7924544fdf689f8d75ea62766e"
+    },
+    {
+      "id": "qa-media-artifact-155",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-08/proof/frame-005710.png",
+      "sha256": "c1886891c10f9d9d67a658058722f166d00d1c0112c9a66e806bab8ce1509103"
+    },
+    {
+      "id": "qa-media-artifact-156",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-08/proof/frame-005711.png",
+      "sha256": "be841f26331681f7f9302fbe5a024815c19191845a5c612670697da32e16a155"
+    },
+    {
+      "id": "qa-media-artifact-157",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-08/public/frame-002808.png",
+      "sha256": "0a72899b3f78e8a041b5cf349033dd07011d0a0a5511088f94c652368c5d2731"
+    },
+    {
+      "id": "qa-media-artifact-158",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-08/public/frame-002809.png",
+      "sha256": "d607bcfc473ebd3dd08bf7d4f4b2958ca00206675770cf19548425456f334309"
+    },
+    {
+      "id": "qa-media-artifact-159",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-08/public/frame-002810.png",
+      "sha256": "296819432b11854f9bec7ee8e3ed9831f2f38a8a23ac0314a5f4fd191b0a0736"
+    },
+    {
+      "id": "qa-media-artifact-160",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-08/public/frame-002811.png",
+      "sha256": "3b16afa3e8ab2ebbb7f58d555fb005599683f833381bd7adcafecc34fdeca8d1"
+    },
+    {
+      "id": "qa-media-artifact-161",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-08/public/frame-002830.png",
+      "sha256": "a081a9d73e030b07e4ba8f2656473784a0b8cde61c6817cd69f7bef9a6f5dfd1"
+    },
+    {
+      "id": "qa-media-artifact-162",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-08/public/frame-002831.png",
+      "sha256": "82392574c23c71f66dd5f28b1fa0ee599751cfa270f61e31cc89810169a4e8f4"
+    },
+    {
+      "id": "qa-media-artifact-163",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-08/public/frame-002832.png",
+      "sha256": "8b1c21422fc46e8096e034a34f410b9fa0fdd17d495fe0ae6dc44c7811dbde4e"
+    },
+    {
+      "id": "qa-media-artifact-164",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-08/public/frame-002833.png",
+      "sha256": "9f6f05851de0e0928c687ff521bfe7fa418d250e638004900f1226a151ccc9fc"
+    },
+    {
+      "id": "qa-media-artifact-165",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-08/public/frame-002854.png",
+      "sha256": "aace2f2a90b833cfa0a8ad98e338c25c3a47a8cb01efceae6ad316e45eb0e5e7"
+    },
+    {
+      "id": "qa-media-artifact-166",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-08/public/frame-002855.png",
+      "sha256": "11f4fb2b1c811c57584a7c3a64d1129bfff3d9abbbc550e2694b82e3809ab7a6"
+    },
+    {
+      "id": "qa-media-artifact-167",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-08/public/frame-002856.png",
+      "sha256": "2dc61f3c9c54a0af8fa324b6f07c37fc6e5f4cd25ce167367480d58cd1f4bbdc"
+    },
+    {
+      "id": "qa-media-artifact-168",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-08/public/frame-002857.png",
+      "sha256": "1db6aa277ed284a1295a74da633021364c6858f921826ba8915ddbcd4822ee36"
+    },
+    {
+      "id": "qa-media-artifact-169",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-03/proof/frame-008447.png",
+      "sha256": "f7675745f5624b2fc6d9014dbdba3ef30440527692fbcf8d170b57dace5cd2f7"
+    },
+    {
+      "id": "qa-media-artifact-170",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-03/proof/frame-008448.png",
+      "sha256": "d7ed1eeb22c64458cd0043b6583941d18e46b63717d8a5c4384500d18206ed32"
+    },
+    {
+      "id": "qa-media-artifact-171",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-03/proof/frame-008449.png",
+      "sha256": "6c8f9c2f24a30d9dbfcf9f98c05877955336c3b57ce94c4af58783a954b34e91"
+    },
+    {
+      "id": "qa-media-artifact-172",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-03/proof/frame-008450.png",
+      "sha256": "177eca539eb72aab8cabcc0a0bbefc597a269374e9a6e0058784df92d6e693c2"
+    },
+    {
+      "id": "qa-media-artifact-173",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-03/proof/frame-008635.png",
+      "sha256": "fe452fb79b9037820bc9316eee4f9a5fcc81fbb4e94a707997a6a0df88002849"
+    },
+    {
+      "id": "qa-media-artifact-174",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-03/proof/frame-008636.png",
+      "sha256": "cb52b008a7179096a222907a67ba3c1a7cf1e21cd2716e0470c26229a552ced9"
+    },
+    {
+      "id": "qa-media-artifact-175",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-03/proof/frame-008637.png",
+      "sha256": "f6b5b003a2021d33b12477aa44dd578b7c6311b473dfffff0ac1c9b0f98f989e"
+    },
+    {
+      "id": "qa-media-artifact-176",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-03/proof/frame-008638.png",
+      "sha256": "3b075d573ba3455de8db0984ea05dabbbb1fb4b933760edd59bbf688d4fb19f3"
+    },
+    {
+      "id": "qa-media-artifact-177",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-03/proof/frame-008709.png",
+      "sha256": "73d593749f541100a9b99ce3f11a91fe2a82a058506b6c331f2c2b8a99ae5152"
+    },
+    {
+      "id": "qa-media-artifact-178",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-03/proof/frame-008710.png",
+      "sha256": "488060459e0373e816e0ef8357825126e48725d9feb3bfa32e7d6a3fe7166e9f"
+    },
+    {
+      "id": "qa-media-artifact-179",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-03/proof/frame-008711.png",
+      "sha256": "4f2d057b054305ae80a3239716097f4767c0934fc0eaae69e50cb2e3cd87ad8c"
+    },
+    {
+      "id": "qa-media-artifact-180",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-03/proof/frame-008712.png",
+      "sha256": "d0f2bcba038da9c4899eb1529e3ad5753775eab8661aadcad15dcc39ff267b73"
+    },
+    {
+      "id": "qa-media-artifact-181",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-03/public/frame-004223.png",
+      "sha256": "597a3aac08244162e4a82ad59ef0a8f28a8b432898926aededdd41143f704ccf"
+    },
+    {
+      "id": "qa-media-artifact-182",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-03/public/frame-004225.png",
+      "sha256": "b0257d2f4705c5a7e4cd94647e6fb4f0f0770e6ecc7e4904b82504586d682958"
+    },
+    {
+      "id": "qa-media-artifact-183",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-03/public/frame-004226.png",
+      "sha256": "a2fdcae100e961c671f5b28e41c6efb3c48a65ef9a601f46c667465155cbb462"
+    },
+    {
+      "id": "qa-media-artifact-184",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-03/public/frame-004317.png",
+      "sha256": "849bd885b5f32d8cc4302423317ee09460f08f0d42b562c815bf59c8f982ef76"
+    },
+    {
+      "id": "qa-media-artifact-185",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-03/public/frame-004318.png",
+      "sha256": "6f4add212e85e015f8ef2fb8b545d43661f3c52953a661d185103ee338dc430d"
+    },
+    {
+      "id": "qa-media-artifact-186",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-03/public/frame-004319.png",
+      "sha256": "c82b0c2f0ce99b53ae3ffd43a1ffbc16f6ddb4fdd653ec8908bc9c0b82907f57"
+    },
+    {
+      "id": "qa-media-artifact-187",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-03/public/frame-004320.png",
+      "sha256": "77133198562935aff0fd21ef47b08421b2c61e0c6bce1e2e584740baa89a2f1f"
+    },
+    {
+      "id": "qa-media-artifact-188",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-03/public/frame-004354.png",
+      "sha256": "4d5d22aca7d824f05bf64f454820e0b32c3047a6c906d0b4f3cadbe9d994126a"
+    },
+    {
+      "id": "qa-media-artifact-189",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-03/public/frame-004355.png",
+      "sha256": "12bb2ed0671be9c927669666e7a4fdd726e37b40958bdba60fca69d53ece7361"
+    },
+    {
+      "id": "qa-media-artifact-190",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-03/public/frame-004356.png",
+      "sha256": "5b30e8c3ab9af8fa80c4c7143adfa2f97bee3fc6b65c9a2e59f4fd8d41c6a1de"
+    },
+    {
+      "id": "qa-media-artifact-191",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-03/public/frame-004357.png",
+      "sha256": "66e1a5490a2b07a8fba13dcaaafa2df0d6602f5e7e501d75814e914db6900d87"
+    },
+    {
+      "id": "qa-media-artifact-192",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/proof/frame-010359.png",
+      "sha256": "4ad0552235e05fd04e8c8f00a9ff0d666a4050c1e4094acd83ac2e5752cef002"
+    },
+    {
+      "id": "qa-media-artifact-193",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/proof/frame-010360.png",
+      "sha256": "02686ffa0bfcd5e2dea451f70c9f9194f206158260e1de0e4047731058eda262"
+    },
+    {
+      "id": "qa-media-artifact-194",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/proof/frame-010361.png",
+      "sha256": "146f01bb50a0fe8177a5b84379cd0903b50481c7a654953e6e0ea261fc976064"
+    },
+    {
+      "id": "qa-media-artifact-195",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/proof/frame-010362.png",
+      "sha256": "a0a46014670759d022e94d8acb1a37a8eee83703377eec37d8ff2c322779c19d"
+    },
+    {
+      "id": "qa-media-artifact-196",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/proof/frame-010392.png",
+      "sha256": "023afe7c0ade93caf60f3d71c52105bee1ddfe040c96fd0e788b9a35233c1154"
+    },
+    {
+      "id": "qa-media-artifact-197",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/proof/frame-010393.png",
+      "sha256": "8356cda6e0928cc028593692f8d1967058e61cc14feecccd3e11463f32869d2a"
+    },
+    {
+      "id": "qa-media-artifact-198",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/proof/frame-010394.png",
+      "sha256": "7830f22491ed4023cecd0aeafada4696ac99b33341f3ba099aefef9e67823be4"
+    },
+    {
+      "id": "qa-media-artifact-199",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/proof/frame-010395.png",
+      "sha256": "b15ac2ffb1f0ca1908d5f4529c2696dfe06e3811452a5299b2bb647562b76634"
+    },
+    {
+      "id": "qa-media-artifact-200",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/proof/frame-010529.png",
+      "sha256": "96e0cb868610e664d883a10539f4384dd6d818ef97d543c4d2510d876809014c"
+    },
+    {
+      "id": "qa-media-artifact-201",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/proof/frame-010530.png",
+      "sha256": "d7c8dec35f489a852e4be24bb15eae8fd5ab31db17116eaaf7dc9adfad85f536"
+    },
+    {
+      "id": "qa-media-artifact-202",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/proof/frame-010531.png",
+      "sha256": "e701eb6358ea83a6accde64f9b3f2c5c78f1a0778b2dce0743805838df14abc0"
+    },
+    {
+      "id": "qa-media-artifact-203",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/proof/frame-010532.png",
+      "sha256": "b0fc065a3cbcf5da3ecb8de28cb799ab2f3d7a0895c6f7269dd329255b880014"
+    },
+    {
+      "id": "qa-media-artifact-204",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/proof/frame-010645.png",
+      "sha256": "2233ecfc332f7adad5f11f6c8fc27c324e0c5aae98e591f2f544106c2ffefe55"
+    },
+    {
+      "id": "qa-media-artifact-205",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/proof/frame-010646.png",
+      "sha256": "e10827164f196aca927e0824a66585274cf0504c9f019410280d4c4730928af2"
+    },
+    {
+      "id": "qa-media-artifact-206",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/proof/frame-010647.png",
+      "sha256": "15b2785b587605ba10f967f1f00abb62739ac41f45870e4f52daa7609f3150bc"
+    },
+    {
+      "id": "qa-media-artifact-207",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/proof/frame-010648.png",
+      "sha256": "d27ad7ed2e777154d205f89e4967dd792e52e2377af7f5e4358179c3ee8e03bb"
+    },
+    {
+      "id": "qa-media-artifact-208",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/public/frame-005179.png",
+      "sha256": "26bc4db30e888e1d7804b7df0da7e3163933a23505364734e1584bf3d7e797b1"
+    },
+    {
+      "id": "qa-media-artifact-209",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/public/frame-005180.png",
+      "sha256": "2e098761427954532bea709fec6ee04526b49d1bb4253967329d1182f83c0ce3"
+    },
+    {
+      "id": "qa-media-artifact-210",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/public/frame-005181.png",
+      "sha256": "36629f0edd6bd0ba601f4cf0004d83bfe78f81e3e0776e05d468a645ca0dc789"
+    },
+    {
+      "id": "qa-media-artifact-211",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/public/frame-005182.png",
+      "sha256": "9c9a38d3b022b00ae877117ed9bc303771d6d1aadec5394bf134a9279034a903"
+    },
+    {
+      "id": "qa-media-artifact-212",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/public/frame-005196.png",
+      "sha256": "4a61a4424d724943e32ee39c87be5d238b6f7fa0655739bfea1d85af0bb25ba3"
+    },
+    {
+      "id": "qa-media-artifact-213",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/public/frame-005197.png",
+      "sha256": "e71301b5a6e45bd2877df1e47d12bc48da200b51ae428059e86f7bb32d357d83"
+    },
+    {
+      "id": "qa-media-artifact-214",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/public/frame-005198.png",
+      "sha256": "a30a37a8dd0eb5baa103b445aebfac501754bf7680d9500225a033438bf49b30"
+    },
+    {
+      "id": "qa-media-artifact-215",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/public/frame-005199.png",
+      "sha256": "476f10eabfa66d5aae46644a17e20611fff8a74bb4a5da8d79ef05ad4e5bd768"
+    },
+    {
+      "id": "qa-media-artifact-216",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/public/frame-005264.png",
+      "sha256": "5b35a16b342b7c1370682b153671363a18872687f376b0854bfe25714c6c1670"
+    },
+    {
+      "id": "qa-media-artifact-217",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/public/frame-005265.png",
+      "sha256": "c6842a38f5cdc4c278ef8fd8b2dac8aa3b88324ee80a78d53ab23f1f59fffec3"
+    },
+    {
+      "id": "qa-media-artifact-218",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/public/frame-005266.png",
+      "sha256": "ee661a8c04ab32e589e649e728a07458dbd47248901491da13ae5b8df4469a0b"
+    },
+    {
+      "id": "qa-media-artifact-219",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/public/frame-005267.png",
+      "sha256": "b10b1f798a8a857296d40dc07d67971bf6250be01786c0d3f67ae19f600c8df4"
+    },
+    {
+      "id": "qa-media-artifact-220",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/public/frame-005322.png",
+      "sha256": "278ba73f747dcf72a42e005536b79f4aa32f3f05dee818fad992a3889793599d"
+    },
+    {
+      "id": "qa-media-artifact-221",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/public/frame-005323.png",
+      "sha256": "319c909e1576eeef8d17c33b81cd528f4495feb68e0f29ec93444fd4146f9f2f"
+    },
+    {
+      "id": "qa-media-artifact-222",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/public/frame-005324.png",
+      "sha256": "6fd46076d8ec6b4ba4fd368292be24a431307374e4a124737c52fc015ab369ac"
+    },
+    {
+      "id": "qa-media-artifact-223",
+      "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/public/frame-005325.png",
+      "sha256": "7e47a7fb1d7d3dc4b4f9fec5f727b370756e5f9db9311bb7a92aa978bd53d1d1"
+    },
+    {
+      "id": "qa-media-artifact-224",
+      "path": "projects/tanisea-lyric-film/work/qa/media/release-sheets/c1-06-proof.png",
+      "sha256": "e92b248a10cd3d7267ed21fc70419fff87c1e31a82b6fabd499779a98793dc14"
+    },
+    {
+      "id": "qa-media-artifact-225",
+      "path": "projects/tanisea-lyric-film/work/qa/media/release-sheets/c1-06-public.png",
+      "sha256": "a2a75c931057f2de617e2f65282ab7dc88541d81414e781bb72d3e74f38bbd54"
+    },
+    {
+      "id": "qa-media-artifact-226",
+      "path": "projects/tanisea-lyric-film/work/qa/media/release-sheets/c1-07-proof.png",
+      "sha256": "42aebec4e4224e55efae521191acfb5021e5fc73f48c105a02b5479cc3e635c2"
+    },
+    {
+      "id": "qa-media-artifact-227",
+      "path": "projects/tanisea-lyric-film/work/qa/media/release-sheets/c1-07-public.png",
+      "sha256": "b1ec7018d2914add11c6c890ab50072e61778b29ec9775e04722c7b0365b2f64"
+    },
+    {
+      "id": "qa-media-artifact-228",
+      "path": "projects/tanisea-lyric-film/work/qa/media/release-sheets/c1-08-proof.png",
+      "sha256": "43c406ccc977a29f7c14e162080ecede21c2eb06fcd80e10aac087a86ea9385e"
+    },
+    {
+      "id": "qa-media-artifact-229",
+      "path": "projects/tanisea-lyric-film/work/qa/media/release-sheets/c1-08-public.png",
+      "sha256": "2b9f404af6c85210addba8a88ffaf7906c2c83d9efbf54b0c0a8e381286c3178"
+    },
+    {
+      "id": "qa-media-artifact-230",
+      "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-06/proof/frame-004937.png",
+      "sha256": "6be0650d25c13be8a698281e6c357eeff6b620c7843163fb8fc0099a8264c1b8"
+    },
+    {
+      "id": "qa-media-artifact-231",
+      "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-06/proof/frame-004938.png",
+      "sha256": "f6e677fef15fbde5a6251738fbcbaa437ce7bb0da13875ddf898f4021f7525c9"
+    },
+    {
+      "id": "qa-media-artifact-232",
+      "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-06/proof/frame-004939.png",
+      "sha256": "ddf0cd25e6175032453f6040ad83e9fd6abc7771ad5c76137a18164f7c59a1ab"
+    },
+    {
+      "id": "qa-media-artifact-233",
+      "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-06/proof/frame-004940.png",
+      "sha256": "63c20ab103e813f5c4f906b81c0c51364844492f2338fb7449e4dda914392d0e"
+    },
+    {
+      "id": "qa-media-artifact-234",
+      "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-06/proof/frame-005254.png",
+      "sha256": "381be0e1ce79caaf60050fab1637e4fe32a7db8a9f90e3547823daef96e99d80"
+    },
+    {
+      "id": "qa-media-artifact-235",
+      "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-06/proof/frame-005255.png",
+      "sha256": "cb90e8a3577b64fb5bb46c032df5d5e3c9a05457efa736c92f399a9c17beef01"
+    },
+    {
+      "id": "qa-media-artifact-236",
+      "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-06/proof/frame-005256.png",
+      "sha256": "b5096fc35668697f18e4ed6ae7ca88f08a5a7b5da9485c92cc76b65dc09eaa36"
+    },
+    {
+      "id": "qa-media-artifact-237",
+      "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-06/proof/frame-005257.png",
+      "sha256": "11186c0cb7f6241d91aea6fb03f3c908e0b396409314f29a7fc6a03d2647ab7f"
+    },
+    {
+      "id": "qa-media-artifact-238",
+      "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-06/proof/frame-005365.png",
+      "sha256": "83862fa6614f07fe2e1feec09cb61b0ac4bb5986d7361c10e2f18af7adbe9375"
+    },
+    {
+      "id": "qa-media-artifact-239",
+      "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-06/proof/frame-005366.png",
+      "sha256": "6ea96c649252369e21da57c435be0b6497f1a2b5694ceca814c1070bae027321"
+    },
+    {
+      "id": "qa-media-artifact-240",
+      "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-06/proof/frame-005367.png",
+      "sha256": "6fc7d1249c129b9ed38c4aaa49561471aca1b4f2bbac59560bb0340f1f589b80"
+    },
+    {
+      "id": "qa-media-artifact-241",
+      "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-06/proof/frame-005368.png",
+      "sha256": "e4d7f1f805ae56a4422ee9d214f7bf42f4b081be0c8057114f4d40231f9d89af"
+    },
+    {
+      "id": "qa-media-artifact-242",
+      "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-06/public/frame-002468.png",
+      "sha256": "35654f329129d46a9f3f8fb6ad396da59f17f9983a1ba4070fe3a06787430cd5"
+    },
+    {
+      "id": "qa-media-artifact-243",
+      "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-06/public/frame-002469.png",
+      "sha256": "5ec24b979a23143478e99cc0bc2f3fb7182caa4b94002e4a43af70707874799f"
+    },
+    {
+      "id": "qa-media-artifact-244",
+      "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-06/public/frame-002470.png",
+      "sha256": "6925ee80250ee4b4968461897de6e71afec4ce05b60bbcb09316b6b781ec9dfb"
+    },
+    {
+      "id": "qa-media-artifact-245",
+      "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-06/public/frame-002471.png",
+      "sha256": "e2da095f5a381da9cadf96b0edc703bf1d89bdbc16099458f7cf34d836dade41"
+    },
+    {
+      "id": "qa-media-artifact-246",
+      "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-06/public/frame-002627.png",
+      "sha256": "ef2e81cb05675b1da12001b1b37f3a449824372dae74e75b1d82326720abbab5"
+    },
+    {
+      "id": "qa-media-artifact-247",
+      "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-06/public/frame-002628.png",
+      "sha256": "edaacd3767d8dbdf2fd154a851cd01267486b9ad95563c315f416b1f37f7017e"
+    },
+    {
+      "id": "qa-media-artifact-248",
+      "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-06/public/frame-002629.png",
+      "sha256": "5d2616267024a23365f5531bd75dbc3c0414d36da383edaae5bd46f7eec6b810"
+    },
+    {
+      "id": "qa-media-artifact-249",
+      "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-06/public/frame-002630.png",
+      "sha256": "c9b72f4e0de6f817db41b504b5f2bb83d8b1f4cc6b6841b86e84e3009348e9fb"
+    },
+    {
+      "id": "qa-media-artifact-250",
+      "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-06/public/frame-002682.png",
+      "sha256": "a206ef9602163ce14b27f969cf3eb330e4363b38653af29372967608ad896a33"
+    },
+    {
+      "id": "qa-media-artifact-251",
+      "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-06/public/frame-002683.png",
+      "sha256": "ded61d9eb81eec568919390972c8dbf79f27f486b8f25609439985e469378412"
+    },
+    {
+      "id": "qa-media-artifact-252",
+      "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-06/public/frame-002684.png",
+      "sha256": "d4f276580f7253a9dc42d8d41e14edd032fae6c82f0f32f7f54aa1084878c192"
+    },
+    {
+      "id": "qa-media-artifact-253",
+      "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-06/public/frame-002685.png",
+      "sha256": "bb65313130f2cfcffcbce81f204478c5943fe9183de96b5a6b0f61984dea9b36"
+    },
+    {
+      "id": "qa-media-artifact-254",
+      "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-07/proof/frame-005475.png",
+      "sha256": "bb60e2807428570b7b48d3603afe715a9e5ba2eb7c3af983214bfaaca369e254"
+    },
+    {
+      "id": "qa-media-artifact-255",
+      "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-07/proof/frame-005476.png",
+      "sha256": "b7de188a42e253d8d85a6558b4f247ba92ba202069006b3d616cbc48276cb800"
+    },
+    {
+      "id": "qa-media-artifact-256",
+      "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-07/proof/frame-005477.png",
+      "sha256": "af482d604efad02e9c92674d7ec392e263070bcc181bec45dbec505a4b556ba8"
+    },
+    {
+      "id": "qa-media-artifact-257",
+      "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-07/proof/frame-005478.png",
+      "sha256": "a89fb47f18b46566f40363b038a3dc50af2167f9ed4982872424585eebbdf25b"
+    },
+    {
+      "id": "qa-media-artifact-258",
+      "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-07/proof/frame-005566.png",
+      "sha256": "99b8f40964d399f409d7480079ef14573eabbb8b67042659dddffd66168ba24f"
+    },
+    {
+      "id": "qa-media-artifact-259",
+      "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-07/proof/frame-005567.png",
+      "sha256": "3b8946fc002d4894ecc771d2cfe788be879e7b9aacb1c1aea9ecb1a969e7c02d"
+    },
+    {
+      "id": "qa-media-artifact-260",
+      "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-07/proof/frame-005568.png",
+      "sha256": "33769dc9e4e832b4ebd26da6c8aaed3d85330d06f4dd9cde2fa7b44fb2b9e9b3"
+    },
+    {
+      "id": "qa-media-artifact-261",
+      "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-07/proof/frame-005569.png",
+      "sha256": "bead79d5c2fbbeacd806c6f9e450b1c772c9652a3624bef8532e7208de23a119"
+    },
+    {
+      "id": "qa-media-artifact-262",
+      "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-07/proof/frame-005614.png",
+      "sha256": "cbc6b50df14362f94d2df150863f4c62729a76b2e60ddb4fa44fc233326b701d"
+    },
+    {
+      "id": "qa-media-artifact-263",
+      "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-07/proof/frame-005615.png",
+      "sha256": "c2ccdbe7ee89f05fab2c6c02fb0fdeae26e9338dcc0df660a1ced7685341e251"
+    },
+    {
+      "id": "qa-media-artifact-264",
+      "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-07/proof/frame-005616.png",
+      "sha256": "f68f430fc5a2b9e09621d8af894924f1c5eed1583df378d74ca1ae7e6cb3f73f"
+    },
+    {
+      "id": "qa-media-artifact-265",
+      "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-07/proof/frame-005617.png",
+      "sha256": "c16ee7904e74f1a52690e60deb03b53cbb7f52493519e51d89c9912dab593671"
+    },
+    {
+      "id": "qa-media-artifact-266",
+      "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-07/public/frame-002737.png",
+      "sha256": "f42d7c8f940b8d382d14e3032289454da08e27636a0e24b786a088314959e302"
+    },
+    {
+      "id": "qa-media-artifact-267",
+      "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-07/public/frame-002738.png",
+      "sha256": "b0d0606b20563a44b897eb2540da3f3a307a93b1d3824dc58b6aa956a488b95e"
+    },
+    {
+      "id": "qa-media-artifact-268",
+      "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-07/public/frame-002739.png",
+      "sha256": "59172cd70f2c775f8b8da1ceff474d7d3d0efce6bdc19d0ed7163d76a5b2bc09"
+    },
+    {
+      "id": "qa-media-artifact-269",
+      "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-07/public/frame-002740.png",
+      "sha256": "a70acbc5924c956cd90eb31faced4ca341d58e8f9b281de6aa78a3f12977d4cf"
+    },
+    {
+      "id": "qa-media-artifact-270",
+      "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-07/public/frame-002783.png",
+      "sha256": "51afd7ceb8349dc5b596cec3f60b94f5e55c163229b2f3727c0c8a8f4f7c4c42"
+    },
+    {
+      "id": "qa-media-artifact-271",
+      "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-07/public/frame-002784.png",
+      "sha256": "4da27520cf8f65188674846dae5fa8b052c605436a914535ea931a18d7d12086"
+    },
+    {
+      "id": "qa-media-artifact-272",
+      "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-07/public/frame-002785.png",
+      "sha256": "3725bc2488d19051e1dda0efa427de86682d72399fca0d7e7aa02200ec9050ea"
+    },
+    {
+      "id": "qa-media-artifact-273",
+      "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-07/public/frame-002786.png",
+      "sha256": "0d26386c68829750e0cc039cce7d6e6cec64ea6eb0ceb214cf0e3dbe554d1102"
+    },
+    {
+      "id": "qa-media-artifact-274",
+      "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-07/public/frame-002807.png",
+      "sha256": "13c56a9e3480fd1c9c55172175540031a144f0f4c25459047cf49d990f556e1b"
+    },
+    {
+      "id": "qa-media-artifact-275",
+      "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-07/public/frame-002808.png",
+      "sha256": "0a72899b3f78e8a041b5cf349033dd07011d0a0a5511088f94c652368c5d2731"
+    },
+    {
+      "id": "qa-media-artifact-276",
+      "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-07/public/frame-002809.png",
+      "sha256": "d607bcfc473ebd3dd08bf7d4f4b2958ca00206675770cf19548425456f334309"
+    },
+    {
+      "id": "qa-media-artifact-277",
+      "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-07/public/frame-002810.png",
+      "sha256": "296819432b11854f9bec7ee8e3ed9831f2f38a8a23ac0314a5f4fd191b0a0736"
+    },
+    {
+      "id": "qa-media-artifact-278",
+      "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-08/proof/frame-005655.png",
+      "sha256": "4b5381aee58d95af21ae0886cac4bbcea2e324cf5f3ccbe91edd5a161a274585"
+    },
+    {
+      "id": "qa-media-artifact-279",
+      "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-08/proof/frame-005656.png",
+      "sha256": "1387406c3e1b2a5493ce80af5154018923bd81d4918ef96a94dddd6ed7609e04"
+    },
+    {
+      "id": "qa-media-artifact-280",
+      "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-08/proof/frame-005657.png",
+      "sha256": "277a14f5ceb064fb2c8c91cc62d7c29078b49d60baabd4fde14b6e8070345705"
+    },
+    {
+      "id": "qa-media-artifact-281",
+      "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-08/proof/frame-005658.png",
+      "sha256": "49e3fbd0756dd61f9364c34934e2df8220679b22c0d213f34ee44095a7874b65"
+    },
+    {
+      "id": "qa-media-artifact-282",
+      "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-08/proof/frame-005703.png",
+      "sha256": "4be97ab0085986352aec72228478aa08b7b1f979cc9a899042b2574fd8558466"
+    },
+    {
+      "id": "qa-media-artifact-283",
+      "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-08/proof/frame-005704.png",
+      "sha256": "a1abddc18fc146b9451df02dc1b8388f9fb51a2198be0c1a5c50ff6243a00235"
+    },
+    {
+      "id": "qa-media-artifact-284",
+      "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-08/proof/frame-005705.png",
+      "sha256": "0a39192c44a770dcf60ebf065cce53008200c9af0889c0c656cf969111ad7f3e"
+    },
+    {
+      "id": "qa-media-artifact-285",
+      "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-08/proof/frame-005706.png",
+      "sha256": "3dd19295b29c048b1ed7a2406fbb5a0c558d1be132936a162c198f9f27a34dfc"
+    },
+    {
+      "id": "qa-media-artifact-286",
+      "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-08/proof/frame-005908.png",
+      "sha256": "0966d915d52c13aae0127685198ba5b84d494ae914d7a0c9e2b1f93c5b3bcdf3"
+    },
+    {
+      "id": "qa-media-artifact-287",
+      "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-08/proof/frame-005909.png",
+      "sha256": "e6f352cc71cb241f02f8514af13d28f9bd2d903e3691dc77a4ccc1c40535bb31"
+    },
+    {
+      "id": "qa-media-artifact-288",
+      "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-08/proof/frame-005910.png",
+      "sha256": "8c56e5891d720249f0961170664a5dcf9084715fa66f1e5a9efc4cbf6681fd14"
+    },
+    {
+      "id": "qa-media-artifact-289",
+      "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-08/proof/frame-005911.png",
+      "sha256": "15e9e96829217b092ec03faa7aa72df766f45bd73da6f14bed1c2a9552efba80"
+    },
+    {
+      "id": "qa-media-artifact-290",
+      "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-08/public/frame-002827.png",
+      "sha256": "2cc0871068eb75490cca76c918822c75ba7c4c4b9984749f6926373601abda13"
+    },
+    {
+      "id": "qa-media-artifact-291",
+      "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-08/public/frame-002828.png",
+      "sha256": "91115c932d5f98d34bde5ccccfe71aee7ed5d23f01dcbdd6cbefe4d41d344649"
+    },
+    {
+      "id": "qa-media-artifact-292",
+      "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-08/public/frame-002829.png",
+      "sha256": "cc9098c37b6167a839181217d36305280c2b3127b4d74ae76164cab6c1f5da67"
+    },
+    {
+      "id": "qa-media-artifact-293",
+      "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-08/public/frame-002830.png",
+      "sha256": "a081a9d73e030b07e4ba8f2656473784a0b8cde61c6817cd69f7bef9a6f5dfd1"
+    },
+    {
+      "id": "qa-media-artifact-294",
+      "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-08/public/frame-002851.png",
+      "sha256": "d40c1226b6c7cd9ace992b401a7bcf0dce212d37c166291478c32d8c51c13fd7"
+    },
+    {
+      "id": "qa-media-artifact-295",
+      "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-08/public/frame-002852.png",
+      "sha256": "10929192bfd644e034aa596e402f36096cb1377d9bb9fa59cfc11f77394eeb6c"
+    },
+    {
+      "id": "qa-media-artifact-296",
+      "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-08/public/frame-002853.png",
+      "sha256": "4061999770a39dae9ac9431fe575a28eafb40e8564441cce88920fc976dba7f1"
+    },
+    {
+      "id": "qa-media-artifact-297",
+      "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-08/public/frame-002854.png",
+      "sha256": "aace2f2a90b833cfa0a8ad98e338c25c3a47a8cb01efceae6ad316e45eb0e5e7"
+    },
+    {
+      "id": "qa-media-artifact-298",
+      "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-08/public/frame-002953.png",
+      "sha256": "943d70f1ccbebbfba3db5d4dc21709b5a903eef15cd2f188fb19b714e02825fe"
+    },
+    {
+      "id": "qa-media-artifact-299",
+      "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-08/public/frame-002954.png",
+      "sha256": "bab22abf3f04cf33a0834f331d593319c691dfdcbb436394a2c06c115b3dd3f5"
+    },
+    {
+      "id": "qa-media-artifact-300",
+      "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-08/public/frame-002955.png",
+      "sha256": "779dbd0b40caa4d2347da9cd53ddb9f55ee084f8618206e206bc6b60d4559544"
+    },
+    {
+      "id": "qa-media-artifact-301",
+      "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-08/public/frame-002956.png",
+      "sha256": "d4ea34d22936038bb713d68f7819bf4b86b8d041bf05609051e065f3ada7ba89"
+    }
+  ],
+  "baselineRun": {
+    "schemaVersion": 1,
+    "runId": "run-1",
+    "fullMediaExecuted": true,
+    "boundedClaim": "sample-indexed alignment with frame-bounded rendering",
+    "git": {
+      "headCommit": "a5d3b5344eb65d2dc91579142c3bc608e53b448a",
+      "trackedTreeSha256": "e4704401f40258c3eadd7021b4691757f6cf64caf3c7b53c3fdeaf45a697b255",
+      "worktreeDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "isClean": true,
+      "statusEntries": []
+    },
+    "toolVersions": {
+      "node": "v24.19.0",
+      "npm": "11.7.0",
+      "ffmpeg": "ffmpeg version 9.0-full_build-www.gyan.dev Copyright (c) 2000-2026 the FFmpeg developers",
+      "ffprobe": "ffprobe version 9.0-full_build-www.gyan.dev Copyright (c) 2007-2026 the FFmpeg developers"
+    },
+    "commands": [
+      {
+        "id": "npm-ci",
+        "command": "npm ci",
+        "exitCode": 0,
+        "durationMs": 23077.496,
+        "logPath": "projects/tanisea-lyric-film/work/qa/run-1/logs/npm-ci.log",
+        "logSha256": "66bf3df6b5b80d9d81907625d49505c7a60640836acb17cb590239d698d179ee"
+      },
+      {
+        "id": "check",
+        "command": "npm run check",
+        "exitCode": 0,
+        "durationMs": 73247.9495,
+        "logPath": "projects/tanisea-lyric-film/work/qa/run-1/logs/check.log",
+        "logSha256": "f38a2d8a8ddb32cae45b3679fcdf888a275b486cd03c5747d6f160767ab017b8"
+      },
+      {
+        "id": "alignment-verify",
+        "command": "npm run alignment:verify",
+        "exitCode": 0,
+        "durationMs": 982.4216999999917,
+        "logPath": "projects/tanisea-lyric-film/work/qa/run-1/logs/alignment-verify.log",
+        "logSha256": "aafb0a9cabb46400ef1bbc77a8dd73b6c7851f6fdefb68a83db2a1a3897ff96c"
+      },
+      {
+        "id": "layout-verify",
+        "command": "npm run layout:verify",
+        "exitCode": 0,
+        "durationMs": 10521.515,
+        "logPath": "projects/tanisea-lyric-film/work/qa/run-1/logs/layout-verify.log",
+        "logSha256": "1811b379c17349f5802cd66db4b4e4913291fbe31aab497bdf0906f8b07e152d"
+      },
+      {
+        "id": "compositions",
+        "command": "npm run compositions",
+        "exitCode": 0,
+        "durationMs": 5205.926999999996,
+        "logPath": "projects/tanisea-lyric-film/work/qa/run-1/logs/compositions.log",
+        "logSha256": "a1eac3658bcd7f01995e076920197773feaf96e333bc50dc87f0a837165d5c06"
+      },
+      {
+        "id": "verify-reference",
+        "command": "npm run verify -- --kind reference",
+        "exitCode": 0,
+        "durationMs": 767842.0747,
+        "logPath": "projects/tanisea-lyric-film/work/qa/run-1/logs/verify-reference.log",
+        "logSha256": "63fde235e0643de5fa4eb15d343f59995109b75c46d19bbf85caceac04104025"
+      },
+      {
+        "id": "verify-public",
+        "command": "npm run verify -- --kind public",
+        "exitCode": 0,
+        "durationMs": 24500.135899999994,
+        "logPath": "projects/tanisea-lyric-film/work/qa/run-1/logs/verify-public.log",
+        "logSha256": "8980e885d04de1bb5e6f0d95cf1466ca0719117c2ad51b08b51d041903ee2598"
+      },
+      {
+        "id": "verify-proof",
+        "command": "npm run verify -- --kind proof",
+        "exitCode": 0,
+        "durationMs": 33535.57609999995,
+        "logPath": "projects/tanisea-lyric-film/work/qa/run-1/logs/verify-proof.log",
+        "logSha256": "2deab5b4ae072188f70bab499956e36fd64713267b044a9b464b174fd9ab8cc0"
+      },
+      {
+        "id": "verify-public-markup",
+        "command": "npm run test:run -- tests/release-gates.test.ts -t \"public-markup release gate\"",
+        "exitCode": 0,
+        "durationMs": 1063.3636000000406,
+        "logPath": "projects/tanisea-lyric-film/work/qa/run-1/logs/verify-public-markup.log",
+        "logSha256": "b7a83e3a51a06daa79e82c44470b0342949de031bcb9982804f71f41626a56eb"
+      },
+      {
+        "id": "verify-matrix",
+        "command": "npm run test:run -- tests/release-gates.test.ts -t \"requirement-matrix release gate\"",
+        "exitCode": 0,
+        "durationMs": 1040.8840000000782,
+        "logPath": "projects/tanisea-lyric-film/work/qa/run-1/logs/verify-matrix.log",
+        "logSha256": "f7b1a9f7dc9746c659cdada9c80256f79d3c04ec638998cb7c61e6079e941e5e"
+      }
+    ],
+    "artifacts": [
+      {
+        "id": "source-audio",
+        "kind": "source-audio",
+        "path": "projects/tanisea-lyric-film/public/soundtrack.m4a",
+        "sizeBytes": 2476341,
+        "sha256": "93084f293d491da1519732f3fa3cf6416c783d04e8ca18b5569c7608a8d4540d"
+      },
+      {
+        "id": "alignment-manifest",
+        "kind": "alignment",
+        "path": "projects/tanisea-lyric-film/alignment/tanisea-word-alignment-v3.json",
+        "sizeBytes": 351148,
+        "sha256": "06fe6c8d6ad4db5131ab4f9ab98be91ea87064fdeea58017c6b8c21ed8530f0b"
+      },
+      {
+        "id": "audio-features",
+        "kind": "features",
+        "path": "projects/tanisea-lyric-film/public/audio-features.bin",
+        "sizeBytes": 688532,
+        "sha256": "c9453f8c6fb3de3f16e691b51b4155c5db7e313f5aac1cc7942904754d29b7cf"
+      },
+      {
+        "id": "reference-render",
+        "kind": "reference",
+        "path": "projects/tanisea-lyric-film/output/Tanisea-Lyric-Film-vNext-reference-2x.mov",
+        "sizeBytes": 28708453523,
+        "sha256": "664feb2fe9e7336c84602dd35c82de21197729949bee93e6bbe164ee87044895"
+      },
+      {
+        "id": "public-master",
+        "kind": "public",
+        "path": "projects/tanisea-lyric-film/output/Tanisea-Lyric-Film-vNext-60fps-Archival-Master.mp4",
+        "sizeBytes": 17279730,
+        "sha256": "c9d0e882715661a706da617a2ffe397343af480b5bdb4a3580fcc1882ce77482"
+      },
+      {
+        "id": "sync-proof",
+        "kind": "proof",
+        "path": "projects/tanisea-lyric-film/output/Tanisea-Lyric-Film-Sync-Proof-120fps.mp4",
+        "sizeBytes": 157392393,
+        "sha256": "6a6600c5b8ef7ccc4421022c13b6fa2c8824ec309e0c22c23fc8dc13ab3236a6"
+      },
+      {
+        "id": "qa-media-manifest",
+        "kind": "qa-manifest",
+        "path": "projects/tanisea-lyric-film/work/qa/media/qa-media-manifest.json",
+        "sizeBytes": 55571,
+        "sha256": "5192a5dfa967612a7a609f1046918cfa595723c3fc8ce2c6cbd269ad9149ff3d"
+      },
+      {
+        "id": "v1-03-public-contact",
+        "kind": "qa-contact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-03/public/frame-004224.png",
+        "sizeBytes": 3382996,
+        "sha256": "bb584c6c756b038ba4e2c98fa234c4b944e448a2044b5df1bfc0c056b1c1f699"
+      },
+      {
+        "id": "v1-03-public-contact-sheet",
+        "kind": "qa-contact-sheet",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contact-sheets/v1-03-public.png",
+        "sizeBytes": 1678547,
+        "sha256": "6a32582c3c2c009b4bec155b95d9a0aa142c3f32183d6a9f5011c4cdc95efa1c"
+      },
+      {
+        "id": "v1-03-proof-contact-sheet",
+        "kind": "qa-contact-sheet",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contact-sheets/v1-03-proof.png",
+        "sizeBytes": 1967654,
+        "sha256": "8b83bca5b0925eb92d387a7c472c9089c0cb02bf99147df280413417df049597"
+      },
+      {
+        "id": "v1-08-public-contact-sheet",
+        "kind": "qa-contact-sheet",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contact-sheets/v1-08-public.png",
+        "sizeBytes": 1761416,
+        "sha256": "ff438ba58e3ac7e16b534932595689e9271e6d71ca6e8a09b43d2598608eee2e"
+      },
+      {
+        "id": "v1-08-proof-contact-sheet",
+        "kind": "qa-contact-sheet",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contact-sheets/v1-08-proof.png",
+        "sizeBytes": 2599920,
+        "sha256": "a4b8b2fbb348514fa4c81c264f1a037353d7f356450ee6def8ec4ce6e479886b"
+      },
+      {
+        "id": "public-chrome-still",
+        "kind": "qa-still",
+        "path": "projects/tanisea-lyric-film/work/qa/media/stills/public-chrome.png",
+        "sizeBytes": 3323694,
+        "sha256": "6b88beff7cd8542202e1a261be60be700b68d54882d7da74f7ef9c50d048fd7a"
+      },
+      {
+        "id": "public-handoff-still",
+        "kind": "qa-still",
+        "path": "projects/tanisea-lyric-film/work/qa/media/stills/public-handoff.png",
+        "sizeBytes": 3199990,
+        "sha256": "bd1f5d453cfec14661d3a1bad0e042892cd9e6af5624c1dd7836d4c9e47cf126"
+      },
+      {
+        "id": "public-focus-still",
+        "kind": "qa-still",
+        "path": "projects/tanisea-lyric-film/work/qa/media/stills/public-focus.png",
+        "sizeBytes": 3107733,
+        "sha256": "12bb2ed0671be9c927669666e7a4fdd726e37b40958bdba60fca69d53ece7361"
+      },
+      {
+        "id": "public-safe-area-still",
+        "kind": "qa-still",
+        "path": "projects/tanisea-lyric-film/work/qa/media/stills/public-safe-area.png",
+        "sizeBytes": 3273707,
+        "sha256": "ff782cd844af1906a760b239f5182b62433dfa69017d0c697c0bcdde420c707b"
+      },
+      {
+        "id": "public-spectrum-peak-still",
+        "kind": "qa-still",
+        "path": "projects/tanisea-lyric-film/work/qa/media/stills/public-spectrum-peak.png",
+        "sizeBytes": 3346212,
+        "sha256": "97c4fcc034eb82d4498697450f38dd25f54b8b9fae36b3889601d8fb0808aef2"
+      },
+      {
+        "id": "proof-backward-contact-still",
+        "kind": "qa-still",
+        "path": "projects/tanisea-lyric-film/work/qa/media/stills/proof-backward-contact.png",
+        "sizeBytes": 870956,
+        "sha256": "7830f22491ed4023cecd0aeafada4696ac99b33341f3ba099aefef9e67823be4"
+      },
+      {
+        "id": "reference-transition-still",
+        "kind": "qa-still",
+        "path": "projects/tanisea-lyric-film/work/qa/media/stills/reference-final-transition.png",
+        "sizeBytes": 20820842,
+        "sha256": "5fe287c4c5a501950efc039dffda85fe8997e52f4d8d63e489eba48e39c8dc57"
+      },
+      {
+        "id": "qa-media-artifact-001",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/proof/v1-03-half.mp4",
+        "sizeBytes": 1427994,
+        "sha256": "49330ee686dc59b290f95e46c57817c337740e5c1e120080daca1bf08eb19bc2"
+      },
+      {
+        "id": "qa-media-artifact-002",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/proof/v1-03-normal.mp4",
+        "sizeBytes": 1119744,
+        "sha256": "4c55faf1a6c2cae2e73354ac74532d22900cb56cc655714db316078a513f4e70"
+      },
+      {
+        "id": "qa-media-artifact-003",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/proof/v1-08-half.mp4",
+        "sizeBytes": 1518511,
+        "sha256": "f54bbfc6f7fd58f3ad6ae0c36ac9ad1faba5fc326c110d994b258641d8dc7a06"
+      },
+      {
+        "id": "qa-media-artifact-004",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/proof/v1-08-normal.mp4",
+        "sizeBytes": 1184934,
+        "sha256": "f315d3d84c78ef908c04d9e3e60d4668b650169716e3e965b738787c430d0b6f"
+      },
+      {
+        "id": "qa-media-artifact-005",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/chorus-1-half.mp4",
+        "sizeBytes": 686745,
+        "sha256": "0db3f48eca36e15d0f92540b401a193b29bd3f49ac745a2971233ad2c073da61"
+      },
+      {
+        "id": "qa-media-artifact-006",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/chorus-1-normal.mp4",
+        "sizeBytes": 493983,
+        "sha256": "16527f6929102ebe6829ca029cc59b4b9ff03a6e347e0f0974de2bd8df6a5b92"
+      },
+      {
+        "id": "qa-media-artifact-007",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/chorus-2-half.mp4",
+        "sizeBytes": 677699,
+        "sha256": "4ba84f06f8845bfc7e17f6b649aae6076b429b607431c578a4b348b67a7d958e"
+      },
+      {
+        "id": "qa-media-artifact-008",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/chorus-2-normal.mp4",
+        "sizeBytes": 488350,
+        "sha256": "528b4a831ba03732b3032b76f534a5b7d9302cf1cf2c4008e4c581b027f95c8a"
+      },
+      {
+        "id": "qa-media-artifact-009",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/final-handoff-half.mp4",
+        "sizeBytes": 615974,
+        "sha256": "09c984f9460beae0f44dc6f20f9757a42dd07bb9da6d91c2f69fa99aed7ad353"
+      },
+      {
+        "id": "qa-media-artifact-010",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/final-handoff-normal.mp4",
+        "sizeBytes": 441422,
+        "sha256": "ce6ee1e9ef3f00b1188b021c3bd01bfd5678a384b22071490e27fd220a3aeb79"
+      },
+      {
+        "id": "qa-media-artifact-011",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/first-act-40-50-half.mp4",
+        "sizeBytes": 3081661,
+        "sha256": "727747eca57315140de6fefd3bfeec7af9fec6c12256b83e0ce8c359026fbbfb"
+      },
+      {
+        "id": "qa-media-artifact-012",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/first-act-40-50-normal.mp4",
+        "sizeBytes": 2124844,
+        "sha256": "44d157f67a0819df816ff2c0bf823e344d55979083268082981624beb753cf63"
+      },
+      {
+        "id": "qa-media-artifact-013",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c1-01-half.mp4",
+        "sizeBytes": 626246,
+        "sha256": "57e855248be4deb2b7a95a255ad02a4a5d561cf2b252ca2283c5c18050ff9756"
+      },
+      {
+        "id": "qa-media-artifact-014",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c1-01-normal.mp4",
+        "sizeBytes": 446866,
+        "sha256": "f276e52bed0a035b0c796ff00eb002cafa9e058a1c032f76a5df194e9081a71c"
+      },
+      {
+        "id": "qa-media-artifact-015",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c1-02-half.mp4",
+        "sizeBytes": 555272,
+        "sha256": "8df63298a7bfdc4a5ce8b08185241687e811547b2bb8aaeba2b96da21a857def"
+      },
+      {
+        "id": "qa-media-artifact-016",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c1-02-normal.mp4",
+        "sizeBytes": 397959,
+        "sha256": "ecb9b29bbd87ef735c880e48bd018fabe94087b57d5fbe3ede78b9f4e800981f"
+      },
+      {
+        "id": "qa-media-artifact-017",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c1-03-half.mp4",
+        "sizeBytes": 496855,
+        "sha256": "f10414f09406602a27e29cd74dc55b5ea1d136fb857d65280315e373c539e222"
+      },
+      {
+        "id": "qa-media-artifact-018",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c1-03-normal.mp4",
+        "sizeBytes": 353816,
+        "sha256": "9a1e67c20824796ccaf0f5af11e15a05ee95d2a91e5e1e7c2413a5a3c9becdbf"
+      },
+      {
+        "id": "qa-media-artifact-019",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c1-04-half.mp4",
+        "sizeBytes": 607125,
+        "sha256": "811e599760e74958f9ffb615a3794746ba655c12a2fddbbb6f889900a780fdd1"
+      },
+      {
+        "id": "qa-media-artifact-020",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c1-04-normal.mp4",
+        "sizeBytes": 427416,
+        "sha256": "061b6a7b4e12d8065b6dd9477e08a94975a38023619d24e2996062462b98f8f5"
+      },
+      {
+        "id": "qa-media-artifact-021",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c1-05-half.mp4",
+        "sizeBytes": 686745,
+        "sha256": "0db3f48eca36e15d0f92540b401a193b29bd3f49ac745a2971233ad2c073da61"
+      },
+      {
+        "id": "qa-media-artifact-022",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c1-05-normal.mp4",
+        "sizeBytes": 493983,
+        "sha256": "16527f6929102ebe6829ca029cc59b4b9ff03a6e347e0f0974de2bd8df6a5b92"
+      },
+      {
+        "id": "qa-media-artifact-023",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c1-06-half.mp4",
+        "sizeBytes": 600552,
+        "sha256": "47e599c7f5e91337d6b4af1740217c70a46f21861e47a7360beb505339e9661a"
+      },
+      {
+        "id": "qa-media-artifact-024",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c1-06-normal.mp4",
+        "sizeBytes": 428601,
+        "sha256": "9b09c1e00be6e40e67226ac9b159ab537ec58e326dd0f4b17fae94fc9f859f07"
+      },
+      {
+        "id": "qa-media-artifact-025",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c1-07-half.mp4",
+        "sizeBytes": 633872,
+        "sha256": "de76438c6e3bf93c53361fa5da02c1540bbad00d3bb6ba839e8d16cc7b4c23db"
+      },
+      {
+        "id": "qa-media-artifact-026",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c1-07-normal.mp4",
+        "sizeBytes": 455298,
+        "sha256": "1667dd403285f5cdadd4c9a39560de5a8a543b03c0b608dd4145f203b4eb22d4"
+      },
+      {
+        "id": "qa-media-artifact-027",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c1-08-half.mp4",
+        "sizeBytes": 626896,
+        "sha256": "a7d7702e1ae7d21ed3450cc20d6a622c650b651a43e01c017ccabe44a36b6dea"
+      },
+      {
+        "id": "qa-media-artifact-028",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c1-08-normal.mp4",
+        "sizeBytes": 446092,
+        "sha256": "074e4fc657daadd0a2aa22adfd20ed7a70dd079b71bc14a0e3a72eb760c8a400"
+      },
+      {
+        "id": "qa-media-artifact-029",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c2-01-half.mp4",
+        "sizeBytes": 574802,
+        "sha256": "642b33689a01434f46a272ad1917217a3268b7bcb2b6515e5d61271c9cc8e9d4"
+      },
+      {
+        "id": "qa-media-artifact-030",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c2-01-normal.mp4",
+        "sizeBytes": 402876,
+        "sha256": "2f66e41d13a331e76caf0689261e282de32a829395bd65797983d8ed055f19a5"
+      },
+      {
+        "id": "qa-media-artifact-031",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c2-02-half.mp4",
+        "sizeBytes": 602486,
+        "sha256": "b24c3665f57fab6ffe843d0f4d710efeea509d126800b5b8152266779e75d404"
+      },
+      {
+        "id": "qa-media-artifact-032",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c2-02-normal.mp4",
+        "sizeBytes": 433922,
+        "sha256": "e1fd4c3a0eea03f8975947753d76729f1e9f515d54e8f922b396bc0a323efe6d"
+      },
+      {
+        "id": "qa-media-artifact-033",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c2-03-half.mp4",
+        "sizeBytes": 501102,
+        "sha256": "b47367e8d69e10901561e5002db8d0f833f718bdd768a530e8f9847e2ae15c9d"
+      },
+      {
+        "id": "qa-media-artifact-034",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c2-03-normal.mp4",
+        "sizeBytes": 354559,
+        "sha256": "6160a6969035ec06c4288a7c4336fc66af24007aa53e1f15dd7fcc84330b23fc"
+      },
+      {
+        "id": "qa-media-artifact-035",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c2-04-half.mp4",
+        "sizeBytes": 589702,
+        "sha256": "354ddcadef8264a7717e09daeed6232f675bbdf519b113b50883fce5b208ad1e"
+      },
+      {
+        "id": "qa-media-artifact-036",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c2-04-normal.mp4",
+        "sizeBytes": 415262,
+        "sha256": "82f13618ce7c552fd789b6e0f41015f1f3b261ac1b164bd38ee6ea812c41701b"
+      },
+      {
+        "id": "qa-media-artifact-037",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c2-05-half.mp4",
+        "sizeBytes": 677699,
+        "sha256": "4ba84f06f8845bfc7e17f6b649aae6076b429b607431c578a4b348b67a7d958e"
+      },
+      {
+        "id": "qa-media-artifact-038",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c2-05-normal.mp4",
+        "sizeBytes": 488350,
+        "sha256": "528b4a831ba03732b3032b76f534a5b7d9302cf1cf2c4008e4c581b027f95c8a"
+      },
+      {
+        "id": "qa-media-artifact-039",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c2-06-half.mp4",
+        "sizeBytes": 633447,
+        "sha256": "1f3264090c1c492026479ce096e7db4621006df0c70eb01f3b856014c423a0bd"
+      },
+      {
+        "id": "qa-media-artifact-040",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c2-06-normal.mp4",
+        "sizeBytes": 448419,
+        "sha256": "6f6599dae66a68fda3c3fd595694ba6b28c051a882cc2ff5ea058e180fdd6aa5"
+      },
+      {
+        "id": "qa-media-artifact-041",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c2-07-half.mp4",
+        "sizeBytes": 540606,
+        "sha256": "c5702d0411ed3a38e7f10e90c05e51df7d8d8018c4f94b112550a1016a5c12a3"
+      },
+      {
+        "id": "qa-media-artifact-042",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c2-07-normal.mp4",
+        "sizeBytes": 385202,
+        "sha256": "009b431802c5140f3878586a1b4337ed443b9ef2d78434efaad97581ab32a07e"
+      },
+      {
+        "id": "qa-media-artifact-043",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c2-08-half.mp4",
+        "sizeBytes": 577584,
+        "sha256": "099f086651c05634acaaa32550cde0af40b4a04fcc7803e5b0f827a515dfc2d8"
+      },
+      {
+        "id": "qa-media-artifact-044",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c2-08-normal.mp4",
+        "sizeBytes": 410331,
+        "sha256": "9d83121309d24f9230f5b604e7d72a9e0e8b57e2f0007207fb1794d2d48099e6"
+      },
+      {
+        "id": "qa-media-artifact-045",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-v1-01-half.mp4",
+        "sizeBytes": 657278,
+        "sha256": "69e5f2bde061bb8c35f737abba5eb7a9da6ce24bc4f2be5db7cbe3b38df7939c"
+      },
+      {
+        "id": "qa-media-artifact-046",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-v1-01-normal.mp4",
+        "sizeBytes": 474503,
+        "sha256": "b1ea84d2ab630422de645750e91e689646f610401a12b8c95e908afcbec196db"
+      },
+      {
+        "id": "qa-media-artifact-047",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-v1-02-half.mp4",
+        "sizeBytes": 604395,
+        "sha256": "5faab3a030f25653d8f22171e604f7fa634ab05b4d7d0794cabc47d27ae1dbd9"
+      },
+      {
+        "id": "qa-media-artifact-048",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-v1-02-normal.mp4",
+        "sizeBytes": 424218,
+        "sha256": "ddf7d49c15b1d3fe66232fbba3faf8e306ea733cca58d19acb93f05d30b22e6c"
+      },
+      {
+        "id": "qa-media-artifact-049",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-v1-03-half.mp4",
+        "sizeBytes": 629404,
+        "sha256": "64738f696d08c21cd2a8f8bb16e67cd80b49a3a05a7f7ffc3a711ae5e7b8cc5c"
+      },
+      {
+        "id": "qa-media-artifact-050",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-v1-03-normal.mp4",
+        "sizeBytes": 447241,
+        "sha256": "26bd58350ceb18eca68c74879d57618878cd76853d3cd9ca5d13c4c682ff9143"
+      },
+      {
+        "id": "qa-media-artifact-051",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-v1-04-half.mp4",
+        "sizeBytes": 618712,
+        "sha256": "509502b8cd4ab27ef919974f1aa0ea12fd17d09eb85c0172529a0909e3e6746c"
+      },
+      {
+        "id": "qa-media-artifact-052",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-v1-04-normal.mp4",
+        "sizeBytes": 448686,
+        "sha256": "e0a4b6f21a4304ae1631865c9ccc6819ed683b54ce737f9e9280fbbb03ffd57e"
+      },
+      {
+        "id": "qa-media-artifact-053",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-v1-05-half.mp4",
+        "sizeBytes": 628641,
+        "sha256": "b35196744fd26c7e3149ec78ecb5a557355aa99c230d4a5389220f1a77ea701e"
+      },
+      {
+        "id": "qa-media-artifact-054",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-v1-05-normal.mp4",
+        "sizeBytes": 447296,
+        "sha256": "f2b293f04c8bd730d6aa9cec1711aa8fe23107d9fbdde2160619d47e1232781c"
+      },
+      {
+        "id": "qa-media-artifact-055",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-v1-06-half.mp4",
+        "sizeBytes": 624878,
+        "sha256": "e7ff8749bf829cc09ff2663d733913889a838bb72efbed923ddc75578ddf5ef1"
+      },
+      {
+        "id": "qa-media-artifact-056",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-v1-06-normal.mp4",
+        "sizeBytes": 445452,
+        "sha256": "15ae56c284ad92aca0dafe785f927055194a23671199eae1de19cd55828bdbbc"
+      },
+      {
+        "id": "qa-media-artifact-057",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-v1-07-half.mp4",
+        "sizeBytes": 596154,
+        "sha256": "d46cb571ae0ccad2e92cda75fbc0727b4a1c60a8969eb2a9a6e2953a932dd467"
+      },
+      {
+        "id": "qa-media-artifact-058",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-v1-07-normal.mp4",
+        "sizeBytes": 424979,
+        "sha256": "a794c715a0a45b77e77803d254036c2827964f2d97c202cbe895faf15148ef07"
+      },
+      {
+        "id": "qa-media-artifact-059",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-v1-08-half.mp4",
+        "sizeBytes": 602837,
+        "sha256": "7ec459cdd86791186f8ea5173044e77df8411e8ce5e7b5ad68ea8c2c2062d739"
+      },
+      {
+        "id": "qa-media-artifact-060",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-v1-08-normal.mp4",
+        "sizeBytes": 437400,
+        "sha256": "3a618a5888e8d27e0c11cf7ac889785296085a53e1d4ef9f46f5a7b3ca33b26e"
+      },
+      {
+        "id": "qa-media-artifact-061",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/v1-03-half.mp4",
+        "sizeBytes": 629404,
+        "sha256": "64738f696d08c21cd2a8f8bb16e67cd80b49a3a05a7f7ffc3a711ae5e7b8cc5c"
+      },
+      {
+        "id": "qa-media-artifact-062",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/v1-03-normal.mp4",
+        "sizeBytes": 447241,
+        "sha256": "26bd58350ceb18eca68c74879d57618878cd76853d3cd9ca5d13c4c682ff9143"
+      },
+      {
+        "id": "qa-media-artifact-063",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/v1-08-half.mp4",
+        "sizeBytes": 602837,
+        "sha256": "7ec459cdd86791186f8ea5173044e77df8411e8ce5e7b5ad68ea8c2c2062d739"
+      },
+      {
+        "id": "qa-media-artifact-064",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/v1-08-normal.mp4",
+        "sizeBytes": 437400,
+        "sha256": "3a618a5888e8d27e0c11cf7ac889785296085a53e1d4ef9f46f5a7b3ca33b26e"
+      },
+      {
+        "id": "qa-media-artifact-065",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contact-sheets/c1-04-proof.png",
+        "sizeBytes": 2059873,
+        "sha256": "4ce4b843cb4abcdf092f96394f7c472deb398a6d41b0eafa300fd1f160d3aa4a"
+      },
+      {
+        "id": "qa-media-artifact-066",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contact-sheets/c1-04-public.png",
+        "sizeBytes": 1760118,
+        "sha256": "8a5700f69079e709d961ca055f165376b5c36d09a331b048a58b0d531ce29f7e"
+      },
+      {
+        "id": "qa-media-artifact-067",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contact-sheets/c1-06-proof.png",
+        "sizeBytes": 2067158,
+        "sha256": "882e0662f7ceae2c0e3ae697f20d2dfd5c22d0b3fbb452041531d276caf6d0d1"
+      },
+      {
+        "id": "qa-media-artifact-068",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contact-sheets/c1-06-public.png",
+        "sizeBytes": 1676148,
+        "sha256": "ca571a0c8fbcd10b6e856b85a6a610a6d4eba9f5a9ecce19edf46475584d2b0d"
+      },
+      {
+        "id": "qa-media-artifact-069",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contact-sheets/c1-07-proof.png",
+        "sizeBytes": 2085412,
+        "sha256": "e2fb10fe13c6966184c0f9447d44a0898be29aafda4a6527888a6a5a2524ecd8"
+      },
+      {
+        "id": "qa-media-artifact-070",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contact-sheets/c1-07-public.png",
+        "sizeBytes": 1787250,
+        "sha256": "97435dd916c2990efb747a684b951367894b791c03ba761de20bd777d140356b"
+      },
+      {
+        "id": "qa-media-artifact-071",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contact-sheets/c1-08-proof.png",
+        "sizeBytes": 2099625,
+        "sha256": "9a545761f08ced0fd33b388900a5cbcbf22ff0d3c4b54da93d73346336b9364d"
+      },
+      {
+        "id": "qa-media-artifact-072",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contact-sheets/c1-08-public.png",
+        "sizeBytes": 1718726,
+        "sha256": "6e47db44d750ce328f64b995aeb9c10130eb0b2a26de030630c40b6d797fef0d"
+      },
+      {
+        "id": "qa-media-artifact-073",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-04/proof/frame-004057.png",
+        "sizeBytes": 730505,
+        "sha256": "b481aa9e2578a00d1c46cd814011c718419f8ec61351587d2961aeb066a8976e"
+      },
+      {
+        "id": "qa-media-artifact-074",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-04/proof/frame-004058.png",
+        "sizeBytes": 800588,
+        "sha256": "d216a51fe812f53c5d9262e3f98cd5c46f240fb8598cfa537014baac082dd62a"
+      },
+      {
+        "id": "qa-media-artifact-075",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-04/proof/frame-004059.png",
+        "sizeBytes": 810586,
+        "sha256": "17028057892c7a95fe43711bacae0bf9a30dd355eafeb5b754355889cb029516"
+      },
+      {
+        "id": "qa-media-artifact-076",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-04/proof/frame-004060.png",
+        "sizeBytes": 810912,
+        "sha256": "b5e0d29a9940ed867e2f428ec043ddf00bff9a3782bc984fab063f29b7b67c2b"
+      },
+      {
+        "id": "qa-media-artifact-077",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-04/proof/frame-004074.png",
+        "sizeBytes": 688193,
+        "sha256": "8ac1b9801e3d3eccde1af996374e949038e779c305a05eccddd8a3185a3b5bd0"
+      },
+      {
+        "id": "qa-media-artifact-078",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-04/proof/frame-004075.png",
+        "sizeBytes": 819952,
+        "sha256": "771e052b9a78206702c538624109097bf50211be87b4c7c59ecbeaea5927c167"
+      },
+      {
+        "id": "qa-media-artifact-079",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-04/proof/frame-004076.png",
+        "sizeBytes": 820227,
+        "sha256": "90de0be4a724715ba00b7f7d70f95c96186b4a63bd63f8113bb5df148972d349"
+      },
+      {
+        "id": "qa-media-artifact-080",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-04/proof/frame-004077.png",
+        "sizeBytes": 813000,
+        "sha256": "729e77b0e3bb1b3b5af4b0612f01b8b57cb15670ab792225b20ccfd6558186bf"
+      },
+      {
+        "id": "qa-media-artifact-081",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-04/proof/frame-004158.png",
+        "sizeBytes": 748664,
+        "sha256": "532f87b7a4da25fdc16da85b23ab689229d10186241f3a2e80215bd92d0cd17a"
+      },
+      {
+        "id": "qa-media-artifact-082",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-04/proof/frame-004159.png",
+        "sizeBytes": 881384,
+        "sha256": "ec770bbf25f4dd84b8937a0a0c0736486a968361fc0ae6253baf16b2ddd19d2d"
+      },
+      {
+        "id": "qa-media-artifact-083",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-04/proof/frame-004160.png",
+        "sizeBytes": 882962,
+        "sha256": "670daf0d1baa083dd6f5815f35cc7ebd65644d4784bfe1cf0ffeb4f3ad532a63"
+      },
+      {
+        "id": "qa-media-artifact-084",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-04/proof/frame-004161.png",
+        "sizeBytes": 877099,
+        "sha256": "0631f395d88b06272cd79cb82fd863b1effc147349b476ddad98291d5222097d"
+      },
+      {
+        "id": "qa-media-artifact-085",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-04/public/frame-002028.png",
+        "sizeBytes": 3103526,
+        "sha256": "18c42dee0c325f2cdc7292ebbffd695eba236f7a194bb3a1a3097243a9d2bf30"
+      },
+      {
+        "id": "qa-media-artifact-086",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-04/public/frame-002029.png",
+        "sizeBytes": 3107745,
+        "sha256": "0bd338458bcb3844152f8111dbbc07dbbfd0f70e8758c1a389b817a72eb26f40"
+      },
+      {
+        "id": "qa-media-artifact-087",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-04/public/frame-002030.png",
+        "sizeBytes": 3119667,
+        "sha256": "0beb36a591551b6965c4aa510828e14d53638fe3b62d5dbb5066d352cc7833e3"
+      },
+      {
+        "id": "qa-media-artifact-088",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-04/public/frame-002031.png",
+        "sizeBytes": 3115948,
+        "sha256": "7c3c7ba72e2ec2987475a55c5bf2017aad184656bfaaf8e3a54ece735eadb350"
+      },
+      {
+        "id": "qa-media-artifact-089",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-04/public/frame-002037.png",
+        "sizeBytes": 3088956,
+        "sha256": "709fe209acedf650da0eb0f6ba6435accfec92f28373b1edc936d4398b4351b3"
+      },
+      {
+        "id": "qa-media-artifact-090",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-04/public/frame-002038.png",
+        "sizeBytes": 3104064,
+        "sha256": "6ec6becb7aabf90fadaf6e427722613889568d0f845eb3e546c6accc82ecabc0"
+      },
+      {
+        "id": "qa-media-artifact-091",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-04/public/frame-002039.png",
+        "sizeBytes": 3095662,
+        "sha256": "f92344162c2f6d0dc4df233d691aedce40b1fb597ccdccb98b3344a2c79d79f6"
+      },
+      {
+        "id": "qa-media-artifact-092",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-04/public/frame-002040.png",
+        "sizeBytes": 3088827,
+        "sha256": "a8b25775572a9d1452010efc37b54ba5189499f279420ac2cb93e2604188bfbd"
+      },
+      {
+        "id": "qa-media-artifact-093",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-04/public/frame-002079.png",
+        "sizeBytes": 3331256,
+        "sha256": "2b7be2ffce52a9cedbf116fef149c546cdd585878fd4935ef0e837de0e60f305"
+      },
+      {
+        "id": "qa-media-artifact-094",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-04/public/frame-002080.png",
+        "sizeBytes": 3330480,
+        "sha256": "ecd48f735fdbf7c2d2eec3b9645346312018dbd63fd4652e5ca4dd3c9473fd61"
+      },
+      {
+        "id": "qa-media-artifact-095",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-04/public/frame-002081.png",
+        "sizeBytes": 3328209,
+        "sha256": "fdb9c9134aa639bc97c86eb3e7aee7039cfa5aaa16b6e26b42651a6a3d993493"
+      },
+      {
+        "id": "qa-media-artifact-096",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-04/public/frame-002082.png",
+        "sizeBytes": 3336508,
+        "sha256": "4366a9c8358377eba8f1621942720814c11b8d07080e6f695f890525b6326727"
+      },
+      {
+        "id": "qa-media-artifact-097",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-06/proof/frame-004889.png",
+        "sizeBytes": 751454,
+        "sha256": "03f4495afb2391f6a72b3049c1124bafea8db589ff2f33983dcc21f2314eac64"
+      },
+      {
+        "id": "qa-media-artifact-098",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-06/proof/frame-004890.png",
+        "sizeBytes": 912114,
+        "sha256": "23a7a1843648d1827996098c020f4f51b515c79c79bef90fe724f7319a5cfa06"
+      },
+      {
+        "id": "qa-media-artifact-099",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-06/proof/frame-004891.png",
+        "sizeBytes": 912123,
+        "sha256": "95e20e5fd4245574f49795cf435792bfb961ca21cf6d2a82dacdea9ef2a197a9"
+      },
+      {
+        "id": "qa-media-artifact-100",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-06/proof/frame-004892.png",
+        "sizeBytes": 911943,
+        "sha256": "1aa41912877bbfe6fe35fa587fe857a55a32cee06ee4e66761e6060672f4259d"
+      },
+      {
+        "id": "qa-media-artifact-101",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-06/proof/frame-004946.png",
+        "sizeBytes": 719106,
+        "sha256": "87d78b4f7c07d9d16992a88f5202f0d868db7c6d9ad17c9505cc9815c9225fa8"
+      },
+      {
+        "id": "qa-media-artifact-102",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-06/proof/frame-004947.png",
+        "sizeBytes": 876733,
+        "sha256": "eb7ddf7af0238c9c5920ee0a20008114feef303f6544a1ef068147e3ef1a64a7"
+      },
+      {
+        "id": "qa-media-artifact-103",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-06/proof/frame-004948.png",
+        "sizeBytes": 881703,
+        "sha256": "60887350390d30cfbc1b8f35c8ee394e175c90f6811c0442eb63cb12b6bcf3de"
+      },
+      {
+        "id": "qa-media-artifact-104",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-06/proof/frame-004949.png",
+        "sizeBytes": 891410,
+        "sha256": "01df7485bfdffbae8ac2c7a9f25bb07b89bba625317b18f620ad6c21ef279309"
+      },
+      {
+        "id": "qa-media-artifact-105",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-06/proof/frame-005268.png",
+        "sizeBytes": 720180,
+        "sha256": "2785d4693f975d442864dfd8b68f3042610288eaaafd445d3234b37b1d4e925d"
+      },
+      {
+        "id": "qa-media-artifact-106",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-06/proof/frame-005269.png",
+        "sizeBytes": 842296,
+        "sha256": "4471aa6764eae03b15fee9e3139daadb602edc2fbff915661b8081df024cc604"
+      },
+      {
+        "id": "qa-media-artifact-107",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-06/proof/frame-005270.png",
+        "sizeBytes": 845926,
+        "sha256": "e0c7163e1156608452d17246922e62441ffdbd6145899ec173da28a11103abac"
+      },
+      {
+        "id": "qa-media-artifact-108",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-06/proof/frame-005271.png",
+        "sizeBytes": 850029,
+        "sha256": "433b9c3a1e38c68e5823746c972fa96e6309129432047c6a900de13a6f9a7a0e"
+      },
+      {
+        "id": "qa-media-artifact-109",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-06/public/frame-002444.png",
+        "sizeBytes": 3400631,
+        "sha256": "916944e42898e4886072acbb927dfcf68c92ebb619da14010e6654db442d335f"
+      },
+      {
+        "id": "qa-media-artifact-110",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-06/public/frame-002445.png",
+        "sizeBytes": 3413584,
+        "sha256": "e181b3331fd4f307247d4e3a792b1d39e1e0a10ab67a11adebbe1a97689cb1b0"
+      },
+      {
+        "id": "qa-media-artifact-111",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-06/public/frame-002446.png",
+        "sizeBytes": 3417742,
+        "sha256": "9ac5d9b4eb896a0e8c6c942eca72180895d46e3a75a6d2ef35bb8478a4e35515"
+      },
+      {
+        "id": "qa-media-artifact-112",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-06/public/frame-002447.png",
+        "sizeBytes": 3409137,
+        "sha256": "8df25f6cec24dec95a1e9bbb2cebe341ad29fbe72f7ed7f91c46febb75d48295"
+      },
+      {
+        "id": "qa-media-artifact-113",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-06/public/frame-002473.png",
+        "sizeBytes": 3291802,
+        "sha256": "5208bed7213cdef822c3e438b66362a5070864a0611db1cf0cb83f7df3e4f6bc"
+      },
+      {
+        "id": "qa-media-artifact-114",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-06/public/frame-002474.png",
+        "sizeBytes": 3313288,
+        "sha256": "7fc4f689c5363d47acb3ee0f57ae1bd96339e992feefded37f1d12fd30e14b56"
+      },
+      {
+        "id": "qa-media-artifact-115",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-06/public/frame-002475.png",
+        "sizeBytes": 3368603,
+        "sha256": "1a66eb3190a1ff396710970c3aa20a9c869ae3eb6b33a7be83233ba644c43169"
+      },
+      {
+        "id": "qa-media-artifact-116",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-06/public/frame-002476.png",
+        "sizeBytes": 3359191,
+        "sha256": "27ddde083672b39aa768fc035d60c51c7da0a2f181e8435740adfe3015694696"
+      },
+      {
+        "id": "qa-media-artifact-117",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-06/public/frame-002634.png",
+        "sizeBytes": 3200020,
+        "sha256": "387b59ffff128dfe407ba6eff98c3f3ce83930506ab2cbc8b8cb8912f6610e01"
+      },
+      {
+        "id": "qa-media-artifact-118",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-06/public/frame-002635.png",
+        "sizeBytes": 3206601,
+        "sha256": "e95fa612cd118ce131e829b4bb227c24c9dc688d560dc980866e2ae38d7fc112"
+      },
+      {
+        "id": "qa-media-artifact-119",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-06/public/frame-002636.png",
+        "sizeBytes": 3207805,
+        "sha256": "376a1e2d436de4620620e21851af67005c65512002bc8e1042bd4d7a4db200b9"
+      },
+      {
+        "id": "qa-media-artifact-120",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-06/public/frame-002637.png",
+        "sizeBytes": 3192185,
+        "sha256": "bf98103b2e14034e425c92222edb594f996d08546eb98d9a00a61f6a5d6eb5a5"
+      },
+      {
+        "id": "qa-media-artifact-121",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-07/proof/frame-005372.png",
+        "sizeBytes": 768695,
+        "sha256": "a82c9eab1e7f81f68f13c19e079eb2125c9230602f87b719fe63bccac247a33d"
+      },
+      {
+        "id": "qa-media-artifact-122",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-07/proof/frame-005373.png",
+        "sizeBytes": 931491,
+        "sha256": "566c46664a688435dc71fa6fc3d4af90d9a58905cd146720e8191036f7137116"
+      },
+      {
+        "id": "qa-media-artifact-123",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-07/proof/frame-005374.png",
+        "sizeBytes": 932723,
+        "sha256": "12e1357a14078b5365a1aebc4c073f32f7d219da58b994d8c5a25fd0c339e70e"
+      },
+      {
+        "id": "qa-media-artifact-124",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-07/proof/frame-005375.png",
+        "sizeBytes": 932136,
+        "sha256": "69bbf88782fe3f0d63fcd3cd1dcab924a0ee144a81b73f2ecee66730595a6157"
+      },
+      {
+        "id": "qa-media-artifact-125",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-07/proof/frame-005477.png",
+        "sizeBytes": 733264,
+        "sha256": "af482d604efad02e9c92674d7ec392e263070bcc181bec45dbec505a4b556ba8"
+      },
+      {
+        "id": "qa-media-artifact-126",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-07/proof/frame-005478.png",
+        "sizeBytes": 849598,
+        "sha256": "a89fb47f18b46566f40363b038a3dc50af2167f9ed4982872424585eebbdf25b"
+      },
+      {
+        "id": "qa-media-artifact-127",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-07/proof/frame-005479.png",
+        "sizeBytes": 859863,
+        "sha256": "ece7461de09fe611c1f5f3ee63be010203a4ba22b5d526c36d50ba5b2330473f"
+      },
+      {
+        "id": "qa-media-artifact-128",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-07/proof/frame-005480.png",
+        "sizeBytes": 860969,
+        "sha256": "c1d0023fda5b0c662cd8517fe2788e6476e4e930bf0aa53e2876c8525c74484c"
+      },
+      {
+        "id": "qa-media-artifact-129",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-07/proof/frame-005569.png",
+        "sizeBytes": 721754,
+        "sha256": "bead79d5c2fbbeacd806c6f9e450b1c772c9652a3624bef8532e7208de23a119"
+      },
+      {
+        "id": "qa-media-artifact-130",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-07/proof/frame-005570.png",
+        "sizeBytes": 887058,
+        "sha256": "0fcb25bb77b41578401995cc54439ae60616c7f1b101d7ce43cafb82218ec468"
+      },
+      {
+        "id": "qa-media-artifact-131",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-07/proof/frame-005571.png",
+        "sizeBytes": 884652,
+        "sha256": "a07d1597095566eed2e5675a0a3edd8bf0743b8a4b17ef54a2fe38967598c987"
+      },
+      {
+        "id": "qa-media-artifact-132",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-07/proof/frame-005572.png",
+        "sizeBytes": 890924,
+        "sha256": "608800d0e89e2a7d543dfd3997348af11f431d9ebaeb4d322f3dc43c335d45c4"
+      },
+      {
+        "id": "qa-media-artifact-133",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-07/public/frame-002685.png",
+        "sizeBytes": 3396934,
+        "sha256": "bb65313130f2cfcffcbce81f204478c5943fe9183de96b5a6b0f61984dea9b36"
+      },
+      {
+        "id": "qa-media-artifact-134",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-07/public/frame-002686.png",
+        "sizeBytes": 3412162,
+        "sha256": "acdb4204f4a557eb476f359c352c9fec05d445a807eadc4de41a34070f4520f9"
+      },
+      {
+        "id": "qa-media-artifact-135",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-07/public/frame-002687.png",
+        "sizeBytes": 3434988,
+        "sha256": "8175295a280a121b10b94d71922d1162e45bd0b8259690782b5860a8e0a82e87"
+      },
+      {
+        "id": "qa-media-artifact-136",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-07/public/frame-002688.png",
+        "sizeBytes": 3463213,
+        "sha256": "961aefde7d358413c5a8e9966ead8615d3ecfa4e7bb0c2d79b71cb50965c6f45"
+      },
+      {
+        "id": "qa-media-artifact-137",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-07/public/frame-002738.png",
+        "sizeBytes": 3320020,
+        "sha256": "b0d0606b20563a44b897eb2540da3f3a307a93b1d3824dc58b6aa956a488b95e"
+      },
+      {
+        "id": "qa-media-artifact-138",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-07/public/frame-002739.png",
+        "sizeBytes": 3303078,
+        "sha256": "59172cd70f2c775f8b8da1ceff474d7d3d0efce6bdc19d0ed7163d76a5b2bc09"
+      },
+      {
+        "id": "qa-media-artifact-139",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-07/public/frame-002740.png",
+        "sizeBytes": 3300784,
+        "sha256": "a70acbc5924c956cd90eb31faced4ca341d58e8f9b281de6aa78a3f12977d4cf"
+      },
+      {
+        "id": "qa-media-artifact-140",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-07/public/frame-002741.png",
+        "sizeBytes": 3297521,
+        "sha256": "90597aa39280c508dc2dd175c96b0f3e7047d4faa157e7a2907ac5873555c783"
+      },
+      {
+        "id": "qa-media-artifact-141",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-07/public/frame-002784.png",
+        "sizeBytes": 2981175,
+        "sha256": "4da27520cf8f65188674846dae5fa8b052c605436a914535ea931a18d7d12086"
+      },
+      {
+        "id": "qa-media-artifact-142",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-07/public/frame-002785.png",
+        "sizeBytes": 3026101,
+        "sha256": "3725bc2488d19051e1dda0efa427de86682d72399fca0d7e7aa02200ec9050ea"
+      },
+      {
+        "id": "qa-media-artifact-143",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-07/public/frame-002786.png",
+        "sizeBytes": 3026650,
+        "sha256": "0d26386c68829750e0cc039cce7d6e6cec64ea6eb0ceb214cf0e3dbe554d1102"
+      },
+      {
+        "id": "qa-media-artifact-144",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-07/public/frame-002787.png",
+        "sizeBytes": 3013859,
+        "sha256": "79fb2e4dc0175729da74b566138c45a149b8f8c37dd6397d2b5d4ff31ff9f9a5"
+      },
+      {
+        "id": "qa-media-artifact-145",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-08/proof/frame-005617.png",
+        "sizeBytes": 755101,
+        "sha256": "c16ee7904e74f1a52690e60deb03b53cbb7f52493519e51d89c9912dab593671"
+      },
+      {
+        "id": "qa-media-artifact-146",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-08/proof/frame-005618.png",
+        "sizeBytes": 934500,
+        "sha256": "55ac3caa063177922b5d06d17fc7a0a52b428211a7d0646336733ed81fe681c3"
+      },
+      {
+        "id": "qa-media-artifact-147",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-08/proof/frame-005619.png",
+        "sizeBytes": 933756,
+        "sha256": "f15e130d51253187dc8fa2c85aefcff680f97b3b0a657030e2a3cf872198fc72"
+      },
+      {
+        "id": "qa-media-artifact-148",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-08/proof/frame-005620.png",
+        "sizeBytes": 931937,
+        "sha256": "e025e75ee0cb90051bd12457b974e089c48749745423af46484848324b0fafd8"
+      },
+      {
+        "id": "qa-media-artifact-149",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-08/proof/frame-005660.png",
+        "sizeBytes": 753891,
+        "sha256": "34f9f2e635e9ac2bf3b0aa26171d25fc20f5ae4ae1926414a1617076f951cc2e"
+      },
+      {
+        "id": "qa-media-artifact-150",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-08/proof/frame-005661.png",
+        "sizeBytes": 886957,
+        "sha256": "6f16afad42b2f486476c53cb7b6aa7ddb7142c51c80ed6a37fae6fd880f3857e"
+      },
+      {
+        "id": "qa-media-artifact-151",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-08/proof/frame-005662.png",
+        "sizeBytes": 893914,
+        "sha256": "21d2ea2afe33d3293f2ca993d6d9d5d8de6a42d641f0c18e467c7ca757583d9c"
+      },
+      {
+        "id": "qa-media-artifact-152",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-08/proof/frame-005663.png",
+        "sizeBytes": 910281,
+        "sha256": "3ef867cff5004a2061584ed369492d3e42c1324af19917ef9c7d5b46441eb090"
+      },
+      {
+        "id": "qa-media-artifact-153",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-08/proof/frame-005708.png",
+        "sizeBytes": 748602,
+        "sha256": "749679605f7510018676844216096c43f02d65e3de34ea7ddbeed950b49ecdfe"
+      },
+      {
+        "id": "qa-media-artifact-154",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-08/proof/frame-005709.png",
+        "sizeBytes": 909274,
+        "sha256": "1e104e0924ddd8c3b9042c8171867c359e7f3f7924544fdf689f8d75ea62766e"
+      },
+      {
+        "id": "qa-media-artifact-155",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-08/proof/frame-005710.png",
+        "sizeBytes": 908574,
+        "sha256": "c1886891c10f9d9d67a658058722f166d00d1c0112c9a66e806bab8ce1509103"
+      },
+      {
+        "id": "qa-media-artifact-156",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-08/proof/frame-005711.png",
+        "sizeBytes": 906459,
+        "sha256": "be841f26331681f7f9302fbe5a024815c19191845a5c612670697da32e16a155"
+      },
+      {
+        "id": "qa-media-artifact-157",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-08/public/frame-002808.png",
+        "sizeBytes": 3160963,
+        "sha256": "0a72899b3f78e8a041b5cf349033dd07011d0a0a5511088f94c652368c5d2731"
+      },
+      {
+        "id": "qa-media-artifact-158",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-08/public/frame-002809.png",
+        "sizeBytes": 3175129,
+        "sha256": "d607bcfc473ebd3dd08bf7d4f4b2958ca00206675770cf19548425456f334309"
+      },
+      {
+        "id": "qa-media-artifact-159",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-08/public/frame-002810.png",
+        "sizeBytes": 3173828,
+        "sha256": "296819432b11854f9bec7ee8e3ed9831f2f38a8a23ac0314a5f4fd191b0a0736"
+      },
+      {
+        "id": "qa-media-artifact-160",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-08/public/frame-002811.png",
+        "sizeBytes": 3161301,
+        "sha256": "3b16afa3e8ab2ebbb7f58d555fb005599683f833381bd7adcafecc34fdeca8d1"
+      },
+      {
+        "id": "qa-media-artifact-161",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-08/public/frame-002830.png",
+        "sizeBytes": 3298350,
+        "sha256": "a081a9d73e030b07e4ba8f2656473784a0b8cde61c6817cd69f7bef9a6f5dfd1"
+      },
+      {
+        "id": "qa-media-artifact-162",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-08/public/frame-002831.png",
+        "sizeBytes": 3328226,
+        "sha256": "82392574c23c71f66dd5f28b1fa0ee599751cfa270f61e31cc89810169a4e8f4"
+      },
+      {
+        "id": "qa-media-artifact-163",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-08/public/frame-002832.png",
+        "sizeBytes": 3340376,
+        "sha256": "8b1c21422fc46e8096e034a34f410b9fa0fdd17d495fe0ae6dc44c7811dbde4e"
+      },
+      {
+        "id": "qa-media-artifact-164",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-08/public/frame-002833.png",
+        "sizeBytes": 3346749,
+        "sha256": "9f6f05851de0e0928c687ff521bfe7fa418d250e638004900f1226a151ccc9fc"
+      },
+      {
+        "id": "qa-media-artifact-165",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-08/public/frame-002854.png",
+        "sizeBytes": 3330386,
+        "sha256": "aace2f2a90b833cfa0a8ad98e338c25c3a47a8cb01efceae6ad316e45eb0e5e7"
+      },
+      {
+        "id": "qa-media-artifact-166",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-08/public/frame-002855.png",
+        "sizeBytes": 3371075,
+        "sha256": "11f4fb2b1c811c57584a7c3a64d1129bfff3d9abbbc550e2694b82e3809ab7a6"
+      },
+      {
+        "id": "qa-media-artifact-167",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-08/public/frame-002856.png",
+        "sizeBytes": 3400121,
+        "sha256": "2dc61f3c9c54a0af8fa324b6f07c37fc6e5f4cd25ce167367480d58cd1f4bbdc"
+      },
+      {
+        "id": "qa-media-artifact-168",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-08/public/frame-002857.png",
+        "sizeBytes": 3340813,
+        "sha256": "1db6aa277ed284a1295a74da633021364c6858f921826ba8915ddbcd4822ee36"
+      },
+      {
+        "id": "qa-media-artifact-169",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-03/proof/frame-008447.png",
+        "sizeBytes": 755403,
+        "sha256": "f7675745f5624b2fc6d9014dbdba3ef30440527692fbcf8d170b57dace5cd2f7"
+      },
+      {
+        "id": "qa-media-artifact-170",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-03/proof/frame-008448.png",
+        "sizeBytes": 883433,
+        "sha256": "d7ed1eeb22c64458cd0043b6583941d18e46b63717d8a5c4384500d18206ed32"
+      },
+      {
+        "id": "qa-media-artifact-171",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-03/proof/frame-008449.png",
+        "sizeBytes": 897867,
+        "sha256": "6c8f9c2f24a30d9dbfcf9f98c05877955336c3b57ce94c4af58783a954b34e91"
+      },
+      {
+        "id": "qa-media-artifact-172",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-03/proof/frame-008450.png",
+        "sizeBytes": 896646,
+        "sha256": "177eca539eb72aab8cabcc0a0bbefc597a269374e9a6e0058784df92d6e693c2"
+      },
+      {
+        "id": "qa-media-artifact-173",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-03/proof/frame-008635.png",
+        "sizeBytes": 724341,
+        "sha256": "fe452fb79b9037820bc9316eee4f9a5fcc81fbb4e94a707997a6a0df88002849"
+      },
+      {
+        "id": "qa-media-artifact-174",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-03/proof/frame-008636.png",
+        "sizeBytes": 819535,
+        "sha256": "cb52b008a7179096a222907a67ba3c1a7cf1e21cd2716e0470c26229a552ced9"
+      },
+      {
+        "id": "qa-media-artifact-175",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-03/proof/frame-008637.png",
+        "sizeBytes": 827566,
+        "sha256": "f6b5b003a2021d33b12477aa44dd578b7c6311b473dfffff0ac1c9b0f98f989e"
+      },
+      {
+        "id": "qa-media-artifact-176",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-03/proof/frame-008638.png",
+        "sizeBytes": 827987,
+        "sha256": "3b075d573ba3455de8db0984ea05dabbbb1fb4b933760edd59bbf688d4fb19f3"
+      },
+      {
+        "id": "qa-media-artifact-177",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-03/proof/frame-008709.png",
+        "sizeBytes": 710283,
+        "sha256": "73d593749f541100a9b99ce3f11a91fe2a82a058506b6c331f2c2b8a99ae5152"
+      },
+      {
+        "id": "qa-media-artifact-178",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-03/proof/frame-008710.png",
+        "sizeBytes": 837749,
+        "sha256": "488060459e0373e816e0ef8357825126e48725d9feb3bfa32e7d6a3fe7166e9f"
+      },
+      {
+        "id": "qa-media-artifact-179",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-03/proof/frame-008711.png",
+        "sizeBytes": 840911,
+        "sha256": "4f2d057b054305ae80a3239716097f4767c0934fc0eaae69e50cb2e3cd87ad8c"
+      },
+      {
+        "id": "qa-media-artifact-180",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-03/proof/frame-008712.png",
+        "sizeBytes": 842592,
+        "sha256": "d0f2bcba038da9c4899eb1529e3ad5753775eab8661aadcad15dcc39ff267b73"
+      },
+      {
+        "id": "qa-media-artifact-181",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-03/public/frame-004223.png",
+        "sizeBytes": 3318606,
+        "sha256": "597a3aac08244162e4a82ad59ef0a8f28a8b432898926aededdd41143f704ccf"
+      },
+      {
+        "id": "qa-media-artifact-182",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-03/public/frame-004225.png",
+        "sizeBytes": 3385415,
+        "sha256": "b0257d2f4705c5a7e4cd94647e6fb4f0f0770e6ecc7e4904b82504586d682958"
+      },
+      {
+        "id": "qa-media-artifact-183",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-03/public/frame-004226.png",
+        "sizeBytes": 3375686,
+        "sha256": "a2fdcae100e961c671f5b28e41c6efb3c48a65ef9a601f46c667465155cbb462"
+      },
+      {
+        "id": "qa-media-artifact-184",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-03/public/frame-004317.png",
+        "sizeBytes": 3094071,
+        "sha256": "849bd885b5f32d8cc4302423317ee09460f08f0d42b562c815bf59c8f982ef76"
+      },
+      {
+        "id": "qa-media-artifact-185",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-03/public/frame-004318.png",
+        "sizeBytes": 3104034,
+        "sha256": "6f4add212e85e015f8ef2fb8b545d43661f3c52953a661d185103ee338dc430d"
+      },
+      {
+        "id": "qa-media-artifact-186",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-03/public/frame-004319.png",
+        "sizeBytes": 3099747,
+        "sha256": "c82b0c2f0ce99b53ae3ffd43a1ffbc16f6ddb4fdd653ec8908bc9c0b82907f57"
+      },
+      {
+        "id": "qa-media-artifact-187",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-03/public/frame-004320.png",
+        "sizeBytes": 3106556,
+        "sha256": "77133198562935aff0fd21ef47b08421b2c61e0c6bce1e2e584740baa89a2f1f"
+      },
+      {
+        "id": "qa-media-artifact-188",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-03/public/frame-004354.png",
+        "sizeBytes": 3098966,
+        "sha256": "4d5d22aca7d824f05bf64f454820e0b32c3047a6c906d0b4f3cadbe9d994126a"
+      },
+      {
+        "id": "qa-media-artifact-189",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-03/public/frame-004355.png",
+        "sizeBytes": 3107733,
+        "sha256": "12bb2ed0671be9c927669666e7a4fdd726e37b40958bdba60fca69d53ece7361"
+      },
+      {
+        "id": "qa-media-artifact-190",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-03/public/frame-004356.png",
+        "sizeBytes": 3113038,
+        "sha256": "5b30e8c3ab9af8fa80c4c7143adfa2f97bee3fc6b65c9a2e59f4fd8d41c6a1de"
+      },
+      {
+        "id": "qa-media-artifact-191",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-03/public/frame-004357.png",
+        "sizeBytes": 3150347,
+        "sha256": "66e1a5490a2b07a8fba13dcaaafa2df0d6602f5e7e501d75814e914db6900d87"
+      },
+      {
+        "id": "qa-media-artifact-192",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/proof/frame-010359.png",
+        "sizeBytes": 752759,
+        "sha256": "4ad0552235e05fd04e8c8f00a9ff0d666a4050c1e4094acd83ac2e5752cef002"
+      },
+      {
+        "id": "qa-media-artifact-193",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/proof/frame-010360.png",
+        "sizeBytes": 814466,
+        "sha256": "02686ffa0bfcd5e2dea451f70c9f9194f206158260e1de0e4047731058eda262"
+      },
+      {
+        "id": "qa-media-artifact-194",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/proof/frame-010361.png",
+        "sizeBytes": 821072,
+        "sha256": "146f01bb50a0fe8177a5b84379cd0903b50481c7a654953e6e0ea261fc976064"
+      },
+      {
+        "id": "qa-media-artifact-195",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/proof/frame-010362.png",
+        "sizeBytes": 822323,
+        "sha256": "a0a46014670759d022e94d8acb1a37a8eee83703377eec37d8ff2c322779c19d"
+      },
+      {
+        "id": "qa-media-artifact-196",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/proof/frame-010392.png",
+        "sizeBytes": 713450,
+        "sha256": "023afe7c0ade93caf60f3d71c52105bee1ddfe040c96fd0e788b9a35233c1154"
+      },
+      {
+        "id": "qa-media-artifact-197",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/proof/frame-010393.png",
+        "sizeBytes": 870747,
+        "sha256": "8356cda6e0928cc028593692f8d1967058e61cc14feecccd3e11463f32869d2a"
+      },
+      {
+        "id": "qa-media-artifact-198",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/proof/frame-010394.png",
+        "sizeBytes": 870956,
+        "sha256": "7830f22491ed4023cecd0aeafada4696ac99b33341f3ba099aefef9e67823be4"
+      },
+      {
+        "id": "qa-media-artifact-199",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/proof/frame-010395.png",
+        "sizeBytes": 868931,
+        "sha256": "b15ac2ffb1f0ca1908d5f4529c2696dfe06e3811452a5299b2bb647562b76634"
+      },
+      {
+        "id": "qa-media-artifact-200",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/proof/frame-010529.png",
+        "sizeBytes": 724025,
+        "sha256": "96e0cb868610e664d883a10539f4384dd6d818ef97d543c4d2510d876809014c"
+      },
+      {
+        "id": "qa-media-artifact-201",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/proof/frame-010530.png",
+        "sizeBytes": 837505,
+        "sha256": "d7c8dec35f489a852e4be24bb15eae8fd5ab31db17116eaaf7dc9adfad85f536"
+      },
+      {
+        "id": "qa-media-artifact-202",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/proof/frame-010531.png",
+        "sizeBytes": 850472,
+        "sha256": "e701eb6358ea83a6accde64f9b3f2c5c78f1a0778b2dce0743805838df14abc0"
+      },
+      {
+        "id": "qa-media-artifact-203",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/proof/frame-010532.png",
+        "sizeBytes": 849892,
+        "sha256": "b0fc065a3cbcf5da3ecb8de28cb799ab2f3d7a0895c6f7269dd329255b880014"
+      },
+      {
+        "id": "qa-media-artifact-204",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/proof/frame-010645.png",
+        "sizeBytes": 720880,
+        "sha256": "2233ecfc332f7adad5f11f6c8fc27c324e0c5aae98e591f2f544106c2ffefe55"
+      },
+      {
+        "id": "qa-media-artifact-205",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/proof/frame-010646.png",
+        "sizeBytes": 846813,
+        "sha256": "e10827164f196aca927e0824a66585274cf0504c9f019410280d4c4730928af2"
+      },
+      {
+        "id": "qa-media-artifact-206",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/proof/frame-010647.png",
+        "sizeBytes": 843198,
+        "sha256": "15b2785b587605ba10f967f1f00abb62739ac41f45870e4f52daa7609f3150bc"
+      },
+      {
+        "id": "qa-media-artifact-207",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/proof/frame-010648.png",
+        "sizeBytes": 845294,
+        "sha256": "d27ad7ed2e777154d205f89e4967dd792e52e2377af7f5e4358179c3ee8e03bb"
+      },
+      {
+        "id": "qa-media-artifact-208",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/public/frame-005179.png",
+        "sizeBytes": 3204738,
+        "sha256": "26bc4db30e888e1d7804b7df0da7e3163933a23505364734e1584bf3d7e797b1"
+      },
+      {
+        "id": "qa-media-artifact-209",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/public/frame-005180.png",
+        "sizeBytes": 3212626,
+        "sha256": "2e098761427954532bea709fec6ee04526b49d1bb4253967329d1182f83c0ce3"
+      },
+      {
+        "id": "qa-media-artifact-210",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/public/frame-005181.png",
+        "sizeBytes": 3218636,
+        "sha256": "36629f0edd6bd0ba601f4cf0004d83bfe78f81e3e0776e05d468a645ca0dc789"
+      },
+      {
+        "id": "qa-media-artifact-211",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/public/frame-005182.png",
+        "sizeBytes": 3217737,
+        "sha256": "9c9a38d3b022b00ae877117ed9bc303771d6d1aadec5394bf134a9279034a903"
+      },
+      {
+        "id": "qa-media-artifact-212",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/public/frame-005196.png",
+        "sizeBytes": 3224833,
+        "sha256": "4a61a4424d724943e32ee39c87be5d238b6f7fa0655739bfea1d85af0bb25ba3"
+      },
+      {
+        "id": "qa-media-artifact-213",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/public/frame-005197.png",
+        "sizeBytes": 3232380,
+        "sha256": "e71301b5a6e45bd2877df1e47d12bc48da200b51ae428059e86f7bb32d357d83"
+      },
+      {
+        "id": "qa-media-artifact-214",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/public/frame-005198.png",
+        "sizeBytes": 3241205,
+        "sha256": "a30a37a8dd0eb5baa103b445aebfac501754bf7680d9500225a033438bf49b30"
+      },
+      {
+        "id": "qa-media-artifact-215",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/public/frame-005199.png",
+        "sizeBytes": 3218612,
+        "sha256": "476f10eabfa66d5aae46644a17e20611fff8a74bb4a5da8d79ef05ad4e5bd768"
+      },
+      {
+        "id": "qa-media-artifact-216",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/public/frame-005264.png",
+        "sizeBytes": 3014551,
+        "sha256": "5b35a16b342b7c1370682b153671363a18872687f376b0854bfe25714c6c1670"
+      },
+      {
+        "id": "qa-media-artifact-217",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/public/frame-005265.png",
+        "sizeBytes": 3019441,
+        "sha256": "c6842a38f5cdc4c278ef8fd8b2dac8aa3b88324ee80a78d53ab23f1f59fffec3"
+      },
+      {
+        "id": "qa-media-artifact-218",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/public/frame-005266.png",
+        "sizeBytes": 3026367,
+        "sha256": "ee661a8c04ab32e589e649e728a07458dbd47248901491da13ae5b8df4469a0b"
+      },
+      {
+        "id": "qa-media-artifact-219",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/public/frame-005267.png",
+        "sizeBytes": 3020716,
+        "sha256": "b10b1f798a8a857296d40dc07d67971bf6250be01786c0d3f67ae19f600c8df4"
+      },
+      {
+        "id": "qa-media-artifact-220",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/public/frame-005322.png",
+        "sizeBytes": 3108369,
+        "sha256": "278ba73f747dcf72a42e005536b79f4aa32f3f05dee818fad992a3889793599d"
+      },
+      {
+        "id": "qa-media-artifact-221",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/public/frame-005323.png",
+        "sizeBytes": 3114832,
+        "sha256": "319c909e1576eeef8d17c33b81cd528f4495feb68e0f29ec93444fd4146f9f2f"
+      },
+      {
+        "id": "qa-media-artifact-222",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/public/frame-005324.png",
+        "sizeBytes": 3119812,
+        "sha256": "6fd46076d8ec6b4ba4fd368292be24a431307374e4a124737c52fc015ab369ac"
+      },
+      {
+        "id": "qa-media-artifact-223",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/public/frame-005325.png",
+        "sizeBytes": 3119252,
+        "sha256": "7e47a7fb1d7d3dc4b4f9fec5f727b370756e5f9db9311bb7a92aa978bd53d1d1"
+      },
+      {
+        "id": "qa-media-artifact-224",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/release-sheets/c1-06-proof.png",
+        "sizeBytes": 1708221,
+        "sha256": "e92b248a10cd3d7267ed21fc70419fff87c1e31a82b6fabd499779a98793dc14"
+      },
+      {
+        "id": "qa-media-artifact-225",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/release-sheets/c1-06-public.png",
+        "sizeBytes": 1409488,
+        "sha256": "a2a75c931057f2de617e2f65282ab7dc88541d81414e781bb72d3e74f38bbd54"
+      },
+      {
+        "id": "qa-media-artifact-226",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/release-sheets/c1-07-proof.png",
+        "sizeBytes": 2012294,
+        "sha256": "42aebec4e4224e55efae521191acfb5021e5fc73f48c105a02b5479cc3e635c2"
+      },
+      {
+        "id": "qa-media-artifact-227",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/release-sheets/c1-07-public.png",
+        "sizeBytes": 1405733,
+        "sha256": "b1ec7018d2914add11c6c890ab50072e61778b29ec9775e04722c7b0365b2f64"
+      },
+      {
+        "id": "qa-media-artifact-228",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/release-sheets/c1-08-proof.png",
+        "sizeBytes": 2064555,
+        "sha256": "43c406ccc977a29f7c14e162080ecede21c2eb06fcd80e10aac087a86ea9385e"
+      },
+      {
+        "id": "qa-media-artifact-229",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/release-sheets/c1-08-public.png",
+        "sizeBytes": 1637813,
+        "sha256": "2b9f404af6c85210addba8a88ffaf7906c2c83d9efbf54b0c0a8e381286c3178"
+      },
+      {
+        "id": "qa-media-artifact-230",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-06/proof/frame-004937.png",
+        "sizeBytes": 869965,
+        "sha256": "6be0650d25c13be8a698281e6c357eeff6b620c7843163fb8fc0099a8264c1b8"
+      },
+      {
+        "id": "qa-media-artifact-231",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-06/proof/frame-004938.png",
+        "sizeBytes": 713154,
+        "sha256": "f6e677fef15fbde5a6251738fbcbaa437ce7bb0da13875ddf898f4021f7525c9"
+      },
+      {
+        "id": "qa-media-artifact-232",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-06/proof/frame-004939.png",
+        "sizeBytes": 714045,
+        "sha256": "ddf0cd25e6175032453f6040ad83e9fd6abc7771ad5c76137a18164f7c59a1ab"
+      },
+      {
+        "id": "qa-media-artifact-233",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-06/proof/frame-004940.png",
+        "sizeBytes": 710661,
+        "sha256": "63c20ab103e813f5c4f906b81c0c51364844492f2338fb7449e4dda914392d0e"
+      },
+      {
+        "id": "qa-media-artifact-234",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-06/proof/frame-005254.png",
+        "sizeBytes": 887124,
+        "sha256": "381be0e1ce79caaf60050fab1637e4fe32a7db8a9f90e3547823daef96e99d80"
+      },
+      {
+        "id": "qa-media-artifact-235",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-06/proof/frame-005255.png",
+        "sizeBytes": 722468,
+        "sha256": "cb90e8a3577b64fb5bb46c032df5d5e3c9a05457efa736c92f399a9c17beef01"
+      },
+      {
+        "id": "qa-media-artifact-236",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-06/proof/frame-005256.png",
+        "sizeBytes": 721967,
+        "sha256": "b5096fc35668697f18e4ed6ae7ca88f08a5a7b5da9485c92cc76b65dc09eaa36"
+      },
+      {
+        "id": "qa-media-artifact-237",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-06/proof/frame-005257.png",
+        "sizeBytes": 718268,
+        "sha256": "11186c0cb7f6241d91aea6fb03f3c908e0b396409314f29a7fc6a03d2647ab7f"
+      },
+      {
+        "id": "qa-media-artifact-238",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-06/proof/frame-005365.png",
+        "sizeBytes": 928568,
+        "sha256": "83862fa6614f07fe2e1feec09cb61b0ac4bb5986d7361c10e2f18af7adbe9375"
+      },
+      {
+        "id": "qa-media-artifact-239",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-06/proof/frame-005366.png",
+        "sizeBytes": 768516,
+        "sha256": "6ea96c649252369e21da57c435be0b6497f1a2b5694ceca814c1070bae027321"
+      },
+      {
+        "id": "qa-media-artifact-240",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-06/proof/frame-005367.png",
+        "sizeBytes": 768723,
+        "sha256": "6fc7d1249c129b9ed38c4aaa49561471aca1b4f2bbac59560bb0340f1f589b80"
+      },
+      {
+        "id": "qa-media-artifact-241",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-06/proof/frame-005368.png",
+        "sizeBytes": 764648,
+        "sha256": "e4d7f1f805ae56a4422ee9d214f7bf42f4b081be0c8057114f4d40231f9d89af"
+      },
+      {
+        "id": "qa-media-artifact-242",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-06/public/frame-002468.png",
+        "sizeBytes": 3298314,
+        "sha256": "35654f329129d46a9f3f8fb6ad396da59f17f9983a1ba4070fe3a06787430cd5"
+      },
+      {
+        "id": "qa-media-artifact-243",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-06/public/frame-002469.png",
+        "sizeBytes": 3299970,
+        "sha256": "5ec24b979a23143478e99cc0bc2f3fb7182caa4b94002e4a43af70707874799f"
+      },
+      {
+        "id": "qa-media-artifact-244",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-06/public/frame-002470.png",
+        "sizeBytes": 3304268,
+        "sha256": "6925ee80250ee4b4968461897de6e71afec4ce05b60bbcb09316b6b781ec9dfb"
+      },
+      {
+        "id": "qa-media-artifact-245",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-06/public/frame-002471.png",
+        "sizeBytes": 3302381,
+        "sha256": "e2da095f5a381da9cadf96b0edc703bf1d89bdbc16099458f7cf34d836dade41"
+      },
+      {
+        "id": "qa-media-artifact-246",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-06/public/frame-002627.png",
+        "sizeBytes": 3218922,
+        "sha256": "ef2e81cb05675b1da12001b1b37f3a449824372dae74e75b1d82326720abbab5"
+      },
+      {
+        "id": "qa-media-artifact-247",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-06/public/frame-002628.png",
+        "sizeBytes": 3214955,
+        "sha256": "edaacd3767d8dbdf2fd154a851cd01267486b9ad95563c315f416b1f37f7017e"
+      },
+      {
+        "id": "qa-media-artifact-248",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-06/public/frame-002629.png",
+        "sizeBytes": 3231850,
+        "sha256": "5d2616267024a23365f5531bd75dbc3c0414d36da383edaae5bd46f7eec6b810"
+      },
+      {
+        "id": "qa-media-artifact-249",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-06/public/frame-002630.png",
+        "sizeBytes": 3209891,
+        "sha256": "c9b72f4e0de6f817db41b504b5f2bb83d8b1f4cc6b6841b86e84e3009348e9fb"
+      },
+      {
+        "id": "qa-media-artifact-250",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-06/public/frame-002682.png",
+        "sizeBytes": 3364338,
+        "sha256": "a206ef9602163ce14b27f969cf3eb330e4363b38653af29372967608ad896a33"
+      },
+      {
+        "id": "qa-media-artifact-251",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-06/public/frame-002683.png",
+        "sizeBytes": 3370335,
+        "sha256": "ded61d9eb81eec568919390972c8dbf79f27f486b8f25609439985e469378412"
+      },
+      {
+        "id": "qa-media-artifact-252",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-06/public/frame-002684.png",
+        "sizeBytes": 3390548,
+        "sha256": "d4f276580f7253a9dc42d8d41e14edd032fae6c82f0f32f7f54aa1084878c192"
+      },
+      {
+        "id": "qa-media-artifact-253",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-06/public/frame-002685.png",
+        "sizeBytes": 3396934,
+        "sha256": "bb65313130f2cfcffcbce81f204478c5943fe9183de96b5a6b0f61984dea9b36"
+      },
+      {
+        "id": "qa-media-artifact-254",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-07/proof/frame-005475.png",
+        "sizeBytes": 917939,
+        "sha256": "bb60e2807428570b7b48d3603afe715a9e5ba2eb7c3af983214bfaaca369e254"
+      },
+      {
+        "id": "qa-media-artifact-255",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-07/proof/frame-005476.png",
+        "sizeBytes": 743442,
+        "sha256": "b7de188a42e253d8d85a6558b4f247ba92ba202069006b3d616cbc48276cb800"
+      },
+      {
+        "id": "qa-media-artifact-256",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-07/proof/frame-005477.png",
+        "sizeBytes": 733264,
+        "sha256": "af482d604efad02e9c92674d7ec392e263070bcc181bec45dbec505a4b556ba8"
+      },
+      {
+        "id": "qa-media-artifact-257",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-07/proof/frame-005478.png",
+        "sizeBytes": 849598,
+        "sha256": "a89fb47f18b46566f40363b038a3dc50af2167f9ed4982872424585eebbdf25b"
+      },
+      {
+        "id": "qa-media-artifact-258",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-07/proof/frame-005566.png",
+        "sizeBytes": 878502,
+        "sha256": "99b8f40964d399f409d7480079ef14573eabbb8b67042659dddffd66168ba24f"
+      },
+      {
+        "id": "qa-media-artifact-259",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-07/proof/frame-005567.png",
+        "sizeBytes": 720573,
+        "sha256": "3b8946fc002d4894ecc771d2cfe788be879e7b9aacb1c1aea9ecb1a969e7c02d"
+      },
+      {
+        "id": "qa-media-artifact-260",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-07/proof/frame-005568.png",
+        "sizeBytes": 721723,
+        "sha256": "33769dc9e4e832b4ebd26da6c8aaed3d85330d06f4dd9cde2fa7b44fb2b9e9b3"
+      },
+      {
+        "id": "qa-media-artifact-261",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-07/proof/frame-005569.png",
+        "sizeBytes": 721754,
+        "sha256": "bead79d5c2fbbeacd806c6f9e450b1c772c9652a3624bef8532e7208de23a119"
+      },
+      {
+        "id": "qa-media-artifact-262",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-07/proof/frame-005614.png",
+        "sizeBytes": 928874,
+        "sha256": "cbc6b50df14362f94d2df150863f4c62729a76b2e60ddb4fa44fc233326b701d"
+      },
+      {
+        "id": "qa-media-artifact-263",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-07/proof/frame-005615.png",
+        "sizeBytes": 761419,
+        "sha256": "c2ccdbe7ee89f05fab2c6c02fb0fdeae26e9338dcc0df660a1ced7685341e251"
+      },
+      {
+        "id": "qa-media-artifact-264",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-07/proof/frame-005616.png",
+        "sizeBytes": 758743,
+        "sha256": "f68f430fc5a2b9e09621d8af894924f1c5eed1583df378d74ca1ae7e6cb3f73f"
+      },
+      {
+        "id": "qa-media-artifact-265",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-07/proof/frame-005617.png",
+        "sizeBytes": 755101,
+        "sha256": "c16ee7904e74f1a52690e60deb03b53cbb7f52493519e51d89c9912dab593671"
+      },
+      {
+        "id": "qa-media-artifact-266",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-07/public/frame-002737.png",
+        "sizeBytes": 3312717,
+        "sha256": "f42d7c8f940b8d382d14e3032289454da08e27636a0e24b786a088314959e302"
+      },
+      {
+        "id": "qa-media-artifact-267",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-07/public/frame-002738.png",
+        "sizeBytes": 3320020,
+        "sha256": "b0d0606b20563a44b897eb2540da3f3a307a93b1d3824dc58b6aa956a488b95e"
+      },
+      {
+        "id": "qa-media-artifact-268",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-07/public/frame-002739.png",
+        "sizeBytes": 3303078,
+        "sha256": "59172cd70f2c775f8b8da1ceff474d7d3d0efce6bdc19d0ed7163d76a5b2bc09"
+      },
+      {
+        "id": "qa-media-artifact-269",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-07/public/frame-002740.png",
+        "sizeBytes": 3300784,
+        "sha256": "a70acbc5924c956cd90eb31faced4ca341d58e8f9b281de6aa78a3f12977d4cf"
+      },
+      {
+        "id": "qa-media-artifact-270",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-07/public/frame-002783.png",
+        "sizeBytes": 2979907,
+        "sha256": "51afd7ceb8349dc5b596cec3f60b94f5e55c163229b2f3727c0c8a8f4f7c4c42"
+      },
+      {
+        "id": "qa-media-artifact-271",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-07/public/frame-002784.png",
+        "sizeBytes": 2981175,
+        "sha256": "4da27520cf8f65188674846dae5fa8b052c605436a914535ea931a18d7d12086"
+      },
+      {
+        "id": "qa-media-artifact-272",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-07/public/frame-002785.png",
+        "sizeBytes": 3026101,
+        "sha256": "3725bc2488d19051e1dda0efa427de86682d72399fca0d7e7aa02200ec9050ea"
+      },
+      {
+        "id": "qa-media-artifact-273",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-07/public/frame-002786.png",
+        "sizeBytes": 3026650,
+        "sha256": "0d26386c68829750e0cc039cce7d6e6cec64ea6eb0ceb214cf0e3dbe554d1102"
+      },
+      {
+        "id": "qa-media-artifact-274",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-07/public/frame-002807.png",
+        "sizeBytes": 3161627,
+        "sha256": "13c56a9e3480fd1c9c55172175540031a144f0f4c25459047cf49d990f556e1b"
+      },
+      {
+        "id": "qa-media-artifact-275",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-07/public/frame-002808.png",
+        "sizeBytes": 3160963,
+        "sha256": "0a72899b3f78e8a041b5cf349033dd07011d0a0a5511088f94c652368c5d2731"
+      },
+      {
+        "id": "qa-media-artifact-276",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-07/public/frame-002809.png",
+        "sizeBytes": 3175129,
+        "sha256": "d607bcfc473ebd3dd08bf7d4f4b2958ca00206675770cf19548425456f334309"
+      },
+      {
+        "id": "qa-media-artifact-277",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-07/public/frame-002810.png",
+        "sizeBytes": 3173828,
+        "sha256": "296819432b11854f9bec7ee8e3ed9831f2f38a8a23ac0314a5f4fd191b0a0736"
+      },
+      {
+        "id": "qa-media-artifact-278",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-08/proof/frame-005655.png",
+        "sizeBytes": 934322,
+        "sha256": "4b5381aee58d95af21ae0886cac4bbcea2e324cf5f3ccbe91edd5a161a274585"
+      },
+      {
+        "id": "qa-media-artifact-279",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-08/proof/frame-005656.png",
+        "sizeBytes": 762230,
+        "sha256": "1387406c3e1b2a5493ce80af5154018923bd81d4918ef96a94dddd6ed7609e04"
+      },
+      {
+        "id": "qa-media-artifact-280",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-08/proof/frame-005657.png",
+        "sizeBytes": 760665,
+        "sha256": "277a14f5ceb064fb2c8c91cc62d7c29078b49d60baabd4fde14b6e8070345705"
+      },
+      {
+        "id": "qa-media-artifact-281",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-08/proof/frame-005658.png",
+        "sizeBytes": 756599,
+        "sha256": "49e3fbd0756dd61f9364c34934e2df8220679b22c0d213f34ee44095a7874b65"
+      },
+      {
+        "id": "qa-media-artifact-282",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-08/proof/frame-005703.png",
+        "sizeBytes": 924053,
+        "sha256": "4be97ab0085986352aec72228478aa08b7b1f979cc9a899042b2574fd8558466"
+      },
+      {
+        "id": "qa-media-artifact-283",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-08/proof/frame-005704.png",
+        "sizeBytes": 758870,
+        "sha256": "a1abddc18fc146b9451df02dc1b8388f9fb51a2198be0c1a5c50ff6243a00235"
+      },
+      {
+        "id": "qa-media-artifact-284",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-08/proof/frame-005705.png",
+        "sizeBytes": 750443,
+        "sha256": "0a39192c44a770dcf60ebf065cce53008200c9af0889c0c656cf969111ad7f3e"
+      },
+      {
+        "id": "qa-media-artifact-285",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-08/proof/frame-005706.png",
+        "sizeBytes": 751070,
+        "sha256": "3dd19295b29c048b1ed7a2406fbb5a0c558d1be132936a162c198f9f27a34dfc"
+      },
+      {
+        "id": "qa-media-artifact-286",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-08/proof/frame-005908.png",
+        "sizeBytes": 932694,
+        "sha256": "0966d915d52c13aae0127685198ba5b84d494ae914d7a0c9e2b1f93c5b3bcdf3"
+      },
+      {
+        "id": "qa-media-artifact-287",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-08/proof/frame-005909.png",
+        "sizeBytes": 767656,
+        "sha256": "e6f352cc71cb241f02f8514af13d28f9bd2d903e3691dc77a4ccc1c40535bb31"
+      },
+      {
+        "id": "qa-media-artifact-288",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-08/proof/frame-005910.png",
+        "sizeBytes": 762118,
+        "sha256": "8c56e5891d720249f0961170664a5dcf9084715fa66f1e5a9efc4cbf6681fd14"
+      },
+      {
+        "id": "qa-media-artifact-289",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-08/proof/frame-005911.png",
+        "sizeBytes": 727930,
+        "sha256": "15e9e96829217b092ec03faa7aa72df766f45bd73da6f14bed1c2a9552efba80"
+      },
+      {
+        "id": "qa-media-artifact-290",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-08/public/frame-002827.png",
+        "sizeBytes": 3264414,
+        "sha256": "2cc0871068eb75490cca76c918822c75ba7c4c4b9984749f6926373601abda13"
+      },
+      {
+        "id": "qa-media-artifact-291",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-08/public/frame-002828.png",
+        "sizeBytes": 3277078,
+        "sha256": "91115c932d5f98d34bde5ccccfe71aee7ed5d23f01dcbdd6cbefe4d41d344649"
+      },
+      {
+        "id": "qa-media-artifact-292",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-08/public/frame-002829.png",
+        "sizeBytes": 3292084,
+        "sha256": "cc9098c37b6167a839181217d36305280c2b3127b4d74ae76164cab6c1f5da67"
+      },
+      {
+        "id": "qa-media-artifact-293",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-08/public/frame-002830.png",
+        "sizeBytes": 3298350,
+        "sha256": "a081a9d73e030b07e4ba8f2656473784a0b8cde61c6817cd69f7bef9a6f5dfd1"
+      },
+      {
+        "id": "qa-media-artifact-294",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-08/public/frame-002851.png",
+        "sizeBytes": 3328231,
+        "sha256": "d40c1226b6c7cd9ace992b401a7bcf0dce212d37c166291478c32d8c51c13fd7"
+      },
+      {
+        "id": "qa-media-artifact-295",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-08/public/frame-002852.png",
+        "sizeBytes": 3319557,
+        "sha256": "10929192bfd644e034aa596e402f36096cb1377d9bb9fa59cfc11f77394eeb6c"
+      },
+      {
+        "id": "qa-media-artifact-296",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-08/public/frame-002853.png",
+        "sizeBytes": 3325052,
+        "sha256": "4061999770a39dae9ac9431fe575a28eafb40e8564441cce88920fc976dba7f1"
+      },
+      {
+        "id": "qa-media-artifact-297",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-08/public/frame-002854.png",
+        "sizeBytes": 3330386,
+        "sha256": "aace2f2a90b833cfa0a8ad98e338c25c3a47a8cb01efceae6ad316e45eb0e5e7"
+      },
+      {
+        "id": "qa-media-artifact-298",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-08/public/frame-002953.png",
+        "sizeBytes": 3336868,
+        "sha256": "943d70f1ccbebbfba3db5d4dc21709b5a903eef15cd2f188fb19b714e02825fe"
+      },
+      {
+        "id": "qa-media-artifact-299",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-08/public/frame-002954.png",
+        "sizeBytes": 3334678,
+        "sha256": "bab22abf3f04cf33a0834f331d593319c691dfdcbb436394a2c06c115b3dd3f5"
+      },
+      {
+        "id": "qa-media-artifact-300",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-08/public/frame-002955.png",
+        "sizeBytes": 3344018,
+        "sha256": "779dbd0b40caa4d2347da9cd53ddb9f55ee084f8618206e206bc6b60d4559544"
+      },
+      {
+        "id": "qa-media-artifact-301",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-08/public/frame-002956.png",
+        "sizeBytes": 3335934,
+        "sha256": "d4ea34d22936038bb713d68f7819bf4b86b8d041bf05609051e065f3ada7ba89"
+      }
+    ],
+    "media": {
+      "reference": {
+        "artifactId": "reference-render",
+        "fileSha256": {
+          "value": "664feb2fe9e7336c84602dd35c82de21197729949bee93e6bbe164ee87044895",
+          "source": "sha256-file"
+        },
+        "video": {
+          "codecName": "prores",
+          "profile": "4444",
+          "codecTag": "ap4h",
+          "width": 2160,
+          "height": 2160,
+          "avgFrameRate": "60/1",
+          "realFrameRate": "60/1",
+          "decodedFrameCount": {
+            "value": 9180,
+            "source": "ffprobe-count_frames"
+          },
+          "pixelFormat": "yuv444p12le",
+          "sampleAspectRatio": "1:1",
+          "colorRange": "tv",
+          "colorSpace": "bt709",
+          "colorTransfer": "bt709",
+          "colorPrimaries": "bt709",
+          "startTime": "0.000000",
+          "duration": "153.000000"
+        },
+        "container": {
+          "duration": "153.000000"
+        },
+        "strictDecode": {
+          "passed": true,
+          "source": "ffmpeg-xerror-full-decode"
+        }
+      },
+      "public": {
+        "artifactId": "public-master",
+        "fileSha256": {
+          "value": "c9d0e882715661a706da617a2ffe397343af480b5bdb4a3580fcc1882ce77482",
+          "source": "sha256-file"
+        },
+        "video": {
+          "codecName": "hevc",
+          "codecTag": "hvc1",
+          "width": 1080,
+          "height": 1080,
+          "avgFrameRate": "60/1",
+          "realFrameRate": "60/1",
+          "decodedFrameCount": {
+            "value": 9180,
+            "source": "ffprobe-count_frames"
+          },
+          "pixelFormat": "yuv420p10le",
+          "sampleAspectRatio": "1:1",
+          "colorRange": "tv",
+          "colorSpace": "bt709",
+          "colorTransfer": "bt709",
+          "colorPrimaries": "bt709",
+          "startTime": "0.000000",
+          "duration": "153.000000"
+        },
+        "audio": {
+          "codecName": "aac",
+          "sampleRate": "44100",
+          "channels": 2,
+          "channelLayout": "stereo",
+          "timeBase": "1/44100",
+          "startPts": 0,
+          "startTime": "0.000000",
+          "durationTs": 6747300,
+          "duration": "153.000000",
+          "packetCount": {
+            "value": 6591,
+            "source": "ffprobe-count_packets"
+          },
+          "packetStreamSha256": {
+            "value": "9d2cc3b8f0bd51b1fe0e990cc0d6d5cbb52a76e1b872b56ada849915b3856b24",
+            "source": "stream-copy-sha256"
+          }
+        },
+        "sourceAudio": {
+          "timeBase": "1/44100",
+          "startPts": 0,
+          "startTime": "0.000000",
+          "durationTs": 6747300,
+          "duration": "153.000000",
+          "packetCount": {
+            "value": 6591,
+            "source": "ffprobe-count_packets"
+          },
+          "packetStreamSha256": {
+            "value": "9d2cc3b8f0bd51b1fe0e990cc0d6d5cbb52a76e1b872b56ada849915b3856b24",
+            "source": "stream-copy-sha256"
+          }
+        },
+        "container": {
+          "duration": "153.000000",
+          "faststart": {
+            "moovBeforeMdat": true,
+            "source": "parsed-atom-order"
+          }
+        },
+        "strictDecode": {
+          "passed": true,
+          "source": "ffmpeg-xerror-full-decode"
+        }
+      },
+      "proof": {
+        "artifactId": "sync-proof",
+        "fileSha256": {
+          "value": "6a6600c5b8ef7ccc4421022c13b6fa2c8824ec309e0c22c23fc8dc13ab3236a6",
+          "source": "sha256-file"
+        },
+        "video": {
+          "codecName": "h264",
+          "codecTag": "avc1",
+          "width": 1080,
+          "height": 1080,
+          "avgFrameRate": "120/1",
+          "realFrameRate": "120/1",
+          "decodedFrameCount": {
+            "value": 18360,
+            "source": "ffprobe-count_frames"
+          },
+          "pixelFormat": "yuv420p",
+          "sampleAspectRatio": "1:1",
+          "colorRange": "tv",
+          "colorSpace": "bt709",
+          "colorTransfer": "bt709",
+          "colorPrimaries": "bt709",
+          "startTime": "0.000000",
+          "duration": "153.000000"
+        },
+        "audio": {
+          "codecName": "aac",
+          "sampleRate": "44100",
+          "channels": 2,
+          "channelLayout": "stereo",
+          "timeBase": "1/44100",
+          "startPts": 0,
+          "startTime": "0.000000",
+          "durationTs": 6747300,
+          "duration": "153.000000",
+          "packetCount": {
+            "value": 6591,
+            "source": "ffprobe-count_packets"
+          },
+          "packetStreamSha256": {
+            "value": "9d2cc3b8f0bd51b1fe0e990cc0d6d5cbb52a76e1b872b56ada849915b3856b24",
+            "source": "stream-copy-sha256"
+          }
+        },
+        "sourceAudio": {
+          "timeBase": "1/44100",
+          "startPts": 0,
+          "startTime": "0.000000",
+          "durationTs": 6747300,
+          "duration": "153.000000",
+          "packetCount": {
+            "value": 6591,
+            "source": "ffprobe-count_packets"
+          },
+          "packetStreamSha256": {
+            "value": "9d2cc3b8f0bd51b1fe0e990cc0d6d5cbb52a76e1b872b56ada849915b3856b24",
+            "source": "stream-copy-sha256"
+          }
+        },
+        "container": {
+          "duration": "153.000000",
+          "faststart": {
+            "moovBeforeMdat": true,
+            "source": "parsed-atom-order"
+          }
+        },
+        "strictDecode": {
+          "passed": true,
+          "source": "ffmpeg-xerror-full-decode"
+        }
+      }
+    },
+    "qaCoverage": {
+      "lineIds": [
+        "C1-01",
+        "C1-02",
+        "C1-03",
+        "C1-04",
+        "C1-05",
+        "C1-06",
+        "C1-07",
+        "C1-08",
+        "V1-01",
+        "V1-02",
+        "V1-03",
+        "V1-04",
+        "V1-05",
+        "V1-06",
+        "V1-07",
+        "V1-08",
+        "C2-01",
+        "C2-02",
+        "C2-03",
+        "C2-04",
+        "C2-05",
+        "C2-06",
+        "C2-07",
+        "C2-08"
+      ],
+      "speedVariants": [
+        "normal",
+        "half"
+      ],
+      "dedicatedRanges": [
+        "v1-03",
+        "v1-08",
+        "chorus-1",
+        "chorus-2",
+        "first-act-40-50",
+        "final-handoff"
+      ],
+      "proofRanges": [
+        "v1-03",
+        "v1-08"
+      ],
+      "cueIds": [
+        "C1-04-C01",
+        "C1-04-C02",
+        "C1-04-C03",
+        "C1-06-C01",
+        "C1-06-C02",
+        "C1-06-C03",
+        "C1-07-C01",
+        "C1-07-C02",
+        "C1-07-C03",
+        "C1-08-C01",
+        "C1-08-C02",
+        "C1-08-C03",
+        "V1-03-C01",
+        "V1-03-C02",
+        "V1-03-C03",
+        "V1-08-C01",
+        "V1-08-C02",
+        "V1-08-C03",
+        "V1-08-C04"
+      ],
+      "contactOffsets": [
+        -1,
+        0,
+        1,
+        2
+      ],
+      "cadences": [
+        60,
+        120
+      ],
+      "stillPurposes": [
+        "chrome",
+        "handoff",
+        "focus",
+        "safe-area",
+        "spectrum-peak",
+        "backward-contact",
+        "final-transition"
+      ],
+      "allArtifactsHashed": true,
+      "mediaManifestArtifactId": "qa-media-manifest"
+    },
+    "requirementMatrix": {
+      "criteria": [
+        {
+          "id": 1,
+          "title": "Locked source audio authority",
+          "status": "proved",
+          "evidence": [
+            {
+              "id": "criterion-01-evidence-01",
+              "kind": "source-audio",
+              "artifact": "projects/tanisea-lyric-film/public/soundtrack.m4a",
+              "sha256": "93084f293d491da1519732f3fa3cf6416c783d04e8ca18b5569c7608a8d4540d",
+              "value": "criterion 1 verified"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Complete build and test verification",
+          "status": "proved",
+          "evidence": [
+            {
+              "id": "criterion-02-evidence-01",
+              "kind": "test-result",
+              "artifact": "projects/tanisea-lyric-film/work/qa/run-1/logs/check.log",
+              "sha256": "f38a2d8a8ddb32cae45b3679fcdf888a275b486cd03c5747d6f160767ab017b8",
+              "value": "criterion 2 verified"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Sample-indexed alignment authority",
+          "status": "proved",
+          "evidence": [
+            {
+              "id": "criterion-03-evidence-01",
+              "kind": "alignment-manifest",
+              "artifact": "projects/tanisea-lyric-film/alignment/tanisea-word-alignment-v3.json",
+              "sha256": "06fe6c8d6ad4db5131ab4f9ab98be91ea87064fdeea58017c6b8c21ed8530f0b",
+              "value": "criterion 3 verified"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Measured timing uncertainty bounds",
+          "status": "proved",
+          "evidence": [
+            {
+              "id": "criterion-04-evidence-01",
+              "kind": "alignment-manifest",
+              "artifact": "projects/tanisea-lyric-film/alignment/tanisea-word-alignment-v3.json",
+              "sha256": "06fe6c8d6ad4db5131ab4f9ab98be91ea87064fdeea58017c6b8c21ed8530f0b",
+              "value": "criterion 4 verified"
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "title": "Reviewed semantic source-to-target mapping",
+          "status": "proved",
+          "evidence": [
+            {
+              "id": "criterion-05-evidence-01",
+              "kind": "semantic-map",
+              "artifact": "projects/tanisea-lyric-film/alignment/tanisea-word-alignment-v3.json",
+              "sha256": "06fe6c8d6ad4db5131ab4f9ab98be91ea87064fdeea58017c6b8c21ed8530f0b",
+              "value": "criterion 5 verified"
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "title": "Backward activation and repeated-chorus semantics",
+          "status": "proved",
+          "evidence": [
+            {
+              "id": "criterion-06-evidence-01",
+              "kind": "semantic-map",
+              "artifact": "projects/tanisea-lyric-film/alignment/tanisea-word-alignment-v3.json",
+              "sha256": "06fe6c8d6ad4db5131ab4f9ab98be91ea87064fdeea58017c6b8c21ed8530f0b",
+              "value": "criterion 6 verified"
+            }
+          ]
+        },
+        {
+          "id": 7,
+          "title": "Public and proof cadence verification",
+          "status": "proved",
+          "evidence": [
+            {
+              "id": "criterion-07-evidence-01",
+              "kind": "cadence-verification",
+              "artifact": "projects/tanisea-lyric-film/work/qa/run-1/logs/verify-public.log",
+              "sha256": "8980e885d04de1bb5e6f0d95cf1466ca0719117c2ad51b08b51d041903ee2598",
+              "value": "public cadence verified"
+            },
+            {
+              "id": "criterion-07-evidence-02",
+              "kind": "cadence-verification",
+              "artifact": "projects/tanisea-lyric-film/work/qa/run-1/logs/verify-proof.log",
+              "sha256": "2deab5b4ae072188f70bab499956e36fd64713267b044a9b464b174fd9ab8cc0",
+              "value": "proof cadence verified"
+            }
+          ]
+        },
+        {
+          "id": 8,
+          "title": "Public chrome and upper-rail removal",
+          "status": "proved",
+          "evidence": [
+            {
+              "id": "criterion-08-evidence-01",
+              "kind": "public-markup",
+              "artifact": "projects/tanisea-lyric-film/work/qa/run-1/logs/verify-public-markup.log",
+              "sha256": "b7a83e3a51a06daa79e82c44470b0342949de031bcb9982804f71f41626a56eb",
+              "value": "criterion 8 verified"
+            },
+            {
+              "id": "criterion-08-evidence-02",
+              "kind": "encoded-frame",
+              "artifact": "projects/tanisea-lyric-film/work/qa/run-1/selected-frames/chrome.png",
+              "sha256": "6b88beff7cd8542202e1a261be60be700b68d54882d7da74f7ef9c50d048fd7a",
+              "value": "public chrome encoded frame verified"
+            }
+          ]
+        },
+        {
+          "id": 9,
+          "title": "Lyric, spectrum, and safe-area layout",
+          "status": "proved",
+          "evidence": [
+            {
+              "id": "criterion-09-evidence-01",
+              "kind": "layout-verification",
+              "artifact": "projects/tanisea-lyric-film/work/qa/run-1/logs/layout-verify.log",
+              "sha256": "1811b379c17349f5802cd66db4b4e4913291fbe31aab497bdf0906f8b07e152d",
+              "value": "criterion 9 verified"
+            },
+            {
+              "id": "criterion-09-evidence-02",
+              "kind": "encoded-frame",
+              "artifact": "projects/tanisea-lyric-film/work/qa/run-1/selected-frames/safe-area.png",
+              "sha256": "ff782cd844af1906a760b239f5182b62433dfa69017d0c697c0bcdde420c707b",
+              "value": "public safe-area encoded frame verified"
+            }
+          ]
+        },
+        {
+          "id": 10,
+          "title": "Repeated QA with no unexplained drift",
+          "status": "pending-repeat",
+          "evidence": [
+            {
+              "id": "criterion-10-evidence-01",
+              "kind": "qa-run-comparison",
+              "artifact": "projects/tanisea-lyric-film/work/qa/run-2/run-comparison.json",
+              "sha256": "2c0d5fe5e46d565263caa2d15bee3bc81fc1fa0e738dcae973d9f4c571b754ed",
+              "value": "criterion 10 baseline captured; repeat verification pending"
+            }
+          ]
+        },
+        {
+          "id": 11,
+          "title": "Release assets and documentation readiness",
+          "status": "pending-publication",
+          "evidence": [
+            {
+              "id": "criterion-11-evidence-01",
+              "kind": "publication-readiness",
+              "artifact": "projects/tanisea-lyric-film/output/Tanisea-Lyric-Film-vNext-60fps-Archival-Master.mp4",
+              "sha256": "c9d0e882715661a706da617a2ffe397343af480b5bdb4a3580fcc1882ce77482",
+              "value": "criterion 11 publication readiness verified locally"
+            }
+          ]
+        }
+      ]
+    },
+    "selectedFrames": [
+      {
+        "id": "chrome",
+        "artifactId": "public-chrome-still",
+        "composition": "LyricFilmVNext",
+        "frame": 3844,
+        "path": "projects/tanisea-lyric-film/work/qa/run-1/selected-frames/chrome.png",
+        "sha256": "6b88beff7cd8542202e1a261be60be700b68d54882d7da74f7ef9c50d048fd7a"
+      },
+      {
+        "id": "handoff",
+        "artifactId": "public-handoff-still",
+        "composition": "LyricFilmVNext",
+        "frame": 7079,
+        "path": "projects/tanisea-lyric-film/work/qa/run-1/selected-frames/handoff.png",
+        "sha256": "bd1f5d453cfec14661d3a1bad0e042892cd9e6af5624c1dd7836d4c9e47cf126"
+      },
+      {
+        "id": "focus",
+        "artifactId": "public-focus-still",
+        "composition": "LyricFilmVNext",
+        "frame": 4355,
+        "path": "projects/tanisea-lyric-film/work/qa/run-1/selected-frames/focus.png",
+        "sha256": "12bb2ed0671be9c927669666e7a4fdd726e37b40958bdba60fca69d53ece7361"
+      },
+      {
+        "id": "safe-area",
+        "artifactId": "public-safe-area-still",
+        "composition": "LyricFilmVNext",
+        "frame": 4458,
+        "path": "projects/tanisea-lyric-film/work/qa/run-1/selected-frames/safe-area.png",
+        "sha256": "ff782cd844af1906a760b239f5182b62433dfa69017d0c697c0bcdde420c707b"
+      },
+      {
+        "id": "spectrum-peak",
+        "artifactId": "public-spectrum-peak-still",
+        "composition": "LyricFilmVNext",
+        "frame": 2306,
+        "path": "projects/tanisea-lyric-film/work/qa/run-1/selected-frames/spectrum-peak.png",
+        "sha256": "97c4fcc034eb82d4498697450f38dd25f54b8b9fae36b3889601d8fb0808aef2"
+      },
+      {
+        "id": "backward-contact",
+        "artifactId": "proof-backward-contact-still",
+        "composition": "LyricFilmSyncProof",
+        "frame": 10394,
+        "path": "projects/tanisea-lyric-film/work/qa/run-1/selected-frames/backward-contact.png",
+        "sha256": "7830f22491ed4023cecd0aeafada4696ac99b33341f3ba099aefef9e67823be4"
+      },
+      {
+        "id": "final-transition",
+        "artifactId": "reference-transition-still",
+        "composition": "LyricFilmVNext",
+        "frame": 7092,
+        "path": "projects/tanisea-lyric-film/work/qa/run-1/selected-frames/final-transition.png",
+        "sha256": "5fe287c4c5a501950efc039dffda85fe8997e52f4d8d63e489eba48e39c8dc57"
+      }
+    ]
+  },
+  "authoritativeRun": {
+    "schemaVersion": 1,
+    "runId": "run-2",
+    "fullMediaExecuted": true,
+    "boundedClaim": "sample-indexed alignment with frame-bounded rendering",
+    "git": {
+      "headCommit": "a5d3b5344eb65d2dc91579142c3bc608e53b448a",
+      "trackedTreeSha256": "e4704401f40258c3eadd7021b4691757f6cf64caf3c7b53c3fdeaf45a697b255",
+      "worktreeDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "isClean": true,
+      "statusEntries": []
+    },
+    "toolVersions": {
+      "node": "v24.19.0",
+      "npm": "11.7.0",
+      "ffmpeg": "ffmpeg version 9.0-full_build-www.gyan.dev Copyright (c) 2000-2026 the FFmpeg developers",
+      "ffprobe": "ffprobe version 9.0-full_build-www.gyan.dev Copyright (c) 2007-2026 the FFmpeg developers"
+    },
+    "commands": [
+      {
+        "id": "npm-ci",
+        "command": "npm ci",
+        "exitCode": 0,
+        "durationMs": 40237.8664,
+        "logPath": "projects/tanisea-lyric-film/work/qa/run-2/logs/npm-ci.log",
+        "logSha256": "142f67ca34f7104a9a8799a2b4ea56c4578daadf4985b8bd61e43eb8686eae92"
+      },
+      {
+        "id": "check",
+        "command": "npm run check",
+        "exitCode": 0,
+        "durationMs": 66844.78940000001,
+        "logPath": "projects/tanisea-lyric-film/work/qa/run-2/logs/check.log",
+        "logSha256": "f35f736a79f3503b8f3258f558a8256f0f5329a797f562673a945fd2bdc579be"
+      },
+      {
+        "id": "alignment-verify",
+        "command": "npm run alignment:verify",
+        "exitCode": 0,
+        "durationMs": 1074.3775000000023,
+        "logPath": "projects/tanisea-lyric-film/work/qa/run-2/logs/alignment-verify.log",
+        "logSha256": "a088de62e1f4d80622811ee0ea9cf52f21ec56c04bb76d15de74fca52112b03a"
+      },
+      {
+        "id": "layout-verify",
+        "command": "npm run layout:verify",
+        "exitCode": 0,
+        "durationMs": 10325.545599999998,
+        "logPath": "projects/tanisea-lyric-film/work/qa/run-2/logs/layout-verify.log",
+        "logSha256": "a2685c1b22d5a015f010a578f169fa47b9264873366e73de233e42a9cca169d6"
+      },
+      {
+        "id": "compositions",
+        "command": "npm run compositions",
+        "exitCode": 0,
+        "durationMs": 4874.619500000001,
+        "logPath": "projects/tanisea-lyric-film/work/qa/run-2/logs/compositions.log",
+        "logSha256": "e2095c88a7fedf85a9bbc3fdd66ad04b6510af6652242ca343decf3a335772cd"
+      },
+      {
+        "id": "verify-reference",
+        "command": "npm run verify -- --kind reference",
+        "exitCode": 0,
+        "durationMs": 769741.7930000001,
+        "logPath": "projects/tanisea-lyric-film/work/qa/run-2/logs/verify-reference.log",
+        "logSha256": "5ba59f77f526fffb84568b2206a094ac66dec741a1da196a64a8a2794c762f26"
+      },
+      {
+        "id": "verify-public",
+        "command": "npm run verify -- --kind public",
+        "exitCode": 0,
+        "durationMs": 22427.277300000074,
+        "logPath": "projects/tanisea-lyric-film/work/qa/run-2/logs/verify-public.log",
+        "logSha256": "aae97bc53267189ec859dc880404ffcab61004559233475b61a060e4337afd33"
+      },
+      {
+        "id": "verify-proof",
+        "command": "npm run verify -- --kind proof",
+        "exitCode": 0,
+        "durationMs": 33827.80520000006,
+        "logPath": "projects/tanisea-lyric-film/work/qa/run-2/logs/verify-proof.log",
+        "logSha256": "c914f87dd8bce8d319ae31ab0f0e9db23233d06263ad4478367950c598fae0c8"
+      },
+      {
+        "id": "verify-public-markup",
+        "command": "npm run test:run -- tests/release-gates.test.ts -t \"public-markup release gate\"",
+        "exitCode": 0,
+        "durationMs": 1051.9076999999816,
+        "logPath": "projects/tanisea-lyric-film/work/qa/run-2/logs/verify-public-markup.log",
+        "logSha256": "b5c39e447be8584bd86ddc2039a04149d0973c12f9ef8bdef6420f2a9974fbf3"
+      },
+      {
+        "id": "verify-matrix",
+        "command": "npm run test:run -- tests/release-gates.test.ts -t \"requirement-matrix release gate\"",
+        "exitCode": 0,
+        "durationMs": 959.7263999999268,
+        "logPath": "projects/tanisea-lyric-film/work/qa/run-2/logs/verify-matrix.log",
+        "logSha256": "6de0ce4107647913138e2ac60d026829c045e82e5bd86f8eda0ab9f4001a1d3d"
+      }
+    ],
+    "artifacts": [
+      {
+        "id": "source-audio",
+        "kind": "source-audio",
+        "path": "projects/tanisea-lyric-film/public/soundtrack.m4a",
+        "sizeBytes": 2476341,
+        "sha256": "93084f293d491da1519732f3fa3cf6416c783d04e8ca18b5569c7608a8d4540d"
+      },
+      {
+        "id": "alignment-manifest",
+        "kind": "alignment",
+        "path": "projects/tanisea-lyric-film/alignment/tanisea-word-alignment-v3.json",
+        "sizeBytes": 351148,
+        "sha256": "06fe6c8d6ad4db5131ab4f9ab98be91ea87064fdeea58017c6b8c21ed8530f0b"
+      },
+      {
+        "id": "audio-features",
+        "kind": "features",
+        "path": "projects/tanisea-lyric-film/public/audio-features.bin",
+        "sizeBytes": 688532,
+        "sha256": "c9453f8c6fb3de3f16e691b51b4155c5db7e313f5aac1cc7942904754d29b7cf"
+      },
+      {
+        "id": "reference-render",
+        "kind": "reference",
+        "path": "projects/tanisea-lyric-film/output/Tanisea-Lyric-Film-vNext-reference-2x.mov",
+        "sizeBytes": 28708453523,
+        "sha256": "664feb2fe9e7336c84602dd35c82de21197729949bee93e6bbe164ee87044895"
+      },
+      {
+        "id": "public-master",
+        "kind": "public",
+        "path": "projects/tanisea-lyric-film/output/Tanisea-Lyric-Film-vNext-60fps-Archival-Master.mp4",
+        "sizeBytes": 17279730,
+        "sha256": "c9d0e882715661a706da617a2ffe397343af480b5bdb4a3580fcc1882ce77482"
+      },
+      {
+        "id": "sync-proof",
+        "kind": "proof",
+        "path": "projects/tanisea-lyric-film/output/Tanisea-Lyric-Film-Sync-Proof-120fps.mp4",
+        "sizeBytes": 157392393,
+        "sha256": "6a6600c5b8ef7ccc4421022c13b6fa2c8824ec309e0c22c23fc8dc13ab3236a6"
+      },
+      {
+        "id": "qa-media-manifest",
+        "kind": "qa-manifest",
+        "path": "projects/tanisea-lyric-film/work/qa/media/qa-media-manifest.json",
+        "sizeBytes": 55571,
+        "sha256": "5192a5dfa967612a7a609f1046918cfa595723c3fc8ce2c6cbd269ad9149ff3d"
+      },
+      {
+        "id": "v1-03-public-contact",
+        "kind": "qa-contact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-03/public/frame-004224.png",
+        "sizeBytes": 3382996,
+        "sha256": "bb584c6c756b038ba4e2c98fa234c4b944e448a2044b5df1bfc0c056b1c1f699"
+      },
+      {
+        "id": "v1-03-public-contact-sheet",
+        "kind": "qa-contact-sheet",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contact-sheets/v1-03-public.png",
+        "sizeBytes": 1678547,
+        "sha256": "6a32582c3c2c009b4bec155b95d9a0aa142c3f32183d6a9f5011c4cdc95efa1c"
+      },
+      {
+        "id": "v1-03-proof-contact-sheet",
+        "kind": "qa-contact-sheet",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contact-sheets/v1-03-proof.png",
+        "sizeBytes": 1967654,
+        "sha256": "8b83bca5b0925eb92d387a7c472c9089c0cb02bf99147df280413417df049597"
+      },
+      {
+        "id": "v1-08-public-contact-sheet",
+        "kind": "qa-contact-sheet",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contact-sheets/v1-08-public.png",
+        "sizeBytes": 1761416,
+        "sha256": "ff438ba58e3ac7e16b534932595689e9271e6d71ca6e8a09b43d2598608eee2e"
+      },
+      {
+        "id": "v1-08-proof-contact-sheet",
+        "kind": "qa-contact-sheet",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contact-sheets/v1-08-proof.png",
+        "sizeBytes": 2599920,
+        "sha256": "a4b8b2fbb348514fa4c81c264f1a037353d7f356450ee6def8ec4ce6e479886b"
+      },
+      {
+        "id": "public-chrome-still",
+        "kind": "qa-still",
+        "path": "projects/tanisea-lyric-film/work/qa/media/stills/public-chrome.png",
+        "sizeBytes": 3323694,
+        "sha256": "6b88beff7cd8542202e1a261be60be700b68d54882d7da74f7ef9c50d048fd7a"
+      },
+      {
+        "id": "public-handoff-still",
+        "kind": "qa-still",
+        "path": "projects/tanisea-lyric-film/work/qa/media/stills/public-handoff.png",
+        "sizeBytes": 3199990,
+        "sha256": "bd1f5d453cfec14661d3a1bad0e042892cd9e6af5624c1dd7836d4c9e47cf126"
+      },
+      {
+        "id": "public-focus-still",
+        "kind": "qa-still",
+        "path": "projects/tanisea-lyric-film/work/qa/media/stills/public-focus.png",
+        "sizeBytes": 3107733,
+        "sha256": "12bb2ed0671be9c927669666e7a4fdd726e37b40958bdba60fca69d53ece7361"
+      },
+      {
+        "id": "public-safe-area-still",
+        "kind": "qa-still",
+        "path": "projects/tanisea-lyric-film/work/qa/media/stills/public-safe-area.png",
+        "sizeBytes": 3273707,
+        "sha256": "ff782cd844af1906a760b239f5182b62433dfa69017d0c697c0bcdde420c707b"
+      },
+      {
+        "id": "public-spectrum-peak-still",
+        "kind": "qa-still",
+        "path": "projects/tanisea-lyric-film/work/qa/media/stills/public-spectrum-peak.png",
+        "sizeBytes": 3346212,
+        "sha256": "97c4fcc034eb82d4498697450f38dd25f54b8b9fae36b3889601d8fb0808aef2"
+      },
+      {
+        "id": "proof-backward-contact-still",
+        "kind": "qa-still",
+        "path": "projects/tanisea-lyric-film/work/qa/media/stills/proof-backward-contact.png",
+        "sizeBytes": 870956,
+        "sha256": "7830f22491ed4023cecd0aeafada4696ac99b33341f3ba099aefef9e67823be4"
+      },
+      {
+        "id": "reference-transition-still",
+        "kind": "qa-still",
+        "path": "projects/tanisea-lyric-film/work/qa/media/stills/reference-final-transition.png",
+        "sizeBytes": 20820842,
+        "sha256": "5fe287c4c5a501950efc039dffda85fe8997e52f4d8d63e489eba48e39c8dc57"
+      },
+      {
+        "id": "qa-media-artifact-001",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/proof/v1-03-half.mp4",
+        "sizeBytes": 1427994,
+        "sha256": "49330ee686dc59b290f95e46c57817c337740e5c1e120080daca1bf08eb19bc2"
+      },
+      {
+        "id": "qa-media-artifact-002",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/proof/v1-03-normal.mp4",
+        "sizeBytes": 1119744,
+        "sha256": "4c55faf1a6c2cae2e73354ac74532d22900cb56cc655714db316078a513f4e70"
+      },
+      {
+        "id": "qa-media-artifact-003",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/proof/v1-08-half.mp4",
+        "sizeBytes": 1518511,
+        "sha256": "f54bbfc6f7fd58f3ad6ae0c36ac9ad1faba5fc326c110d994b258641d8dc7a06"
+      },
+      {
+        "id": "qa-media-artifact-004",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/proof/v1-08-normal.mp4",
+        "sizeBytes": 1184934,
+        "sha256": "f315d3d84c78ef908c04d9e3e60d4668b650169716e3e965b738787c430d0b6f"
+      },
+      {
+        "id": "qa-media-artifact-005",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/chorus-1-half.mp4",
+        "sizeBytes": 686745,
+        "sha256": "0db3f48eca36e15d0f92540b401a193b29bd3f49ac745a2971233ad2c073da61"
+      },
+      {
+        "id": "qa-media-artifact-006",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/chorus-1-normal.mp4",
+        "sizeBytes": 493983,
+        "sha256": "16527f6929102ebe6829ca029cc59b4b9ff03a6e347e0f0974de2bd8df6a5b92"
+      },
+      {
+        "id": "qa-media-artifact-007",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/chorus-2-half.mp4",
+        "sizeBytes": 677699,
+        "sha256": "4ba84f06f8845bfc7e17f6b649aae6076b429b607431c578a4b348b67a7d958e"
+      },
+      {
+        "id": "qa-media-artifact-008",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/chorus-2-normal.mp4",
+        "sizeBytes": 488350,
+        "sha256": "528b4a831ba03732b3032b76f534a5b7d9302cf1cf2c4008e4c581b027f95c8a"
+      },
+      {
+        "id": "qa-media-artifact-009",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/final-handoff-half.mp4",
+        "sizeBytes": 615974,
+        "sha256": "09c984f9460beae0f44dc6f20f9757a42dd07bb9da6d91c2f69fa99aed7ad353"
+      },
+      {
+        "id": "qa-media-artifact-010",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/final-handoff-normal.mp4",
+        "sizeBytes": 441422,
+        "sha256": "ce6ee1e9ef3f00b1188b021c3bd01bfd5678a384b22071490e27fd220a3aeb79"
+      },
+      {
+        "id": "qa-media-artifact-011",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/first-act-40-50-half.mp4",
+        "sizeBytes": 3081661,
+        "sha256": "727747eca57315140de6fefd3bfeec7af9fec6c12256b83e0ce8c359026fbbfb"
+      },
+      {
+        "id": "qa-media-artifact-012",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/first-act-40-50-normal.mp4",
+        "sizeBytes": 2124844,
+        "sha256": "44d157f67a0819df816ff2c0bf823e344d55979083268082981624beb753cf63"
+      },
+      {
+        "id": "qa-media-artifact-013",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c1-01-half.mp4",
+        "sizeBytes": 626246,
+        "sha256": "57e855248be4deb2b7a95a255ad02a4a5d561cf2b252ca2283c5c18050ff9756"
+      },
+      {
+        "id": "qa-media-artifact-014",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c1-01-normal.mp4",
+        "sizeBytes": 446866,
+        "sha256": "f276e52bed0a035b0c796ff00eb002cafa9e058a1c032f76a5df194e9081a71c"
+      },
+      {
+        "id": "qa-media-artifact-015",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c1-02-half.mp4",
+        "sizeBytes": 555272,
+        "sha256": "8df63298a7bfdc4a5ce8b08185241687e811547b2bb8aaeba2b96da21a857def"
+      },
+      {
+        "id": "qa-media-artifact-016",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c1-02-normal.mp4",
+        "sizeBytes": 397959,
+        "sha256": "ecb9b29bbd87ef735c880e48bd018fabe94087b57d5fbe3ede78b9f4e800981f"
+      },
+      {
+        "id": "qa-media-artifact-017",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c1-03-half.mp4",
+        "sizeBytes": 496855,
+        "sha256": "f10414f09406602a27e29cd74dc55b5ea1d136fb857d65280315e373c539e222"
+      },
+      {
+        "id": "qa-media-artifact-018",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c1-03-normal.mp4",
+        "sizeBytes": 353816,
+        "sha256": "9a1e67c20824796ccaf0f5af11e15a05ee95d2a91e5e1e7c2413a5a3c9becdbf"
+      },
+      {
+        "id": "qa-media-artifact-019",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c1-04-half.mp4",
+        "sizeBytes": 607125,
+        "sha256": "811e599760e74958f9ffb615a3794746ba655c12a2fddbbb6f889900a780fdd1"
+      },
+      {
+        "id": "qa-media-artifact-020",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c1-04-normal.mp4",
+        "sizeBytes": 427416,
+        "sha256": "061b6a7b4e12d8065b6dd9477e08a94975a38023619d24e2996062462b98f8f5"
+      },
+      {
+        "id": "qa-media-artifact-021",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c1-05-half.mp4",
+        "sizeBytes": 686745,
+        "sha256": "0db3f48eca36e15d0f92540b401a193b29bd3f49ac745a2971233ad2c073da61"
+      },
+      {
+        "id": "qa-media-artifact-022",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c1-05-normal.mp4",
+        "sizeBytes": 493983,
+        "sha256": "16527f6929102ebe6829ca029cc59b4b9ff03a6e347e0f0974de2bd8df6a5b92"
+      },
+      {
+        "id": "qa-media-artifact-023",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c1-06-half.mp4",
+        "sizeBytes": 600552,
+        "sha256": "47e599c7f5e91337d6b4af1740217c70a46f21861e47a7360beb505339e9661a"
+      },
+      {
+        "id": "qa-media-artifact-024",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c1-06-normal.mp4",
+        "sizeBytes": 428601,
+        "sha256": "9b09c1e00be6e40e67226ac9b159ab537ec58e326dd0f4b17fae94fc9f859f07"
+      },
+      {
+        "id": "qa-media-artifact-025",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c1-07-half.mp4",
+        "sizeBytes": 633872,
+        "sha256": "de76438c6e3bf93c53361fa5da02c1540bbad00d3bb6ba839e8d16cc7b4c23db"
+      },
+      {
+        "id": "qa-media-artifact-026",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c1-07-normal.mp4",
+        "sizeBytes": 455298,
+        "sha256": "1667dd403285f5cdadd4c9a39560de5a8a543b03c0b608dd4145f203b4eb22d4"
+      },
+      {
+        "id": "qa-media-artifact-027",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c1-08-half.mp4",
+        "sizeBytes": 626896,
+        "sha256": "a7d7702e1ae7d21ed3450cc20d6a622c650b651a43e01c017ccabe44a36b6dea"
+      },
+      {
+        "id": "qa-media-artifact-028",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c1-08-normal.mp4",
+        "sizeBytes": 446092,
+        "sha256": "074e4fc657daadd0a2aa22adfd20ed7a70dd079b71bc14a0e3a72eb760c8a400"
+      },
+      {
+        "id": "qa-media-artifact-029",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c2-01-half.mp4",
+        "sizeBytes": 574802,
+        "sha256": "642b33689a01434f46a272ad1917217a3268b7bcb2b6515e5d61271c9cc8e9d4"
+      },
+      {
+        "id": "qa-media-artifact-030",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c2-01-normal.mp4",
+        "sizeBytes": 402876,
+        "sha256": "2f66e41d13a331e76caf0689261e282de32a829395bd65797983d8ed055f19a5"
+      },
+      {
+        "id": "qa-media-artifact-031",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c2-02-half.mp4",
+        "sizeBytes": 602486,
+        "sha256": "b24c3665f57fab6ffe843d0f4d710efeea509d126800b5b8152266779e75d404"
+      },
+      {
+        "id": "qa-media-artifact-032",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c2-02-normal.mp4",
+        "sizeBytes": 433922,
+        "sha256": "e1fd4c3a0eea03f8975947753d76729f1e9f515d54e8f922b396bc0a323efe6d"
+      },
+      {
+        "id": "qa-media-artifact-033",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c2-03-half.mp4",
+        "sizeBytes": 501102,
+        "sha256": "b47367e8d69e10901561e5002db8d0f833f718bdd768a530e8f9847e2ae15c9d"
+      },
+      {
+        "id": "qa-media-artifact-034",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c2-03-normal.mp4",
+        "sizeBytes": 354559,
+        "sha256": "6160a6969035ec06c4288a7c4336fc66af24007aa53e1f15dd7fcc84330b23fc"
+      },
+      {
+        "id": "qa-media-artifact-035",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c2-04-half.mp4",
+        "sizeBytes": 589702,
+        "sha256": "354ddcadef8264a7717e09daeed6232f675bbdf519b113b50883fce5b208ad1e"
+      },
+      {
+        "id": "qa-media-artifact-036",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c2-04-normal.mp4",
+        "sizeBytes": 415262,
+        "sha256": "82f13618ce7c552fd789b6e0f41015f1f3b261ac1b164bd38ee6ea812c41701b"
+      },
+      {
+        "id": "qa-media-artifact-037",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c2-05-half.mp4",
+        "sizeBytes": 677699,
+        "sha256": "4ba84f06f8845bfc7e17f6b649aae6076b429b607431c578a4b348b67a7d958e"
+      },
+      {
+        "id": "qa-media-artifact-038",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c2-05-normal.mp4",
+        "sizeBytes": 488350,
+        "sha256": "528b4a831ba03732b3032b76f534a5b7d9302cf1cf2c4008e4c581b027f95c8a"
+      },
+      {
+        "id": "qa-media-artifact-039",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c2-06-half.mp4",
+        "sizeBytes": 633447,
+        "sha256": "1f3264090c1c492026479ce096e7db4621006df0c70eb01f3b856014c423a0bd"
+      },
+      {
+        "id": "qa-media-artifact-040",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c2-06-normal.mp4",
+        "sizeBytes": 448419,
+        "sha256": "6f6599dae66a68fda3c3fd595694ba6b28c051a882cc2ff5ea058e180fdd6aa5"
+      },
+      {
+        "id": "qa-media-artifact-041",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c2-07-half.mp4",
+        "sizeBytes": 540606,
+        "sha256": "c5702d0411ed3a38e7f10e90c05e51df7d8d8018c4f94b112550a1016a5c12a3"
+      },
+      {
+        "id": "qa-media-artifact-042",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c2-07-normal.mp4",
+        "sizeBytes": 385202,
+        "sha256": "009b431802c5140f3878586a1b4337ed443b9ef2d78434efaad97581ab32a07e"
+      },
+      {
+        "id": "qa-media-artifact-043",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c2-08-half.mp4",
+        "sizeBytes": 577584,
+        "sha256": "099f086651c05634acaaa32550cde0af40b4a04fcc7803e5b0f827a515dfc2d8"
+      },
+      {
+        "id": "qa-media-artifact-044",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-c2-08-normal.mp4",
+        "sizeBytes": 410331,
+        "sha256": "9d83121309d24f9230f5b604e7d72a9e0e8b57e2f0007207fb1794d2d48099e6"
+      },
+      {
+        "id": "qa-media-artifact-045",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-v1-01-half.mp4",
+        "sizeBytes": 657278,
+        "sha256": "69e5f2bde061bb8c35f737abba5eb7a9da6ce24bc4f2be5db7cbe3b38df7939c"
+      },
+      {
+        "id": "qa-media-artifact-046",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-v1-01-normal.mp4",
+        "sizeBytes": 474503,
+        "sha256": "b1ea84d2ab630422de645750e91e689646f610401a12b8c95e908afcbec196db"
+      },
+      {
+        "id": "qa-media-artifact-047",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-v1-02-half.mp4",
+        "sizeBytes": 604395,
+        "sha256": "5faab3a030f25653d8f22171e604f7fa634ab05b4d7d0794cabc47d27ae1dbd9"
+      },
+      {
+        "id": "qa-media-artifact-048",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-v1-02-normal.mp4",
+        "sizeBytes": 424218,
+        "sha256": "ddf7d49c15b1d3fe66232fbba3faf8e306ea733cca58d19acb93f05d30b22e6c"
+      },
+      {
+        "id": "qa-media-artifact-049",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-v1-03-half.mp4",
+        "sizeBytes": 629404,
+        "sha256": "64738f696d08c21cd2a8f8bb16e67cd80b49a3a05a7f7ffc3a711ae5e7b8cc5c"
+      },
+      {
+        "id": "qa-media-artifact-050",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-v1-03-normal.mp4",
+        "sizeBytes": 447241,
+        "sha256": "26bd58350ceb18eca68c74879d57618878cd76853d3cd9ca5d13c4c682ff9143"
+      },
+      {
+        "id": "qa-media-artifact-051",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-v1-04-half.mp4",
+        "sizeBytes": 618712,
+        "sha256": "509502b8cd4ab27ef919974f1aa0ea12fd17d09eb85c0172529a0909e3e6746c"
+      },
+      {
+        "id": "qa-media-artifact-052",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-v1-04-normal.mp4",
+        "sizeBytes": 448686,
+        "sha256": "e0a4b6f21a4304ae1631865c9ccc6819ed683b54ce737f9e9280fbbb03ffd57e"
+      },
+      {
+        "id": "qa-media-artifact-053",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-v1-05-half.mp4",
+        "sizeBytes": 628641,
+        "sha256": "b35196744fd26c7e3149ec78ecb5a557355aa99c230d4a5389220f1a77ea701e"
+      },
+      {
+        "id": "qa-media-artifact-054",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-v1-05-normal.mp4",
+        "sizeBytes": 447296,
+        "sha256": "f2b293f04c8bd730d6aa9cec1711aa8fe23107d9fbdde2160619d47e1232781c"
+      },
+      {
+        "id": "qa-media-artifact-055",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-v1-06-half.mp4",
+        "sizeBytes": 624878,
+        "sha256": "e7ff8749bf829cc09ff2663d733913889a838bb72efbed923ddc75578ddf5ef1"
+      },
+      {
+        "id": "qa-media-artifact-056",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-v1-06-normal.mp4",
+        "sizeBytes": 445452,
+        "sha256": "15ae56c284ad92aca0dafe785f927055194a23671199eae1de19cd55828bdbbc"
+      },
+      {
+        "id": "qa-media-artifact-057",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-v1-07-half.mp4",
+        "sizeBytes": 596154,
+        "sha256": "d46cb571ae0ccad2e92cda75fbc0727b4a1c60a8969eb2a9a6e2953a932dd467"
+      },
+      {
+        "id": "qa-media-artifact-058",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-v1-07-normal.mp4",
+        "sizeBytes": 424979,
+        "sha256": "a794c715a0a45b77e77803d254036c2827964f2d97c202cbe895faf15148ef07"
+      },
+      {
+        "id": "qa-media-artifact-059",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-v1-08-half.mp4",
+        "sizeBytes": 602837,
+        "sha256": "7ec459cdd86791186f8ea5173044e77df8411e8ce5e7b5ad68ea8c2c2062d739"
+      },
+      {
+        "id": "qa-media-artifact-060",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/line-v1-08-normal.mp4",
+        "sizeBytes": 437400,
+        "sha256": "3a618a5888e8d27e0c11cf7ac889785296085a53e1d4ef9f46f5a7b3ca33b26e"
+      },
+      {
+        "id": "qa-media-artifact-061",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/v1-03-half.mp4",
+        "sizeBytes": 629404,
+        "sha256": "64738f696d08c21cd2a8f8bb16e67cd80b49a3a05a7f7ffc3a711ae5e7b8cc5c"
+      },
+      {
+        "id": "qa-media-artifact-062",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/v1-03-normal.mp4",
+        "sizeBytes": 447241,
+        "sha256": "26bd58350ceb18eca68c74879d57618878cd76853d3cd9ca5d13c4c682ff9143"
+      },
+      {
+        "id": "qa-media-artifact-063",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/v1-08-half.mp4",
+        "sizeBytes": 602837,
+        "sha256": "7ec459cdd86791186f8ea5173044e77df8411e8ce5e7b5ad68ea8c2c2062d739"
+      },
+      {
+        "id": "qa-media-artifact-064",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/clips/public/v1-08-normal.mp4",
+        "sizeBytes": 437400,
+        "sha256": "3a618a5888e8d27e0c11cf7ac889785296085a53e1d4ef9f46f5a7b3ca33b26e"
+      },
+      {
+        "id": "qa-media-artifact-065",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contact-sheets/c1-04-proof.png",
+        "sizeBytes": 2059873,
+        "sha256": "4ce4b843cb4abcdf092f96394f7c472deb398a6d41b0eafa300fd1f160d3aa4a"
+      },
+      {
+        "id": "qa-media-artifact-066",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contact-sheets/c1-04-public.png",
+        "sizeBytes": 1760118,
+        "sha256": "8a5700f69079e709d961ca055f165376b5c36d09a331b048a58b0d531ce29f7e"
+      },
+      {
+        "id": "qa-media-artifact-067",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contact-sheets/c1-06-proof.png",
+        "sizeBytes": 2067158,
+        "sha256": "882e0662f7ceae2c0e3ae697f20d2dfd5c22d0b3fbb452041531d276caf6d0d1"
+      },
+      {
+        "id": "qa-media-artifact-068",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contact-sheets/c1-06-public.png",
+        "sizeBytes": 1676148,
+        "sha256": "ca571a0c8fbcd10b6e856b85a6a610a6d4eba9f5a9ecce19edf46475584d2b0d"
+      },
+      {
+        "id": "qa-media-artifact-069",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contact-sheets/c1-07-proof.png",
+        "sizeBytes": 2085412,
+        "sha256": "e2fb10fe13c6966184c0f9447d44a0898be29aafda4a6527888a6a5a2524ecd8"
+      },
+      {
+        "id": "qa-media-artifact-070",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contact-sheets/c1-07-public.png",
+        "sizeBytes": 1787250,
+        "sha256": "97435dd916c2990efb747a684b951367894b791c03ba761de20bd777d140356b"
+      },
+      {
+        "id": "qa-media-artifact-071",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contact-sheets/c1-08-proof.png",
+        "sizeBytes": 2099625,
+        "sha256": "9a545761f08ced0fd33b388900a5cbcbf22ff0d3c4b54da93d73346336b9364d"
+      },
+      {
+        "id": "qa-media-artifact-072",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contact-sheets/c1-08-public.png",
+        "sizeBytes": 1718726,
+        "sha256": "6e47db44d750ce328f64b995aeb9c10130eb0b2a26de030630c40b6d797fef0d"
+      },
+      {
+        "id": "qa-media-artifact-073",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-04/proof/frame-004057.png",
+        "sizeBytes": 730505,
+        "sha256": "b481aa9e2578a00d1c46cd814011c718419f8ec61351587d2961aeb066a8976e"
+      },
+      {
+        "id": "qa-media-artifact-074",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-04/proof/frame-004058.png",
+        "sizeBytes": 800588,
+        "sha256": "d216a51fe812f53c5d9262e3f98cd5c46f240fb8598cfa537014baac082dd62a"
+      },
+      {
+        "id": "qa-media-artifact-075",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-04/proof/frame-004059.png",
+        "sizeBytes": 810586,
+        "sha256": "17028057892c7a95fe43711bacae0bf9a30dd355eafeb5b754355889cb029516"
+      },
+      {
+        "id": "qa-media-artifact-076",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-04/proof/frame-004060.png",
+        "sizeBytes": 810912,
+        "sha256": "b5e0d29a9940ed867e2f428ec043ddf00bff9a3782bc984fab063f29b7b67c2b"
+      },
+      {
+        "id": "qa-media-artifact-077",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-04/proof/frame-004074.png",
+        "sizeBytes": 688193,
+        "sha256": "8ac1b9801e3d3eccde1af996374e949038e779c305a05eccddd8a3185a3b5bd0"
+      },
+      {
+        "id": "qa-media-artifact-078",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-04/proof/frame-004075.png",
+        "sizeBytes": 819952,
+        "sha256": "771e052b9a78206702c538624109097bf50211be87b4c7c59ecbeaea5927c167"
+      },
+      {
+        "id": "qa-media-artifact-079",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-04/proof/frame-004076.png",
+        "sizeBytes": 820227,
+        "sha256": "90de0be4a724715ba00b7f7d70f95c96186b4a63bd63f8113bb5df148972d349"
+      },
+      {
+        "id": "qa-media-artifact-080",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-04/proof/frame-004077.png",
+        "sizeBytes": 813000,
+        "sha256": "729e77b0e3bb1b3b5af4b0612f01b8b57cb15670ab792225b20ccfd6558186bf"
+      },
+      {
+        "id": "qa-media-artifact-081",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-04/proof/frame-004158.png",
+        "sizeBytes": 748664,
+        "sha256": "532f87b7a4da25fdc16da85b23ab689229d10186241f3a2e80215bd92d0cd17a"
+      },
+      {
+        "id": "qa-media-artifact-082",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-04/proof/frame-004159.png",
+        "sizeBytes": 881384,
+        "sha256": "ec770bbf25f4dd84b8937a0a0c0736486a968361fc0ae6253baf16b2ddd19d2d"
+      },
+      {
+        "id": "qa-media-artifact-083",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-04/proof/frame-004160.png",
+        "sizeBytes": 882962,
+        "sha256": "670daf0d1baa083dd6f5815f35cc7ebd65644d4784bfe1cf0ffeb4f3ad532a63"
+      },
+      {
+        "id": "qa-media-artifact-084",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-04/proof/frame-004161.png",
+        "sizeBytes": 877099,
+        "sha256": "0631f395d88b06272cd79cb82fd863b1effc147349b476ddad98291d5222097d"
+      },
+      {
+        "id": "qa-media-artifact-085",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-04/public/frame-002028.png",
+        "sizeBytes": 3103526,
+        "sha256": "18c42dee0c325f2cdc7292ebbffd695eba236f7a194bb3a1a3097243a9d2bf30"
+      },
+      {
+        "id": "qa-media-artifact-086",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-04/public/frame-002029.png",
+        "sizeBytes": 3107745,
+        "sha256": "0bd338458bcb3844152f8111dbbc07dbbfd0f70e8758c1a389b817a72eb26f40"
+      },
+      {
+        "id": "qa-media-artifact-087",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-04/public/frame-002030.png",
+        "sizeBytes": 3119667,
+        "sha256": "0beb36a591551b6965c4aa510828e14d53638fe3b62d5dbb5066d352cc7833e3"
+      },
+      {
+        "id": "qa-media-artifact-088",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-04/public/frame-002031.png",
+        "sizeBytes": 3115948,
+        "sha256": "7c3c7ba72e2ec2987475a55c5bf2017aad184656bfaaf8e3a54ece735eadb350"
+      },
+      {
+        "id": "qa-media-artifact-089",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-04/public/frame-002037.png",
+        "sizeBytes": 3088956,
+        "sha256": "709fe209acedf650da0eb0f6ba6435accfec92f28373b1edc936d4398b4351b3"
+      },
+      {
+        "id": "qa-media-artifact-090",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-04/public/frame-002038.png",
+        "sizeBytes": 3104064,
+        "sha256": "6ec6becb7aabf90fadaf6e427722613889568d0f845eb3e546c6accc82ecabc0"
+      },
+      {
+        "id": "qa-media-artifact-091",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-04/public/frame-002039.png",
+        "sizeBytes": 3095662,
+        "sha256": "f92344162c2f6d0dc4df233d691aedce40b1fb597ccdccb98b3344a2c79d79f6"
+      },
+      {
+        "id": "qa-media-artifact-092",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-04/public/frame-002040.png",
+        "sizeBytes": 3088827,
+        "sha256": "a8b25775572a9d1452010efc37b54ba5189499f279420ac2cb93e2604188bfbd"
+      },
+      {
+        "id": "qa-media-artifact-093",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-04/public/frame-002079.png",
+        "sizeBytes": 3331256,
+        "sha256": "2b7be2ffce52a9cedbf116fef149c546cdd585878fd4935ef0e837de0e60f305"
+      },
+      {
+        "id": "qa-media-artifact-094",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-04/public/frame-002080.png",
+        "sizeBytes": 3330480,
+        "sha256": "ecd48f735fdbf7c2d2eec3b9645346312018dbd63fd4652e5ca4dd3c9473fd61"
+      },
+      {
+        "id": "qa-media-artifact-095",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-04/public/frame-002081.png",
+        "sizeBytes": 3328209,
+        "sha256": "fdb9c9134aa639bc97c86eb3e7aee7039cfa5aaa16b6e26b42651a6a3d993493"
+      },
+      {
+        "id": "qa-media-artifact-096",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-04/public/frame-002082.png",
+        "sizeBytes": 3336508,
+        "sha256": "4366a9c8358377eba8f1621942720814c11b8d07080e6f695f890525b6326727"
+      },
+      {
+        "id": "qa-media-artifact-097",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-06/proof/frame-004889.png",
+        "sizeBytes": 751454,
+        "sha256": "03f4495afb2391f6a72b3049c1124bafea8db589ff2f33983dcc21f2314eac64"
+      },
+      {
+        "id": "qa-media-artifact-098",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-06/proof/frame-004890.png",
+        "sizeBytes": 912114,
+        "sha256": "23a7a1843648d1827996098c020f4f51b515c79c79bef90fe724f7319a5cfa06"
+      },
+      {
+        "id": "qa-media-artifact-099",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-06/proof/frame-004891.png",
+        "sizeBytes": 912123,
+        "sha256": "95e20e5fd4245574f49795cf435792bfb961ca21cf6d2a82dacdea9ef2a197a9"
+      },
+      {
+        "id": "qa-media-artifact-100",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-06/proof/frame-004892.png",
+        "sizeBytes": 911943,
+        "sha256": "1aa41912877bbfe6fe35fa587fe857a55a32cee06ee4e66761e6060672f4259d"
+      },
+      {
+        "id": "qa-media-artifact-101",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-06/proof/frame-004946.png",
+        "sizeBytes": 719106,
+        "sha256": "87d78b4f7c07d9d16992a88f5202f0d868db7c6d9ad17c9505cc9815c9225fa8"
+      },
+      {
+        "id": "qa-media-artifact-102",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-06/proof/frame-004947.png",
+        "sizeBytes": 876733,
+        "sha256": "eb7ddf7af0238c9c5920ee0a20008114feef303f6544a1ef068147e3ef1a64a7"
+      },
+      {
+        "id": "qa-media-artifact-103",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-06/proof/frame-004948.png",
+        "sizeBytes": 881703,
+        "sha256": "60887350390d30cfbc1b8f35c8ee394e175c90f6811c0442eb63cb12b6bcf3de"
+      },
+      {
+        "id": "qa-media-artifact-104",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-06/proof/frame-004949.png",
+        "sizeBytes": 891410,
+        "sha256": "01df7485bfdffbae8ac2c7a9f25bb07b89bba625317b18f620ad6c21ef279309"
+      },
+      {
+        "id": "qa-media-artifact-105",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-06/proof/frame-005268.png",
+        "sizeBytes": 720180,
+        "sha256": "2785d4693f975d442864dfd8b68f3042610288eaaafd445d3234b37b1d4e925d"
+      },
+      {
+        "id": "qa-media-artifact-106",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-06/proof/frame-005269.png",
+        "sizeBytes": 842296,
+        "sha256": "4471aa6764eae03b15fee9e3139daadb602edc2fbff915661b8081df024cc604"
+      },
+      {
+        "id": "qa-media-artifact-107",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-06/proof/frame-005270.png",
+        "sizeBytes": 845926,
+        "sha256": "e0c7163e1156608452d17246922e62441ffdbd6145899ec173da28a11103abac"
+      },
+      {
+        "id": "qa-media-artifact-108",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-06/proof/frame-005271.png",
+        "sizeBytes": 850029,
+        "sha256": "433b9c3a1e38c68e5823746c972fa96e6309129432047c6a900de13a6f9a7a0e"
+      },
+      {
+        "id": "qa-media-artifact-109",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-06/public/frame-002444.png",
+        "sizeBytes": 3400631,
+        "sha256": "916944e42898e4886072acbb927dfcf68c92ebb619da14010e6654db442d335f"
+      },
+      {
+        "id": "qa-media-artifact-110",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-06/public/frame-002445.png",
+        "sizeBytes": 3413584,
+        "sha256": "e181b3331fd4f307247d4e3a792b1d39e1e0a10ab67a11adebbe1a97689cb1b0"
+      },
+      {
+        "id": "qa-media-artifact-111",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-06/public/frame-002446.png",
+        "sizeBytes": 3417742,
+        "sha256": "9ac5d9b4eb896a0e8c6c942eca72180895d46e3a75a6d2ef35bb8478a4e35515"
+      },
+      {
+        "id": "qa-media-artifact-112",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-06/public/frame-002447.png",
+        "sizeBytes": 3409137,
+        "sha256": "8df25f6cec24dec95a1e9bbb2cebe341ad29fbe72f7ed7f91c46febb75d48295"
+      },
+      {
+        "id": "qa-media-artifact-113",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-06/public/frame-002473.png",
+        "sizeBytes": 3291802,
+        "sha256": "5208bed7213cdef822c3e438b66362a5070864a0611db1cf0cb83f7df3e4f6bc"
+      },
+      {
+        "id": "qa-media-artifact-114",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-06/public/frame-002474.png",
+        "sizeBytes": 3313288,
+        "sha256": "7fc4f689c5363d47acb3ee0f57ae1bd96339e992feefded37f1d12fd30e14b56"
+      },
+      {
+        "id": "qa-media-artifact-115",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-06/public/frame-002475.png",
+        "sizeBytes": 3368603,
+        "sha256": "1a66eb3190a1ff396710970c3aa20a9c869ae3eb6b33a7be83233ba644c43169"
+      },
+      {
+        "id": "qa-media-artifact-116",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-06/public/frame-002476.png",
+        "sizeBytes": 3359191,
+        "sha256": "27ddde083672b39aa768fc035d60c51c7da0a2f181e8435740adfe3015694696"
+      },
+      {
+        "id": "qa-media-artifact-117",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-06/public/frame-002634.png",
+        "sizeBytes": 3200020,
+        "sha256": "387b59ffff128dfe407ba6eff98c3f3ce83930506ab2cbc8b8cb8912f6610e01"
+      },
+      {
+        "id": "qa-media-artifact-118",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-06/public/frame-002635.png",
+        "sizeBytes": 3206601,
+        "sha256": "e95fa612cd118ce131e829b4bb227c24c9dc688d560dc980866e2ae38d7fc112"
+      },
+      {
+        "id": "qa-media-artifact-119",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-06/public/frame-002636.png",
+        "sizeBytes": 3207805,
+        "sha256": "376a1e2d436de4620620e21851af67005c65512002bc8e1042bd4d7a4db200b9"
+      },
+      {
+        "id": "qa-media-artifact-120",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-06/public/frame-002637.png",
+        "sizeBytes": 3192185,
+        "sha256": "bf98103b2e14034e425c92222edb594f996d08546eb98d9a00a61f6a5d6eb5a5"
+      },
+      {
+        "id": "qa-media-artifact-121",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-07/proof/frame-005372.png",
+        "sizeBytes": 768695,
+        "sha256": "a82c9eab1e7f81f68f13c19e079eb2125c9230602f87b719fe63bccac247a33d"
+      },
+      {
+        "id": "qa-media-artifact-122",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-07/proof/frame-005373.png",
+        "sizeBytes": 931491,
+        "sha256": "566c46664a688435dc71fa6fc3d4af90d9a58905cd146720e8191036f7137116"
+      },
+      {
+        "id": "qa-media-artifact-123",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-07/proof/frame-005374.png",
+        "sizeBytes": 932723,
+        "sha256": "12e1357a14078b5365a1aebc4c073f32f7d219da58b994d8c5a25fd0c339e70e"
+      },
+      {
+        "id": "qa-media-artifact-124",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-07/proof/frame-005375.png",
+        "sizeBytes": 932136,
+        "sha256": "69bbf88782fe3f0d63fcd3cd1dcab924a0ee144a81b73f2ecee66730595a6157"
+      },
+      {
+        "id": "qa-media-artifact-125",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-07/proof/frame-005477.png",
+        "sizeBytes": 733264,
+        "sha256": "af482d604efad02e9c92674d7ec392e263070bcc181bec45dbec505a4b556ba8"
+      },
+      {
+        "id": "qa-media-artifact-126",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-07/proof/frame-005478.png",
+        "sizeBytes": 849598,
+        "sha256": "a89fb47f18b46566f40363b038a3dc50af2167f9ed4982872424585eebbdf25b"
+      },
+      {
+        "id": "qa-media-artifact-127",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-07/proof/frame-005479.png",
+        "sizeBytes": 859863,
+        "sha256": "ece7461de09fe611c1f5f3ee63be010203a4ba22b5d526c36d50ba5b2330473f"
+      },
+      {
+        "id": "qa-media-artifact-128",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-07/proof/frame-005480.png",
+        "sizeBytes": 860969,
+        "sha256": "c1d0023fda5b0c662cd8517fe2788e6476e4e930bf0aa53e2876c8525c74484c"
+      },
+      {
+        "id": "qa-media-artifact-129",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-07/proof/frame-005569.png",
+        "sizeBytes": 721754,
+        "sha256": "bead79d5c2fbbeacd806c6f9e450b1c772c9652a3624bef8532e7208de23a119"
+      },
+      {
+        "id": "qa-media-artifact-130",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-07/proof/frame-005570.png",
+        "sizeBytes": 887058,
+        "sha256": "0fcb25bb77b41578401995cc54439ae60616c7f1b101d7ce43cafb82218ec468"
+      },
+      {
+        "id": "qa-media-artifact-131",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-07/proof/frame-005571.png",
+        "sizeBytes": 884652,
+        "sha256": "a07d1597095566eed2e5675a0a3edd8bf0743b8a4b17ef54a2fe38967598c987"
+      },
+      {
+        "id": "qa-media-artifact-132",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-07/proof/frame-005572.png",
+        "sizeBytes": 890924,
+        "sha256": "608800d0e89e2a7d543dfd3997348af11f431d9ebaeb4d322f3dc43c335d45c4"
+      },
+      {
+        "id": "qa-media-artifact-133",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-07/public/frame-002685.png",
+        "sizeBytes": 3396934,
+        "sha256": "bb65313130f2cfcffcbce81f204478c5943fe9183de96b5a6b0f61984dea9b36"
+      },
+      {
+        "id": "qa-media-artifact-134",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-07/public/frame-002686.png",
+        "sizeBytes": 3412162,
+        "sha256": "acdb4204f4a557eb476f359c352c9fec05d445a807eadc4de41a34070f4520f9"
+      },
+      {
+        "id": "qa-media-artifact-135",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-07/public/frame-002687.png",
+        "sizeBytes": 3434988,
+        "sha256": "8175295a280a121b10b94d71922d1162e45bd0b8259690782b5860a8e0a82e87"
+      },
+      {
+        "id": "qa-media-artifact-136",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-07/public/frame-002688.png",
+        "sizeBytes": 3463213,
+        "sha256": "961aefde7d358413c5a8e9966ead8615d3ecfa4e7bb0c2d79b71cb50965c6f45"
+      },
+      {
+        "id": "qa-media-artifact-137",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-07/public/frame-002738.png",
+        "sizeBytes": 3320020,
+        "sha256": "b0d0606b20563a44b897eb2540da3f3a307a93b1d3824dc58b6aa956a488b95e"
+      },
+      {
+        "id": "qa-media-artifact-138",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-07/public/frame-002739.png",
+        "sizeBytes": 3303078,
+        "sha256": "59172cd70f2c775f8b8da1ceff474d7d3d0efce6bdc19d0ed7163d76a5b2bc09"
+      },
+      {
+        "id": "qa-media-artifact-139",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-07/public/frame-002740.png",
+        "sizeBytes": 3300784,
+        "sha256": "a70acbc5924c956cd90eb31faced4ca341d58e8f9b281de6aa78a3f12977d4cf"
+      },
+      {
+        "id": "qa-media-artifact-140",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-07/public/frame-002741.png",
+        "sizeBytes": 3297521,
+        "sha256": "90597aa39280c508dc2dd175c96b0f3e7047d4faa157e7a2907ac5873555c783"
+      },
+      {
+        "id": "qa-media-artifact-141",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-07/public/frame-002784.png",
+        "sizeBytes": 2981175,
+        "sha256": "4da27520cf8f65188674846dae5fa8b052c605436a914535ea931a18d7d12086"
+      },
+      {
+        "id": "qa-media-artifact-142",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-07/public/frame-002785.png",
+        "sizeBytes": 3026101,
+        "sha256": "3725bc2488d19051e1dda0efa427de86682d72399fca0d7e7aa02200ec9050ea"
+      },
+      {
+        "id": "qa-media-artifact-143",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-07/public/frame-002786.png",
+        "sizeBytes": 3026650,
+        "sha256": "0d26386c68829750e0cc039cce7d6e6cec64ea6eb0ceb214cf0e3dbe554d1102"
+      },
+      {
+        "id": "qa-media-artifact-144",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-07/public/frame-002787.png",
+        "sizeBytes": 3013859,
+        "sha256": "79fb2e4dc0175729da74b566138c45a149b8f8c37dd6397d2b5d4ff31ff9f9a5"
+      },
+      {
+        "id": "qa-media-artifact-145",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-08/proof/frame-005617.png",
+        "sizeBytes": 755101,
+        "sha256": "c16ee7904e74f1a52690e60deb03b53cbb7f52493519e51d89c9912dab593671"
+      },
+      {
+        "id": "qa-media-artifact-146",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-08/proof/frame-005618.png",
+        "sizeBytes": 934500,
+        "sha256": "55ac3caa063177922b5d06d17fc7a0a52b428211a7d0646336733ed81fe681c3"
+      },
+      {
+        "id": "qa-media-artifact-147",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-08/proof/frame-005619.png",
+        "sizeBytes": 933756,
+        "sha256": "f15e130d51253187dc8fa2c85aefcff680f97b3b0a657030e2a3cf872198fc72"
+      },
+      {
+        "id": "qa-media-artifact-148",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-08/proof/frame-005620.png",
+        "sizeBytes": 931937,
+        "sha256": "e025e75ee0cb90051bd12457b974e089c48749745423af46484848324b0fafd8"
+      },
+      {
+        "id": "qa-media-artifact-149",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-08/proof/frame-005660.png",
+        "sizeBytes": 753891,
+        "sha256": "34f9f2e635e9ac2bf3b0aa26171d25fc20f5ae4ae1926414a1617076f951cc2e"
+      },
+      {
+        "id": "qa-media-artifact-150",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-08/proof/frame-005661.png",
+        "sizeBytes": 886957,
+        "sha256": "6f16afad42b2f486476c53cb7b6aa7ddb7142c51c80ed6a37fae6fd880f3857e"
+      },
+      {
+        "id": "qa-media-artifact-151",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-08/proof/frame-005662.png",
+        "sizeBytes": 893914,
+        "sha256": "21d2ea2afe33d3293f2ca993d6d9d5d8de6a42d641f0c18e467c7ca757583d9c"
+      },
+      {
+        "id": "qa-media-artifact-152",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-08/proof/frame-005663.png",
+        "sizeBytes": 910281,
+        "sha256": "3ef867cff5004a2061584ed369492d3e42c1324af19917ef9c7d5b46441eb090"
+      },
+      {
+        "id": "qa-media-artifact-153",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-08/proof/frame-005708.png",
+        "sizeBytes": 748602,
+        "sha256": "749679605f7510018676844216096c43f02d65e3de34ea7ddbeed950b49ecdfe"
+      },
+      {
+        "id": "qa-media-artifact-154",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-08/proof/frame-005709.png",
+        "sizeBytes": 909274,
+        "sha256": "1e104e0924ddd8c3b9042c8171867c359e7f3f7924544fdf689f8d75ea62766e"
+      },
+      {
+        "id": "qa-media-artifact-155",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-08/proof/frame-005710.png",
+        "sizeBytes": 908574,
+        "sha256": "c1886891c10f9d9d67a658058722f166d00d1c0112c9a66e806bab8ce1509103"
+      },
+      {
+        "id": "qa-media-artifact-156",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-08/proof/frame-005711.png",
+        "sizeBytes": 906459,
+        "sha256": "be841f26331681f7f9302fbe5a024815c19191845a5c612670697da32e16a155"
+      },
+      {
+        "id": "qa-media-artifact-157",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-08/public/frame-002808.png",
+        "sizeBytes": 3160963,
+        "sha256": "0a72899b3f78e8a041b5cf349033dd07011d0a0a5511088f94c652368c5d2731"
+      },
+      {
+        "id": "qa-media-artifact-158",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-08/public/frame-002809.png",
+        "sizeBytes": 3175129,
+        "sha256": "d607bcfc473ebd3dd08bf7d4f4b2958ca00206675770cf19548425456f334309"
+      },
+      {
+        "id": "qa-media-artifact-159",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-08/public/frame-002810.png",
+        "sizeBytes": 3173828,
+        "sha256": "296819432b11854f9bec7ee8e3ed9831f2f38a8a23ac0314a5f4fd191b0a0736"
+      },
+      {
+        "id": "qa-media-artifact-160",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-08/public/frame-002811.png",
+        "sizeBytes": 3161301,
+        "sha256": "3b16afa3e8ab2ebbb7f58d555fb005599683f833381bd7adcafecc34fdeca8d1"
+      },
+      {
+        "id": "qa-media-artifact-161",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-08/public/frame-002830.png",
+        "sizeBytes": 3298350,
+        "sha256": "a081a9d73e030b07e4ba8f2656473784a0b8cde61c6817cd69f7bef9a6f5dfd1"
+      },
+      {
+        "id": "qa-media-artifact-162",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-08/public/frame-002831.png",
+        "sizeBytes": 3328226,
+        "sha256": "82392574c23c71f66dd5f28b1fa0ee599751cfa270f61e31cc89810169a4e8f4"
+      },
+      {
+        "id": "qa-media-artifact-163",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-08/public/frame-002832.png",
+        "sizeBytes": 3340376,
+        "sha256": "8b1c21422fc46e8096e034a34f410b9fa0fdd17d495fe0ae6dc44c7811dbde4e"
+      },
+      {
+        "id": "qa-media-artifact-164",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-08/public/frame-002833.png",
+        "sizeBytes": 3346749,
+        "sha256": "9f6f05851de0e0928c687ff521bfe7fa418d250e638004900f1226a151ccc9fc"
+      },
+      {
+        "id": "qa-media-artifact-165",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-08/public/frame-002854.png",
+        "sizeBytes": 3330386,
+        "sha256": "aace2f2a90b833cfa0a8ad98e338c25c3a47a8cb01efceae6ad316e45eb0e5e7"
+      },
+      {
+        "id": "qa-media-artifact-166",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-08/public/frame-002855.png",
+        "sizeBytes": 3371075,
+        "sha256": "11f4fb2b1c811c57584a7c3a64d1129bfff3d9abbbc550e2694b82e3809ab7a6"
+      },
+      {
+        "id": "qa-media-artifact-167",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-08/public/frame-002856.png",
+        "sizeBytes": 3400121,
+        "sha256": "2dc61f3c9c54a0af8fa324b6f07c37fc6e5f4cd25ce167367480d58cd1f4bbdc"
+      },
+      {
+        "id": "qa-media-artifact-168",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/c1-08/public/frame-002857.png",
+        "sizeBytes": 3340813,
+        "sha256": "1db6aa277ed284a1295a74da633021364c6858f921826ba8915ddbcd4822ee36"
+      },
+      {
+        "id": "qa-media-artifact-169",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-03/proof/frame-008447.png",
+        "sizeBytes": 755403,
+        "sha256": "f7675745f5624b2fc6d9014dbdba3ef30440527692fbcf8d170b57dace5cd2f7"
+      },
+      {
+        "id": "qa-media-artifact-170",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-03/proof/frame-008448.png",
+        "sizeBytes": 883433,
+        "sha256": "d7ed1eeb22c64458cd0043b6583941d18e46b63717d8a5c4384500d18206ed32"
+      },
+      {
+        "id": "qa-media-artifact-171",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-03/proof/frame-008449.png",
+        "sizeBytes": 897867,
+        "sha256": "6c8f9c2f24a30d9dbfcf9f98c05877955336c3b57ce94c4af58783a954b34e91"
+      },
+      {
+        "id": "qa-media-artifact-172",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-03/proof/frame-008450.png",
+        "sizeBytes": 896646,
+        "sha256": "177eca539eb72aab8cabcc0a0bbefc597a269374e9a6e0058784df92d6e693c2"
+      },
+      {
+        "id": "qa-media-artifact-173",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-03/proof/frame-008635.png",
+        "sizeBytes": 724341,
+        "sha256": "fe452fb79b9037820bc9316eee4f9a5fcc81fbb4e94a707997a6a0df88002849"
+      },
+      {
+        "id": "qa-media-artifact-174",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-03/proof/frame-008636.png",
+        "sizeBytes": 819535,
+        "sha256": "cb52b008a7179096a222907a67ba3c1a7cf1e21cd2716e0470c26229a552ced9"
+      },
+      {
+        "id": "qa-media-artifact-175",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-03/proof/frame-008637.png",
+        "sizeBytes": 827566,
+        "sha256": "f6b5b003a2021d33b12477aa44dd578b7c6311b473dfffff0ac1c9b0f98f989e"
+      },
+      {
+        "id": "qa-media-artifact-176",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-03/proof/frame-008638.png",
+        "sizeBytes": 827987,
+        "sha256": "3b075d573ba3455de8db0984ea05dabbbb1fb4b933760edd59bbf688d4fb19f3"
+      },
+      {
+        "id": "qa-media-artifact-177",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-03/proof/frame-008709.png",
+        "sizeBytes": 710283,
+        "sha256": "73d593749f541100a9b99ce3f11a91fe2a82a058506b6c331f2c2b8a99ae5152"
+      },
+      {
+        "id": "qa-media-artifact-178",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-03/proof/frame-008710.png",
+        "sizeBytes": 837749,
+        "sha256": "488060459e0373e816e0ef8357825126e48725d9feb3bfa32e7d6a3fe7166e9f"
+      },
+      {
+        "id": "qa-media-artifact-179",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-03/proof/frame-008711.png",
+        "sizeBytes": 840911,
+        "sha256": "4f2d057b054305ae80a3239716097f4767c0934fc0eaae69e50cb2e3cd87ad8c"
+      },
+      {
+        "id": "qa-media-artifact-180",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-03/proof/frame-008712.png",
+        "sizeBytes": 842592,
+        "sha256": "d0f2bcba038da9c4899eb1529e3ad5753775eab8661aadcad15dcc39ff267b73"
+      },
+      {
+        "id": "qa-media-artifact-181",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-03/public/frame-004223.png",
+        "sizeBytes": 3318606,
+        "sha256": "597a3aac08244162e4a82ad59ef0a8f28a8b432898926aededdd41143f704ccf"
+      },
+      {
+        "id": "qa-media-artifact-182",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-03/public/frame-004225.png",
+        "sizeBytes": 3385415,
+        "sha256": "b0257d2f4705c5a7e4cd94647e6fb4f0f0770e6ecc7e4904b82504586d682958"
+      },
+      {
+        "id": "qa-media-artifact-183",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-03/public/frame-004226.png",
+        "sizeBytes": 3375686,
+        "sha256": "a2fdcae100e961c671f5b28e41c6efb3c48a65ef9a601f46c667465155cbb462"
+      },
+      {
+        "id": "qa-media-artifact-184",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-03/public/frame-004317.png",
+        "sizeBytes": 3094071,
+        "sha256": "849bd885b5f32d8cc4302423317ee09460f08f0d42b562c815bf59c8f982ef76"
+      },
+      {
+        "id": "qa-media-artifact-185",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-03/public/frame-004318.png",
+        "sizeBytes": 3104034,
+        "sha256": "6f4add212e85e015f8ef2fb8b545d43661f3c52953a661d185103ee338dc430d"
+      },
+      {
+        "id": "qa-media-artifact-186",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-03/public/frame-004319.png",
+        "sizeBytes": 3099747,
+        "sha256": "c82b0c2f0ce99b53ae3ffd43a1ffbc16f6ddb4fdd653ec8908bc9c0b82907f57"
+      },
+      {
+        "id": "qa-media-artifact-187",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-03/public/frame-004320.png",
+        "sizeBytes": 3106556,
+        "sha256": "77133198562935aff0fd21ef47b08421b2c61e0c6bce1e2e584740baa89a2f1f"
+      },
+      {
+        "id": "qa-media-artifact-188",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-03/public/frame-004354.png",
+        "sizeBytes": 3098966,
+        "sha256": "4d5d22aca7d824f05bf64f454820e0b32c3047a6c906d0b4f3cadbe9d994126a"
+      },
+      {
+        "id": "qa-media-artifact-189",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-03/public/frame-004355.png",
+        "sizeBytes": 3107733,
+        "sha256": "12bb2ed0671be9c927669666e7a4fdd726e37b40958bdba60fca69d53ece7361"
+      },
+      {
+        "id": "qa-media-artifact-190",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-03/public/frame-004356.png",
+        "sizeBytes": 3113038,
+        "sha256": "5b30e8c3ab9af8fa80c4c7143adfa2f97bee3fc6b65c9a2e59f4fd8d41c6a1de"
+      },
+      {
+        "id": "qa-media-artifact-191",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-03/public/frame-004357.png",
+        "sizeBytes": 3150347,
+        "sha256": "66e1a5490a2b07a8fba13dcaaafa2df0d6602f5e7e501d75814e914db6900d87"
+      },
+      {
+        "id": "qa-media-artifact-192",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/proof/frame-010359.png",
+        "sizeBytes": 752759,
+        "sha256": "4ad0552235e05fd04e8c8f00a9ff0d666a4050c1e4094acd83ac2e5752cef002"
+      },
+      {
+        "id": "qa-media-artifact-193",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/proof/frame-010360.png",
+        "sizeBytes": 814466,
+        "sha256": "02686ffa0bfcd5e2dea451f70c9f9194f206158260e1de0e4047731058eda262"
+      },
+      {
+        "id": "qa-media-artifact-194",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/proof/frame-010361.png",
+        "sizeBytes": 821072,
+        "sha256": "146f01bb50a0fe8177a5b84379cd0903b50481c7a654953e6e0ea261fc976064"
+      },
+      {
+        "id": "qa-media-artifact-195",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/proof/frame-010362.png",
+        "sizeBytes": 822323,
+        "sha256": "a0a46014670759d022e94d8acb1a37a8eee83703377eec37d8ff2c322779c19d"
+      },
+      {
+        "id": "qa-media-artifact-196",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/proof/frame-010392.png",
+        "sizeBytes": 713450,
+        "sha256": "023afe7c0ade93caf60f3d71c52105bee1ddfe040c96fd0e788b9a35233c1154"
+      },
+      {
+        "id": "qa-media-artifact-197",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/proof/frame-010393.png",
+        "sizeBytes": 870747,
+        "sha256": "8356cda6e0928cc028593692f8d1967058e61cc14feecccd3e11463f32869d2a"
+      },
+      {
+        "id": "qa-media-artifact-198",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/proof/frame-010394.png",
+        "sizeBytes": 870956,
+        "sha256": "7830f22491ed4023cecd0aeafada4696ac99b33341f3ba099aefef9e67823be4"
+      },
+      {
+        "id": "qa-media-artifact-199",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/proof/frame-010395.png",
+        "sizeBytes": 868931,
+        "sha256": "b15ac2ffb1f0ca1908d5f4529c2696dfe06e3811452a5299b2bb647562b76634"
+      },
+      {
+        "id": "qa-media-artifact-200",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/proof/frame-010529.png",
+        "sizeBytes": 724025,
+        "sha256": "96e0cb868610e664d883a10539f4384dd6d818ef97d543c4d2510d876809014c"
+      },
+      {
+        "id": "qa-media-artifact-201",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/proof/frame-010530.png",
+        "sizeBytes": 837505,
+        "sha256": "d7c8dec35f489a852e4be24bb15eae8fd5ab31db17116eaaf7dc9adfad85f536"
+      },
+      {
+        "id": "qa-media-artifact-202",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/proof/frame-010531.png",
+        "sizeBytes": 850472,
+        "sha256": "e701eb6358ea83a6accde64f9b3f2c5c78f1a0778b2dce0743805838df14abc0"
+      },
+      {
+        "id": "qa-media-artifact-203",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/proof/frame-010532.png",
+        "sizeBytes": 849892,
+        "sha256": "b0fc065a3cbcf5da3ecb8de28cb799ab2f3d7a0895c6f7269dd329255b880014"
+      },
+      {
+        "id": "qa-media-artifact-204",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/proof/frame-010645.png",
+        "sizeBytes": 720880,
+        "sha256": "2233ecfc332f7adad5f11f6c8fc27c324e0c5aae98e591f2f544106c2ffefe55"
+      },
+      {
+        "id": "qa-media-artifact-205",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/proof/frame-010646.png",
+        "sizeBytes": 846813,
+        "sha256": "e10827164f196aca927e0824a66585274cf0504c9f019410280d4c4730928af2"
+      },
+      {
+        "id": "qa-media-artifact-206",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/proof/frame-010647.png",
+        "sizeBytes": 843198,
+        "sha256": "15b2785b587605ba10f967f1f00abb62739ac41f45870e4f52daa7609f3150bc"
+      },
+      {
+        "id": "qa-media-artifact-207",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/proof/frame-010648.png",
+        "sizeBytes": 845294,
+        "sha256": "d27ad7ed2e777154d205f89e4967dd792e52e2377af7f5e4358179c3ee8e03bb"
+      },
+      {
+        "id": "qa-media-artifact-208",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/public/frame-005179.png",
+        "sizeBytes": 3204738,
+        "sha256": "26bc4db30e888e1d7804b7df0da7e3163933a23505364734e1584bf3d7e797b1"
+      },
+      {
+        "id": "qa-media-artifact-209",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/public/frame-005180.png",
+        "sizeBytes": 3212626,
+        "sha256": "2e098761427954532bea709fec6ee04526b49d1bb4253967329d1182f83c0ce3"
+      },
+      {
+        "id": "qa-media-artifact-210",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/public/frame-005181.png",
+        "sizeBytes": 3218636,
+        "sha256": "36629f0edd6bd0ba601f4cf0004d83bfe78f81e3e0776e05d468a645ca0dc789"
+      },
+      {
+        "id": "qa-media-artifact-211",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/public/frame-005182.png",
+        "sizeBytes": 3217737,
+        "sha256": "9c9a38d3b022b00ae877117ed9bc303771d6d1aadec5394bf134a9279034a903"
+      },
+      {
+        "id": "qa-media-artifact-212",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/public/frame-005196.png",
+        "sizeBytes": 3224833,
+        "sha256": "4a61a4424d724943e32ee39c87be5d238b6f7fa0655739bfea1d85af0bb25ba3"
+      },
+      {
+        "id": "qa-media-artifact-213",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/public/frame-005197.png",
+        "sizeBytes": 3232380,
+        "sha256": "e71301b5a6e45bd2877df1e47d12bc48da200b51ae428059e86f7bb32d357d83"
+      },
+      {
+        "id": "qa-media-artifact-214",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/public/frame-005198.png",
+        "sizeBytes": 3241205,
+        "sha256": "a30a37a8dd0eb5baa103b445aebfac501754bf7680d9500225a033438bf49b30"
+      },
+      {
+        "id": "qa-media-artifact-215",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/public/frame-005199.png",
+        "sizeBytes": 3218612,
+        "sha256": "476f10eabfa66d5aae46644a17e20611fff8a74bb4a5da8d79ef05ad4e5bd768"
+      },
+      {
+        "id": "qa-media-artifact-216",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/public/frame-005264.png",
+        "sizeBytes": 3014551,
+        "sha256": "5b35a16b342b7c1370682b153671363a18872687f376b0854bfe25714c6c1670"
+      },
+      {
+        "id": "qa-media-artifact-217",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/public/frame-005265.png",
+        "sizeBytes": 3019441,
+        "sha256": "c6842a38f5cdc4c278ef8fd8b2dac8aa3b88324ee80a78d53ab23f1f59fffec3"
+      },
+      {
+        "id": "qa-media-artifact-218",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/public/frame-005266.png",
+        "sizeBytes": 3026367,
+        "sha256": "ee661a8c04ab32e589e649e728a07458dbd47248901491da13ae5b8df4469a0b"
+      },
+      {
+        "id": "qa-media-artifact-219",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/public/frame-005267.png",
+        "sizeBytes": 3020716,
+        "sha256": "b10b1f798a8a857296d40dc07d67971bf6250be01786c0d3f67ae19f600c8df4"
+      },
+      {
+        "id": "qa-media-artifact-220",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/public/frame-005322.png",
+        "sizeBytes": 3108369,
+        "sha256": "278ba73f747dcf72a42e005536b79f4aa32f3f05dee818fad992a3889793599d"
+      },
+      {
+        "id": "qa-media-artifact-221",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/public/frame-005323.png",
+        "sizeBytes": 3114832,
+        "sha256": "319c909e1576eeef8d17c33b81cd528f4495feb68e0f29ec93444fd4146f9f2f"
+      },
+      {
+        "id": "qa-media-artifact-222",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/public/frame-005324.png",
+        "sizeBytes": 3119812,
+        "sha256": "6fd46076d8ec6b4ba4fd368292be24a431307374e4a124737c52fc015ab369ac"
+      },
+      {
+        "id": "qa-media-artifact-223",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/contacts/v1-08/public/frame-005325.png",
+        "sizeBytes": 3119252,
+        "sha256": "7e47a7fb1d7d3dc4b4f9fec5f727b370756e5f9db9311bb7a92aa978bd53d1d1"
+      },
+      {
+        "id": "qa-media-artifact-224",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/release-sheets/c1-06-proof.png",
+        "sizeBytes": 1708221,
+        "sha256": "e92b248a10cd3d7267ed21fc70419fff87c1e31a82b6fabd499779a98793dc14"
+      },
+      {
+        "id": "qa-media-artifact-225",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/release-sheets/c1-06-public.png",
+        "sizeBytes": 1409488,
+        "sha256": "a2a75c931057f2de617e2f65282ab7dc88541d81414e781bb72d3e74f38bbd54"
+      },
+      {
+        "id": "qa-media-artifact-226",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/release-sheets/c1-07-proof.png",
+        "sizeBytes": 2012294,
+        "sha256": "42aebec4e4224e55efae521191acfb5021e5fc73f48c105a02b5479cc3e635c2"
+      },
+      {
+        "id": "qa-media-artifact-227",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/release-sheets/c1-07-public.png",
+        "sizeBytes": 1405733,
+        "sha256": "b1ec7018d2914add11c6c890ab50072e61778b29ec9775e04722c7b0365b2f64"
+      },
+      {
+        "id": "qa-media-artifact-228",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/release-sheets/c1-08-proof.png",
+        "sizeBytes": 2064555,
+        "sha256": "43c406ccc977a29f7c14e162080ecede21c2eb06fcd80e10aac087a86ea9385e"
+      },
+      {
+        "id": "qa-media-artifact-229",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/release-sheets/c1-08-public.png",
+        "sizeBytes": 1637813,
+        "sha256": "2b9f404af6c85210addba8a88ffaf7906c2c83d9efbf54b0c0a8e381286c3178"
+      },
+      {
+        "id": "qa-media-artifact-230",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-06/proof/frame-004937.png",
+        "sizeBytes": 869965,
+        "sha256": "6be0650d25c13be8a698281e6c357eeff6b620c7843163fb8fc0099a8264c1b8"
+      },
+      {
+        "id": "qa-media-artifact-231",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-06/proof/frame-004938.png",
+        "sizeBytes": 713154,
+        "sha256": "f6e677fef15fbde5a6251738fbcbaa437ce7bb0da13875ddf898f4021f7525c9"
+      },
+      {
+        "id": "qa-media-artifact-232",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-06/proof/frame-004939.png",
+        "sizeBytes": 714045,
+        "sha256": "ddf0cd25e6175032453f6040ad83e9fd6abc7771ad5c76137a18164f7c59a1ab"
+      },
+      {
+        "id": "qa-media-artifact-233",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-06/proof/frame-004940.png",
+        "sizeBytes": 710661,
+        "sha256": "63c20ab103e813f5c4f906b81c0c51364844492f2338fb7449e4dda914392d0e"
+      },
+      {
+        "id": "qa-media-artifact-234",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-06/proof/frame-005254.png",
+        "sizeBytes": 887124,
+        "sha256": "381be0e1ce79caaf60050fab1637e4fe32a7db8a9f90e3547823daef96e99d80"
+      },
+      {
+        "id": "qa-media-artifact-235",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-06/proof/frame-005255.png",
+        "sizeBytes": 722468,
+        "sha256": "cb90e8a3577b64fb5bb46c032df5d5e3c9a05457efa736c92f399a9c17beef01"
+      },
+      {
+        "id": "qa-media-artifact-236",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-06/proof/frame-005256.png",
+        "sizeBytes": 721967,
+        "sha256": "b5096fc35668697f18e4ed6ae7ca88f08a5a7b5da9485c92cc76b65dc09eaa36"
+      },
+      {
+        "id": "qa-media-artifact-237",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-06/proof/frame-005257.png",
+        "sizeBytes": 718268,
+        "sha256": "11186c0cb7f6241d91aea6fb03f3c908e0b396409314f29a7fc6a03d2647ab7f"
+      },
+      {
+        "id": "qa-media-artifact-238",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-06/proof/frame-005365.png",
+        "sizeBytes": 928568,
+        "sha256": "83862fa6614f07fe2e1feec09cb61b0ac4bb5986d7361c10e2f18af7adbe9375"
+      },
+      {
+        "id": "qa-media-artifact-239",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-06/proof/frame-005366.png",
+        "sizeBytes": 768516,
+        "sha256": "6ea96c649252369e21da57c435be0b6497f1a2b5694ceca814c1070bae027321"
+      },
+      {
+        "id": "qa-media-artifact-240",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-06/proof/frame-005367.png",
+        "sizeBytes": 768723,
+        "sha256": "6fc7d1249c129b9ed38c4aaa49561471aca1b4f2bbac59560bb0340f1f589b80"
+      },
+      {
+        "id": "qa-media-artifact-241",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-06/proof/frame-005368.png",
+        "sizeBytes": 764648,
+        "sha256": "e4d7f1f805ae56a4422ee9d214f7bf42f4b081be0c8057114f4d40231f9d89af"
+      },
+      {
+        "id": "qa-media-artifact-242",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-06/public/frame-002468.png",
+        "sizeBytes": 3298314,
+        "sha256": "35654f329129d46a9f3f8fb6ad396da59f17f9983a1ba4070fe3a06787430cd5"
+      },
+      {
+        "id": "qa-media-artifact-243",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-06/public/frame-002469.png",
+        "sizeBytes": 3299970,
+        "sha256": "5ec24b979a23143478e99cc0bc2f3fb7182caa4b94002e4a43af70707874799f"
+      },
+      {
+        "id": "qa-media-artifact-244",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-06/public/frame-002470.png",
+        "sizeBytes": 3304268,
+        "sha256": "6925ee80250ee4b4968461897de6e71afec4ce05b60bbcb09316b6b781ec9dfb"
+      },
+      {
+        "id": "qa-media-artifact-245",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-06/public/frame-002471.png",
+        "sizeBytes": 3302381,
+        "sha256": "e2da095f5a381da9cadf96b0edc703bf1d89bdbc16099458f7cf34d836dade41"
+      },
+      {
+        "id": "qa-media-artifact-246",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-06/public/frame-002627.png",
+        "sizeBytes": 3218922,
+        "sha256": "ef2e81cb05675b1da12001b1b37f3a449824372dae74e75b1d82326720abbab5"
+      },
+      {
+        "id": "qa-media-artifact-247",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-06/public/frame-002628.png",
+        "sizeBytes": 3214955,
+        "sha256": "edaacd3767d8dbdf2fd154a851cd01267486b9ad95563c315f416b1f37f7017e"
+      },
+      {
+        "id": "qa-media-artifact-248",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-06/public/frame-002629.png",
+        "sizeBytes": 3231850,
+        "sha256": "5d2616267024a23365f5531bd75dbc3c0414d36da383edaae5bd46f7eec6b810"
+      },
+      {
+        "id": "qa-media-artifact-249",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-06/public/frame-002630.png",
+        "sizeBytes": 3209891,
+        "sha256": "c9b72f4e0de6f817db41b504b5f2bb83d8b1f4cc6b6841b86e84e3009348e9fb"
+      },
+      {
+        "id": "qa-media-artifact-250",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-06/public/frame-002682.png",
+        "sizeBytes": 3364338,
+        "sha256": "a206ef9602163ce14b27f969cf3eb330e4363b38653af29372967608ad896a33"
+      },
+      {
+        "id": "qa-media-artifact-251",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-06/public/frame-002683.png",
+        "sizeBytes": 3370335,
+        "sha256": "ded61d9eb81eec568919390972c8dbf79f27f486b8f25609439985e469378412"
+      },
+      {
+        "id": "qa-media-artifact-252",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-06/public/frame-002684.png",
+        "sizeBytes": 3390548,
+        "sha256": "d4f276580f7253a9dc42d8d41e14edd032fae6c82f0f32f7f54aa1084878c192"
+      },
+      {
+        "id": "qa-media-artifact-253",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-06/public/frame-002685.png",
+        "sizeBytes": 3396934,
+        "sha256": "bb65313130f2cfcffcbce81f204478c5943fe9183de96b5a6b0f61984dea9b36"
+      },
+      {
+        "id": "qa-media-artifact-254",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-07/proof/frame-005475.png",
+        "sizeBytes": 917939,
+        "sha256": "bb60e2807428570b7b48d3603afe715a9e5ba2eb7c3af983214bfaaca369e254"
+      },
+      {
+        "id": "qa-media-artifact-255",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-07/proof/frame-005476.png",
+        "sizeBytes": 743442,
+        "sha256": "b7de188a42e253d8d85a6558b4f247ba92ba202069006b3d616cbc48276cb800"
+      },
+      {
+        "id": "qa-media-artifact-256",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-07/proof/frame-005477.png",
+        "sizeBytes": 733264,
+        "sha256": "af482d604efad02e9c92674d7ec392e263070bcc181bec45dbec505a4b556ba8"
+      },
+      {
+        "id": "qa-media-artifact-257",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-07/proof/frame-005478.png",
+        "sizeBytes": 849598,
+        "sha256": "a89fb47f18b46566f40363b038a3dc50af2167f9ed4982872424585eebbdf25b"
+      },
+      {
+        "id": "qa-media-artifact-258",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-07/proof/frame-005566.png",
+        "sizeBytes": 878502,
+        "sha256": "99b8f40964d399f409d7480079ef14573eabbb8b67042659dddffd66168ba24f"
+      },
+      {
+        "id": "qa-media-artifact-259",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-07/proof/frame-005567.png",
+        "sizeBytes": 720573,
+        "sha256": "3b8946fc002d4894ecc771d2cfe788be879e7b9aacb1c1aea9ecb1a969e7c02d"
+      },
+      {
+        "id": "qa-media-artifact-260",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-07/proof/frame-005568.png",
+        "sizeBytes": 721723,
+        "sha256": "33769dc9e4e832b4ebd26da6c8aaed3d85330d06f4dd9cde2fa7b44fb2b9e9b3"
+      },
+      {
+        "id": "qa-media-artifact-261",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-07/proof/frame-005569.png",
+        "sizeBytes": 721754,
+        "sha256": "bead79d5c2fbbeacd806c6f9e450b1c772c9652a3624bef8532e7208de23a119"
+      },
+      {
+        "id": "qa-media-artifact-262",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-07/proof/frame-005614.png",
+        "sizeBytes": 928874,
+        "sha256": "cbc6b50df14362f94d2df150863f4c62729a76b2e60ddb4fa44fc233326b701d"
+      },
+      {
+        "id": "qa-media-artifact-263",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-07/proof/frame-005615.png",
+        "sizeBytes": 761419,
+        "sha256": "c2ccdbe7ee89f05fab2c6c02fb0fdeae26e9338dcc0df660a1ced7685341e251"
+      },
+      {
+        "id": "qa-media-artifact-264",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-07/proof/frame-005616.png",
+        "sizeBytes": 758743,
+        "sha256": "f68f430fc5a2b9e09621d8af894924f1c5eed1583df378d74ca1ae7e6cb3f73f"
+      },
+      {
+        "id": "qa-media-artifact-265",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-07/proof/frame-005617.png",
+        "sizeBytes": 755101,
+        "sha256": "c16ee7904e74f1a52690e60deb03b53cbb7f52493519e51d89c9912dab593671"
+      },
+      {
+        "id": "qa-media-artifact-266",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-07/public/frame-002737.png",
+        "sizeBytes": 3312717,
+        "sha256": "f42d7c8f940b8d382d14e3032289454da08e27636a0e24b786a088314959e302"
+      },
+      {
+        "id": "qa-media-artifact-267",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-07/public/frame-002738.png",
+        "sizeBytes": 3320020,
+        "sha256": "b0d0606b20563a44b897eb2540da3f3a307a93b1d3824dc58b6aa956a488b95e"
+      },
+      {
+        "id": "qa-media-artifact-268",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-07/public/frame-002739.png",
+        "sizeBytes": 3303078,
+        "sha256": "59172cd70f2c775f8b8da1ceff474d7d3d0efce6bdc19d0ed7163d76a5b2bc09"
+      },
+      {
+        "id": "qa-media-artifact-269",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-07/public/frame-002740.png",
+        "sizeBytes": 3300784,
+        "sha256": "a70acbc5924c956cd90eb31faced4ca341d58e8f9b281de6aa78a3f12977d4cf"
+      },
+      {
+        "id": "qa-media-artifact-270",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-07/public/frame-002783.png",
+        "sizeBytes": 2979907,
+        "sha256": "51afd7ceb8349dc5b596cec3f60b94f5e55c163229b2f3727c0c8a8f4f7c4c42"
+      },
+      {
+        "id": "qa-media-artifact-271",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-07/public/frame-002784.png",
+        "sizeBytes": 2981175,
+        "sha256": "4da27520cf8f65188674846dae5fa8b052c605436a914535ea931a18d7d12086"
+      },
+      {
+        "id": "qa-media-artifact-272",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-07/public/frame-002785.png",
+        "sizeBytes": 3026101,
+        "sha256": "3725bc2488d19051e1dda0efa427de86682d72399fca0d7e7aa02200ec9050ea"
+      },
+      {
+        "id": "qa-media-artifact-273",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-07/public/frame-002786.png",
+        "sizeBytes": 3026650,
+        "sha256": "0d26386c68829750e0cc039cce7d6e6cec64ea6eb0ceb214cf0e3dbe554d1102"
+      },
+      {
+        "id": "qa-media-artifact-274",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-07/public/frame-002807.png",
+        "sizeBytes": 3161627,
+        "sha256": "13c56a9e3480fd1c9c55172175540031a144f0f4c25459047cf49d990f556e1b"
+      },
+      {
+        "id": "qa-media-artifact-275",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-07/public/frame-002808.png",
+        "sizeBytes": 3160963,
+        "sha256": "0a72899b3f78e8a041b5cf349033dd07011d0a0a5511088f94c652368c5d2731"
+      },
+      {
+        "id": "qa-media-artifact-276",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-07/public/frame-002809.png",
+        "sizeBytes": 3175129,
+        "sha256": "d607bcfc473ebd3dd08bf7d4f4b2958ca00206675770cf19548425456f334309"
+      },
+      {
+        "id": "qa-media-artifact-277",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-07/public/frame-002810.png",
+        "sizeBytes": 3173828,
+        "sha256": "296819432b11854f9bec7ee8e3ed9831f2f38a8a23ac0314a5f4fd191b0a0736"
+      },
+      {
+        "id": "qa-media-artifact-278",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-08/proof/frame-005655.png",
+        "sizeBytes": 934322,
+        "sha256": "4b5381aee58d95af21ae0886cac4bbcea2e324cf5f3ccbe91edd5a161a274585"
+      },
+      {
+        "id": "qa-media-artifact-279",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-08/proof/frame-005656.png",
+        "sizeBytes": 762230,
+        "sha256": "1387406c3e1b2a5493ce80af5154018923bd81d4918ef96a94dddd6ed7609e04"
+      },
+      {
+        "id": "qa-media-artifact-280",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-08/proof/frame-005657.png",
+        "sizeBytes": 760665,
+        "sha256": "277a14f5ceb064fb2c8c91cc62d7c29078b49d60baabd4fde14b6e8070345705"
+      },
+      {
+        "id": "qa-media-artifact-281",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-08/proof/frame-005658.png",
+        "sizeBytes": 756599,
+        "sha256": "49e3fbd0756dd61f9364c34934e2df8220679b22c0d213f34ee44095a7874b65"
+      },
+      {
+        "id": "qa-media-artifact-282",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-08/proof/frame-005703.png",
+        "sizeBytes": 924053,
+        "sha256": "4be97ab0085986352aec72228478aa08b7b1f979cc9a899042b2574fd8558466"
+      },
+      {
+        "id": "qa-media-artifact-283",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-08/proof/frame-005704.png",
+        "sizeBytes": 758870,
+        "sha256": "a1abddc18fc146b9451df02dc1b8388f9fb51a2198be0c1a5c50ff6243a00235"
+      },
+      {
+        "id": "qa-media-artifact-284",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-08/proof/frame-005705.png",
+        "sizeBytes": 750443,
+        "sha256": "0a39192c44a770dcf60ebf065cce53008200c9af0889c0c656cf969111ad7f3e"
+      },
+      {
+        "id": "qa-media-artifact-285",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-08/proof/frame-005706.png",
+        "sizeBytes": 751070,
+        "sha256": "3dd19295b29c048b1ed7a2406fbb5a0c558d1be132936a162c198f9f27a34dfc"
+      },
+      {
+        "id": "qa-media-artifact-286",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-08/proof/frame-005908.png",
+        "sizeBytes": 932694,
+        "sha256": "0966d915d52c13aae0127685198ba5b84d494ae914d7a0c9e2b1f93c5b3bcdf3"
+      },
+      {
+        "id": "qa-media-artifact-287",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-08/proof/frame-005909.png",
+        "sizeBytes": 767656,
+        "sha256": "e6f352cc71cb241f02f8514af13d28f9bd2d903e3691dc77a4ccc1c40535bb31"
+      },
+      {
+        "id": "qa-media-artifact-288",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-08/proof/frame-005910.png",
+        "sizeBytes": 762118,
+        "sha256": "8c56e5891d720249f0961170664a5dcf9084715fa66f1e5a9efc4cbf6681fd14"
+      },
+      {
+        "id": "qa-media-artifact-289",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-08/proof/frame-005911.png",
+        "sizeBytes": 727930,
+        "sha256": "15e9e96829217b092ec03faa7aa72df766f45bd73da6f14bed1c2a9552efba80"
+      },
+      {
+        "id": "qa-media-artifact-290",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-08/public/frame-002827.png",
+        "sizeBytes": 3264414,
+        "sha256": "2cc0871068eb75490cca76c918822c75ba7c4c4b9984749f6926373601abda13"
+      },
+      {
+        "id": "qa-media-artifact-291",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-08/public/frame-002828.png",
+        "sizeBytes": 3277078,
+        "sha256": "91115c932d5f98d34bde5ccccfe71aee7ed5d23f01dcbdd6cbefe4d41d344649"
+      },
+      {
+        "id": "qa-media-artifact-292",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-08/public/frame-002829.png",
+        "sizeBytes": 3292084,
+        "sha256": "cc9098c37b6167a839181217d36305280c2b3127b4d74ae76164cab6c1f5da67"
+      },
+      {
+        "id": "qa-media-artifact-293",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-08/public/frame-002830.png",
+        "sizeBytes": 3298350,
+        "sha256": "a081a9d73e030b07e4ba8f2656473784a0b8cde61c6817cd69f7bef9a6f5dfd1"
+      },
+      {
+        "id": "qa-media-artifact-294",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-08/public/frame-002851.png",
+        "sizeBytes": 3328231,
+        "sha256": "d40c1226b6c7cd9ace992b401a7bcf0dce212d37c166291478c32d8c51c13fd7"
+      },
+      {
+        "id": "qa-media-artifact-295",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-08/public/frame-002852.png",
+        "sizeBytes": 3319557,
+        "sha256": "10929192bfd644e034aa596e402f36096cb1377d9bb9fa59cfc11f77394eeb6c"
+      },
+      {
+        "id": "qa-media-artifact-296",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-08/public/frame-002853.png",
+        "sizeBytes": 3325052,
+        "sha256": "4061999770a39dae9ac9431fe575a28eafb40e8564441cce88920fc976dba7f1"
+      },
+      {
+        "id": "qa-media-artifact-297",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-08/public/frame-002854.png",
+        "sizeBytes": 3330386,
+        "sha256": "aace2f2a90b833cfa0a8ad98e338c25c3a47a8cb01efceae6ad316e45eb0e5e7"
+      },
+      {
+        "id": "qa-media-artifact-298",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-08/public/frame-002953.png",
+        "sizeBytes": 3336868,
+        "sha256": "943d70f1ccbebbfba3db5d4dc21709b5a903eef15cd2f188fb19b714e02825fe"
+      },
+      {
+        "id": "qa-media-artifact-299",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-08/public/frame-002954.png",
+        "sizeBytes": 3334678,
+        "sha256": "bab22abf3f04cf33a0834f331d593319c691dfdcbb436394a2c06c115b3dd3f5"
+      },
+      {
+        "id": "qa-media-artifact-300",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-08/public/frame-002955.png",
+        "sizeBytes": 3344018,
+        "sha256": "779dbd0b40caa4d2347da9cd53ddb9f55ee084f8618206e206bc6b60d4559544"
+      },
+      {
+        "id": "qa-media-artifact-301",
+        "kind": "qa-media-artifact",
+        "path": "projects/tanisea-lyric-film/work/qa/media/releases/c1-08/public/frame-002956.png",
+        "sizeBytes": 3335934,
+        "sha256": "d4ea34d22936038bb713d68f7819bf4b86b8d041bf05609051e065f3ada7ba89"
+      }
+    ],
+    "media": {
+      "reference": {
+        "artifactId": "reference-render",
+        "fileSha256": {
+          "value": "664feb2fe9e7336c84602dd35c82de21197729949bee93e6bbe164ee87044895",
+          "source": "sha256-file"
+        },
+        "video": {
+          "codecName": "prores",
+          "profile": "4444",
+          "codecTag": "ap4h",
+          "width": 2160,
+          "height": 2160,
+          "avgFrameRate": "60/1",
+          "realFrameRate": "60/1",
+          "decodedFrameCount": {
+            "value": 9180,
+            "source": "ffprobe-count_frames"
+          },
+          "pixelFormat": "yuv444p12le",
+          "sampleAspectRatio": "1:1",
+          "colorRange": "tv",
+          "colorSpace": "bt709",
+          "colorTransfer": "bt709",
+          "colorPrimaries": "bt709",
+          "startTime": "0.000000",
+          "duration": "153.000000"
+        },
+        "container": {
+          "duration": "153.000000"
+        },
+        "strictDecode": {
+          "passed": true,
+          "source": "ffmpeg-xerror-full-decode"
+        }
+      },
+      "public": {
+        "artifactId": "public-master",
+        "fileSha256": {
+          "value": "c9d0e882715661a706da617a2ffe397343af480b5bdb4a3580fcc1882ce77482",
+          "source": "sha256-file"
+        },
+        "video": {
+          "codecName": "hevc",
+          "codecTag": "hvc1",
+          "width": 1080,
+          "height": 1080,
+          "avgFrameRate": "60/1",
+          "realFrameRate": "60/1",
+          "decodedFrameCount": {
+            "value": 9180,
+            "source": "ffprobe-count_frames"
+          },
+          "pixelFormat": "yuv420p10le",
+          "sampleAspectRatio": "1:1",
+          "colorRange": "tv",
+          "colorSpace": "bt709",
+          "colorTransfer": "bt709",
+          "colorPrimaries": "bt709",
+          "startTime": "0.000000",
+          "duration": "153.000000"
+        },
+        "audio": {
+          "codecName": "aac",
+          "sampleRate": "44100",
+          "channels": 2,
+          "channelLayout": "stereo",
+          "timeBase": "1/44100",
+          "startPts": 0,
+          "startTime": "0.000000",
+          "durationTs": 6747300,
+          "duration": "153.000000",
+          "packetCount": {
+            "value": 6591,
+            "source": "ffprobe-count_packets"
+          },
+          "packetStreamSha256": {
+            "value": "9d2cc3b8f0bd51b1fe0e990cc0d6d5cbb52a76e1b872b56ada849915b3856b24",
+            "source": "stream-copy-sha256"
+          }
+        },
+        "sourceAudio": {
+          "timeBase": "1/44100",
+          "startPts": 0,
+          "startTime": "0.000000",
+          "durationTs": 6747300,
+          "duration": "153.000000",
+          "packetCount": {
+            "value": 6591,
+            "source": "ffprobe-count_packets"
+          },
+          "packetStreamSha256": {
+            "value": "9d2cc3b8f0bd51b1fe0e990cc0d6d5cbb52a76e1b872b56ada849915b3856b24",
+            "source": "stream-copy-sha256"
+          }
+        },
+        "container": {
+          "duration": "153.000000",
+          "faststart": {
+            "moovBeforeMdat": true,
+            "source": "parsed-atom-order"
+          }
+        },
+        "strictDecode": {
+          "passed": true,
+          "source": "ffmpeg-xerror-full-decode"
+        }
+      },
+      "proof": {
+        "artifactId": "sync-proof",
+        "fileSha256": {
+          "value": "6a6600c5b8ef7ccc4421022c13b6fa2c8824ec309e0c22c23fc8dc13ab3236a6",
+          "source": "sha256-file"
+        },
+        "video": {
+          "codecName": "h264",
+          "codecTag": "avc1",
+          "width": 1080,
+          "height": 1080,
+          "avgFrameRate": "120/1",
+          "realFrameRate": "120/1",
+          "decodedFrameCount": {
+            "value": 18360,
+            "source": "ffprobe-count_frames"
+          },
+          "pixelFormat": "yuv420p",
+          "sampleAspectRatio": "1:1",
+          "colorRange": "tv",
+          "colorSpace": "bt709",
+          "colorTransfer": "bt709",
+          "colorPrimaries": "bt709",
+          "startTime": "0.000000",
+          "duration": "153.000000"
+        },
+        "audio": {
+          "codecName": "aac",
+          "sampleRate": "44100",
+          "channels": 2,
+          "channelLayout": "stereo",
+          "timeBase": "1/44100",
+          "startPts": 0,
+          "startTime": "0.000000",
+          "durationTs": 6747300,
+          "duration": "153.000000",
+          "packetCount": {
+            "value": 6591,
+            "source": "ffprobe-count_packets"
+          },
+          "packetStreamSha256": {
+            "value": "9d2cc3b8f0bd51b1fe0e990cc0d6d5cbb52a76e1b872b56ada849915b3856b24",
+            "source": "stream-copy-sha256"
+          }
+        },
+        "sourceAudio": {
+          "timeBase": "1/44100",
+          "startPts": 0,
+          "startTime": "0.000000",
+          "durationTs": 6747300,
+          "duration": "153.000000",
+          "packetCount": {
+            "value": 6591,
+            "source": "ffprobe-count_packets"
+          },
+          "packetStreamSha256": {
+            "value": "9d2cc3b8f0bd51b1fe0e990cc0d6d5cbb52a76e1b872b56ada849915b3856b24",
+            "source": "stream-copy-sha256"
+          }
+        },
+        "container": {
+          "duration": "153.000000",
+          "faststart": {
+            "moovBeforeMdat": true,
+            "source": "parsed-atom-order"
+          }
+        },
+        "strictDecode": {
+          "passed": true,
+          "source": "ffmpeg-xerror-full-decode"
+        }
+      }
+    },
+    "qaCoverage": {
+      "lineIds": [
+        "C1-01",
+        "C1-02",
+        "C1-03",
+        "C1-04",
+        "C1-05",
+        "C1-06",
+        "C1-07",
+        "C1-08",
+        "V1-01",
+        "V1-02",
+        "V1-03",
+        "V1-04",
+        "V1-05",
+        "V1-06",
+        "V1-07",
+        "V1-08",
+        "C2-01",
+        "C2-02",
+        "C2-03",
+        "C2-04",
+        "C2-05",
+        "C2-06",
+        "C2-07",
+        "C2-08"
+      ],
+      "speedVariants": [
+        "normal",
+        "half"
+      ],
+      "dedicatedRanges": [
+        "v1-03",
+        "v1-08",
+        "chorus-1",
+        "chorus-2",
+        "first-act-40-50",
+        "final-handoff"
+      ],
+      "proofRanges": [
+        "v1-03",
+        "v1-08"
+      ],
+      "cueIds": [
+        "C1-04-C01",
+        "C1-04-C02",
+        "C1-04-C03",
+        "C1-06-C01",
+        "C1-06-C02",
+        "C1-06-C03",
+        "C1-07-C01",
+        "C1-07-C02",
+        "C1-07-C03",
+        "C1-08-C01",
+        "C1-08-C02",
+        "C1-08-C03",
+        "V1-03-C01",
+        "V1-03-C02",
+        "V1-03-C03",
+        "V1-08-C01",
+        "V1-08-C02",
+        "V1-08-C03",
+        "V1-08-C04"
+      ],
+      "contactOffsets": [
+        -1,
+        0,
+        1,
+        2
+      ],
+      "cadences": [
+        60,
+        120
+      ],
+      "stillPurposes": [
+        "chrome",
+        "handoff",
+        "focus",
+        "safe-area",
+        "spectrum-peak",
+        "backward-contact",
+        "final-transition"
+      ],
+      "allArtifactsHashed": true,
+      "mediaManifestArtifactId": "qa-media-manifest"
+    },
+    "requirementMatrix": {
+      "criteria": [
+        {
+          "id": 1,
+          "title": "Locked source audio authority",
+          "status": "proved",
+          "evidence": [
+            {
+              "id": "criterion-01-evidence-01",
+              "kind": "source-audio",
+              "artifact": "projects/tanisea-lyric-film/public/soundtrack.m4a",
+              "sha256": "93084f293d491da1519732f3fa3cf6416c783d04e8ca18b5569c7608a8d4540d",
+              "value": "criterion 1 verified"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Complete build and test verification",
+          "status": "proved",
+          "evidence": [
+            {
+              "id": "criterion-02-evidence-01",
+              "kind": "test-result",
+              "artifact": "projects/tanisea-lyric-film/work/qa/run-2/logs/check.log",
+              "sha256": "f35f736a79f3503b8f3258f558a8256f0f5329a797f562673a945fd2bdc579be",
+              "value": "criterion 2 verified"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Sample-indexed alignment authority",
+          "status": "proved",
+          "evidence": [
+            {
+              "id": "criterion-03-evidence-01",
+              "kind": "alignment-manifest",
+              "artifact": "projects/tanisea-lyric-film/alignment/tanisea-word-alignment-v3.json",
+              "sha256": "06fe6c8d6ad4db5131ab4f9ab98be91ea87064fdeea58017c6b8c21ed8530f0b",
+              "value": "criterion 3 verified"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Measured timing uncertainty bounds",
+          "status": "proved",
+          "evidence": [
+            {
+              "id": "criterion-04-evidence-01",
+              "kind": "alignment-manifest",
+              "artifact": "projects/tanisea-lyric-film/alignment/tanisea-word-alignment-v3.json",
+              "sha256": "06fe6c8d6ad4db5131ab4f9ab98be91ea87064fdeea58017c6b8c21ed8530f0b",
+              "value": "criterion 4 verified"
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "title": "Reviewed semantic source-to-target mapping",
+          "status": "proved",
+          "evidence": [
+            {
+              "id": "criterion-05-evidence-01",
+              "kind": "semantic-map",
+              "artifact": "projects/tanisea-lyric-film/alignment/tanisea-word-alignment-v3.json",
+              "sha256": "06fe6c8d6ad4db5131ab4f9ab98be91ea87064fdeea58017c6b8c21ed8530f0b",
+              "value": "criterion 5 verified"
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "title": "Backward activation and repeated-chorus semantics",
+          "status": "proved",
+          "evidence": [
+            {
+              "id": "criterion-06-evidence-01",
+              "kind": "semantic-map",
+              "artifact": "projects/tanisea-lyric-film/alignment/tanisea-word-alignment-v3.json",
+              "sha256": "06fe6c8d6ad4db5131ab4f9ab98be91ea87064fdeea58017c6b8c21ed8530f0b",
+              "value": "criterion 6 verified"
+            }
+          ]
+        },
+        {
+          "id": 7,
+          "title": "Public and proof cadence verification",
+          "status": "proved",
+          "evidence": [
+            {
+              "id": "criterion-07-evidence-01",
+              "kind": "cadence-verification",
+              "artifact": "projects/tanisea-lyric-film/work/qa/run-2/logs/verify-public.log",
+              "sha256": "aae97bc53267189ec859dc880404ffcab61004559233475b61a060e4337afd33",
+              "value": "public cadence verified"
+            },
+            {
+              "id": "criterion-07-evidence-02",
+              "kind": "cadence-verification",
+              "artifact": "projects/tanisea-lyric-film/work/qa/run-2/logs/verify-proof.log",
+              "sha256": "c914f87dd8bce8d319ae31ab0f0e9db23233d06263ad4478367950c598fae0c8",
+              "value": "proof cadence verified"
+            }
+          ]
+        },
+        {
+          "id": 8,
+          "title": "Public chrome and upper-rail removal",
+          "status": "proved",
+          "evidence": [
+            {
+              "id": "criterion-08-evidence-01",
+              "kind": "public-markup",
+              "artifact": "projects/tanisea-lyric-film/work/qa/run-2/logs/verify-public-markup.log",
+              "sha256": "b5c39e447be8584bd86ddc2039a04149d0973c12f9ef8bdef6420f2a9974fbf3",
+              "value": "criterion 8 verified"
+            },
+            {
+              "id": "criterion-08-evidence-02",
+              "kind": "encoded-frame",
+              "artifact": "projects/tanisea-lyric-film/work/qa/run-2/selected-frames/chrome.png",
+              "sha256": "6b88beff7cd8542202e1a261be60be700b68d54882d7da74f7ef9c50d048fd7a",
+              "value": "public chrome encoded frame verified"
+            }
+          ]
+        },
+        {
+          "id": 9,
+          "title": "Lyric, spectrum, and safe-area layout",
+          "status": "proved",
+          "evidence": [
+            {
+              "id": "criterion-09-evidence-01",
+              "kind": "layout-verification",
+              "artifact": "projects/tanisea-lyric-film/work/qa/run-2/logs/layout-verify.log",
+              "sha256": "a2685c1b22d5a015f010a578f169fa47b9264873366e73de233e42a9cca169d6",
+              "value": "criterion 9 verified"
+            },
+            {
+              "id": "criterion-09-evidence-02",
+              "kind": "encoded-frame",
+              "artifact": "projects/tanisea-lyric-film/work/qa/run-2/selected-frames/safe-area.png",
+              "sha256": "ff782cd844af1906a760b239f5182b62433dfa69017d0c697c0bcdde420c707b",
+              "value": "public safe-area encoded frame verified"
+            }
+          ]
+        },
+        {
+          "id": 10,
+          "title": "Repeated QA with no unexplained drift",
+          "status": "proved",
+          "evidence": [
+            {
+              "id": "criterion-10-evidence-01",
+              "kind": "qa-run-comparison",
+              "artifact": "projects/tanisea-lyric-film/work/qa/run-2/run-comparison.json",
+              "sha256": "2c0d5fe5e46d565263caa2d15bee3bc81fc1fa0e738dcae973d9f4c571b754ed",
+              "value": "criterion 10 verified"
+            }
+          ]
+        },
+        {
+          "id": 11,
+          "title": "Release assets and documentation readiness",
+          "status": "pending-publication",
+          "evidence": [
+            {
+              "id": "criterion-11-evidence-01",
+              "kind": "publication-readiness",
+              "artifact": "projects/tanisea-lyric-film/output/Tanisea-Lyric-Film-vNext-60fps-Archival-Master.mp4",
+              "sha256": "c9d0e882715661a706da617a2ffe397343af480b5bdb4a3580fcc1882ce77482",
+              "value": "criterion 11 publication readiness verified locally"
+            }
+          ]
+        }
+      ]
+    },
+    "selectedFrames": [
+      {
+        "id": "chrome",
+        "artifactId": "public-chrome-still",
+        "composition": "LyricFilmVNext",
+        "frame": 3844,
+        "path": "projects/tanisea-lyric-film/work/qa/run-2/selected-frames/chrome.png",
+        "sha256": "6b88beff7cd8542202e1a261be60be700b68d54882d7da74f7ef9c50d048fd7a"
+      },
+      {
+        "id": "handoff",
+        "artifactId": "public-handoff-still",
+        "composition": "LyricFilmVNext",
+        "frame": 7079,
+        "path": "projects/tanisea-lyric-film/work/qa/run-2/selected-frames/handoff.png",
+        "sha256": "bd1f5d453cfec14661d3a1bad0e042892cd9e6af5624c1dd7836d4c9e47cf126"
+      },
+      {
+        "id": "focus",
+        "artifactId": "public-focus-still",
+        "composition": "LyricFilmVNext",
+        "frame": 4355,
+        "path": "projects/tanisea-lyric-film/work/qa/run-2/selected-frames/focus.png",
+        "sha256": "12bb2ed0671be9c927669666e7a4fdd726e37b40958bdba60fca69d53ece7361"
+      },
+      {
+        "id": "safe-area",
+        "artifactId": "public-safe-area-still",
+        "composition": "LyricFilmVNext",
+        "frame": 4458,
+        "path": "projects/tanisea-lyric-film/work/qa/run-2/selected-frames/safe-area.png",
+        "sha256": "ff782cd844af1906a760b239f5182b62433dfa69017d0c697c0bcdde420c707b"
+      },
+      {
+        "id": "spectrum-peak",
+        "artifactId": "public-spectrum-peak-still",
+        "composition": "LyricFilmVNext",
+        "frame": 2306,
+        "path": "projects/tanisea-lyric-film/work/qa/run-2/selected-frames/spectrum-peak.png",
+        "sha256": "97c4fcc034eb82d4498697450f38dd25f54b8b9fae36b3889601d8fb0808aef2"
+      },
+      {
+        "id": "backward-contact",
+        "artifactId": "proof-backward-contact-still",
+        "composition": "LyricFilmSyncProof",
+        "frame": 10394,
+        "path": "projects/tanisea-lyric-film/work/qa/run-2/selected-frames/backward-contact.png",
+        "sha256": "7830f22491ed4023cecd0aeafada4696ac99b33341f3ba099aefef9e67823be4"
+      },
+      {
+        "id": "final-transition",
+        "artifactId": "reference-transition-still",
+        "composition": "LyricFilmVNext",
+        "frame": 7092,
+        "path": "projects/tanisea-lyric-film/work/qa/run-2/selected-frames/final-transition.png",
+        "sha256": "5fe287c4c5a501950efc039dffda85fe8997e52f4d8d63e489eba48e39c8dc57"
+      }
+    ]
+  },
+  "sourceSummary": {
+    "artifactId": "source-audio",
+    "sha256": "93084f293d491da1519732f3fa3cf6416c783d04e8ca18b5569c7608a8d4540d",
+    "sampleRateHz": 44100,
+    "channels": 2,
+    "channelLayout": "stereo",
+    "publicDurationSeconds": 153,
+    "decodedSamplesPerChannel": 6747584,
+    "retainedAnalysisDurationSeconds": 153.00644
+  },
+  "alignmentSummary": {
+    "artifactId": "alignment-manifest",
+    "sha256": "06fe6c8d6ad4db5131ab4f9ab98be91ea87064fdeea58017c6b8c21ed8530f0b",
+    "displayedLineCount": 24,
+    "sourceTokenCount": 102,
+    "cueReferencedSemanticSourceTokenCount": 101,
+    "explicitlyUnmappedSourceTokenIds": [
+      "V1-08-R01"
+    ],
+    "cueCount": 74,
+    "targetActivationCount": 74,
+    "chorusOccurrenceCount": 2,
+    "literalChorusPairCount": 8,
+    "maximumUncertainty": {
+      "samples": 882,
+      "milliseconds": 20
+    },
+    "observedMaximumFrameErrorMilliseconds": {
+      "fps60": 8.321995,
+      "fps120": 4.002268
+    },
+    "reviewedSemanticSequences": [
+      {
+        "lineId": "V1-03",
+        "records": [
+          {
+            "cueId": "V1-03-C02",
+            "startSample": 3173568,
+            "sourceTokenIds": [
+              "V1-03-R05"
+            ],
+            "targetSegmentIds": [
+              "V1-03-S03"
+            ],
+            "activation": "forward"
+          },
+          {
+            "cueId": "V1-03-C03",
+            "startSample": 3200910,
+            "sourceTokenIds": [
+              "V1-03-R06"
+            ],
+            "targetSegmentIds": [
+              "V1-03-S02"
+            ],
+            "activation": "backward"
+          }
+        ]
+      },
+      {
+        "lineId": "V1-08",
+        "records": [
+          {
+            "cueId": "V1-08-C01",
+            "startSample": 3807197,
+            "sourceTokenIds": [
+              "V1-08-R02"
+            ],
+            "targetSegmentIds": [
+              "V1-08-S02"
+            ],
+            "activation": "forward"
+          },
+          {
+            "cueId": "V1-08-C02",
+            "startSample": 3819545,
+            "sourceTokenIds": [
+              "V1-08-R03",
+              "V1-08-R04"
+            ],
+            "targetSegmentIds": [
+              "V1-08-S01"
+            ],
+            "activation": "backward"
+          },
+          {
+            "cueId": "V1-08-C03",
+            "startSample": 3869863,
+            "sourceTokenIds": [
+              "V1-08-R05",
+              "V1-08-R06"
+            ],
+            "targetSegmentIds": [
+              "V1-08-S03"
+            ],
+            "activation": "forward"
+          },
+          {
+            "cueId": "V1-08-C04",
+            "startSample": 3912243,
+            "sourceTokenIds": [
+              "V1-08-R07"
+            ],
+            "targetSegmentIds": [
+              "V1-08-S04"
+            ],
+            "activation": "forward"
+          }
+        ]
+      }
+    ]
+  },
+  "featuresSummary": {
+    "artifactId": "audio-features",
+    "sha256": "c9453f8c6fb3de3f16e691b51b4155c5db7e313f5aac1cc7942904754d29b7cf"
+  },
+  "layoutSummary": {
+    "spectrumBandCount": 64,
+    "spectrumMeasuredCorePx": 96,
+    "spectrumMaximumTransientExtensionPx": 18,
+    "spectrumMaximumLineTravelPx": 114,
+    "spectrumLineWidthPx": 4,
+    "spectrumSeparateImpactCapsAbsent": true,
+    "minimumLyricGapPx": 36,
+    "lowerChromeClearancePx": 11,
+    "publicUpperTelemetryAbsent": true,
+    "publicGlobalUpperRailAbsent": true
+  },
+  "qaCoverage": {
+    "lineIds": [
+      "C1-01",
+      "C1-02",
+      "C1-03",
+      "C1-04",
+      "C1-05",
+      "C1-06",
+      "C1-07",
+      "C1-08",
+      "V1-01",
+      "V1-02",
+      "V1-03",
+      "V1-04",
+      "V1-05",
+      "V1-06",
+      "V1-07",
+      "V1-08",
+      "C2-01",
+      "C2-02",
+      "C2-03",
+      "C2-04",
+      "C2-05",
+      "C2-06",
+      "C2-07",
+      "C2-08"
+    ],
+    "speedVariants": [
+      "normal",
+      "half"
+    ],
+    "dedicatedRanges": [
+      "v1-03",
+      "v1-08",
+      "chorus-1",
+      "chorus-2",
+      "first-act-40-50",
+      "final-handoff"
+    ],
+    "proofRanges": [
+      "v1-03",
+      "v1-08"
+    ],
+    "cueIds": [
+      "C1-04-C01",
+      "C1-04-C02",
+      "C1-04-C03",
+      "C1-06-C01",
+      "C1-06-C02",
+      "C1-06-C03",
+      "C1-07-C01",
+      "C1-07-C02",
+      "C1-07-C03",
+      "C1-08-C01",
+      "C1-08-C02",
+      "C1-08-C03",
+      "V1-03-C01",
+      "V1-03-C02",
+      "V1-03-C03",
+      "V1-08-C01",
+      "V1-08-C02",
+      "V1-08-C03",
+      "V1-08-C04"
+    ],
+    "contactOffsets": [
+      -1,
+      0,
+      1,
+      2
+    ],
+    "cadences": [
+      60,
+      120
+    ],
+    "stillPurposes": [
+      "chrome",
+      "handoff",
+      "focus",
+      "safe-area",
+      "spectrum-peak",
+      "backward-contact",
+      "final-transition"
+    ],
+    "allArtifactsHashed": true,
+    "mediaManifestArtifactId": "qa-media-manifest"
+  },
+  "media": {
+    "reference": {
+      "artifactId": "reference-render",
+      "fileSha256": {
+        "value": "664feb2fe9e7336c84602dd35c82de21197729949bee93e6bbe164ee87044895",
+        "source": "sha256-file"
+      },
+      "video": {
+        "codecName": "prores",
+        "profile": "4444",
+        "codecTag": "ap4h",
+        "width": 2160,
+        "height": 2160,
+        "avgFrameRate": "60/1",
+        "realFrameRate": "60/1",
+        "decodedFrameCount": {
+          "value": 9180,
+          "source": "ffprobe-count_frames"
+        },
+        "pixelFormat": "yuv444p12le",
+        "sampleAspectRatio": "1:1",
+        "colorRange": "tv",
+        "colorSpace": "bt709",
+        "colorTransfer": "bt709",
+        "colorPrimaries": "bt709",
+        "startTime": "0.000000",
+        "duration": "153.000000"
+      },
+      "container": {
+        "duration": "153.000000"
+      },
+      "strictDecode": {
+        "passed": true,
+        "source": "ffmpeg-xerror-full-decode"
+      }
+    },
+    "public": {
+      "artifactId": "public-master",
+      "fileSha256": {
+        "value": "c9d0e882715661a706da617a2ffe397343af480b5bdb4a3580fcc1882ce77482",
+        "source": "sha256-file"
+      },
+      "video": {
+        "codecName": "hevc",
+        "codecTag": "hvc1",
+        "width": 1080,
+        "height": 1080,
+        "avgFrameRate": "60/1",
+        "realFrameRate": "60/1",
+        "decodedFrameCount": {
+          "value": 9180,
+          "source": "ffprobe-count_frames"
+        },
+        "pixelFormat": "yuv420p10le",
+        "sampleAspectRatio": "1:1",
+        "colorRange": "tv",
+        "colorSpace": "bt709",
+        "colorTransfer": "bt709",
+        "colorPrimaries": "bt709",
+        "startTime": "0.000000",
+        "duration": "153.000000"
+      },
+      "audio": {
+        "codecName": "aac",
+        "sampleRate": "44100",
+        "channels": 2,
+        "channelLayout": "stereo",
+        "timeBase": "1/44100",
+        "startPts": 0,
+        "startTime": "0.000000",
+        "durationTs": 6747300,
+        "duration": "153.000000",
+        "packetCount": {
+          "value": 6591,
+          "source": "ffprobe-count_packets"
+        },
+        "packetStreamSha256": {
+          "value": "9d2cc3b8f0bd51b1fe0e990cc0d6d5cbb52a76e1b872b56ada849915b3856b24",
+          "source": "stream-copy-sha256"
+        }
+      },
+      "sourceAudio": {
+        "timeBase": "1/44100",
+        "startPts": 0,
+        "startTime": "0.000000",
+        "durationTs": 6747300,
+        "duration": "153.000000",
+        "packetCount": {
+          "value": 6591,
+          "source": "ffprobe-count_packets"
+        },
+        "packetStreamSha256": {
+          "value": "9d2cc3b8f0bd51b1fe0e990cc0d6d5cbb52a76e1b872b56ada849915b3856b24",
+          "source": "stream-copy-sha256"
+        }
+      },
+      "container": {
+        "duration": "153.000000",
+        "faststart": {
+          "moovBeforeMdat": true,
+          "source": "parsed-atom-order"
+        }
+      },
+      "strictDecode": {
+        "passed": true,
+        "source": "ffmpeg-xerror-full-decode"
+      }
+    },
+    "proof": {
+      "artifactId": "sync-proof",
+      "fileSha256": {
+        "value": "6a6600c5b8ef7ccc4421022c13b6fa2c8824ec309e0c22c23fc8dc13ab3236a6",
+        "source": "sha256-file"
+      },
+      "video": {
+        "codecName": "h264",
+        "codecTag": "avc1",
+        "width": 1080,
+        "height": 1080,
+        "avgFrameRate": "120/1",
+        "realFrameRate": "120/1",
+        "decodedFrameCount": {
+          "value": 18360,
+          "source": "ffprobe-count_frames"
+        },
+        "pixelFormat": "yuv420p",
+        "sampleAspectRatio": "1:1",
+        "colorRange": "tv",
+        "colorSpace": "bt709",
+        "colorTransfer": "bt709",
+        "colorPrimaries": "bt709",
+        "startTime": "0.000000",
+        "duration": "153.000000"
+      },
+      "audio": {
+        "codecName": "aac",
+        "sampleRate": "44100",
+        "channels": 2,
+        "channelLayout": "stereo",
+        "timeBase": "1/44100",
+        "startPts": 0,
+        "startTime": "0.000000",
+        "durationTs": 6747300,
+        "duration": "153.000000",
+        "packetCount": {
+          "value": 6591,
+          "source": "ffprobe-count_packets"
+        },
+        "packetStreamSha256": {
+          "value": "9d2cc3b8f0bd51b1fe0e990cc0d6d5cbb52a76e1b872b56ada849915b3856b24",
+          "source": "stream-copy-sha256"
+        }
+      },
+      "sourceAudio": {
+        "timeBase": "1/44100",
+        "startPts": 0,
+        "startTime": "0.000000",
+        "durationTs": 6747300,
+        "duration": "153.000000",
+        "packetCount": {
+          "value": 6591,
+          "source": "ffprobe-count_packets"
+        },
+        "packetStreamSha256": {
+          "value": "9d2cc3b8f0bd51b1fe0e990cc0d6d5cbb52a76e1b872b56ada849915b3856b24",
+          "source": "stream-copy-sha256"
+        }
+      },
+      "container": {
+        "duration": "153.000000",
+        "faststart": {
+          "moovBeforeMdat": true,
+          "source": "parsed-atom-order"
+        }
+      },
+      "strictDecode": {
+        "passed": true,
+        "source": "ffmpeg-xerror-full-decode"
+      }
+    }
+  },
+  "runReferences": [
+    {
+      "runId": "run-1",
+      "path": "projects/tanisea-lyric-film/work/qa/run-1/qa-run.json",
+      "sha256": "772258ced3164c5ee9442fa564576fd6d1069de632cbbcaa4703f889da7975b5"
+    },
+    {
+      "runId": "run-2",
+      "path": "projects/tanisea-lyric-film/work/qa/run-2/qa-run.json",
+      "sha256": "fd840372cd1f7b2903188ab5d38d9ce2551729bb2ca428abcf90fb14886842ca"
+    }
+  ],
+  "comparison": {
+    "matched": true,
+    "authoritativeRunId": "run-2",
+    "recordPath": "projects/tanisea-lyric-film/work/qa/run-2/run-comparison.json",
+    "unexplainedDrift": [],
+    "recordSha256": "2c0d5fe5e46d565263caa2d15bee3bc81fc1fa0e738dcae973d9f4c571b754ed"
+  }
+}
+```
