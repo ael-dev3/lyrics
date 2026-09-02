@@ -141,6 +141,8 @@ followed by `npm run youtube:verify`; it remuxes the original AAC packet stream.
 The detailed implementation record is in the
 [v2.5.0 landscape implementation note](../../docs/youtube-16x9-v2.5.0-implementation.md).
 
+The [sanitized workflow and production-preference record](../../docs/track-workflow-preferences-and-known-issues.md) captures the preview-first review method, reference-window comparison, aspect-ratio rules, QA sequence, publication boundary, and the known future-refinement checkpoint around `00:47`.
+
 Delivery verification checks container duration, dimensions, cadence, frame count, codec, pixel format, colour metadata, strict full decode, `moov` placement, audio stream geometry, packet identity, and exact timeline geometry.
 
 ## Release publication workflow

@@ -77,6 +77,12 @@ outro around `02:16`. Source tests independently assert:
 - the 1,712 px lower rail has 64 square-ended bands and remains inside the
   landscape safe area.
 
+## Known future refinement
+
+The current delivery is accepted without further media changes, but the checkpoint around `00:47` remains a known imperfect lyric-highlighting/presentation moment. The surrounding `00:40–00:50` section is usable; it is simply not yet at the reference quality demonstrated by `01:46–01:56`. On a future pass, review that short window beside the approved reference and inspect source lyric cues separately from derived presentation cues.
+
+The broader, sanitized production workflow and preference record is maintained in [Reproducible lyric-film workflow and production preferences](track-workflow-preferences-and-known-issues.md).
+
 The generated final file is the asset intended for regular YouTube upload; it
 does not imply permission to publish the copyrighted recording or lyric
 adaptation. Written permission or an authorized Content ID policy change is

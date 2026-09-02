@@ -117,3 +117,5 @@ The release gate covers strict typechecking, 1,000+ assertions, browser-measured
 ## Media and rights
 
 The soundtrack, artwork, names, fonts, and other included media remain subject to their respective rights and licences. Confirm the necessary rights before redistribution or commercial use. Playfair is included under the SIL Open Font License in `projects/tanisea-lyric-film/public/Playfair-OFL.txt`.
+
+The [sanitized workflow and production-preference record](docs/track-workflow-preferences-and-known-issues.md) documents the repeatable preview, timing, visual-QA, handoff, and publication process for future tracks. It also records the current landscape edition’s known future-refinement checkpoint around `00:47` without including private conversation or personal details.
