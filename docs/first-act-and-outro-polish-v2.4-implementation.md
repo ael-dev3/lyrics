@@ -61,4 +61,6 @@ The source gates cover the new behavior directly:
 - zero-height transient extensions produce no element;
 - the outro test rejects the previous 43 px gap and opposite horizontal translations.
 
+The full 120 fps proof is rendered at four concurrent workers with a 120-second per-frame ceiling, preventing an isolated browser-render stall from invalidating the diagnostic artifact.
+
 The full render, delivery, synchronization-proof, layout, strict-decode, repeated-QA, publication, and checksum gates remain required for the v2.4.1 package.

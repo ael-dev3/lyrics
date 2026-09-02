@@ -16,6 +16,8 @@ const COMPOSITION_ID = 'LyricFilmSyncProof';
 const PROOF_FPS = 120;
 const FULL_FRAME_COUNT = 18_360;
 const FULL_DURATION_SECONDS = FULL_FRAME_COUNT / PROOF_FPS;
+const PROOF_RENDER_CONCURRENCY = 4;
+const PROOF_RENDER_TIMEOUT_MILLISECONDS = 120_000;
 
 export type InclusiveFrameRange = Readonly<{
   start: number;
@@ -215,6 +217,8 @@ export const createProofRenderPlan = ({
     '--crf=12',
     '--pixel-format=yuv420p',
     '--color-space=bt709',
+    `--concurrency=${PROOF_RENDER_CONCURRENCY}`,
+    `--timeout=${PROOF_RENDER_TIMEOUT_MILLISECONDS}`,
     '--muted',
     '--overwrite',
     ...(frameRange ? [`--frames=${frameRange.start}-${frameRange.end}`] : []),

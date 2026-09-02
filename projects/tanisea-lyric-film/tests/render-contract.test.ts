@@ -1339,6 +1339,8 @@ describe("proof render and remux contract", () => {
         "--crf=12",
         "--pixel-format=yuv420p",
         "--color-space=bt709",
+        "--concurrency=4",
+        "--timeout=120000",
         "--muted",
         "--overwrite",
         "--frames=8448-8806",
@@ -1369,6 +1371,8 @@ describe("proof render and remux contract", () => {
       "--crf=12",
       "--pixel-format=yuv420p",
       "--color-space=bt709",
+      "--concurrency=4",
+      "--timeout=120000",
       "--muted",
       "--overwrite",
     ]);
