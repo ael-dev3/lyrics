@@ -1,7 +1,7 @@
 import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
-import {createReadStream, existsSync, statSync, writeFileSync} from 'node:fs';
-import {resolve} from 'node:path';
+import {createReadStream, existsSync, mkdirSync, statSync, writeFileSync} from 'node:fs';
+import {dirname, resolve} from 'node:path';
 import {projectRootFromScriptDirectory} from './project-root.js';
 
 type UnknownRecord = Record<string, unknown>;
@@ -314,6 +314,7 @@ const run = async (): Promise<void> => {
         : {}),
     },
   };
+  mkdirSync(dirname(auditPath), {recursive: true});
   writeFileSync(auditPath, `${JSON.stringify(report, null, 2)}\n`, 'utf8');
   process.stdout.write(`${JSON.stringify(report, null, 2)}\n`);
 };
