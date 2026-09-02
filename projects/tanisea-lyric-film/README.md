@@ -1,6 +1,6 @@
 # Tanisea precision-sync vNext source
 
-This directory contains the reproducible Remotion source, reviewed alignment data, deterministic audio features, render tools, and release gates for the 153-second Tanisea English lyric film.
+This directory contains the reproducible Remotion source, reviewed alignment data, deterministic audio features, render tools, and release gates for the 153-second Tanisea English lyric film, including the approved square master and a native 16:9 YouTube edition.
 
 The public claim is **sample-indexed alignment with frame-bounded rendering**. Timing is stored against the locked 44.1 kHz soundtrack as integer sample indices and converted to the nearest video frame only at render time.
 
@@ -32,12 +32,14 @@ npm run dev
 
 ## Compositions
 
-| Composition          | Dimensions | Cadence | Frames | Purpose                          |
-| -------------------- | ---------: | ------: | -----: | -------------------------------- |
-| `LyricFilmVNext`     |  1080×1080 |  60 fps |  9,180 | Clean public master              |
-| `LyricFilmSyncProof` |  1080×1080 | 120 fps | 18,360 | Diagnostic synchronization proof |
+| Composition                 | Dimensions | Cadence | Frames | Purpose                                      |
+| --------------------------- | ---------: | ------: | -----: | -------------------------------------------- |
+| `LyricFilmVNext`            |  1080×1080 |  60 fps |  9,180 | Approved square public master                |
+| `LyricFilmSyncProof`        |  1080×1080 | 120 fps | 18,360 | Square diagnostic synchronization proof      |
+| `LyricFilmYouTube`          |  1920×1080 |  60 fps |  9,180 | Native landscape regular-YouTube composition |
+| `LyricFilmYouTubeSyncProof` |  1920×1080 | 120 fps | 18,360 | Landscape diagnostic synchronization proof   |
 
-Both compositions use `src/index.ts` as their entry point and the same sample-indexed alignment authority. The proof adds token, target, uncertainty, and signed frame-error overlays without changing the public design.
+All four compositions use `src/index.ts` as their entry point and the same sample-indexed alignment authority. Each proof adds token, target, uncertainty, and signed frame-error overlays without changing its public design.
 
 ## Alignment data model
 
@@ -74,6 +76,10 @@ The public spectrum separates measurement from emphasis:
 - browser geometry checks preserve at least 36 px between lyrics and the maximum cap;
 - all 64 measured bands and 64 caps remain inside the public safe area.
 
+The 16:9 edition increases the lower rail to 1,712 px and 9 px square-ended
+lines, while retaining the same 64 authoritative feature bands and no
+phase-delaying visual smoothing.
+
 ## Commands
 
 | Command                     | Function                                                          |
@@ -87,6 +93,11 @@ The public spectrum separates measurement from emphasis:
 | `npm run render`            | Render and normalize the muted 2160×2160 4:4:4 reference          |
 | `npm run encode`            | Downsample once, encode 10-bit HEVC, and copy original AAC        |
 | `npm run proof`             | Render and verify the 120 fps proof                               |
+| `npm run youtube:reference` | Render the muted 1920×1080 ProRes 4444 YouTube reference          |
+| `npm run youtube:encode`    | Encode the 1920×1080 H.264/AAC YouTube upload delivery            |
+| `npm run youtube:render`    | Run the 16:9 reference and delivery stages                        |
+| `npm run youtube:proof`     | Render and remux the 1920×1080 120 fps sync proof                 |
+| `npm run youtube:verify`    | Strictly verify 16:9 media and write its local audit              |
 | `npm run verify`            | Full-decode and inspect a delivery artifact                       |
 | `npm run qa:clips`          | Generate deterministic contact sheets, clips, and selected frames |
 | `npm run qa:run`            | Execute one named release-matrix run (`TANISEA_QA_RUN=run-1|run-2`) |
@@ -111,6 +122,21 @@ TANISEA_QA_RUN=run-2 npm run qa:run
 ```
 
 The reference is 2160×2160 ProRes 4444 in BT.709. The public master is encoded from that reference as 1080×1080, 60 fps, 10-bit HEVC with the `hvc1` tag and `faststart`. The proof is 1080×1080 H.264 at 120 fps. Both final MP4 files copy the locked AAC packets without gain, normalization, or audio re-encoding.
+
+The landscape pipeline is deliberately independent so it cannot silently alter
+the square release:
+
+```sh
+npm run youtube:reference
+npm run youtube:encode
+npm run youtube:proof
+npm run youtube:verify
+```
+
+It renders a muted 1920×1080 ProRes 4444 reference, encodes a 60 fps H.264/AVC
+upload delivery with 4 dB platform-safety attenuation, and makes a 120 fps
+proof with the original AAC packet stream. Its detailed record is in the
+[v2.5.0 landscape implementation note](../../docs/youtube-16x9-v2.5.0-implementation.md).
 
 Delivery verification checks container duration, dimensions, cadence, frame count, codec, pixel format, colour metadata, strict full decode, `moov` placement, audio stream geometry, packet identity, and exact timeline geometry.
 
@@ -152,7 +178,7 @@ The release matrix verifies:
 10. repeated QA with no unexplained artifact drift;
 11. publication assets, checksums, and documentation.
 
-See the [final QA report](../../audits/tanisea-final-qa-vnext.md), [v2.4.1 correction record](../../docs/first-act-and-outro-polish-v2.4-implementation.md), [v2.4.0 historical baseline](../../docs/cinematic-parity-v2.4-implementation.md), [v2.3 implementation report](../../docs/first-act-semantic-sync-v2.3-implementation.md), [v2.2 implementation report](../../docs/first-act-polish-v2.2-implementation.md), [v2.1 implementation report](../../docs/first-act-precision-v2.1-implementation.md), [full-system implementation report](../../docs/precision-sync-vnext-implementation.md), and [workflow evidence guide](../../docs/workflow-evidence.md). The supplemental release archive preserves the generated alignment provenance, both canonical QA runs, QA media, and final visual-review artifacts that remain excluded from source control.
+See the [final QA report](../../audits/tanisea-final-qa-vnext.md), [v2.5.0 landscape implementation note](../../docs/youtube-16x9-v2.5.0-implementation.md), [v2.4.1 correction record](../../docs/first-act-and-outro-polish-v2.4-implementation.md), [v2.4.0 historical baseline](../../docs/cinematic-parity-v2.4-implementation.md), [v2.3 implementation report](../../docs/first-act-semantic-sync-v2.3-implementation.md), [v2.2 implementation report](../../docs/first-act-polish-v2.2-implementation.md), [v2.1 implementation report](../../docs/first-act-precision-v2.1-implementation.md), [full-system implementation report](../../docs/precision-sync-vnext-implementation.md), and [workflow evidence guide](../../docs/workflow-evidence.md). The supplemental release archive preserves the generated alignment provenance, both canonical QA runs, QA media, and final visual-review artifacts that remain excluded from source control.
 
 ## Source layout
 

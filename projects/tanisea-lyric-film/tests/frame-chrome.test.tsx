@@ -124,3 +124,53 @@ describe('public spectrum rail', () => {
     expect(markup).not.toContain('STEREO · 64 LOG BANDS · HANN · 20 HZ—20 KHZ');
   });
 });
+
+describe('landscape YouTube chrome and spectrum', () => {
+  test('uses a native 1920×1080 frame rather than square coordinates', () => {
+    const markup = renderToStaticMarkup(
+      createElement(FrameChrome, {time: 136.06, variant: 'youtube'}),
+    );
+
+    expect(markup).toContain('data-frame-chrome="youtube"');
+    expect(openingTagFor(markup, 'data-frame-chrome-border', 'frame')).toContain(
+      'inset:42px',
+    );
+    expect(openingTagFor(markup, 'data-frame-chrome-corner', 'top-right')).toContain(
+      'left:1878px;top:42px',
+    );
+    expect(openingTagFor(markup, 'data-frame-chrome-corner', 'bottom-left')).toContain(
+      'left:42px;top:1038px',
+    );
+    expect(markup).toContain('02:16.06');
+  });
+
+  test('spans the landscape safe area with 64 square-ended reactive bands', () => {
+    const markup = renderToStaticMarkup(
+      createElement(SpectrumRail, {feature: peakFeature, variant: 'youtube'}),
+    );
+    const root = openingTagFor(markup, 'data-spectrum-rail', 'youtube');
+    const svg = openingTagFor(markup, 'data-spectrum-svg', 'bands');
+    const peak = openingTagFor(markup, 'data-spectrum-measured-band', '0');
+    const cap = openingTagFor(markup, 'data-spectrum-impact-band', '0');
+
+    expect(root).toContain('left:104px');
+    expect(root).toContain('bottom:66px');
+    expect(root).toContain('width:1712px');
+    expect(root).toContain('height:174px');
+    expect(svg).toContain('width="1712"');
+    expect(svg).toContain('height="174"');
+    expect(openingTagFor(markup, 'data-spectrum-baseline', 'youtube')).toContain(
+      'y1="148"',
+    );
+    expect(peak).toContain('x1="13.375"');
+    expect(peak).toContain('y1="148"');
+    expect(peak).toContain('y2="52"');
+    expect(peak).toContain('stroke-width="9"');
+    expect(peak).toContain('stroke-linecap="butt"');
+    expect(cap).toContain('y1="52"');
+    expect(cap).toContain('y2="34"');
+    expect(cap).toContain('stroke-width="9"');
+    expect(markup.match(/data-spectrum-measured-band=/g)).toHaveLength(64);
+    expect(markup).not.toContain('stroke-linecap="round"');
+  });
+});

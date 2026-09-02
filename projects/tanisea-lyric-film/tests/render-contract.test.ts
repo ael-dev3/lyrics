@@ -29,7 +29,7 @@ import {
   verifyAudioPacketIdentity,
   verifyProofProbe,
 } from "../scripts/render-sync-proof";
-import { LyricFilm } from "../src/LyricFilm";
+import { LyricFilm, YouTubeLyricFilm } from "../src/LyricFilm";
 import { RemotionRoot } from "../src/Root";
 import {
   featureFrameForTime,
@@ -37,6 +37,7 @@ import {
   proofFrameState,
   SyncProof,
   SyncProofFrame,
+  YouTubeSyncProof,
 } from "../src/SyncProof";
 import { lyrics } from "../src/timed-lyrics";
 import { taniseaAlignment } from "../src/timing/tanisea-alignment";
@@ -892,6 +893,22 @@ describe("diagnostic-only proof composition", () => {
         durationInFrames: 18_360,
         fps: 120,
         width: 1_080,
+        height: 1_080,
+      },
+      {
+        id: "LyricFilmYouTube",
+        component: YouTubeLyricFilm,
+        durationInFrames: 9_180,
+        fps: 60,
+        width: 1_920,
+        height: 1_080,
+      },
+      {
+        id: "LyricFilmYouTubeSyncProof",
+        component: YouTubeSyncProof,
+        durationInFrames: 18_360,
+        fps: 120,
+        width: 1_920,
         height: 1_080,
       },
     ]);

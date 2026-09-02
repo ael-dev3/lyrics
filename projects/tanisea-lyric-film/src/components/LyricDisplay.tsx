@@ -4,6 +4,8 @@ import {getPresentationProgress} from '../presentation-progress';
 import {lyrics} from '../timed-lyrics';
 import type {LyricLine} from '../timed-lyrics';
 import {frameForSample} from '../timing/alignment-types';
+import {isYouTubeVariant} from '../film-variant';
+import type {FilmVariant} from '../film-variant';
 
 const teal = '#16e6d1';
 const mint = '#c9fff7';
@@ -23,9 +25,16 @@ type LyricLineViewProps = Readonly<{
   line: LyricLine;
   frame: number;
   fps: number;
+  variant: FilmVariant;
 }>;
 
-const LyricLineView = ({line, frame, fps}: LyricLineViewProps) => {
+const LyricLineView = ({
+  line,
+  frame,
+  fps,
+  variant,
+}: LyricLineViewProps) => {
+  const youtube = isYouTubeVariant(variant);
   const enter = smoothstep(
     frameForSample(line.visualInStartSample, fps),
     frameForSample(line.visualInCompleteSample, fps),
@@ -40,28 +49,47 @@ const LyricLineView = ({line, frame, fps}: LyricLineViewProps) => {
   const chorus = line.section === 'chorus';
   const verse = line.section === 'verse';
   const precisionFocus = line.focusProfile === 'precision';
-  const fontSize = chorus
-    ? line.text.length > 31
-      ? 66
-      : 80
-    : verse
-      ? line.text.length > 45
-        ? 45
-        : 53
-      : line.text.length > 36
-        ? 53
-        : 62;
-  const entranceTranslation = chorus ? 18 : 2;
+  const fontSize = youtube
+    ? chorus
+      ? line.text.length > 31
+        ? 92
+        : 110
+      : verse
+        ? line.text.length > 45
+          ? 64
+          : 74
+        : line.text.length > 36
+          ? 74
+          : 84
+    : chorus
+      ? line.text.length > 31
+        ? 66
+        : 80
+      : verse
+        ? line.text.length > 45
+          ? 45
+          : 53
+        : line.text.length > 36
+          ? 53
+          : 62;
+  const entranceTranslation = chorus ? (youtube ? 24 : 18) : youtube ? 3 : 2;
   const progress = getPresentationProgress(line.presentationCues, frame, fps);
 
   return (
     <AbsoluteFill
       data-lyric-line-id={line.id}
       data-focus-profile={line.focusProfile}
+      data-lyric-layout={variant}
       style={{
         justifyContent: chorus ? 'center' : 'flex-end',
         alignItems: chorus ? 'center' : 'stretch',
-        padding: chorus ? '180px 76px 205px' : '0 74px 238px',
+        padding: youtube
+          ? chorus
+            ? '120px 140px 280px'
+            : '0 136px 280px'
+          : chorus
+            ? '180px 76px 205px'
+            : '0 74px 238px',
         color: white,
         fontFamily: 'Space Grotesk',
         opacity,
@@ -71,7 +99,7 @@ const LyricLineView = ({line, frame, fps}: LyricLineViewProps) => {
       <div
         style={{
           width: '100%',
-          maxWidth: chorus ? 940 : 920,
+          maxWidth: youtube ? (chorus ? 1460 : 980) : chorus ? 940 : 920,
           alignSelf: chorus ? 'center' : 'flex-start',
         }}
       >
@@ -81,16 +109,18 @@ const LyricLineView = ({line, frame, fps}: LyricLineViewProps) => {
             display: 'flex',
             justifyContent: chorus ? 'center' : 'flex-start',
             alignItems: 'center',
-            gap: 13,
-            marginBottom: 17,
-            fontSize: 12,
-            letterSpacing: 4.2,
+            gap: youtube ? 15 : 13,
+            marginBottom: youtube ? 20 : 17,
+            fontSize: youtube ? 14 : 12,
+            letterSpacing: youtube ? 4.8 : 4.2,
             fontWeight: 650,
             color: teal,
           }}
         >
           <span>{line.id}</span>
-          <span style={{height: 2, width: 58, background: teal}} />
+          <span
+            style={{height: 2, width: youtube ? 68 : 58, background: teal}}
+          />
           <span>{line.section.toUpperCase()}</span>
         </div>
         <div
@@ -99,11 +129,17 @@ const LyricLineView = ({line, frame, fps}: LyricLineViewProps) => {
             flexWrap: 'wrap',
             justifyContent: chorus ? 'center' : 'flex-start',
             alignItems: 'baseline',
-            columnGap: chorus ? 18 : 13,
-            rowGap: 8,
+            columnGap: youtube ? (chorus ? 24 : 17) : chorus ? 18 : 13,
+            rowGap: youtube ? 11 : 8,
             fontSize,
             lineHeight: chorus ? 1.02 : 1.1,
-            letterSpacing: chorus ? -1.8 : -1.1,
+            letterSpacing: youtube
+              ? chorus
+                ? -2.1
+                : -1.3
+              : chorus
+                ? -1.8
+                : -1.1,
             textAlign: chorus ? 'center' : 'left',
             textTransform: chorus ? 'uppercase' : 'none',
           }}
@@ -175,12 +211,12 @@ const LyricLineView = ({line, frame, fps}: LyricLineViewProps) => {
         <div
           data-lyric-progress-track-id={line.id}
           style={{
-            marginTop: 24,
+            marginTop: youtube ? 28 : 24,
             marginLeft: chorus ? 'auto' : 0,
             marginRight: chorus ? 'auto' : 0,
-            width: chorus ? 760 : 560,
+            width: youtube ? (chorus ? 1150 : 720) : chorus ? 760 : 560,
             maxWidth: '100%',
-            height: 4,
+            height: youtube ? 5 : 4,
             background: 'rgba(255,255,255,.12)',
           }}
         >
@@ -188,7 +224,7 @@ const LyricLineView = ({line, frame, fps}: LyricLineViewProps) => {
             data-lyric-progress-id={line.id}
             style={{
               width: `${Math.round(progress * 1000) / 10}%`,
-              height: 4,
+              height: youtube ? 5 : 4,
               background: `linear-gradient(90deg, ${teal}, ${mint}, ${ember})`,
             }}
           />
@@ -201,9 +237,14 @@ const LyricLineView = ({line, frame, fps}: LyricLineViewProps) => {
 export type LyricDisplayProps = Readonly<{
   frame: number;
   fps: number;
+  variant?: FilmVariant;
 }>;
 
-export const LyricDisplay = ({frame, fps}: LyricDisplayProps) => (
+export const LyricDisplay = ({
+  frame,
+  fps,
+  variant = 'square',
+}: LyricDisplayProps) => (
   <>
     {lyrics
       .filter(
@@ -217,6 +258,7 @@ export const LyricDisplay = ({frame, fps}: LyricDisplayProps) => (
           line={line}
           frame={frame}
           fps={fps}
+          variant={variant}
         />
       ))}
   </>

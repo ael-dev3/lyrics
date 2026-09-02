@@ -1,5 +1,6 @@
 import { AbsoluteFill, useCurrentFrame, useVideoConfig } from "remotion";
 import { LyricFilm } from "./LyricFilm";
+import type { FilmVariant } from "./film-variant";
 import { lyrics, type PresentationCue } from "./timed-lyrics";
 import {
   frameErrorMs,
@@ -399,12 +400,13 @@ export const ProofDiagnosticOverlay = ({
 export const SyncProofFrame = ({
   frame,
   fps,
-}: Readonly<{ frame: number; fps: number }>) => {
+  variant = "square",
+}: Readonly<{ frame: number; fps: number; variant?: FilmVariant }>) => {
   const state = proofFrameState(null, fps, frame);
 
   return (
     <AbsoluteFill data-sync-proof-frame="true">
-      <LyricFilm />
+      <LyricFilm variant={variant} />
       <ProofDiagnosticOverlay state={state} />
     </AbsoluteFill>
   );
@@ -414,4 +416,10 @@ export const SyncProof = () => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   return <SyncProofFrame frame={frame} fps={fps} />;
+};
+
+export const YouTubeSyncProof = () => {
+  const frame = useCurrentFrame();
+  const { fps } = useVideoConfig();
+  return <SyncProofFrame frame={frame} fps={fps} variant="youtube" />;
 };

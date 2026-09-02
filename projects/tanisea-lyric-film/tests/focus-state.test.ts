@@ -978,4 +978,42 @@ describe("LyricDisplay rendering", () => {
     expect(weight).toBeLessThanOrEqual(700);
     expect(weight).toBe(700);
   });
+
+  test("recomposes the same active lyric timing for the 1920×1080 YouTube stage", () => {
+    const frame = 4_500;
+    const square = renderToStaticMarkup(
+      createElement(LyricDisplay, {frame, fps: 60}),
+    );
+    const youtube = renderToStaticMarkup(
+      createElement(LyricDisplay, {frame, fps: 60, variant: "youtube"}),
+    );
+
+    expect(square).toContain('data-lyric-line-id="V1-04"');
+    expect(youtube).toContain('data-lyric-line-id="V1-04"');
+    expect(youtube).toContain('data-lyric-layout="youtube"');
+    expect(
+      dataOpeningTag(square, "data-lyric-line-id", "V1-04"),
+    ).toContain("padding:0 74px 238px");
+    expect(
+      dataOpeningTag(youtube, "data-lyric-line-id", "V1-04"),
+    ).toContain("padding:0 136px 280px");
+    expect(
+      dataOpeningTag(youtube, "data-lyric-progress-track-id", "V1-04"),
+    ).toContain("width:720px");
+    const squareFocus = dataStyle(
+      square,
+      "data-lyric-glyph-id",
+      "V1-04-S01",
+    );
+    const youtubeFocus = dataStyle(
+      youtube,
+      "data-lyric-glyph-id",
+      "V1-04-S01",
+    );
+    expect(squareFocus).toMatch(/background-size:[^;]+/);
+    expect(youtubeFocus).toMatch(/background-size:[^;]+/);
+    expect(youtubeFocus.match(/background-size:[^;]+/)?.[0]).toBe(
+      squareFocus.match(/background-size:[^;]+/)?.[0],
+    );
+  });
 });
