@@ -70,7 +70,7 @@ The [reviewed alignment report](audits/tanisea-word-alignment-v3.md) lists every
 
 ## Build the source
 
-Requirements: Node.js 20 or newer, npm, FFmpeg, FFprobe, and the Chromium runtime supported by Remotion.
+Requirements: Node.js 20 or newer, npm, FFmpeg, FFprobe, and the Chromium runtime supported by Remotion. The QA sheet generator uses FFmpeg `drawtext` when available; otherwise it uses its checked-in Python/Pillow fallback with the tracked font, without altering any delivery media.
 
 ```sh
 cd projects/tanisea-lyric-film

@@ -137,6 +137,8 @@ export type QaMediaManifest = Readonly<{
   artifacts: readonly QaMediaArtifactRecord[];
 }>;
 
+export type QaContactSheetRenderer = "ffmpeg-drawtext" | "python-pillow";
+
 type QaMediaOutputSafetyOptions = Readonly<{
   qaRoot: string;
   outputPaths: readonly string[];
@@ -198,6 +200,10 @@ const EXPECTED_CORRECTED_RELEASE_CUE_IDS = [
 ] as const;
 const CONTACT_CADENCES = [PUBLIC_FPS, PROOF_FPS] as const;
 const CONTACT_OFFSETS = [-1, 0, 1, 2] as const;
+const CONTACT_SHEET_COLUMNS = 4;
+const CONTACT_SHEET_CELL_SIZE = 480;
+const CONTACT_SHEET_FONT_PATH = "public/SpaceGrotesk.ttf";
+const CONTACT_SHEET_FALLBACK_SCRIPT = "scripts/render-qa-contact-sheet.py";
 
 const requireValue: (
   condition: unknown,
@@ -360,13 +366,13 @@ const sheetCommand = (
     contacts.length === labels.length && contacts.length > 0,
     `Contact sheet ${outputPath} requires matching contacts and labels`,
   );
-  const columns = 4;
-  const cellSize = 480;
+  const columns = CONTACT_SHEET_COLUMNS;
+  const cellSize = CONTACT_SHEET_CELL_SIZE;
   const rows = Math.ceil(contacts.length / columns);
   const cellFilters = labels.map(
     (label, index) =>
       `[${index}:v]scale=${cellSize}:${cellSize},` +
-      `drawtext=fontfile='public/SpaceGrotesk.ttf':text='${label}':` +
+      `drawtext=fontfile='${CONTACT_SHEET_FONT_PATH}':text='${label}':` +
       "x=16:y=h-th-16:" +
       "fontcolor=white:fontsize=24:box=1:boxcolor=black@0.72[cell" +
       `${index}]`,
@@ -914,7 +920,9 @@ const projectRootFromModule = (): string => {
   return basename(parent) === ".tools-dist" ? resolve(parent, "..") : parent;
 };
 
-const allCommands = (plan: QaMediaPlan): readonly CommandPlan[] => [
+type SheetPlan = ContactSheet | ReleaseSheet;
+
+const primaryCommands = (plan: QaMediaPlan): readonly CommandPlan[] => [
   ...plan.publicRanges.flatMap(({ variants }) =>
     variants.map(({ command }) => command),
   ),
@@ -922,11 +930,49 @@ const allCommands = (plan: QaMediaPlan): readonly CommandPlan[] => [
     variants.map(({ command }) => command),
   ),
   ...plan.contacts.map(({ command }) => command),
-  ...plan.contactSheets.map(({ command }) => command),
   ...plan.releases.map(({ command }) => command),
-  ...plan.releaseSheets.map(({ command }) => command),
   ...plan.selectedStills.map(({ command }) => command),
 ];
+
+const sheetPlans = (plan: QaMediaPlan): readonly SheetPlan[] => [
+  ...plan.contactSheets,
+  ...plan.releaseSheets,
+];
+
+export const qaContactSheetRendererForFilters = (
+  filtersOutput: string,
+): QaContactSheetRenderer => {
+  requireValue(
+    typeof filtersOutput === "string",
+    "FFmpeg filter discovery output must be text",
+  );
+  return /(?:^|\s)drawtext(?:\s|$)/m.test(filtersOutput)
+    ? "ffmpeg-drawtext"
+    : "python-pillow";
+};
+
+const discoverQaContactSheetRenderer = (
+  projectRoot: string,
+): QaContactSheetRenderer =>
+  qaContactSheetRendererForFilters(
+    execFileSync("ffmpeg", ["-hide_banner", "-filters"], {
+      cwd: projectRoot,
+      encoding: "utf8",
+      stdio: ["ignore", "pipe", "pipe"],
+    }),
+  );
+
+const qaOutputPath = (qaRoot: string, path: string): string =>
+  resolve(qaRoot, ...path.split("/"));
+
+const assertQaMediaArtifact = (outputPath: string): void => {
+  requireValue(
+    existsSync(outputPath) &&
+      statSync(outputPath).isFile() &&
+      statSync(outputPath).size > 0,
+    `QA-media artifact was not created: ${outputPath}`,
+  );
+};
 
 const executePlannedCommand = (
   command: CommandPlan,
@@ -954,12 +1000,66 @@ const executePlannedCommand = (
     cwd: projectRoot,
     stdio: "inherit",
   });
+  assertQaMediaArtifact(outputPath);
+};
+
+const sheetInputPaths = (sheet: SheetPlan, qaRoot: string): readonly string[] => {
   requireValue(
-    existsSync(outputPath) &&
-      statSync(outputPath).isFile() &&
-      statSync(outputPath).size > 0,
-    `QA-media artifact was not created: ${outputPath}`,
+    sheet.command.arguments.at(-1) === sheet.path,
+    `QA sheet command output drifted from ${sheet.path}`,
   );
+  const inputs = sheet.command.arguments.flatMap((argument, index, argumentsList) =>
+    argumentsList[index - 1] === "-i" ? [qaOutputPath(qaRoot, argument)] : [],
+  );
+  requireValue(
+    inputs.length === sheet.labels.length && inputs.length > 0,
+    `QA sheet ${sheet.path} must have matching inputs and labels`,
+  );
+  return inputs;
+};
+
+const executePythonSheetFallback = (
+  sheet: SheetPlan,
+  projectRoot: string,
+  qaRoot: string,
+): void => {
+  const outputPath = qaOutputPath(qaRoot, sheet.path);
+  const inputPaths = sheetInputPaths(sheet, qaRoot);
+  const fallbackScript = resolve(
+    projectRoot,
+    ...CONTACT_SHEET_FALLBACK_SCRIPT.split("/"),
+  );
+  const fontPath = resolve(projectRoot, ...CONTACT_SHEET_FONT_PATH.split("/"));
+  requireValue(
+    existsSync(fallbackScript) && statSync(fallbackScript).isFile(),
+    `QA contact-sheet fallback is missing: ${fallbackScript}`,
+  );
+  requireValue(
+    existsSync(fontPath) && statSync(fontPath).isFile(),
+    `QA contact-sheet font is missing: ${fontPath}`,
+  );
+  requireValue(
+    !existsSync(outputPath),
+    `Refusing to overwrite existing QA sheet: ${outputPath}`,
+  );
+  execFileSync(
+    "python3",
+    [
+      fallbackScript,
+      "--output",
+      outputPath,
+      "--font",
+      fontPath,
+      "--columns",
+      String(CONTACT_SHEET_COLUMNS),
+      "--cell-size",
+      String(CONTACT_SHEET_CELL_SIZE),
+      ...sheet.labels.flatMap((label) => ["--label", label]),
+      ...inputPaths.flatMap((inputPath) => ["--input", inputPath]),
+    ],
+    {cwd: projectRoot, stdio: "inherit"},
+  );
+  assertQaMediaArtifact(outputPath);
 };
 
 const streamingSha256 = async (path: string): Promise<string> => {
@@ -1017,8 +1117,19 @@ const renderQaMedia = async (): Promise<void> => {
   }
 
   const outputPathSet = new Set(outputPaths);
-  for (const command of allCommands(plan)) {
+  for (const command of primaryCommands(plan)) {
     executePlannedCommand(command, projectRoot, qaRoot, outputPathSet);
+  }
+  const contactSheetRenderer = discoverQaContactSheetRenderer(projectRoot);
+  process.stdout.write(
+    `${JSON.stringify({contactSheetRenderer}, null, 2)}\n`,
+  );
+  for (const sheet of sheetPlans(plan)) {
+    if (contactSheetRenderer === "ffmpeg-drawtext") {
+      executePlannedCommand(sheet.command, projectRoot, qaRoot, outputPathSet);
+    } else {
+      executePythonSheetFallback(sheet, projectRoot, qaRoot);
+    }
   }
 
   const artifacts: QaMediaArtifactRecord[] = [];

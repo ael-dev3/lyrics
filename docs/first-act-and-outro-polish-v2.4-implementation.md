@@ -63,4 +63,22 @@ The source gates cover the new behavior directly:
 
 The full 120 fps proof is rendered at four concurrent workers with a 120-second per-frame ceiling, preventing an isolated browser-render stall from invalidating the diagnostic artifact.
 
+### QA contact-sheet portability
+
+During the v2.4.1 publication run, the installed FFmpeg `8.1.2` build decoded,
+encoded, scaled, and strictly verified all delivery media, but its filter list
+did not contain optional `drawtext`. The first QA-media attempt therefore
+stopped only while building the first labeled contact sheet; the production
+master and 120 fps proof had already passed their complete strict-decode and
+packet-identity checks.
+
+`npm run qa:clips` now probes `ffmpeg -filters` before sheet generation. A
+build with `drawtext` keeps the primary FFmpeg `xstack` path. A build without
+it invokes the checked-in Python/Pillow compositor with the tracked Space
+Grotesk font, the same `480×480` cells, four-column layout, deterministic
+labels, and no-overwrite/atomic-output checks. The fallback only composites
+already-decoded QA frames: it cannot affect vocal samples, cue timing,
+presentation choreography, the reference render, the public master, or the
+synchronization proof.
+
 The full render, delivery, synchronization-proof, layout, strict-decode, repeated-QA, publication, and checksum gates remain required for the v2.4.1 package.

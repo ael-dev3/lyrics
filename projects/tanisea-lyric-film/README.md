@@ -13,6 +13,14 @@ Requirements:
 - FFmpeg and FFprobe;
 - a Chromium-compatible environment supported by Remotion.
 
+`npm run qa:clips` probes the local FFmpeg filter list before drawing labeled
+contact and release sheets. It uses FFmpeg's `drawtext` filter when available.
+If a valid FFmpeg build omits that optional filter, it automatically uses the
+checked-in `scripts/render-qa-contact-sheet.py` compositor with Python 3 and
+Pillow, plus the tracked `public/SpaceGrotesk.ttf` font. This fallback only
+labels already-extracted QA frames; it never changes source timing or the
+production/proof masters.
+
 ```sh
 npm ci
 npm run features

@@ -170,6 +170,9 @@ type QaMediaManifest = Readonly<{
 type QaMediaApi = Readonly<{
   createQaMediaPlan: () => QaMediaPlan;
   qaMediaOutputPaths: (plan: QaMediaPlan) => readonly string[];
+  qaContactSheetRendererForFilters: (
+    filtersOutput: string,
+  ) => "ffmpeg-drawtext" | "python-pillow";
   createCanonicalQaMediaManifest: (
     plan: QaMediaPlan,
     artifacts: readonly QaMediaArtifactRecord[],
@@ -312,6 +315,9 @@ describe("QA-media authority plan", () => {
   test("exports an import-safe deterministic planning API", () => {
     expect(requireApi("createQaMediaPlan")).toBeTypeOf("function");
     expect(requireApi("qaMediaOutputPaths")).toBeTypeOf("function");
+    expect(requireApi("qaContactSheetRendererForFilters")).toBeTypeOf(
+      "function",
+    );
     expect(requireApi("createCanonicalQaMediaManifest")).toBeTypeOf("function");
     expect(requireApi("verifyQaMediaOutputSafety")).toBeTypeOf("function");
   });
@@ -322,6 +328,16 @@ describe("QA-media authority plan", () => {
       alignmentManifest: "alignment/tanisea-word-alignment-v3.json",
       roughHistoryUsed: false,
     });
+  });
+
+  test("uses the Pillow sheet fallback only when this FFmpeg lacks drawtext", () => {
+    const selectRenderer = requireApi("qaContactSheetRendererForFilters");
+    expect(
+      selectRenderer(" .. drawtext          V->V       Draw text on top of video frames"),
+    ).toBe("ffmpeg-drawtext");
+    expect(
+      selectRenderer(" .. overlay           VV->V      Overlay a video on top of another"),
+    ).toBe("python-pillow");
   });
 
   test("creates exactly 24 line-contact and six dedicated public ranges", () => {

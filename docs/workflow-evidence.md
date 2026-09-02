@@ -10,6 +10,13 @@ round(1,631,876 + (s - 4,595,926) × 539,520 / 575,328)
 
 The mapping covers word attack, release, inter-word gaps, entrance, settle, and ordinary handoffs. The `C1-08` exit remains tied to its break-card milestone. The source keeps the reviewed schedule in `cues` and records the derived visible schedule in `presentationCues`, allowing the proof and QA records to show both without conflating them.
 
+The QA-media step is portable across FFmpeg builds. It probes `ffmpeg -filters`:
+when `drawtext` is available, labels are rendered inside the primary FFmpeg
+contact-sheet path; otherwise, the checked-in Python/Pillow compositor uses the
+tracked Space Grotesk font and the same deterministic four-column 480 px grid.
+The fallback only annotates extracted QA frames and has no rendering path into
+the reference, public, or proof masters.
+
 The reproducible release sequence is:
 
 1. Run `npm run check` and `npm run alignment:verify` on the tagged source revision.
