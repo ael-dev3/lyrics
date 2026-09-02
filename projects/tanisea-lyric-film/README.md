@@ -2,6 +2,8 @@
 
 This directory contains the reproducible Remotion source, reviewed alignment data, deterministic audio features, render tools, and release gates for the 153-second Tanisea English lyric film, including the approved square master and a native 16:9 YouTube edition.
 
+For a stable comparison with the official static-audio upload—including viewer-facing differences, project metrics, attribution, and the rights boundary—see [Original upload vs English lyric film](../../docs/original-vs-lyric-film-comparison.md).
+
 The public claim is **sample-indexed alignment with frame-bounded rendering**. Timing is stored against the locked 44.1 kHz soundtrack as integer sample indices and converted to the nearest video frame only at render time.
 
 ## Quick start

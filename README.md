@@ -28,6 +28,8 @@ Tanisea is a complete 9,180-frame Remotion lyric film built against a locked 153
 
 The public composition keeps diagnostics out of the picture. A separate 120 fps proof exposes source tokens, target segments, sample indices, confidence, uncertainty, and frame error for inspection.
 
+The [original-versus-lyric-film comparison](docs/original-vs-lyric-film-comparison.md) records exactly what the official static-audio presentation supplies, what this project adds, the measurable engineering footprint, and the contribution and rights boundary. It links the [official source upload](https://www.youtube.com/watch?v=dYraLlQzjAA) and the [published English lyric film](https://www.youtube.com/watch?v=ZWBaldEgepk).
+
 The implementation includes:
 
 - 24 reviewed vocal lines, 102 source tokens, 74 English segments, and 74 semantic cues;
