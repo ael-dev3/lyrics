@@ -24,10 +24,10 @@ npm run dev
 
 ## Compositions
 
-| Composition | Dimensions | Cadence | Frames | Purpose |
-| --- | ---: | ---: | ---: | --- |
-| `LyricFilmVNext` | 1080×1080 | 60 fps | 9,180 | Clean public master |
-| `LyricFilmSyncProof` | 1080×1080 | 120 fps | 18,360 | Diagnostic synchronization proof |
+| Composition          | Dimensions | Cadence | Frames | Purpose                          |
+| -------------------- | ---------: | ------: | -----: | -------------------------------- |
+| `LyricFilmVNext`     |  1080×1080 |  60 fps |  9,180 | Clean public master              |
+| `LyricFilmSyncProof` |  1080×1080 | 120 fps | 18,360 | Diagnostic synchronization proof |
 
 Both compositions use `src/index.ts` as their entry point and the same sample-indexed alignment authority. The proof adds token, target, uncertainty, and signed frame-error overlays without changing the public design.
 
@@ -50,40 +50,41 @@ The observed maximum semantic-cue boundary errors are `8.321995 ms` at 60 fps an
 
 English words remain in fixed positions. The render computes focus from active semantic cues rather than rebuilding the line as progress text. This allows forward, backward, repeated, and simultaneous activation while keeping layout stationary.
 
-All public lyric acts use the same cinematic presentation profile. Each line begins its entrance 10,584 samples (240 ms) before the reviewed vocal start and settles 2,205 samples (50 ms) before contact. Internal handoffs crossfade for 8,379 samples (190 ms). Semantic emphasis attacks over three frames and releases over two while the reviewed cue sample remains the authority. `C1-06`, `C1-07`, and `C1-08` retain their reviewed semantic target order and exact exclusive cue releases, including backward contact where Russian and English concept order differ. `C1-01` retains its contiguous English-order presentation. The horizontal rail advances by cue stage and pauses in reviewed inter-word gaps. The original `cues` remain unchanged for alignment auditability, and the same sample authority drives the 120 fps proof.
+The first build lines (`C1-01` through `C1-04`) retain the `precision` presentation profile. The complete repeated first-chorus window (`C1-05` through `C1-08`, including the `00:40–00:50` review range) uses an affine fit of the approved `C2-05`–`C2-08` word choreography: three-frame emphasis attack, two-frame focus release, cue-stage rail progression, and cinematic line handoffs all retain their relative C2 timing while being fitted to the C1 performance window. `cues` retain the independently reviewed C1 source samples and semantic targets; `presentationCues` are the explicitly derived visual schedule. The diagnostic proof and QA contact/release sheets report both clocks so the public timing transformation remains inspectable.
 
 ## Audio features and spectrum
 
 `public/audio-features.bin` stores 9,180 fixed-size records generated from `public/soundtrack.m4a`. Each record includes 64 logarithmic bands, sustained pressure, transient impact, low-end weight, brightness, emotional emphasis, line reach, momentary dBFS, and sample peak dBFS. `public/audio-features.manifest.json` records generation settings and hashes.
 
-The public spectrum integrates measurement and transient emphasis into one line per band:
+The public spectrum separates measurement from emphasis:
 
 - a symmetric `[1, 2, 3, 2, 1]` kernel smooths adjacent frames and bands without phase delay;
-- 64 flat-ended 4 px SVG lines and a restrained ember/teal split reduce visual mass and chatter;
-- the measured component has 96 px of travel at the verified peak;
-- transient emphasis extends the same continuous line by at most 18 px, for 114 px maximum travel;
-- no separate cap, rounded tip, circle, or dot is rendered;
-- browser geometry checks preserve at least 36 px between lyrics and the maximum line;
-- all 64 lines remain inside the public safe area.
+- 7 px square-ended spectrum lines, a restrained ember/teal split with no neutral interpolation, and softer chrome reduce visual chatter;
+- the measured core has at least 96 px of travel at the verified peak;
+- the lighter transient cap extends the display by at most 18 px;
+- the cap does not alter the measured magnitude;
+- browser geometry checks preserve at least 36 px between lyrics and the maximum cap;
+- all 64 measured bands and 64 caps remain inside the public safe area.
 
 ## Commands
 
-| Command | Function |
-| --- | --- |
-| `npm run dev` | Open Remotion Studio |
-| `npm run features` | Regenerate deterministic audio features |
-| `npm run alignment:prepare` | Prepare decoded audio and alignment input artifacts |
-| `npm run alignment:import` | Import reviewed external evidence into the alignment manifest |
-| `npm run alignment:verify` | Verify token, cue, uncertainty, and cadence contracts |
-| `npm run layout:verify` | Measure lyric/spectrum layout in Chromium |
-| `npm run render` | Render and normalize the muted 2160×2160 4:4:4 reference |
-| `npm run encode` | Downsample once, encode 10-bit HEVC, and copy original AAC |
-| `npm run proof` | Render and verify the 120 fps proof |
-| `npm run verify` | Full-decode and inspect a delivery artifact |
-| `npm run qa:clips` | Generate deterministic contact sheets, clips, and selected frames |
-| `npm run qa:run` | Execute and record the complete release matrix |
-| `npm run qa:publish` | Finalize criterion 11 from verified remote release evidence |
-| `npm run check` | Run source, test, layout, and composition gates |
+| Command                     | Function                                                          |
+| --------------------------- | ----------------------------------------------------------------- |
+| `npm run dev`               | Open Remotion Studio                                              |
+| `npm run features`          | Regenerate deterministic audio features                           |
+| `npm run alignment:prepare` | Prepare decoded audio and alignment input artifacts               |
+| `npm run alignment:import`  | Import reviewed external evidence into the alignment manifest     |
+| `npm run alignment:verify`  | Verify token, cue, uncertainty, and cadence contracts             |
+| `npm run layout:verify`     | Measure lyric/spectrum layout in Chromium                         |
+| `npm run render`            | Render and normalize the muted 2160×2160 4:4:4 reference          |
+| `npm run encode`            | Downsample once, encode 10-bit HEVC, and copy original AAC        |
+| `npm run proof`             | Render and verify the 120 fps proof                               |
+| `npm run verify`            | Full-decode and inspect a delivery artifact                       |
+| `npm run qa:clips`          | Generate deterministic contact sheets, clips, and selected frames |
+| `npm run qa:run`            | Execute one named release-matrix run (`TANISEA_QA_RUN=run-1|run-2`) |
+| `npm run qa:publish`        | Finalize criterion 11 from verified remote release evidence       |
+| `npm run workflow:package`  | Build the sanitized supplemental workflow archive                 |
+| `npm run check`             | Run source, test, layout, and composition gates                   |
 
 Scripts that accept artifact paths take them after `--`. Their defaults target the checked project layout and `output/`.
 
@@ -97,12 +98,35 @@ npm run verify -- --kind reference
 npm run verify -- --kind public
 npm run verify -- --kind proof
 npm run qa:clips
-npm run qa:run
+TANISEA_QA_RUN=run-1 npm run qa:run
+TANISEA_QA_RUN=run-2 npm run qa:run
 ```
 
 The reference is 2160×2160 ProRes 4444 in BT.709. The public master is encoded from that reference as 1080×1080, 60 fps, 10-bit HEVC with the `hvc1` tag and `faststart`. The proof is 1080×1080 H.264 at 120 fps. Both final MP4 files copy the locked AAC packets without gain, normalization, or audio re-encoding.
 
 Delivery verification checks container duration, dimensions, cadence, frame count, codec, pixel format, colour metadata, strict full decode, `moov` placement, audio stream geometry, packet identity, and exact timeline geometry.
+
+## Release publication workflow
+
+The two QA runs are intentionally separate and must start with no stale `work/qa/run-1`, `work/qa/run-2`, or tracked `audits/tanisea-final-qa-vnext.*` outputs. The first run records its full command ledger and QA media; the second reproduces it, compares every stable artifact, and writes the pre-publication audit.
+
+Publish the six stable release assets (production master, sync proof, hero image, project source archive, alignment JSON, and alignment report), plus the two QA reports and `CHECKSUMS.sha256`. The source archive is a Git archive of `projects/tanisea-lyric-film` at the release source commit, so it contains the exact Remotion source, scripts, reviewed alignment, soundtrack, artwork, fonts, deterministic features, and tests used for the render.
+
+After downloading those eight release files and checking their SHA-256 values against `CHECKSUMS.sha256`, record the verified release URL, source commit, asset sizes, and hashes in `work/release-publication.json`, then run:
+
+```sh
+npm run qa:publish
+```
+
+That command upgrades the final audit from `passed-prepublication` to `passed-publication`. The supplemental workflow archive then preserves the two QA records, command logs, generated contact/release media, visual-review artifacts, and manifest without duplicating the final media or source archive.
+
+Create it only after `qa:publish` and after recording the release verification, with the immutable source revision that was used for the source archive:
+
+```sh
+TANISEA_RELEASE_SOURCE_COMMIT=<40-character-release-commit> npm run workflow:package
+```
+
+The packer refuses pre-existing output paths, rejects symlinks, uses repository-relative manifest paths, and replaces local checkout/home paths in text evidence before it creates the public ZIP.
 
 ## QA evidence
 
@@ -120,7 +144,7 @@ The release matrix verifies:
 10. repeated QA with no unexplained artifact drift;
 11. publication assets, checksums, and documentation.
 
-See the [final QA report](../../audits/tanisea-final-qa-vnext.md), [v2.4 implementation report](../../docs/cinematic-parity-v2.4-implementation.md), [first-pass song workflow](../../docs/first-pass-song-workflow.md), [v2.3 implementation report](../../docs/first-act-semantic-sync-v2.3-implementation.md), [full-system implementation report](../../docs/precision-sync-vnext-implementation.md), and [workflow evidence guide](../../docs/workflow-evidence.md). The supplemental release archive preserves the generated alignment provenance, both canonical QA runs, QA media, and final visual-review artifacts that remain excluded from source control.
+See the [final QA report](../../audits/tanisea-final-qa-vnext.md), [v2.4 implementation report](../../docs/first-act-and-outro-polish-v2.4-implementation.md), [v2.3 implementation report](../../docs/first-act-semantic-sync-v2.3-implementation.md), [v2.2 implementation report](../../docs/first-act-polish-v2.2-implementation.md), [v2.1 implementation report](../../docs/first-act-precision-v2.1-implementation.md), [full-system implementation report](../../docs/precision-sync-vnext-implementation.md), and [workflow evidence guide](../../docs/workflow-evidence.md). The supplemental release archive preserves the generated alignment provenance, both canonical QA runs, QA media, and final visual-review artifacts that remain excluded from source control.
 
 ## Source layout
 

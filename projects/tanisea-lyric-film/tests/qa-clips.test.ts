@@ -1,19 +1,19 @@
-import {win32} from 'node:path';
-import {describe, expect, test, vi} from 'vitest';
-import {lyrics, presentationMilestones} from '../src/timed-lyrics';
-import {taniseaAlignment} from '../src/timing/tanisea-alignment';
+import { win32 } from "node:path";
+import { describe, expect, test, vi } from "vitest";
+import { lyrics, presentationMilestones } from "../src/timed-lyrics";
+import { taniseaAlignment } from "../src/timing/tanisea-alignment";
 import {
   PUBLIC_FPS,
   PROOF_FPS,
   SAMPLE_RATE,
   frameForSample,
-} from '../src/timing/alignment-types';
+} from "../src/timing/alignment-types";
 
 const importIo = vi.hoisted(() => {
-  const childProcess = vi.fn(() => '');
+  const childProcess = vi.fn(() => "");
   const filesystemRead = vi.fn(() => Buffer.alloc(0));
   const filesystemMutation = vi.fn();
-  const stdoutWrite = vi.spyOn(process.stdout, 'write');
+  const stdoutWrite = vi.spyOn(process.stdout, "write");
   stdoutWrite.mockImplementation(() => true);
   return {
     childProcess,
@@ -23,14 +23,14 @@ const importIo = vi.hoisted(() => {
   };
 });
 
-vi.mock('node:child_process', async (importOriginal) => ({
-  ...(await importOriginal<typeof import('node:child_process')>()),
+vi.mock("node:child_process", async (importOriginal) => ({
+  ...(await importOriginal<typeof import("node:child_process")>()),
   execFileSync: importIo.childProcess,
   spawnSync: importIo.childProcess,
 }));
 
-vi.mock('node:fs', async (importOriginal) => ({
-  ...(await importOriginal<typeof import('node:fs')>()),
+vi.mock("node:fs", async (importOriginal) => ({
+  ...(await importOriginal<typeof import("node:fs")>()),
   closeSync: importIo.filesystemRead,
   existsSync: importIo.filesystemRead,
   mkdirSync: importIo.filesystemMutation,
@@ -46,8 +46,8 @@ vi.mock('node:fs', async (importOriginal) => ({
   writeFileSync: importIo.filesystemMutation,
 }));
 
-vi.mock('node:fs/promises', async (importOriginal) => ({
-  ...(await importOriginal<typeof import('node:fs/promises')>()),
+vi.mock("node:fs/promises", async (importOriginal) => ({
+  ...(await importOriginal<typeof import("node:fs/promises")>()),
   mkdir: importIo.filesystemMutation,
   readFile: importIo.filesystemRead,
   readdir: importIo.filesystemRead,
@@ -59,42 +59,37 @@ vi.mock('node:fs/promises', async (importOriginal) => ({
   writeFile: importIo.filesystemMutation,
 }));
 
-type QaMediaSource = 'public' | 'proof' | 'reference';
+type QaMediaSource = "public" | "proof" | "reference";
 
 type CommandPlan = Readonly<{
-  executable: 'ffmpeg';
+  executable: "ffmpeg";
   arguments: readonly string[];
 }>;
 
 type ClipVariant = Readonly<{
-  speed: 'normal' | 'half';
+  speed: "normal" | "half";
   path: string;
   command: CommandPlan;
 }>;
 
 type ReviewRange = Readonly<{
   id: string;
-  source: 'public' | 'proof';
+  source: "public" | "proof";
   centerSample: number;
   startSample: number;
   endSample: number;
   variants: readonly ClipVariant[];
 }>;
 
-type HighRiskLineId =
-  | 'C1-04'
-  | 'C1-06'
-  | 'C1-07'
-  | 'C1-08'
-  | 'V1-03'
-  | 'V1-08';
+type HighRiskLineId = "C1-04" | "C1-06" | "C1-07" | "C1-08" | "V1-03" | "V1-08";
 
-type CorrectedReleaseLineId = 'C1-06' | 'C1-07' | 'C1-08';
+type CorrectedReleaseLineId = "C1-06" | "C1-07" | "C1-08";
 
 type ContactFrame = Readonly<{
   id: string;
   lineId: HighRiskLineId;
   cueId: string;
+  reviewedCueStartSample: number;
   cueStartSample: number;
   cadenceFps: 60 | 120;
   offsetFrames: -1 | 0 | 1 | 2;
@@ -116,6 +111,7 @@ type ReleaseFrame = Readonly<{
   id: string;
   lineId: CorrectedReleaseLineId;
   cueId: string;
+  reviewedCueEndSample: number;
   cueEndSample: number;
   cadenceFps: 60 | 120;
   offsetFrames: -1 | 0 | 1 | 2;
@@ -146,8 +142,8 @@ type SelectedStill = Readonly<{
 type QaMediaPlan = Readonly<{
   schemaVersion: 1;
   authority: Readonly<{
-    timedLyrics: 'src/timed-lyrics.ts';
-    alignmentManifest: 'alignment/tanisea-word-alignment-v3.json';
+    timedLyrics: "src/timed-lyrics.ts";
+    alignmentManifest: "alignment/tanisea-word-alignment-v3.json";
     roughHistoryUsed: false;
   }>;
   publicRanges: readonly ReviewRange[];
@@ -178,16 +174,18 @@ type QaMediaApi = Readonly<{
     plan: QaMediaPlan,
     artifacts: readonly QaMediaArtifactRecord[],
   ) => QaMediaManifest;
-  verifyQaMediaOutputSafety: (options: Readonly<{
-    qaRoot: string;
-    outputPaths: readonly string[];
-    existingEntries: readonly string[];
-    protectedInputs: readonly string[];
-    canonicalize: (path: string) => string;
-  }>) => void;
+  verifyQaMediaOutputSafety: (
+    options: Readonly<{
+      qaRoot: string;
+      outputPaths: readonly string[];
+      existingEntries: readonly string[];
+      protectedInputs: readonly string[];
+      canonicalize: (path: string) => string;
+    }>,
+  ) => void;
 }>;
 
-const qaMediaModuleSpecifier = '../scripts/render-qa-clips';
+const qaMediaModuleSpecifier = "../scripts/render-qa-clips";
 const qaMediaModule = (await import(
   /* @vite-ignore */ qaMediaModuleSpecifier
 ).catch(() => ({}))) as Partial<QaMediaApi>;
@@ -204,95 +202,105 @@ const requireApi = <Name extends keyof QaMediaApi>(
   name: Name,
 ): QaMediaApi[Name] => {
   const value = qaMediaModule[name];
-  expect(value, `render-qa-clips must export ${name}`).toBeTypeOf('function');
+  expect(value, `render-qa-clips must export ${name}`).toBeTypeOf("function");
   return value as QaMediaApi[Name];
 };
 
-const createPlan = (): QaMediaPlan => requireApi('createQaMediaPlan')();
+const createPlan = (): QaMediaPlan => requireApi("createQaMediaPlan")();
 
-const highRiskCueAuthorities = taniseaAlignment.lines
-  .filter(({id}) =>
-    ['C1-04', 'C1-06', 'C1-07', 'C1-08', 'V1-03', 'V1-08'].includes(id),
+const highRiskCueAuthorities = lyrics
+  .filter(({ id }) =>
+    ["C1-04", "C1-06", "C1-07", "C1-08", "V1-03", "V1-08"].includes(id),
   )
-  .flatMap(({id, cues}) =>
-    cues.map((cue) => ({
-      lineId: id as HighRiskLineId,
-      cueId: cue.id,
-      startSample: cue.startSample,
-    })),
+  .flatMap((line) =>
+    line.presentationCues.map((cue) => {
+      const reviewedCue = line.cues.find(({ id }) => id === cue.sourceCueId);
+      if (!reviewedCue) throw new Error(`Missing ${cue.sourceCueId}`);
+      return {
+        lineId: line.id as HighRiskLineId,
+        cueId: cue.sourceCueId,
+        reviewedStartSample: reviewedCue.startSample,
+        startSample: cue.startSample,
+      };
+    }),
   );
 
-const correctedReleaseCueAuthorities = taniseaAlignment.lines
-  .filter(({id}) => ['C1-06', 'C1-07', 'C1-08'].includes(id))
-  .flatMap(({id, cues}) =>
-    cues.map((cue) => ({
-      lineId: id as CorrectedReleaseLineId,
-      cueId: cue.id,
-      endSample: cue.endSample,
-    })),
+const correctedReleaseCueAuthorities = lyrics
+  .filter(({ id }) => ["C1-06", "C1-07", "C1-08"].includes(id))
+  .flatMap((line) =>
+    line.presentationCues.map((cue) => {
+      const reviewedCue = line.cues.find(({ id }) => id === cue.sourceCueId);
+      if (!reviewedCue) throw new Error(`Missing ${cue.sourceCueId}`);
+      return {
+        lineId: line.id as CorrectedReleaseLineId,
+        cueId: cue.sourceCueId,
+        reviewedEndSample: reviewedCue.endSample,
+        endSample: cue.endSample,
+      };
+    }),
   );
 
 const expectedStillAuthorities = [
   {
-    id: 'chrome',
-    source: 'public',
+    id: "chrome",
+    source: "public",
     frame: 3844,
     width: 1080,
     height: 1080,
-    path: 'stills/public-chrome.png',
+    path: "stills/public-chrome.png",
   },
   {
-    id: 'handoff',
-    source: 'public',
+    id: "handoff",
+    source: "public",
     frame: 7079,
     width: 1080,
     height: 1080,
-    path: 'stills/public-handoff.png',
+    path: "stills/public-handoff.png",
   },
   {
-    id: 'focus',
-    source: 'public',
+    id: "focus",
+    source: "public",
     frame: 4355,
     width: 1080,
     height: 1080,
-    path: 'stills/public-focus.png',
+    path: "stills/public-focus.png",
   },
   {
-    id: 'safe-area',
-    source: 'public',
+    id: "safe-area",
+    source: "public",
     frame: 4458,
     width: 1080,
     height: 1080,
-    path: 'stills/public-safe-area.png',
+    path: "stills/public-safe-area.png",
   },
   {
-    id: 'spectrum-peak',
-    source: 'public',
+    id: "spectrum-peak",
+    source: "public",
     frame: 2306,
     width: 1080,
     height: 1080,
-    path: 'stills/public-spectrum-peak.png',
+    path: "stills/public-spectrum-peak.png",
   },
   {
-    id: 'backward-contact',
-    source: 'proof',
+    id: "backward-contact",
+    source: "proof",
     frame: 10394,
     width: 1080,
     height: 1080,
-    path: 'stills/proof-backward-contact.png',
+    path: "stills/proof-backward-contact.png",
   },
   {
-    id: 'final-transition',
-    source: 'reference',
+    id: "final-transition",
+    source: "reference",
     frame: 7092,
     width: 2160,
     height: 2160,
-    path: 'stills/reference-final-transition.png',
+    path: "stills/reference-final-transition.png",
   },
 ] as const;
 
-describe('QA-media authority plan', () => {
-  test('performs no process, filesystem, or stdout I/O on import', () => {
+describe("QA-media authority plan", () => {
+  test("performs no process, filesystem, or stdout I/O on import", () => {
     expect(importSideEffects).toEqual({
       childProcesses: 0,
       filesystemMutations: 0,
@@ -301,59 +309,57 @@ describe('QA-media authority plan', () => {
     });
   });
 
-  test('exports an import-safe deterministic planning API', () => {
-    expect(requireApi('createQaMediaPlan')).toBeTypeOf('function');
-    expect(requireApi('qaMediaOutputPaths')).toBeTypeOf('function');
-    expect(requireApi('createCanonicalQaMediaManifest')).toBeTypeOf(
-      'function',
-    );
-    expect(requireApi('verifyQaMediaOutputSafety')).toBeTypeOf('function');
+  test("exports an import-safe deterministic planning API", () => {
+    expect(requireApi("createQaMediaPlan")).toBeTypeOf("function");
+    expect(requireApi("qaMediaOutputPaths")).toBeTypeOf("function");
+    expect(requireApi("createCanonicalQaMediaManifest")).toBeTypeOf("function");
+    expect(requireApi("verifyQaMediaOutputSafety")).toBeTypeOf("function");
   });
 
-  test('declares only the accepted timing authorities', () => {
+  test("declares only the accepted timing authorities", () => {
     expect(createPlan().authority).toEqual({
-      timedLyrics: 'src/timed-lyrics.ts',
-      alignmentManifest: 'alignment/tanisea-word-alignment-v3.json',
+      timedLyrics: "src/timed-lyrics.ts",
+      alignmentManifest: "alignment/tanisea-word-alignment-v3.json",
       roughHistoryUsed: false,
     });
   });
 
-  test('creates exactly 24 line-contact and six dedicated public ranges', () => {
+  test("creates exactly 24 line-contact and six dedicated public ranges", () => {
     const publicRanges = createPlan().publicRanges;
-    const lineRanges = publicRanges.filter(({id}) => id.startsWith('line-'));
+    const lineRanges = publicRanges.filter(({ id }) => id.startsWith("line-"));
     const dedicatedRanges = publicRanges.filter(
-      ({id}) => !id.startsWith('line-'),
+      ({ id }) => !id.startsWith("line-"),
     );
 
     expect(publicRanges).toHaveLength(30);
     expect(lineRanges).toHaveLength(24);
-    expect(lineRanges.map(({id}) => id)).toEqual(
-      lyrics.map(({id}) => `line-${id.toLowerCase()}`),
+    expect(lineRanges.map(({ id }) => id)).toEqual(
+      lyrics.map(({ id }) => `line-${id.toLowerCase()}`),
     );
-    expect(dedicatedRanges.map(({id}) => id).sort()).toEqual([
-      'chorus-1',
-      'chorus-2',
-      'final-handoff',
-      'first-act-40-50',
-      'v1-03',
-      'v1-08',
+    expect(dedicatedRanges.map(({ id }) => id).sort()).toEqual([
+      "chorus-1",
+      "chorus-2",
+      "final-handoff",
+      "first-act-40-50",
+      "v1-03",
+      "v1-08",
     ]);
   });
 
-  test('covers the complete requested 40–50 second passage with half-second handles', () => {
+  test("covers the complete requested 40–50 second passage with half-second handles", () => {
     const range = createPlan().publicRanges.find(
-      ({id}) => id === 'first-act-40-50',
+      ({ id }) => id === "first-act-40-50",
     );
 
     expect(range).toMatchObject({
-      source: 'public',
+      source: "public",
       centerSample: 1_984_500,
       startSample: 1_741_950,
       endSample: 2_227_050,
     });
   });
 
-  test('centers every public line-contact range on reviewed vocal timing', () => {
+  test("centers every public line-contact range on reviewed vocal timing", () => {
     const rangesById = new Map(
       createPlan().publicRanges.map((range) => [range.id, range] as const),
     );
@@ -372,14 +378,15 @@ describe('QA-media authority plan', () => {
     }
   });
 
-  test('creates only the two dedicated proof ranges', () => {
-    expect(createPlan().proofRanges.map(({id}) => id).sort()).toEqual([
-      'v1-03',
-      'v1-08',
-    ]);
+  test("creates only the two dedicated proof ranges", () => {
+    expect(
+      createPlan()
+        .proofRanges.map(({ id }) => id)
+        .sort(),
+    ).toEqual(["v1-03", "v1-08"]);
   });
 
-  test('keeps every review range ordered and inside the public timeline', () => {
+  test("keeps every review range ordered and inside the public timeline", () => {
     const plan = createPlan();
     for (const range of [...plan.publicRanges, ...plan.proofRanges]) {
       expect(range.startSample, range.id).toBeGreaterThanOrEqual(0);
@@ -393,24 +400,24 @@ describe('QA-media authority plan', () => {
     }
   });
 
-  test('emits normal and pitch-preserved half-speed variants for all 32 ranges', () => {
+  test("emits normal and pitch-preserved half-speed variants for all 32 ranges", () => {
     const plan = createPlan();
     const ranges = [...plan.publicRanges, ...plan.proofRanges];
     expect(ranges).toHaveLength(32);
 
     for (const range of ranges) {
-      expect(range.variants.map(({speed}) => speed)).toEqual([
-        'normal',
-        'half',
+      expect(range.variants.map(({ speed }) => speed)).toEqual([
+        "normal",
+        "half",
       ]);
       const normal = range.variants[0]!;
       const half = range.variants[1]!;
-      expect(normal.command.executable).toBe('ffmpeg');
-      expect(normal.command.arguments.join(' ')).not.toContain('setpts=2*PTS');
-      expect(normal.command.arguments.join(' ')).not.toContain('atempo=0.5');
-      expect(half.command.executable).toBe('ffmpeg');
-      expect(half.command.arguments).toContain('setpts=2*PTS');
-      expect(half.command.arguments).toContain('atempo=0.5');
+      expect(normal.command.executable).toBe("ffmpeg");
+      expect(normal.command.arguments.join(" ")).not.toContain("setpts=2*PTS");
+      expect(normal.command.arguments.join(" ")).not.toContain("atempo=0.5");
+      expect(half.command.executable).toBe("ffmpeg");
+      expect(half.command.arguments).toContain("setpts=2*PTS");
+      expect(half.command.arguments).toContain("atempo=0.5");
       expect(normal.path).toMatch(
         new RegExp(`^clips/${range.source}/${range.id}-normal\\.mp4$`),
       );
@@ -421,32 +428,32 @@ describe('QA-media authority plan', () => {
   });
 });
 
-describe('cue-contact and sheet plan', () => {
-  test('derives all nineteen high-risk cues from the reviewed alignment', () => {
-    expect(highRiskCueAuthorities.map(({cueId}) => cueId)).toEqual([
-      'C1-04-C01',
-      'C1-04-C02',
-      'C1-04-C03',
-      'C1-06-C01',
-      'C1-06-C02',
-      'C1-06-C03',
-      'C1-07-C01',
-      'C1-07-C02',
-      'C1-07-C03',
-      'C1-08-C01',
-      'C1-08-C02',
-      'C1-08-C03',
-      'V1-03-C01',
-      'V1-03-C02',
-      'V1-03-C03',
-      'V1-08-C01',
-      'V1-08-C02',
-      'V1-08-C03',
-      'V1-08-C04',
+describe("cue-contact and sheet plan", () => {
+  test("keeps all nineteen high-risk source cue IDs while using visible presentation contacts", () => {
+    expect(highRiskCueAuthorities.map(({ cueId }) => cueId)).toEqual([
+      "C1-04-C01",
+      "C1-04-C02",
+      "C1-04-C03",
+      "C1-06-C01",
+      "C1-06-C02",
+      "C1-06-C03",
+      "C1-07-C01",
+      "C1-07-C02",
+      "C1-07-C03",
+      "C1-08-C01",
+      "C1-08-C02",
+      "C1-08-C03",
+      "V1-03-C01",
+      "V1-03-C02",
+      "V1-03-C03",
+      "V1-08-C01",
+      "V1-08-C02",
+      "V1-08-C03",
+      "V1-08-C04",
     ]);
   });
 
-  test('emits exactly 152 cadence-specific contact PNGs at offsets -1 through +2', () => {
+  test("emits exactly 152 cadence-specific contact PNGs at offsets -1 through +2", () => {
     const contacts = createPlan().contacts;
     expect(contacts).toHaveLength(152);
 
@@ -454,77 +461,73 @@ describe('cue-contact and sheet plan', () => {
       for (const cadenceFps of [PUBLIC_FPS, PROOF_FPS] as const) {
         const cueContacts = contacts.filter(
           (contact) =>
-            contact.cueId === cue.cueId &&
-            contact.cadenceFps === cadenceFps,
+            contact.cueId === cue.cueId && contact.cadenceFps === cadenceFps,
         );
-        expect(cueContacts.map(({offsetFrames}) => offsetFrames)).toEqual([
-          -1,
-          0,
-          1,
-          2,
+        expect(cueContacts.map(({ offsetFrames }) => offsetFrames)).toEqual([
+          -1, 0, 1, 2,
         ]);
         for (const contact of cueContacts) {
           const expectedFrame =
-            frameForSample(cue.startSample, cadenceFps) +
-            contact.offsetFrames;
-          const cadence = cadenceFps === PUBLIC_FPS ? 'public' : 'proof';
+            frameForSample(cue.startSample, cadenceFps) + contact.offsetFrames;
+          const cadence = cadenceFps === PUBLIC_FPS ? "public" : "proof";
           expect(contact.lineId).toBe(cue.lineId);
+          expect(contact.reviewedCueStartSample).toBe(cue.reviewedStartSample);
           expect(contact.cueStartSample).toBe(cue.startSample);
           expect(contact.frame).toBe(expectedFrame);
           expect(contact.path).toBe(
             `contacts/${cue.lineId.toLowerCase()}/${cadence}/` +
-              `frame-${String(expectedFrame).padStart(6, '0')}.png`,
+              `frame-${String(expectedFrame).padStart(6, "0")}.png`,
           );
         }
       }
     }
   });
 
-  test('retains the exact representative V1-03 public contact authority', () => {
+  test("retains the exact representative V1-03 public contact authority", () => {
     const representative = createPlan().contacts.find(
-      ({cueId, cadenceFps, offsetFrames}) =>
-        cueId === 'V1-03-C01' &&
+      ({ cueId, cadenceFps, offsetFrames }) =>
+        cueId === "V1-03-C01" &&
         cadenceFps === PUBLIC_FPS &&
         offsetFrames === 0,
     );
     expect(representative).toMatchObject({
       frame: 4224,
-      path: 'contacts/v1-03/public/frame-004224.png',
+      path: "contacts/v1-03/public/frame-004224.png",
     });
   });
 
-  test('retains the exact shortest-cue C1-04 public contact authority', () => {
+  test("retains the exact shortest-cue C1-04 public contact authority", () => {
     const representative = createPlan().contacts.find(
-      ({cueId, cadenceFps, offsetFrames}) =>
-        cueId === 'C1-04-C01' &&
+      ({ cueId, cadenceFps, offsetFrames }) =>
+        cueId === "C1-04-C01" &&
         cadenceFps === PUBLIC_FPS &&
         offsetFrames === 0,
     );
     expect(representative).toMatchObject({
       frame: 2029,
-      path: 'contacts/c1-04/public/frame-002029.png',
+      path: "contacts/c1-04/public/frame-002029.png",
     });
   });
 
-  test('emits exactly twelve contact sheets with authoritative paths', () => {
+  test("emits exactly twelve contact sheets with authoritative paths", () => {
     const sheets = createPlan().contactSheets;
-    expect(sheets.map(({path}) => path).sort()).toEqual([
-      'contact-sheets/c1-04-proof.png',
-      'contact-sheets/c1-04-public.png',
-      'contact-sheets/c1-06-proof.png',
-      'contact-sheets/c1-06-public.png',
-      'contact-sheets/c1-07-proof.png',
-      'contact-sheets/c1-07-public.png',
-      'contact-sheets/c1-08-proof.png',
-      'contact-sheets/c1-08-public.png',
-      'contact-sheets/v1-03-proof.png',
-      'contact-sheets/v1-03-public.png',
-      'contact-sheets/v1-08-proof.png',
-      'contact-sheets/v1-08-public.png',
+    expect(sheets.map(({ path }) => path).sort()).toEqual([
+      "contact-sheets/c1-04-proof.png",
+      "contact-sheets/c1-04-public.png",
+      "contact-sheets/c1-06-proof.png",
+      "contact-sheets/c1-06-public.png",
+      "contact-sheets/c1-07-proof.png",
+      "contact-sheets/c1-07-public.png",
+      "contact-sheets/c1-08-proof.png",
+      "contact-sheets/c1-08-public.png",
+      "contact-sheets/v1-03-proof.png",
+      "contact-sheets/v1-03-public.png",
+      "contact-sheets/v1-08-proof.png",
+      "contact-sheets/v1-08-public.png",
     ]);
   });
 
-  test('labels every sheet cell with cue, cadence, frame, and offset identity', () => {
+  test("labels every sheet cell with cue, cadence, frame, and offset identity", () => {
     const plan = createPlan();
     const contactsById = new Map(
       plan.contacts.map((contact) => [contact.id, contact] as const),
@@ -544,21 +547,21 @@ describe('cue-contact and sheet plan', () => {
     }
   });
 
-  test('derives all nine corrected exclusive-release authorities', () => {
-    expect(correctedReleaseCueAuthorities.map(({cueId}) => cueId)).toEqual([
-      'C1-06-C01',
-      'C1-06-C02',
-      'C1-06-C03',
-      'C1-07-C01',
-      'C1-07-C02',
-      'C1-07-C03',
-      'C1-08-C01',
-      'C1-08-C02',
-      'C1-08-C03',
+  test("derives all nine corrected exclusive-release authorities", () => {
+    expect(correctedReleaseCueAuthorities.map(({ cueId }) => cueId)).toEqual([
+      "C1-06-C01",
+      "C1-06-C02",
+      "C1-06-C03",
+      "C1-07-C01",
+      "C1-07-C02",
+      "C1-07-C03",
+      "C1-08-C01",
+      "C1-08-C02",
+      "C1-08-C03",
     ]);
   });
 
-  test('emits 72 cadence-specific release PNGs at offsets -1 through +2', () => {
+  test("emits 72 cadence-specific release PNGs at offsets -1 through +2", () => {
     const releases = createPlan().releases;
     expect(releases).toHaveLength(72);
 
@@ -566,54 +569,51 @@ describe('cue-contact and sheet plan', () => {
       for (const cadenceFps of [PUBLIC_FPS, PROOF_FPS] as const) {
         const cueReleases = releases.filter(
           (release) =>
-            release.cueId === cue.cueId &&
-            release.cadenceFps === cadenceFps,
+            release.cueId === cue.cueId && release.cadenceFps === cadenceFps,
         );
-        expect(cueReleases.map(({offsetFrames}) => offsetFrames)).toEqual([
-          -1,
-          0,
-          1,
-          2,
+        expect(cueReleases.map(({ offsetFrames }) => offsetFrames)).toEqual([
+          -1, 0, 1, 2,
         ]);
         for (const release of cueReleases) {
           const expectedFrame =
             frameForSample(cue.endSample, cadenceFps) + release.offsetFrames;
-          const cadence = cadenceFps === PUBLIC_FPS ? 'public' : 'proof';
+          const cadence = cadenceFps === PUBLIC_FPS ? "public" : "proof";
           expect(release.lineId).toBe(cue.lineId);
+          expect(release.reviewedCueEndSample).toBe(cue.reviewedEndSample);
           expect(release.cueEndSample).toBe(cue.endSample);
           expect(release.frame).toBe(expectedFrame);
           expect(release.path).toBe(
             `releases/${cue.lineId.toLowerCase()}/${cadence}/` +
-              `frame-${String(expectedFrame).padStart(6, '0')}.png`,
+              `frame-${String(expectedFrame).padStart(6, "0")}.png`,
           );
         }
       }
     }
   });
 
-  test('retains the exact C1-08 final release authority', () => {
+  test("retains the exact C1-08 final release authority", () => {
     const release = createPlan().releases.find(
-      ({cueId, cadenceFps, offsetFrames}) =>
-        cueId === 'C1-08-C03' &&
+      ({ cueId, cadenceFps, offsetFrames }) =>
+        cueId === "C1-08-C03" &&
         cadenceFps === PUBLIC_FPS &&
         offsetFrames === 0,
     );
     expect(release).toMatchObject({
       cueEndSample: 2_171_396,
       frame: 2954,
-      path: 'releases/c1-08/public/frame-002954.png',
+      path: "releases/c1-08/public/frame-002954.png",
     });
   });
 
-  test('emits six labeled release sheets for the corrected passage', () => {
+  test("emits six labeled release sheets for the corrected passage", () => {
     const plan = createPlan();
-    expect(plan.releaseSheets.map(({path}) => path).sort()).toEqual([
-      'release-sheets/c1-06-proof.png',
-      'release-sheets/c1-06-public.png',
-      'release-sheets/c1-07-proof.png',
-      'release-sheets/c1-07-public.png',
-      'release-sheets/c1-08-proof.png',
-      'release-sheets/c1-08-public.png',
+    expect(plan.releaseSheets.map(({ path }) => path).sort()).toEqual([
+      "release-sheets/c1-06-proof.png",
+      "release-sheets/c1-06-public.png",
+      "release-sheets/c1-07-proof.png",
+      "release-sheets/c1-07-public.png",
+      "release-sheets/c1-08-proof.png",
+      "release-sheets/c1-08-public.png",
     ]);
 
     const releasesById = new Map(
@@ -626,7 +626,7 @@ describe('cue-contact and sheet plan', () => {
         const label = sheet.labels[index];
         expect(release, releaseId).toBeDefined();
         expect(label).toContain(release!.cueId);
-        expect(label).toContain('end');
+        expect(label).toContain("end");
         expect(label).toContain(`${release!.cadenceFps}fps`);
         expect(label).toContain(`frame ${release!.frame}`);
         expect(label).toContain(`offset ${release!.offsetFrames}`);
@@ -634,9 +634,9 @@ describe('cue-contact and sheet plan', () => {
     }
   });
 
-  test('uses the tracked Space Grotesk font for deterministic sheet labels', () => {
+  test("uses the tracked Space Grotesk font for deterministic sheet labels", () => {
     for (const sheet of createPlan().contactSheets) {
-      const filterIndex = sheet.command.arguments.indexOf('-filter_complex');
+      const filterIndex = sheet.command.arguments.indexOf("-filter_complex");
       expect(filterIndex).toBeGreaterThan(-1);
       expect(sheet.command.arguments[filterIndex + 1]).toContain(
         "fontfile='public/SpaceGrotesk.ttf'",
@@ -645,10 +645,10 @@ describe('cue-contact and sheet plan', () => {
   });
 });
 
-describe('selected encoded still authorities', () => {
-  test('binds all seven exact source/frame/geometry/path authorities', () => {
+describe("selected encoded still authorities", () => {
+  test("binds all seven exact source/frame/geometry/path authorities", () => {
     const stills = createPlan().selectedStills.map(
-      ({id, source, frame, width, height, path}) => ({
+      ({ id, source, frame, width, height, path }) => ({
         id,
         source,
         frame,
@@ -660,20 +660,20 @@ describe('selected encoded still authorities', () => {
     expect(stills).toEqual(expectedStillAuthorities);
   });
 
-  test('extracts every still at its encoded frame without scaling', () => {
+  test("extracts every still at its encoded frame without scaling", () => {
     for (const still of createPlan().selectedStills) {
       const command = still.command.arguments;
-      expect(still.command.executable).toBe('ffmpeg');
-      expect(command.join(' ')).toContain(`select=eq(n\\,${still.frame})`);
-      expect(command).not.toContain('scale');
+      expect(still.command.executable).toBe("ffmpeg");
+      expect(command.join(" ")).toContain(`select=eq(n\\,${still.frame})`);
+      expect(command).not.toContain("scale");
       expect(command.at(-1)).toBe(still.path);
     }
   });
 });
 
-describe('canonical QA-media manifest', () => {
+describe("canonical QA-media manifest", () => {
   const completeArtifactRecords = (plan: QaMediaPlan) => {
-    const outputPaths = requireApi('qaMediaOutputPaths')(plan);
+    const outputPaths = requireApi("qaMediaOutputPaths")(plan);
     return outputPaths.map((path, index) => ({
       path,
       sha256: (index % 16).toString(16).repeat(64),
@@ -681,49 +681,53 @@ describe('canonical QA-media manifest', () => {
     }));
   };
 
-  test('enumerates exactly 313 unique generated artifacts', () => {
-    const paths = requireApi('qaMediaOutputPaths')(createPlan());
+  test("enumerates exactly 313 unique generated artifacts", () => {
+    const paths = requireApi("qaMediaOutputPaths")(createPlan());
     expect(paths).toHaveLength(313);
     expect(new Set(paths).size).toBe(paths.length);
-    expect(paths).toContain('contacts/c1-04/public/frame-002029.png');
-    expect(paths).toContain('contacts/c1-06/public/frame-002445.png');
-    expect(paths).toContain('clips/public/first-act-40-50-normal.mp4');
-    expect(paths).toContain('releases/c1-08/public/frame-002954.png');
-    expect(paths).toContain('contacts/v1-03/public/frame-004224.png');
-    for (const still of expectedStillAuthorities) expect(paths).toContain(still.path);
+    expect(paths).toContain("contacts/c1-04/public/frame-002029.png");
+    expect(paths).toContain("contacts/c1-06/public/frame-002431.png");
+    expect(paths).toContain("clips/public/first-act-40-50-normal.mp4");
+    expect(paths).toContain("releases/c1-08/public/frame-002954.png");
+    expect(paths).toContain("contacts/v1-03/public/frame-004224.png");
+    for (const still of expectedStillAuthorities)
+      expect(paths).toContain(still.path);
   });
 
-  test('sorts and hashes every planned artifact in one canonical manifest', () => {
+  test("sorts and hashes every planned artifact in one canonical manifest", () => {
     const plan = createPlan();
-    const createManifest = requireApi('createCanonicalQaMediaManifest');
+    const createManifest = requireApi("createCanonicalQaMediaManifest");
     const records = completeArtifactRecords(plan).reverse();
     const manifest = createManifest(plan, records);
-    const sortedPaths = records.map(({path}) => path).sort();
+    const sortedPaths = records.map(({ path }) => path).sort();
 
     expect(manifest.schemaVersion).toBe(1);
     expect(manifest.artifactCount).toBe(313);
-    expect(manifest.artifacts.map(({path}) => path)).toEqual(sortedPaths);
-    expect(manifest.artifacts.every(({sha256}) => /^[0-9a-f]{64}$/.test(sha256)))
-      .toBe(true);
-    expect(manifest.artifacts.every(({sizeBytes}) => sizeBytes > 0)).toBe(true);
+    expect(manifest.artifacts.map(({ path }) => path)).toEqual(sortedPaths);
+    expect(
+      manifest.artifacts.every(({ sha256 }) => /^[0-9a-f]{64}$/.test(sha256)),
+    ).toBe(true);
+    expect(manifest.artifacts.every(({ sizeBytes }) => sizeBytes > 0)).toBe(
+      true,
+    );
   });
 
-  test('rejects a manifest missing any planned artifact', () => {
+  test("rejects a manifest missing any planned artifact", () => {
     const plan = createPlan();
     const records = completeArtifactRecords(plan);
     expect(() =>
-      requireApi('createCanonicalQaMediaManifest')(plan, records.slice(1)),
+      requireApi("createCanonicalQaMediaManifest")(plan, records.slice(1)),
     ).toThrow(/missing|artifact/i);
   });
 
-  test('rejects extra or duplicate artifact paths', () => {
+  test("rejects extra or duplicate artifact paths", () => {
     const plan = createPlan();
     const records = completeArtifactRecords(plan);
-    const createManifest = requireApi('createCanonicalQaMediaManifest');
+    const createManifest = requireApi("createCanonicalQaMediaManifest");
     expect(() =>
       createManifest(plan, [
         ...records,
-        {path: 'extra/stale.png', sha256: 'a'.repeat(64), sizeBytes: 1},
+        { path: "extra/stale.png", sha256: "a".repeat(64), sizeBytes: 1 },
       ]),
     ).toThrow(/extra|planned|artifact/i);
     expect(() => createManifest(plan, [...records, records[0]!])).toThrow(
@@ -732,95 +736,94 @@ describe('canonical QA-media manifest', () => {
   });
 
   test.each([
-    ['short hash', {sha256: 'a'.repeat(63)}],
-    ['uppercase hash', {sha256: 'A'.repeat(64)}],
-    ['zero size', {sizeBytes: 0}],
-    ['nonfinite size', {sizeBytes: Number.POSITIVE_INFINITY}],
-  ] as const)('rejects %s evidence', (_case, change) => {
+    ["short hash", { sha256: "a".repeat(63) }],
+    ["uppercase hash", { sha256: "A".repeat(64) }],
+    ["zero size", { sizeBytes: 0 }],
+    ["nonfinite size", { sizeBytes: Number.POSITIVE_INFINITY }],
+  ] as const)("rejects %s evidence", (_case, change) => {
     const plan = createPlan();
     const records = completeArtifactRecords(plan);
-    records[0] = {...records[0]!, ...change};
+    records[0] = { ...records[0]!, ...change };
     expect(() =>
-      requireApi('createCanonicalQaMediaManifest')(plan, records),
+      requireApi("createCanonicalQaMediaManifest")(plan, records),
     ).toThrow(/sha|size|artifact/i);
   });
 });
 
-describe('QA-media output preflight safety', () => {
-  const qaRoot =
-    'C:\\repo\\projects\\tanisea-lyric-film\\work\\qa\\media';
+describe("QA-media output preflight safety", () => {
+  const qaRoot = "C:\\repo\\projects\\tanisea-lyric-film\\work\\qa\\media";
   const protectedInputs = [
-    'C:\\repo\\projects\\tanisea-lyric-film\\public\\soundtrack.m4a',
-    'C:\\repo\\projects\\tanisea-lyric-film\\output\\Tanisea-Lyric-Film-vNext-60fps-Archival-Master.mp4',
+    "C:\\repo\\projects\\tanisea-lyric-film\\public\\soundtrack.m4a",
+    "C:\\repo\\projects\\tanisea-lyric-film\\output\\Tanisea-Lyric-Film-vNext-60fps-Archival-Master.mp4",
   ];
   const canonicalize = (path: string) =>
-    win32.normalize(path).replaceAll('/', '\\').toLowerCase();
+    win32.normalize(path).replaceAll("/", "\\").toLowerCase();
 
   const safetyOptions = () => ({
     qaRoot,
-    outputPaths: [...requireApi('qaMediaOutputPaths')(createPlan())],
+    outputPaths: [...requireApi("qaMediaOutputPaths")(createPlan())],
     existingEntries: [] as string[],
     protectedInputs,
     canonicalize,
   });
 
-  test('accepts one empty canonical root with the complete unique plan', () => {
+  test("accepts one empty canonical root with the complete unique plan", () => {
     expect(() =>
-      requireApi('verifyQaMediaOutputSafety')(safetyOptions()),
+      requireApi("verifyQaMediaOutputSafety")(safetyOptions()),
     ).not.toThrow();
   });
 
-  test('rejects a nonempty QA-media root before mutation', () => {
+  test("rejects a nonempty QA-media root before mutation", () => {
     expect(() =>
-      requireApi('verifyQaMediaOutputSafety')({
+      requireApi("verifyQaMediaOutputSafety")({
         ...safetyOptions(),
-        existingEntries: ['stale-output.mp4'],
+        existingEntries: ["stale-output.mp4"],
       }),
     ).toThrow(/nonempty|empty|stale/i);
   });
 
   test.each([
-    '../outside.png',
-    'contacts/../../outside.png',
-    'C:\\outside\\absolute.png',
-    '/outside/absolute.png',
-  ])('rejects unsafe output path %s', (unsafePath) => {
+    "../outside.png",
+    "contacts/../../outside.png",
+    "C:\\outside\\absolute.png",
+    "/outside/absolute.png",
+  ])("rejects unsafe output path %s", (unsafePath) => {
     expect(() =>
-      requireApi('verifyQaMediaOutputSafety')({
+      requireApi("verifyQaMediaOutputSafety")({
         ...safetyOptions(),
         outputPaths: [unsafePath],
       }),
     ).toThrow(/path|outside|traversal|relative/i);
   });
 
-  test('rejects duplicate and canonical-collision output paths', () => {
+  test("rejects duplicate and canonical-collision output paths", () => {
     const options = safetyOptions();
     const first = options.outputPaths[0]!;
     expect(() =>
-      requireApi('verifyQaMediaOutputSafety')({
+      requireApi("verifyQaMediaOutputSafety")({
         ...options,
         outputPaths: [first, first],
       }),
     ).toThrow(/duplicate|collision/i);
 
     expect(() =>
-      requireApi('verifyQaMediaOutputSafety')({
+      requireApi("verifyQaMediaOutputSafety")({
         ...options,
-        outputPaths: ['a/first.png', 'b/second.png'],
-        canonicalize: () => 'c:\\same\\artifact.png',
+        outputPaths: ["a/first.png", "b/second.png"],
+        canonicalize: () => "c:\\same\\artifact.png",
       }),
     ).toThrow(/alias|duplicate|collision/i);
   });
 
-  test('rejects a canonical alias to a protected input', () => {
+  test("rejects a canonical alias to a protected input", () => {
     const options = safetyOptions();
     const protectedCanonical = canonicalize(protectedInputs[0]!);
     expect(() =>
-      requireApi('verifyQaMediaOutputSafety')({
+      requireApi("verifyQaMediaOutputSafety")({
         ...options,
-        outputPaths: ['stills/public-chrome.png'],
+        outputPaths: ["stills/public-chrome.png"],
         canonicalize: (path) =>
-          path.endsWith('public-chrome.png')
+          path.endsWith("public-chrome.png")
             ? protectedCanonical
             : canonicalize(path),
       }),

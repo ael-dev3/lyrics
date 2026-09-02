@@ -1,6 +1,6 @@
-import {AbsoluteFill, useCurrentFrame, useVideoConfig} from 'remotion';
-import {LyricFilm} from './LyricFilm';
-import {lyrics, type PresentationCue} from './timed-lyrics';
+import { AbsoluteFill, useCurrentFrame, useVideoConfig } from "remotion";
+import { LyricFilm } from "./LyricFilm";
+import { lyrics, type PresentationCue } from "./timed-lyrics";
 import {
   frameErrorMs,
   frameForSample,
@@ -8,10 +8,10 @@ import {
   type AlignedLyricLine,
   type Confidence,
   type SemanticCue,
-} from './timing/alignment-types';
-import {taniseaAlignment} from './timing/tanisea-alignment';
+} from "./timing/alignment-types";
+import { taniseaAlignment } from "./timing/tanisea-alignment";
 
-export {featureFrameForTime} from './feature-frame';
+export { featureFrameForTime } from "./feature-frame";
 
 type ProofTextItem = Readonly<{
   id: string;
@@ -19,7 +19,7 @@ type ProofTextItem = Readonly<{
 }>;
 
 export type IdleProofFrameState = Readonly<{
-  status: 'idle';
+  status: "idle";
   compositionFps: number;
   proofFrame: number;
   proofTimeSeconds: number;
@@ -27,10 +27,10 @@ export type IdleProofFrameState = Readonly<{
 }>;
 
 export type ActiveProofFrameState = Readonly<{
-  status: 'active';
+  status: "active";
   lineId: string;
   cueId: string;
-  activation: SemanticCue['activation'];
+  activation: SemanticCue["activation"];
   presentationCueId: string;
   sourceTokenIds: readonly string[];
   sourceTokens: readonly ProofTextItem[];
@@ -45,6 +45,11 @@ export type ActiveProofFrameState = Readonly<{
   presentationEndSample: number;
   presentationStartMilliseconds: number;
   presentationEndMilliseconds: number;
+  presentationTimingMode: "reviewed" | "retimed";
+  presentationStartOffsetSamples: number;
+  presentationEndOffsetSamples: number;
+  presentationStartOffsetMilliseconds: number;
+  presentationEndOffsetMilliseconds: number;
   presentationHeldBeyondReviewedCue: boolean;
   selectedSample: number;
   selectedMilliseconds: number;
@@ -74,14 +79,19 @@ type ActiveCandidate = Readonly<{
 
 const validateFrameContext = (fps: number, frame: number): void => {
   if (!Number.isFinite(frame) || frame < 0) {
-    throw new RangeError(`Frame must be finite and non-negative; received ${frame}`);
+    throw new RangeError(
+      `Frame must be finite and non-negative; received ${frame}`,
+    );
   }
   if (!Number.isFinite(fps) || fps <= 0) {
     throw new RangeError(`FPS must be finite and positive; received ${fps}`);
   }
 };
 
-const candidateOrder = (left: ActiveCandidate, right: ActiveCandidate): number =>
+const candidateOrder = (
+  left: ActiveCandidate,
+  right: ActiveCandidate,
+): number =>
   right.cue.startSample - left.cue.startSample ||
   left.cue.endSample - right.cue.endSample ||
   left.line.id.localeCompare(right.line.id) ||
@@ -95,7 +105,7 @@ const textItems = (
   ids.map((id) => {
     const item = items.find((candidate) => candidate.id === id);
     if (!item) throw new Error(`Reviewed ${kind} ${id} is missing`);
-    return {id: item.id, text: item.text};
+    return { id: item.id, text: item.text };
   });
 
 export const proofFrameState = (
@@ -105,9 +115,8 @@ export const proofFrameState = (
 ): ProofFrameState => {
   validateFrameContext(fps, frame);
 
-  const presentationLines = lineId === null
-    ? lyrics
-    : lyrics.filter(({id}) => id === lineId);
+  const presentationLines =
+    lineId === null ? lyrics : lyrics.filter(({ id }) => id === lineId);
   if (lineId !== null && presentationLines.length === 0) {
     throw new Error(`Unknown reviewed line: ${lineId}`);
   }
@@ -115,21 +124,20 @@ export const proofFrameState = (
   const activeCandidates = presentationLines
     .flatMap((presentationLine) => {
       const line = taniseaAlignment.lines.find(
-        ({id}) => id === presentationLine.id,
+        ({ id }) => id === presentationLine.id,
       );
       if (!line) {
         throw new Error(`Reviewed line ${presentationLine.id} is missing`);
       }
       return presentationLine.presentationCues.map((cue) => {
-        const reviewedCue = line.cues.find(({id}) => id === cue.sourceCueId);
+        const reviewedCue = line.cues.find(({ id }) => id === cue.sourceCueId);
         if (!reviewedCue) {
           throw new Error(`Reviewed cue ${cue.sourceCueId} is missing`);
         }
-        if (reviewedCue.startSample !== cue.startSample) {
-          throw new Error(
-            `Presentation cue ${cue.id} must retain reviewed onset ${reviewedCue.startSample}`,
-          );
-        }
+        // The source cue remains the audit authority. Presentation can use a
+        // separately reviewed choreography (for example the requested C1 ↔ C2
+        // parity fit), so keep both clocks visible in the diagnostic instead
+        // of pretending that every public onset is the source onset.
         return {
           line,
           cue,
@@ -139,7 +147,9 @@ export const proofFrameState = (
         };
       });
     })
-    .filter(({startFrame, endFrame}) => frame >= startFrame && frame < endFrame)
+    .filter(
+      ({ startFrame, endFrame }) => frame >= startFrame && frame < endFrame,
+    )
     .sort(candidateOrder);
 
   const proofTimeSeconds = frame / fps;
@@ -147,7 +157,7 @@ export const proofFrameState = (
   const selected = activeCandidates[0];
   if (!selected) {
     return {
-      status: 'idle',
+      status: "idle",
       compositionFps: fps,
       proofFrame: frame,
       proofTimeSeconds,
@@ -157,21 +167,21 @@ export const proofFrameState = (
 
   // Most recently started contact wins; ties use shortest end, line ID, then
   // cue ID. All simultaneous matches remain visible through matchingCueIds.
-  const {line, cue, reviewedCue} = selected;
+  const { line, cue, reviewedCue } = selected;
   const sourceTokens = textItems(
     reviewedCue.sourceTokenIds,
     line.tokens,
-    'source token',
+    "source token",
   );
   const targets = textItems(
     reviewedCue.targets,
     line.segments,
-    'reviewed target segment',
+    "reviewed target segment",
   );
   const presentationTargets = textItems(
     cue.targets,
     line.segments,
-    'presentation target segment',
+    "presentation target segment",
   );
   const nearestFrame = frameForSample(reviewedCue.startSample, fps);
   const signedFrameError = frameErrorMs(
@@ -179,26 +189,42 @@ export const proofFrameState = (
     nearestFrame,
     fps,
   );
+  const presentationStartOffsetSamples =
+    cue.startSample - reviewedCue.startSample;
+  const presentationEndOffsetSamples = cue.endSample - reviewedCue.endSample;
+  const presentationTimingMode =
+    presentationStartOffsetSamples === 0 && presentationEndOffsetSamples === 0
+      ? "reviewed"
+      : "retimed";
 
   return {
-    status: 'active',
+    status: "active",
     lineId: line.id,
     cueId: reviewedCue.id,
     activation: reviewedCue.activation,
     presentationCueId: cue.id,
     sourceTokenIds: [...reviewedCue.sourceTokenIds],
     sourceTokens,
-    sourceText: sourceTokens.map(({text}) => text).join(' '),
+    sourceText: sourceTokens.map(({ text }) => text).join(" "),
     targetIds: [...reviewedCue.targets],
     targets,
-    targetText: targets.map(({text}) => text).join(' '),
+    targetText: targets.map(({ text }) => text).join(" "),
     presentationTargetIds: [...cue.targets],
     presentationTargets,
-    presentationTargetText: presentationTargets.map(({text}) => text).join(' '),
+    presentationTargetText: presentationTargets
+      .map(({ text }) => text)
+      .join(" "),
     presentationStartSample: cue.startSample,
     presentationEndSample: cue.endSample,
     presentationStartMilliseconds: (cue.startSample / SAMPLE_RATE) * 1_000,
     presentationEndMilliseconds: (cue.endSample / SAMPLE_RATE) * 1_000,
+    presentationTimingMode,
+    presentationStartOffsetSamples,
+    presentationEndOffsetSamples,
+    presentationStartOffsetMilliseconds:
+      (presentationStartOffsetSamples / SAMPLE_RATE) * 1_000,
+    presentationEndOffsetMilliseconds:
+      (presentationEndOffsetSamples / SAMPLE_RATE) * 1_000,
     presentationHeldBeyondReviewedCue: cue.endSample > reviewedCue.endSample,
     selectedSample: reviewedCue.startSample,
     selectedMilliseconds: (reviewedCue.startSample / SAMPLE_RATE) * 1_000,
@@ -214,57 +240,59 @@ export const proofFrameState = (
     frameErrorMilliseconds: signedFrameError,
     absoluteFrameErrorMilliseconds: Math.abs(signedFrameError),
     matchingCueIds: activeCandidates.map(
-      ({line: candidateLine, reviewedCue: candidateCue}) =>
+      ({ line: candidateLine, reviewedCue: candidateCue }) =>
         `${candidateLine.id}/${candidateCue.id}`,
     ),
     matchingPresentationCueIds: activeCandidates.map(
-      ({line: candidateLine, cue: candidateCue}) =>
+      ({ line: candidateLine, cue: candidateCue }) =>
         `${candidateLine.id}/${candidateCue.id}`,
     ),
   };
 };
 
 const valueStyle = {
-  color: '#fffdfd',
+  color: "#fffdfd",
   fontWeight: 650,
 } as const;
 
 export const ProofDiagnosticOverlay = ({
   state,
-}: Readonly<{state: ProofFrameState}>) => (
+}: Readonly<{ state: ProofFrameState }>) => (
   <div
     data-sync-proof-overlay="true"
     data-sync-proof-status={state.status}
-    data-sync-proof-line-id={state.status === 'active' ? state.lineId : undefined}
+    data-sync-proof-line-id={
+      state.status === "active" ? state.lineId : undefined
+    }
     style={{
-      position: 'absolute',
+      position: "absolute",
       zIndex: 100,
       left: 26,
       right: 26,
       bottom: 24,
       minHeight: 218,
-      padding: '18px 22px',
-      border: '2px solid rgba(255,211,62,.96)',
+      padding: "18px 22px",
+      border: "2px solid rgba(255,211,62,.96)",
       borderRadius: 8,
-      background: 'rgba(5,8,13,.94)',
-      boxShadow: '0 0 0 2px rgba(0,0,0,.72), 0 12px 34px rgba(0,0,0,.64)',
-      color: '#c9fff7',
-      fontFamily: 'Space Grotesk, sans-serif',
+      background: "rgba(5,8,13,.94)",
+      boxShadow: "0 0 0 2px rgba(0,0,0,.72), 0 12px 34px rgba(0,0,0,.64)",
+      color: "#c9fff7",
+      fontFamily: "Space Grotesk, sans-serif",
       fontSize: 20,
       lineHeight: 1.34,
       letterSpacing: 0.2,
-      pointerEvents: 'none',
+      pointerEvents: "none",
     }}
   >
     <div
       style={{
-        display: 'flex',
-        justifyContent: 'space-between',
+        display: "flex",
+        justifyContent: "space-between",
         gap: 24,
         paddingBottom: 8,
         marginBottom: 9,
-        borderBottom: '1px solid rgba(255,211,62,.5)',
-        color: '#ffd33e',
+        borderBottom: "1px solid rgba(255,211,62,.5)",
+        color: "#ffd33e",
         fontSize: 17,
         fontWeight: 800,
         letterSpacing: 2.3,
@@ -272,75 +300,94 @@ export const ProofDiagnosticOverlay = ({
     >
       <span>SYNC PROOF · {state.status.toUpperCase()}</span>
       <span>
-        FRAME {state.proofFrame} · {state.compositionFps} FPS ·{' '}
+        FRAME {state.proofFrame} · {state.compositionFps} FPS ·{" "}
         {state.proofTimeMilliseconds.toFixed(3)} MS
       </span>
     </div>
-    {state.status === 'idle' ? (
-      <div style={{...valueStyle, paddingTop: 44, textAlign: 'center'}}>
+    {state.status === "idle" ? (
+      <div style={{ ...valueStyle, paddingTop: 44, textAlign: "center" }}>
         IDLE — NO PRESENTATION CUE ACTIVE
       </div>
     ) : (
-      <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '6px 24px'}}>
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "1fr 1fr",
+          gap: "6px 24px",
+        }}
+      >
         <div>
-          REVIEWED LINE / CUE / TYPE ·{' '}
+          REVIEWED LINE / CUE / TYPE ·{" "}
           <span style={valueStyle}>
             {state.lineId} · {state.cueId} · {state.activation.toUpperCase()}
           </span>
         </div>
         <div>
-          SAMPLE / TIME ·{' '}
+          SAMPLE / TIME ·{" "}
           <span style={valueStyle}>
             {state.selectedSample} · {state.selectedMilliseconds.toFixed(3)} MS
           </span>
         </div>
         <div>
-          RUSSIAN IDS ·{' '}
-          <span style={valueStyle}>{state.sourceTokenIds.join(' + ')}</span>
+          RUSSIAN IDS ·{" "}
+          <span style={valueStyle}>{state.sourceTokenIds.join(" + ")}</span>
         </div>
         <div>
-          CONFIDENCE / UNCERTAINTY ·{' '}
+          CONFIDENCE / UNCERTAINTY ·{" "}
           <span style={valueStyle}>
-            {state.confidence.toUpperCase()} · {state.uncertaintySamples} samples ·{' '}
-            {state.uncertaintyMilliseconds.toFixed(3)} MS
+            {state.confidence.toUpperCase()} · {state.uncertaintySamples}{" "}
+            samples · {state.uncertaintyMilliseconds.toFixed(3)} MS
           </span>
         </div>
         <div>
           RUSSIAN · <span style={valueStyle}>{state.sourceText}</span>
         </div>
         <div>
-          PROOF / NEAREST ·{' '}
+          PROOF / NEAREST ·{" "}
           <span style={valueStyle}>
             {state.proofFrame} / {state.nearestFrame}
           </span>
         </div>
         <div>
-          REVIEWED ENGLISH IDS ·{' '}
-          <span style={valueStyle}>{state.targetIds.join(' + ')}</span>
+          REVIEWED ENGLISH IDS ·{" "}
+          <span style={valueStyle}>{state.targetIds.join(" + ")}</span>
         </div>
         <div>
-          SIGNED / ABS ERROR ·{' '}
+          SIGNED / ABS ERROR ·{" "}
           <span style={valueStyle}>
-            {state.frameErrorMilliseconds >= 0 ? '+' : ''}
-            {state.frameErrorMilliseconds.toFixed(3)} /{' '}
+            {state.frameErrorMilliseconds >= 0 ? "+" : ""}
+            {state.frameErrorMilliseconds.toFixed(3)} /{" "}
             {state.absoluteFrameErrorMilliseconds.toFixed(3)} MS
           </span>
         </div>
-        <div style={{gridColumn: '1 / -1'}}>
+        <div style={{ gridColumn: "1 / -1" }}>
           REVIEWED ENGLISH · <span style={valueStyle}>{state.targetText}</span>
         </div>
-        <div style={{gridColumn: '1 / -1'}}>
-          PRESENTATION CUE / INTERVAL ·{' '}
+        <div style={{ gridColumn: "1 / -1" }}>
+          PRESENTATION CUE / INTERVAL ·{" "}
           <span style={valueStyle}>
             {state.presentationCueId} · {state.presentationStartSample}..
-            {state.presentationEndSample} ·{' '}
-            {state.presentationHeldBeyondReviewedCue ? 'EXTENDED HOLD' : 'REVIEWED END'}
+            {state.presentationEndSample} ·{" "}
+            {state.presentationTimingMode === "retimed"
+              ? "RETIMED"
+              : state.presentationHeldBeyondReviewedCue
+                ? "EXTENDED HOLD"
+                : "REVIEWED END"}
           </span>
         </div>
-        <div style={{gridColumn: '1 / -1'}}>
-          PUBLIC ENGLISH IDS / TEXT ·{' '}
+        <div style={{ gridColumn: "1 / -1" }}>
+          PRESENTATION / SOURCE START Δ ·{" "}
           <span style={valueStyle}>
-            {state.presentationTargetIds.join(' + ')} ·{' '}
+            {state.presentationStartOffsetSamples >= 0 ? "+" : ""}
+            {state.presentationStartOffsetSamples} samples ·{" "}
+            {state.presentationStartOffsetMilliseconds >= 0 ? "+" : ""}
+            {state.presentationStartOffsetMilliseconds.toFixed(3)} MS
+          </span>
+        </div>
+        <div style={{ gridColumn: "1 / -1" }}>
+          PUBLIC ENGLISH IDS / TEXT ·{" "}
+          <span style={valueStyle}>
+            {state.presentationTargetIds.join(" + ")} ·{" "}
             {state.presentationTargetText}
           </span>
         </div>
@@ -352,7 +399,7 @@ export const ProofDiagnosticOverlay = ({
 export const SyncProofFrame = ({
   frame,
   fps,
-}: Readonly<{frame: number; fps: number}>) => {
+}: Readonly<{ frame: number; fps: number }>) => {
   const state = proofFrameState(null, fps, frame);
 
   return (
@@ -365,6 +412,6 @@ export const SyncProofFrame = ({
 
 export const SyncProof = () => {
   const frame = useCurrentFrame();
-  const {fps} = useVideoConfig();
+  const { fps } = useVideoConfig();
   return <SyncProofFrame frame={frame} fps={fps} />;
 };

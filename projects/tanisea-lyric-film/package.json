@@ -1,6 +1,6 @@
 {
   "name": "tanisea-lyric-film",
-  "version": "1.0.0",
+  "version": "2.4.0",
   "private": true,
   "scripts": {
     "dev": "remotion studio src/index.ts",
@@ -18,6 +18,7 @@
     "qa:clips": "npm run build:tools && node .tools-dist/scripts/render-qa-clips.js",
     "qa:run": "npm run build:tools && node .tools-dist/scripts/run-release-qa.js",
     "qa:publish": "npm run build:tools && node .tools-dist/scripts/finalize-publication.js",
+    "workflow:package": "npm run build:tools && node .tools-dist/scripts/package-workflow-evidence.js",
     "test": "vitest",
     "test:run": "vitest run",
     "compositions": "remotion compositions src/index.ts",
@@ -25,7 +26,7 @@
     "check": "npm run typecheck && npm run test:run && npm run layout:verify && npm run compositions",
     "still": "remotion still src/index.ts LyricFilmVNext",
     "prerender": "npm run typecheck",
-    "render": "remotion render src/index.ts LyricFilmVNext output/Tanisea-Lyric-Film-vNext-reference-2x.mov --scale=2 --codec=prores --prores-profile=4444 --pixel-format=yuv444p10le --image-format=png --color-space=bt709 --concurrency=8 --muted && npm run reference:normalize"
+    "render": "remotion render src/index.ts LyricFilmVNext output/Tanisea-Lyric-Film-vNext-reference-2x.mov --scale=2 --codec=prores --prores-profile=4444 --pixel-format=yuv444p10le --image-format=png --color-space=bt709 --concurrency=4 --timeout=120000 --muted && npm run reference:normalize"
   },
   "dependencies": {
     "@remotion/cli": "4.0.518",

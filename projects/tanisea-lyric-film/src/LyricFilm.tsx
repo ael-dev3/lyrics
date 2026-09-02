@@ -492,7 +492,7 @@ export const Outro = ({time, feature}: OutroProps) => {
   if (time < 117.98) return null;
   const reveal = smoothstep(117.98, 118.4, time);
   const translationStage = smoothstep(125.45, 126.3, time);
-  const deconstructionStage = smoothstep(135.7, 136.8, time);
+  const outroSettleStage = smoothstep(135.7, 136.8, time);
   const endCardStage = smoothstep(144.55, 145.45, time);
   const primaryOpacity = reveal * (1 - smoothstep(144.35, 145.25, time));
   const translationOpacity =
@@ -523,10 +523,11 @@ export const Outro = ({time, feature}: OutroProps) => {
       />
       <AudioMotionLine
         feature={feature}
-        top={390 - Math.round(deconstructionStage * 34) + Math.round(endCardStage * 42)}
+        top={390 - Math.round(outroSettleStage * 34) + Math.round(endCardStage * 42)}
         emphasis={0.5 + reveal * 0.5}
       />
       <div
+        data-presentation-layer="outro-primary-title"
         style={{
           position: 'absolute',
           left: 52,
@@ -535,7 +536,7 @@ export const Outro = ({time, feature}: OutroProps) => {
           textAlign: 'center',
           fontFamily: 'Space Grotesk',
           opacity: primaryOpacity,
-          transform: `translateY(${Math.round((1 - reveal) * 16 - deconstructionStage * 16 + drift)}px) scale(${1 - deconstructionStage * 0.035})`,
+          transform: `translateY(${Math.round((1 - reveal) * 16 - outroSettleStage * 6 + drift)}px) scale(${1 - outroSettleStage * 0.02})`,
         }}
       >
         <div
@@ -555,25 +556,25 @@ export const Outro = ({time, feature}: OutroProps) => {
             fontSize: 74,
             fontWeight: 740,
             lineHeight: 1.04,
-            letterSpacing: 0.5 + deconstructionStage * 1.8,
+            letterSpacing: 0.5,
             whiteSpace: 'nowrap',
             color: white,
             textShadow: `0 7px 24px rgba(0,0,0,.74), 0 0 ${titleGlow}px rgba(22,230,209,${0.16 + feature.hero * 0.2})`,
             display: 'flex',
             justifyContent: 'center',
-            gap: 17 + deconstructionStage * 26,
+            gap: 17,
           }}
         >
           <span
             style={{
-              transform: `translateX(${Math.round(-deconstructionStage * 10)}px)`,
+              transform: 'translateX(0px)',
             }}
           >
             ЗАКРИЧУ
           </span>
           <span
             style={{
-              transform: `translateX(${Math.round(deconstructionStage * 10)}px)`,
+              transform: 'translateX(0px)',
             }}
           >
             НА ВЕСЬ МИР

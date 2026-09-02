@@ -1,13 +1,14 @@
-import {createElement} from 'react';
-import {renderToStaticMarkup} from 'react-dom/server';
-import {describe, expect, test} from 'vitest';
-import type {AudioFeatureFrame} from '../src/audio-features';
-import {LyricDisplay} from '../src/components/LyricDisplay';
-import {BreakCard, Outro} from '../src/LyricFilm';
-import {lyrics} from '../src/timed-lyrics';
-import {frameForSample, SAMPLE_RATE} from '../src/timing/alignment-types';
+import { createElement } from "react";
+import { renderToStaticMarkup } from "react-dom/server";
+import { describe, expect, test } from "vitest";
+import type { AudioFeatureFrame } from "../src/audio-features";
+import { LyricDisplay } from "../src/components/LyricDisplay";
+import { BreakCard, Outro } from "../src/LyricFilm";
+import { lyrics } from "../src/timed-lyrics";
+import { frameForSample, SAMPLE_RATE } from "../src/timing/alignment-types";
 
 const CROSSFADE_SAMPLES = 8_379;
+const PRECISION_HANDOFF_SAMPLES = 368;
 const SEMANTIC_RELEASE_HOLD_SAMPLES = 1_470;
 const BREAK_CARD_START_SAMPLE = 2_204_118;
 const BREAK_CARD_COMPLETE_SAMPLE = 2_217_348;
@@ -34,11 +35,34 @@ const findLine = (id: string) => {
   return line;
 };
 
-const internalPairs = ['C1', 'V1', 'C2'].flatMap((prefix) =>
-  Array.from({length: 7}, (_, index) => [
-    `${prefix}-${String(index + 1).padStart(2, '0')}`,
-    `${prefix}-${String(index + 2).padStart(2, '0')}`,
-  ] as const),
+const firstChorusPresentationParityIds = new Set([
+  "C1-05",
+  "C1-06",
+  "C1-07",
+  "C1-08",
+]);
+
+const mapLaterChorusPresentationSample = (sample: number): number => {
+  const firstStart = findLine("C1-05").vocalStartSample;
+  const firstEnd = findLine("C1-08").vocalEndSample;
+  const laterStart = findLine("C2-05").vocalStartSample;
+  const laterEnd = findLine("C2-08").vocalEndSample;
+  return Math.round(
+    firstStart +
+      ((sample - laterStart) * (firstEnd - firstStart)) /
+        (laterEnd - laterStart),
+  );
+};
+
+const internalPairs = ["C1", "V1", "C2"].flatMap((prefix) =>
+  Array.from(
+    { length: 7 },
+    (_, index) =>
+      [
+        `${prefix}-${String(index + 1).padStart(2, "0")}`,
+        `${prefix}-${String(index + 2).padStart(2, "0")}`,
+      ] as const,
+  ),
 );
 
 const styleFor = (
@@ -48,8 +72,8 @@ const styleFor = (
 ): string => {
   const index = markup.indexOf(`${attribute}="${identifier}"`);
   if (index < 0) throw new Error(`Missing rendered ${attribute}=${identifier}`);
-  const start = markup.lastIndexOf('<div', index);
-  const end = markup.indexOf('>', index);
+  const start = markup.lastIndexOf("<div", index);
+  const end = markup.indexOf(">", index);
   const style = /style="([^"]*)"/.exec(markup.slice(start, end))?.[1];
   if (!style) throw new Error(`Missing style for ${attribute}=${identifier}`);
   return style;
@@ -68,40 +92,72 @@ const opacityFor = (
   return opacity;
 };
 
-describe('absolute-sample presentation handoffs', () => {
-  test('uses fixed cinematic crossfades for every lyric-to-lyric handoff', () => {
+describe("absolute-sample presentation handoffs", () => {
+  test("uses C2-mapped chorus handoffs, fixed cinematic handoffs, and precision-only handoffs where configured", () => {
     for (const [currentId, nextId] of [
       ...internalPairs,
-      ['V1-08', 'C2-01'] as const,
+      ["V1-08", "C2-01"] as const,
     ]) {
       const current = findLine(currentId);
       const next = findLine(nextId);
+      if (firstChorusPresentationParityIds.has(currentId)) {
+        const template = findLine(`C2-${currentId.slice("C1-".length)}`);
+        expect(current.visualOutStartSample, currentId).toBe(
+          mapLaterChorusPresentationSample(template.visualOutStartSample),
+        );
+        expect(current.visualOutEndSample, currentId).toBe(
+          mapLaterChorusPresentationSample(template.visualOutEndSample),
+        );
+        expect(next.visualInStartSample, nextId).toBe(
+          mapLaterChorusPresentationSample(
+            findLine(`C2-${nextId.slice("C1-".length)}`).visualInStartSample,
+          ),
+        );
+        continue;
+      }
       const cinematicStart = Math.max(
         current.vocalEndSample + SEMANTIC_RELEASE_HOLD_SAMPLES,
         next.visualInStartSample,
       );
       const cinematicEnd = cinematicStart + CROSSFADE_SAMPLES;
-      expect(current.visualOutStartSample, currentId).toBe(cinematicStart);
-      expect(current.visualOutEndSample, currentId).toBe(cinematicEnd);
+      const contactBounded = current.focusProfile === "precision";
+      const expectedEnd = contactBounded ? next.vocalStartSample : cinematicEnd;
+      const expectedStart = contactBounded
+        ? Math.max(
+            current.vocalEndSample,
+            expectedEnd - PRECISION_HANDOFF_SAMPLES,
+          )
+        : cinematicStart;
+
+      expect(current.visualOutStartSample, currentId).toBe(expectedStart);
+      expect(current.visualOutEndSample, currentId).toBe(expectedEnd);
     }
   });
 
-  test('uses explicit terminal presentation milestones', () => {
-    expect(findLine('C1-08')).toMatchObject({
+  test("uses explicit terminal presentation milestones", () => {
+    expect(findLine("C1-08")).toMatchObject({
       visualOutStartSample: BREAK_CARD_START_SAMPLE,
       visualOutEndSample: BREAK_CARD_COMPLETE_SAMPLE,
     });
-    expect(findLine('V1-08')).toMatchObject({
-      visualOutStartSample: findLine('C2-01').visualInStartSample,
-      visualOutEndSample: findLine('C2-01').visualInCompleteSample,
+    expect(findLine("C1-08")).toMatchObject({
+      visualInStartSample: mapLaterChorusPresentationSample(
+        findLine("C2-08").visualInStartSample,
+      ),
+      visualInCompleteSample: mapLaterChorusPresentationSample(
+        findLine("C2-08").visualInCompleteSample,
+      ),
     });
-    expect(findLine('C2-08')).toMatchObject({
+    expect(findLine("V1-08")).toMatchObject({
+      visualOutStartSample: findLine("C2-01").visualInStartSample,
+      visualOutEndSample: findLine("C2-01").visualInCompleteSample,
+    });
+    expect(findLine("C2-08")).toMatchObject({
       visualOutStartSample: OUTRO_START_SAMPLE,
       visualOutEndSample: OUTRO_COMPLETE_SAMPLE,
     });
   });
 
-  test('keeps all presentation intervals ordered within the public timeline', () => {
+  test("keeps all presentation intervals ordered within the public timeline", () => {
     for (const line of lyrics) {
       expect(line.visualInStartSample, line.id).toBeGreaterThanOrEqual(0);
       expect(line.visualInCompleteSample, line.id).toBeGreaterThan(
@@ -120,59 +176,59 @@ describe('absolute-sample presentation handoffs', () => {
   });
 
   test.each([60, 120])(
-    'renders overlap at every cinematic lyric-to-lyric handoff at %i fps',
+    "renders overlap at every cinematic lyric-to-lyric handoff at %i fps",
     (fps) => {
       for (const [currentId, nextId] of [
         ...internalPairs,
-        ['V1-08', 'C2-01'] as const,
+        ["V1-08", "C2-01"] as const,
       ]) {
         const current = findLine(currentId);
+        if (current.focusProfile === "precision") continue;
         const sample = Math.round(
           (current.visualOutStartSample + current.visualOutEndSample) / 2,
         );
         const frame = frameForSample(sample, fps);
         const markup = renderToStaticMarkup(
-          createElement(LyricDisplay, {frame, fps}),
+          createElement(LyricDisplay, { frame, fps }),
         );
         const currentOpacity = opacityFor(
           markup,
-          'data-lyric-line-id',
+          "data-lyric-line-id",
           currentId,
         );
-        const nextOpacity = opacityFor(
-          markup,
-          'data-lyric-line-id',
-          nextId,
-        );
+        const nextOpacity = opacityFor(markup, "data-lyric-line-id", nextId);
 
         expect(currentOpacity, `${currentId} at ${frame}`).toBeGreaterThan(0);
         expect(nextOpacity, `${nextId} at ${frame}`).toBeGreaterThan(0);
-        expect(currentOpacity + nextOpacity, `${currentId}->${nextId}`).toBeGreaterThanOrEqual(0.95);
+        expect(
+          currentOpacity + nextOpacity,
+          `${currentId}->${nextId}`,
+        ).toBeGreaterThanOrEqual(0.95);
       }
     },
   );
 
   test.each([60, 120])(
-    'renders continuous overlap at C1-08/card and C2-08/outro at %i fps',
+    "renders continuous overlap at C1-08/card and C2-08/outro at %i fps",
     (fps) => {
       const boundaries = [
         {
-          lineId: 'C1-08',
+          lineId: "C1-08",
           startSample: BREAK_CARD_START_SAMPLE,
           endSample: BREAK_CARD_COMPLETE_SAMPLE,
           overlay: (time: number) =>
-            renderToStaticMarkup(createElement(BreakCard, {time, feature})),
-          overlayAttribute: 'data-presentation-layer',
-          overlayId: 'break-card',
+            renderToStaticMarkup(createElement(BreakCard, { time, feature })),
+          overlayAttribute: "data-presentation-layer",
+          overlayId: "break-card",
         },
         {
-          lineId: 'C2-08',
+          lineId: "C2-08",
           startSample: OUTRO_START_SAMPLE,
           endSample: OUTRO_COMPLETE_SAMPLE,
           overlay: (time: number) =>
-            renderToStaticMarkup(createElement(Outro, {time, feature})),
-          overlayAttribute: 'data-presentation-layer',
-          overlayId: 'outro-reveal',
+            renderToStaticMarkup(createElement(Outro, { time, feature })),
+          overlayAttribute: "data-presentation-layer",
+          overlayId: "outro-reveal",
         },
       ] as const;
 
@@ -182,12 +238,12 @@ describe('absolute-sample presentation handoffs', () => {
         );
         const frame = frameForSample(sample, fps);
         const lyricMarkup = renderToStaticMarkup(
-          createElement(LyricDisplay, {frame, fps}),
+          createElement(LyricDisplay, { frame, fps }),
         );
         const overlayMarkup = boundary.overlay(frame / fps);
         const lyricOpacity = opacityFor(
           lyricMarkup,
-          'data-lyric-line-id',
+          "data-lyric-line-id",
           boundary.lineId,
         );
         const overlayOpacity = opacityFor(
@@ -202,4 +258,21 @@ describe('absolute-sample presentation handoffs', () => {
       }
     },
   );
+
+  test("keeps the original-title outro centered and readable during the settle transition", () => {
+    const early = renderToStaticMarkup(
+      createElement(Outro, { time: 135.7, feature }),
+    );
+    const settled = renderToStaticMarkup(
+      createElement(Outro, { time: 136.8, feature }),
+    );
+
+    expect(early).toContain('data-presentation-layer="outro-primary-title"');
+    expect(settled).toContain("gap:17px");
+    expect(settled).toContain("letter-spacing:0.5px");
+    expect(settled).toContain("translateX(0px)");
+    expect(settled).not.toContain("gap:43px");
+    expect(settled).not.toContain("translateX(-10px)");
+    expect(settled).not.toContain("translateX(10px)");
+  });
 });
