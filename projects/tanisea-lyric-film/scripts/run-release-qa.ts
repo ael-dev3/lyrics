@@ -1534,10 +1534,7 @@ const createQaReport = (options: Readonly<{
     layoutSummary: {
       spectrumBandCount: 64,
       spectrumMeasuredCorePx: 96,
-      spectrumMaximumTransientExtensionPx: 18,
-      spectrumMaximumLineTravelPx: 114,
-      spectrumLineWidthPx: 4,
-      spectrumSeparateImpactCapsAbsent: true,
+      spectrumMaximumCapPx: 18,
       minimumLyricGapPx: 36,
       lowerChromeClearancePx: 11,
       publicUpperTelemetryAbsent: true,
