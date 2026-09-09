@@ -202,3 +202,7 @@ work/         generated local evidence; excluded from source control
 ## Media and rights
 
 The soundtrack, artwork, names, fonts, and other included media remain subject to their respective rights and licences. Confirm the necessary rights before redistribution or commercial use. Playfair is included under the SIL Open Font License in `public/Playfair-OFL.txt`.
+
+## License, credits and AI disclosure
+
+Project-owned workflow contributions are licensed under [CC BY 4.0](../../LICENSE.md), subject to the stated scope and third-party exclusions. Source music, lyrics, artwork, animation, fonts and dependencies retain their original rights. Mixed films and covers are not wholly CC-licensed assets. See [creator credits](../../CREDITS.md) and the [AI use disclosure](../../AI-DISCLOSURE.md).

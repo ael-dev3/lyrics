@@ -123,6 +123,23 @@ The Roi × Adore rebuild supersedes the earlier [Roi × Slow Down v1.0.1 edition
 
 [All published releases](https://github.com/ael-dev3/lyrics/releases) · [Release status and version notes](docs/release-status.md)
 
-## Media and credits
+## License
 
-Music, original animation, artwork and fonts remain subject to their respective rights and licences. Source attribution is included in the song records and publishing material. AI-assisted cover artwork and its generation prompts are identified in the TikTok publishing kit. Playfair’s licence is included in the [Tanisea font assets](projects/tanisea-lyric-film/public/Playfair-OFL.txt).
+Our authored workflow documentation, code, prompts, reusable visual contributions and other material we have authority to license are available under **[Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)**. Credit **Ael / Lyrics workflow**, link to the project and licence, and indicate changes. See [LICENSE.md](LICENSE.md) for the scope, exclusions and attribution example, and [the legal text](LICENSES/CC-BY-4.0.txt) for the full terms.
+
+**The original music, lyrics, recordings, remixes, animation, characters, source artwork, fonts and third-party software are excluded. We are not taking credit for their creators' work.** Finished films, screenshots and AI-assisted covers contain third-party material and are not offered as wholly CC BY 4.0 assets.
+
+## Original creators and source credits
+
+- **VIDEOCLUB — Roi:** [official music video](https://www.youtube.com/watch?v=4NOMFBRfaT0).
+- **adore — did i tell u that i miss u:** [original track upload](https://www.youtube.com/watch?v=Xf9v-Uvabxo).
+- **Dj At — Roi × Adore source mashup:** [source video](https://www.youtube.com/watch?v=11tjwUK2adU).
+- **Tanisea / Танисия and ksviety — Закричу на весь мир (Remix):** [source upload](https://www.youtube.com/watch?v=dYraLlQzjAA).
+
+[Full credits, reference uploaders, fonts and unresolved artwork attribution](CREDITS.md). Our work adds lyric presentation and a production workflow; it does not claim authorship of the source music or visuals. No endorsement by the original creators is implied.
+
+## AI disclosure
+
+The project uses substantial **AI assistance** for code, documentation, translation drafting, vocal alignment and cover generation, under Ael's creative direction and review. The films retain source music and animation; the promotional covers are AI-assisted adaptations. Automated verification does not certify every vocal boundary or translation.
+
+[Read the AI disclosure, methods and limitations](AI-DISCLOSURE.md).

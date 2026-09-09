@@ -37,3 +37,7 @@ The [final film](https://github.com/ael-dev3/lyrics/releases/download/roi-adore-
 The exact delivered filename and SHA-256 are in [final-verification.json](evidence/final-verification.json). Full decode passed, AAC packets matched the locked master, and the Desktop copy matched the final hash. Actual video duration is 379.366667 s at 60 fps (22,762 frames); AAC duration is 379.367619 s.
 
 The timing report measures frame quantization, not ground-truth vocal accuracy. Dense overlaps retain uncertainty; some highlights intentionally group words. See the production record for the full interpretation.
+
+## License, credits and AI disclosure
+
+Project-owned workflow contributions are licensed under [CC BY 4.0](../../LICENSE.md), subject to the stated scope and third-party exclusions. Source music, lyrics, artwork, animation, fonts and dependencies retain their original rights. Mixed films and covers are not wholly CC-licensed assets. See [creator credits](../../CREDITS.md) and the [AI use disclosure](../../AI-DISCLOSURE.md).

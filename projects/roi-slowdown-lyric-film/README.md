@@ -73,3 +73,7 @@ The background preserves the source 16:9 picture without stretching. The public 
 | `work/whisper-transcript.json`, `work/whisper-fr.json`, `work/whisper-en.json` | Automatic and forced-language transcription evidence |
 
 The final master and source are copied to the Desktop only after strict media verification. Release assets are published from the repository root README with Song 1/Song 2 labels.
+
+## License, credits and AI disclosure
+
+Project-owned workflow contributions are licensed under [CC BY 4.0](../../LICENSE.md), subject to the stated scope and third-party exclusions. Source music, lyrics, artwork, animation, fonts and dependencies retain their original rights. Mixed films and covers are not wholly CC-licensed assets. See [creator credits](../../CREDITS.md) and the [AI use disclosure](../../AI-DISCLOSURE.md).

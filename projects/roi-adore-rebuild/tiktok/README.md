@@ -19,3 +19,7 @@ The video and publishing kit are available in [the release](https://github.com/a
 Scripts are archived with their original session-relative layout. Run from the extracted production archive root after generating `work/frames-v4` using the full production project's renderer. Place `tiktok-render.py` and `verify-tiktok.py` under `work/`. The render script uses FFmpeg, original animation, locked AAC and the rendered transparent frames. `--preview` makes a ten-second sample; omission renders the full timeline. Set the verifier's `<DELIVERY_DIRECTORY>` to the desired copy destination before running it. The script's first input is the lossless frame sequence, not the compressed landscape movie.
 
 Video SHA-256: `498d704e134db351e0578f7c41dfc523bb2d2371f8169401c2821a053b32d132`.
+
+## License, credits and AI disclosure
+
+Project-owned workflow contributions are licensed under [CC BY 4.0](../../../LICENSE.md), subject to the stated scope and third-party exclusions. Source music, lyrics, artwork, animation, fonts and dependencies retain their original rights. Mixed films and covers are not wholly CC-licensed assets. See [creator credits](../../../CREDITS.md) and the [AI use disclosure](../../../AI-DISCLOSURE.md).

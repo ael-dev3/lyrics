@@ -29,3 +29,7 @@ npm run verify -- --platform-safe output/Tanisea-Lyric-Film-vNext-60fps-Final.mp
 `render` creates the high-quality 2× visual reference. `encode` makes the archival HEVC master while stream-copying the locked AAC soundtrack; `platform` copies the video and creates the platform-safe AAC track; `verify` checks codecs, dimensions, cadence, frame count, duration, color metadata, loudness, fast-start layout, and full decode.
 
 The included media and fonts remain subject to their respective rights and licences.
+
+## License, credits and AI disclosure
+
+Project-owned workflow contributions are licensed under [CC BY 4.0](../LICENSE.md), subject to the stated scope and third-party exclusions. Source music, lyrics, artwork, animation, fonts and dependencies retain their original rights. Mixed films and covers are not wholly CC-licensed assets. See [creator credits](../CREDITS.md) and the [AI use disclosure](../AI-DISCLOSURE.md).
