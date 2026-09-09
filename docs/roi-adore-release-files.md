@@ -16,3 +16,7 @@ The 1,267,871,245-byte ZIP contains 154 inventoried files plus `FILES.json`, whi
 The package preserves the production-relative `work/film` layout. Its npm scripts expose opening, typechecking, timing checks, rendering, encoding and final verification. `ROI_DELIVERY_DIR` controls the verifier's copy location; the default is the archive's `delivery/` directory. The lightweight Studio preview uses a poster; the encoder composites the real animation. Full rerendering requires Node.js 24, FFmpeg/FFprobe, Remotion Chromium, sufficient disk space and time.
 
 ZIP CRC verification, packaged TypeScript checking and the 71-cue timing checks passed before upload. Binary media hashes are retained; machine paths in textual records are sanitized. Installed dependencies, downloaded model weights, regenerable frames, temporary encode experiments and duplicate historical release copies are excluded. The historical v1.0.1 master remains available in its original release.
+
+## TikTok material
+
+The same release now includes the full vertical MP4, both corrected cover aspect ratios, a publishing ZIP with all cover variants and caption, and separate TikTok verification/checksums. The [tracked TikTok folder](../projects/roi-adore-rebuild/tiktok/README.md) preserves the adaptation scripts and AI cover prompts. Existing landscape assets are unchanged.

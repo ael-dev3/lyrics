@@ -48,6 +48,20 @@ The [complete release](https://github.com/ael-dev3/lyrics/releases/tag/roi-adore
 
 The measured maximum frame-rounding error is 8.1667 ms, which does not certify inferred vocal boundaries. Dense overlaps retain timing uncertainty.
 
+### TikTok edition and publishing material
+
+The full track is also available as a **1080×1920, 60 fps vertical film**, with original animation above the French/translation and English lyric lanes. Cue timing and original AAC packets are preserved; full decode and copied-file checks passed.
+
+| Download | Contents |
+| --- | --- |
+| [Vertical video](https://github.com/ael-dev3/lyrics/releases/download/roi-adore-rebuild-v1.0.0/Roi-x-Adore-TikTok-1080x1920-60fps.mp4) | Full-length 9:16 H.264/AAC film |
+| [TikTok publishing kit](https://github.com/ael-dev3/lyrics/releases/download/roi-adore-rebuild-v1.0.0/Roi-x-Adore-TikTok-Publishing-Kit.zip) | All covers, caption, generation prompts, adaptation scripts and QA |
+| [4:3 cover](https://github.com/ael-dev3/lyrics/releases/download/roi-adore-rebuild-v1.0.0/Roi-Cover-Landscape-4x3.jpg) | 1600×1200 landscape |
+| [Portrait profile cover](https://github.com/ael-dev3/lyrics/releases/download/roi-adore-rebuild-v1.0.0/Roi-Cover-Profile-3x4.jpg) | 1200×1600 portrait alternative |
+| [Verification](https://github.com/ael-dev3/lyrics/releases/download/roi-adore-rebuild-v1.0.0/Roi-x-Adore-TikTok-Verification.json) · [Checksums](https://github.com/ael-dev3/lyrics/releases/download/roi-adore-rebuild-v1.0.0/TIKTOK-CHECKSUMS.sha256) | Delivery metadata and asset SHA-256 |
+
+[Browse the caption, covers and TikTok production notes](projects/roi-adore-rebuild/tiktok/README.md).
+
 ### Historical dual-song release: Roi × Slow Down v1.0.1
 
 The earlier published release applies the same precision lyric-film workflow to the mixed track `roi x did i tell u that i miss u` (`11tjwUK2adU`). It keeps the two sources distinct in the public picture and in the timing authority:
