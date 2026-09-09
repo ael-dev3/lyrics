@@ -1,217 +1,128 @@
-# Lyrics — song films and production workflows
+# Lyrics
 
-[**Roi × Adore: completed rebuild**](#roi--adore--light-blue-1080p60-rebuild) · [Tanisea](#tanisea--precision-synced-english-lyric-film) · [Production workflow](docs/production-workflow.md)
+Music films with synchronized lyrics, meaning-linked translations, and audio-reactive visuals. This repository contains the projects, production workflows, and verification evidence behind each edition.
 
-## Roi × Adore — light-blue 1080p60 rebuild
+[**Roi × Adore**](#roi--adore) · [**TikTok edition**](#tiktok-edition) · [**Tanisea**](#tanisea) · [**Build and workflow**](#build-and-workflow)
 
-**VIDEOCLUB “Roi” × Adore “Did I Tell U That I Miss U”** — two overlapping vocal tracks, French lyrics with synchronized English translation, and a larger original animation in its blue visual language. Completed and accepted on **9 September 2026**.
+## Roi × Adore
 
-![Final Roi × Adore film: both songs highlighted over the original blue animation at 02:05.800](assets/roi-adore-rebuild-125-8.png)
+**VIDEOCLUB — Roi × adore — Did I Tell U That I Miss U**
 
-*Actual frame extracted from the final encoded movie at 02:05.800. French and translation share semantic focus; the second song has its own English lyric timing.*
+A blue-toned lyric film for two overlapping vocal tracks. French lyrics appear alongside their English translation, while the second song has an independent English lyric lane. Original animation, stable typography, and separate spectrum and expressive motion controls carry the design across landscape and vertical editions.
 
-| Film | Final result |
+![Roi × Adore: French lyrics, English translation and independent English vocals over blue animation](assets/roi-adore-rebuild-125-8.png)
+
+*Frame from the final landscape movie at 02:05.800.*
+
+| Edition | Format | Duration | Video / audio |
+| --- | --- | --- | --- |
+| Landscape | 1920×1080 · 60 fps | 6:19 | HEVC Main 10 / AAC |
+| Vertical | 1080×1920 · 60 fps | 6:19 | H.264 / AAC |
+
+Both editions preserve the locked AAC packets and lyric timeline. The project includes 49 French cues with English translation, 22 English cues, and 504 timed highlight units. The visualizer measures 64 stereo frequency bands on a fixed dBFS RMS scale; expressive motion is controlled separately.
+
+### Film and production downloads
+
+| Download | Contents |
 | --- | --- |
-| Picture | 1920×1080 · 60 fps · HEVC Main 10 · BT.709 |
-| Duration | 6:19.368 overall · 22,762 decoded video frames |
-| Lyrics | 49 French cues with English translation + 22 independent English cues |
-| Focus | 504 timed highlight units; individual words or evidence-supported groups |
-| Visualizer | 64 calibrated stereo bands, 20 Hz–20 kHz, fixed dBFS RMS scale |
-| Motion | Separate sustained pressure, transient impact, bass and brightness controls |
-| Verification | Full decode passed · original AAC packets preserved · delivered copy hash verified |
+| [Landscape film](https://github.com/ael-dev3/lyrics/releases/download/roi-adore-rebuild-v1.0.0/Roi-x-Adore-Lyric-Film-Rebuilt-1080p60.mp4) | Final 1080p60 master |
+| [Complete production archive · 1.27 GB](https://github.com/ael-dev3/lyrics/releases/download/roi-adore-rebuild-v1.0.0/Roi-x-Adore-Complete-Production.zip) | Editable project, media, fonts, stems, alignment inputs, analysis, dependency lock and setup instructions |
+| [Original source video](https://github.com/ael-dev3/lyrics/releases/download/roi-adore-rebuild-v1.0.0/roi-x-did-i-tell-u-that-i-miss-u-source.mkv) | Untouched downloaded stream |
+| [10-second preview](https://github.com/ael-dev3/lyrics/releases/download/roi-adore-rebuild-v1.0.0/Roi-x-Adore-Immersive-Review.mp4) | Short review of the visual treatment |
+| [Verification](https://github.com/ael-dev3/lyrics/releases/download/roi-adore-rebuild-v1.0.0/Roi-x-Adore-Verification.json) · [Checksums](https://github.com/ael-dev3/lyrics/releases/download/roi-adore-rebuild-v1.0.0/CHECKSUMS.sha256) | Landscape delivery QA and original release asset hashes |
 
-The rebuild carries forward Tanisea’s stable typography, semantic translation focus, fine frame details, and expressive motion. It develops a distinct light-blue treatment with stronger contrast, feathered lyric backdrops, full-height animation, and measured spectrum bars whose levels remain independent of artistic effects.
-
-**Explore this song:** [Full production record and lessons](docs/roi-adore-rebuild.md) · [Source and evidence snapshot](projects/roi-adore-rebuild/README.md) · [Final QA JSON](projects/roi-adore-rebuild/evidence/final-verification.json) · [Timing checks](projects/roi-adore-rebuild/evidence/checks.json) · [Original source video](https://www.youtube.com/watch?v=11tjwUK2adU)
+[Full release](https://github.com/ael-dev3/lyrics/releases/tag/roi-adore-rebuild-v1.0.0) · [Production record](docs/roi-adore-rebuild.md) · [Source and evidence](projects/roi-adore-rebuild/README.md) · [Asset inventory](docs/roi-adore-release-files.md) · [Original upload](https://www.youtube.com/watch?v=11tjwUK2adU)
 
 <details>
-<summary>Second screenshot: independent English focus at 03:59</summary>
+<summary>Additional frame and verification details</summary>
 
-![English lyrics active while French holds its title state at 03:59](assets/roi-adore-rebuild-239.png)
+![Independent English focus with the French lane in a title state](assets/roi-adore-rebuild-239.png)
 
-The original animation stays prominent while inactive lyrics resolve to a clean title state. Both screenshots are extracted from the delivered MP4, not design mockups.
+*Final landscape movie at 03:59.000.*
+
+- Full decoding passed for both editions: 22,762 delivered video frames each.
+- AAC packet identity and delivered-file SHA-256 were verified.
+- All 71 lyric cues were checked in two browser focus states.
+- Maximum measured cue-boundary rounding error is 8.1667 ms at 60 fps. This describes frame placement, not the accuracy of inferred vocal boundaries; dense overlapping vocals retain uncertainty.
+- The selected 1080p60 source is YouTube’s upscaled derivative of native 720p60 material.
+
+The production archive includes a per-file manifest. Installed dependencies, downloadable model weights, regenerable frame caches and temporary encode trials are excluded. See the [production record](docs/roi-adore-rebuild.md) for calibration, rendering methods and limitations.
 
 </details>
 
-### Download the film and original production files
+### TikTok edition
+
+The vertical adaptation places animation above both lyric lanes, with the spectrum below and space around the content for platform controls. The publishing kit includes the caption, all cover variants, generation prompts, adaptation scripts and verification files.
 
 | Download | Contents |
 | --- | --- |
-| [Final 1080p60 film](https://github.com/ael-dev3/lyrics/releases/download/roi-adore-rebuild-v1.0.0/Roi-x-Adore-Lyric-Film-Rebuilt-1080p60.mp4) | Exact accepted HEVC Main 10 master with retained AAC |
-| [Original downloaded video](https://github.com/ael-dev3/lyrics/releases/download/roi-adore-rebuild-v1.0.0/roi-x-did-i-tell-u-that-i-miss-u-source.mkv) | Untouched source stream; 1080p60 upscaled derivative of native 720p60 |
-| [Complete production archive · 1.27 GB](https://github.com/ael-dev3/lyrics/releases/download/roi-adore-rebuild-v1.0.0/Roi-x-Adore-Complete-Production.zip) | Editable project, animation, audio, fonts, stems, raw analysis, alignment inputs, features, evidence, dependency lock and setup instructions |
-| [10-second motion review](https://github.com/ael-dev3/lyrics/releases/download/roi-adore-rebuild-v1.0.0/Roi-x-Adore-Immersive-Review.mp4) | Short review of the final visual treatment |
-| [Source metadata](https://github.com/ael-dev3/lyrics/releases/download/roi-adore-rebuild-v1.0.0/roi-x-did-i-tell-u-that-i-miss-u-source.info.json) | Original download metadata |
-| [Delivery verification](https://github.com/ael-dev3/lyrics/releases/download/roi-adore-rebuild-v1.0.0/Roi-x-Adore-Verification.json) · [Checksums](https://github.com/ael-dev3/lyrics/releases/download/roi-adore-rebuild-v1.0.0/CHECKSUMS.sha256) | Final QA and SHA-256 for every asset |
+| [Vertical film](https://github.com/ael-dev3/lyrics/releases/download/roi-adore-rebuild-v1.0.0/Roi-x-Adore-TikTok-1080x1920-60fps.mp4) | Full-length 9:16 video at 60 fps |
+| [Publishing kit](https://github.com/ael-dev3/lyrics/releases/download/roi-adore-rebuild-v1.0.0/Roi-x-Adore-TikTok-Publishing-Kit.zip) | Covers, caption, prompts, scripts and QA |
+| [Landscape cover · 4:3](https://github.com/ael-dev3/lyrics/releases/download/roi-adore-rebuild-v1.0.0/Roi-Cover-Landscape-4x3.jpg) · [Portrait cover · 3:4](https://github.com/ael-dev3/lyrics/releases/download/roi-adore-rebuild-v1.0.0/Roi-Cover-Profile-3x4.jpg) | 1600×1200 and 1200×1600 alternatives |
+| [Verification](https://github.com/ael-dev3/lyrics/releases/download/roi-adore-rebuild-v1.0.0/Roi-x-Adore-TikTok-Verification.json) · [TikTok checksums](https://github.com/ael-dev3/lyrics/releases/download/roi-adore-rebuild-v1.0.0/TIKTOK-CHECKSUMS.sha256) | Vertical delivery QA and TikTok asset hashes |
 
-The [complete release](https://github.com/ael-dev3/lyrics/releases/tag/roi-adore-rebuild-v1.0.0) includes the original production inputs; the archive has its own per-file inventory. Installed dependencies, downloaded model binaries, regenerable frame caches and temporary encode trials are excluded. Binary media are unchanged; machine-specific paths in text records are sanitized. The packaged project passed typechecking and timing checks.
+[Browse the TikTok material and reproduction notes](projects/roi-adore-rebuild/tiktok/README.md).
 
-The measured maximum frame-rounding error is 8.1667 ms, which does not certify inferred vocal boundaries. Dense overlaps retain timing uncertainty.
+## Tanisea
 
-### TikTok edition and publishing material
+**Tanisea & ksviety — Закричу на весь мир (Remix)**
 
-The full track is also available as a **1080×1920, 60 fps vertical film**, with original animation above the French/translation and English lyric lanes. Cue timing and original AAC packets are preserved; full decode and copied-file checks passed.
+The first lyric-film project pairs Russian vocals with meaning-linked English highlights. Its warm ember and teal design established the typography, timing and verification workflow used as a starting point for Roi × Adore.
 
-| Download | Contents |
+<img src="assets/tanisea-vnext-hero.png" width="640" alt="Tanisea lyric-film design with English translation and an audio-reactive spectrum">
+
+The published square edition runs for 153 seconds at 1080×1080 and 60 fps. Its source records Russian vocal timing as sample indices and maps English phrases to the corresponding meaning, including changes in word order. A separate 120 fps proof exposes timing evidence for inspection.
+
+| Published download · v2.4.0 | Contents |
 | --- | --- |
-| [Vertical video](https://github.com/ael-dev3/lyrics/releases/download/roi-adore-rebuild-v1.0.0/Roi-x-Adore-TikTok-1080x1920-60fps.mp4) | Full-length 9:16 H.264/AAC film |
-| [TikTok publishing kit](https://github.com/ael-dev3/lyrics/releases/download/roi-adore-rebuild-v1.0.0/Roi-x-Adore-TikTok-Publishing-Kit.zip) | All covers, caption, generation prompts, adaptation scripts and QA |
-| [4:3 cover](https://github.com/ael-dev3/lyrics/releases/download/roi-adore-rebuild-v1.0.0/Roi-Cover-Landscape-4x3.jpg) | 1600×1200 landscape |
-| [Portrait profile cover](https://github.com/ael-dev3/lyrics/releases/download/roi-adore-rebuild-v1.0.0/Roi-Cover-Profile-3x4.jpg) | 1200×1600 portrait alternative |
-| [Verification](https://github.com/ael-dev3/lyrics/releases/download/roi-adore-rebuild-v1.0.0/Roi-x-Adore-TikTok-Verification.json) · [Checksums](https://github.com/ael-dev3/lyrics/releases/download/roi-adore-rebuild-v1.0.0/TIKTOK-CHECKSUMS.sha256) | Delivery metadata and asset SHA-256 |
+| [Production master](https://github.com/ael-dev3/lyrics/releases/download/v2.4.0/Tanisea-Lyric-Film-Production-Master-vNext.mp4) | Square HEVC Main 10 film with retained AAC |
+| [120 fps sync proof](https://github.com/ael-dev3/lyrics/releases/download/v2.4.0/Tanisea-Lyric-Film-Sync-Proof-120fps.mp4) | Diagnostic timing render |
+| [Source archive](https://github.com/ael-dev3/lyrics/releases/download/v2.4.0/Tanisea-Lyric-Film-Source-vNext.zip) | Source corresponding to the published edition |
+| [Workflow evidence](https://github.com/ael-dev3/lyrics/releases/download/v2.4.0/Tanisea-Lyric-Film-Workflow-Evidence-vNext.zip) | Alignment, generated QA and production evidence |
+| [QA report](https://github.com/ael-dev3/lyrics/releases/download/v2.4.0/tanisea-final-qa-vnext.md) · [Checksums](https://github.com/ael-dev3/lyrics/releases/download/v2.4.0/CHECKSUMS.sha256) | Published verification and asset hashes |
 
-[Browse the caption, covers and TikTok production notes](projects/roi-adore-rebuild/tiktok/README.md).
+[Source project](projects/tanisea-lyric-film/README.md) · [Alignment report](audits/tanisea-word-alignment-v3.md) · [Original versus lyric-film comparison](docs/original-vs-lyric-film-comparison.md)
 
-### Historical dual-song release: Roi × Slow Down v1.0.1
+The repository also contains later chorus corrections and a landscape composition. These are distinct from the published v2.4.0 files above; see [release status and history](docs/release-status.md) before selecting a source revision or download.
 
-The earlier published release applies the same precision lyric-film workflow to the mixed track `roi x did i tell u that i miss u` (`11tjwUK2adU`). It keeps the two sources distinct in the public picture and in the timing authority:
+## Build and workflow
 
-| Lane | Track | Timing / visual identity |
-| --- | --- | --- |
-| Song 1 | `Roi` | French · warm rail · 48 reviewed lines |
-| Song 2 | `Slow down / Did I tell you that I miss you?` | English · cool rail · 13 reviewed lines |
+Each project has its own setup instructions. Use the release source archive when reproducing a particular published movie.
 
-The public master is 1920×1080 at 60 fps. The source’s native maximum was 720p60; the selected 1080p60 stream is YouTube’s AI-upscaled derivative. The separate 120-fps proof, source metadata, alignment JSON, QA report, checksums, and exact reusable workflow are published with the release.
-
-| Artifact | Link |
+| Project | Starting point |
 | --- | --- |
-| Song 1 · `Roi` / Song 2 · `Slow Down` public master | [Roi × Slow Down Lyric Film · 1080p60](https://github.com/ael-dev3/lyrics/releases/download/roi-slowdown-v1.0.1/Roi-x-Slow-Down-Lyric-Film-1080p60.mp4) |
-| Song 1 + Song 2 synchronization proof | [120 fps diagnostic proof](https://github.com/ael-dev3/lyrics/releases/download/roi-slowdown-v1.0.1/Roi-x-Slow-Down-Sync-Proof-120fps.mp4) |
-| Source project and exact next-song workflow | [Dual-song source archive](https://github.com/ael-dev3/lyrics/releases/download/roi-slowdown-v1.0.1/Roi-x-Slow-Down-Workflow.zip) |
-| Source media and provenance | [1080p60 source](https://github.com/ael-dev3/lyrics/releases/download/roi-slowdown-v1.0.1/Roi-x-Slow-Down-Source-1080p60-AI-Upscaled.mp4) · [metadata](https://github.com/ael-dev3/lyrics/releases/download/roi-slowdown-v1.0.1/Roi-x-Slow-Down-Source-Metadata.json) |
-| Timing authority | [Song 1 / Song 2 alignment JSON](https://github.com/ael-dev3/lyrics/releases/download/roi-slowdown-v1.0.1/Roi-x-Slow-Down-Alignment.json) |
-| QA and checksums | [QA JSON](https://github.com/ael-dev3/lyrics/releases/download/roi-slowdown-v1.0.1/Roi-x-Slow-Down-Release-QA.json) · [checksums](https://github.com/ael-dev3/lyrics/releases/download/roi-slowdown-v1.0.1/Roi-x-Slow-Down-Checksums.sha256) |
-| Transcription evidence | [Automatic + French + English Whisper passes](https://github.com/ael-dev3/lyrics/releases/download/roi-slowdown-v1.0.1/Roi-x-Slow-Down-Transcription-Evidence.zip) |
-| Reusable workflow | [Dual-song workflow guide](projects/roi-slowdown-lyric-film/docs/roi-slowdown-workflow.md) |
+| Roi × Adore | Download the complete production archive and follow its included README; the Git snapshot documents the source and evidence |
+| TikTok adaptation | Follow the [vertical reproduction notes](projects/roi-adore-rebuild/tiktok/README.md) after preparing the production inputs |
+| Tanisea | Follow the [project quick start](projects/tanisea-lyric-film/README.md#quick-start) for Node.js, FFmpeg and Remotion setup |
 
+The reusable workflow covers soundtrack locking, lyric alignment, semantic translation, visual design, calibrated audio features, rendering and delivery verification:
 
----
+- [Production workflow](docs/production-workflow.md)
+- [First-pass song workflow](docs/first-pass-song-workflow.md)
+- [Visual production workflow](docs/pixel-perfect-visual-workflow.md)
+- [Scientific audio visualization](docs/scientific-audio-visualization.md)
+- [Emotional audio-reactive motion](docs/emotional-audio-reactive-motion.md)
+- [Production preferences and known issues](docs/track-workflow-preferences-and-known-issues.md)
 
-<div align="center">
-  <img src="assets/tanisea-vnext-hero.png" width="760" alt="Lossless hero frame from the Tanisea precision-synced English lyric film">
-  <h1>Tanisea — Precision-Synced English Lyric Film</h1>
-  <p><strong>Sample-indexed Russian vocal alignment, semantic English focus, and verified frame-bounded rendering.</strong></p>
-  <p>
-    <a href="https://github.com/ael-dev3/lyrics/releases/download/v2.4.1/Tanisea-Lyric-Film-Production-Master-vNext.mp4">Production master</a>
-    ·
-    <a href="https://github.com/ael-dev3/lyrics/releases/download/v2.4.1/Tanisea-Lyric-Film-Sync-Proof-120fps.mp4">120 fps sync proof</a>
-    ·
-    <a href="projects/tanisea-lyric-film">Source project</a>
-    ·
-    <a href="https://github.com/ael-dev3/lyrics/releases/download/v2.4.1/Tanisea-Lyric-Film-Workflow-Evidence-vNext.zip">Workflow evidence</a>
-    ·
-    <a href="audits/tanisea-final-qa-vnext.md">Final QA</a>
-  </p>
-  <p>
-    <code>1080 × 1080</code>
-    <code>60 fps</code>
-    <code>153 seconds</code>
-    <code>HEVC 10-bit</code>
-    <code>AAC 44.1 kHz</code>
-  </p>
-</div>
-
-## What the Tanisea release demonstrates
-
-Tanisea is a complete 9,180-frame Remotion lyric film built against a locked 153-second soundtrack. Russian vocal boundaries are stored as integer sample indices. Each reviewed source group activates the English phrase carrying the same meaning, including backward activation where source and translation order differ. Version 2.4.1 affinely fits the approved `01:46–01:56` word-level choreography across the repeated `00:40–00:50` performance window, removes rounded caps from the bottom spectrum so it is made only of square-ended lines, and replaces the outro word-spread with a cohesive centered settle. It supersedes the earlier v2.4.0 C1 visual schedule while preserving the reviewed C1 source timing beside the fitted presentation schedule for auditability.
-
-The public composition keeps diagnostics out of the picture. A separate 120 fps proof exposes source tokens, target segments, sample indices, confidence, uncertainty, and frame error for inspection.
-
-The [original-versus-lyric-film comparison](docs/original-vs-lyric-film-comparison.md) records exactly what the official static-audio presentation supplies, what this project adds, the measurable engineering footprint, and the contribution and rights boundary. It links the [official source upload](https://www.youtube.com/watch?v=dYraLlQzjAA) and the [published English lyric film](https://www.youtube.com/watch?v=ZWBaldEgepk).
-
-The implementation includes:
-
-- 24 reviewed vocal lines, 102 source tokens, 74 English segments, and 74 semantic cues;
-- a deterministic 64-band audio feature package with one record per 60 fps frame;
-- semantic focus that supports forward, backward, repeated, and simultaneous targets, with cinematic parity across the repeated `C1-05`–`C1-08` and `C2-05`–`C2-08` chorus windows;
-- a zero-phase temporally and spatially smoothed bottom spectrum with square-ended lines, a restrained ember/teal palette, at least 96 px of measured core travel, and a distinct transient extension of up to 18 px;
-- a clean upper field, mobile-safe lyric geometry, persistent frame chrome, and a native original-title outro;
-- 4:4:4 reference rendering followed by one controlled 1080×1080 delivery conversion;
-- packet-identical AAC audio in the production master and synchronization proof.
-
-## Measured synchronization bounds
-
-Public characterization: **sample-indexed alignment with frame-bounded rendering**.
-
-| Measure                                  | Verified result                        |
-| ---------------------------------------- | -------------------------------------- |
-| Timing authority                         | Integer sample indices at 44,100 Hz    |
-| Maximum reviewed token uncertainty       | 882 samples / 20.000 ms                |
-| Maximum 60 fps cue-boundary frame error  | 8.321995 ms, within the 8.334 ms bound |
-| Maximum 120 fps cue-boundary frame error | 4.002268 ms, within the 4.167 ms bound |
-| Public cadence                           | 60 fps / 9,180 frames                  |
-| Proof cadence                            | 120 fps / 18,360 frames                |
-
-The [reviewed alignment report](audits/tanisea-word-alignment-v3.md) lists every token and semantic cue with source samples, uncertainty, evidence methods, and signed frame error. The [machine-readable alignment](projects/tanisea-lyric-film/alignment/tanisea-word-alignment-v3.json) is the render authority.
-
-## Release files
-
-| Artifact                                                                                                                        | Purpose                                                                                             |
-| ------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| [Production master](https://github.com/ael-dev3/lyrics/releases/download/v2.4.1/Tanisea-Lyric-Film-Production-Master-vNext.mp4) | 1080×1080, 60 fps, 10-bit HEVC `hvc1`, original AAC                                                 |
-| [Synchronization proof](https://github.com/ael-dev3/lyrics/releases/download/v2.4.1/Tanisea-Lyric-Film-Sync-Proof-120fps.mp4)   | 1080×1080, 120 fps diagnostic render, original AAC                                                  |
-| [Source archive](https://github.com/ael-dev3/lyrics/releases/download/v2.4.1/Tanisea-Lyric-Film-Source-vNext.zip)               | Tracked Remotion project files at the release source revision                                       |
-| [Alignment JSON](https://github.com/ael-dev3/lyrics/releases/download/v2.4.1/tanisea-word-alignment-v3.json)                    | Reviewed sample-indexed timing and semantic mapping                                                 |
-| [QA JSON](https://github.com/ael-dev3/lyrics/releases/download/v2.4.1/tanisea-final-qa-vnext.json)                              | Machine-readable build, media, layout, and repeatability evidence                                   |
-| [Checksums](https://github.com/ael-dev3/lyrics/releases/download/v2.4.1/CHECKSUMS.sha256)                                       | SHA-256 values for the release package                                                              |
-| [Workflow evidence](https://github.com/ael-dev3/lyrics/releases/download/v2.4.1/Tanisea-Lyric-Film-Workflow-Evidence-vNext.zip) | Canonical alignment provenance, both QA executions, generated QA media, and visual-review artifacts |
-| [Workflow manifest](https://github.com/ael-dev3/lyrics/releases/download/v2.4.1/tanisea-workflow-evidence-vnext.json)           | Per-file SHA-256 and byte size for the supplemental workflow archive                                |
-| [Workflow checksums](https://github.com/ael-dev3/lyrics/releases/download/v2.4.1/WORKFLOW-EVIDENCE.sha256)                      | SHA-256 values for the workflow archive and standalone manifest                                     |
-| [Earlier platform snapshot](deliverables/Tanisea-Lyric-Film-vNext-60fps-Final.mp4)                                              | Previously published attenuated-AAC delivery retained with its original checksum                    |
-
-## Build the source
-
-Requirements: Node.js 20 or newer, npm, FFmpeg, FFprobe, and the Chromium runtime supported by Remotion. The QA sheet generator uses FFmpeg `drawtext` when available; otherwise it uses its checked-in Python/Pillow fallback with the tracked font, without altering any delivery media.
-
-```sh
-cd projects/tanisea-lyric-film
-npm ci
-npm run features
-npm run check
-```
-
-Open the composition or render the 2× reference:
-
-```sh
-npm run dev
-npm run render
-```
-
-Delivery and QA commands are documented in the [project README](projects/tanisea-lyric-film/README.md). The [v2.4.1 correction report](docs/first-act-and-outro-polish-v2.4-implementation.md) records the exact C1/C2 timing defect, affine fit, square-ended spectrum, and cohesive outro settle. The [historical v2.4.0 report](docs/cinematic-parity-v2.4-implementation.md) is retained for provenance. The [v2.3 implementation report](docs/first-act-semantic-sync-v2.3-implementation.md) records the preceding `00:40–00:50` semantic, handoff, and rail correction; the [v2.2 implementation report](docs/first-act-polish-v2.2-implementation.md) records the preceding phrase-continuity and two-tone-spectrum revision. The [v2.1 implementation report](docs/first-act-precision-v2.1-implementation.md) records the earlier contact-focus revision. The [original implementation report](docs/precision-sync-vnext-implementation.md) connects the full data model, render architecture, media outputs, and verification evidence. The [workflow evidence guide](docs/workflow-evidence.md) inventories the supplemental generated evidence and its deliberate exclusions.
-
-## Repository map
+## Repository structure
 
 ```text
-assets/                              lossless repository hero
-audits/tanisea-word-alignment-v3.md reviewed timing evidence
-audits/tanisea-final-qa-vnext.*     final human- and machine-readable QA
-audits/tanisea-workflow-evidence-vnext.json
-docs/precision-sync-vnext-implementation.md
-docs/first-act-precision-v2.1-implementation.md
-docs/first-act-polish-v2.2-implementation.md
-docs/first-act-semantic-sync-v2.3-implementation.md
-docs/first-act-and-outro-polish-v2.4-implementation.md  v2.4.1 correction record
-docs/cinematic-parity-v2.4-implementation.md             v2.4.0 historical record
-docs/workflow-evidence.md
-projects/tanisea-lyric-film/
-  alignment/                         render-authoritative sample data
-  public/                            locked media, fonts, audio features
-  scripts/                           generation, render, encode, and QA tools
-  src/                               Remotion compositions and visual system
-  tests/                             timing, layout, media, and release gates
-projects/roi-slowdown-lyric-film/    dual-song Roi × Slow Down source project
-  alignment/                         Song 1/Song 2 sample-indexed timing
-  scripts/                            source lock, alignment export, media QA
-  src/                                1080p60 Remotion master and 120fps proof
-  tests/                              timing and calm-visualizer contracts
+assets/                          Film screenshots and artwork
+projects/roi-adore-rebuild/       Roi × Adore source and evidence snapshot
+  tiktok/                        Vertical adaptation and publishing material
+projects/tanisea-lyric-film/      Tanisea Remotion project
+projects/roi-slowdown-lyric-film/ Historical dual-song implementation
+docs/                            Production guides and implementation records
+audits/                          Timing and quality reports
+deliverables/                    Earlier tracked delivery snapshot
 ```
 
-## QA status
+## Release history
 
-The release gate covers strict typechecking, 1,000+ assertions, browser-measured layout, composition discovery, full media decode, codec and colour metadata, AAC packet identity, selected encoded frames, generated QA media, and two independent executions of the final matrix. Publication evidence and immutable asset URLs are recorded in the [final QA report](audits/tanisea-final-qa-vnext.md). The generated alignment, run, media, and visual-review evidence is preserved in the supplemental workflow archive.
+The Roi × Adore rebuild supersedes the earlier [Roi × Slow Down v1.0.1 edition](https://github.com/ael-dev3/lyrics/releases/tag/roi-slowdown-v1.0.1). Earlier source, timing evidence and downloads remain available for provenance.
 
-## Media and rights
+[All published releases](https://github.com/ael-dev3/lyrics/releases) · [Release status and version notes](docs/release-status.md)
 
-The soundtrack, artwork, names, fonts, and other included media remain subject to their respective rights and licences. Confirm the necessary rights before redistribution or commercial use. Playfair is included under the SIL Open Font License in `projects/tanisea-lyric-film/public/Playfair-OFL.txt`.
+## Media and credits
 
-The [sanitized workflow and production-preference record](docs/track-workflow-preferences-and-known-issues.md) documents the repeatable preview, timing, visual-QA, handoff, and publication process for future tracks. It also records the current landscape edition’s known future-refinement checkpoint around `00:47` without including private conversation or personal details.
+Music, original animation, artwork and fonts remain subject to their respective rights and licences. Source attribution is included in the song records and publishing material. AI-assisted cover artwork and its generation prompts are identified in the TikTok publishing kit. Playfair’s licence is included in the [Tanisea font assets](projects/tanisea-lyric-film/public/Playfair-OFL.txt).
