@@ -2118,10 +2118,7 @@ const validQaReport = () => {
     layoutSummary: {
       spectrumBandCount: 64,
       spectrumMeasuredCorePx: 96,
-      spectrumMaximumTransientExtensionPx: 18,
-      spectrumMaximumLineTravelPx: 114,
-      spectrumLineWidthPx: 4,
-      spectrumSeparateImpactCapsAbsent: true,
+      spectrumMaximumCapPx: 18,
       minimumLyricGapPx: 36,
       lowerChromeClearancePx: 11,
       publicUpperTelemetryAbsent: true,
@@ -2158,7 +2155,7 @@ const PUBLISHED_ASSET_NAMES = [
 ] as const;
 
 const validPublicationEvidence = () => {
-  const tag = 'v2.4.0';
+  const tag = 'v2.4.1';
   const downloadRoot =
     `https://github.com/ael-dev3/lyrics/releases/download/${tag}`;
   return {
@@ -5643,10 +5640,7 @@ describe('Task 7 pure-gate review Fix Round B2 complete QA report', () => {
     test.each([
       ['spectrumBandCount', 63],
       ['spectrumMeasuredCorePx', 95],
-      ['spectrumMaximumTransientExtensionPx', 19],
-      ['spectrumMaximumLineTravelPx', 113],
-      ['spectrumLineWidthPx', 5],
-      ['spectrumSeparateImpactCapsAbsent', false],
+      ['spectrumMaximumCapPx', 19],
       ['minimumLyricGapPx', 35],
       ['lowerChromeClearancePx', 10],
       ['publicUpperTelemetryAbsent', false],

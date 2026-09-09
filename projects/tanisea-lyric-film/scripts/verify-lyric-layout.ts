@@ -10,7 +10,7 @@ const SAMPLE_RATE = 44_100;
 const VIEWPORT = 1080;
 const TOLERANCE_PX = 0.05;
 const MAXIMUM_LYRIC_BOTTOM_PX = 844;
-const MAXIMUM_SPECTRUM_LINE_TOP_PX = 880;
+const MAXIMUM_SPECTRUM_CAP_TOP_PX = 880;
 const MINIMUM_SAFE_AREA_PX = 36;
 
 type SegmentFixture = Readonly<{id: string; text: string}>;
@@ -72,7 +72,7 @@ type EntryFrames = Readonly<{
 type PublicLayoutSnapshot = Readonly<{
   lineIds: readonly string[];
   lyricBottom: number;
-  spectrumLineTop: number;
+  capTop: number;
   separation: number;
   spectrumClipped: boolean;
   tickBottom: number;
@@ -238,8 +238,11 @@ const measurePublicLayout = async (
     const spectrum = document.querySelector<HTMLElement>(
       '[data-spectrum-rail="public"]',
     );
-    const spectrumLines = [...document.querySelectorAll<SVGLineElement>(
-      '[data-spectrum-line-band]',
+    const caps = [...document.querySelectorAll<SVGLineElement>(
+      '[data-spectrum-impact-band]',
+    )];
+    const measured = [...document.querySelectorAll<SVGLineElement>(
+      '[data-spectrum-measured-band]',
     )];
     const ticks = [...document.querySelectorAll<SVGTextElement>(
       '[data-spectrum-tick]',
@@ -247,7 +250,7 @@ const measurePublicLayout = async (
     const lowerChrome = [...document.querySelectorAll<HTMLElement>(
       '[data-frame-chrome-slot="track-label"], [data-frame-chrome-slot="timecode"]',
     )];
-    if (!spectrum || spectrumLines.length !== 64) {
+    if (!spectrum || caps.length !== 64 || measured.length !== 64) {
       throw new Error('Peak spectrum fixture did not render all public bands');
     }
     if (ticks.length === 0 || lowerChrome.length !== 2) {
@@ -255,11 +258,12 @@ const measurePublicLayout = async (
     }
 
     const spectrumRect = spectrum.getBoundingClientRect();
-    const lineRectangles = spectrumLines.map((line) =>
-      line.getBoundingClientRect(),
+    const capRectangles = caps.map((cap) => cap.getBoundingClientRect());
+    const barRectangles = [...measured, ...caps].map((bar) =>
+      bar.getBoundingClientRect(),
     );
     const lyricBottom = Math.max(...contentRectangles.map(({bottom}) => bottom));
-    const spectrumLineTop = Math.min(...lineRectangles.map(({top}) => top));
+    const capTop = Math.min(...capRectangles.map(({top}) => top));
     const tickBottom = Math.max(
       ...ticks.map((tick) => tick.getBoundingClientRect().bottom),
     );
@@ -272,9 +276,9 @@ const measurePublicLayout = async (
         line.getAttribute('data-lyric-line-id') ?? 'unknown',
       ),
       lyricBottom,
-      spectrumLineTop,
-      separation: spectrumLineTop - lyricBottom,
-      spectrumClipped: lineRectangles.some(
+      capTop,
+      separation: capTop - lyricBottom,
+      spectrumClipped: barRectangles.some(
         ({top, right, bottom, left}) =>
           top < spectrumRect.top - 0.01 ||
           right > spectrumRect.right + 0.01 ||
@@ -383,9 +387,9 @@ const main = async (): Promise<void> => {
         `public lyric bottom ${worstPublicLayout.lyricBottom.toFixed(3)}px exceeds ${MAXIMUM_LYRIC_BOTTOM_PX}px at frame ${worstPublicLayout.frame} (${worstPublicLayout.lineIds.join(', ')})`,
       );
     }
-    if (Math.abs(worstPublicLayout.spectrumLineTop - MAXIMUM_SPECTRUM_LINE_TOP_PX) > TOLERANCE_PX) {
+    if (Math.abs(worstPublicLayout.capTop - MAXIMUM_SPECTRUM_CAP_TOP_PX) > TOLERANCE_PX) {
       failures.push(
-        `peak spectrum line top ${worstPublicLayout.spectrumLineTop.toFixed(3)}px differs from ${MAXIMUM_SPECTRUM_LINE_TOP_PX}px`,
+        `peak spectrum cap top ${worstPublicLayout.capTop.toFixed(3)}px differs from ${MAXIMUM_SPECTRUM_CAP_TOP_PX}px`,
       );
     }
     if (worstPublicLayout.separation < MINIMUM_SAFE_AREA_PX) {
@@ -410,7 +414,7 @@ const main = async (): Promise<void> => {
       publicSafeArea: {
         framesMeasured: publicFramesMeasured,
         maximumLyricBottomPx: worstPublicLayout.lyricBottom,
-        spectrumLineTopPx: worstPublicLayout.spectrumLineTop,
+        spectrumCapTopPx: worstPublicLayout.capTop,
         minimumSeparationPx: worstPublicLayout.separation,
         worstFrame: worstPublicLayout.frame,
         worstLineIds: worstPublicLayout.lineIds,

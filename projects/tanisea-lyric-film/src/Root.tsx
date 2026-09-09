@@ -1,6 +1,6 @@
 import {Composition} from 'remotion';
-import {LyricFilm} from './LyricFilm';
-import {SyncProof} from './SyncProof';
+import {LyricFilm, YouTubeLyricFilm} from './LyricFilm';
+import {SyncProof, YouTubeSyncProof} from './SyncProof';
 
 export const RemotionRoot = () => (
   <>
@@ -18,6 +18,22 @@ export const RemotionRoot = () => (
       durationInFrames={18360}
       fps={120}
       width={1080}
+      height={1080}
+    />
+    <Composition
+      id="LyricFilmYouTube"
+      component={YouTubeLyricFilm}
+      durationInFrames={9180}
+      fps={60}
+      width={1920}
+      height={1080}
+    />
+    <Composition
+      id="LyricFilmYouTubeSyncProof"
+      component={YouTubeSyncProof}
+      durationInFrames={18360}
+      fps={120}
+      width={1920}
       height={1080}
     />
   </>

@@ -1,4 +1,6 @@
 import {AbsoluteFill} from 'remotion';
+import {isYouTubeVariant} from '../film-variant';
+import type {FilmVariant} from '../film-variant';
 
 const teal = '#16e6d1';
 const mint = '#c9fff7';
@@ -12,30 +14,44 @@ const formatTime = (time: number): string => {
 
 export type FrameChromeProps = Readonly<{
   time: number;
+  variant?: FilmVariant;
 }>;
 
-export const FrameChrome = ({time}: FrameChromeProps) => (
-  <AbsoluteFill
-    data-frame-chrome="public"
-    style={{
-      color: mint,
-      fontFamily: 'Space Grotesk',
-      pointerEvents: 'none',
-    }}
-  >
+export const FrameChrome = ({
+  time,
+  variant = 'square',
+}: FrameChromeProps) => {
+  const youtube = isYouTubeVariant(variant);
+  const canvasWidth = youtube ? 1920 : 1080;
+  const canvasHeight = 1080;
+  const inset = youtube ? 42 : 30;
+  const cornerSize = youtube ? 40 : 32;
+  const identityLeft = youtube ? 64 : 48;
+  const identityTop = youtube ? 63 : 47;
+  const bottomLabel = youtube ? 58 : 43;
+
+  return (
+    <AbsoluteFill
+      data-frame-chrome={youtube ? 'youtube' : 'public'}
+      style={{
+        color: mint,
+        fontFamily: 'Space Grotesk',
+        pointerEvents: 'none',
+      }}
+    >
     <div
       data-frame-chrome-border="frame"
       style={{
         position: 'absolute',
-        inset: 30,
+        inset,
         border: '2px solid rgba(201,255,247,.2)',
       }}
     />
     {[
-      {corner: 'top-left', x: 30, y: 30, translate: '0 0'},
-      {corner: 'top-right', x: 1050, y: 30, translate: '-100% 0'},
-      {corner: 'bottom-left', x: 30, y: 1050, translate: '0 -100%'},
-      {corner: 'bottom-right', x: 1050, y: 1050, translate: '-100% -100%'},
+      {corner: 'top-left', x: inset, y: inset, translate: '0 0'},
+      {corner: 'top-right', x: canvasWidth - inset, y: inset, translate: '-100% 0'},
+      {corner: 'bottom-left', x: inset, y: canvasHeight - inset, translate: '0 -100%'},
+      {corner: 'bottom-right', x: canvasWidth - inset, y: canvasHeight - inset, translate: '-100% -100%'},
     ].map(({corner, x, y, translate}, index) => (
       <div
         key={corner}
@@ -44,8 +60,8 @@ export const FrameChrome = ({time}: FrameChromeProps) => (
           position: 'absolute',
           left: x,
           top: y,
-          width: 32,
-          height: 32,
+          width: cornerSize,
+          height: cornerSize,
           transform: `translate(${translate})`,
           borderLeft: index % 2 === 0 ? `4px solid ${teal}` : undefined,
           borderRight: index % 2 === 1 ? `4px solid ${teal}` : undefined,
@@ -58,10 +74,10 @@ export const FrameChrome = ({time}: FrameChromeProps) => (
       data-frame-chrome-slot="identity"
       style={{
         position: 'absolute',
-        left: 48,
-        top: 47,
-        fontSize: 14,
-        letterSpacing: 3.6,
+        left: identityLeft,
+        top: identityTop,
+        fontSize: youtube ? 16 : 14,
+        letterSpacing: youtube ? 4.1 : 3.6,
         fontWeight: 650,
       }}
     >
@@ -71,10 +87,10 @@ export const FrameChrome = ({time}: FrameChromeProps) => (
       data-frame-chrome-slot="track-label"
       style={{
         position: 'absolute',
-        left: 48,
-        bottom: 43,
-        fontSize: 10,
-        letterSpacing: 2.4,
+        left: identityLeft,
+        bottom: bottomLabel,
+        fontSize: youtube ? 12 : 10,
+        letterSpacing: youtube ? 2.8 : 2.4,
         fontWeight: 600,
         color: 'rgba(201,255,247,.54)',
       }}
@@ -85,10 +101,10 @@ export const FrameChrome = ({time}: FrameChromeProps) => (
       data-frame-chrome-slot="timecode"
       style={{
         position: 'absolute',
-        right: 48,
-        bottom: 41,
-        fontSize: 12,
-        letterSpacing: 2.2,
+        right: identityLeft,
+        bottom: youtube ? 56 : 41,
+        fontSize: youtube ? 14 : 12,
+        letterSpacing: youtube ? 2.6 : 2.2,
         fontWeight: 650,
         fontVariantNumeric: 'tabular-nums',
         color: 'rgba(201,255,247,.68)',
@@ -96,5 +112,6 @@ export const FrameChrome = ({time}: FrameChromeProps) => (
     >
       {formatTime(time)}
     </div>
-  </AbsoluteFill>
-);
+    </AbsoluteFill>
+  );
+};

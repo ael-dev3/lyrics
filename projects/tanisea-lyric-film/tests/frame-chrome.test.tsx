@@ -60,13 +60,14 @@ describe('public frame chrome', () => {
 });
 
 describe('public spectrum rail', () => {
-  test('renders 64 continuous lines with no separate impact dots on the 960x150 rail', () => {
+  test('renders 64 measured bars and separate lighter impact caps on the 960x150 rail', () => {
     const markup = renderToStaticMarkup(
       createElement(SpectrumRail, {feature: peakFeature}),
     );
     const root = openingTagFor(markup, 'data-spectrum-rail', 'public');
     const svg = openingTagFor(markup, 'data-spectrum-svg', 'bands');
-    const lines = valuesFor(markup, 'data-spectrum-line-band');
+    const measured = valuesFor(markup, 'data-spectrum-measured-band');
+    const caps = valuesFor(markup, 'data-spectrum-impact-band');
 
     expect(root).toContain('left:60px');
     expect(root).toContain('bottom:68px');
@@ -74,23 +75,30 @@ describe('public spectrum rail', () => {
     expect(root).toContain('height:150px');
     expect(svg).toContain('width="960"');
     expect(svg).toContain('height="150"');
-    expect(lines).toEqual(Array.from({length: 64}, (_, index) => String(index)));
-    expect(markup).not.toContain('data-spectrum-impact-band');
-    expect(markup).not.toContain('<rect');
+    expect(measured).toEqual(Array.from({length: 64}, (_, index) => String(index)));
+    expect(caps).toEqual(measured);
 
-    const peakLine = openingTagFor(markup, 'data-spectrum-line-band', '0');
-    expect(peakLine).toContain('x1="7.5"');
-    expect(peakLine).toContain('x2="7.5"');
-    expect(peakLine).toContain('y1="132"');
-    expect(peakLine).toContain('y2="18"');
-    expect(peakLine).toContain('stroke-width="4"');
-    expect(peakLine).toContain('stroke-linecap="butt"');
-    expect(peakLine).toContain('stroke="#ff5b70"');
+    const peakMeasured = openingTagFor(markup, 'data-spectrum-measured-band', '0');
+    const peakCap = openingTagFor(markup, 'data-spectrum-impact-band', '0');
+    expect(peakMeasured).toContain('x1="7.5"');
+    expect(peakMeasured).toContain('y1="132"');
+    expect(peakMeasured).toContain('x2="7.5"');
+    expect(peakMeasured).toContain('y2="36"');
+    expect(peakMeasured).toContain('stroke-width="7"');
+    expect(peakMeasured).toContain('stroke-linecap="butt"');
+    expect(peakMeasured).toContain('stroke="#ff5b70"');
+    expect(peakCap).toContain('x1="7.5"');
+    expect(peakCap).toContain('y1="36"');
+    expect(peakCap).toContain('x2="7.5"');
+    expect(peakCap).toContain('y2="18"');
+    expect(peakCap).toContain('stroke-width="7"');
+    expect(peakCap).toContain('stroke-linecap="butt"');
+    expect(peakCap).toContain('stroke="#ff5b70"');
 
-    const quietLine = openingTagFor(markup, 'data-spectrum-line-band', '1');
-    expect(quietLine).toContain('x1="22.5"');
-    expect(quietLine).toContain('y1="132"');
-    expect(quietLine).toContain('y2="112"');
+    const quietMeasured = openingTagFor(markup, 'data-spectrum-measured-band', '1');
+    expect(quietMeasured).toContain('x1="22.5"');
+    expect(quietMeasured).toContain('y1="132"');
+    expect(quietMeasured).toContain('y2="130"');
   });
 
   test('preserves the baseline and logarithmic ticks with a two-tone bar palette', () => {
@@ -100,11 +108,11 @@ describe('public spectrum rail', () => {
 
     expect(openingTagFor(markup, 'data-spectrum-baseline', 'public')).toContain('y1="132"');
     expect(markup).not.toContain('<linearGradient');
-    expect(openingTagFor(markup, 'data-spectrum-line-band', '17')).toContain('stroke="#ff5b70"');
-    expect(openingTagFor(markup, 'data-spectrum-line-band', '18')).toContain('stroke="#16e6d1"');
-    expect(openingTagFor(markup, 'data-spectrum-line-band', '51')).toContain('stroke="#16e6d1"');
-    expect(openingTagFor(markup, 'data-spectrum-line-band', '52')).toContain('stroke="#16e6d1"');
-    expect(openingTagFor(markup, 'data-spectrum-line-band', '63')).toContain('stroke="#16e6d1"');
+    expect(openingTagFor(markup, 'data-spectrum-measured-band', '17')).toContain('stroke="#ff5b70"');
+    expect(openingTagFor(markup, 'data-spectrum-measured-band', '18')).toContain('stroke="#16e6d1"');
+    expect(openingTagFor(markup, 'data-spectrum-measured-band', '51')).toContain('stroke="#16e6d1"');
+    expect(openingTagFor(markup, 'data-spectrum-measured-band', '52')).toContain('stroke="#16e6d1"');
+    expect(openingTagFor(markup, 'data-spectrum-measured-band', '63')).toContain('stroke="#16e6d1"');
     expect(valuesFor(markup, 'data-spectrum-tick')).toEqual([
       '20',
       '60',
@@ -114,5 +122,55 @@ describe('public spectrum rail', () => {
       '20K',
     ]);
     expect(markup).not.toContain('STEREO · 64 LOG BANDS · HANN · 20 HZ—20 KHZ');
+  });
+});
+
+describe('landscape YouTube chrome and spectrum', () => {
+  test('uses a native 1920×1080 frame rather than square coordinates', () => {
+    const markup = renderToStaticMarkup(
+      createElement(FrameChrome, {time: 136.06, variant: 'youtube'}),
+    );
+
+    expect(markup).toContain('data-frame-chrome="youtube"');
+    expect(openingTagFor(markup, 'data-frame-chrome-border', 'frame')).toContain(
+      'inset:42px',
+    );
+    expect(openingTagFor(markup, 'data-frame-chrome-corner', 'top-right')).toContain(
+      'left:1878px;top:42px',
+    );
+    expect(openingTagFor(markup, 'data-frame-chrome-corner', 'bottom-left')).toContain(
+      'left:42px;top:1038px',
+    );
+    expect(markup).toContain('02:16.06');
+  });
+
+  test('spans the landscape safe area with 64 square-ended reactive bands', () => {
+    const markup = renderToStaticMarkup(
+      createElement(SpectrumRail, {feature: peakFeature, variant: 'youtube'}),
+    );
+    const root = openingTagFor(markup, 'data-spectrum-rail', 'youtube');
+    const svg = openingTagFor(markup, 'data-spectrum-svg', 'bands');
+    const peak = openingTagFor(markup, 'data-spectrum-measured-band', '0');
+    const cap = openingTagFor(markup, 'data-spectrum-impact-band', '0');
+
+    expect(root).toContain('left:104px');
+    expect(root).toContain('bottom:66px');
+    expect(root).toContain('width:1712px');
+    expect(root).toContain('height:174px');
+    expect(svg).toContain('width="1712"');
+    expect(svg).toContain('height="174"');
+    expect(openingTagFor(markup, 'data-spectrum-baseline', 'youtube')).toContain(
+      'y1="148"',
+    );
+    expect(peak).toContain('x1="13.375"');
+    expect(peak).toContain('y1="148"');
+    expect(peak).toContain('y2="52"');
+    expect(peak).toContain('stroke-width="9"');
+    expect(peak).toContain('stroke-linecap="butt"');
+    expect(cap).toContain('y1="52"');
+    expect(cap).toContain('y2="34"');
+    expect(cap).toContain('stroke-width="9"');
+    expect(markup.match(/data-spectrum-measured-band=/g)).toHaveLength(64);
+    expect(markup).not.toContain('stroke-linecap="round"');
   });
 });

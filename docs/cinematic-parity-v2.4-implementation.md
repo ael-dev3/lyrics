@@ -1,4 +1,6 @@
-# Cinematic first/later-passage parity and continuous-line spectrum
+# Historical v2.4.0 cinematic-parity baseline
+
+> This immutable v2.4.0 implementation note is retained as historical provenance. The current v2.4.1 source preserves the precision profile on `C1-01`–`C1-04` and affinely maps the approved C2 visual schedule only onto `C1-05`–`C1-08`. See [the v2.4.1 correction record](first-act-and-outro-polish-v2.4-implementation.md) for the exact issue, formula, and verification workflow.
 
 ## Scope
 
@@ -76,4 +78,3 @@ The v2.4 visual-review package includes:
 - the lossless 2160×2160 README screenshot from frame 2,760 (`00:46.00`).
 
 The final release matrix runs typechecking, all unit and integration tests, browser layout measurement, composition discovery, alignment verification, full reference/public/proof media verification, strict decode, selected-frame extraction, QA-media generation, and two independent QA executions before publication.
-
