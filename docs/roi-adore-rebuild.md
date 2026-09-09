@@ -85,7 +85,7 @@ The shortest-stream export contains **22,762 decoded frames**: one terminal near
 
 Selected decoded final frames were inspected at 125.8 s, 239 s, and the closing fade at 379.3 s. The finished film was accepted by the requester. Computational/visual verification does not certify every inferred word onset by human listening.
 
-The [source and evidence snapshot](../projects/roi-adore-rebuild/README.md) preserves the final composition, cues, translation mapping, DSP implementation, calibration, reconciliation, onset audit, and final delivery report. The full movie and source media are not newly published by this documentation update. Historical release links in the root README point to the earlier edition, not this rebuild.
+The [source and evidence snapshot](../projects/roi-adore-rebuild/README.md) preserves the final composition, cues, translation mapping, DSP implementation, calibration, reconciliation, onset audit, and final delivery report. The full movie, untouched downloaded source and complete production inputs are now published in [roi-adore-rebuild-v1.0.0](https://github.com/ael-dev3/lyrics/releases/tag/roi-adore-rebuild-v1.0.0). See the [asset inventory](roi-adore-release-files.md) for archive contents and checksums. Historical v1.0.1 links remain explicitly labeled in the root README.
 
 ## Screenshots from the final encoded file
 

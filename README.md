@@ -33,7 +33,20 @@ The original animation stays prominent while inactive lyrics resolve to a clean 
 
 </details>
 
-**Delivery:** `Roi-x-Adore-Lyric-Film-Rebuilt-1080p60.mp4` was delivered locally and verified. This documentation update does not upload a new video release; the download links below belong to the earlier v1.0.1 edition. The measured maximum frame-rounding error is 8.1667 ms, which does not certify inferred vocal boundaries. Dense overlaps retain timing uncertainty. The selected 1080p60 source was YouTube’s upscaled derivative of native 720p60 material.
+### Download the film and original production files
+
+| Download | Contents |
+| --- | --- |
+| [Final 1080p60 film](https://github.com/ael-dev3/lyrics/releases/download/roi-adore-rebuild-v1.0.0/Roi-x-Adore-Lyric-Film-Rebuilt-1080p60.mp4) | Exact accepted HEVC Main 10 master with retained AAC |
+| [Original downloaded video](https://github.com/ael-dev3/lyrics/releases/download/roi-adore-rebuild-v1.0.0/roi-x-did-i-tell-u-that-i-miss-u-source.mkv) | Untouched source stream; 1080p60 upscaled derivative of native 720p60 |
+| [Complete production archive · 1.27 GB](https://github.com/ael-dev3/lyrics/releases/download/roi-adore-rebuild-v1.0.0/Roi-x-Adore-Complete-Production.zip) | Editable project, animation, audio, fonts, stems, raw analysis, alignment inputs, features, evidence, dependency lock and setup instructions |
+| [10-second motion review](https://github.com/ael-dev3/lyrics/releases/download/roi-adore-rebuild-v1.0.0/Roi-x-Adore-Immersive-Review.mp4) | Short review of the final visual treatment |
+| [Source metadata](https://github.com/ael-dev3/lyrics/releases/download/roi-adore-rebuild-v1.0.0/roi-x-did-i-tell-u-that-i-miss-u-source.info.json) | Original download metadata |
+| [Delivery verification](https://github.com/ael-dev3/lyrics/releases/download/roi-adore-rebuild-v1.0.0/Roi-x-Adore-Verification.json) · [Checksums](https://github.com/ael-dev3/lyrics/releases/download/roi-adore-rebuild-v1.0.0/CHECKSUMS.sha256) | Final QA and SHA-256 for every asset |
+
+The [complete release](https://github.com/ael-dev3/lyrics/releases/tag/roi-adore-rebuild-v1.0.0) includes the original production inputs; the archive has its own per-file inventory. Installed dependencies, downloaded model binaries, regenerable frame caches and temporary encode trials are excluded. Binary media are unchanged; machine-specific paths in text records are sanitized. The packaged project passed typechecking and timing checks.
+
+The measured maximum frame-rounding error is 8.1667 ms, which does not certify inferred vocal boundaries. Dense overlaps retain timing uncertainty.
 
 ### Historical dual-song release: Roi × Slow Down v1.0.1
 
