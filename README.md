@@ -22,6 +22,28 @@
   </p>
 </div>
 
+## Latest dual-song publication: Roi × Slow Down
+
+The latest release applies the same precision lyric-film workflow to the mixed track `roi x did i tell u that i miss u` (`11tjwUK2adU`). It keeps the two sources distinct in the public picture and in the timing authority:
+
+| Lane | Track | Timing / visual identity |
+| --- | --- | --- |
+| Song 1 | `Roi` | French · warm rail · 48 reviewed lines |
+| Song 2 | `Slow down / Did I tell you that I miss you?` | English · cool rail · 13 reviewed lines |
+
+The public master is 1920×1080 at 60 fps. The source’s native maximum was 720p60; the selected 1080p60 stream is YouTube’s AI-upscaled derivative. The separate 120-fps proof, source metadata, alignment JSON, QA report, checksums, and exact reusable workflow are published with the release.
+
+| Artifact | Link |
+| --- | --- |
+| Song 1 · `Roi` / Song 2 · `Slow Down` public master | [Roi × Slow Down Lyric Film · 1080p60](https://github.com/ael-dev3/lyrics/releases/download/roi-slowdown-v1.0.0/Roi-x-Slow-Down-Lyric-Film-1080p60.mp4) |
+| Song 1 + Song 2 synchronization proof | [120 fps diagnostic proof](https://github.com/ael-dev3/lyrics/releases/download/roi-slowdown-v1.0.0/Roi-x-Slow-Down-Sync-Proof-120fps.mp4) |
+| Source project and exact next-song workflow | [Dual-song source archive](https://github.com/ael-dev3/lyrics/releases/download/roi-slowdown-v1.0.0/Roi-x-Slow-Down-Workflow.zip) |
+| Source media and provenance | [1080p60 source](https://github.com/ael-dev3/lyrics/releases/download/roi-slowdown-v1.0.0/Roi-x-Slow-Down-Source-1080p60-AI-Upscaled.mp4) · [metadata](https://github.com/ael-dev3/lyrics/releases/download/roi-slowdown-v1.0.0/Roi-x-Slow-Down-Source-Metadata.json) |
+| Timing authority | [Song 1 / Song 2 alignment JSON](https://github.com/ael-dev3/lyrics/releases/download/roi-slowdown-v1.0.0/Roi-x-Slow-Down-Alignment.json) |
+| QA and checksums | [QA JSON](https://github.com/ael-dev3/lyrics/releases/download/roi-slowdown-v1.0.0/Roi-x-Slow-Down-Release-QA.json) · [checksums](https://github.com/ael-dev3/lyrics/releases/download/roi-slowdown-v1.0.0/Roi-x-Slow-Down-Checksums.sha256) |
+| Transcription evidence | [Automatic + French + English Whisper passes](https://github.com/ael-dev3/lyrics/releases/download/roi-slowdown-v1.0.0/Roi-x-Slow-Down-Transcription-Evidence.zip) |
+| Reusable workflow | [Dual-song workflow guide](projects/roi-slowdown-lyric-film/docs/roi-slowdown-workflow.md) |
+
 ## What this release demonstrates
 
 Tanisea is a complete 9,180-frame Remotion lyric film built against a locked 153-second soundtrack. Russian vocal boundaries are stored as integer sample indices. Each reviewed source group activates the English phrase carrying the same meaning, including backward activation where source and translation order differ. Version 2.4 brings `00:40–00:50` to the same cinematic presentation standard as the repeated `01:46–01:56` passage while preserving every reviewed cue sample and semantic target. It also replaces the rounded measured-bar/transient-cap stack with 64 continuous flat-ended spectrum lines.
@@ -109,6 +131,11 @@ projects/tanisea-lyric-film/
   scripts/                           generation, render, encode, and QA tools
   src/                               Remotion compositions and visual system
   tests/                             timing, layout, media, and release gates
+projects/roi-slowdown-lyric-film/    dual-song Roi × Slow Down source project
+  alignment/                         Song 1/Song 2 sample-indexed timing
+  scripts/                            source lock, alignment export, media QA
+  src/                                1080p60 Remotion master and 120fps proof
+  tests/                              timing and calm-visualizer contracts
 ```
 
 ## QA status

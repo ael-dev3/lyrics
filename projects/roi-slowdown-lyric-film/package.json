@@ -1,0 +1,40 @@
+{
+  "name": "roi-slowdown-lyric-film",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "remotion studio src/index.ts",
+    "build:tools": "tsc --project tsconfig.tools.json",
+    "alignment:export": "tsx scripts/export-alignment.ts",
+    "alignment:verify": "npm run alignment:export && tsx scripts/validate-alignment.ts",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "compositions": "remotion compositions src/index.ts",
+    "typecheck": "tsc --noEmit",
+    "check": "npm run typecheck && npm run test:run && npm run alignment:verify && npm run compositions",
+    "still": "remotion still src/index.ts RoiSlowdownLyricFilm output/roi-slowdown-still.png --frame=450",
+    "render:master": "tsx scripts/compose-direct.ts master",
+    "render:proof": "tsx scripts/compose-direct.ts proof",
+    "verify:media": "tsx scripts/verify-media.ts",
+    "qa:report": "tsx scripts/write-release-report.ts",
+    "package:checksums": "tsx scripts/package-checksums.ts",
+    "release:manifest": "tsx scripts/write-release-manifest.ts"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.518",
+    "@remotion/media": "4.0.518",
+    "@remotion/media-utils": "4.0.518",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "remotion": "4.0.518"
+  },
+  "devDependencies": {
+    "@types/node": "26.4.0",
+    "@types/react": "19.2.18",
+    "@types/react-dom": "19.2.5",
+    "tsx": "^4.19.3",
+    "typescript": "7.0.2",
+    "vitest": "4.1.11"
+  }
+}
