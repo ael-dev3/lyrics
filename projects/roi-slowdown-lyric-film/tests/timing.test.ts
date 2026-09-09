@@ -22,4 +22,12 @@ describe('dual-song timing authority', () => {
     expect(line).toBeDefined();
     expect(line!.startSample / SAMPLE_RATE).toBeCloseTo(100, 3);
   });
+
+  it('keeps early Song 1 word highlights contiguous with the reviewed line interval', () => {
+    const line = dualSongAlignment.songs[0].lines.find((item) => item.id === 'S1-09');
+    expect(line).toBeDefined();
+    expect(line!.words[0].startSample).toBe(line!.startSample);
+    expect(line!.words.at(-1)!.endSample).toBe(line!.endSample);
+    expect(line!.words.slice(0, -1).every((word, index) => word.endSample === line!.words[index + 1].startSample)).toBe(true);
+  });
 });

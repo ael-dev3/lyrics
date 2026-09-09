@@ -5,7 +5,8 @@ import {PROJECT_ROOT} from './project-root.js';
 
 const ffprobe = join(PROJECT_ROOT, 'node_modules', '@remotion', 'compositor-win32-x64-msvc', 'ffprobe.exe');
 const mediaPath = process.argv[2] ?? join(PROJECT_ROOT, 'output', 'Roi-x-Slow-Down-Lyric-Film-1080p60.mp4');
-const expectedRate = process.argv[3] ?? (mediaPath.toLowerCase().includes('120fps') ? '120/1' : '60/1');
+const requestedRate = process.argv[3];
+const expectedRate = requestedRate ? (requestedRate.includes('/') ? requestedRate : `${requestedRate}/1`) : (mediaPath.toLowerCase().includes('120fps') ? '120/1' : '60/1');
 const ffmpeg = execFileSync('python', ['-c', 'import imageio_ffmpeg; print(imageio_ffmpeg.get_ffmpeg_exe())'], {encoding: 'utf8'}).trim();
 if (!existsSync(mediaPath)) throw new Error(`media not found: ${mediaPath}`);
 

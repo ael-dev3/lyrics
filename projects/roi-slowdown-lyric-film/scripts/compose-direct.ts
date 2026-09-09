@@ -27,6 +27,7 @@ const drawTextEscape = (value: string): string => value
 
 const seconds = (sample: number): string => (sample / dualSongAlignment.sampleRate).toFixed(6);
 const enable = (start: number, end: number): string => `between(t\\,${seconds(start)}\\,${seconds(end)})`;
+const estimateWordWidth = (word: string, size: number): number => Math.max(12, Math.round(word.length * size * 0.5));
 const textFilter = (text: string, x: string, y: number, size: number, color: string, when?: string): string =>
   `drawtext=fontfile='${font}':text='${drawTextEscape(text)}':x=${x}:y=${y}:fontsize=${size}:fontcolor=${color}:shadowcolor=black@0.72:shadowx=2:shadowy=3${when ? `:enable='${when}'` : ''}`;
 
@@ -34,11 +35,26 @@ const lineFilters = dualSongAlignment.songs.flatMap((song) => song.lines.map((li
   const y = song.id === 'song-1' ? 265 : 625;
   const sampleY = song.id === 'song-1' ? 353 : 713;
   const color = song.id === 'song-1' ? 'FFD59E@0.96' : 'A7E8FF@0.96';
+  const dimColor = song.id === 'song-1' ? 'FFD59E@0.34' : 'A7E8FF@0.34';
+  const activeColor = 'FFFDF7@0.98';
+  const fontSize = song.id === 'song-1' ? 46 : 51;
   const labelColor = song.id === 'song-1' ? 'FFD59E@0.82' : 'A7E8FF@0.82';
   const progressWidth = song.id === 'song-1' ? 1400 : 1400;
   const interval = enable(line.startSample, line.endSample);
+  let wordX = 180;
+  const wordFilters = line.words.flatMap((word) => {
+    const x = wordX;
+    const width = estimateWordWidth(word.text, fontSize);
+    wordX += width + 12;
+    const wordInterval = enable(word.startSample, word.endSample);
+    return [
+      textFilter(word.text, String(x), y, fontSize, activeColor, wordInterval),
+      `drawbox=x=${x}:y=${y + 78}:w=${width}:h=3:color=${labelColor}:t=fill:enable='${wordInterval}'`,
+    ];
+  });
   return [
-    textFilter(line.text, '180', y, song.id === 'song-1' ? 46 : 51, color, interval),
+    textFilter(line.text, '180', y, fontSize, dimColor, interval),
+    ...wordFilters,
     `drawbox=x=180:y=${y + 78}:w=${progressWidth}:h=3:color=${labelColor}:t=fill:enable='${interval}'`,
     textFilter(`${line.id}  ·  ${line.section}  ·  ${seconds(line.startSample)}–${seconds(line.endSample)} s`, '180', sampleY, 12, `${song.id === 'song-1' ? 'FFD59E' : 'A7E8FF'}@0.72`, interval),
   ];

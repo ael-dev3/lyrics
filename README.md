@@ -35,13 +35,13 @@ The public master is 1920×1080 at 60 fps. The source’s native maximum was 720
 
 | Artifact | Link |
 | --- | --- |
-| Song 1 · `Roi` / Song 2 · `Slow Down` public master | [Roi × Slow Down Lyric Film · 1080p60](https://github.com/ael-dev3/lyrics/releases/download/roi-slowdown-v1.0.0/Roi-x-Slow-Down-Lyric-Film-1080p60.mp4) |
-| Song 1 + Song 2 synchronization proof | [120 fps diagnostic proof](https://github.com/ael-dev3/lyrics/releases/download/roi-slowdown-v1.0.0/Roi-x-Slow-Down-Sync-Proof-120fps.mp4) |
-| Source project and exact next-song workflow | [Dual-song source archive](https://github.com/ael-dev3/lyrics/releases/download/roi-slowdown-v1.0.0/Roi-x-Slow-Down-Workflow.zip) |
-| Source media and provenance | [1080p60 source](https://github.com/ael-dev3/lyrics/releases/download/roi-slowdown-v1.0.0/Roi-x-Slow-Down-Source-1080p60-AI-Upscaled.mp4) · [metadata](https://github.com/ael-dev3/lyrics/releases/download/roi-slowdown-v1.0.0/Roi-x-Slow-Down-Source-Metadata.json) |
-| Timing authority | [Song 1 / Song 2 alignment JSON](https://github.com/ael-dev3/lyrics/releases/download/roi-slowdown-v1.0.0/Roi-x-Slow-Down-Alignment.json) |
-| QA and checksums | [QA JSON](https://github.com/ael-dev3/lyrics/releases/download/roi-slowdown-v1.0.0/Roi-x-Slow-Down-Release-QA.json) · [checksums](https://github.com/ael-dev3/lyrics/releases/download/roi-slowdown-v1.0.0/Roi-x-Slow-Down-Checksums.sha256) |
-| Transcription evidence | [Automatic + French + English Whisper passes](https://github.com/ael-dev3/lyrics/releases/download/roi-slowdown-v1.0.0/Roi-x-Slow-Down-Transcription-Evidence.zip) |
+| Song 1 · `Roi` / Song 2 · `Slow Down` public master | [Roi × Slow Down Lyric Film · 1080p60](https://github.com/ael-dev3/lyrics/releases/download/roi-slowdown-v1.0.1/Roi-x-Slow-Down-Lyric-Film-1080p60.mp4) |
+| Song 1 + Song 2 synchronization proof | [120 fps diagnostic proof](https://github.com/ael-dev3/lyrics/releases/download/roi-slowdown-v1.0.1/Roi-x-Slow-Down-Sync-Proof-120fps.mp4) |
+| Source project and exact next-song workflow | [Dual-song source archive](https://github.com/ael-dev3/lyrics/releases/download/roi-slowdown-v1.0.1/Roi-x-Slow-Down-Workflow.zip) |
+| Source media and provenance | [1080p60 source](https://github.com/ael-dev3/lyrics/releases/download/roi-slowdown-v1.0.1/Roi-x-Slow-Down-Source-1080p60-AI-Upscaled.mp4) · [metadata](https://github.com/ael-dev3/lyrics/releases/download/roi-slowdown-v1.0.1/Roi-x-Slow-Down-Source-Metadata.json) |
+| Timing authority | [Song 1 / Song 2 alignment JSON](https://github.com/ael-dev3/lyrics/releases/download/roi-slowdown-v1.0.1/Roi-x-Slow-Down-Alignment.json) |
+| QA and checksums | [QA JSON](https://github.com/ael-dev3/lyrics/releases/download/roi-slowdown-v1.0.1/Roi-x-Slow-Down-Release-QA.json) · [checksums](https://github.com/ael-dev3/lyrics/releases/download/roi-slowdown-v1.0.1/Roi-x-Slow-Down-Checksums.sha256) |
+| Transcription evidence | [Automatic + French + English Whisper passes](https://github.com/ael-dev3/lyrics/releases/download/roi-slowdown-v1.0.1/Roi-x-Slow-Down-Transcription-Evidence.zip) |
 | Reusable workflow | [Dual-song workflow guide](projects/roi-slowdown-lyric-film/docs/roi-slowdown-workflow.md) |
 
 ## What this release demonstrates
