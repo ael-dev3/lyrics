@@ -1,0 +1,29 @@
+{
+  "implementation": "FFmpeg biquad in float64, forward/backward, independent of TypeScript DSP kernel",
+  "results": [
+    {
+      "band": 0,
+      "centerHz": 21.10899209587972,
+      "ffmpegDbfs": -9.016188787322283,
+      "errorDb": 0.014711082597340663
+    },
+    {
+      "band": 24,
+      "centerHz": 281.4931183816415,
+      "ffmpegDbfs": -9.03079613386103,
+      "errorDb": 0.00010373605859470558
+    },
+    {
+      "band": 40,
+      "centerHz": 1582.9842061565323,
+      "ffmpegDbfs": -9.030864188527696,
+      "errorDb": 0.00003568139192822173
+    },
+    {
+      "band": 63,
+      "centerHz": 19066.95889861674,
+      "ffmpegDbfs": -9.03093424494398,
+      "errorDb": 0.00003437502435588158
+    }
+  ]
+}

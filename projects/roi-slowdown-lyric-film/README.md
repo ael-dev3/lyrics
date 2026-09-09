@@ -1,3 +1,5 @@
+> **Newer completed edition:** see the [Roi × Adore rebuild](../roi-adore-rebuild/README.md) and [production record](../../docs/roi-adore-rebuild.md) for the light-blue film, French translations, refined timing, and calibrated spectrum. This project documents the historical v1.0.1 release.
+
 # Roi × Slow Down dual-song lyric film
 
 This project applies the repository’s precision lyric-film workflow to the YouTube mix `roi x did i tell u that i miss u` (`11tjwUK2adU`). It preserves the downloaded source as a separate provenance artifact and renders a clean 1920×1080 public master at 60 fps with two clearly separated lyric lanes:

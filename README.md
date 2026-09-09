@@ -1,3 +1,65 @@
+# Lyrics — song films and production workflows
+
+[**Roi × Adore: completed rebuild**](#roi--adore--light-blue-1080p60-rebuild) · [Tanisea](#tanisea--precision-synced-english-lyric-film) · [Production workflow](docs/production-workflow.md)
+
+## Roi × Adore — light-blue 1080p60 rebuild
+
+**VIDEOCLUB “Roi” × Adore “Did I Tell U That I Miss U”** — two overlapping vocal tracks, French lyrics with synchronized English translation, and a larger original animation in its blue visual language. Completed and accepted on **9 September 2026**.
+
+![Final Roi × Adore film: both songs highlighted over the original blue animation at 02:05.800](assets/roi-adore-rebuild-125-8.png)
+
+*Actual frame extracted from the final encoded movie at 02:05.800. French and translation share semantic focus; the second song has its own English lyric timing.*
+
+| Film | Final result |
+| --- | --- |
+| Picture | 1920×1080 · 60 fps · HEVC Main 10 · BT.709 |
+| Duration | 6:19.368 overall · 22,762 decoded video frames |
+| Lyrics | 49 French cues with English translation + 22 independent English cues |
+| Focus | 504 timed highlight units; individual words or evidence-supported groups |
+| Visualizer | 64 calibrated stereo bands, 20 Hz–20 kHz, fixed dBFS RMS scale |
+| Motion | Separate sustained pressure, transient impact, bass and brightness controls |
+| Verification | Full decode passed · original AAC packets preserved · delivered copy hash verified |
+
+The rebuild carries forward Tanisea’s stable typography, semantic translation focus, fine frame details, and expressive motion. It develops a distinct light-blue treatment with stronger contrast, feathered lyric backdrops, full-height animation, and measured spectrum bars whose levels remain independent of artistic effects.
+
+**Explore this song:** [Full production record and lessons](docs/roi-adore-rebuild.md) · [Source and evidence snapshot](projects/roi-adore-rebuild/README.md) · [Final QA JSON](projects/roi-adore-rebuild/evidence/final-verification.json) · [Timing checks](projects/roi-adore-rebuild/evidence/checks.json) · [Original source video](https://www.youtube.com/watch?v=11tjwUK2adU)
+
+<details>
+<summary>Second screenshot: independent English focus at 03:59</summary>
+
+![English lyrics active while French holds its title state at 03:59](assets/roi-adore-rebuild-239.png)
+
+The original animation stays prominent while inactive lyrics resolve to a clean title state. Both screenshots are extracted from the delivered MP4, not design mockups.
+
+</details>
+
+**Delivery:** `Roi-x-Adore-Lyric-Film-Rebuilt-1080p60.mp4` was delivered locally and verified. This documentation update does not upload a new video release; the download links below belong to the earlier v1.0.1 edition. The measured maximum frame-rounding error is 8.1667 ms, which does not certify inferred vocal boundaries. Dense overlaps retain timing uncertainty. The selected 1080p60 source was YouTube’s upscaled derivative of native 720p60 material.
+
+### Historical dual-song release: Roi × Slow Down v1.0.1
+
+The earlier published release applies the same precision lyric-film workflow to the mixed track `roi x did i tell u that i miss u` (`11tjwUK2adU`). It keeps the two sources distinct in the public picture and in the timing authority:
+
+| Lane | Track | Timing / visual identity |
+| --- | --- | --- |
+| Song 1 | `Roi` | French · warm rail · 48 reviewed lines |
+| Song 2 | `Slow down / Did I tell you that I miss you?` | English · cool rail · 13 reviewed lines |
+
+The public master is 1920×1080 at 60 fps. The source’s native maximum was 720p60; the selected 1080p60 stream is YouTube’s AI-upscaled derivative. The separate 120-fps proof, source metadata, alignment JSON, QA report, checksums, and exact reusable workflow are published with the release.
+
+| Artifact | Link |
+| --- | --- |
+| Song 1 · `Roi` / Song 2 · `Slow Down` public master | [Roi × Slow Down Lyric Film · 1080p60](https://github.com/ael-dev3/lyrics/releases/download/roi-slowdown-v1.0.1/Roi-x-Slow-Down-Lyric-Film-1080p60.mp4) |
+| Song 1 + Song 2 synchronization proof | [120 fps diagnostic proof](https://github.com/ael-dev3/lyrics/releases/download/roi-slowdown-v1.0.1/Roi-x-Slow-Down-Sync-Proof-120fps.mp4) |
+| Source project and exact next-song workflow | [Dual-song source archive](https://github.com/ael-dev3/lyrics/releases/download/roi-slowdown-v1.0.1/Roi-x-Slow-Down-Workflow.zip) |
+| Source media and provenance | [1080p60 source](https://github.com/ael-dev3/lyrics/releases/download/roi-slowdown-v1.0.1/Roi-x-Slow-Down-Source-1080p60-AI-Upscaled.mp4) · [metadata](https://github.com/ael-dev3/lyrics/releases/download/roi-slowdown-v1.0.1/Roi-x-Slow-Down-Source-Metadata.json) |
+| Timing authority | [Song 1 / Song 2 alignment JSON](https://github.com/ael-dev3/lyrics/releases/download/roi-slowdown-v1.0.1/Roi-x-Slow-Down-Alignment.json) |
+| QA and checksums | [QA JSON](https://github.com/ael-dev3/lyrics/releases/download/roi-slowdown-v1.0.1/Roi-x-Slow-Down-Release-QA.json) · [checksums](https://github.com/ael-dev3/lyrics/releases/download/roi-slowdown-v1.0.1/Roi-x-Slow-Down-Checksums.sha256) |
+| Transcription evidence | [Automatic + French + English Whisper passes](https://github.com/ael-dev3/lyrics/releases/download/roi-slowdown-v1.0.1/Roi-x-Slow-Down-Transcription-Evidence.zip) |
+| Reusable workflow | [Dual-song workflow guide](projects/roi-slowdown-lyric-film/docs/roi-slowdown-workflow.md) |
+
+
+---
+
 <div align="center">
   <img src="assets/tanisea-vnext-hero.png" width="760" alt="Lossless hero frame from the Tanisea precision-synced English lyric film">
   <h1>Tanisea — Precision-Synced English Lyric Film</h1>
@@ -22,29 +84,7 @@
   </p>
 </div>
 
-## Latest dual-song publication: Roi × Slow Down
-
-The latest release applies the same precision lyric-film workflow to the mixed track `roi x did i tell u that i miss u` (`11tjwUK2adU`). It keeps the two sources distinct in the public picture and in the timing authority:
-
-| Lane | Track | Timing / visual identity |
-| --- | --- | --- |
-| Song 1 | `Roi` | French · warm rail · 48 reviewed lines |
-| Song 2 | `Slow down / Did I tell you that I miss you?` | English · cool rail · 13 reviewed lines |
-
-The public master is 1920×1080 at 60 fps. The source’s native maximum was 720p60; the selected 1080p60 stream is YouTube’s AI-upscaled derivative. The separate 120-fps proof, source metadata, alignment JSON, QA report, checksums, and exact reusable workflow are published with the release.
-
-| Artifact | Link |
-| --- | --- |
-| Song 1 · `Roi` / Song 2 · `Slow Down` public master | [Roi × Slow Down Lyric Film · 1080p60](https://github.com/ael-dev3/lyrics/releases/download/roi-slowdown-v1.0.1/Roi-x-Slow-Down-Lyric-Film-1080p60.mp4) |
-| Song 1 + Song 2 synchronization proof | [120 fps diagnostic proof](https://github.com/ael-dev3/lyrics/releases/download/roi-slowdown-v1.0.1/Roi-x-Slow-Down-Sync-Proof-120fps.mp4) |
-| Source project and exact next-song workflow | [Dual-song source archive](https://github.com/ael-dev3/lyrics/releases/download/roi-slowdown-v1.0.1/Roi-x-Slow-Down-Workflow.zip) |
-| Source media and provenance | [1080p60 source](https://github.com/ael-dev3/lyrics/releases/download/roi-slowdown-v1.0.1/Roi-x-Slow-Down-Source-1080p60-AI-Upscaled.mp4) · [metadata](https://github.com/ael-dev3/lyrics/releases/download/roi-slowdown-v1.0.1/Roi-x-Slow-Down-Source-Metadata.json) |
-| Timing authority | [Song 1 / Song 2 alignment JSON](https://github.com/ael-dev3/lyrics/releases/download/roi-slowdown-v1.0.1/Roi-x-Slow-Down-Alignment.json) |
-| QA and checksums | [QA JSON](https://github.com/ael-dev3/lyrics/releases/download/roi-slowdown-v1.0.1/Roi-x-Slow-Down-Release-QA.json) · [checksums](https://github.com/ael-dev3/lyrics/releases/download/roi-slowdown-v1.0.1/Roi-x-Slow-Down-Checksums.sha256) |
-| Transcription evidence | [Automatic + French + English Whisper passes](https://github.com/ael-dev3/lyrics/releases/download/roi-slowdown-v1.0.1/Roi-x-Slow-Down-Transcription-Evidence.zip) |
-| Reusable workflow | [Dual-song workflow guide](projects/roi-slowdown-lyric-film/docs/roi-slowdown-workflow.md) |
-
-## What this release demonstrates
+## What the Tanisea release demonstrates
 
 Tanisea is a complete 9,180-frame Remotion lyric film built against a locked 153-second soundtrack. Russian vocal boundaries are stored as integer sample indices. Each reviewed source group activates the English phrase carrying the same meaning, including backward activation where source and translation order differ. Version 2.4.1 affinely fits the approved `01:46–01:56` word-level choreography across the repeated `00:40–00:50` performance window, removes rounded caps from the bottom spectrum so it is made only of square-ended lines, and replaces the outro word-spread with a cohesive centered settle. It supersedes the earlier v2.4.0 C1 visual schedule while preserving the reviewed C1 source timing beside the fitted presentation schedule for auditability.
 

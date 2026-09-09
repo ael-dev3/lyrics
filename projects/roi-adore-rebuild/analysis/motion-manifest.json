@@ -1,0 +1,33 @@
+{
+  "sourcePcmSha256": "93212fa589e260b50431a638bea86466c8686893c045ed12379a88f46d3396fc",
+  "fps": 60,
+  "fields": [
+    "pressure",
+    "impact",
+    "lowEnd",
+    "brightness",
+    "hero",
+    "lineWidthPx",
+    "coreThicknessPx"
+  ],
+  "sustained": "Centered 400ms stereo RMS, dBFS; track-relative P60/P96; 75ms attack, 320ms release artistic smoothing",
+  "thresholds": {
+    "p60": -10.39632744309934,
+    "p96": -8.967813120261244,
+    "p995": -8.518767769755971,
+    "p80": 0.46536987564969123,
+    "p99": 0.6971006768452953,
+    "low50": 0.054676238721423735,
+    "low95": 0.17502797966052297
+  },
+  "transients": "1ms stereo-energy blocks; novelty against prior25ms; local sample-peak refinement;180ms exclusion; stored real-music uncertainty12ms is detector scope, not perceptual certainty",
+  "impact": "Apex on nearest60fps frame; 33.333ms anticipation;55ms exponential decay, zero by240ms",
+  "heroFraction": 0.0004832403461758116,
+  "syntheticImpulseMaxErrorMs": 0,
+  "eventCount": 1342,
+  "sha256": "940515b45179997433a84302e5a01963f74759221f6fa3e529b1742ed55ce5c7",
+  "separation": "Artistic controls never modify raw measured band levels",
+  "eventSampleClock": 48000,
+  "nativeSourceSampleClock": 44100,
+  "nativeSampleMapping": "round(analysisSample * 44100 / 48000); event timing retains detector uncertainty"
+}

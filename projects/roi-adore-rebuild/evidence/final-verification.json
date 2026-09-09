@@ -1,0 +1,169 @@
+{
+  "file": "Roi-x-Adore-Lyric-Film-Rebuilt-1080p60.mp4",
+  "bytes": 164312267,
+  "sha256": "1230e17c3a6b0470dbb3d496dd840f3f73ae7885ca40ca010b02031e090424b4",
+  "video": {
+    "index": 0,
+    "codec_name": "hevc",
+    "codec_long_name": "H.265 / HEVC (High Efficiency Video Coding)",
+    "profile": "Main 10",
+    "codec_type": "video",
+    "codec_tag_string": "hvc1",
+    "codec_tag": "0x31637668",
+    "width": 1920,
+    "height": 1080,
+    "coded_width": 1920,
+    "coded_height": 1080,
+    "has_b_frames": 2,
+    "sample_aspect_ratio": "1:1",
+    "display_aspect_ratio": "16:9",
+    "pix_fmt": "yuv420p10le",
+    "level": 123,
+    "color_range": "tv",
+    "color_space": "bt709",
+    "color_transfer": "bt709",
+    "color_primaries": "bt709",
+    "chroma_location": "left",
+    "field_order": "progressive",
+    "view_ids_available": "",
+    "view_pos_available": "",
+    "id": "0x1",
+    "r_frame_rate": "60/1",
+    "avg_frame_rate": "60/1",
+    "time_base": "1/15360",
+    "start_pts": 0,
+    "start_time": "0.000000",
+    "duration_ts": 5827072,
+    "duration": "379.366667",
+    "bit_rate": "3324033",
+    "nb_frames": "22762",
+    "extradata_size": 2432,
+    "disposition": {
+      "default": 1,
+      "dub": 0,
+      "original": 0,
+      "comment": 0,
+      "lyrics": 0,
+      "karaoke": 0,
+      "forced": 0,
+      "hearing_impaired": 0,
+      "visual_impaired": 0,
+      "clean_effects": 0,
+      "attached_pic": 0,
+      "timed_thumbnails": 0,
+      "non_diegetic": 0,
+      "captions": 0,
+      "descriptions": 0,
+      "metadata": 0,
+      "dependent": 0,
+      "still_image": 0,
+      "multilayer": 0
+    },
+    "tags": {
+      "language": "und",
+      "handler_name": "VideoHandler",
+      "encoder": "Lavc62.28.102 libx265"
+    }
+  },
+  "fullDecode": "passed",
+  "audioDuration": "379.367619",
+  "durationDifferenceSeconds": -0.0009519999999838547,
+  "endTrim": "The shortest-stream export omits one near-white terminal render frame to match audio duration.",
+  "decodedFrames": 22762,
+  "audioPacketsIdentical": true,
+  "audioHash": "SHA256=4632bd0ea1dcf9ff0ef0b5133860b6762e5190ff9777c808a549959467324741",
+  "desktopCopyVerified": true,
+  "render": {
+    "start": 0,
+    "end": 22762,
+    "frameCount": 22763,
+    "pattern": "frames-v4/element-%05d.png",
+    "scale": 2,
+    "format": "lossless RGBA PNG",
+    "test": false,
+    "seconds": 1597.674
+  },
+  "checks": {
+    "translatedFrenchCues": 49,
+    "translationTiming": "Semantic groups inherit corresponding aligned French word boundaries",
+    "cueCount": 71,
+    "boundaries": 1008,
+    "maxFrameQuantizationErrorMs": 8.166666666667766,
+    "overlapWithinLane": false,
+    "sourceAudioOffsetSeconds": 0.0365,
+    "wordTiming": "bounded alignment and measured repeat shifts; uncertainty groups retained",
+    "limitations": "Computational and visual QA. No claim of human listening certification or sample-accurate word truth."
+  },
+  "spectrumCalibration": {
+    "distinctBands": 64,
+    "edgeCalibration": "All 128 -3 dB edges within 0.001 dB",
+    "centerGain": "64 centers within 0.001 dB",
+    "sineLevelsMaxErrorDb": 0.0223877291967991,
+    "antiPhasePreserved": true,
+    "oneChannelPowerDifferenceDb": 3.01029995664,
+    "silencePassed": true,
+    "method": "Zero-phase forward/backward biquad; warped edge design; stereo power aggregation"
+  },
+  "independentCalibration": {
+    "implementation": "FFmpeg biquad in float64, forward/backward, independent of TypeScript DSP kernel",
+    "results": [
+      {
+        "band": 0,
+        "centerHz": 21.10899209587972,
+        "ffmpegDbfs": -9.016188787322283,
+        "errorDb": 0.014711082597340663
+      },
+      {
+        "band": 24,
+        "centerHz": 281.4931183816415,
+        "ffmpegDbfs": -9.03079613386103,
+        "errorDb": 0.00010373605859470558
+      },
+      {
+        "band": 40,
+        "centerHz": 1582.9842061565323,
+        "ffmpegDbfs": -9.030864188527696,
+        "errorDb": 3.568139192822173e-05
+      },
+      {
+        "band": 63,
+        "centerHz": 19066.95889861674,
+        "ffmpegDbfs": -9.03093424494398,
+        "errorDb": 3.437502435588158e-05
+      }
+    ]
+  },
+  "motion": {
+    "sourcePcmSha256": "93212fa589e260b50431a638bea86466c8686893c045ed12379a88f46d3396fc",
+    "fps": 60,
+    "fields": [
+      "pressure",
+      "impact",
+      "lowEnd",
+      "brightness",
+      "hero",
+      "lineWidthPx",
+      "coreThicknessPx"
+    ],
+    "sustained": "Centered 400ms stereo RMS, dBFS; track-relative P60/P96; 75ms attack, 320ms release artistic smoothing",
+    "thresholds": {
+      "p60": -10.39632744309934,
+      "p96": -8.967813120261244,
+      "p995": -8.518767769755971,
+      "p80": 0.46536987564969123,
+      "p99": 0.6971006768452953,
+      "low50": 0.054676238721423735,
+      "low95": 0.17502797966052297
+    },
+    "transients": "1ms stereo-energy blocks; novelty against prior25ms; local sample-peak refinement;180ms exclusion; stored real-music uncertainty12ms is detector scope, not perceptual certainty",
+    "impact": "Apex on nearest60fps frame; 33.333ms anticipation;55ms exponential decay, zero by240ms",
+    "heroFraction": 0.0004832403461758116,
+    "syntheticImpulseMaxErrorMs": 0,
+    "eventCount": 1342,
+    "sha256": "940515b45179997433a84302e5a01963f74759221f6fa3e529b1742ed55ce5c7",
+    "separation": "Artistic controls never modify raw measured band levels",
+    "eventSampleClock": 48000,
+    "nativeSourceSampleClock": 44100,
+    "nativeSampleMapping": "round(analysisSample * 44100 / 48000); event timing retains detector uncertainty"
+  }
+}
