@@ -94,7 +94,7 @@ The vertical adaptation places animation above both lyric lanes, with the spectr
 | --- | --- |
 | [Vertical film](https://github.com/ael-dev3/lyrics/releases/download/roi-adore-rebuild-v1.0.0/Roi-x-Adore-TikTok-1080x1920-60fps.mp4) | Full-length 9:16 video at 60 fps |
 | [Publishing kit](https://github.com/ael-dev3/lyrics/releases/download/roi-adore-rebuild-v1.0.0/Roi-x-Adore-TikTok-Publishing-Kit.zip) | Covers, caption, prompts, scripts and QA |
-| [Landscape cover · 4:3](https://github.com/ael-dev3/lyrics/releases/download/roi-adore-rebuild-v1.0.0/Roi-Cover-Landscape-4x3.jpg) · [Portrait cover · 3:4](https://github.com/ael-dev3/lyrics/releases/download/roi-adore-rebuild-v1.0.0/Roi-Cover-Profile-3x4.jpg) | 1600×1200 and 1200×1600 alternatives |
+| [Profile cover · 1200×1600](https://github.com/ael-dev3/lyrics/releases/download/roi-adore-rebuild-v1.0.0/Roi-Cover-Profile-3x4.jpg) · [Archived landscape variant](https://github.com/ael-dev3/lyrics/releases/download/roi-adore-rebuild-v1.0.0/Roi-Cover-Landscape-4x3.jpg) | Use the portrait cover for the tall profile preview; see the [cover default](docs/tiktok-cover-workflow.md) |
 | [Verification](https://github.com/ael-dev3/lyrics/releases/download/roi-adore-rebuild-v1.0.0/Roi-x-Adore-TikTok-Verification.json) · [TikTok checksums](https://github.com/ael-dev3/lyrics/releases/download/roi-adore-rebuild-v1.0.0/TIKTOK-CHECKSUMS.sha256) | Vertical delivery QA and TikTok asset hashes |
 
 [Browse the TikTok material and reproduction notes](projects/roi-adore-rebuild/tiktok/README.md).
@@ -140,6 +140,7 @@ The reusable workflow covers soundtrack locking, lyric alignment, semantic trans
 - [Scientific audio visualization](docs/scientific-audio-visualization.md)
 - [Emotional audio-reactive motion](docs/emotional-audio-reactive-motion.md)
 - [Production preferences and known issues](docs/track-workflow-preferences-and-known-issues.md)
+- [TikTok cover defaults and crop review](docs/tiktok-cover-workflow.md) — portrait 1200×1600 for the profile preview labelled “4:3”; checked at thumbnail size
 
 ## Reference studies
 

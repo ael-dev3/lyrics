@@ -24,6 +24,7 @@ For a future pass, create a short preview and compare `00:47` directly with `01:
 
 ### Lyric timing and readability
 
+- Production deliverables include original-language lyrics and meaning-based translations only. Pronunciation guides, phonetic respellings, romanized singing aids and pronunciation practice subtitles are excluded from current and future workflows, source archives and publishing assets.
 - Lyric highlighting must follow the vocal performance closely enough to feel intentional at normal playback speed.
 - Word-level emphasis, line handoffs, focus release, and cue-stage movement should be driven by explicit timing data rather than ad-hoc offsets.
 - When a repeated section has a stronger approved performance, use it as a measured reference and fit the repeated section with an explicit, documented transform.
@@ -44,6 +45,13 @@ For a future pass, create a short preview and compare `00:47` directly with `01:
 - Prefer a high-quality master render followed by a controlled delivery encode with recorded metadata and checksums.
 - Make changes reversible and traceable: keep source data, scripts, composition variants, audit reports, and release notes together.
 - Use concise progress updates focused on decisions, completed checks, and blockers; keep private conversation out of repository history.
+
+### TikTok cover default
+
+- Apply the [TikTok cover workflow](tiktok-cover-workflow.md) to every TikTok publishing kit without requesting the same specifications again.
+- Deliver a dedicated **portrait 1200×1600** profile cover. The established upload interface labels its tall preview “4:3”; record the actual file ratio as **3:4 width:height** to avoid repeating the landscape-cover mistake.
+- Keep the complete title, artist and focal subject visible; match the track's artwork and palette. Check the cover at 150×200 pixels and under a modest centered crop before delivery.
+- Name the file with `Profile-1200x1600` so orientation is unambiguous. A landscape or 9:16 cover is a separate, explicitly requested variant, not the default upload.
 
 ## Repeatable workflow
 

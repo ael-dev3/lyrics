@@ -10,6 +10,8 @@ Typechecking is a blocking pre-render gate, but it does not replace runtime sche
 
 ## 1. Define the deliverable before animating
 
+For TikTok publishing kits, apply the [profile-cover workflow](tiktok-cover-workflow.md): portrait 1200×1600 cover, complete title and artist, thumbnail-size and crop review. The observed interface's “4:3” label does not mean a landscape upload.
+
 Record the following in a small production manifest:
 
 - exact track title and version;

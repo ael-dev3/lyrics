@@ -1,0 +1,73 @@
+{
+  "date": "2026-09-10",
+  "selectedUpload": "Otmenyai-TikTok-Cover-Profile-1200x1600.jpg",
+  "dimensions": {
+    "width": 1200,
+    "height": 1600,
+    "sample_aspect_ratio": "1:1",
+    "pix_fmt": "yuvj444p"
+  },
+  "widthToHeight": "3:4 portrait",
+  "interfaceLabel": "4:3, shown as a tall profile preview",
+  "method": "Built-in image generation with two reference images, then one typography-position refinement; FFmpeg Lanczos delivery sizing",
+  "imageModelVersion": "not exposed by the tool",
+  "checks": {
+    "metadataPassed": true,
+    "reviewedAt": [
+      "150x200",
+      "300x400"
+    ],
+    "fullTitleAndArtistReadable": true,
+    "sourceCharacterAndBothEyesVisible": true,
+    "cropStress": {
+      "removePerEdgePercent": 5,
+      "window": {
+        "x": 60,
+        "y": 80,
+        "width": 1080,
+        "height": 1440
+      },
+      "allTextIntact": true
+    },
+    "visualReviewer": "Codex image inspection",
+    "liveUploaderVerified": false,
+    "liveUploaderNote": "Local profile-size and crop simulations reviewed; no live upload performed."
+  },
+  "files": [
+    {
+      "file": "Otmenyai-TikTok-Cover-Profile-1200x1600.jpg",
+      "bytes": 231815,
+      "sha256": "4d3c5d8abce48d21c6856b19ec4d366b21397eb381e4a7153e77f8940e33a28d"
+    },
+    {
+      "file": "cover-generated.png",
+      "bytes": 1331478,
+      "sha256": "f4cca8c409b17a70f94c90cfb66c3d32f4c8f1ffce2b41ed418e8c1a28c92095"
+    },
+    {
+      "file": "profile-150x200.png",
+      "bytes": 41352,
+      "sha256": "e90e327f4767c7124e812ffbb9b50812c0c0d3b349942da0d38833fea33596e4"
+    },
+    {
+      "file": "profile-300x400.png",
+      "bytes": 117823,
+      "sha256": "a3f4b2d84b32200f4df8720120505a84217b06c664671c43d3fd1a450d06ac52"
+    },
+    {
+      "file": "crop-stress-300x400.png",
+      "bytes": 123535,
+      "sha256": "2766598fa56ec947b9523c92e0ab8ee1a309d2952b529dcfcda2d6241ab2610c"
+    },
+    {
+      "file": "cover-prompt-v2.txt",
+      "bytes": 2293,
+      "sha256": "53e725a5dae0a11e36bcc8edda6aa37e151b5a0e28375798df635db9c8dd594a"
+    },
+    {
+      "file": "cover-refinement-prompt-v2.txt",
+      "bytes": 1088,
+      "sha256": "8972947509d7d20b950944c714feb0a915426e555c78ebd80e4ed941285cf0fc"
+    }
+  ]
+}

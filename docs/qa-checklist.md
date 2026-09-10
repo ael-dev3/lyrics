@@ -163,6 +163,8 @@
 
 ## Technical delivery
 
+For TikTok kits, complete the separate [profile-cover checks](tiktok-cover-workflow.md#required-cover-review), including actual 1200×1600 metadata, full title/artist legibility at 150×200, and a modest crop stress check.
+
 - [ ] The final duration matches the locked audio.
 - [ ] The decoded frame count matches `duration × fps`.
 - [ ] Video dimensions, pixel format, frame rate, and codec are correct.

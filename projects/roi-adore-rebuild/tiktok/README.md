@@ -1,5 +1,7 @@
 # TikTok edition
 
+**Current default:** use the portrait `Roi-Cover-Profile-3x4.jpg` for the tall profile preview labelled “4:3”. Its actual dimensions are 1200×1600. The landscape file below is an archived variant. Future tracks follow the [TikTok cover workflow](../../../docs/tiktok-cover-workflow.md).
+
 Full-length 1080×1920, 60 fps H.264/AAC adaptation. The original animation sits above both timed lyric lanes and the spectrum. The final transparent 4K graphics frames are recomposed without changing cue timing; audio packets match the locked AAC master. Full decode and Desktop copy verification passed.
 
 The video and publishing kit are available in [the release](https://github.com/ael-dev3/lyrics/releases/tag/roi-adore-rebuild-v1.0.0).
@@ -7,8 +9,8 @@ The video and publishing kit are available in [the release](https://github.com/a
 ## Publishing files
 
 - `Description.txt`: ready-to-paste caption and credits.
-- `Roi-Cover-Landscape-4x3.jpg`: requested literal 4:3 cover, 1600×1200.
-- `Roi-Cover-Profile-3x4.jpg`: portrait alternative matching the shown profile preview, 1200×1600.
+- `Roi-Cover-Profile-3x4.jpg`: default profile cover, 1200×1600 portrait, matching the shown tall profile preview.
+- `Roi-Cover-Landscape-4x3.jpg`: archived 1600×1200 landscape variant; not the default profile upload.
 - `Roi-x-Adore-TikTok-Cover.jpg`: earlier 9:16 cover, 1080×1920.
 - `Roi-x-Adore-Cover-Original.png`: original generated portrait artwork.
 - Prompt files preserve the AI-assisted cover creation and format corrections.

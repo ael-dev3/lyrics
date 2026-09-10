@@ -4,6 +4,8 @@ This is the production order for reusing the Tanisea system on another song. It 
 
 ## 1. Freeze the input contract
 
+When the delivery includes TikTok, apply the established [profile-cover specification and review](tiktok-cover-workflow.md): a dedicated 1200×1600 portrait cover, title and concise artist-focused description. Do not repeat the landscape interpretation of the upload interface's “4:3” label.
+
 Create an immutable input manifest before editing visuals. Record:
 
 - source-audio filename, byte size, SHA-256, codec, sample rate, channels, and decoded sample count;

@@ -4,6 +4,8 @@ Released landscape Russian/English lyric film, completed on 10 September 2026. *
 
 [Film and production downloads](https://github.com/ael-dev3/lyrics/releases/tag/otmenyai-v1.0.0) · [Original official audio](https://www.youtube.com/watch?v=U9SYUPV0QrA) · [Software credits](SOFTWARE.md)
 
+[Corrected TikTok profile cover](tiktok/README.md): portrait 1200×1600, with the complete title and artist preserved in the tall profile crop. The reusable [cover workflow](../../docs/tiktok-cover-workflow.md) records this as the default for future tracks.
+
 ![Final encoded frame at 00:13.950](evidence/final-13.95.png)
 
 ## Inputs and credits
