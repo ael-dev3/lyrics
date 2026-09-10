@@ -1,9 +1,10 @@
 # Release status and version notes
 
-Checked against the GitHub release inventory on 9 September 2026. Source documentation and published binary assets can represent different revisions; use an edition's release source archive when reproducing its movie.
+Checked against the GitHub release inventory on 10 September 2026. Source documentation and published binary assets can represent different revisions; use an edition's release source archive when reproducing its movie.
 
 | Project / version | Status | Where to start |
 | --- | --- | --- |
+| Отменяй `otmenyai-v1.0.0` | Published; landscape master, publishing assets, original source and complete production archive | [Release](https://github.com/ael-dev3/lyrics/releases/tag/otmenyai-v1.0.0) · [Inventory](otmenyai-release-files.md) |
 | Roi × Adore `roi-adore-rebuild-v1.0.0` | Published; landscape and TikTok assets available | [Release](https://github.com/ael-dev3/lyrics/releases/tag/roi-adore-rebuild-v1.0.0) · [Inventory](roi-adore-release-files.md) |
 | Roi × Slow Down `roi-slowdown-v1.0.1` | Published historical edition, superseded by the rebuild | [Release](https://github.com/ael-dev3/lyrics/releases/tag/roi-slowdown-v1.0.1) · [Project](../projects/roi-slowdown-lyric-film/README.md) |
 | Tanisea `v2.4.0` | Published square master and 120 fps proof | [Release](https://github.com/ael-dev3/lyrics/releases/tag/v2.4.0) · [Implementation](cinematic-parity-v2.4-implementation.md) |

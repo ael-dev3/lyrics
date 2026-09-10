@@ -1,0 +1,22 @@
+Run from work/otmenyai after node scripts/render.ts completes:
+
+ffmpeg -y -hide_banner -loglevel warning \
+  -i evidence/master-lossless.mkv -i public/soundtrack.m4a \
+  -map 0:v:0 -map 1:a:0 \
+  -vf 'scale=1920:1080:flags=lanczos:out_color_matrix=bt709,format=yuv420p,setsar=1' \
+  -c:v libx264 -preset slow -crf 14 -profile:v high -level:v 4.2 \
+  -color_primaries bt709 -color_trc bt709 -colorspace bt709 -color_range tv \
+  -c:a copy -movflags +faststart -progress evidence/encode-progress.txt \
+  ../../outputs/REDCHINAWAVE-Otmenyai-Lyric-Film-1080p60.mp4
+
+The first encode retained the BT.709 matrix but omitted primaries and transfer
+metadata in the H.264 stream. Add those tags without changing picture data:
+
+mv ../../outputs/REDCHINAWAVE-Otmenyai-Lyric-Film-1080p60.mp4 evidence/master-before-color-tags.mp4
+ffmpeg -y -v warning -i evidence/master-before-color-tags.mp4 \
+  -map 0 -c copy \
+  -bsf:v 'h264_metadata=colour_primaries=1:transfer_characteristics=1:matrix_coefficients=1:video_full_range_flag=0' \
+  -color_primaries bt709 -color_trc bt709 -colorspace bt709 -color_range tv \
+  -movflags +faststart ../../outputs/REDCHINAWAVE-Otmenyai-Lyric-Film-1080p60.mp4
+
+Then run node scripts/verify.ts for full-file verification.

@@ -2,6 +2,19 @@
 
 **We are not the creators of the original music, lyrics, performances, musical remixes, anime footage, characters or source illustrations. We do not take credit for that work.** Our contribution is the additional lyric-film presentation and production workflow. Artist and source-upload links below distinguish those roles; a source uploader is not necessarily the owner of every element in an upload.
 
+## Отменяй
+
+| Contribution | Credit and source |
+| --- | --- |
+| “Отменяй” music, lyrics and recording | **REDCHINAWAVE** — [official audio](https://www.youtube.com/watch?v=U9SYUPV0QrA), album Отменяй (2022) |
+| Artist pages | [YouTube](https://www.youtube.com/@REDCHINAWAVE.official) · [official links](https://linktr.ee/redchinawave) · [Instagram](https://www.instagram.com/redchinawave.official/) |
+| Source illustration used in the film and adapted thumbnail | Sourced from the official upload above; original illustrator and complete artwork rights chain have not been independently established |
+| Added lyric presentation, English adaptation and motion graphics | **Ael / Lyrics workflow**, assisted by OpenAI Codex with **GPT-6 Astra** |
+
+The music was not remixed by this project. Analysis stems were used to study timing; the final soundtrack derives from the original recording. Source artwork was mapped to the requested four-color base palette, with new camera and graphic motion at 60 fps. The thumbnail used a separate image-generation tool; its model version was not exposed and is not inferred from the Codex model.
+
+The [LOOP study](docs/studies/loop-2026/README.md) informed the layout approach. [Production notes](projects/otmenyai-lyric-film/README.md) and [software/font credits](projects/otmenyai-lyric-film/SOFTWARE.md) preserve the detailed record. No authorship claim is made over the source music, lyrics, illustration or characters. The scoped repository license does not clear those third-party rights.
+
 ## Roi × Adore
 
 | Contribution in the source material | Credit and source |
@@ -35,6 +48,7 @@ Our CC BY 4.0 grant applies only to our licensable contributions. It does not re
 - **Playfair** — [upstream font project](https://github.com/clauseggers/Playfair) · [bundled SIL Open Font License](projects/tanisea-lyric-film/public/Playfair-OFL.txt).
 - **Space Grotesk** — [upstream font project and licence](https://github.com/floriankarsten/space-grotesk).
 - **Bebas Neue** — [upstream font project and licence](https://github.com/dharmatype/Bebas-Neue).
+- **Oswald** — [Google Fonts](https://fonts.google.com/specimen/Oswald) · [bundled SIL Open Font License](projects/otmenyai-lyric-film/public/Oswald-OFL.txt). The Отменяй project also includes [Space Grotesk’s font notice](projects/otmenyai-lyric-film/public/SpaceGrotesk-OFL.txt).
 - **Remotion**, **React**, **FFmpeg**, **Whisper / stable-ts**, **Demucs**, and other dependencies retain their own licences. The project licence does not replace their terms. Package manifests and dependency locks identify software versions where recorded.
 
 Credits reflect source metadata and the available production record. If a specific illustration, animation or other credit can be established or corrected, please [open a repository issue](https://github.com/ael-dev3/lyrics/issues) with the source and relevant details.

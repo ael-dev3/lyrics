@@ -2,7 +2,43 @@
 
 Music films with synchronized lyrics, meaning-linked translations, and audio-reactive visuals. This repository contains the projects, production workflows, and verification evidence behind each edition.
 
-[**Roi × Adore**](#roi--adore) · [**TikTok edition**](#tiktok-edition) · [**Tanisea**](#tanisea) · [**Build and workflow**](#build-and-workflow)
+[**Отменяй**](#отменяй) · [**Roi × Adore**](#roi--adore) · [**TikTok edition**](#tiktok-edition) · [**Tanisea**](#tanisea) · [**Build and workflow**](#build-and-workflow)
+
+## Отменяй
+
+**REDCHINAWAVE — Отменяй · Russian lyrics + English translation**
+
+A dark landscape lyric film built around the original upload’s illustration, with a four-color base palette: red `#e10508`, near-black `#030303`, light gray `#c2c2c2` and medium gray `#5c5c5c`. Large Russian type and meaning-linked English highlights sit beside the source artwork, with new camera motion and audio-reactive graphics rendered at 60 fps.
+
+![Отменяй: synchronized Russian and English highlights beside the original source illustration, in red and gray](assets/otmenyai-13-95.png)
+
+*Decoded frame from the final movie at 00:13.950. Artwork sourced from REDCHINAWAVE’s official upload; original illustrator unverified.*
+
+| Format | Duration | Lyrics | Delivery |
+| --- | --- | --- | --- |
+| 1920×1080 · 16:9 · 60 fps | 2:10.453 | 21 bilingual lines · 71 Russian words · 50 highlight groups | H.264 High · AAC stereo · BT.709 |
+
+Every repeated verse has its own measured timing. Alignment combines windowed Whisper observations on the mix and separated vocals, independent MMS-FA alignment and waveform/spectrogram inspection. The 64-band measured spectrum is separate from expressive motion. Final verification confirms 7,827 decoded frames, matching AAC packets and no measured source-to-AAC timing shift. Acoustic word boundaries retain uncertainty; frame-rounding accuracy is not ground-truth lyric accuracy.
+
+| Download | Contents |
+| --- | --- |
+| [Final YouTube film](https://github.com/ael-dev3/lyrics/releases/download/otmenyai-v1.0.0/REDCHINAWAVE-Otmenyai-Lyric-Film-1080p60.mp4) | Verified landscape 1080p60 master |
+| [Complete production archive](https://github.com/ael-dev3/lyrics/releases/download/otmenyai-v1.0.0/REDCHINAWAVE-Otmenyai-Complete-Production.zip) | Editable source, dependency lock, fonts, media, stems, alignment inputs, final assets and per-file hashes |
+| [Original source video](https://github.com/ael-dev3/lyrics/releases/download/otmenyai-v1.0.0/REDCHINAWAVE-Otmenyai-Original-Source.mkv) | Downloaded streams before the lyric treatment |
+| [YouTube thumbnail](https://github.com/ael-dev3/lyrics/releases/download/otmenyai-v1.0.0/REDCHINAWAVE-Otmenyai-YouTube-Thumbnail.jpg) · [Original PNG](https://github.com/ael-dev3/lyrics/releases/download/otmenyai-v1.0.0/REDCHINAWAVE-Otmenyai-YouTube-Thumbnail.png) | Upload-ready JPEG and generated source image |
+| [Title and description](projects/otmenyai-lyric-film/publishing/REDCHINAWAVE-Otmenyai-YouTube-Description.txt) · [Russian captions](projects/otmenyai-lyric-film/publishing/REDCHINAWAVE-Otmenyai.ru.srt) · [English captions](projects/otmenyai-lyric-film/publishing/REDCHINAWAVE-Otmenyai.en.srt) | Short artist-focused copy and optional caption tracks |
+| [Verification](projects/otmenyai-lyric-film/evidence/delivery-verification.json) · [Release checksums](https://github.com/ael-dev3/lyrics/releases/download/otmenyai-v1.0.0/CHECKSUMS.sha256) | Measured delivery results and asset hashes |
+
+[Full release](https://github.com/ael-dev3/lyrics/releases/tag/otmenyai-v1.0.0) · [Production notes and reproduction](projects/otmenyai-lyric-film/README.md) · [Asset inventory](docs/otmenyai-release-files.md) · [Original official audio](https://www.youtube.com/watch?v=U9SYUPV0QrA)
+
+<details>
+<summary>YouTube thumbnail and production credits</summary>
+
+![AI-assisted Отменяй YouTube thumbnail](assets/otmenyai-youtube-thumbnail.jpg)
+
+Music and lyrics: **REDCHINAWAVE**. Lyric-film production and English adaptation: **Ael**, assisted by **OpenAI Codex with GPT-6 Astra**. The thumbnail is an AI-assisted adaptation of the source artwork. [Artist and source credits](CREDITS.md#отменяй) · [Software and font credits](projects/otmenyai-lyric-film/SOFTWARE.md).
+
+</details>
 
 ## Roi × Adore
 
@@ -91,6 +127,7 @@ Each project has its own setup instructions. Use the release source archive when
 
 | Project | Starting point |
 | --- | --- |
+| Отменяй | Use the complete production archive and its [reproduction steps](projects/otmenyai-lyric-film/README.md#reproduction); finalized cues and features are included |
 | Roi × Adore | Download the complete production archive and follow its included README; the Git snapshot documents the source and evidence |
 | TikTok adaptation | Follow the [vertical reproduction notes](projects/roi-adore-rebuild/tiktok/README.md) after preparing the production inputs |
 | Tanisea | Follow the [project quick start](projects/tanisea-lyric-film/README.md#quick-start) for Node.js, FFmpeg and Remotion setup |
@@ -112,6 +149,7 @@ The reusable workflow covers soundtrack locking, lyric alignment, semantic trans
 
 ```text
 assets/                          Film screenshots and artwork
+projects/otmenyai-lyric-film/      Отменяй source, publishing copy and evidence
 projects/roi-adore-rebuild/       Roi × Adore source and evidence snapshot
   tiktok/                        Vertical adaptation and publishing material
 projects/tanisea-lyric-film/      Tanisea Remotion project
@@ -135,6 +173,7 @@ Our authored workflow documentation, code, prompts, reusable visual contribution
 
 ## Original creators and source credits
 
+- **REDCHINAWAVE — Отменяй:** [official audio and source artwork](https://www.youtube.com/watch?v=U9SYUPV0QrA) · [artist links](https://linktr.ee/redchinawave).
 - **VIDEOCLUB — Roi:** [official music video](https://www.youtube.com/watch?v=4NOMFBRfaT0).
 - **adore — did i tell u that i miss u:** [original track upload](https://www.youtube.com/watch?v=Xf9v-Uvabxo).
 - **Dj At — Roi × Adore source mashup:** [source video](https://www.youtube.com/watch?v=11tjwUK2adU).
@@ -144,6 +183,6 @@ Our authored workflow documentation, code, prompts, reusable visual contribution
 
 ## AI disclosure
 
-The project uses substantial **AI assistance** for code, documentation, translation drafting, vocal alignment and cover generation, under Ael's creative direction and review. The films retain source music and animation; the promotional covers are AI-assisted adaptations. Automated verification does not certify every vocal boundary or translation.
+The project uses substantial **AI assistance** for code, documentation, translation drafting, vocal alignment and cover generation, under Ael's creative direction and review. The films retain source music and source visuals; new motion and lyric graphics are authored for each treatment. Promotional covers are AI-assisted adaptations. Automated verification does not certify every vocal boundary or translation.
 
 [Read the AI disclosure, methods and limitations](AI-DISCLOSURE.md).

@@ -1,0 +1,43 @@
+{
+  "date": "2026-09-10",
+  "cleanNpmCiPassed": true,
+  "installFlags": [
+    "--ignore-scripts",
+    "--no-audit",
+    "--no-fund"
+  ],
+  "typecheckPassed": true,
+  "timingPassed": true,
+  "dspCalibrationPassed": true,
+  "layoutStates": 42,
+  "fullDeliveredFileVerificationPassed": true,
+  "masterSha256": "70fd65b514c6a14de42d4d6bc0f7aa04a8d51e2a8fbd7b949e291e6bc2032ee0",
+  "unchangedRenderInputs": [
+    {
+      "path": "src/Film.tsx",
+      "sha256": "97814505ef2f4541814fd840336ab77cce5280f3a28c3d46f4384f1dab89cd4c"
+    },
+    {
+      "path": "src/cues.json",
+      "sha256": "f75847c229250a3323cc5be4227f4be6d3b282905da3a12343b757e90eaf1dd4"
+    },
+    {
+      "path": "src/timing.ts",
+      "sha256": "79e9956859ba44b778af9a0bb8dca9934ffd58aa14ce37f4340f7f47215eede1"
+    },
+    {
+      "path": "public/artwork.png",
+      "sha256": "6c5254637f6390cee20d7921b9fee170d98a6468a3802efd4450a06377085f90"
+    },
+    {
+      "path": "public/science.json",
+      "sha256": "bbe9ca8a79e7fc67286144ff030f2f8c7576fbfe07a497ee71cea4bfa0941c86"
+    },
+    {
+      "path": "public/motion.json",
+      "sha256": "1daaecdf36e2b84934068e4e7d6a4b61d97111f72236ebdee5960622ca4a5d70"
+    }
+  ],
+  "lockfileSha256": "a3784c7ccf383bf0398cfb08576c2d0413692f2758bed67468288f2f9c4e673f",
+  "scope": "Fresh dependency installation, source checks, browser layout and existing master verification. Full movie was not rerendered for packaging; the encode wrapper preserves the documented production commands."
+}

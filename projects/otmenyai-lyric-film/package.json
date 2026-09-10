@@ -1,0 +1,35 @@
+{
+  "name": "otmenyai-lyric-film",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "features": "node scripts/analyze.ts && node scripts/motion.ts",
+    "cues": "node scripts/build-cues.ts && node scripts/reconcile.ts && node scripts/check.ts",
+    "render": "node scripts/render.ts",
+    "verify": "node scripts/verify.ts",
+    "captions": "node scripts/captions.ts",
+    "check:timing": "node scripts/check.ts",
+    "check:dsp": "node scripts/dsp-test.ts",
+    "check:layout": "node scripts/layout.ts",
+    "encode": "node scripts/encode.ts"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.518",
+    "@remotion/media": "4.0.518",
+    "@remotion/media-utils": "4.0.518",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "remotion": "4.0.518",
+    "@remotion/bundler": "4.0.518",
+    "@remotion/renderer": "4.0.518"
+  },
+  "devDependencies": {
+    "@types/node": "26.4.0",
+    "@types/react": "19.2.18",
+    "@types/react-dom": "19.2.5",
+    "typescript": "7.0.2",
+    "vitest": "4.1.11"
+  }
+}
