@@ -75,3 +75,7 @@ Before calling a track complete, record:
 - rights and permission status for any included media.
 
 This checklist is intended to make the workflow portable to additional tracks while preserving the current project’s timing discipline and visual standards.
+
+## Reference study: LOOP
+
+For future image-dominant lyric films, consult the [LÜCY & Moyka — LOOP study](studies/loop-2026/README.md). It documents stable reading positions, recurring visual motifs and independently changing language rows. Use its prototype brief as inspiration alongside this workflow; its observations do not replace audio alignment, semantic translation or delivery verification.

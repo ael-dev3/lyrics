@@ -38,3 +38,7 @@ Our CC BY 4.0 grant applies only to our licensable contributions. It does not re
 - **Remotion**, **React**, **FFmpeg**, **Whisper / stable-ts**, **Demucs**, and other dependencies retain their own licences. The project licence does not replace their terms. Package manifests and dependency locks identify software versions where recorded.
 
 Credits reflect source metadata and the available production record. If a specific illustration, animation or other credit can be established or corrected, please [open a repository issue](https://github.com/ael-dev3/lyrics/issues) with the source and relevant details.
+
+## Design-study references
+
+- **LÜCY & Moyka — LOOP**, visualizer by **Yoren佑任**, © 2026 Don’t Lie To Me LTD. [Original upload and credits](https://www.youtube.com/watch?v=fdcrpG9uKn0) · [Study and screenshot attribution](docs/studies/loop-2026/README.md). The screenshot excerpts remain third-party material; we claim no authorship or CC BY licensing rights over them.

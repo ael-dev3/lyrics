@@ -104,6 +104,10 @@ The reusable workflow covers soundtrack locking, lyric alignment, semantic trans
 - [Emotional audio-reactive motion](docs/emotional-audio-reactive-motion.md)
 - [Production preferences and known issues](docs/track-workflow-preferences-and-known-issues.md)
 
+## Reference studies
+
+[**LÜCY & Moyka — LOOP**](docs/studies/loop-2026/README.md): illustrated analysis of image-dominant composition, anchored lyrics, independent language transitions and recurring visual motifs. Includes an 8,654-frame numerical scan, selected frame-level observations, source credits and a practical brief for future films.
+
 ## Repository structure
 
 ```text
