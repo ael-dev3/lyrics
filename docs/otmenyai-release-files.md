@@ -29,7 +29,7 @@ Download `CHECKSUMS.sha256` beside the release files and run `shasum -a 256 -c C
 
 Final master SHA-256: `70fd65b514c6a14de42d4d6bc0f7aa04a8d51e2a8fbd7b949e291e6bc2032ee0`.
 
-The [machine-readable inventory](../projects/otmenyai-lyric-film/release-assets.json) records exact byte counts and hashes. GitHub upload verification is retained with the project release evidence.
+The [machine-readable inventory](../projects/otmenyai-lyric-film/release-assets.json) records exact byte counts and hashes. [GitHub upload verification](../projects/otmenyai-lyric-film/release-upload-verification.json) confirms all ten published asset sizes and SHA-256 digests.
 
 ## Credits and rights
 
