@@ -1,5 +1,7 @@
 # Production workflow
 
+For future bilingual films, apply the [equal-emphasis lyric workflow](bilingual-lyric-workflow.md): English and original-language lyrics share equal perceived size and weight, color/contrast, highlighting and synchronization precision. This takes precedence over subordinate translation treatments in historical examples.
+
 ## 0. Lock the typed toolchain
 
 All authored application, analysis, rendering, validation, and reusable workflow code uses strict TypeScript: `.ts` for data and logic, `.tsx` for React/Remotion components, and no new `.js` or `.jsx` source. Verify the npm registry's stable `latest` tag, exact-pin that compiler in the project and lockfile, and run the local compiler rather than a global installation.

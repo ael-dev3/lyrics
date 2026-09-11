@@ -2,6 +2,8 @@
 
 This is the production order for reusing the Tanisea system on another song. It front-loads timing authority and a short style lock so preventable synchronization, layout, and rendering problems are found before the full-length render.
 
+For future bilingual films, apply the [equal-emphasis workflow](bilingual-lyric-workflow.md) before adopting historical visual defaults. English must match the original language's perceived size, weight, color strength, highlighting and timing precision.
+
 ## 1. Freeze the input contract
 
 When the delivery includes TikTok, apply the established [profile-cover specification and review](tiktok-cover-workflow.md): a dedicated 1200×1600 portrait cover, title and concise artist-focused description. Do not repeat the landscape interpretation of the upload interface's “4:3” label.
@@ -45,6 +47,8 @@ Keep English segments stationary. For every performed source group, map the Engl
 - cue start and exclusive end sample;
 - forward, backward, repeated, or simultaneous activation.
 
+Both languages use those same source events for focus onset, handoff and release. English receives equivalent emphasis at word or semantic-group level, including when its natural word order differs.
+
 Review repeated choruses as independent performances. Never copy timestamps from the first chorus to the second. Pair repeated lines only for presentation-quality comparison.
 
 ## 4. Lock one presentation profile
@@ -66,6 +70,8 @@ Use the Tanisea cinematic defaults unless the new song's prototype demonstrates 
 
 Apply the same profile to repeated sections. Preserve explicit card/outro transitions as named milestones. If a long inter-line gap needs a hold, encode it as an explicit rule and test it; do not allow incidental blank or stacked frames.
 
+Apply typography, active/inactive color roles and focus strength equally to both lyric languages. Reflow long translations or rebalance the layout instead of reducing English alone. Historical font sizes and subtitle styling do not override the current equal-emphasis requirement.
+
 ## 5. Produce a short style lock
 
 Before the complete composition, render one 10–15 second prototype containing:
@@ -78,6 +84,8 @@ Before the complete composition, render one 10–15 second prototype containing:
 - the transition into or out of a card.
 
 Create a six-frame contact sheet and a boundary sheet at offsets `-1`, `0`, `+1`, and `+2` around each high-risk contact. Inspect the prototype at native size and at the intended mobile display size. Freeze typography, focus behavior, palette, safe area, and spectrum geometry after this pass.
+
+Pass the [bilingual style-preview acceptance gate](bilingual-lyric-workflow.md#style-preview-acceptance-gate) in each requested aspect ratio before freezing the profile. Check perceived size and weight, active/inactive contrast, equivalent highlight behavior and shared semantic timing for both languages.
 
 ## 6. Keep the visualizer calm by construction
 

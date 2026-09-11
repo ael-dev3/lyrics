@@ -12,9 +12,9 @@ Project documentation should contain decisions that another contributor can appl
 
 It should not contain private thoughts or quotations, personal identifiers, account or contact details, exact local paths, token or cost information, or unpublished rights-sensitive links. Use neutral production language for subjective feedback, such as “below the approved reference standard” or “needs another preview pass.”
 
-## Current track follow-up
+## Tanisea v2.5.0 follow-up
 
-The current v2.5.0 16:9 delivery is accepted as the working YouTube edition. No media changes are requested as part of this note.
+The Tanisea v2.5.0 16:9 delivery is accepted as the working YouTube edition. No media changes are requested as part of this note.
 
 The checkpoint around `00:47` remains a known imperfect lyric-highlighting/presentation moment. The surrounding `00:40–00:50` section is usable, but that checkpoint does not yet meet the reference quality demonstrated by `01:46–01:56`. Record it as a future refinement item rather than silently changing the approved file.
 
@@ -39,6 +39,13 @@ For a future pass, create a short preview and compare `00:47` directly with `01:
 - Treat the square master and native 16:9 edition as deliberate compositions. Do not stretch, crop, or letterbox one into the other without an explicit design decision.
 - Keep public compositions clean. Put diagnostic overlays, measurement guides, and proof-only material in separate previews or proof renders.
 
+### Equal emphasis for English lyrics
+
+- Follow the [bilingual lyric workflow](bilingual-lyric-workflow.md) for future productions. English receives equal perceived size and weight, color/contrast, highlight intensity and synchronization precision alongside the original-language lyrics.
+- Share source timing and semantic cue events across both languages, including onset, handoff and release behavior. Natural English word order may require grouped or non-linear focus.
+- Fit long translations through reflow or composition changes, not English-only shrinking or dimming. Use the track's own palette with equally strong active and inactive text treatments.
+- Check both languages at native and mobile size before the full render. Earlier films with small secondary English captions remain historical references, not the future design default.
+
 ### Media and handoff
 
 - Preserve the approved audio timing and source-media identity through the render pipeline.
@@ -60,7 +67,7 @@ For a future pass, create a short preview and compare `00:47` directly with `01:
 3. Define the timing authority for each section. Keep source lyric cues distinct from presentation-only choreography.
 4. Implement changes as explicit, named, reproducible composition or data updates.
 5. Render short previews first, normally 10–15 seconds around the affected section and its approved comparison section.
-6. Play the preview with the source audio and review lyric highlighting, line transitions, spacing, safe areas, and motion at normal speed.
+6. Play the preview with the source audio and review lyric highlighting, line transitions, spacing, safe areas, and motion at normal speed. Verify equal bilingual size, color, focus and timing at native and mobile size using the [style-preview acceptance gate](bilingual-lyric-workflow.md#style-preview-acceptance-gate).
 7. For repeated sections, compare the candidate directly with the approved reference window; document any remaining checkpoint instead of masking it with unrelated changes.
 8. Render the complete delivery only after the targeted previews are acceptable.
 9. Run technical checks: typecheck, tests, composition discovery, timing/alignment checks, full decode, frame count, dimensions, frame rate, metadata, and checksums.
@@ -76,6 +83,7 @@ Before calling a track complete, record:
 - lyric and audio timing authority;
 - approved comparison windows;
 - aspect-ratio-specific composition decisions;
+- equal bilingual emphasis checks, including typography, active/inactive contrast, semantic focus and mobile-size evidence;
 - short-preview review points and their status;
 - known imperfections with timestamps and a neutral description;
 - commands used to render and verify;

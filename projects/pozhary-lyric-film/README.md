@@ -58,6 +58,12 @@ The design takes the earlier workflow's fixed bilingual reading positions and me
 
 [Spectrum calibration](analysis/manifest.json) · [DSP checks](evidence/dsp-checks.log) · [Artistic control manifest](analysis/motion-manifest.json) · [Audio timing check](evidence/audio-timing-check.json).
 
+## Lessons for the next production
+
+The reusable [bilingual lyric workflow](../../docs/bilingual-lyric-workflow.md) records the production sequence and the new equal-emphasis default. This release uses larger Oswald Russian lyrics and smaller Space Grotesk English meanings, with stronger Russian highlighting. Future films must give English equal perceived size and weight, color/contrast, focus strength and synchronization precision, using the same source timing and semantic mappings.
+
+Keep the bounded alignment, explicit uncertainty records, separate measured and expressive visuals, dedicated aspect ratios and verified delivery pipeline. Add a paired-language style-preview gate at native and mobile size, including long English lines and difficult handoffs. This is a forward-looking workflow change; the published v1.0.0 movies, finalized cues and source archive remain unchanged.
+
 ## Verification
 
 [Readable delivery report](evidence/final-verification.md) · [YouTube checks](evidence/youtube-verification.json) · [TikTok checks](evidence/tiktok-verification.json). Checks include full strict decoding, all 9,001 frames per movie, AAC packet/timestamp identity, square pixels, BT.709 tags, fast-start layout and selected final decoded frames.

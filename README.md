@@ -164,6 +164,7 @@ Each project has its own setup instructions. Use the release source archive when
 
 The reusable workflow covers soundtrack locking, lyric alignment, semantic translation, visual design, calibrated audio features, rendering and delivery verification:
 
+- [Bilingual lyric workflow and equal-emphasis standard](docs/bilingual-lyric-workflow.md) — future films give English equal size, color strength, highlighting and synchronization precision; includes the production sequence and lessons from Пожары
 - [Production workflow](docs/production-workflow.md)
 - [First-pass song workflow](docs/first-pass-song-workflow.md)
 - [Visual production workflow](docs/pixel-perfect-visual-workflow.md)

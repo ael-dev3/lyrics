@@ -133,6 +133,8 @@ Asset rules:
 
 Typography is geometry. A fallback font changes timing perception, wrapping, and alignment as well as appearance.
 
+For bilingual films, follow the [equal-emphasis typography and preview gate](bilingual-lyric-workflow.md). English is a core lyric layer with equal perceived size, weight, color/contrast and focus strength. Do not reduce it to a small secondary label to solve layout pressure.
+
 - Bundle every font used by the composition, including Cyrillic, punctuation, numerals, and symbols.
 - Load local faces with `@remotion/fonts`, or use `FontFace` with `delayRender()`/`continueRender()`; do not begin capture while a face is unresolved.
 - Use only weights and styles that exist in the file. Set `font-synthesis: none` so the browser cannot fabricate bold, italic, or small-caps faces.
