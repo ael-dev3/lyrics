@@ -72,6 +72,12 @@ The complete title and artist were checked at 150×200, 300×400 and with 5% rem
 
 [Exact image-generation prompts](analysis/cover-prompts.json) · [Cover verification](evidence/cover-verification.json) · [Crop stress check](evidence/crop-stress-300x400.png).
 
+## Publication
+
+The [published release](https://github.com/ael-dev3/lyrics/releases/tag/pozhary-v1.0.0) contains both final movies, original source and the complete production archive. All **19 downloadable assets** were downloaded again and matched to their local SHA-256 hashes. The public README and screenshot also matched the committed files.
+
+The release tag and archive identify source commit `8591719616eb212f11be96d1f7ea978bcc8e1803`. This post-publication record does not change the movies or the release source archive. [Remote-byte verification](release-upload-verification.json) · [Asset inventory](release-assets.json) · [Release checksums](release-CHECKSUMS.sha256).
+
 ## Reproduction
 
 Use Node.js 24+, FFmpeg/FFprobe with libx264, and the pinned dependencies. Put them on PATH. The complete production archive supplies the source audio, artwork and model observations; the Git source snapshot may omit large media. Installed dependencies, model weights, decoded PCM, temporary frame caches and lossless intermediate movies are excluded from the archive because they can be regenerated.
