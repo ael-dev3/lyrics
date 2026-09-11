@@ -1,0 +1,157 @@
+{
+  "version": 1,
+  "track": "ray! — Пожары",
+  "sourceUrl": "https://www.youtube.com/watch?v=ml9TqzvJLCg",
+  "releaseUrl": "https://hangov3r.band.link/pojari",
+  "artistChannel": "https://www.youtube.com/channel/UC5x2GKvVvMUvCp7bKIzY23Q",
+  "published": "2026-09-10",
+  "retrieved": "2026-09-11",
+  "sourceVideo": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "codec": "av1",
+    "formatId": "399",
+    "decodedFrames": 4500,
+    "visualContent": "Stationary official release photograph with blurred side fill. 4500 frames scanned at 160×90; differences are primarily compression variation."
+  },
+  "sourceAudio": {
+    "codec": "opus",
+    "formatId": "251",
+    "sampleRate": 48000,
+    "channels": 2,
+    "retainedDecodedSamples": 7200648,
+    "durationSeconds": 150.0135
+  },
+  "delivery": {
+    "fps": 60,
+    "frames": 9001,
+    "videoDurationSeconds": 150.01666666666668,
+    "audio": "AAC 320k, -3.2 dB gain, no temporal edit; identical packets in both final films",
+    "dimensions": [
+      [
+        1920,
+        1080
+      ],
+      [
+        1080,
+        1920
+      ]
+    ]
+  },
+  "artwork": {
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/aa/0e/ad/aa0ead8b-6fd7-ddd9-07d8-1818e3d46fe2/0.jpg/3000x3000bb.jpg",
+    "discovery": "Linked official release page; higher-resolution version of the same photograph",
+    "width": 3000,
+    "height": 3000,
+    "photographer": "Not independently identified",
+    "filmTreatment": "Original photograph with crop, gradients and added 60fps motion; no generated replacement inside the film",
+    "coverTreatment": "Separate AI-assisted adaptations of the source photo; generated-image model version not exposed"
+  },
+  "credits": {
+    "artist": "ray!",
+    "lyrics": "Чистякова-Ионова Лидия Александровна",
+    "music": [
+      "Чистякова-Ионова Лидия Александровна",
+      "Багиров Гейдар Анвер Оглы"
+    ],
+    "authority": "Credits transcribed from the artist upload description"
+  },
+  "inputs": [
+    {
+      "path": "source/source.mkv",
+      "bytes": 14518589,
+      "sha256": "56ae632e092d4a94523b80de40433edc64cb34392a5aef46528fac2bb3d7d1cb"
+    },
+    {
+      "path": "source/soundtrack.opus",
+      "bytes": 2506946,
+      "sha256": "ac8c533ef73ebe70fa134181dfe57e7e08ff0daf17fa8cca9dd48073b4d0ea68"
+    },
+    {
+      "path": "source/artist-cover.jpg",
+      "bytes": 3090781,
+      "sha256": "a17253c3162422725fb3ba44b9f023834aee34dffc15ded4db69dd6aa4c3860c"
+    },
+    {
+      "path": "public/soundtrack.m4a",
+      "bytes": 6078562,
+      "sha256": "9a6e87e55cb56bcad77849b2e1435d3162fd6dfac50177dd617a0dc1997fa6f7"
+    },
+    {
+      "path": "src/cues.json",
+      "bytes": 28707,
+      "sha256": "e040326ffb3a0b897219948407fd1ac33af5f9d710f4f97bfc227b8b2258d962"
+    },
+    {
+      "path": "analysis/lyrics-user-ru.txt",
+      "bytes": 1251,
+      "sha256": "ab7d4f7c4a131049cf6ae9b35cfaaa8d5058e3ef8e7fbdf7ab94d7090b4f9813"
+    },
+    {
+      "path": "public/Oswald-Bold.ttf",
+      "bytes": 86416,
+      "sha256": "a6ee8b91ec269a6f48631ba4ba1a3ab7e5039e5482dda8dc9672ee4620d7bd68"
+    },
+    {
+      "path": "public/Oswald-Medium.ttf",
+      "bytes": 86428,
+      "sha256": "edca7f2098242ead25675251ac9c35ecd2a9d001e4bcb641e07471148b6c365b"
+    },
+    {
+      "path": "public/SpaceGrotesk.ttf",
+      "bytes": 136676,
+      "sha256": "acad6de1fc93436f5c0f1f4137751ef04f1aea3063e7036535970ffcfbd79f72"
+    },
+    {
+      "path": "public/Oswald-OFL.txt",
+      "bytes": 4483,
+      "sha256": "0fd731a904b729a4e02eaf5e8ebd06783edd9abe400e8882760160230675b652"
+    },
+    {
+      "path": "public/SpaceGrotesk-OFL.txt",
+      "bytes": 4495,
+      "sha256": "564ce565c371c5e5bbf286006565a7c9aa55a9f56e7ca58d56e05d649dd61a72"
+    }
+  ],
+  "runtime": {
+    "node": "v24.20.0",
+    "chromiumOriginalRun": "Google Chrome for Testing 149.0.7790.0",
+    "ffmpeg": "ffmpeg version 8.1.2 Copyright (c) 2000-2026 the FFmpeg developers",
+    "packages": {
+      "name": "ray-pozhary-lyric-film",
+      "version": "1.0.0",
+      "private": true,
+      "type": "module",
+      "scripts": {
+        "typecheck": "tsc --noEmit",
+        "features": "node scripts/analyze.ts && node scripts/motion.ts",
+        "render": "node scripts/render.ts",
+        "verify": "node scripts/verify.ts",
+        "alignment:verify": "node scripts/check.ts",
+        "check": "npm run typecheck && node scripts/check.ts && node scripts/dsp-test.ts && node scripts/layout.ts",
+        "render:all": "node scripts/render-all.ts",
+        "encode": "node scripts/encode.ts",
+        "captions": "node scripts/captions.ts"
+      },
+      "dependencies": {
+        "@remotion/cli": "4.0.518",
+        "@remotion/media": "4.0.518",
+        "@remotion/media-utils": "4.0.518",
+        "react": "19.2.8",
+        "react-dom": "19.2.8",
+        "remotion": "4.0.518",
+        "@remotion/bundler": "4.0.518",
+        "@remotion/renderer": "4.0.518"
+      },
+      "devDependencies": {
+        "@types/node": "26.4.0",
+        "@types/react": "19.2.18",
+        "@types/react-dom": "19.2.5",
+        "typescript": "7.0.2",
+        "vitest": "4.1.11"
+      }
+    }
+  },
+  "rights": "Music, lyrics, recording, photograph and source-derived covers remain third-party material, excluded from the repository CC BY 4.0 grant. No ownership or endorsement claim."
+}

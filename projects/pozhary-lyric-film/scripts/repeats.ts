@@ -1,0 +1,6 @@
+import {readFileSync,writeFileSync} from 'node:fs';
+const bytes=readFileSync('analysis/vocals.f32'),pcm=new Float32Array(bytes.buffer,bytes.byteOffset,bytes.byteLength/4),sr=16000;
+const correlation=(a:number,b:number,duration:number,step=4)=>{let xy=0,xx=0,yy=0;const count=Math.round(duration*sr);for(let k=0;k<count;k+=step){const x=pcm[Math.round(a*sr)+k]??0,y=pcm[Math.round(b*sr)+k]??0;xy+=x*y;xx+=x*x;yy+=y*y;}return xy/Math.sqrt(Math.max(1e-15,xx*yy));};
+const pairs=[];
+for(const [reference,target] of [[63.4,.4],[63.4,111.4]] as const){let best={lag:0,correlation:-1};for(let d=-.18;d<=.18;d+=.001){const c=correlation(reference,target+d,23,8);if(c>best.correlation)best={lag:d,correlation:c};}const sections=Array.from({length:7},(_,i)=>{const off=[0,3,6,9,12,18,21][i]!;return {offset:off,correlation:correlation(reference+off,target+best.lag+off,i===4?5:2.1,4)};});pairs.push({referenceStart:reference,targetStart:target,lagSeconds:Math.round(best.lag*1000)/1000,globalCorrelation:best.correlation,sections});}
+writeFileSync('analysis/repeated-vocal-correlation.json',JSON.stringify({method:'Signed waveform normalized cross-correlation of the isolated vocal stem; independent lag search ±180ms at 1ms resolution. Supporting evidence only.',pairs},null,2));console.log(JSON.stringify(pairs,null,2));

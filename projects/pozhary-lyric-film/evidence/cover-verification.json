@@ -1,0 +1,29 @@
+{
+  "method": "Built-in image generation with official source photograph as reference; FFmpeg Lanczos normalization and JPEG export. Exact prompts and generated originals retained.",
+  "imageModel": "Not disclosed by tool",
+  "assets": [
+    {
+      "file": "Pozhary-YouTube-Thumbnail-1920x1080.jpg",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 612989,
+      "sha256": "b738cbe8d797f9e4cfea692ceb0a832cecf76fdcfe4f39626e2c5e4409571d2f"
+    },
+    {
+      "file": "Pozhary-TikTok-Cover-Profile-1200x1600.jpg",
+      "width": 1200,
+      "height": 1600,
+      "bytes": 641916,
+      "sha256": "7ae3166ffceffa62d94fc7ea72c279085727a8005842547415f57b3222334694"
+    }
+  ],
+  "checks": {
+    "exactSpelling": true,
+    "titleAndArtistReadableAt150x200": true,
+    "portrait300x400Reviewed": true,
+    "centerCropRemovingFivePercentEachEdgeReviewed": true,
+    "youtube320x180Reviewed": true,
+    "letterboxing": false,
+    "uploadInterfaceReview": "Local simulations only; no live upload performed."
+  }
+}

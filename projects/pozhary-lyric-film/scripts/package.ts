@@ -1,0 +1,30 @@
+import {execFileSync} from 'node:child_process';
+import {cpSync,mkdirSync,readFileSync,readdirSync,statSync,writeFileSync,createReadStream} from 'node:fs';
+import {join,resolve,relative} from 'node:path';
+import {createHash} from 'node:crypto';
+const repo=resolve(process.env.LYRICS_REPO??'../lyrics'),commit=execFileSync('git',['-C',repo,'rev-parse','HEAD']).toString().trim();
+const root=resolve('package/Pozhary-Complete-Production');mkdirSync(root,{recursive:true});mkdirSync('release',{recursive:true});
+execFileSync('git',['-C',repo,'archive','--format=tar',`--output=${resolve('package/source.tar')}`,commit,'projects/pozhary-lyric-film']);
+execFileSync('tar',['-xf','package/source.tar','--strip-components=2','-C',root]);
+for(const dir of ['source','public','analysis','output'])mkdirSync(join(root,dir),{recursive:true});
+for(const p of ['source.mkv','soundtrack.opus','artist-cover.jpg','source.ru-orig.json3'])cpSync('source/'+p,join(root,'source',p));
+cpSync('source.json',join(root,'source','source-metadata.json'));
+for(const p of ['soundtrack.m4a','soundtrack.opus'])cpSync('public/'+p,join(root,'public',p));
+cpSync('analysis/stems',join(root,'analysis/stems'),{recursive:true});
+cpSync('output',join(root,'output'),{recursive:true});
+cpSync('evidence/encoded',join(root,'evidence/encoded'),{recursive:true});
+cpSync('evidence/Pozhary-Style-Preview.mp4',join(root,'evidence/Pozhary-Style-Preview.mp4'));
+cpSync('analysis/bands-dbfs.f32',join(root,'analysis/bands-dbfs.f32'));
+writeFileSync(join(root,'SOURCE-REVISION.txt'),commit+'\n');
+for(const name of ['LICENSE.md','AI-DISCLOSURE.md','CREDITS.md'])cpSync(join(repo,name),join(root,'REPOSITORY-'+name));
+cpSync(join(repo,'LICENSES'),join(root,'LICENSES'),{recursive:true});
+const files:string[]=[];const walk=(d:string)=>{for(const e of readdirSync(d,{withFileTypes:true})){const p=join(d,e.name);if(e.isDirectory())walk(p);else if(e.isFile())files.push(p);else throw Error('Unexpected non-regular package entry '+p);}};walk(root);
+const entries=[];for(const p of files.sort()){const h=createHash('sha256');for await(const b of createReadStream(p))h.update(b);entries.push({path:relative(root,p),bytes:statSync(p).size,sha256:h.digest('hex')});}
+writeFileSync(join(root,'MANIFEST.json'),JSON.stringify({sourceCommit:commit,files:entries},null,2));
+writeFileSync(join(root,'CHECKSUMS.sha256'),entries.map(e=>`${e.sha256}  ${e.path}\n`).join(''));
+execFileSync('zip',['-q','-r','-6',resolve('release/Pozhary-Complete-Production.zip'),'Pozhary-Complete-Production'],{cwd:resolve('package')});
+for(const p of readdirSync('output'))cpSync('output/'+p,'release/'+p);
+cpSync('source/source.mkv','release/Pozhary-Original-Source.mkv');
+const releaseEntries=[];for(const p of readdirSync('release').filter(p=>p!=='CHECKSUMS.sha256'&&p!=='release-assets.json').sort()){const b=readFileSync('release/'+p);releaseEntries.push({file:p,bytes:b.length,sha256:createHash('sha256').update(b).digest('hex')});}
+writeFileSync('release/CHECKSUMS.sha256',releaseEntries.map(e=>`${e.sha256}  ${e.file}\n`).join(''));writeFileSync('release/release-assets.json',JSON.stringify({sourceCommit:commit,assets:releaseEntries},null,2));
+console.log({sourceCommit:commit,productionFiles:entries.length,releaseAssets:releaseEntries.length});

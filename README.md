@@ -2,7 +2,36 @@
 
 Music films with synchronized lyrics, meaning-linked translations, and audio-reactive visuals. This repository contains the projects, production workflows, and verification evidence behind each edition.
 
-[**Отменяй**](#отменяй) · [**Roi × Adore**](#roi--adore) · [**TikTok edition**](#tiktok-edition) · [**Tanisea**](#tanisea) · [**Build and workflow**](#build-and-workflow)
+[**Пожары**](#пожары) · [**Отменяй**](#отменяй) · [**Roi × Adore**](#roi--adore) · [**TikTok edition**](#tiktok-edition) · [**Tanisea**](#tanisea) · [**Build and workflow**](#build-and-workflow)
+
+## Пожары
+
+**ray! — Пожары · Russian lyrics + English translation**
+
+A photographic lyric film in moss green, charcoal and copper, built around the artist's official release artwork. Fixed Russian words and meaning-linked English highlights sit beside the photograph in landscape and beneath it in the dedicated vertical edition. New camera movement and expressive graphics run at 60 fps, with a separately calibrated 64-band spectrum.
+
+![Пожары: Russian words and English meaning highlights beside the source photograph](assets/pozhary-16-2.png)
+
+*Decoded final movie frame at 00:16.200. Original photograph sourced through the artist's official release; individual photographer unverified.*
+
+| Edition | Format | Timeline | Lyrics |
+| --- | --- | --- | --- |
+| YouTube | 1920×1080 · 60 fps | 2:30 · 9,001 video frames | Russian + English meanings |
+| TikTok | 1080×1920 · 60 fps | Same soundtrack and cue data | Dedicated portrait layout |
+
+The production represents all 117 supplied words in 36 cues and 84 highlight groups. Bounded CTC and attention alignment, isolated vocals and waveform correlation inform the timing. The chopped “Пожар” bridge uses one sustained bilingual motif; individual echoes are not claimed as separately aligned words. [Timing methods and review limits](projects/pozhary-lyric-film/README.md#timing-and-translation).
+
+| Download | Contents |
+| --- | --- |
+| [YouTube film](https://github.com/ael-dev3/lyrics/releases/download/pozhary-v1.0.0/Pozhary-YouTube-1920x1080-60fps.mp4) | Landscape H.264 / AAC master |
+| [TikTok film](https://github.com/ael-dev3/lyrics/releases/download/pozhary-v1.0.0/Pozhary-TikTok-1080x1920-60fps.mp4) | Full-length vertical edition |
+| [YouTube thumbnail](projects/pozhary-lyric-film/publishing/Pozhary-YouTube-Thumbnail-1920x1080.jpg) · [TikTok profile cover](projects/pozhary-lyric-film/publishing/Pozhary-TikTok-Cover-Profile-1200x1600.jpg) | Landscape thumbnail and **1200×1600 portrait** profile cover |
+| [YouTube title](projects/pozhary-lyric-film/publishing/Pozhary-YouTube-Title.txt) · [description](projects/pozhary-lyric-film/publishing/Pozhary-YouTube-Description.txt) · [TikTok copy](projects/pozhary-lyric-film/publishing/Pozhary-TikTok-Description.txt) | Concise artist-focused credits and AI disclosure |
+| [Russian captions](projects/pozhary-lyric-film/publishing/Pozhary.ru.srt) · [English captions](projects/pozhary-lyric-film/publishing/Pozhary.en.srt) | Optional timed caption tracks |
+| [Complete production archive](https://github.com/ael-dev3/lyrics/releases/download/pozhary-v1.0.0/Pozhary-Complete-Production.zip) · [Original source](https://github.com/ael-dev3/lyrics/releases/download/pozhary-v1.0.0/Pozhary-Original-Source.mkv) | Editable source, original media, model observations, stems, covers and per-file hashes |
+| [Delivery checksums](https://github.com/ael-dev3/lyrics/releases/download/pozhary-v1.0.0/CHECKSUMS.sha256) | Release asset sizes and SHA-256 records |
+
+[Production notes and reproduction](projects/pozhary-lyric-film/README.md) · [Original artist and source credits](CREDITS.md#пожары) · [Official audio](https://www.youtube.com/watch?v=ml9TqzvJLCg)
 
 ## Отменяй
 
@@ -127,6 +156,7 @@ Each project has its own setup instructions. Use the release source archive when
 
 | Project | Starting point |
 | --- | --- |
+| Пожары | Follow the [reproduction steps](projects/pozhary-lyric-film/README.md#reproduction); both aspect ratios share finalized cues and audio features |
 | Отменяй | Use the complete production archive and its [reproduction steps](projects/otmenyai-lyric-film/README.md#reproduction); finalized cues and features are included |
 | Roi × Adore | Download the complete production archive and follow its included README; the Git snapshot documents the source and evidence |
 | TikTok adaptation | Follow the [vertical reproduction notes](projects/roi-adore-rebuild/tiktok/README.md) after preparing the production inputs |
@@ -150,6 +180,7 @@ The reusable workflow covers soundtrack locking, lyric alignment, semantic trans
 
 ```text
 assets/                          Film screenshots and artwork
+projects/pozhary-lyric-film/       Пожары source, both publishing kits and evidence
 projects/otmenyai-lyric-film/      Отменяй source, publishing copy and evidence
 projects/roi-adore-rebuild/       Roi × Adore source and evidence snapshot
   tiktok/                        Vertical adaptation and publishing material
@@ -174,6 +205,7 @@ Our authored workflow documentation, code, prompts, reusable visual contribution
 
 ## Original creators and source credits
 
+- **ray! — Пожары:** [official audio and artwork](https://www.youtube.com/watch?v=ml9TqzvJLCg) · [official release links](https://hangov3r.band.link/pojari).
 - **REDCHINAWAVE — Отменяй:** [official audio and source artwork](https://www.youtube.com/watch?v=U9SYUPV0QrA) · [artist links](https://linktr.ee/redchinawave).
 - **VIDEOCLUB — Roi:** [official music video](https://www.youtube.com/watch?v=4NOMFBRfaT0).
 - **adore — did i tell u that i miss u:** [original track upload](https://www.youtube.com/watch?v=Xf9v-Uvabxo).

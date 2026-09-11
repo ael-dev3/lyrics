@@ -24,3 +24,9 @@ The Отменяй production task used **OpenAI Codex with GPT-6 Astra**, confi
 AI assistance does not transfer the underlying music, lyric, animation, character or artwork rights. We make no blanket claim that every AI output is copyrightable. [CC BY 4.0](LICENSE.md) is offered only for rights that exist and that Ael has authority to license in the project's own contributions. Mixed audiovisual deliverables and covers are not wholly CC-licensed media.
 
 See [source credits](CREDITS.md) for the original artists and uploaders. No artist endorsement, affiliation or participation is implied.
+
+## Пожары production
+
+The Пожары landscape and vertical editions were developed with OpenAI Codex (GPT-6 Astra). AI assistance covered TypeScript implementation, English meaning adaptation, model-based timing analysis, visual checks and publishing copy. The covers use the built-in image-generation tool with official release artwork as a reference; its image-model version was not exposed. The original photograph remains the film background. No synthetic singing replaces the original recording.
+
+[Track-specific methods, uncertainty and review limits](projects/pozhary-lyric-film/README.md) · [Exact cover prompts](projects/pozhary-lyric-film/analysis/cover-prompts.json).

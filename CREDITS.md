@@ -2,6 +2,20 @@
 
 **We are not the creators of the original music, lyrics, performances, musical remixes, anime footage, characters or source illustrations. We do not take credit for that work.** Our contribution is the additional lyric-film presentation and production workflow. Artist and source-upload links below distinguish those roles; a source uploader is not necessarily the owner of every element in an upload.
 
+## Пожары
+
+| Contribution | Credit and source |
+| --- | --- |
+| “Пожары” artist, vocal performance and official upload | **ray!** — [official audio](https://www.youtube.com/watch?v=ml9TqzvJLCg), [release / streaming links](https://hangov3r.band.link/pojari), [artist channel](https://www.youtube.com/channel/UC5x2GKvVvMUvCp7bKIzY23Q) |
+| Lyrics | **Чистякова-Ионова Лидия Александровна**, as credited in the official upload |
+| Music | **Чистякова-Ионова Лидия Александровна / Багиров Гейдар Анвер Оглы**, as credited in the official upload |
+| Source photograph | Official release artwork, obtained through the artist's release page; individual photographer not independently identified |
+| Added bilingual lyric presentation and motion | **Ael / Lyrics workflow**, assisted by **OpenAI Codex (GPT-6 Astra)** |
+
+The film uses the original photograph with new camera and graphic motion. Separate covers are AI-assisted adaptations of that photograph; the image tool did not disclose its model version. The soundtrack preserves the recording and timeline, with −3.2 dB linear gain before a single AAC encode for delivery headroom. Stems are analysis inputs only.
+
+The original music, lyrics, recording, source photograph and source-derived cover imagery are excluded from the repository's CC BY 4.0 grant. We make no claim of original authorship, endorsement or rights clearance. [Production notes](projects/pozhary-lyric-film/README.md) · [Software record](projects/pozhary-lyric-film/SOFTWARE.md).
+
 ## Отменяй
 
 | Contribution | Credit and source |
