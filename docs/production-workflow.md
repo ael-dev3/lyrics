@@ -322,3 +322,11 @@ A lyric film is production-ready only when:
 - the decoded delivery has no unintended visible artifacts against the frozen visual reference;
 - no edit is a patch over a previously encoded video;
 - the final full-length file passes technical and audiovisual QA.
+
+## 11. Publish a recoverable release
+
+Commit the verified source and build the production archive from that exact revision. Record file sizes and SHA-256 hashes for every release asset, test the archive, and verify copied Desktop files before uploading.
+
+For releases with several large media files, create an explicit draft first and upload assets individually. A failed combined create-and-upload operation can remove its temporary draft and discard successful uploads; Joyride encountered this after a large-asset HTTP 400 and a connection reset. A persistent draft lets a retry inspect the remote inventory and transfer only missing assets. Check the state and size of any existing asset; verify its digest before treating it as complete. Do not overwrite an existing published version as a routine retry.
+
+Once every asset is present, publish the release against the recorded source commit. Freshly download the assets and compare their hashes with the local inventory. Verify the public README, screenshot and tag target separately. Commit the resulting publication receipt afterward; it cannot be part of the immutable archive whose own hash it verifies. Link that receipt in the live repository and explain this distinction in future archive notes.
