@@ -1,5 +1,7 @@
 # Production workflow
 
+Apply the [cinematic lyric presentation standard](cinematic-lyric-workflow.md) to current and future productions: stable color-only word/group focus, precise timing and continuous scene shading. Historical underline and progress-fill examples do not override this default.
+
 For future bilingual films, apply the [equal-emphasis lyric workflow](bilingual-lyric-workflow.md): English and original-language lyrics share equal perceived size and weight, color/contrast, highlighting and synchronization precision. This takes precedence over subordinate translation treatments in historical examples.
 
 ## 0. Lock the typed toolchain
@@ -53,7 +55,7 @@ Never use a lyric page for the original song when the soundtrack is a remix with
 
 Create a source-language line list first. Create the English translation in a separate field. This prevents a poetic translation from being mistaken for a literal word-for-word timing map.
 
-For bilingual karaoke, align English **semantic groups** to the corresponding performed source-language phrase. Do not force every English word onto a Russian syllable when the grammar differs.
+For bilingual lyric focus, align English **semantic groups** to the corresponding performed source-language phrase. Do not force every English word onto a Russian syllable when the grammar differs.
 
 Do not assume those English groups must activate from left to right. When natural English and source-language performance order differ, keep the English sentence in natural reading order and let chronological source cues target semantic groups in any display position. A target may move backwards, repeat, or activate alongside another target when the meaning requires it.
 

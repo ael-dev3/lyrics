@@ -4,6 +4,8 @@ Production workflows use original-language lyrics and meaning-based translations
 
 Read `docs/track-workflow-preferences-and-known-issues.md` for the established production and handoff preferences.
 
+Read `docs/cinematic-lyric-workflow.md` before choosing a lyric treatment. It defines the current cinematic default and takes precedence over conflicting visual defaults in historical references.
+
 Use a cinematic lyric treatment by default: stable words or semantic groups receive color-only emphasis, with readable active and inactive contrast against the actual artwork. Do not add karaoke underlines, word boxes or pills, or bouncing glyphs unless the user explicitly requests them. Preserve precise timing and equal bilingual size, weight, color strength and synchronization. This default applies to the current Midnight Love revision and future productions; it does not request changes to other published films or release archives.
 
 For every future bilingual lyric film, follow `docs/bilingual-lyric-workflow.md`: give English equal emphasis, perceived font size and weight, color/contrast, word or semantic-group highlighting, and synchronization precision alongside the original-language lyrics. Drive both from the same source timing and meaning mappings. Reflow or rebalance long lines instead of shrinking or dimming English alone. Check both languages at native and mobile size in every delivery aspect ratio. This default supersedes subordinate English treatments in historical examples; it does not request changes to published films.

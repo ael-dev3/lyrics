@@ -1,5 +1,7 @@
 # Precision lyric synchronization vNext design
 
+**Historical reference:** the [current cinematic lyric standard](cinematic-lyric-workflow.md) supersedes underline, progress-fill and subordinate-English styling described here for future productions. Preserve this document as the record of its original design; use color-only focus and equal bilingual prominence in new films.
+
 ## Purpose
 
 This design upgrades the Tanisea lyric film from phrase-level timing with proportional within-line subdivision to evidence-backed Russian word and semantic-group alignment. It also simplifies the upper frame, gives the bottom spectrum materially more visual reach, establishes release-blocking audiovisual QA, and publishes the result with neutral technical documentation.

@@ -2,6 +2,8 @@
 
 This is the production order for reusing the Tanisea system on another song. It front-loads timing authority and a short style lock so preventable synchronization, layout, and rendering problems are found before the full-length render.
 
+Use the [current cinematic lyric standard](cinematic-lyric-workflow.md): stable color-only focus with precise timing. Earlier underline treatments are historical references and are not the default for new films.
+
 For future bilingual films, apply the [equal-emphasis workflow](bilingual-lyric-workflow.md) before adopting historical visual defaults. English must match the original language's perceived size, weight, color strength, highlighting and timing precision.
 
 ## 1. Freeze the input contract
@@ -53,7 +55,7 @@ Review repeated choruses as independent performances. Never copy timestamps from
 
 ## 4. Lock one presentation profile
 
-Use the Tanisea cinematic defaults unless the new song's prototype demonstrates a specific reason to change them:
+The timing values below are starting references from Tanisea, not universal settings. Confirm them against the new recording and derive sample counts from its actual sample rate; the listed sample counts use 44.1 kHz. Apply the current cinematic treatment and verify that any attack or release animation preserves the selected vocal contact:
 
 | Parameter | Default |
 | --- | ---: |
@@ -65,8 +67,9 @@ Use the Tanisea cinematic defaults unless the new song's prototype demonstrates 
 | Semantic release hold | 1,470 samples / 33.333 ms |
 | Focus attack | 3 frames |
 | Residual release | 2 frames |
-| Inactive lyric opacity | 0.62 |
-| Contact underline | 3 px |
+| Inactive lyric contrast | Choose from the track palette; both active and inactive words remain readable at native and mobile size |
+| Focus treatment | Color and luminance only; stable glyph positions |
+| Contact underline | None unless explicitly requested |
 
 Apply the same profile to repeated sections. Preserve explicit card/outro transitions as named milestones. If a long inter-line gap needs a hold, encode it as an explicit rule and test it; do not allow incidental blank or stacked frames.
 

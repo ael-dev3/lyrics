@@ -1,5 +1,7 @@
 # Reproducible lyric-film workflow and production preferences
 
+See the [cinematic lyric presentation guide](cinematic-lyric-workflow.md) for the current visual default, an implemented reference and review requirements.
+
 This is a sanitized operational record for future tracks. It describes the production requirements, review method, and handoff standard without reproducing private conversation or personal details.
 
 ## Documentation boundary

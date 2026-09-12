@@ -1,5 +1,7 @@
 # First-act precision and calm visualizer implementation
 
+**Historical reference:** the [current cinematic lyric standard](cinematic-lyric-workflow.md) supersedes underline, progress-fill and subordinate-English styling described here for future productions. Preserve this document as the record of its original design; use color-only focus and equal bilingual prominence in new films.
+
 ## Scope
 
 Version `v2.1.0` responds to two review findings: the first vocal act needed more exact highlighting and handoff timing, and the bottom spectrum needed to feel calmer and easier to watch. The approved V1/C2 timing design, reviewed alignment samples, soundtrack, lyric geometry, and second-act presentation remain unchanged.

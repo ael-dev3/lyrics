@@ -2,6 +2,8 @@
 
 Music films with synchronized lyrics, meaning-linked translations, and audio-reactive visuals. This repository contains the projects, production workflows, and verification evidence behind each edition.
 
+**Current style default:** [cinematic lyric presentation](docs/cinematic-lyric-workflow.md) — stable, color-only word or phrase emphasis, precise vocal timing, smooth scene shading and equally prominent bilingual lyrics. The guide includes the final Midnight Love reference and review requirements for future tracks.
+
 [**midnight love**](#midnight-love) · [**Пожары**](#пожары) · [**Отменяй**](#отменяй) · [**Roi × Adore**](#roi--adore) · [**TikTok edition**](#tiktok-edition) · [**Tanisea**](#tanisea) · [**Build and workflow**](#build-and-workflow)
 
 ## midnight love
@@ -187,6 +189,7 @@ Each project has its own setup instructions. Use the release source archive when
 
 | Project | Starting point |
 | --- | --- |
+| Midnight Love | Follow the [v1.1.0 reproduction steps](projects/midnight-love-lyric-film/README.md#reproduction); includes the restored ending, cinematic focus and verified landscape/portrait delivery |
 | Пожары | Follow the [reproduction steps](projects/pozhary-lyric-film/README.md#reproduction); both aspect ratios share finalized cues and audio features |
 | Отменяй | Use the complete production archive and its [reproduction steps](projects/otmenyai-lyric-film/README.md#reproduction); finalized cues and features are included |
 | Roi × Adore | Download the complete production archive and follow its included README; the Git snapshot documents the source and evidence |
@@ -195,6 +198,7 @@ Each project has its own setup instructions. Use the release source archive when
 
 The reusable workflow covers soundtrack locking, lyric alignment, semantic translation, visual design, calibrated audio features, rendering and delivery verification:
 
+- [Cinematic lyric presentation](docs/cinematic-lyric-workflow.md) — the current visual default, timing and readability rules, final-film reference and review requirements
 - [Bilingual lyric workflow and equal-emphasis standard](docs/bilingual-lyric-workflow.md) — future films give English equal size, color strength, highlighting and synchronization precision; includes the production sequence and lessons from Пожары
 - [Production workflow](docs/production-workflow.md)
 - [First-pass song workflow](docs/first-pass-song-workflow.md)

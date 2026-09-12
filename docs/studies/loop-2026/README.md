@@ -64,7 +64,7 @@ For our renderer, retain explicit roles: `original vocal`, `translation of cue`,
 
 - Keep a crisp luminance-defined glyph core, with texture and glow primarily behind it.
 - Preserve the upper baseline when a translation row appears; reserve its space to avoid layout jumps.
-- Keep our timed word or phrase highlights inside stable text geometry. Highlight by fill or underline rather than enlarging words and causing reflow.
+- Keep our timed word or phrase highlights inside stable text geometry. Use color and luminance changes with fixed glyph positions, following the [current cinematic lyric standard](../../cinematic-lyric-workflow.md).
 - Use a restrained scrim or shadow when bright art crosses text. Judge the compressed export at phone size, including the shortest cues and longest translations.
 - Allow lyric-free intervals to remain lyric-free. Avoid filling every gap with labels or a permanent title.
 

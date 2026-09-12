@@ -1,5 +1,7 @@
 # Historical v2.4.0 cinematic-parity baseline
 
+**Historical reference:** the [current cinematic lyric standard](cinematic-lyric-workflow.md) supersedes underline, progress-fill and subordinate-English styling described here for future productions. Preserve this document as the record of its original design; use color-only focus and equal bilingual prominence in new films.
+
 > This immutable v2.4.0 implementation note is retained as historical provenance. The current v2.4.1 source preserves the precision profile on `C1-01`–`C1-04` and affinely maps the approved C2 visual schedule only onto `C1-05`–`C1-08`. See [the v2.4.1 correction record](first-act-and-outro-polish-v2.4-implementation.md) for the exact issue, formula, and verification workflow.
 
 ## Scope

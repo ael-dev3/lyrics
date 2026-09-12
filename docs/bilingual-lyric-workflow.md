@@ -1,5 +1,7 @@
 # Bilingual lyric workflow: equal emphasis
 
+See the [cinematic lyric presentation guide](cinematic-lyric-workflow.md) for the current visual default, an implemented reference and review requirements.
+
 **Default for future productions, recorded after Пожары v1.0.0:** original-language and English lyrics are equally prominent parts of the film. Give English equal perceived size, weight, color strength, highlighting and synchronization precision. This requirement takes precedence over smaller or dimmer translation treatments in earlier project examples.
 
 This is a forward-looking production standard. It does not change published movies, finalized timing data or release archives. The [Пожары production record](../projects/pozhary-lyric-film/README.md) documents the completed implementation and its limitations.

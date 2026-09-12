@@ -1,5 +1,7 @@
 # First-project retrospective and semantic highlighting proposal
 
+**Historical reference:** the [current cinematic lyric standard](cinematic-lyric-workflow.md) supersedes underline, progress-fill and subordinate-English styling described here for future productions. Preserve this document as the record of its original design; use color-only focus and equal bilingual prominence in new films.
+
 > This scorecard is historical and remains tied to the checksum below. Its provisional timing diagnosis has been superseded by two later full-master audits and the [vNext reconciliation](../audits/tanisea-vnext-qc-implementation.md); its design and non-linear semantic-highlighting lessons remain applicable.
 
 ## Assessment
