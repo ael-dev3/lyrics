@@ -1,16 +1,20 @@
 {
-  "cues": 32,
-  "sourceWords": 151,
-  "displayWords": 151,
-  "highlightGroups": 132,
+  "cues": 38,
+  "sourceWords": 185,
+  "providedWords": 151,
+  "additionalPerformedRepeatWords": 34,
+  "displayWords": 185,
+  "highlightGroups": 161,
   "maxFrameRoundingErrorMs": 8.3125,
   "timingAuthority": "48,000 Hz integer samples",
   "userTextCoverage": true,
+  "performedTextCoverage": true,
   "positiveOrderedIntervals": true,
   "groupCoverage": true,
   "stablePresentationWindows": true,
   "featureFrames": 11632,
   "originalLanguage": "English",
   "translationLane": "Not needed: source lyrics already English",
-  "limits": "Frame rounding is not acoustic accuracy. Model disagreement, short vowels and sustained endings remain documented; no repeated-section timestamp transfer."
+  "limits": "Frame rounding is not acoustic accuracy. Model disagreement, short vowels and sustained endings remain documented; no repeated-section timestamp transfer.",
+  "fullyVisibleFirstFocusContacts": 161
 }

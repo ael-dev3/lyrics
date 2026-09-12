@@ -1,4 +1,12 @@
 {
+  "recordStatus": "Historical v1.0 baseline retained for candidate evidence; original selections are superseded for v1.1.",
+  "currentAuthority": {
+    "finalCues": "src/cues.json",
+    "revisionBuilder": "scripts/build-revision-cues.ts",
+    "originalCueCorrectionEvidence": "analysis/original-cue-audit/proposed-corrections.json",
+    "tailCorrectionEvidence": "analysis/tail-correction/tail-correction-evidence.json"
+  },
+  "scope": "The 151-word baseline below preserves the original candidates, selections and overlap clamps. It is not the 185-word v1.1 production timeline. Consult the linked revision evidence and final cues for corrected selections and the six added reprise lines.",
   "authority": "Supplied English text; 48 kHz integer sample clock",
   "primary": "MMS-FA on separated vocal stem",
   "independent": "MMS-FA mix; wav2vec2 BASE 960h English encoder; bounded Whisper large-v3-turbo attention",

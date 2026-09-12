@@ -31,8 +31,18 @@ For a future pass, create a short preview and compare `00:47` directly with `01:
 - Preserve independently reviewed source cues; derive presentation cues from them instead of overwriting the source timing.
 - Short previews are the primary review unit for synchronization. A full render is not a substitute for checking a questionable ten-second window.
 
+### Vocal coverage across the complete recording
+
+- Audit the entire source audio for performed lyrics before locking the cue map. Check the intro, every gap between supplied lines, and the complete tail after the supplied text ends. The end of a lyric reference is not evidence that the remaining audio is instrumental.
+- Compare the cue map with independent evidence from the actual recording, such as full-track transcription and targeted audio review of uncovered spans. A forced alignment of supplied text can establish where those words occur but cannot establish that no other words are sung. Automatic-caption labels such as `[Music]`, missing captions, and transcription silence are not proof of an instrumental passage.
+- Investigate every uncovered span with apparent vocals. Record its time range, the evidence reviewed, and whether it contains omitted lyrics, a performed reprise, non-lexical vocals, or an instrumental passage. Keep unresolved passages explicit and resolve lyric omissions before the full render.
+- Add confirmed performed repeats to the production text and align them to their actual occurrence. Reusing the wording does not justify copying another chorus's timestamps. Preserve the supplied reference separately and document any additions to the performed lyric sequence.
+
 ### Visual language
 
+- Default to a cinematic lyric presentation with stable word positions and color-only emphasis on the current word or semantic group. Keep the source imagery, composition and broader motion expressive while the reading position stays calm.
+- Do not add karaoke underlines, word boxes or pills, or bouncing glyphs unless explicitly requested. A historical reference containing these treatments does not override this default. Color and luminance should distinguish focus while both active and inactive words remain readable over the actual background, including bright or busy frames and mobile-size views.
+- Apply this treatment to the current Midnight Love revision and future productions. Other published films, finalized timing data and release archives remain historical records; this default does not itself request their revision.
 - Keep lyric lines stable, centered, and readable against the artwork; protect safe areas in every delivery aspect ratio.
 - Do not introduce unnecessary word separation or a “words flying apart” effect. Outro motion should resolve to a controlled, centered settle with a consistent gap.
 - Keep spectrum and other diagnostic-style visuals restrained, legible, and visually coherent; avoid rounded or noisy treatments when square-ended bars are the intended language.
@@ -43,6 +53,7 @@ For a future pass, create a short preview and compare `00:47` directly with `01:
 ### Equal emphasis for English lyrics
 
 - Follow the [bilingual lyric workflow](bilingual-lyric-workflow.md) for future productions. English receives equal perceived size and weight, color/contrast, highlight intensity and synchronization precision alongside the original-language lyrics.
+- Apply the same cinematic color-only focus to both languages, including comparable active and inactive contrast. Removing karaoke decoration must not reduce English prominence or loosen either language's timing.
 - Share source timing and semantic cue events across both languages, including onset, handoff and release behavior. Natural English word order may require grouped or non-linear focus.
 - Fit long translations through reflow or composition changes, not English-only shrinking or dimming. Use the track's own palette with equally strong active and inactive text treatments.
 - Check both languages at native and mobile size before the full render. Earlier films with small secondary English captions remain historical references, not the future design default.
@@ -65,12 +76,12 @@ For a future pass, create a short preview and compare `00:47` directly with `01:
 
 1. Lock the source audio, artwork, lyric text, and project identity before editing.
 2. Read the existing project notes and inspect prior approved reference windows.
-3. Define the timing authority for each section. Keep source lyric cues distinct from presentation-only choreography.
+3. Audit vocal coverage across the entire recording, including gaps and the tail after the supplied text ends. Resolve omitted performed lines and document the evidence for uncovered spans. Define the timing authority for each section, keeping source lyric cues distinct from presentation-only choreography.
 4. Implement changes as explicit, named, reproducible composition or data updates.
 5. Render short previews first, normally 10–15 seconds around the affected section and its approved comparison section.
-6. Play the preview with the source audio and review lyric highlighting, line transitions, spacing, safe areas, and motion at normal speed. Verify equal bilingual size, color, focus and timing at native and mobile size using the [style-preview acceptance gate](bilingual-lyric-workflow.md#style-preview-acceptance-gate).
+6. Play the preview with the source audio and review lyric highlighting, line transitions, spacing, safe areas, and motion at normal speed. Check stable, color-only word/group emphasis without karaoke decoration unless explicitly requested. Verify active/inactive readability and equal bilingual size, color, focus and timing at native and mobile size using the [style-preview acceptance gate](bilingual-lyric-workflow.md#style-preview-acceptance-gate).
 7. For repeated sections, compare the candidate directly with the approved reference window; document any remaining checkpoint instead of masking it with unrelated changes.
-8. Render the complete delivery only after the targeted previews are acceptable.
+8. Render the complete delivery only after the targeted previews are acceptable and the complete-recording vocal-coverage audit has no unresolved lyric omissions.
 9. Run technical checks: typecheck, tests, composition discovery, timing/alignment checks, full decode, frame count, dimensions, frame rate, metadata, and checksums.
 10. Run visual spot checks at intro, affected sections, transitions, and outro. Keep proof renders separate from the clean master.
 11. Place the final local deliverable in the requested handoff location and publish source, workflow, audits, and checksums to GitHub.
@@ -82,6 +93,7 @@ Before calling a track complete, record:
 
 - source media identity and duration;
 - lyric and audio timing authority;
+- complete-recording vocal-coverage evidence, including checked gaps, the final vocal passage, any added reprises, and the verified tail classification;
 - approved comparison windows;
 - aspect-ratio-specific composition decisions;
 - equal bilingual emphasis checks, including typography, active/inactive contrast, semantic focus and mobile-size evidence;

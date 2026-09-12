@@ -1,0 +1,1393 @@
+{
+  "status": "Proposed correction; existing source and media remain untouched",
+  "sourceCueSha256": "ec01e2cc3f5131165dbbe1b0c635bd4fc1bd478e7070e43b1aea31e7a06c6462",
+  "retainedAudioSamples": 9304968,
+  "sampleRate": 48000,
+  "tailAnalysisWindow": [
+    150,
+    193.8535
+  ],
+  "sourceFramesUnchanged": 11632,
+  "addedCues": 6,
+  "addedWords": 34,
+  "addedFocusGroups": 29,
+  "correctedTotals": {
+    "cues": 38,
+    "words": 185,
+    "groups": 161
+  },
+  "firstNewContactSeconds": 154.65,
+  "lastNewEndSeconds": 185.4,
+  "earliestRequiredPatchFrame": 9000,
+  "textAuthority": "Six repeated lines, all words already supplied by the user; blind ASR on the mix and separated vocal stem independently confirms the text/order.",
+  "captions": "YouTube auto-captions provide [Music] only in this region and cannot establish lyric absence.",
+  "repeatTransfer": "None. Signed waveform correlations0.085–0.165 are too low to justify copying timestamps.",
+  "grouping": "I/can’t and I/keep share focus; ambiguous sustained midnight/love share focus; connected but/not share focus.",
+  "limits": "No human/native-listener audition is claimed. ASR attention absorbs gaps and CTC can slide into held vowels. The midnight/love division and sustained releases near162s and185.4s remain approximate, explicitly grouped/documented rather than described as exact acoustic boundaries.",
+  "edits": {
+    "L33": {
+      "0": {
+        "start": 154.65,
+        "reason": "Vocal-envelope rise near154.68s and first-pass mix MMS contact154.644s precede the weak refined CTC vowel spike. Group I/can’t so a short vowel does not flash separately."
+      },
+      "4": {
+        "end": 157.51467625899278,
+        "reason": "Wide-window CTC absorbs the sustained following word into midnight. First bounded English encoder and both blind transcriptions support the earlier midnight/love division; both words share focus because the division remains uncertain."
+      },
+      "5": {
+        "start": 157.51467625899278,
+        "end": 161.97959697732998,
+        "reason": "Use first bounded English-encoder contact and wider-window English-encoder release. Wider CTC paths incorrectly delay the word onset into its sustained vowel. Midnight/love share one focus group; the held-vowel release near162s is approximate."
+      }
+    },
+    "L35": {
+      "0": {
+        "start": 168.66,
+        "reason": "Visible vocal attack near168.66s, supported by blind vocal transcription168.70s; the acoustic encoders identify a later point inside the short I vowel. Group I/can’t."
+      }
+    },
+    "L37": {
+      "0": {
+        "start": 176.65,
+        "reason": "Mix MMS onset176.631s and the vocal-envelope rise support an earlier contact than the short vocal-only CTC spike. Group I/keep."
+      }
+    },
+    "L38": {
+      "4": {
+        "end": 185.4,
+        "reason": "Both mix/vocal MMS locate before near182.97s, but shorten its sustained ending. The vocal spectrogram and 5ms RMS show the sung vowel through~185.4s before clear decay. A blind184s crop emits only Oh/oh for this held vowel; do not invent additional words or a new lyric cue."
+      }
+    }
+  },
+  "words": [
+    {
+      "cue": "L33",
+      "word": "I",
+      "selected": {
+        "start": 154.65,
+        "end": 154.81057934508814
+      },
+      "reason": "Vocal-envelope rise near154.68s and first-pass mix MMS contact154.644s precede the weak refined CTC vowel spike. Group I/can’t so a short vowel does not flash separately.",
+      "candidates": {
+        "vocalMMS": {
+          "word": "I",
+          "start": 154.79055415617128,
+          "end": 154.81057934508814,
+          "probability": 0.0003805431770160794
+        },
+        "mixMMS": {
+          "word": "I",
+          "start": 154.57027707808564,
+          "end": 154.5903022670025,
+          "probability": 0.001484453328885138
+        },
+        "englishCTC": {
+          "word": "I",
+          "start": 154.83060453400503,
+          "end": 154.8506297229219,
+          "probability": 0.0021119716111570597
+        },
+        "attention": {
+          "word": " I",
+          "start": 154.67,
+          "end": 155.03,
+          "probability": 0.8866743445396423,
+          "tokens": [
+            286
+          ]
+        }
+      },
+      "candidateOnsetSpreadMs": 260.3274559193949
+    },
+    {
+      "cue": "L33",
+      "word": "can't",
+      "selected": {
+        "start": 155.17103274559193,
+        "end": 155.61158690176322
+      },
+      "reason": "Vocal MMS is the primary contact; independent mix MMS, English wav2vec and bounded attention retained. This is an independently aligned performance.",
+      "candidates": {
+        "vocalMMS": {
+          "word": "can't",
+          "start": 155.17103274559193,
+          "end": 155.61158690176322,
+          "probability": 0.10205069587682374
+        },
+        "mixMMS": {
+          "word": "can't",
+          "start": 154.67040302267003,
+          "end": 155.19105793450882,
+          "probability": 0.20891860937699674
+        },
+        "englishCTC": {
+          "word": "can't",
+          "start": 155.21108312342568,
+          "end": 155.6316120906801,
+          "probability": 0.755233770608902
+        },
+        "attention": {
+          "word": " can't",
+          "start": 155.03,
+          "end": 155.71,
+          "probability": 0.9469615817070007,
+          "tokens": [
+            393,
+            380
+          ]
+        }
+      },
+      "candidateOnsetSpreadMs": 540.680100755651
+    },
+    {
+      "cue": "L33",
+      "word": "be",
+      "selected": {
+        "start": 155.65163727959697,
+        "end": 155.7918136020151
+      },
+      "reason": "Vocal MMS is the primary contact; independent mix MMS, English wav2vec and bounded attention retained. This is an independently aligned performance.",
+      "candidates": {
+        "vocalMMS": {
+          "word": "be",
+          "start": 155.65163727959697,
+          "end": 155.7918136020151,
+          "probability": 0.20401364471763372
+        },
+        "mixMMS": {
+          "word": "be",
+          "start": 155.67166246851386,
+          "end": 155.77178841309822,
+          "probability": 0.37929682433605194
+        },
+        "englishCTC": {
+          "word": "be",
+          "start": 155.7117128463476,
+          "end": 155.95201511335011,
+          "probability": 0.830083578824997
+        },
+        "attention": {
+          "word": " be",
+          "start": 155.71,
+          "end": 155.99,
+          "probability": 0.9938348531723022,
+          "tokens": [
+            312
+          ]
+        }
+      },
+      "candidateOnsetSpreadMs": 60.07556675064052
+    },
+    {
+      "cue": "L33",
+      "word": "your",
+      "selected": {
+        "start": 156.19231738035265,
+        "end": 156.3925692695214
+      },
+      "reason": "Vocal MMS is the primary contact; independent mix MMS, English wav2vec and bounded attention retained. This is an independently aligned performance.",
+      "candidates": {
+        "vocalMMS": {
+          "word": "your",
+          "start": 156.19231738035265,
+          "end": 156.3925692695214,
+          "probability": 0.4206788777737529
+        },
+        "mixMMS": {
+          "word": "your",
+          "start": 156.2123425692695,
+          "end": 156.4125944584383,
+          "probability": 0.2783533557521878
+        },
+        "englishCTC": {
+          "word": "your",
+          "start": 156.25239294710326,
+          "end": 156.3925692695214,
+          "probability": 0.05923190340399742
+        },
+        "attention": {
+          "word": " your",
+          "start": 155.99,
+          "end": 156.49,
+          "probability": 0.979830801486969,
+          "tokens": [
+            428
+          ]
+        }
+      },
+      "candidateOnsetSpreadMs": 262.3929471032511
+    },
+    {
+      "cue": "L33",
+      "word": "midnight",
+      "selected": {
+        "start": 156.4726700251889,
+        "end": 157.51467625899278
+      },
+      "reason": "Wide-window CTC absorbs the sustained following word into midnight. First bounded English encoder and both blind transcriptions support the earlier midnight/love division; both words share focus because the division remains uncertain.",
+      "candidates": {
+        "vocalMMS": {
+          "word": "midnight",
+          "start": 156.4726700251889,
+          "end": 160.29748110831233,
+          "probability": 0.23800421340274625
+        },
+        "mixMMS": {
+          "word": "midnight",
+          "start": 156.4726700251889,
+          "end": 159.61662468513853,
+          "probability": 0.12527713342569768
+        },
+        "englishCTC": {
+          "word": "midnight",
+          "start": 156.4926952141058,
+          "end": 157.51397984886648,
+          "probability": 0.32982651321799494
+        },
+        "attention": {
+          "word": " midnight",
+          "start": 156.49,
+          "end": 156.91,
+          "probability": 0.9446543455123901,
+          "tokens": [
+            19006
+          ]
+        }
+      },
+      "candidateOnsetSpreadMs": 20.025188916889647
+    },
+    {
+      "cue": "L33",
+      "word": "love",
+      "selected": {
+        "start": 157.51467625899278,
+        "end": 161.97959697732998
+      },
+      "reason": "Use first bounded English-encoder contact and wider-window English-encoder release. Wider CTC paths incorrectly delay the word onset into its sustained vowel. Midnight/love share one focus group; the held-vowel release near162s is approximate.",
+      "candidates": {
+        "vocalMMS": {
+          "word": "love",
+          "start": 160.71801007556675,
+          "end": 161.41889168765744,
+          "probability": 0.15814016736112535
+        },
+        "mixMMS": {
+          "word": "love",
+          "start": 160.27745591939546,
+          "end": 161.37884130982368,
+          "probability": 0.1763888350687921
+        },
+        "englishCTC": {
+          "word": "love",
+          "start": 159.69672544080603,
+          "end": 161.97959697732998,
+          "probability": 0.15517118691059295
+        },
+        "attention": {
+          "word": " love",
+          "start": 156.91,
+          "end": 158.37,
+          "probability": 0.9856430888175964,
+          "tokens": [
+            959
+          ]
+        }
+      },
+      "candidateOnsetSpreadMs": 3808.010075566756
+    },
+    {
+      "cue": "L34",
+      "word": "When",
+      "selected": {
+        "start": 162.7112244897959,
+        "end": 163.1125850340136
+      },
+      "reason": "Vocal MMS is the primary contact; independent mix MMS, English wav2vec and bounded attention retained. This is an independently aligned performance.",
+      "candidates": {
+        "vocalMMS": {
+          "word": "When",
+          "start": 162.7112244897959,
+          "end": 163.1125850340136,
+          "probability": 0.7061184477061033
+        },
+        "mixMMS": {
+          "word": "When",
+          "start": 162.7312925170068,
+          "end": 163.1326530612245,
+          "probability": 0.1490694178501144
+        },
+        "englishCTC": {
+          "word": "When",
+          "start": 162.69115646258504,
+          "end": 163.09251700680272,
+          "probability": 0.49436118826270103
+        },
+        "attention": {
+          "word": " When",
+          "start": 162.35,
+          "end": 163.11,
+          "probability": 0.7881085276603699,
+          "tokens": [
+            1133
+          ]
+        }
+      },
+      "candidateOnsetSpreadMs": 381.29251700681266
+    },
+    {
+      "cue": "L34",
+      "word": "your",
+      "selected": {
+        "start": 163.21292517006802,
+        "end": 163.53401360544217
+      },
+      "reason": "Vocal MMS is the primary contact; independent mix MMS, English wav2vec and bounded attention retained. This is an independently aligned performance.",
+      "candidates": {
+        "vocalMMS": {
+          "word": "your",
+          "start": 163.21292517006802,
+          "end": 163.53401360544217,
+          "probability": 0.6956082582473755
+        },
+        "mixMMS": {
+          "word": "your",
+          "start": 163.19285714285715,
+          "end": 163.5139455782313,
+          "probability": 0.20766308926977217
+        },
+        "englishCTC": {
+          "word": "your",
+          "start": 163.19285714285715,
+          "end": 163.53401360544217,
+          "probability": 0.1716110808774829
+        },
+        "attention": {
+          "word": " your",
+          "start": 163.11,
+          "end": 163.47,
+          "probability": 0.08882179111242294,
+          "tokens": [
+            428
+          ]
+        }
+      },
+      "candidateOnsetSpreadMs": 102.92517006800495
+    },
+    {
+      "cue": "L34",
+      "word": "silver",
+      "selected": {
+        "start": 163.65442176870746,
+        "end": 164.49727891156462
+      },
+      "reason": "Vocal MMS is the primary contact; independent mix MMS, English wav2vec and bounded attention retained. This is an independently aligned performance.",
+      "candidates": {
+        "vocalMMS": {
+          "word": "silver",
+          "start": 163.65442176870746,
+          "end": 164.49727891156462,
+          "probability": 0.7412945238562921
+        },
+        "mixMMS": {
+          "word": "silver",
+          "start": 163.67448979591836,
+          "end": 164.33673469387753,
+          "probability": 0.19222948203484216
+        },
+        "englishCTC": {
+          "word": "silver",
+          "start": 163.6142857142857,
+          "end": 164.49727891156462,
+          "probability": 0.4836244420148432
+        },
+        "attention": {
+          "word": " silver",
+          "start": 163.47,
+          "end": 164.25,
+          "probability": 0.9936684966087341,
+          "tokens": [
+            8753
+          ]
+        }
+      },
+      "candidateOnsetSpreadMs": 204.48979591836292
+    },
+    {
+      "cue": "L34",
+      "word": "is",
+      "selected": {
+        "start": 164.59761904761905,
+        "end": 164.79829931972787
+      },
+      "reason": "Vocal MMS is the primary contact; independent mix MMS, English wav2vec and bounded attention retained. This is an independently aligned performance.",
+      "candidates": {
+        "vocalMMS": {
+          "word": "is",
+          "start": 164.59761904761905,
+          "end": 164.79829931972787,
+          "probability": 0.8400958180427551
+        },
+        "mixMMS": {
+          "word": "is",
+          "start": 164.4170068027211,
+          "end": 164.79829931972787,
+          "probability": 0.4459026623517275
+        },
+        "englishCTC": {
+          "word": "is",
+          "start": 164.67789115646258,
+          "end": 164.7581632653061,
+          "probability": 0.49976371228694916
+        },
+        "attention": {
+          "word": " is",
+          "start": 164.25,
+          "end": 164.79,
+          "probability": 0.8645452260971069,
+          "tokens": [
+            307
+          ]
+        }
+      },
+      "candidateOnsetSpreadMs": 427.8911564625787
+    },
+    {
+      "cue": "L34",
+      "word": "my",
+      "selected": {
+        "start": 164.97891156462583,
+        "end": 165.38027210884354
+      },
+      "reason": "Vocal MMS is the primary contact; independent mix MMS, English wav2vec and bounded attention retained. This is an independently aligned performance.",
+      "candidates": {
+        "vocalMMS": {
+          "word": "my",
+          "start": 164.97891156462583,
+          "end": 165.38027210884354,
+          "probability": 0.5126499086618423
+        },
+        "mixMMS": {
+          "word": "my",
+          "start": 164.97891156462583,
+          "end": 165.38027210884354,
+          "probability": 0.47287417948246
+        },
+        "englishCTC": {
+          "word": "my",
+          "start": 165.01904761904763,
+          "end": 165.32006802721088,
+          "probability": 0.33858903497457504
+        },
+        "attention": {
+          "word": " my",
+          "start": 164.79,
+          "end": 165.37,
+          "probability": 0.9867941737174988,
+          "tokens": [
+            452
+          ]
+        }
+      },
+      "candidateOnsetSpreadMs": 229.04761904763404
+    },
+    {
+      "cue": "L34",
+      "word": "gold",
+      "selected": {
+        "start": 165.50068027210884,
+        "end": 167.20646258503402
+      },
+      "reason": "Vocal MMS is the primary contact; independent mix MMS, English wav2vec and bounded attention retained. This is an independently aligned performance.",
+      "candidates": {
+        "vocalMMS": {
+          "word": "gold",
+          "start": 165.50068027210884,
+          "end": 167.20646258503402,
+          "probability": 0.4485996459843591
+        },
+        "mixMMS": {
+          "word": "gold",
+          "start": 165.50068027210884,
+          "end": 166.90544217687074,
+          "probability": 0.2379938441881677
+        },
+        "englishCTC": {
+          "word": "gold",
+          "start": 165.52074829931973,
+          "end": 167.3469387755102,
+          "probability": 0.11496689040200181
+        },
+        "attention": {
+          "word": " gold",
+          "start": 165.37,
+          "end": 166.21,
+          "probability": 0.9737811088562012,
+          "tokens": [
+            3821
+          ]
+        }
+      },
+      "candidateOnsetSpreadMs": 150.74829931973
+    },
+    {
+      "cue": "L35",
+      "word": "I",
+      "selected": {
+        "start": 168.66,
+        "end": 169.03168316831682
+      },
+      "reason": "Visible vocal attack near168.66s, supported by blind vocal transcription168.70s; the acoustic encoders identify a later point inside the short I vowel. Group I/can’t.",
+      "candidates": {
+        "vocalMMS": {
+          "word": "I",
+          "start": 169.01163366336633,
+          "end": 169.03168316831682,
+          "probability": 0.5673994421958923
+        },
+        "mixMMS": {
+          "word": "I",
+          "start": 169.01163366336633,
+          "end": 169.03168316831682,
+          "probability": 0.18092072010040283
+        },
+        "englishCTC": {
+          "word": "I",
+          "start": 168.93143564356436,
+          "end": 168.95148514851485,
+          "probability": 0.4050244092941284
+        },
+        "attention": {
+          "word": " I",
+          "start": 168.67,
+          "end": 168.99,
+          "probability": 0.7663450241088867,
+          "tokens": [
+            286
+          ]
+        }
+      },
+      "candidateOnsetSpreadMs": 341.6336633663377
+    },
+    {
+      "cue": "L35",
+      "word": "can't",
+      "selected": {
+        "start": 169.1319306930693,
+        "end": 169.5529702970297
+      },
+      "reason": "Vocal MMS is the primary contact; independent mix MMS, English wav2vec and bounded attention retained. This is an independently aligned performance.",
+      "candidates": {
+        "vocalMMS": {
+          "word": "can't",
+          "start": 169.1319306930693,
+          "end": 169.5529702970297,
+          "probability": 0.2727057203039294
+        },
+        "mixMMS": {
+          "word": "can't",
+          "start": 169.1319306930693,
+          "end": 169.4727722772277,
+          "probability": 0.042682557553052905
+        },
+        "englishCTC": {
+          "word": "can't",
+          "start": 169.1519801980198,
+          "end": 169.5930693069307,
+          "probability": 0.6121794904271761
+        },
+        "attention": {
+          "word": " can't",
+          "start": 168.99,
+          "end": 169.67,
+          "probability": 0.8895525336265564,
+          "tokens": [
+            393,
+            380
+          ]
+        }
+      },
+      "candidateOnsetSpreadMs": 161.98019801979058
+    },
+    {
+      "cue": "L35",
+      "word": "be",
+      "selected": {
+        "start": 169.67326732673266,
+        "end": 169.81361386138613
+      },
+      "reason": "Vocal MMS is the primary contact; independent mix MMS, English wav2vec and bounded attention retained. This is an independently aligned performance.",
+      "candidates": {
+        "vocalMMS": {
+          "word": "be",
+          "start": 169.67326732673266,
+          "end": 169.81361386138613,
+          "probability": 0.7490457892417908
+        },
+        "mixMMS": {
+          "word": "be",
+          "start": 169.65321782178216,
+          "end": 169.77351485148515,
+          "probability": 0.16942951083183289
+        },
+        "englishCTC": {
+          "word": "be",
+          "start": 169.71336633663367,
+          "end": 170.07425742574256,
+          "probability": 0.5752347831924757
+        },
+        "attention": {
+          "word": " be",
+          "start": 169.67,
+          "end": 169.97,
+          "probability": 0.9971476197242737,
+          "tokens": [
+            312
+          ]
+        }
+      },
+      "candidateOnsetSpreadMs": 60.1485148515053
+    },
+    {
+      "cue": "L35",
+      "word": "your",
+      "selected": {
+        "start": 169.9740099009901,
+        "end": 170.31485148514852
+      },
+      "reason": "Vocal MMS is the primary contact; independent mix MMS, English wav2vec and bounded attention retained. This is an independently aligned performance.",
+      "candidates": {
+        "vocalMMS": {
+          "word": "your",
+          "start": 169.9740099009901,
+          "end": 170.31485148514852,
+          "probability": 0.0450027136830613
+        },
+        "mixMMS": {
+          "word": "your",
+          "start": 169.83366336633662,
+          "end": 169.9539603960396,
+          "probability": 0.04063364688772708
+        },
+        "englishCTC": {
+          "word": "your",
+          "start": 170.15445544554456,
+          "end": 170.23465346534653,
+          "probability": 0.00938465615035966
+        },
+        "attention": {
+          "word": " your",
+          "start": 169.97,
+          "end": 170.51,
+          "probability": 0.5364376306533813,
+          "tokens": [
+            428
+          ]
+        }
+      },
+      "candidateOnsetSpreadMs": 320.7920792079335
+    },
+    {
+      "cue": "L35",
+      "word": "second",
+      "selected": {
+        "start": 170.45519801980197,
+        "end": 171.25717821782177
+      },
+      "reason": "Vocal MMS is the primary contact; independent mix MMS, English wav2vec and bounded attention retained. This is an independently aligned performance.",
+      "candidates": {
+        "vocalMMS": {
+          "word": "second",
+          "start": 170.45519801980197,
+          "end": 171.25717821782177,
+          "probability": 0.26206280407495797
+        },
+        "mixMMS": {
+          "word": "second",
+          "start": 170.21460396039603,
+          "end": 170.95643564356436,
+          "probability": 0.11833069349328677
+        },
+        "englishCTC": {
+          "word": "second",
+          "start": 170.43514851485148,
+          "end": 170.85618811881187,
+          "probability": 0.18152878151643867
+        },
+        "attention": {
+          "word": " second",
+          "start": 170.51,
+          "end": 170.99,
+          "probability": 0.9961938858032227,
+          "tokens": [
+            1150
+          ]
+        }
+      },
+      "candidateOnsetSpreadMs": 295.39603960395766
+    },
+    {
+      "cue": "L35",
+      "word": "best",
+      "selected": {
+        "start": 171.43762376237623,
+        "end": 172.17945544554456
+      },
+      "reason": "Vocal MMS is the primary contact; independent mix MMS, English wav2vec and bounded attention retained. This is an independently aligned performance.",
+      "candidates": {
+        "vocalMMS": {
+          "word": "best",
+          "start": 171.43762376237623,
+          "end": 172.17945544554456,
+          "probability": 0.4045202306006104
+        },
+        "mixMMS": {
+          "word": "best",
+          "start": 171.43762376237623,
+          "end": 171.9789603960396,
+          "probability": 0.20812991738785058
+        },
+        "englishCTC": {
+          "word": "best",
+          "start": 170.95643564356436,
+          "end": 171.9990099009901,
+          "probability": 0.1649108729325235
+        },
+        "attention": {
+          "word": " best",
+          "start": 170.99,
+          "end": 172.11,
+          "probability": 0.9591836929321289,
+          "tokens": [
+            1151
+          ]
+        }
+      },
+      "candidateOnsetSpreadMs": 481.18811881187185
+    },
+    {
+      "cue": "L36",
+      "word": "Close",
+      "selected": {
+        "start": 172.61065989847714,
+        "end": 173.0718274111675
+      },
+      "reason": "Vocal MMS is the primary contact; independent mix MMS, English wav2vec and bounded attention retained. This is an independently aligned performance.",
+      "candidates": {
+        "vocalMMS": {
+          "word": "Close",
+          "start": 172.61065989847714,
+          "end": 173.0718274111675,
+          "probability": 0.47217351011931896
+        },
+        "mixMMS": {
+          "word": "Close",
+          "start": 172.63071065989848,
+          "end": 173.11192893401014,
+          "probability": 0.17922660559415818
+        },
+        "englishCTC": {
+          "word": "Close",
+          "start": 172.6507614213198,
+          "end": 173.0517766497462,
+          "probability": 0.15026879608631133
+        },
+        "attention": {
+          "word": " Close",
+          "start": 172.35,
+          "end": 173.05,
+          "probability": 0.8277222514152527,
+          "tokens": [
+            16346
+          ]
+        }
+      },
+      "candidateOnsetSpreadMs": 300.7614213198053
+    },
+    {
+      "cue": "L36",
+      "word": "but",
+      "selected": {
+        "start": 173.13197969543145,
+        "end": 173.59314720812182
+      },
+      "reason": "Vocal MMS is the primary contact; independent mix MMS, English wav2vec and bounded attention retained. This is an independently aligned performance.",
+      "candidates": {
+        "vocalMMS": {
+          "word": "but",
+          "start": 173.13197969543145,
+          "end": 173.59314720812182,
+          "probability": 0.044626510391632714
+        },
+        "mixMMS": {
+          "word": "but",
+          "start": 173.13197969543145,
+          "end": 173.59314720812182,
+          "probability": 0.021048081573098898
+        },
+        "englishCTC": {
+          "word": "but",
+          "start": 173.19213197969543,
+          "end": 173.33248730964468,
+          "probability": 0.012620322406291962
+        },
+        "attention": {
+          "word": " but",
+          "start": 173.05,
+          "end": 173.47,
+          "probability": 0.5865186452865601,
+          "tokens": [
+            457
+          ]
+        }
+      },
+      "candidateOnsetSpreadMs": 142.1319796954208
+    },
+    {
+      "cue": "L36",
+      "word": "not",
+      "selected": {
+        "start": 173.69340101522843,
+        "end": 174.0743654822335
+      },
+      "reason": "Vocal MMS is the primary contact; independent mix MMS, English wav2vec and bounded attention retained. This is an independently aligned performance.",
+      "candidates": {
+        "vocalMMS": {
+          "word": "not",
+          "start": 173.69340101522843,
+          "end": 174.0743654822335,
+          "probability": 0.03448169150700172
+        },
+        "mixMMS": {
+          "word": "not",
+          "start": 173.65329949238577,
+          "end": 174.13451776649745,
+          "probability": 0.11837239190936089
+        },
+        "englishCTC": {
+          "word": "not",
+          "start": 173.43274111675126,
+          "end": 173.53299492385787,
+          "probability": 0.0051389325720568495
+        },
+        "attention": {
+          "word": " not",
+          "start": 173.47,
+          "end": 173.99,
+          "probability": 0.9589023590087891,
+          "tokens": [
+            406
+          ]
+        }
+      },
+      "candidateOnsetSpreadMs": 260.6598984771722
+    },
+    {
+      "cue": "L36",
+      "word": "your",
+      "selected": {
+        "start": 174.1746192893401,
+        "end": 174.33502538071065
+      },
+      "reason": "Vocal MMS is the primary contact; independent mix MMS, English wav2vec and bounded attention retained. This is an independently aligned performance.",
+      "candidates": {
+        "vocalMMS": {
+          "word": "your",
+          "start": 174.1746192893401,
+          "end": 174.33502538071065,
+          "probability": 0.02422186080366373
+        },
+        "mixMMS": {
+          "word": "your",
+          "start": 174.13451776649745,
+          "end": 174.39517766497463,
+          "probability": 0.16121352557092905
+        },
+        "englishCTC": {
+          "word": "your",
+          "start": 173.63324873096445,
+          "end": 174.294923857868,
+          "probability": 0.413019698811695
+        },
+        "attention": {
+          "word": " your",
+          "start": 173.99,
+          "end": 174.43,
+          "probability": 0.9884161949157715,
+          "tokens": [
+            428
+          ]
+        }
+      },
+      "candidateOnsetSpreadMs": 541.3705583756325
+    },
+    {
+      "cue": "L36",
+      "word": "favorite",
+      "selected": {
+        "start": 174.43527918781726,
+        "end": 175.798730964467
+      },
+      "reason": "Vocal MMS is the primary contact; independent mix MMS, English wav2vec and bounded attention retained. This is an independently aligned performance.",
+      "candidates": {
+        "vocalMMS": {
+          "word": "favorite",
+          "start": 174.43527918781726,
+          "end": 175.798730964467,
+          "probability": 0.13425268372520804
+        },
+        "mixMMS": {
+          "word": "favorite",
+          "start": 174.45532994923857,
+          "end": 175.75862944162435,
+          "probability": 0.1327427556971088
+        },
+        "englishCTC": {
+          "word": "favorite",
+          "start": 174.4954314720812,
+          "end": 175.63832487309645,
+          "probability": 0.020332093561592046
+        },
+        "attention": {
+          "word": " favorite",
+          "start": 174.43,
+          "end": 175.27,
+          "probability": 0.6877872347831726,
+          "tokens": [
+            2954
+          ]
+        }
+      },
+      "candidateOnsetSpreadMs": 65.43147208120104
+    },
+    {
+      "cue": "L37",
+      "word": "I",
+      "selected": {
+        "start": 176.65,
+        "end": 176.79221105527637
+      },
+      "reason": "Mix MMS onset176.631s and the vocal-envelope rise support an earlier contact than the short vocal-only CTC spike. Group I/keep.",
+      "candidates": {
+        "vocalMMS": {
+          "word": "I",
+          "start": 176.77211055276382,
+          "end": 176.79221105527637,
+          "probability": 0.0008606360061094165
+        },
+        "mixMMS": {
+          "word": "I",
+          "start": 176.63140703517587,
+          "end": 176.65150753768845,
+          "probability": 0.0008140916470438242
+        },
+        "englishCTC": {
+          "word": "I",
+          "start": 176.993216080402,
+          "end": 177.01331658291457,
+          "probability": 0.7251137495040894
+        },
+        "attention": {
+          "word": " I",
+          "start": 176.35,
+          "end": 176.99,
+          "probability": 0.6399431824684143,
+          "tokens": [
+            286
+          ]
+        }
+      },
+      "candidateOnsetSpreadMs": 643.2160804019986
+    },
+    {
+      "cue": "L37",
+      "word": "keep",
+      "selected": {
+        "start": 177.11381909547737,
+        "end": 177.55603015075377
+      },
+      "reason": "Vocal MMS is the primary contact; independent mix MMS, English wav2vec and bounded attention retained. This is an independently aligned performance.",
+      "candidates": {
+        "vocalMMS": {
+          "word": "keep",
+          "start": 177.11381909547737,
+          "end": 177.55603015075377,
+          "probability": 0.04079798169186688
+        },
+        "mixMMS": {
+          "word": "keep",
+          "start": 176.65150753768845,
+          "end": 177.55603015075377,
+          "probability": 0.056123808957636356
+        },
+        "englishCTC": {
+          "word": "keep",
+          "start": 177.17412060301507,
+          "end": 177.51582914572865,
+          "probability": 0.07253903985838406
+        },
+        "attention": {
+          "word": " keep",
+          "start": 176.99,
+          "end": 177.43,
+          "probability": 0.8007124662399292,
+          "tokens": [
+            1066
+          ]
+        }
+      },
+      "candidateOnsetSpreadMs": 522.6130653266239
+    },
+    {
+      "cue": "L37",
+      "word": "going",
+      "selected": {
+        "start": 177.63643216080402,
+        "end": 178.4002512562814
+      },
+      "reason": "Vocal MMS is the primary contact; independent mix MMS, English wav2vec and bounded attention retained. This is an independently aligned performance.",
+      "candidates": {
+        "vocalMMS": {
+          "word": "going",
+          "start": 177.63643216080402,
+          "end": 178.4002512562814,
+          "probability": 0.22206318122334778
+        },
+        "mixMMS": {
+          "word": "going",
+          "start": 177.63643216080402,
+          "end": 178.36005025125627,
+          "probability": 0.13325991794699804
+        },
+        "englishCTC": {
+          "word": "going",
+          "start": 177.65653266331657,
+          "end": 178.33994974874372,
+          "probability": 0.49206139594316484
+        },
+        "attention": {
+          "word": " going",
+          "start": 177.43,
+          "end": 178.17,
+          "probability": 0.9481188654899597,
+          "tokens": [
+            516
+          ]
+        }
+      },
+      "candidateOnsetSpreadMs": 226.5326633165614
+    },
+    {
+      "cue": "L37",
+      "word": "back",
+      "selected": {
+        "start": 178.44045226130652,
+        "end": 178.76206030150755
+      },
+      "reason": "Vocal MMS is the primary contact; independent mix MMS, English wav2vec and bounded attention retained. This is an independently aligned performance.",
+      "candidates": {
+        "vocalMMS": {
+          "word": "back",
+          "start": 178.44045226130652,
+          "end": 178.76206030150755,
+          "probability": 0.28824116052419413
+        },
+        "mixMMS": {
+          "word": "back",
+          "start": 178.44045226130652,
+          "end": 178.82236180904522,
+          "probability": 0.29506435719667934
+        },
+        "englishCTC": {
+          "word": "back",
+          "start": 178.4605527638191,
+          "end": 178.64145728643214,
+          "probability": 0.06392873940058053
+        },
+        "attention": {
+          "word": " back",
+          "start": 178.17,
+          "end": 178.71,
+          "probability": 0.810232400894165,
+          "tokens": [
+            646
+          ]
+        }
+      },
+      "candidateOnsetSpreadMs": 290.55276381910744
+    },
+    {
+      "cue": "L37",
+      "word": "for",
+      "selected": {
+        "start": 178.92286432160805,
+        "end": 179.24447236180904
+      },
+      "reason": "Vocal MMS is the primary contact; independent mix MMS, English wav2vec and bounded attention retained. This is an independently aligned performance.",
+      "candidates": {
+        "vocalMMS": {
+          "word": "for",
+          "start": 178.92286432160805,
+          "end": 179.24447236180904,
+          "probability": 0.24526656372472644
+        },
+        "mixMMS": {
+          "word": "for",
+          "start": 178.9429648241206,
+          "end": 179.12386934673367,
+          "probability": 0.07901805181366701
+        },
+        "englishCTC": {
+          "word": "for",
+          "start": 179.0032663316583,
+          "end": 179.12386934673367,
+          "probability": 0.03700732843329509
+        },
+        "attention": {
+          "word": " for",
+          "start": 178.71,
+          "end": 179.17,
+          "probability": 0.7396541833877563,
+          "tokens": [
+            337
+          ]
+        }
+      },
+      "candidateOnsetSpreadMs": 293.2663316582875
+    },
+    {
+      "cue": "L37",
+      "word": "more",
+      "selected": {
+        "start": 179.4253768844221,
+        "end": 180.06859296482412
+      },
+      "reason": "Vocal MMS is the primary contact; independent mix MMS, English wav2vec and bounded attention retained. This is an independently aligned performance.",
+      "candidates": {
+        "vocalMMS": {
+          "word": "more",
+          "start": 179.4253768844221,
+          "end": 180.06859296482412,
+          "probability": 0.3738020905293524
+        },
+        "mixMMS": {
+          "word": "more",
+          "start": 179.44547738693467,
+          "end": 179.76708542713567,
+          "probability": 0.385428752284497
+        },
+        "englishCTC": {
+          "word": "more",
+          "start": 179.4856783919598,
+          "end": 179.8675879396985,
+          "probability": 0.024799387785606086
+        },
+        "attention": {
+          "word": " more",
+          "start": 179.17,
+          "end": 179.73,
+          "probability": 0.9764617085456848,
+          "tokens": [
+            544
+          ]
+        }
+      },
+      "candidateOnsetSpreadMs": 315.67839195980696
+    },
+    {
+      "cue": "L38",
+      "word": "Where",
+      "selected": {
+        "start": 180.46075581395348,
+        "end": 180.84186046511627
+      },
+      "reason": "Vocal MMS is the primary contact; independent mix MMS, English wav2vec and bounded attention retained. This is an independently aligned performance.",
+      "candidates": {
+        "vocalMMS": {
+          "word": "Where",
+          "start": 180.46075581395348,
+          "end": 180.84186046511627,
+          "probability": 0.3282956597395241
+        },
+        "mixMMS": {
+          "word": "Where",
+          "start": 180.4406976744186,
+          "end": 180.8017441860465,
+          "probability": 0.09235208886675536
+        },
+        "englishCTC": {
+          "word": "Where",
+          "start": 180.48081395348837,
+          "end": 180.74156976744186,
+          "probability": 0.2319412797689438
+        },
+        "attention": {
+          "word": " Where",
+          "start": 180.2,
+          "end": 180.8,
+          "probability": 0.6830618381500244,
+          "tokens": [
+            2305
+          ]
+        }
+      },
+      "candidateOnsetSpreadMs": 280.81395348837646
+    },
+    {
+      "cue": "L38",
+      "word": "there's",
+      "selected": {
+        "start": 180.94215116279068,
+        "end": 181.40348837209302
+      },
+      "reason": "Vocal MMS is the primary contact; independent mix MMS, English wav2vec and bounded attention retained. This is an independently aligned performance.",
+      "candidates": {
+        "vocalMMS": {
+          "word": "there's",
+          "start": 180.94215116279068,
+          "end": 181.40348837209302,
+          "probability": 0.2724110043945984
+        },
+        "mixMMS": {
+          "word": "there's",
+          "start": 180.96220930232556,
+          "end": 181.4235465116279,
+          "probability": 0.2955140388039581
+        },
+        "englishCTC": {
+          "word": "there's",
+          "start": 180.78168604651162,
+          "end": 181.40348837209302,
+          "probability": 0.029318590290910964
+        },
+        "attention": {
+          "word": " there's",
+          "start": 180.8,
+          "end": 181.44,
+          "probability": 0.8833975493907928,
+          "tokens": [
+            456,
+            311
+          ]
+        }
+      },
+      "candidateOnsetSpreadMs": 180.52325581393802
+    },
+    {
+      "cue": "L38",
+      "word": "nothing",
+      "selected": {
+        "start": 181.48372093023255,
+        "end": 182.32616279069765
+      },
+      "reason": "Vocal MMS is the primary contact; independent mix MMS, English wav2vec and bounded attention retained. This is an independently aligned performance.",
+      "candidates": {
+        "vocalMMS": {
+          "word": "nothing",
+          "start": 181.48372093023255,
+          "end": 182.32616279069765,
+          "probability": 0.21338861788223898
+        },
+        "mixMMS": {
+          "word": "nothing",
+          "start": 181.50377906976743,
+          "end": 182.36627906976744,
+          "probability": 0.2411823434356068
+        },
+        "englishCTC": {
+          "word": "nothing",
+          "start": 181.48372093023255,
+          "end": 182.24593023255812,
+          "probability": 0.06599240600397545
+        },
+        "attention": {
+          "word": " nothing",
+          "start": 181.44,
+          "end": 181.98,
+          "probability": 0.9551811218261719,
+          "tokens": [
+            1825
+          ]
+        }
+      },
+      "candidateOnsetSpreadMs": 63.77906976743475
+    },
+    {
+      "cue": "L38",
+      "word": "from",
+      "selected": {
+        "start": 182.4264534883721,
+        "end": 182.7674418604651
+      },
+      "reason": "Vocal MMS is the primary contact; independent mix MMS, English wav2vec and bounded attention retained. This is an independently aligned performance.",
+      "candidates": {
+        "vocalMMS": {
+          "word": "from",
+          "start": 182.4264534883721,
+          "end": 182.7674418604651,
+          "probability": 0.7634841799736023
+        },
+        "mixMMS": {
+          "word": "from",
+          "start": 182.4063953488372,
+          "end": 182.84767441860464,
+          "probability": 0.38320560194551945
+        },
+        "englishCTC": {
+          "word": "from",
+          "start": 182.48662790697674,
+          "end": 183.0281976744186,
+          "probability": 0.03835604278719984
+        },
+        "attention": {
+          "word": " from",
+          "start": 181.98,
+          "end": 182.78,
+          "probability": 0.9793391823768616,
+          "tokens": [
+            490
+          ]
+        }
+      },
+      "candidateOnsetSpreadMs": 506.6279069767461
+    },
+    {
+      "cue": "L38",
+      "word": "before",
+      "selected": {
+        "start": 182.96802325581393,
+        "end": 185.4
+      },
+      "reason": "Both mix/vocal MMS locate before near182.97s, but shorten its sustained ending. The vocal spectrogram and 5ms RMS show the sung vowel through~185.4s before clear decay. A blind184s crop emits only Oh/oh for this held vowel; do not invent additional words or a new lyric cue.",
+      "candidates": {
+        "vocalMMS": {
+          "word": "before",
+          "start": 182.96802325581393,
+          "end": 183.93081395348835,
+          "probability": 0.24611797090619802
+        },
+        "mixMMS": {
+          "word": "before",
+          "start": 182.98808139534881,
+          "end": 183.91075581395347,
+          "probability": 0.24822650663554668
+        },
+        "englishCTC": {
+          "word": "before",
+          "start": 184.2517441860465,
+          "end": 185.55552325581394,
+          "probability": 0.0353329255982923
+        },
+        "attention": {
+          "word": " before",
+          "start": 182.78,
+          "end": 183.72,
+          "probability": 0.5089569091796875,
+          "tokens": [
+            949
+          ]
+        }
+      },
+      "candidateOnsetSpreadMs": 1471.744186046493
+    }
+  ]
+}

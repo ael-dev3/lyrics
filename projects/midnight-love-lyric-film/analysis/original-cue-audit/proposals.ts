@@ -1,0 +1,22 @@
+import {readFileSync,writeFileSync} from 'node:fs';
+import assert from 'node:assert/strict';
+import {createHash} from 'node:crypto';
+type W={text:string;startSample:number;endSample:number;confidence:number};type C={id:string;section:string;startSample:number;endSample:number;words:W[];groups:number[][]};
+type O={word:string;start:number;end:number;probability:number};type A={cue:string;word:string;selected:{start:number;end:number};candidates:Record<string,O>};
+const path='../midnight-love/src/cues.json',bytes=readFileSync(path),cues=JSON.parse(bytes.toString()) as C[],audit=JSON.parse(readFileSync('../midnight-love/analysis/alignment-decisions.json','utf8')) as {words:A[]};
+const get=(list:C[],id:string)=>{const c=list.find(c=>c.id===id);assert(c);return c;};
+const word=(c:C[],id:string,k:number)=>{const w=get(c,id).words[k];assert(w);return w;};
+const raw=(id:string,k:number,model:string)=>{const a=audit.words.filter(w=>w.cue===id)[k];assert(a);const w=a.candidates[model];assert(w);return w;};
+type Correction={cue:string;wordIndex:number;startSample?:number;endSample?:number;reason:string};
+const corrections:Correction[]=[
+ {cue:'L07',wordIndex:0,endSample:Math.round(35.72*48000),reason:'Keep the original But onset. Its English-encoder release is 35.714 s and blind full-mix ASR release is 35.72 s; reject the MMS hold through the following silence to 36.338 s. This correction accompanies separating But from the later I/always group.'},
+ {cue:'L18',wordIndex:3,endSample:Math.round(raw('L18',3,'vocalMMS').end*48000),reason:'Restore the original vocal-MMS die release once the erroneous early Able onset no longer forces an overlap clamp.'},
+ {cue:'L19',wordIndex:0,startSample:Math.round(80.735*48000),reason:'New vocal-envelope attack near 80.735 s agrees with original vocal/mix MMS 80.744/80.764 s and narrow-window MMS 80.754 s. The previous 80.10 s selection was an English-encoder path absorbing the dying previous phrase.'},
+];
+const modified=structuredClone(cues);
+for(const p of corrections){const c=get(modified,p.cue),w=word(modified,p.cue,p.wordIndex);if(p.startSample!==undefined)w.startSample=p.startSample;if(p.endSample!==undefined)w.endSample=p.endSample;const first=c.words[0],last=c.words.at(-1);assert(first&&last);c.startSample=first.startSample;c.endSample=last.endSample;}
+get(modified,'L07').groups=[[0],[1,2],[3],[4]];
+let last=0;for(const c of modified){assert(c.startSample>=last);last=c.endSample;let end=c.startSample;for(const w of c.words){assert(w.startSample>=end&&w.endSample>w.startSample);end=w.endSample;}assert.deepEqual(c.groups.flat().sort((a,b)=>a-b),c.words.map((_,i)=>i));}
+assert.deepEqual(cues.flatMap(c=>c.words.map(w=>w.text)),modified.flatMap(c=>c.words.map(w=>w.text)));
+const result={status:'Final proposed audit corrections; original production file is unchanged',originalCueSha256:createHash('sha256').update(bytes).digest('hex'),sampleRate:48000,originalCues:32,originalWords:151,corrections:corrections.map(p=>({cue:p.cue,wordIndex:p.wordIndex,word:word(cues,p.cue,p.wordIndex).text,original:word(cues,p.cue,p.wordIndex),proposed:word(modified,p.cue,p.wordIndex),reason:p.reason})),groupChanges:[{cue:'L07',original:get(cues,'L07').groups,proposed:get(modified,'L07').groups,reason:'The previous But/I group highlighted I at 35.432 s although its selected acoustic contact is 36.439 s. Pair I with the following connected always instead; keep all later source-word contacts.'}],safePatchWindows:[{startSeconds:34,endSeconds:38.2,startFrame:2040,endFrameExclusive:2292,sourceChanges:'L07 But release and focus grouping; L06 acoustic intervals unchanged'},{startSeconds:78,endSeconds:82.8,startFrame:4680,endFrameExclusive:4968,sourceChanges:'L18 die end and L19 Able start'}],rejectedExperiment:{case:'L07 clipped-window But onset',candidateSeconds:36.21,reason:'Clipping away 35.43–35.72 s collapses the But acoustic scores from original vocal/mix MMS 0.24/0.21 to 0.002–0.018. The forced later token is an artifact of excluding the real earlier word. Retain original onset.'},validation:{positiveOrderedWordIntervals:true,noCueOverlaps:true,unchangedText:true,completeGroupCoverage:true},limits:'Envelope-based and model-based timing evidence; no human listening or calibrated millisecond acoustic-accuracy claim. Fine consonant/vowel boundaries remain estimates.'};
+writeFileSync('analysis/original-cue-audit/proposed-corrections.json',JSON.stringify(result,null,2));console.log(JSON.stringify(result,null,2));

@@ -4,13 +4,15 @@
 
 This is a forward-looking production standard. It does not change published movies, finalized timing data or release archives. The [Пожары production record](../projects/pozhary-lyric-film/README.md) documents the completed implementation and its limitations.
 
+The visual default is a cinematic treatment with stable glyph positions and **color-only word or semantic-group emphasis** in both languages. Karaoke underlines, word boxes or pills, and bouncing glyphs require an explicit request. This change preserves precise synchronization and equal bilingual prominence. The current Midnight Love revision adopts the same general visual default; other published films are not retroactively changed by this standard.
+
 ## Equal treatment in the composition
 
 | Dimension | Required treatment |
 | --- | --- |
 | Size and weight | Start with the same font size and weight for both languages. If different fonts need optical adjustment, match visible letter height and stroke strength and record the adjustment. English must not read as a smaller caption. |
-| Color and contrast | Use the same active accent, inactive text color and opacity by default, drawn from the current track's palette. Any language-specific hues must provide comparable contrast and prominence over the actual artwork. |
-| Highlighting | Apply the same focus treatment, including underline or other emphasis, attack, release and visual intensity. A strong original-language highlight must not become a faint color change in English. |
+| Color and contrast | Use the same active accent, inactive text color and opacity by default, drawn from the current track's palette. Both active and inactive lyrics must stay readable over the actual artwork at native and mobile size. Any language-specific hues must provide comparable contrast and prominence; use luminance as well as hue to distinguish focus. |
+| Highlighting | Apply the same color-only word/group focus, attack, release and visual intensity with stable glyph positions. Do not use karaoke underlines, word boxes or pills, or bouncing glyphs unless explicitly requested. English must receive the same visible emphasis as the original language. |
 | Synchronization | Drive both languages from the same sample-indexed source events. English semantic groups activate with the corresponding performed meaning and receive the same onset, handoff and release scrutiny. |
 | Reading area | Give both languages enough stable space to read comfortably. Keep both visible for the relevant passage and protected from artwork, effects and platform overlays. |
 | Long lines | Rephrase only when meaning is preserved; otherwise reflow, split at semantic boundaries or rebalance the composition. Do not solve overflow by shrinking or dimming English alone. |
@@ -38,6 +40,7 @@ Record these checks separately for every delivery aspect ratio before the full r
 - Both languages look equally large and strong at native resolution and at the intended mobile display size; record the review dimensions and any optical font adjustment.
 - Active and inactive English text remains as legible as the original language over the brightest and darkest sampled artwork states.
 - Both languages receive equivalent word/group emphasis. Inspect onset, handoff and exclusive-end frames, including the frame immediately before and after each high-risk boundary.
+- Focus uses color and luminance with stable glyph positions; neither language introduces karaoke underlines, word boxes or pills, or bouncing glyphs without an explicit request. Check that removing these decorations leaves both active and inactive text readable.
 - English follows the performed meaning without a separate delay, premature fade or cumulative timing drift. A reordered phrase keeps its natural reading order and stable glyph positions.
 - The longest translation fits at equal prominence without clipping, collisions, abrupt reflow or English-only font reduction.
 - Spectrum, particles and camera motion do not obscure either language. Both lanes retain their reading areas through entrances, holds and exits.

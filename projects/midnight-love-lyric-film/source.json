@@ -102,7 +102,8 @@
     },
     "sourceMotion": "Official source animation, nominal 24 fps; existing frame cadence preserved on the 60 fps delivery clock. Newly authored camera, word highlights, particles and measured spectrum run at 60 fps. No optical-flow claim.",
     "filmSource": "Original official video retained; no generated background replacement",
-    "covers": "AI-assisted referenced adaptations; exact prompts in analysis/cover-prompts.json"
+    "covers": "AI-assisted referenced adaptations; exact prompts in analysis/cover-prompts.json",
+    "lyricFocus": "Stable color-only word or explicit connected-group emphasis; no active-word underline, word box or bouncing glyphs."
   },
   "tools": {
     "node": "v24.20.0",
@@ -137,9 +138,19 @@
       "sha256": "a54c8eb253965f4641ff561ae34c2e8ab1f0fb7aaec0229f2497a3877e59bc00"
     },
     {
+      "path": "analysis/lyrics-performance-en.txt",
+      "bytes": 882,
+      "sha256": "a1a675fb491233fcd711f4af5263cbb1efd27b3cbf6d6c7bdc4f6009281138bb"
+    },
+    {
+      "path": "analysis/performed-repeat-map.json",
+      "bytes": 489,
+      "sha256": "c9bb08ef45d78dcfa8f9c620fdbe90f24216c8e27995ee73c4b19c777713384a"
+    },
+    {
       "path": "src/cues.json",
-      "bytes": 30299,
-      "sha256": "ec01e2cc3f5131165dbbe1b0c635bd4fc1bd478e7070e43b1aea31e7a06c6462"
+      "bytes": 36992,
+      "sha256": "797ab3cd6a0f4a74df304035f6810e5ac4a530ee0bcbe681741433e6a5b820eb"
     },
     {
       "path": "public/SpaceGrotesk.ttf",
@@ -156,5 +167,17 @@
       "bytes": 293244,
       "sha256": "14efb9443652199ade5bc6ba8637b4084acce40a58368a3808f84f55667e3e90"
     }
-  ]
+  ],
+  "productionRevision": {
+    "version": "1.1.0",
+    "previous": "1.0.0",
+    "reason": "Restore six performed ending phrases and refine earlier word focus/onset",
+    "performedWords": 185,
+    "providedWords": 151,
+    "addedRepeatedWords": 34,
+    "cues": 38,
+    "focusGroups": 161,
+    "finalHeldVocalEndSeconds": 185.4,
+    "recordingAndMeasuredFeaturesUnchanged": true
+  }
 }

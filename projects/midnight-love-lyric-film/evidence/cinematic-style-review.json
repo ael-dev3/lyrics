@@ -1,0 +1,77 @@
+{
+  "release": "midnight-love-v1.1.0",
+  "reviewType": "Visual inspection of sampled full-frame color-only PNG proofs",
+  "status": "No blocking visual issue observed in the inspected stills; final encoded review remains pending.",
+  "inspectedFiles": [
+    "evidence/viewport-proof/youtube-full-f0.png",
+    "evidence/viewport-proof/youtube-full-f900.png",
+    "evidence/viewport-proof/youtube-full-f2186.png",
+    "evidence/viewport-proof/youtube-full-f4844.png",
+    "evidence/viewport-proof/youtube-full-f9840.png",
+    "evidence/viewport-proof/youtube-full-f11028.png",
+    "evidence/viewport-proof/youtube-full-f11340.png",
+    "evidence/viewport-proof/youtube-full-f11631.png",
+    "evidence/viewport-proof/tiktok-full-f0.png",
+    "evidence/viewport-proof/tiktok-full-f900.png",
+    "evidence/viewport-proof/tiktok-full-f2186.png",
+    "evidence/viewport-proof/tiktok-full-f4844.png",
+    "evidence/viewport-proof/tiktok-full-f9840.png",
+    "evidence/viewport-proof/tiktok-full-f11028.png",
+    "evidence/viewport-proof/tiktok-full-f11340.png",
+    "evidence/viewport-proof/tiktok-full-f11631.png"
+  ],
+  "display": {
+    "youtube": "3840 x 2160 proof images displayed at 2048 x 1152",
+    "tiktok": "2160 x 3840 proof images displayed at 1152 x 2048"
+  },
+  "sampleObservations": [
+    {
+      "frames": [0, 11631],
+      "seconds": [0, 193.85],
+      "observation": "Both formats show a clean dark midnight-blue field at the opening and final samples, without residual glyphs, titles or rectangular edges."
+    },
+    {
+      "frame": 900,
+      "seconds": 15,
+      "observation": "Both lyric regions are clear. The source figure and flame remain integrated into the blue field; the portrait source image fades smoothly into the lower lyric area."
+    },
+    {
+      "frame": 2186,
+      "seconds": 36.433333,
+      "observation": "Both formats show the I + always group in pale gold while But and the remaining words stay silver. Word spacing and baseline look natural, with no active-word underline, box or pill."
+    },
+    {
+      "frame": 4844,
+      "seconds": 80.733333,
+      "observation": "Able is emphasized in pale gold in both formats. The line remains legible and comfortably within the lyric region."
+    },
+    {
+      "frame": 9840,
+      "seconds": 164,
+      "observation": "Silver receives the gold emphasis in both formats. Landscape and portrait use clean, different line breaks without clipping or collisions."
+    },
+    {
+      "frame": 11028,
+      "seconds": 183.8,
+      "observation": "Before retains pale-gold focus in the final lyric line in both formats. The line is fully readable, and no closing title overlaps it."
+    },
+    {
+      "frame": 11340,
+      "seconds": 189,
+      "observation": "The lyric region is clear and the muted-gold italic closing title appears in both formats. Its decorative rule is separate from the removed lyric-word underlines."
+    }
+  ],
+  "overallObservations": [
+    "The active pale-gold and inactive silver words have clear visual contrast against the midnight-blue background, with consistent size and weight in the sampled lyric states.",
+    "Color-only emphasis provides a restrained cinematic treatment. No karaoke word underlines, word boxes, pills or displaced glyphs are visible in these samples.",
+    "No obvious rectangular shade patch, source-crop edge or background seam is visible at the displayed review scale. The figure, flame, header and spectrum retain a coherent visual style.",
+    "Closing-title separation and the final clear frame are visually correct in the inspected samples."
+  ],
+  "limits": [
+    "This review inspected rendered full-frame PNG proofs, not frames decoded from the final encoded videos.",
+    "The images were displayed at the reduced sizes recorded above; this is not a native-pixel seam or compression-artifact inspection.",
+    "Nonconsecutive stills cannot establish temporal word-position stability, animation smoothness or correctness at every frame.",
+    "No acoustic listening was performed for this review, and no claim of acoustic synchronization or held-vocal endpoint accuracy follows from these stills.",
+    "The separate viewport-proof.json records sampled pixel equality. This visual review does not extend that proof to every frame, retained outside pixels or the final encodes."
+  ]
+}

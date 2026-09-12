@@ -1,0 +1,122 @@
+{
+  "text": " Oh, oh, oh",
+  "segments": [
+    {
+      "start": 184,
+      "end": 185.42,
+      "text": " Oh, oh, oh",
+      "seek": 0,
+      "tokens": [
+        876,
+        11,
+        1954,
+        11,
+        1954
+      ],
+      "temperature": 0,
+      "avg_logprob": -1.0940046310424805,
+      "compression_ratio": 0.7142857142857143,
+      "no_speech_prob": 1.2272785565592415e-10,
+      "words": [
+        {
+          "word": " Oh,",
+          "start": 184,
+          "end": 184.46,
+          "probability": 0.00025997214834205806,
+          "tokens": [
+            876,
+            11
+          ]
+        },
+        {
+          "word": " oh,",
+          "start": 184.6,
+          "end": 184.84,
+          "probability": 0.1788436770439148,
+          "tokens": [
+            1954,
+            11
+          ]
+        },
+        {
+          "word": " oh",
+          "start": 185.14,
+          "end": 185.42,
+          "probability": 0.9603148102760315,
+          "tokens": [
+            1954
+          ]
+        }
+      ]
+    }
+  ],
+  "language": "en",
+  "ori_dict": {
+    "text": " Oh, oh, oh",
+    "segments": [
+      {
+        "id": 0,
+        "start": 0,
+        "end": 1.42,
+        "text": " Oh, oh, oh",
+        "seek": 0,
+        "tokens": [
+          876,
+          11,
+          1954,
+          11,
+          1954
+        ],
+        "temperature": 0,
+        "avg_logprob": -1.0940046310424805,
+        "compression_ratio": 0.7142857142857143,
+        "no_speech_prob": 1.2272785565592415e-10,
+        "words": [
+          {
+            "word": " Oh,",
+            "start": 0,
+            "end": 0.46,
+            "probability": 0.00025997214834205806,
+            "tokens": [
+              876,
+              11
+            ]
+          },
+          {
+            "word": " oh,",
+            "start": 0.6,
+            "end": 0.84,
+            "probability": 0.1788436770439148,
+            "tokens": [
+              1954,
+              11
+            ]
+          },
+          {
+            "word": " oh",
+            "start": 1.14,
+            "end": 1.42,
+            "probability": 0.9603148102760315,
+            "tokens": [
+              1954
+            ]
+          }
+        ]
+      }
+    ],
+    "language": "en",
+    "time_scale": null
+  },
+  "regroup_history": "",
+  "nonspeech_sections": [
+    {
+      "start": 2.46,
+      "end": 9.88
+    }
+  ],
+  "analysisWindow": {
+    "start": 184,
+    "end": 193.8535,
+    "timeConvention": "Top-level segments and words use global source seconds. Retained raw ori_dict and nonspeech_sections use crop-relative seconds; add this window start before comparing them to the source."
+  }
+}

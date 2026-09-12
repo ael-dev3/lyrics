@@ -1,0 +1,25 @@
+{
+  "kind": "youtube",
+  "part": 2,
+  "start": 2908,
+  "end": 5815,
+  "frames": 2908,
+  "scale": 2,
+  "output": "evidence/cinematic/youtube-part-2.mkv",
+  "stream": {
+    "codec_name": "h264",
+    "width": 1664,
+    "height": 768,
+    "pix_fmt": "yuv444p",
+    "avg_frame_rate": "60/1",
+    "nb_read_frames": "2908"
+  },
+  "frozenInputManifestSha256": "10c5e49f95f2d3f91143ad23350ca7ae2af2277b4be0e05640ae258080061a5c",
+  "sha256": "44fd17b02c3fa3e860ff12df6c61221582599cf376345c1514447809ac52dc1a",
+  "reusedCapture": {
+    "originalFrozenInputManifestSha256": "c378ba3c3200518241ff6222207c5aafbacd3768988e49d0408a70a3aa67a7d4",
+    "originalRenderScriptSha256": "3ff87589f193b7180b764518100b1df744110be2555478eb6289973cfb47059a",
+    "originalReceiptSha256": "67e34fec73493704fbd91aca3f4ffd9d5311080181d76c4fd9edde92c68a3180",
+    "reason": "Only final full-frame FFmpeg assembly changed from conflicting rate/passthrough flags to CFR; error reporting also preserves the initial cause. Browser capture, codec settings, frame ranges and all image/timing/source inputs are byte-identical."
+  }
+}

@@ -52,10 +52,10 @@ export const Film:React.FC<{portrait?:boolean;sampleFrame?:number;forceCue?:numb
    </div>}
    {cue&&<div key={cue.id} data-cue={cue.id} style={{opacity}}>
     <div data-lyrics style={{position:'absolute',left:lyricLeft,top:lyricTop,width:lyricWidth,fontSize:portrait?78:76,fontWeight:600,lineHeight:1.25,letterSpacing:-1.65,display:'flex',flexWrap:'wrap',columnGap:portrait?19:18,rowGap:7,alignContent:'flex-start'}}>
-     {cue.words.map((word,i)=><span key={i} data-word={i} style={{position:'relative',whiteSpace:'nowrap',color:active(i)?P.gold:P.silver,textShadow:'0 2px 12px rgba(4,8,24,.85)'}}>{word.text.toLowerCase()}<span style={{position:'absolute',left:0,right:0,bottom:-3,height:3,background:P.gold,opacity:active(i)?1:0}}/></span>)}
+     {cue.words.map((word,i)=><span key={i} data-word={i} style={{position:'relative',whiteSpace:'nowrap',color:active(i)?P.gold:P.silver,textShadow:'0 2px 12px rgba(4,8,24,.85)'}}>{word.text.toLowerCase()}</span>)}
     </div>
    </div>}
-   {!cue&&f>181*FPS&&<div style={{position:'absolute',left:lyricLeft,top:portrait?1200:481,width:lyricWidth,opacity:.8*smooth(181*FPS,183*FPS,f)}}>
+   {!cue&&f>188*FPS&&<div style={{position:'absolute',left:lyricLeft,top:portrait?1200:481,width:lyricWidth,opacity:.8*smooth(188*FPS,190*FPS,f)}}>
     <div style={{fontFamily:'Cormorant',fontSize:portrait?108:102,fontWeight:500,fontStyle:'italic',color:P.gold}}>midnight love</div>
     <div style={{height:1,width:portrait?240:200,background:P.blue,marginTop:28,opacity:.6}}/>
    </div>}

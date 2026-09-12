@@ -1,8 +1,20 @@
 {
   "inputs": [
     {
+      "path": "evidence/layout-TikTok.json",
+      "sha256": "ba0af4e6c6b88a97045ed6bcaff4bd9f199aa7936b92fc142d869fbd7d2b4342"
+    },
+    {
+      "path": "evidence/layout-YouTube.json",
+      "sha256": "0974694eae2d7db35f2ad4f9c1236b7ff640ad4ec2f27637b5f30e5e02f6695e"
+    },
+    {
+      "path": "evidence/timing-checks.json",
+      "sha256": "6aac6c4a8a61daaa9eff765698e2084c13c5a8c55b5888573fc78cc96f87730c"
+    },
+    {
       "path": "package-lock.json",
-      "sha256": "768480a45419852aa7f6c90ca535b560cd76e795a2dc65753ea7fc07e2a2500b"
+      "sha256": "c095ec43934cde2192e7c1832c2c8ca5f9aad1930b87d8b6e087e860b9beff72"
     },
     {
       "path": "public/CormorantGaramond-Italic.ttf",
@@ -33,12 +45,32 @@
       "sha256": "0bd4382fc99a014c92a2ffbc1b6828aab6e1cc86508403601f95d18f4efad487"
     },
     {
+      "path": "scripts/check.ts",
+      "sha256": "d2479fecd6a3a8197452fa0e9cedc8472520da465e33846b3242a83e2daa4ef7"
+    },
+    {
+      "path": "scripts/encode.ts",
+      "sha256": "888000facbb3e68a21ebf2a2685a1b326f3097d386e0e74cfc2112b1b7f454a8"
+    },
+    {
+      "path": "scripts/layout.ts",
+      "sha256": "4f887dd23fa404fabacc074e932a876858cbfd07cb2c0bfa925f7cea3dd3bc32"
+    },
+    {
+      "path": "scripts/render-cinematic.ts",
+      "sha256": "de5589075d01e582dfc626af35e4cdfa3e43166e889173e394fa681342da7aff"
+    },
+    {
       "path": "src/Film.tsx",
-      "sha256": "482e809c57130dc56329e0029b0663d370d3daf2115e3c484550353b71c8ee13"
+      "sha256": "0822735bba8ca4cf9b6f91414416847ff6df348945afe9ae1550938e26b70c2a"
     },
     {
       "path": "src/LayoutAudit.tsx",
       "sha256": "e6be4fb9f874ac2ee50483b749fd2241e2d6dff659d844fa78f5ab3befc7f59e"
+    },
+    {
+      "path": "src/RevisionViewport.tsx",
+      "sha256": "33f8a2802bc10c6d6515a8eb0bc961c35abcc01e5c517216e61612afa243c750"
     },
     {
       "path": "src/config.ts",
@@ -46,11 +78,11 @@
     },
     {
       "path": "src/cues.json",
-      "sha256": "ec01e2cc3f5131165dbbe1b0c635bd4fc1bd478e7070e43b1aea31e7a06c6462"
+      "sha256": "797ab3cd6a0f4a74df304035f6810e5ac4a530ee0bcbe681741433e6a5b820eb"
     },
     {
       "path": "src/index.tsx",
-      "sha256": "8742a5024e51a9561738b735cff04c3e4ec0c1c745fc0c69ca9874fc00c5eea3"
+      "sha256": "74b97f93faa9369c53735a4358fafc19b5eb6e053b608ef3adf654a7e3b0c3ba"
     },
     {
       "path": "src/schema.ts",
@@ -59,6 +91,10 @@
     {
       "path": "src/timing.ts",
       "sha256": "79e9956859ba44b778af9a0bb8dca9934ffd58aa14ce37f4340f7f47215eede1"
+    },
+    {
+      "path": "src/viewport-config.ts",
+      "sha256": "dfd6e82ebb724b53fabe1e121c6416e640c478ec5fbd10913359bc792b7a0a8c"
     }
   ],
   "purpose": "Frozen composition, media and dependency inputs; delivery verification rejects any mismatch."

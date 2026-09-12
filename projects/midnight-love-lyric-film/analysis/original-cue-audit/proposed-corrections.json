@@ -1,0 +1,127 @@
+{
+  "status": "Final proposed audit corrections; original production file is unchanged",
+  "originalCueSha256": "ec01e2cc3f5131165dbbe1b0c635bd4fc1bd478e7070e43b1aea31e7a06c6462",
+  "sampleRate": 48000,
+  "originalCues": 32,
+  "originalWords": 151,
+  "corrections": [
+    {
+      "cue": "L07",
+      "wordIndex": 0,
+      "word": "But",
+      "original": {
+        "text": "But",
+        "startSample": 1700737,
+        "endSample": 1744247,
+        "confidence": 0.24008639172340432
+      },
+      "proposed": {
+        "text": "But",
+        "startSample": 1700737,
+        "endSample": 1714560,
+        "confidence": 0.24008639172340432
+      },
+      "reason": "Keep the original But onset. Its English-encoder release is 35.714 s and blind full-mix ASR release is 35.72 s; reject the MMS hold through the following silence to 36.338 s. This correction accompanies separating But from the later I/always group."
+    },
+    {
+      "cue": "L18",
+      "wordIndex": 3,
+      "word": "die",
+      "original": {
+        "text": "die",
+        "startSample": 3815729,
+        "endSample": 3844800,
+        "confidence": 0.2361227236688137
+      },
+      "proposed": {
+        "text": "die",
+        "startSample": 3815729,
+        "endSample": 3849600,
+        "confidence": 0.2361227236688137
+      },
+      "reason": "Restore the original vocal-MMS die release once the erroneous early Able onset no longer forces an overlap clamp."
+    },
+    {
+      "cue": "L19",
+      "wordIndex": 0,
+      "word": "Able",
+      "original": {
+        "text": "Able",
+        "startSample": 3844800,
+        "endSample": 3891110,
+        "confidence": 0.30713914323132485
+      },
+      "proposed": {
+        "text": "Able",
+        "startSample": 3875280,
+        "endSample": 3891110,
+        "confidence": 0.30713914323132485
+      },
+      "reason": "New vocal-envelope attack near 80.735 s agrees with original vocal/mix MMS 80.744/80.764 s and narrow-window MMS 80.754 s. The previous 80.10 s selection was an English-encoder path absorbing the dying previous phrase."
+    }
+  ],
+  "groupChanges": [
+    {
+      "cue": "L07",
+      "original": [
+        [
+          0,
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ]
+      ],
+      "proposed": [
+        [
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ]
+      ],
+      "reason": "The previous But/I group highlighted I at 35.432 s although its selected acoustic contact is 36.439 s. Pair I with the following connected always instead; keep all later source-word contacts."
+    }
+  ],
+  "safePatchWindows": [
+    {
+      "startSeconds": 34,
+      "endSeconds": 38.2,
+      "startFrame": 2040,
+      "endFrameExclusive": 2292,
+      "sourceChanges": "L07 But release and focus grouping; L06 acoustic intervals unchanged"
+    },
+    {
+      "startSeconds": 78,
+      "endSeconds": 82.8,
+      "startFrame": 4680,
+      "endFrameExclusive": 4968,
+      "sourceChanges": "L18 die end and L19 Able start"
+    }
+  ],
+  "rejectedExperiment": {
+    "case": "L07 clipped-window But onset",
+    "candidateSeconds": 36.21,
+    "reason": "Clipping away 35.43–35.72 s collapses the But acoustic scores from original vocal/mix MMS 0.24/0.21 to 0.002–0.018. The forced later token is an artifact of excluding the real earlier word. Retain original onset."
+  },
+  "validation": {
+    "positiveOrderedWordIntervals": true,
+    "noCueOverlaps": true,
+    "unchangedText": true,
+    "completeGroupCoverage": true
+  },
+  "limits": "Envelope-based and model-based timing evidence; no human listening or calibrated millisecond acoustic-accuracy claim. Fine consonant/vowel boundaries remain estimates."
+}

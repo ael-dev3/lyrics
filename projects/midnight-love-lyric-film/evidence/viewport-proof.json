@@ -1,0 +1,269 @@
+{
+  "passed": true,
+  "inputs": [
+    {
+      "path": "package-lock.json",
+      "sha256": "c095ec43934cde2192e7c1832c2c8ca5f9aad1930b87d8b6e087e860b9beff72"
+    },
+    {
+      "path": "scripts/benchmark-viewport.ts",
+      "sha256": "ee77265322802c5a8679181e74fadb7100d58e6b932c367de3bf00aaa6512efd"
+    },
+    {
+      "path": "src/Film.tsx",
+      "sha256": "0822735bba8ca4cf9b6f91414416847ff6df348945afe9ae1550938e26b70c2a"
+    },
+    {
+      "path": "src/LayoutAudit.tsx",
+      "sha256": "e6be4fb9f874ac2ee50483b749fd2241e2d6dff659d844fa78f5ab3befc7f59e"
+    },
+    {
+      "path": "src/RevisionViewport.tsx",
+      "sha256": "33f8a2802bc10c6d6515a8eb0bc961c35abcc01e5c517216e61612afa243c750"
+    },
+    {
+      "path": "src/config.ts",
+      "sha256": "8793a139a52eafae5e1435ce99258af7d1a999ecca5f9f528d91448f49a5a6fc"
+    },
+    {
+      "path": "src/cues.json",
+      "sha256": "797ab3cd6a0f4a74df304035f6810e5ac4a530ee0bcbe681741433e6a5b820eb"
+    },
+    {
+      "path": "src/index.tsx",
+      "sha256": "74b97f93faa9369c53735a4358fafc19b5eb6e053b608ef3adf654a7e3b0c3ba"
+    },
+    {
+      "path": "src/schema.ts",
+      "sha256": "6182bff10f050882845cc898a4ea1c8f2d33c79a3bbf285cbc646e6917f1fda1"
+    },
+    {
+      "path": "src/timing.ts",
+      "sha256": "79e9956859ba44b778af9a0bb8dca9934ffd58aa14ce37f4340f7f47215eede1"
+    },
+    {
+      "path": "src/viewport-config.ts",
+      "sha256": "dfd6e82ebb724b53fabe1e121c6416e640c478ec5fbd10913359bc792b7a0a8c"
+    }
+  ],
+  "scale": 2,
+  "sourceFrameClock": "Global 60 fps frame; no sequence/offset retiming",
+  "viewports": [
+    {
+      "kind": "youtube",
+      "fullId": "MidnightYouTube",
+      "cropId": "MidnightYouTubeViewport",
+      "x": 1024,
+      "y": 416,
+      "width": 832,
+      "height": 384,
+      "fullWidth": 1920,
+      "fullHeight": 1080
+    },
+    {
+      "kind": "tiktok",
+      "fullId": "MidnightTikTok",
+      "cropId": "MidnightTikTokViewport",
+      "x": 32,
+      "y": 1135,
+      "width": 948,
+      "height": 400,
+      "fullWidth": 1080,
+      "fullHeight": 1920
+    }
+  ],
+  "proof": [
+    {
+      "kind": "youtube",
+      "frame": 0,
+      "fullPng": "evidence/viewport-proof/youtube-full-f0.png",
+      "viewportPng": "evidence/viewport-proof/youtube-viewport-f0.png",
+      "fullCropRgbaSha256": "73bde3e3ccdf919baf4b84e17b2d6b69083af1711bf7827361eea9b8a1d02e37",
+      "viewportRgbaSha256": "73bde3e3ccdf919baf4b84e17b2d6b69083af1711bf7827361eea9b8a1d02e37",
+      "matched": true
+    },
+    {
+      "kind": "youtube",
+      "frame": 900,
+      "fullPng": "evidence/viewport-proof/youtube-full-f900.png",
+      "viewportPng": "evidence/viewport-proof/youtube-viewport-f900.png",
+      "fullCropRgbaSha256": "ef8174a9c203d35b741e432b3cee9261e8cc5505d21e23d931e983f47dd92cb4",
+      "viewportRgbaSha256": "ef8174a9c203d35b741e432b3cee9261e8cc5505d21e23d931e983f47dd92cb4",
+      "matched": true
+    },
+    {
+      "kind": "youtube",
+      "frame": 2186,
+      "fullPng": "evidence/viewport-proof/youtube-full-f2186.png",
+      "viewportPng": "evidence/viewport-proof/youtube-viewport-f2186.png",
+      "fullCropRgbaSha256": "f5b0a00c420e5cf67f5d28ebdcfb9a6252df29bbc330f03f48c0e01e44438b3e",
+      "viewportRgbaSha256": "f5b0a00c420e5cf67f5d28ebdcfb9a6252df29bbc330f03f48c0e01e44438b3e",
+      "matched": true
+    },
+    {
+      "kind": "youtube",
+      "frame": 4844,
+      "fullPng": "evidence/viewport-proof/youtube-full-f4844.png",
+      "viewportPng": "evidence/viewport-proof/youtube-viewport-f4844.png",
+      "fullCropRgbaSha256": "3518e0397767d0f419a7c943d6e5e35d2913a88d0fcfb6c0b874c81c53ab2b7f",
+      "viewportRgbaSha256": "3518e0397767d0f419a7c943d6e5e35d2913a88d0fcfb6c0b874c81c53ab2b7f",
+      "matched": true
+    },
+    {
+      "kind": "youtube",
+      "frame": 9840,
+      "fullPng": "evidence/viewport-proof/youtube-full-f9840.png",
+      "viewportPng": "evidence/viewport-proof/youtube-viewport-f9840.png",
+      "fullCropRgbaSha256": "a68464a97a5f3c44638d18759e8e9b22eee82f2453dc008f08f0887cb3195d52",
+      "viewportRgbaSha256": "a68464a97a5f3c44638d18759e8e9b22eee82f2453dc008f08f0887cb3195d52",
+      "matched": true
+    },
+    {
+      "kind": "youtube",
+      "frame": 11028,
+      "fullPng": "evidence/viewport-proof/youtube-full-f11028.png",
+      "viewportPng": "evidence/viewport-proof/youtube-viewport-f11028.png",
+      "fullCropRgbaSha256": "5dd91f3090530d3be58c56eabffc44d78e03917e3adba12eeee861796b139d94",
+      "viewportRgbaSha256": "5dd91f3090530d3be58c56eabffc44d78e03917e3adba12eeee861796b139d94",
+      "matched": true
+    },
+    {
+      "kind": "youtube",
+      "frame": 11340,
+      "fullPng": "evidence/viewport-proof/youtube-full-f11340.png",
+      "viewportPng": "evidence/viewport-proof/youtube-viewport-f11340.png",
+      "fullCropRgbaSha256": "fcd1439ac346a9fea69f47676feea5aa5629aad04bf07b9636f247b5d8e1fbcb",
+      "viewportRgbaSha256": "fcd1439ac346a9fea69f47676feea5aa5629aad04bf07b9636f247b5d8e1fbcb",
+      "matched": true
+    },
+    {
+      "kind": "youtube",
+      "frame": 11631,
+      "fullPng": "evidence/viewport-proof/youtube-full-f11631.png",
+      "viewportPng": "evidence/viewport-proof/youtube-viewport-f11631.png",
+      "fullCropRgbaSha256": "73bde3e3ccdf919baf4b84e17b2d6b69083af1711bf7827361eea9b8a1d02e37",
+      "viewportRgbaSha256": "73bde3e3ccdf919baf4b84e17b2d6b69083af1711bf7827361eea9b8a1d02e37",
+      "matched": true
+    },
+    {
+      "kind": "tiktok",
+      "frame": 0,
+      "fullPng": "evidence/viewport-proof/tiktok-full-f0.png",
+      "viewportPng": "evidence/viewport-proof/tiktok-viewport-f0.png",
+      "fullCropRgbaSha256": "81601010651d42b93eff99c5ab9189a39f2223265d130292fcac4e64088c08f4",
+      "viewportRgbaSha256": "81601010651d42b93eff99c5ab9189a39f2223265d130292fcac4e64088c08f4",
+      "matched": true
+    },
+    {
+      "kind": "tiktok",
+      "frame": 900,
+      "fullPng": "evidence/viewport-proof/tiktok-full-f900.png",
+      "viewportPng": "evidence/viewport-proof/tiktok-viewport-f900.png",
+      "fullCropRgbaSha256": "a4274953776c8349c32e46eaf46e9af3bab99eb861a2b4af827836838a7dd134",
+      "viewportRgbaSha256": "a4274953776c8349c32e46eaf46e9af3bab99eb861a2b4af827836838a7dd134",
+      "matched": true
+    },
+    {
+      "kind": "tiktok",
+      "frame": 2186,
+      "fullPng": "evidence/viewport-proof/tiktok-full-f2186.png",
+      "viewportPng": "evidence/viewport-proof/tiktok-viewport-f2186.png",
+      "fullCropRgbaSha256": "dc378073e523e623eb9ae862358524e3de3a632ff93051dadb2bd80442b47ffc",
+      "viewportRgbaSha256": "dc378073e523e623eb9ae862358524e3de3a632ff93051dadb2bd80442b47ffc",
+      "matched": true
+    },
+    {
+      "kind": "tiktok",
+      "frame": 4844,
+      "fullPng": "evidence/viewport-proof/tiktok-full-f4844.png",
+      "viewportPng": "evidence/viewport-proof/tiktok-viewport-f4844.png",
+      "fullCropRgbaSha256": "5e8a7b5ffd9cb5e483582323d9efbd5fe0bac7f1de2a2267020102353be5c95f",
+      "viewportRgbaSha256": "5e8a7b5ffd9cb5e483582323d9efbd5fe0bac7f1de2a2267020102353be5c95f",
+      "matched": true
+    },
+    {
+      "kind": "tiktok",
+      "frame": 9840,
+      "fullPng": "evidence/viewport-proof/tiktok-full-f9840.png",
+      "viewportPng": "evidence/viewport-proof/tiktok-viewport-f9840.png",
+      "fullCropRgbaSha256": "016e453886b22047ab1aabf066e9f9149dfec144473467208f26fc46fe4a41ec",
+      "viewportRgbaSha256": "016e453886b22047ab1aabf066e9f9149dfec144473467208f26fc46fe4a41ec",
+      "matched": true
+    },
+    {
+      "kind": "tiktok",
+      "frame": 11028,
+      "fullPng": "evidence/viewport-proof/tiktok-full-f11028.png",
+      "viewportPng": "evidence/viewport-proof/tiktok-viewport-f11028.png",
+      "fullCropRgbaSha256": "6ebbacfbfb14ced3c4c6f2e94a2d1b8514327bd2683d2b2b17b97370a672f87f",
+      "viewportRgbaSha256": "6ebbacfbfb14ced3c4c6f2e94a2d1b8514327bd2683d2b2b17b97370a672f87f",
+      "matched": true
+    },
+    {
+      "kind": "tiktok",
+      "frame": 11340,
+      "fullPng": "evidence/viewport-proof/tiktok-full-f11340.png",
+      "viewportPng": "evidence/viewport-proof/tiktok-viewport-f11340.png",
+      "fullCropRgbaSha256": "63d50d0de0590e18eb6d54568398d55e1259a41397771647dd679a73ce670b57",
+      "viewportRgbaSha256": "63d50d0de0590e18eb6d54568398d55e1259a41397771647dd679a73ce670b57",
+      "matched": true
+    },
+    {
+      "kind": "tiktok",
+      "frame": 11631,
+      "fullPng": "evidence/viewport-proof/tiktok-full-f11631.png",
+      "viewportPng": "evidence/viewport-proof/tiktok-viewport-f11631.png",
+      "fullCropRgbaSha256": "81601010651d42b93eff99c5ab9189a39f2223265d130292fcac4e64088c08f4",
+      "viewportRgbaSha256": "81601010651d42b93eff99c5ab9189a39f2223265d130292fcac4e64088c08f4",
+      "matched": true
+    }
+  ],
+  "benchmarks": [
+    {
+      "kind": "youtube",
+      "output": "evidence/viewport-proof/youtube-benchmark-120f-lossless.mkv",
+      "range": [
+        9840,
+        9959
+      ],
+      "frames": 120,
+      "scale": 2,
+      "concurrency": 3,
+      "seconds": 6.804,
+      "framesPerSecond": 17.636684303350968,
+      "projectedFullTimelineMinutes": 10.992240000000002,
+      "stream": {
+        "width": 1664,
+        "height": 768,
+        "pix_fmt": "yuv444p",
+        "avg_frame_rate": "60/1",
+        "nb_read_frames": "120"
+      },
+      "sha256": "995191971e2bb7868d649a6354b91c99e4597d6a5883cde73e9424dc9cb39c25"
+    },
+    {
+      "kind": "tiktok",
+      "output": "evidence/viewport-proof/tiktok-benchmark-120f-lossless.mkv",
+      "range": [
+        9840,
+        9959
+      ],
+      "frames": 120,
+      "scale": 2,
+      "concurrency": 3,
+      "seconds": 4.051,
+      "framesPerSecond": 29.622315477659836,
+      "projectedFullTimelineMinutes": 6.544615555555556,
+      "stream": {
+        "width": 1896,
+        "height": 800,
+        "pix_fmt": "yuv444p",
+        "avg_frame_rate": "60/1",
+        "nb_read_frames": "120"
+      },
+      "sha256": "0cffe5719bf8bf722c6aa38694a5085fc8d8d93ee23bdba5c2b912c3e0c98ca3"
+    }
+  ],
+  "seconds": 30.243,
+  "limits": "Sixteen selected PNG comparisons prove identical captured RGBA pixels inside the listed rectangles at those frames. This is not an exhaustive proof over all frames or of pixels outside the rectangles. Benchmark projections are estimates, not promises. Opaque YUV444 overlay and final encoding require separate pixel/frame/audio verification."
+}

@@ -1,3 +1,6 @@
+// Historical v1.0 generator: reproduces the original 32-cue baseline only.
+// The corrected v1.1 timeline is rebuilt with scripts/build-revision-cues.ts.
+// Running this file overwrites the final cues and requires reapplying that revision.
 import {readFileSync,writeFileSync} from 'node:fs';
 import assert from 'node:assert/strict';
 import type {Cue,Word} from '../src/schema.ts';

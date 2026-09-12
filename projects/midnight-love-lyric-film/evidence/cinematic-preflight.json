@@ -1,0 +1,122 @@
+{
+  "passed": true,
+  "options": {
+    "method": "opaque-lyric-viewport",
+    "scale": 2,
+    "fps": 60,
+    "frames": 11632,
+    "totalBrowserTabs": 6,
+    "tabsPerFormat": 3,
+    "chunks": [
+      {
+        "part": 1,
+        "start": 0,
+        "end": 2907
+      },
+      {
+        "part": 2,
+        "start": 2908,
+        "end": 5815
+      },
+      {
+        "part": 3,
+        "start": 5816,
+        "end": 8723
+      },
+      {
+        "part": 4,
+        "start": 8724,
+        "end": 11631
+      }
+    ],
+    "viewports": {
+      "youtube": {
+        "x": 1024,
+        "y": 416,
+        "width": 832,
+        "height": 384,
+        "fullWidth": 1920,
+        "fullHeight": 1080
+      },
+      "tiktok": {
+        "x": 32,
+        "y": 1135,
+        "width": 948,
+        "height": 400,
+        "fullWidth": 1080,
+        "fullHeight": 1920
+      }
+    },
+    "frozenInputManifestSha256": "10c5e49f95f2d3f91143ad23350ca7ae2af2277b4be0e05640ae258080061a5c"
+  },
+  "geometry": [
+    {
+      "kind": "youtube",
+      "minimumGlyphMarginPixels": 29,
+      "requiredMarginPixels": 24,
+      "closingTitleContained": true
+    },
+    {
+      "kind": "tiktok",
+      "minimumGlyphMarginPixels": 32,
+      "requiredMarginPixels": 24,
+      "closingTitleContained": true
+    }
+  ],
+  "preservedInputs": [
+    {
+      "path": "src/config.ts",
+      "sha256": "8793a139a52eafae5e1435ce99258af7d1a999ecca5f9f528d91448f49a5a6fc"
+    },
+    {
+      "path": "src/timing.ts",
+      "sha256": "79e9956859ba44b778af9a0bb8dca9934ffd58aa14ce37f4340f7f47215eede1"
+    },
+    {
+      "path": "src/schema.ts",
+      "sha256": "6182bff10f050882845cc898a4ea1c8f2d33c79a3bbf285cbc646e6917f1fda1"
+    },
+    {
+      "path": "public/science.json",
+      "sha256": "f77bb78e03a2ff6063d903a7a0df6da32c6c3bc280bbb771a6cb2073a475824b"
+    },
+    {
+      "path": "public/motion.json",
+      "sha256": "3c54406b96fa03e954d85b82b231cd8eb5c438347dc609275139ff505ac05db0"
+    },
+    {
+      "path": "public/soundtrack.m4a",
+      "sha256": "9e2eb53ea89f31bfc6f8fa5b80fabc6a80fce6bb48c5a9188a64e57bf39fbdb7"
+    },
+    {
+      "path": "public/source-video.webm",
+      "sha256": "0bd4382fc99a014c92a2ffbc1b6828aab6e1cc86508403601f95d18f4efad487"
+    },
+    {
+      "path": "public/SpaceGrotesk.ttf",
+      "sha256": "acad6de1fc93436f5c0f1f4137751ef04f1aea3063e7036535970ffcfbd79f72"
+    },
+    {
+      "path": "public/CormorantGaramond-Semibold.ttf",
+      "sha256": "69e7ae35cba23d962227b86f99217c250e642e4c6f6104b4f3ec465039e4e2d8"
+    },
+    {
+      "path": "public/CormorantGaramond-Italic.ttf",
+      "sha256": "14efb9443652199ade5bc6ba8637b4084acce40a58368a3808f84f55667e3e90"
+    }
+  ],
+  "oldMasters": [
+    {
+      "kind": "youtube",
+      "path": "../midnight-love/evidence/youtube-master-lossless.mkv",
+      "sha256": "e2162d0e1387efbcd90c50891cc539c87e32ec4cdb22398363a3ad0cf82c8196"
+    },
+    {
+      "kind": "tiktok",
+      "path": "../midnight-love/evidence/tiktok-master-lossless.mkv",
+      "sha256": "bfe62b1b094f2e846b2d7d71426675aeccf0a5ee3dd7ba29cc834d23a0cfdaf4"
+    }
+  ],
+  "viewportProofSha256": "ddb8b7cec2849c1ef975e1eb47800de5eef20fb0052511d65605b7078d44c50c",
+  "changeScope": "Only lyric words, active-word underline removal and closing-title timing differ; these are enclosed by the verified viewport. All other Film code and original background/motion/audio inputs match v1.0."
+}
