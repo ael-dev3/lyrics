@@ -1,0 +1,22 @@
+{
+  "tool": "Built-in image generation",
+  "model": "Not exposed by tool",
+  "reference": "evidence/source-120.png",
+  "assets": [
+    {
+      "kind": "YouTube",
+      "prompt": "Use case: ads-marketing. Create a polished cinematic 16:9 YouTube thumbnail for Oliver Tree — Joyride, 1920x1080 or larger same ratio. The input is a reference frame from the official music video: preserve Oliver Tree's recognizable face, huge rounded dark hair/hat, tiny black sunglasses, red headband, red Persian-carpet-pattern suit, dramatic teal cloudy sky and fire torch. Compose a sharp expressive close portrait mainly on the right, the flame a secondary warm accent, natural photographic texture and bold restrained editorial design. Leave clean integrated deep teal space on the left for very large cream condensed sans-serif typography. Exact text: 'JOYRIDE' as the dominant headline, 'OLIVER TREE' above, 'ENGLISH LYRICS' small below. All text fully within generous 7% safe margins; JOYRIDE especially readable at 320x180. Palette deep teal #101b1c, muted turquoise #3f7772, cream #f0e9d6, coral red #f16e50, with natural skin and flame. Premium music-film artwork, source-inspired, clean contrast, subtly textured. No logos, official badges, invented credits, frames, lyric karaoke bars or interface."
+    },
+    {
+      "kind": "TikTok profile",
+      "prompt": "Use case: ads-marketing. Create a dedicated PORTRAIT TikTok profile cover, exactly 1200 pixels wide by 1600 tall or a larger 3:4 width:height ratio. This is a tall cover, not a landscape 4:3. For Oliver Tree — Joyride. Input image is the official music-video reference. Preserve Oliver Tree's recognizable face, exaggerated rounded dark hair/hat, small black sunglasses, red headband, red Persian-carpet-pattern suit and teal stormy sky. Cinematic photographic editorial poster: large expressive face and red suit in the middle, warm flame at one side, calm deep teal space above/below, no clutter. Exact text: 'OLIVER TREE' clear cream condensed sans-serif at top, 'JOYRIDE' very large cream condensed sans-serif across lower-middle, 'ENGLISH LYRICS' small beneath. Keep the entire title, artist and face within the central 84% width and 88% height, legible at 150x200 and after 5% edge crop. Palette deep teal #101b1c, muted turquoise #3f7772, cream #f0e9d6, coral red #f16e50 with natural photographic skin/flame tones. No logos, badges, invented credits, frame, interface or karaoke bars."
+    }
+  ],
+  "revision": {
+    "tool": "Built-in image generation",
+    "model": "Not exposed by tool",
+    "reference": "analysis/covers/tiktok-generated.png",
+    "selected": "analysis/covers/tiktok-safe-generated.png",
+    "prompt": "Edit this existing TikTok cover only to improve crop safety. Preserve the exact photographic face, hair, outfit, torch, sky, typography style, color palette and all exact text. Keep a PORTRAIT 3:4 width:height canvas (ideally 1200x1600). Move/reduce the OLIVER TREE heading enough that its TOP is at least 9% of canvas height from the top edge and its full width fits between 10% and 90% of canvas width. Move the ENGLISH LYRICS footer upward so its BOTTOM is at most 90% of canvas height. Keep JOYRIDE fully within the same 10% horizontal margins. The face and title must remain large and recognizable. Extend matching teal sky/background where needed. All critical text must survive a centered crop removing 5% from each edge. Do not add any text, border, badge or logo. Do not change identity or recreate a different scene."
+  }
+}

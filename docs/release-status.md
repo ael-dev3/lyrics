@@ -1,9 +1,11 @@
 # Release status and version notes
 
-Checked against the GitHub release inventory on 11 September 2026. Source documentation and published binary assets can represent different revisions; use an edition's release source archive when reproducing its movie.
+The historical inventory was checked on 11 September 2026; the Joyride and Midnight Love entries link their subsequent per-release verification receipts. Source documentation and published binary assets can represent different revisions; use an edition's release source archive when reproducing its movie.
 
 | Project / version | Status | Where to start |
 | --- | --- | --- |
+| Joyride `joyride-v1.0.0` | Complete YouTube and TikTok films, source-referenced covers, captions, original media and production archive | [Release](https://github.com/ael-dev3/lyrics/releases/tag/joyride-v1.0.0) · [Production record](../projects/joyride-lyric-film/README.md) · [Downloaded-asset verification](../projects/joyride-lyric-film/evidence/release-upload-verification.json) |
+| midnight love `midnight-love-v1.1.0` | Corrected ending and cinematic color-only focus in both editions; supersedes v1.0.0 | [Release](https://github.com/ael-dev3/lyrics/releases/tag/midnight-love-v1.1.0) · [Production record](../projects/midnight-love-lyric-film/README.md) · [Downloaded-asset verification](../projects/midnight-love-lyric-film/evidence/release-upload-verification.json) |
 | Пожары `pozhary-v1.0.0` | Landscape and TikTok editions, covers, captions, original source and complete production archive | [Release](https://github.com/ael-dev3/lyrics/releases/tag/pozhary-v1.0.0) · [Production record](../projects/pozhary-lyric-film/README.md) |
 | Отменяй `otmenyai-v1.0.0` | Published; landscape master, publishing assets, original source and complete production archive | [Release](https://github.com/ael-dev3/lyrics/releases/tag/otmenyai-v1.0.0) · [Inventory](otmenyai-release-files.md) |
 | Roi × Adore `roi-adore-rebuild-v1.0.0` | Published; landscape and TikTok assets available | [Release](https://github.com/ael-dev3/lyrics/releases/tag/roi-adore-rebuild-v1.0.0) · [Inventory](roi-adore-release-files.md) |

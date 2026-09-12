@@ -1,0 +1,31 @@
+{
+  "fps": 60,
+  "frames": 8932,
+  "compositions": [
+    "JoyrideYouTube",
+    "JoyrideTikTok"
+  ],
+  "scale": 2,
+  "segmentsPerComposition": 8,
+  "maximumWorkers": 2,
+  "concurrencyPerWorker": 3,
+  "maximumTotalTabs": 6,
+  "frameCapture": "PNG",
+  "intermediate": {
+    "codec": "H.264",
+    "pixelFormat": "yuv444p",
+    "crf": 0,
+    "preset": "ultrafast",
+    "colorSpace": "bt709",
+    "muted": true
+  },
+  "decodeLimits": {
+    "offthreadVideoCacheBytes": 536870912,
+    "mediaCacheBytes": 134217728,
+    "decodeThreads": 2,
+    "timeoutMilliseconds": 120000
+  },
+  "captureReuse": "evidence/recovery/capture-reuse.json",
+  "delivery": "Concatenate lossless segments, then scripts/encode.ts performs the single downsample and locked-audio delivery encode.",
+  "bundlePolicy": "One shared bundle for layout, composition discovery and every render worker."
+}

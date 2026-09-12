@@ -1,0 +1,14 @@
+import {readFileSync,writeFileSync} from 'node:fs';
+import assert from 'node:assert/strict';
+type W={word:string;start:number;end:number;probability?:number};
+const norm=(s:string)=>s.toLowerCase().replace(/[^a-z']/g,'');
+const observed=(JSON.parse(readFileSync('analysis/full-vocals16.json','utf8')) as {segments:{words:W[]}[]}).segments.flatMap(s=>s.words).filter(w=>norm(w.word));
+const lines=readFileSync('analysis/lyrics-user-en.txt','utf8').trim().split('\n');
+let k=0;
+const refs=lines.map((text,i)=>{const words=text.split(/\s+/).map(word=>{const w=observed[k++];assert(w);assert.equal(norm(word),norm(w.word));return {...w,word};});return {id:`L${String(i+1).padStart(2,'0')}`,text,start:words[0]?.start??0,end:words.at(-1)?.end??0,words};});
+assert.equal(k,observed.length);
+writeFileSync('analysis/attention-by-line.json',JSON.stringify({segments:refs},null,2));
+console.log(refs.map(s=>`${s.id} ${s.start.toFixed(3)}–${s.end.toFixed(3)} ${s.text}`).join('\n'));
+const windows=refs.map(s=>({id:s.id,text:s.text,start:Math.max(0,s.start-.3),end:s.end+.22}));
+writeFileSync('analysis/windows.json',JSON.stringify(windows,null,2));
+writeFileSync('analysis/window-method.md','# Phrase windows\n\nThe 44 user-supplied lines were located by full-track Whisper large-v3-turbo attention alignment on the vocal stem. Each model search window extends 300 ms before and 220 ms after that phrase candidate. These margins permit independent CTC encoders to find the word contacts rather than inheriting attention starts, which can absorb preceding silence. Every repeated chorus is aligned on its own audio window; no word timestamps are copied from another occurrence.\n\nThe transcription-only pass was used for navigation and to identify possible gaps, never to replace the supplied wording. Its isolated 146.68 s lyric line is absent from the supplied text and full text-constrained alignment; it is not introduced into the lyric film.\n');

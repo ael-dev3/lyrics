@@ -1,0 +1,37 @@
+{
+  "assets": [
+    {
+      "file": "Joyride-YouTube-Thumbnail-1920x1080.jpg",
+      "width": 1920,
+      "height": 1080,
+      "pixelFormat": "yuvj444p",
+      "rotationMetadata": [],
+      "bytes": 472782,
+      "sha256": "0323cc5ad3f6ef7a8310db788685bc773d25ff40f18fff6a525e6b7039358612",
+      "generatedOriginal": "analysis/covers/youtube-generated.png",
+      "review": "Correct title and artist; recognizable face; local native and small-size review. No app-upload preview claimed."
+    },
+    {
+      "file": "Joyride-TikTok-Cover-Profile-1200x1600.jpg",
+      "width": 1200,
+      "height": 1600,
+      "pixelFormat": "yuvj444p",
+      "rotationMetadata": [],
+      "bytes": 442834,
+      "sha256": "74f3b81dd5460a844402746a93c31de22b96b8018b5796b2ef2d5f387291b32f",
+      "generatedOriginal": "analysis/covers/tiktok-safe-generated.png",
+      "review": "Correct title and artist; recognizable face; local native and small-size review. No app-upload preview claimed."
+    }
+  ],
+  "reviewedImages": [
+    "evidence/youtube-cover-small.png",
+    "evidence/tiktok-cover-150x200.png",
+    "evidence/tiktok-cover-300x400.png",
+    "evidence/tiktok-cover-crop-preview.png",
+    "evidence/tiktok-cover-crop-300x400.png"
+  ],
+  "portraitCrop": "Centered crop removes 5% on all four edges; title, artist and face survive. Local simulation, not platform verification.",
+  "prompts": "analysis/cover-prompts.json",
+  "export": "FFmpeg Lanczos to exact dimensions; JPEG quality 2, no rotation dependency.",
+  "rights": "AI-assisted adaptations of original source imagery; excluded from the scoped CC BY 4.0 grant."
+}

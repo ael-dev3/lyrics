@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "contactCases": 18,
+  "boundaryStates": 72,
+  "clocks": [
+    "48000/60",
+    "44100/60",
+    "48000/120"
+  ],
+  "checks": [
+    "Sample authority immutable",
+    "Nearest-frame visibility and focus agree",
+    "Zero-lead contact is fully opaque",
+    "Exclusive end hands off on the same frame",
+    "Grouped words share contact and release",
+    "Normal entrance settles by contact"
+  ],
+  "limitation": "Synthetic presentation checks do not establish acoustic alignment accuracy."
+}

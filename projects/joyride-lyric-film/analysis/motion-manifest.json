@@ -1,0 +1,30 @@
+{
+  "sourcePcmSha256": "e34690ed442f47240fbfcfe99992483c61cfc0b70e31318adee4cc39b56bee92",
+  "fps": 60,
+  "fields": [
+    "pressure",
+    "impact",
+    "lowEnd",
+    "brightness",
+    "hero",
+    "lineWidthPx",
+    "coreThicknessPx"
+  ],
+  "sustained": "Centered 400ms stereo RMS, dBFS; track-relative P60/P96; 75ms attack, 320ms release artistic smoothing",
+  "thresholds": {
+    "p60": -12.478040566126754,
+    "p96": -10.542880993789046,
+    "p995": -10.080023411814963,
+    "p80": 0.22414458077353688,
+    "p99": 0.27257547097288837,
+    "low50": 0.03202814169877052,
+    "low95": 0.11004500194543529
+  },
+  "transients": "1ms stereo-energy blocks; novelty against prior25ms; local sample-peak refinement;180ms exclusion; stored real-music uncertainty12ms is detector scope, not perceptual certainty",
+  "impact": "Apex on nearest60fps frame; 33.333ms anticipation;55ms exponential decay, zero by240ms",
+  "heroFraction": 0,
+  "syntheticImpulseMaxErrorMs": 0,
+  "eventCount": 483,
+  "sha256": "9d1792020a24fcef172ff53076f7326808e38d6c9ab11131c4b9eaa16289ed76",
+  "separation": "Artistic controls never modify raw measured band levels"
+}

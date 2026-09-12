@@ -4,7 +4,33 @@ Music films with synchronized lyrics, meaning-linked translations, and audio-rea
 
 **Current style default:** [cinematic lyric presentation](docs/cinematic-lyric-workflow.md) — stable, color-only word or phrase emphasis, precise vocal timing, smooth scene shading and equally prominent bilingual lyrics. The guide includes the final Midnight Love reference and review requirements for future tracks.
 
-[**midnight love**](#midnight-love) · [**Пожары**](#пожары) · [**Отменяй**](#отменяй) · [**Roi × Adore**](#roi--adore) · [**TikTok edition**](#tiktok-edition) · [**Tanisea**](#tanisea) · [**Build and workflow**](#build-and-workflow)
+[**Joyride**](#joyride) · [**midnight love**](#midnight-love) · [**Пожары**](#пожары) · [**Отменяй**](#отменяй) · [**Roi × Adore**](#roi--adore) · [**TikTok edition**](#tiktok-edition) · [**Tanisea**](#tanisea) · [**Build and workflow**](#build-and-workflow)
+
+## Joyride
+
+**Oliver Tree — Joyride · English lyrics**
+
+A cinematic lyric film shaped by the official video's teal courtyard, patterned red clothing and fire imagery. Large cream words turn coral with the vocal; continuous shading blends the performance into a stable reading area. Dedicated landscape and portrait compositions share the full recording and a calibrated 64-band spectrum.
+
+![Joyride: coral lyric focus alongside Oliver Tree's original performance](assets/joyride-120.png)
+
+*Decoded final YouTube frame at 02:00. Original song, performance and music video by Oliver Tree and the credited production crew; added lyric presentation by Ael, assisted with Codex.*
+
+| Edition | Format | Timeline | Lyrics |
+| --- | --- | --- | --- |
+| YouTube | 1920×1080 · 60 fps | 2:28.85 recording · 8,932 video frames | 395 supplied English words in 70 cues |
+| TikTok | 1080×1920 · 60 fps | Same complete recording | Dedicated portrait composition; 323 focus groups |
+
+The original 2880×2160 footage keeps its 25 fps cadence; new graphics run at 60 fps. Word timing combines independent vocal/mix alignment, an English acoustic encoder and waveform review. Model uncertainty remains documented, and the full intro and ending are audited separately. Both films use stable color-only emphasis without lyric underlines or word boxes.
+
+| Download | Contents |
+| --- | --- |
+| [YouTube film](https://github.com/ael-dev3/lyrics/releases/download/joyride-v1.0.0/Joyride-YouTube-1920x1080-60fps.mp4) · [TikTok film](https://github.com/ael-dev3/lyrics/releases/download/joyride-v1.0.0/Joyride-TikTok-1080x1920-60fps.mp4) | Complete 1080p60 editions with the same locked soundtrack |
+| [YouTube thumbnail](projects/joyride-lyric-film/publishing/Joyride-YouTube-Thumbnail-1920x1080.jpg) · [TikTok profile cover](projects/joyride-lyric-film/publishing/Joyride-TikTok-Cover-Profile-1200x1600.jpg) | Source-referenced covers; portrait profile target **1200×1600** |
+| [YouTube title](projects/joyride-lyric-film/publishing/Joyride-YouTube-Title.txt) · [description](projects/joyride-lyric-film/publishing/Joyride-YouTube-Description.txt) · [TikTok copy](projects/joyride-lyric-film/publishing/Joyride-TikTok-Description.txt) | Concise artist credits and AI disclosure |
+| [Complete production archive](https://github.com/ael-dev3/lyrics/releases/download/joyride-v1.0.0/Joyride-Complete-Production.zip) · [original source](https://github.com/ael-dev3/lyrics/releases/download/joyride-v1.0.0/Joyride-Original-Source.mkv) | Editable source, original media, fonts, stems, timing decisions, review evidence and final files |
+
+[Production notes and reproduction](projects/joyride-lyric-film/README.md) · [Verification and limits](projects/joyride-lyric-film/evidence/final-verification.md) · [Source creators](projects/joyride-lyric-film/CREDITS-SOURCE.md) · [Release](https://github.com/ael-dev3/lyrics/releases/tag/joyride-v1.0.0)
 
 ## midnight love
 
@@ -189,6 +215,7 @@ Each project has its own setup instructions. Use the release source archive when
 
 | Project | Starting point |
 | --- | --- |
+| Joyride | Follow the [reproduction steps](projects/joyride-lyric-film/README.md#reproduce); full-recording coverage, sample-based color focus, original video and separate landscape/portrait compositions |
 | Midnight Love | Follow the [v1.1.0 reproduction steps](projects/midnight-love-lyric-film/README.md#reproduction); includes the restored ending, cinematic focus and verified landscape/portrait delivery |
 | Пожары | Follow the [reproduction steps](projects/pozhary-lyric-film/README.md#reproduction); both aspect ratios share finalized cues and audio features |
 | Отменяй | Use the complete production archive and its [reproduction steps](projects/otmenyai-lyric-film/README.md#reproduction); finalized cues and features are included |
@@ -216,6 +243,8 @@ The reusable workflow covers soundtrack locking, lyric alignment, semantic trans
 
 ```text
 assets/                          Film screenshots and artwork
+projects/joyride-lyric-film/       Joyride source, both publishing kits and evidence
+projects/midnight-love-lyric-film/ Midnight Love source, restored ending and evidence
 projects/pozhary-lyric-film/       Пожары source, both publishing kits and evidence
 projects/otmenyai-lyric-film/      Отменяй source, publishing copy and evidence
 projects/roi-adore-rebuild/       Roi × Adore source and evidence snapshot
@@ -241,6 +270,8 @@ Our authored workflow documentation, code, prompts, reusable visual contribution
 
 ## Original creators and source credits
 
+- **Oliver Tree — Joyride:** [official music video and production credits](https://www.youtube.com/watch?v=TIipwQUU9mc) · [listening / support links](https://olivertree.lnk.to/Joyride).
+- **girl in red — midnight love:** [official song and visual](https://www.youtube.com/watch?v=9256X67IQdQ); original description credits the photograph to **Fabian Fjeldvik**.
 - **ray! — Пожары:** [official audio and artwork](https://www.youtube.com/watch?v=ml9TqzvJLCg) · [official release links](https://hangov3r.band.link/pojari).
 - **REDCHINAWAVE — Отменяй:** [official audio and source artwork](https://www.youtube.com/watch?v=U9SYUPV0QrA) · [artist links](https://linktr.ee/redchinawave).
 - **VIDEOCLUB — Roi:** [official music video](https://www.youtube.com/watch?v=4NOMFBRfaT0).

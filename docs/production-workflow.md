@@ -243,6 +243,10 @@ Validate the composition before the production render:
 npm run check
 ```
 
+For parallel renders containing high-resolution source video, budget decoder memory **per worker**. An automatic cache sized from available system RAM can be multiplied across workers. Set explicit video/media cache limits, keep decode threads bounded, and use shorter contiguous segments when needed. A short throughput benchmark does not establish sustained memory stability. The [Joyride production record](../projects/joyride-lyric-film/README.md#reproduce) documents a 512 MiB source-video cache per worker and eight segments per composition after an interrupted run.
+
+Preserve the original frozen-input record before recovering captures. Reuse only a complete, verified frame sequence whose composition, media and dependency hashes still match; compare sampled native pixels against fresh renders and check the recovered intermediate's color conversion. Keep a recovery receipt and make clean reproduction independent of temporary caches. After concatenating segments, rebuild the final timestamps from integer frame indices and verify every decoded timestamp against the delivery clock.
+
 For broad compatibility, use H.264. For a smaller Mac- and modern-device-friendly delivery, use HEVC and tag the stream as `hvc1` during the final mux. In either case, pin PNG browser frames and BT.709; otherwise the render may introduce a lossy JPEG generation and the wrong implicit colour conversion before codec compression.
 
 Direct high-quality compact review render:

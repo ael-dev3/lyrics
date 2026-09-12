@@ -2,6 +2,12 @@
 
 This is an **AI-assisted lyric-film and workflow project**. It should not be described as entirely hand-coded, manually timed or hand-illustrated.
 
+## Joyride production
+
+The Joyride landscape and portrait films were developed with **OpenAI Codex (GPT-6 Astra)**. Assistance covered TypeScript implementation, comparison of audio-model observations, sample-timing decisions, waveform and visual inspection, publishing copy and documentation. Stored evidence distinguishes model estimates and display rounding from proven acoustic boundaries; no human/native-listener audition is claimed.
+
+The original Oliver Tree music video and full recording are retained. Original footage remains 25 fps while added graphics run at 60 fps. Separate covers use built-in image generation with a source frame as reference; its underlying model version was not exposed. No synthetic singing replaces the performance. [Methods and limits](projects/joyride-lyric-film/README.md) · [Exact cover prompts](projects/joyride-lyric-film/analysis/cover-prompts.json) · [Creator credits](projects/joyride-lyric-film/CREDITS-SOURCE.md).
+
 ## midnight love production
 
 The girl in red landscape and portrait editions use OpenAI Codex (GPT-6 Astra) for TypeScript implementation, reconciliation of timing observations, visual review and publishing material. Whisper/stable-ts, mix and vocal MMS-FA, and an independent English wav2vec2 encoder provide alignment evidence. Demucs supplies a vocal analysis stem. Model agreement and frame quantization do not prove exact acoustic boundaries; short vowels and sustained endings retain documented uncertainty.

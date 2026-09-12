@@ -2,6 +2,14 @@
 
 **We are not the creators of the original music, lyrics, performances, musical remixes, anime footage, characters or source illustrations. We do not take credit for that work.** Our contribution is the additional lyric-film presentation and production workflow. Artist and source-upload links below distinguish those roles; a source uploader is not necessarily the owner of every element in an upload.
 
+## Joyride
+
+**Oliver Tree** is the original artist, performer, music-video director and writer. [Official video and production credits](https://www.youtube.com/watch?v=TIipwQUU9mc) · [Listening / support links](https://olivertree.lnk.to/Joyride) · [Artist channel](https://www.youtube.com/@OliverTree).
+
+The official video credits **WMW studio** for production and **Alien Boy Films** for post-production. The [track's full credit record](projects/joyride-lyric-film/CREDITS-SOURCE.md) preserves the named crew and distinguishes video-post roles from unestablished music-writing credits.
+
+**Ael** adds the lyric presentation and production workflow, assisted by **OpenAI Codex (GPT-6 Astra)**. The original recording and 25 fps footage are retained; added graphics run at 60 fps. Covers are AI-assisted source adaptations. We take no credit for the original song, lyrics, recording, performance or footage, and imply no artist affiliation or endorsement. These works, complete films and source-derived covers are excluded from the repository's scoped CC BY 4.0 grant. [Production and software record](projects/joyride-lyric-film/README.md).
+
 ## midnight love
 
 | Contribution | Credit and source |

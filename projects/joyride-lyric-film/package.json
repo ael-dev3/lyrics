@@ -1,0 +1,37 @@
+{
+  "name": "oliver-tree-joyride-lyric-film",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "features": "node scripts/analyze.ts && node scripts/motion.ts",
+    "render": "node scripts/render.ts",
+    "verify": "node scripts/verify.ts",
+    "alignment:verify": "node scripts/check.ts",
+    "check": "npm run typecheck && npm run compositions && node scripts/check.ts && node scripts/dsp-test.ts && node scripts/layout.ts",
+    "render:all": "node scripts/render-all.ts",
+    "encode": "node scripts/encode.ts",
+    "captions": "node scripts/captions.ts",
+    "compositions": "remotion compositions src/index.tsx",
+    "prerender": "npm run typecheck",
+    "prerender:all": "npm run typecheck"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.518",
+    "@remotion/media": "4.0.518",
+    "@remotion/media-utils": "4.0.518",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "remotion": "4.0.518",
+    "@remotion/bundler": "4.0.518",
+    "@remotion/renderer": "4.0.518"
+  },
+  "devDependencies": {
+    "@types/node": "26.4.0",
+    "@types/react": "19.2.18",
+    "@types/react-dom": "19.2.5",
+    "typescript": "7.0.2",
+    "vitest": "4.1.11"
+  }
+}

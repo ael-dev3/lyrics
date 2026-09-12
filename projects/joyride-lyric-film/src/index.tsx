@@ -1,0 +1,8 @@
+import React from 'react';
+import {Composition,registerRoot} from 'remotion';
+import {Film} from './Film';
+import {LayoutAudit} from './LayoutAudit';
+import cues from './cues.json';
+import {FRAMES,FPS} from './config';
+const Root:React.FC=()=> <><Composition id="JoyrideYouTube" component={Film} width={1920} height={1080} fps={FPS} durationInFrames={FRAMES}/><Composition id="JoyrideTikTok" component={Film} defaultProps={{portrait:true}} width={1080} height={1920} fps={FPS} durationInFrames={FRAMES}/><Composition id="LayoutYouTube" component={LayoutAudit} width={1920} height={1080} fps={FPS} durationInFrames={Math.max(2,cues.length*2)}/><Composition id="LayoutTikTok" component={LayoutAudit} defaultProps={{portrait:true}} width={1080} height={1920} fps={FPS} durationInFrames={Math.max(2,cues.length*2)}/></>;
+registerRoot(Root);

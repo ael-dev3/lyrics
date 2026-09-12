@@ -1,0 +1,18 @@
+import assert from 'node:assert/strict';
+import {readFileSync,writeFileSync,statSync} from 'node:fs';
+import {execFileSync} from 'node:child_process';
+import {hashFile} from './record-render-inputs.ts';
+import {RenderInternals} from '@remotion/renderer';
+import {resolve} from 'node:path';
+const cache=process.argv[2];assert(cache,'Provide the interrupted PNG capture directory.');
+const old=JSON.parse(readFileSync('evidence/recovery/original-render-inputs.json','utf8'));
+for(const row of old.inputs.filter((x: {path:string})=>x.path.startsWith('src/')||x.path.startsWith('public/')||['package.json','package-lock.json','tsconfig.json'].includes(x.path)))assert.equal(await hashFile(row.path),row.sha256);
+const pngProof=JSON.parse(readFileSync('evidence/recovery/png-proof.json','utf8'));assert(pngProof.sampledPixelsIdentical);assert.equal(pngProof.frames.length,1116);
+for(const row of pngProof.frames)assert.equal(await hashFile(`${cache}/element-${String(row.frame).padStart(4,'0')}.png`),row.sha256);
+const started=Date.now(),file='evidence/youtube-part-1.mkv';
+await RenderInternals.callFf({bin:'ffmpeg',binariesDirectory:null,indent:false,logLevel:'error',cancelSignal:undefined,options:{stdio:'inherit'},args:['-y','-v','error','-framerate','60','-start_number','0','-i',resolve(cache,'element-%04d.png'),'-frames:v','1116','-an','-vf','zscale=matrix=709:matrixin=709:range=limited','-c:v','libx264','-preset','ultrafast','-crf','0','-pix_fmt','yuv444p','-colorspace:v','bt709','-color_primaries:v','bt709','-color_trc:v','bt709','-color_range','tv',resolve(file)]});
+const probe=JSON.parse(execFileSync('ffprobe',['-v','error','-count_frames','-show_streams','-of','json',file],{encoding:'utf8'})).streams[0];
+assert.equal(Number(probe.nb_read_frames),1116);assert.equal(probe.width,3840);assert.equal(probe.height,2160);assert.equal(probe.pix_fmt,'yuv444p');
+writeFileSync('evidence/recovery/capture-reuse.json',JSON.stringify({file,sha256:await hashFile(file),bytes:statSync(file).size,frames:1116,range:[0,1115],sampledPixelsIdentical:true,pixelChecks:pngProof.proofs,capturedPngHashes:pngProof.frames,originalInputManifestSha256:await hashFile('evidence/recovery/original-render-inputs.json'),failure:'Default per-worker source-video caches coincided with browser crashes and a decoder timeout. The final run caps decoding caches and uses shorter segments.',reuse:'Complete consecutive 2× PNG prefix from the interrupted frozen composition. Three fresh native RGB captures match exactly; PNGs are losslessly encoded with the renderer color conversion. Current source/media hashes match the original frozen inputs.',scope:'Intermediate recovery optimization only. A clean reproduction renders all eight segments; no temporary capture paths or cache files are required in the archive.'},null,2));
+writeFileSync('evidence/youtube-part-1.json',JSON.stringify({seconds:(Date.now()-started)/1000,range:[0,1115],frames:1116,scale:2,losslessReference:true,recoveredCapture:true,sharedBundle:false,originalCapture:'evidence/recovery/original-render-inputs.json',reuseProof:'evidence/recovery/capture-reuse.json'},null,2));
+console.log({frames:1116,recovered:true});

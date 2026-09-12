@@ -1,0 +1,53 @@
+{
+  "cueSha256": "a569d166cddfcac2d7b2e65c3626a6241f6f3c14c633a64b27568989a01546c6",
+  "filmSha256": "6aff37857e8e75945144393a8e7d158df304fb407dc1bf4832a4f1a1c3454942",
+  "windows": [
+    {
+      "kind": "YouTube",
+      "start": 11,
+      "end": 26,
+      "frames": 900
+    },
+    {
+      "kind": "TikTok",
+      "start": 116,
+      "end": 131,
+      "frames": 900
+    }
+  ],
+  "visualMethod": "Two 30-frame contact sheets at 2 Hz plus native decoded stills; 280 active/inactive DOM geometry states across every cue. Color-only focus, no glyph movement, source-edge blending, contrast over daylight and fire footage, and final vocal release reviewed.",
+  "findings": [
+    "Landscape source top repositioned to frame edge before preview; no hard crop edge appears in reviewed frames.",
+    "Portrait gradients fully conceal source top and bottom edges before they reach the canvas.",
+    "Cream inactive and coral active words remain readable.",
+    "Final supplied phrase remains visible through its selected held-vowel release; original fire sequence is retained afterward."
+  ],
+  "synchronizationMethod": "Five alignment observations per line plus reviewed 5 ms vocal energy, documented sample selection, and 323 frame-domain contact checks. Preview movies contain the matching locked AAC segment.",
+  "limits": "No claim of real-time human auditory audition. Contact sheets do not verify hearing or every intervening frame. Final decoded-film review and media verification remain separate gates.",
+  "files": [
+    {
+      "file": "evidence/Joyride-YouTube-Preview.mp4",
+      "sha256": "a9c3a9e9824fc2500a362504a802387b56c307057289eeef13ff7891a7b111ab"
+    },
+    {
+      "file": "evidence/Joyride-TikTok-Preview.mp4",
+      "sha256": "a6f97b6f716bd77f714e6daf6f067646673dd08cd7d76d0780a0b16392341097"
+    },
+    {
+      "file": "evidence/youtube-preview-contact.png",
+      "sha256": "293f4712cdea2eaa6f73a2eb32dc00be1e97daa8bf392f177d9df0d9e813efbe"
+    },
+    {
+      "file": "evidence/tiktok-preview-contact.png",
+      "sha256": "26b2eef5686c9700296c204fdc0064637cda57d3d229fb9e170cc357c51126a7"
+    },
+    {
+      "file": "evidence/youtube-corrected-preview.png",
+      "sha256": "25529c1187c82cb7b467a92fa519eed43faec2ebcd5408941d2408c8f68c385d"
+    },
+    {
+      "file": "evidence/tiktok-corrected-preview.png",
+      "sha256": "4b8af0dcf2fb88b4bf75d4ad7f3113e02217f97479bd8a5a3639e22d68f60a44"
+    }
+  ]
+}
