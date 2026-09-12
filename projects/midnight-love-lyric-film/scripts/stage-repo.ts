@@ -1,0 +1,14 @@
+import {cpSync,mkdirSync,readdirSync,writeFileSync,readFileSync} from 'node:fs';
+import {resolve,join} from 'node:path';
+const repo=resolve(process.env.LYRICS_REPO??'../lyrics'),dest=join(repo,'projects/midnight-love-lyric-film');
+mkdirSync(dest,{recursive:true});
+for(const p of ['src','scripts','README.md','SOFTWARE.md','package.json','package-lock.json','tsconfig.json','source.json'])cpSync(p,join(dest,p),{recursive:true});
+for(const dir of ['public','analysis','evidence','publishing'])mkdirSync(join(dest,dir),{recursive:true});
+for(const p of ['source-frame.png','science.json','motion.json','SpaceGrotesk.ttf','CormorantGaramond-Semibold.ttf','CormorantGaramond-Italic.ttf','SpaceGrotesk-OFL.txt','CormorantGaramond-OFL.txt'])cpSync('public/'+p,join(dest,'public',p));
+for(const p of ['lyrics-user-en.txt','windows.json','window-method.md','full-audio16.json','full-vocals16.json','bounded-vocals16.json','mms-vocals16.json','mms-audio16.json','wav2vec-vocals16.json','alignment-decisions.json','repeated-vocal-correlation.json','manifest.json','motion-manifest.json','events.json','vocal-rms-5ms.json','cover-prompts.json','cover-youtube-generated.png','cover-tiktok-generated.png'])cpSync('analysis/'+p,join(dest,'analysis',p));
+const evidence=['youtube-final-44.png','tiktok-final-44.png','source-contact.jpg','smooth-preview-contact.jpg','opening-preview-contact.jpg','vocal-boundary-review.svg','vocal-boundary-review.png','profile-150x200.png','profile-crop-300x400.png','thumbnail-320x180.png','layout-YouTube.json','layout-TikTok.json','timing-checks.json','audio-timing-check.json','dsp-checks.log','cover-verification.json','final-verification.md','youtube-final-contact-sheet.png','tiktok-final-contact-sheet.png','render-inputs.json','encoded-frame-review.json','intro-revision.json','Film-before-title-handoff.txt'];
+for(const p of readdirSync('evidence'))if(evidence.includes(p)||p.endsWith('-verification.json'))cpSync('evidence/'+p,join(dest,'evidence',p));
+for(const p of readdirSync('output'))if(/\.(jpg|txt|srt|json)$/.test(p))cpSync('output/'+p,join(dest,'publishing',p));
+writeFileSync(join(dest,'README.md'),readFileSync(join(dest,'README.md'),'utf8').replaceAll('](output/','](publishing/'));
+cpSync('evidence/youtube-final-44.png',join(repo,'assets/midnight-love-44.png'));
+console.log('Staged sanitized source, small publishing assets and reviewed evidence.');

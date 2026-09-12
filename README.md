@@ -2,7 +2,36 @@
 
 Music films with synchronized lyrics, meaning-linked translations, and audio-reactive visuals. This repository contains the projects, production workflows, and verification evidence behind each edition.
 
-[**Пожары**](#пожары) · [**Отменяй**](#отменяй) · [**Roi × Adore**](#roi--adore) · [**TikTok edition**](#tiktok-edition) · [**Tanisea**](#tanisea) · [**Build and workflow**](#build-and-workflow)
+[**midnight love**](#midnight-love) · [**Пожары**](#пожары) · [**Отменяй**](#отменяй) · [**Roi × Adore**](#roi--adore) · [**TikTok edition**](#tiktok-edition) · [**Tanisea**](#tanisea) · [**Build and workflow**](#build-and-workflow)
+
+## midnight love
+
+**girl in red — midnight love · English lyrics**
+
+An intimate lyric film built around the official video's blue night sky, hooded silhouette and moving flame. Large silver words turn pale gold with the vocal, while continuous shading keeps the image smooth through lyric handoffs. Dedicated landscape and portrait compositions share the original soundtrack, independently aligned phrases and a calibrated 64-band spectrum.
+
+![midnight love: pale-gold word highlighting beside the source figure and flame](assets/midnight-love-44.png)
+
+*Decoded final movie frame at 00:44.000. Original song and footage from girl in red's official upload; its description credits the photograph to Fabian Fjeldvik.*
+
+| Edition | Format | Timeline | Lyrics |
+| --- | --- | --- | --- |
+| YouTube | 1920×1080 · 60 fps | 3:13.85 · 11,632 video frames | 151 supplied English words in 32 cues |
+| TikTok | 1080×1920 · 60 fps | Same recording and 132 focus groups | Dedicated portrait composition |
+
+The original animation is nominally 24 fps. Added camera movement, lyric focus, embers and spectrum graphics run at 60 fps. Timing combines bounded vocal and mix alignment, an independent English acoustic encoder and waveform review; model uncertainty remains documented. [Methods and review limits](projects/midnight-love-lyric-film/README.md#timing-method-and-limits).
+
+| Download | Contents |
+| --- | --- |
+| [YouTube film](https://github.com/ael-dev3/lyrics/releases/download/midnight-love-v1.0.0/Midnight-Love-YouTube-1920x1080-60fps.mp4) | Landscape H.264 / AAC edition |
+| [TikTok film](https://github.com/ael-dev3/lyrics/releases/download/midnight-love-v1.0.0/Midnight-Love-TikTok-1080x1920-60fps.mp4) | Full-length portrait edition |
+| [YouTube thumbnail](projects/midnight-love-lyric-film/publishing/Midnight-Love-YouTube-Thumbnail-1920x1080.jpg) · [TikTok profile cover](projects/midnight-love-lyric-film/publishing/Midnight-Love-TikTok-Cover-Profile-1200x1600.jpg) | Source-referenced covers; portrait profile cover is **1200×1600** |
+| [YouTube title](projects/midnight-love-lyric-film/publishing/Midnight-Love-YouTube-Title.txt) · [description](projects/midnight-love-lyric-film/publishing/Midnight-Love-YouTube-Description.txt) · [TikTok copy](projects/midnight-love-lyric-film/publishing/Midnight-Love-TikTok-Description.txt) | Concise artist credits and AI disclosure |
+| [English captions](projects/midnight-love-lyric-film/publishing/Midnight-Love.en.srt) | Optional timed caption track |
+| [Complete production](https://github.com/ael-dev3/lyrics/releases/download/midnight-love-v1.0.0/Midnight-Love-Complete-Production.zip) · [Original source](https://github.com/ael-dev3/lyrics/releases/download/midnight-love-v1.0.0/Midnight-Love-Original-Source.mkv) | Editable code, original media, analysis stems, observations, covers and file hashes |
+| [Delivery checksums](https://github.com/ael-dev3/lyrics/releases/download/midnight-love-v1.0.0/CHECKSUMS.sha256) | SHA-256 records for the release assets |
+
+[Production notes and reproduction](projects/midnight-love-lyric-film/README.md) · [Original creators](CREDITS.md#midnight-love) · [Official song and visual](https://www.youtube.com/watch?v=9256X67IQdQ)
 
 ## Пожары
 

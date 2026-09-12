@@ -38,6 +38,7 @@ For a future pass, create a short preview and compare `00:47` directly with `01:
 - Keep spectrum and other diagnostic-style visuals restrained, legible, and visually coherent; avoid rounded or noisy treatments when square-ended bars are the intended language.
 - Treat the square master and native 16:9 edition as deliberate compositions. Do not stretch, crop, or letterbox one into the other without an explicit design decision.
 - Keep public compositions clean. Put diagnostic overlays, measurement guides, and proof-only material in separate previews or proof renders.
+- Blend lyric-area contrast into continuous full-frame shading. Avoid visible boxes or localized dark patches that appear and disappear with cues. Check occupied and empty reading areas, and fade cropped source edges completely into the surrounding background before they become visible, especially in portrait compositions.
 
 ### Equal emphasis for English lyrics
 

@@ -1,0 +1,80 @@
+{
+  "sourceSamples": 9304968,
+  "deliverySamples": 9304968,
+  "sampleRate": 48000,
+  "gainDb": -2.7,
+  "aacBitrateTarget": 320000,
+  "measuredIntegratedLUFS": -12.34,
+  "measuredTruePeakDBTP": -1.79,
+  "method": "Signed waveform correlation in eleven 500ms windows; exhaustive integer-sample lag search ±2ms, evaluated every eighth waveform sample. AAC padding trimmed to retained source length for analysis.",
+  "rows": [
+    {
+      "second": 1,
+      "bestLagSamples": 0,
+      "bestLagMs": 0,
+      "correlation": 0.9999962494860386
+    },
+    {
+      "second": 19,
+      "bestLagSamples": 0,
+      "bestLagMs": 0,
+      "correlation": 0.999930981611042
+    },
+    {
+      "second": 42,
+      "bestLagSamples": 0,
+      "bestLagMs": 0,
+      "correlation": 0.9999834529299355
+    },
+    {
+      "second": 60,
+      "bestLagSamples": 0,
+      "bestLagMs": 0,
+      "correlation": 0.9999875785047585
+    },
+    {
+      "second": 77,
+      "bestLagSamples": 0,
+      "bestLagMs": 0,
+      "correlation": 0.9999831061253974
+    },
+    {
+      "second": 95,
+      "bestLagSamples": 0,
+      "bestLagMs": 0,
+      "correlation": 0.9999601325987427
+    },
+    {
+      "second": 110,
+      "bestLagSamples": 0,
+      "bestLagMs": 0,
+      "correlation": 0.9999885146764999
+    },
+    {
+      "second": 131,
+      "bestLagSamples": 0,
+      "bestLagMs": 0,
+      "correlation": 0.9999767479869711
+    },
+    {
+      "second": 144,
+      "bestLagSamples": 0,
+      "bestLagMs": 0,
+      "correlation": 0.9999778871854188
+    },
+    {
+      "second": 165,
+      "bestLagSamples": 0,
+      "bestLagMs": 0,
+      "correlation": 0.9999463112149075
+    },
+    {
+      "second": 188,
+      "bestLagSamples": 0,
+      "bestLagMs": 0,
+      "correlation": 0.9999907797583961
+    }
+  ],
+  "noMeasuredDelay": true,
+  "limits": "Fixed gain for peak headroom; no limiter, time stretching or inserted silence. Numerical correlation is distinct from listening review."
+}

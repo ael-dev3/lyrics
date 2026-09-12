@@ -2,6 +2,12 @@
 
 This is an **AI-assisted lyric-film and workflow project**. It should not be described as entirely hand-coded, manually timed or hand-illustrated.
 
+## midnight love production
+
+The girl in red landscape and portrait editions use OpenAI Codex (GPT-6 Astra) for TypeScript implementation, reconciliation of timing observations, visual review and publishing material. Whisper/stable-ts, mix and vocal MMS-FA, and an independent English wav2vec2 encoder provide alignment evidence. Demucs supplies a vocal analysis stem. Model agreement and frame quantization do not prove exact acoustic boundaries; short vowels and sustained endings retain documented uncertainty.
+
+The film retains the official animated footage and original recording. Its new graphic motion runs at 60 fps while the source animation remains nominally 24 fps. Separate covers use built-in image generation with the source visual as reference; the image-model version was not exposed. No synthetic singing replaces the original performance. [Production methods and review limits](projects/midnight-love-lyric-film/README.md) · [Exact cover prompts](projects/midnight-love-lyric-film/analysis/cover-prompts.json).
+
 ## How AI was used
 
 - **OpenAI Codex / language-model assistance:** substantial code authoring, workflow design and documentation, troubleshooting, translation drafting, timing reconciliation, visual-layout development, automated checks and publishing copy.

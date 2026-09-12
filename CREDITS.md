@@ -2,6 +2,19 @@
 
 **We are not the creators of the original music, lyrics, performances, musical remixes, anime footage, characters or source illustrations. We do not take credit for that work.** Our contribution is the additional lyric-film presentation and production workflow. Artist and source-upload links below distinguish those roles; a source uploader is not necessarily the owner of every element in an upload.
 
+## midnight love
+
+| Contribution | Credit and source |
+| --- | --- |
+| Song, performance and official source upload | **girl in red** — [original song and visual](https://www.youtube.com/watch?v=9256X67IQdQ), [listening / support links](https://girlinred.ffm.to/midnightlove-single), [artist website](https://www.worldinred.com) |
+| Photograph | **Fabian Fjeldvik**, credited in the original upload's description |
+| Animated source footage | Retained from the official upload; a separate animation credit has not been established |
+| Added lyric presentation, motion and production workflow | **Ael**, assisted by **OpenAI Codex (GPT-6 Astra)** |
+
+The original source animation and recording are retained. Additional camera, word, ember and spectrum graphics run at 60 fps; the source animation remains nominally 24 fps. Analysis stems do not replace the recording. The covers are AI-assisted adaptations of the source visual, with [exact prompts](projects/midnight-love-lyric-film/analysis/cover-prompts.json) retained.
+
+We claim no authorship of the original music, lyrics, performance, photograph or animation, and no endorsement or rights clearance. Those works, complete films and source-derived covers are excluded from the repository's scoped CC BY 4.0 grant. [Production notes](projects/midnight-love-lyric-film/README.md) · [Software and fonts](projects/midnight-love-lyric-film/SOFTWARE.md).
+
 ## Пожары
 
 | Contribution | Credit and source |
@@ -61,6 +74,7 @@ Our CC BY 4.0 grant applies only to our licensable contributions. It does not re
 
 - **Playfair** — [upstream font project](https://github.com/clauseggers/Playfair) · [bundled SIL Open Font License](projects/tanisea-lyric-film/public/Playfair-OFL.txt).
 - **Space Grotesk** — [upstream font project and licence](https://github.com/floriankarsten/space-grotesk).
+- **Cormorant Garamond** — [upstream font project](https://github.com/CatharsisFonts/Cormorant) · [bundled SIL Open Font License](projects/midnight-love-lyric-film/public/CormorantGaramond-OFL.txt).
 - **Bebas Neue** — [upstream font project and licence](https://github.com/dharmatype/Bebas-Neue).
 - **Oswald** — [Google Fonts](https://fonts.google.com/specimen/Oswald) · [bundled SIL Open Font License](projects/otmenyai-lyric-film/public/Oswald-OFL.txt). The Отменяй project also includes [Space Grotesk’s font notice](projects/otmenyai-lyric-film/public/SpaceGrotesk-OFL.txt).
 - **Remotion**, **React**, **FFmpeg**, **Whisper / stable-ts**, **Demucs**, and other dependencies retain their own licences. The project licence does not replace their terms. Package manifests and dependency locks identify software versions where recorded.
