@@ -4,7 +4,32 @@ Music films with synchronized lyrics, meaning-linked translations, and audio-rea
 
 **Current style default:** [cinematic lyric presentation](docs/cinematic-lyric-workflow.md) — stable, color-only word or phrase emphasis, precise vocal timing, smooth scene shading and equally prominent bilingual lyrics. The guide includes the final Midnight Love reference and review requirements for future tracks.
 
-[**Joyride**](#joyride) · [**midnight love**](#midnight-love) · [**Пожары**](#пожары) · [**Отменяй**](#отменяй) · [**Roi × Adore**](#roi--adore) · [**TikTok edition**](#tiktok-edition) · [**Tanisea**](#tanisea) · [**Build and workflow**](#build-and-workflow)
+[**Life Letters**](#life-letters) · [**Joyride**](#joyride) · [**midnight love**](#midnight-love) · [**Пожары**](#пожары) · [**Отменяй**](#отменяй) · [**Roi × Adore**](#roi--adore) · [**TikTok edition**](#tiktok-edition) · [**Tanisea**](#tanisea) · [**Build and workflow**](#build-and-workflow)
+
+## Life Letters
+
+**Never Get Used To People — Life Letters (Long Version) · Russian + Argentinian Spanish + pronunciation**
+
+An expansive landscape film for horizontal phone viewing, with equally large Russian and Argentinian Spanish lyrics, word-linked pronunciation and a prominent 64-band spectrum. Stable pink and warm-gold focus follows the vocal, while the original moving footage and complete closing credits remain visible.
+
+![Life Letters final film: Russian, pronunciation and Argentinian Spanish above the wide visualizer](assets/life-letters-63-8.png)
+
+*Decoded final film at 01:03.800, reviewed at 874×402. Original song and source video by Never Get Used To People; added lyric presentation by Ael, assisted with Codex.*
+
+| Format | Timeline | Text |
+| --- | --- | --- |
+| 2348×1080 · 60 fps · H.264 / AAC · BT.709 | Complete 4:21.526 recording; 15,692 video frames | 42 cards; Russian and Spanish 82 px, pronunciation 44 px |
+
+Timing combines isolated vocals, independent recognition, bounded alignment, CTC emissions and measured sample repetitions. The pronunciation is a Spanish-oriented approximation with stress marks. Difficult transformed vocals retain documented uncertainty; phone-size frame review does not claim a physical iPhone test. This edition explicitly includes the third pronunciation layer as a scoped production exception.
+
+| Download | Contents |
+| --- | --- |
+| [Full landscape film](https://github.com/ael-dev3/lyrics/releases/download/life-letters-v1.0.0/LIFE-LETTERS-RU-ES-AR-LANDSCAPE.mp4) | Complete verified H.264/AAC movie |
+| [Editable project](https://github.com/ael-dev3/lyrics/releases/download/life-letters-v1.0.0/Life-Letters-Editable.zip) | Committed source, original extracted streams, render media, fonts, timing evidence and QA |
+| [Argentina pronunciation guide](projects/life-letters-lyric-film/publishing/Pronunciacion-para-Argentina.md) · [Four subtitle tracks](projects/life-letters-lyric-film/publishing/subtitles) | Russian, Spanish, pronunciation and combined captions |
+| [Checksums](https://github.com/ael-dev3/lyrics/releases/download/life-letters-v1.0.0/CHECKSUMS.sha256) · [Verification](projects/life-letters-lyric-film/evidence/final-verification.md) | File hashes, audio identity, frame cadence and review limits |
+
+[Release](https://github.com/ael-dev3/lyrics/releases/tag/life-letters-v1.0.0) · [Production and reproduction](projects/life-letters-lyric-film/README.md) · [Original source](https://www.youtube.com/watch?v=7hUbvIJ0Hnw)
 
 ## Joyride
 
@@ -243,6 +268,7 @@ The reusable workflow covers soundtrack locking, lyric alignment, semantic trans
 
 ```text
 assets/                          Film screenshots and artwork
+projects/life-letters-lyric-film/  Life Letters Russian / es-AR / pronunciation, source and evidence
 projects/joyride-lyric-film/       Joyride source, both publishing kits and evidence
 projects/midnight-love-lyric-film/ Midnight Love source, restored ending and evidence
 projects/pozhary-lyric-film/       Пожары source, both publishing kits and evidence
@@ -269,6 +295,8 @@ Our authored workflow documentation, code, prompts, reusable visual contribution
 **The original music, lyrics, recordings, remixes, animation, characters, source artwork, fonts and third-party software are excluded. We are not taking credit for their creators' work.** Finished films, screenshots and AI-assisted covers contain third-party material and are not offered as wholly CC BY 4.0 assets.
 
 ## Original creators and source credits
+
+- **Never Get Used To People — Life Letters (Long Version):** [source song and video](https://www.youtube.com/watch?v=7hUbvIJ0Hnw) · [artist links](https://linktr.ee/ngutp); original closing credits preserved.
 
 - **Oliver Tree — Joyride:** [official music video and production credits](https://www.youtube.com/watch?v=TIipwQUU9mc) · [listening / support links](https://olivertree.lnk.to/Joyride).
 - **girl in red — midnight love:** [official song and visual](https://www.youtube.com/watch?v=9256X67IQdQ); original description credits the photograph to **Fabian Fjeldvik**.

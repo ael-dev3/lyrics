@@ -26,6 +26,8 @@ For a future pass, create a short preview and compare `00:47` directly with `01:
 
 ### Lyric timing and readability
 
+The explicitly commissioned [Life Letters Russian / Argentinian Spanish edition](../projects/life-letters-lyric-film/README.md) is a scoped exception to the pronunciation exclusion below: its synchronized pronunciation layer, Spanish guide and pronunciation subtitles are part of that edition's film, source and release. Other project defaults remain unchanged.
+
 - Production deliverables include original-language lyrics and meaning-based translations only. Pronunciation guides, phonetic respellings, romanized singing aids and pronunciation practice subtitles are excluded from current and future workflows, source archives and publishing assets.
 - Lyric highlighting must follow the vocal performance closely enough to feel intentional at normal playback speed.
 - Word-level emphasis, line handoffs, focus release, and cue-stage movement should be driven by explicit timing data rather than ad-hoc offsets.

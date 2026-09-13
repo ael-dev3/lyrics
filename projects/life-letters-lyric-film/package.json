@@ -1,0 +1,30 @@
+{
+  "name": "life-letters-ru-es-ar",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "compositions": "remotion compositions src/index.tsx",
+    "check": "npm run typecheck && npm run compositions",
+    "render": "node scripts/render.ts",
+    "prerender": "npm run typecheck"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.518",
+    "@remotion/media": "4.0.518",
+    "@remotion/media-utils": "4.0.518",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "remotion": "4.0.518",
+    "@remotion/bundler": "4.0.518",
+    "@remotion/renderer": "4.0.518"
+  },
+  "devDependencies": {
+    "@types/node": "26.4.0",
+    "@types/react": "19.2.18",
+    "@types/react-dom": "19.2.5",
+    "typescript": "7.0.2",
+    "vitest": "4.1.11"
+  }
+}

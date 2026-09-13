@@ -4,6 +4,8 @@ Production workflows use original-language lyrics and meaning-based translations
 
 Read `docs/track-workflow-preferences-and-known-issues.md` for the established production and handoff preferences.
 
+Scoped exception: the explicitly commissioned [Life Letters Russian / Argentinian Spanish edition](projects/life-letters-lyric-film/README.md) includes a synchronized Spanish-oriented pronunciation layer, its guide and subtitle files in the film, source and release. Preserve that edition's three-layer treatment; the pronunciation exclusion remains the default for other projects.
+
 Read `docs/cinematic-lyric-workflow.md` before choosing a lyric treatment. It defines the current cinematic default and takes precedence over conflicting visual defaults in historical references.
 
 Use a cinematic lyric treatment by default: stable words or semantic groups receive color-only emphasis, with readable active and inactive contrast against the actual artwork. Do not add karaoke underlines, word boxes or pills, or bouncing glyphs unless the user explicitly requests them. Preserve precise timing and equal bilingual size, weight, color strength and synchronization. This default applies to the current Midnight Love revision and future productions; it does not request changes to other published films or release archives.

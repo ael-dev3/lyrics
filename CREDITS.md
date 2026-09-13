@@ -2,6 +2,12 @@
 
 **We are not the creators of the original music, lyrics, performances, musical remixes, anime footage, characters or source illustrations. We do not take credit for that work.** Our contribution is the additional lyric-film presentation and production workflow. Artist and source-upload links below distinguish those roles; a source uploader is not necessarily the owner of every element in an upload.
 
+## Life Letters
+
+**Never Get Used To People** — music, Russian lyrics, recording and immediate source upload, [Life Letters (Long Version)](https://www.youtube.com/watch?v=7hUbvIJ0Hnw). [Artist links from the source description](https://linktr.ee/ngutp). The source closing credits remain unobscured. Individual underlying footage credits have not been independently established; this records provenance, not complete rights clearance.
+
+Ael adds the lyric composition, Argentinian Spanish adaptation, Spanish-oriented pronunciation aid and production workflow with OpenAI Codex assistance. Original music, lyrics, recording and footage are excluded from the repository licence. [Project and method](projects/life-letters-lyric-film/README.md) · [Software and fonts](projects/life-letters-lyric-film/SOFTWARE.md).
+
 ## Joyride
 
 **Oliver Tree** is the original artist, performer, music-video director and writer. [Official video and production credits](https://www.youtube.com/watch?v=TIipwQUU9mc) · [Listening / support links](https://olivertree.lnk.to/Joyride) · [Artist channel](https://www.youtube.com/@OliverTree).
