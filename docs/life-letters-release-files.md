@@ -18,3 +18,5 @@
 The archive's `SOURCE-REVISION.txt` identifies its committed project tree. `PACKAGE-CHECKSUMS.sha256` covers its contents except itself. Runtime video/audio stay in release assets rather than ordinary Git history; model weights, dependencies, caches and redundant intermediate renders are excluded. The final film is a separate asset rather than duplicated inside the editable archive.
 
 The release tag is fixed to the source commit. A later repository commit records the publication receipt after every asset is freshly downloaded and compared; the receipt is not retroactively inserted into the immutable archive.
+
+[Downloaded-asset receipt](../projects/life-letters-lyric-film/evidence/release-upload-verification.json) · [Archive integrity and clean-extraction checks](../projects/life-letters-lyric-film/evidence/package-verification.json) · [Asset sizes, hashes and URLs](../projects/life-letters-lyric-film/release-assets.json).

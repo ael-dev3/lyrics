@@ -8,6 +8,8 @@
 
 [Download v1.0.0](https://github.com/ael-dev3/lyrics/releases/tag/life-letters-v1.0.0) · [Pronunciation guide](publishing/Pronunciacion-para-Argentina.md) · [Verification and limits](evidence/final-verification.md) · [Software and source credits](SOFTWARE.md)
 
+[Downloaded-asset verification](evidence/release-upload-verification.json) · [Archive integrity and clean extraction](evidence/package-verification.json) · [Asset inventory](release-assets.json). These publication records are added after the immutable release source commit.
+
 ## Delivery
 
 | Item | Specification |
