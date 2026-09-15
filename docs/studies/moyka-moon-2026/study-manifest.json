@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "studyDate": "2026-09-15",
+  "source": "source.json",
+  "status": "published_analysis_scope_ready",
+  "nativeTimeline": {
+    "videoFirstPTS": 0,
+    "videoFrameCount": 3831,
+    "videoFrameSeconds": 0.04,
+    "videoLastPTS": 153.2,
+    "firstPresentedAudioFramePTS": 0,
+    "firstDecodedAudioFrameSamples": 648,
+    "audioPresentedSamples": 7355525,
+    "audioSampleRate": 48000,
+    "containerTimeBase": "1/1000",
+    "audioTimingNote": "Decoded PCM starts at presented time zero after Opus pre-skip; packet timestamp rounding is not vocal-onset precision."
+  },
+  "tools": {
+    "yt-dlp": "2026.08.19",
+    "ffmpeg": "8.1.2",
+    "ffprobe": "8.1.2",
+    "node": "24.20.0",
+    "typescript": "7.0.2",
+    "macOS": "26.6.2 (25G83)",
+    "openai-whisper": "20250625",
+    "stable-ts": "2.19.1",
+    "torch": "2.14.0",
+    "torchaudio": "2.11.0"
+  },
+  "validation": {
+    "strictTypecheck": true,
+    "completeFrameCountAnd40msCadence": true,
+    "repeatedFrameMeasurementsByteIdentical": true,
+    "repeatedAudioMeasurementsByteIdentical": true,
+    "candidateListReproduced": true,
+    "audioFixture": {
+      "description": "1-second 48 kHz stereo 1 kHz sine, 0.5 peak amplitude, 16-bit PCM; compare same-phase and opposite-phase channels",
+      "result": {
+        "sineMaxRmsErrorDb": 1.9869919436033e-05,
+        "antiphasePowerIdentical": true,
+        "rows": 100
+      },
+      "scope": "RMS scaling and no phase-cancellation regression; not calibration of the attack proxy as a musical onset detector"
+    }
+  },
+  "limitations": [
+    "Only the named 852 distinct frame indices received targeted visual review; all 3831 were measured and OCR-processed.",
+    "No direct listening or listener-certified phonetic/lip-sync verdict is claimed.",
+    "Model word times and mixed-audio attack peaks are evidence candidates, not timing ground truth.",
+    "The original project and effect-generation method are unknown."
+  ],
+  "artifacts": [
+    {
+      "file": "README.md",
+      "bytes": 19149,
+      "sha256": "732b5e5fe409e9ea332a8632ba42cddd0e94d583dbb596d5c959c4a6189b6276"
+    },
+    {
+      "file": "analysis-summary.json",
+      "bytes": 2818,
+      "sha256": "17b75bbc746cbe465da7f582edc4d881e47222e937f232be156a33e80428b853"
+    },
+    {
+      "file": "analyze-audio.ts",
+      "bytes": 2993,
+      "sha256": "f2eac29ad100e8f3b0eb4d4c1ebaea0b298ca0f827fef07fa0f1c2e1918e2e97"
+    },
+    {
+      "file": "analyze-frames.ts",
+      "bytes": 3156,
+      "sha256": "859e1643277d85493727ae0071099820b32a3f1c4567a1a000f7f66b251bd948"
+    },
+    {
+      "file": "audio-features.csv",
+      "bytes": 532693,
+      "sha256": "1245e71c61b484348af140a57fb0f1735c0f116cf86641b93de031467673625f"
+    },
+    {
+      "file": "audio-summary.json",
+      "bytes": 133056,
+      "sha256": "894253ef07869bbdb33b71e3c542a392cb3cdca83a1d3005e46383cc99855a79"
+    },
+    {
+      "file": "cut-candidates.json",
+      "bytes": 13062,
+      "sha256": "881e436e78c1d0a0f8d560c4e5f23273123b16256d1e3b1a35c793df95f6c7b4"
+    },
+    {
+      "file": "frame-metrics.csv",
+      "bytes": 106182,
+      "sha256": "10e3b17382890f7aae8c30e10bfa857ecde77b529cb2cc755ea1e4463aee6ec7"
+    },
+    {
+      "file": "review-coverage.json",
+      "bytes": 12281,
+      "sha256": "9c79f8cc2a686901554ecf1a1ef2f77e0449379f19d1ea035e70f08a945f4a2c"
+    },
+    {
+      "file": "source.json",
+      "bytes": 1256,
+      "sha256": "bbad0c9b83c8dcc18fd11447cc6f24a7020d2915e09789d44bd47f66234f5745"
+    },
+    {
+      "file": "word-event-comparison.json",
+      "bytes": 7828,
+      "sha256": "7b19abe50a41fb85c03d4e5b683032750c8300f11f14ff598666ead7ef1f521d"
+    }
+  ]
+}

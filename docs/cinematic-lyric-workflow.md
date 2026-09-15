@@ -32,6 +32,12 @@ Keep line visibility separate from word focus: the incoming line should be reada
 
 At 60 fps, nearest-frame rounding can stay within about 8.33 ms; that describes display quantization, not acoustic alignment accuracy. Record uncertain vocal boundaries and the actual review methods. Do not describe model or still-frame checks as a human listening review.
 
+### Applying the Moon reference
+
+The [Moyka — Moon frame study](studies/moyka-moon-2026/README.md) separates word reveals, line holds, picture changes and decorative cycles. Reserve complete lyric geometry before animation. Keep full inactive bilingual lines legible while their semantic spans receive focus; a source-language reveal pattern cannot substitute for translated meaning correspondence. A cut beneath persistent text must not reset its focus or position.
+
+Review each repeated performance’s onset, sustain and release separately, even when its reveal spacing matches another occurrence. Keep picture accents and decorative envelopes separate from the acoustic event map. The reference’s rapid alternating typography is a documented stylistic choice, not our default; adapting a reference to 60 fps must preserve intended durations in seconds rather than blindly copying frame counts. Review actual-cadence playback as well as boundary frames before production rendering.
+
 ## Review before delivery
 
 1. Render short previews covering a quiet line, a rapid handoff, the longest line, a bright or busy background, an uncertain boundary and the final vocal release. Include reordered English groups when relevant.

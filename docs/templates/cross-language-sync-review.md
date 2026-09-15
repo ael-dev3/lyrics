@@ -20,6 +20,8 @@
 | Actual-audio review of the entire recording in all languages | Incomplete | Pending |
 | Reduced-speed review of fast, ambiguous and high-risk events | Incomplete | Pending |
 | Every repeated passage, gap and final vocal release reviewed | Incomplete | Pending |
+| Acoustic events, line visibility, semantic focus and picture/decorative events are separately recorded | Incomplete | Pending |
+| Stable line geometry, cuts beneath held text and repeated phrase releases checked at native cadence | Incomplete | Pending |
 | Every cue and target span reviewed audiovisually in all delivery formats | Incomplete | Pending |
 | Under-/over-highlighting, timing boundaries, coverage and layout checks pass | Incomplete | Pending |
 | No unresolved meaning, coverage, highlight or synchronization defects | Incomplete | Pending |

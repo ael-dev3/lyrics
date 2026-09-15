@@ -35,6 +35,8 @@ After the text and map are complete, inspect every cue in every requested format
 
 Keep type size, weight, active/rest contrast and focus strength comparable across languages. Reflow long lines without weakening a language’s emphasis. A passing geometry check does not establish semantic completeness or audible synchronization.
 
+Keep acoustic events, line visibility, semantic focus, picture cuts and decorative envelopes separately identifiable on the same audio clock. Include a cut beneath held text, a repeated phrase with independently checked release, and the previous/entry/next frames of each uncertain transition. Preserve complete line geometry across focus changes. Review effects at native cadence: the [Moon study](studies/moyka-moon-2026/README.md) demonstrates how one-frame alternation can be concealed by screenshots or mistaken for extra lyric events. Model disagreement must trigger audio review, not an automatic global offset.
+
 ## 4. Close the gate before production rendering
 
 Record all of the following in the project review:

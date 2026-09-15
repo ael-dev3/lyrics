@@ -118,3 +118,7 @@ This checklist is intended to make the workflow portable to additional tracks wh
 ## Reference study: LOOP
 
 For future image-dominant lyric films, consult the [LÜCY & Moyka — LOOP study](studies/loop-2026/README.md). It documents stable reading positions, recurring visual motifs and independently changing language rows. Use its prototype brief as inspiration alongside this workflow; its observations do not replace audio alignment, semantic translation or delivery verification.
+
+## Reference study: Moon
+
+The [Moyka — Moon study](studies/moyka-moon-2026/README.md) documents native-frame lyric reveals, independent phrase holds and picture cuts, plus decorative frame alternation. Apply its stable geometry and separate event records to the next song. Keep the actual-audio and cross-language review mandatory before production rendering; do not import the reference’s flashing typography, model-derived timing offsets or source-language word counts as bilingual synchronization rules.
