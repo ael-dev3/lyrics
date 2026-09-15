@@ -79,3 +79,5 @@ Only source media, generated artwork, production code, lyric data and technical 
 ## Publication packaging
 
 The original 106,209,506-byte editable archive is preserved byte-for-byte from the verified local delivery. It contains 128 individually hashed files and passes independent extracted-file verification. The public Git tree contains code, fonts, cue data, artwork and audit reports; original media are provided in the release archive. The archive README describes the pre-publication local delivery. No private conversation or screenshots are included.
+
+[Published-asset verification](evidence/release-upload-verification.json): all ten release assets matched the local byte counts and hashes after download; the published asset identities and digests were rechecked after release publication.
