@@ -1,5 +1,7 @@
 # Cinematic lyric presentation
 
+**Mandatory for future multilingual productions:** pass the [complete cross-language synchronization gate](cross-language-sync-gate.md) before starting full-length production rendering. Review the entire recording in all languages, including complete translated highlight spans. Diagnostic previews are review evidence, not permission to skip unfinished synchronization.
+
 **Default for current and future productions, established with Midnight Love v1.1.0 on 12 September 2026.** Keep the image expressive and the reading position calm. Precisely timed color emphasis follows the performed word or short semantic group without adding karaoke decoration.
 
 This standard takes precedence over underline, progress-fill and subordinate-English treatments in older prototypes and implementation notes. Published films and immutable release archives remain records of their own editions. Apply an explicitly requested style exception to the relevant project and document it there.

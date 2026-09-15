@@ -1,5 +1,7 @@
 # Bilingual lyric workflow: equal emphasis
 
+**Mandatory before production rendering:** complete the [cross-language sync gate](cross-language-sync-gate.md) for the entire recording and every displayed language. This is separate from style approval and file-integrity tests.
+
 See the [cinematic lyric presentation guide](cinematic-lyric-workflow.md) for the current visual default, an implemented reference and review requirements.
 
 **Default for future productions, recorded after Пожары v1.0.0:** original-language and English lyrics are equally prominent parts of the film. Give English equal perceived size, weight, color strength, highlighting and synchronization precision. This requirement takes precedence over smaller or dimmer translation treatments in earlier project examples.
@@ -23,6 +25,17 @@ Equal prominence does not require an identical number of words or a forced word-
 
 Keep translation lyrics separate from small metadata labels such as artist names or language tags. Both lyric lanes belong to the sharp, high-priority text layer.
 
+## Translation and word correspondence audit
+
+- Preserve meaning conservatively. Do not fill an unstated love object with a guessed addressee, add an unstated possessive, remove an explicit conjunction, or omit negation, degree, repetition or emphasis merely to make a line smoother. Necessary English grammatical completions must be distinguished from new content.
+- Prefer individual correspondences for pronouns, verbs, nouns, conjunctions, negators and prepositions. For example, Russian «что я любила» maps to **that / I / loved**, with three independent source events and no added object. Reordered English keeps natural reading order while each word follows its own source token.
+- Use an English multi-word expression when a single Russian word encodes that meaning, such as a tense-marked verb or a phrasal-verb equivalent. Use a group spanning multiple Russian source words only when a compound, idiom or grammatical construction prevents a defensible finer correspondence. Record the reason for every exception; group size is not a rendering or effort optimization.
+- Highlight the smallest **semantically complete** translated span. Necessary articles, pronouns, auxiliaries or elliptical completions that belong to that meaning may share the source word’s focus window. Do not leave them neutral merely because they lack a separate source token, and do not invent separate acoustic times for them. In the selected translation, «Остыла» covers **I have grown cold** and «прости» covers **forgive me**. Neutral words need a positive editorial reason. This replaces the blanket neutral-grammar rule that left gaps in Прости за любовь v1.2.
+- Phrase focus follows the union of the participating source-word intervals, not their enclosing start/end span. Release focus during gaps; do not hold it over an unrelated source word or interpolate invented English word timings.
+- Review every source word and every target-language word in a ledger showing the correspondence, full target span, relation, rationale and actual timing. Inspect rendered focus states in every delivery format, including short pronouns, reversed word order, negation, conjunctions, all phrase exceptions and the final vocal.
+- Add semantic regression expectations for easy individual matches **and complete meaning spans**, alongside every-frame source-window checks. Test both under-highlighting and over-highlighting. A high count of one-word matches or few phrase groups is not a quality target; interval consistency alone cannot prove translation quality or the adequacy of the chosen mapping.
+- Keep interpretive ambiguity explicit. Do not describe a chosen parse as author-certified or a model/still audit as human listening. Use a short corrected preview before committing to the full export.
+
 ## Production sequence
 
 1. **Lock inputs and provenance.** Record the exact recording, decoded sample count, artwork, supplied lyrics, creator links and hashes. Inspect whether source imagery is animated or static. Use official higher-resolution artwork when available; describe newly authored motion accurately.
@@ -32,7 +45,7 @@ Keep translation lyrics separate from small metadata labels such as artist names
 5. **Lock delivery audio and features.** Preserve timing through the final audio encode; measure loudness and true peak and record any gain. Generate final spectrum features from the locked delivery soundtrack. Keep calibrated frequency measurements separate from expressive particles, camera movement and decorative motion.
 6. **Compose both languages as peers.** Use the equal-treatment table above in each requested aspect ratio. Preserve the song's artwork and palette. Build a dedicated landscape and vertical composition when both are requested; reuse timing and audio, not a cropped lyric layout.
 7. **Review a short style preview.** Include quiet lyrics, the fastest handoff, the longest English line, a reordered semantic group, an uncertain passage and a bright/busy artwork moment. Use more than one short clip if needed. Inspect both languages at native and intended mobile size, then review timing with audio. Record which checks were performed and which remain uncertain.
-8. **Render and inspect final media.** Freeze fonts and source data, check all active/inactive lyric states, then render a high-quality reference and controlled final downsample/encode. Verify full decoding, frame cadence, dimensions, duration, color metadata and soundtrack identity across editions. Inspect selected decoded frames, including joins, handoffs and the outro.
+8. **Pass the full cross-language sync gate, then render.** Complete the [sync review](cross-language-sync-gate.md), resolve all known meaning/highlight/timing defects, and freeze the reviewed input hashes. A style preview alone does not pass this gate. Freeze fonts and source data, check all active/inactive lyric states, then render a high-quality reference and controlled final downsample/encode. Verify full decoding, frame cadence, dimensions, duration, color metadata and soundtrack identity across editions. Inspect selected decoded frames, including joins, handoffs and the outro.
 9. **Package and document.** Include finalized cues, translation mappings, source manifests, reproducible commands, software/model attribution, review evidence, covers, concise artist-focused publishing copy and checksums. Follow the [TikTok profile-cover default](tiktok-cover-workflow.md) when applicable. Exclude pronunciation material and private build data. Copy to the requested handoff location and verify published assets against local hashes when publication is in scope.
 
 ## Style-preview acceptance gate

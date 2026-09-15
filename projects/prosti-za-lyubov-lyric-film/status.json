@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "project": "prosti-za-lyubov",
+  "edition": "1.2.0",
+  "statusRecordedOn": "2026-09-15",
+  "deliveryStatus": "accepted_with_known_highlighting_gaps",
+  "crossLanguageSyncStatus": "known_gaps_remain",
+  "publicationStatus": "local_delivery_documented_no_binary_release_in_this_update",
+  "acceptedArtifactsPreserved": true,
+  "additionalRenderRequested": false,
+  "meetsNextSongSyncBaseline": false,
+  "knownIssueIds": [
+    "PZL-01",
+    "PZL-02"
+  ],
+  "nextSongRequirement": "Complete the full cross-language synchronization gate before production rendering.",
+  "workflow": "../../docs/cross-language-sync-gate.md",
+  "technicalChecks": "evidence/delivery-verification.json",
+  "historicalMapChecks": "evidence/translation-checks.json",
+  "historicalMapCheckLimit": "Passing frame-to-map assertions does not prove complete English highlight coverage.",
+  "acceptedFilms": [
+    {
+      "filename": "Prosti-YouTube-1920x1080-60fps.mp4",
+      "sha256": "aaba91e18a8f90663c476c12f9a7b11cbc2a403fdddb8707c71043c38be612f4",
+      "bytes": 111674723
+    },
+    {
+      "filename": "Prosti-TikTok-1080x1920-60fps.mp4",
+      "sha256": "d23de97d57b0eb6fa27bf56bbf3ceacf38a7a83f511e8141a675d01bebb3d39b",
+      "bytes": 77259139
+    }
+  ],
+  "acceptedEditableArchive": {
+    "filename": "Prosti-Editable-Project.zip",
+    "sha256": "5cf5aaa06026439d5973ec17aa0bef3b9c70b42c69ea9c586a65436c9c269c90"
+  }
+}

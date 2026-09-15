@@ -4,7 +4,19 @@ Music films with synchronized lyrics, meaning-linked translations, and audio-rea
 
 **Current style default:** [cinematic lyric presentation](docs/cinematic-lyric-workflow.md) — stable, color-only word or phrase emphasis, precise vocal timing, smooth scene shading and equally prominent bilingual lyrics. The guide includes the final Midnight Love reference and review requirements for future tracks.
 
-[**Половинка**](#половинка) · [**Life Letters**](#life-letters) · [**Joyride**](#joyride) · [**midnight love**](#midnight-love) · [**Пожары**](#пожары) · [**Отменяй**](#отменяй) · [**Roi × Adore**](#roi--adore) · [**TikTok edition**](#tiktok-edition) · [**Tanisea**](#tanisea) · [**Build and workflow**](#build-and-workflow)
+[**Прости за любовь — accepted with known gaps**](#прости-за-любовь) · [**Половинка**](#половинка) · [**Life Letters**](#life-letters) · [**Joyride**](#joyride) · [**midnight love**](#midnight-love) · [**Пожары**](#пожары) · [**Отменяй**](#отменяй) · [**Roi × Adore**](#roi--adore) · [**TikTok edition**](#tiktok-edition) · [**Tanisea**](#tanisea) · [**Build and workflow**](#build-and-workflow)
+
+## Прости за любовь
+
+**Артем Пора Домой & Jahmal TGK · v1.2 · Russian + English · YouTube and TikTok**
+
+**Accepted with known highlighting gaps.** The current song is sufficient for delivery. Some English meaning spans remain only partly highlighted: «Остыла» needs “I have grown cold,” and «прости» needs “forgive me” in the chosen translation. The accepted films are preserved; this edition is not the synchronization quality baseline for the next song.
+
+[Project and exact delivery identity](projects/prosti-za-lyubov-lyric-film/README.md) · [Known issues and follow-up criteria](projects/prosti-za-lyubov-lyric-film/KNOWN-ISSUES.md) · [Structured status](projects/prosti-za-lyubov-lyric-film/status.json)
+
+**Next song: synchronization must be complete before production rendering.** Follow the [mandatory cross-language sync gate](docs/cross-language-sync-gate.md) for every cue and every language. Technical checks and a few successful previews do not replace the full semantic and audiovisual review.
+
+This entry documents the locally delivered edition; it does not publish new video or archive release assets.
 
 ## Половинка
 
@@ -254,6 +266,7 @@ Each project has its own setup instructions. Use the release source archive when
 
 | Project | Starting point |
 | --- | --- |
+| Прости за любовь v1.2 | [Accepted delivery record and known gaps](projects/prosti-za-lyubov-lyric-film/README.md); preserve the existing films and apply the new sync gate to the next song |
 | Joyride | Follow the [reproduction steps](projects/joyride-lyric-film/README.md#reproduce); full-recording coverage, sample-based color focus, original video and separate landscape/portrait compositions |
 | Midnight Love | Follow the [v1.1.0 reproduction steps](projects/midnight-love-lyric-film/README.md#reproduction); includes the restored ending, cinematic focus and verified landscape/portrait delivery |
 | Пожары | Follow the [reproduction steps](projects/pozhary-lyric-film/README.md#reproduction); both aspect ratios share finalized cues and audio features |
@@ -264,6 +277,7 @@ Each project has its own setup instructions. Use the release source archive when
 
 The reusable workflow covers soundtrack locking, lyric alignment, semantic translation, visual design, calibrated audio features, rendering and delivery verification:
 
+- [Mandatory cross-language sync gate](docs/cross-language-sync-gate.md) — complete meaning, target spans and actual-audio review in every language before production rendering; [review template](docs/templates/cross-language-sync-review.md)
 - [Cinematic lyric presentation](docs/cinematic-lyric-workflow.md) — the current visual default, timing and readability rules, final-film reference and review requirements
 - [Bilingual lyric workflow and equal-emphasis standard](docs/bilingual-lyric-workflow.md) — future films give English equal size, color strength, highlighting and synchronization precision; includes the production sequence and lessons from Пожары
 - [Production workflow](docs/production-workflow.md)
@@ -282,6 +296,9 @@ The reusable workflow covers soundtrack locking, lyric alignment, semantic trans
 
 ```text
 assets/                          Film screenshots and artwork
+projects/prosti-za-lyubov-lyric-film/ Accepted v1.2 record, known gaps and delivery evidence
+docs/cross-language-sync-gate.md  Mandatory synchronization review before production rendering
+docs/templates/                  Reusable review records
 projects/life-letters-lyric-film/  Life Letters Russian / es-AR / pronunciation, source and evidence
 projects/joyride-lyric-film/       Joyride source, both publishing kits and evidence
 projects/midnight-love-lyric-film/ Midnight Love source, restored ending and evidence

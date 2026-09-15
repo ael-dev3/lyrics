@@ -1,5 +1,7 @@
 # Production workflow
 
+**Mandatory for future multilingual productions:** pass the [complete cross-language synchronization gate](cross-language-sync-gate.md) before starting full-length production rendering. Review the entire recording in all languages, including complete translated highlight spans. Diagnostic previews are review evidence, not permission to skip unfinished synchronization.
+
 Apply the [cinematic lyric presentation standard](cinematic-lyric-workflow.md) to current and future productions: stable color-only word/group focus, precise timing and continuous scene shading. Historical underline and progress-fill examples do not override this default.
 
 For future bilingual films, apply the [equal-emphasis lyric workflow](bilingual-lyric-workflow.md): English and original-language lyrics share equal perceived size and weight, color/contrast, highlighting and synchronization precision. This takes precedence over subordinate translation treatments in historical examples.

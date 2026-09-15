@@ -1,5 +1,18 @@
 # QA checklist
 
+## Mandatory synchronization gate before production rendering
+
+Follow the [cross-language sync gate](cross-language-sync-gate.md) and save a [completed review record](templates/cross-language-sync-review.md).
+
+- [ ] Every cue and every displayed language has been reviewed against the actual audio across the complete recording.
+- [ ] Correspondences preserve meaning and highlight the full translated span, including necessary English grammar; neither under-highlighting nor over-highlighting remains.
+- [ ] Individual matches, grammatical expansions, reordered words, repetitions and final releases have audiovisual evidence in every delivery format.
+- [ ] Known sync/translation defects are resolved; missing listening review is not marked complete by model or frame checks.
+- [ ] The review names its method and reviewer role, records remaining interpretive uncertainty and matches frozen input hashes.
+- [ ] Every new project’s production render entry point refuses an incomplete or stale sync review.
+
+An accepted historical edition with documented gaps does not pass this gate for the next song.
+
 ## Source lock
 
 - [ ] Confirm the exact song, remix, and edit.

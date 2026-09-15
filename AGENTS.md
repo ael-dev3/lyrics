@@ -4,6 +4,10 @@ Production workflows use original-language lyrics and meaning-based translations
 
 Read `docs/track-workflow-preferences-and-known-issues.md` for the established production and handoff preferences.
 
+Mandatory for the next song and every future multilingual film: complete the full cross-language synchronization review in `docs/cross-language-sync-gate.md` before any full-length production render begins. Review every cue and every language with the actual audio, including the complete translated highlight span. Diagnostic sync previews support this review; a few good clips, passing interval tests or a previously accepted film do not constitute completion. Missing, incomplete or stale review evidence blocks production rendering. Keep delivery acceptance and synchronization completeness as separate statuses; Прости за любовь v1.2 is accepted with known gaps, not the next song’s quality baseline.
+
+Translation and highlighting prioritize precision. Preserve unstated objects rather than supplying a guessed beloved, keep explicit grammatical meanings, and map individually corresponding words separately. Use multi-word source groups only for documented irreducible constructions, never for convenience. Highlight the complete translated meaning, including necessary grammatical completions that belong to the same source event; do not leave them neutral solely because there is no separate source token. Do not invent independent timestamps for those words. Follow the word correspondence audit in `docs/bilingual-lyric-workflow.md`.
+
 Scoped exception: the explicitly commissioned [Life Letters Russian / Argentinian Spanish edition](projects/life-letters-lyric-film/README.md) includes a synchronized Spanish-oriented pronunciation layer, its guide and subtitle files in the film, source and release. Preserve that edition's three-layer treatment; the pronunciation exclusion remains the default for other projects.
 
 Read `docs/cinematic-lyric-workflow.md` before choosing a lyric treatment. It defines the current cinematic default and takes precedence over conflicting visual defaults in historical references.

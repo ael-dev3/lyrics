@@ -14,6 +14,10 @@ Project documentation should contain decisions that another contributor can appl
 
 It should not contain private thoughts or quotations, personal identifiers, account or contact details, exact local paths, token or cost information, or unpublished rights-sensitive links. Use neutral production language for subjective feedback, such as “below the approved reference standard” or “needs another preview pass.”
 
+## Прости за любовь v1.2 follow-up
+
+This delivery is **accepted with known highlighting gaps**. The full English spans for «Остыла» and «прости» are not always highlighted; see the [project record](../projects/prosti-za-lyubov-lyric-film/README.md) and [known issues](../projects/prosti-za-lyubov-lyric-film/KNOWN-ISSUES.md). Preserve the accepted files. The next song must meet the stricter cross-language sync gate before rendering; acceptance here does not waive that requirement.
+
 ## Tanisea v2.5.0 follow-up
 
 The Tanisea v2.5.0 16:9 delivery is accepted as the working YouTube edition. No media changes are requested as part of this note.
@@ -56,6 +60,8 @@ The explicitly commissioned [Life Letters Russian / Argentinian Spanish edition]
 
 ### Equal emphasis for English lyrics
 
+- Follow the [word correspondence audit](bilingual-lyric-workflow.md#translation-and-word-correspondence-audit): conservative meaning, individual matches where defensible, and complete semantic spans where English needs additional grammatical words. Preserve explicit small words and unstated objects. Check for both overly broad focus and omitted English parts; necessary completions may share a source event without invented word timings.
+
 - Follow the [bilingual lyric workflow](bilingual-lyric-workflow.md) for future productions. English receives equal perceived size and weight, color/contrast, highlight intensity and synchronization precision alongside the original-language lyrics.
 - Apply the same cinematic color-only focus to both languages, including comparable active and inactive contrast. Removing karaoke decoration must not reduce English prominence or loosen either language's timing.
 - Share source timing and semantic cue events across both languages, including onset, handoff and release behavior. Natural English word order may require grouped or non-linear focus.
@@ -85,7 +91,7 @@ The explicitly commissioned [Life Letters Russian / Argentinian Spanish edition]
 5. Render short previews first, normally 10–15 seconds around the affected section and its approved comparison section.
 6. Play the preview with the source audio and review lyric highlighting, line transitions, spacing, safe areas, and motion at normal speed. Check stable, color-only word/group emphasis without karaoke decoration unless explicitly requested. Verify active/inactive readability and equal bilingual size, color, focus and timing at native and mobile size using the [style-preview acceptance gate](bilingual-lyric-workflow.md#style-preview-acceptance-gate).
 7. For repeated sections, compare the candidate directly with the approved reference window; document any remaining checkpoint instead of masking it with unrelated changes.
-8. Render the complete delivery only after the targeted previews are acceptable and the complete-recording vocal-coverage audit has no unresolved lyric omissions.
+8. Complete the mandatory [cross-language sync gate](cross-language-sync-gate.md) before the full production render: every cue, every language, actual-audio review, complete target spans and no unresolved synchronization or meaning defects. Targeted previews and a coverage audit alone are insufficient. Record the completed review and freeze its input hashes.
 9. Run technical checks: typecheck, tests, composition discovery, timing/alignment checks, full decode, frame count, dimensions, frame rate, metadata, and checksums.
 10. Run visual spot checks at intro, affected sections, transitions, and outro. Keep proof renders separate from the clean master.
 11. Place the final local deliverable in the requested handoff location and publish source, workflow, audits, and checksums to GitHub.

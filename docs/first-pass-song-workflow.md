@@ -1,5 +1,7 @@
 # First-pass workflow for the next lyric film
 
+**Mandatory for future multilingual productions:** pass the [complete cross-language synchronization gate](cross-language-sync-gate.md) before starting full-length production rendering. Review the entire recording in all languages, including complete translated highlight spans. Diagnostic previews are review evidence, not permission to skip unfinished synchronization.
+
 This is the production order for reusing the Tanisea system on another song. It front-loads timing authority and a short style lock so preventable synchronization, layout, and rendering problems are found before the full-length render.
 
 Use the [current cinematic lyric standard](cinematic-lyric-workflow.md): stable color-only focus with precise timing. Earlier underline treatments are historical references and are not the default for new films.
@@ -152,6 +154,8 @@ For each repeated or high-risk passage, render matched-duration public clips wit
 Compare presentation behavior, not copied timestamps. Different performances keep their independent sample cues.
 
 ## 10. Build final media once
+
+The [cross-language sync review](cross-language-sync-gate.md) must be complete and refer to the exact current audio, lyrics, mappings, timing and presentation behavior. Wire this check into every production render entry point for a new project; missing, incomplete or stale evidence must stop capture.
 
 Use the tested source revision for every final artifact:
 
