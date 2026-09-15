@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "recordedOn": "2026-09-16",
+  "status": "verified local posting handoff",
+  "supplements": "delivery-receipt.json",
+  "originalArchiveSourceCommit": "c031f9fd77debb73d953eddb6747692b65013d98",
+  "scope": "Both platform folders verified against delivered originals; YouTube thumbnail added after the original publishing archive was frozen.",
+  "mediaPublication": "Local files only; this workflow has not published a media release or uploaded to YouTube or TikTok.",
+  "files": [
+    {
+      "path": "YouTube/Tvoi-Glaza-YouTube-1920x1080.mp4",
+      "role": "video",
+      "bytes": 27923530,
+      "sha256": "f065a205ac4b48118f34a10544a324c6e4f746ccb0c2297da1ba977a038fa42e",
+      "matchesVerifiedSource": true,
+      "width": 1920,
+      "height": 1080,
+      "sampleAspectRatio": "1:1"
+    },
+    {
+      "path": "YouTube/Title.txt",
+      "role": "title",
+      "bytes": 75,
+      "sha256": "7247a853545caa24df48c175f6a0dca3c9a2b9f24c6716bbea66dafcd9d3b801",
+      "matchesVerifiedSource": true
+    },
+    {
+      "path": "YouTube/Description.txt",
+      "role": "description",
+      "bytes": 908,
+      "sha256": "740776771e14a69380a8d2d1bcfaa78be8f43db84da898a65184ecca969bdb58",
+      "matchesVerifiedSource": true
+    },
+    {
+      "path": "YouTube/Thumbnail-3840x2160.jpg",
+      "role": "thumbnail",
+      "bytes": 577603,
+      "sha256": "68986614aad7e6612d687d3475663df1b939097d3995d8a4663add074b2da12e",
+      "matchesVerifiedSource": true,
+      "width": 3840,
+      "height": 2160,
+      "sampleAspectRatio": "1:1"
+    },
+    {
+      "path": "TikTok/Tvoi-Glaza-TikTok-1080x1920.mp4",
+      "role": "video",
+      "bytes": 26206241,
+      "sha256": "663d5d4ff7aef993b709169c59d1f3a0e764d32769b12b4b65bb970c8c03aece",
+      "matchesVerifiedSource": true,
+      "width": 1080,
+      "height": 1920,
+      "sampleAspectRatio": "1:1"
+    },
+    {
+      "path": "TikTok/Description.txt",
+      "role": "description",
+      "bytes": 429,
+      "sha256": "bbfce3fcf88e17ebabdad687e1780e24b5cbc59159934bff89815513efa5565a",
+      "matchesVerifiedSource": true
+    },
+    {
+      "path": "TikTok/Profile-Cover-1200x1600.jpg",
+      "role": "thumbnail",
+      "bytes": 169741,
+      "sha256": "cc9e2cf2936bda1254ae423835904779d41f4c0c7d4287b77db79ea75607e1ff",
+      "matchesVerifiedSource": true,
+      "width": 1200,
+      "height": 1600,
+      "sampleAspectRatio": "1:1"
+    }
+  ],
+  "instructions": {
+    "path": "START-HERE.txt",
+    "bytes": 563,
+    "sha256": "fbf8e955def04c9daf68371d3faeddf3176a65981a6faa3b3acd3ff222619624",
+    "bothThumbnailPathsPresent": true
+  },
+  "covers": {
+    "youtube": {
+      "source": "Existing portrait cover for the same film",
+      "generationTool": "built-in image_gen",
+      "modelVersion": "not exposed",
+      "prompt": "../publishing/youtube-thumbnail-prompt.json",
+      "generatedSize": [
+        1672,
+        941
+      ],
+      "deliveredSize": [
+        3840,
+        2160
+      ],
+      "conversion": "FFmpeg Lanczos resize, JPEG quality 2; 3840×2160 is the delivered raster size, not native generated detail.",
+      "visualReview": "Full title, artist and face inspected at native and 320×180 display size."
+    },
+    "tiktok": {
+      "manifest": "../publishing/cover-manifest.json",
+      "deliveredSize": [
+        1200,
+        1600
+      ],
+      "widthToHeightRatio": "3:4",
+      "visualReview": "Existing reviewed cover retained; 150×200 legibility rechecked during the thumbnail handoff."
+    }
+  },
+  "archivePolicy": "The original editable archive, publishing ZIP and checksum inventory remain unchanged. This addendum records later handoff details separately."
+}

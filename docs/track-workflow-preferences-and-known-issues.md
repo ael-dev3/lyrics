@@ -58,6 +58,14 @@ The explicitly commissioned [Life Letters Russian / Argentinian Spanish edition]
 - Keep public compositions clean. Put diagnostic overlays, measurement guides, and proof-only material in separate previews or proof renders.
 - Blend lyric-area contrast into continuous full-frame shading. Avoid visible boxes or localized dark patches that appear and disappear with cues. Check occupied and empty reading areas, and fade cropped source edges completely into the surrounding background before they become visible, especially in portrait compositions.
 
+### Motion intensity for the current song
+
+- Select motion intensity from the arrangement, vocal delivery and source imagery. The accepted Твои глаза composition establishes a restrained option for gentle, contemplative material: original animation, equal serif lyric rows and a compact, subdued spectrum. See the [exact settings and production lessons](../projects/tvoi-glaza-lyric-film/PRODUCTION-LESSONS.md).
+- Small travel and lower opacity can be deliberate finished choices. Preserve visible musical response and sharp bar cores while allowing the picture and words to remain prominent.
+- Higher-energy gestures, broad rails and transient extensions are available when the recording calls for them. Do not carry their numeric ranges into every new track automatically.
+- Record display transforms, geometry and ending behavior separately from raw measurements. Keep the lyric timing and bilingual emphasis equally precise at every motion intensity.
+- Document creative conclusions as reusable production decisions, without personal ratings, direct feedback quotations or comparisons that imply one song supplied another's design.
+
 ### Equal emphasis for English lyrics
 
 - Follow the [word correspondence audit](bilingual-lyric-workflow.md#translation-and-word-correspondence-audit): conservative meaning, individual matches where defensible, and complete semantic spans where English needs additional grammatical words. Preserve explicit small words and unstated objects. Check for both overly broad focus and omitted English parts; necessary completions may share a source event without invented word timings.
@@ -74,6 +82,7 @@ The explicitly commissioned [Life Letters Russian / Argentinian Spanish edition]
 - Prefer a high-quality master render followed by a controlled delivery encode with recorded metadata and checksums.
 - Make changes reversible and traceable: keep source data, scripts, composition variants, audit reports, and release notes together.
 - Use concise progress updates focused on decisions, completed checks, and blockers; keep private conversation out of repository history.
+- For a YouTube and TikTok posting handoff, verify each platform has its own final video, copy and thumbnail. Include a YouTube title and description and a TikTok description. Review both covers at small display sizes, then verify copied file hashes in the final destination. Record later additions in a separate receipt so an already delivered archive keeps its original identity.
 
 ### TikTok cover default
 

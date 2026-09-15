@@ -2,6 +2,8 @@
 
 A Russian / English lyric film using the Lyrics production workflow in general. Original animation and recording are retained. Both languages receive equal serif typography, stable positions and color-only word/meaning emphasis.
 
+**A restrained visualizer for a contemplative arrangement.** Compact pale-gold bars provide a quiet musical response beneath the lyric composition. Their bounded travel and subdued opacity leave the original animation, voice and words prominent. This finished approach is a reusable option for gentler tracks. The [production lessons](PRODUCTION-LESSONS.md) record exact visual settings, synchronization decisions, encoding findings, verification limits and the complete posting handoff.
+
 **The project owner completed review, reported no mistakes and authorized full rendering.** Frozen timings and translations are retained. Detailed listening telemetry was not supplied; the review record distinguishes this user attestation from measured technical checks.
 
 ## Delivery
@@ -16,6 +18,8 @@ A Russian / English lyric film using the Lyrics production workflow in general. 
 See [final verification](evidence/final-verification.md), [review record](evidence/cross-language-sync-review.md), `evidence/frame-audit.json` and the per-format `.verification.json` reports for acceptance and technical evidence. Numerical checks do not claim mathematically perfect acoustic alignment.
 
 The [delivery receipt](evidence/delivery-receipt.json) records the editable archive's exact source commit and verified checksums. The receipt is committed after packaging because an immutable archive cannot contain its own final checksum.
+
+The later [posting-handoff addendum](evidence/posting-handoff-addendum.json) records the two final videos, platform copy and both thumbnails, including the dedicated 3840×2160 YouTube JPEG. It supplements the original delivery receipt; the original movie and archive identities remain authoritative for that delivery. See the [publishing inventory](publishing/README.md).
 
 ## Render from frozen inputs
 
