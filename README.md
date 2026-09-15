@@ -14,7 +14,7 @@ Dedicated 1920×1080 and 1080×1920 compositions at 60 fps retain the complete o
 
 The project owner completed the actual-recording review and authorized full rendering. The review record distinguishes this overall user attestation from unavailable granular listening telemetry. Production captures at 2×, uses ProRes 4444 references and HEVC Main 10 delivery, and preserves the original AAC packets and timestamps. Decoded-word checks inspect the actual highlight colors against the frozen event map.
 
-[Production and reproduction](projects/tvoi-glaza-lyric-film/README.md) · [Review record](projects/tvoi-glaza-lyric-film/evidence/cross-language-sync-review.md) · [Decoded-focus method](projects/tvoi-glaza-lyric-film/evidence/decoded-focus-method.md) · [Publishing copy](projects/tvoi-glaza-lyric-film/publishing/Tvoi-Glaza-Description.txt) · [Original song and animation](https://www.youtube.com/watch?v=qC4sCCmvoXU)
+[Production and reproduction](projects/tvoi-glaza-lyric-film/README.md) · [Verified delivery and checksums](projects/tvoi-glaza-lyric-film/evidence/delivery-receipt.json) · [Review record](projects/tvoi-glaza-lyric-film/evidence/cross-language-sync-review.md) · [Decoded-focus method](projects/tvoi-glaza-lyric-film/evidence/decoded-focus-method.md) · [Publishing copy](projects/tvoi-glaza-lyric-film/publishing/Tvoi-Glaza-Description.txt) · [Original song and animation](https://www.youtube.com/watch?v=qC4sCCmvoXU)
 
 This edition applies the Lyrics workflow in general. Recording, animation, covers and full-film assets remain local or in a draft release; source-artist rights are excluded from the repository contribution license.
 

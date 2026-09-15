@@ -15,6 +15,8 @@ A Russian / English lyric film using the Lyrics production workflow in general. 
 
 See [final verification](evidence/final-verification.md), [review record](evidence/cross-language-sync-review.md), `evidence/frame-audit.json` and the per-format `.verification.json` reports for acceptance and technical evidence. Numerical checks do not claim mathematically perfect acoustic alignment.
 
+The [delivery receipt](evidence/delivery-receipt.json) records the editable archive's exact source commit and verified checksums. The receipt is committed after packaging because an immutable archive cannot contain its own final checksum.
+
 ## Render from frozen inputs
 
 With Node.js 24+, FFmpeg/FFprobe (libx265) and the original media listed in `source/input-manifest.json`:
