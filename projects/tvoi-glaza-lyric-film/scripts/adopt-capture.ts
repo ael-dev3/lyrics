@@ -1,0 +1,11 @@
+import {readFileSync,writeFileSync,createReadStream} from 'node:fs';
+import {createHash} from 'node:crypto';
+import {execFileSync} from 'node:child_process';
+import {inputHashes,assertSyncGate} from './sync-gate.ts';
+assertSyncGate();const format=process.argv[2];if(!['landscape','portrait'].includes(format??''))throw Error('format');
+const path=`evidence/previews/Tvoi-Glaza-${format}-reference/part-01.mov`;
+const s=JSON.parse(execFileSync('ffprobe',['-v','error','-count_packets','-select_streams','v:0','-show_streams','-of','json',path],{encoding:'utf8'})).streams[0];
+if(s.codec_name!=='prores'||s.profile!=='4444'||!s.pix_fmt.includes('444')||+s.nb_read_packets!==1261||s.width!==(format==='portrait'?2160:3840)||s.height!==(format==='portrait'?3840:2160))throw Error('Recovered capture contract failed');
+const hash=createHash('sha256');for await(const chunk of createReadStream(path))hash.update(chunk);
+const fingerprint=createHash('sha256').update(JSON.stringify(inputHashes())).update('PNG-2x-ProRes4444-BT709-v1').digest('hex');
+writeFileSync(path+'.json',JSON.stringify({fingerprint,first:0,last:1260,frames:1261,sha256:hash.digest('hex'),recovery:'Preserved the complete original Remotion PNG capture; encoded via prores_videotoolbox profile 4444.',video:s},null,2));console.log('Verified recovered',format,'reference 1/8');

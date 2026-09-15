@@ -120,6 +120,13 @@ An accepted historical edition with documented gaps does not pass this gate for 
 
 ## Emotional audio-reactive motion
 
+Choose the motion profile before applying profile-specific checks. Expanded title rails and hero states are optional; their ranges and fixtures below apply when that system is present. A restrained spectrum uses its declared geometry instead. See the [song-dependent motion guidance](emotional-audio-reactive-motion.md#choose-the-amount-of-motion-first).
+
+- [ ] The selected intensity and its relationship to the arrangement and source image are documented in neutral production language.
+- [ ] Bar count, height caps, opacity, thickness, placement and ending fade match the selected profile in every aspect ratio.
+- [ ] The actual renderer's measurement-to-display mapping is documented separately from raw calibrated values, including nonlinear transforms.
+- [ ] Quiet passages and musical peaks retain clear bilingual text; the encoded spectrum remains visible at native and mobile size.
+
 - [ ] Sustained pressure, transient impact, low-end weight, spectral brightness, and editorial emotion are separate controls.
 - [ ] Artistic controls are derived from the frozen scientific feature package without modifying its raw values.
 - [ ] Loudness and transient normalization use frozen track-relative percentiles rather than per-frame or per-line renormalization.
@@ -192,3 +199,6 @@ For TikTok kits, complete the separate [profile-cover checks](tiktok-cover-workf
 - [ ] The platform-safe copy measures within its declared LUFS window and at or below its true-peak ceiling after final AAC encoding.
 - [ ] The final file checksum is recorded.
 - [ ] The delivered copy matches the audited master byte-for-byte.
+- [ ] Every requested posting platform has its own final film, thumbnail and copy; the YouTube title is included.
+- [ ] Thumbnail dimensions, aspect ratio, file size, small-size legibility and destination-copy hashes are recorded for both platforms.
+- [ ] Additions after delivery have a separate dated receipt; original archives, source commit identities and checksum inventories remain reproducible.

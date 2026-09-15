@@ -96,7 +96,9 @@ Pass the [bilingual style-preview acceptance gate](bilingual-lyric-workflow.md#s
 
 Generate deterministic 64-band logarithmic analysis from 20 Hz to 20 kHz. Use one feature record per public frame and store the generator settings and hashes.
 
-Tanisea defaults:
+Choose intensity from the current song's arrangement and picture. For gentle material, begin with the [restrained Твои глаза approach](../projects/tvoi-glaza-lyric-film/PRODUCTION-LESSONS.md#the-restrained-visualizer): compact bars, modest travel, subdued opacity and stable bilingual focus. Record the actual measurement-to-height mapping, geometry and fade. Confirm the selected approach with audio in both formats before freezing it.
+
+Historical Tanisea profile, available when its larger motion suits the new track:
 
 - symmetric `[1, 2, 3, 2, 1]` temporal and spatial smoothing;
 - one flat-ended 4 px SVG line per band;
@@ -108,6 +110,8 @@ Tanisea defaults:
 - 36 px minimum lyric-to-spectrum clearance.
 
 Test element count, geometry, palette, flat endings, and absence of separate impact elements in static markup. Measure peak geometry in Chromium rather than inferring it from CSS or SVG source.
+
+Keep all artistic smoothing, nonlinear scaling and transient extension separate from the raw measured artifact. Label a calibrated instrument with its true scale; describe an unlabeled decorative spectrum as an artistic display of measured bands. The historical travel ranges above do not set a minimum for future songs.
 
 ## 7. Write the failure tests first
 

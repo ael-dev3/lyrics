@@ -24,6 +24,16 @@ Color-only focus includes a visible luminance difference; do not rely on hue alo
 
 Use track-specific colors, fonts and motion. Midnight Love's blue, silver and pale gold are a reference for that recording, not a universal palette. Decorative spectrum or composition lines are distinct from active-word underlines.
 
+## Match motion intensity to the song
+
+Choose the visualizer's role before tuning its response. Gentle, intimate or contemplative arrangements benefit from a small supporting spectrum, limited vertical travel and subdued opacity. Let source animation, composition and lyric meaning provide the expression. A sustained or emotionally important passage may retain that restraint throughout.
+
+Use **Твои глаза** as an implemented example of this approach: 64 square-ended pale-gold bars, maximum group opacity 0.60, height caps of 24 px in landscape and 42 px in portrait, and equal, stable bilingual text. The spectrum and title fade out together before the source ending. The [production lessons](../projects/tvoi-glaza-lyric-film/PRODUCTION-LESSONS.md#the-restrained-visualizer) record the actual formula, geometry and limits.
+
+For more forceful arrangements, larger reach or reviewed transient accents may suit the composition. Historical hero gestures and large analyzer rails remain available techniques; choose them deliberately. Numerical loudness alone cannot decide the song's emotional treatment. Keep raw audio measurements unchanged, describe any nonlinear artistic mapping, and preserve the same acoustic precision and bilingual prominence at every motion intensity.
+
+During the short style review, include quiet material, a musical peak, dense bilingual text and the ending in both formats. Check that bars remain visible after encoding and at mobile size, that their movement supports the picture, and that the ending has room for original credits. Record the chosen intensity and its reason in neutral production language.
+
 ## Timing and coverage
 
 Audit the complete recording, including gaps and the tail after the supplied reference ends. A lyric sheet ending, missing automatic captions or a `[Music]` label does not establish that a passage is instrumental. Preserve the supplied reference separately, document confirmed performed repeats and align each performance independently. Follow the [complete-recording coverage requirements](track-workflow-preferences-and-known-issues.md#vocal-coverage-across-the-complete-recording).

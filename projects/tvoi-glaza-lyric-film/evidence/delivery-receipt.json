@@ -1,0 +1,62 @@
+{
+  "status": "verified local delivery",
+  "sourceCommit": "c031f9fd77debb73d953eddb6747692b65013d98",
+  "repository": "https://github.com/ael-dev3/lyrics",
+  "sourceBranch": "feat/tvoi-glaza-delivery",
+  "sourceArchive": "Tvoi-Glaza-Editable-Project.zip",
+  "archiveSource": "Exact committed project source plus frozen media, compiled review player, publishing assets, selected decoded pictures and immutable workflow Markdown",
+  "mediaPublication": "Local files only; no public media release or platform upload performed",
+  "assets": [
+    {
+      "name": "Tvoi-Glaza-Landscape-1920x1080-60fps.mp4",
+      "bytes": 27923530,
+      "sha256": "f065a205ac4b48118f34a10544a324c6e4f746ccb0c2297da1ba977a038fa42e"
+    },
+    {
+      "name": "Tvoi-Glaza-Portrait-1080x1920-60fps.mp4",
+      "bytes": 26206241,
+      "sha256": "663d5d4ff7aef993b709169c59d1f3a0e764d32769b12b4b65bb970c8c03aece"
+    },
+    {
+      "name": "Tvoi-Glaza-Editable-Project.zip",
+      "bytes": 434109718,
+      "sha256": "31506c4e0010ba157dcf331352c3da89573985cb61f3097e5bbfab143b5d3bc3"
+    },
+    {
+      "name": "Tvoi-Glaza-Publishing-Kit.zip",
+      "bytes": 2366552,
+      "sha256": "82f80b859d44f3aa6a4906941cdfb322d09231f5695bfbddadfaa326edda389c"
+    },
+    {
+      "name": "Tvoi-Glaza-Verification.md",
+      "bytes": 3698,
+      "sha256": "8d8fd2e2ab38c03bef931d72d8bfda33ee0c269e4310a706acba44a5445057ea"
+    },
+    {
+      "name": "Tvoi-Glaza-TikTok-Cover-Profile-1200x1600.jpg",
+      "bytes": 169741,
+      "sha256": "cc9e2cf2936bda1254ae423835904779d41f4c0c7d4287b77db79ea75607e1ff"
+    },
+    {
+      "name": "Tvoi-Glaza-Cover-Prompt.json",
+      "bytes": 1367,
+      "sha256": "0c49fcdcc1aca49b0f7512d01d7e6fb932254472ced55a7c9ecd44a694f9a0ef"
+    }
+  ],
+  "verification": "Original AAC packet payloads, PTS and durations identical in both films; all 20188 video frames and 247136 visible bilingual word states checked; zero highlight mismatches or ambiguous states; full-file strict decoding; selected final pictures visually inspected",
+  "archiveVerification": {
+    "status": "passed",
+    "archive": "Tvoi-Glaza-Editable-Project.zip",
+    "sha256": "31506c4e0010ba157dcf331352c3da89573985cb61f3097e5bbfab143b5d3bc3",
+    "sourceCommit": "c031f9fd77debb73d953eddb6747692b65013d98",
+    "extractedFiles": 248,
+    "checkedPayloads": 247,
+    "checks": [
+      "ZIP CRC validation during package creation",
+      "All archive entry paths inspected",
+      "Fresh extraction",
+      "Every extracted payload checked against SHA-256 inventory",
+      "No missing, unexpected or symlink entries"
+    ]
+  }
+}

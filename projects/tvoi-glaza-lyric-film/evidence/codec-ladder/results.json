@@ -1,0 +1,89 @@
+{
+  "method": "Two-second real-composition comparison, equal 120-frame counts and normalized pixel format. Both inputs use settb=1/60,setpts=N before comparison, preventing Matroska millisecond timestamps from pairing a highlight onset with the preceding frame. Full-frame SSIM and separately masked bilingual lyric PSNR.",
+  "records": [
+    {
+      "kernel": "lanczos",
+      "crf": 15,
+      "frames": 120,
+      "seconds": [
+        15,
+        17
+      ],
+      "bytes": 486263,
+      "metrics": [
+        "[Parsed_psnr_9 @ 0xa02c1e580] PSNR y:55.472801 u:57.271505 v:57.063107 average:55.967313 min:54.217570 max:90.094386",
+        "[Parsed_ssim_6 @ 0xa02c1e340] SSIM Y:0.999230 (31.136591) U:0.999034 (30.149440) V:0.998888 (29.537895) All:0.999140 (30.657218)"
+      ]
+    },
+    {
+      "kernel": "lanczos",
+      "crf": 17,
+      "frames": 120,
+      "seconds": [
+        15,
+        17
+      ],
+      "bytes": 411578,
+      "metrics": [
+        "[Parsed_psnr_9 @ 0x7dcc26580] PSNR y:53.688833 u:55.724568 v:55.627558 average:54.255777 min:52.499535 max:81.805332",
+        "[Parsed_ssim_6 @ 0x7dcc26340] SSIM Y:0.998991 (29.960803) U:0.998774 (29.114179) V:0.998577 (28.469145) All:0.998886 (29.530412)"
+      ]
+    },
+    {
+      "kernel": "lanczos",
+      "crf": 19,
+      "frames": 120,
+      "seconds": [
+        15,
+        17
+      ],
+      "bytes": 347914,
+      "metrics": [
+        "[Parsed_psnr_9 @ 0xafd022580] PSNR y:51.961901 u:54.492655 v:54.436952 average:52.647361 min:50.761073 max:81.334745",
+        "[Parsed_ssim_6 @ 0xafd022340] SSIM Y:0.998692 (28.833507) U:0.998465 (28.138799) V:0.998190 (27.423659) All:0.998570 (28.447978)"
+      ]
+    },
+    {
+      "kernel": "spline",
+      "crf": 15,
+      "frames": 120,
+      "seconds": [
+        15,
+        17
+      ],
+      "bytes": 477799,
+      "metrics": [
+        "[Parsed_psnr_9 @ 0xa34c12c40] PSNR y:55.456229 u:57.384518 v:57.162446 average:55.981419 min:54.282693 max:86.352291",
+        "[Parsed_ssim_6 @ 0xa34c12a00] SSIM Y:0.999232 (31.146587) U:0.999057 (30.252618) V:0.998913 (29.635922) All:0.999150 (30.703430)"
+      ]
+    },
+    {
+      "kernel": "spline",
+      "crf": 17,
+      "frames": 120,
+      "seconds": [
+        15,
+        17
+      ],
+      "bytes": 404957,
+      "metrics": [
+        "[Parsed_psnr_9 @ 0xb12816700] PSNR y:53.659081 u:55.945570 v:55.748808 average:54.273272 min:52.598088 max:82.564686",
+        "[Parsed_ssim_6 @ 0xb128164c0] SSIM Y:0.998991 (29.959728) U:0.998795 (29.189926) V:0.998594 (28.518752) All:0.998892 (29.554098)"
+      ]
+    },
+    {
+      "kernel": "spline",
+      "crf": 19,
+      "frames": 120,
+      "seconds": [
+        15,
+        17
+      ],
+      "bytes": 342357,
+      "metrics": [
+        "[Parsed_psnr_9 @ 0x720c12b80] PSNR y:51.969019 u:54.560495 v:54.487379 average:52.665821 min:50.812138 max:79.754611",
+        "[Parsed_ssim_6 @ 0x720c12940] SSIM Y:0.998693 (28.837918) U:0.998482 (28.187489) V:0.998221 (27.498479) All:0.998579 (28.475068)"
+      ]
+    }
+  ]
+}

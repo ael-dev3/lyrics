@@ -2,9 +2,23 @@
 
 Music films with synchronized lyrics, meaning-linked translations, and audio-reactive visuals. This repository contains the projects, production workflows, and verification evidence behind each edition.
 
-**Current style default:** [cinematic lyric presentation](docs/cinematic-lyric-workflow.md) — stable, color-only word or phrase emphasis, precise vocal timing, smooth scene shading and equally prominent bilingual lyrics. The guide includes the final Midnight Love reference and review requirements for future tracks.
+**Current style default:** [cinematic lyric presentation](docs/cinematic-lyric-workflow.md) — stable, color-only word or phrase emphasis, precise vocal timing, smooth scene shading and equally prominent bilingual lyrics. Motion intensity follows the song: gentle arrangements can use compact, subdued audio-reactive graphics. The guide includes implemented references and review requirements for future tracks.
 
-[**Прости за любовь — accepted with known gaps**](#прости-за-любовь) · [**Половинка**](#половинка) · [**Life Letters**](#life-letters) · [**Joyride**](#joyride) · [**midnight love**](#midnight-love) · [**Пожары**](#пожары) · [**Отменяй**](#отменяй) · [**Roi × Adore**](#roi--adore) · [**TikTok edition**](#tiktok-edition) · [**Tanisea**](#tanisea) · [**Build and workflow**](#build-and-workflow)
+[**Твои глаза**](#твои-глаза) · [**Прости за любовь — accepted with known gaps**](#прости-за-любовь) · [**Половинка**](#половинка) · [**Life Letters**](#life-letters) · [**Joyride**](#joyride) · [**midnight love**](#midnight-love) · [**Пожары**](#пожары) · [**Отменяй**](#отменяй) · [**Roi × Adore**](#roi--adore) · [**TikTok edition**](#tiktok-edition) · [**Tanisea**](#tanisea) · [**Build and workflow**](#build-and-workflow)
+
+## Твои глаза
+
+**POLNALYUBVI — Твои глаза / Your Eyes · Russian + English**
+
+Dedicated 1920×1080 and 1080×1920 compositions at 60 fps retain the complete original recording and animation. All 154 Russian tokens and 195 English words receive stable, meaning-linked color emphasis, including grammatical completions and reordered English phrases.
+
+**Restrained visualizer reference.** A compact pale-gold spectrum supports the contemplative animation and equal bilingual serif text. Its 64 measured bands use small, bounded travel and subdued opacity, leaving the voice, words and source picture prominent. This edition establishes a successful low-intensity approach for gentler arrangements; visual energy is chosen for each recording. See the [production lessons and exact display settings](projects/tvoi-glaza-lyric-film/PRODUCTION-LESSONS.md).
+
+The project owner completed the actual-recording review and authorized full rendering. The review record distinguishes this overall user attestation from unavailable granular listening telemetry. Production captures at 2×, uses ProRes 4444 references and HEVC Main 10 delivery, and preserves the original AAC packets and timestamps. Decoded-word checks inspect the actual highlight colors against the frozen event map.
+
+[Production and reproduction](projects/tvoi-glaza-lyric-film/README.md) · [Verified delivery and checksums](projects/tvoi-glaza-lyric-film/evidence/delivery-receipt.json) · [Review record](projects/tvoi-glaza-lyric-film/evidence/cross-language-sync-review.md) · [Decoded-focus method](projects/tvoi-glaza-lyric-film/evidence/decoded-focus-method.md) · [Publishing copy](projects/tvoi-glaza-lyric-film/publishing/Tvoi-Glaza-Description.txt) · [Original song and animation](https://www.youtube.com/watch?v=qC4sCCmvoXU)
+
+This edition applies the Lyrics workflow in general. Recording, animation, covers and full-film assets remain local or in a draft release; source-artist rights are excluded from the repository contribution license.
 
 ## Прости за любовь
 
@@ -285,6 +299,7 @@ The reusable workflow covers soundtrack locking, lyric alignment, semantic trans
 - [Visual production workflow](docs/pixel-perfect-visual-workflow.md)
 - [Scientific audio visualization](docs/scientific-audio-visualization.md)
 - [Emotional audio-reactive motion](docs/emotional-audio-reactive-motion.md)
+- [Твои глаза production lessons](projects/tvoi-glaza-lyric-film/PRODUCTION-LESSONS.md) — restrained visualization, complete bilingual focus, decoded-frame verification and platform handoff
 - [Production preferences and known issues](docs/track-workflow-preferences-and-known-issues.md)
 - [TikTok cover defaults and crop review](docs/tiktok-cover-workflow.md) — portrait 1200×1600 for the profile preview labelled “4:3”; checked at thumbnail size
 

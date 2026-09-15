@@ -1,0 +1,5 @@
+import {readFileSync,writeFileSync} from 'node:fs';
+import {inputHashes} from './sync-gate.ts';
+import {parseData} from '../src/schema.ts';
+const data=parseData(JSON.parse(readFileSync('src/cues.json','utf8')));
+writeFileSync('evidence/cross-language-sync-review.json',JSON.stringify({status:'incomplete',reviewer:{role:'pending actual-audio reviewer',method:'model alignment and programmatic inspection only so far',actualListening:false},requirements:{translation:true,targetSpans:true,fullTrackAudio:false,highRiskSlowAudio:false,introGapsRepeatsTail:false,allFormatsAudiovisual:false,noKnownDefects:false},hashes:inputHashes(),cues:data.cues.map(c=>({id:c.id,ruMeaning:true,enMeaning:true,fullTargetSpan:true,normalAudio:false,slowAudio:false,landscape:false,portrait:false,notes:''})),unresolved:['Actual listening review has not been performed.','Every source boundary remains provisional; compare all candidate disagreements.','Check unforced-transcription omissions in opening verse and apparent ending hallucination with actual audio.','Full audiovisual review in both delivery formats remains incomplete.']},null,2));

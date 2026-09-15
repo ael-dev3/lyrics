@@ -1,0 +1,24 @@
+import {spawnSync} from 'node:child_process';
+import {readFileSync,writeFileSync} from 'node:fs';
+import {basename} from 'node:path';
+import {createHash} from 'node:crypto';
+import {assertSyncGate} from './sync-gate.ts';
+import {parseData,array,object,str,num} from '../src/schema.ts';
+assertSyncGate();const output=process.argv[2];if(!output)throw Error('Output file required');
+const command=(bin:string,args:string[])=>{const r=spawnSync(bin,args,{encoding:'utf8',maxBuffer:64*1024*1024});if(r.status!==0)throw Error(bin+' failed: '+r.stderr);return r.stdout;};
+const data=parseData(JSON.parse(readFileSync('src/cues.json','utf8')));
+const probe=object(JSON.parse(command('ffprobe',['-v','error','-threads','4','-count_frames','-show_streams','-show_format','-show_frames','-show_entries','frame=best_effort_timestamp_time,media_type','-of','json',output]))),streams=array(probe.streams).map(object),video=streams.find(s=>s.codec_type==='video');if(!video)throw Error('Missing video');
+const audioStream=streams.find(s=>s.codec_type==='audio');if(!audioStream||audioStream.codec_name!=='aac'||audioStream.sample_rate!=='44100'||audioStream.channels!==2||audioStream.time_base!=='1/44100')throw Error('Original audio stream clock/format not preserved');
+if(video.codec_name!=='hevc'||video.codec_tag_string!=='hvc1'||video.pix_fmt!=='yuv420p10le'||video.r_frame_rate!=='60/1'||Number(video.nb_read_frames)!==data.frames)throw Error('Video contract failed');
+const portrait=basename(output).includes('portrait');if(video.width!==(portrait?1080:1920)||video.height!==(portrait?1920:1080))throw Error('Wrong delivery dimensions');
+if(video.color_range!=='tv'||video.sample_aspect_ratio!=='1:1')throw Error('Range or pixel aspect mismatch');
+for(const key of ['color_space','color_transfer','color_primaries'])if(video[key]!=='bt709')throw Error('Color contract '+key);
+const frames=array(probe.frames).map(object).filter(f=>f.media_type==='video');if(frames.length!==data.frames)throw Error('Decoded frame inventory mismatch');
+frames.forEach((f,i)=>{if(Math.abs(Number(f.best_effort_timestamp_time)-i/60)>.000002)throw Error('Frame clock drift '+i);});
+const fileBytes=readFileSync(output),atoms:{type:string;offset:number;size:number}[]=[];let position=0;
+while(position<fileBytes.length){if(position+8>fileBytes.length)throw Error('Truncated MP4 atom');let size=fileBytes.readUInt32BE(position);const type=fileBytes.toString('ascii',position+4,position+8);if(size===1)size=Number(fileBytes.readBigUInt64BE(position+8));if(size===0)size=fileBytes.length-position;if(size<8||position+size>fileBytes.length)throw Error('Invalid MP4 atom size');atoms.push({type,offset:position,size});position+=size;}
+const moov=atoms.find(a=>a.type==='moov'),mdat=atoms.find(a=>a.type==='mdat');if(!moov||!mdat||moov.offset>mdat.offset)throw Error('MP4 is not fast-start');
+const packetHashes=(path:string)=>{const p=object(JSON.parse(command('ffprobe',['-v','error','-select_streams','a:0','-show_packets','-show_data_hash','sha256','-show_entries','packet=pts,duration,data_hash','-of','json',path])));return array(p.packets).map(object).map(x=>({pts:x.pts,duration:x.duration,hash:str(x.data_hash)}));};
+const original=packetHashes('public/soundtrack.m4a'),delivered=packetHashes(output);if(JSON.stringify(original)!==JSON.stringify(delivered))throw Error('Locked AAC packet/timestamp identity failed');
+command('ffmpeg',['-v','error','-xerror','-err_detect','explode','-i',output,'-f','null','-']);
+writeFileSync('evidence/'+basename(output)+'.verification.json',JSON.stringify({status:'passed technical verification',video,audioStream,audioPackets:original.length,frameClock:'every decoded video frame checked against i/60',audio:'AAC packet payloads, PTS and durations identical',strictFullDecode:true,fastStart:true,atoms,sha256:createHash('sha256').update(fileBytes).digest('hex')},null,2));

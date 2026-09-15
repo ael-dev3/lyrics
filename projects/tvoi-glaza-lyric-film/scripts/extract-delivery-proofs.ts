@@ -1,0 +1,3 @@
+import {mkdirSync} from 'node:fs';import {spawnSync} from 'node:child_process';
+const format=process.argv[2];if(!['landscape','portrait'].includes(format??''))throw Error('format');const root=`evidence/final-${format}`;mkdirSync(root,{recursive:true});const source=`output/Tvoi-Glaza-${format}.mp4`;
+for(const frame of [0,180,904,1260,1261,2522,2523,3784,3785,3804,5046,5047,6307,6308,7569,7570,8831,8832,9340,9630,9840,10089,10093]){const r=spawnSync('ffmpeg',['-v','error','-y','-ss',String(Math.floor(frame/60)),'-i',source,'-vf',`select=eq(n\\,${frame%60})`,'-frames:v','1',`${root}/frame-${String(frame).padStart(5,'0')}.png`],{stdio:'inherit'});if(r.status)throw Error('Extraction '+frame);}

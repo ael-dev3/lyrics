@@ -14,7 +14,15 @@ The intended result is not “more movement everywhere.” Impact comes from con
 
 This is an **artistic motion system**, not a measurement display. It consumes verified audio features but never modifies or relabels the scientific values documented in the [scientific audio-visualization specification](scientific-audio-visualization.md).
 
-## Why the current response feels smaller and less exact
+## Choose the amount of motion first
+
+The detailed expanded-line design below was developed for the Tanisea baseline. Its reach ranges, percentile budgets, transient extensions and hero states apply when that high-impact profile is selected. They are not minimum motion requirements for every song.
+
+For calmer arrangements, begin with a compact supporting spectrum and a lower ceiling for movement and opacity. **Твои глаза** is an implemented restrained reference: the original animation carries the atmosphere, stable bilingual color focus follows the voice, and small measured bars provide musical continuity. Its [exact settings and production lessons](../projects/tvoi-glaza-lyric-film/PRODUCTION-LESSONS.md) explain the approach. The choice is an editorial interpretation of the arrangement and imagery, not a loudness-derived emotion score.
+
+Document each track's maximum travel, opacity, thickness, palette, placement and fade behavior. Keep artistic scaling separate from the stored measured bands and the lyric event map. A quiet profile may omit transient overreach and hero states entirely. Review its encoded visibility and relationship to the source picture at native and mobile sizes before increasing motion.
+
+## Historical Tanisea response and expanded-line target
 
 The checked-in source derives one `masterLevel` from already compressed spectrum bars, clamps `energy` to a narrow range, and holds recent FFT peaks. In the outro, the accent-line width is:
 
@@ -74,7 +82,7 @@ Do not derive every control from the same FFT average. Independent drivers allow
 
 ## Track-relative normalization
 
-This song is heavily mastered, so much of it is objectively loud. A fixed threshold such as `−10 LUFS` would provide almost no contrast.
+The Tanisea baseline is heavily mastered, so much of it is objectively loud. A fixed threshold such as `−10 LUFS` would provide almost no contrast.
 
 For the frozen soundtrack, compute valid momentary-loudness percentiles after excluding digital silence and invalid startup windows:
 
@@ -345,6 +353,8 @@ The artistic mapper must pass:
 | Manual quiet accent | Authored emphasis without changing measurement labels. |
 
 ## Acceptance gates
+
+Apply the expanded-line geometry and hero-distribution gates when that profile is selected. For a restrained spectrum, verify its declared bar count, travel caps, opacity, safe placement, encoded visibility and fade instead. Source integrity, stable lyrics and explicit separation of measurements from artistic controls apply to every profile.
 
 - [ ] The line’s local maximum lands within half a 60fps frame of every tested transient or authored apex.
 - [ ] Quiet passages remain visibly calmer than builds and choruses.
