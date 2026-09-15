@@ -84,6 +84,15 @@ The explicitly commissioned [Life Letters Russian / Argentinian Spanish edition]
 - Use concise progress updates focused on decisions, completed checks, and blockers; keep private conversation out of repository history.
 - For a YouTube and TikTok posting handoff, verify each platform has its own final video, copy and thumbnail. Include a YouTube title and description and a TikTok description. Review both covers at small display sizes, then verify copied file hashes in the final destination. Record later additions in a separate receipt so an already delivered archive keeps its original identity.
 
+### Complete the GitHub handoff
+
+- Finish authorized repository updates with verification and merge into the default branch. An open or draft pull request is an intermediate review state.
+- Inspect the final diff, run applicable project checks, resolve blocking review findings and confirm mergeability before merging. Recheck affected work if the branch or base changes during verification.
+- Merge completed work without another confirmation request, then verify the remote pull request state and default-branch contents. Check for remaining open pull requests at the end of the handoff and resolve those within the authorized scope.
+- Preserve source commits referenced by immutable delivery archives. Prefer a merge commit when retaining those exact commits in the default branch's ancestry matters for reproduction.
+- If a check fails or repository protections block the merge, report the concrete blocker. Do not bypass required checks to obtain an empty pull-request list.
+- Source integration, binary release publication and video-platform upload are separate actions; this merge default governs authorized repository work.
+
 ### TikTok cover default
 
 - Apply the [TikTok cover workflow](tiktok-cover-workflow.md) to every TikTok publishing kit without requesting the same specifications again.
@@ -103,7 +112,7 @@ The explicitly commissioned [Life Letters Russian / Argentinian Spanish edition]
 8. Complete the mandatory [cross-language sync gate](cross-language-sync-gate.md) before the full production render: every cue, every language, actual-audio review, complete target spans and no unresolved synchronization or meaning defects. Targeted previews and a coverage audit alone are insufficient. Record the completed review and freeze its input hashes.
 9. Run technical checks: typecheck, tests, composition discovery, timing/alignment checks, full decode, frame count, dimensions, frame rate, metadata, and checksums.
 10. Run visual spot checks at intro, affected sections, transitions, and outro. Keep proof renders separate from the clean master.
-11. Place the final local deliverable in the requested handoff location and publish source, workflow, audits, and checksums to GitHub.
+11. Place the final local deliverable in the requested handoff location and publish source, workflow, audits, and checksums to GitHub. Verify and merge the completed pull request, then confirm the default branch contains the intended revision and record any remaining blockers.
 12. Keep rights-sensitive media private or in draft release state until the necessary permission is confirmed.
 
 ## Per-track handoff checklist
