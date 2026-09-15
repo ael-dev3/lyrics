@@ -1,0 +1,11 @@
+import {existsSync,readFileSync,mkdirSync,copyFileSync,writeFileSync} from 'node:fs';
+import {spawn} from 'node:child_process';
+const format=process.argv[2];if(format!=='landscape'&&format!=='portrait')throw Error('format');
+const run=(script:string,args:string[]=[])=>new Promise<void>((resolve,reject)=>{const p=spawn('node',[script,...args],{stdio:'inherit'});p.on('error',reject);p.on('close',c=>c===0?resolve():reject(Error(script+' exited '+c)));});
+const verification=`evidence/Tvoi-Glaza-${format}.mp4.verification.json`;
+while(!existsSync(verification))await new Promise(resolve=>setTimeout(resolve,10000));
+console.log('Delivery integrity verified; starting decoded focus and proof checks:',format);
+await run('scripts/audit-decoded-focus.ts',[`output/Tvoi-Glaza-${format}.mp4`,format]);
+await run('scripts/verify-reference-segments.ts',[format]);
+await run('scripts/extract-delivery-proofs.ts',[format]);
+writeFileSync(`evidence/post-render-${format}.json`,JSON.stringify({status:'automated checks complete; selected final pictures await visual inspection',format,verification:JSON.parse(readFileSync(verification,'utf8'))},null,2));console.log('Post-render automated QA complete',format);

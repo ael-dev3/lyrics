@@ -2,6 +2,12 @@
 
 **We are not the creators of the original music, lyrics, performances, musical remixes, anime footage, characters or source illustrations. We do not take credit for that work.** Our contribution is the additional lyric-film presentation and production workflow. Artist and source-upload links below distinguish those roles; a source uploader is not necessarily the owner of every element in an upload.
 
+## Твои глаза
+
+**POLNALYUBVI — Твои глаза**: music and lyrics by **Марина Демещенко / POLNALYUBVI**; animation by **Юлия Чайковская / ORAMAI**; backgrounds and illustrations by **Алина Чайковская / FINITO (FINITOLINA)**, as credited in the [official recording and animation](https://www.youtube.com/watch?v=qC4sCCmvoXU).
+
+**Ael**, assisted by **OpenAI Codex**, adds the English meaning adaptation, bilingual lyric presentation and production implementation. The portrait cover is an AI-assisted adaptation of the source animation. This edition follows the Lyrics workflow in general, with no particular-song inspiration attribution. Original recording, lyrics, animation and source-derived imagery remain excluded from the repository contribution license. [Project and evidence](projects/tvoi-glaza-lyric-film/README.md).
+
 ## Life Letters
 
 **Never Get Used To People** — music, Russian lyrics, recording and immediate source upload, [Life Letters (Long Version)](https://www.youtube.com/watch?v=7hUbvIJ0Hnw). [Artist links from the source description](https://linktr.ee/ngutp). The source closing credits remain unobscured. Individual underlying footage credits have not been independently established; this records provenance, not complete rights clearance.

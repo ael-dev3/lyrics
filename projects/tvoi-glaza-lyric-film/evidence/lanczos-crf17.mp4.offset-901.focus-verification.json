@@ -1,0 +1,82 @@
+{
+  "status": "inspection required",
+  "format": "portrait",
+  "offset": 901,
+  "decodedFrames": 120,
+  "wordStates": 1724,
+  "ambiguous": 7,
+  "mismatchCount": 10,
+  "mismatches": [
+    {
+      "frame": 904,
+      "word": "L03-ru-05",
+      "expected": true,
+      "median": -31,
+      "brightness": 181
+    },
+    {
+      "frame": 904,
+      "word": "L03-en-08",
+      "expected": true,
+      "median": -29,
+      "brightness": 182
+    },
+    {
+      "frame": 904,
+      "word": "L03-en-09",
+      "expected": true,
+      "median": -31,
+      "brightness": 181
+    },
+    {
+      "frame": 957,
+      "word": "L03-ru-05",
+      "expected": false,
+      "median": 99,
+      "brightness": 253
+    },
+    {
+      "frame": 957,
+      "word": "L03-en-08",
+      "expected": false,
+      "median": 94,
+      "brightness": 250
+    },
+    {
+      "frame": 957,
+      "word": "L03-en-09",
+      "expected": false,
+      "median": 98,
+      "brightness": 253
+    },
+    {
+      "frame": 965,
+      "word": "L03-ru-06",
+      "expected": true,
+      "median": -31,
+      "brightness": 182
+    },
+    {
+      "frame": 965,
+      "word": "L03-en-10",
+      "expected": true,
+      "median": -31,
+      "brightness": 182
+    },
+    {
+      "frame": 989,
+      "word": "L03-ru-06",
+      "expected": false,
+      "median": 97,
+      "brightness": 252
+    },
+    {
+      "frame": 989,
+      "word": "L03-en-10",
+      "expected": false,
+      "median": 97,
+      "brightness": 252
+    }
+  ],
+  "method": "Independent bundled-font masks select eroded glyph-interior pixels; median red-minus-blue classifies pale-gold active versus blue-silver inactive in every visible word of every decoded frame. This verifies rendered state, not acoustic truth."
+}

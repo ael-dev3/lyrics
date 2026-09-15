@@ -2,6 +2,12 @@
 
 This is an **AI-assisted lyric-film and workflow project**. It should not be described as entirely hand-coded, manually timed or hand-illustrated.
 
+## Твои глаза production
+
+The POLNALYUBVI Russian / English edition uses OpenAI Codex assistance for translation, meaning correspondence, TypeScript implementation, alignment analysis, visual inspection, encoding tests and documentation. Demucs, Whisper/stable-ts and MMS provide independent acoustic observations; the final renderer uses frozen artifacts. The original recording is retained without synthetic singing or audio processing.
+
+The project owner reported completing the actual-recording review, found no mistakes and explicitly authorized rendering. The record does not invent per-cue, playback-speed or per-format telemetry, and the assistant does not claim personal listening. Automated source-event tests and decoded-pixel checks verify complete highlighting and rendering integrity separately from acoustic truth. The portrait cover uses built-in image generation with a source animation frame; its exact prompt and selected original are retained in the local publishing kit. [Review and limits](projects/tvoi-glaza-lyric-film/evidence/cross-language-sync-review.md) · [Production](projects/tvoi-glaza-lyric-film/README.md).
+
 ## Joyride production
 
 The Joyride landscape and portrait films were developed with **OpenAI Codex (GPT-6 Astra)**. Assistance covered TypeScript implementation, comparison of audio-model observations, sample-timing decisions, waveform and visual inspection, publishing copy and documentation. Stored evidence distinguishes model estimates and display rounding from proven acoustic boundaries; no human/native-listener audition is claimed.

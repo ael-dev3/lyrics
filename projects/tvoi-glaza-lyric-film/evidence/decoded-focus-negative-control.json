@@ -1,0 +1,63 @@
+{
+  "status": "passed negative control",
+  "intentionalOffsetFrames": 1,
+  "detectedMismatches": 10,
+  "examples": [
+    {
+      "frame": 904,
+      "word": "L03-ru-05",
+      "expected": true,
+      "median": -31,
+      "brightness": 181
+    },
+    {
+      "frame": 904,
+      "word": "L03-en-08",
+      "expected": true,
+      "median": -29,
+      "brightness": 182
+    },
+    {
+      "frame": 904,
+      "word": "L03-en-09",
+      "expected": true,
+      "median": -31,
+      "brightness": 181
+    },
+    {
+      "frame": 957,
+      "word": "L03-ru-05",
+      "expected": false,
+      "median": 99,
+      "brightness": 253
+    },
+    {
+      "frame": 957,
+      "word": "L03-en-08",
+      "expected": false,
+      "median": 94,
+      "brightness": 250
+    },
+    {
+      "frame": 957,
+      "word": "L03-en-09",
+      "expected": false,
+      "median": 98,
+      "brightness": 253
+    },
+    {
+      "frame": 965,
+      "word": "L03-ru-06",
+      "expected": true,
+      "median": -31,
+      "brightness": 182
+    },
+    {
+      "frame": 965,
+      "word": "L03-en-10",
+      "expected": true,
+      "median": -31,
+      "brightness": 182
+    }
+  ]
+}

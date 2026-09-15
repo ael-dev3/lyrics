@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "issue": "Initial HEVC omitted explicit sample aspect ratio",
+  "correction": "Lossless HEVC VUI sample_aspect_ratio=1/1 metadata filter; streams copied",
+  "beforeSha": "9a124894235e3b1b1001ba02b9819cc66e363d7f21aefed40b8067b20668f9b1",
+  "afterSha": "663d5d4ff7aef993b709169c59d1f3a0e764d32769b12b4b65bb970c8c03aece",
+  "decodedVideoSha256": {
+    "sha256": "55c108b8c2c9b7f182ef08fcc50aa16a4ee6b21f063ecb36601bd45851f517cb",
+    "bytes": 62792755200
+  },
+  "allDecodedPixelsIdentical": true,
+  "audioValidation": "Verified separately against every original AAC packet by verify-production.ts"
+}

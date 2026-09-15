@@ -1,0 +1,14 @@
+import {spawn,spawnSync} from 'node:child_process';
+import {readFileSync,writeFileSync,renameSync} from 'node:fs';
+import {basename} from 'node:path';
+import {createHash} from 'node:crypto';
+const path=process.argv[2];if(!path)throw Error('Delivery file required');
+const run=(args:string[])=>{const p=spawnSync('ffmpeg',args,{encoding:'utf8',maxBuffer:4*1024*1024});if(p.status!==0)throw Error(p.stderr);return p.stdout.trim();};
+const sha=(p:string)=>createHash('sha256').update(readFileSync(p)).digest('hex');
+const beforeSha=sha(path),temporary=path+'.square.mp4';
+run(['-v','error','-y','-i',path,'-map','0','-c','copy','-bsf:v','hevc_metadata=sample_aspect_ratio=1/1','-tag:v','hvc1','-movflags','+faststart',temporary]);
+const decoded=async(p:string)=>{const child=spawn('ffmpeg',['-v','error','-threads','4','-i',p,'-map','0:v:0','-an','-fps_mode','passthrough','-c:v','rawvideo','-f','rawvideo','pipe:1']);const hash=createHash('sha256');let bytes=0,error='';child.stderr.on('data',p=>error+=p);for await(const chunk of child.stdout){hash.update(chunk);bytes+=chunk.length;}const code=await new Promise<number|null>(ok=>child.exitCode!==null?ok(child.exitCode):child.on('close',ok));if(code!==0)throw Error(error);console.log('Decoded pixel bytes checked',bytes,p);return {sha256:hash.digest('hex'),bytes};};
+const beforePixels=await decoded(path),afterPixels=await decoded(temporary);if(JSON.stringify(beforePixels)!==JSON.stringify(afterPixels))throw Error('Metadata repair changed decoded video pixels');
+renameSync(temporary,path);
+writeFileSync('evidence/'+basename(path)+'.aspect-normalization.json',JSON.stringify({status:'passed',issue:'Initial HEVC omitted explicit sample aspect ratio',correction:'Lossless HEVC VUI sample_aspect_ratio=1/1 metadata filter; streams copied',beforeSha,afterSha:sha(path),decodedVideoSha256:beforePixels,allDecodedPixelsIdentical:true,audioValidation:'Verified separately against every original AAC packet by verify-production.ts'},null,2));
+console.log('Square-pixel metadata corrected; all decoded video pixels are identical',path);

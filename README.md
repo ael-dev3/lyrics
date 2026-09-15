@@ -4,7 +4,19 @@ Music films with synchronized lyrics, meaning-linked translations, and audio-rea
 
 **Current style default:** [cinematic lyric presentation](docs/cinematic-lyric-workflow.md) — stable, color-only word or phrase emphasis, precise vocal timing, smooth scene shading and equally prominent bilingual lyrics. The guide includes the final Midnight Love reference and review requirements for future tracks.
 
-[**Прости за любовь — accepted with known gaps**](#прости-за-любовь) · [**Половинка**](#половинка) · [**Life Letters**](#life-letters) · [**Joyride**](#joyride) · [**midnight love**](#midnight-love) · [**Пожары**](#пожары) · [**Отменяй**](#отменяй) · [**Roi × Adore**](#roi--adore) · [**TikTok edition**](#tiktok-edition) · [**Tanisea**](#tanisea) · [**Build and workflow**](#build-and-workflow)
+[**Твои глаза**](#твои-глаза) · [**Прости за любовь — accepted with known gaps**](#прости-за-любовь) · [**Половинка**](#половинка) · [**Life Letters**](#life-letters) · [**Joyride**](#joyride) · [**midnight love**](#midnight-love) · [**Пожары**](#пожары) · [**Отменяй**](#отменяй) · [**Roi × Adore**](#roi--adore) · [**TikTok edition**](#tiktok-edition) · [**Tanisea**](#tanisea) · [**Build and workflow**](#build-and-workflow)
+
+## Твои глаза
+
+**POLNALYUBVI — Твои глаза / Your Eyes · Russian + English**
+
+Dedicated 1920×1080 and 1080×1920 compositions at 60 fps retain the complete original recording and animation. All 154 Russian tokens and 195 English words receive stable, meaning-linked color emphasis, including grammatical completions and reordered English phrases.
+
+The project owner completed the actual-recording review and authorized full rendering. The review record distinguishes this overall user attestation from unavailable granular listening telemetry. Production captures at 2×, uses ProRes 4444 references and HEVC Main 10 delivery, and preserves the original AAC packets and timestamps. Decoded-word checks inspect the actual highlight colors against the frozen event map.
+
+[Production and reproduction](projects/tvoi-glaza-lyric-film/README.md) · [Review record](projects/tvoi-glaza-lyric-film/evidence/cross-language-sync-review.md) · [Decoded-focus method](projects/tvoi-glaza-lyric-film/evidence/decoded-focus-method.md) · [Publishing copy](projects/tvoi-glaza-lyric-film/publishing/Tvoi-Glaza-Description.txt) · [Original song and animation](https://www.youtube.com/watch?v=qC4sCCmvoXU)
+
+This edition applies the Lyrics workflow in general. Recording, animation, covers and full-film assets remain local or in a draft release; source-artist rights are excluded from the repository contribution license.
 
 ## Прости за любовь
 

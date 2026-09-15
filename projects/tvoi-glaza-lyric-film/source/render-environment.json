@@ -1,0 +1,11 @@
+{
+  "browser": "Google Chrome for Testing 149.0.7790.0",
+  "remotion": "4.0.518",
+  "capture": "Chromium PNG, scale 2, default GL backend, 3 workers per composition",
+  "reference": "ProRes 4444, VideoToolbox where available, decoded yuva444p12le, BT.709 matrix, 1/90000 timebase",
+  "delivery": "libx265 medium CRF 17; hvc1; yuv420p10le; explicit limited-range BT.709 matrix, transfer and primaries",
+  "audio": "Original AAC packet copy",
+  "platform": "darwin arm64",
+  "reproducibility": "Frozen code, media, fonts, cue data and analysis inputs. No fresh model inference needed for rendering. Encoder and OS changes may change bitstreams even with the same visual and timing contract.",
+  "sampleAspect": "Explicit square pixels (1:1). Initial production encodes were losslessly updated with hevc_metadata after metadata QA detected omission; complete decoded video bytes were SHA-256 compared before/after. Future renders declare setsar=1 before encoding."
+}

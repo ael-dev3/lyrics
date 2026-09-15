@@ -1,0 +1,120 @@
+{
+  "repositoryRevision": "6a7b860",
+  "source": "https://www.youtube.com/watch?v=qC4sCCmvoXU",
+  "audio": {
+    "sampleRate": 44100,
+    "channels": 2,
+    "decodedSamples": 7418880,
+    "duration": 168.22857142857143,
+    "firstPacketPTS": 0,
+    "firstPacketDuration": 1024,
+    "declaredInitialPadding": 0,
+    "presentedZero": "first decoded PCM sample",
+    "codec": "AAC LC",
+    "delivery": "preserve original AAC packets; no normalization, tempo or offset"
+  },
+  "analysisResampling": {
+    "models": "16000 Hz mono",
+    "spectrum": "48000 Hz stereo",
+    "sourceTimeZero": "unchanged",
+    "resampler": "FFmpeg default swresample"
+  },
+  "video": {
+    "sourceFormat": 271,
+    "sourceSize": [
+      2560,
+      1440
+    ],
+    "sourceFPS": 30,
+    "reviewCodec": "H.264 CRF16, same dimensions and cadence",
+    "logicalFormats": [
+      [
+        1920,
+        1080
+      ],
+      [
+        1080,
+        1920
+      ]
+    ],
+    "addedGraphicsFPS": 60,
+    "frames": 10094
+  },
+  "tools": {
+    "node": "v24.20.0",
+    "typescript": "Version 7.0.2",
+    "ffmpeg": "ffmpeg version 8.1.2 Copyright (c) 2000-2026 the FFmpeg developers",
+    "ffprobe": "ffprobe version 8.1.2 Copyright (c) 2007-2026 the FFmpeg developers"
+  },
+  "assets": [
+    {
+      "path": "public/soundtrack.m4a",
+      "bytes": 2721525,
+      "sha256": "322d8e4e15bfc1ce74dd700dcfcaebd0204321927a45efe5e5051094b5db7abf"
+    },
+    {
+      "path": "public/footage.webm",
+      "bytes": 36529119,
+      "sha256": "b1b32d20c55db8499fbd2956c1c3a7566ab9b86f0900f84b3d2de563eeab8303"
+    },
+    {
+      "path": "public/footage.mp4",
+      "bytes": 70094399,
+      "sha256": "7dbbbb138153eba73b7c8b257559547df20ee4c6403119aeb2be968a91f00cf2"
+    },
+    {
+      "path": "analysis/mix44.f32",
+      "bytes": 59351040,
+      "sha256": "45060cb08d095bdf73b08065f065e71b8d671704f6d69b6a112c099a5f2a5780"
+    },
+    {
+      "path": "analysis/vocals16.wav",
+      "bytes": 10766712,
+      "sha256": "f7acaff8e3df2f047c11ac11ceb4f876b31bde91ed8dfd850930afe6ba84dc56"
+    },
+    {
+      "path": "analysis/mms-vocals-sections.json",
+      "bytes": 139083,
+      "sha256": "ac9d731a52ec3be1e05039b5b1290f9a08057516e164bc0eb4483fdc1a2a1af9"
+    },
+    {
+      "path": "analysis/whisper-vocals-lines.json",
+      "bytes": 36234,
+      "sha256": "34ccb702e6f0dc468caf589d985536484203008c607e0a21c7d2b011a4eddf4b"
+    },
+    {
+      "path": "analysis/mms-mix-lines.json",
+      "bytes": 140081,
+      "sha256": "3da78ef63b1b9ce0d6df83fc135ecaaf938adf4533e058a09a56558c855c5335"
+    },
+    {
+      "path": "source/original.txt",
+      "bytes": 1440,
+      "sha256": "5236812623dbc4f281391f07f08204b803432b3824a73bf99d783db34d7bfdb0"
+    },
+    {
+      "path": "source/text-and-mapping.json",
+      "bytes": 37072,
+      "sha256": "14a7593b2141c4044330e9f47eec6a88d6fb0b98959622e1367ea167e97cae5c"
+    }
+  ],
+  "reviewedInputHashes": {
+    "public/soundtrack.m4a": "322d8e4e15bfc1ce74dd700dcfcaebd0204321927a45efe5e5051094b5db7abf",
+    "public/footage.mp4": "7dbbbb138153eba73b7c8b257559547df20ee4c6403119aeb2be968a91f00cf2",
+    "public/CormorantGaramond-Semibold.ttf": "69e7ae35cba23d962227b86f99217c250e642e4c6f6104b4f3ec465039e4e2d8",
+    "source/original.txt": "5236812623dbc4f281391f07f08204b803432b3824a73bf99d783db34d7bfdb0",
+    "source/text-and-mapping.json": "14a7593b2141c4044330e9f47eec6a88d6fb0b98959622e1367ea167e97cae5c",
+    "src/cues.json": "dcbb135a3e97ec6b733e0fee348f347d5e30f4a6231fd453550784b8cb33fe7e",
+    "src/layout.json": "e0fd045f82d3749d1d538569a06f5557c4b178804abefc26e86ac9a538ab12b8",
+    "src/focus.ts": "8338f00947fd5bdbdbfaafa9cb8c832be2ef92b4ea7630b5cd4d599dd76ff43d",
+    "src/scene.ts": "d706dd57501ec0320f42da4d3d3fd20d4b6102d47b139601b90f628b60f5fdbf",
+    "src/Film.tsx": "f23faa721bd70150bf4cf565f0b3bbe28fd9c305474ad63e241671dae6534be7",
+    "public/science.json": "608692d2a6471ba9140428778ef79f23ad941c648f92f845b1d892c28ab0ff78",
+    "package-lock.json": "4c0fe142d8769af4a4e0b142fd69050b1c89809a7d8cd780e7f4f7b2dcdc601c"
+  },
+  "status": {
+    "delivery": "technically verified local masters",
+    "synchronization": "user-reviewed and authorized; granular telemetry not supplied",
+    "publication": "media local only"
+  }
+}

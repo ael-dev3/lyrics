@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "commands": [
+    "npm run check",
+    "npm run sync:gate"
+  ],
+  "strictTypeScript": true,
+  "tests": {
+    "passed": 6,
+    "failed": 0
+  },
+  "additionalSourceCheckout": "Separate source checkout passed the same typecheck, six tests and frozen-input sync gate",
+  "notes": "See independent geometry, frame audit, DSP, full delivery decode, AAC identity and decoded-focus reports for the corresponding checks."
+}
