@@ -1,0 +1,23 @@
+{
+  "reason": "Eliminate a seven-frame fallback-title flash and fade the English intro title into the first lyric entrance.",
+  "replacementFrames": [
+    768,
+    783
+  ],
+  "changedIntroFrames": [
+    770,
+    771,
+    772,
+    773,
+    774,
+    775,
+    776,
+    777,
+    778,
+    779,
+    780
+  ],
+  "firstCueFrame": 781,
+  "audioAndCueDataChanged": false,
+  "method": "Render the corrected 16-frame window at the same 2x scale; substitute it into the lossless base during the controlled final encode. Default full rendering from final source produces the same opening directly."
+}

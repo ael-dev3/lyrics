@@ -1,0 +1,3 @@
+import {readFileSync,existsSync} from 'node:fs';
+import {FRAMES} from '../src/config.ts';
+let total=0;for(const kind of ['youtube','tiktok']){let done=0,frames=0;for(let i=1;i<=8;i++){const path=`evidence/${kind}-part-${i}`;if(existsSync(path+'.json')){const j=JSON.parse(readFileSync(path+'.json','utf8'));frames+=j.frames;done++;}else if(existsSync(path+'.log')){const rows=readFileSync(path+'.log','utf8').trim().split('\n').filter(x=>x.startsWith('{'));if(rows.length){const j=JSON.parse(rows.at(-1)!);frames+=j.rendered??0;}}}total+=frames;console.log({format:kind,completeSegments:done,capturedFrames:frames,totalFrames:FRAMES,percent:Math.round(frames/FRAMES*100)});}console.log({capturedPercent:Math.round(total/(2*FRAMES)*100)});

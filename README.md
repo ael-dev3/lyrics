@@ -4,7 +4,21 @@ Music films with synchronized lyrics, meaning-linked translations, and audio-rea
 
 **Current style default:** [cinematic lyric presentation](docs/cinematic-lyric-workflow.md) — stable, color-only word or phrase emphasis, precise vocal timing, smooth scene shading and equally prominent bilingual lyrics. The guide includes the final Midnight Love reference and review requirements for future tracks.
 
-[**Life Letters**](#life-letters) · [**Joyride**](#joyride) · [**midnight love**](#midnight-love) · [**Пожары**](#пожары) · [**Отменяй**](#отменяй) · [**Roi × Adore**](#roi--adore) · [**TikTok edition**](#tiktok-edition) · [**Tanisea**](#tanisea) · [**Build and workflow**](#build-and-workflow)
+[**Половинка**](#половинка) · [**Life Letters**](#life-letters) · [**Joyride**](#joyride) · [**midnight love**](#midnight-love) · [**Пожары**](#пожары) · [**Отменяй**](#отменяй) · [**Roi × Adore**](#roi--adore) · [**TikTok edition**](#tiktok-edition) · [**Tanisea**](#tanisea) · [**Build and workflow**](#build-and-workflow)
+
+## Половинка
+
+**Танцы Минус — Половинка · Russian + English · YouTube and TikTok**
+
+Full-song bilingual films with equal Russian and English typography, stable color-only emphasis and a measured 64-band spectrum. Both 1080p60 editions share the original soundtrack with constant gain only. The archival source picture retains its native 480p detail and 25 fps cadence.
+
+![Polovinka final decoded film](assets/polovinka-final.png)
+
+[YouTube film](https://github.com/ael-dev3/lyrics/releases/download/polovinka-v1.0.0/Polovinka-YouTube-1920x1080-60fps.mp4) · [TikTok film](https://github.com/ael-dev3/lyrics/releases/download/polovinka-v1.0.0/Polovinka-TikTok-1080x1920-60fps.mp4) · [Covers, copy and captions](https://github.com/ael-dev3/lyrics/releases/download/polovinka-v1.0.0/Polovinka-Publishing-Kit.zip) · [Editable project](https://github.com/ael-dev3/lyrics/releases/download/polovinka-v1.0.0/Polovinka-Editable-Project.zip)
+
+Both exports passed full decoding, all 10,501 frame timestamps, and preservation of all 8,205 locked AAC packets. The audio timing audit is model-assisted; its scope and uncertainty are documented.
+
+[Production notes](projects/polovinka-lyric-film/README.md) · [Verification](projects/polovinka-lyric-film/evidence/delivery-verification.json) · [Release](https://github.com/ael-dev3/lyrics/releases/tag/polovinka-v1.0.0) · [Original source](https://www.youtube.com/watch?v=hqBBM7ioil8)
 
 ## Life Letters
 

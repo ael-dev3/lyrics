@@ -1,0 +1,21 @@
+import {readFileSync,writeFileSync,copyFileSync,existsSync} from 'node:fs';
+import {execFileSync} from 'node:child_process';
+import {createHash} from 'node:crypto';
+import assert from 'node:assert/strict';
+import {verifyFrozenInputs,hashFile} from './record-render-inputs.ts';
+import {FRAMES} from '../src/config.ts';
+assert(!existsSync('evidence/base-render-inputs.json'),'Opening correction was already adopted; keep the existing provenance.');
+for(const kind of ['youtube','tiktok']){for(let i=1;i<=8;i++)assert(existsSync(`evidence/${kind}-part-${i}.json`));const j=JSON.parse(execFileSync('ffprobe',['-v','error','-select_streams','v:0','-count_packets','-show_entries','stream=nb_read_packets','-of','json',`evidence/${kind}-master-lossless.mkv`],{encoding:'utf8'}));assert.equal(Number(j.streams[0].nb_read_packets),FRAMES);}
+await verifyFrozenInputs('evidence/render-inputs.json');
+const opening=JSON.parse(readFileSync('evidence/opening-repair.json','utf8'));assert(opening.passed&&opening.cutBoundariesPixelIdentical);
+for(const c of opening.clips)assert.equal(await hashFile(c.replacementClip),c.clipSha256);
+copyFileSync('src/Film.tsx','source/Film-base-render.tsx');copyFileSync('evidence/render-inputs.json','evidence/base-render-inputs.json');
+const corrected=readFileSync('repair-src/Film.tsx','utf8').replace("from '../src/config'","from './config'").replace("from '../src/timing'","from './timing'");writeFileSync('src/Film.tsx',corrected);
+execFileSync('npm',['run','check'],{stdio:'inherit'});
+const base=JSON.parse(readFileSync('evidence/base-render-inputs.json','utf8'));
+const paths=[...base.inputs.map((x:{path:string})=>x.path),'scripts/encode-opening.ts','source/Film-base-render.tsx','source/opening-repair-youtube.mkv','source/opening-repair-tiktok.mkv','repair-src/Film.tsx','repair-src/index.tsx','evidence/base-render-inputs.json','evidence/opening-repair.json','evidence/opening-inputs.json'];
+const inputs=[];for(const path of [...new Set(paths)].sort())inputs.push({path,sha256:await hashFile(path)});
+const {sharedBundle,...rest}=base;
+const final={...rest,inputs,baseCaptureSharedBundle:sharedBundle,openingCorrection:{...opening,changedFrames:JSON.parse(readFileSync('analysis/opening-handoff.json','utf8')).changedIntroFrames,baseCaptureManifest:'evidence/base-render-inputs.json',legacySource:{originalPath:'src/Film.tsx',archivedPath:'source/Film-base-render.tsx',sha256:await hashFile('source/Film-base-render.tsx')},encoder:'scripts/encode-opening.ts',purpose:'Replace the tightly bounded opening handoff before the final encode; ordinary full rendering from final source produces the corrected handoff directly.'},purpose:'Final source, original lossless capture provenance, verified opening replacement and delivery encoder frozen together.'};
+writeFileSync('evidence/render-inputs.json',JSON.stringify(final,null,2));
+await verifyFrozenInputs('evidence/render-inputs.json');console.log('FINAL_SOURCE_FROZEN',inputs.length);

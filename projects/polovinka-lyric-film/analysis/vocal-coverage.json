@@ -1,0 +1,188 @@
+{
+  "scope": "Complete 175.0135-second recording, including all breaks and tail",
+  "approach": "Model-assisted audit: full mixed recording and isolated-vocal Whisper turbo transcription, targeted independent Whisper small transcription, MMS word alignments on both signals, and isolated-stem measurements. No human listening certification is claimed.",
+  "lyricCoverage": {
+    "suppliedWords": 75,
+    "performedPhrases": 12,
+    "firstWordSeconds": 13.206291666666667,
+    "finalWordEndSeconds": 139.09770833333334,
+    "addedRepeats": 0
+  },
+  "classification": [
+    {
+      "start": 0,
+      "end": 12.9,
+      "stemRmsDbfs": -69.91392533402939,
+      "stemPeakDbfs": -44.05649462604899,
+      "result": "instrumental introduction"
+    },
+    {
+      "start": 39.9,
+      "end": 62.4,
+      "stemRmsDbfs": -45.00061896911614,
+      "stemPeakDbfs": -18.274169835948406,
+      "result": "instrumental gap with vocal/reverb boundary spill"
+    },
+    {
+      "start": 89.6,
+      "end": 112.2,
+      "stemRmsDbfs": -39.01828451674183,
+      "stemPeakDbfs": -15.462574899970974,
+      "result": "instrumental gap with vocal/reverb boundary spill"
+    },
+    {
+      "start": 139.3,
+      "end": 160,
+      "stemRmsDbfs": -38.61698537005732,
+      "stemPeakDbfs": -11.140683351140101,
+      "result": "instrumental outro"
+    },
+    {
+      "start": 160,
+      "end": 171,
+      "stemRmsDbfs": -86.03975159328482,
+      "stemPeakDbfs": -64.28911201116475,
+      "result": "instrumental fade / near-silent tail"
+    },
+    {
+      "start": 171,
+      "end": 175.0135,
+      "stemRmsDbfs": -98.07858327234223,
+      "stemPeakDbfs": -90.40780693650711,
+      "result": "instrumental fade / near-silent tail"
+    }
+  ],
+  "rejectedAsr": [
+    {
+      "range": [
+        0,
+        15
+      ],
+      "issue": "Full-mix turbo stretches the first phrase into the intro; isolated transcription and both MMS alignments start near 13.2s."
+    },
+    {
+      "range": [
+        15,
+        30
+      ],
+      "issue": "Turbo full-track decoding omits first-verse middle lines. Independent bounded small-model decoding recovers them and MMS aligns every supplied word."
+    },
+    {
+      "range": [
+        105,
+        112.4
+      ],
+      "issue": "Vocal turbo starts verse-three text in the preceding instrumental. Both MMS signals place the first word near 112.38s."
+    },
+    {
+      "range": [
+        171.6,
+        174.52
+      ],
+      "issue": "Mixed turbo invents a closing continuation phrase. It is absent from full-vocal turbo and bounded small-model tail transcription; stem measurements support rejection."
+    }
+  ],
+  "pausePolicy": "The long gaps before the final two words of each stanza are retained. No highlight runs through those pauses.",
+  "limits": "ASR and source separation can miss or hallucinate speech. CTC boundaries are estimated; agreement is not independent human validation. No additional lexical passage was corroborated by the combined analysis.",
+  "longPauseCrossCheck": {
+    "method": "2× time-compressed Whisper turbo on independently bounded endings; unforced MMS acoustic event decoding on original-speed vocals.",
+    "evidence": [
+      {
+        "verse": 1,
+        "words": [
+          {
+            "word": " я",
+            "start": 29.64,
+            "end": 29.84
+          },
+          {
+            "word": " тебе",
+            "start": 29.84,
+            "end": 30.48
+          },
+          {
+            "word": " подарил",
+            "start": 30.48,
+            "end": 32.44
+          },
+          {
+            "word": " половинку",
+            "start": 32.44,
+            "end": 39.16
+          },
+          {
+            "word": " себя",
+            "start": 39.16,
+            "end": 39.8
+          }
+        ]
+      },
+      {
+        "verse": 2,
+        "words": [
+          {
+            "word": " я",
+            "start": 78,
+            "end": 79.52
+          },
+          {
+            "word": " оставил",
+            "start": 79.52,
+            "end": 80.56
+          },
+          {
+            "word": " с",
+            "start": 80.56,
+            "end": 80.76
+          },
+          {
+            "word": " тобой",
+            "start": 80.76,
+            "end": 81.68
+          },
+          {
+            "word": " половинку",
+            "start": 81.68,
+            "end": 88.76
+          },
+          {
+            "word": " себя",
+            "start": 88.76,
+            "end": 89.4
+          }
+        ]
+      },
+      {
+        "verse": 3,
+        "words": [
+          {
+            "word": " и",
+            "start": 128.96,
+            "end": 129.24
+          },
+          {
+            "word": " оставила",
+            "start": 129.24,
+            "end": 130.44
+          },
+          {
+            "word": " мне",
+            "start": 130.44,
+            "end": 131.2
+          },
+          {
+            "word": " половинку",
+            "start": 131.2,
+            "end": 138.44
+          },
+          {
+            "word": " меня",
+            "start": 138.44,
+            "end": 139.04
+          }
+        ]
+      }
+    ],
+    "result": "Unforced original-speed acoustic events corroborate the final-word entries near 37.9, 87.6 and 137.2 seconds. Time-compressed Whisper confirms wording, but its boundaries absorb preceding pauses and are rejected as onset evidence. Residual stem energy alone does not establish an earlier lexical onset."
+  }
+}

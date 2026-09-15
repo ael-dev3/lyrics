@@ -1,0 +1,93 @@
+{
+  "reviewedBeforeFullRender": {
+    "landscapeSeconds": [
+      14,
+      32,
+      66,
+      114,
+      124
+    ],
+    "portraitSeconds": [
+      14,
+      32,
+      66,
+      114,
+      124
+    ],
+    "motionPreviews": [
+      {
+        "format": "YouTube",
+        "start": 62,
+        "end": 75
+      },
+      {
+        "format": "TikTok",
+        "start": 111,
+        "end": 124
+      }
+    ],
+    "decodedMobileReview": {
+      "landscape": "852x480",
+      "portrait": "360x640"
+    },
+    "coverReview": {
+      "youtube": "320x180",
+      "tiktok": "150x200",
+      "tiktokCenteredCrop": "5% removed from each edge"
+    }
+  },
+  "observations": [
+    "Both languages retain equal font size, weight, resting color and focus color.",
+    "Words remain stable during color-only emphasis.",
+    "Portrait source edges fade into continuous background shading.",
+    "No clipped title or artist on the revised profile cover under the tested crop.",
+    "Exact final composition frame resolves to the background without a source-duration error."
+  ],
+  "limitations": "Visual review uses selected frames and decoded preview stills. Audio was checked with the documented model-assisted workflow; these notes do not claim human listening review.",
+  "finalDecodedReviewPending": false,
+  "openingCorrection": {
+    "replacementFrames": [
+      768,
+      783
+    ],
+    "affectedFrames": [
+      770,
+      771,
+      772,
+      773,
+      774,
+      775,
+      776,
+      777,
+      778,
+      779,
+      780
+    ],
+    "reviewed": true,
+    "cutBoundariesPixelIdenticalBothFormats": true
+  },
+  "finalDecodedReview": {
+    "passed": true,
+    "contactSheets": [
+      "final-contact-youtube.jpg",
+      "final-contact-tiktok.jpg"
+    ],
+    "contactFramesPerFormat": 16,
+    "nativeFramesInspected": {
+      "youtube": [
+        777,
+        10500
+      ],
+      "tiktok": [
+        7440,
+        8331
+      ]
+    },
+    "observations": [
+      "Both final contact sheets cover all twelve phrases, intro, opening transition, last sung word and outro.",
+      "Equal bilingual typography remains legible and within the reviewed safe areas; no clipping or overlay collisions were found in the sampled frames.",
+      "Corrected intro title fades out before the first phrase; no fallback title flash remains.",
+      "Exact final decoded frame is the intended dark background."
+    ]
+  }
+}

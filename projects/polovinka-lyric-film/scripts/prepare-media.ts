@@ -1,0 +1,10 @@
+import {execFileSync} from 'node:child_process';
+import {mkdirSync} from 'node:fs';
+for(const d of ['public','analysis','evidence'])mkdirSync(d,{recursive:true});
+const ff=(args:string[])=>execFileSync('ffmpeg',['-y','-hide_banner','-loglevel','warning',...args],{stdio:'inherit'});
+ff(['-i','source/native-480p.mp4','-an','-vf','setsar=1','-c:v','libx264','-preset','fast','-crf','16','-pix_fmt','yuv420p','-movflags','+faststart','public/footage.mp4']);
+ff(['-i','source/audio-original.opus','-af','volume=2dB','-c:a','aac','-b:a','320k','-ar','48000','-ac','2','-movflags','+faststart','public/soundtrack.m4a']);
+ff(['-i','source/audio-original.opus','-c:a','pcm_f32le','-ar','48000','-ac','2','analysis/mix48.wav']);
+ff(['-i','source/audio-original.opus','-c:a','pcm_f32le','-ar','16000','-ac','1','analysis/mix16.wav']);
+ff(['-i','public/soundtrack.m4a','-af','atrim=end_sample=8400648','-f','f32le','-ar','48000','-ac','2','analysis/audio-delivery.f32']);
+ff(['-i','analysis/mix48.wav','-f','f32le','-ar','48000','-ac','2','analysis/audio-original.f32']);

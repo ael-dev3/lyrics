@@ -1,0 +1,70 @@
+{
+  "background": [
+    {
+      "x": 100,
+      "y": 1070,
+      "reference": [
+        16,
+        14,
+        13
+      ],
+      "render": [
+        16,
+        14,
+        12
+      ]
+    },
+    {
+      "x": 450,
+      "y": 1060,
+      "reference": [
+        16,
+        14,
+        13
+      ],
+      "render": [
+        16,
+        14,
+        12
+      ]
+    },
+    {
+      "x": 800,
+      "y": 1070,
+      "reference": [
+        16,
+        14,
+        13
+      ],
+      "render": [
+        16,
+        14,
+        12
+      ]
+    },
+    {
+      "x": 1810,
+      "y": 1060,
+      "reference": [
+        16,
+        14,
+        13
+      ],
+      "render": [
+        16,
+        14,
+        12
+      ]
+    }
+  ],
+  "matchedSolidTextPixels": 44292,
+  "meanChannelDifference": 1.8538562268581233,
+  "maxChannelDifference": 11,
+  "note": "Spot comparison of native reference and 2x lossless capture downsampled to delivery size. Anti-aliased edges and source-video resampling differ as expected.",
+  "erodedSolidTextComparison": {
+    "pixels": 12839,
+    "meanMaxChannelDifference": 0.36093153672404393,
+    "maximumChannelDifference": 38,
+    "selection": "Reference-only 7x7 flat text interior; no filtering by output error"
+  }
+}
