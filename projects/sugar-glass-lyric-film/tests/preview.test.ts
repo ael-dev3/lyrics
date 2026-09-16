@@ -3,8 +3,8 @@ import assert from 'node:assert/strict';
 import {readFileSync,existsSync} from 'node:fs';
 import {spawnSync} from 'node:child_process';
 import {parseData} from '../src/schema.ts';
-import {activeSource,activeTargets,frameAt,visibleCues} from '../src/focus.ts';
-import {sceneSvg} from '../src/scene.ts';
+import {activeSource,frameAt,visibleCues} from '../src/focus.ts';
+import {sceneSvg,spectrumHeights,intensityAt} from '../src/scene.ts';
 import {assertAuthorization,assertReview,projectId,inputHashes} from '../scripts/sync-gate.ts';
 import layouts from '../src/layout.json' with {type:'json'};
 const data=parseData(JSON.parse(readFileSync('src/cues.json','utf8')));
@@ -24,21 +24,20 @@ test('review hashes match the delivered preview and approval stays closed',()=>{
 test('all selected boundaries are ordered, positive and represented at 60 fps',()=>{
  for(const cue of data.cues){let end=0;for(const word of cue.source){assert.ok(word.startSample>=end,word.id);assert.ok(frameAt(word.endSample,44100,60)>frameAt(word.startSample,44100,60),word.id+' invisible');assert.ok(cue.visibleFrom<=word.startSample&&cue.visibleUntil>=word.endSample);end=word.endSample;}}
 });
-test('all-frame bilingual focus follows exact source membership and preserves gaps',()=>{
+test('all-frame focus preserves exact word boundaries and gaps',()=>{
  let states=0;for(let frame=0;frame<data.frames;frame++)for(const cue of visibleCues(data,frame)){
-  const active=activeSource(cue,frame,data),target=activeTargets(cue,frame,data);
-  for(const word of cue.target){assert.equal(target.has(word.id),word.sourceIds.some(id=>active.has(id)),word.id);states++;}
+  const active=activeSource(cue,frame,data);
+  for(const word of cue.source){assert.equal(active.has(word.id),frame>=Math.round(word.startSample/44100*60)&&frame<Math.round(word.endSample/44100*60),word.id);states++;}
  }assert.ok(states>20000);
 });
-test('reordered meanings and necessary grammar light together',()=>{
- const morning=data.cues.find(c=>c.id==='SG-022');assert.ok(morning);const w=morning.source.find(w=>w.text==='morning');assert.ok(w);
- const target=activeTargets(morning,frameAt(w.startSample,44100,60),data);assert.deepEqual(morning.target.filter(w=>target.has(w.id)).map(w=>w.text),['утро']);
- const never=data.cues.find(c=>c.id==='SG-011');assert.ok(never);const n=never.source.find(w=>w.text==='never');assert.ok(n);
- const negative=activeTargets(never,frameAt(n.startSample,44100,60),data);assert.deepEqual(never.target.filter(w=>negative.has(w.id)).map(w=>w.text),['никогда','не']);
+test('spectrum is bounded, silent without signal and more expansive in choruses',()=>{
+ const bands=Array.from({length:data.frames},()=>Array(64).fill(-30));
+ for(const format of ['landscape','portrait'] as const){const verse=spectrumHeights(8*60,format,bands),chorus=spectrumHeights(90*60,format,bands);assert.equal(chorus.length,64);assert.ok(chorus[0]>verse[0]*1.4);assert.ok(chorus.every(h=>h<=197));assert.deepEqual(spectrumHeights(90*60,format,[Array(64).fill(-120)]),Array(64).fill(2));}
+ assert.equal(intensityAt(231),0);
 });
-test('both layouts have complete stable geometry, equal type and separate vocal lanes',()=>{
- for(const format of ['landscape','portrait'] as const){const l=layouts[format];for(const cue of data.cues){const b=l.cues[cue.id as keyof typeof l.cues];assert.ok(b);assert.equal(b.source.length,cue.source.length);assert.equal(b.target.length,cue.target.length);for(const word of [...b.source,...b.target]){assert.ok(word.x>=l.safeX-1);assert.ok(word.x+word.width<=l.width-l.safeX+1);assert.ok(word.y-l.fontSize>180&&word.y<l.height-100);}
-  const frame=frameAt(cue.startSample,44100,60),svg=sceneSvg(frame,format,data,layouts,[]);assert.match(svg,/data-language="en"/);assert.match(svg,/data-language="ru"/);
+test('both English layouts retain every word, stable emphasis and separate vocal lanes',()=>{
+ for(const format of ['landscape','portrait'] as const){const l=layouts[format];for(const cue of data.cues){const b=l.cues[cue.id as keyof typeof l.cues];assert.ok(b);assert.equal(b.source.length,cue.source.length);for(const word of b.source){assert.ok(word.x>=l.safeX-1);assert.ok(word.x+word.width<=l.width-l.safeX+1);assert.ok(word.y-b.fontSize>180&&word.y<l.height-160);}
+  const frame=frameAt(cue.startSample,44100,60),svg=sceneSvg(frame,format,data,layouts,[]);assert.match(svg,/data-language="en"/);assert.doesNotMatch(svg,/[\u0400-\u04ff]|data-language="ru"/);assert.doesNotMatch(svg,/<animate|<tspan|text-decoration/);
  }
  for(let f=0;f<data.frames;f++){const cues=visibleCues(data,f);assert.ok(cues.filter(c=>c.layer==='main').length<=1);assert.ok(cues.filter(c=>c.layer==='backing').length<=1);}
  }

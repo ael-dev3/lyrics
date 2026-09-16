@@ -4,7 +4,7 @@ Reviewed 16 September 2026. All eleven featured songs in the main README have a 
 
 | Song | Representative image | Time | Edition / provenance |
 | --- | --- | --- | --- |
-| Sugar Glass | [Mirror performance and bilingual focus](../assets/sugar-glass-preview-90.jpg) | 01:30.000 | Live browser preview-v1; production not rendered |
+| Sugar Glass | [Mirror performance, large English focus and spectrum](../assets/sugar-glass-preview-90.jpg) | 01:30.000 | Live English-only preview-v2; production not rendered |
 | Твои глаза | [Original animation and bilingual focus](../assets/tvoi-glaza-63-4.png) | 01:03.400 | Verified final local landscape film |
 | Прости за любовь | [Night-tram scene and bilingual lyrics](../assets/prosti-v1-2-52-4.png) | 00:52.400 | Accepted v1.2; known highlighting gaps preserved |
 | Половинка | [Original performance and turquoise focus](../assets/polovinka-80.png) | 01:20.000 | Final v1.0.0 landscape film |
@@ -35,6 +35,6 @@ Existing screenshots were inspected and retained when the subject, lyric treatme
 
 ## Sugar Glass preview
 
-The new entry is a live browser screenshot of the shared scene at 90.000 seconds, captured at the normal review display size as a 1280×720 JPEG. It is explicitly labelled preview-only in both READMEs and the inventory. No production-film extraction or acoustic approval is implied. The source-video and draft identities are recorded in the project input manifest and preview review record.
+The current English-only entry is a live browser screenshot of the shared scene at 90.000 seconds, captured at the normal review display size as a 1280×720 JPEG. It is explicitly labelled preview-only in both READMEs and the inventory. No production-film extraction or acoustic approval is implied. The source-video and draft identities are recorded in the project input manifest and preview review record.
 
 Check the actual image encoding before choosing the filename extension or reading dimensions. Native browser screenshots can return JPEG bytes even when a caller supplies a PNG filename. Use an image decoder or `ffprobe` to verify the encoding and dimensions, then verify the inventory byte count and SHA-256. Preserve the captured bytes rather than re-encoding solely to fit an assumed extension.

@@ -9,6 +9,7 @@ Every new song starts with a **preview-only review stage**. Deliver a playable p
 - Lock the recording, preserve the supplied lyric reference and audit the complete performed text, including repeats, backing vocals and the outro.
 - Build translations, fine-grained meaning mappings, provisional acoustic boundaries and the song's visual treatment.
 - Provide a full-recording browser preview with the actual soundtrack, seeking, normal/reduced-speed playback and every requested aspect ratio. Use the same scene and timing logic planned for production. Mark timing uncertainty and pending review plainly.
+- Hand off at the beginning with the full duration and an obvious restart control. Keep the local server alive independently of the setup command and provide restart instructions. Check media loading and seeking after startup; a cached page or screenshot does not prove playback is available. Show recoverable loading errors and preserve notes when the server disconnects.
 - Provide short diagnostic clips or stills only as useful review evidence. If the request says “no render yet,” use live browser playback and stills; do not start an encoded lyric-film job. Downloading, decoding or remuxing the original source for playback is source preparation.
 - Include high-risk passages, dense translations, independent repeated performances and the final vocal in the review. Saving notes or marking individual cues reviewed never authorizes a production render.
 

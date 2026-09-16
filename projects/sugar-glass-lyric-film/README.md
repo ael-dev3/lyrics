@@ -1,26 +1,34 @@
 # Anya Nami — Sugar Glass
 
-**English + Russian · preview only · no production film rendered**
+**English only · preview v2 · no production film rendered**
 
-![Sugar Glass preview: Anya Nami reflected among glass, with equal English and Russian lyrics and warm word focus](../../assets/sugar-glass-preview-90.jpg)
+![Sugar Glass English preview with large lyric focus and an expanded reflective spectrum](../../assets/sugar-glass-preview-90.jpg)
 
-*Live browser preview at 01:30.000, captured at the normal review display size. This is a preview screenshot, not a decoded final-film frame. Original music, performance and mood video: [Anya Nami](https://www.youtube.com/watch?v=-NsQ8_WLq2s).*
+*Live browser preview at 01:30.000. Original music, performance and mood video: [Anya Nami](https://www.youtube.com/watch?v=-NsQ8_WLq2s). This is a preview screenshot, not a final-film frame.*
 
-The full-recording review player pairs the supplied English lyrics with Russian meaning and stable, color-only word/semantic focus. It applies the **Lyrics workflow in general**. The source video's cream, blue and black imagery determines the palette; warm peach focus and a compact muted-teal spectrum support the picture. English and Russian use the same Cormorant Garamond Semibold size, weight and color roles.
+This edition uses English lyrics only. The full-recording preview applies the **Lyrics workflow in general**, using the source video's glass, cream, blue and black imagery. Removing the translation lane makes room for larger type, oversized refrain lines and a more expressive spectrum. The earlier bilingual draft is superseded; its history remains in Git.
+
+## Visual direction
+
+- **Lyric hierarchy:** 102 px verse/bridge/outro text in both formats; 116 px landscape and 108 px portrait choruses; 156/142 px refrains. Independent backing vocals use a separate 64/62 px lane. Complete lines retain fixed word positions while warm color follows each vocal event.
+- **Opening:** a large title settles into the small persistent identity before the first lyric. No sung word is hidden by the title transition.
+- **Audio spectrum:** 64 measured bands become broader prismatic columns with a faint reflection. Smooth arrangement envelopes expand the display into choruses and the post-chorus, then ease back for the bridge and outro. Display travel ranges from 38–132 px landscape and 56–195 px portrait, with opacity 0.60–0.94.
+- **Source imagery:** original footage and cadence are preserved. Continuous shading supports the lower reading area. Portrait reserves separate image, backing-vocal, lead-lyric and spectrum regions.
+- **Player:** a clean watching view opens by default. Timing tools remain available through **Timing review**, including word boundaries, candidate comparisons, notes and saved progress.
+
+The spectrum uses `height = 2 + clamp((dB + 65) / 52, 0, 1)^1.18 × travel`. Arrangement envelopes are artistic display decisions, separate from raw measurements and lyric timing. There is no per-frame normalization, random beat simulation or word-position bounce.
 
 | Item | Preview scope |
 | --- | --- |
 | Recording | Original AAC, 44.1 kHz stereo; 10,202,112 decoded samples; 231.340408 s |
-| Compositions | Landscape 1920×1080 and portrait 1080×1920; 60 fps event display |
-| Footage | Original 25 fps; local 4K VP9 retained, official 1080p H.264 used for browser playback |
-| Lyrics | 71 cues; 424 English source tokens; 405 Russian words; independent lead/backing layers |
-| Typography | Equal 64 px in landscape, 72 px in portrait; reflow instead of shrinking one language |
-| Visualizer | 64 measured 20 Hz–20 kHz bands; bounded artistic travel, opacity 0.55; no word decoration |
-| Approval | Preview available; complete listening review pending; production authorization absent |
+| Formats | Landscape 1920×1080 and portrait 1080×1920; 60 fps lyric event display |
+| Footage | Original 25 fps; local 4K VP9 retained, official 1080p H.264 used for live playback |
+| Lyrics | 71 English lead/backing cues, 424 source tokens; existing acoustic boundaries preserved |
+| Approval | Listening review incomplete; rendering unauthorized |
 
 ## Review the preview
 
-Run from this directory with Node 24 or newer and the locked dependencies:
+With Node 24 or newer and the source assets restored from [the manifest](source/input-manifest.json):
 
 ```sh
 npm ci
@@ -28,32 +36,27 @@ npm run check
 npm run preview
 ```
 
-Open `http://127.0.0.1:4318/`. Use the format buttons, timeline and 0.75×/0.5× controls. Click a cue, then a source word, to inspect its full Russian correspondence and acoustic candidates. Notes and proposed boundaries stay in the review draft; **Save review progress** also writes the ignored local listener record. Saved notes never authorize production or replace the frozen cue map. A material source change invalidates the draft identity.
+Open `http://127.0.0.1:4318/`. **Play from beginning** covers the full 3:51 recording. Switch between 16:9 and 9:16, use normal/0.75×/0.5× speed, or seek. **Timing review** reveals the cue list and word inspector. Notes and proposed edits remain local; saving progress does not approve production.
 
-For clean live review, add `?clean=1&t=90`; add `&format=portrait` for the portrait layout. The separate `review/geometry.html` checks browser glyph geometry after the review bundle is built.
+A cached page can remain visible after its local server exits. Keep the server running, or restart the portable package with **Start Preview.command**, then choose **Retry playback**. Retry reconnects without discarding notes. Drafts from an earlier input identity are archived locally before a new draft is saved.
 
-Downloaded media are excluded from Git. Restore the exact source files listed in [the input manifest](source/input-manifest.json) before local playback. The separately supplied local review package contains the remux, font and bundled player and needs no npm install. It is not a production deliverable.
+For a clean still, use `?clean=1&t=90`; append `&format=portrait` for portrait. These URLs do not encode a lyric film. The geometry audit is at `review/geometry.html`.
 
 ## Timing and review limits
 
-The [review record](evidence/cross-language-sync-review.md) lists unresolved wording, overlapping-refrain and release questions. Timing is model-assisted and provisional. Candidate disagreement remains visible rather than being presented as completed listening. Every target word is source-linked, including grammatical expansions; non-contiguous source groups preserve their gaps.
+[Review questions](evidence/sync-review.md) cover supplied “sleeve” versus recognized “sleep,” the bridge wording, post-chorus repetitions and sustained releases. The English-only revision preserves all 424 source-word intervals; a larger display does not imply improved acoustic accuracy. Independent recognizers and aligners support listening review; they do not certify it.
 
-Independent recognition on mix/vocals is followed by bounded MMS, Whisper and an English wav2vec encoder. The original audio clock is unchanged. Nearest-frame quantization at 60 fps is at most half a frame; this does not describe the accuracy of inferred vocal boundaries. Repeated choruses are aligned separately.
+The [sync review](evidence/sync-review.json) and [authorization](evidence/render-authorization.json) remain separate. This single-language edition checks the full performed English text, every word boundary, both formats and the complete recording. Multilingual productions still require the repository's cross-language checks.
 
-The raw band artifact preserves stereo dBFS RMS measurements. The separate artistic mapping is `h = 2 + clamp((dB + 65) / 60, 0, 1)^1.5 × travel`, with travel 26 px landscape / 38 px portrait and opacity 0.55. This unlabeled decorative display is not a calibrated scale. The chosen restraint comes from this song's imagery and arrangement, not a borrowed song-specific treatment.
+## Preview before rendering
 
-## Preview-before-render enforcement
-
-`npm run render` checks authorization and synchronization before any output work. The preview-only edition contains no production encoder; direct Remotion capture also refuses. Tests cover missing approval, another song/revision, stale input hashes, incomplete sync review and prevention of output creation. A passing check or merged PR does not open the gate.
-
-After review, record explicit approval for this song and revision, resolve the full sync checklist and only then add the production adapter. Follow [preview before render](../../docs/preview-before-render.md).
+Production remains blocked until full listening review, resolved findings and explicit authorization for **preview-v2-english**. `npm run render` refuses before output creation, and direct Remotion capture remains disabled. This preview edition contains no production encoder. Follow the [preview-first workflow](../../docs/preview-before-render.md).
 
 ## Source and reproduction
 
-- Original recording and mood video: **Anya Nami — Sugar Glass**. No production-crew credits were returned in the source description; none are invented.
-- Russian meaning, mapping and added presentation: this Lyrics project, assisted with Codex.
-- Bundled typeface: Cormorant Garamond, SIL Open Font License; [license](public/CormorantGaramond-OFL.txt).
-- Authored application/analysis/QA code: strict TypeScript 7.0.2. Python bridges are limited to existing pretrained audio-model interfaces.
-- Stable input identities: [input manifest](source/input-manifest.json), [preview hashes](evidence/preview-identity.json), [browser geometry](evidence/browser-geometry.json), [preview verification](evidence/preview-verification.json).
+- Original music, lyrics, performance and mood video: **Anya Nami — Sugar Glass**. No additional production credits are inferred.
+- Added lyric presentation: Lyrics project, assisted with Codex. No individual song serves as the stated design inspiration.
+- Cormorant Garamond Semibold: [SIL Open Font License](public/CormorantGaramond-OFL.txt).
+- [Source identity](source/input-manifest.json), [preview hashes](evidence/preview-identity.json), [browser geometry](evidence/browser-geometry.json), [verification](evidence/preview-verification.json).
 
-Model rebuilding requires `ALIGN_PYTHON` pointing to an environment with torch, torchaudio, stable-whisper, demucs, soundfile and uroman plus the named pretrained weights. Run `scripts/prepare-text.ts`, the documented model bridges and `scripts/build-cues.ts`, then `scripts/layout.ts` and `scripts/analyze.ts`. Rebuilding inference does not imply identical boundaries and requires renewed review. Preserve existing listener progress before intentionally starting another revision.
+`source/lyric-plan.json` preserves the English cue plan. Existing model evidence and the boundary ledger retain the timing candidates. `scripts/prepare-text.ts` rebuilds the text reference without changing alignment windows. `scripts/build-cues.ts` reconstructs candidate selection; `scripts/layout.ts` lays out the English edition. Rebuilding timing requires renewed review. Full audio/video assets and listener records stay local.

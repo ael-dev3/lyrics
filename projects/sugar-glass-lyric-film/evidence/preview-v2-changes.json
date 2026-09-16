@@ -1,0 +1,34 @@
+{
+  "revision": "preview-v2-english",
+  "language": "en",
+  "priorRevision": "preview-v1",
+  "sourceWords": 424,
+  "sourceTimingUnchanged": true,
+  "clockUnchanged": true,
+  "changes": [
+    "Removed translation lane and current Russian cue data.",
+    "Enlarged English lyrics with verse, chorus, refrain and backing hierarchy.",
+    "Expanded measured spectrum with arrangement envelopes and reflection.",
+    "Added clean watch view with optional timing tools.",
+    "Added full-duration, restart, unavailable-media and retry controls."
+  ],
+  "verified": {
+    "strictTypeScript": true,
+    "projectTests": 7,
+    "browserGeometry": {
+      "status": "passed",
+      "cueLayouts": 142,
+      "wordBoxes": 888,
+      "overlapStates": 8,
+      "maxWidthDifference": 0.011566162109375,
+      "findings": []
+    },
+    "isolatedMediaFailure": "HTTP 503 fixture displayed retry after Play; recovery resumed loaded playback without page reload.",
+    "audioPacketIdentity": 9963
+  },
+  "limits": {
+    "listeningReviewComplete": false,
+    "renderAuthorized": false,
+    "fullLyricFilmRendered": false
+  }
+}

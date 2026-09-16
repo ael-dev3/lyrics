@@ -664,14 +664,95 @@
   "artisticDisplay": {
     "bands": 64,
     "dbFloor": -65,
-    "dbCeiling": -5,
-    "exponent": 1.5,
+    "dbCeiling": -13,
+    "exponent": 1.18,
     "baseHeight": 2,
     "travel": {
-      "landscape": 26,
-      "portrait": 38
+      "landscape": [
+        38,
+        132
+      ],
+      "portrait": [
+        56,
+        195
+      ]
     },
-    "opacity": 0.55
+    "opacity": [
+      0.6,
+      0.94
+    ],
+    "reflection": 0.24,
+    "arrangement": [
+      [
+        0,
+        0.18
+      ],
+      [
+        6,
+        0.36
+      ],
+      [
+        29,
+        0.4
+      ],
+      [
+        31,
+        0.66
+      ],
+      [
+        43,
+        0.38
+      ],
+      [
+        68,
+        0.48
+      ],
+      [
+        78,
+        0.74
+      ],
+      [
+        82.3,
+        1
+      ],
+      [
+        108.8,
+        0.82
+      ],
+      [
+        113,
+        0.22
+      ],
+      [
+        144.5,
+        0.38
+      ],
+      [
+        146.5,
+        1
+      ],
+      [
+        173.8,
+        1
+      ],
+      [
+        196.8,
+        0.48
+      ],
+      [
+        198.4,
+        0.28
+      ],
+      [
+        226.2,
+        0.2
+      ],
+      [
+        230,
+        0
+      ]
+    ],
+    "measurementTransforms": "none; bounded display transform only"
   },
   "reference": "https://www.w3.org/TR/audio-eq-cookbook/"
 }
