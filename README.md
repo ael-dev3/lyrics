@@ -10,17 +10,17 @@ Music films with synchronized lyrics, meaning-linked translations, and audio-rea
 
 ## Sugar Glass
 
-**Anya Nami · English + Russian · preview only**
+**Anya Nami · English only · preview v2**
 
-![Sugar Glass preview: reflected source performance with equal English and Russian word focus](assets/sugar-glass-preview-90.jpg)
+![Sugar Glass English preview: large warm lyric focus and an expanded reflective spectrum](assets/sugar-glass-preview-90.jpg)
 
 *Live review-player screenshot at 01:30.000. Original music, performance and mood video: Anya Nami. This is a preview, not a final-film frame.*
 
-The complete recording is available for local review in landscape and portrait, with 71 cues, 424 English source tokens, 405 Russian words and independent overlapping vocal layers. Warm color-only focus and a compact teal spectrum support the source imagery. Both languages share source events and equal typography.
+The complete recording is available for local review in landscape and portrait, with 71 cues, 424 English words and independent lead/backing layers. The English-only edition uses larger lyrics, oversized refrains and a broader reflective spectrum that expands into choruses and recedes through the bridge and outro. Word geometry and the original audio clock stay stable.
 
 **Review pending; production blocked.** The supplied wording and model-assisted boundaries retain explicit review questions. No full lyric film has been rendered. Completed source/workflow checks and GitHub merging do not substitute for listening review or render authorization.
 
-[Preview setup and production boundary](projects/sugar-glass-lyric-film/README.md) · [Review questions](projects/sugar-glass-lyric-film/evidence/cross-language-sync-review.md) · [Technical verification](projects/sugar-glass-lyric-film/evidence/preview-verification.json) · [Original mood video](https://www.youtube.com/watch?v=-NsQ8_WLq2s)
+[Preview setup and production boundary](projects/sugar-glass-lyric-film/README.md) · [Review questions](projects/sugar-glass-lyric-film/evidence/sync-review.md) · [Technical verification](projects/sugar-glass-lyric-film/evidence/preview-verification.json) · [Original mood video](https://www.youtube.com/watch?v=-NsQ8_WLq2s)
 
 ## Твои глаза
 

@@ -3,7 +3,7 @@ import {createHash} from 'node:crypto';
 import {parseData,object,array,str,num} from '../src/schema.ts';
 import type {Cue,SourceWord} from '../src/schema.ts';
 const read=(p:string):unknown=>JSON.parse(readFileSync(p,'utf8'));
-const plan=object(read('source/text-and-mapping.json'));
+const plan=object(read('source/lyric-plan.json'));
 const methods=[['mms-vocals','analysis/mms-vocals-revised.json'],['wav2vec-vocals','analysis/wav2vec-vocals16.json'],['whisper-vocals','analysis/whisper-vocals-lines.json'],['mms-mix','analysis/mms-mix-lines.json']] as const;
 const corrected=array(object(read('analysis/whisper-vocals-corrected.json')).segments).map(object);
 const candidates=methods.map(([method,path])=>({method,segments:array(object(read(path)).segments).map(object).map(seg=>method==='whisper-vocals'?(corrected.find(c=>c.id===seg.id)??seg):seg)}));
@@ -27,9 +27,8 @@ const cues:Cue[]=array(plan.rows).map(value=>{
   ledger.push({...word,candidates:options,selection:'Provisional local CTC onset; robust release from nearby candidates. Not a completed listening review.'});return word;
  });
  for(let i=0;i<source.length-1;i++){const word=source[i],next=source[i+1];if(!word||!next)throw Error('Word missing');if(word.startSample>=next.startSample)throw Error('Reversed candidate '+word.id);word.endSample=Math.min(word.endSample,next.startSample);}
- const target=array(row.targets).flatMap((value,j)=>{const t=object(value),ids=array(t.sourceIndices).map(num).map(i=>{const w=source[i];if(!w)throw Error('Target source missing');return w.id;});return str(t.text).split(/\s+/).map((text,k)=>({id:`${id}-t${j+1}-${k+1}`,text,sourceIds:ids}));});
  const startSample=Math.min(...source.map(w=>w.startSample)),endSample=Math.max(...source.map(w=>w.endSample));
- return {id,section:str(row.section),layer,source,target,startSample,endSample,visibleFrom:Math.max(0,startSample-Math.round(.20*sr)),visibleUntil:Math.min(sampleCount,endSample+Math.round(.22*sr))};
+ return {id,section:str(row.section),layer,source,startSample,endSample,visibleFrom:Math.max(0,startSample-Math.round(.20*sr)),visibleUntil:Math.min(sampleCount,endSample+Math.round(.22*sr))};
 });
 for(const layer of ['main','backing']){
  const sequence=cues.filter(c=>c.layer===layer).sort((a,b)=>a.startSample-b.startSample);
@@ -42,4 +41,4 @@ const data=parseData({sampleRate:sr,sampleCount,duration,fps:60,frames:Math.ceil
 for(const raw of ledger){const item=object(raw);const selected=cues.flatMap(c=>c.source).find(w=>w.id===item.id);Object.assign(item,selected);}
 writeFileSync('src/cues.json',JSON.stringify(data,null,2)+'\n');
 writeFileSync('analysis/boundary-ledger.json',JSON.stringify(ledger,null,2)+'\n');
-console.log({cues:cues.length,words:cues.reduce((n,c)=>n+c.source.length,0),russianWords:cues.reduce((n,c)=>n+c.target.length,0),reviewRequired:cues.flatMap(c=>c.source).filter(w=>w.reviewRequired).length});
+console.log({cues:cues.length,words:cues.reduce((n,c)=>n+c.source.length,0),reviewRequired:cues.flatMap(c=>c.source).filter(w=>w.reviewRequired).length});

@@ -26,6 +26,10 @@ Color-only focus includes a visible luminance difference; do not rely on hue alo
 
 Use track-specific colors, fonts and motion. Midnight Love's blue, silver and pale gold are a reference for that recording, not a universal palette. Decorative spectrum or composition lines are distinct from active-word underlines.
 
+### Single-language editions
+
+Follow the language scope commissioned for the current edition. When a translation lane is removed, recompose the available area: enlarge the source lyrics, distinguish lead and backing voices, and consider a stronger spectrum or section-level scale changes. Freeze each phrase's geometry before word highlighting; a more expressive composition must preserve the original acoustic boundaries and readable inactive words. Review quiet sections, choruses, overlaps and the ending in every format. Single-language editions retain the full listening and render-approval gates; cross-language correspondence checks apply when translations are included.
+
 ## Match motion intensity to the song
 
 Choose the visualizer's role before tuning its response. Gentle, intimate or contemplative arrangements benefit from a small supporting spectrum, limited vertical travel and subdued opacity. Let source animation, composition and lyric meaning provide the expression. A sustained or emotionally important passage may retain that restraint throughout.
