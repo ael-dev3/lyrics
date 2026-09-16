@@ -1,30 +1,31 @@
 {
   "version": 1,
-  "reviewedOn": "2026-09-16",
-  "scope": "The eleven featured song sections in the main README and their project README entry points; Sugar Glass is preview-only.",
+  "reviewedOn": "2026-09-17",
+  "scope": "The eleven featured song sections in the main README and their project README entry points.",
   "newExtraction": {
     "fps": 60,
     "frameNumbering": "zero-based",
     "capture": "FFmpeg select=eq(n,FRAME), one full-frame PNG; no crop, recolor, text replacement or generated imagery.",
     "sourceIdentity": "New source files matched the recorded delivery SHA-256 before selecting their frames."
   },
-  "review": "All ten representative images visually inspected for correct song association, legible text and coherent composition. New candidates were compared at reduced size and selected images inspected at native resolution. Sugar Glass adds a visually inspected live-browser preview screenshot, with final-media provenance explicitly excluded.",
+  "review": "All eleven representative images are associated with their song and project README. Sugar Glass now uses a decoded frame from its verified final landscape file; the prior preview screenshot remains in repository history and assets. Historical limitations for other editions remain recorded.",
   "screenshots": [
     {
       "song": "Sugar Glass",
-      "image": "assets/sugar-glass-preview-90.jpg",
+      "image": "assets/sugar-glass-90.png",
       "project": "projects/sugar-glass-lyric-film/README.md",
       "timestampSeconds": 90,
       "frame": 5400,
-      "edition": "preview-v2-english; listening review pending",
-      "sourceFile": "live review player with original footage and shared scene",
+      "edition": "English-only verified local delivery of accepted preview v2",
+      "sourceFile": "Sugar-Glass-landscape-1920x1080-60fps.mp4",
       "selection": "Mirror performance with large English talking focus, expanded spectrum and reflection; complete uncropped composition.",
-      "method": "Native browser screenshot at normal review display size; no full film rendering.",
-      "width": 1280,
-      "height": 720,
-      "bytes": 61287,
-      "sha256": "659fdc0548348d3ea0dbd04bbb47beea4042779a65a92e22da2a019f38a45b34",
-      "encoding": "JPEG"
+      "method": "Native 1920x1080 frame 5400 decoded from the verified final film as an 8-bit RGB PNG; full composition without crop or replaced text.",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 884283,
+      "sha256": "cea2be10cf4680bd2929967588cdca7a101851d152e7e4d647c1def4c7a7cb5f",
+      "encoding": "PNG",
+      "sourceSha256": "7a8f1bc0a45c23d5b3ceabdfdf2fe4f8ee852e7ea952656e35adac91f93f1d16"
     },
     {
       "song": "Твои глаза",

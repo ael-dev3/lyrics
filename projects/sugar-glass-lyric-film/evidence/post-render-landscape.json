@@ -1,0 +1,230 @@
+{
+  "status": "automated checks and selected-frame visual inspection passed",
+  "format": "landscape",
+  "capture": {
+    "fingerprint": "18d011ea282b57928f85ae90e80a028b2f4da91a52d71faf4a107bf0aaf384ca",
+    "format": "landscape",
+    "scale": 2,
+    "frames": 13881,
+    "chunks": [
+      {
+        "filename": "part-01.mov",
+        "first": 0,
+        "last": 1155
+      },
+      {
+        "filename": "part-02.mov",
+        "first": 1156,
+        "last": 2312
+      },
+      {
+        "filename": "part-03.mov",
+        "first": 2313,
+        "last": 3469
+      },
+      {
+        "filename": "part-04.mov",
+        "first": 3470,
+        "last": 4626
+      },
+      {
+        "filename": "part-05.mov",
+        "first": 4627,
+        "last": 5782
+      },
+      {
+        "filename": "part-06.mov",
+        "first": 5783,
+        "last": 6939
+      },
+      {
+        "filename": "part-07.mov",
+        "first": 6940,
+        "last": 8096
+      },
+      {
+        "filename": "part-08.mov",
+        "first": 8097,
+        "last": 9253
+      },
+      {
+        "filename": "part-09.mov",
+        "first": 9254,
+        "last": 10409
+      },
+      {
+        "filename": "part-10.mov",
+        "first": 10410,
+        "last": 11566
+      },
+      {
+        "filename": "part-11.mov",
+        "first": 11567,
+        "last": 12723
+      },
+      {
+        "filename": "part-12.mov",
+        "first": 12724,
+        "last": 13880
+      }
+    ],
+    "output": "output/Sugar-Glass-landscape-1920x1080-60fps.mp4",
+    "sha256": "7a8f1bc0a45c23d5b3ceabdfdf2fe4f8ee852e7ea952656e35adac91f93f1d16",
+    "elapsedSeconds": 6641.325
+  },
+  "verification": {
+    "status": "passed technical verification",
+    "format": "landscape",
+    "video": {
+      "index": 0,
+      "codec_name": "hevc",
+      "codec_long_name": "H.265 / HEVC (High Efficiency Video Coding)",
+      "profile": "Main 10",
+      "codec_type": "video",
+      "codec_tag_string": "hvc1",
+      "codec_tag": "0x31637668",
+      "width": 1920,
+      "height": 1080,
+      "coded_width": 1920,
+      "coded_height": 1080,
+      "has_b_frames": 2,
+      "sample_aspect_ratio": "1:1",
+      "display_aspect_ratio": "16:9",
+      "pix_fmt": "yuv420p10le",
+      "level": 123,
+      "color_range": "tv",
+      "color_space": "bt709",
+      "color_transfer": "bt709",
+      "color_primaries": "bt709",
+      "chroma_location": "left",
+      "field_order": "progressive",
+      "refs": 1,
+      "view_ids_available": "",
+      "view_pos_available": "",
+      "id": "0x1",
+      "r_frame_rate": "60/1",
+      "avg_frame_rate": "60/1",
+      "time_base": "1/15360",
+      "start_pts": 0,
+      "start_time": "0.000000",
+      "duration_ts": 3553536,
+      "duration": "231.350000",
+      "bit_rate": "1701595",
+      "nb_frames": "13881",
+      "nb_read_frames": "13881",
+      "extradata_size": 2442,
+      "disposition": {
+        "default": 1,
+        "dub": 0,
+        "original": 0,
+        "comment": 0,
+        "lyrics": 0,
+        "karaoke": 0,
+        "forced": 0,
+        "hearing_impaired": 0,
+        "visual_impaired": 0,
+        "clean_effects": 0,
+        "attached_pic": 0,
+        "timed_thumbnails": 0,
+        "non_diegetic": 0,
+        "captions": 0,
+        "descriptions": 0,
+        "metadata": 0,
+        "dependent": 0,
+        "still_image": 0,
+        "multilayer": 0
+      },
+      "tags": {
+        "language": "und",
+        "handler_name": "VideoHandler",
+        "encoder": "Lavc62.28.102 libx265"
+      }
+    },
+    "audio": {
+      "index": 1,
+      "codec_name": "aac",
+      "codec_long_name": "AAC (Advanced Audio Coding)",
+      "profile": "LC",
+      "codec_type": "audio",
+      "codec_tag_string": "mp4a",
+      "codec_tag": "0x6134706d",
+      "mime_codec_string": "mp4a.40.2",
+      "sample_fmt": "fltp",
+      "sample_rate": "44100",
+      "channels": 2,
+      "channel_layout": "stereo",
+      "bits_per_sample": 0,
+      "initial_padding": 0,
+      "id": "0x2",
+      "r_frame_rate": "0/0",
+      "avg_frame_rate": "0/0",
+      "time_base": "1/44100",
+      "start_pts": 0,
+      "start_time": "0.000000",
+      "duration_ts": 10202112,
+      "duration": "231.340408",
+      "bit_rate": "127999",
+      "nb_frames": "9963",
+      "nb_read_frames": "9963",
+      "extradata_size": 16,
+      "disposition": {
+        "default": 1,
+        "dub": 0,
+        "original": 0,
+        "comment": 0,
+        "lyrics": 0,
+        "karaoke": 0,
+        "forced": 0,
+        "hearing_impaired": 0,
+        "visual_impaired": 0,
+        "clean_effects": 0,
+        "attached_pic": 0,
+        "timed_thumbnails": 0,
+        "non_diegetic": 0,
+        "captions": 0,
+        "descriptions": 0,
+        "metadata": 0,
+        "dependent": 0,
+        "still_image": 0,
+        "multilayer": 0
+      },
+      "tags": {
+        "language": "und",
+        "handler_name": "ISO Media file produced by Google Inc."
+      }
+    },
+    "frames": 13881,
+    "allFrameTimestamps": true,
+    "aacPackets": 9963,
+    "audioIdentity": "Original payloads, PTS, DTS, durations and sizes identical",
+    "decodedSamples": 10202112,
+    "decodedPcmSha256": "5749ef6cf9961971c670827c33ebbfd57d74b36e52ae4811a2620ac171137d26",
+    "strictFullDecode": true,
+    "fastStart": true,
+    "atoms": [
+      {
+        "type": "ftyp",
+        "offset": 0,
+        "size": 28
+      },
+      {
+        "type": "moov",
+        "offset": 28,
+        "size": 381452
+      },
+      {
+        "type": "free",
+        "offset": 381480,
+        "size": 8
+      },
+      {
+        "type": "mdat",
+        "offset": 381488,
+        "size": 52909481
+      }
+    ],
+    "bytes": 53290969,
+    "sha256": "7a8f1bc0a45c23d5b3ceabdfdf2fe4f8ee852e7ea952656e35adac91f93f1d16"
+  },
+  "visualReview": "evidence/delivery-approved-landscape.json"
+}

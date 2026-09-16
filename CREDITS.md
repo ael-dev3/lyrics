@@ -2,6 +2,12 @@
 
 **We are not the creators of the original music, lyrics, performances, musical remixes, anime footage, characters or source illustrations. We do not take credit for that work.** Our contribution is the additional lyric-film presentation and production workflow. Artist and source-upload links below distinguish those roles; a source uploader is not necessarily the owner of every element in an upload.
 
+## Sugar Glass
+
+**Anya Nami — Sugar Glass**: original song, performance and immediate source upload, [Sugar Glass (mood video)](https://www.youtube.com/watch?v=-NsQ8_WLq2s). Individual production and writing credits beyond the identified source are not inferred.
+
+**Ael**, assisted by **OpenAI Codex**, adds the English-only lyric presentation, measured spectrum, production code and verification workflow. Original footage and recording remain in the film. The design follows the Lyrics workflow in general. The source song, lyrics, recording and imagery are excluded from the repository contribution license. [Project, source identity and review limits](projects/sugar-glass-lyric-film/README.md).
+
 ## Твои глаза
 
 **POLNALYUBVI — Твои глаза**: music and lyrics by **Марина Демещенко / POLNALYUBVI**; animation by **Юлия Чайковская / ORAMAI**; backgrounds and illustrations by **Алина Чайковская / FINITO (FINITOLINA)**, as credited in the [official recording and animation](https://www.youtube.com/watch?v=qC4sCCmvoXU).

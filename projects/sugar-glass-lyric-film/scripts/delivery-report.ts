@@ -29,11 +29,13 @@ Both files use HEVC Main 10 / hvc1, 10-bit 4:2:0 pixels, square pixels and BT.70
 ## Checks passed
 
 - Strict full-file decoding, complete frame inventory and every video timestamp against frame number / 60.
-- Original 44.1 kHz stereo AAC payloads, PTS, DTS, packet durations and sizes retained exactly; no audio re-encode, gain or resampling.
+- Original 44.1 kHz stereo AAC payloads, PTS, DTS, packet durations and sizes retained exactly; no audio re-encode, gain or resampling. Decoded PCM SHA-256 and all 10,202,112 samples match the original.
 - Every visible lead/backing word's decoded highlight agrees with the accepted event map, with zero mismatches and zero ambiguous states in both complete files. An intentionally shifted one-frame diagnostic produces 13 mismatches and four ambiguous states.
 - All twelve reference segments have matching SHA-256 identities, complete packet inventories and contiguous global frame ranges.
 - Representative final pictures and both sides of every capture join were inspected, including the opening title, large refrain, long lines, independent backing vocals, final lyric and complete tail.
 - Fast-start MP4 structure places metadata before media data.
+
+The paired 90-frame codec diagnostic scored full-frame SSIM 0.998144 and a lyric-region average PSNR of 53.549430 dB (minimum 52.023554 dB). These are sample measurements, not whole-film quality scores; [the diagnostic record](codec-diagnostic.json) records its exact scope.
 
 ## Timing and review limits
 

@@ -1,10 +1,10 @@
 # README song screenshots
 
-Reviewed 16 September 2026. All eleven featured songs in the main README have a representative screenshot with its edition and preview/final status, and each song's project README has an associated image. Promotional covers and supplementary frames remain separate from the representative screenshot.
+Reviewed 17 September 2026. All eleven featured songs in the main README have a representative screenshot with its edition and preview/final status, and each song's project README has an associated image. Promotional covers and supplementary frames remain separate from the representative screenshot.
 
 | Song | Representative image | Time | Edition / provenance |
 | --- | --- | --- | --- |
-| Sugar Glass | [Mirror performance, large English focus and spectrum](../assets/sugar-glass-preview-90.jpg) | 01:30.000 | Live English-only preview-v2; production not rendered |
+| Sugar Glass | [Mirror performance, large English focus and spectrum](../assets/sugar-glass-90.png) | 01:30.000 | Verified final English-only landscape film |
 | Твои глаза | [Original animation and bilingual focus](../assets/tvoi-glaza-63-4.png) | 01:03.400 | Verified final local landscape film |
 | Прости за любовь | [Night-tram scene and bilingual lyrics](../assets/prosti-v1-2-52-4.png) | 00:52.400 | Accepted v1.2; known highlighting gaps preserved |
 | Половинка | [Original performance and turquoise focus](../assets/polovinka-80.png) | 01:20.000 | Final v1.0.0 landscape film |
@@ -33,8 +33,8 @@ The selected frame indices are 3804, 3144 and 4800 for Твои глаза, Пр
 
 Existing screenshots were inspected and retained when the subject, lyric treatment and composition remained suitable. Five are byte-identical to their project evidence images; Roi × Adore shares the asset already cited by its production record. Tanisea remains explicitly labelled as a historical vNext design reference: this pass did not re-establish its exact source-master identity. Screenshot review documents visual presentation, not acoustic synchronization or a new approval of historical timing.
 
-## Sugar Glass preview
+## Sugar Glass final frame
 
-The current English-only entry is a live browser screenshot of the shared scene at 90.000 seconds, captured at the normal review display size as a 1280×720 JPEG. It is explicitly labelled preview-only in both READMEs and the inventory. No production-film extraction or acoustic approval is implied. The source-video and draft identities are recorded in the project input manifest and preview review record.
+The current English-only entry is frame 5400 at 90.000 seconds, decoded from the verified final landscape file at native 1920×1080 as an RGB PNG. Both READMEs and the inventory identify the final film and its SHA-256. The mirror composition, large active word and reflective spectrum remain fully visible. The earlier browser screenshot is retained as preview history. Screenshot selection documents presentation, not acoustic certainty.
 
 Check the actual image encoding before choosing the filename extension or reading dimensions. Native browser screenshots can return JPEG bytes even when a caller supplies a PNG filename. Use an image decoder or `ffprobe` to verify the encoding and dimensions, then verify the inventory byte count and SHA-256. Preserve the captured bytes rather than re-encoding solely to fit an assumed extension.

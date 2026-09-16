@@ -1,10 +1,10 @@
 # Anya Nami — Sugar Glass
 
-**English only · accepted preview v2 · production authorized**
+**English only · verified landscape and portrait delivery**
 
-![Sugar Glass English preview with large lyric focus and an expanded reflective spectrum](../../assets/sugar-glass-preview-90.jpg)
+![Sugar Glass final film with large English lyric focus and an expanded reflective spectrum](../../assets/sugar-glass-90.png)
 
-*Live browser preview at 01:30.000. Original music, performance and mood video: [Anya Nami](https://www.youtube.com/watch?v=-NsQ8_WLq2s). This is a preview screenshot, not a final-film frame.*
+*Decoded final landscape frame at 01:30.000. Original music, performance and mood video: [Anya Nami](https://www.youtube.com/watch?v=-NsQ8_WLq2s).*
 
 This edition uses English lyrics only. The full-recording preview applies the **Lyrics workflow in general**, using the source video's glass, cream, blue and black imagery. Removing the translation lane makes room for larger type, oversized refrain lines and a more expressive spectrum. The earlier bilingual draft is superseded; its history remains in Git.
 
@@ -18,7 +18,7 @@ This edition uses English lyrics only. The full-recording preview applies the **
 
 The spectrum uses `height = 2 + clamp((dB + 65) / 52, 0, 1)^1.18 × travel`. Arrangement envelopes are artistic display decisions, separate from raw measurements and lyric timing. There is no per-frame normalization, random beat simulation or word-position bounce.
 
-| Item | Preview scope |
+| Item | Delivery scope |
 | --- | --- |
 | Recording | Original AAC, 44.1 kHz stereo; 10,202,112 decoded samples; 231.340408 s |
 | Formats | Landscape 1920×1080 and portrait 1080×1920; 60 fps lyric event display |
@@ -65,7 +65,7 @@ node scripts/post-render.ts landscape
 node scripts/post-render.ts portrait
 ```
 
-The post-render checks verify strict decoding, every frame timestamp, stream metadata, original AAC packet identity, decoded word focus and reference segment continuity. They extract selected final frames for visual inspection. A technical pass verifies faithful delivery of the accepted event map; it does not certify model-derived acoustic boundaries. Final delivery status and checksums are recorded after both files pass.
+The post-render checks verify strict decoding, every frame timestamp, stream metadata, original AAC packet identity, decoded word focus and reference segment continuity. They extract selected final frames for visual inspection. A technical pass verifies faithful delivery of the accepted event map; it does not certify model-derived acoustic boundaries. Both complete files passed. See the [final verification](evidence/final-verification.md), [delivery receipt](evidence/delivery-receipt.json) and [checksums](evidence/delivery-checksums.sha256). Full media is delivered locally; no new public binary release or platform upload was performed.
 
 ## Source and reproduction
 
