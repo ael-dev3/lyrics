@@ -1,0 +1,54 @@
+{
+  "authority": "src/cues.json is the provisional preview selection. Every inference file is supporting evidence, never listening approval.",
+  "artifacts": [
+    {
+      "file": "analysis/whisper-vocals-lines.json",
+      "windows": "analysis/initial-line-windows.json",
+      "role": "initial attention candidates; corrected rows supersede by stable cue ID",
+      "sha256": "6d9a69b22a106614c28967dc7bd4fea45cdf271edd06b3d6123ce1cf2d767f36",
+      "windowSha256": "9721c2774a20d7db6fd3289a99e3b375f6250511578e7bd6e614a6d5b3796ad4"
+    },
+    {
+      "file": "analysis/whisper-vocals-corrected.json",
+      "windows": "analysis/corrected-windows.json",
+      "role": "replacement attention candidates for refined windows",
+      "sha256": "55155801b4b1b9ddef05029c3e796ec002fd1dec22e9fbcb4b8ef7b870419678",
+      "windowSha256": "0637bd64aebadfda3824f6d5522e10494d79bdd98e32cffc4588decb146027f1"
+    },
+    {
+      "file": "analysis/mms-vocals-revised.json",
+      "windows": "analysis/line-windows.json",
+      "role": "current local vocal CTC candidates",
+      "sha256": "9b0393ac0d43a1d5a324b3fd3fba2d787561f3d24b2757af436e74bff35cf73c",
+      "windowSha256": "cd939722cd64ebd249fd9adae326b459649f61f2b5f8406ccd3ab896a066b949"
+    },
+    {
+      "file": "analysis/mms-mix-lines.json",
+      "windows": "analysis/line-windows.json",
+      "role": "current mix CTC candidates",
+      "sha256": "706ff79e7d01cda4b4538ec5fa0d9b42ce79d740af38aa182c943e4885e206ef",
+      "windowSha256": "cd939722cd64ebd249fd9adae326b459649f61f2b5f8406ccd3ab896a066b949"
+    },
+    {
+      "file": "analysis/wav2vec-vocals16.json",
+      "windows": "analysis/line-windows.json",
+      "role": "independent English acoustic encoder",
+      "sha256": "24d8715e402d87e75d3593f1509785169930f9dac552031d1ef4b0930ba74320",
+      "windowSha256": "cd939722cd64ebd249fd9adae326b459649f61f2b5f8406ccd3ab896a066b949"
+    },
+    {
+      "file": "analysis/mms-vocals-lines.json",
+      "windows": "analysis/initial-line-windows.json",
+      "role": "superseded initial CTC; excluded from selected draft",
+      "sha256": "9b8c1e89a5b3f51763967681d73c1545a41b4d701e72c554d6d03769a8b479d0",
+      "windowSha256": "9721c2774a20d7db6fd3289a99e3b375f6250511578e7bd6e614a6d5b3796ad4"
+    },
+    {
+      "file": "analysis/mms-vocals-post.json",
+      "windows": "analysis/post-windows.json",
+      "role": "rejected broad-window overlap experiment; excluded from selected draft",
+      "sha256": "5f814cc22db3ded74811a7d7e064cf5c2a8354e64a8fe87dac3e6baea21bbf6d",
+      "windowSha256": "a48a4ccd7315f22268c9c86ce50268a921f0f7d0e52ba777e237f682d5876318"
+    }
+  ]
+}

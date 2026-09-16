@@ -1,5 +1,7 @@
 # First-pass workflow for the next lyric film
 
+**Preview before render:** follow [the mandatory preview-first workflow](preview-before-render.md). Deliver a playable review preview before full production. Complete synchronization review and obtain explicit render approval for the current song and reviewed revision before capture or encoding. A preview-only request stops at review delivery; passing tests, positive feedback, saved review notes, a merged PR or approval of an earlier song do not authorize rendering.
+
 **Mandatory for future multilingual productions:** pass the [complete cross-language synchronization gate](cross-language-sync-gate.md) before starting full-length production rendering. Review the entire recording in all languages, including complete translated highlight spans. Diagnostic previews are review evidence, not permission to skip unfinished synchronization.
 
 This is the production order for reusing the Tanisea system on another song. It front-loads timing authority and a short style lock so preventable synchronization, layout, and rendering problems are found before the full-length render.

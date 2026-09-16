@@ -1,10 +1,26 @@
 # Lyrics
 
+**Preview before render:** follow [the mandatory preview-first workflow](docs/preview-before-render.md). Deliver a playable review preview before full production. Complete synchronization review and obtain explicit render approval for the current song and reviewed revision before capture or encoding. A preview-only request stops at review delivery; passing tests, positive feedback, saved review notes, a merged PR or approval of an earlier song do not authorize rendering.
+
 Music films with synchronized lyrics, meaning-linked translations, and audio-reactive visuals. This repository contains the projects, production workflows, and verification evidence behind each edition.
 
 **Current style default:** [cinematic lyric presentation](docs/cinematic-lyric-workflow.md) — stable, color-only word or phrase emphasis, precise vocal timing, smooth scene shading and equally prominent bilingual lyrics. Motion intensity follows the song: gentle arrangements can use compact, subdued audio-reactive graphics. The guide includes implemented references and review requirements for future tracks.
 
-[**Твои глаза**](#твои-глаза) · [**Прости за любовь — accepted with known gaps**](#прости-за-любовь) · [**Половинка**](#половинка) · [**Life Letters**](#life-letters) · [**Joyride**](#joyride) · [**midnight love**](#midnight-love) · [**Пожары**](#пожары) · [**Отменяй**](#отменяй) · [**Roi × Adore**](#roi--adore) · [**TikTok edition**](#tiktok-edition) · [**Tanisea**](#tanisea) · [**Build and workflow**](#build-and-workflow)
+[**Sugar Glass — preview**](#sugar-glass) · [**Твои глаза**](#твои-глаза) · [**Прости за любовь — accepted with known gaps**](#прости-за-любовь) · [**Половинка**](#половинка) · [**Life Letters**](#life-letters) · [**Joyride**](#joyride) · [**midnight love**](#midnight-love) · [**Пожары**](#пожары) · [**Отменяй**](#отменяй) · [**Roi × Adore**](#roi--adore) · [**TikTok edition**](#tiktok-edition) · [**Tanisea**](#tanisea) · [**Build and workflow**](#build-and-workflow)
+
+## Sugar Glass
+
+**Anya Nami · English + Russian · preview only**
+
+![Sugar Glass preview: reflected source performance with equal English and Russian word focus](assets/sugar-glass-preview-90.png)
+
+*Live review-player screenshot at 01:30.000. Original music, performance and mood video: Anya Nami. This is a preview, not a final-film frame.*
+
+The complete recording is available for local review in landscape and portrait, with 71 cues, 424 English source tokens, 405 Russian words and independent overlapping vocal layers. Warm color-only focus and a compact teal spectrum support the source imagery. Both languages share source events and equal typography.
+
+**Review pending; production blocked.** The supplied wording and model-assisted boundaries retain explicit review questions. No full lyric film has been rendered. Completed source/workflow checks and GitHub merging do not substitute for listening review or render authorization.
+
+[Preview setup and production boundary](projects/sugar-glass-lyric-film/README.md) · [Review questions](projects/sugar-glass-lyric-film/evidence/cross-language-sync-review.md) · [Technical verification](projects/sugar-glass-lyric-film/evidence/preview-verification.json) · [Original mood video](https://www.youtube.com/watch?v=-NsQ8_WLq2s)
 
 ## Твои глаза
 

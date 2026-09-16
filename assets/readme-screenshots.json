@@ -1,15 +1,30 @@
 {
   "version": 1,
   "reviewedOn": "2026-09-16",
-  "scope": "The ten featured song sections in the main README and their project README entry points.",
+  "scope": "The eleven featured song sections in the main README and their project README entry points; Sugar Glass is preview-only.",
   "newExtraction": {
     "fps": 60,
     "frameNumbering": "zero-based",
     "capture": "FFmpeg select=eq(n,FRAME), one full-frame PNG; no crop, recolor, text replacement or generated imagery.",
     "sourceIdentity": "New source files matched the recorded delivery SHA-256 before selecting their frames."
   },
-  "review": "All ten representative images visually inspected for correct song association, legible text and coherent composition. New candidates were compared at reduced size and selected images inspected at native resolution.",
+  "review": "All ten representative images visually inspected for correct song association, legible text and coherent composition. New candidates were compared at reduced size and selected images inspected at native resolution. Sugar Glass adds a visually inspected live-browser preview screenshot, with final-media provenance explicitly excluded.",
   "screenshots": [
+    {
+      "song": "Sugar Glass",
+      "image": "assets/sugar-glass-preview-90.png",
+      "project": "projects/sugar-glass-lyric-film/README.md",
+      "timestampSeconds": 90,
+      "frame": 5400,
+      "edition": "preview-v1; listening review pending",
+      "sourceFile": "live review player with original footage and shared scene",
+      "selection": "Recognizable mirror/glass performance, complete equal bilingual lines, talking / говорю focus and restrained spectrum.",
+      "method": "Native browser screenshot at normal review display size; no full film rendering.",
+      "width": 65536,
+      "height": 4292542531,
+      "bytes": 50003,
+      "sha256": "731a491eddb2a595b6fed844427aff5766fa1d0157a77c59618a27a871d9b95a"
+    },
     {
       "song": "Твои глаза",
       "image": "assets/tvoi-glaza-63-4.png",

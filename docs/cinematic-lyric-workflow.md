@@ -1,5 +1,7 @@
 # Cinematic lyric presentation
 
+**Preview before render:** follow [the mandatory preview-first workflow](preview-before-render.md). Deliver a playable review preview before full production. Complete synchronization review and obtain explicit render approval for the current song and reviewed revision before capture or encoding. A preview-only request stops at review delivery; passing tests, positive feedback, saved review notes, a merged PR or approval of an earlier song do not authorize rendering.
+
 **Mandatory for future multilingual productions:** pass the [complete cross-language synchronization gate](cross-language-sync-gate.md) before starting full-length production rendering. Review the entire recording in all languages, including complete translated highlight spans. Diagnostic previews are review evidence, not permission to skip unfinished synchronization.
 
 **Default for current and future productions, established with Midnight Love v1.1.0 on 12 September 2026.** Keep the image expressive and the reading position calm. Precisely timed color emphasis follows the performed word or short semantic group without adding karaoke decoration.

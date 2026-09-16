@@ -1,5 +1,7 @@
 # Lyric-film production scope
 
+**Preview before render:** follow [the mandatory preview-first workflow](docs/preview-before-render.md). Deliver a playable review preview before full production. Complete synchronization review and obtain explicit render approval for the current song and reviewed revision before capture or encoding. A preview-only request stops at review delivery; passing tests, positive feedback, saved review notes, a merged PR or approval of an earlier song do not authorize rendering.
+
 Production workflows use original-language lyrics and meaning-based translations. Do not include pronunciation guides, phonetic respellings, romanized singing aids or pronunciation practice subtitles in source projects, rendered films, covers, publishing copy, archives or releases. Keep any separate personal learning material outside the production workflow and repository.
 
 Read `docs/track-workflow-preferences-and-known-issues.md` for the established production and handoff preferences.

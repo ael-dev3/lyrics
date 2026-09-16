@@ -1,5 +1,7 @@
 # Production workflow
 
+**Preview before render:** follow [the mandatory preview-first workflow](preview-before-render.md). Deliver a playable review preview before full production. Complete synchronization review and obtain explicit render approval for the current song and reviewed revision before capture or encoding. A preview-only request stops at review delivery; passing tests, positive feedback, saved review notes, a merged PR or approval of an earlier song do not authorize rendering.
+
 **Mandatory for future multilingual productions:** pass the [complete cross-language synchronization gate](cross-language-sync-gate.md) before starting full-length production rendering. Review the entire recording in all languages, including complete translated highlight spans. Diagnostic previews are review evidence, not permission to skip unfinished synchronization.
 
 Apply the [cinematic lyric presentation standard](cinematic-lyric-workflow.md) to current and future productions: stable color-only word/group focus, precise timing and continuous scene shading. Historical underline and progress-fill examples do not override this default.
