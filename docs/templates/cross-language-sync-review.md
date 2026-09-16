@@ -1,5 +1,7 @@
 # Cross-language synchronization review — TEMPLATE
 
+**Preview before render:** follow [the mandatory preview-first workflow](../preview-before-render.md). Deliver a playable review preview before full production. Complete synchronization review and obtain explicit render approval for the current song and reviewed revision before capture or encoding. A preview-only request stops at review delivery; passing tests, positive feedback, saved review notes, a merged PR or approval of an earlier song do not authorize rendering.
+
 **Status: INCOMPLETE.** Copy into the new project’s `evidence/cross-language-sync-review.md` and adjust relative links for that location. Complete the [mandatory gate](../cross-language-sync-gate.md) before production rendering. A checked box without supporting review evidence is not completion.
 
 | Field | Record |

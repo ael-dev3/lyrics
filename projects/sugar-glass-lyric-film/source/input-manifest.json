@@ -1,0 +1,96 @@
+{
+  "project": "Anya Nami — Sugar Glass",
+  "source": "https://www.youtube.com/watch?v=-NsQ8_WLq2s",
+  "sourceTitle": "Anya Nami - Sugar Glass (mood video)",
+  "sourceAuthor": "Anya Nami",
+  "sourceDescription": "No description returned by the metadata endpoint.",
+  "sourceFormats": {
+    "originalPicture": "313: VP9 3840×2160, 25 fps",
+    "reviewPicture": "137: AVC 1920×1080, 25 fps",
+    "lockedAudio": "140: AAC LC, 44100 Hz stereo"
+  },
+  "audio": {
+    "sampleRate": 44100,
+    "sampleCount": 10202112,
+    "duration": 231.3404081632653,
+    "decodedPcmSha256": "5749ef6cf9961971c670827c33ebbfd57d74b36e52ae4811a2620ac171137d26",
+    "timeZero": "first decoded PCM sample",
+    "gain": "unchanged",
+    "initialPadding": 0,
+    "reviewPacketIdentity": true,
+    "aacPackets": 9963
+  },
+  "display": {
+    "fps": 60,
+    "frames": 13881,
+    "formats": [
+      [
+        1920,
+        1080
+      ],
+      [
+        1080,
+        1920
+      ]
+    ],
+    "sourceCadence": 25
+  },
+  "tools": {
+    "node": "v24.20.0",
+    "typescript": "7.0.2 (stable registry tag verified for this project)",
+    "ffmpeg": "ffmpeg version 8.1.2 Copyright (c) 2000-2026 the FFmpeg developers"
+  },
+  "assets": [
+    {
+      "path": "public/soundtrack.m4a",
+      "bytes": 3742190,
+      "sha256": "42f6f95d04fd37a67fbf2ba61267c3ee4b3c2ae6cd5d26377523e311507e7c88"
+    },
+    {
+      "path": "public/footage.mp4",
+      "bytes": 49632184,
+      "sha256": "863cf06bd532da56252ef9122c8ec27aa66e8559da789ecf7cfc4891734e470b"
+    },
+    {
+      "path": "public/original-4k.webm",
+      "bytes": 178699917,
+      "sha256": "89218677ca489ddb985ac7eb77a5f1bdf70795c2d2e61e989c9524a0359c8cdc"
+    },
+    {
+      "path": "public/review-source.mp4",
+      "bytes": 53444693,
+      "sha256": "d5f015bb4c4c20aba807e87286969ba251ff340ec5aad85b425cfe1cbf42d905"
+    },
+    {
+      "path": "public/CormorantGaramond-Semibold.ttf",
+      "bytes": 290392,
+      "sha256": "69e7ae35cba23d962227b86f99217c250e642e4c6f6104b4f3ec465039e4e2d8"
+    },
+    {
+      "path": "public/CormorantGaramond-OFL.txt",
+      "bytes": 4386,
+      "sha256": "6f5a41d57400577a50aae88475b11f292f3d7de78ee7d5113c69577331d8ad31"
+    },
+    {
+      "path": "source/supplied-lyrics.txt",
+      "bytes": 2136,
+      "sha256": "1f52522cbf61864b9072cc889e051a6f28dce839447eb745ae736dd395a1accf"
+    },
+    {
+      "path": "source/original.txt",
+      "bytes": 1997,
+      "sha256": "d1740333597c104e1e4f0c1a05c7df99445b20236a4241750bfa4393d65d5aed"
+    },
+    {
+      "path": "source/text-and-mapping.json",
+      "bytes": 105620,
+      "sha256": "0b3d4387638c842f60733d305b4a6af20f83be28585886c73520dec878f5f314"
+    }
+  ],
+  "status": {
+    "preview": "available",
+    "synchronization": "incomplete — actual-audio review pending",
+    "production": "not authorized; no production capture or encoding performed",
+    "publication": "source and workflow only; full media kept local"
+  }
+}

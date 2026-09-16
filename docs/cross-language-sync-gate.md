@@ -1,5 +1,7 @@
 # Mandatory cross-language synchronization gate
 
+**Preview before render:** follow [the mandatory preview-first workflow](preview-before-render.md). Deliver a playable review preview before full production. Complete synchronization review and obtain explicit render approval for the current song and reviewed revision before capture or encoding. A preview-only request stops at review delivery; passing tests, positive feedback, saved review notes, a merged PR or approval of an earlier song do not authorize rendering.
+
 **Applies to the next song and every future multilingual production. Full-length production rendering must not begin until synchronization across all displayed languages has been thoroughly reviewed and completed.** This gate covers meaning, highlight coverage and acoustic timing. Passing interval tests or inspecting a few attractive frames is insufficient.
 
 Use the [review template](templates/cross-language-sync-review.md) as the project’s `evidence/cross-language-sync-review.md`. Diagnostic playback, short sync proofs and frame sheets are allowed to complete the review; they are not production delivery renders. Complete translation and source-to-target mapping before generating those proofs.

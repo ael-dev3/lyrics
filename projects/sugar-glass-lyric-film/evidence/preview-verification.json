@@ -1,0 +1,33 @@
+{
+  "status": "preview technically verified; listening review pending",
+  "revision": "preview-v1",
+  "cues": 71,
+  "sourceWords": 424,
+  "targetWords": 405,
+  "compositions": [
+    "SugarGlassLandscape",
+    "SugarGlassPortrait"
+  ],
+  "frames": 13881,
+  "selectedBoundaryReviewRequired": 424,
+  "checks": {
+    "strictTypeScript": true,
+    "testsPassed": 7,
+    "completeSourceDecode": true,
+    "aacPacketAndTimestampIdentity": true,
+    "decodedSampleCount": 10202112,
+    "productionGateNegativeControl": "render refuses before output creation",
+    "browserGeometry": {
+      "status": "passed",
+      "cueLayouts": 142,
+      "wordBoxes": 1736,
+      "overlapStates": 8,
+      "maxWidthDifference": 0.011566162109375,
+      "findings": []
+    },
+    "modelChecksAreActualListening": false
+  },
+  "actualAudioReviewComplete": false,
+  "productionRenderAuthorized": false,
+  "fullFilmRendered": false
+}

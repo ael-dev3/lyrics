@@ -1,5 +1,7 @@
 # Reproducible lyric-film workflow and production preferences
 
+**Preview before render:** follow [the mandatory preview-first workflow](preview-before-render.md). Deliver a playable review preview before full production. Complete synchronization review and obtain explicit render approval for the current song and reviewed revision before capture or encoding. A preview-only request stops at review delivery; passing tests, positive feedback, saved review notes, a merged PR or approval of an earlier song do not authorize rendering.
+
 See the [cinematic lyric presentation guide](cinematic-lyric-workflow.md) for the current visual default, an implemented reference and review requirements.
 
 This is a sanitized operational record for future tracks. It describes the production requirements, review method, and handoff standard without reproducing private conversation or personal details.

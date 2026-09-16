@@ -1,0 +1,757 @@
+{
+  "status": "incomplete",
+  "reviewer": {
+    "role": "pending listener",
+    "method": "model-assisted draft with programmatic timing, mapping and layout checks",
+    "actualListening": false
+  },
+  "requirements": {
+    "translation": true,
+    "targetSpans": true,
+    "fullTrackAudio": false,
+    "highRiskSlowAudio": false,
+    "introGapsRepeatsTail": false,
+    "allFormatsAudiovisual": false,
+    "noKnownDefects": false
+  },
+  "hashes": {
+    "public/soundtrack.m4a": "42f6f95d04fd37a67fbf2ba61267c3ee4b3c2ae6cd5d26377523e311507e7c88",
+    "public/footage.mp4": "863cf06bd532da56252ef9122c8ec27aa66e8559da789ecf7cfc4891734e470b",
+    "public/review-source.mp4": "d5f015bb4c4c20aba807e87286969ba251ff340ec5aad85b425cfe1cbf42d905",
+    "public/CormorantGaramond-Semibold.ttf": "69e7ae35cba23d962227b86f99217c250e642e4c6f6104b4f3ec465039e4e2d8",
+    "source/supplied-lyrics.txt": "1f52522cbf61864b9072cc889e051a6f28dce839447eb745ae736dd395a1accf",
+    "source/original.txt": "d1740333597c104e1e4f0c1a05c7df99445b20236a4241750bfa4393d65d5aed",
+    "source/text-and-mapping.json": "0b3d4387638c842f60733d305b4a6af20f83be28585886c73520dec878f5f314",
+    "src/cues.json": "25092693b694beeaa697dc2bb5d3584bdd3bf42d812d55cd4cee5466209a9ea0",
+    "src/layout.json": "c86a16965f61b9557877c196e8d55463e3380d4377a52c51356a961115d28c66",
+    "src/schema.ts": "783a221966b12628b6f11b0ad45b5c4d36e43381a292ea4121d3fd9b889d599b",
+    "src/layout-types.ts": "e87ca230f7b02e17645064681ca2cd64240e560f89371207b226d6e6d4b2af45",
+    "src/focus.ts": "590647fd0790cca902b0b92011fd47de2037ca42abc896d3b50bb4fb1c5bf3ab",
+    "src/scene.ts": "2966028d414488cd38273b969d43ddfdf41d7aaf0bacb97e698c7e399e53a590",
+    "src/Film.tsx": "6aac713308299fd612e811b97c89064630d7aafc6f5a8f1f6d2b60624406d54d",
+    "src/review-client.ts": "bdfa44ba408ec14305b7d4d47bed61617b6850dda86e90b4a64e8ce7ea9e4625",
+    "review/index.html": "c77c3fc7384a27928e8f51f16b25d2863e489151fef66fa853ed315ce1de15dc",
+    "public/science.json": "fd7238760badb6e845effec5dcbc9fc2bc915e04e0ac1495f3e16e9840866d16",
+    "package.json": "1828c37518ae31bc05c3fd483506f017ed7c1282668d3a7c5687c2865049d429",
+    "package-lock.json": "510c686ef83d63fee427bebc57c9b98c5d695c227403ddce2f1467693f69cef7"
+  },
+  "cues": [
+    {
+      "id": "SG-001",
+      "sourceMeaning": true,
+      "targetMeaning": true,
+      "fullTargetSpan": true,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-002",
+      "sourceMeaning": true,
+      "targetMeaning": true,
+      "fullTargetSpan": true,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-003",
+      "sourceMeaning": true,
+      "targetMeaning": true,
+      "fullTargetSpan": true,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-004",
+      "sourceMeaning": true,
+      "targetMeaning": true,
+      "fullTargetSpan": true,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-005",
+      "sourceMeaning": true,
+      "targetMeaning": true,
+      "fullTargetSpan": true,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-006",
+      "sourceMeaning": true,
+      "targetMeaning": true,
+      "fullTargetSpan": true,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-007",
+      "sourceMeaning": true,
+      "targetMeaning": true,
+      "fullTargetSpan": true,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-008",
+      "sourceMeaning": true,
+      "targetMeaning": true,
+      "fullTargetSpan": true,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-009",
+      "sourceMeaning": true,
+      "targetMeaning": true,
+      "fullTargetSpan": true,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-010",
+      "sourceMeaning": true,
+      "targetMeaning": true,
+      "fullTargetSpan": true,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-011",
+      "sourceMeaning": true,
+      "targetMeaning": true,
+      "fullTargetSpan": true,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-012",
+      "sourceMeaning": true,
+      "targetMeaning": true,
+      "fullTargetSpan": true,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-013",
+      "sourceMeaning": true,
+      "targetMeaning": true,
+      "fullTargetSpan": true,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-014",
+      "sourceMeaning": true,
+      "targetMeaning": true,
+      "fullTargetSpan": true,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-015",
+      "sourceMeaning": true,
+      "targetMeaning": true,
+      "fullTargetSpan": true,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-016",
+      "sourceMeaning": true,
+      "targetMeaning": true,
+      "fullTargetSpan": true,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-017",
+      "sourceMeaning": true,
+      "targetMeaning": true,
+      "fullTargetSpan": true,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-018",
+      "sourceMeaning": true,
+      "targetMeaning": true,
+      "fullTargetSpan": true,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-019",
+      "sourceMeaning": true,
+      "targetMeaning": true,
+      "fullTargetSpan": true,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-020",
+      "sourceMeaning": true,
+      "targetMeaning": true,
+      "fullTargetSpan": true,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-021",
+      "sourceMeaning": true,
+      "targetMeaning": true,
+      "fullTargetSpan": true,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-022",
+      "sourceMeaning": true,
+      "targetMeaning": true,
+      "fullTargetSpan": true,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-023",
+      "sourceMeaning": true,
+      "targetMeaning": true,
+      "fullTargetSpan": true,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-024",
+      "sourceMeaning": true,
+      "targetMeaning": true,
+      "fullTargetSpan": true,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-025",
+      "sourceMeaning": true,
+      "targetMeaning": true,
+      "fullTargetSpan": true,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-026",
+      "sourceMeaning": true,
+      "targetMeaning": true,
+      "fullTargetSpan": true,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-027",
+      "sourceMeaning": true,
+      "targetMeaning": true,
+      "fullTargetSpan": true,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-028",
+      "sourceMeaning": true,
+      "targetMeaning": true,
+      "fullTargetSpan": true,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-029",
+      "sourceMeaning": true,
+      "targetMeaning": true,
+      "fullTargetSpan": true,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-030",
+      "sourceMeaning": true,
+      "targetMeaning": true,
+      "fullTargetSpan": true,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-031",
+      "sourceMeaning": true,
+      "targetMeaning": true,
+      "fullTargetSpan": true,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-032",
+      "sourceMeaning": true,
+      "targetMeaning": true,
+      "fullTargetSpan": true,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-033",
+      "sourceMeaning": true,
+      "targetMeaning": true,
+      "fullTargetSpan": true,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-034",
+      "sourceMeaning": true,
+      "targetMeaning": true,
+      "fullTargetSpan": true,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-035",
+      "sourceMeaning": true,
+      "targetMeaning": true,
+      "fullTargetSpan": true,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-036",
+      "sourceMeaning": true,
+      "targetMeaning": true,
+      "fullTargetSpan": true,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-037",
+      "sourceMeaning": true,
+      "targetMeaning": true,
+      "fullTargetSpan": true,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-038",
+      "sourceMeaning": true,
+      "targetMeaning": true,
+      "fullTargetSpan": true,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-039",
+      "sourceMeaning": true,
+      "targetMeaning": true,
+      "fullTargetSpan": true,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-040",
+      "sourceMeaning": true,
+      "targetMeaning": true,
+      "fullTargetSpan": true,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-041",
+      "sourceMeaning": true,
+      "targetMeaning": true,
+      "fullTargetSpan": true,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-042",
+      "sourceMeaning": true,
+      "targetMeaning": true,
+      "fullTargetSpan": true,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-043",
+      "sourceMeaning": true,
+      "targetMeaning": true,
+      "fullTargetSpan": true,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-044",
+      "sourceMeaning": true,
+      "targetMeaning": true,
+      "fullTargetSpan": true,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-045",
+      "sourceMeaning": true,
+      "targetMeaning": true,
+      "fullTargetSpan": true,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-046",
+      "sourceMeaning": true,
+      "targetMeaning": true,
+      "fullTargetSpan": true,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-047",
+      "sourceMeaning": true,
+      "targetMeaning": true,
+      "fullTargetSpan": true,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-048",
+      "sourceMeaning": true,
+      "targetMeaning": true,
+      "fullTargetSpan": true,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-049",
+      "sourceMeaning": true,
+      "targetMeaning": true,
+      "fullTargetSpan": true,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-050",
+      "sourceMeaning": true,
+      "targetMeaning": true,
+      "fullTargetSpan": true,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-051",
+      "sourceMeaning": true,
+      "targetMeaning": true,
+      "fullTargetSpan": true,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-052",
+      "sourceMeaning": true,
+      "targetMeaning": true,
+      "fullTargetSpan": true,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-053",
+      "sourceMeaning": true,
+      "targetMeaning": true,
+      "fullTargetSpan": true,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-054",
+      "sourceMeaning": true,
+      "targetMeaning": true,
+      "fullTargetSpan": true,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-055",
+      "sourceMeaning": true,
+      "targetMeaning": true,
+      "fullTargetSpan": true,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-056",
+      "sourceMeaning": true,
+      "targetMeaning": true,
+      "fullTargetSpan": true,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-057",
+      "sourceMeaning": true,
+      "targetMeaning": true,
+      "fullTargetSpan": true,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-058",
+      "sourceMeaning": true,
+      "targetMeaning": true,
+      "fullTargetSpan": true,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-059",
+      "sourceMeaning": true,
+      "targetMeaning": true,
+      "fullTargetSpan": true,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-060",
+      "sourceMeaning": true,
+      "targetMeaning": true,
+      "fullTargetSpan": true,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-061",
+      "sourceMeaning": true,
+      "targetMeaning": true,
+      "fullTargetSpan": true,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-062",
+      "sourceMeaning": true,
+      "targetMeaning": true,
+      "fullTargetSpan": true,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-063",
+      "sourceMeaning": true,
+      "targetMeaning": true,
+      "fullTargetSpan": true,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-065",
+      "sourceMeaning": true,
+      "targetMeaning": true,
+      "fullTargetSpan": true,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-064",
+      "sourceMeaning": true,
+      "targetMeaning": true,
+      "fullTargetSpan": true,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-066",
+      "sourceMeaning": true,
+      "targetMeaning": true,
+      "fullTargetSpan": true,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-067",
+      "sourceMeaning": true,
+      "targetMeaning": true,
+      "fullTargetSpan": true,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-068",
+      "sourceMeaning": true,
+      "targetMeaning": true,
+      "fullTargetSpan": true,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-069",
+      "sourceMeaning": true,
+      "targetMeaning": true,
+      "fullTargetSpan": true,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-070",
+      "sourceMeaning": true,
+      "targetMeaning": true,
+      "fullTargetSpan": true,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-071",
+      "sourceMeaning": true,
+      "targetMeaning": true,
+      "fullTargetSpan": true,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    }
+  ],
+  "unresolved": [
+    "Complete actual-audio review of all cues and both layouts.",
+    "Resolve model disagreements and sustained-vowel releases.",
+    "Confirm supplied wording sleeve versus model recognition sleep in both choruses.",
+    "Confirm bridge normalization then one to the one.",
+    "Review overlapping post-chorus transcription, repetitions and source-word boundaries independently."
+  ]
+}

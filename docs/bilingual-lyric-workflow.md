@@ -1,5 +1,7 @@
 # Bilingual lyric workflow: equal emphasis
 
+**Preview before render:** follow [the mandatory preview-first workflow](preview-before-render.md). Deliver a playable review preview before full production. Complete synchronization review and obtain explicit render approval for the current song and reviewed revision before capture or encoding. A preview-only request stops at review delivery; passing tests, positive feedback, saved review notes, a merged PR or approval of an earlier song do not authorize rendering.
+
 **Mandatory before production rendering:** complete the [cross-language sync gate](cross-language-sync-gate.md) for the entire recording and every displayed language. This is separate from style approval and file-integrity tests.
 
 See the [cinematic lyric presentation guide](cinematic-lyric-workflow.md) for the current visual default, an implemented reference and review requirements.
