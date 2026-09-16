@@ -2,7 +2,7 @@
 
 **English + Russian · preview only · no production film rendered**
 
-![Sugar Glass preview: Anya Nami reflected among glass, with equal English and Russian lyrics and warm word focus](../../assets/sugar-glass-preview-90.png)
+![Sugar Glass preview: Anya Nami reflected among glass, with equal English and Russian lyrics and warm word focus](../../assets/sugar-glass-preview-90.jpg)
 
 *Live browser preview at 01:30.000, captured at the normal review display size. This is a preview screenshot, not a decoded final-film frame. Original music, performance and mood video: [Anya Nami](https://www.youtube.com/watch?v=-NsQ8_WLq2s).*
 
