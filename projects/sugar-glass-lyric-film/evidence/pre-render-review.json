@@ -1,0 +1,686 @@
+{
+  "status": "incomplete",
+  "reviewer": {
+    "role": "pending listener",
+    "method": "model-assisted timing with programmatic word coverage, playback and layout checks",
+    "actualListening": false
+  },
+  "requirements": {
+    "sourceText": true,
+    "wordTiming": false,
+    "fullTrackAudio": false,
+    "highRiskSlowAudio": false,
+    "introGapsRepeatsTail": false,
+    "allFormatsAudiovisual": false,
+    "noKnownDefects": false
+  },
+  "hashes": {
+    "public/soundtrack.m4a": "42f6f95d04fd37a67fbf2ba61267c3ee4b3c2ae6cd5d26377523e311507e7c88",
+    "public/footage.mp4": "863cf06bd532da56252ef9122c8ec27aa66e8559da789ecf7cfc4891734e470b",
+    "public/review-source.mp4": "d5f015bb4c4c20aba807e87286969ba251ff340ec5aad85b425cfe1cbf42d905",
+    "public/CormorantGaramond-Semibold.ttf": "69e7ae35cba23d962227b86f99217c250e642e4c6f6104b4f3ec465039e4e2d8",
+    "source/supplied-lyrics.txt": "1f52522cbf61864b9072cc889e051a6f28dce839447eb745ae736dd395a1accf",
+    "source/original.txt": "d1740333597c104e1e4f0c1a05c7df99445b20236a4241750bfa4393d65d5aed",
+    "source/lyric-plan.json": "916ca347e96304a1c25486778f722d13660168261cd9e7c107d84d382cfb4fe0",
+    "src/cues.json": "31f4b7fcc420d153f079bad3c3f746d57c5b99d8af217c0ab2441524fb1c27e6",
+    "src/layout.json": "10ffd41ac50207f7211a4e11a9edc3124520451e04c019df1ae383a14a94deb8",
+    "src/schema.ts": "534c7d49135ea21158e558da7b8a5eb72b01ff1cf56b405caedddefd560f4470",
+    "src/layout-types.ts": "3bad2669dd4482f6558dc76e4f20182fbffdce6f3f8f1b20336c50be35541a8f",
+    "src/focus.ts": "38fe2f003aa89398dc8c696daffb0b6808bcaee44defb53c05003fbe81311f97",
+    "src/scene.ts": "3c91c235c4284127b44b79f389468afb41da28aaad816eaf2923c12be8c258a1",
+    "src/Film.tsx": "f3661ee42025344853bdbb149219375bf32ef47d7a2eab404d28020e4fd27065",
+    "src/review-client.ts": "e654fe8dd1b8c8b4629e76c71891bd65da6ebc3f5b33cf6e59b38be913494296",
+    "review/index.html": "4296a912854c44cf68ae58dff2d20be0a95a4e21f48b6dc32dc4de3c8c954839",
+    "public/science.json": "fd7238760badb6e845effec5dcbc9fc2bc915e04e0ac1495f3e16e9840866d16",
+    "package.json": "3cb013442d020de924fea5543b0b3983b354a3424ab56657c5d5834162f2699e",
+    "package-lock.json": "0c9ea78e1fedfb46d6f250cf202db6cfade2db12937341276884eb6d6cd7774d"
+  },
+  "cues": [
+    {
+      "id": "SG-001",
+      "sourceText": true,
+      "wordTiming": false,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-002",
+      "sourceText": true,
+      "wordTiming": false,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-003",
+      "sourceText": true,
+      "wordTiming": false,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-004",
+      "sourceText": true,
+      "wordTiming": false,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-005",
+      "sourceText": true,
+      "wordTiming": false,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-006",
+      "sourceText": true,
+      "wordTiming": false,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-007",
+      "sourceText": true,
+      "wordTiming": false,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-008",
+      "sourceText": true,
+      "wordTiming": false,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-009",
+      "sourceText": true,
+      "wordTiming": false,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-010",
+      "sourceText": true,
+      "wordTiming": false,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-011",
+      "sourceText": true,
+      "wordTiming": false,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-012",
+      "sourceText": true,
+      "wordTiming": false,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-013",
+      "sourceText": true,
+      "wordTiming": false,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-014",
+      "sourceText": true,
+      "wordTiming": false,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-015",
+      "sourceText": true,
+      "wordTiming": false,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-016",
+      "sourceText": true,
+      "wordTiming": false,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-017",
+      "sourceText": true,
+      "wordTiming": false,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-018",
+      "sourceText": true,
+      "wordTiming": false,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-019",
+      "sourceText": true,
+      "wordTiming": false,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-020",
+      "sourceText": true,
+      "wordTiming": false,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-021",
+      "sourceText": true,
+      "wordTiming": false,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-022",
+      "sourceText": true,
+      "wordTiming": false,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-023",
+      "sourceText": true,
+      "wordTiming": false,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-024",
+      "sourceText": true,
+      "wordTiming": false,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-025",
+      "sourceText": true,
+      "wordTiming": false,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-026",
+      "sourceText": true,
+      "wordTiming": false,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-027",
+      "sourceText": true,
+      "wordTiming": false,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-028",
+      "sourceText": true,
+      "wordTiming": false,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-029",
+      "sourceText": true,
+      "wordTiming": false,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-030",
+      "sourceText": true,
+      "wordTiming": false,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-031",
+      "sourceText": true,
+      "wordTiming": false,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-032",
+      "sourceText": true,
+      "wordTiming": false,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-033",
+      "sourceText": true,
+      "wordTiming": false,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-034",
+      "sourceText": true,
+      "wordTiming": false,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-035",
+      "sourceText": true,
+      "wordTiming": false,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-036",
+      "sourceText": true,
+      "wordTiming": false,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-037",
+      "sourceText": true,
+      "wordTiming": false,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-038",
+      "sourceText": true,
+      "wordTiming": false,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-039",
+      "sourceText": true,
+      "wordTiming": false,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-040",
+      "sourceText": true,
+      "wordTiming": false,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-041",
+      "sourceText": true,
+      "wordTiming": false,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-042",
+      "sourceText": true,
+      "wordTiming": false,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-043",
+      "sourceText": true,
+      "wordTiming": false,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-044",
+      "sourceText": true,
+      "wordTiming": false,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-045",
+      "sourceText": true,
+      "wordTiming": false,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-046",
+      "sourceText": true,
+      "wordTiming": false,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-047",
+      "sourceText": true,
+      "wordTiming": false,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-048",
+      "sourceText": true,
+      "wordTiming": false,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-049",
+      "sourceText": true,
+      "wordTiming": false,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-050",
+      "sourceText": true,
+      "wordTiming": false,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-051",
+      "sourceText": true,
+      "wordTiming": false,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-052",
+      "sourceText": true,
+      "wordTiming": false,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-053",
+      "sourceText": true,
+      "wordTiming": false,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-054",
+      "sourceText": true,
+      "wordTiming": false,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-055",
+      "sourceText": true,
+      "wordTiming": false,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-056",
+      "sourceText": true,
+      "wordTiming": false,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-057",
+      "sourceText": true,
+      "wordTiming": false,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-058",
+      "sourceText": true,
+      "wordTiming": false,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-059",
+      "sourceText": true,
+      "wordTiming": false,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-060",
+      "sourceText": true,
+      "wordTiming": false,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-061",
+      "sourceText": true,
+      "wordTiming": false,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-062",
+      "sourceText": true,
+      "wordTiming": false,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-063",
+      "sourceText": true,
+      "wordTiming": false,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-065",
+      "sourceText": true,
+      "wordTiming": false,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-064",
+      "sourceText": true,
+      "wordTiming": false,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-066",
+      "sourceText": true,
+      "wordTiming": false,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-067",
+      "sourceText": true,
+      "wordTiming": false,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-068",
+      "sourceText": true,
+      "wordTiming": false,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-069",
+      "sourceText": true,
+      "wordTiming": false,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-070",
+      "sourceText": true,
+      "wordTiming": false,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    },
+    {
+      "id": "SG-071",
+      "sourceText": true,
+      "wordTiming": false,
+      "normalAudio": false,
+      "slowAudio": false,
+      "landscape": false,
+      "portrait": false
+    }
+  ],
+  "unresolved": [
+    "Complete actual-audio review of all cues and both layouts.",
+    "Resolve model disagreements and sustained-vowel releases.",
+    "Confirm supplied wording sleeve versus model recognition sleep in both choruses.",
+    "Confirm bridge normalization then one to the one.",
+    "Review overlapping post-chorus transcription, repetitions and source-word boundaries independently."
+  ]
+}

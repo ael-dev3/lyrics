@@ -1,0 +1,104 @@
+{
+  "status": "inspection required",
+  "format": "landscape",
+  "offset": 5401,
+  "negativeControl": true,
+  "decodedFrames": 90,
+  "wordStates": 492,
+  "ambiguous": 4,
+  "mismatchCount": 13,
+  "mismatches": [
+    {
+      "frame": 5408,
+      "word": "SG-026-s03",
+      "expected": false,
+      "median": 86,
+      "brightness": 255
+    },
+    {
+      "frame": 5423,
+      "word": "SG-026-s04",
+      "expected": true,
+      "median": 5,
+      "brightness": 232
+    },
+    {
+      "frame": 5430,
+      "word": "SG-026-s04",
+      "expected": false,
+      "median": 86,
+      "brightness": 255
+    },
+    {
+      "frame": 5432,
+      "word": "SG-026-s05",
+      "expected": true,
+      "median": 5,
+      "brightness": 232
+    },
+    {
+      "frame": 5443,
+      "word": "SG-026-s05",
+      "expected": false,
+      "median": 86,
+      "brightness": 255
+    },
+    {
+      "frame": 5446,
+      "word": "SG-027-s01",
+      "expected": true,
+      "median": 5,
+      "brightness": 232
+    },
+    {
+      "frame": 5454,
+      "word": "SG-027-s01",
+      "expected": false,
+      "median": 86,
+      "brightness": 255
+    },
+    {
+      "frame": 5457,
+      "word": "SG-027-s02",
+      "expected": true,
+      "median": 5,
+      "brightness": 232
+    },
+    {
+      "frame": 5469,
+      "word": "SG-027-s02",
+      "expected": false,
+      "median": 86,
+      "brightness": 255
+    },
+    {
+      "frame": 5470,
+      "word": "SG-027-s03",
+      "expected": true,
+      "median": 5,
+      "brightness": 232
+    },
+    {
+      "frame": 5476,
+      "word": "SG-027-s03",
+      "expected": false,
+      "median": 86,
+      "brightness": 255
+    },
+    {
+      "frame": 5476,
+      "word": "SG-027-s04",
+      "expected": true,
+      "median": 5,
+      "brightness": 232
+    },
+    {
+      "frame": 5488,
+      "word": "SG-027-s04",
+      "expected": false,
+      "median": 86,
+      "brightness": 255
+    }
+  ],
+  "method": "Bundled-font masks select eroded glyph-interior pixels. Median red-minus-blue separates warm active words from neutral inactive words for all visible lead and backing words in every decoded frame. Verifies displayed state, not acoustic truth."
+}
