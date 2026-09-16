@@ -26,6 +26,8 @@ Record the approved preview revision and input hashes, the scope of approval, an
 
 Both synchronization completion and production authorization are required. The [cross-language synchronization gate](cross-language-sync-gate.md) remains mandatory. A materially changed recording, lyric, mapping, timing or presentation revision invalidates the relevant review and approval; present the corrected preview before production.
 
+**Scoped production decision:** the [Sugar Glass English-only record](../projects/sugar-glass-lyric-film/PRODUCTION-LESSONS.md#approval-and-identity) documents overall acceptance of the current playable preview followed by an explicit render instruction, without a complete granular listening log. That edition records `owner-approved-preview` acceptance, preserves unknown checklist fields and model uncertainty, and binds production to the exact approved inputs. It does not label its detailed synchronization audit complete or change the default review requirement above. Technical delivery checks remain separate from acoustic accuracy.
+
 ## Enforce the boundary
 
 Every new project must keep its preview command separate from production commands. Production entry points must refuse absent, incomplete or stale review evidence and absent or stale authorization before capture, segment rendering, encoding or final-file creation. Do not hide full capture behind a command named `preview`.

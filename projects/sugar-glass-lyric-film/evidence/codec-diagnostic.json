@@ -1,0 +1,13 @@
+{
+  "status": "passed sample comparison",
+  "format": "landscape",
+  "firstFrame": 5400,
+  "frames": 90,
+  "reference": "2x PNG-derived ProRes 4444, Lanczos downsampled to 1920x1080 yuv420p10le",
+  "encode": "HEVC Main 10, medium preset, CRF 17, hvc1, BT.709 limited range; diagnostic pool=2 and frame-threads=1",
+  "fullFrameSsim": 0.998144,
+  "lyricRegion": {"x": 0, "y": 420, "width": 1920, "height": 470},
+  "lyricRegionPsnrDb": {"average": 53.549430, "minimum": 52.023554, "maximum": 55.784843},
+  "decodedFocus": {"wordStates": 495, "mismatches": 0, "ambiguous": 0},
+  "scope": "Exactly paired 90-frame diagnostic comparison. Sample evidence supports the delivery codec; it is not represented as a whole-film quality metric. Final delivery uses the production encoder's pool=4 and frame-threads=2."
+}

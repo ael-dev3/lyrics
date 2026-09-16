@@ -6,21 +6,21 @@ Music films with synchronized lyrics, meaning-linked translations, and audio-rea
 
 **Current style default:** [cinematic lyric presentation](docs/cinematic-lyric-workflow.md) — stable, color-only word or phrase emphasis, precise vocal timing, smooth scene shading and equally prominent bilingual lyrics. Motion intensity follows the song: gentle arrangements can use compact, subdued audio-reactive graphics. The guide includes implemented references and review requirements for future tracks.
 
-[**Sugar Glass — preview**](#sugar-glass) · [**Твои глаза**](#твои-глаза) · [**Прости за любовь — accepted with known gaps**](#прости-за-любовь) · [**Половинка**](#половинка) · [**Life Letters**](#life-letters) · [**Joyride**](#joyride) · [**midnight love**](#midnight-love) · [**Пожары**](#пожары) · [**Отменяй**](#отменяй) · [**Roi × Adore**](#roi--adore) · [**TikTok edition**](#tiktok-edition) · [**Tanisea**](#tanisea) · [**Build and workflow**](#build-and-workflow)
+[**Sugar Glass**](#sugar-glass) · [**Твои глаза**](#твои-глаза) · [**Прости за любовь — accepted with known gaps**](#прости-за-любовь) · [**Половинка**](#половинка) · [**Life Letters**](#life-letters) · [**Joyride**](#joyride) · [**midnight love**](#midnight-love) · [**Пожары**](#пожары) · [**Отменяй**](#отменяй) · [**Roi × Adore**](#roi--adore) · [**TikTok edition**](#tiktok-edition) · [**Tanisea**](#tanisea) · [**Build and workflow**](#build-and-workflow)
 
 ## Sugar Glass
 
-**Anya Nami · English only · preview v2**
+**Anya Nami · English only · verified landscape and portrait films**
 
-![Sugar Glass English preview: large warm lyric focus and an expanded reflective spectrum](assets/sugar-glass-preview-90.jpg)
+![Sugar Glass: large warm English word focus and a reflective spectrum](assets/sugar-glass-90.png)
 
-*Live review-player screenshot at 01:30.000. Original music, performance and mood video: Anya Nami. This is a preview, not a final-film frame.*
+*Decoded final landscape frame at 01:30.000. Original music, performance and mood video: Anya Nami.*
 
-The complete recording is available for local review in landscape and portrait, with 71 cues, 424 English words and independent lead/backing layers. The English-only edition uses larger lyrics, oversized refrains and a broader reflective spectrum that expands into choruses and recedes through the bridge and outro. Word geometry and the original audio clock stay stable.
+Both complete 1080p60 films preserve the accepted English-only preview: 71 cues, 424 words, independent lead/backing lanes, larger lyrics and oversized refrains. A broad reflective spectrum expands into choruses and recedes through the bridge and outro. Word geometry and the original audio clock stay stable. The design applies the Lyrics workflow in general.
 
-**Review pending; production blocked.** The supplied wording and model-assisted boundaries retain explicit review questions. No full lyric film has been rendered. Completed source/workflow checks and GitHub merging do not substitute for listening review or render authorization.
+The playable preview preceded explicit render approval. Overall acceptance is recorded separately from unavailable granular listening telemetry and retained model uncertainty. Both final files passed strict decoding, all 13,881 video timestamps, exact original AAC and decoded PCM identity, and every visible word's decoded focus with zero mismatches. Full media remains local.
 
-[Preview setup and production boundary](projects/sugar-glass-lyric-film/README.md) · [Review questions](projects/sugar-glass-lyric-film/evidence/sync-review.md) · [Technical verification](projects/sugar-glass-lyric-film/evidence/preview-verification.json) · [Original mood video](https://www.youtube.com/watch?v=-NsQ8_WLq2s)
+[Production and reproduction](projects/sugar-glass-lyric-film/README.md) · [Verified delivery and checksums](projects/sugar-glass-lyric-film/evidence/delivery-receipt.json) · [Verification details and limits](projects/sugar-glass-lyric-film/evidence/final-verification.md) · [Production lessons](projects/sugar-glass-lyric-film/PRODUCTION-LESSONS.md) · [Original mood video](https://www.youtube.com/watch?v=-NsQ8_WLq2s)
 
 ## Твои глаза
 

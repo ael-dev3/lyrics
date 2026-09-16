@@ -2,6 +2,12 @@
 
 This is an **AI-assisted lyric-film and workflow project**. It should not be described as entirely hand-coded, manually timed or hand-illustrated.
 
+## Sugar Glass production
+
+The English-only edition uses OpenAI Codex assistance for TypeScript implementation, model-assisted alignment analysis, layout, visual inspection, encoding verification and documentation. Stored recognizer and aligner observations support the selected word events; they do not prove exact vocal boundaries. The original Anya Nami footage and recording are retained, with no synthetic singing or replacement soundtrack.
+
+The project owner accepted the current playable preview and explicitly authorized rendering. This overall acceptance is recorded without inventing per-cue listening, playback-speed coverage or per-format listening telemetry. The production adapter preserves the approved scene and timing. Decoded-pixel checks verify displayed word colors against that accepted event map, while packet and decoded-sample checks verify audio identity. [Production notes](projects/sugar-glass-lyric-film/PRODUCTION-LESSONS.md) · [Review scope and uncertainty](projects/sugar-glass-lyric-film/evidence/sync-review.md).
+
 ## Твои глаза production
 
 The POLNALYUBVI Russian / English edition uses OpenAI Codex assistance for translation, meaning correspondence, TypeScript implementation, alignment analysis, visual inspection, encoding tests and documentation. Demucs, Whisper/stable-ts and MMS provide independent acoustic observations; the final renderer uses frozen artifacts. The original recording is retained without synthetic singing or audio processing.

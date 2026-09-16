@@ -1,10 +1,10 @@
 # Anya Nami — Sugar Glass
 
-**English only · preview v2 · no production film rendered**
+**English only · verified landscape and portrait delivery**
 
-![Sugar Glass English preview with large lyric focus and an expanded reflective spectrum](../../assets/sugar-glass-preview-90.jpg)
+![Sugar Glass final film with large English lyric focus and an expanded reflective spectrum](../../assets/sugar-glass-90.png)
 
-*Live browser preview at 01:30.000. Original music, performance and mood video: [Anya Nami](https://www.youtube.com/watch?v=-NsQ8_WLq2s). This is a preview screenshot, not a final-film frame.*
+*Decoded final landscape frame at 01:30.000. Original music, performance and mood video: [Anya Nami](https://www.youtube.com/watch?v=-NsQ8_WLq2s).*
 
 This edition uses English lyrics only. The full-recording preview applies the **Lyrics workflow in general**, using the source video's glass, cream, blue and black imagery. Removing the translation lane makes room for larger type, oversized refrain lines and a more expressive spectrum. The earlier bilingual draft is superseded; its history remains in Git.
 
@@ -18,13 +18,13 @@ This edition uses English lyrics only. The full-recording preview applies the **
 
 The spectrum uses `height = 2 + clamp((dB + 65) / 52, 0, 1)^1.18 × travel`. Arrangement envelopes are artistic display decisions, separate from raw measurements and lyric timing. There is no per-frame normalization, random beat simulation or word-position bounce.
 
-| Item | Preview scope |
+| Item | Delivery scope |
 | --- | --- |
 | Recording | Original AAC, 44.1 kHz stereo; 10,202,112 decoded samples; 231.340408 s |
 | Formats | Landscape 1920×1080 and portrait 1080×1920; 60 fps lyric event display |
 | Footage | Original 25 fps; local 4K VP9 retained, official 1080p H.264 used for live playback |
 | Lyrics | 71 English lead/backing cues, 424 source tokens; existing acoustic boundaries preserved |
-| Approval | Listening review incomplete; rendering unauthorized |
+| Approval | Current preview accepted; both production formats explicitly authorized; granular listening telemetry remains unavailable |
 
 ## Review the preview
 
@@ -46,11 +46,26 @@ For a clean still, use `?clean=1&t=90`; append `&format=portrait` for portrait. 
 
 [Review questions](evidence/sync-review.md) cover supplied “sleeve” versus recognized “sleep,” the bridge wording, post-chorus repetitions and sustained releases. The English-only revision preserves all 424 source-word intervals; a larger display does not imply improved acoustic accuracy. Independent recognizers and aligners support listening review; they do not certify it.
 
-The [sync review](evidence/sync-review.json) and [authorization](evidence/render-authorization.json) remain separate. This single-language edition checks the full performed English text, every word boundary, both formats and the complete recording. Multilingual productions still require the repository's cross-language checks.
+The [sync review](evidence/sync-review.json) and [authorization](evidence/render-authorization.json) remain separate. This single-language edition retains the full performed English text and both formats. The project owner accepted the preview and explicitly authorized production. The scoped acceptance record preserves unknown listening fields and model uncertainty; it does not claim a completed granular acoustic audit. Multilingual productions still require the repository's cross-language checks.
 
 ## Preview before rendering
 
-Production remains blocked until full listening review, resolved findings and explicit authorization for **preview-v2-english**. `npm run render` refuses before output creation, and direct Remotion capture remains disabled. This preview edition contains no production encoder. Follow the [preview-first workflow](../../docs/preview-before-render.md).
+The playable English preview preceded explicit approval of **preview-v2-english**. Its [original identity](evidence/approved-preview-identity.json) and [earlier review record](evidence/pre-render-review.json) remain intact. [Production inputs](evidence/production-identity.json) preserve the approved scene, timing, text, audio, font and layouts; the capture adapter adds a production guard and the original picture's final-frame hold. Follow the [preview-first workflow](../../docs/preview-before-render.md) and [scoped production notes](PRODUCTION-LESSONS.md).
+
+## Production and verification
+
+The approved renderer requires an explicit mode and verifies current input hashes, acceptance and authorization before creating output. The default Remotion composition remains guarded against accidental capture. Both formats use 2× PNG capture, twelve contiguous ProRes 4444 segments, one Lanczos downsample, HEVC Main 10 / CRF 17 / BT.709 and original AAC packet copying.
+
+```sh
+npm run check
+npm run sync:gate
+npm run render -- --production --format landscape
+npm run render -- --production --format portrait
+node scripts/post-render.ts landscape
+node scripts/post-render.ts portrait
+```
+
+The post-render checks verify strict decoding, every frame timestamp, stream metadata, original AAC packet identity, decoded word focus and reference segment continuity. They extract selected final frames for visual inspection. A technical pass verifies faithful delivery of the accepted event map; it does not certify model-derived acoustic boundaries. Both complete files passed. See the [final verification](evidence/final-verification.md), [delivery receipt](evidence/delivery-receipt.json) and [checksums](evidence/delivery-checksums.sha256). Full media is delivered locally; no new public binary release or platform upload was performed.
 
 ## Source and reproduction
 

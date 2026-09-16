@@ -1,16 +1,11 @@
 {
-  "projectId": "sugar-glass-english",
-  "status": "authorized",
+  "project": "Anya Nami — Sugar Glass",
+  "edition": "English-only approved preview v2",
+  "status": "both local deliveries technically and visually verified",
+  "sourceUrl": "https://www.youtube.com/watch?v=-NsQ8_WLq2s",
   "previewRevision": "preview-v2-english",
-  "fullRenderAuthorized": true,
-  "previewAccepted": true,
   "authorizationId": "sugar-glass-preview-v2-english-owner-approval-2026-09-16",
-  "evidenceBasis": "Project owner accepted the current English-only preview and explicitly requested rendering and the GitHub update.",
-  "scope": [
-    "landscape 1920x1080 60fps",
-    "portrait 1080x1920 60fps"
-  ],
-  "hashes": {
+  "productionInputHashes": {
     "public/soundtrack.m4a": "42f6f95d04fd37a67fbf2ba61267c3ee4b3c2ae6cd5d26377523e311507e7c88",
     "public/footage.mp4": "863cf06bd532da56252ef9122c8ec27aa66e8559da789ecf7cfc4891734e470b",
     "public/review-source.mp4": "d5f015bb4c4c20aba807e87286969ba251ff340ec5aad85b425cfe1cbf42d905",
@@ -32,5 +27,46 @@
     "package-lock.json": "0c9ea78e1fedfb46d6f250cf202db6cfade2db12937341276884eb6d6cd7774d",
     "scripts/render.ts": "d48f93cdb8fa3c4b77a08c77d1c2a09dd8c561aa05308774acc52909ac677c36",
     "scripts/encode.ts": "9a37822968b21352fa49cd3c48233f97e69e5ab82db98ca0af64be41ee08e55a"
-  }
+  },
+  "sourceCommit": "989bbcb69c628438c0880fbb8c61c709b950fc8b",
+  "sourceAudioSeconds": 231.3404081632653,
+  "videoFrames": 13881,
+  "fps": 60,
+  "maxDisplayRoundingMs": 8.321995464854126,
+  "cues": 71,
+  "words": 424,
+  "files": [
+    {
+      "format": "landscape",
+      "name": "Sugar-Glass-landscape-1920x1080-60fps.mp4",
+      "bytes": 53290969,
+      "sha256": "7a8f1bc0a45c23d5b3ceabdfdf2fe4f8ee852e7ea952656e35adac91f93f1d16",
+      "width": 1920,
+      "height": 1080,
+      "codec": "hevc",
+      "pixelFormat": "yuv420p10le",
+      "aacPackets": 9963,
+      "visibleWordStates": 73026,
+      "decodedFocusMismatches": 0,
+      "ambiguousStates": 0,
+      "referenceSegments": 12
+    },
+    {
+      "format": "portrait",
+      "name": "Sugar-Glass-portrait-1080x1920-60fps.mp4",
+      "bytes": 55522675,
+      "sha256": "bc6ccade6431e473b787888cb928b38a092b6a04f8948a3ff1db437fcfce49d1",
+      "width": 1080,
+      "height": 1920,
+      "codec": "hevc",
+      "pixelFormat": "yuv420p10le",
+      "aacPackets": 9963,
+      "visibleWordStates": 73026,
+      "decodedFocusMismatches": 0,
+      "ambiguousStates": 0,
+      "referenceSegments": 12
+    }
+  ],
+  "publication": "Local media delivery; source, small visual evidence and checksums on GitHub. No new public binary release or platform upload.",
+  "limits": "Accepted event map preserved. Granular listening telemetry is unknown and acoustic-model disagreement remains documented; decoded color checks are not an acoustic-accuracy certificate."
 }
