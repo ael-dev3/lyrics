@@ -15,7 +15,7 @@ export function parseData(value:unknown):ProductionData{
  const target=array(c.target).map((raw):TargetWord=>{const w=object(raw);return {id:str(w.id),text:str(w.text),sourceIds:array(w.sourceIds).map(str)};});
  const sourceIds=new Set(source.map(w=>w.id));if(sourceIds.size!==source.length)throw Error('Duplicate source word');
  for(const w of target)if(!w.sourceIds.length||w.sourceIds.some(id=>!sourceIds.has(id)))throw Error('Unknown semantic source');
- for(const w of source)if(!target.some(t=>t.sourceIds.includes(w.id)))throw Error('Unmapped Sourcessian word');
+ for(const w of source)if(!target.some(t=>t.sourceIds.includes(w.id)))throw Error('Unmapped source word');
  const startSample=integer(c.startSample),endSample=integer(c.endSample);if(source.some(w=>w.startSample<startSample||w.endSample>endSample))throw Error('Cue containment');
  const layer=c.layer;if(layer!=='main'&&layer!=='backing')throw Error('Unknown vocal layer');
  return {id,section:str(c.section),layer,source,target,startSample,endSample,visibleFrom:integer(c.visibleFrom),visibleUntil:integer(c.visibleUntil)};});

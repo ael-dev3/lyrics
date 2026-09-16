@@ -12,7 +12,7 @@ Music films with synchronized lyrics, meaning-linked translations, and audio-rea
 
 **Anya Nami · English + Russian · preview only**
 
-![Sugar Glass preview: reflected source performance with equal English and Russian word focus](assets/sugar-glass-preview-90.png)
+![Sugar Glass preview: reflected source performance with equal English and Russian word focus](assets/sugar-glass-preview-90.jpg)
 
 *Live review-player screenshot at 01:30.000. Original music, performance and mood video: Anya Nami. This is a preview, not a final-film frame.*
 
