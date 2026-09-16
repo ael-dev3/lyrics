@@ -12,6 +12,10 @@ Music films with synchronized lyrics, meaning-linked translations, and audio-rea
 
 Dedicated 1920×1080 and 1080×1920 compositions at 60 fps retain the complete original recording and animation. All 154 Russian tokens and 195 English words receive stable, meaning-linked color emphasis, including grammatical completions and reordered English phrases.
 
+![Твои глаза: pale-gold Russian and English word focus beneath a close-up from the original animation](assets/tvoi-glaza-63-4.png)
+
+*Decoded final landscape frame at 01:03.400. Original animation by ORAMAI, with backgrounds and illustrations by FINITO / FINITOLINA; music and lyrics by POLNALYUBVI.*
+
 **Restrained visualizer reference.** A compact pale-gold spectrum supports the contemplative animation and equal bilingual serif text. Its 64 measured bands use small, bounded travel and subdued opacity, leaving the voice, words and source picture prominent. This edition establishes a successful low-intensity approach for gentler arrangements; visual energy is chosen for each recording. See the [production lessons and exact display settings](projects/tvoi-glaza-lyric-film/PRODUCTION-LESSONS.md).
 
 The project owner completed the actual-recording review and authorized full rendering. The review record distinguishes this overall user attestation from unavailable granular listening telemetry. Production captures at 2×, uses ProRes 4444 references and HEVC Main 10 delivery, and preserves the original AAC packets and timestamps. Decoded-word checks inspect the actual highlight colors against the frozen event map.
@@ -26,6 +30,10 @@ This edition applies the Lyrics workflow in general. Recording, animation, cover
 
 **Accepted with known highlighting gaps.** The current song is sufficient for delivery. Some English meaning spans remain only partly highlighted: «Остыла» needs “I have grown cold,” and «прости» needs “forgive me” in the chosen translation. The accepted films are preserved; this edition is not the synchronization quality baseline for the next song.
 
+![Прости за любовь: Russian and English lyrics over a rainy night-tram scene with a coral spectrum](assets/prosti-v1-2-52-4.png)
+
+*Decoded accepted v1.2 landscape frame at 00:52.400. The screenshot preserves that edition's documented highlighting gaps. Music by Артем Пора Домой & Jahmal TGK; generated artwork and lyric presentation belong to this edition.*
+
 [Project and exact delivery identity](projects/prosti-za-lyubov-lyric-film/README.md) · [Known issues and follow-up criteria](projects/prosti-za-lyubov-lyric-film/KNOWN-ISSUES.md) · [Structured status](projects/prosti-za-lyubov-lyric-film/status.json)
 
 **Next song: synchronization must be complete before production rendering.** Follow the [mandatory cross-language sync gate](docs/cross-language-sync-gate.md) for every cue and every language. Technical checks and a few successful previews do not replace the full semantic and audiovisual review.
@@ -38,7 +46,9 @@ This entry documents the locally delivered edition; it does not publish new vide
 
 Full-song bilingual films with equal Russian and English typography, stable color-only emphasis and a measured 64-band spectrum. Both 1080p60 editions share the original soundtrack with constant gain only. The archival source picture retains its native 480p detail and 25 fps cadence.
 
-![Polovinka final decoded film](assets/polovinka-final.png)
+![Половинка: the original performance above equal Russian and English lyrics with turquoise word focus](assets/polovinka-80.png)
+
+*Decoded v1.0.0 landscape frame at 01:20.000. Original performance and music by Танцы Минус; the source picture retains its archival detail.*
 
 [YouTube film](https://github.com/ael-dev3/lyrics/releases/download/polovinka-v1.0.0/Polovinka-YouTube-1920x1080-60fps.mp4) · [TikTok film](https://github.com/ael-dev3/lyrics/releases/download/polovinka-v1.0.0/Polovinka-TikTok-1080x1920-60fps.mp4) · [Covers, copy and captions](https://github.com/ael-dev3/lyrics/releases/download/polovinka-v1.0.0/Polovinka-Publishing-Kit.zip) · [Editable project](https://github.com/ael-dev3/lyrics/releases/download/polovinka-v1.0.0/Polovinka-Editable-Project.zip)
 
@@ -260,6 +270,8 @@ The first lyric-film project pairs Russian vocals with meaning-linked English hi
 
 <img src="assets/tanisea-vnext-hero.png" width="640" alt="Tanisea lyric-film design with English translation and an audio-reactive spectrum">
 
+*Square vNext design reference at the on-frame time 00:48.000. Original music by Tanisea & ksviety; source-art attribution is recorded in [the credits](CREDITS.md#tanisea).*
+
 The published square edition runs for 153 seconds at 1080×1080 and 60 fps. Its source records Russian vocal timing as sample indices and maps English phrases to the corresponding meaning, including changes in word order. A separate 120 fps proof exposes timing evidence for inspection.
 
 | Published download · v2.4.0 | Contents |
@@ -290,6 +302,8 @@ Each project has its own setup instructions. Use the release source archive when
 | Tanisea | Follow the [project quick start](projects/tanisea-lyric-film/README.md#quick-start) for Node.js, FFmpeg and Remotion setup |
 
 The reusable workflow covers soundtrack locking, lyric alignment, semantic translation, visual design, calibrated audio features, rendering and delivery verification:
+
+[README screenshot inventory](docs/readme-screenshots.md) records each song's representative frame, edition and selection checks.
 
 - [Mandatory cross-language sync gate](docs/cross-language-sync-gate.md) — complete meaning, target spans and actual-audio review in every language before production rendering; [review template](docs/templates/cross-language-sync-review.md)
 - [Cinematic lyric presentation](docs/cinematic-lyric-workflow.md) — the current visual default, timing and readability rules, final-film reference and review requirements

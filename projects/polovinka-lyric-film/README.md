@@ -2,7 +2,9 @@
 
 [Release v1.0.0](https://github.com/ael-dev3/lyrics/releases/tag/polovinka-v1.0.0) · [YouTube film](https://github.com/ael-dev3/lyrics/releases/download/polovinka-v1.0.0/Polovinka-YouTube-1920x1080-60fps.mp4) · [TikTok film](https://github.com/ael-dev3/lyrics/releases/download/polovinka-v1.0.0/Polovinka-TikTok-1080x1920-60fps.mp4) · [Editable project](https://github.com/ael-dev3/lyrics/releases/download/polovinka-v1.0.0/Polovinka-Editable-Project.zip)
 
-![Final decoded landscape contact sheet](evidence/final-contact-youtube.jpg)
+![Final landscape frame with the source performance and equal bilingual word focus](../../assets/polovinka-80.png)
+
+*Decoded v1.0.0 film at 01:20.000. [Additional decoded frames](evidence/final-contact-youtube.jpg) retain the broader visual review.*
 
 Russian and English lyric films built from the complete original recording: a dedicated 1920×1080 YouTube composition and a dedicated 1080×1920 TikTok composition, both delivered at 60 fps. Russian words and meaning-based English groups share the same acoustic timing. No pronunciation layer is included.
 
