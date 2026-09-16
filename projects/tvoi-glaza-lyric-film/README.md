@@ -2,6 +2,10 @@
 
 A Russian / English lyric film using the Lyrics production workflow in general. Original animation and recording are retained. Both languages receive equal serif typography, stable positions and color-only word/meaning emphasis.
 
+![Final landscape frame with equal Russian and English word focus over the original animation](../../assets/tvoi-glaza-63-4.png)
+
+*Decoded final film at 01:03.400, showing «твои / your» focus and the restrained spectrum. Original creators are credited below.*
+
 **A restrained visualizer for a contemplative arrangement.** Compact pale-gold bars provide a quiet musical response beneath the lyric composition. Their bounded travel and subdued opacity leave the original animation, voice and words prominent. This finished approach is a reusable option for gentler tracks. The [production lessons](PRODUCTION-LESSONS.md) record exact visual settings, synchronization decisions, encoding findings, verification limits and the complete posting handoff.
 
 **The project owner completed review, reported no mistakes and authorized full rendering.** Frozen timings and translations are retained. Detailed listening telemetry was not supplied; the review record distinguishes this user attestation from measured technical checks.

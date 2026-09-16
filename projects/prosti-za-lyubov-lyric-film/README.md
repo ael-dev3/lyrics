@@ -2,6 +2,10 @@
 
 **Артем Пора Домой & Jahmal TGK · Russian + English · YouTube and TikTok**
 
+![Accepted v1.2 landscape frame with Russian and English lyrics over the night-tram artwork](../../assets/prosti-v1-2-52-4.png)
+
+*Decoded accepted v1.2 film at 00:52.400. The frame retains the documented highlighting gaps; it does not imply a corrected edition.*
+
 | Status | Meaning |
 | --- | --- |
 | Delivery: **accepted with known highlighting gaps** | Accepted on 15 September 2026; the existing song is sufficient for use and is preserved as delivered. |
@@ -39,4 +43,4 @@ These identify the accepted v1.2 artifacts. Their archived reports retain their 
 
 [Original release](https://www.youtube.com/watch?v=wfFhw_eu1BI), provided through ONErpm; ℗ А+/ФОРМАНТА/Monolit. Music and original lyrics remain the work of their creators. Translation, generated artwork and added lyric presentation belong to this fan-made edition and do not imply endorsement.
 
-This directory records status, known issues and selected technical evidence. The full editable project remains in the delivered archive; this is not a standalone source checkout. Feedback is documented in text with cue references. Private screenshots, conversation content and personal local paths are excluded.
+This directory records status, known issues, a frame decoded from the accepted film and selected technical evidence. The full editable project remains in the delivered archive; this is not a standalone source checkout. Feedback is documented in text with cue references. Private screenshots, conversation content and personal local paths are excluded.

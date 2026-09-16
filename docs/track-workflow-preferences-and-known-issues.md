@@ -83,6 +83,7 @@ The explicitly commissioned [Life Letters Russian / Argentinian Spanish edition]
 - Make changes reversible and traceable: keep source data, scripts, composition variants, audit reports, and release notes together.
 - Use concise progress updates focused on decisions, completed checks, and blockers; keep private conversation out of repository history.
 - For a YouTube and TikTok posting handoff, verify each platform has its own final video, copy and thumbnail. Include a YouTube title and description and a TikTok description. Review both covers at small display sizes, then verify copied file hashes in the final destination. Record later additions in a separate receipt so an already delivered archive keeps its original identity.
+- Give every song in the main README a representative screenshot, and reuse it in the song's project README where needed. Prefer a frame decoded from the identified delivery with readable lyrics, meaningful focus, clear source imagery and the complete composition. Verify the edition before extraction, inspect at native and README size, and caption the timestamp and creator attribution. Record provenance in the [screenshot inventory](readme-screenshots.md); preserve historical limitations and keep private UI, proof overlays and promotional covers distinct from film screenshots.
 
 ### Complete the GitHub handoff
 
