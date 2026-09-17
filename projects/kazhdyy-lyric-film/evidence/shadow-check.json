@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "revision": "preview-v6-shadow-static",
+  "comparison": [
+    "portrait-18.55.png",
+    "portrait-18.62.png"
+  ],
+  "region": {
+    "x": 0,
+    "y": 143,
+    "width": 1080,
+    "height": 747
+  },
+  "totalPixels": 806760,
+  "changedPixels": 249225,
+  "protectedBrightOrRedPixelsChanged": 0,
+  "maxChannelDelta": 45,
+  "meanChangedDelta": 10.795911325107834,
+  "method": "Native diagnostic PNG difference within artwork, excluding the changing spectrum. Protected pixels have any baseline RGB channel >= 100. The check bounds this inspected transition, not every raster frame. Full-timeline tests separately verify deterministic event bursts and constant image geometry."
+}

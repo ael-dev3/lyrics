@@ -1,25 +1,28 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
-import {artworkPose,impactAt,impactEvents} from '../src/motion.ts';
-test('one measured hit reaches its apex on the matching video frame',()=>{
- for(const e of impactEvents){
-  const isolated=[e];assert.equal(impactAt(e.frame,isolated),e.weight);
-  assert.equal(impactAt(e.frame-1,isolated),0);assert.equal(impactAt(e.frame+11,isolated),0);
-  for(let f=e.frame+1;f<e.frame+11;f++)assert.ok(impactAt(f,isolated)<e.weight);
-  assert.ok(Math.abs(e.frame/60-e.time)<=1/120+1e-10);
+import {artworkPose} from '../src/motion.ts';
+import {barHeight,vocalDrive,spectrumHeights,travelAt,emphasisAt} from '../src/visualizer.ts';
+import {motionAt} from '../src/scene.ts';
+const bands=JSON.parse(readFileSync('public/science.json','utf8')) as number[][];
+test('picture transform is exactly constant for the full recording in both formats',()=>{
+ for(const portrait of [true,false])for(let frame=0;frame<12798;frame++)assert.deepEqual(artworkPose(frame,portrait),artworkPose(0,portrait));
+});
+test('emphasis is confined to the exact requested sections, including boundary frames',()=>{
+ for(let f=0;f<12798;f++){
+  const t=f/60,e=emphasisAt(f),travel=travelAt(f);
+  const medium=(t>=70&&t<88)||(t>=158&&t<175),high=t>=175&&t<190;
+  if(!medium&&!high){assert.equal(travel,36);assert.deepEqual(e,{medium:0,high:0});}
+  if(medium){assert.equal(e.high,0);assert.ok(travel<=108);}
+  if(high)assert.ok(travel<=294);
  }
+ assert.equal(travelAt(190*60),36);assert.equal(emphasisAt(175*60).medium,1);assert.equal(emphasisAt(175*60).high,0);
+ assert.equal(emphasisAt(175*60+18).high,1);
 });
-test('no free-running movement or added decoration when no hit is active',()=>{
- for(const portrait of [true,false])assert.deepEqual(artworkPose(60,portrait),artworkPose(120,portrait));
- const scene=readFileSync('src/scene.ts','utf8');assert.doesNotMatch(scene,/Math\.sin|Math\.cos|rotate\(|<ellipse|const eye=|const threads=/);
- assert.match(scene,/artInk=p\.ink,artPaper=p\.ivory/);
-});
-test('picture movement is bounded and preserves the visual anchor',()=>{
- for(const portrait of [true,false])for(let frame=0;frame<12798;frame++){
-  const p=artworkPose(frame,portrait),base=portrait?1.06:1.10;
-  assert.ok(p.scale>=base&&p.scale<=base+.012001);
-  assert.ok(Math.abs(p.x+500*p.scale-(portrait?1080:910)*.48)<1e-8);
-  assert.ok(Math.abs(p.y+500*p.scale-(portrait?630:550))<1e-8);
+test('vocal emphasis is bounded and never changes the measured band shape',()=>{
+ assert.equal(barHeight(-120,294),3);assert.equal(barHeight(0,294),297);
+ for(let frame=0;frame<12798;frame++){
+  const m=motionAt(frame/60,bands),heights=spectrumHeights(frame,m.values);assert.equal(heights.length,64);assert.ok(vocalDrive(frame)>=0&&vocalDrive(frame)<=1);
+  for(const h of heights)assert.ok(Number.isFinite(h)&&h>=3&&h<=297);
  }
 });

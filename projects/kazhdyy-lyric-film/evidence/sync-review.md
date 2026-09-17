@@ -1,4 +1,4 @@
-# Preview v3: word, meaning and synchronization review
+# Preview v6: word, meaning and synchronization review
 
 **Preview only. Complete actual-audio review and explicit approval of this revision remain pending. No production film was rendered.**
 
@@ -25,12 +25,12 @@ The supplied «У-у-у» / `Ooh` has a provisional bounded MMS interval near **
 - 2,580 onset, handoff and exclusive-end frame states across both formats; 44,434 visible word-color checks passed.
 - All 32 cues were checked in the browser through 3,086 focus and boundary states, covering 53,116 word boxes. No ink collisions, missing text, unsafe placement or moving glyphs were found. Persistent preview focus and artwork pose matched the static scene implementation. Minimum same-row spacing was 17.854 native pixels.
 - Both formats have equal language weight, size and active/rest colors. English expansions remain together at line breaks. The portrait title's accent clearance and landscape eye crop are protected.
-- Three authored base colors; 107 corroborated musical attacks drive bounded picture pulses. Unrelated decorative motion and palette inversion are removed. The measured visualizer stays separate from the fixed reading panel. Full recording and instrumental gaps remain available.
+- Three authored base colors; a centered vocal-energy measurement shapes the selected medium and strongest spectrum windows while the artwork stays still. Unrelated decorative motion and palette inversion are removed. The measured visualizer stays separate from the fixed reading panel. Full recording and instrumental gaps remain available.
 - Encoded audio payload and decoded PCM match the original source. The preview uses the media element's clock, with no soundtrack retiming or gain change.
 
 The maximum frame-grid rounding is **8.322 ms** at 60 fps. This is an implementation precision bound, **not** a claim that every acoustic boundary is accurate within that amount.
 
-The v3 change addresses picture timing and browser work. Russian words, English meaning maps, lyric sample intervals, layouts and source audio remain identical to v2. [Motion and playback evidence](motion-review.md) records the new attack map, purpose audit and measured browser limits. No global lyric offset was introduced to compensate for decorative motion or browser cadence.
+The v6 change adds bounded shadow texture at vocal spectral changes. Picture geometry and the exact section-based spectrum budgets remain unchanged from v5. Russian words, English meaning maps, lyric sample intervals, layouts and source audio remain identical to v2 and v3. [Motion and playback evidence](motion-review.md) records the separate shadow event map, purpose audit and browser checks. No global lyric offset was introduced to compensate for decorative motion or browser cadence.
 
 ## Remaining review before production
 

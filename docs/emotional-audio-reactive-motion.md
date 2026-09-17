@@ -28,6 +28,8 @@ Before adding detail, identify what it contributes: source imagery, lyric hierar
 
 For a static source picture, a short pulse can follow selected, sample-indexed attacks while the camera remains still between them. If attacks come from a separated stem, corroborate them in the original mix and retain rejected candidates in the evidence. An uncertain event can be omitted. Do not compensate for picture motion by shifting unrelated lyric events.
 
+Musical alignment alone does not make a camera pulse suitable. Test repeated scaling against the image's texture and the vocal phrasing; keep the picture fully still when the visualizer provides clearer musical contact. If strong singing is understated, measure vocal energy separately and give it a bounded contribution inside the chosen emphasis sections. Explicit section directions take precedence over automatic loudness: normal sections must remain normal even when a local vocal peak is strong. Keep the raw spectrum unchanged and document the artistic travel formula, centered window, calibration and maximum height.
+
 Evaluate playback implementation separately from the timeline. Keep static artwork and filters mounted; redraw hidden analysis tools only when opened. An audio-only media element avoids unnecessary source-video decoding when the preview uses a static illustration. Record DOM update cost, animation-callback cadence and media-clock agreement separately. Frame rounding and low DOM cost do not establish end-to-end audio/display latency, a guaranteed browser frame rate or completed listening review.
 
 The [current bilingual preview's purpose audit](../projects/kazhdyy-lyric-film/evidence/motion-review.md) documents one application of these principles; it is implementation evidence, not a prescribed visual template.
@@ -415,3 +417,7 @@ Reject these approaches:
 - [Production workflow](production-workflow.md) — editorial timing, composition, rendering, and delivery.
 - [TypeScript-first workflow](typescript-first-workflow.md) — strict source contracts, stable compiler pinning, and controlled upgrades.
 - [QA checklist](qa-checklist.md) — release gates across timing, visuals, science, and delivery.
+
+## Shadow texture without camera movement
+
+For ink-based source art, a subtle grain change confined to broad dark interiors can express vocal changes while preserving the silhouette and reading position. Derive events from the vocal signal, exclude colored landmarks and bright areas from the mask, and erode the mask to protect fine outlines. Use a few deterministic texture states per event, then hold; avoid unrelated continuous jitter. Verify the browser and frame renderer share the same event map, and inspect raster differences to ensure the effect stays within its intended region. Spectral-change detection is an artistic driver, not speaker recognition or acoustic word alignment.

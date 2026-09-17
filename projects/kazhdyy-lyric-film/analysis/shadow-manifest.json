@@ -1,0 +1,18 @@
+{
+  "revision": "preview-v6-shadow-static",
+  "sourceAudioSha256": "e8f3cd23ed692aca32c5bc0d9705e0f5b7506f580f0175d17a459fdb19b4598c",
+  "acousticSha256": "e9056df77b496ee58aaddcd66ec705c91284761c40fa113b18e315cbd26bd42c",
+  "vocalEnergySha256": "838ab844afec2272c4869c91495fd733dca91e639672b0f3f43db0c47c0c9027",
+  "method": "Local peaks of isolated-vocal spectral-shape change over 30 ms plus positive level change; minimum -32 dBFS vocal gate; 72nd-percentile threshold; 240 ms minimum event spacing.",
+  "threshold": 0.17664455422572362,
+  "candidates": 788,
+  "events": 384,
+  "display": {
+    "texture": "Fine ivory noise inside original pixels below 20% luminance; source-red exclusion and 3-pixel erosion protect colored landmarks and edges",
+    "opacity": 0.2,
+    "seedChanges": "Three deterministic grains over the first five frames of each event, then held until the next event",
+    "artworkTransform": "unchanged",
+    "visualizerWindows": "unchanged from v5"
+  },
+  "limitations": "Spectral changes are acoustic feature candidates, not recognized phonemes or exact semantic voice-change annotations. Stem artifacts remain possible."
+}
