@@ -67,6 +67,10 @@ node scripts/post-render.ts portrait
 
 The post-render checks verify strict decoding, every frame timestamp, stream metadata, original AAC packet identity, decoded word focus and reference segment continuity. They extract selected final frames for visual inspection. A technical pass verifies faithful delivery of the accepted event map; it does not certify model-derived acoustic boundaries. Both complete files passed. See the [final verification](evidence/final-verification.md), [delivery receipt](evidence/delivery-receipt.json) and [checksums](evidence/delivery-checksums.sha256). Full media is delivered locally; no new public binary release or platform upload was performed.
 
+## Posting kit
+
+The [YouTube and TikTok publishing kit](publishing/README.md) includes separate titles and descriptions, matching landscape and portrait covers, exact cover prompts and crop-review evidence. Both verified films and all posting files were delivered locally with matching checksums. The [posting-handoff addendum](evidence/posting-handoff-addendum.json) records these later additions without changing the original delivery receipt. No platform upload is claimed.
+
 ## Source and reproduction
 
 - Original music, lyrics, performance and mood video: **Anya Nami — Sugar Glass**. No additional production credits are inferred.
