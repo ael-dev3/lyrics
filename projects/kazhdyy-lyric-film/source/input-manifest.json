@@ -1,0 +1,51 @@
+{
+  "sourceUrl": "https://www.youtube.com/watch?v=3yDdoi1c7-8",
+  "sourceId": "3yDdoi1c7-8",
+  "title": "каждый, кто делал тебе больно",
+  "artist": "забей, лерочка",
+  "provider": "Spooky music",
+  "sourceMetadata": {
+    "descriptionReleaseDate": "2021-07-09",
+    "descriptionPhonogram": "2023 Spooky music",
+    "note": "The supplied auto-generated upload contains both dates; neither is silently reconciled."
+  },
+  "artwork": {
+    "type": "Static ink illustration extracted from original upload at 15 seconds",
+    "illustrator": "Not identified in verified upload metadata",
+    "transform": "Code-authored tritone treatment and motion; not original source animation"
+  },
+  "sourceFiles": {
+    "public/review-source.mp4": {
+      "bytes": 9263117,
+      "sha256": "21383d7d450c2feabe49ca8f14d16e8dcd7d0a82c8f27e420a35c48dc1766cdf"
+    },
+    "public/soundtrack.m4a": {
+      "bytes": 3451090,
+      "sha256": "e8f3cd23ed692aca32c5bc0d9705e0f5b7506f580f0175d17a459fdb19b4598c"
+    },
+    "public/artwork.png": {
+      "bytes": 1388301,
+      "sha256": "6f2335749f267857af9cdd042c272e24231feac60d059dd66bd1168716d778d1"
+    }
+  },
+  "audio": {
+    "codec": "AAC LC",
+    "sampleRate": 44100,
+    "channels": 2,
+    "containerDuration": "213.272993",
+    "decodedSamples": 9405888,
+    "decodedDuration": 213.28544217687076,
+    "originalPacketHash": "SHA256=a763c50e7d6a6c58f64fc19a2337ffca595e18f41b50a73e1a6817e764996f17",
+    "previewPacketHash": "SHA256=a763c50e7d6a6c58f64fc19a2337ffca595e18f41b50a73e1a6817e764996f17",
+    "originalFloatPcmHash": "SHA256=d506f193fdcfe1e38b723de97446eeb1c26e98ba76172b67757eebf5d309dd79",
+    "previewFloatPcmHash": "SHA256=d506f193fdcfe1e38b723de97446eeb1c26e98ba76172b67757eebf5d309dd79",
+    "status": "Bit-identical encoded audio payload and decoded PCM; no retiming or gain change",
+    "clockNote": "Decoded AAC tail padding yields 213.285442 seconds; media element reports approximately 213.273 seconds. Preview follows media currentTime; 60 fps coverage uses ceil, never truncates the recording."
+  },
+  "tools": {
+    "node": "24.20.0",
+    "ffmpeg": "ffmpeg version 8.1.2 Copyright (c) 2000-2026 the FFmpeg developers",
+    "remotion": "4.0.518",
+    "alignment": "MMS_FA + stable-whisper large-v3-turbo; Whisper small independent free recognition; Demucs htdemucs analysis stem"
+  }
+}

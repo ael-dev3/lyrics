@@ -1,0 +1,25 @@
+import {readFileSync,writeFileSync,statSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+import {array,object,str,num,parseData} from '../src/schema.ts';
+const read=(path:string):unknown=>JSON.parse(readFileSync(path,'utf8'));
+const parseAlignment=(path:string)=>array(object(read(path)).segments).flatMap(s=>array(object(s).words).map(w=>{const o=object(w);return {word:str(o.word),start:num(o.start),end:num(o.end)};}));
+const primary=parseAlignment('analysis/mms-vocals-sections.json');
+const alternatives=[parseAlignment('analysis/whisper-vocals-lines.json'),parseAlignment('analysis/mms-mix-sections.json')];
+const sampleRate=44100,sampleCount=statSync('analysis/mix44.f32').size/8;
+const text=array(read('source/text-and-mapping.json'));let cursor=0;
+const ledger:unknown[]=[];
+const cues=text.map(raw=>{const c=object(raw);const ru=array(c.ru).map(raw=>{const w=object(raw),index=cursor++,selected=primary[index];if(!selected)throw Error('Missing candidate');
+ const others=alternatives.map(a=>a[index]).filter(v=>v!==undefined);if(others.length!==2)throw Error('Missing independent candidate');
+ const valid=others.filter(v=>v.end>v.start);const starts=[selected.start,...valid.map(v=>v.start)],ends=[selected.end,...valid.map(v=>v.end)];
+ const spread=Math.max(Math.max(...starts)-Math.min(...starts),Math.max(...ends)-Math.min(...ends))*1000;
+ const startSample=Math.round(selected.start*sampleRate),endSample=Math.round(selected.end*sampleRate);
+ ledger.push({id:w.id,text:w.text,selectedMethod:'MMS isolated vocals, section bounds; PROVISIONAL',selected:{startSample,endSample},candidates:[{method:'MMS-vocals-section',...selected},...others.map((v,i)=>({method:i===0?'Whisper-vocals-line':'MMS-mix-section',...v}))],candidateSpreadMs:spread,listeningReview:'incomplete',waveformSpectrogramReview:'pending',reviewReasons:[...(spread>25?['candidate spread exceeds 25 ms']:[]),...(endSample-startSample<sampleRate*.08?['brief word, inspect onset and release']:[])]});
+ return {id:str(w.id),text:str(w.text),startSample,endSample,candidateSpreadMs:spread,reviewRequired:true};});
+ const first=ru[0],last=ru.at(-1);if(!first||!last)throw Error('Empty line');
+ return {id:str(c.id),section:str(c.section),ru,en:c.en,startSample:first.startSample,endSample:last.endSample,visibleFrom:Math.max(0,first.startSample-Math.round(.24*sampleRate)),visibleUntil:Math.min(sampleCount,last.endSample+Math.round(.28*sampleRate))};});
+for(let i=0;i<cues.length-1;i++){const c=cues[i],next=cues[i+1];if(!c||!next)continue;if(c.visibleUntil>next.visibleFrom){const midpoint=Math.round((c.endSample+next.startSample)/2);c.visibleUntil=Math.max(c.endSample,midpoint);next.visibleFrom=Math.min(next.startSample,midpoint);}}
+const audioSha256=createHash('sha256').update(readFileSync('public/soundtrack.m4a')).digest('hex');
+const data=parseData({sampleRate,sampleCount,duration:sampleCount/sampleRate,fps:60,frames:Math.round(sampleCount/sampleRate*60),audioSha256,cues});
+writeFileSync('src/cues.json',JSON.stringify(data,null,2)+'\n');writeFileSync('analysis/core-cues.json',JSON.stringify(data,null,2)+'\n');writeFileSync('analysis/boundary-ledger.json',JSON.stringify(ledger,null,2)+'\n');
+writeFileSync('evidence/timing-status.json',JSON.stringify({status:'PROVISIONAL — listening and audiovisual review incomplete',sourceWords:cursor,above25ms:ledger.filter(v=>num(object(v).candidateSpreadMs)>25).length,selectionRule:'Retain MMS isolated-vocal section intervals as candidate draft; no averaged offsets and no perfect-sync claim.',sampleRate,sampleCount,frames:data.frames},null,2));
+console.log({cues:cues.length,words:cursor,frames:data.frames,sampleCount});
