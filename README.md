@@ -12,11 +12,11 @@ Music films with synchronized lyrics, meaning-linked translations, and audio-rea
 
 **забей, лерочка · Russian + English · full-recording preview · three-color animated treatment**
 
-![Bilingual chorus preview with inverted source artwork and vermilion word focus](assets/kazhdyy-preview-72-2.png)
+![Bilingual chorus preview with source illustration and vermilion word focus](assets/kazhdyy-preview-72-2.png)
 
 *Native diagnostic preview frame at 01:12.200. Music and source illustration from the original забей, лерочка / Spooky music upload; illustrator unidentified in the available source metadata. No production film has been rendered.*
 
-Ink, ivory and vermilion frame the original kitchen illustration, animated eyes and steam, enclosing red contours, and a measured 64-band spectrum. Choruses reverse the artwork's ink/paper roles. Equal Russian and English text stays fixed, with complete meaning-linked word emphasis. Both layouts preserve the complete recording.
+Ink, ivory and vermilion frame the original kitchen illustration and a measured 64-band spectrum. Preview v3 adds brief, anchored picture pulses at 107 percussion attacks corroborated in the original mix; the picture rests between them. Decorative loops, added eye marks, steam and palette inversion have been removed. Equal Russian and English text stays fixed, with complete meaning-linked word emphasis. Both layouts preserve the complete recording.
 
 The polished preview includes 32 cues, inspected held-word release candidates, independent recognition and alignment evidence, and automated checks of every source/target mapping and both layouts. Acoustic uncertainty and pending actual-audio review remain explicit. **Full rendering requires completed synchronization review and approval of this exact revision.**
 

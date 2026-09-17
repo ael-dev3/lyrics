@@ -7,7 +7,7 @@ os.environ['HF_HUB_OFFLINE']='1'
 import torch,soundfile as sf,numpy as np
 torch.set_num_threads(4)
 mode=sys.argv[1]
-if mode=='separate':
+if mode in ['separate','drums']:
  from demucs.pretrained import get_model
  from demucs.apply import apply_model
  import torchaudio.functional as AF
@@ -18,7 +18,7 @@ if mode=='separate':
  ref=x.mean(0);mean=ref.mean();std=ref.std();x=(x-mean)/std
  with torch.inference_mode():stems=apply_model(model,x[None],device='cpu',shifts=1,split=True,overlap=.25,progress=True,num_workers=0)[0]
  stems=stems*std+mean
- for name in ['vocals']:
+ for name in (['drums'] if mode=='drums' else ['vocals']):
   v=stems[model.sources.index(name)]
   sf.write('analysis/'+name+'44.wav',v.T.numpy(),model.samplerate,subtype='FLOAT')
   v16=AF.resample(v.mean(0),model.samplerate,16000)

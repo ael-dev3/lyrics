@@ -1,0 +1,24 @@
+{
+  "sourceAudioSha256": "e8f3cd23ed692aca32c5bc0d9705e0f5b7506f580f0175d17a459fdb19b4598c",
+  "drumPcmSha256": "9389718a47d74323a5c5c987dda7854cf50618fe8211fbc0c377c571ac4c8ebe",
+  "source": "Demucs htdemucs percussion stem, analysis only; delivery audio unchanged",
+  "method": "Stereo 8 ms centered power minus preceding 33 ms mean (12–45 ms before candidate); 5 ms search hop and 0.5 ms apex refinement; local 120 ms nonmaximum suppression. Selected hits anchored to corroborating original-mix attacks; disagreements over 20 ms omitted.",
+  "candidateCount": 742,
+  "selectedHits": 107,
+  "uncorroboratedHitsOmitted": 19,
+  "thresholds": {
+    "minimumPower": 0.0001,
+    "minimumPositiveFlux": 0.00003,
+    "candidateP62": 0.016339891505243898,
+    "candidateP98": 0.28762944959942566,
+    "minimumStemCandidateSpacingSeconds": 0.32
+  },
+  "display": {
+    "onlySelectedHitsMovePicture": true,
+    "attackFrames": 1,
+    "releaseFrames": 11,
+    "maximumScaleAddition": 0.012,
+    "apex": "Nearest 60 fps frame to original-mix attack sample; no arbitrary timer, beat-grid transfer or global lyric offset"
+  },
+  "limitation": "A drum stem can leak other instruments. These are acoustic attack candidates, not a claim of human beat annotation or exact hardware audiovisual latency."
+}

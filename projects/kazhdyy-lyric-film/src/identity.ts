@@ -3,7 +3,7 @@ export const identityPaths=[
  'public/Oswald-Medium.ttf','public/Oswald-Bold.ttf','public/science.json',
  'source/text-and-mapping.json','source/supplied-lyrics.txt',
  'src/cues.json','src/layout.json','src/scene.ts','src/focus.ts','src/palette.ts',
- 'src/schema.ts','src/review-client.ts','review/index.html',
+ 'public/motion.json','src/motion.ts','src/preview-painter.ts','src/schema.ts','src/review-client.ts','review/index.html',
  'package.json','package-lock.json',
 ] as const;
 export type PreviewIdentity={song:string;revision:string;hashes:Record<string,string>};

@@ -19,8 +19,8 @@ Historical project implementation and verification records were inspected for la
 | Constraint | Implementation | Verification |
 | --- | --- | --- |
 | Three-color palette | Ink `#101116`, ivory `#F2E9D8`, vermilion `#FF6454`; source tritone filter | Three authored base colors. Antialiasing and opacity produce intermediate pixel values. |
-| More expressive visuals | Source-relative eye scribbles and kettle steam, enclosing red contours, bounded camera movement, measured 64-band spectrum | Lyrics remain outside the artwork motion; full-frame portrait and landscape stills inspected. |
-| Chorus contrast | Reverse ink/paper roles on the artwork at section transitions; red remains stable | No beat-driven flashing of the reading background. |
+| Purposeful visuals | Original illustration, measured 64-band spectrum and one anchored picture pulse per selected strong attack | 107 mix-corroborated events; 19 uncertain candidates omitted; no free-running decorative motion. |
+| Musical contrast | Larger spectrum travel budget in choruses, bounded by each band's actual measured value | Palette and reading background stay stable; camera rests between confirmed attacks. |
 | Equal languages | Same Oswald weight, 78 px landscape / 82 px portrait for both languages | Fixed precomputed word boxes; reflow up to three rows; do not split identical-source English expansions. |
 | Word accuracy | Supplied words, two free recognizers, original mix and isolated vocals, bounded section alignment | Reject recognizer substitutions and instrumental hallucinations; preserve explicit negation and repetition. |
 | Release precision | Inspect 32 extended vowel/final-word candidates, including all repeated hooks | Two one-second energy caps shortened after harmonic-tail inspection. Exact audible releases remain listening questions. |
@@ -33,3 +33,6 @@ Historical project implementation and verification records were inspected for la
 3. SVG text boxes include font em metrics beyond visible ink. Use browser-measured ink ascent/descent for vertical collision checks and SVG bounds for horizontal geometry; verify the actual pictures as well.
 4. Diagnostic timestamps must reach the resolved composition props. Passing `inputProps` alone with previously resolved default composition props can silently produce repeated wrong-time stills. The corrected script sets both, and distinct frames were visually verified.
 5. Large portrait title accents and source eyes need explicit clearance from picture masks and camera crops.
+6. A visual gesture needs a readable purpose and a specific driver. Extra rings, eye overlays and steam weakened the source illustration; periodic motion also made its relationship to the soundtrack ambiguous. Preserve source details and remove accents that do not strengthen hierarchy or musical contact.
+7. Stem attacks can shift or reflect separation artifacts. Corroborate candidate accents in the unchanged mix, omit disagreements and keep this map independent of lyric boundaries. The camera's apex belongs on the event frame, followed by a short release.
+8. Browser work can obscure otherwise correct timing. Keep artwork/filter nodes mounted, update cue text only at handoffs, defer hidden inspector drawing and use the audio-only media asset when the source picture is static. Measure DOM cost, display callback cadence and media-clock rounding separately; none establishes hardware audiovisual latency or completes listening review.

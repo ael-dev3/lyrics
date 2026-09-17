@@ -1,7 +1,7 @@
 {
-  "song": "3yDdoi1c7-8",
   "revision": "preview-v3-audio-led",
-  "hashes": {
+  "method": "Read-only browser DOM observations during real media playback; no listening attestation",
+  "inputHashes": {
     "public/soundtrack.m4a": "e8f3cd23ed692aca32c5bc0d9705e0f5b7506f580f0175d17a459fdb19b4598c",
     "public/review-source.mp4": "21383d7d450c2feabe49ca8f14d16e8dcd7d0a82c8f27e420a35c48dc1766cdf",
     "public/artwork.png": "6f2335749f267857af9cdd042c272e24231feac60d059dd66bd1168716d778d1",
@@ -23,5 +23,54 @@
     "review/index.html": "ac39f0d6ae0013683628c2788a74c66311a837db28c826fb3c4fc3dd499a55e3",
     "package.json": "d83656a1ab438c9f302ce2a37a6718c67c3cde8e08cb7d65219bf16653dd5785",
     "package-lock.json": "d4b0e69be2a503ebb3f4c14d2fe42c53ce902d8285e0ac39ddc2d7e05797aecf"
-  }
+  },
+  "observations": [
+    {
+      "format": "portrait",
+      "rate": 1,
+      "startSeconds": 69,
+      "observedEndSeconds": 213.272993,
+      "mediaError": null,
+      "diagnostics": {
+        "frames": 7500,
+        "meanMs": 0.32595999992688496,
+        "maxMs": 2.300000011920929,
+        "recentP95Ms": 0.5,
+        "frameIntervalP95Ms": 34.400000005960464,
+        "frameIntervalMaxMs": 36.900000005960464,
+        "clockErrorMaxMs": 8.329666666668345,
+        "sceneRebuilds": 1
+      }
+    },
+    {
+      "format": "landscape",
+      "rate": 0.75,
+      "startSeconds": 69,
+      "observedPauseSeconds": 121.948276,
+      "diagnostics": {
+        "frames": 780,
+        "meanMs": 0.2764102560205337,
+        "maxMs": 1.5,
+        "recentP95Ms": 0.5,
+        "frameIntervalP95Ms": 34,
+        "frameIntervalMaxMs": 83.40000000596046,
+        "clockErrorMaxMs": 8.333333333325754,
+        "sceneRebuilds": 1
+      },
+      "note": "Periodic diagnostic record, not a count of every callback in the complete wall-clock interval."
+    }
+  ],
+  "functionalChecks": [
+    "Audio element ended normally with no media error",
+    "Playback-speed selector applied 0.75 and returned to 1",
+    "Paused format switch updated composition",
+    "Deferred timing inspector opened to KB-018 at 121.948276 seconds",
+    "No captured console warning or error"
+  ],
+  "limits": [
+    "DOM update measurements exclude compositor and hardware audio/display latency",
+    "Callback intervals and clock errors retain recent 1200 samples; DOM p95 retains recent 600; diagnostics update every 60 measured frames",
+    "Observed cadence does not prove uninterrupted 60 fps playback",
+    "No actual-audio review checkboxes were marked; acoustic timing and complete listening review remain pending"
+  ]
 }
