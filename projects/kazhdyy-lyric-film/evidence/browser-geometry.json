@@ -1,17 +1,22 @@
 {
   "status": "PASS",
-  "states": 506,
-  "glyphs": 8682,
+  "states": 3086,
+  "glyphs": 53116,
   "minimumSameRowGap": 17.85400390625,
   "failureCount": 0,
   "failures": [],
-  "method": "Observed live browser audit at /review/geometry.html. Browser SVG horizontal bounds plus Canvas actual ink ascent/descent with bundled actual fonts; complete cue geometry through every source focus state in both formats. No listening certification.",
-  "previewRevision": "preview-v2-polished",
+  "method": "Observed live browser audit at /review/geometry.html. Browser SVG horizontal bounds plus Canvas actual ink ascent/descent with bundled actual fonts; persistent preview focus and artwork pose checked against static scene output at word midpoints and onset/end boundary frames in both formats. Does not certify actual audio.",
+  "previewRevision": "preview-v3-audio-led",
   "presentationHashes": {
     "src/cues.json": "573647bd16e4b14146becce7ee21e2672a333315ec9143206c77354a2807c11e",
     "src/layout.json": "1fd15ae0e6f15212e6b398924d3ccb5c5cf834dd2b93c1256d09203c0f150ebe",
-    "src/scene.ts": "6dfb58f197c06903f8f76f174bae6b7723e81abbb364a3c227ada9f772b7ab3b",
+    "src/scene.ts": "7b346978083fe1cb1443a98154a5d09b0e366075ef940850d2eb16b08639d324",
     "src/focus.ts": "8338f00947fd5bdbdbfaafa9cb8c832be2ef92b4ea7630b5cd4d599dd76ff43d",
-    "src/review-client.ts": "f58155c1d375a832bac06dc5356207522f849c90114dd66b517497b7a3e4373f"
+    "src/palette.ts": "fcc5b66924ed33b95229c010041304c76be94c84f7be1cc95ca43a16e0e8ddf2",
+    "public/motion.json": "93ba841c13af315a2d3db31272d410dacd455ab8ff283e5428bb21987690fe38",
+    "src/motion.ts": "3dee62fabf6e1d9e93b573211ea0d0c71b1865fec1c2472b5fb4e7b19eeb4b82",
+    "src/preview-painter.ts": "095081d50387ee76b2803b3df45046165e50b343ad89426911c02f5ee5aad849",
+    "src/schema.ts": "f4a36df1a6ccd9db2b5f268ec9143638907cf00ed26c7b8b73746c0a093e5f87",
+    "src/review-client.ts": "53b7f5d7926b787f0001f86cdf8eb9095814ef1e2cf7069932d4878fb5e3f2b2"
   }
 }

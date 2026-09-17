@@ -22,6 +22,16 @@ For calmer arrangements, begin with a compact supporting spectrum and a lower ce
 
 Document each track's maximum travel, opacity, thickness, palette, placement and fade behavior. Keep artistic scaling separate from the stored measured bands and the lyric event map. A quiet profile may omit transient overreach and hero states entirely. Review its encoded visibility and relationship to the source picture at native and mobile sizes before increasing motion.
 
+## Give every gesture a purpose
+
+Before adding detail, identify what it contributes: source imagery, lyric hierarchy, measured musical activity or an intentional section transition. Keep one dominant response. Remove a decorative element when its meaning, location or timing competes with those roles. A three-color treatment does not require extra contours, recoloring or overlays; preserving the original illustration can provide the stronger focal point.
+
+For a static source picture, a short pulse can follow selected, sample-indexed attacks while the camera remains still between them. If attacks come from a separated stem, corroborate them in the original mix and retain rejected candidates in the evidence. An uncertain event can be omitted. Do not compensate for picture motion by shifting unrelated lyric events.
+
+Evaluate playback implementation separately from the timeline. Keep static artwork and filters mounted; redraw hidden analysis tools only when opened. An audio-only media element avoids unnecessary source-video decoding when the preview uses a static illustration. Record DOM update cost, animation-callback cadence and media-clock agreement separately. Frame rounding and low DOM cost do not establish end-to-end audio/display latency, a guaranteed browser frame rate or completed listening review.
+
+The [current bilingual preview's purpose audit](../projects/kazhdyy-lyric-film/evidence/motion-review.md) documents one application of these principles; it is implementation evidence, not a prescribed visual template.
+
 ## Historical Tanisea response and expanded-line target
 
 The checked-in source derives one `masterLevel` from already compressed spectrum bars, clamps `energy` to a narrow range, and holds recent FFT peaks. In the outro, the accent-line width is:
