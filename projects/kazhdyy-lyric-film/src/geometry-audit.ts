@@ -3,6 +3,7 @@ import layouts from './layout.json';
 import bands from '../public/science.json';
 import {parseData} from './schema.ts';
 import {sceneSvg} from './scene.ts';
+import {shadowSeed} from './shadows.ts';
 import {createPreviewPainter} from './preview-painter.ts';
 const data=parseData(raw),host=document.getElementById('host')!,output=document.getElementById('result')!;
 await document.fonts.load('500 82px LyricSans');await document.fonts.load('700 116px LyricSans');
@@ -14,6 +15,9 @@ for(const format of ['landscape','portrait'] as const){
   const times=[...new Set([cue.startSample,...cue.ru.flatMap(w=>[Math.round((w.startSample+w.endSample)/2),...[w.startSample,w.endSample].flatMap(s=>[-1,0,1].map(offset=>Math.round((Math.round(s/data.sampleRate*60)+offset)/60*data.sampleRate)))])])].filter(s=>s>=cue.visibleFrom&&s<cue.visibleUntil);let baseline:string|undefined;
   for(const time of times){
    const frame=Math.round(time/data.sampleRate*60);painter.paint(frame,format);states++;const reference=sceneSvg(frame,format,data,layouts,bands);const expected=new Map([...reference.matchAll(/data-word="([^"]+)"[^>]*fill="([^"]+)"/g)].map(m=>[m[1],m[2]]));for(const word of host.querySelectorAll('[data-word]'))if(word.getAttribute('fill')!==expected.get(word.getAttribute('data-word')??''))failures.push(`${format}/${cue.id}: painter focus mismatch`);const referencePose=/id="art-pose" transform="([^"]+)"/.exec(reference)?.[1];if(host.querySelector('#art-pose')?.getAttribute('transform')!==referencePose)failures.push('Painter pose mismatch');
+   if(host.querySelector('#shadow-seed')?.getAttribute('seed')!==String(shadowSeed(frame)))failures.push('Painter shadow seed mismatch');
+   const expectedBars=new Map([...reference.matchAll(/<path d="([^"]+)" data-band="([^"]+)"/g)].map(m=>[m[2],m[1]]));
+   for(const bar of host.querySelectorAll('[data-band]'))if(bar.getAttribute('d')!==expectedBars.get(bar.getAttribute('data-band')??''))failures.push('Painter spectrum mismatch');
    const words=[...host.querySelectorAll<SVGTextElement>('text[data-word]')];
    if(words.length!==cue.ru.length+cue.en.length)failures.push(`${format}/${cue.id}: incomplete visible text`);
    const boxes=words.map(w=>{const r=w.getBBox();ctx.font=`500 ${l.fontSize}px LyricSans`;const ink=ctx.measureText(w.textContent??'');const baseline=Number(w.getAttribute('y'));return {id:w.dataset.word!,x:r.x,y:baseline-ink.actualBoundingBoxAscent,width:r.width,height:ink.actualBoundingBoxAscent+ink.actualBoundingBoxDescent,baseline};});glyphs+=boxes.length;

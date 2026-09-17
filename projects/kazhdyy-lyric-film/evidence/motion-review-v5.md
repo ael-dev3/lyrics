@@ -1,10 +1,10 @@
-# Preview v6: voice-linked shadow static
+# Preview v5: exact section dynamics
 
-**Revision: `preview-v6-shadow-static`. Current preview ready; full rendering awaits current-revision approval.** No full film has been rendered. The accepted v3 identity and earlier diagnostic checks remain separate historical evidence.
+**Revision: `preview-v5-section-dynamics`. Current preview ready; full rendering awaits current-revision approval.** No full film has been rendered. The accepted v3 identity and earlier diagnostic checks remain separate historical evidence.
 
 ## Visual hierarchy
 
-The original illustration geometry stays completely still. Fine ivory noise shifts inside the darkest source regions; the spectrum carries the larger musical movement; Russian and English retain equal fixed word geometry and source-linked color emphasis. Ink, ivory and vermilion remain the only authored base colors.
+The original illustration stays completely still. The spectrum carries the musical movement; Russian and English retain equal fixed word geometry and source-linked color emphasis. Ink, ivory and vermilion remain the only authored base colors.
 
 | Time window | Strength | Maximum authored bar height |
 | --- | --- | ---: |
@@ -27,21 +27,13 @@ This is an artistic display transform. A separated stem can contain instrumental
 
 The [measurement manifest](../analysis/vocal-energy-manifest.json), [shared mapper](../src/visualizer.ts) and [full-timeline section checks](vocal-response-check.json) record the exact method. Observed peak heights are 38.26 px in normal material, 108.46 px in the first medium section, 107.99 px in the second medium section, and 297 px in the strongest section.
 
-## Shadow texture
-
-The 384 events come from local peaks in isolated-vocal spectral-shape change over 30 ms, with a smaller positive-level-change contribution. A −32 dBFS gate, percentile threshold and 240 ms event spacing prevent constant free-running noise. Each event produces three deterministic grain states over five frames, then holds until the next event. This is a musical texture map, not speaker recognition or a new lyric clock. Stem artifacts remain possible.
-
-Only original pixels below 20% luminance enter the mask. Red source pixels are explicitly excluded, and three-pixel erosion protects the silhouette and hatch lines. An ivory layer at 20% opacity introduces no fourth base color. Picture position, scale, lyric geometry and exact v5 strength windows stay fixed. The [shadow manifest](../analysis/shadow-manifest.json) and [shadow checks](shadow-check.json) preserve the method and inspection limits.
-
 ## Verification
 
 - Tests check the exact boundaries and every one of the 12,798 frames. All frames outside the selected windows use normal travel. The picture transform is identical throughout both formats.
-- The live browser audit checks 3,086 focus/boundary states and 53,116 word boxes, including parity of artwork pose, shadow seed and all 64 spectrum paths with the static renderer. No mismatches, collisions or unsafe word placement were observed.
+- The live browser audit checks 3,086 focus/boundary states and 53,116 word boxes, including parity of artwork pose and all 64 spectrum paths with the static renderer. No mismatches, collisions or unsafe word placement were observed.
 - Native stills cover quiet material, both medium sections, the strongest passage, dense bilingual text, intro and ending. The higher bars remain within the artwork panel and preserve the reading region.
-- The [v4 audit](motion-review-v4.md) records two historical 120-frame encoded diagnostics with zero word-focus mismatches. They validate that earlier adapter revision, not a v6 delivery. No full v6 encoded verification is claimed.
+- The [v4 audit](motion-review-v4.md) records two historical 120-frame encoded diagnostics with zero word-focus mismatches. They validate that earlier adapter revision, not a v5 delivery. No full v5 encoded verification is claimed.
 
 The actual-audio checklist remains incomplete. Overall preview approval and technical agreement with the event map do not fabricate listening telemetry. The browser's audio clock drives the scene; hardware latency and display cadence remain separate from frame-grid precision.
-
-The [v5 audit](motion-review-v5.md) preserves the preceding section-only revision.
 
 The [v3 audit](motion-review-v3.md) and its percussion event map remain historical. Neither picture pulses nor that attack map is consumed by the current scene.

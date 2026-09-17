@@ -1,0 +1,15 @@
+import {readFileSync,writeFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+const acoustic=JSON.parse(readFileSync('public/acoustic.json','utf8')) as {hop:number;sampleRate:number;spec:number[][]};
+const vocal=JSON.parse(readFileSync('public/vocal-energy.json','utf8')) as {dbfs:number[]};
+const vectors=acoustic.spec.map(row=>{const x=row.slice(5,72).map(v=>10**(((v/255*75)-85)/20));const norm=Math.hypot(...x);return x.map(v=>v/Math.max(1e-9,norm));});
+const step=acoustic.hop/acoustic.sampleRate;
+const scores=vectors.map((v,i)=>{const before=vectors[Math.max(0,i-3)]!,f=Math.round(i*step*60),db=vocal.dbfs[f]??-120,prior=vocal.dbfs[Math.max(0,f-2)]??-120;if(db<-32)return 0;const shape=Math.max(0,1-v.reduce((sum,x,k)=>sum+x*(before[k]??0),0));return shape*.8+Math.min(1,Math.max(0,db-prior)/12)*.2;});
+const positive=scores.filter(v=>v>0).sort((a,b)=>a-b),threshold=positive[Math.floor(positive.length*.72)]??1;
+const candidates=scores.flatMap((score,i)=>score>=threshold&&scores.slice(Math.max(0,i-5),i+6).every((x,j)=>x<score||(x===score&&j>=Math.min(i,5)))?[{time:i*step,score}]:[]);
+const selected:typeof candidates=[];for(const e of [...candidates].sort((a,b)=>b.score-a.score))if(selected.every(x=>Math.abs(x.time-e.time)>=.24))selected.push(e);selected.sort((a,b)=>a.time-b.time);
+const events=selected.map((e,i)=>({id:`voice-change-${i+1}`,time:e.time,frame:Math.round(e.time*60),score:Number(e.score.toFixed(6))}));
+const sha=(p:string)=>createHash('sha256').update(readFileSync(p)).digest('hex');
+writeFileSync('public/shadow-events.json',JSON.stringify({version:1,fps:60,events},null,2)+'\n');
+writeFileSync('analysis/shadow-manifest.json',JSON.stringify({revision:'preview-v6-shadow-static',sourceAudioSha256:sha('public/soundtrack.m4a'),acousticSha256:sha('public/acoustic.json'),vocalEnergySha256:sha('public/vocal-energy.json'),method:'Local peaks of isolated-vocal spectral-shape change over 30 ms plus positive level change; minimum -32 dBFS vocal gate; 72nd-percentile threshold; 240 ms minimum event spacing.',threshold,candidates:candidates.length,events:events.length,display:{texture:'Fine ivory noise inside original pixels below 20% luminance; source-red exclusion and 3-pixel erosion protect colored landmarks and edges',opacity:.2,seedChanges:'Three deterministic grains over the first five frames of each event, then held until the next event',artworkTransform:'unchanged',visualizerWindows:'unchanged from v5'},limitations:'Spectral changes are acoustic feature candidates, not recognized phonemes or exact semantic voice-change annotations. Stem artifacts remain possible.'},null,2)+'\n');
+console.log({threshold,candidates:candidates.length,selected:events.length,first:events.slice(0,4)});

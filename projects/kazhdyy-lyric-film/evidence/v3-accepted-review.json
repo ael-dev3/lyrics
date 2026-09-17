@@ -1,6 +1,6 @@
 {
   "song": "3yDdoi1c7-8",
-  "revision": "preview-v6-shadow-static",
+  "revision": "preview-v3-audio-led",
   "inputHashes": {
     "public/soundtrack.m4a": "e8f3cd23ed692aca32c5bc0d9705e0f5b7506f580f0175d17a459fdb19b4598c",
     "public/review-source.mp4": "21383d7d450c2feabe49ca8f14d16e8dcd7d0a82c8f27e420a35c48dc1766cdf",
@@ -12,22 +12,19 @@
     "source/supplied-lyrics.txt": "f038e331e029caf1084ee0adda1593bbbeb5dd425709000f72366068b6d28060",
     "src/cues.json": "573647bd16e4b14146becce7ee21e2672a333315ec9143206c77354a2807c11e",
     "src/layout.json": "1fd15ae0e6f15212e6b398924d3ccb5c5cf834dd2b93c1256d09203c0f150ebe",
-    "src/scene.ts": "82978de10e239963bae352e0d8c847d80b46ede8af47f19800b42c39f67e891a",
+    "src/scene.ts": "7b346978083fe1cb1443a98154a5d09b0e366075ef940850d2eb16b08639d324",
     "src/focus.ts": "8338f00947fd5bdbdbfaafa9cb8c832be2ef92b4ea7630b5cd4d599dd76ff43d",
     "src/palette.ts": "fcc5b66924ed33b95229c010041304c76be94c84f7be1cc95ca43a16e0e8ddf2",
-    "public/shadow-events.json": "f4a50c39a7602a3ee109ce4b8fe195713b564c3d3c5d9ba7ef9f13ad4e0aac03",
-    "src/shadows.ts": "0795e31f5ab5783e2bdcbc9d43fea0906e583d01853c46980f91beaae5c58e38",
-    "public/vocal-energy.json": "838ab844afec2272c4869c91495fd733dca91e639672b0f3f43db0c47c0c9027",
-    "src/visualizer.ts": "463fc4446617214a6412f83fe280a76f3fbc084af34aa34332cee9d23e0863df",
-    "src/motion.ts": "c92c59feed40283811006d024bc50321c456e3a08e570f3b71eaf83560112473",
-    "src/preview-painter.ts": "0e01d65cd4fe997309c02825b58f895a39941bb32f17e7e4cdfaf48500e96a8c",
+    "public/motion.json": "93ba841c13af315a2d3db31272d410dacd455ab8ff283e5428bb21987690fe38",
+    "src/motion.ts": "3dee62fabf6e1d9e93b573211ea0d0c71b1865fec1c2472b5fb4e7b19eeb4b82",
+    "src/preview-painter.ts": "095081d50387ee76b2803b3df45046165e50b343ad89426911c02f5ee5aad849",
     "src/schema.ts": "f4a36df1a6ccd9db2b5f268ec9143638907cf00ed26c7b8b73746c0a093e5f87",
     "src/review-client.ts": "53b7f5d7926b787f0001f86cdf8eb9095814ef1e2cf7069932d4878fb5e3f2b2",
     "review/index.html": "ac39f0d6ae0013683628c2788a74c66311a837db28c826fb3c4fc3dd499a55e3",
     "package.json": "d83656a1ab438c9f302ce2a37a6718c67c3cde8e08cb7d65219bf16653dd5785",
     "package-lock.json": "d4b0e69be2a503ebb3f4c14d2fe42c53ce902d8285e0ac39ddc2d7e05797aecf"
   },
-  "status": "preview-review-pending",
+  "status": "accepted-for-production",
   "actualAudioReviewComplete": false,
   "translationReviewComplete": true,
   "allCuesAllFormatsComplete": false,
@@ -298,11 +295,17 @@
     }
   ],
   "authorization": {
-    "approved": false,
-    "revision": null,
-    "evidence": null
+    "approved": true,
+    "revision": "preview-v3-audio-led",
+    "evidence": "render-authorization.json"
   },
-  "deliveryAcceptance": "pending current revision",
+  "deliveryAcceptance": "Current preview accepted for production; encoded delivery verification pending",
   "publicationStatus": "source preview only; full media not published",
-  "note": "Technical checks and positive direction feedback do not authorize production rendering."
+  "note": "Scoped owner acceptance of this exact preview permits the requested production run. This does not label the detailed synchronization review complete.",
+  "reviewMode": "owner-approved-preview",
+  "acceptance": {
+    "authorizationId": "kazhdyy-v3-production-2026-09-17",
+    "evidenceBasis": "The project owner accepted the current playable v3 preview and explicitly requested production rendering after its review handoff.",
+    "coverageLimit": "Overall preview acceptance is recorded. Per-cue normal/slow listening and audiovisual-format telemetry was not supplied; incomplete detailed-review fields are preserved."
+  }
 }

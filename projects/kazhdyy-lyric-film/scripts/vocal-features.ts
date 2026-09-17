@@ -1,0 +1,13 @@
+import {readFileSync,writeFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+const sampleRate=44100,fps=60,frames=12798,windowSamples=1412;
+const bytes=readFileSync('analysis/vocals44.f32'),pcm=new Float32Array(bytes.buffer,bytes.byteOffset,bytes.length/4),count=pcm.length/2,prefix=new Float64Array(count+1);
+for(let i=0;i<count;i++)prefix[i+1]=prefix[i]!+((pcm[i*2]??0)**2+(pcm[i*2+1]??0)**2)/2;
+const dbfs=Array.from({length:frames},(_,f)=>{const c=Math.round(f/fps*sampleRate),a=Math.max(0,c-windowSamples/2),z=Math.min(count,c+windowSamples/2);return 10*Math.log10(Math.max(1e-12,(prefix[z]!-prefix[a]!)/Math.max(1,z-a)));});
+const eligible=dbfs.filter(v=>v>-45).sort((a,b)=>a-b),quantile=(p:number)=>eligible[Math.floor((eligible.length-1)*p)]!;
+const calibration={floorDb:quantile(.35),ceilingDb:quantile(.995),exponent:1.5};
+const sha=(b:Uint8Array)=>createHash('sha256').update(b).digest('hex');
+const write=(p:string,v:unknown)=>writeFileSync(p,JSON.stringify(v,null,2)+'\n');
+write('public/vocal-energy.json',{version:1,sampleRate,fps,frames,windowSamples,calibration,dbfs:dbfs.map(v=>Number(v.toFixed(4)))});
+write('analysis/vocal-energy-manifest.json',{sourceAudioSha256:sha(readFileSync('public/soundtrack.m4a')),vocalPcmSha256:sha(bytes),sampleRate,channels:2,samples:count,fps,frames,method:'32.018 ms centered stereo RMS at each composition frame. No causal smoothing, beat quantization, peak hold or lyric-time offset.',calibration:{...calibration,eligibleFloorDb:-45,eligibleFrames:eligible.length,floorPercentile:35,ceilingPercentile:99.5},display:{normalTravel:36,mediumTravel:'90 + 18*vocalDrive',strongTravel:'170 + 124*vocalDrive',mediumIntervalsSeconds:[[70,88],[158,175]],strongIntervalSeconds:[175,190],intervals:'Start inclusive, end exclusive. 300 ms smooth transitions stay inside intervals; medium blends directly into strong at 175 seconds.',minimumBarHeight:3,maximumBarHeight:297,artworkMotion:'none',equation:'3 + clamp((bandDb + 64) / 55)^1.35 * travelAt(frame); vocalDrive has no effect outside designated emphasis sections'},limitations:'Separated-vocal energy can contain instrumental leakage and reverberation. This is an artistic response to a measured stem, not a dBFS axis, word boundary or perceptual emotion score. Raw full-mix spectrum measurements remain unchanged.'});
+console.log({frames,calibration,maxDb:Math.max(...dbfs)});

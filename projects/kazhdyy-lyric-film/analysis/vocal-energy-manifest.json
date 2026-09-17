@@ -1,0 +1,44 @@
+{
+  "sourceAudioSha256": "e8f3cd23ed692aca32c5bc0d9705e0f5b7506f580f0175d17a459fdb19b4598c",
+  "vocalPcmSha256": "df4d3541ff209e43e9fbddc7f51175972a3194f7351e81a52bf48637945d5414",
+  "sampleRate": 44100,
+  "channels": 2,
+  "samples": 9405889,
+  "fps": 60,
+  "frames": 12798,
+  "method": "32.018 ms centered stereo RMS at each composition frame. No causal smoothing, beat quantization, peak hold or lyric-time offset.",
+  "calibration": {
+    "floorDb": -24.761013066780997,
+    "ceilingDb": -10.315399318091652,
+    "exponent": 1.5,
+    "eligibleFloorDb": -45,
+    "eligibleFrames": 12144,
+    "floorPercentile": 35,
+    "ceilingPercentile": 99.5
+  },
+  "display": {
+    "normalTravel": 36,
+    "mediumTravel": "90 + 18*vocalDrive",
+    "strongTravel": "170 + 124*vocalDrive",
+    "mediumIntervalsSeconds": [
+      [
+        70,
+        88
+      ],
+      [
+        158,
+        175
+      ]
+    ],
+    "strongIntervalSeconds": [
+      175,
+      190
+    ],
+    "intervals": "Start inclusive, end exclusive. 300 ms smooth transitions stay inside intervals; medium blends directly into strong at 175 seconds.",
+    "minimumBarHeight": 3,
+    "maximumBarHeight": 297,
+    "artworkMotion": "none",
+    "equation": "3 + clamp((bandDb + 64) / 55)^1.35 * travelAt(frame); vocalDrive has no effect outside designated emphasis sections"
+  },
+  "limitations": "Separated-vocal energy can contain instrumental leakage and reverberation. This is an artistic response to a measured stem, not a dBFS axis, word boundary or perceptual emotion score. Raw full-mix spectrum measurements remain unchanged."
+}
