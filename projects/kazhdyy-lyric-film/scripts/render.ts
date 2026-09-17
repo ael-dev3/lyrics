@@ -5,6 +5,7 @@ import {createHash} from 'node:crypto';
 import {spawn} from 'node:child_process';
 import {resolve} from 'node:path';
 import {assertProductionGate,inputHashes} from './production-contract.ts';
+import {assertArtworkCache} from './artwork-cache-contract.ts';
 const arg=(key:string,fallback:string)=>{const i=process.argv.indexOf(key);return i>=0?process.argv[i+1]??fallback:fallback;};
 const production=process.argv.includes('--production'),diagnostic=process.argv.includes('--diagnostic');
 if(production===diagnostic)throw Error('Choose one explicit production or diagnostic mode');
@@ -23,6 +24,7 @@ const parts=production?16:1,chunks=[];
 for(let i=0;i<parts;i++){
  assertProductionGate();const disk=statfsSync('.');if(disk.bavail*disk.bsize<8e9)throw Error('Insufficient free space for bounded capture');
  const first=production?Math.floor(i*composition.durationInFrames/parts):Math.round(start*60),last=production?Math.floor((i+1)*composition.durationInFrames/parts)-1:Math.min(composition.durationInFrames-1,first+count-1);
+ assertArtworkCache(format,first,last);
  const stem=production?`part-${String(i+1).padStart(2,'0')}`:'diagnostic',reference=`output/${format}-segments/${stem}.mov`,encoded=`output/${format}-segments/${stem}.mp4`,receipt=encoded+'.json';
  let cached=false;if(existsSync(encoded)&&existsSync(receipt)){const r=JSON.parse(readFileSync(receipt,'utf8'));cached=r.fingerprint===fingerprint&&r.first===first&&r.last===last&&r.sha256===await sha(encoded);}
  if(!cached){let tick=0;status({phase:'Capturing',segment:i+1,segments:parts,frames:first,totalFrames:composition.durationInFrames});

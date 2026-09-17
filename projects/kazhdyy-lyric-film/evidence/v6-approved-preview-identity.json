@@ -1,19 +1,7 @@
 {
-  "authorizationId": "kazhdyy-v6-production-2026-09-17",
   "song": "3yDdoi1c7-8",
-  "previewRevision": "preview-v6-shadow-static",
-  "status": "authorized",
-  "previewAccepted": true,
-  "fullRenderAuthorized": true,
-  "approvedBaseRevision": "preview-v3-audio-led",
-  "evidenceBasis": "The project owner accepted the current v6 shadow-static preview and explicitly requested rendering after review.",
-  "formats": [
-    "landscape",
-    "portrait"
-  ],
-  "authorizedOn": "2026-09-17",
-  "scope": "Render both approved aspect ratios without changing the current scene, audio, timings or translation. Verify deliveries and prepare the established local upload kit.",
-  "productionHashes": {
+  "revision": "preview-v6-shadow-static",
+  "hashes": {
     "public/soundtrack.m4a": "e8f3cd23ed692aca32c5bc0d9705e0f5b7506f580f0175d17a459fdb19b4598c",
     "public/review-source.mp4": "21383d7d450c2feabe49ca8f14d16e8dcd7d0a82c8f27e420a35c48dc1766cdf",
     "public/artwork.png": "6f2335749f267857af9cdd042c272e24231feac60d059dd66bd1168716d778d1",
@@ -37,16 +25,6 @@
     "src/review-client.ts": "53b7f5d7926b787f0001f86cdf8eb9095814ef1e2cf7069932d4878fb5e3f2b2",
     "review/index.html": "ac39f0d6ae0013683628c2788a74c66311a837db28c826fb3c4fc3dd499a55e3",
     "package.json": "d83656a1ab438c9f302ce2a37a6718c67c3cde8e08cb7d65219bf16653dd5785",
-    "package-lock.json": "d4b0e69be2a503ebb3f4c14d2fe42c53ce902d8285e0ac39ddc2d7e05797aecf",
-    "src/ArtworkCache.tsx": "c2681cfdeb66bdd8fc5bf7c491e64e3aeaf74ed737fc53cc5121be8b94f84614",
-    "scripts/artwork-cache-contract.ts": "bee22daeee0fa042996a47ac9d4e21118b7812b360e6dc6336a8d6331c669850",
-    "scripts/render-artwork-cache.ts": "131d792fe2321886a4c867174fe059c1a1cd0f4a15d253fe1858e1a9b0f7fa75",
-    "src/Still.tsx": "f120675f71345887df0b2e7ba42025869d23c492871d1127d94603a5d02931c1",
-    "src/Film.tsx": "87f45ef657f72fdaf99f9766636e74985ad78de4ad0b400b5e9150275d07639d",
-    "src/production-gate.ts": "b1f15efb64e7eac8bff15011a9e1615223ac0171ec36f8ed47010b751f9e0ec4",
-    "scripts/production-contract.ts": "c989777d70a84cc988e2f9ce23fadf87096c88fbeacfff79a4c31525162129fb",
-    "scripts/production-gate.ts": "d94dd8263f991945bab50480cac7714957e95c6ead205ad934073b5085ebe426",
-    "scripts/render.ts": "c9867ed130fbfd8559a57b93d83ac2529c7c8e136737df0079736a8d137e02c5"
-  },
-  "adapterNote": "Approved artwork layers are rasterized once per deterministic shadow state at the capture scale; cached panel pixels are checked against the original renderer before production. Preview scene, timing and audio unchanged."
+    "package-lock.json": "d4b0e69be2a503ebb3f4c14d2fe42c53ce902d8285e0ac39ddc2d7e05797aecf"
+  }
 }

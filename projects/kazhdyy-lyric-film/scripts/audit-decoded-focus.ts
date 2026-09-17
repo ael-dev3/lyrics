@@ -1,5 +1,6 @@
 import {spawn} from 'node:child_process';
-import {readFileSync,writeFileSync} from 'node:fs';
+import {readFileSync,writeFileSync,createReadStream} from 'node:fs';
+import {createHash} from 'node:crypto';
 import {basename} from 'node:path';
 import {GlobalFonts,createCanvas} from '@napi-rs/canvas';
 import {parseData} from '../src/schema.ts';
@@ -28,4 +29,6 @@ const processFrame=()=>{const globalFrame=offset+frame;const cue=visibleCue(data
 for await(const chunk of child.stdout){let at=0;while(at<chunk.length){const amount=Math.min(bytes-filled,chunk.length-at);chunk.copy(buffer,filled,at,at+amount);filled+=amount;at+=amount;if(filled===bytes){processFrame();filled=0;}}}
 const code=await new Promise<number|null>(resolve=>child.exitCode!==null?resolve(child.exitCode):child.on('close',resolve));if(code!==0||filled)throw Error('Incomplete decode '+errors);
 const negative=process.argv.includes('--negative-control');
-const report={status:mismatches.length||ambiguous?'inspection required':'passed',format,offset,negativeControl:negative,decodedFrames:frame,wordStates,ambiguous,mismatchCount:mismatches.length,mismatches:mismatches.slice(0,100),method:'Bundled-font masks select eroded glyph-interior pixels. Median red-minus-blue separates warm active words from neutral inactive words for all visible Russian and English words in every decoded frame. Verifies displayed state, not acoustic truth.'};writeFileSync(`evidence/${format}-${basename(path)}${negative?'.negative-control':''}.focus-verification.json`,JSON.stringify(report,null,2)+'\n');console.log({...report,mismatches:report.mismatches.slice(0,6)});if(mismatches.length||ambiguous)process.exitCode=1;
+const hash=createHash('sha256');for await(const part of createReadStream(path))hash.update(part);
+const identity=JSON.parse(readFileSync('evidence/preview-identity.json','utf8'));
+const report={revision:identity.revision,inputFile:basename(path),inputSha256:hash.digest('hex'),status:mismatches.length||ambiguous?'inspection required':'passed',format,offset,negativeControl:negative,decodedFrames:frame,wordStates,ambiguous,mismatchCount:mismatches.length,mismatches:mismatches.slice(0,100),method:'Bundled-font masks select eroded glyph-interior pixels. Median red-minus-blue separates warm active words from neutral inactive words for all visible Russian and English words in every decoded frame. Verifies displayed state, not acoustic truth.'};writeFileSync(`evidence/${format}-${basename(path)}${negative?'.negative-control':''}.focus-verification.json`,JSON.stringify(report,null,2)+'\n');console.log({...report,mismatches:report.mismatches.slice(0,6)});if(mismatches.length||ambiguous)process.exitCode=1;

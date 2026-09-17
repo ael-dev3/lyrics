@@ -4,7 +4,7 @@ import {identityPaths} from '../src/identity.ts';
 import type {PreviewIdentity} from '../src/identity.ts';
 import {parseData,object,str} from '../src/schema.ts';
 import {checkProductionReview} from '../src/production-gate.ts';
-export const productionPaths=[...identityPaths,'src/Still.tsx','src/Film.tsx','src/production-gate.ts','scripts/production-contract.ts','scripts/production-gate.ts','scripts/render.ts'] as const;
+export const productionPaths=[...identityPaths,'src/ArtworkCache.tsx','scripts/artwork-cache-contract.ts','scripts/render-artwork-cache.ts','src/Still.tsx','src/Film.tsx','src/production-gate.ts','scripts/production-contract.ts','scripts/production-gate.ts','scripts/render.ts'] as const;
 export const inputHashes=()=>Object.fromEntries(productionPaths.map(path=>[path,createHash('sha256').update(readFileSync(path)).digest('hex')]));
 export function assertProductionGate(){
  const read=(p:string)=>JSON.parse(readFileSync(p,'utf8')) as unknown;

@@ -27,7 +27,7 @@
     "package.json": "d83656a1ab438c9f302ce2a37a6718c67c3cde8e08cb7d65219bf16653dd5785",
     "package-lock.json": "d4b0e69be2a503ebb3f4c14d2fe42c53ce902d8285e0ac39ddc2d7e05797aecf"
   },
-  "status": "accepted-for-production",
+  "status": "preview-review-pending",
   "actualAudioReviewComplete": false,
   "translationReviewComplete": true,
   "allCuesAllFormatsComplete": false,
@@ -298,17 +298,11 @@
     }
   ],
   "authorization": {
-    "approved": true,
-    "revision": "preview-v6-shadow-static",
-    "evidence": "Explicit current-preview rendering instruction after v6 review handoff"
+    "approved": false,
+    "revision": null,
+    "evidence": null
   },
-  "deliveryAcceptance": "current v6 preview accepted for production",
+  "deliveryAcceptance": "pending current revision",
   "publicationStatus": "source preview only; full media not published",
-  "note": "Technical checks and positive direction feedback do not authorize production rendering.",
-  "reviewMode": "owner-approved-preview",
-  "acceptance": {
-    "authorizationId": "kazhdyy-v6-production-2026-09-17",
-    "evidenceBasis": "The project owner accepted the current v6 shadow-static preview and explicitly requested rendering after review.",
-    "coverageLimit": "Overall current-preview acceptance is recorded separately from the incomplete detailed actual-audio checklist. No per-cue listening telemetry is fabricated."
-  }
+  "note": "Technical checks and positive direction feedback do not authorize production rendering."
 }

@@ -1,0 +1,13 @@
+import {spawnSync} from 'node:child_process';
+import {mkdirSync,readFileSync,writeFileSync,copyFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+import {assertProductionGate} from './production-contract.ts';
+assertProductionGate();
+const format=process.argv[2];if(format!=='landscape'&&format!=='portrait')throw Error('Expected format');
+const width=format==='landscape'?1920:1080,height=format==='landscape'?1080:1920,file=`output/Kazhdyy-${format}-${width}x${height}-60fps.mp4`;
+const times=[8,18.6,43.75,55.72,72.2,87.95,88,121.1,158.3,174.95,175.05,185.7333333333,190,207,213.2],frames=times.map(t=>Math.round(t*60));
+const dir=`evidence/stills/production-${format}`;mkdirSync(dir,{recursive:true});
+const r=spawnSync('ffmpeg',['-v','error','-y','-threads','3','-i',file,'-vf',`select='${frames.map(f=>`eq(n,${f})`).join('+')}'`,'-fps_mode','vfr',`${dir}/frame-%02d.png`],{encoding:'utf8'});if(r.status!==0)throw Error(r.stderr);
+const inventory=frames.map((frame,i)=>{const path=`${dir}/frame-${String(i+1).padStart(2,'0')}.png`,b=readFileSync(path);return {frame,timeSeconds:frame/60,path,bytes:b.length,sha256:createHash('sha256').update(b).digest('hex')};});
+writeFileSync(`evidence/${format}-decoded-stills.json`,JSON.stringify({revision:'preview-v6-shadow-static',source:file,frames:inventory,scope:'Frames decoded from the final delivery; inspected checkpoints do not certify every raster frame or acoustic boundary.'},null,2)+'\n');
+console.log({format,frames:inventory.length,directory:dir});

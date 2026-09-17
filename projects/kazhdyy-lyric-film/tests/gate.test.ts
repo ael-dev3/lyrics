@@ -18,3 +18,13 @@ test('scoped accepted preview requires current explicit authorization and honest
  for(const r of [{...review,cues:[]},{...review,actualAudioReviewComplete:true},{...review,unresolvedDefects:['defect']}])assert.throws(()=>checkProductionReview(r,id,id.hashes,['1'],auth));
  assert.throws(()=>checkProductionReview(review,id,{...id.hashes,audio:'changed'},['1'],auth));
 });
+
+test('v6 approval applies only to the frozen shadow-static revision',()=>{
+ const id={song:'3yDdoi1c7-8',revision:'preview-v6-shadow-static',hashes:{audio:'abc',timing:'def'}};
+ const auth={song:id.song,previewRevision:id.revision,authorizationId:'kazhdyy-v6-production-2026-09-17',fullRenderAuthorized:true,previewAccepted:true};
+ const review={...valid(),song:id.song,revision:id.revision,status:'accepted-for-production',reviewMode:'owner-approved-preview',actualAudioReviewComplete:false,allCuesAllFormatsComplete:false,acceptance:{authorizationId:auth.authorizationId,evidenceBasis:'synthetic fixture',coverageLimit:'Granular listening log unknown'}};
+ assert.equal(checkProductionReview(review,id,id.hashes,['1'],auth),true);
+ assert.throws(()=>checkProductionReview(review,id,id.hashes,['1'],{...auth,fullRenderAuthorized:false}));
+ assert.throws(()=>checkProductionReview(review,id,id.hashes,['1'],{...auth,authorizationId:'kazhdyy-v3-production-2026-09-17'}));
+ assert.throws(()=>checkProductionReview({...review,revision:'preview-v5-section-dynamics'},id,id.hashes,['1'],auth));
+});

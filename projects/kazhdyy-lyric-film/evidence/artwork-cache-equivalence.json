@@ -1,0 +1,44 @@
+{
+  "status": "PASS",
+  "revision": "preview-v6-shadow-static",
+  "cacheKey": "e8e3f9c1766f804c669357fbbf8db5e9651ee897478f1da94ff5843a8b972487",
+  "scale": 2,
+  "formats": [
+    {
+      "format": "landscape",
+      "globalFrameRange": [
+        11088,
+        11207
+      ],
+      "comparedFrames": 120,
+      "allChannelsMeanSquaredError": 0,
+      "allFramesPsnr": "infinite (identical decoded pixels)",
+      "wordStates": 2040,
+      "focusMismatches": 0,
+      "ambiguousWords": 0,
+      "staticReferenceSha256": "911a8467b29b31e5b952852ad873ea2f8671e8f98a004c7f873fe5aa062d05d8",
+      "cachedReferenceSha256": "911a8467b29b31e5b952852ad873ea2f8671e8f98a004c7f873fe5aa062d05d8"
+    },
+    {
+      "format": "portrait",
+      "globalFrameRange": [
+        11088,
+        11207
+      ],
+      "comparedFrames": 120,
+      "allChannelsMeanSquaredError": 0,
+      "allFramesPsnr": "infinite (identical decoded pixels)",
+      "wordStates": 2040,
+      "focusMismatches": 0,
+      "ambiguousWords": 0,
+      "staticReferenceSha256": "2a3b77ab0115708612125911078f1fa8bb8828b6b3f4e18cadf27f9afc868e09",
+      "cachedReferenceSha256": "2a3b77ab0115708612125911078f1fa8bb8828b6b3f4e18cadf27f9afc868e09"
+    }
+  ],
+  "method": "Every decoded ProRes pixel compared between direct approved SVG rendering and cached artwork panels, across the same 120 frames per format. All Y/U/V/alpha differences are zero. Remaining full-film states use the same deterministic scene and raster pipeline; this diagnostic is not a full-film pixel comparison.",
+  "hardwareAccelerationTrial": {
+    "accepted": false,
+    "reason": "Three native shadow-panel comparisons changed pixels; the original renderer backend is retained."
+  },
+  "resourcePolicy": "Default Chromium backend; artwork preparation in 24-state batches with two workers; completed image hashes permit safe resume."
+}
