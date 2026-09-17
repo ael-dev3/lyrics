@@ -1,15 +1,30 @@
 {
   "version": 1,
   "reviewedOn": "2026-09-17",
-  "scope": "The eleven featured song sections in the main README and their project README entry points.",
+  "scope": "The twelve featured song sections in the main README and their project README entry points.",
   "newExtraction": {
     "fps": 60,
     "frameNumbering": "zero-based",
     "capture": "FFmpeg select=eq(n,FRAME), one full-frame PNG; no crop, recolor, text replacement or generated imagery.",
     "sourceIdentity": "New source files matched the recorded delivery SHA-256 before selecting their frames."
   },
-  "review": "All eleven representative images are associated with their song and project README. Sugar Glass now uses a decoded frame from its verified final landscape file; the prior preview screenshot remains in repository history and assets. Historical limitations for other editions remain recorded.",
+  "review": "Every featured song has an associated representative image. The new bilingual preview has a native diagnostic still, explicitly distinguished from decoded final-delivery screenshots. Existing released editions and documented limitations are preserved.",
   "screenshots": [
+    {
+      "song": "каждый, кто делал тебе больно",
+      "image": "assets/kazhdyy-preview-72-2.png",
+      "project": "projects/kazhdyy-lyric-film/README.md",
+      "timestampSeconds": 72.2,
+      "frame": 4332,
+      "edition": "preview-v2-polished; production render not authorized",
+      "selection": "Complete landscape composition, source eyes and figure, inverted chorus plate, equal столе / the table focus and measured spectrum.",
+      "method": "One-frame diagnostic Remotion composition using resolved timestamp props; full uncropped preview. Not decoded from a production film.",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 273156,
+      "sha256": "155d579de0f67af10ac24e91bb7445b605683a0497fd6d0370ef59d54f5400ab",
+      "encoding": "PNG"
+    },
     {
       "song": "Sugar Glass",
       "image": "assets/sugar-glass-90.png",

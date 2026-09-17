@@ -6,7 +6,21 @@ Music films with synchronized lyrics, meaning-linked translations, and audio-rea
 
 **Current style default:** [cinematic lyric presentation](docs/cinematic-lyric-workflow.md) — stable, color-only word or phrase emphasis, precise vocal timing, smooth scene shading and equally prominent bilingual lyrics. Motion intensity follows the song: gentle arrangements can use compact, subdued audio-reactive graphics. The guide includes implemented references and review requirements for future tracks.
 
-[**Sugar Glass**](#sugar-glass) · [**Твои глаза**](#твои-глаза) · [**Прости за любовь — accepted with known gaps**](#прости-за-любовь) · [**Половинка**](#половинка) · [**Life Letters**](#life-letters) · [**Joyride**](#joyride) · [**midnight love**](#midnight-love) · [**Пожары**](#пожары) · [**Отменяй**](#отменяй) · [**Roi × Adore**](#roi--adore) · [**TikTok edition**](#tiktok-edition) · [**Tanisea**](#tanisea) · [**Build and workflow**](#build-and-workflow)
+[**каждый, кто делал тебе больно — preview**](#каждый-кто-делал-тебе-больно) · [**Sugar Glass**](#sugar-glass) · [**Твои глаза**](#твои-глаза) · [**Прости за любовь — accepted with known gaps**](#прости-за-любовь) · [**Половинка**](#половинка) · [**Life Letters**](#life-letters) · [**Joyride**](#joyride) · [**midnight love**](#midnight-love) · [**Пожары**](#пожары) · [**Отменяй**](#отменяй) · [**Roi × Adore**](#roi--adore) · [**TikTok edition**](#tiktok-edition) · [**Tanisea**](#tanisea) · [**Build and workflow**](#build-and-workflow)
+
+## каждый, кто делал тебе больно
+
+**забей, лерочка · Russian + English · full-recording preview · three-color animated treatment**
+
+![Bilingual chorus preview with inverted source artwork and vermilion word focus](assets/kazhdyy-preview-72-2.png)
+
+*Native diagnostic preview frame at 01:12.200. Music and source illustration from the original забей, лерочка / Spooky music upload; illustrator unidentified in the available source metadata. No production film has been rendered.*
+
+Ink, ivory and vermilion frame the original kitchen illustration, animated eyes and steam, enclosing red contours, and a measured 64-band spectrum. Choruses reverse the artwork's ink/paper roles. Equal Russian and English text stays fixed, with complete meaning-linked word emphasis. Both layouts preserve the complete recording.
+
+The polished preview includes 32 cues, inspected held-word release candidates, independent recognition and alignment evidence, and automated checks of every source/target mapping and both layouts. Acoustic uncertainty and pending actual-audio review remain explicit. **Full rendering requires completed synchronization review and approval of this exact revision.**
+
+[Project and local preview](projects/kazhdyy-lyric-film/README.md) · [Detailed review and limits](projects/kazhdyy-lyric-film/evidence/sync-review.md) · [Workflow decisions](projects/kazhdyy-lyric-film/evidence/workflow-study.md) · [Original upload](https://www.youtube.com/watch?v=3yDdoi1c7-8)
 
 ## Sugar Glass
 

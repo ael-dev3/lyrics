@@ -43,6 +43,8 @@ Store every candidate and the selected boundary. Require manual review when cand
 
 Validate that tokens are ordered, line bounds contain their tokens, intervals are positive, and all samples fit the retained decoded audio.
 
+Separate a recognizer's phonetic core from the audible release of a held vowel. Inspect the tail in the original mix and vocal stem; stem RMS can include reverberation or separation leakage. Keep automatic extension limits, spectral overrides and uncertainty visible, and never treat a fixed extension cap as proof of a release. Recompute refinements from an unchanged core draft so repeated runs cannot extend the same word again. Review each repeated phrase independently, and apply the selected source release to its complete translated meaning.
+
 ## 3. Map meaning, not English reading order
 
 Keep English segments stationary. For every performed source group, map the English segment carrying the same meaning. Record:
@@ -158,6 +160,8 @@ For each repeated or high-risk passage, render matched-duration public clips wit
 - README screenshot from a representative revised frame.
 
 Compare presentation behavior, not copied timestamps. Different performances keep their independent sample cues.
+
+Verify that every diagnostic still actually uses its requested timestamp. With a pre-resolved Remotion composition, update its resolved `props` as well as the renderer's `inputProps`; otherwise a retained default can silently produce the same frame under different filenames. Inspect visibly distinct source moments before trusting a contact sheet. For text collision checks, distinguish a font's em box from visible ink: combine browser horizontal bounds with actual glyph ascent/descent, then inspect the image at native and mobile size.
 
 ## 10. Build final media once
 
