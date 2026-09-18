@@ -4,6 +4,7 @@ import {createHash} from 'node:crypto';
 import {assertProductionGate,inputHashes} from './production-contract.ts';
 import {verifyCache} from './raster-contract.ts';
 const args=process.argv.slice(2),production=args.includes('--production');
+if(production&&args.includes('--baseline'))throw Error('The baseline adapter is retained for diagnostics only; use the isolated raster pipeline for production.');
 const run=()=>new Promise<void>((ok,fail)=>{const child=spawn(process.execPath,['--expose-gc','--import','./scripts/memory-guard.ts','scripts/production-gate.ts',...args,'--one-segment'],{stdio:'inherit'});child.on('error',fail);child.on('close',code=>code===0?ok():fail(Error('Isolated render worker exited '+code)));});
 if(!production){await run();}else{
  assertProductionGate();const format=args[args.indexOf('--format')+1];if(format!=='landscape'&&format!=='portrait')throw Error('Explicit format required');

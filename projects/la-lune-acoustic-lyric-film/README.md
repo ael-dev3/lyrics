@@ -1,10 +1,10 @@
-# La Lune — acoustic lunar preview
+# La Lune — acoustic lunar film
 
-**L’Impératrice · French + English · preview-v2-lunar · production authorized**
+**L’Impératrice · French + English · preview-v2-lunar · verified local delivery**
 
-![Lunar preview with equal French and English word emphasis](../../assets/la-lune-acoustic-46-8.png)
+![Final lunar film with equal French and English word emphasis](../../assets/la-lune-acoustic-final-46-8.png)
 
-*Native 1920×1080 diagnostic still at 00:46.800 from the current preview scene. This is a preview image, not a decoded production film. Music: L’Impératrice / microqlima. AI-assisted lunar artwork and lyric presentation created for this edition.*
+*Native 1920×1080 frame at 00:46.800 decoded from the verified final landscape film. Music: L’Impératrice / microqlima. AI-assisted lunar artwork and lyric presentation created for this edition.*
 
 The complete 3:17.555 acoustic recording has 14 bilingual cues: 49 French words and 56 English words. Both 1920×1080 and 1080×1920 layouts use equal language prominence and stable color-only emphasis. English follows the corresponding French meaning; it has no invented vocal timestamps.
 
@@ -27,7 +27,7 @@ npm run preview
 
 Open `http://127.0.0.1:4320/`. The macOS launcher `Start Preview.command` starts the same server with already installed dependencies. The recording starts paused at zero. Buttons switch between 16:9 and 9:16. Normal, 0.75× and 0.5× playback, cue navigation, waveform/spectrogram inspection and local notes support review. Optional links such as `/?t=103.5&format=portrait` open a particular moment. Review notes are local and do not confer render approval.
 
-## Verification and remaining review
+## Verification and review scope
 
 | Check | Result |
 | --- | --- |
@@ -38,7 +38,8 @@ Open `http://127.0.0.1:4320/`. The macOS launcher `Start Preview.command` starts
 | Browser geometry/painter parity | 664 states; 5,838 glyph checks; zero failures |
 | Technical playback | Portrait played from 26.7 s to completion; landscape 0.75× segment progressed without media errors |
 | Actual-audio synchronization review | **Pending for every cue and both formats** |
-| Production render | **Authorized; rendering and verification in progress** |
+| Production render | **Both complete 1080p60 files passed technical verification** |
+| Decoded word focus | **50,372 source/target word states; zero mismatches or ambiguous states** |
 
 The maximum nearest-frame quantization is 8.232 ms; this measures implementation rounding, not acoustic timing accuracy. Model agreement and spectrogram review support candidate timing, but do not establish perfect synchronization. All 49 French words retain `reviewRequired: true`.
 
@@ -56,4 +57,20 @@ The current preview was accepted and production explicitly authorized on 18 Sept
 
 `npm run review:geometry` builds the browser audit at `/review/geometry.html`. `npm run stills` creates sixteen local diagnostic PNGs, not full-length films. Analysis inputs, model weights, downloaded source media, logs and generated browser bundles stay local. The bundled font retains its SIL Open Font License. Music rights remain with the original creators and are not granted by the repository license.
 
-[Production lessons](PRODUCTION-LESSONS.md) · [Posting assets](publishing/README.md)
+[Final verification and limits](evidence/final-verification.md) · [Production lessons](PRODUCTION-LESSONS.md) · [Posting assets](publishing/README.md)
+
+## Render and verify
+
+After restoring the source audio and installing the locked dependencies, build and bind the two lossless layer caches as described in [the render contract](PRODUCTION-NOTES.md#render-contract). Then run:
+
+```sh
+npm run render -- --production --format landscape
+npm run render -- --production --format portrait
+node scripts/verify-production.ts output/La-Lune-landscape-1920x1080-60fps.mp4 landscape
+node scripts/verify-production.ts output/La-Lune-portrait-1080x1920-60fps.mp4 portrait
+node scripts/audit-decoded-focus.ts output/La-Lune-landscape-1920x1080-60fps.mp4 landscape
+node scripts/audit-decoded-focus.ts output/La-Lune-portrait-1080x1920-60fps.mp4 portrait
+npm run package
+```
+
+The package step requires both final verification reports to match the actual video hashes. It creates separate YouTube and TikTok upload directories with the correct video, dedicated cover and posting copy. Full films and cache data are generated locally and excluded from Git.

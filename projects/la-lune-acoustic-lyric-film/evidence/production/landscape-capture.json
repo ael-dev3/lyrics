@@ -1,0 +1,275 @@
+{
+  "fingerprint": "66a7d642aa0dfcddf8b3bc79ce64015c770a7ef29d15e79eaa6f99993638304e",
+  "format": "landscape",
+  "pipeline": "2× lossless Chromium layers → RGBA → single Lanczos downsample → HEVC Main10 CRF17",
+  "scale": 2,
+  "frames": 11854,
+  "chunks": [
+    {
+      "file": "part-01.mp4",
+      "first": 0,
+      "last": 739
+    },
+    {
+      "file": "part-02.mp4",
+      "first": 740,
+      "last": 1480
+    },
+    {
+      "file": "part-03.mp4",
+      "first": 1481,
+      "last": 2221
+    },
+    {
+      "file": "part-04.mp4",
+      "first": 2222,
+      "last": 2962
+    },
+    {
+      "file": "part-05.mp4",
+      "first": 2963,
+      "last": 3703
+    },
+    {
+      "file": "part-06.mp4",
+      "first": 3704,
+      "last": 4444
+    },
+    {
+      "file": "part-07.mp4",
+      "first": 4445,
+      "last": 5185
+    },
+    {
+      "file": "part-08.mp4",
+      "first": 5186,
+      "last": 5926
+    },
+    {
+      "file": "part-09.mp4",
+      "first": 5927,
+      "last": 6666
+    },
+    {
+      "file": "part-10.mp4",
+      "first": 6667,
+      "last": 7407
+    },
+    {
+      "file": "part-11.mp4",
+      "first": 7408,
+      "last": 8148
+    },
+    {
+      "file": "part-12.mp4",
+      "first": 8149,
+      "last": 8889
+    },
+    {
+      "file": "part-13.mp4",
+      "first": 8890,
+      "last": 9630
+    },
+    {
+      "file": "part-14.mp4",
+      "first": 9631,
+      "last": 10371
+    },
+    {
+      "file": "part-15.mp4",
+      "first": 10372,
+      "last": 11112
+    },
+    {
+      "file": "part-16.mp4",
+      "first": 11113,
+      "last": 11853
+    }
+  ],
+  "cache": {
+    "format": "landscape",
+    "inputs": {
+      "public/soundtrack.m4a": "5619c096237395e1f1d02ad329ffc7c32851e3d60a9f63a0b7540d189730a0e2",
+      "public/moon-v2.png": "fb1af4bb2477a89b57aa54b84235bcdb05994464ece69eb45bb68b5e27a95c48",
+      "public/science.json": "3704844df900fb3c32aeb11a5d3a3db4734a8ad245874023ce133273d722739c",
+      "public/fonts/SpaceGrotesk.ttf": "acad6de1fc93436f5c0f1f4137751ef04f1aea3063e7036535970ffcfbd79f72",
+      "source/lyrics-fr.json": "d88838cd9d2dd93b0fbe4c950a28d5aada49bfb93b0f9c59bb12afdfe6c9c950",
+      "source/translation.json": "59187049908baadee72c6f5c886e1817f19cdf879de6cf50f4a8366559a8b922",
+      "src/cues.json": "983cfc3462a79e07fb753b987f4efe09f69219d0a127b2eae6eeb87f856bca88",
+      "src/layout.json": "03f22959f1bd871638282d4a051e0f52dafaba417a6ea4795b865dc348ed2574",
+      "src/schema.ts": "8c73702bca92992bd7e9c450e41e94d0d2249062ef7963f259ad0c94d88d0131",
+      "src/focus.ts": "dc5cfce6fbdc09ab1ed5a93b72073c653383be951f50e7487cc0cc6140166d99",
+      "src/palette.ts": "17851a268b02444b40d33f21822165e4da42db3367f37982ae90f29b56178315",
+      "public/lunar-motion.json": "5860a70e6cca1adc2930245915a921bec4f276b00d15205df9ff6776c105bc06",
+      "src/lunar-motion.ts": "021f8f29b4e43af6328d824afd280909da0e6a81fe32208f862590418000a10c",
+      "src/scene.ts": "56872c96140bd917f5038c881e3e7aba1e24e54491bc8391ede658644ca68c50",
+      "src/preview-painter.ts": "0b58dba750e0bfc3d3175f6722dac778b996c3c5ad1e6569117f01ee50ece165",
+      "src/review-client.ts": "ca9393ddb3a4303ae3f38f39da8ca8025fb044c520a2aa80199cd341119dcad4",
+      "review/index.html": "eca29cb5d22426809802ac7c8e841fa4b5ba71ffe0cab3c23e55af6c4a8b84f7",
+      "src/raster-inventory.ts": "0b44cb4b0e5abd2ec1412d0a6afa41ce7c0fb4fe3615b8f33aac2fe81fd65615",
+      "src/RasterCache.tsx": "04148e29342a97eb1153e149552bd761171c64695a569432099cc66d83b2a4fd",
+      "scripts/raster-cache.ts": "50b4ca40bed3d16afbc468ec2d853c973321d413c7bd17ddf83536e6607e4b22",
+      "scripts/raster-compose.ts": "3bbc573a8766bc624a1e26a365c09f5205afee47ad386b85f1079a625aed67b4"
+    },
+    "inventorySha256": "0c22a0bf1f20756fce73fe2fe024f9a9108e41c7f8380092bf3db8dba3a761d2",
+    "method": "Approved Chromium SVG layers, 2× lossless PNG, labels repaired before proof",
+    "createdAt": "2026-09-18T18:54:26.462Z"
+  },
+  "output": "output/La-Lune-landscape-1920x1080-60fps.mp4",
+  "sha256": "a38efe0e61a86eeb57793feaf0b9be2bfaea279ce1c0c8ae027cffa69743dca7",
+  "elapsedSeconds": 45.648,
+  "elapsedScope": "Final worker including verified-cache scan and mux; not total production wall time.",
+  "workerIsolation": "Each newly completed segment ran in a fresh process with periodic native allocation collection. Completed segments were strictly decoded and hashed before exit.",
+  "segmentReceipts": [
+    {
+      "fingerprint": "66a7d642aa0dfcddf8b3bc79ce64015c770a7ef29d15e79eaa6f99993638304e",
+      "first": 0,
+      "last": 739,
+      "frames": 740,
+      "rawRgbaSha256": "2957c98b0de5c80adf58f3a99312882f761c8d3d7673074c502eef744fd93b7a",
+      "referencePolicy": "2× lossless Chromium layer cache plus deterministic composition; full raw frames reproducible from locked inputs",
+      "sha256": "55dab593b404e4f9b0ae62a6691617dabda45e7617cacf18f8262ec093654052",
+      "previousFingerprint": "070041dba1c0ab1ad26a92635691245980debdc3487e47249071c426858680c8",
+      "continuationEvidence": "evidence/isolated-segment-continuation.json"
+    },
+    {
+      "fingerprint": "66a7d642aa0dfcddf8b3bc79ce64015c770a7ef29d15e79eaa6f99993638304e",
+      "first": 740,
+      "last": 1480,
+      "frames": 741,
+      "rawRgbaSha256": "5a00f24784ff0159d3a98a38ee78a23a8cdb36a2902b186726c7393cbeb73352",
+      "referencePolicy": "2× lossless Chromium layer cache plus deterministic composition; full raw frames reproducible from locked inputs",
+      "sha256": "5f5289bff3e533118681836e49b9edf4a5cff9158c4e33f6d57f14f0e1660289",
+      "previousFingerprint": "070041dba1c0ab1ad26a92635691245980debdc3487e47249071c426858680c8",
+      "continuationEvidence": "evidence/isolated-segment-continuation.json"
+    },
+    {
+      "fingerprint": "66a7d642aa0dfcddf8b3bc79ce64015c770a7ef29d15e79eaa6f99993638304e",
+      "first": 1481,
+      "last": 2221,
+      "frames": 741,
+      "rawRgbaSha256": "42117bb5260defc94da2e1ab333e390ef8cdc395ed833802daa7766684a63c17",
+      "referencePolicy": "2× lossless Chromium layer cache plus deterministic composition; full raw frames reproducible from locked inputs",
+      "sha256": "a8f70eb09afec1ab12d48d7572378e87da41812ead27ae32c9b592c4b601f343",
+      "previousFingerprint": "070041dba1c0ab1ad26a92635691245980debdc3487e47249071c426858680c8",
+      "continuationEvidence": "evidence/isolated-segment-continuation.json"
+    },
+    {
+      "fingerprint": "66a7d642aa0dfcddf8b3bc79ce64015c770a7ef29d15e79eaa6f99993638304e",
+      "first": 2222,
+      "last": 2962,
+      "frames": 741,
+      "rawRgbaSha256": "ca0f2b6a7ee9eb8a8045b5bf1015bb811d449dbb9672f34e3029b0860823dad5",
+      "referencePolicy": "2× lossless Chromium layer cache plus deterministic composition; full raw frames reproducible from locked inputs",
+      "sha256": "d22eaadb3a82a166b64ccb227b8d88ccbac987ee19ac7b40e26e1f9f49eee078"
+    },
+    {
+      "fingerprint": "66a7d642aa0dfcddf8b3bc79ce64015c770a7ef29d15e79eaa6f99993638304e",
+      "first": 2963,
+      "last": 3703,
+      "frames": 741,
+      "rawRgbaSha256": "98913a973afada1c2179d9f3c7a311e279655288d236779fe7e5cfc6b3870eec",
+      "referencePolicy": "2× lossless Chromium layer cache plus deterministic composition; full raw frames reproducible from locked inputs",
+      "sha256": "ccfb520776ff47d02dfb32dda98e2c9bde0b561bd41670aa7907ba77635423e0"
+    },
+    {
+      "fingerprint": "66a7d642aa0dfcddf8b3bc79ce64015c770a7ef29d15e79eaa6f99993638304e",
+      "first": 3704,
+      "last": 4444,
+      "frames": 741,
+      "rawRgbaSha256": "afdfa088c41a9fd7beffc5a564b334b89595e29f29283edac1ac0bf9d9e839b8",
+      "referencePolicy": "2× lossless Chromium layer cache plus deterministic composition; full raw frames reproducible from locked inputs",
+      "sha256": "6231c2d662b5f5df40ce44a5f710d0796313c020f23fbc430dbd17046691ff70"
+    },
+    {
+      "fingerprint": "66a7d642aa0dfcddf8b3bc79ce64015c770a7ef29d15e79eaa6f99993638304e",
+      "first": 4445,
+      "last": 5185,
+      "frames": 741,
+      "rawRgbaSha256": "47485326af298d72811002160be4956a8910d278b22579bc2542749fad408547",
+      "referencePolicy": "2× lossless Chromium layer cache plus deterministic composition; full raw frames reproducible from locked inputs",
+      "sha256": "8290f7ba6c7d5626e1653ff4e5e5cc324954364a512da2879e78bfb093dec7e8"
+    },
+    {
+      "fingerprint": "66a7d642aa0dfcddf8b3bc79ce64015c770a7ef29d15e79eaa6f99993638304e",
+      "first": 5186,
+      "last": 5926,
+      "frames": 741,
+      "rawRgbaSha256": "f13db5439222357084282429e13542ffe70af476097dafc77743aa46c3246cbf",
+      "referencePolicy": "2× lossless Chromium layer cache plus deterministic composition; full raw frames reproducible from locked inputs",
+      "sha256": "fa93806f0ecef40bfa9e2e639f6b1869d53a5d25439e31a6f801af5ecc5b70f1"
+    },
+    {
+      "fingerprint": "66a7d642aa0dfcddf8b3bc79ce64015c770a7ef29d15e79eaa6f99993638304e",
+      "first": 5927,
+      "last": 6666,
+      "frames": 740,
+      "rawRgbaSha256": "fc3ebe1ca836f9f39bfa55b380335ec0dc914a56217854b327bb67406fc9e9ee",
+      "referencePolicy": "2× lossless Chromium layer cache plus deterministic composition; full raw frames reproducible from locked inputs",
+      "sha256": "d436a57a3351e125bd729e579ad339c60dc168c97b31998a31e2d602dbf97c8f"
+    },
+    {
+      "fingerprint": "66a7d642aa0dfcddf8b3bc79ce64015c770a7ef29d15e79eaa6f99993638304e",
+      "first": 6667,
+      "last": 7407,
+      "frames": 741,
+      "rawRgbaSha256": "4f429412d97ccc03f10b5c52bdff709356afb8fdf66bd98548cfade445098414",
+      "referencePolicy": "2× lossless Chromium layer cache plus deterministic composition; full raw frames reproducible from locked inputs",
+      "sha256": "b1b819591f9cb06209b2b691d23710647427b7f5d2f2402e8be664f06fa13687"
+    },
+    {
+      "fingerprint": "66a7d642aa0dfcddf8b3bc79ce64015c770a7ef29d15e79eaa6f99993638304e",
+      "first": 7408,
+      "last": 8148,
+      "frames": 741,
+      "rawRgbaSha256": "d6c312e2b88aec489124e28067d50ff4aadccc8aaa35a56a51d31ba44d6f47d2",
+      "referencePolicy": "2× lossless Chromium layer cache plus deterministic composition; full raw frames reproducible from locked inputs",
+      "sha256": "b26e21a65d5d9e3fed6cd6a6dece75027096368f6e21014673e306360f6ce492"
+    },
+    {
+      "fingerprint": "66a7d642aa0dfcddf8b3bc79ce64015c770a7ef29d15e79eaa6f99993638304e",
+      "first": 8149,
+      "last": 8889,
+      "frames": 741,
+      "rawRgbaSha256": "e5f5018fef3945c0efd24e6bab04c6f32c6e7587ab251c10b5290c63d3e8fcd8",
+      "referencePolicy": "2× lossless Chromium layer cache plus deterministic composition; full raw frames reproducible from locked inputs",
+      "sha256": "394e9bebafa857e7074b8b1787fc7e97f2eae9bd6433653ee7fd807ab3f4e7d0"
+    },
+    {
+      "fingerprint": "66a7d642aa0dfcddf8b3bc79ce64015c770a7ef29d15e79eaa6f99993638304e",
+      "first": 8890,
+      "last": 9630,
+      "frames": 741,
+      "rawRgbaSha256": "44b6e5da322d0c3639cd7f3e8443653b5813f0594cc8e35ec7cfd78720ebfa27",
+      "referencePolicy": "2× lossless Chromium layer cache plus deterministic composition; full raw frames reproducible from locked inputs",
+      "sha256": "73a427f47f01953c9cb95bce1c879033dc873a03775569c604092bffb70626e6"
+    },
+    {
+      "fingerprint": "66a7d642aa0dfcddf8b3bc79ce64015c770a7ef29d15e79eaa6f99993638304e",
+      "first": 9631,
+      "last": 10371,
+      "frames": 741,
+      "rawRgbaSha256": "f33d08d85cf3dae99011c595cedf13f3f38a39a1935d99981984039e8c053ff9",
+      "referencePolicy": "2× lossless Chromium layer cache plus deterministic composition; full raw frames reproducible from locked inputs",
+      "sha256": "bd25af420331111629548474bfade3bd0d71080159afdda73b9722f8bfb7f2ad"
+    },
+    {
+      "fingerprint": "66a7d642aa0dfcddf8b3bc79ce64015c770a7ef29d15e79eaa6f99993638304e",
+      "first": 10372,
+      "last": 11112,
+      "frames": 741,
+      "rawRgbaSha256": "865e10d67428027292ad6c7df0dfe4ad0b04435fb3d46d4622ca37b9d31ae8eb",
+      "referencePolicy": "2× lossless Chromium layer cache plus deterministic composition; full raw frames reproducible from locked inputs",
+      "sha256": "690c4be66cbc51dad325200b0aa39172b517124f216018e99f51404b7810c782"
+    },
+    {
+      "fingerprint": "66a7d642aa0dfcddf8b3bc79ce64015c770a7ef29d15e79eaa6f99993638304e",
+      "first": 11113,
+      "last": 11853,
+      "frames": 741,
+      "rawRgbaSha256": "2d56575b3b846a0ab52116505c64b282e370995d41418bcfc00312b3bf308e96",
+      "referencePolicy": "2× lossless Chromium layer cache plus deterministic composition; full raw frames reproducible from locked inputs",
+      "sha256": "b52843bf0fdaae92a377d83595b8a43adf95eddf2a23c57780e7d2202c09d6d4"
+    }
+  ]
+}

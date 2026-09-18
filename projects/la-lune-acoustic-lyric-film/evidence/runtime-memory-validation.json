@@ -1,6 +1,6 @@
 {
   "runtime": "Node 24.20.0 with --expose-gc and scripts/memory-guard.ts",
-  "cause": "Two long canvas exports were interrupted with exit 137 after large native-buffer accumulation. Short encoded diagnostics had not exposed this sustained-memory condition.",
+  "cause": "Long canvas workers exited with code 137 after substantial resident-memory growth. The exact operating-system termination reason was not captured.",
   "resolution": "Periodic GC improved speed but remained insufficient: a later worker also exited 137. The final supervisor uses a fresh process per completed segment, one at a time. All rendering and encoding operations are unchanged; segment continuation is separately proved.",
   "observedResumedPortraitSamples": [
     {
@@ -12,6 +12,7 @@
       "residentKiB": 3535424
     }
   ],
-  "scope": "Early memory samples were insufficient to establish full-run safety; final isolated-worker completion and complete delivery checks determine validity.",
-  "memoryGuardSha256": "6ad89c4fb73fc5fc08373581b04f6a16cc805584d134b867e1f9fb95376e40b5"
+  "scope": "Early memory samples were insufficient to establish full-run safety. Final completion and delivery checks validate the isolated-worker approach for these files; no peak-memory bound or acoustic accuracy is claimed.",
+  "memoryGuardSha256": "6ad89c4fb73fc5fc08373581b04f6a16cc805584d134b867e1f9fb95376e40b5",
+  "finalOutcome": "Both full exports completed using isolated segment workers. Each passed strict decoding, every frame timestamp, original AAC and PCM identity, and all 25,186 decoded word states."
 }
