@@ -13,7 +13,7 @@
     "preview": "npm run review:build && node scripts/review-server.ts",
     "preview:freeze": "node scripts/freeze-preview.ts && npm run review:build",
     "sync:gate": "node scripts/production-gate.ts",
-    "render": "node --expose-gc --import ./scripts/memory-guard.ts scripts/production-gate.ts",
+    "render": "node scripts/render-isolated.ts",
     "lunar:features": "node scripts/lunar-features.ts",
     "review:geometry": "esbuild src/geometry-audit.ts --bundle --format=esm --outfile=review/geometry.js",
     "stills": "node scripts/stills.ts",

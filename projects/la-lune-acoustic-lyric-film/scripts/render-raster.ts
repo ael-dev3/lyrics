@@ -42,6 +42,7 @@ for(let i=0;i<parts;i++){
   write(receipt,{fingerprint,first,last,frames:last-first+1,rawRgbaSha256:rawHash.digest('hex'),referencePolicy:'2× lossless Chromium layer cache plus deterministic composition; full raw frames reproducible from locked inputs',sha256:await sha(encoded)});
  }else console.log('Verified cache:',encoded);
  chunks.push({file:stem+'.mp4',first,last});
+ if(production&&!cached&&process.argv.includes('--one-segment')&&i<parts-1){console.log('Completed one isolated segment; resume with a fresh process.');process.exit(0);}
 }
 if(production){
  assertProductionGate();const list=directory+'/concat.txt';writeFileSync(list,chunks.map(c=>`file '${c.file}'\nduration ${((Math.round((c.last+1)*1e6/60)-Math.round(c.first*1e6/60))/1e6).toFixed(6)}`).join('\n')+'\n');

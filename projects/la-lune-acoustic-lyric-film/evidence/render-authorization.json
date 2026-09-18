@@ -37,10 +37,11 @@
     "scripts/raster-cache.ts": "50b4ca40bed3d16afbc468ec2d853c973321d413c7bd17ddf83536e6607e4b22",
     "scripts/raster-compose.ts": "3bbc573a8766bc624a1e26a365c09f5205afee47ad386b85f1079a625aed67b4",
     "scripts/raster-contract.ts": "1c6175c3e6e05ed5859b1e6bf2c85c771f71fc39440abe973d942f4a28bd4492",
-    "scripts/render-raster.ts": "ad8f5bef0ba9d1b00efeafe382b93c300913c2365cf498f5af4d48d68cd8dc98",
+    "scripts/render-raster.ts": "5dc8efddb76f44c1eb3ff726f2d91cabfe7d20bc23c9406e797d2dc4d29565f4",
     "scripts/raster-proof.ts": "65a0b8959f3214b19c2186c46058fd32881b6be3b44dd1d15325e91e5347d777",
     "scripts/adopt-raster.ts": "1f597804af6d8265778ae0020648d8896cd6f6cfb49ed93055c847ee0389ef7c",
     "evidence/raster-adoption.json": "c53ad08b2ca955142d42bbcc08a2904fa36aef7797bad2fe021bdafcbef76901"
   },
-  "rendererDecision": "Validated lossless Chromium layer cache; exact accepted preview inputs and timing unchanged. See raster-adoption.json."
+  "rendererDecision": "Validated lossless Chromium layer cache; exact accepted preview inputs and timing unchanged. See raster-adoption.json.",
+  "runtimeIsolation": "One newly completed segment per process, preserving the exact frame/compression loop and all approved visual inputs."
 }

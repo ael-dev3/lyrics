@@ -1,7 +1,7 @@
 {
   "runtime": "Node 24.20.0 with --expose-gc and scripts/memory-guard.ts",
   "cause": "Two long canvas exports were interrupted with exit 137 after large native-buffer accumulation. Short encoded diagnostics had not exposed this sustained-memory condition.",
-  "resolution": "Periodic collection of unreachable native allocations, one full-resolution worker at a time, and checksum-verified segment resume. Pixel generation, encoder settings, source timing and approved input identities are unchanged.",
+  "resolution": "Periodic GC improved speed but remained insufficient: a later worker also exited 137. The final supervisor uses a fresh process per completed segment, one at a time. All rendering and encoding operations are unchanged; segment continuation is separately proved.",
   "observedResumedPortraitSamples": [
     {
       "completedFrameApproximately": 4943,
@@ -12,6 +12,6 @@
       "residentKiB": 3535424
     }
   ],
-  "scope": "Early sustained-run samples; final delivery checks determine whether the resumed files are valid. No acoustic accuracy claim.",
+  "scope": "Early memory samples were insufficient to establish full-run safety; final isolated-worker completion and complete delivery checks determine validity.",
   "memoryGuardSha256": "6ad89c4fb73fc5fc08373581b04f6a16cc805584d134b867e1f9fb95376e40b5"
 }
