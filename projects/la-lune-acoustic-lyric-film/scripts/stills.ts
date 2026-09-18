@@ -1,0 +1,3 @@
+import {bundle} from '@remotion/bundler';import {getCompositions,renderStill} from '@remotion/renderer';import {mkdirSync} from 'node:fs';
+const serveUrl=await bundle({entryPoint:'src/StillRoot.tsx'}),comps=await getCompositions(serveUrl);mkdirSync('evidence/stills',{recursive:true});
+for(const format of ['landscape','portrait'] as const)for(const at of [8,35.4,46.8,57.8,103.5,114.5,170,197.54]){const c=comps.find(c=>c.id===(format==='landscape'?'PreviewLandscape':'PreviewPortrait'));if(!c)throw Error('Missing diagnostic composition');await renderStill({serveUrl,composition:{...c,props:{format,at}},inputProps:{format,at},output:'evidence/stills/'+format+'-'+at+'.png',imageFormat:'png',logLevel:'warn'});console.log(format,at);}

@@ -1,0 +1,16 @@
+import {readFileSync,writeFileSync} from 'node:fs';import {createHash} from 'node:crypto';import {parseData} from '../src/schema.ts';
+const data=parseData(JSON.parse(readFileSync('src/cues.json','utf8'))),bytes=readFileSync('analysis/audio-delivery.f32'),pcm=new Float32Array(bytes.buffer,bytes.byteOffset,bytes.length/4),sr=data.sampleRate,hop=Math.round(sr*.01);
+const energy:number[]=[],flux:number[]=[];
+for(let c=0;c<data.sampleCount;c+=hop){let power=0,n=0;for(let i=Math.max(0,c-Math.round(sr*.005));i<Math.min(data.sampleCount,c+Math.round(sr*.005));i++){const l=pcm[i*2]??0,r=pcm[i*2+1]??0,pl=pcm[(i-1)*2]??0,pr=pcm[(i-1)*2+1]??0;power+=((l-pl)**2+(r-pr)**2)/2;n++;}energy.push(power/Math.max(1,n));}
+for(let i=0;i<energy.length;i++){const prior=energy.slice(Math.max(0,i-6),Math.max(1,i-1));flux.push(Math.max(0,(energy[i]??0)-prior.reduce((a,b)=>a+b,0)/prior.length));}
+const candidates=flux.flatMap((v,i)=>{const t=i*hop/sr,vocal=data.cues.some(c=>t>=c.startSample/sr-.8&&t<c.endSample/sr+.8);return !vocal&&v>0&&v===Math.max(...flux.slice(Math.max(0,i-6),i+7))?[{time:t,value:v}]:[];});
+const ranked=[...candidates].sort((a,b)=>b.value-a.value),threshold=ranked[Math.floor(ranked.length*.35)]?.value??Infinity,selected:{time:number;strength:number}[]=[];
+const peak=ranked[0]?.value??1;
+for(const c of ranked)if(c.value>=threshold&&selected.every(s=>Math.abs(s.time-c.time)>.75))selected.push({time:Number(c.time.toFixed(5)),strength:Number(Math.min(1,Math.sqrt(c.value/peak)).toFixed(4))});
+selected.sort((a,b)=>a.time-b.time);
+const vbytes=readFileSync('analysis/vocals16.f32'),v=new Float32Array(vbytes.buffer,vbytes.byteOffset,vbytes.length/4),vocal=Array.from({length:data.frames},(_,f)=>{const center=Math.round(f/60*16000);let p=0,n=0;for(let i=Math.max(0,center-320);i<Math.min(v.length,center+320);i++){p+=(v[i]??0)**2;n++;}return Math.sqrt(p/Math.max(1,n));});
+const q=[...vocal].sort((a,b)=>a-b)[Math.floor(vocal.length*.98)]??1;
+const artifact={sourceAudioSha256:data.audioSha256,fps:60,events:selected,vocal:vocal.map(x=>Math.round(Math.min(1,x/q)*10000)/10000)};
+writeFileSync('public/lunar-motion.json',JSON.stringify(artifact));
+writeFileSync('analysis/lunar-motion-manifest.json',JSON.stringify({sourceAudioSha256:data.audioSha256,pcmSha256:createHash('sha256').update(bytes).digest('hex'),attackMethod:'Centered 10 ms original stereo first-difference energy; positive rise above preceding 20–60 ms mean, 10 ms candidate hop, ±60 ms local maxima, upper 35 percent candidates, 750 ms minimum spacing. Exclude lexical vocal windows plus 800 ms lead / 800 ms tail.',eventCount:selected.length,limitation:'Mixed-audio transient proxy in instrumental windows, not beat or instrument recognition. No attack event alters lyric timing.',vocalMethod:'Separated vocal RMS, centered 40 ms window at each 60 fps frame, calibrated by whole-recording 98th percentile; stem leakage remains possible.',display:'Bounded moonlight opacity, a compact radial 64-band spectrum, and a short faint halo ripple only at selected instrumental attacks. One gradual lunar reveal ends at the first vocal. No picture shake, periodic brightness loop or lyric motion.'},null,2)+'\n');
+console.log({events:selected.length,frames:vocal.length});

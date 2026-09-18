@@ -1,0 +1,9 @@
+{
+  "sourceAudioSha256": "5619c096237395e1f1d02ad329ffc7c32851e3d60a9f63a0b7540d189730a0e2",
+  "pcmSha256": "7daaa85552f47cee9ce1f69b089b61ff1919387a53bb86d57f39d9f3a0ad4067",
+  "attackMethod": "Centered 10 ms original stereo first-difference energy; positive rise above preceding 20–60 ms mean, 10 ms candidate hop, ±60 ms local maxima, upper 35 percent candidates, 750 ms minimum spacing. Exclude lexical vocal windows plus 800 ms lead / 800 ms tail.",
+  "eventCount": 104,
+  "limitation": "Mixed-audio transient proxy in instrumental windows, not beat or instrument recognition. No attack event alters lyric timing.",
+  "vocalMethod": "Separated vocal RMS, centered 40 ms window at each 60 fps frame, calibrated by whole-recording 98th percentile; stem leakage remains possible.",
+  "display": "Bounded moonlight opacity, a compact radial 64-band spectrum, and a short faint halo ripple only at selected instrumental attacks. One gradual lunar reveal ends at the first vocal. No picture shake, periodic brightness loop or lyric motion."
+}

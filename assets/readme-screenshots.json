@@ -1,15 +1,32 @@
 {
   "version": 1,
   "reviewedOn": "2026-09-18",
-  "scope": "The twelve featured song sections in the main README and their project README entry points.",
+  "scope": "The thirteen featured song sections in the main README and their project README entry points.",
   "newExtraction": {
     "fps": 60,
     "frameNumbering": "zero-based",
     "capture": "FFmpeg select=eq(n,FRAME), one full-frame PNG; no crop, recolor, text replacement or generated imagery.",
     "sourceIdentity": "New source files matched the recorded delivery SHA-256 before selecting their frames."
   },
-  "review": "Every featured song has an associated representative image. The current bilingual v6 screenshot is decoded from its verified final landscape delivery. Existing released editions and documented historical limitations are preserved.",
+  "review": "Every featured song has an associated representative image. La Lune is a diagnostic preview still; prior released and accepted editions retain their recorded status and limitations.",
   "screenshots": [
+    {
+      "song": "La Lune (version acoustique)",
+      "image": "assets/la-lune-acoustic-46-8.png",
+      "project": "projects/la-lune-acoustic-lyric-film/README.md",
+      "timestampSeconds": 46.8,
+      "frame": 2808,
+      "edition": "preview-v2-lunar; pending actual-audio review and production approval",
+      "selection": "New lunar composition, radial spectrum and complete equal bilingual suddenly / soudain focus.",
+      "method": "Native one-frame 1920×1080 diagnostic capture from the current deterministic scene; no crop or text replacement. Not decoded from a production film.",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 924023,
+      "sha256": "1e3e3987edbc689613ff341f4cc6cdd0124ae83e8d741f7131f46f85bebd7cf9",
+      "encoding": "PNG",
+      "sourceFile": "projects/la-lune-acoustic-lyric-film/src/scene.ts",
+      "sourceSha256": "56872c96140bd917f5038c881e3e7aba1e24e54491bc8391ede658644ca68c50"
+    },
     {
       "song": "каждый, кто делал тебе больно",
       "image": "assets/kazhdyy-72-2.png",

@@ -1,9 +1,10 @@
 # README song screenshots
 
-Updated 18 September 2026. All twelve featured songs in the main README have a representative screenshot with its edition and preview/final status, and each song's project README has an associated image. Promotional covers and supplementary frames remain separate from the representative screenshot.
+Updated 18 September 2026. All thirteen featured songs in the main README have a representative screenshot with its edition and preview/final status, and each song's project README has an associated image. Promotional covers and supplementary frames remain separate from the representative screenshot.
 
 | Song | Representative image | Time | Edition / provenance |
 | --- | --- | --- | --- |
+| La Lune (version acoustique) | [Lunar scene and equal French / English focus](../assets/la-lune-acoustic-46-8.png) | 00:46.800 | Diagnostic preview-v2-lunar still; no production film |
 | каждый, кто делал тебе больно | [Source illustration, shadow texture and equal bilingual focus](../assets/kazhdyy-72-2.png) | 01:12.200 | Verified final v6 landscape film |
 | Sugar Glass | [Mirror performance, large English focus and spectrum](../assets/sugar-glass-90.png) | 01:30.000 | Verified final English-only landscape film |
 | Твои глаза | [Original animation and bilingual focus](../assets/tvoi-glaza-63-4.png) | 01:03.400 | Verified final local landscape film |
@@ -43,3 +44,7 @@ Check the actual image encoding before choosing the filename extension or readin
 ## каждый, кто делал тебе больно final frame
 
 Frame 4332 at 72.200 seconds is decoded from the checksum-verified v6 landscape film at native 1920×1080. The complete source illustration, subtle shadow texture, medium spectrum and corresponding столе / the table emphasis remain visible. Both READMEs use the same image; the inventory records its final source identity. The preceding diagnostic preview image is retained as history. Promotional cover adaptations are separate assets.
+
+## La Lune lunar preview
+
+The representative image is a native 1920×1080 single-frame diagnostic capture at 46.800 seconds from the current lunar scene. It shows the new generated Moon artwork, radial response and corresponding French/English word emphasis. The gallery records the scene hash and explicitly distinguishes this preview from a decoded final film. Browser geometry/painter checks support visual implementation; actual-audio synchronization review remains pending.
