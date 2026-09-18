@@ -1,6 +1,6 @@
 # Preview v6: word, meaning and synchronization review
 
-**Preview only. Complete actual-audio review and explicit approval of this revision remain pending. No production film was rendered.**
+**Current v6 preview accepted and explicitly authorized for production on 17 September 2026. Both full films are rendered and technically verified; see [final verification](final-verification.md).** Overall acceptance is recorded separately from incomplete granular actual-audio telemetry; the scoped authorization binds this exact reviewed revision and its production inputs.
 
 ## Three verification passes
 
@@ -32,8 +32,8 @@ The maximum frame-grid rounding is **8.322 ms** at 60 fps. This is an implementa
 
 The v6 change adds bounded shadow texture at vocal spectral changes. Picture geometry and the exact section-based spectrum budgets remain unchanged from v5. Russian words, English meaning maps, lyric sample intervals, layouts and source audio remain identical to v2 and v3. [Motion and playback evidence](motion-review.md) records the separate shadow event map, purpose audit and browser checks. No global lyric offset was introduced to compensate for decorative motion or browser cadence.
 
-## Remaining review before production
+## Listening evidence and acceptance scope
 
-Play the complete recording at normal speed in both formats. Check every model disagreement above 25 ms at reduced speed, including short connecting words, repeated «столе» and «ты» releases, the nonlexical vocalisation and the final vocal. Review the full translated meaning on each event. The browser inspector offers source-linked words, acoustic candidates, local boundary proposals and saved notes. Its review controls must only be marked after actual listening.
+For a future acoustic refinement, play the complete recording at normal speed in both formats. Check every model disagreement above 25 ms at reduced speed, including short connecting words, repeated «столе» and «ты» releases, the nonlexical vocalisation and the final vocal. Review the full translated meaning on each event. The browser inspector offers source-linked words, acoustic candidates, local boundary proposals and saved notes. Its review controls must only be marked after actual listening.
 
-Current evidence does not attest completed listening. Technical tests, direction feedback, screenshots and a source merge do not clear the production gate. The [machine-readable review](sync-review.json), [frozen identity](preview-identity.json), [semantic ledger](semantic-ledger.json) and [technical results](technical-checks.json) keep those statuses separate.
+Current evidence does not attest completed per-cue listening. Explicit acceptance and render authorization for the unchanged v6 preview clear this project's scoped owner-approved-preview gate; technical tests or a source merge alone do not. The [machine-readable review](sync-review.json), [render authorization](render-authorization.json), [frozen identity](preview-identity.json), [semantic ledger](semantic-ledger.json) and [technical results](technical-checks.json) keep those statuses separate. The default complete synchronization-review requirement remains in force for future work.

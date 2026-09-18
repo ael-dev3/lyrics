@@ -1,0 +1,38 @@
+{
+  "status": "visually reviewed",
+  "method": "Decode the final 100 ms and inspect every RGB pixel of the last decoded frame, then inspect both native final-frame PNGs. Exact pixel uniformity is a diagnostic, not an assertion for a lossy delivery.",
+  "results": [
+    {
+      "format": "landscape",
+      "finalFrame": 12797,
+      "minRgb": [
+        8,
+        13,
+        16
+      ],
+      "maxRgb": [
+        23,
+        18,
+        24
+      ],
+      "uniform": false
+    },
+    {
+      "format": "portrait",
+      "finalFrame": 12797,
+      "minRgb": [
+        10,
+        13,
+        16
+      ],
+      "maxRgb": [
+        23,
+        17,
+        22
+      ],
+      "uniform": false
+    }
+  ],
+  "observation": "Both final frames resolve into dark ink with faint low-amplitude compression residuals. They are not mathematically uniform RGB fields.",
+  "maxChannelDeviationFromAuthoredInk": 8
+}

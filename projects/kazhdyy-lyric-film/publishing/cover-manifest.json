@@ -1,0 +1,44 @@
+{
+  "method": "Built-in image-generation tool; AI-assisted promotional adaptation of source illustration. Model version not independently exposed.",
+  "sourceArtworkSha256": "6f2335749f267857af9cdd042c272e24231feac60d059dd66bd1168716d778d1",
+  "initialPrompts": [
+    "Cover-Source/YouTube-prompt.txt",
+    "Cover-Source/TikTok-prompt.txt"
+  ],
+  "revisionPrompt": "Cover-Source/Crop-safety-revision-prompt.txt",
+  "covers": [
+    {
+      "platform": "YouTube",
+      "file": "Kazhdyy-YouTube-Thumbnail-1920x1080.jpg",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 689172,
+      "sha256": "c6ec2cb1702208f450e29cc8940349da97235ae0518118b1233afbed55664993",
+      "source": {
+        "file": "Cover-Source/YouTube-selected-original.png",
+        "width": 1672,
+        "height": 941,
+        "sha256": "0900628c74405caea1219931e1a50a50cc7e821d84eadbaa1ca667e0d154e8ed"
+      },
+      "normalization": "Uniform Lanczos resize and negligible edge crop; JPEG, square pixels, no rotation dependency",
+      "smallSizeAndFivePercentCropReviewed": true
+    },
+    {
+      "platform": "TikTok",
+      "file": "Kazhdyy-TikTok-Cover-Profile-1200x1600.jpg",
+      "width": 1200,
+      "height": 1600,
+      "bytes": 657658,
+      "sha256": "31d9856f0e5e793a94ff5b00d07d56714428e4210255cb50c536e5391e31aab8",
+      "source": {
+        "file": "Cover-Source/TikTok-selected-original.png",
+        "width": 1086,
+        "height": 1448,
+        "sha256": "992803d19deb8d5e1d11c545fba2493ae462487e3d003ff13578228418164805"
+      },
+      "normalization": "Uniform Lanczos resize and negligible edge crop; JPEG, square pixels, no rotation dependency",
+      "smallSizeAndFivePercentCropReviewed": true
+    }
+  ],
+  "actualUploadPreview": false
+}

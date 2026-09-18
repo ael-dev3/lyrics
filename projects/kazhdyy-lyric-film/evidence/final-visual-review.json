@@ -1,0 +1,71 @@
+{
+  "status": "passed",
+  "revision": "preview-v6-shadow-static",
+  "reviewedAt": "2026-09-18T09:58:22.939Z",
+  "formats": [
+    {
+      "format": "landscape",
+      "sourceFile": "Kazhdyy-landscape-1920x1080-60fps.mp4",
+      "sourceSha256": "f50f0224e9d2444694ff495230fd499c49428599c3cbd730b1fa62e0ccd0e328",
+      "contactSheetFrames": [
+        480,
+        1116,
+        2625,
+        3343,
+        4332,
+        5277,
+        5280,
+        7266,
+        9498,
+        10497,
+        10503,
+        11144,
+        11400,
+        12420,
+        12792
+      ],
+      "nativeInspectedFrames": [
+        4332,
+        11144,
+        12797
+      ],
+      "readmeFrame": 4332
+    },
+    {
+      "format": "portrait",
+      "sourceFile": "Kazhdyy-portrait-1080x1920-60fps.mp4",
+      "sourceSha256": "07920f4389957928fb17d1676d836302bf0cf0e91297d6e8fb4d829c975722f8",
+      "contactSheetFrames": [
+        480,
+        1116,
+        2625,
+        3343,
+        4332,
+        5277,
+        5280,
+        7266,
+        9498,
+        10497,
+        10503,
+        11144,
+        11400,
+        12420,
+        12792
+      ],
+      "nativeInspectedFrames": [
+        2625,
+        11144,
+        12797
+      ],
+      "readmeFrame": null
+    }
+  ],
+  "observations": [
+    "All 30 decoded checkpoints inspected in labeled contact sheets; selected detailed frames inspected at native size.",
+    "Stable composition, protected red eyes, readable equal-weight bilingual lyrics, and clear active-word contrast.",
+    "Spectrum remains within the artwork region; strongest passage visibly exceeds medium passages and returns to normal at 190 seconds.",
+    "Intro, interlude title, dense text, section boundaries and fade are intact.",
+    "Ending inspected separately; minor low-amplitude lossy compression residuals are documented in final-ending-check.json."
+  ],
+  "scope": "Visual checkpoint inspection and complete decoded focus/timestamp tests. No claim that every raster pixel or acoustic word boundary was manually reviewed."
+}
