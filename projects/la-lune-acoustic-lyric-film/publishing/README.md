@@ -12,3 +12,7 @@ The kit contains separate YouTube and TikTok folders. Each has its complete film
 The covers use the approved AI-assisted Moon illustration with dedicated code-native poster layouts in [CoverRoot.tsx](../src/CoverRoot.tsx). Text is set with the bundled Space Grotesk font. The cover export script verifies dimensions; local review covers small sizes and a conservative centered crop. [Cover identity and review](../evidence/cover-assets.json) records the files and limits. The source-art prompt is preserved in [artwork provenance](../source/moon-artwork-prompt.md).
 
 The package script requires both final videos to pass technical and decoded-word checks before copying. Checksums cover every posting file. Desktop-copy verification is recorded separately so the built package retains its original identity. Original music and recording belong to L’Impératrice / microqlima; posting copy includes the source link and AI-art disclosure. No platform upload is performed by this handoff.
+
+## Verified delivery
+
+Both complete videos and all supporting files were packaged and copied to the requested Desktop folder. [Local kit manifest](../evidence/delivery-receipt.json), [Desktop file verification](../evidence/desktop-delivery-receipt.json) and [checksums](../evidence/delivery-checksums.sha256) record all fourteen files. The package retains source commit `5c8969e` for reproducibility; later receipt documentation does not alter the delivered videos.

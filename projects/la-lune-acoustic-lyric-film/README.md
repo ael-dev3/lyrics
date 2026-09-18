@@ -37,7 +37,7 @@ Open `http://127.0.0.1:4320/`. The macOS launcher `Start Preview.command` starts
 | Timing/color implementation | 542 boundary states across both formats; 4,732 visible word-color checks |
 | Browser geometry/painter parity | 664 states; 5,838 glyph checks; zero failures |
 | Technical playback | Portrait played from 26.7 s to completion; landscape 0.75× segment progressed without media errors |
-| Actual-audio synchronization review | **Pending for every cue and both formats** |
+| Actual-audio synchronization review | **Granular listening checklist incomplete; scoped preview acceptance recorded** |
 | Production render | **Both complete 1080p60 files passed technical verification** |
 | Decoded word focus | **50,372 source/target word states; zero mismatches or ambiguous states** |
 
@@ -74,3 +74,7 @@ npm run package
 ```
 
 The package step requires both final verification reports to match the actual video hashes. It creates separate YouTube and TikTok upload directories with the correct video, dedicated cover and posting copy. Full films and cache data are generated locally and excluded from Git.
+
+## Local posting delivery
+
+The verified 14-file Desktop folder is named **L’Impératrice — La Lune — Upload Kit**. It contains the two complete films, both dedicated covers, YouTube and TikTok posting copy, optional captions, instructions, a manifest and checksums. [Package identity](evidence/delivery-receipt.json) · [Desktop copy receipt](evidence/desktop-delivery-receipt.json) · [Checksums](evidence/delivery-checksums.sha256). No platform upload was performed.

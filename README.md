@@ -20,7 +20,7 @@ The complete 3:17.555 acoustic recording has a centered Moon composition, icy bl
 
 The current lunar preview was accepted before explicit render authorization. Both final files passed strict decoding, all 11,854 frame timestamps, unchanged original AAC packets and decoded PCM, and 50,372 visible word-state checks across both formats with zero mismatches or ambiguous states. Overall acceptance is separate from incomplete granular listening telemetry and model-assisted acoustic uncertainty. Full media stays local.
 
-[Production and reproduction](projects/la-lune-acoustic-lyric-film/README.md) · [Verification and limits](projects/la-lune-acoustic-lyric-film/evidence/final-verification.md) · [Production lessons](projects/la-lune-acoustic-lyric-film/PRODUCTION-LESSONS.md) · [Upload assets](projects/la-lune-acoustic-lyric-film/publishing/README.md) · [Original acoustic recording](https://www.youtube.com/watch?v=p3E731cu_nE)
+[Production and reproduction](projects/la-lune-acoustic-lyric-film/README.md) · [Verified delivery](projects/la-lune-acoustic-lyric-film/evidence/delivery-receipt.json) · [Verification and limits](projects/la-lune-acoustic-lyric-film/evidence/final-verification.md) · [Production lessons](projects/la-lune-acoustic-lyric-film/PRODUCTION-LESSONS.md) · [Upload assets](projects/la-lune-acoustic-lyric-film/publishing/README.md) · [Original acoustic recording](https://www.youtube.com/watch?v=p3E731cu_nE)
 
 ## каждый, кто делал тебе больно
 
