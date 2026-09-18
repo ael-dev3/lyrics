@@ -1,6 +1,6 @@
 # Cross-language review — La Lune
 
-Revision: **preview-v2-lunar**. Full recording and both layouts are available for review. Editorial meaning links are checked; actual-audio and format listening sign-offs remain pending. No current-song production approval is recorded.
+Revision: **preview-v2-lunar**. The project owner accepted the full lunar preview and explicitly authorized production on 18 September 2026. Editorial meaning links and the final technical audit are checked. Granular actual-audio and format listening sign-offs remain pending; overall acceptance is recorded separately in the [production record](../PRODUCTION-NOTES.md#approval-and-review-scope).
 
 | Cue | French line | Meaning mapping | Normal audio | Slow audio | Landscape | Portrait |
 | --- | --- | --- | --- | --- | --- | --- |

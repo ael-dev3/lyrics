@@ -1,6 +1,6 @@
 # La Lune — acoustic lunar preview
 
-**L’Impératrice · French + English · preview-v2-lunar · review pending**
+**L’Impératrice · French + English · preview-v2-lunar · production authorized**
 
 ![Lunar preview with equal French and English word emphasis](../../assets/la-lune-acoustic-46-8.png)
 
@@ -38,13 +38,13 @@ Open `http://127.0.0.1:4320/`. The macOS launcher `Start Preview.command` starts
 | Browser geometry/painter parity | 664 states; 5,838 glyph checks; zero failures |
 | Technical playback | Portrait played from 26.7 s to completion; landscape 0.75× segment progressed without media errors |
 | Actual-audio synchronization review | **Pending for every cue and both formats** |
-| Production render | **Not authorized or performed** |
+| Production render | **Authorized; rendering and verification in progress** |
 
 The maximum nearest-frame quantization is 8.232 ms; this measures implementation rounding, not acoustic timing accuracy. Model agreement and spectrogram review support candidate timing, but do not establish perfect synchronization. All 49 French words retain `reviewRequired: true`.
 
 [Technical checks](evidence/technical-checks.json) · [Browser geometry](evidence/browser-geometry.json) · [Playback scope](evidence/playback-smoke-check.json) · [Audio identity](evidence/source-audio-identity.json) · [Sync findings](evidence/sync-review.md) · [Review checklist](evidence/cross-language-sync-review.md) · [Semantic ledger](evidence/semantic-ledger.json)
 
-`npm run render` currently runs only the production gate and rejects incomplete or stale listening/approval evidence. This preview edition contains no full-film capture command. One-frame diagnostic compositions support layout review only. Current-song review and explicit approval must precede production implementation and capture, following the [repository workflow](../../docs/preview-before-render.md).
+The current preview was accepted and production explicitly authorized on 18 September 2026. The [production record](PRODUCTION-NOTES.md) separates this scoped owner acceptance from incomplete granular listening fields. `npm run render -- --production --format landscape` and the corresponding portrait command verify the approved inputs before capture. The [final sync audit](evidence/final-sync-audit.json) and [production-adapter comparison](evidence/production-adapter-equivalence.json) document the additional checks.
 
 ## Reproduction and source
 
@@ -55,3 +55,5 @@ The maximum nearest-frame quantization is 8.232 ms; this measures implementation
 - [Workflow study](evidence/workflow-study.md). Methods are reused; visual choices and measured values are specific to this recording.
 
 `npm run review:geometry` builds the browser audit at `/review/geometry.html`. `npm run stills` creates sixteen local diagnostic PNGs, not full-length films. Analysis inputs, model weights, downloaded source media, logs and generated browser bundles stay local. The bundled font retains its SIL Open Font License. Music rights remain with the original creators and are not granted by the repository license.
+
+[Production lessons](PRODUCTION-LESSONS.md) · [Posting assets](publishing/README.md)

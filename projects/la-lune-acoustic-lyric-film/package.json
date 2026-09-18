@@ -16,7 +16,14 @@
     "render": "node scripts/production-gate.ts",
     "lunar:features": "node scripts/lunar-features.ts",
     "review:geometry": "esbuild src/geometry-audit.ts --bundle --format=esm --outfile=review/geometry.js",
-    "stills": "node scripts/stills.ts"
+    "stills": "node scripts/stills.ts",
+    "production:proof": "node scripts/adapter-proof.ts",
+    "sync:audit": "node scripts/final-sync-audit.ts",
+    "covers": "node scripts/covers.ts",
+    "captions": "node scripts/captions.ts",
+    "package": "node scripts/package-posting-kit.ts",
+    "raster:cache": "node scripts/raster-cache.ts",
+    "raster:proof": "node scripts/raster-proof.ts"
   },
   "dependencies": {
     "@napi-rs/canvas": "0.1.100",

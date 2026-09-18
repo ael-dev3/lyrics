@@ -1,0 +1,13 @@
+import {spawnSync} from 'node:child_process';
+import {mkdirSync,readFileSync,writeFileSync,copyFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+import {assertProductionGate} from './production-contract.ts';
+assertProductionGate();
+const format=process.argv[2];if(format!=='landscape'&&format!=='portrait')throw Error('Expected format');
+const width=format==='landscape'?1920:1080,height=format==='landscape'?1080:1920,file=`output/La-Lune-${format}-${width}x${height}-60fps.mp4`;
+const times=[0,8,27.3,35.4,46.8,47.4,48.1,57.8,84.2,92.5,103.5,114.5,170,195.5,197.54],frames=times.map(t=>Math.round(t*60));
+const dir=`evidence/stills/production-${format}`;mkdirSync(dir,{recursive:true});
+const r=spawnSync('ffmpeg',['-v','error','-y','-threads','3','-i',file,'-vf',`select='${frames.map(f=>`eq(n,${f})`).join('+')}'`,'-fps_mode','vfr',`${dir}/frame-%02d.png`],{encoding:'utf8'});if(r.status!==0)throw Error(r.stderr);
+const inventory=frames.map((frame,i)=>{const path=`${dir}/frame-${String(i+1).padStart(2,'0')}.png`,b=readFileSync(path);return {frame,timeSeconds:frame/60,path,bytes:b.length,sha256:createHash('sha256').update(b).digest('hex')};});
+writeFileSync(`evidence/${format}-decoded-stills.json`,JSON.stringify({revision:'preview-v2-lunar',source:file,frames:inventory,scope:'Frames decoded from the final delivery; inspected checkpoints do not certify every raster frame or acoustic boundary.'},null,2)+'\n');
+console.log({format,frames:inventory.length,directory:dir});
