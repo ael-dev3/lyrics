@@ -26,3 +26,7 @@ Use normal speed for phrasing and reduced speed for boundary investigation, in b
 ## Verified scope
 
 Structural checks cover every word and translation link, boundary ordering, source-clock identity, nearest-frame color states and bounded spectrum geometry. Browser checks cover actual font ink bounds and persistent-painter parity. Technical playback confirms media-clock progress and completion. They exclude hardware audio/display latency and do not replace listening. The [structured review record](sync-review.json) therefore keeps actual-audio and format sign-offs false.
+
+## Accepted preview production decision — 18 September 2026
+
+The project owner accepted the current lunar preview and explicitly requested production. The [final technical and semantic audit](final-sync-audit.json) adds two bounded model comparisons, all fourteen spectrogram panels and every visible source/target word state on the full frame clock. The selected boundaries remain unchanged. The [production record](../PRODUCTION-NOTES.md) and [authorization](render-authorization.json) bind this scoped decision to the exact revision. Unknown per-cue listening fields remain unknown; technical consistency and overall acceptance do not establish perfect acoustic boundaries.

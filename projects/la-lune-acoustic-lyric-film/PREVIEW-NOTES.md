@@ -1,6 +1,6 @@
 # Lunar visual decisions
 
-Revision: **preview-v2-lunar**. Status: full-length playable preview, awaiting actual-audio review and current-revision approval.
+Revision: **preview-v2-lunar**. Status: full-length playable preview accepted for production. [Current-song authorization and detailed-review limits](PRODUCTION-NOTES.md#approval-and-review-scope) remain separate.
 
 ## Each motion has one job
 

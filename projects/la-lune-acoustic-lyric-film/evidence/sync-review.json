@@ -1,7 +1,7 @@
 {
   "song": "p3E731cu_nE",
   "revision": "preview-v2-lunar",
-  "status": "preview-only; actual-audio review pending",
+  "status": "accepted-for-production",
   "inputHashes": {
     "public/soundtrack.m4a": "5619c096237395e1f1d02ad329ffc7c32851e3d60a9f63a0b7540d189730a0e2",
     "public/moon-v2.png": "fb1af4bb2477a89b57aa54b84235bcdb05994464ece69eb45bb68b5e27a95c48",
@@ -25,7 +25,7 @@
   "actualAudioReviewComplete": false,
   "allCuesAllFormatsComplete": false,
   "unresolvedDefects": [],
-  "uncertainty": "Model disagreements and signal-derived sustain endpoints require actual-audio review. Every source token remains marked reviewRequired.",
+  "uncertainty": "All source words retain model-assisted boundary uncertainty. Additional mix/vocal comparisons, complete meaning/state checks and signal panels were reviewed without changing the approved timeline.",
   "cues": [
     {
       "id": "LL-01",
@@ -141,9 +141,16 @@
     }
   ],
   "authorization": {
-    "approved": false,
+    "approved": true,
     "song": "p3E731cu_nE",
     "revision": "preview-v2-lunar",
-    "evidence": ""
+    "evidence": "Current-song production explicitly requested after preview review on 2026-09-18."
+  },
+  "reviewMode": "owner-approved-preview",
+  "finalTechnicalAuditComplete": true,
+  "acceptance": {
+    "authorizationId": "la-lune-v2-production-2026-09-18",
+    "evidenceBasis": "Current playable lunar preview accepted by the project owner, followed by explicit production and local delivery instructions.",
+    "coverageLimit": "Overall acceptance is not a complete granular listening log. All per-cue normal/slow listening and audiovisual format fields remain false; model timing uncertainty remains visible."
   }
 }

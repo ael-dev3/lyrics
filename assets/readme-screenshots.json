@@ -8,24 +8,24 @@
     "capture": "FFmpeg select=eq(n,FRAME), one full-frame PNG; no crop, recolor, text replacement or generated imagery.",
     "sourceIdentity": "New source files matched the recorded delivery SHA-256 before selecting their frames."
   },
-  "review": "Every featured song has an associated representative image. La Lune is a diagnostic preview still; prior released and accepted editions retain their recorded status and limitations.",
+  "review": "Every featured song has an associated representative image. La Lune now uses a frame decoded from the verified final landscape delivery; historical editions retain their recorded status and limitations.",
   "screenshots": [
     {
       "song": "La Lune (version acoustique)",
-      "image": "assets/la-lune-acoustic-46-8.png",
+      "image": "assets/la-lune-acoustic-final-46-8.png",
       "project": "projects/la-lune-acoustic-lyric-film/README.md",
       "timestampSeconds": 46.8,
       "frame": 2808,
-      "edition": "preview-v2-lunar; pending actual-audio review and production approval",
+      "edition": "Verified local landscape delivery of accepted preview-v2-lunar",
       "selection": "New lunar composition, radial spectrum and complete equal bilingual suddenly / soudain focus.",
-      "method": "Native one-frame 1920×1080 diagnostic capture from the current deterministic scene; no crop or text replacement. Not decoded from a production film.",
+      "method": "Native 1920×1080 frame 2808 decoded from the verified final HEVC film as RGB PNG; full composition without crop, recolor or replaced text.",
       "width": 1920,
       "height": 1080,
-      "bytes": 924023,
-      "sha256": "1e3e3987edbc689613ff341f4cc6cdd0124ae83e8d741f7131f46f85bebd7cf9",
+      "bytes": 2411758,
+      "sha256": "37062cdaeca572d4238bd53ead170d815c6801eaabcbbb796e1a183c36386dbc",
       "encoding": "PNG",
-      "sourceFile": "projects/la-lune-acoustic-lyric-film/src/scene.ts",
-      "sourceSha256": "56872c96140bd917f5038c881e3e7aba1e24e54491bc8391ede658644ca68c50"
+      "sourceFile": "La-Lune-landscape-1920x1080-60fps.mp4",
+      "sourceSha256": "a38efe0e61a86eeb57793feaf0b9be2bfaea279ce1c0c8ae027cffa69743dca7"
     },
     {
       "song": "каждый, кто делал тебе больно",

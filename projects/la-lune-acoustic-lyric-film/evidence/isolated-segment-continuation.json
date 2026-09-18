@@ -1,0 +1,140 @@
+{
+  "status": "Verified byte-identical segment continuation",
+  "previousSourceCommit": "bb01496",
+  "changedProductionInput": "scripts/render-raster.ts",
+  "previousRendererSha256": "ad8f5bef0ba9d1b00efeafe382b93c300913c2365cf498f5af4d48d68cd8dc98",
+  "currentRendererSha256": "5dc8efddb76f44c1eb3ff726f2d91cabfe7d20bc23c9406e797d2dc4d29565f4",
+  "proof": "Removing the single process-exit line from the updated renderer reproduces the previous renderer byte-for-byte. All other production hashes, cache inputs, frame-generation and encoder code are identical. Every reused segment matches its strict-decode receipt SHA-256. The new flag exits only after a fresh segment is encoded, strictly decoded and its receipt persisted.",
+  "files": [
+    {
+      "format": "landscape",
+      "file": "output/landscape-raster-segments/part-01.mp4",
+      "first": 0,
+      "last": 739,
+      "sha256": "55dab593b404e4f9b0ae62a6691617dabda45e7617cacf18f8262ec093654052",
+      "rawRgbaSha256": "2957c98b0de5c80adf58f3a99312882f761c8d3d7673074c502eef744fd93b7a",
+      "previousFingerprint": "070041dba1c0ab1ad26a92635691245980debdc3487e47249071c426858680c8",
+      "fingerprint": "66a7d642aa0dfcddf8b3bc79ce64015c770a7ef29d15e79eaa6f99993638304e"
+    },
+    {
+      "format": "landscape",
+      "file": "output/landscape-raster-segments/part-02.mp4",
+      "first": 740,
+      "last": 1480,
+      "sha256": "5f5289bff3e533118681836e49b9edf4a5cff9158c4e33f6d57f14f0e1660289",
+      "rawRgbaSha256": "5a00f24784ff0159d3a98a38ee78a23a8cdb36a2902b186726c7393cbeb73352",
+      "previousFingerprint": "070041dba1c0ab1ad26a92635691245980debdc3487e47249071c426858680c8",
+      "fingerprint": "66a7d642aa0dfcddf8b3bc79ce64015c770a7ef29d15e79eaa6f99993638304e"
+    },
+    {
+      "format": "landscape",
+      "file": "output/landscape-raster-segments/part-03.mp4",
+      "first": 1481,
+      "last": 2221,
+      "sha256": "a8f70eb09afec1ab12d48d7572378e87da41812ead27ae32c9b592c4b601f343",
+      "rawRgbaSha256": "42117bb5260defc94da2e1ab333e390ef8cdc395ed833802daa7766684a63c17",
+      "previousFingerprint": "070041dba1c0ab1ad26a92635691245980debdc3487e47249071c426858680c8",
+      "fingerprint": "66a7d642aa0dfcddf8b3bc79ce64015c770a7ef29d15e79eaa6f99993638304e"
+    },
+    {
+      "format": "portrait",
+      "file": "output/portrait-raster-segments/part-01.mp4",
+      "first": 0,
+      "last": 739,
+      "sha256": "7ce8810f7956ba789da97b69fc467f77969f5ee2f317f0f3b84f197c03a82f40",
+      "rawRgbaSha256": "7f0542f3fcb1281b8a7fa53f27e2c9c6e039ef1002a0ff866ee1896d08b608c4",
+      "previousFingerprint": "5deda7153dd77f65e106799808595ebc743c150ab8044d85f912123db177c8ab",
+      "fingerprint": "20f0a251c633fc01e622df70d96d7dee88f9f06facd85d825e0f906f9c3371b3"
+    },
+    {
+      "format": "portrait",
+      "file": "output/portrait-raster-segments/part-02.mp4",
+      "first": 740,
+      "last": 1480,
+      "sha256": "d414e0683a7156525a90e89172b8ca750793c4a138095923d4576ec1c10a4be7",
+      "rawRgbaSha256": "4ef251c9f8146a21574af847af94e883f97cb49076732fe6ab5ff1306e703ccd",
+      "previousFingerprint": "5deda7153dd77f65e106799808595ebc743c150ab8044d85f912123db177c8ab",
+      "fingerprint": "20f0a251c633fc01e622df70d96d7dee88f9f06facd85d825e0f906f9c3371b3"
+    },
+    {
+      "format": "portrait",
+      "file": "output/portrait-raster-segments/part-03.mp4",
+      "first": 1481,
+      "last": 2221,
+      "sha256": "65ae2bc9965f8253c19e4011bcff8a32891dc3da3fac1c2bd1e2f8458e838718",
+      "rawRgbaSha256": "4a511ee95fe59cf08b595aad9fc595327f57260c738240c1344d4d52fa8601fa",
+      "previousFingerprint": "5deda7153dd77f65e106799808595ebc743c150ab8044d85f912123db177c8ab",
+      "fingerprint": "20f0a251c633fc01e622df70d96d7dee88f9f06facd85d825e0f906f9c3371b3"
+    },
+    {
+      "format": "portrait",
+      "file": "output/portrait-raster-segments/part-04.mp4",
+      "first": 2222,
+      "last": 2962,
+      "sha256": "fd5d20e08987c1dc0f1d54163333708e620aaccbc3b527885c28923343faa080",
+      "rawRgbaSha256": "f80beeedef4d578ac814d86758a12f374b92c33e0bf5abdf01d4706be18578e1",
+      "previousFingerprint": "5deda7153dd77f65e106799808595ebc743c150ab8044d85f912123db177c8ab",
+      "fingerprint": "20f0a251c633fc01e622df70d96d7dee88f9f06facd85d825e0f906f9c3371b3"
+    },
+    {
+      "format": "portrait",
+      "file": "output/portrait-raster-segments/part-05.mp4",
+      "first": 2963,
+      "last": 3703,
+      "sha256": "29b669f140be59b872c00162402d0ed524de74bc76a775b2877e06037162d86c",
+      "rawRgbaSha256": "c0579ab0d17d756be2b36a0a7130b5755745f7cb952353760ede42c54270161a",
+      "previousFingerprint": "5deda7153dd77f65e106799808595ebc743c150ab8044d85f912123db177c8ab",
+      "fingerprint": "20f0a251c633fc01e622df70d96d7dee88f9f06facd85d825e0f906f9c3371b3"
+    },
+    {
+      "format": "portrait",
+      "file": "output/portrait-raster-segments/part-06.mp4",
+      "first": 3704,
+      "last": 4444,
+      "sha256": "1cb75ebf46d26c09f3bea066b5f73eb49c81accbbc1f347259023239bac23ba9",
+      "rawRgbaSha256": "8f4adda0952ca0c2914593cd7b180cea7523f196df7f481b2e5ddaf1ae6d392e",
+      "previousFingerprint": "5deda7153dd77f65e106799808595ebc743c150ab8044d85f912123db177c8ab",
+      "fingerprint": "20f0a251c633fc01e622df70d96d7dee88f9f06facd85d825e0f906f9c3371b3"
+    },
+    {
+      "format": "portrait",
+      "file": "output/portrait-raster-segments/part-07.mp4",
+      "first": 4445,
+      "last": 5185,
+      "sha256": "a263cfb11ec8163128d0ddd6f9f9475a509ab36a5c7c34f3b927b0441b8b9272",
+      "rawRgbaSha256": "33074df304ec0e4b8423116250ff8cd2beb99d834203828051538485056d36f9",
+      "previousFingerprint": "5deda7153dd77f65e106799808595ebc743c150ab8044d85f912123db177c8ab",
+      "fingerprint": "20f0a251c633fc01e622df70d96d7dee88f9f06facd85d825e0f906f9c3371b3"
+    },
+    {
+      "format": "portrait",
+      "file": "output/portrait-raster-segments/part-08.mp4",
+      "first": 5186,
+      "last": 5926,
+      "sha256": "a559b1d9eed55dd0e4ee27edd74bc66d71ee6ad9cc2c025199604dc44537018b",
+      "rawRgbaSha256": "ef5f550380a5e7b948a53f4fec817117e614b1e11687d20f31d6d8366fc4652e",
+      "previousFingerprint": "5deda7153dd77f65e106799808595ebc743c150ab8044d85f912123db177c8ab",
+      "fingerprint": "20f0a251c633fc01e622df70d96d7dee88f9f06facd85d825e0f906f9c3371b3"
+    },
+    {
+      "format": "portrait",
+      "file": "output/portrait-raster-segments/part-09.mp4",
+      "first": 5927,
+      "last": 6666,
+      "sha256": "555065cc4a788e18c80b2ce2648fc9efe8064ed44056e34ae8b5a69a7f1aabd7",
+      "rawRgbaSha256": "7d51177a201e384615b8cdfca1d5b108fff4cd123996c6747abc1b0d8bfe00f9",
+      "previousFingerprint": "5deda7153dd77f65e106799808595ebc743c150ab8044d85f912123db177c8ab",
+      "fingerprint": "20f0a251c633fc01e622df70d96d7dee88f9f06facd85d825e0f906f9c3371b3"
+    },
+    {
+      "format": "portrait",
+      "file": "output/portrait-raster-segments/part-10.mp4",
+      "first": 6667,
+      "last": 7407,
+      "sha256": "0a7f6cdddd30182072536f281a7c8b4c129721f5dda14a3beafcf11fc2ac2d70",
+      "rawRgbaSha256": "bc2846f2d341b2eae120eafed28291e4d07d46149feaa9d8f89c6253fe1e4d6a",
+      "previousFingerprint": "5deda7153dd77f65e106799808595ebc743c150ab8044d85f912123db177c8ab",
+      "fingerprint": "20f0a251c633fc01e622df70d96d7dee88f9f06facd85d825e0f906f9c3371b3"
+    }
+  ]
+}
