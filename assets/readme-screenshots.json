@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "reviewedOn": "2026-09-17",
+  "reviewedOn": "2026-09-18",
   "scope": "The twelve featured song sections in the main README and their project README entry points.",
   "newExtraction": {
     "fps": 60,
@@ -8,22 +8,24 @@
     "capture": "FFmpeg select=eq(n,FRAME), one full-frame PNG; no crop, recolor, text replacement or generated imagery.",
     "sourceIdentity": "New source files matched the recorded delivery SHA-256 before selecting their frames."
   },
-  "review": "Every featured song has an associated representative image. The new bilingual preview has a native diagnostic still, explicitly distinguished from decoded final-delivery screenshots. Existing released editions and documented limitations are preserved.",
+  "review": "Every featured song has an associated representative image. The current bilingual v6 screenshot is decoded from its verified final landscape delivery. Existing released editions and documented historical limitations are preserved.",
   "screenshots": [
     {
       "song": "каждый, кто делал тебе больно",
-      "image": "assets/kazhdyy-preview-72-2.png",
+      "image": "assets/kazhdyy-72-2.png",
       "project": "projects/kazhdyy-lyric-film/README.md",
       "timestampSeconds": 72.2,
       "frame": 4332,
-      "edition": "preview-v6-shadow-static; current full render pending",
+      "edition": "Verified local v6 landscape delivery",
       "selection": "Fixed source illustration with subtle shadow grain, equal bilingual столе / the table focus, and medium spectrum emphasis inside its specified window.",
-      "method": "One-frame diagnostic Remotion composition using resolved timestamp props; full uncropped preview. Not decoded from a production film.",
+      "method": "Native 1920×1080 frame 4332 decoded from the verified final landscape film as RGB PNG; full composition without crop, recolor or replaced text.",
       "width": 1920,
       "height": 1080,
-      "bytes": 855253,
-      "sha256": "1010aac96f25c0b635055c0395d4ed5e885c6b456fa649313d3cde1118970dbd",
-      "encoding": "PNG"
+      "bytes": 4606819,
+      "sha256": "f4535101f5e7755f5c259e20f648445086fbeddc9398e20bfbf019245b8cad2b",
+      "encoding": "PNG",
+      "sourceFile": "Kazhdyy-landscape-1920x1080-60fps.mp4",
+      "sourceSha256": "f50f0224e9d2444694ff495230fd499c49428599c3cbd730b1fa62e0ccd0e328"
     },
     {
       "song": "Sugar Glass",

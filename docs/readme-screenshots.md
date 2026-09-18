@@ -1,9 +1,10 @@
 # README song screenshots
 
-Reviewed 17 September 2026. All eleven featured songs in the main README have a representative screenshot with its edition and preview/final status, and each song's project README has an associated image. Promotional covers and supplementary frames remain separate from the representative screenshot.
+Updated 18 September 2026. All twelve featured songs in the main README have a representative screenshot with its edition and preview/final status, and each song's project README has an associated image. Promotional covers and supplementary frames remain separate from the representative screenshot.
 
 | Song | Representative image | Time | Edition / provenance |
 | --- | --- | --- | --- |
+| каждый, кто делал тебе больно | [Source illustration, shadow texture and equal bilingual focus](../assets/kazhdyy-72-2.png) | 01:12.200 | Verified final v6 landscape film |
 | Sugar Glass | [Mirror performance, large English focus and spectrum](../assets/sugar-glass-90.png) | 01:30.000 | Verified final English-only landscape film |
 | Твои глаза | [Original animation and bilingual focus](../assets/tvoi-glaza-63-4.png) | 01:03.400 | Verified final local landscape film |
 | Прости за любовь | [Night-tram scene and bilingual lyrics](../assets/prosti-v1-2-52-4.png) | 00:52.400 | Accepted v1.2; known highlighting gaps preserved |
@@ -38,3 +39,7 @@ Existing screenshots were inspected and retained when the subject, lyric treatme
 The current English-only entry is frame 5400 at 90.000 seconds, decoded from the verified final landscape file at native 1920×1080 as an RGB PNG. Both READMEs and the inventory identify the final film and its SHA-256. The mirror composition, large active word and reflective spectrum remain fully visible. The earlier browser screenshot is retained as preview history. Screenshot selection documents presentation, not acoustic certainty.
 
 Check the actual image encoding before choosing the filename extension or reading dimensions. Native browser screenshots can return JPEG bytes even when a caller supplies a PNG filename. Use an image decoder or `ffprobe` to verify the encoding and dimensions, then verify the inventory byte count and SHA-256. Preserve the captured bytes rather than re-encoding solely to fit an assumed extension.
+
+## каждый, кто делал тебе больно final frame
+
+Frame 4332 at 72.200 seconds is decoded from the checksum-verified v6 landscape film at native 1920×1080. The complete source illustration, subtle shadow texture, medium spectrum and corresponding столе / the table emphasis remain visible. Both READMEs use the same image; the inventory records its final source identity. The preceding diagnostic preview image is retained as history. Promotional cover adaptations are separate assets.

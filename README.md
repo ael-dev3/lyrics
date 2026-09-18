@@ -6,21 +6,21 @@ Music films with synchronized lyrics, meaning-linked translations, and audio-rea
 
 **Current style default:** [cinematic lyric presentation](docs/cinematic-lyric-workflow.md) — stable, color-only word or phrase emphasis, precise vocal timing, smooth scene shading and equally prominent bilingual lyrics. Motion intensity follows the song: gentle arrangements can use compact, subdued audio-reactive graphics. The guide includes implemented references and review requirements for future tracks.
 
-[**каждый, кто делал тебе больно — preview**](#каждый-кто-делал-тебе-больно) · [**Sugar Glass**](#sugar-glass) · [**Твои глаза**](#твои-глаза) · [**Прости за любовь — accepted with known gaps**](#прости-за-любовь) · [**Половинка**](#половинка) · [**Life Letters**](#life-letters) · [**Joyride**](#joyride) · [**midnight love**](#midnight-love) · [**Пожары**](#пожары) · [**Отменяй**](#отменяй) · [**Roi × Adore**](#roi--adore) · [**TikTok edition**](#tiktok-edition) · [**Tanisea**](#tanisea) · [**Build and workflow**](#build-and-workflow)
+[**каждый, кто делал тебе больно**](#каждый-кто-делал-тебе-больно) · [**Sugar Glass**](#sugar-glass) · [**Твои глаза**](#твои-глаза) · [**Прости за любовь — accepted with known gaps**](#прости-за-любовь) · [**Половинка**](#половинка) · [**Life Letters**](#life-letters) · [**Joyride**](#joyride) · [**midnight love**](#midnight-love) · [**Пожары**](#пожары) · [**Отменяй**](#отменяй) · [**Roi × Adore**](#roi--adore) · [**TikTok edition**](#tiktok-edition) · [**Tanisea**](#tanisea) · [**Build and workflow**](#build-and-workflow)
 
 ## каждый, кто делал тебе больно
 
-**забей, лерочка · Russian + English · full-recording preview · three-color animated treatment**
+**забей, лерочка · Russian + English · verified landscape and portrait films · three-color animated treatment**
 
-![Bilingual chorus preview with source illustration and vermilion word focus](assets/kazhdyy-preview-72-2.png)
+![Final bilingual chorus frame with source illustration and vermilion word focus](assets/kazhdyy-72-2.png)
 
-*Native diagnostic preview frame at 01:12.200. Music and source illustration from the original забей, лерочка / Spooky music upload; illustrator unidentified in the available source metadata. No production film has been rendered.*
+*Decoded final landscape frame at 01:12.200. Music and source illustration from the original забей, лерочка / Spooky music upload; illustrator unidentified in the available source metadata.*
 
-Ink, ivory and vermilion frame the original kitchen illustration and a measured 64-band spectrum. Preview v6 keeps the picture geometry still while fine static shifts inside its darkest areas at detected vocal changes. Visualizer emphasis is medium at 1:10–1:28 and 2:38–2:55, strongest only at 2:55–3:10, and normal everywhere else. Centered vocal energy shapes the response inside the selected windows. Decorative loops, extra eye marks, steam, palette inversion and picture pulses are omitted. Equal Russian and English text stays fixed, with complete meaning-linked word emphasis. Both layouts preserve the complete recording.
+Ink, ivory and vermilion frame the original kitchen illustration and a measured 64-band spectrum. The approved v6 film keeps the picture geometry still while fine static shifts inside its darkest areas at detected vocal changes. Visualizer emphasis is medium at 1:10–1:28 and 2:38–2:55, strongest only at 2:55–3:10, and normal everywhere else. Centered vocal energy shapes the response inside the selected windows. Decorative loops, extra eye marks, steam, palette inversion and picture pulses are omitted. Equal Russian and English text stays fixed, with complete meaning-linked word emphasis. Both layouts preserve the complete recording.
 
-The polished preview includes 32 cues, inspected held-word release candidates, independent recognition and alignment evidence, and automated checks of every source/target mapping and both layouts. Acoustic uncertainty and pending actual-audio review remain explicit. **Full rendering requires completed synchronization review and approval of this exact revision.**
+The full preview preceded explicit approval of the current v6 render. Both final films passed strict decoding, all 12,798 video timestamps, exact original AAC and decoded PCM identity, and 280,986 visible word-state checks across both layouts with zero focus mismatches. Overall acceptance remains separate from incomplete granular listening telemetry and model-assisted acoustic uncertainty. Full media stays local.
 
-[Project and local preview](projects/kazhdyy-lyric-film/README.md) · [Detailed review and limits](projects/kazhdyy-lyric-film/evidence/sync-review.md) · [Workflow decisions](projects/kazhdyy-lyric-film/evidence/workflow-study.md) · [Original upload](https://www.youtube.com/watch?v=3yDdoi1c7-8)
+[Production and reproduction](projects/kazhdyy-lyric-film/README.md) · [Verified delivery](projects/kazhdyy-lyric-film/evidence/delivery-receipt.json) · [Verification and limits](projects/kazhdyy-lyric-film/evidence/final-verification.md) · [Production lessons](projects/kazhdyy-lyric-film/PRODUCTION-LESSONS.md) · [Upload assets](projects/kazhdyy-lyric-film/publishing/README.md) · [Original upload](https://www.youtube.com/watch?v=3yDdoi1c7-8)
 
 ## Sugar Glass
 

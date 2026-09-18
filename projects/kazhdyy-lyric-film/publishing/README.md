@@ -1,6 +1,8 @@
 # каждый, кто делал тебе больно — upload kit
 
-The approved bilingual film has separate landscape and portrait compositions. The final local posting folder contains one video, cover and publishing copy per platform, plus optional line-level caption files. Final-file verification and copied-file hashes are recorded in the delivery receipt when production completes.
+The approved bilingual film has separate landscape and portrait compositions. The final local posting folder contains one video, cover and publishing copy per platform, plus optional line-level caption files. Both films have passed final-file verification. The [delivery receipt](../evidence/delivery-receipt.json) and [checksums](../evidence/delivery-checksums.sha256) record the verified posting kit.
+
+All 14 files were copied to the Desktop folder named **забей, лерочка — каждый, кто делал тебе больно — Upload Kit** and checked again against their source hashes. The [destination receipt](../evidence/desktop-delivery-receipt.json) includes both videos, covers, copy, captions, manifest and checksum file.
 
 | Platform | Video | Cover | Copy |
 | --- | --- | --- | --- |

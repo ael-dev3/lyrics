@@ -1,6 +1,6 @@
 # Preview v6: voice-linked shadow static
 
-**Revision: `preview-v6-shadow-static`. Current preview ready; full rendering awaits current-revision approval.** No full film has been rendered. The accepted v3 identity and earlier diagnostic checks remain separate historical evidence.
+**Revision: `preview-v6-shadow-static`. The current preview was accepted and explicitly authorized for production on 17 September 2026.** Both full films are rendered and verified; see [final verification](final-verification.md). The accepted v3 identity and earlier diagnostic checks remain separate historical evidence.
 
 ## Visual hierarchy
 
@@ -38,7 +38,8 @@ Only original pixels below 20% luminance enter the mask. Red source pixels are e
 - Tests check the exact boundaries and every one of the 12,798 frames. All frames outside the selected windows use normal travel. The picture transform is identical throughout both formats.
 - The live browser audit checks 3,086 focus/boundary states and 53,116 word boxes, including parity of artwork pose, shadow seed and all 64 spectrum paths with the static renderer. No mismatches, collisions or unsafe word placement were observed.
 - Native stills cover quiet material, both medium sections, the strongest passage, dense bilingual text, intro and ending. The higher bars remain within the artwork panel and preserve the reading region.
-- The [v4 audit](motion-review-v4.md) records two historical 120-frame encoded diagnostics with zero word-focus mismatches. They validate that earlier adapter revision, not a v6 delivery. No full v6 encoded verification is claimed.
+- The [v6 cache comparison](artwork-cache-equivalence.json) records byte-identical direct and cached ProRes diagnostics in both layouts, with zero decoded pixel differences across 120 frames each. Both current encoded diagnostics passed all 2,040 visible-word checks per format. A deliberate 100 ms offset produced 92 focus mismatches, confirming that the decoded check detects timing errors.
+- The [v4 audit](motion-review-v4.md) records historical adapter diagnostics. Full-length v6 verification checked 280,986 visible word states across both films with zero focus mismatches or ambiguous samples, plus all timestamps and original audio identity. Thirty decoded checkpoints support the [visual review](final-visual-review.json).
 
 The actual-audio checklist remains incomplete. Overall preview approval and technical agreement with the event map do not fabricate listening telemetry. The browser's audio clock drives the scene; hardware latency and display cadence remain separate from frame-grid precision.
 
