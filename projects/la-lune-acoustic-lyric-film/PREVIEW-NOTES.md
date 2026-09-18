@@ -1,3 +1,5 @@
+> Historical v2 design notes. The current visual revision is documented in [Celestial notes](CELESTIAL-NOTES.md).
+
 # Lunar visual decisions
 
 Revision: **preview-v2-lunar**. Status: full-length playable preview accepted for production. [Current-song authorization and detailed-review limits](PRODUCTION-NOTES.md#approval-and-review-scope) remain separate.

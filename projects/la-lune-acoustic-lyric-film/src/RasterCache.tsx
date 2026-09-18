@@ -8,7 +8,7 @@ function Layer({format='landscape'}:{format?:Format}){
  useEffect(()=>{
   const handle=delayRender('Select exact scene layer'),cue=data.cues.find(c=>c.id===entry.cueId),at=cue?Math.ceil(cue.startSample/data.sampleRate*60):480;
   const dom=new DOMParser().parseFromString(sceneSvg(at,format,data,layouts,bands),'image/svg+xml'),svg=dom.documentElement,content=svg.querySelector('#scene-content')!;
-  const nodes=entry.layer==='stars'?[...content.children].filter(n=>n.tagName==='circle'&&!n.id):entry.layer==='labels'?[...content.children].filter(n=>(n.tagName==='g'||n.tagName==='text')&&!n.id&&!n.querySelector('[data-band]')):[svg.querySelector('#'+entry.layer)!];
+  const nodes=entry.layer==='stars'?[svg.querySelector('#star-field')!]:entry.layer==='labels'?[...content.children].filter(n=>(n.tagName==='g'||n.tagName==='text')&&!n.id&&!n.querySelector('[data-band]')):[svg.querySelector('#'+entry.layer)!];
   if(nodes.some(n=>!n))throw Error('Missing cache layer');
   for(const n of nodes)if(n.id)n.setAttribute('opacity','1');
   if(cue)for(const word of [...nodes[0]!.querySelectorAll('[data-word]')]){const id=word.getAttribute('data-word'),active=id===entry.active||cue.en.some(w=>w.id===id&&w.sourceIds.includes(entry.active));word.setAttribute('fill',active?palette.accent:palette.ivory);}

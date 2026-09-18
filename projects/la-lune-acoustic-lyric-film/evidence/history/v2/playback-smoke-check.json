@@ -1,0 +1,39 @@
+{
+  "revision": "preview-v2-lunar",
+  "scope": "Technical playback only; not listening certification, hardware latency measurement or production-video validation",
+  "runs": [
+    {
+      "format": "portrait",
+      "rate": 1,
+      "startedAt": 26.7,
+      "observedEnd": 197.555374,
+      "ended": true,
+      "mediaError": null,
+      "readyState": 4,
+      "paintedFrames": 10140,
+      "meanPaintMs": 0.4445857988218584,
+      "maxPaintMs": 4.199999999254942,
+      "recentPaintP95Ms": 0.6999999992549419,
+      "frameIntervalP95Ms": 17.599999997764826,
+      "frameIntervalMaxMs": 18.400000002235174,
+      "clockErrorMaxMs": 7.636000000019294,
+      "sceneRebuilds": 1
+    },
+    {
+      "format": "landscape",
+      "rate": 0.75,
+      "startedAt": 100,
+      "observedTime": 127.909563,
+      "mediaError": null,
+      "paintedFrames": 1620,
+      "meanPaintMs": 0.5495061727723589,
+      "maxPaintMs": 3,
+      "recentPaintP95Ms": 0.7000000029802322,
+      "frameIntervalP95Ms": 34.19999999925494,
+      "frameIntervalMaxMs": 66,
+      "clockErrorMaxMs": 8.33233333334249,
+      "sceneRebuilds": 1
+    }
+  ],
+  "qualification": "Observed cadence can skip 60 fps display states at reduced speed or under browser scheduling; the media clock drives the current frame. Final feature refinement removed five instrumental ripple events near vocal entrances; source, timing, painter and geometry were unchanged. Final geometry parity was rerun."
+}

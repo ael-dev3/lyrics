@@ -6,9 +6,9 @@ export const geometry=(portrait:boolean)=>({cx:portrait?540:960,cy:portrait?605:
 export function lunarState(frame:number,data:ProductionData){
  const t=frame/data.fps,vocal=motion.vocal[Math.min(motion.vocal.length-1,Math.max(0,frame))]??0;
  const event=[...motion.events].reverse().find(e=>e.time<=t),age=event?t-event.time:10;
- const ripple=age<.65?{progress:age/.65,opacity:(event?.strength??0)*.16*(1-age/.65)**2}:{progress:0,opacity:0};
+ const ripple=age<.65?{progress:age/.65,opacity:(event?.strength??0)*.065*(1-age/.65)**2}:{progress:0,opacity:0};
  const first=(data.cues[0]?.startSample??0)/data.sampleRate;
- return {vocal,reveal:smooth(t/Math.max(1,first)),ripple,moonOpacity:.78+.17*vocal,haloOpacity:.10+.12*vocal+ripple.opacity*.35,fade:1-smooth((t-(data.duration-2.5))/2.5)};
+ return {vocal,reveal:smooth(t/Math.max(1,first)),ripple,moonOpacity:.86,haloOpacity:.07,fade:1-smooth((t-(data.duration-2.5))/2.5)};
 }
 export function titleOpacity(frame:number,data:ProductionData){
  const t=frame/data.fps,first=(data.cues[0]?.startSample??0)/data.sampleRate,verseEnd=(data.cues[6]?.endSample??0)/data.sampleRate,second=(data.cues[7]?.startSample??0)/data.sampleRate,last=(data.cues.at(-1)?.endSample??0)/data.sampleRate;

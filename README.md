@@ -10,17 +10,17 @@ Music films with synchronized lyrics, meaning-linked translations, and audio-rea
 
 ## La Lune
 
-**L’Impératrice · version acoustique · French + English · verified landscape and portrait films**
+**L’Impératrice · version acoustique · French + English · Celestial v3**
 
-![La Lune: silver Moon and equal French / English focus](assets/la-lune-acoustic-final-46-8.png)
+![La Lune: steady silver Moon, catalogue stars and equal French / English focus](assets/la-lune-acoustic-celestial-v3-46-8.png)
 
-*Decoded final landscape frame at 00:46.800. Music: L’Impératrice / microqlima. AI-assisted lunar artwork and lyric presentation created for this edition.*
+*Decoded final landscape frame at 00:46.800. Music: L’Impératrice / microqlima. AI-assisted lunar artwork and original lyric presentation.*
 
-The complete 3:17.555 acoustic recording has a centered Moon composition, icy blue and pearl typography, a compact radial spectrum, vocal-responsive light and faint instrumental ripples. Equal French and English lyrics retain fixed positions and complete meaning-linked focus. The long instrumental outro remains intact in both 1080p60 films.
+The complete 3:17.555 acoustic recording pairs a steady neutral-silver Moon with true black, a Yale Bright Star Catalogue field, slow independent stellar twinkling, a compact radial spectrum and faint instrumental ripples. Equal French and English words retain the earlier accepted audio, timing, mappings and fixed geometry. The oversized Moon is artistic; the catalogue-grounded claim applies to star positions and magnitude ordering.
 
-The current lunar preview was accepted before explicit render authorization. Both final files passed strict decoding, all 11,854 frame timestamps, unchanged original AAC packets and decoded PCM, and 50,372 visible word-state checks across both formats with zero mismatches or ambiguous states. Overall acceptance is separate from incomplete granular listening telemetry and model-assisted acoustic uncertainty. Full media stays local.
+Both 1080p60 films passed complete timestamps, strict decoding, unchanged original AAC packets and decoded PCM, plus 50,372 visible word-state checks with zero mismatches or ambiguous states. Sampled encoded lunar illumination is steady and neutral. This owner-directed visual correction and replacement delivery is separate from a new preview-acceptance claim or complete granular listening review. Full media stays local, and the previous edition is preserved.
 
-[Production and reproduction](projects/la-lune-acoustic-lyric-film/README.md) · [Verified delivery](projects/la-lune-acoustic-lyric-film/evidence/delivery-receipt.json) · [Verification and limits](projects/la-lune-acoustic-lyric-film/evidence/final-verification.md) · [Production lessons](projects/la-lune-acoustic-lyric-film/PRODUCTION-LESSONS.md) · [Upload assets](projects/la-lune-acoustic-lyric-film/publishing/README.md) · [Original acoustic recording](https://www.youtube.com/watch?v=p3E731cu_nE)
+[Project and reproduction](projects/la-lune-acoustic-lyric-film/README.md) · [Celestial design and scientific limits](projects/la-lune-acoustic-lyric-film/CELESTIAL-NOTES.md) · [Final verification](projects/la-lune-acoustic-lyric-film/evidence/final-verification.md) · [Production lessons](projects/la-lune-acoustic-lyric-film/PRODUCTION-LESSONS.md) · [Posting assets](projects/la-lune-acoustic-lyric-film/publishing/README.md) · [Original recording](https://www.youtube.com/watch?v=p3E731cu_nE)
 
 ## каждый, кто делал тебе больно
 

@@ -1,0 +1,68 @@
+{
+  "status": "PASS",
+  "revision": "preview-v3-celestial",
+  "results": [
+    {
+      "format": "landscape",
+      "file": "La-Lune-Celestial-v3-landscape-1920x1080-60fps.mp4",
+      "sha256": "89e2422006381cbf76868a607bb230b2b5856e87a1173b1cc20977989b866254",
+      "samples": 321,
+      "fromSeconds": 30,
+      "toSeconds": 190,
+      "roi": {
+        "x": 896,
+        "y": 298,
+        "width": 128,
+        "height": 128
+      },
+      "rgbMinimum": [
+        142,
+        142,
+        142
+      ],
+      "rgbMaximum": [
+        142,
+        142,
+        142
+      ],
+      "ranges": [
+        0,
+        0,
+        0
+      ],
+      "maxChannelSpread": 0
+    },
+    {
+      "format": "portrait",
+      "file": "La-Lune-Celestial-v3-portrait-1080x1920-60fps.mp4",
+      "sha256": "73f9402627288ae317e5545126abdf51413f048fb848a9416abaee047170e534",
+      "samples": 321,
+      "fromSeconds": 30,
+      "toSeconds": 190,
+      "roi": {
+        "x": 476,
+        "y": 541,
+        "width": 128,
+        "height": 128
+      },
+      "rgbMinimum": [
+        150,
+        150,
+        150
+      ],
+      "rgbMaximum": [
+        150,
+        150,
+        150
+      ],
+      "ranges": [
+        0,
+        0,
+        0
+      ],
+      "maxChannelSpread": 0
+    }
+  ],
+  "method": "Decode final HEVC; area-average the fixed central 128×128 Moon region to one RGB pixel every 30 frames from 30–190 seconds. Maximum permitted per-channel range and RGB separation: two 8-bit levels.",
+  "limits": "Checks sampled central-surface illumination and neutral color. Separate all-frame source audit establishes fixed Moon and halo opacity. Intro reveal, final fade, moving spectrum and stellar scintillation are intentional and excluded from this ROI."
+}
