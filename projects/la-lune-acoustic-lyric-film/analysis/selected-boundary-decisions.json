@@ -1,0 +1,101 @@
+{
+  "status": "preview candidates; actual-audio review pending",
+  "overrides": {
+    "0:2": {
+      "end": 28.82,
+      "reason": "Resolve bounded-window overlap before the next phrase."
+    },
+    "1:3": {
+      "end": 31.72,
+      "reason": "Retain the harmonic sustain; decline into diffuse tail around 31.7–31.9."
+    },
+    "2:2": {
+      "end": 37.08,
+      "reason": "Voiced structure continues past the short Whisper core; tail thins near 37.1."
+    },
+    "3:2": {
+      "end": 40.4,
+      "reason": "Keep the observed final vocal energy; later energy is diffuse."
+    },
+    "4:0": {
+      "end": 44.49,
+      "reason": "Two independent Whisper observations place the following word near 44.5."
+    },
+    "4:1": {
+      "start": 44.49,
+      "reason": "Bounded Whisper and small free recognition agree; MMS onset appears late."
+    },
+    "4:5": {
+      "end": 47.36,
+      "reason": "Conservative handoff within conflicting candidate intervals."
+    },
+    "4:6": {
+      "start": 47.36,
+      "end": 47.82,
+      "reason": "Bounded Whisper and small recognition support an earlier consonant contact than MMS."
+    },
+    "4:7": {
+      "start": 47.82,
+      "end": 49.02,
+      "reason": "Preserve restriction and final vowel, with harmonic decay near 49.0."
+    },
+    "5:0": {
+      "end": 51.31,
+      "reason": "Whisper observations agree on the early following pronoun."
+    },
+    "5:1": {
+      "start": 51.31,
+      "end": 51.75,
+      "reason": "Connected delivery: model comparison supports the pronoun before the MMS phonetic core."
+    },
+    "5:5": {
+      "end": 55.38,
+      "reason": "Harmonic sustain is visible through 55.3; neither short model core includes the full note."
+    },
+    "6:1": {
+      "end": 58.45,
+      "reason": "Harmonic sustain remains strong until about 58.4 before rapid decay."
+    },
+    "7:1": {
+      "end": 85.64,
+      "reason": "Remove window-edge overlap with the following line."
+    },
+    "8:1": {
+      "end": 88.43,
+      "reason": "Retain vocal energy to the decay around 88.4."
+    },
+    "9:2": {
+      "start": 92.4,
+      "end": 94.08,
+      "reason": "MMS and small free recognition support contact near 92.4; retain the sung tail."
+    },
+    "10:1": {
+      "end": 97.2,
+      "reason": "Harmonic support decays into diffuse energy after 97.2."
+    },
+    "11:1": {
+      "end": 103.08,
+      "reason": "Whisper observes the full connected vowel beyond the short MMS core."
+    },
+    "11:4": {
+      "end": 105.78,
+      "reason": "Retain the sustained note through the strong harmonic decay."
+    },
+    "12:3": {
+      "end": 112.84,
+      "reason": "Voiced sustain ends before the next title phrase; diffuse tail remains uncertain."
+    },
+    "13:1": {
+      "end": 115.1,
+      "reason": "Final harmonic decay becomes weak and diffuse after 115.1."
+    }
+  },
+  "methods": [
+    "MMS forced alignment on bounded vocal windows",
+    "Whisper forced alignment on bounded vocal windows",
+    "MMS section alignment on original mix and stem",
+    "Independent small-model free recognition on six full-recording windows",
+    "Visual waveform and spectrogram inspection of 12 detailed windows"
+  ],
+  "limits": "Soft legato vocals and separated-stem reverberation create uncertain onsets and releases. Window-edge forced alignments and ASR hallucinations were rejected as lyric authority; no full listening review is claimed."
+}

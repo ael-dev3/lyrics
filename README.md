@@ -6,7 +6,19 @@ Music films with synchronized lyrics, meaning-linked translations, and audio-rea
 
 **Current style default:** [cinematic lyric presentation](docs/cinematic-lyric-workflow.md) — stable, color-only word or phrase emphasis, precise vocal timing, smooth scene shading and equally prominent bilingual lyrics. Motion intensity follows the song: gentle arrangements can use compact, subdued audio-reactive graphics. The guide includes implemented references and review requirements for future tracks.
 
-[**каждый, кто делал тебе больно**](#каждый-кто-делал-тебе-больно) · [**Sugar Glass**](#sugar-glass) · [**Твои глаза**](#твои-глаза) · [**Прости за любовь — accepted with known gaps**](#прости-за-любовь) · [**Половинка**](#половинка) · [**Life Letters**](#life-letters) · [**Joyride**](#joyride) · [**midnight love**](#midnight-love) · [**Пожары**](#пожары) · [**Отменяй**](#отменяй) · [**Roi × Adore**](#roi--adore) · [**TikTok edition**](#tiktok-edition) · [**Tanisea**](#tanisea) · [**Build and workflow**](#build-and-workflow)
+[**La Lune — lunar preview**](#la-lune) · [**каждый, кто делал тебе больно**](#каждый-кто-делал-тебе-больно) · [**Sugar Glass**](#sugar-glass) · [**Твои глаза**](#твои-глаза) · [**Прости за любовь — accepted with known gaps**](#прости-за-любовь) · [**Половинка**](#половинка) · [**Life Letters**](#life-letters) · [**Joyride**](#joyride) · [**midnight love**](#midnight-love) · [**Пожары**](#пожары) · [**Отменяй**](#отменяй) · [**Roi × Adore**](#roi--adore) · [**TikTok edition**](#tiktok-edition) · [**Tanisea**](#tanisea) · [**Build and workflow**](#build-and-workflow)
+
+## La Lune
+
+**L’Impératrice · version acoustique · French + English · playable lunar preview**
+
+![La Lune lunar preview with equal bilingual word emphasis](assets/la-lune-acoustic-46-8.png)
+
+*Native diagnostic preview still at 00:46.800. Music: L’Impératrice / microqlima. New AI-assisted lunar artwork and lyric presentation created for this edition. No full production film rendered.*
+
+The complete 3:17.555 acoustic recording has a new centered Moon composition, icy blue and pearl typography, a compact radial spectrum, vocal-responsive light and faint instrumental ripples. Equal French and English lyrics retain fixed positions and complete meaning-linked focus. The long instrumental outro remains intact. Both 16:9 and 9:16 previews are available; actual-audio synchronization review and current-revision render approval remain pending.
+
+[Preview and reproduction](projects/la-lune-acoustic-lyric-film/README.md) · [Visual decisions and reusable lessons](projects/la-lune-acoustic-lyric-film/PREVIEW-NOTES.md) · [Sync review status](projects/la-lune-acoustic-lyric-film/evidence/cross-language-sync-review.md) · [Original acoustic recording](https://www.youtube.com/watch?v=p3E731cu_nE)
 
 ## каждый, кто делал тебе больно
 

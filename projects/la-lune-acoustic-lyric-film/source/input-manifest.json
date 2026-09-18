@@ -1,0 +1,53 @@
+{
+  "sourceId": "p3E731cu_nE",
+  "sourceUrl": "https://www.youtube.com/watch?v=p3E731cu_nE",
+  "title": "L'Impératrice — LA LUNE (version acoustique)",
+  "artist": "L’Impératrice",
+  "label": "microqlima",
+  "descriptionSummary": "Official artist upload identifies an impromptu acoustic version recorded on a winter day.",
+  "lyricsAuthority": "Supplied user text agrees with the official upload description; typography normalized to curly apostrophes.",
+  "artwork": {
+    "source": "AI-assisted original lunar illustration generated for preview-v2-lunar",
+    "path": "public/moon-v2.png",
+    "width": 1254,
+    "height": 1254,
+    "credit": "New artwork for this lyric edition; not artwork attributed to L’Impératrice or microqlima",
+    "composition": "Centered full-frame lunar scene with radial audio spectrum and restrained audio-driven light",
+    "provenance": "source/moon-artwork-prompt.md",
+    "limitation": "Artistic lunar illustration, not a scientific map"
+  },
+  "audio": {
+    "codec": "AAC LC",
+    "sampleRate": 44100,
+    "channels": 2,
+    "sampleCount": 8712192,
+    "duration": 197.55537414965985,
+    "framesAt60": 11854,
+    "transform": "Stream-copy AAC from original download; no gain or timing change"
+  },
+  "files": {
+    "public/soundtrack.m4a": {
+      "bytes": 3195789,
+      "sha256": "5619c096237395e1f1d02ad329ffc7c32851e3d60a9f63a0b7540d189730a0e2"
+    },
+    "public/fonts/SpaceGrotesk.ttf": {
+      "bytes": 136676,
+      "sha256": "acad6de1fc93436f5c0f1f4137751ef04f1aea3063e7036535970ffcfbd79f72"
+    },
+    "package-lock.json": {
+      "bytes": 195728,
+      "sha256": "6de7b4f67a5b3f10ae60ec3d3bb7a649e59a184972b7c57e8bc70edc2ee6003e"
+    },
+    "public/moon-v2.png": {
+      "bytes": 2020358,
+      "sha256": "fb1af4bb2477a89b57aa54b84235bcdb05994464ece69eb45bb68b5e27a95c48"
+    }
+  },
+  "tools": {
+    "node": "24.20.0",
+    "typescript": "7.0.2",
+    "typescriptRegistryChecked": "2026-09-18",
+    "remotion": "4.0.518",
+    "alignment": "MMS_FA + stable-whisper large-v3-turbo; independent small-model free recognition; Demucs htdemucs vocal analysis only"
+  }
+}

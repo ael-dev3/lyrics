@@ -1,0 +1,7 @@
+# Original lunar artwork
+
+Generated for the acoustic preview with the built-in image-generation tool. This is an artistic lunar asset, not a scientific map or original artist artwork. Typography and audio-linked animation are authored separately. The selected image is stored as `public/moon-v2.png`.
+
+## Generation prompt
+
+Use case: stylized-concept. Asset type: original high-resolution lunar disc for an animated lyric film of a gentle French acoustic song. Create one square 2048x2048 image: a large complete Moon centered exactly in the square, its circular disc occupying about 78 percent of the image width, surrounded by uninterrupted almost-black deep midnight blue (#050C18). An exquisite photorealistic lunar surface with recognizable seas, crater rims and subtly tactile relief; softly illuminated silver-ivory near-full moon with a slender blue-grey shaded edge, delicate icy blue light at the rim. Restrained poetic astronomical photography, intimate and luminous, authentic detail without oversharpened grit. Palette only shades naturally belonging to the moon and night: midnight navy, blue-grey, cool pearl, pale ice. Edge of the canvas must remain flat midnight blue, leaving enough clean margin for later compositing. No stars, clouds, scenery, additional planets, orbital rings, lens flares, lettering, logos, watermark or frame. Perfectly round moon, not an ellipse. This is an asset, not a finished poster; typography and audio-linked motion will be added separately in code.
