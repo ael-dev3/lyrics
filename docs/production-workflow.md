@@ -251,6 +251,20 @@ For parallel renders containing high-resolution source video, budget decoder mem
 
 Preserve the original frozen-input record before recovering captures. Reuse only a complete, verified frame sequence whose composition, media and dependency hashes still match; compare sampled native pixels against fresh renders and check the recovered intermediate's color conversion. Keep a recovery receipt and make clean reproduction independent of temporary caches. After concatenating segments, rebuild the final timestamps from integer frame indices and verify every decoded timestamp against the delivery clock.
 
+### Cache expensive artwork without changing the composition
+
+For deterministic filters with a finite set of states, consider caching the affected artwork layer while the approved painter continues to drive lyrics, spectrum, titles and fades. Bind cache entries to source, recipe and file hashes, bound preparation batches, and compare the direct and cached paths at delivery resolution before using the adapter. State the comparison's scope: a matching diagnostic does not establish whole-film pixel equality. Changing the graphics backend also requires a fresh comparison. [Kazhdyy's production lessons](../projects/kazhdyy-lyric-film/PRODUCTION-LESSONS.md#preserve-the-reviewed-pixels-while-making-rendering-practical) record byte-identical 120-frame diagnostics and a rejected backend that changed pixels.
+
+During a long render, check ongoing frame progress as well as process liveness. Use temporary host-wake protection where needed, one supervisor per format, bounded retries and retained attempt records. Inspect existing processes before restarting after an app interruption. Recovery may stop only processes it owns and may reuse only verified segments; file existence alone is insufficient.
+
+### Assemble on the frame clock
+
+Container-reported segment duration can be rounded even when every segment decodes correctly. Derive segment starts and ends from integer global frame boundaries. When a concat manifest requires microsecond durations, use `round(endExclusiveFrame * 1e6 / fps) - round(startFrame * 1e6 / fps)`; independently rounding each segment's duration can accumulate error.
+
+The [Kazhdyy assembler](../projects/kazhdyy-lyric-film/scripts/assemble-delivery.ts) corrected rounded portrait segment metadata by supplying explicit concat durations while stream-copying the encoded picture and original audio. Its [assembly receipt](../projects/kazhdyy-lyric-film/evidence/production/portrait-assembly.json) verifies unchanged video packet payloads. The helper is project-specific; preserve its frame-clock principle when adapting it. After assembly, verify **every** video presentation timestamp against the intended clock, audio packets and timestamps, full decode and decoded focus. An assembly receipt alone is not delivery verification.
+
+### Encode the delivery
+
 For broad compatibility, use H.264. For a smaller Mac- and modern-device-friendly delivery, use HEVC and tag the stream as `hvc1` during the final mux. In either case, pin PNG browser frames and BT.709; otherwise the render may introduce a lossy JPEG generation and the wrong implicit colour conversion before codec compression.
 
 Direct high-quality compact review render:
@@ -288,6 +302,7 @@ ffmpeg \
 The final file—not only previews—must pass:
 
 - expected duration and frame count;
+- every video presentation timestamp against the frame clock, including all segment joins;
 - expected dimensions and frame rate;
 - expected pixel format, sample aspect ratio, BT.709 primaries, transfer, matrix, range, and chroma location;
 - full decode without errors;
@@ -296,6 +311,10 @@ The final file—not only previews—must pass:
 - visual inspection of every high-risk window;
 - source-audio identity when copied without re-encoding;
 - final file checksum recorded with the audit.
+
+Check decoded lyric focus against the approved event map, including complete translated spans. Where an automated pixel check is used, include a separate deliberately shifted diagnostic that must fail; record the offset, coverage and observed failures. Kazhdyy's 100 ms negative control detected 92 mismatches, while the correct full deliveries had none. This demonstrates sensitivity to disagreement with the map; acoustic alignment still requires the actual-audio review. See the [verification scope and evidence](../projects/kazhdyy-lyric-film/evidence/final-verification.md).
+
+Inspect the decoded ending at native size. Record visible residuals and distinguish visual acceptance from exact pixel uniformity; lossy compression can leave low-amplitude outlines even after the authored fade reaches its final color. Rehash the actual destination copy before declaring the upload kit complete, and keep the frozen source identity and subsequent handoff receipts traceable.
 
 ```sh
 ffprobe -v error -count_frames \

@@ -40,6 +40,16 @@ For more forceful arrangements, larger reach or reviewed transient accents may s
 
 During the short style review, include quiet material, a musical peak, dense bilingual text and the ending in both formats. Check that bars remain visible after encoding and at mobile size, that their movement supports the picture, and that the ending has room for original credits. Record the chosen intensity and its reason in neutral production language.
 
+### Reserve impact for selected sections
+
+For arrangements with distinct energy tiers, define baseline, supporting emphasis and climax windows on the audio timeline before tuning bar size. Let measured frequency shape and vocal energy operate within those artistic limits. Keep transitions within the reviewed windows and join adjacent tiers without an unintended dip. Review the frames immediately before, at and after each boundary with actual-cadence playback.
+
+The completed [каждый, кто делал тебе больно treatment](../projects/kazhdyy-lyric-film/PRODUCTION-LESSONS.md) demonstrates this approach: the largest response is reserved for one climax, the illustration stays fixed, and brief vocal-linked grain changes remain inside protected shadow interiors. The reusable decision is to assign a clear purpose to each moving layer. Choose the next recording's windows, geometry and effects from its own arrangement and imagery.
+
+Give each effect a reason to exist: section energy, a discernible change in vocal texture, or a meaningful picture transition. Compare it enabled and disabled during review. Protect artwork landmarks and the reading area; remove motion that distracts without strengthening the relationship to the music. Texture events, lyric timing and translated meaning remain separate data, even when they share the same audio clock.
+
+A limited palette can still support strong contrast through luminance, scale, negative space and texture. Record authored base colors separately from intermediate raster and encoded values. Keep the commissioned palette local to its project, and preserve equal bilingual focus through every intensity tier. Review dense text and fine shadow detail at native and mobile size in both formats, including decoded diagnostics.
+
 ## Timing and coverage
 
 Audit the complete recording, including gaps and the tail after the supplied reference ends. A lyric sheet ending, missing automatic captions or a `[Music]` label does not establish that a passage is instrumental. Preserve the supplied reference separately, document confirmed performed repeats and align each performance independently. Follow the [complete-recording coverage requirements](track-workflow-preferences-and-known-issues.md#vocal-coverage-across-the-complete-recording).
