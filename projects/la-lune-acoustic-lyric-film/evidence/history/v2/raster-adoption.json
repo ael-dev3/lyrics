@@ -1,0 +1,124 @@
+{
+  "status": "PASS",
+  "revision": "preview-v2-lunar",
+  "comparisons": [
+    {
+      "format": "landscape",
+      "at": 8,
+      "paintMs": 701.3697089999987,
+      "maxChannelDifference": 11,
+      "meanChannelDifference": 0.10304402166923868,
+      "pixelsOver4": 27,
+      "pixelsOver16": 0,
+      "pixelCount": 8294400
+    },
+    {
+      "format": "landscape",
+      "at": 46.8,
+      "paintMs": 56.996124999997846,
+      "maxChannelDifference": 7,
+      "meanChannelDifference": 0.08989828478652263,
+      "pixelsOver4": 23,
+      "pixelsOver16": 0,
+      "pixelCount": 8294400
+    },
+    {
+      "format": "landscape",
+      "at": 103.5,
+      "paintMs": 49.24899999999616,
+      "maxChannelDifference": 10,
+      "meanChannelDifference": 0.06315574363425926,
+      "pixelsOver4": 20,
+      "pixelsOver16": 0,
+      "pixelCount": 8294400
+    },
+    {
+      "format": "landscape",
+      "at": 170,
+      "paintMs": 45.84766700000182,
+      "maxChannelDifference": 11,
+      "meanChannelDifference": 0.09895126028806585,
+      "pixelsOver4": 136,
+      "pixelsOver16": 0,
+      "pixelCount": 8294400
+    },
+    {
+      "format": "portrait",
+      "at": 8,
+      "paintMs": 72.30291700000089,
+      "maxChannelDifference": 7,
+      "meanChannelDifference": 0.18213597929526748,
+      "pixelsOver4": 14,
+      "pixelsOver16": 0,
+      "pixelCount": 8294400
+    },
+    {
+      "format": "portrait",
+      "at": 46.8,
+      "paintMs": 165.0416669999995,
+      "maxChannelDifference": 9,
+      "meanChannelDifference": 0.15837231545781894,
+      "pixelsOver4": 27,
+      "pixelsOver16": 0,
+      "pixelCount": 8294400
+    },
+    {
+      "format": "portrait",
+      "at": 103.5,
+      "paintMs": 89.17795799999658,
+      "maxChannelDifference": 7,
+      "meanChannelDifference": 0.1115063175154321,
+      "pixelsOver4": 11,
+      "pixelsOver16": 0,
+      "pixelCount": 8294400
+    },
+    {
+      "format": "portrait",
+      "at": 170,
+      "paintMs": 96.87233399999968,
+      "maxChannelDifference": 10,
+      "meanChannelDifference": 0.17347274466306584,
+      "pixelsOver4": 354,
+      "pixelsOver16": 0,
+      "pixelCount": 8294400
+    }
+  ],
+  "diagnostics": [
+    {
+      "revision": "preview-v2-lunar",
+      "inputFile": "landscape-raster-diagnostic.mp4",
+      "inputSha256": "900a66bc38a0d1e1fd8de932dc4f92e9f30175e1b189665d0f31f8486305169b",
+      "status": "passed",
+      "format": "landscape",
+      "offset": 2778,
+      "negativeControl": false,
+      "decodedFrames": 120,
+      "wordStates": 1920,
+      "ambiguous": 0,
+      "mismatchCount": 0,
+      "mismatches": [],
+      "method": "Bundled-font masks select eroded glyph-interior pixels. Median RGB distance to the frozen pearl-active and blue-inactive colors classifies all visible French and English words in every decoded frame; ambiguous or distant pixels fail closed. Verifies displayed state, not acoustic truth."
+    },
+    {
+      "revision": "preview-v2-lunar",
+      "inputFile": "portrait-raster-diagnostic.mp4",
+      "inputSha256": "3ad7e7b56ce1508d8fec04525ca60ea2f3cce4f39da6ae96f7c8ed31e3737e50",
+      "status": "passed",
+      "format": "portrait",
+      "offset": 2778,
+      "negativeControl": false,
+      "decodedFrames": 120,
+      "wordStates": 1920,
+      "ambiguous": 0,
+      "mismatchCount": 0,
+      "mismatches": [],
+      "method": "Bundled-font masks select eroded glyph-interior pixels. Median RGB distance to the frozen pearl-active and blue-inactive colors classifies all visible French and English words in every decoded frame; ambiguous or distant pixels fail closed. Verifies displayed state, not acoustic truth."
+    }
+  ],
+  "negativeControl": {
+    "offsetFrames": 20,
+    "detectedMismatches": 292
+  },
+  "review": "Both layouts preserve the approved composition and words. Full 2× comparisons differ only by small opacity/stroke antialiasing rounding: no channel difference exceeds 11/255, mean channel error is below 0.183/255, and at most 354 of 8,294,400 pixels exceed 4/255 in any channel. The final encoder receives lossless RGBA with a single Lanczos downsample. This is measured visual equivalence, not pixel identity.",
+  "limits": "Eight representative image comparisons and two encoded diagnostic intervals; full production receives an all-frame word-state audit and complete clock/audio checks. Does not establish acoustic ground truth."
+}

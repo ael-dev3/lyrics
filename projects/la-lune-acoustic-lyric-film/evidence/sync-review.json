@@ -1,7 +1,7 @@
 {
   "song": "p3E731cu_nE",
-  "revision": "preview-v2-lunar",
-  "status": "accepted-for-production",
+  "revision": "preview-v3-celestial",
+  "status": "authorized-visual-revision",
   "inputHashes": {
     "public/soundtrack.m4a": "5619c096237395e1f1d02ad329ffc7c32851e3d60a9f63a0b7540d189730a0e2",
     "public/moon-v2.png": "fb1af4bb2477a89b57aa54b84235bcdb05994464ece69eb45bb68b5e27a95c48",
@@ -13,11 +13,13 @@
     "src/layout.json": "03f22959f1bd871638282d4a051e0f52dafaba417a6ea4795b865dc348ed2574",
     "src/schema.ts": "8c73702bca92992bd7e9c450e41e94d0d2249062ef7963f259ad0c94d88d0131",
     "src/focus.ts": "dc5cfce6fbdc09ab1ed5a93b72073c653383be951f50e7487cc0cc6140166d99",
-    "src/palette.ts": "17851a268b02444b40d33f21822165e4da42db3367f37982ae90f29b56178315",
+    "src/palette.ts": "ee30c48abe92a678d2945a094d0f0d4987dab32e99ac38a4a2296c24b5bd376a",
     "public/lunar-motion.json": "5860a70e6cca1adc2930245915a921bec4f276b00d15205df9ff6776c105bc06",
-    "src/lunar-motion.ts": "021f8f29b4e43af6328d824afd280909da0e6a81fe32208f862590418000a10c",
-    "src/scene.ts": "56872c96140bd917f5038c881e3e7aba1e24e54491bc8391ede658644ca68c50",
-    "src/preview-painter.ts": "0b58dba750e0bfc3d3175f6722dac778b996c3c5ad1e6569117f01ee50ece165",
+    "src/lunar-motion.ts": "4ffce0f3f9b31559510e9e6d892811baedd72702231e8313a744606a713e9a0e",
+    "src/stars.ts": "b2ff67dbd43f397a4bd11c003b7bb84909f2de9b4aa4fcd6baaa9af11edb6a4f",
+    "public/stars-bsc5.json": "36c18ccd0f223210eee7aba963b29bd4923a889ae15dd341d820651ad4c2ea30",
+    "src/scene.ts": "4a47b88b988f17a674b499e358607e0f2f6abb52335c0c43de5bef6e7690bf91",
+    "src/preview-painter.ts": "5883d25d1d69cb3a3a9ac0c8bde1eeebea8e4a9966dc1fd56f6d2baccc348421",
     "src/review-client.ts": "ca9393ddb3a4303ae3f38f39da8ca8025fb044c520a2aa80199cd341119dcad4",
     "review/index.html": "eca29cb5d22426809802ac7c8e841fa4b5ba71ffe0cab3c23e55af6c4a8b84f7"
   },
@@ -143,14 +145,14 @@
   "authorization": {
     "approved": true,
     "song": "p3E731cu_nE",
-    "revision": "preview-v2-lunar",
-    "evidence": "Current-song production explicitly requested after preview review on 2026-09-18."
+    "revision": "preview-v3-celestial",
+    "evidence": "After the completed lunar edition, the project owner commissioned visual corrections to steady Moon illumination, deepen the sky, improve catalogue-grounded stars and remove the blue tint, with a new Desktop delivery folder. This authorizes the requested correction and replacement deliverables; it is not a new claim of preview acceptance or complete granular listening."
   },
-  "reviewMode": "owner-approved-preview",
+  "reviewMode": "owner-directed-visual-revision",
   "finalTechnicalAuditComplete": true,
   "acceptance": {
-    "authorizationId": "la-lune-v2-production-2026-09-18",
-    "evidenceBasis": "Current playable lunar preview accepted by the project owner, followed by explicit production and local delivery instructions.",
-    "coverageLimit": "Overall acceptance is not a complete granular listening log. All per-cue normal/slow listening and audiovisual format fields remain false; model timing uncertainty remains visible."
+    "authorizationId": "la-lune-v3-celestial-2026-09-18",
+    "evidenceBasis": "After the completed lunar edition, the project owner commissioned visual corrections to steady Moon illumination, deepen the sky, improve catalogue-grounded stars and remove the blue tint, with a new Desktop delivery folder. This authorizes the requested correction and replacement deliverables; it is not a new claim of preview acceptance or complete granular listening.",
+    "coverageLimit": "Visual-revision delivery instruction only. Earlier accepted audio, timing, text, mappings and geometry are hash-identical. Granular listening fields and model uncertainty remain unchanged."
   }
 }

@@ -2,11 +2,11 @@
 
 ## Build the visual identity around this recording
 
-A single large lunar subject, cold silver colors and centered sans-serif lyrics form a distinct identity for the acoustic arrangement. The composition works in both aspect ratios without copying another film's panel layout or importing its intensity schedule. Shared workflow knowledge should transfer through source verification, translation discipline and review tools; the visual concept can start afresh.
+A single large lunar subject, neutral silver colors and centered sans-serif lyrics form a distinct identity for the acoustic arrangement. The composition works in both aspect ratios without copying another film's panel layout or importing its intensity schedule. Shared workflow knowledge should transfer through source verification, translation discipline and review tools; the visual concept can start afresh.
 
 ## Give motion a musical purpose
 
-The scene uses a gradual introductory reveal, restrained vocal-responsive moonlight, a compact radial spectrum and short instrumental ripples. Each has a separate driver and bounded range. Fixed stars and a steady lunar disc support the mood. A long instrumental outro can remain visually complete with the subject, measured response and title; it does not need invented lyric events or repeated camera gestures.
+The scene uses a gradual introductory reveal, steady lunar illumination, a compact radial spectrum and short instrumental ripples. Each has a separate driver and bounded range. Catalogue-positioned stars with bounded independent twinkling and a steady lunar disc support the mood. A long instrumental outro can remain visually complete with the subject, measured response and title; it does not need invented lyric events or repeated camera gestures.
 
 The instrumental ripple's exclusion window must account for its full lifetime. A 400 ms lead guard allowed the faint tail of a 650 ms ripple to reach a vocal entrance. An 800 ms guard resolves this, and an all-frame regression test now checks that the ripple is absent during lexical passages. Check effect tails, not merely trigger timestamps.
 
@@ -18,7 +18,7 @@ English grammatical completions should share the source event they express. Reor
 
 ## Verify the actual encoded colors
 
-The prior warm-color classifier does not apply to a cold lunar palette. Here the checker compares median RGB values inside eroded glyph masks with the frozen pearl-active and blue-inactive colors. It fails ambiguous samples rather than silently omitting them. A shifted-timeline negative control demonstrates error detection before using the method on full deliveries.
+The prior warm-color classifier does not apply to a cold lunar palette. Here the checker compares median RGB values inside eroded glyph masks with the frozen silver-active and gray-inactive colors. It fails ambiguous samples rather than silently omitting them. A shifted-timeline negative control demonstrates error detection before using the method on full deliveries.
 
 ## Protect the audio clock across segment joins
 
@@ -33,3 +33,15 @@ Record the accepted revision and explicit production instruction without publish
 A mostly fixed scene can retain Chromium-rasterized artwork and text in a small lossless layer inventory while recomputing the measured animation on each global frame. This avoids rerasterizing the Moon and every glyph thousands of times. Validate the alternative renderer against the approved scene at full supersampled resolution; report small antialiasing differences numerically rather than calling it pixel-identical. Compare encoded lyric colors too, and bind every layer hash and source input before production. Do not reuse this optimization for a scene whose moving masks, transforms or blending are absent from the cache model.
 
 Native canvas buffers do not necessarily trigger JavaScript heap collection promptly. Periodic collection improved speed but was insufficient for the full run. Long exports require a fresh process per completed segment and a single full-resolution worker under constrained memory, even when a short diagnostic is fast. Verify sustained resident memory and retain per-segment hashes so interruption does not invalidate completed work. This runtime safeguard changes resource reclamation, not frame data.
+
+## Protect the dominant light source
+
+A small opacity range can still feel like blinking when it affects a large bright Moon against a dark sky. Keep the focal disc and its halo steady and let compact measured bars carry musical response. Evaluate perceived area and contrast as well as raw numeric amplitude. Neutral black and silver can strengthen a lunar composition when blue grading begins to compete with the subject.
+
+## Make natural detail defensible
+
+Use catalogue coordinates and magnitudes for a recognizable sky pattern, and document projection, epoch, crop and display transforms. Soft point glows and slight independent scintillation communicate shine without arbitrary sparkle sprites. Keep scientific claims narrower than the artwork: a real stellar pattern does not make an oversized artistic Moon a physically accurate sky observation. See [the catalogue implementation and limits](CELESTIAL-NOTES.md).
+
+## Use spacing before decoration
+
+Equal bilingual rows can be distinguished by a stable vertical gap. Add a separator only when it resolves an actual reading ambiguity; otherwise it becomes another visual element competing with the subject.

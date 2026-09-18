@@ -46,7 +46,7 @@ for(let i=0;i<parts;i++){
 }
 if(production){
  assertProductionGate();const list=directory+'/concat.txt';writeFileSync(list,chunks.map(c=>`file '${c.file}'\nduration ${((Math.round((c.last+1)*1e6/60)-Math.round(c.first*1e6/60))/1e6).toFixed(6)}`).join('\n')+'\n');
- const output=`output/La-Lune-${format}-${width}x${height}-60fps.mp4`;
+ const output=`output/La-Lune-Celestial-v3-${format}-${width}x${height}-60fps.mp4`;
  await run(['-v','error','-y','-f','concat','-safe','0','-i',list,'-i','public/soundtrack.m4a','-map','0:v:0','-map','1:a:0','-c','copy','-tag:v','hvc1','-video_track_timescale','60000','-movflags','+faststart',output]);
  write(`evidence/production/${format}-capture.json`,{fingerprint,format,pipeline:'2× lossless Chromium layers → RGBA → single Lanczos downsample → HEVC Main10 CRF17',scale:2,frames:data.frames,chunks,cache,output,sha256:await sha(output),elapsedSeconds:(Date.now()-began)/1000});status({phase:'Rendered; verification pending',frames:data.frames,totalFrames:data.frames,output});console.log(output);
 }else {status({phase:'Diagnostic complete',mode:'diagnostic',frames:chunks.reduce((n,c)=>n+c.last-c.first+1,0)});console.log('Diagnostic complete:',format);}

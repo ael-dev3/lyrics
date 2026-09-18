@@ -1,0 +1,51 @@
+{
+  "status": "PASS",
+  "revision": "preview-v3-celestial",
+  "allFrames": 11854,
+  "palette": {
+    "ink": "#000000",
+    "ivory": "#B0B0B0",
+    "accent": "#F5F5F5",
+    "muted": "#8F8F8F",
+    "halo": "#A0A0A0"
+  },
+  "unchangedTimingTextLayoutHashes": {
+    "public/soundtrack.m4a": "5619c096237395e1f1d02ad329ffc7c32851e3d60a9f63a0b7540d189730a0e2",
+    "source/lyrics-fr.json": "d88838cd9d2dd93b0fbe4c950a28d5aada49bfb93b0f9c59bb12afdfe6c9c950",
+    "source/translation.json": "59187049908baadee72c6f5c886e1817f19cdf879de6cf50f4a8366559a8b922",
+    "src/cues.json": "983cfc3462a79e07fb753b987f4efe09f69219d0a127b2eae6eeb87f856bca88",
+    "src/layout.json": "03f22959f1bd871638282d4a051e0f52dafaba417a6ea4795b865dc348ed2574",
+    "src/focus.ts": "dc5cfce6fbdc09ab1ed5a93b72073c653383be951f50e7487cc0cc6140166d99"
+  },
+  "moon": {
+    "opacity": 0.86,
+    "haloOpacity": 0.07,
+    "maxMoonChange": 0,
+    "maxHaloChange": 0,
+    "limits": "Intro phase reveal and final scene fade remain intentional; the audio never modulates Moon illumination."
+  },
+  "stars": {
+    "catalogue": "Yale Bright Star Catalogue, 5th Revised Ed. (Hoffleit & Warren 1991), CDS V/50",
+    "field": {
+      "ra": 65,
+      "dec": 0,
+      "shortAxisDegrees": 54,
+      "orientation": "north up, east left",
+      "epoch": "FK5 J2000.0"
+    },
+    "projection": {
+      "landscape": {
+        "visibleCatalogueStars": 393,
+        "maxProjectionRoundingErrorPixels": 0.000498645218499405
+      },
+      "portrait": {
+        "visibleCatalogueStars": 264,
+        "maxProjectionRoundingErrorPixels": 0.0004966463997106985
+      }
+    },
+    "maxStarOpacityStepPerFrame": 0.0007000000000000339,
+    "minimumScintillationMultiplier": 0.88,
+    "display": "V magnitudes converted to relative flux and compressed by power 0.30; neutral point cores with soft glows; slow independent scintillation.",
+    "limits": "J2000 catalogue pattern, not a dated horizon observation. No proper-motion correction. Oversized Moon is artistic, not an ephemeris. Uniform silver styling does not claim stellar spectral colors; twinkle is an illustrative exposure treatment."
+  }
+}

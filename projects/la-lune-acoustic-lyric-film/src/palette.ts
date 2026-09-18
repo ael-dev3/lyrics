@@ -1,1 +1,1 @@
-export const palette={ink:'#050C18',ivory:'#98B0C5',accent:'#EDF8FF',muted:'#7692A9',halo:'#85A8C3'} as const;
+export const palette={ink:'#000000',ivory:'#B0B0B0',accent:'#F5F5F5',muted:'#8F8F8F',halo:'#A0A0A0'} as const;

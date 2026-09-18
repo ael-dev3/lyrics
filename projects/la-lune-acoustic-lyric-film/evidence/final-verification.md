@@ -1,32 +1,29 @@
-# Final delivery verification
+# Celestial v3 final verification
 
-Both complete files preserve the accepted lunar design and original recording.
+Both complete neutral-silver films preserve the earlier accepted timing and original recording.
 
 | Format | Dimensions | Frames at 60 fps | Decimal size | Decoded word states | Mismatches / ambiguous |
 | --- | --- | --- | --- | --- | --- |
-| landscape | 1920×1080 | 11,854 | 18.71 MB | 25,186 | 0 / 0 |
-| portrait | 1080×1920 | 11,854 | 23.15 MB | 25,186 | 0 / 0 |
+| landscape | 1920×1080 | 11,854 | 16.36 MB | 25,186 | 0 / 0 |
+| portrait | 1080×1920 | 11,854 | 20.01 MB | 25,186 | 0 / 0 |
 
-Every frame timestamp follows its global index divided by 60, within the 2 μs timestamp serialization tolerance; no duplicated or missing frame occurs at any segment join. Both files strictly decode and use HEVC Main 10 / hvc1, yuv420p10le, square pixels, BT.709 limited range and fast-start metadata. The video spans 197.5667 seconds, covering the complete 197.555374-second audio clock.
+Every video timestamp follows its global frame index at 60 fps within the 2 μs serialization tolerance. Both films strictly decode as HEVC Main 10 / hvc1, yuv420p10le, square pixels and BT.709 limited range, with fast-start metadata. No frame is missing or duplicated at segment joins. The 197.5667-second video covers the entire 197.555374-second recording.
 
-The 8,508 original AAC packet payloads, PTS, DTS, duration and size fields are identical in each delivery. Decoded audio remains 8,712,192 stereo samples at 44,100 Hz with PCM SHA-256 `7daaa85552f47cee9ce1f69b089b61ff1919387a53bb86d57f39d9f3a0ad4067`. There is no audio retiming, resampling or gain change.
+All 8,508 original AAC packet payloads, PTS, DTS, duration and size fields match in each delivery. Both decoded tracks have 8,712,192 stereo samples at 44,100 Hz and PCM SHA-256 `7daaa85552f47cee9ce1f69b089b61ff1919387a53bb86d57f39d9f3a0ad4067`. Audio is neither retimed, resampled nor gain-adjusted.
 
-The [full event audit](final-sync-audit.json) covers all 49 French and 56 English words; each delivery's decoded color checker verifies all 25,186 visible word states. A shifted diagnostic produces 292 detected errors. The [renderer comparison](raster-adoption.json) records bounded antialiasing differences from direct 2× SVG capture, followed by passing encoded diagnostics in both layouts.
+The [event audit](final-sync-audit.json) covers all 49 French and 56 English words. Every decoded visible word state matches the frozen source/meaning map. The deliberately shifted diagnostic detects 292 errors, confirming that the classifier can reject an offset. [Renderer comparisons](raster-adoption.json) report the small supersampled antialiasing differences separately from exact native preview-adapter parity. All 69 cache layers per format were freshly captured for the neutral palette, and every v3 film segment was rerendered.
 
-## Artifact hashes
+## Illumination and stars
 
-- La-Lune-landscape-1920x1080-60fps.mp4: `a38efe0e61a86eeb57793feaf0b9be2bfaea279ce1c0c8ae027cffa69743dca7`
-- La-Lune-portrait-1080x1920-60fps.mp4: `295f9195460a33eec22bf79521466dd7a4627089690006d0023cbedf07b3ef86`
+The [source audit](celestial-audit.json) verifies constant Moon/halo opacity over all 11,854 frames, neutral palette, star projection and bounded independent scintillation. The [encoded Moon audit](encoded-moon-illumination.json) samples 321 central-surface regions per film from 30–190 seconds: maximum per-channel temporal range 0/255, maximum RGB channel separation 0/255. Intro reveal and final fade are intentionally excluded.
 
-## Scope and limitations
+## Final file hashes
 
-These checks prove fidelity to the approved event map and recording. They do not establish perfect acoustic word boundaries. Overall preview acceptance and explicit render authorization remain separate from incomplete granular normal-speed, reduced-speed and audiovisual listening fields. Model candidates, source-word review flags and uncertainty remain preserved. See [production notes](../PRODUCTION-NOTES.md), [sync review](sync-review.json) and the [pre-production snapshot](review-before-production.json).
+- La-Lune-Celestial-v3-landscape-1920x1080-60fps.mp4: `89e2422006381cbf76868a607bb230b2b5856e87a1173b1cc20977989b866254`
+- La-Lune-Celestial-v3-portrait-1080x1920-60fps.mp4: `73f9402627288ae317e5545126abdf51413f048fb848a9416abaee047170e534`
 
-The 1254×1254 lunar source is supersampled with code-native vectors and text; this does not create additional lunar source detail. Full videos stay local. No platform upload or public binary release is part of this delivery.
+## Scope and limits
 
-## Reports and decoded image review
+These tests establish fidelity to the preserved timing map and recording, not perfect acoustic boundaries. The [current authorization](render-authorization.json) records an owner-directed visual correction and replacement delivery; v3 preview acceptance remains unclaimed. Granular listening fields and model-assisted uncertainty remain visible in [the review](sync-review.json). [V2 evidence](history/v2/README.md) remains historical.
 
-- Landscape: [technical report](La-Lune-landscape-1920x1080-60fps.mp4.verification.json), [decoded word colors](landscape-La-Lune-landscape-1920x1080-60fps.mp4.focus-verification.json), [visual review](landscape-visual-review.json).
-- Portrait: [technical report](La-Lune-portrait-1080x1920-60fps.mp4.verification.json), [decoded word colors](portrait-La-Lune-portrait-1080x1920-60fps.mp4.focus-verification.json), [visual review](portrait-visual-review.json).
-
-Fifteen decoded checkpoints per format were inspected, with frame 2808 additionally reviewed at native size. The representative README screenshot comes from that exact final landscape frame. All seven project regression tests, TypeScript, boundary/color checks and the scoped production gate passed before packaging. [Runtime isolation findings](runtime-memory-validation.json) document the sustained-export correction without changing the approved visual or timing inputs.
+The catalogue star pattern uses J2000 coordinates; the oversized Moon is artistic, with no dated ephemeris or horizon claim. Twinkling and monochrome colors are display choices. The original 1254×1254 Moon is supersampled alongside vectors and text without inventing source detail. Full films remain local; no video-platform upload or public binary release was performed.

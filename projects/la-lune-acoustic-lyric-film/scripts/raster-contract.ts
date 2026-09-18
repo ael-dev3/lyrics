@@ -16,6 +16,6 @@ export function verifyCache(format:string){
 if(process.argv.includes('--bind'))for(const format of ['landscape','portrait']){
  const root='output/raster-cache/'+format,inventory=JSON.parse(readFileSync(root+'/inventory.json','utf8'));
  for(const entry of inventory.entries)if(sha(readFileSync(root+'/'+entry.file))!==entry.sha256)throw Error('Invalid cached layer');
- writeFileSync(root+'/contract.json',JSON.stringify({format,inputs:rasterInputs(),inventorySha256:sha(readFileSync(root+'/inventory.json')),method:'Approved Chromium SVG layers, 2× lossless PNG, labels repaired before proof',createdAt:new Date().toISOString()},null,2)+'\n');
+ writeFileSync(root+'/contract.json',JSON.stringify({format,inputs:rasterInputs(),inventorySha256:sha(readFileSync(root+'/inventory.json')),method:'Current preview Chromium SVG layers, 2× lossless PNG; all 69 layers recaptured for neutral palette',createdAt:new Date().toISOString()},null,2)+'\n');
  verifyCache(format);
 }
