@@ -36,7 +36,7 @@ Open `http://127.0.0.1:4320/`. `Start Preview.command` starts the server with in
 - Native preview/production-adapter checks match exactly at eight states. The [raster adoption report](evidence/raster-adoption.json) separately quantifies small supersampled antialiasing differences and encoded diagnostic results.
 - Technical source-state accuracy is separate from audible-boundary certainty. All 49 French words retain `reviewRequired: true`; granular listening fields remain incomplete. The unchanged timeline's [semantic audit](evidence/final-sync-audit.json) covers 11,820 French and 13,366 English visible word states per format.
 
-The project owner commissioned this visual correction and a new delivery after the completed v2 edition. The [production record](PRODUCTION-NOTES.md) and [authorization](evidence/render-authorization.json) use `owner-directed-visual-revision`, explicitly leaving v3 `previewAccepted: false`. Earlier acceptance is preserved as history. This does not change the preview-before-render workflow for new songs.
+The current celestial preview is accepted and both full films are verified. The [final three-pass check](evidence/final-three-pass-review.json) records a fresh lyric/meaning, audio/frame-clock and encoded-highlight audit. [Owner acceptance](evidence/owner-acceptance-v3.json) binds this approval to the exact unchanged preview and delivered file hashes. The earlier visual-correction authorization remains a historical record; granular listening uncertainty is preserved.
 
 ## Render and verify
 

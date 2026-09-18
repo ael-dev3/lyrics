@@ -4,7 +4,7 @@
 
 The current `preview-v3-celestial` is an owner-directed visual correction and replacement local delivery of the completed lunar edition. The [celestial record](CELESTIAL-NOTES.md) documents neutral black/silver color, steady Moon illumination, real catalogue stars and bounded independent twinkling. Audio, words, timing, mappings and reading geometry match the prior accepted edition exactly.
 
-The [v2 acceptance snapshot](evidence/history/v2/accepted-preview-identity.json) remains historical. The [current authorization](evidence/render-authorization.json) records the correction-and-delivery instruction with `previewAccepted: false`; no new acceptance or granular listening telemetry is invented. The [current review](evidence/sync-review.json) retains incomplete listening fields and source-token uncertainty. The corrected live preview and both render adapters were technically checked before production.
+The [v2 acceptance snapshot](evidence/history/v2/accepted-preview-identity.json) remains historical. The [initial production authorization](evidence/render-authorization.json) records the correction-and-delivery instruction with `previewAccepted: false`; no new acceptance or granular listening telemetry is invented. The [current review](evidence/sync-review.json) retains incomplete listening fields and source-token uncertainty. The corrected live preview and both render adapters were technically checked before production.
 
 ## Final pre-render audit
 
@@ -33,3 +33,9 @@ Both covers are dedicated SVG poster layouts made from the approved Moon asset a
 The posting kit includes platform-specific videos, covers, titles and descriptions; optional French, English and bilingual line-level captions; instructions; checksums and a delivery manifest. Video-platform uploads and public binary releases are outside this handoff.
 
 The [historical v2 segment-continuation record](evidence/isolated-segment-continuation.json) describes the earlier export only. All v3 film segments are freshly rendered; no v2 segment is reused after the visual change.
+
+## Final acceptance and repeated verification
+
+On 19 September 2026, the current celestial preview received explicit acceptance and production/delivery instructions. The [acceptance record](evidence/owner-acceptance-v3.json) binds that decision to the unchanged inputs and both delivery hashes. The [three-pass review](evidence/final-three-pass-review.json) records a fresh wording/meaning audit, full audio/frame-clock checks and all 50,372 encoded word states. All 14 existing Desktop files were rehashed successfully. No new scene or timing revision was needed.
+
+The browser server derives its delivery badge from current acceptance, input hashes, both actual video hashes and passing verification reports. It keeps the original pending state when evidence is missing or stale. This status is outside the frozen film scene and does not modify the videos or their historical manifest.

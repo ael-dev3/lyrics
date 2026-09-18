@@ -24,6 +24,8 @@ The [source audit](celestial-audit.json) verifies constant Moon/halo opacity ove
 
 ## Scope and limits
 
-These tests establish fidelity to the preserved timing map and recording, not perfect acoustic boundaries. The [current authorization](render-authorization.json) records an owner-directed visual correction and replacement delivery; v3 preview acceptance remains unclaimed. Granular listening fields and model-assisted uncertainty remain visible in [the review](sync-review.json). [V2 evidence](history/v2/README.md) remains historical.
+These tests establish fidelity to the preserved timing map and recording, not perfect acoustic boundaries. The [current authorization](render-authorization.json) records an owner-directed visual correction and replacement delivery; the subsequent [explicit preview acceptance](owner-acceptance-v3.json) is recorded separately. Granular listening fields and model-assisted uncertainty remain visible in [the review](sync-review.json). [V2 evidence](history/v2/README.md) remains historical.
 
 The catalogue star pattern uses J2000 coordinates; the oversized Moon is artistic, with no dated ephemeris or horizon claim. Twinkling and monochrome colors are display choices. The original 1254×1254 Moon is supersampled alongside vectors and text without inventing source detail. Full films remain local; no video-platform upload or public binary release was performed.
+
+The [final three-pass recheck](final-three-pass-review.json) reconfirms these same file hashes and all 14 Desktop assets after explicit preview acceptance.
