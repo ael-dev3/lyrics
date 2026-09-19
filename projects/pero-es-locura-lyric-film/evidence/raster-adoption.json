@@ -1,6 +1,6 @@
 {
   "status": "PASS",
-  "revision": "preview-v1-live-capitalized",
+  "revision": "preview-v3-paired-bilingual-focus",
   "comparisons": [
     {
       "format": "landscape",
@@ -15,7 +15,25 @@
       "format": "landscape",
       "at": 1.15,
       "maxPremultipliedDifference": 2.9529411764705884,
-      "meanPremultipliedDifference": 0.23726959802453232,
+      "meanPremultipliedDifference": 0.237268692618003,
+      "pixelsOver8": 0,
+      "pixelsOver32": 0,
+      "pixelCount": 8294400
+    },
+    {
+      "format": "landscape",
+      "at": 2.35,
+      "maxPremultipliedDifference": 2.9529411764705884,
+      "meanPremultipliedDifference": 0.23711185516756342,
+      "pixelsOver8": 0,
+      "pixelsOver32": 0,
+      "pixelCount": 8294400
+    },
+    {
+      "format": "landscape",
+      "at": 2.683333333333333,
+      "maxPremultipliedDifference": 2.9529411764705884,
+      "meanPremultipliedDifference": 0.2375346393564576,
       "pixelsOver8": 0,
       "pixelsOver32": 0,
       "pixelCount": 8294400
@@ -58,6 +76,15 @@
     },
     {
       "format": "landscape",
+      "at": 201.583333,
+      "maxPremultipliedDifference": 2.8313725490196084,
+      "meanPremultipliedDifference": 0.23663387179391113,
+      "pixelsOver8": 0,
+      "pixelsOver32": 0,
+      "pixelCount": 8294400
+    },
+    {
+      "format": "landscape",
       "at": 203.8,
       "maxPremultipliedDifference": 2.9529411764705884,
       "meanPremultipliedDifference": 0.2373571939787168,
@@ -86,8 +113,8 @@
     {
       "format": "landscape",
       "at": 289.6,
-      "maxPremultipliedDifference": 0,
-      "meanPremultipliedDifference": 0,
+      "maxPremultipliedDifference": 2.9529411764705884,
+      "meanPremultipliedDifference": 0.23906868524202934,
       "pixelsOver8": 0,
       "pixelsOver32": 0,
       "pixelCount": 8294400
@@ -115,6 +142,24 @@
       "at": 1.15,
       "maxPremultipliedDifference": 1.3254901960784338,
       "meanPremultipliedDifference": 0.0001667059088295906,
+      "pixelsOver8": 0,
+      "pixelsOver32": 0,
+      "pixelCount": 8294400
+    },
+    {
+      "format": "portrait",
+      "at": 2.35,
+      "maxPremultipliedDifference": 1.2588235294117638,
+      "meanPremultipliedDifference": 0.00007447737003752242,
+      "pixelsOver8": 0,
+      "pixelsOver32": 0,
+      "pixelCount": 8294400
+    },
+    {
+      "format": "portrait",
+      "at": 2.683333333333333,
+      "maxPremultipliedDifference": 2.2745098039215748,
+      "meanPremultipliedDifference": 0.0003602430555556437,
       "pixelsOver8": 0,
       "pixelsOver32": 0,
       "pixelCount": 8294400
@@ -151,6 +196,15 @@
       "at": 190,
       "maxPremultipliedDifference": 1.4313725490195992,
       "meanPremultipliedDifference": 0.0005539775950889683,
+      "pixelsOver8": 0,
+      "pixelsOver32": 0,
+      "pixelCount": 8294400
+    },
+    {
+      "format": "portrait",
+      "at": 201.583333,
+      "maxPremultipliedDifference": 2.4980392156862763,
+      "meanPremultipliedDifference": 0.0003355074909980178,
       "pixelsOver8": 0,
       "pixelsOver32": 0,
       "pixelCount": 8294400
@@ -203,9 +257,9 @@
   ],
   "diagnostics": [
     {
-      "revision": "preview-v1-live-capitalized",
+      "revision": "preview-v3-paired-bilingual-focus",
       "inputFile": "diagnostic.mp4",
-      "inputSha256": "c9a04bd06404aaf4e6c548b63ad6bed1b2c388c7db1b57bed9e2eaaaca19b095",
+      "inputSha256": "3863a83b96f678780f070126efebb5611963f95f52e5635b84a4d5fc79e53d10",
       "status": "passed",
       "format": "landscape",
       "offset": 6468,
@@ -218,9 +272,9 @@
       "method": "Bundled-font masks select eroded glyph-interior pixels. Median RGB distance to the frozen champagne-active and warm-ivory inactive colors classifies all visible Spanish and English words in every decoded frame; ambiguous or distant pixels fail closed. Verifies displayed state, not acoustic truth."
     },
     {
-      "revision": "preview-v1-live-capitalized",
+      "revision": "preview-v3-paired-bilingual-focus",
       "inputFile": "diagnostic.mp4",
-      "inputSha256": "0a03f05a8731fdfb1fd0e20147dc341e3686bb6dc4866f833ed1152886b054b9",
+      "inputSha256": "d0f7364c7f10a1bf9a566a286a8afcd306c2a033b4295fe8f6838ccd7cfcff17",
       "status": "passed",
       "format": "portrait",
       "offset": 11310,
@@ -235,7 +289,7 @@
   ],
   "negativeControl": {
     "offsetFrames": 20,
-    "detectedMismatches": 553
+    "detectedMismatches": 622
   },
   "sourceCadence": {
     "status": "PASS",
@@ -249,15 +303,15 @@
   },
   "rawTransfer": {
     "method": "Canvas raw pixels instead of ImageData copy; asynchronous writes awaited before canvas mutation",
-    "diagnosticComparison": "33,177,600 native bytes compared with ImageData at the 109-second checkpoint: zero differences"
+    "historicalQualification": "Unchanged raw-transfer implementation qualified in history/delivery-v1/raster-adoption.json; no fresh byte-copy comparison claimed"
   },
   "encoder": {
     "codec": "HEVC Main10",
     "implementation": "VideoToolbox",
     "targetBitrate": 24000000,
     "maximumBitrate": 32000000,
-    "referenceComparison": "180-frame comparison with software x265 CRF17: average PSNR 53.294 dB; both diagnostics have zero focus mismatches"
+    "historicalReference": "Encoder settings previously qualified against x265 in history/delivery-v1/raster-adoption.json; current diagnostics independently pass decoded-focus checks"
   },
-  "review": "Twenty-two overlay proofs retain the exact cached typography. Native/Chromium gradient quantization differs by less than 0.4 average premultiplied channel level; at most two isolated pixels exceed eight levels during fades. No pixel exceeds 32 levels. Full delivered frames receive separate decoded-focus and timing audits.",
+  "review": "Twenty-eight overlay proofs retain the exact cached typography. Native/Chromium gradient quantization differs by less than 0.4 average premultiplied channel level; at most two isolated pixels exceed eight levels during fades. No pixel exceeds 32 levels. Full delivered frames receive separate decoded-focus and timing audits.",
   "limits": "Selected overlay proofs and encoded samples establish the adapter, not independent acoustic ground truth. Listening completion is recorded separately as owner attestation."
 }

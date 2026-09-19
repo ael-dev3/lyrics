@@ -18,7 +18,7 @@ It should not contain private thoughts or quotations, personal identifiers, acco
 
 ## Pero es locura semantic-focus follow-up
 
-The delivered v1 films preserve their approved map and original audio, but that map has known incomplete English phrase spans. Revision 3 pairs complete Spanish and English constructions in 53 affected cues, including “te quiero / I love you.” Raw timing, text and geometry are unchanged. Late spoken lyrics retain reading contrast after metadata fades. The affected audiovisual review and new production authorization remain pending; preserve existing delivery files. [Audit, review status and reusable lessons](../projects/pero-es-locura-lyric-film/PAIRED-FOCUS-V3.md).
+The delivered v1 films preserve their original map and audio, with incomplete English phrase spans retained as historical limitations. The approved revision 3 pairs complete Spanish and English constructions in 53 cues, including “te quiero / I love you,” and protects the final spoken lyric's contrast. Source acoustic events remain unchanged. Preserve earlier deliveries when issuing the corrected edition. [Current delivery](../projects/pero-es-locura-lyric-film/README.md) · [Editorial and visual lessons](../projects/pero-es-locura-lyric-film/PRODUCTION-LESSONS.md).
 
 ## Прости за любовь v1.2 follow-up
 

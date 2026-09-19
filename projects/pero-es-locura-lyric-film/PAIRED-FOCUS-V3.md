@@ -1,6 +1,8 @@
 # Paired Spanish and English focus — preview revision 3
 
-**Current state: technically checked preview; affected audiovisual review and new production authorization pending.** Delivered v1 films remain unchanged. Revision 2 is superseded because its correction completed the English phrase without completing the corresponding Spanish display group.
+**Delivery update:** this corrected presentation is now rendered and verified; see [current delivery](DELIVERY-V3.md). The diagnostic record below preserves the preview-stage findings.
+
+**Historical preview-stage record.** Review and authorization were pending when these diagnostics were prepared; current delivery status is linked above. Delivered v1 films remain unchanged. Revision 2 is superseded because its correction completed the English phrase without completing the corresponding Spanish display group.
 
 ## Correct both sides of the meaning
 

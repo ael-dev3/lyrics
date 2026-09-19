@@ -1,4 +1,6 @@
-# Production and verification
+# Historical v1 production and verification
+
+This document preserves the original v1 implementation and results. See [current delivery and lessons](README.md) for the approved paired-focus edition. Historical values below are not current-render results. Exact historical source is identified by the archived delivery receipt.
 
 ## Approval and strict listening review
 
@@ -80,6 +82,6 @@ The production contract includes adapter and audit hashes. A changed adapter req
 
 Both formats have zero focus mismatches and zero ambiguous classifications. All 12,666 AAC packets and 12,969,984 decoded stereo sample frames match the original; every frame timestamp and strict full decode passes. Color finalization preserves every native decoded pixel hash and timestamp.
 
-**Landscape:** [technical verification](evidence/Pero-es-locura-landscape-1920x1080-60fps.mp4.verification.json) · [decoded focus](evidence/landscape-Pero-es-locura-landscape-1920x1080-60fps.mp4.focus-verification.json) · [lossless color correction](evidence/production/landscape-color-metadata.json).
+**Landscape:** [technical verification](evidence/history/delivery-v1/Pero-es-locura-landscape-1920x1080-60fps.mp4.verification.json) · [decoded focus](evidence/history/delivery-v1/landscape-Pero-es-locura-landscape-1920x1080-60fps.mp4.focus-verification.json) · [lossless color correction](evidence/history/delivery-v1/production/landscape-color-metadata.json).
 
-**Portrait:** [technical verification](evidence/Pero-es-locura-portrait-1080x1920-60fps.mp4.verification.json) · [decoded focus](evidence/portrait-Pero-es-locura-portrait-1080x1920-60fps.mp4.focus-verification.json) · [lossless color correction](evidence/production/portrait-color-metadata.json).
+**Portrait:** [technical verification](evidence/history/delivery-v1/Pero-es-locura-portrait-1080x1920-60fps.mp4.verification.json) · [decoded focus](evidence/history/delivery-v1/portrait-Pero-es-locura-portrait-1080x1920-60fps.mp4.focus-verification.json) · [lossless color correction](evidence/history/delivery-v1/production/portrait-color-metadata.json).
