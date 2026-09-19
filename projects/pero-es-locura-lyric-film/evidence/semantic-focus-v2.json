@@ -1,0 +1,1967 @@
+{
+  "revision": "preview-v2-complete-english-focus",
+  "status": "PASS — editorial and technical preview audit",
+  "templatesReviewed": 50,
+  "cuesReviewed": 86,
+  "affectedCues": [
+    "C001",
+    "C003",
+    "C005",
+    "C007",
+    "C009",
+    "C010",
+    "C011",
+    "C012",
+    "C013",
+    "C014",
+    "C015",
+    "C016",
+    "C017",
+    "C019",
+    "C021",
+    "C023",
+    "C030",
+    "C039",
+    "C041",
+    "C043",
+    "C045",
+    "C058",
+    "C060",
+    "C062",
+    "C064",
+    "C066",
+    "C068",
+    "C070",
+    "C071",
+    "C072",
+    "C073",
+    "C074",
+    "C075",
+    "C076",
+    "C077",
+    "C079",
+    "C081",
+    "C082",
+    "C083",
+    "C085"
+  ],
+  "groupOccurrences": 58,
+  "lexicalChanges": [
+    {
+      "cue": "C030",
+      "word": "you",
+      "before": [
+        "P017-s02",
+        "P017-s06"
+      ],
+      "after": [
+        "P017-s06"
+      ]
+    },
+    {
+      "cue": "C030",
+      "word": "to",
+      "before": [
+        "P017-s02",
+        "P017-s06"
+      ],
+      "after": [
+        "P017-s02"
+      ]
+    },
+    {
+      "cue": "C030",
+      "word": "be",
+      "before": [
+        "P017-s07"
+      ],
+      "after": [
+        "P017-s06"
+      ]
+    }
+  ],
+  "frames": 17647,
+  "englishWordStates": 87911,
+  "changedEnglishFrameStates": 2244,
+  "sourceTimingChanges": 0,
+  "displayedTextChanges": 0,
+  "layoutGeometryChanges": 0,
+  "editorial": [
+    {
+      "template": "R1",
+      "spanish": "Ay, que te quiero decir",
+      "english": "Oh, I want to tell you",
+      "decision": "corrected complete English focus",
+      "rationale": "The displaced recipient te belongs to decir: highlight the complete to tell you at either contributing event, releasing during quiero and any gap.",
+      "lexicalCorrection": null,
+      "groups": [
+        {
+          "id": "tell-you",
+          "targetIndices": [
+            4,
+            5,
+            6
+          ],
+          "sourceIndices": [
+            3,
+            5
+          ],
+          "reason": "The displaced recipient te belongs to decir: highlight the complete to tell you at either contributing event, releasing during quiero and any gap."
+        }
+      ]
+    },
+    {
+      "template": "R2",
+      "spanish": "lo que te quiero",
+      "english": "how much I love you.",
+      "decision": "corrected complete English focus",
+      "rationale": "Complete the affection predicate love you throughout te / quiero; retain I on verb inflection and how much on the degree construction.",
+      "lexicalCorrection": null,
+      "groups": [
+        {
+          "id": "love-you",
+          "targetIndices": [
+            4,
+            5
+          ],
+          "sourceIndices": [
+            3,
+            4
+          ],
+          "reason": "Complete the affection predicate love you throughout te / quiero; retain I on verb inflection and how much on the degree construction."
+        }
+      ]
+    },
+    {
+      "template": "R3",
+      "spanish": "que sos el muchacho",
+      "english": "that you're the boy",
+      "decision": "retained after audit",
+      "rationale": "Explicit complement, subject/copula contraction, article and noun retain their individual events.",
+      "lexicalCorrection": null,
+      "groups": []
+    },
+    {
+      "template": "R4",
+      "spanish": "que yo más quiero",
+      "english": "whom I love most.",
+      "decision": "retained after audit",
+      "rationale": "Whom, explicit I and most retain their events; the reversed degree/verb order is intentional, not a missing clitic.",
+      "lexicalCorrection": null,
+      "groups": []
+    },
+    {
+      "template": "V01",
+      "spanish": "Cuando se levanta mi párpado",
+      "english": "When my eyelid lifts",
+      "decision": "retained after audit",
+      "rationale": "Se levanta is the reflexive intransitive construction lifts; natural English order reverses noun and verb.",
+      "lexicalCorrection": null,
+      "groups": []
+    },
+    {
+      "template": "V02",
+      "spanish": "y estás vos al lado,",
+      "english": "and you're close by,",
+      "decision": "retained after audit",
+      "rationale": "Estás vos encodes the explicit you with its verb; al lado is rendered close by, retaining proximity without adding an unstated object.",
+      "lexicalCorrection": null,
+      "groups": []
+    },
+    {
+      "template": "V03",
+      "spanish": "siento que no quiero",
+      "english": "I feel that I don't want",
+      "decision": "retained after audit",
+      "rationale": "Explicit negation retains its own event. Subject and inflected wanting remain distinct from the following infinitive; no object clitic is lost.",
+      "lexicalCorrection": null,
+      "groups": []
+    },
+    {
+      "template": "V04",
+      "spanish": "abandonar mi costado",
+      "english": "to leave my side.",
+      "decision": "retained after audit",
+      "rationale": "Preserve the supplied mi costado provisionally; compare with actual live wording before freezing the performed sequence.",
+      "lexicalCorrection": null,
+      "groups": []
+    },
+    {
+      "template": "V05",
+      "spanish": "el día y la noche son tu reinado",
+      "english": "The day and the night are your realm.",
+      "decision": "retained after audit",
+      "rationale": "Separate day/night nouns, conjunction, copula and explicit possessive are fully mapped.",
+      "lexicalCorrection": null,
+      "groups": []
+    },
+    {
+      "template": "V06",
+      "spanish": "vos sos el muchacho dorado",
+      "english": "You are the golden boy.",
+      "decision": "retained after audit",
+      "rationale": "Explicit You and reordered golden / boy remain independently timed; no full-clause grouping.",
+      "lexicalCorrection": null,
+      "groups": []
+    },
+    {
+      "template": "V07",
+      "spanish": "quiero que de mí siempre estés empapado",
+      "english": "I want you to always be soaked in me.",
+      "decision": "corrected complete English focus",
+      "rationale": "The copula and participle form be soaked. Keep its full display span while preserving separate lexical correspondences and always / in me.",
+      "lexicalCorrection": "you and be follow estés; to follows que; soaked follows empapado",
+      "groups": [
+        {
+          "id": "be-soaked",
+          "targetIndices": [
+            6,
+            7
+          ],
+          "sourceIndices": [
+            6,
+            7
+          ],
+          "reason": "The copula and participle form be soaked. Keep its full display span while preserving separate lexical correspondences and always / in me."
+        }
+      ]
+    },
+    {
+      "template": "V08",
+      "spanish": "estás completamente emparentado",
+      "english": "You're completely bound up",
+      "decision": "retained after audit",
+      "rationale": "Emparentado literally related/akin; bound up retains the relationship with beauty in the following complement.",
+      "lexicalCorrection": null,
+      "groups": []
+    },
+    {
+      "template": "V09",
+      "spanish": "con lo bello, lo más bonito,",
+      "english": "with the beautiful, the most lovely,",
+      "decision": "retained after audit",
+      "rationale": "Articles, nominalized adjectives and most are explicit source words with complete corresponding target focus.",
+      "lexicalCorrection": null,
+      "groups": []
+    },
+    {
+      "template": "V10",
+      "spanish": "con lo adornado",
+      "english": "with the adorned.",
+      "decision": "retained after audit",
+      "rationale": "The nominalized adorned wording and its article are retained without inventing an object.",
+      "lexicalCorrection": null,
+      "groups": []
+    },
+    {
+      "template": "V11",
+      "spanish": "quedate un poquito más acá acostado",
+      "english": "Stay lying down here a little longer.",
+      "decision": "retained after audit",
+      "rationale": "Más modifies duration with un poquito, rendered a little longer. Natural English moves lying down and here ahead of the duration.",
+      "lexicalCorrection": null,
+      "groups": []
+    },
+    {
+      "template": "V12",
+      "spanish": "que yo quiero usarte como almohada",
+      "english": "because I want to use you as a pillow.",
+      "decision": "retained after audit",
+      "rationale": "Usarte already highlights the complete to use you; its attached clitic has no separate early release.",
+      "lexicalCorrection": null,
+      "groups": []
+    },
+    {
+      "template": "V13",
+      "spanish": "quiero servirme de vos sin abusarme",
+      "english": "I want to draw on you without taking advantage.",
+      "decision": "retained after audit",
+      "rationale": "Servirme de is the phrasal construction draw on; sin abusarme qualifies this as without taking advantage.",
+      "lexicalCorrection": null,
+      "groups": []
+    },
+    {
+      "template": "V14",
+      "spanish": "quiero buscarte en mí",
+      "english": "I want to seek you in me",
+      "decision": "retained after audit",
+      "rationale": "Buscarte already highlights to seek you together; in me keeps its independently spoken preposition and pronoun.",
+      "lexicalCorrection": null,
+      "groups": []
+    },
+    {
+      "template": "V15",
+      "spanish": "y en vos buscarme",
+      "english": "and seek myself in you.",
+      "decision": "retained after audit",
+      "rationale": "Buscarme already highlights seek myself together; the separate vos belongs to in you.",
+      "lexicalCorrection": null,
+      "groups": []
+    },
+    {
+      "template": "V16",
+      "spanish": "y al encontrarnos los dos",
+      "english": "And when we find each other, both of us,",
+      "decision": "retained after audit",
+      "rationale": "Al + infinitive marks when; encontrarnos is reciprocal and los dos stresses both.",
+      "lexicalCorrection": null,
+      "groups": []
+    },
+    {
+      "template": "V17",
+      "spanish": "dentro de nos",
+      "english": "within us,",
+      "decision": "retained after audit",
+      "rationale": "Dentro de is the prepositional unit within; preserve poetic nos as us.",
+      "lexicalCorrection": null,
+      "groups": []
+    },
+    {
+      "template": "V18",
+      "spanish": "quiero gustarte en mí",
+      "english": "I want to please you in me",
+      "decision": "retained after audit",
+      "rationale": "Gustarte already highlights to please you together; its object is not dropped.",
+      "lexicalCorrection": null,
+      "groups": []
+    },
+    {
+      "template": "V19",
+      "spanish": "y en vos gustarme",
+      "english": "and please myself in you.",
+      "decision": "retained after audit",
+      "rationale": "Preserve the mirrored, reflexive image without turning gustar into a different affection claim.",
+      "lexicalCorrection": null,
+      "groups": []
+    },
+    {
+      "template": "V20",
+      "spanish": "Desarmada mi alma estaría",
+      "english": "My soul would be disarmed",
+      "decision": "retained after audit",
+      "rationale": "Would be is complete on estaría. The initial disarmed and explicit my soul remain separate source events.",
+      "lexicalCorrection": null,
+      "groups": []
+    },
+    {
+      "template": "V21",
+      "spanish": "si al final del día",
+      "english": "if at the end of the day",
+      "decision": "retained after audit",
+      "rationale": "Contracted al and del supply their complete at the / of the English expansions.",
+      "lexicalCorrection": null,
+      "groups": []
+    },
+    {
+      "template": "V22",
+      "spanish": "no se complementara con tu estadía,",
+      "english": "it were not made complete by your stay.",
+      "decision": "retained after audit",
+      "rationale": "Se complementara is the reflexive subjunctive predicate; English subject and auxiliary share that predicate while not follows the independent negator. Estadía remains stay, not an invented permanent promise.",
+      "lexicalCorrection": null,
+      "groups": []
+    },
+    {
+      "template": "V23",
+      "spanish": "perdoná si algún día dudé",
+      "english": "Forgive me if one day I doubted.",
+      "decision": "retained after audit",
+      "rationale": "Perdoná already highlights Forgive me completely; I doubted includes the inflected subject.",
+      "lexicalCorrection": null,
+      "groups": []
+    },
+    {
+      "template": "V24",
+      "spanish": "pero la duda es lo que apura",
+      "english": "But doubt is what urges",
+      "decision": "retained after audit",
+      "rationale": "Generic Spanish la duda is bare English doubt. Lo que is the relative unit what.",
+      "lexicalCorrection": null,
+      "groups": []
+    },
+    {
+      "template": "V25",
+      "spanish": "al corazón a romper con la estructura,",
+      "english": "the heart to break with the structure.",
+      "decision": "retained after audit",
+      "rationale": "Al marks the preceding verb’s target; English urges the heart does not take a separate to before the heart.",
+      "lexicalCorrection": null,
+      "groups": []
+    },
+    {
+      "template": "V26",
+      "spanish": "el miedo a sentir ranuras",
+      "english": "The fear of feeling cracks",
+      "decision": "retained after audit",
+      "rationale": "The fear, preposition, infinitive and cracks retain their independent correspondences.",
+      "lexicalCorrection": null,
+      "groups": []
+    },
+    {
+      "template": "V27",
+      "spanish": "de las que cuesta encontrar la cura",
+      "english": "for which it's hard to find the cure.",
+      "decision": "retained after audit",
+      "rationale": "De las que is a relative preposition/pronoun unit. Cuesta encodes difficulty with the following infinitive.",
+      "lexicalCorrection": null,
+      "groups": []
+    },
+    {
+      "template": "V28",
+      "spanish": "pero es locura",
+      "english": "But it's madness",
+      "decision": "retained after audit",
+      "rationale": "Individual word correspondence; inflected verbs and required English grammatical completions share their source event.",
+      "lexicalCorrection": null,
+      "groups": []
+    },
+    {
+      "template": "V29",
+      "spanish": "temer lo que podría",
+      "english": "to fear what might happen",
+      "decision": "retained after audit",
+      "rationale": "Podría is elliptical; happen supplies the event implied by could, without inventing a specific feared outcome.",
+      "lexicalCorrection": null,
+      "groups": []
+    },
+    {
+      "template": "V30",
+      "spanish": "y dejar de hacer lo que uno desearía,",
+      "english": "and stop doing what one would wish.",
+      "decision": "retained after audit",
+      "rationale": "Dejar de is the cessative unit stop; lo que is what.",
+      "lexicalCorrection": null,
+      "groups": []
+    },
+    {
+      "template": "V31",
+      "spanish": "lo que yo sé que deseo",
+      "english": "What I know that I desire",
+      "decision": "retained after audit",
+      "rationale": "Relative What and inflected I desire are complete; explicit I / know / that remain independently linked.",
+      "lexicalCorrection": null,
+      "groups": []
+    },
+    {
+      "template": "V32",
+      "spanish": "es llenarme con tu compañía",
+      "english": "is to fill myself with your company.",
+      "decision": "retained after audit",
+      "rationale": "Llenarme already highlights to fill myself completely; explicit your company remains word-specific.",
+      "lexicalCorrection": null,
+      "groups": []
+    },
+    {
+      "template": "V33",
+      "spanish": "porque sos lo que me inspira",
+      "english": "Because you're what inspires me.",
+      "decision": "corrected complete English focus",
+      "rationale": "Preverbal clitic me is the object of inspira; the English predicate includes me while the verb is active.",
+      "lexicalCorrection": null,
+      "groups": [
+        {
+          "id": "inspires-me",
+          "targetIndices": [
+            4,
+            5
+          ],
+          "sourceIndices": [
+            5,
+            6
+          ],
+          "reason": "Preverbal clitic me is the object of inspira; the English predicate includes me while the verb is active."
+        }
+      ]
+    },
+    {
+      "template": "V34",
+      "spanish": "porque con vos la vida es más",
+      "english": "Because with you life is more.",
+      "decision": "retained after audit",
+      "rationale": "Generic la vida becomes bare life; keep the deliberately open-ended more.",
+      "lexicalCorrection": null,
+      "groups": []
+    },
+    {
+      "template": "V35",
+      "spanish": "me sumás, me aumentás,",
+      "english": "You add to me, you expand me,",
+      "decision": "corrected complete English focus",
+      "rationale": "Complete add to me across the preverbal clitic and sumás; implied subject You retains its own inflected-verb event. Complete expand me across the second clitic and aumentás; do not merge the two repeated predicates.",
+      "lexicalCorrection": null,
+      "groups": [
+        {
+          "id": "add-to-me",
+          "targetIndices": [
+            2,
+            3,
+            4
+          ],
+          "sourceIndices": [
+            1,
+            2
+          ],
+          "reason": "Complete add to me across the preverbal clitic and sumás; implied subject You retains its own inflected-verb event."
+        },
+        {
+          "id": "expand-me",
+          "targetIndices": [
+            6,
+            7
+          ],
+          "sourceIndices": [
+            3,
+            4
+          ],
+          "reason": "Complete expand me across the second clitic and aumentás; do not merge the two repeated predicates."
+        }
+      ]
+    },
+    {
+      "template": "V36",
+      "spanish": "me hacés más capaz",
+      "english": "you make me more capable.",
+      "decision": "corrected complete English focus",
+      "rationale": "Complete make me across the preverbal clitic and hacés, leaving more and capable independently timed.",
+      "lexicalCorrection": null,
+      "groups": [
+        {
+          "id": "make-me",
+          "targetIndices": [
+            2,
+            3
+          ],
+          "sourceIndices": [
+            1,
+            2
+          ],
+          "reason": "Complete make me across the preverbal clitic and hacés, leaving more and capable independently timed."
+        }
+      ]
+    },
+    {
+      "template": "V37",
+      "spanish": "por eso y por mucho, mucho, mucho más",
+      "english": "For that and for much, much, much more.",
+      "decision": "retained after audit",
+      "rationale": "The live delivery repeats mucho three times. Each repetition receives its own independent acoustic event.",
+      "lexicalCorrection": null,
+      "groups": []
+    },
+    {
+      "template": "B01",
+      "spanish": "ay, que me robó el corazón",
+      "english": "Oh, he stole my heart.",
+      "decision": "corrected complete English focus",
+      "rationale": "The affected possessor me becomes my in my heart. Complete that noun phrase at the possessor and heart events; stole remains separate.",
+      "lexicalCorrection": null,
+      "groups": [
+        {
+          "id": "my-heart",
+          "targetIndices": [
+            4,
+            5
+          ],
+          "sourceIndices": [
+            3,
+            5,
+            6
+          ],
+          "reason": "The affected possessor me becomes my in my heart. Complete that noun phrase at the possessor and heart events; stole remains separate."
+        }
+      ]
+    },
+    {
+      "template": "B02",
+      "spanish": "ese muchacho me robó el corazón",
+      "english": "That boy stole my heart.",
+      "decision": "corrected complete English focus",
+      "rationale": "Complete the affected-possession phrase my heart without extending it through the independent verb stole.",
+      "lexicalCorrection": null,
+      "groups": [
+        {
+          "id": "my-heart",
+          "targetIndices": [
+            4,
+            5
+          ],
+          "sourceIndices": [
+            3,
+            5,
+            6
+          ],
+          "reason": "Complete the affected-possession phrase my heart without extending it through the independent verb stole."
+        }
+      ]
+    },
+    {
+      "template": "B03",
+      "spanish": "y si laten mis costillas",
+      "english": "And if my ribs beat,",
+      "decision": "retained after audit",
+      "rationale": "The explicit possessive mis belongs to my, not a displaced affected-possessor clitic. Reordered ribs / beat remain independent.",
+      "lexicalCorrection": null,
+      "groups": []
+    },
+    {
+      "template": "B04",
+      "spanish": "es porque te quiero",
+      "english": "it's because I love you.",
+      "decision": "corrected complete English focus",
+      "rationale": "Complete love you throughout te / quiero, independently of because and the inflected subject I.",
+      "lexicalCorrection": null,
+      "groups": [
+        {
+          "id": "love-you",
+          "targetIndices": [
+            4,
+            5
+          ],
+          "sourceIndices": [
+            3,
+            4
+          ],
+          "reason": "Complete love you throughout te / quiero, independently of because and the inflected subject I."
+        }
+      ]
+    },
+    {
+      "template": "B05",
+      "spanish": "y si tiemblan mis rodillas",
+      "english": "And if my knees tremble,",
+      "decision": "retained after audit",
+      "rationale": "Explicit my / knees and reordered tremble retain individual events; no clitic completion is missing.",
+      "lexicalCorrection": null,
+      "groups": []
+    },
+    {
+      "template": "B06",
+      "spanish": "y si nos separan millas",
+      "english": "And if miles separate us,",
+      "decision": "corrected complete English focus",
+      "rationale": "The preverbal clitic nos is the object of separan; complete separate us while retaining miles at its own source event.",
+      "lexicalCorrection": null,
+      "groups": [
+        {
+          "id": "separate-us",
+          "targetIndices": [
+            4,
+            5
+          ],
+          "sourceIndices": [
+            3,
+            4
+          ],
+          "reason": "The preverbal clitic nos is the object of separan; complete separate us while retaining miles at its own source event."
+        }
+      ]
+    },
+    {
+      "template": "B07",
+      "spanish": "yo aún te quiero",
+      "english": "I still love you.",
+      "decision": "corrected complete English focus",
+      "rationale": "Complete love you throughout te / quiero. The explicit yo and long held aún remain independently focused as I and still.",
+      "lexicalCorrection": null,
+      "groups": [
+        {
+          "id": "love-you",
+          "targetIndices": [
+            3,
+            4
+          ],
+          "sourceIndices": [
+            3,
+            4
+          ],
+          "reason": "Complete love you throughout te / quiero. The explicit yo and long held aún remain independently focused as I and still."
+        }
+      ]
+    },
+    {
+      "template": "B08",
+      "spanish": "aunque millones de millas",
+      "english": "Despite millions of miles,",
+      "decision": "retained after audit",
+      "rationale": "The elliptical distance concession stays elliptical; no extra action or subject is supplied.",
+      "lexicalCorrection": null,
+      "groups": []
+    },
+    {
+      "template": "B09",
+      "spanish": "Esto se acabó",
+      "english": "This is over.",
+      "decision": "retained after audit",
+      "rationale": "Short live closing tag, absent from the supplied lyric reference; independently recovered in bounded original-mix and isolated-vocal transcription. Se acabó is the completed-state construction is over.",
+      "lexicalCorrection": null,
+      "groups": []
+    }
+  ],
+  "groups": [
+    {
+      "cue": "C001",
+      "group": "R1/tell-you",
+      "english": "to tell you",
+      "source": [
+        {
+          "id": "P001-s03",
+          "text": "te",
+          "start": 1.07,
+          "end": 1.21
+        },
+        {
+          "id": "P001-s05",
+          "text": "decir",
+          "start": 1.65,
+          "end": 1.97
+        }
+      ],
+      "checkpoint": 1.8166666666666667
+    },
+    {
+      "cue": "C001",
+      "group": "R2/love-you",
+      "english": "love you.",
+      "source": [
+        {
+          "id": "P001-s08",
+          "text": "te",
+          "start": 2.29,
+          "end": 2.4343990929705215
+        },
+        {
+          "id": "P001-s09",
+          "text": "quiero",
+          "start": 2.47,
+          "end": 2.89
+        }
+      ],
+      "checkpoint": 2.683333333333333
+    },
+    {
+      "cue": "C003",
+      "group": "R1/tell-you",
+      "english": "to tell you",
+      "source": [
+        {
+          "id": "P002-s03",
+          "text": "te",
+          "start": 5.88,
+          "end": 6.021882086167801
+        },
+        {
+          "id": "P002-s05",
+          "text": "decir",
+          "start": 6.46,
+          "end": 6.76
+        }
+      ],
+      "checkpoint": 6.616666666666666
+    },
+    {
+      "cue": "C003",
+      "group": "R2/love-you",
+      "english": "love you.",
+      "source": [
+        {
+          "id": "P002-s08",
+          "text": "te",
+          "start": 7.08,
+          "end": 7.204308390022676
+        },
+        {
+          "id": "P002-s09",
+          "text": "quiero",
+          "start": 7.24,
+          "end": 7.66
+        }
+      ],
+      "checkpoint": 7.45
+    },
+    {
+      "cue": "C005",
+      "group": "R1/tell-you",
+      "english": "to tell you",
+      "source": [
+        {
+          "id": "P003-s03",
+          "text": "te",
+          "start": 10.65,
+          "end": 10.79
+        },
+        {
+          "id": "P003-s05",
+          "text": "decir",
+          "start": 11.23,
+          "end": 11.55
+        }
+      ],
+      "checkpoint": 11.383333333333333
+    },
+    {
+      "cue": "C005",
+      "group": "R2/love-you",
+      "english": "love you.",
+      "source": [
+        {
+          "id": "P003-s08",
+          "text": "te",
+          "start": 11.85,
+          "end": 11.978321995464853
+        },
+        {
+          "id": "P003-s09",
+          "text": "quiero",
+          "start": 12.03,
+          "end": 12.43
+        }
+      ],
+      "checkpoint": 12.233333333333333
+    },
+    {
+      "cue": "C007",
+      "group": "R1/tell-you",
+      "english": "to tell you",
+      "source": [
+        {
+          "id": "P004-s03",
+          "text": "te",
+          "start": 15.39,
+          "end": 15.531655328798186
+        },
+        {
+          "id": "P004-s05",
+          "text": "decir",
+          "start": 15.97,
+          "end": 16.27
+        }
+      ],
+      "checkpoint": 16.116666666666667
+    },
+    {
+      "cue": "C007",
+      "group": "R2/love-you",
+      "english": "love you.",
+      "source": [
+        {
+          "id": "P004-s08",
+          "text": "te",
+          "start": 16.59,
+          "end": 16.714126984126985
+        },
+        {
+          "id": "P004-s09",
+          "text": "quiero",
+          "start": 16.75,
+          "end": 17.17
+        }
+      ],
+      "checkpoint": 16.966666666666665
+    },
+    {
+      "cue": "C009",
+      "group": "B01/my-heart",
+      "english": "my heart.",
+      "source": [
+        {
+          "id": "P005-s03",
+          "text": "me",
+          "start": 20.61,
+          "end": 20.755124716553286
+        },
+        {
+          "id": "P005-s05",
+          "text": "el",
+          "start": 21.11,
+          "end": 21.176916099773244
+        },
+        {
+          "id": "P005-s06",
+          "text": "corazón",
+          "start": 21.23,
+          "end": 21.759410430839
+        }
+      ],
+      "checkpoint": 21.5
+    },
+    {
+      "cue": "C010",
+      "group": "B02/my-heart",
+      "english": "my heart.",
+      "source": [
+        {
+          "id": "P005-s09",
+          "text": "me",
+          "start": 22.97,
+          "end": 23.18546485260771
+        },
+        {
+          "id": "P005-s11",
+          "text": "el",
+          "start": 23.55,
+          "end": 23.58718820861678
+        },
+        {
+          "id": "P005-s12",
+          "text": "corazón",
+          "start": 23.61,
+          "end": 24.189750566893423
+        }
+      ],
+      "checkpoint": 23.9
+    },
+    {
+      "cue": "C011",
+      "group": "B01/my-heart",
+      "english": "my heart.",
+      "source": [
+        {
+          "id": "P006-s03",
+          "text": "me",
+          "start": 25.43,
+          "end": 25.57
+        },
+        {
+          "id": "P006-s05",
+          "text": "el",
+          "start": 25.91,
+          "end": 25.993650793650794
+        },
+        {
+          "id": "P006-s06",
+          "text": "corazón",
+          "start": 26.07,
+          "end": 26.574875283446712
+        }
+      ],
+      "checkpoint": 26.316666666666666
+    },
+    {
+      "cue": "C012",
+      "group": "B02/my-heart",
+      "english": "my heart.",
+      "source": [
+        {
+          "id": "P006-s09",
+          "text": "me",
+          "start": 27.83,
+          "end": 27.9778231292517
+        },
+        {
+          "id": "P006-s11",
+          "text": "el",
+          "start": 28.29,
+          "end": 28.398707482993196
+        },
+        {
+          "id": "P006-s12",
+          "text": "corazón",
+          "start": 28.41,
+          "end": 28.95986394557823
+        }
+      ],
+      "checkpoint": 28.683333333333334
+    },
+    {
+      "cue": "C013",
+      "group": "B01/my-heart",
+      "english": "my heart.",
+      "source": [
+        {
+          "id": "P007-s03",
+          "text": "me",
+          "start": 30.23,
+          "end": 30.37
+        },
+        {
+          "id": "P007-s05",
+          "text": "el",
+          "start": 30.73,
+          "end": 30.797256235827664
+        },
+        {
+          "id": "P007-s06",
+          "text": "corazón",
+          "start": 30.85,
+          "end": 31.379659863945577
+        }
+      ],
+      "checkpoint": 31.116666666666667
+    },
+    {
+      "cue": "C014",
+      "group": "B02/my-heart",
+      "english": "my heart.",
+      "source": [
+        {
+          "id": "P007-s09",
+          "text": "me",
+          "start": 32.61,
+          "end": 32.765419501133785
+        },
+        {
+          "id": "P007-s11",
+          "text": "el",
+          "start": 33.11,
+          "end": 33.18716553287982
+        },
+        {
+          "id": "P007-s12",
+          "text": "corazón",
+          "start": 33.21,
+          "end": 33.78965986394558
+        }
+      ],
+      "checkpoint": 33.5
+    },
+    {
+      "cue": "C015",
+      "group": "B01/my-heart",
+      "english": "my heart.",
+      "source": [
+        {
+          "id": "P008-s03",
+          "text": "me",
+          "start": 35.04,
+          "end": 35.18571428571428
+        },
+        {
+          "id": "P008-s05",
+          "text": "el",
+          "start": 35.54,
+          "end": 35.58739229024943
+        },
+        {
+          "id": "P008-s06",
+          "text": "corazón",
+          "start": 35.64,
+          "end": 36.16984126984127
+        }
+      ],
+      "checkpoint": 35.9
+    },
+    {
+      "cue": "C016",
+      "group": "B02/my-heart",
+      "english": "my heart.",
+      "source": [
+        {
+          "id": "P008-s09",
+          "text": "me",
+          "start": 37.34,
+          "end": 37.535555555555554
+        },
+        {
+          "id": "P008-s11",
+          "text": "el",
+          "start": 37.86,
+          "end": 37.937233560090704
+        },
+        {
+          "id": "P008-s12",
+          "text": "corazón",
+          "start": 37.98,
+          "end": 38.539750566893424
+        }
+      ],
+      "checkpoint": 38.266666666666666
+    },
+    {
+      "cue": "C017",
+      "group": "R1/tell-you",
+      "english": "to tell you",
+      "source": [
+        {
+          "id": "P009-s03",
+          "text": "te",
+          "start": 58.33,
+          "end": 58.47190476190476
+        },
+        {
+          "id": "P009-s05",
+          "text": "decir",
+          "start": 58.89,
+          "end": 59.21
+        }
+      ],
+      "checkpoint": 59.05
+    },
+    {
+      "cue": "C017",
+      "group": "R2/love-you",
+      "english": "love you.",
+      "source": [
+        {
+          "id": "P009-s08",
+          "text": "te",
+          "start": 59.51,
+          "end": 59.654331065759635
+        },
+        {
+          "id": "P009-s09",
+          "text": "quiero",
+          "start": 59.67,
+          "end": 60.09
+        }
+      ],
+      "checkpoint": 59.88333333333333
+    },
+    {
+      "cue": "C019",
+      "group": "R1/tell-you",
+      "english": "to tell you",
+      "source": [
+        {
+          "id": "P010-s03",
+          "text": "te",
+          "start": 63.02,
+          "end": 63.16
+        },
+        {
+          "id": "P010-s05",
+          "text": "decir",
+          "start": 63.58,
+          "end": 63.86
+        }
+      ],
+      "checkpoint": 63.71666666666667
+    },
+    {
+      "cue": "C019",
+      "group": "R2/love-you",
+      "english": "love you.",
+      "source": [
+        {
+          "id": "P010-s08",
+          "text": "te",
+          "start": 64.18,
+          "end": 64.32848072562358
+        },
+        {
+          "id": "P010-s09",
+          "text": "quiero",
+          "start": 64.34,
+          "end": 64.76
+        }
+      ],
+      "checkpoint": 64.55
+    },
+    {
+      "cue": "C021",
+      "group": "R1/tell-you",
+      "english": "to tell you",
+      "source": [
+        {
+          "id": "P011-s03",
+          "text": "te",
+          "start": 67.69,
+          "end": 67.83333333333333
+        },
+        {
+          "id": "P011-s05",
+          "text": "decir",
+          "start": 68.29,
+          "end": 68.57
+        }
+      ],
+      "checkpoint": 68.43333333333334
+    },
+    {
+      "cue": "C021",
+      "group": "R2/love-you",
+      "english": "love you.",
+      "source": [
+        {
+          "id": "P011-s08",
+          "text": "te",
+          "start": 68.87,
+          "end": 69.01836734693877
+        },
+        {
+          "id": "P011-s09",
+          "text": "quiero",
+          "start": 69.03,
+          "end": 69.43
+        }
+      ],
+      "checkpoint": 69.23333333333333
+    },
+    {
+      "cue": "C023",
+      "group": "R1/tell-you",
+      "english": "to tell you",
+      "source": [
+        {
+          "id": "P012-s03",
+          "text": "te",
+          "start": 72.35,
+          "end": 72.49
+        },
+        {
+          "id": "P012-s05",
+          "text": "decir",
+          "start": 72.93,
+          "end": 73.19
+        }
+      ],
+      "checkpoint": 73.06666666666666
+    },
+    {
+      "cue": "C023",
+      "group": "R2/love-you",
+      "english": "love you.",
+      "source": [
+        {
+          "id": "P012-s08",
+          "text": "te",
+          "start": 73.53,
+          "end": 73.65979591836735
+        },
+        {
+          "id": "P012-s09",
+          "text": "quiero",
+          "start": 73.67,
+          "end": 74.07
+        }
+      ],
+      "checkpoint": 73.86666666666666
+    },
+    {
+      "cue": "C030",
+      "group": "V07/be-soaked",
+      "english": "be soaked",
+      "source": [
+        {
+          "id": "P017-s06",
+          "text": "estés",
+          "start": 110.84,
+          "end": 111.17412698412699
+        },
+        {
+          "id": "P017-s07",
+          "text": "empapado",
+          "start": 111.18,
+          "end": 111.83965986394558
+        }
+      ],
+      "checkpoint": 111.51666666666667
+    },
+    {
+      "cue": "C039",
+      "group": "R1/tell-you",
+      "english": "to tell you",
+      "source": [
+        {
+          "id": "P026-s03",
+          "text": "te",
+          "start": 132.97,
+          "end": 133.11
+        },
+        {
+          "id": "P026-s05",
+          "text": "decir",
+          "start": 133.55,
+          "end": 133.85
+        }
+      ],
+      "checkpoint": 133.7
+    },
+    {
+      "cue": "C039",
+      "group": "R2/love-you",
+      "english": "love you.",
+      "source": [
+        {
+          "id": "P026-s08",
+          "text": "te",
+          "start": 134.17,
+          "end": 134.2941723356009
+        },
+        {
+          "id": "P026-s09",
+          "text": "quiero",
+          "start": 134.33,
+          "end": 134.73
+        }
+      ],
+      "checkpoint": 134.53333333333333
+    },
+    {
+      "cue": "C041",
+      "group": "R1/tell-you",
+      "english": "to tell you",
+      "source": [
+        {
+          "id": "P027-s03",
+          "text": "te",
+          "start": 137.66,
+          "end": 137.8
+        },
+        {
+          "id": "P027-s05",
+          "text": "decir",
+          "start": 138.22,
+          "end": 138.5
+        }
+      ],
+      "checkpoint": 138.36666666666667
+    },
+    {
+      "cue": "C041",
+      "group": "R2/love-you",
+      "english": "love you.",
+      "source": [
+        {
+          "id": "P027-s08",
+          "text": "te",
+          "start": 138.82,
+          "end": 138.9640589569161
+        },
+        {
+          "id": "P027-s09",
+          "text": "quiero",
+          "start": 138.98,
+          "end": 139.4
+        }
+      ],
+      "checkpoint": 139.18333333333334
+    },
+    {
+      "cue": "C043",
+      "group": "R1/tell-you",
+      "english": "to tell you",
+      "source": [
+        {
+          "id": "P028-s03",
+          "text": "te",
+          "start": 142.34,
+          "end": 142.48183673469387
+        },
+        {
+          "id": "P028-s05",
+          "text": "decir",
+          "start": 142.9,
+          "end": 143.2
+        }
+      ],
+      "checkpoint": 143.05
+    },
+    {
+      "cue": "C043",
+      "group": "R2/love-you",
+      "english": "love you.",
+      "source": [
+        {
+          "id": "P028-s08",
+          "text": "te",
+          "start": 143.52,
+          "end": 143.66426303854874
+        },
+        {
+          "id": "P028-s09",
+          "text": "quiero",
+          "start": 143.68,
+          "end": 144.08
+        }
+      ],
+      "checkpoint": 143.88333333333333
+    },
+    {
+      "cue": "C045",
+      "group": "R1/tell-you",
+      "english": "to tell you",
+      "source": [
+        {
+          "id": "P029-s03",
+          "text": "te",
+          "start": 147.01,
+          "end": 147.15215419501135
+        },
+        {
+          "id": "P029-s05",
+          "text": "decir",
+          "start": 147.57,
+          "end": 147.87
+        }
+      ],
+      "checkpoint": 147.71666666666667
+    },
+    {
+      "cue": "C045",
+      "group": "R2/love-you",
+      "english": "love you.",
+      "source": [
+        {
+          "id": "P029-s08",
+          "text": "te",
+          "start": 148.21,
+          "end": 148.33521541950114
+        },
+        {
+          "id": "P029-s09",
+          "text": "quiero",
+          "start": 148.35,
+          "end": 148.75
+        }
+      ],
+      "checkpoint": 148.55
+    },
+    {
+      "cue": "C058",
+      "group": "V33/inspires-me",
+      "english": "inspires me.",
+      "source": [
+        {
+          "id": "P038-s05",
+          "text": "me",
+          "start": 198.45,
+          "end": 198.55700680272108
+        },
+        {
+          "id": "P038-s06",
+          "text": "inspira",
+          "start": 198.57,
+          "end": 198.9391156462585
+        }
+      ],
+      "checkpoint": 198.75
+    },
+    {
+      "cue": "C060",
+      "group": "V35/add-to-me",
+      "english": "add to me,",
+      "source": [
+        {
+          "id": "P040-s01",
+          "text": "Me",
+          "start": 201.18056689342404,
+          "end": 201.27090702947845
+        },
+        {
+          "id": "P040-s02",
+          "text": "sumás,",
+          "start": 201.35,
+          "end": 201.8330612244898
+        }
+      ],
+      "checkpoint": 201.58333333333334
+    },
+    {
+      "cue": "C060",
+      "group": "V35/expand-me",
+      "english": "expand me,",
+      "source": [
+        {
+          "id": "P040-s03",
+          "text": "me",
+          "start": 201.93,
+          "end": 201.95351473922904
+        },
+        {
+          "id": "P040-s04",
+          "text": "aumentás,",
+          "start": 201.97,
+          "end": 202.55
+        }
+      ],
+      "checkpoint": 202.26666666666668
+    },
+    {
+      "cue": "C060",
+      "group": "V36/make-me",
+      "english": "make me",
+      "source": [
+        {
+          "id": "P040-s05",
+          "text": "me",
+          "start": 202.55,
+          "end": 202.67625850340136
+        },
+        {
+          "id": "P040-s06",
+          "text": "hacés",
+          "start": 202.71,
+          "end": 202.9171655328798
+        }
+      ],
+      "checkpoint": 202.81666666666666
+    },
+    {
+      "cue": "C062",
+      "group": "R1/tell-you",
+      "english": "to tell you",
+      "source": [
+        {
+          "id": "P042-s03",
+          "text": "te",
+          "start": 207.8,
+          "end": 207.94360544217687
+        },
+        {
+          "id": "P042-s05",
+          "text": "decir",
+          "start": 208.38,
+          "end": 208.68
+        }
+      ],
+      "checkpoint": 208.53333333333333
+    },
+    {
+      "cue": "C062",
+      "group": "R2/love-you",
+      "english": "love you.",
+      "source": [
+        {
+          "id": "P042-s08",
+          "text": "te",
+          "start": 208.98,
+          "end": 209.10845804988662
+        },
+        {
+          "id": "P042-s09",
+          "text": "quiero",
+          "start": 209.12,
+          "end": 209.54
+        }
+      ],
+      "checkpoint": 209.33333333333334
+    },
+    {
+      "cue": "C064",
+      "group": "R1/tell-you",
+      "english": "to tell you",
+      "source": [
+        {
+          "id": "P043-s03",
+          "text": "te",
+          "start": 212.46,
+          "end": 212.6033560090703
+        },
+        {
+          "id": "P043-s05",
+          "text": "decir",
+          "start": 213.06,
+          "end": 213.34
+        }
+      ],
+      "checkpoint": 213.2
+    },
+    {
+      "cue": "C064",
+      "group": "R2/love-you",
+      "english": "love you.",
+      "source": [
+        {
+          "id": "P043-s08",
+          "text": "te",
+          "start": 213.64,
+          "end": 213.78841269841269
+        },
+        {
+          "id": "P043-s09",
+          "text": "quiero",
+          "start": 213.8,
+          "end": 214.22
+        }
+      ],
+      "checkpoint": 214.01666666666668
+    },
+    {
+      "cue": "C066",
+      "group": "R1/tell-you",
+      "english": "to tell you",
+      "source": [
+        {
+          "id": "P044-s03",
+          "text": "te",
+          "start": 217.14,
+          "end": 217.2836961451247
+        },
+        {
+          "id": "P044-s05",
+          "text": "decir",
+          "start": 217.68,
+          "end": 218
+        }
+      ],
+      "checkpoint": 217.83333333333334
+    },
+    {
+      "cue": "C066",
+      "group": "R2/love-you",
+      "english": "love you.",
+      "source": [
+        {
+          "id": "P044-s08",
+          "text": "te",
+          "start": 218.32,
+          "end": 218.46875283446713
+        },
+        {
+          "id": "P044-s09",
+          "text": "quiero",
+          "start": 218.48,
+          "end": 218.86
+        }
+      ],
+      "checkpoint": 218.66666666666666
+    },
+    {
+      "cue": "C068",
+      "group": "R1/tell-you",
+      "english": "to tell you",
+      "source": [
+        {
+          "id": "P045-s03",
+          "text": "te",
+          "start": 221.82,
+          "end": 221.96
+        },
+        {
+          "id": "P045-s05",
+          "text": "decir",
+          "start": 222.36,
+          "end": 222.68
+        }
+      ],
+      "checkpoint": 222.51666666666668
+    },
+    {
+      "cue": "C068",
+      "group": "R2/love-you",
+      "english": "love you.",
+      "source": [
+        {
+          "id": "P045-s08",
+          "text": "te",
+          "start": 223,
+          "end": 223.15024943310658
+        },
+        {
+          "id": "P045-s09",
+          "text": "quiero",
+          "start": 223.16,
+          "end": 223.54
+        }
+      ],
+      "checkpoint": 223.35
+    },
+    {
+      "cue": "C070",
+      "group": "B01/my-heart",
+      "english": "my heart.",
+      "source": [
+        {
+          "id": "P046-s03",
+          "text": "me",
+          "start": 226.9,
+          "end": 227.04
+        },
+        {
+          "id": "P046-s05",
+          "text": "el",
+          "start": 227.38,
+          "end": 227.48
+        },
+        {
+          "id": "P046-s06",
+          "text": "corazón",
+          "start": 227.48,
+          "end": 228.0702947845805
+        }
+      ],
+      "checkpoint": 227.78333333333333
+    },
+    {
+      "cue": "C071",
+      "group": "B02/my-heart",
+      "english": "my heart.",
+      "source": [
+        {
+          "id": "P046-s09",
+          "text": "me",
+          "start": 229.22,
+          "end": 229.39566893424038
+        },
+        {
+          "id": "P046-s11",
+          "text": "el",
+          "start": 229.7,
+          "end": 229.79730158730158
+        },
+        {
+          "id": "P046-s12",
+          "text": "corazón",
+          "start": 229.82,
+          "end": 230.3595918367347
+        }
+      ],
+      "checkpoint": 230.08333333333334
+    },
+    {
+      "cue": "C072",
+      "group": "B01/my-heart",
+      "english": "my heart.",
+      "source": [
+        {
+          "id": "P047-s03",
+          "text": "me",
+          "start": 231.52,
+          "end": 231.68609977324263
+        },
+        {
+          "id": "P047-s05",
+          "text": "el",
+          "start": 232.04,
+          "end": 232.10780045351473
+        },
+        {
+          "id": "P047-s06",
+          "text": "corazón",
+          "start": 232.12,
+          "end": 232.69015873015874
+        }
+      ],
+      "checkpoint": 232.4
+    },
+    {
+      "cue": "C073",
+      "group": "B02/my-heart",
+      "english": "my heart.",
+      "source": [
+        {
+          "id": "P047-s09",
+          "text": "me",
+          "start": 233.82,
+          "end": 233.99544217687074
+        },
+        {
+          "id": "P047-s11",
+          "text": "el",
+          "start": 234.32,
+          "end": 234.4171655328798
+        },
+        {
+          "id": "P047-s12",
+          "text": "corazón",
+          "start": 234.42,
+          "end": 234.99950113378685
+        }
+      ],
+      "checkpoint": 234.71666666666667
+    },
+    {
+      "cue": "C074",
+      "group": "B01/my-heart",
+      "english": "my heart.",
+      "source": [
+        {
+          "id": "P048-s03",
+          "text": "me",
+          "start": 236.13,
+          "end": 236.29
+        },
+        {
+          "id": "P048-s05",
+          "text": "el",
+          "start": 236.65,
+          "end": 236.69380952380953
+        },
+        {
+          "id": "P048-s06",
+          "text": "corazón",
+          "start": 236.73,
+          "end": 237.2749886621315
+        }
+      ],
+      "checkpoint": 237
+    },
+    {
+      "cue": "C075",
+      "group": "B02/my-heart",
+      "english": "my heart.",
+      "source": [
+        {
+          "id": "P048-s09",
+          "text": "me",
+          "start": 238.43,
+          "end": 238.61768707482995
+        },
+        {
+          "id": "P048-s11",
+          "text": "el",
+          "start": 238.91,
+          "end": 238.9984580498866
+        },
+        {
+          "id": "P048-s12",
+          "text": "corazón",
+          "start": 239.03,
+          "end": 239.5796371882086
+        }
+      ],
+      "checkpoint": 239.3
+    },
+    {
+      "cue": "C076",
+      "group": "B01/my-heart",
+      "english": "my heart.",
+      "source": [
+        {
+          "id": "P049-s03",
+          "text": "me",
+          "start": 240.74,
+          "end": 240.8659410430839
+        },
+        {
+          "id": "P049-s05",
+          "text": "el",
+          "start": 241.26,
+          "end": 241.30780045351474
+        },
+        {
+          "id": "P049-s06",
+          "text": "corazón",
+          "start": 241.32,
+          "end": 241.91034013605443
+        }
+      ],
+      "checkpoint": 241.61666666666667
+    },
+    {
+      "cue": "C077",
+      "group": "B02/my-heart",
+      "english": "my heart.",
+      "source": [
+        {
+          "id": "P049-s09",
+          "text": "me",
+          "start": 243,
+          "end": 243.21585034013606
+        },
+        {
+          "id": "P049-s11",
+          "text": "el",
+          "start": 243.54,
+          "end": 243.61755102040817
+        },
+        {
+          "id": "P049-s12",
+          "text": "corazón",
+          "start": 243.66,
+          "end": 244.15984126984128
+        }
+      ],
+      "checkpoint": 243.91666666666666
+    },
+    {
+      "cue": "C079",
+      "group": "B04/love-you",
+      "english": "love you.",
+      "source": [
+        {
+          "id": "P050-s08",
+          "text": "te",
+          "start": 247.64621315192744,
+          "end": 247.72657596371883
+        },
+        {
+          "id": "P050-s09",
+          "text": "quiero",
+          "start": 247.75,
+          "end": 248.28916099773244
+        }
+      ],
+      "checkpoint": 248.01666666666668
+    },
+    {
+      "cue": "C081",
+      "group": "B04/love-you",
+      "english": "love you.",
+      "source": [
+        {
+          "id": "P051-s08",
+          "text": "te",
+          "start": 252.31637188208617,
+          "end": 252.38
+        },
+        {
+          "id": "P051-s09",
+          "text": "quiero",
+          "start": 252.38,
+          "end": 252.91909297052155
+        }
+      ],
+      "checkpoint": 252.65
+    },
+    {
+      "cue": "C082",
+      "group": "B06/separate-us",
+      "english": "separate us,",
+      "source": [
+        {
+          "id": "P052-s03",
+          "text": "nos",
+          "start": 253.88,
+          "end": 254.1
+        },
+        {
+          "id": "P052-s04",
+          "text": "separan",
+          "start": 254.1,
+          "end": 254.72657596371883
+        }
+      ],
+      "checkpoint": 254.41666666666666
+    },
+    {
+      "cue": "C083",
+      "group": "B07/love-you",
+      "english": "love you.",
+      "source": [
+        {
+          "id": "P052-s08",
+          "text": "te",
+          "start": 256.86,
+          "end": 257.04
+        },
+        {
+          "id": "P052-s09",
+          "text": "quiero",
+          "start": 257.04,
+          "end": 257.53902494331066
+        }
+      ],
+      "checkpoint": 257.28333333333336
+    },
+    {
+      "cue": "C085",
+      "group": "B07/love-you",
+      "english": "love you.",
+      "source": [
+        {
+          "id": "P054-s03",
+          "text": "te",
+          "start": 265.31496598639455,
+          "end": 265.4
+        },
+        {
+          "id": "P054-s04",
+          "text": "quiero",
+          "start": 265.4,
+          "end": 266.0772562358277
+        }
+      ],
+      "checkpoint": 265.73333333333335
+    }
+  ],
+  "method": "All fifty translation templates inspected for displaced clitics, attached clitics, possession, auxiliaries, negation, reciprocal/reflexive constructions and reordered explicit words. Separate semantic regression tests require complete English predicates and reject the old lexical-only behavior. All frame focus states checked against real source-event unions.",
+  "limits": "The original recording clock and word boundaries are unchanged. This is a revised semantic preview, not new listening signoff or render authorization.",
+  "inputHashes": {
+    "src/cues.json": "3b8e93a330f85d2dcf999e24b46fda34952b3d2fa194caab1446408e33d8ae51",
+    "source/translation-templates.json": "3ef204639020c849c116546c7845bc86bc4c2a0b8070fb2db83c8597c4846843",
+    "src/focus.ts": "65976c7664d7280efad99f0fa4bc6d519ebf7b4b3dd4f6e2a09cdd28804d0fed",
+    "src/schema.ts": "1ac7b6835986a6e7b2ed9c246e7cba6d602ffbc724fce946bd384b179cd46971",
+    "src/translation.ts": "961f83297fcbb252b456027a65d21576adfa82ebfb78caf3921fe6fbb0a6836d"
+  }
+}

@@ -16,6 +16,10 @@ Project documentation should contain decisions that another contributor can appl
 
 It should not contain private thoughts or quotations, personal identifiers, account or contact details, exact local paths, token or cost information, or unpublished rights-sensitive links. Use neutral production language for subjective feedback, such as “below the approved reference standard” or “needs another preview pass.”
 
+## Pero es locura semantic-focus follow-up
+
+The delivered v1 films preserve their approved map and original audio, but that map has known incomplete English phrase spans. Revision 2 corrects “love you” and related constructions in a playable preview: 58 occurrences across 40 cues. Spanish timing, text and geometry are unchanged. The affected audiovisual review and new production authorization remain pending; preserve existing delivery files. [Audit, review status and reusable lessons](../projects/pero-es-locura-lyric-film/SEMANTIC-FOCUS-V2.md).
+
 ## Прости за любовь v1.2 follow-up
 
 This delivery is **accepted with known highlighting gaps**. The full English spans for «Остыла» and «прости» are not always highlighted; see the [project record](../projects/prosti-za-lyubov-lyric-film/README.md) and [known issues](../projects/prosti-za-lyubov-lyric-film/KNOWN-ISSUES.md). Preserve the accepted files. The next song must meet the stricter cross-language sync gate before rendering; acceptance here does not waive that requirement.

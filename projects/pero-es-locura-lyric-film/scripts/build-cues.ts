@@ -4,7 +4,8 @@ import type {Cue,SourceWord,TargetWord,ProductionData} from '../src/schema.ts';
 type Word={word:string;start:number;end:number;probability?:number;acousticSpans?:{start:number;end:number;score:number}[]};
 type Segment={id:string;words:Word[]};
 type Alignment={segments:Segment[]};
-type Template={id:string;es:string;en:string;targets:{text:string;sourceIndices:number[]}[];note:string};
+import {translate} from '../src/translation.ts';
+import type {TranslationTemplate as Template} from '../src/translation.ts';
 type Performance={id:string;section:string;start:number;end:number;text:string;displayGroups:string[][]};
 const read=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
 const templates=read('source/translation-templates.json') as Template[],performances=read('source/performed-sequence.json') as Performance[];
@@ -49,7 +50,7 @@ for(const perf of performances){
   for(const templateId of group){
    const template=templates.find(t=>t.id===templateId);if(!template)throw Error(templateId);
    const words=selected.slice(offset,offset+template.es.split(/\s+/).length);es.push(...words);
-   for(const target of template.targets)en.push({id:cueId+'-e'+String(en.length+1).padStart(2,'0'),text:target.text,sourceIds:target.sourceIndices.map(index=>{const w=words[index-1];if(!w)throw Error('Unknown mapping');return w.id;})});
+   en.push(...translate(template,words,cueId,en.length));
    offset+=words.length;
   }
   if(en[0])en[0].text=en[0].text.replace(/^\p{L}/u,c=>c.toLocaleUpperCase('en'));

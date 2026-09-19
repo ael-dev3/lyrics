@@ -71,3 +71,11 @@ The completed film provides a reproducible reference for bounded alignment, sour
 The released design uses large Oswald Russian lyrics and smaller Space Grotesk English translations, with a stronger Russian focus treatment. The next production must keep the timing discipline while replacing that hierarchy with equal bilingual emphasis. Existing screenshots illustrate the historical treatment; they are not the typography target for future English lyrics.
 
 Use the [general production workflow](production-workflow.md) for the broader pipeline, the [first-pass workflow](first-pass-song-workflow.md) for prototype and timing checks, and each project's own commands to reproduce a particular release. Exact palettes, audio gain, model choices and encode settings are track-specific decisions rather than universal presets.
+
+## Check complete display meaning independently of lexical links
+
+A correct word-to-word map and a perfect renderer comparison can still yield an incomplete highlighted phrase. The [Pero es locura correction](../projects/pero-es-locura-lyric-film/SEMANTIC-FOCUS-V2.md) found that “you” released during “love,” and audited all performed repeats plus related short-object, auxiliary and possession constructions.
+
+Keep lexical correspondence explicit. When a complete display phrase is specifically required, record it separately with its rationale and exact source-word membership. Use the union of those source intervals, never the enclosing span: an intervening word or gap must not inherit focus. This scoped presentation choice does not replace the default of individual correspondence or justify grouping whole lines. Review whether subjects, negation, degree and reordered words still retain their own events.
+
+Tests need independent semantic expectations, including examples that fail the previous mapping. Renderer agreement, acoustic review, and complete translated meaning are separate checks. When a correction follows delivery, preserve the original edition, identify its known issue, reopen affected review and bind future final-file evidence to the new revision.
