@@ -79,3 +79,10 @@ A correct word-to-word map and a perfect renderer comparison can still yield an 
 Keep lexical correspondence explicit. When a complete display phrase is specifically required, record it separately with its rationale and exact source-word membership. Use the union of those source intervals, never the enclosing span: an intervening word or gap must not inherit focus. This scoped presentation choice does not replace the default of individual correspondence or justify grouping whole lines. Review whether subjects, negation, degree and reordered words still retain their own events.
 
 Tests need independent semantic expectations, including examples that fail the previous mapping. Renderer agreement, acoustic review, and complete translated meaning are separate checks. When a correction follows delivery, preserve the original edition, identify its known issue, reopen affected review and bind future final-file evidence to the new revision.
+
+
+### Audit paired focus in both directions
+
+When complete phrase focus is selected, the corresponding original-language words must receive the same display emphasis. Completing only the translation can leave a source clitic neutral. Include subjects encoded by verb inflection, while retaining independent focus for explicitly spoken subjects, negation and degree. The [paired bilingual correction](../projects/pero-es-locura-lyric-film/PAIRED-FOCUS-V3.md) checks this distinction across repeated source events.
+
+Keep acoustic activation separate from display grouping and verify every consumer uses the correct one. Geometry and font-color checks should be accompanied by semantic tests that reject one-sided phrases. Check late spoken material over the actual picture: reading shade may need a separate envelope from title/spectrum decoration so it stays readable and still clears before original credits.

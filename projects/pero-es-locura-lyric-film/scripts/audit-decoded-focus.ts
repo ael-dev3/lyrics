@@ -6,7 +6,7 @@ import {GlobalFonts,createCanvas} from '@napi-rs/canvas';
 import {parseData} from '../src/schema.ts';
 import type {Format} from '../src/schema.ts';
 import type {Layouts} from '../src/layout-types.ts';
-import {visibleCue,activeSource,activeTargets} from '../src/focus.ts';
+import {visibleCue,activeDisplaySource,activeTargets} from '../src/focus.ts';
 import {palette} from '../src/palette.ts';
 const rgb=(h:string)=>[1,3,5].map(i=>parseInt(h.slice(i,i+2),16));const activeColor=rgb(palette.active),idleColor=rgb(palette.rest);
 const path=process.argv[2],format=(process.argv[3]??'landscape') as Format,offset=Number(process.argv[4]??0);if(!path||!['landscape','portrait'].includes(format))throw Error('Usage: file format [global frame offset]');
@@ -27,7 +27,7 @@ for(const cue of data.cues){const layout=l.cues[cue.id]!;for(const w of [...layo
 const child=spawn('ffmpeg',['-v','error','-threads','4','-i',path,'-an','-vf',`scale=${l.width}:${l.height}:flags=lanczos,crop=${crop.width}:${crop.height}:${crop.x}:${crop.y}`,'-pix_fmt','rgb24','-fps_mode','passthrough','-f','rawvideo','pipe:1']);
 let errors='';child.stderr.on('data',x=>errors+=x);let frame=0,wordStates=0,ambiguous=0;const mismatches:{frame:number;word:string;expected:boolean;median:number;brightness:number}[]=[];
 const bytes=crop.width*crop.height*3,buffer=Buffer.allocUnsafe(bytes);let filled=0;
-const processFrame=()=>{const globalFrame=offset+frame;const cue=visibleCue(data,globalFrame);if(cue){const active=new Set([...activeSource(cue,globalFrame,data),...activeTargets(cue,globalFrame,data)]);for(const word of [...cue.es,...cue.en]){const points=masks.get(word.id)!;const color=[0,1,2].map(channel=>{const values=points.map(p=>buffer[p+channel]!).sort((a,b)=>a-b);return values[Math.floor(values.length/2)]!;});const distance=(target:number[])=>Math.hypot(...color.map((v,i)=>v-target[i]!));const toActive=distance(activeColor),toIdle=distance(idleColor);const median=toIdle-toActive,r=color[0]!;if(Math.min(toActive,toIdle)>35||Math.abs(median)<30){ambiguous++;continue;}const expected=active.has(word.id);if((toActive<toIdle)!==expected)mismatches.push({frame:globalFrame,word:word.id,expected,median,brightness:r});wordStates++;}}frame++;};
+const processFrame=()=>{const globalFrame=offset+frame;const cue=visibleCue(data,globalFrame);if(cue){const active=new Set([...activeDisplaySource(cue,globalFrame,data),...activeTargets(cue,globalFrame,data)]);for(const word of [...cue.es,...cue.en]){const points=masks.get(word.id)!;const color=[0,1,2].map(channel=>{const values=points.map(p=>buffer[p+channel]!).sort((a,b)=>a-b);return values[Math.floor(values.length/2)]!;});const distance=(target:number[])=>Math.hypot(...color.map((v,i)=>v-target[i]!));const toActive=distance(activeColor),toIdle=distance(idleColor);const median=toIdle-toActive,r=color[0]!;if(Math.min(toActive,toIdle)>35||Math.abs(median)<30){ambiguous++;continue;}const expected=active.has(word.id);if((toActive<toIdle)!==expected)mismatches.push({frame:globalFrame,word:word.id,expected,median,brightness:r});wordStates++;}}frame++;};
 for await(const chunk of child.stdout){let at=0;while(at<chunk.length){const amount=Math.min(bytes-filled,chunk.length-at);chunk.copy(buffer,filled,at,at+amount);filled+=amount;at+=amount;if(filled===bytes){processFrame();filled=0;}}}
 const code=await new Promise<number|null>(resolve=>child.exitCode!==null?resolve(child.exitCode):child.on('close',resolve));if(code!==0||filled)throw Error('Incomplete decode '+errors);
 const negative=process.argv.includes('--negative-control');

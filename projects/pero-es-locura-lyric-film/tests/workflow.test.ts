@@ -9,3 +9,19 @@ const ready=()=>({song:identity.song,revision:identity.revision,inputHashes:{aud
 test('Production refuses missing authorization, stale revision and incomplete listening',()=>{assert.throws(()=>checkGate({},identity,current,ids));assert.throws(()=>checkGate({...ready(),song:'other'},identity,current,ids));assert.throws(()=>checkGate({...ready(),revision:'old'},identity,current,ids));assert.throws(()=>checkGate(ready(),identity,{audio:'changed'},ids));assert.throws(()=>checkGate({...ready(),actualAudioReviewComplete:false},identity,current,ids));assert.throws(()=>checkGate({...ready(),authorization:{approved:false}},identity,current,ids));assert.throws(()=>checkGate({...ready(),cues:[]},identity,current,ids));assert.throws(()=>checkGate({...ready(),unresolvedDefects:['a defect']},identity,current,ids));assert.equal(checkGate(ready(),identity,current,ids),true);});
 
 test('Cue beginnings use sentence case while internal words retain normal Spanish and English spelling',()=>{for(const c of data.cues)for(const language of (['es','en'] as const)){const text=c[language].map(w=>w.text).join(' ');const first=text.match(/\p{L}/u)?.[0];assert.ok(first);assert.equal(first,first.toLocaleUpperCase(language),c.id+' '+language);}const all=data.cues.flatMap(c=>c.es).map(w=>w.text.toLowerCase().replace(/[.,!?]+$/g,''));for(const word of ['párpado','estadía','compañía','robó','sumás','aumentás'])assert.ok(all.includes(word),word);});
+
+
+test('Both lyric lanes retain equal type and credit-safe decoration release',async()=>{
+ const {sceneSvg,portraitMask,decorOpacity,readingShadeOpacity}=await import('../src/scene.ts');
+ const layouts=JSON.parse(readFileSync('src/layout.json','utf8'));
+ for(const format of ['landscape','portrait'] as const){
+  const svg=sceneSvg(161,format,data,layouts,[]);
+  for(const language of ['es','en'])assert.ok(svg.includes(`data-language="${language}" font-size="${layouts[format].fontSize}"`));
+  assert.ok(!svg.includes('font-size="0"'));
+ }
+ assert.equal(decorOpacity(0),0);assert.equal(decorOpacity(287),0);assert.equal(decorOpacity(292),0);
+ assert.ok(Math.abs(Number(portraitMask(287).match(/rgba\(0,0,0,([0-9.]+)/)![1])-1)<1e-10);
+ assert.equal(readingShadeOpacity(Math.round(289.6*60),data),1);
+ assert.equal(readingShadeOpacity(292*60,data),0);
+ assert.equal(portraitMask(292),'linear-gradient(to bottom,rgba(0,0,0,1),black 4%,black 84%,rgba(0,0,0,1))');
+});

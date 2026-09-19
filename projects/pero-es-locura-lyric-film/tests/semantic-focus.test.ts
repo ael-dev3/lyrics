@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {parseData} from '../src/schema.ts';
-import {activeTargets,activeSource,frameAt} from '../src/focus.ts';
+import {activeTargets,activeSource,activeDisplaySource,sourceFocusIds,targetFocusIds,frameAt} from '../src/focus.ts';
 
 const read=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
 const data=parseData(read('src/cues.json'));
@@ -76,4 +76,44 @@ test('Focus metadata rejects orphaned words, unrelated source events and inconsi
     if(defect==='different-member')member.focusSourceIds=[member.sourceIds[0]!];
     assert.throws(()=>parseData(copy));
   }
+});
+
+
+test('Te quiero and its complete English phrase share every source event in both directions',()=>{
+ let pairs=0,spanishFailuresUnderV2=0;
+ for(const cue of data.cues)for(let index=0;index<cue.es.length-1;index++){
+  const te=cue.es[index]!,quiero=cue.es[index+1]!;
+  if(clean(te.text)!=='te'||clean(quiero.text)!=='quiero')continue;
+  // The opening te quiero decir means wanting to tell; only affection predicates qualify.
+  const love=cue.en.find(w=>clean(w.text)==='love'&&w.sourceIds.includes(quiero.id));if(!love)continue;
+  pairs++;const you=cue.en.find(w=>clean(w.text)==='you'&&w.sourceIds.includes(te.id))!;
+  const impliedI=cue.en.find(w=>clean(w.text)==='i'&&w.sourceIds.includes(quiero.id));
+  for(let frame=frameAt(te.startSample,data.sampleRate,60)-1;frame<=frameAt(quiero.endSample,data.sampleRate,60)+1;frame++){
+   const acoustic=activeSource(cue,frame,data),expected=acoustic.has(te.id)||acoustic.has(quiero.id);
+   const es=activeDisplaySource(cue,frame,data),en=activeTargets(cue,frame,data);
+   for(const word of [te,quiero]){assert.equal(es.has(word.id),expected);if(acoustic.has(word.id)!==expected)spanishFailuresUnderV2++;}
+   for(const word of [love,you,...(impliedI?[impliedI]:[])])assert.equal(en.has(word.id),expected,`${cue.id}/${word.text}/${frame}`);
+  }
+ }
+ assert.equal(pairs,20);assert.ok(spanishFailuresUnderV2>500);
+});
+
+test('Every paired unit contains all corresponding words, without a one-sided grammatical fragment',()=>{
+ for(const cue of data.cues)for(const target of cue.en){
+  const unit=sourceFocusIds(cue,targetFocusIds(target)[0]!);
+  assert.deepEqual([...targetFocusIds(target)].sort(),[...unit].sort(),`${cue.id}: incomplete target ${target.text}`);
+  for(let frame=frameAt(cue.startSample,data.sampleRate,60)-1;frame<=frameAt(cue.endSample,data.sampleRate,60)+1;frame++){
+   const expected=activeTargets(cue,frame,data).has(target.id),es=activeDisplaySource(cue,frame,data);
+   for(const source of unit)assert.equal(es.has(source),expected,`${cue.id}/${target.text}/${source}/${frame}`);
+  }
+ }
+});
+
+test('Source grouping preserves unrelated querer, stole, explicit yo, held aún, negation and golden/boy',()=>{
+ const check=(cueId:string,sourceId:string,expected:string[])=>{const cue=data.cues.find(c=>c.id===cueId)!;assert.deepEqual(sourceFocusIds(cue,sourceId).map(id=>clean(cue.es.find(w=>w.id===id)!.text)),expected);};
+ const opening=data.cues[0]!;
+ check(opening.id,opening.es[3]!.id,['quiero']); // wanting, not the subsequent affection predicate
+ const heart=data.cues.find(c=>c.es.some(w=>clean(w.text)==='robó'))!;
+ check(heart.id,heart.es.find(w=>clean(w.text)==='robó')!.id,['robó']);
+ for(const cue of data.cues)for(const word of cue.es)if(['aún','yo','no','dorado','muchacho'].includes(clean(word.text)))check(cue.id,word.id,[clean(word.text)]);
 });

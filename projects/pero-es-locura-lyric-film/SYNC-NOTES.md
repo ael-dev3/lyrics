@@ -1,8 +1,8 @@
 # Timing, wording and review scope
 
-## Revision 2 scope
+## Revision 3 scope
 
-The current preview corrects incomplete English phrase focus while preserving every Spanish timestamp and displayed word. [The semantic audit](SEMANTIC-FOCUS-V2.md) separates lexical correspondence from the requested complete display phrases. Current affected audiovisual review remains pending; completed listening references below describe v1.
+The current preview pairs complete Spanish and English focus, including te quiero / I love you, while preserving every acoustic timestamp and displayed word. [The paired-focus audit](PAIRED-FOCUS-V3.md) separates acoustic source events, lexical correspondence and bilingual display groups. Current affected audiovisual review remains pending; completed listening references below describe v1.
 
 ## Performed order
 
@@ -39,7 +39,7 @@ The selection script prefers corroborated onsets, rejects crop-edge-pinned Whisp
 
 The source keeps `mi costado` as supplied and supported by recognition, even though the image is unusual. `Al lado` becomes “close by,” without adding an unstated object. Rioplatense `vos` and verb forms are preserved. The distance fragment becomes “Despite millions of miles,” retaining the concession without inventing a subject or action.
 
-Each target token names source IDs. Spanish word order is allowed to differ from English: `muchacho dorado` focuses “boy” and “golden” at their own source events. `No` owns “don't,” and `quiero` owns “I want” in the corresponding negative construction. Lexical correspondence remains separate from revision 2 display groups. Selected complete English phrases use the union of their documented source events without bridging gaps or unrelated words. The semantic ledger records both lexical intervals and display-focus intervals.
+Each target token names source IDs. Spanish word order is allowed to differ from English: `muchacho dorado` focuses “boy” and “golden” at their own source events. `No` owns “don't,” and `quiero` owns “I want” in the corresponding negative construction. Lexical correspondence remains separate from revision 3 paired display groups. Both sides of each selected complete phrase use the union of their documented source events without bridging gaps or unrelated words. The semantic ledger records both lexical intervals and display-focus intervals.
 
 Capitalization belongs to displayed cue text, not the recognizer. Capitalize the first letter of each cue in both languages; preserve internal grammar, diacritics and first-person English “I.” A wrapped continuation is not a new sentence. Capitalization edits do not shift boundaries or create new acoustic evidence.
 
