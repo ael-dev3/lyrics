@@ -29,6 +29,8 @@ Review the intro, every verse, every repetition, fast passages, gaps, overlappin
 
 Use actual-audio playback for the complete recording at normal speed. Recheck every uncertain or fast event at reduced speed and around its onset, handoff and release. Record the real review method and reviewer role. Model alignments, spectrograms, source-window assertions and still images support the review; they cannot be described as completed listening. If actual-audio review cannot be performed, leave that part incomplete and do not start production rendering.
 
+A human reviewer may explicitly attest that the complete recording, uncertain-event reduced-speed checks and all delivery layouts have been reviewed. Record the reviewer role, exact scope and frozen input identity. Such an attestation is review evidence; do not invent automated playback telemetry or infer those checks from general praise or render approval alone.
+
 All languages use the same locked audio timeline. Keep natural target-language reading order while allowing backward, repeated or simultaneous focus. A grammatical expansion shares its source event’s interval; do not invent separate English syllable times. Multi-source groups use their participating intervals, with any perceptual hold explicitly justified and checked against neighboring words.
 
 ## 3. Review audiovisual proofs in every delivery format

@@ -1,6 +1,6 @@
 # Pero es locura — preview brief
 
-Prepare the complete live recording in Spanish and English, with an original performance-led presentation. The preview is available; production approval remains pending.
+Prepare the complete live recording in Spanish and English, with an original performance-led presentation. The complete preview was reviewed and accepted. Production of the unchanged revision is authorized; see the [review record](evidence/cross-language-sync-review.json) and [production notes](PRODUCTION-NOTES.md).
 
 Warm stage footage, skin tones, microphones and the original close/wide edits determine the visual direction. The full-width portrait image retains the performance above equal bilingual reading areas. Landscape uses continuous shading over the same source footage. Cormorant Garamond Semibold supplies the same size, weight and focus strength to both languages.
 

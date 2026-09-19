@@ -1,0 +1,10 @@
+import React,{useEffect,useState} from 'react';import {AbsoluteFill,Composition,registerRoot,useCurrentFrame,delayRender,continueRender,cancelRender,staticFile} from 'remotion';
+import raw from './cues.json';import layouts from './layout.json';import bands from '../public/science.json';import {parseData} from './schema.ts';import type {Format} from './schema.ts';import {sceneSvg} from './scene.ts';import {palette} from './palette.ts';import {rasterEntries} from './raster-inventory.ts';
+const data=parseData(raw);
+function Layer({format='landscape'}:{format?:Format}){
+ const frame=useCurrentFrame(),entry=rasterEntries[frame]!,[markup,setMarkup]=useState(''),[ready]=useState(()=>delayRender('Load exact preview font'));
+ useEffect(()=>{new FontFace('LiveSerif',`url(${staticFile('fonts/CormorantGaramond-Semibold.ttf')})`,{weight:'600'}).load().then(font=>{document.fonts.add(font);continueRender(ready);}).catch(cancelRender);},[ready]);
+ useEffect(()=>{const h=delayRender('Select preview layer');try{const cue=data.cues.find(c=>c.id===entry.cueId),at=cue?Math.ceil(cue.startSample/data.sampleRate*60):600;const dom=new DOMParser().parseFromString(sceneSvg(at,format,data,layouts,bands),'image/svg+xml'),svg=dom.documentElement,node=svg.querySelector(entry.mode==='metadata'?'[data-decor="metadata"]':'#lyric-layer');if(!node)throw Error('Missing layer');node.setAttribute('opacity','1');for(const w of node.querySelectorAll('[data-word]'))w.setAttribute('fill',entry.mode==='active'?palette.active:palette.rest);svg.replaceChildren(svg.querySelector('defs')!,node);setMarkup(new XMLSerializer().serializeToString(svg));continueRender(h);}catch(e){cancelRender(e);}},[entry,format]);
+ return <AbsoluteFill style={{backgroundColor:'transparent'}} dangerouslySetInnerHTML={{__html:markup}}/>;
+}
+registerRoot(()=> <>{(['landscape','portrait'] as const).map(format=><Composition key={format} id={'cache-'+format} component={Layer} fps={60} durationInFrames={rasterEntries.length} width={format==='landscape'?1920:1080} height={format==='landscape'?1080:1920} defaultProps={{format}}/>)}</>);

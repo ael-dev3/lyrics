@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "format": "portrait",
+  "inputSha256": "e5a978901dab024ba46d12e3d216cc99578aeb3d44d6531b2659bc36496ba296",
+  "contactSheetFrames": [
+    0,
+    69,
+    1194,
+    2340,
+    3486,
+    5988,
+    6540,
+    7476,
+    10452,
+    11400,
+    12228,
+    14670,
+    15690,
+    17178,
+    17376,
+    17520,
+    17646
+  ],
+  "nativeSizeFrames": [
+    7476,
+    11400,
+    17520
+  ],
+  "checks": [
+    "Complete composition inspected at mobile-like contact-sheet size across all seventeen checkpoints.",
+    "Native dense wrapped lyrics retain complete descenders, Spanish accents, equal bilingual weight, stable positions and legible active/rest color separation.",
+    "Original credits remain fully visible after the portrait mask clears; the late spoken tag and final picture are preserved.",
+    "No added crop of the source width, debug UI, unintended text box or clipped reading area."
+  ],
+  "limits": "Visual frame inspection supplements the all-frame decoded focus/clock checks. Actual-audio review is separately attributed to the project owner."
+}

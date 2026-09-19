@@ -12,8 +12,12 @@
     "preview": "npm run review:build && node scripts/review-server.ts",
     "preview:freeze": "node scripts/freeze-preview.ts && npm run review:build",
     "sync:gate": "node scripts/production-gate.ts",
-    "render": "node scripts/render.ts",
-    "geometry:build": "esbuild src/geometry-audit.ts --bundle --format=esm --outfile=review/geometry.js"
+    "render": "node scripts/render-isolated.ts",
+    "geometry:build": "esbuild src/geometry-audit.ts --bundle --format=esm --outfile=review/geometry.js",
+    "production:gate": "node scripts/production-contract.ts --verify",
+    "cache:build": "node --expose-gc scripts/raster-cache.ts",
+    "captions": "node scripts/captions.ts",
+    "covers": "node scripts/covers.ts"
   },
   "dependencies": {
     "@napi-rs/canvas": "0.1.100",

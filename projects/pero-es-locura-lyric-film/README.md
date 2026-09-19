@@ -1,49 +1,56 @@
 # Fémina — Pero es locura
 
-**Vivo en La Oreja Negra · Spanish + English · full-recording preview**
+**Vivo en La Oreja Negra · Spanish + English · verified landscape and portrait films**
 
-![Live performance with equal Spanish and English word focus](../../assets/pero-es-locura-preview-109.png)
+![Live performance with equal Spanish and English word focus](../../assets/pero-es-locura-final-109.png)
 
-*Diagnostic landscape still at 01:49.000, made from the actual source picture and shared preview scene. Performance and music: Fémina. Production: La Oreja Negra. Film: FLAN Audiovisual. This is a preview image, not a frame from a completed film.*
+*Final landscape frame 6540 at 01:49.000, decoded from the verified delivery. Music and performance: Fémina. Production: La Oreja Negra. Film: FLAN Audiovisual.*
 
-## Preview
+## Delivery
 
-The complete 4:54.104 recording plays locally at **http://127.0.0.1:4321/**. Select 16:9 or 9:16, seek anywhere, restart, or use 0.75× / 0.5× playback. “Timing review” exposes source and translated word correspondence, acoustic evidence, candidate boundaries and draft review notes. Saving notes does not authorize production.
+The complete **4:54.104** live recording is delivered in 1920×1080 and 1080×1920 at 60 fps, with Spanish lyrics and meaning-linked English highlighting. Original live cuts and motion remain intact; warm serif text, continuous shading and a compact measured spectrum support the performance. Both languages have equal size, weight and focus strength, with stable word positions. Portrait retains the full source width above dedicated reading space. Added decoration clears before the source credits; the late spoken tag remains subtitled.
 
-The live footage provides the motion and shot changes. Warm ivory text, champagne focus, continuous shading and one compact spectrum support the performance. Both languages have equal font size, weight and highlight strength. Words keep fixed positions. Portrait retains the full source width, above dedicated reading space. Added title and spectrum disappear before the source credits; the portrait edge mask also clears to retain the credit lettering.
+The local upload kit includes both films, separate YouTube and TikTok titles/descriptions, a 1920×1080 YouTube thumbnail, a **1200×1600 portrait TikTok profile cover**, optional captions and checksums. Full recording files and upload assets stay local. Source integration does not publish the recording to a video platform or create a public media release.
 
-**Preview only.** No full-length film has been rendered. Model alignment is complete; actual-audio review and explicit approval of this revision remain pending. See [status](status.json), [review record](evidence/cross-language-sync-review.json) and the repository's [mandatory gate](../../docs/cross-language-sync-gate.md).
+[Delivery receipt](evidence/delivery-receipt.json) · [Desktop handoff](evidence/desktop-handoff.json) · [Checksums](evidence/delivery-checksums.sha256) · [Posting assets](publishing/README.md) · [Production and verification](PRODUCTION-NOTES.md)
+
+## Review and final-file verification
+
+The project owner explicitly confirmed complete actual-audio review, uncertain events at reduced speed and both layouts, then authorized rendering of `preview-v1-live-capitalized`. The strict gate remains unchanged. Its completed cue records identify human attestation as the review basis; no granular playback telemetry or automated listening is claimed. Lyrics, timing, meaning maps and the approved visual inputs are unchanged.
+
+- Both final films contain **17,647 frames at 60 fps**, with every timestamp checked and strict full-file decode passing.
+- Each format passed **168,742 visible word-state checks**, with **zero mismatches and zero ambiguous classifications**.
+- All **12,666 AAC packets**, their timestamps and **12,969,984 decoded stereo sample frames** match the original. The decoded audio SHA-256 is identical.
+- The metadata correction preserved every native 10-bit pixel hash and timestamp across both films.
+
+Before production, the SVG checks covered **70,730 visible word-color states**; browser geometry covered **6,036 states** with no missing words, overlaps, clipping or glyph movement. Twenty-two compositor proofs verified the production typography against the approved preview. An intentionally shifted encoded diagnostic demonstrated that the focus checker detects incorrect timing.
+
+Software checks establish agreement with the approved map and preservation of the source timeline. Human acoustic review is recorded separately. Raw alignment disagreements remain available as provenance; frame quantization and physical playback latency are not claims of perfect acoustic accuracy.
+
+[Completed review](evidence/cross-language-sync-review.json) · [Authorization](evidence/render-authorization.json) · [Timing audit](evidence/final-sync-audit.json) · [Technical checks](evidence/technical-checks.json) · [Browser geometry](evidence/browser-geometry.json) · [Frozen identity](evidence/preview-identity.json)
 
 ## Text and timing
 
-- 86 displayed cues, 586 Spanish words, 636 English tokens, on 55 independently aligned performance windows.
-- Both supplied lyric references are retained. The displayed transcription follows this particular live recording, including its early heart refrain, shortened refrain endings, three “mucho” repetitions and final spoken tag.
-- Each displayed cue starts with a capital letter. Internal text uses normal sentence case; automatic wrapping does not capitalize a continuation. Spanish accents and Rioplatense forms are retained: `párpado`, `estás`, `estadía`, `Perdoná`, `sumás`, `aumentás`, `hacés`; `Quedate` remains unaccented.
-- English words follow their corresponding Spanish source intervals. Reordered adjectives, pronouns and necessary English grammatical completions receive the whole mapped focus. Gaps between source events stay gaps; no independent target timing is fabricated.
-- One HTML video element supplies both source picture and original sound. Its media clock drives lyric focus and the measured spectrum. Normal and slow playback use that same clock.
+- **86 displayed cues, 586 Spanish words and 636 English tokens**, prepared from 55 independently aligned performance windows.
+- Both supplied lyric references are retained. The transcription follows this live recording, including its early heart refrain, shortened refrain endings, three “mucho” repetitions and final spoken “Esto se acabó.”
+- Every cue starts with a capital letter. Internal text uses sentence case; a wrapped continuation is not automatically capitalized. Spanish accents and Rioplatense forms are retained, including `párpado`, `estadía`, `Perdoná`, `sumás`, `aumentás` and `hacés`; `Quedate` remains unaccented.
+- English words follow their corresponding Spanish source intervals. Reordered words keep their own events; necessary grammatical completions receive the complete mapped focus. Gaps remain gaps, without fabricated English syllable timings.
+- Preview picture, sound and graphics follow one video clock. Production preserves the original 24000/1001 fps picture cadence on the 60 fps graphics timeline, with the final source picture held through the remaining audio.
 
-[Performed Spanish](source/lyrics-performed-es.txt) · [English translation](source/lyrics-translated-en.txt) · [Translation mappings](source/translation-templates.json) · [Timing and coverage notes](SYNC-NOTES.md)
-
-## Verification and limits
-
-`npm run check` validates capitalization, performed sequence, semantic coverage, source audio identity, all timing boundaries, both layouts and the closed production gate. The recorded run checked **70,730 visible word-color states** with no mismatch. The browser audit checked **6,036 states** in both formats with no missing words, overlaps, clipping or glyph movement.
-
-These are software checks, not proof of perfect acoustic alignment. All 586 words remain marked for listening review. MMS on the mixture and isolated vocal, plus Whisper alignment, retain their disagreements in the boundary ledger. Browser clock measurements exclude hardware output latency. Full audio/video review must resolve the remaining uncertainty before production.
-
-[Technical checks](evidence/technical-checks.json) · [Browser geometry](evidence/browser-geometry.json) · [Playback checks](evidence/browser-playback.json) · [Alignment summary](evidence/alignment-summary.json) · [Frozen identity](evidence/preview-identity.json)
+[Performed Spanish](source/lyrics-performed-es.txt) · [English translation](source/lyrics-translated-en.txt) · [Meaning mappings](source/translation-templates.json) · [Timing and coverage notes](SYNC-NOTES.md)
 
 ## Run locally
 
-Requires Node with direct TypeScript execution, npm and FFmpeg. The committed lockfile pins dependencies.
+Requires Node with direct TypeScript execution, npm and FFmpeg. The committed lockfile pins dependencies. Production uses macOS VideoToolbox HEVC Main10 encoding; the preview does not require that encoder.
 
 ```sh
 npm ci
-# Restore the original local recording using source/PREPARATION.md.
+# Restore the locked local recording using source/PREPARATION.md.
 npm run check
 npm run preview
 ```
 
-`Start Preview.command` starts the same preview from this folder on macOS. Recording files remain local and are excluded from Git. Match the source hashes before reusing timing evidence. Generated browser bundles are ignored and rebuilt by `npm run preview`.
+The review preview remains available at **http://127.0.0.1:4321/**, with 16:9 / 9:16 selection and normal or reduced-speed playback. `Start Preview.command` starts it on macOS. The frozen review interface preserves its original review-era wording; the current review status is in the separate [review record](evidence/cross-language-sync-review.json) and [delivery status](status.json). Saving preview notes never authorizes production.
 
 To rebuild text/layout after an intentional correction:
 
@@ -56,6 +63,6 @@ npm run check
 npm run preview:freeze
 ```
 
-Any changed review input invalidates previous signoff. `npm run sync:gate` currently refuses production because listening review and authorization are incomplete. `npm run render` is a guarded placeholder; this preview edition does not install a full-film rendering adapter. Single-frame diagnostic images use `node scripts/stills.ts` and cannot produce a full film.
+Changed review inputs invalidate prior signoff. Recheck the affected material and obtain authorization for the new revision before rendering. See [production reproduction](PRODUCTION-NOTES.md#reproduction) for cache capture, diagnostic proofs, full rendering and final verification.
 
 [Original live recording](https://www.youtube.com/watch?v=uvLVcEBIn-4) · [Source preparation](source/PREPARATION.md) · [Design brief](PREVIEW-BRIEF.md) · [Workflow findings](WORKFLOW-NOTES.md)
