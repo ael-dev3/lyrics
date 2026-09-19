@@ -1,6 +1,6 @@
 # Complete English focus — preview revision 2
 
-**Historical v2 preview, superseded by [paired-focus v3](PAIRED-FOCUS-V3.md).** This pass corrected the English object span but left Spanish source groups incomplete and implied English subjects briefly independent. No replacement film was rendered. The delivered v1 files remain unchanged. Review and production authorization for this changed focus are pending.
+**Historical v2 preview, superseded by [paired-focus v3](PAIRED-FOCUS-V3.md).** This pass corrected the English object span but left Spanish source groups incomplete and implied English subjects briefly independent. No replacement film was rendered. The delivered v1 files remain unchanged. This intermediate preview did not receive a replacement delivery; current status belongs to the linked v3 edition.
 
 ## Problem and correction
 
@@ -45,7 +45,7 @@ There are three lexical repairs in the “estés empapado” cue: “you” and 
 - The SVG audit passes **70,730 word-color states**. The browser audit passes **6,036 states / 90,742 glyph observations**, with no missing text, clipping, overlap, movement or mismatch between the preview painter and static scene.
 - Nine targeted checkpoints pass in both browser layouts after completed seeks. Normal and 0.5× playback advance correctly; observed overlay/media-clock quantization stays below 8.334 ms. This does not measure hardware speaker/display latency or certify fresh acoustic listening.
 
-The v1 encoded checks correctly proved agreement with the old map; they did **not** prove the map's complete English meaning. Its immutable delivery receipt and files remain v1 evidence. The current review retains the prior attestation for 46 unchanged cues and reopens the 40 affected cues. Automated tests do not sign off the new audiovisual review. The production gate refuses the pending revision, and the posting-kit script rejects final focus verification from a different revision.
+The v1 encoded checks correctly proved agreement with the old map; they did **not** prove the map's complete English meaning. Its immutable delivery receipt and files remain v1 evidence. The v2 review retained the prior attestation for 46 unchanged cues and reopened the 40 affected cues. Automated tests do not sign off the new audiovisual review. The production gate refused that pending revision, and the posting-kit script rejects final focus verification from a different revision.
 
 ## Reproduce the correction
 

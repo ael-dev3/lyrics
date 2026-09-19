@@ -2,7 +2,7 @@
 
 ## Revision 3 scope
 
-The current preview pairs complete Spanish and English focus, including te quiero / I love you, while preserving every acoustic timestamp and displayed word. [The paired-focus audit](PAIRED-FOCUS-V3.md) separates acoustic source events, lexical correspondence and bilingual display groups. Current affected audiovisual review remains pending; completed listening references below describe v1.
+The current preview pairs complete Spanish and English focus, including te quiero / I love you, while preserving every acoustic timestamp and displayed word. [The paired-focus audit](PAIRED-FOCUS-V3.md) separates acoustic source events, lexical correspondence and bilingual display groups. The corrected presentation is approved for production. Original listening evidence is retained for identical source audio and acoustic events; current display acceptance and technical checks are recorded separately.
 
 ## Performed order
 
@@ -45,6 +45,6 @@ Capitalization belongs to displayed cue text, not the recognizer. Capitalize the
 
 ## Historical v1 review and production authorization
 
-The project owner explicitly attested to reviewing the complete actual-audio preview, uncertain events at reduced speed and both delivery layouts, then authorized production of the same frozen revision. The strict gate passed for v1 without an exception; it remains closed for the revised focus. Per-cue completion records identify this attestation as their basis; they do not claim observed playback telemetry or machine listening. The original pending review snapshot remains in `evidence/history/`.
+The project owner explicitly attested to reviewing the complete actual-audio preview, uncertain events at reduced speed and both delivery layouts, then authorized production of the same frozen revision. The original gate passed for v1 without an exception. The current record retains that acoustic review for unchanged events and separately binds approval to the corrected paired presentation. Per-cue completion records identify this attestation as their basis; they do not claim observed playback telemetry or machine listening. The original pending review snapshot remains in `evidence/history/`.
 
 Automated color, geometry and final-file checks supplement human review. They establish agreement with the approved timing map and unchanged source audio, not independent acoustic ground truth. See the [completed review](evidence/history/delivery-v1/cross-language-sync-review.json), [production authorization](evidence/history/delivery-v1/render-authorization.json) and [production method](PRODUCTION-NOTES.md).
