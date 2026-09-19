@@ -1,9 +1,9 @@
 # Timing questions and evidence limits
 
-This preview includes the complete original live recording and 86 Spanish / English cues. The two languages share source-word events, including reordered words and complete grammatical expansions. Capitalization and Spanish accents are editorial text corrections; they do not move timing boundaries.
+Revision 2 preserves the complete original recording and all 86 Spanish / English cues. It corrects 58 English phrase occurrences across 40 cues; Spanish timestamps, displayed text and glyph positions are unchanged.
 
-Actual-audio listening review, uncertain-event reduced-speed checks and both formats are complete by explicit project-owner attestation. Three model/signal observations provide candidate boundaries; their original uncertainty remains documented. In Timing review, inspect a word's candidate spans, waveform and spectrogram, then play around that word at normal and reduced speed. The held final “aún,” shortened refrain endings and final spoken “Esto se acabó” deserve particular attention.
+Use **Review highlight fixes** to compare complete phrases such as “love you,” “to tell you,” “my heart,” “be soaked” and “inspires me.” Check their onsets, internal source changes and releases at normal and reduced speed in both layouts. Intervening unrelated words and genuine gaps must release the group. The timing inspector distinguishes lexical correspondence from complete English display focus.
 
-Browser geometry, mapping and playback checks pass. They do not establish perfect acoustic alignment or measure physical speaker/display latency. Saving review progress stores notes only and never authorizes production. The unchanged revision has explicit production authorization. Current delivery status is recorded in `status.json`.
+The prior actual-audio review is preserved as v1 evidence. The 40 changed cues need revised audiovisual review; the current preview has no new production authorization. Browser geometry, semantic regression and playback telemetry pass, but do not establish fresh listening or measure physical speaker/display latency. Saving progress stores notes only.
 
-The complete source order, model limitations and translation decisions are documented in the project's SYNC-NOTES.md. Recording and all stage/film credits belong to their original creators.
+The full semantic audit and reproduction steps are in SEMANTIC-FOCUS-V2.md. Original model uncertainty remains in SYNC-NOTES.md. Music and performance: Fémina. Production: La Oreja Negra. Film: FLAN Audiovisual.

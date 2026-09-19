@@ -1,4 +1,5 @@
-import assert from 'node:assert/strict';import {readFileSync,writeFileSync} from 'node:fs';import {createHash} from 'node:crypto';import type {SourceWord,TargetWord} from '../src/schema.ts';import type {CueLayout} from '../src/layout-types.ts';import {parseData} from '../src/schema.ts';import type {Layouts} from '../src/layout-types.ts';import {sceneSvg,spectrum} from '../src/scene.ts';import {palette} from '../src/palette.ts';
+import assert from 'node:assert/strict';import {readFileSync,writeFileSync} from 'node:fs';import {createHash} from 'node:crypto';import type {SourceWord,TargetWord} from '../src/schema.ts';import type {CueLayout} from '../src/layout-types.ts';import {parseData} from '../src/schema.ts';import type {Layouts} from '../src/layout-types.ts';import {sceneSvg,spectrum} from '../src/scene.ts';import {targetFocusIds} from '../src/focus.ts';
+import {palette} from '../src/palette.ts';
 const read=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
 const d=parseData(read('src/cues.json')),layouts=read('src/layout.json') as Layouts,bands=read('public/science.json') as number[][];
 const expected=(read('source/performed-sequence.json') as {text:string}[]).flatMap(c=>c.text.split(/\s+/));
@@ -18,13 +19,13 @@ for(let ci=0;ci<d.cues.length;ci++){
    const colors=new Map([...svg.matchAll(/data-word="([^"]+)"[^>]*fill="([^"]+)"/g)].map(m=>[m[1],m[2]]));
    for(const word of [...c.es,...c.en]){
     if(!visible){assert.ok(!colors.has(word.id));continue;}
-    const source:SourceWord[]='sourceIds'in word?c.es.filter((w:SourceWord)=>(word as TargetWord).sourceIds.includes(w.id)):[word];
+    const source:SourceWord[]='sourceIds'in word?c.es.filter((w:SourceWord)=>targetFocusIds(word as TargetWord).includes(w.id)):[word];
     const on:boolean=source.some((w:SourceWord)=>f>=Math.round(w.startSample/d.sampleRate*d.fps)&&f<Math.round(w.endSample/d.sampleRate*d.fps));
     assert.equal(colors.get(word.id),on?palette.active:palette.rest,word.id+'/'+format+'/'+f);wordColors++;
    }states++;
   }
  }
- semantic.push({id:c.id,es:c.es,en:c.en.map(w=>({...w,intervals:c.es.filter(s=>w.sourceIds.includes(s.id)).map(s=>({startSample:s.startSample,endSample:s.endSample})),rule:'source interval union; exclusive ends; no invented target times'}))});
+ semantic.push({id:c.id,es:c.es,en:c.en.map(w=>({...w,intervals:c.es.filter(s=>w.sourceIds.includes(s.id)).map(s=>({startSample:s.startSample,endSample:s.endSample})),focusIntervals:c.es.filter(s=>targetFocusIds(w).includes(s.id)).map(s=>({startSample:s.startSample,endSample:s.endSample})),rule:'lexical correspondence retained; complete display group uses source interval union with exclusive ends, no bridge across gaps or unrelated source events'}))});
 }
 for(let f=0;f<d.frames;f++)for(const p of [false,true])for(const v of spectrum(f,bands,p))assert.ok(Number.isFinite(v)&&v>=2&&v<=(p?54:32));
 assert.ok(maxQuantizationMs<=1000/d.fps/2+.0001);

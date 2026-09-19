@@ -42,7 +42,22 @@
         ]
       }
     ],
-    "note": "Ay, que is a discourse opening, rendered Oh; te remains independently linked to you. Quiero expresses wanting here; the following quiero expresses affection."
+    "note": "Ay, que is a discourse opening, rendered Oh; te is the recipient of decir and remains lexically linked to you; the complete tell-you display group is recorded separately. Quiero expresses wanting here; the following quiero expresses affection.",
+    "focusGroups": [
+      {
+        "id": "tell-you",
+        "targetIndices": [
+          4,
+          5,
+          6
+        ],
+        "sourceIndices": [
+          3,
+          5
+        ],
+        "reason": "The displaced recipient te belongs to decir: highlight the complete to tell you at either contributing event, releasing during quiero and any gap."
+      }
+    ]
   },
   {
     "id": "R2",
@@ -82,7 +97,21 @@
         ]
       }
     ],
-    "note": "Lo que is the degree construction how much; te maps separately."
+    "note": "Lo que is the degree construction how much; te retains its lexical you correspondence; display focus completes love you across the two source events.",
+    "focusGroups": [
+      {
+        "id": "love-you",
+        "targetIndices": [
+          4,
+          5
+        ],
+        "sourceIndices": [
+          3,
+          4
+        ],
+        "reason": "Complete the affection predicate love you throughout te / quiero; retain I on verb inflection and how much on the degree construction."
+      }
+    ]
   },
   {
     "id": "R3",
@@ -406,15 +435,13 @@
       {
         "text": "you",
         "sourceIndices": [
-          2,
           6
         ]
       },
       {
         "text": "to",
         "sourceIndices": [
-          2,
-          6
+          2
         ]
       },
       {
@@ -426,7 +453,7 @@
       {
         "text": "be",
         "sourceIndices": [
-          7
+          6
         ]
       },
       {
@@ -448,7 +475,21 @@
         ]
       }
     ],
-    "note": "Quiero que... estés is a subjunctive complement, rendered I want you to...; de marks the substance/source of empapado. Natural English reorders the phrase. No independent timing is invented for English auxiliaries."
+    "note": "Quiero que... estés is a subjunctive complement, rendered I want you to...; de marks the substance/source of empapado. Natural English reorders the phrase. The complement marker que maps to to, estés supplies you and be, and empapado supplies soaked. Display focus completes be soaked without assigning you to que.",
+    "focusGroups": [
+      {
+        "id": "be-soaked",
+        "targetIndices": [
+          6,
+          7
+        ],
+        "sourceIndices": [
+          6,
+          7
+        ],
+        "reason": "The copula and participle form be soaked. Keep its full display span while preserving separate lexical correspondences and always / in me."
+      }
+    ]
   },
   {
     "id": "V08",
@@ -1628,7 +1669,21 @@
         ]
       }
     ],
-    "note": "Individual word correspondence; inflected verbs and required English grammatical completions share their source event."
+    "note": "Individual word correspondence; inflected verbs and required English grammatical completions share their source event.",
+    "focusGroups": [
+      {
+        "id": "inspires-me",
+        "targetIndices": [
+          4,
+          5
+        ],
+        "sourceIndices": [
+          5,
+          6
+        ],
+        "reason": "Preverbal clitic me is the object of inspira; the English predicate includes me while the verb is active."
+      }
+    ]
   },
   {
     "id": "V34",
@@ -1723,7 +1778,34 @@
         ]
       }
     ],
-    "note": "Individual word correspondence; inflected verbs and required English grammatical completions share their source event."
+    "note": "Individual word correspondence; inflected verbs and required English grammatical completions share their source event.",
+    "focusGroups": [
+      {
+        "id": "add-to-me",
+        "targetIndices": [
+          2,
+          3,
+          4
+        ],
+        "sourceIndices": [
+          1,
+          2
+        ],
+        "reason": "Complete add to me across the preverbal clitic and sumás; implied subject You retains its own inflected-verb event."
+      },
+      {
+        "id": "expand-me",
+        "targetIndices": [
+          6,
+          7
+        ],
+        "sourceIndices": [
+          3,
+          4
+        ],
+        "reason": "Complete expand me across the second clitic and aumentás; do not merge the two repeated predicates."
+      }
+    ]
   },
   {
     "id": "V36",
@@ -1761,7 +1843,21 @@
         ]
       }
     ],
-    "note": "Individual word correspondence; inflected verbs and required English grammatical completions share their source event."
+    "note": "Individual word correspondence; inflected verbs and required English grammatical completions share their source event.",
+    "focusGroups": [
+      {
+        "id": "make-me",
+        "targetIndices": [
+          2,
+          3
+        ],
+        "sourceIndices": [
+          1,
+          2
+        ],
+        "reason": "Complete make me across the preverbal clitic and hacés, leaving more and capable independently timed."
+      }
+    ]
   },
   {
     "id": "V37",
@@ -1857,7 +1953,22 @@
         ]
       }
     ],
-    "note": "Ay que is an emphatic opening. Me... el corazón is the Spanish affected-possessor construction, naturally my heart; keep me independently linked to my."
+    "note": "Ay que is an emphatic opening. Me... el corazón is the Spanish affected-possessor construction, naturally my heart; keep me lexically linked to my and complete my heart in display focus.",
+    "focusGroups": [
+      {
+        "id": "my-heart",
+        "targetIndices": [
+          4,
+          5
+        ],
+        "sourceIndices": [
+          3,
+          5,
+          6
+        ],
+        "reason": "The affected possessor me becomes my in my heart. Complete that noun phrase at the possessor and heart events; stole remains separate."
+      }
+    ]
   },
   {
     "id": "B02",
@@ -1896,7 +2007,22 @@
         ]
       }
     ],
-    "note": "Me... el corazón is the affected-possessor construction my heart. Article remains part of heart."
+    "note": "Me... el corazón is the affected-possessor construction my heart. Article remains part of heart; the displaced affected possessor participates in the complete my-heart display group.",
+    "focusGroups": [
+      {
+        "id": "my-heart",
+        "targetIndices": [
+          4,
+          5
+        ],
+        "sourceIndices": [
+          3,
+          5,
+          6
+        ],
+        "reason": "Complete the affected-possession phrase my heart without extending it through the independent verb stole."
+      }
+    ]
   },
   {
     "id": "B03",
@@ -1972,7 +2098,21 @@
         ]
       }
     ],
-    "note": "Individual word correspondence; inflected verbs and required English grammatical completions share their source event."
+    "note": "Individual word correspondence; inflected verbs and required English grammatical completions share their source event.",
+    "focusGroups": [
+      {
+        "id": "love-you",
+        "targetIndices": [
+          4,
+          5
+        ],
+        "sourceIndices": [
+          3,
+          4
+        ],
+        "reason": "Complete love you throughout te / quiero, independently of because and the inflected subject I."
+      }
+    ]
   },
   {
     "id": "B05",
@@ -2048,7 +2188,21 @@
         ]
       }
     ],
-    "note": "Individual word correspondence; inflected verbs and required English grammatical completions share their source event."
+    "note": "Individual word correspondence; inflected verbs and required English grammatical completions share their source event.",
+    "focusGroups": [
+      {
+        "id": "separate-us",
+        "targetIndices": [
+          4,
+          5
+        ],
+        "sourceIndices": [
+          3,
+          4
+        ],
+        "reason": "The preverbal clitic nos is the object of separan; complete separate us while retaining miles at its own source event."
+      }
+    ]
   },
   {
     "id": "B07",
@@ -2080,7 +2234,21 @@
         ]
       }
     ],
-    "note": "Individual word correspondence; inflected verbs and required English grammatical completions share their source event."
+    "note": "Individual word correspondence; inflected verbs and required English grammatical completions share their source event.",
+    "focusGroups": [
+      {
+        "id": "love-you",
+        "targetIndices": [
+          3,
+          4
+        ],
+        "sourceIndices": [
+          3,
+          4
+        ],
+        "reason": "Complete love you throughout te / quiero. The explicit yo and long held aún remain independently focused as I and still."
+      }
+    ]
   },
   {
     "id": "B08",

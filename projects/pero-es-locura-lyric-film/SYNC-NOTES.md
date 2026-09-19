@@ -1,5 +1,9 @@
 # Timing, wording and review scope
 
+## Revision 2 scope
+
+The current preview corrects incomplete English phrase focus while preserving every Spanish timestamp and displayed word. [The semantic audit](SEMANTIC-FOCUS-V2.md) separates lexical correspondence from the requested complete display phrases. Current affected audiovisual review remains pending; completed listening references below describe v1.
+
 ## Performed order
 
 The supplied text is a reference, not a time grid. Full-track recognizers collapse repeats, so bounded mixture/vocal transcripts were compared with independently aligned windows. Original text and the later expanded reference remain separate from the normalized performed sequence. Copied website controls and recommendation links are excluded.
@@ -35,12 +39,12 @@ The selection script prefers corroborated onsets, rejects crop-edge-pinned Whisp
 
 The source keeps `mi costado` as supplied and supported by recognition, even though the image is unusual. `Al lado` becomes “close by,” without adding an unstated object. Rioplatense `vos` and verb forms are preserved. The distance fragment becomes “Despite millions of miles,” retaining the concession without inventing a subject or action.
 
-Each target token names source IDs. Spanish word order is allowed to differ from English: `muchacho dorado` focuses “boy” and “golden” at their own source events. `No` owns “don't,” and `quiero` owns “I want” in the corresponding negative construction. Expansions share an acoustic interval only where they express one source event or documented irreducible construction. The semantic ledger records the complete interval union for every English token.
+Each target token names source IDs. Spanish word order is allowed to differ from English: `muchacho dorado` focuses “boy” and “golden” at their own source events. `No` owns “don't,” and `quiero` owns “I want” in the corresponding negative construction. Lexical correspondence remains separate from revision 2 display groups. Selected complete English phrases use the union of their documented source events without bridging gaps or unrelated words. The semantic ledger records both lexical intervals and display-focus intervals.
 
 Capitalization belongs to displayed cue text, not the recognizer. Capitalize the first letter of each cue in both languages; preserve internal grammar, diacritics and first-person English “I.” A wrapped continuation is not a new sentence. Capitalization edits do not shift boundaries or create new acoustic evidence.
 
-## Completed review and production authorization
+## Historical v1 review and production authorization
 
-The project owner explicitly attested to reviewing the complete actual-audio preview, uncertain events at reduced speed and both delivery layouts, then authorized production of the same frozen revision. The strict gate passes without an exception. Per-cue completion records identify this attestation as their basis; they do not claim observed playback telemetry or machine listening. The original pending review snapshot remains in `evidence/history/`.
+The project owner explicitly attested to reviewing the complete actual-audio preview, uncertain events at reduced speed and both delivery layouts, then authorized production of the same frozen revision. The strict gate passed for v1 without an exception; it remains closed for the revised focus. Per-cue completion records identify this attestation as their basis; they do not claim observed playback telemetry or machine listening. The original pending review snapshot remains in `evidence/history/`.
 
-Automated color, geometry and final-file checks supplement human review. They establish agreement with the approved timing map and unchanged source audio, not independent acoustic ground truth. See the [completed review](evidence/cross-language-sync-review.json), [production authorization](evidence/render-authorization.json) and [production method](PRODUCTION-NOTES.md).
+Automated color, geometry and final-file checks supplement human review. They establish agreement with the approved timing map and unchanged source audio, not independent acoustic ground truth. See the [completed review](evidence/history/delivery-v1/cross-language-sync-review.json), [production authorization](evidence/history/delivery-v1/render-authorization.json) and [production method](PRODUCTION-NOTES.md).

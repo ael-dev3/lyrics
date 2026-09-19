@@ -17,3 +17,11 @@
 - Preserve source cadence with an explicit sample-and-hold rule, and verify every converted frame against the original source. A 60 fps graphics clock does not create new source-video detail.
 
 - Treat requested encoder metadata as an input, not a verified result. Inspect actual bitstream and container color tags. If only tags are missing, a lossless metadata remux can correct them; prove that every native decoded pixel hash and timestamp is unchanged and retain both byte identities.
+
+## Semantic focus findings from revision 2
+
+An implementation can render every specified word color correctly and still leave the translated meaning incomplete. Audit short objects, auxiliaries, affected possession and repeated hooks independently of the renderer. “Te quiero” exposed this: “you” ended before “love,” despite valid lexical links.
+
+Keep precise lexical correspondence and explicitly requested complete display groups as separate data. Record the reason and source-event union for each group; never extend through unrelated words or acoustic gaps. Preserve independently corresponding words when grouping adds no meaning. Add semantic regression expectations that fail the previous mapping, rather than only checking that a renderer reproduces that mapping.
+
+Bind delivery verification to its exact revision. When a correction follows a delivery, preserve the delivered bytes and their evidence, label the known issue, reopen affected review, and prevent old final-file verification from qualifying a new posting kit. [Implementation and measured results](SEMANTIC-FOCUS-V2.md).

@@ -10,15 +10,15 @@ Music films with synchronized lyrics, meaning-linked translations, and audio-rea
 
 ## Pero es locura
 
-**Fémina · Vivo en La Oreja Negra · Spanish + English · verified local delivery**
+**Fémina · Vivo en La Oreja Negra · Spanish + English · semantic-focus v2 preview**
 
 ![Pero es locura: live performance, warm bilingual word focus and restrained spectrum](assets/pero-es-locura-final-109.png)
 
-*Verified final landscape frame at 01:49.000. Music and performance: Fémina. Production: La Oreja Negra. Film: FLAN Audiovisual.*
+*Delivered v1 landscape frame at 01:49.000. Music and performance: Fémina. Production: La Oreja Negra. Film: FLAN Audiovisual.*
 
-The full 4:54.104 live recording has 86 displayed cues, with sentence-case Spanish and English, restored Spanish accents, independently aligned live repeats and complete source-linked word emphasis. The original performance supplies the motion; warm serif text and a compact measured spectrum support it. Both layouts retain the source ending and credits.
+The full 4:54.104 live recording has 86 displayed cues, with sentence-case Spanish and English, restored Spanish accents, independently aligned live repeats and source-linked word emphasis. The original performance supplies the motion; warm serif text and a compact measured spectrum support it. Both layouts retain the source ending and credits.
 
-Both 60 fps films passed every frame-timestamp check and 337,484 combined decoded word-state checks with zero mismatches. Original audio packets and decoded samples are unchanged. The strict listening review was completed by explicit human attestation before production. The local upload kit includes both videos, posting copy and dedicated thumbnails; full media stays local.
+The delivered v1 films passed frame-timestamp and decoded word-state checks against their approved map, with original audio unchanged. A subsequent semantic audit identified incomplete English spans such as “love you.” The corrected **v2 preview** updates 58 phrase occurrences across 40 cues while preserving Spanish timing, wording and layout. Its affected audiovisual review and new rendering remain pending; the v1 videos and upload kit stay unchanged. [Correction details](projects/pero-es-locura-lyric-film/SEMANTIC-FOCUS-V2.md).
 
 [Delivery and reproduction](projects/pero-es-locura-lyric-film/README.md) · [Timing and wording](projects/pero-es-locura-lyric-film/SYNC-NOTES.md) · [Workflow findings](projects/pero-es-locura-lyric-film/WORKFLOW-NOTES.md) · [Original performance](https://www.youtube.com/watch?v=uvLVcEBIn-4)
 

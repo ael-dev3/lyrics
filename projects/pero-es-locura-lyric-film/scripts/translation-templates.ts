@@ -1,6 +1,7 @@
 import {writeFileSync} from 'node:fs';
+import type {TranslationTemplate} from '../src/translation.ts';
 type Piece = readonly [string, readonly number[]];
-const rows: {id:string;es:string;en:string;targets:{text:string;sourceIndices:number[]}[];note:string}[]=[];
+const rows:TranslationTemplate[]=[];
 function add(id:string,es:string,pieces:Piece[],note='Individual word correspondence; inflected verbs and required English grammatical completions share their source event.') {
  const source=es.split(/\s+/);
  const targets=pieces.flatMap(([text,indices])=>text.split(/\s+/).map(text=>({text,sourceIndices:[...indices]})));
@@ -8,8 +9,8 @@ function add(id:string,es:string,pieces:Piece[],note='Individual word correspond
  for(let i=1;i<=source.length;i++)if(!targets.some(t=>t.sourceIndices.includes(i)))throw Error('Unmapped source '+id+' '+source[i-1]+' '+i);
  rows.push({id,es,en:targets.map(t=>t.text).join(' '),targets,note});
 }
-add('R1','Ay, que te quiero decir',[['Oh,',[1,2]],['I want',[4]],['to tell',[5]],['you',[3]]],'Ay, que is a discourse opening, rendered Oh; te remains independently linked to you. Quiero expresses wanting here; the following quiero expresses affection.');
-add('R2','lo que te quiero',[['how much',[1,2]],['I love',[4]],['you.',[3]]],'Lo que is the degree construction how much; te maps separately.');
+add('R1','Ay, que te quiero decir',[['Oh,',[1,2]],['I want',[4]],['to tell',[5]],['you',[3]]],'Ay, que is a discourse opening, rendered Oh; te is the recipient of decir and remains lexically linked to you; the complete tell-you display group is recorded separately. Quiero expresses wanting here; the following quiero expresses affection.');
+add('R2','lo que te quiero',[['how much',[1,2]],['I love',[4]],['you.',[3]]],'Lo que is the degree construction how much; te retains its lexical you correspondence; display focus completes love you across the two source events.');
 add('R3','que sos el muchacho',[['that',[1]],["you're",[2]],['the',[3]],['boy',[4]]]);
 add('R4','que yo más quiero',[['whom',[1]],['I',[2]],['love',[4]],['most.',[3]]]);
 add('V01','Cuando se levanta mi párpado',[['When',[1]],['my',[4]],['eyelid',[5]],['lifts',[2,3]]],'Se levanta is the reflexive intransitive construction lifts; natural English order reverses noun and verb.');
@@ -18,7 +19,7 @@ add('V03','siento que no quiero',[['I feel',[1]],['that',[2]],['I',[4]],["don't"
 add('V04','abandonar mi costado',[['to leave',[1]],['my',[2]],['side.',[3]]],'Preserve the supplied mi costado provisionally; compare with actual live wording before freezing the performed sequence.');
 add('V05','el día y la noche son tu reinado',[['The',[1]],['day',[2]],['and',[3]],['the',[4]],['night',[5]],['are',[6]],['your',[7]],['realm.',[8]]]);
 add('V06','vos sos el muchacho dorado',[['You',[1]],['are',[2]],['the',[3]],['golden',[5]],['boy.',[4]]]);
-add('V07','quiero que de mí siempre estés empapado',[['I want',[1]],['you to',[2,6]],['always',[5]],['be soaked',[7]],['in',[3]],['me.',[4]]],'Quiero que... estés is a subjunctive complement, rendered I want you to...; de marks the substance/source of empapado. Natural English reorders the phrase. No independent timing is invented for English auxiliaries.');
+add('V07','quiero que de mí siempre estés empapado',[['I want',[1]],['you',[6]],['to',[2]],['always',[5]],['be',[6]],['soaked',[7]],['in',[3]],['me.',[4]]],'Quiero que... estés is a subjunctive complement, rendered I want you to...; de marks the substance/source of empapado. Natural English reorders the phrase. The complement marker que maps to to, estés supplies you and be, and empapado supplies soaked. Display focus completes be soaked without assigning you to que.');
 add('V08','estás completamente emparentado',[["You're",[1]],['completely',[2]],['bound up',[3]]],'Emparentado literally related/akin; bound up retains the relationship with beauty in the following complement.');
 add('V09','con lo bello, lo más bonito,',[['with',[1]],['the',[2]],['beautiful,',[3]],['the',[4]],['most',[5]],['lovely,',[6]]]);
 add('V10','con lo adornado',[['with',[1]],['the',[2]],['adorned.',[3]]]);
@@ -49,8 +50,8 @@ add('V34','porque con vos la vida es más',[['Because',[1]],['with',[2]],['you',
 add('V35','me sumás, me aumentás,',[['You add to',[2]],['me,',[1]],['you expand',[4]],['me,',[3]]]);
 add('V36','me hacés más capaz',[['you make',[2]],['me',[1]],['more',[3]],['capable.',[4]]]);
 add('V37','por eso y por mucho, mucho, mucho más',[['For',[1]],['that',[2]],['and',[3]],['for',[4]],['much,',[5]],['much,',[6]],['much',[7]],['more.',[8]]],'The live delivery repeats mucho three times. Each repetition receives its own independent acoustic event.');
-add('B01','ay, que me robó el corazón',[['Oh,',[1,2]],['he stole',[4]],['my',[3]],['heart.',[5,6]]],'Ay que is an emphatic opening. Me... el corazón is the Spanish affected-possessor construction, naturally my heart; keep me independently linked to my.');
-add('B02','ese muchacho me robó el corazón',[['That',[1]],['boy',[2]],['stole',[4]],['my',[3]],['heart.',[5,6]]],'Me... el corazón is the affected-possessor construction my heart. Article remains part of heart.');
+add('B01','ay, que me robó el corazón',[['Oh,',[1,2]],['he stole',[4]],['my',[3]],['heart.',[5,6]]],'Ay que is an emphatic opening. Me... el corazón is the Spanish affected-possessor construction, naturally my heart; keep me lexically linked to my and complete my heart in display focus.');
+add('B02','ese muchacho me robó el corazón',[['That',[1]],['boy',[2]],['stole',[4]],['my',[3]],['heart.',[5,6]]],'Me... el corazón is the affected-possessor construction my heart. Article remains part of heart; the displaced affected possessor participates in the complete my-heart display group.');
 add('B03','y si laten mis costillas',[['And',[1]],['if',[2]],['my',[4]],['ribs',[5]],['beat,',[3]]]);
 add('B04','es porque te quiero',[["it's",[1]],['because',[2]],['I love',[4]],['you.',[3]]]);
 add('B05','y si tiemblan mis rodillas',[['And',[1]],['if',[2]],['my',[4]],['knees',[5]],['tremble,',[3]]]);
@@ -58,5 +59,25 @@ add('B06','y si nos separan millas',[['And',[1]],['if',[2]],['miles',[5]],['sepa
 add('B07','yo aún te quiero',[['I',[1]],['still',[2]],['love',[4]],['you.',[3]]]);
 add('B08','aunque millones de millas',[['Despite',[1]],['millions',[2]],['of',[3]],['miles,',[4]]],'The elliptical distance concession stays elliptical; no extra action or subject is supplied.');
 add('B09','Esto se acabó',[['This',[1]],['is over.',[2,3]]],'Short live closing tag, absent from the supplied lyric reference; independently recovered in bounded original-mix and isolated-vocal transcription. Se acabó is the completed-state construction is over.');
+
+function group(templateId:string,id:string,targetIndices:number[],sourceIndices:number[],reason:string){
+ const template=rows.find(row=>row.id===templateId);if(!template)throw Error(templateId);
+ if(!reason||targetIndices.length<2||targetIndices.some(i=>!template.targets[i-1]))throw Error('Invalid focus group '+id);
+ const lexical=[...new Set(targetIndices.flatMap(i=>template.targets[i-1]!.sourceIndices))].sort((a,b)=>a-b);
+ if(JSON.stringify(lexical)!==JSON.stringify([...sourceIndices].sort((a,b)=>a-b)))throw Error('Focus group must contain exactly its lexical source events: '+id);
+ (template.focusGroups??=[]).push({id,targetIndices,sourceIndices,reason});
+}
+group('R1','tell-you',[4,5,6],[3,5],'The displaced recipient te belongs to decir: highlight the complete to tell you at either contributing event, releasing during quiero and any gap.');
+group('R2','love-you',[4,5],[3,4],'Complete the affection predicate love you throughout te / quiero; retain I on verb inflection and how much on the degree construction.');
+group('V07','be-soaked',[6,7],[6,7],'The copula and participle form be soaked. Keep its full display span while preserving separate lexical correspondences and always / in me.');
+group('V33','inspires-me',[4,5],[5,6],'Preverbal clitic me is the object of inspira; the English predicate includes me while the verb is active.');
+group('V35','add-to-me',[2,3,4],[1,2],'Complete add to me across the preverbal clitic and sumás; implied subject You retains its own inflected-verb event.');
+group('V35','expand-me',[6,7],[3,4],'Complete expand me across the second clitic and aumentás; do not merge the two repeated predicates.');
+group('V36','make-me',[2,3],[1,2],'Complete make me across the preverbal clitic and hacés, leaving more and capable independently timed.');
+group('B01','my-heart',[4,5],[3,5,6],'The affected possessor me becomes my in my heart. Complete that noun phrase at the possessor and heart events; stole remains separate.');
+group('B02','my-heart',[4,5],[3,5,6],'Complete the affected-possession phrase my heart without extending it through the independent verb stole.');
+group('B04','love-you',[4,5],[3,4],'Complete love you throughout te / quiero, independently of because and the inflected subject I.');
+group('B06','separate-us',[4,5],[3,4],'The preverbal clitic nos is the object of separan; complete separate us while retaining miles at its own source event.');
+group('B07','love-you',[3,4],[3,4],'Complete love you throughout te / quiero. The explicit yo and long held aún remain independently focused as I and still.');
 writeFileSync('source/translation-templates.json',JSON.stringify(rows,null,2)+'\n');
 console.log(rows.length+' translation templates');
