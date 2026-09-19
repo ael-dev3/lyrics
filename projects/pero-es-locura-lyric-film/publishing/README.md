@@ -10,3 +10,5 @@ The local kit has separate YouTube and TikTok directories, each with its complet
 Music and performance: Fémina. Production: La Oreja Negra. Film: FLAN Audiovisual. Source-image rights are excluded from the repository contribution license. Platform descriptions credit the source and disclose AI-assisted lyric preparation. Full media stays local; no platform upload or public media release is included in source integration.
 
 [Cover identities](../evidence/cover-assets.json) · [YouTube title](YouTube-Title.txt) · [YouTube description](YouTube-Description.txt) · [TikTok description](TikTok-Description.txt)
+
+The delivered 14-file kit was independently hash-verified after its Desktop copy. See the [delivery manifest](../evidence/delivery-receipt.json), [copy verification](../evidence/desktop-handoff.json) and [checksums](../evidence/delivery-checksums.sha256).

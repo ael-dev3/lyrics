@@ -70,3 +70,16 @@ node scripts/package-posting-kit.ts
 ```
 
 The production contract includes adapter and audit hashes. A changed adapter requires affected proofs and a new binding; a changed approved scene or timing requires renewed relevant review. A cached segment is reused only after its range, complete fingerprint and encoded checksum match.
+
+## Verified delivery results
+
+| Film | Dimensions | Frames | Visible word states checked | Bytes |
+| --- | --- | ---: | ---: | ---: |
+| Landscape | 1920×1080 | 17,647 | 168,742 | 224,486,771 |
+| Portrait | 1080×1920 | 17,647 | 168,742 | 209,376,167 |
+
+Both formats have zero focus mismatches and zero ambiguous classifications. All 12,666 AAC packets and 12,969,984 decoded stereo sample frames match the original; every frame timestamp and strict full decode passes. Color finalization preserves every native decoded pixel hash and timestamp.
+
+**Landscape:** [technical verification](evidence/Pero-es-locura-landscape-1920x1080-60fps.mp4.verification.json) · [decoded focus](evidence/landscape-Pero-es-locura-landscape-1920x1080-60fps.mp4.focus-verification.json) · [lossless color correction](evidence/production/landscape-color-metadata.json).
+
+**Portrait:** [technical verification](evidence/Pero-es-locura-portrait-1080x1920-60fps.mp4.verification.json) · [decoded focus](evidence/portrait-Pero-es-locura-portrait-1080x1920-60fps.mp4.focus-verification.json) · [lossless color correction](evidence/production/portrait-color-metadata.json).
