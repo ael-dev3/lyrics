@@ -1,0 +1,151 @@
+{
+  "song": "uvLVcEBIn-4",
+  "revision": "preview-v3-paired-bilingual-focus",
+  "date": "2026-09-19",
+  "scope": "Browser picture recovery and preview completeness; no composition or acoustic timing changes and no new listening attestation.",
+  "observedFailure": {
+    "picture": "Black background in the existing preview tab while lyrics remained visible",
+    "mediaReadyState": 4,
+    "decodedDimensions": [
+      1920,
+      1080
+    ],
+    "mediaClockAdvanced": true,
+    "mediaErrorReported": false,
+    "browserConsoleErrors": [],
+    "restoredBy": "Reloading the affected preview page",
+    "rootCause": "Exact browser failure mechanism not established; source media and normal fresh-page composition were intact."
+  },
+  "sourceComparison": {
+    "atSeconds": 2.683333,
+    "directVideoVisible": true,
+    "canvasCopyVisible": true,
+    "ffmpegSourceFrameVisible": true,
+    "canvasMeanRgb": 59.198004115219916,
+    "canvasMinRgb": 3,
+    "canvasMaxRgb": 255
+  },
+  "browserVisualChecks": [
+    {
+      "operation": "fresh load",
+      "format": "portrait",
+      "seconds": 2.683333,
+      "result": "Source close-up visible with complete paired bilingual highlights"
+    },
+    {
+      "operation": "format switch",
+      "format": "landscape",
+      "seconds": 2.683333,
+      "result": "Source close-up visible beneath the full lyric composition"
+    },
+    {
+      "operation": "normal-speed playback",
+      "format": "portrait",
+      "observedSeconds": [
+        3.064,
+        25.778
+      ],
+      "result": "Visible source movement and a cut from instrumental close-up to singer; lyrics and spectrum remained present"
+    },
+    {
+      "operation": "switch during playback and continue",
+      "format": "landscape",
+      "observedSeconds": [
+        26.252,
+        57.696
+      ],
+      "result": "Visible singer motion and later camera change; no missing background"
+    },
+    {
+      "operation": "seek to final spoken lyric",
+      "formats": [
+        "landscape",
+        "portrait"
+      ],
+      "seconds": 289.6,
+      "result": "Source stage lights visible; bilingual lyric present with intended reading support"
+    },
+    {
+      "operation": "seek to source credits and switch formats",
+      "formats": [
+        "portrait",
+        "landscape"
+      ],
+      "seconds": 292,
+      "result": "Original source credit picture fully visible; added decoration cleared"
+    }
+  ],
+  "recoveryChecks": [
+    {
+      "format": "portrait",
+      "requestedSeconds": 21.5,
+      "restoredSeconds": 21.5,
+      "requestedSpeed": 0.75,
+      "restoredSpeed": 0.75,
+      "paused": true,
+      "pictureVisible": true
+    },
+    {
+      "format": "landscape",
+      "requestedSeconds": 198.75,
+      "restoredSeconds": 198.75,
+      "requestedSpeed": 0.5,
+      "restoredSpeed": 0.5,
+      "paused": true,
+      "pictureVisible": true
+    }
+  ],
+  "draftCheck": {
+    "temporaryNoteCue": "C001",
+    "watchModeDestinationCue": "C009",
+    "originalNoteRetainedAfterReload": true,
+    "destinationCueNotContaminated": true,
+    "temporaryTestNoteRemoved": true,
+    "listeningCheckboxesNotChanged": true
+  },
+  "handoff": {
+    "bothExistingTabsRefreshed": true,
+    "reportedTabSeconds": 2.683333,
+    "secondTabSeconds": 0,
+    "format": "portrait",
+    "sourcePictureConfirmedInBothTabs": true
+  },
+  "validation": {
+    "typecheck": "pass",
+    "testsPassed": 14,
+    "svgBoundaryStates": 4828,
+    "visibleWordColors": 70730,
+    "identityHashesVerified": true,
+    "changedFrozenInputs": [
+      "src/review-client.ts",
+      "review/index.html"
+    ]
+  },
+  "inputHashes": {
+    "public/source.mp4": "43828218bfb549f787a492eda87889d0286d0f5c8b7978c5bfc416760131a1e8",
+    "public/soundtrack.m4a": "7260604e9148cdaa2b2dbcad9f305baeff06bbe8bdb56ce01e7840b9d9ae799b",
+    "public/fonts/CormorantGaramond-Semibold.ttf": "69e7ae35cba23d962227b86f99217c250e642e4c6f6104b4f3ec465039e4e2d8",
+    "public/science.json": "d67455d0403d1aec8408d7116f888597723357c1a74da8a58d84bfbfa6b42591",
+    "source/lyrics-supplied.txt": "021c82c8a2b3266199507bdb1bc66836d51ba20a315df628c77092316c2a07e5",
+    "source/lyrics-supplied-revision-2.txt": "8c4c6972c5ba50037e31f5b21f89fe5ecb82497d0791d008c3a888b2ab57873e",
+    "source/translation-templates.json": "ceda88d5747093805f2d456eb89c126388efe70fe1dcc3b62ba5f9213bb1564a",
+    "source/performed-sequence.json": "6f6706cf0b8471c5ee73abc1d1af0333ad85369c3bcd0baae6bd369a56a67503",
+    "src/cues.json": "eb4170c6f083263210e2458bb6818874bacf2e4f2239106dc32136db22fea430",
+    "src/layout.json": "f094bd1843c0864105640f7e6ab5b707b018989f154737346bd8cb7c668ce9da",
+    "src/schema.ts": "1ac7b6835986a6e7b2ed9c246e7cba6d602ffbc724fce946bd384b179cd46971",
+    "src/focus.ts": "5118451b91744e075e7b496ffe7086bc7d270d39c37695b7bb98a842160e1591",
+    "src/translation.ts": "961f83297fcbb252b456027a65d21576adfa82ebfb78caf3921fe6fbb0a6836d",
+    "src/palette.ts": "ba944037a13b08ec55135389bc8065ada530acbf9ca577e4df62cf9187f8ac0b",
+    "src/scene.ts": "b7d615c6f4e7795e5bd8d9607293e641230422fac74f1d515a9c09d67dbb348e",
+    "src/preview-painter.ts": "c54acb7dd5bc97f9ca1052ce66d4cd9995fc19813d2961d64aa5afd26dfca58a",
+    "src/review-client.ts": "9907a4545d7ad35d51fffa20bc246f04f6af8dd2b3d69588a98af4db3ae0a4cd",
+    "review/index.html": "eceec48e41edc66308d0efe471b5aee077cdede2229745dc975ab0162cf7c373",
+    "src/production-gate.ts": "a8e6e4b875bc7fb67daea79c2b9c1ba9174a7c9749a0598bc5011b891e8bdeef"
+  },
+  "limitations": [
+    "Visual checks are selected browser observations, not exhaustive physical-display monitoring.",
+    "A healthy decoder or media clock alone cannot detect every browser compositing failure.",
+    "The recovery control restores the page; this does not claim the underlying browser defect cannot recur.",
+    "Existing paired-focus audiovisual review and render-authorization requirements remain pending."
+  ]
+}
