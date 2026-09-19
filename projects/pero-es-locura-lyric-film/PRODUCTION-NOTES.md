@@ -1,4 +1,6 @@
-# Production and verification
+# Historical v1 production and verification
+
+This document preserves the original v1 implementation and results. See [current delivery and lessons](README.md) for the approved paired-focus edition. Historical values below are not current-render results.
 
 ## Approval and strict listening review
 

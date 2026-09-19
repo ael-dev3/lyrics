@@ -1,7 +1,7 @@
 {
-  "revision": "preview-v3-paired-bilingual-focus",
+  "revision": "preview-v1-live-capitalized",
   "inputFile": "diagnostic.mp4",
-  "inputSha256": "d0f7364c7f10a1bf9a566a286a8afcd306c2a033b4295fe8f6838ccd7cfcff17",
+  "inputSha256": "0a03f05a8731fdfb1fd0e20147dc341e3686bb6dc4866f833ed1152886b054b9",
   "status": "inspection required",
   "format": "portrait",
   "offset": 11330,
@@ -9,7 +9,7 @@
   "decodedFrames": 180,
   "wordStates": 2460,
   "ambiguous": 240,
-  "mismatchCount": 622,
+  "mismatchCount": 553,
   "mismatches": [
     {
       "frame": 11330,
@@ -538,13 +538,6 @@
     },
     {
       "frame": 11359,
-      "word": "P035-s06",
-      "expected": true,
-      "median": -55.92311408294352,
-      "brightness": 212
-    },
-    {
-      "frame": 11359,
       "word": "C054-e06",
       "expected": true,
       "median": -55.025578747511034,
@@ -559,13 +552,6 @@
     },
     {
       "frame": 11360,
-      "word": "P035-s06",
-      "expected": true,
-      "median": -55.92311408294352,
-      "brightness": 212
-    },
-    {
-      "frame": 11360,
       "word": "C054-e06",
       "expected": true,
       "median": -55.025578747511034,
@@ -577,13 +563,6 @@
       "expected": true,
       "median": -55.94182761871335,
       "brightness": 211
-    },
-    {
-      "frame": 11361,
-      "word": "P035-s06",
-      "expected": true,
-      "median": -55.92311408294352,
-      "brightness": 212
     },
     {
       "frame": 11361,
@@ -598,13 +577,6 @@
       "expected": true,
       "median": -55.94182761871335,
       "brightness": 211
-    },
-    {
-      "frame": 11362,
-      "word": "P035-s06",
-      "expected": true,
-      "median": -55.92311408294352,
-      "brightness": 212
     },
     {
       "frame": 11362,
@@ -619,13 +591,6 @@
       "expected": true,
       "median": -55.94182761871335,
       "brightness": 211
-    },
-    {
-      "frame": 11363,
-      "word": "P035-s06",
-      "expected": true,
-      "median": -55.92311408294352,
-      "brightness": 212
     },
     {
       "frame": 11363,
@@ -640,13 +605,6 @@
       "expected": true,
       "median": -55.94182761871335,
       "brightness": 211
-    },
-    {
-      "frame": 11364,
-      "word": "P035-s06",
-      "expected": true,
-      "median": -55.92311408294352,
-      "brightness": 212
     },
     {
       "frame": 11364,
@@ -668,13 +626,6 @@
       "expected": true,
       "median": -55.94182761871335,
       "brightness": 211
-    },
-    {
-      "frame": 11365,
-      "word": "P035-s06",
-      "expected": true,
-      "median": -55.92311408294352,
-      "brightness": 212
     },
     {
       "frame": 11365,
@@ -706,10 +657,59 @@
     },
     {
       "frame": 11366,
-      "word": "P035-s05",
+      "word": "P035-s06",
       "expected": true,
-      "median": -55.94182761871335,
-      "brightness": 211
+      "median": -55.92311408294352,
+      "brightness": 212
+    },
+    {
+      "frame": 11366,
+      "word": "C054-e04",
+      "expected": false,
+      "median": 53.885042612489165,
+      "brightness": 252
+    },
+    {
+      "frame": 11366,
+      "word": "C054-e05",
+      "expected": false,
+      "median": 55.61800249935772,
+      "brightness": 253
+    },
+    {
+      "frame": 11366,
+      "word": "C054-e06",
+      "expected": true,
+      "median": -55.025578747511034,
+      "brightness": 212
+    },
+    {
+      "frame": 11367,
+      "word": "P035-s04",
+      "expected": false,
+      "median": 53.885042612489165,
+      "brightness": 252
+    },
+    {
+      "frame": 11367,
+      "word": "P035-s06",
+      "expected": true,
+      "median": -55.92311408294352,
+      "brightness": 212
+    },
+    {
+      "frame": 11367,
+      "word": "C054-e04",
+      "expected": false,
+      "median": 53.885042612489165,
+      "brightness": 252
+    },
+    {
+      "frame": 11367,
+      "word": "C054-e05",
+      "expected": false,
+      "median": 55.61800249935772,
+      "brightness": 253
     }
   ],
   "method": "Bundled-font masks select eroded glyph-interior pixels. Median RGB distance to the frozen champagne-active and warm-ivory inactive colors classifies all visible Spanish and English words in every decoded frame; ambiguous or distant pixels fail closed. Verifies displayed state, not acoustic truth."

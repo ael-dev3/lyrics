@@ -4,6 +4,8 @@
 
 Preview completeness includes the actual moving picture, artwork and every intended visual layer. Never silently replace the full review preview with an isolated lyrics diagnostic. Verify visible video motion in the user's browser in both formats after loading, seeking and switching layouts; advancing audio or media time alone does not establish a working picture. Follow the visual-completeness and recovery checks in the preview-first workflow.
 
+Apply the [Pero es locura editorial and visual lessons](projects/pero-es-locura-lyric-film/PRODUCTION-LESSONS.md): verify complete paired meanings in both languages, keep independently sung words distinct, preserve purposeful source motion and protect late-lyric contrast. Public documentation should describe reusable decisions and evidence limits in neutral language, without personal quotations, ratings, local account details or private review conversations.
+
 Production workflows use original-language lyrics and meaning-based translations. Do not include pronunciation guides, phonetic respellings, romanized singing aids or pronunciation practice subtitles in source projects, rendered films, covers, publishing copy, archives or releases. Keep any separate personal learning material outside the production workflow and repository.
 
 Read `docs/track-workflow-preferences-and-known-issues.md` for the established production and handoff preferences.
