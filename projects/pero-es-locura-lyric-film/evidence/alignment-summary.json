@@ -1,0 +1,23 @@
+{
+  "cues": 86,
+  "words": 586,
+  "targetWords": 636,
+  "methods": [
+    "mms-vocals",
+    "mms-mix",
+    "whisper-mix"
+  ],
+  "disagreementsOver25ms": 548,
+  "allWordsRequireListeningReview": true,
+  "scope": "Three model/signal observations; waveform and spectrogram are review aids. No actual-audio signoff is inferred.",
+  "inputHashes": {
+    "source/performed-sequence.json": "6f6706cf0b8471c5ee73abc1d1af0333ad85369c3bcd0baae6bd369a56a67503",
+    "source/translation-templates.json": "7f1118a211d57ab3d3165487081a4f57eb1c88971ea00177be9f84370eb69151",
+    "analysis/mms-mix-corrections.json": "508b678afccb900447f36ddae978a6930201267088c9e462edc1b90e8d07332c",
+    "analysis/mms-mix-lines.json": "3ad05ec71fe3ca3be45eb25b444cabae95c59f69f7d15b31085696f8ee968527",
+    "analysis/mms-vocals-corrections.json": "35d59819ae2cd3fef31e30de407f89017b76d1f23c00b69c207794026a8e6ddb",
+    "analysis/mms-vocals-lines.json": "164abeb0dad3b409ff0bb37a5e1f7494ed3b772da469453da41d81385b4147a8",
+    "analysis/whisper-mix-corrections.json": "7fa6cd4dc294e13b302374ce29db371629c15aed248e5179d1fe8200c9f26832",
+    "analysis/whisper-mix-lines.json": "a4afb569d61338a4a163e223920262e22e5838b6ca9a89b4ae32123deb7ad6df"
+  }
+}

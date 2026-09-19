@@ -6,7 +6,21 @@ Music films with synchronized lyrics, meaning-linked translations, and audio-rea
 
 **Current style default:** [cinematic lyric presentation](docs/cinematic-lyric-workflow.md) — stable, color-only word or phrase emphasis, precise vocal timing, smooth scene shading and equally prominent bilingual lyrics. Motion intensity follows the song: gentle arrangements can use compact, subdued audio-reactive graphics. The guide includes implemented references and review requirements for future tracks.
 
-[**La Lune**](#la-lune) · [**каждый, кто делал тебе больно**](#каждый-кто-делал-тебе-больно) · [**Sugar Glass**](#sugar-glass) · [**Твои глаза**](#твои-глаза) · [**Прости за любовь — accepted with known gaps**](#прости-за-любовь) · [**Половинка**](#половинка) · [**Life Letters**](#life-letters) · [**Joyride**](#joyride) · [**midnight love**](#midnight-love) · [**Пожары**](#пожары) · [**Отменяй**](#отменяй) · [**Roi × Adore**](#roi--adore) · [**TikTok edition**](#tiktok-edition) · [**Tanisea**](#tanisea) · [**Build and workflow**](#build-and-workflow)
+[**Pero es locura — preview**](#pero-es-locura) · [**La Lune**](#la-lune) · [**каждый, кто делал тебе больно**](#каждый-кто-делал-тебе-больно) · [**Sugar Glass**](#sugar-glass) · [**Твои глаза**](#твои-глаза) · [**Прости за любовь — accepted with known gaps**](#прости-за-любовь) · [**Половинка**](#половинка) · [**Life Letters**](#life-letters) · [**Joyride**](#joyride) · [**midnight love**](#midnight-love) · [**Пожары**](#пожары) · [**Отменяй**](#отменяй) · [**Roi × Adore**](#roi--adore) · [**TikTok edition**](#tiktok-edition) · [**Tanisea**](#tanisea) · [**Build and workflow**](#build-and-workflow)
+
+## Pero es locura
+
+**Fémina · Vivo en La Oreja Negra · Spanish + English · full-recording preview**
+
+![Pero es locura: live performance, warm bilingual word focus and restrained spectrum](assets/pero-es-locura-preview-109.png)
+
+*Diagnostic preview still at 01:49.000. Music and performance: Fémina. Production: La Oreja Negra. Film: FLAN Audiovisual. This is not a frame from a completed production render.*
+
+The full 4:54.104 live recording has 86 displayed cues, with sentence-case Spanish and English, restored Spanish accents, independently aligned live repeats and complete source-linked word emphasis. The original performance supplies the motion; warm serif text and a compact measured spectrum support it. Both layouts retain the source ending and credits.
+
+Technical word-color and browser-layout checks pass. Full actual-audio review and approval of this revision remain pending; production is closed. The source recording stays local.
+
+[Preview and reproduction](projects/pero-es-locura-lyric-film/README.md) · [Timing and wording](projects/pero-es-locura-lyric-film/SYNC-NOTES.md) · [Workflow findings](projects/pero-es-locura-lyric-film/WORKFLOW-NOTES.md) · [Original performance](https://www.youtube.com/watch?v=uvLVcEBIn-4)
 
 ## La Lune
 

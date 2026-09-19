@@ -1,0 +1,5 @@
+import {bundle} from '@remotion/bundler';import {getCompositions,renderStill} from '@remotion/renderer';import {mkdirSync} from 'node:fs';import {execFileSync} from 'node:child_process';
+const moments=[109,190,264,289.6,292];mkdirSync('public/diagnostic-frames',{recursive:true});mkdirSync('evidence/stills',{recursive:true});
+for(const at of moments)execFileSync('ffmpeg',['-hide_banner','-loglevel','error','-y','-ss',String(at),'-i','public/source.mp4','-frames:v','1','public/diagnostic-frames/'+at+'.png']);
+const serveUrl=await bundle({entryPoint:'src/StillRoot.tsx'}),comps=await getCompositions(serveUrl);
+for(const [format,at] of [['landscape',109],['portrait',109],['portrait',190],['portrait',264],['landscape',289.6],['landscape',292],['portrait',292]] as const){const c=comps.find(c=>c.id===(format==='landscape'?'PreviewLandscape':'PreviewPortrait'));if(!c)throw Error('Missing diagnostic composition');await renderStill({serveUrl,composition:{...c,props:{format,at}},inputProps:{format,at},output:'evidence/stills/'+format+'-'+at+'.png',imageFormat:'png',logLevel:'warn'});console.log(format,at);}
