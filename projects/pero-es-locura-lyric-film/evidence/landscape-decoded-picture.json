@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "revision": "preview-v3-paired-bilingual-focus",
+  "format": "landscape",
+  "inputFile": "Pero-es-locura-landscape-1920x1080-60fps.mp4",
+  "inputSha256": "75d49246127967ef3a5379586396142d22cd41022a1e1f4da8f39e1a6934e4d0",
+  "sourceSha256": "43828218bfb549f787a492eda87889d0286d0f5c8b7978c5bfc416760131a1e8",
+  "scriptSha256": "f43746ed2ef9a13618f7c1c5be5ae59c83dff13b5ad2bcd98f71c8e8d661fe0b",
+  "frames": 17647,
+  "nonblackSourceFrames": 17452,
+  "darkSourceFrames": 195,
+  "largestMeanAbsoluteError": 2.814453125,
+  "failureCount": 0,
+  "failures": [],
+  "method": "Compare a common text-free picture strip in every decoded delivery frame against the original source at its sample-and-hold timestamp. Reduce each strip to 64×8 grayscale; allow up to 15 mean absolute levels for scaling, compression and the light landscape shade, and require at least 65% of source mean brightness when the source is nonblack.",
+  "limits": "Detects absent, substantially wrong or mis-timed sampled picture content. This strip check is not full-frame pixel equivalence and cannot establish physical-browser or audio latency. Separate decoded-frame inspection covers the complete composition."
+}

@@ -10,17 +10,17 @@ Music films with synchronized lyrics, meaning-linked translations, and audio-rea
 
 ## Pero es locura
 
-**Fémina · Vivo en La Oreja Negra · Spanish + English · paired bilingual-focus v3 preview**
+**Fémina · Vivo en La Oreja Negra · Spanish + English · verified paired-focus v3**
 
-![Pero es locura: live performance, warm bilingual word focus and restrained spectrum](assets/pero-es-locura-preview-v3-paired-landscape.png)
+![Pero es locura: complete paired Spanish and English focus over the live performance](assets/pero-es-locura-v3-final-paired.png)
 
-*Current v3 landscape diagnostic preview at 00:02.350. Music and performance: Fémina. Production: La Oreja Negra. Film: FLAN Audiovisual.*
+*Frame from the verified v3 landscape film at 02:14.450. Music and performance: Fémina. Production: La Oreja Negra. Film: FLAN Audiovisual.*
 
-The full 4:54.104 live recording has 86 displayed cues, with sentence-case Spanish and English, restored Spanish accents, independently aligned live repeats and source-linked word emphasis. The original performance supplies the motion; warm serif text and a compact measured spectrum support it. Both layouts retain the source ending and credits.
+The full live performance keeps its original motion and soundtrack beneath warm, equally weighted bilingual lyrics. Matching phrases such as **te quiero / I love you** now highlight completely in both languages. A restrained spectrum supports the performance, and soft shading protects the final spoken lyric before clearing for the original credits.
 
-The delivered v1 films passed frame-timestamp and decoded word-state checks against their approved map, with original audio unchanged. A subsequent semantic audit identified incomplete English spans such as “love you.” The corrected **v3 preview** pairs complete Spanish and English meanings, including **te quiero / I love you**, across 53 affected cues. Acoustic timing, wording and layout stay fixed. The late spoken landscape cue also gains soft reading contrast over its bright background. Its affected audiovisual review and new rendering remain pending; the v1 videos and upload kit stay unchanged. [Correction details](projects/pero-es-locura-lyric-film/PAIRED-FOCUS-V3.md).
+Both formats are rendered and verified, with platform covers and posting copy in a new local upload kit. Final-file checks cover every frame's timing, every visible word's focus, sampled source-picture content throughout the recording and unchanged original audio. Earlier deliveries remain preserved; no platform upload or public media release was made.
 
-[Delivery and reproduction](projects/pero-es-locura-lyric-film/README.md) · [Timing and wording](projects/pero-es-locura-lyric-film/SYNC-NOTES.md) · [Workflow findings](projects/pero-es-locura-lyric-film/WORKFLOW-NOTES.md) · [Original performance](https://www.youtube.com/watch?v=uvLVcEBIn-4)
+[Delivery and verification](projects/pero-es-locura-lyric-film/README.md) · [Editorial and visual lessons](projects/pero-es-locura-lyric-film/PRODUCTION-LESSONS.md) · [Paired-focus audit](projects/pero-es-locura-lyric-film/PAIRED-FOCUS-V3.md) · [Original performance](https://www.youtube.com/watch?v=uvLVcEBIn-4)
 
 ## La Lune
 

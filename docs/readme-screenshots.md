@@ -1,9 +1,10 @@
 # README song screenshots
 
-Updated 18 September 2026. All thirteen featured songs in the main README have a representative screenshot with its edition and preview/final status, and each song's project README has an associated image. Promotional covers and supplementary frames remain separate from the representative screenshot.
+Updated 19 September 2026. All fourteen featured songs in the main README have a representative screenshot with its edition and preview/final status, and each song's project README has an associated image. Promotional covers and supplementary frames remain separate from the representative screenshot.
 
 | Song | Representative image | Time | Edition / provenance |
 | --- | --- | --- | --- |
+| Pero es locura | [Original live performance and complete paired focus](../assets/pero-es-locura-v3-final-paired.png) | 02:14.450 | Verified paired-focus v3 final landscape film |
 | La Lune (version acoustique) | [Lunar scene and equal French / English focus](../assets/la-lune-acoustic-celestial-v3-46-8.png) | 00:46.800 | Verified Celestial v3 final landscape film |
 | каждый, кто делал тебе больно | [Source illustration, shadow texture and equal bilingual focus](../assets/kazhdyy-72-2.png) | 01:12.200 | Verified final v6 landscape film |
 | Sugar Glass | [Mirror performance, large English focus and spectrum](../assets/sugar-glass-90.png) | 01:30.000 | Verified final English-only landscape film |
@@ -48,3 +49,7 @@ Frame 4332 at 72.200 seconds is decoded from the checksum-verified v6 landscape 
 ## La Lune final celestial frame
 
 Frame 2808 at 46.800 seconds is decoded from the checksum-verified final landscape file at native 1920×1080. It shows the complete generated Moon, radial spectrum and equal French/English soudain / suddenly focus. Both READMEs share this unmodified full-frame image; the inventory records the final video identity. The preceding v2 diagnostic and final stills are retained as history. Screenshot selection documents visual presentation, not acoustic certainty.
+
+## Pero es locura final paired-focus frame
+
+Frame 8067 at 134.450 seconds is decoded from the verified v3 landscape film at native 1920×1080. The complete **te quiero / I love you** emphasis sits beneath the original live performance, with equal warm typography and the restrained spectrum visible. Both READMEs share the full unmodified frame; the structured inventory records its final-video identity. Earlier preview and delivery imagery remains historical.

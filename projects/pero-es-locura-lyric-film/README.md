@@ -1,18 +1,24 @@
 # Fémina — Pero es locura
 
-**Vivo en La Oreja Negra · Spanish + English · paired bilingual-focus preview v3**
+**Vivo en La Oreja Negra · Spanish + English · verified paired-focus v3 delivery**
 
-![Live performance with equal Spanish and English word focus](../../assets/pero-es-locura-preview-v3-paired-landscape.png)
+![Complete paired Spanish and English emphasis over the live performance](../../assets/pero-es-locura-v3-final-paired.png)
 
-*Current v3 landscape diagnostic preview at 00:02.350. Music and performance: Fémina. Production: La Oreja Negra. Film: FLAN Audiovisual.*
+*Decoded current landscape delivery, frame 8067 at 02:14.450. Music and performance: Fémina. Production: La Oreja Negra. Film: FLAN Audiovisual.*
 
-## Current preview: matching Spanish and English phrases
+## Current delivery
 
-Revision 3 highlights **te quiero ↔ I love you** as matching complete phrases, including the implied subject. The full audit covers 116 multi-source units across 26 pairings and corrects display focus in **53 cues**. Raw Spanish timestamps, wording, audio and geometry are unchanged. Use **Review highlight fixes** to jump to examples in the playable preview.
+Both full-length formats retain the complete original live footage and soundtrack, warm equal bilingual typography, stable reading positions and a restrained spectrum. The corrected display pairs complete Spanish and English meanings in 53 cues, including **te quiero ↔ I love you**, and protects the late spoken lyric's contrast. Original acoustic word boundaries, wording and layout are unchanged.
 
-The new focus is technically checked; affected audiovisual review and new render authorization remain pending. The delivered v1 videos are preserved and have known incomplete English highlight spans. [Paired-focus correction and visual audit](PAIRED-FOCUS-V3.md) · [Current review](evidence/cross-language-sync-review.json) · [Current identity](evidence/preview-identity.json)
+The new local upload kit contains the 1920×1080 landscape and 1080×1920 portrait videos at 60 fps; a 1920×1080 YouTube thumbnail; a portrait 1200×1600 TikTok profile cover; titles and descriptions; optional captions; and checksums. Earlier delivered bytes are preserved. No platform upload or public media release was performed.
 
-The review includes the complete original moving picture in both formats. If the browser displays black or frozen footage while audio continues, **Reload preview** recreates the video surface at the same position, layout and speed, retaining review notes and resuming paused for inspection. This recovery control is available even when the browser reports no media error. See [browser picture verification](evidence/preview-video-recovery.json).
+[Current results and evidence](DELIVERY-V3.md) · [Editorial and visual lessons](PRODUCTION-LESSONS.md) · [Delivery receipt](evidence/delivery-receipt.json) · [Checksums](evidence/delivery-checksums.sha256) · [Desktop handoff](evidence/desktop-handoff.json)
+
+## Review and scope
+
+The earlier explicit complete-recording, uncertain-event reduced-speed and both-format listening attestation is retained for identical source audio and acoustic events. The corrected full presentation was separately accepted and authorized for rendering. Editorial, browser and final-file checks establish the new paired display behavior; no fresh granular human playback log is claimed.
+
+The playable preview includes the complete moving image. **Reload preview** recovers a missing or frozen browser video while preserving position, layout, speed and local notes, returning paused. The final files are independently decoded and checked. [Browser recovery evidence](evidence/preview-video-recovery.json) · [Current review](evidence/cross-language-sync-review.json) · [Approved identity](evidence/preview-identity.json)
 
 ## Historical v1 delivery
 
@@ -20,11 +26,11 @@ The complete **4:54.104** live recording is delivered in 1920×1080 and 1080×19
 
 The local upload kit includes both films, separate YouTube and TikTok titles/descriptions, a 1920×1080 YouTube thumbnail, a **1200×1600 portrait TikTok profile cover**, optional captions and checksums. Full recording files and upload assets stay local. Source integration does not publish the recording to a video platform or create a public media release.
 
-[Delivery receipt](evidence/delivery-receipt.json) · [Desktop handoff](evidence/desktop-handoff.json) · [Checksums](evidence/delivery-checksums.sha256) · [Posting assets](publishing/README.md) · [Production and verification](PRODUCTION-NOTES.md)
+[Delivery receipt](evidence/history/delivery-v1/delivery-receipt.json) · [Desktop handoff](evidence/history/delivery-v1/desktop-handoff.json) · [Checksums](evidence/history/delivery-v1/delivery-checksums.sha256) · [Posting assets](publishing/README.md) · [Production and verification](PRODUCTION-NOTES.md)
 
 ## Historical v1 review and final-file verification
 
-The project owner explicitly confirmed complete actual-audio review, uncertain events at reduced speed and both layouts, then authorized rendering of `preview-v1-live-capitalized`. The strict gate remains unchanged. Its completed cue records identify human attestation as the review basis; no granular playback telemetry or automated listening is claimed. Those final files retain the approved v1 inputs. Revision 3 changes paired Spanish and English display focus in the preview only.
+The project owner explicitly confirmed complete actual-audio review, uncertain events at reduced speed and both layouts, then authorized rendering of `preview-v1-live-capitalized`. The strict gate remains unchanged. Its completed cue records identify human attestation as the review basis; no granular playback telemetry or automated listening is claimed. Those final files retain the approved v1 inputs. The separate current v3 delivery corrects that display behavior; historical v1 results below describe only the preserved original edition.
 
 - Both final films contain **17,647 frames at 60 fps**, with every timestamp checked and strict full-file decode passing.
 - Each format passed **168,742 visible word-state checks**, with **zero mismatches and zero ambiguous classifications**.
@@ -58,7 +64,7 @@ npm run check
 npm run preview
 ```
 
-The review preview remains available at **http://127.0.0.1:4321/**, with 16:9 / 9:16 selection and normal or reduced-speed playback. `Start Preview.command` starts it on macOS. The interface labels revision 3 and offers a correction checkpoint menu. Current status is in the [review record](evidence/cross-language-sync-review.json) and [project status](status.json). Saving preview notes never authorizes production.
+The review preview remains available at **http://127.0.0.1:4321/**, with 16:9 / 9:16 selection and normal or reduced-speed playback. `Start Preview.command` starts it on macOS. The frozen revision-3 interface offers a correction checkpoint menu; its original pending-review badge is historical, while the linked record carries current authorization. The current delivery status is in the [review record](evidence/cross-language-sync-review.json) and [project status](status.json). Saving preview notes never authorizes production.
 
 To rebuild this paired-focus correction without recalculating acoustic boundaries:
 

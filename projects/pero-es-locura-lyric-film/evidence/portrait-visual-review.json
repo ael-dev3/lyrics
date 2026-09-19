@@ -1,10 +1,13 @@
 {
   "status": "PASS",
+  "revision": "preview-v3-paired-bilingual-focus",
   "format": "portrait",
-  "inputSha256": "e5a978901dab024ba46d12e3d216cc99578aeb3d44d6531b2659bc36496ba296",
+  "inputSha256": "2469515869a4312f67e4f12500494a24c110b57c2dfe46b18fa3189a62492009",
   "contactSheetFrames": [
     0,
     69,
+    141,
+    161,
     1194,
     2340,
     3486,
@@ -22,15 +25,16 @@
     17646
   ],
   "nativeSizeFrames": [
-    7476,
+    141,
     11400,
+    17376,
     17520
   ],
   "checks": [
-    "Complete composition inspected at mobile-like contact-sheet size across all seventeen checkpoints.",
-    "Native dense wrapped lyrics retain complete descenders, Spanish accents, equal bilingual weight, stable positions and legible active/rest color separation.",
-    "Original credits remain fully visible after the portrait mask clears; the late spoken tag and final picture are preserved.",
-    "No added crop of the source width, debug UI, unintended text box or clipped reading area."
+    "Inspected the complete composition at all nineteen decoded contact-sheet checkpoints.",
+    "Complete te quiero and I love you receive matching gold focus; dense two-line text retains equal bilingual weight, full glyphs and clear active/inactive contrast.",
+    "The final spoken tag remains readable, the source picture is retained, and added typography and spectrum clear before the original credits.",
+    "No proof interface, unintended text box, clipped reading area or additional source-width crop is visible."
   ],
-  "limits": "Visual frame inspection supplements the all-frame decoded focus/clock checks. Actual-audio review is separately attributed to the project owner."
+  "limits": "Selected final-frame visual inspection supplements all-frame decoded focus, picture-strip and clock checks. It does not constitute a new actual-audio listening review or a physical playback-latency measurement."
 }
