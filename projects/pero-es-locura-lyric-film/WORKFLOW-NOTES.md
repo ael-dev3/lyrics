@@ -1,0 +1,10 @@
+# Findings for future live-recording previews
+
+1. **Establish the performed inventory before alignment.** A studio lyric sheet and a live recording can differ in repeat count, shortened lines, vocalizations and spoken endings. Full-track recognition often collapses loops; bounded windows provide useful counterevidence. They still need listening review.
+2. **Normalize spelling in a separate layer.** Keep both supplied references, the performed words and model candidates. Capitalization and accents should be reviewable editorial choices without changing acoustic boundaries. Rioplatense imperatives and verb accents need dialect-aware handling.
+3. **Use one media clock.** A video element containing its original audio prevents independently started audio/video elements from drifting. Read its current time for the overlay at both normal and reduced speed. Report hardware latency and display-cadence limits separately.
+4. **Inspect aligner failure modes.** Crop-edge pinning, detached low-confidence consonants and long vowel sustains can produce plausible-looking but wrong word spans. Keep raw alternatives and an explicit reason for each selection. A median is evidence handling, not proof.
+5. **Preserve live footage's own movement.** Existing cuts, singers and instruments can provide sufficient animation. Add only a bounded measured spectrum and quiet reading support when they improve the experience.
+6. **Review source credits in every format.** A soft portrait edge can obscure lower source lettering even with an uncropped image. Clear both decorative overlays and the edge mask before the original credits.
+7. **Audit the displayed frame, not an unrounded sample.** A time just inside a cue can round onto the neighboring video frame. Geometry tests should verify the cue actually selected by that frame before asserting its word count or positions.
+8. **Keep preview completion separate from listening signoff.** Full-recording playback, typed text coverage, technical tests, screenshots and a merged source PR do not constitute production authorization.
