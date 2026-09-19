@@ -18,8 +18,9 @@ At the end, source metadata and spectrum clear by 04:47, and the portrait mask b
 2. Reconstruct current source-linked focus by selecting complete, nonoverlapping word regions. Vertical regions follow the midpoint between reading rows; descenders retain their full ink. Cache hashes bind each layer to the approved preview.
 3. Decode the original source to RGBA at 60 fps using sample-and-hold. All 17,647 frame identities were compared against the original 24000/1001 fps cadence; the converter matches the source frame at or before each graphics timestamp. No interpolated motion is generated.
 4. Composite the source, approved masks/shading, exact text and measured spectrum at 2×. Pass raw opaque pixels to FFmpeg and await each write before changing the canvas. Downsample once with Lanczos.
-5. Encode HEVC Main10 using VideoToolbox at a 24 Mb/s target and 32 Mb/s maximum. The hardware diagnostic differs from the software x265 CRF17 reference by an average 53.294 dB PSNR; both pass decoded-word checks. Segment capture runs in isolated processes to bound memory.
+5. Encode HEVC Main10 using VideoToolbox at a 24 Mb/s target and 32 Mb/s maximum. The hardware diagnostic differs from the software x265 CRF17 reference by an average 53.294 dB PSNR; both pass decoded-word checks. Segment capture runs in isolated processes to bound memory. The capture receipt’s `elapsedSeconds` covers the final isolated worker, not total render wall time.
 6. Concatenate verified video segments on the exact 60 fps clock and remux the untouched original AAC. Do not normalize, offset, resample or shorten the delivered audio.
+7. Verify the actual color tags. VideoToolbox omitted transfer and primaries in this run despite explicit encoder options. A stream-copy HEVC metadata remux writes BT.709 into the bitstream and container. Compare every decoded native 10-bit frame hash and timestamp before/after; no pixels or sound are re-encoded. Keep the original capture checksum and the separate finalization receipt.
 
 ## Verification layers
 
@@ -44,11 +45,28 @@ node --expose-gc scripts/raster-proof.ts landscape
 node --expose-gc scripts/raster-proof.ts portrait
 node scripts/source-frame-audit.ts
 node scripts/final-sync-audit.ts
-# Produce and verify diagnostic intervals before binding production.
+node scripts/render.ts --diagnostic --format landscape --start 107.8 --frames 180
+node scripts/render.ts --diagnostic --format portrait --start 188.5 --frames 180
+node scripts/audit-decoded-focus.ts output/landscape-segments/diagnostic.mp4 landscape 6468
+node scripts/audit-decoded-focus.ts output/portrait-segments/diagnostic.mp4 portrait 11310
+# Expected failure: the deliberately wrong offset must detect mismatches.
+node scripts/audit-decoded-focus.ts output/portrait-segments/diagnostic.mp4 portrait 11330 --negative-control
 node scripts/adopt-raster.ts
 npm run production:gate
 npm run render -- --production --format landscape
 npm run render -- --production --format portrait
+node scripts/finalize-color.ts landscape
+node scripts/finalize-color.ts portrait
+node scripts/verify-production.ts output/Pero-es-locura-landscape-1920x1080-60fps.mp4 landscape
+node scripts/verify-production.ts output/Pero-es-locura-portrait-1080x1920-60fps.mp4 portrait
+node scripts/audit-decoded-focus.ts output/Pero-es-locura-landscape-1920x1080-60fps.mp4 landscape
+node scripts/audit-decoded-focus.ts output/Pero-es-locura-portrait-1080x1920-60fps.mp4 portrait
+node scripts/extract-delivery-proofs.ts landscape
+node scripts/extract-delivery-proofs.ts portrait
+# Inspect the decoded visual checkpoints in both formats before packaging.
+npm run captions
+npm run covers
+node scripts/package-posting-kit.ts
 ```
 
 The production contract includes adapter and audit hashes. A changed adapter requires affected proofs and a new binding; a changed approved scene or timing requires renewed relevant review. A cached segment is reused only after its range, complete fingerprint and encoded checksum match.

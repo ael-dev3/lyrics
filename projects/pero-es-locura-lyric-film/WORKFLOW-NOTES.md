@@ -15,3 +15,5 @@
 - Cached text-color reconstruction must include full descenders and isolate neighboring wrapped rows. Use whitespace boundaries between rows and verify the production pixels against the approved SVG before encoding.
 - Opaque Canvas raw pixels can avoid an unnecessary ImageData copy. Verify byte equivalence and await the encoder write before mutating the canvas.
 - Preserve source cadence with an explicit sample-and-hold rule, and verify every converted frame against the original source. A 60 fps graphics clock does not create new source-video detail.
+
+- Treat requested encoder metadata as an input, not a verified result. Inspect actual bitstream and container color tags. If only tags are missing, a lossless metadata remux can correct them; prove that every native decoded pixel hash and timestamp is unchanged and retain both byte identities.
