@@ -1,16 +1,16 @@
 # Fémina — Pero es locura
 
-**Vivo en La Oreja Negra · Spanish + English · corrected semantic-focus preview v2**
+**Vivo en La Oreja Negra · Spanish + English · paired bilingual-focus preview v3**
 
-![Live performance with equal Spanish and English word focus](../../assets/pero-es-locura-final-109.png)
+![Live performance with equal Spanish and English word focus](../../assets/pero-es-locura-preview-v3-paired-landscape.png)
 
-*Delivered v1 landscape frame 6540 at 01:49.000, decoded from the verified delivery. Music and performance: Fémina. Production: La Oreja Negra. Film: FLAN Audiovisual.*
+*Current v3 landscape diagnostic preview at 00:02.350. Music and performance: Fémina. Production: La Oreja Negra. Film: FLAN Audiovisual.*
 
-## Current preview: complete English phrases
+## Current preview: matching Spanish and English phrases
 
-Revision 2 corrects **58 phrase occurrences in 40 cues**, including “love you,” “to tell you,” “my heart,” “inspires me” and “be soaked.” Individual lexical mappings remain available alongside the complete display groups. Spanish timing, wording, audio and geometry are unchanged. Use **Review highlight fixes** to jump to examples in the playable preview.
+Revision 3 highlights **te quiero ↔ I love you** as matching complete phrases, including the implied subject. The full audit covers 116 multi-source units across 26 pairings and corrects display focus in **53 cues**. Raw Spanish timestamps, wording, audio and geometry are unchanged. Use **Review highlight fixes** to jump to examples in the playable preview.
 
-The new focus is technically checked; affected audiovisual review and new render authorization remain pending. The delivered v1 videos are preserved and have known incomplete English highlight spans. [Correction details and audit](SEMANTIC-FOCUS-V2.md) · [Current review](evidence/cross-language-sync-review.json) · [Current identity](evidence/preview-identity.json)
+The new focus is technically checked; affected audiovisual review and new render authorization remain pending. The delivered v1 videos are preserved and have known incomplete English highlight spans. [Paired-focus correction and visual audit](PAIRED-FOCUS-V3.md) · [Current review](evidence/cross-language-sync-review.json) · [Current identity](evidence/preview-identity.json)
 
 ## Historical v1 delivery
 
@@ -22,7 +22,7 @@ The local upload kit includes both films, separate YouTube and TikTok titles/des
 
 ## Historical v1 review and final-file verification
 
-The project owner explicitly confirmed complete actual-audio review, uncertain events at reduced speed and both layouts, then authorized rendering of `preview-v1-live-capitalized`. The strict gate remains unchanged. Its completed cue records identify human attestation as the review basis; no granular playback telemetry or automated listening is claimed. Those final files retain the approved v1 inputs. Revision 2 changes English display focus in the preview only.
+The project owner explicitly confirmed complete actual-audio review, uncertain events at reduced speed and both layouts, then authorized rendering of `preview-v1-live-capitalized`. The strict gate remains unchanged. Its completed cue records identify human attestation as the review basis; no granular playback telemetry or automated listening is claimed. Those final files retain the approved v1 inputs. Revision 3 changes paired Spanish and English display focus in the preview only.
 
 - Both final films contain **17,647 frames at 60 fps**, with every timestamp checked and strict full-file decode passing.
 - Each format passed **168,742 visible word-state checks**, with **zero mismatches and zero ambiguous classifications**.
@@ -56,9 +56,9 @@ npm run check
 npm run preview
 ```
 
-The review preview remains available at **http://127.0.0.1:4321/**, with 16:9 / 9:16 selection and normal or reduced-speed playback. `Start Preview.command` starts it on macOS. The interface labels revision 2 and offers a correction checkpoint menu. Current status is in the [review record](evidence/cross-language-sync-review.json) and [project status](status.json). Saving preview notes never authorizes production.
+The review preview remains available at **http://127.0.0.1:4321/**, with 16:9 / 9:16 selection and normal or reduced-speed playback. `Start Preview.command` starts it on macOS. The interface labels revision 3 and offers a correction checkpoint menu. Current status is in the [review record](evidence/cross-language-sync-review.json) and [project status](status.json). Saving preview notes never authorizes production.
 
-To rebuild this English-focus correction without recalculating acoustic boundaries:
+To rebuild this paired-focus correction without recalculating acoustic boundaries:
 
 ```sh
 node scripts/translation-templates.ts

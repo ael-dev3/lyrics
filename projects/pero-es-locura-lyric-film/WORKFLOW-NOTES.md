@@ -25,3 +25,9 @@ An implementation can render every specified word color correctly and still leav
 Keep precise lexical correspondence and explicitly requested complete display groups as separate data. Record the reason and source-event union for each group; never extend through unrelated words or acoustic gaps. Preserve independently corresponding words when grouping adds no meaning. Add semantic regression expectations that fail the previous mapping, rather than only checking that a renderer reproduces that mapping.
 
 Bind delivery verification to its exact revision. When a correction follows a delivery, preserve the delivered bytes and their evidence, label the known issue, reopen affected review, and prevent old final-file verification from qualifying a new posting kit. [Implementation and measured results](SEMANTIC-FOCUS-V2.md).
+
+## Paired-language correction in revision 3
+
+Check semantic completeness in both directions. Completing an English phrase while leaving the Spanish clitic neutral produces a mismatched visible meaning. The paired unit must also include subjects expressed by verb inflection: `te quiero` requires all of “I love you” during either participating event. An independently spoken subject such as `Yo` remains separate when its own source event exists.
+
+Separate raw acoustic activation from display activation explicitly, and update every display consumer: preview, SVG diagnostics, production compositor and decoded-output checker. Retain timing inspection on the original events. Test full paired units as well as untouched negation, degree, explicit subjects and reordered nouns/adjectives. [V3 audit and visual evidence](PAIRED-FOCUS-V3.md).

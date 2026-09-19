@@ -1,0 +1,2989 @@
+{
+  "revision": "preview-v3-paired-bilingual-focus",
+  "status": "PASS — paired Spanish and English preview audit",
+  "templatesReviewed": 50,
+  "cuesReviewed": 86,
+  "affectedCues": [
+    "C001",
+    "C003",
+    "C005",
+    "C007",
+    "C009",
+    "C010",
+    "C011",
+    "C012",
+    "C013",
+    "C014",
+    "C015",
+    "C016",
+    "C017",
+    "C019",
+    "C021",
+    "C023",
+    "C025",
+    "C026",
+    "C030",
+    "C035",
+    "C037",
+    "C039",
+    "C041",
+    "C043",
+    "C045",
+    "C048",
+    "C050",
+    "C051",
+    "C053",
+    "C054",
+    "C055",
+    "C056",
+    "C058",
+    "C059",
+    "C060",
+    "C062",
+    "C064",
+    "C066",
+    "C068",
+    "C070",
+    "C071",
+    "C072",
+    "C073",
+    "C074",
+    "C075",
+    "C076",
+    "C077",
+    "C079",
+    "C081",
+    "C082",
+    "C083",
+    "C085",
+    "C086"
+  ],
+  "pairedUnitOccurrences": 116,
+  "distinctPairings": 26,
+  "sourceWordStates": 80831,
+  "englishWordStates": 87911,
+  "changedSpanishFrameStatesFromV2": 4019,
+  "changedEnglishFrameStatesFromV2": 196,
+  "frames": 17647,
+  "sourceTimingChanges": 0,
+  "displayedTextChanges": 0,
+  "layoutGeometryChanges": 0,
+  "lexicalChangesFromV2": 0,
+  "editorial": [
+    {
+      "template": "R1",
+      "spanish": "Ay, que te quiero decir",
+      "english": "Oh, I want to tell you",
+      "decision": "paired complete phrase including inflected subject",
+      "rationale": "The displaced recipient te belongs to decir: highlight the complete to tell you at either contributing event, releasing during quiero and any gap.",
+      "lexicalCorrection": null,
+      "groups": [
+        {
+          "id": "tell-you",
+          "targetIndices": [
+            4,
+            5,
+            6
+          ],
+          "sourceIndices": [
+            3,
+            5
+          ],
+          "reason": "The displaced recipient te belongs to decir: highlight the complete to tell you at either contributing event, releasing during quiero and any gap."
+        }
+      ]
+    },
+    {
+      "template": "R2",
+      "spanish": "lo que te quiero",
+      "english": "how much I love you.",
+      "decision": "paired complete phrase including inflected subject",
+      "rationale": "Pair te quiero with the complete I love you, including the inflected subject, over both real source events. Keep how much on its separate degree construction.",
+      "lexicalCorrection": null,
+      "groups": [
+        {
+          "id": "love-you",
+          "targetIndices": [
+            3,
+            4,
+            5
+          ],
+          "sourceIndices": [
+            3,
+            4
+          ],
+          "reason": "Pair te quiero with the complete I love you, including the inflected subject, over both real source events. Keep how much on its separate degree construction."
+        }
+      ]
+    },
+    {
+      "template": "R3",
+      "spanish": "que sos el muchacho",
+      "english": "that you're the boy",
+      "decision": "lexical mapping retained; multi-source constructions use paired display focus",
+      "rationale": "Explicit complement, subject/copula contraction, article and noun retain their individual events.",
+      "lexicalCorrection": null,
+      "groups": []
+    },
+    {
+      "template": "R4",
+      "spanish": "que yo más quiero",
+      "english": "whom I love most.",
+      "decision": "lexical mapping retained; multi-source constructions use paired display focus",
+      "rationale": "Whom, explicit I and most retain their events; the reversed degree/verb order is intentional, not a missing clitic.",
+      "lexicalCorrection": null,
+      "groups": []
+    },
+    {
+      "template": "V01",
+      "spanish": "Cuando se levanta mi párpado",
+      "english": "When my eyelid lifts",
+      "decision": "lexical mapping retained; multi-source constructions use paired display focus",
+      "rationale": "Se levanta is the reflexive intransitive construction lifts; natural English order reverses noun and verb.",
+      "lexicalCorrection": null,
+      "groups": []
+    },
+    {
+      "template": "V02",
+      "spanish": "y estás vos al lado,",
+      "english": "and you're close by,",
+      "decision": "lexical mapping retained; multi-source constructions use paired display focus",
+      "rationale": "Estás vos encodes the explicit you with its verb; al lado is rendered close by, retaining proximity without adding an unstated object.",
+      "lexicalCorrection": null,
+      "groups": []
+    },
+    {
+      "template": "V03",
+      "spanish": "siento que no quiero",
+      "english": "I feel that I don't want",
+      "decision": "lexical mapping retained; multi-source constructions use paired display focus",
+      "rationale": "Explicit negation retains its own event. Subject and inflected wanting remain distinct from the following infinitive; no object clitic is lost.",
+      "lexicalCorrection": null,
+      "groups": []
+    },
+    {
+      "template": "V04",
+      "spanish": "abandonar mi costado",
+      "english": "to leave my side.",
+      "decision": "lexical mapping retained; multi-source constructions use paired display focus",
+      "rationale": "Preserve the supplied mi costado provisionally; compare with actual live wording before freezing the performed sequence.",
+      "lexicalCorrection": null,
+      "groups": []
+    },
+    {
+      "template": "V05",
+      "spanish": "el día y la noche son tu reinado",
+      "english": "The day and the night are your realm.",
+      "decision": "lexical mapping retained; multi-source constructions use paired display focus",
+      "rationale": "Separate day/night nouns, conjunction, copula and explicit possessive are fully mapped.",
+      "lexicalCorrection": null,
+      "groups": []
+    },
+    {
+      "template": "V06",
+      "spanish": "vos sos el muchacho dorado",
+      "english": "You are the golden boy.",
+      "decision": "lexical mapping retained; multi-source constructions use paired display focus",
+      "rationale": "Explicit You and reordered golden / boy remain independently timed; no full-clause grouping.",
+      "lexicalCorrection": null,
+      "groups": []
+    },
+    {
+      "template": "V07",
+      "spanish": "quiero que de mí siempre estés empapado",
+      "english": "I want you to always be soaked in me.",
+      "decision": "paired complete phrase including inflected subject",
+      "rationale": "Pair estés empapado with you / be soaked, including the subject encoded by estés. The reordered always / in me and infinitival to remain independently timed.",
+      "lexicalCorrection": "you and be follow estés; to follows que; soaked follows empapado",
+      "groups": [
+        {
+          "id": "be-soaked",
+          "targetIndices": [
+            3,
+            6,
+            7
+          ],
+          "sourceIndices": [
+            6,
+            7
+          ],
+          "reason": "Pair estés empapado with you / be soaked, including the subject encoded by estés. The reordered always / in me and infinitival to remain independently timed."
+        }
+      ]
+    },
+    {
+      "template": "V08",
+      "spanish": "estás completamente emparentado",
+      "english": "You're completely bound up",
+      "decision": "lexical mapping retained; multi-source constructions use paired display focus",
+      "rationale": "Emparentado literally related/akin; bound up retains the relationship with beauty in the following complement.",
+      "lexicalCorrection": null,
+      "groups": []
+    },
+    {
+      "template": "V09",
+      "spanish": "con lo bello, lo más bonito,",
+      "english": "with the beautiful, the most lovely,",
+      "decision": "lexical mapping retained; multi-source constructions use paired display focus",
+      "rationale": "Articles, nominalized adjectives and most are explicit source words with complete corresponding target focus.",
+      "lexicalCorrection": null,
+      "groups": []
+    },
+    {
+      "template": "V10",
+      "spanish": "con lo adornado",
+      "english": "with the adorned.",
+      "decision": "lexical mapping retained; multi-source constructions use paired display focus",
+      "rationale": "The nominalized adorned wording and its article are retained without inventing an object.",
+      "lexicalCorrection": null,
+      "groups": []
+    },
+    {
+      "template": "V11",
+      "spanish": "quedate un poquito más acá acostado",
+      "english": "Stay lying down here a little longer.",
+      "decision": "lexical mapping retained; multi-source constructions use paired display focus",
+      "rationale": "Más modifies duration with un poquito, rendered a little longer. Natural English moves lying down and here ahead of the duration.",
+      "lexicalCorrection": null,
+      "groups": []
+    },
+    {
+      "template": "V12",
+      "spanish": "que yo quiero usarte como almohada",
+      "english": "because I want to use you as a pillow.",
+      "decision": "lexical mapping retained; multi-source constructions use paired display focus",
+      "rationale": "Usarte already highlights the complete to use you; its attached clitic has no separate early release.",
+      "lexicalCorrection": null,
+      "groups": []
+    },
+    {
+      "template": "V13",
+      "spanish": "quiero servirme de vos sin abusarme",
+      "english": "I want to draw on you without taking advantage.",
+      "decision": "lexical mapping retained; multi-source constructions use paired display focus",
+      "rationale": "Servirme de is the phrasal construction draw on; sin abusarme qualifies this as without taking advantage.",
+      "lexicalCorrection": null,
+      "groups": []
+    },
+    {
+      "template": "V14",
+      "spanish": "quiero buscarte en mí",
+      "english": "I want to seek you in me",
+      "decision": "lexical mapping retained; multi-source constructions use paired display focus",
+      "rationale": "Buscarte already highlights to seek you together; in me keeps its independently spoken preposition and pronoun.",
+      "lexicalCorrection": null,
+      "groups": []
+    },
+    {
+      "template": "V15",
+      "spanish": "y en vos buscarme",
+      "english": "and seek myself in you.",
+      "decision": "lexical mapping retained; multi-source constructions use paired display focus",
+      "rationale": "Buscarme already highlights seek myself together; the separate vos belongs to in you.",
+      "lexicalCorrection": null,
+      "groups": []
+    },
+    {
+      "template": "V16",
+      "spanish": "y al encontrarnos los dos",
+      "english": "And when we find each other, both of us,",
+      "decision": "lexical mapping retained; multi-source constructions use paired display focus",
+      "rationale": "Al + infinitive marks when; encontrarnos is reciprocal and los dos stresses both.",
+      "lexicalCorrection": null,
+      "groups": []
+    },
+    {
+      "template": "V17",
+      "spanish": "dentro de nos",
+      "english": "within us,",
+      "decision": "lexical mapping retained; multi-source constructions use paired display focus",
+      "rationale": "Dentro de is the prepositional unit within; preserve poetic nos as us.",
+      "lexicalCorrection": null,
+      "groups": []
+    },
+    {
+      "template": "V18",
+      "spanish": "quiero gustarte en mí",
+      "english": "I want to please you in me",
+      "decision": "lexical mapping retained; multi-source constructions use paired display focus",
+      "rationale": "Gustarte already highlights to please you together; its object is not dropped.",
+      "lexicalCorrection": null,
+      "groups": []
+    },
+    {
+      "template": "V19",
+      "spanish": "y en vos gustarme",
+      "english": "and please myself in you.",
+      "decision": "lexical mapping retained; multi-source constructions use paired display focus",
+      "rationale": "Preserve the mirrored, reflexive image without turning gustar into a different affection claim.",
+      "lexicalCorrection": null,
+      "groups": []
+    },
+    {
+      "template": "V20",
+      "spanish": "Desarmada mi alma estaría",
+      "english": "My soul would be disarmed",
+      "decision": "lexical mapping retained; multi-source constructions use paired display focus",
+      "rationale": "Would be is complete on estaría. The initial disarmed and explicit my soul remain separate source events.",
+      "lexicalCorrection": null,
+      "groups": []
+    },
+    {
+      "template": "V21",
+      "spanish": "si al final del día",
+      "english": "if at the end of the day",
+      "decision": "lexical mapping retained; multi-source constructions use paired display focus",
+      "rationale": "Contracted al and del supply their complete at the / of the English expansions.",
+      "lexicalCorrection": null,
+      "groups": []
+    },
+    {
+      "template": "V22",
+      "spanish": "no se complementara con tu estadía,",
+      "english": "it were not made complete by your stay.",
+      "decision": "lexical mapping retained; multi-source constructions use paired display focus",
+      "rationale": "Se complementara is the reflexive subjunctive predicate; English subject and auxiliary share that predicate while not follows the independent negator. Estadía remains stay, not an invented permanent promise.",
+      "lexicalCorrection": null,
+      "groups": []
+    },
+    {
+      "template": "V23",
+      "spanish": "perdoná si algún día dudé",
+      "english": "Forgive me if one day I doubted.",
+      "decision": "lexical mapping retained; multi-source constructions use paired display focus",
+      "rationale": "Perdoná already highlights Forgive me completely; I doubted includes the inflected subject.",
+      "lexicalCorrection": null,
+      "groups": []
+    },
+    {
+      "template": "V24",
+      "spanish": "pero la duda es lo que apura",
+      "english": "But doubt is what urges",
+      "decision": "lexical mapping retained; multi-source constructions use paired display focus",
+      "rationale": "Generic Spanish la duda is bare English doubt. Lo que is the relative unit what.",
+      "lexicalCorrection": null,
+      "groups": []
+    },
+    {
+      "template": "V25",
+      "spanish": "al corazón a romper con la estructura,",
+      "english": "the heart to break with the structure.",
+      "decision": "lexical mapping retained; multi-source constructions use paired display focus",
+      "rationale": "Al marks the preceding verb’s target; English urges the heart does not take a separate to before the heart.",
+      "lexicalCorrection": null,
+      "groups": []
+    },
+    {
+      "template": "V26",
+      "spanish": "el miedo a sentir ranuras",
+      "english": "The fear of feeling cracks",
+      "decision": "lexical mapping retained; multi-source constructions use paired display focus",
+      "rationale": "The fear, preposition, infinitive and cracks retain their independent correspondences.",
+      "lexicalCorrection": null,
+      "groups": []
+    },
+    {
+      "template": "V27",
+      "spanish": "de las que cuesta encontrar la cura",
+      "english": "for which it's hard to find the cure.",
+      "decision": "lexical mapping retained; multi-source constructions use paired display focus",
+      "rationale": "De las que is a relative preposition/pronoun unit. Cuesta encodes difficulty with the following infinitive.",
+      "lexicalCorrection": null,
+      "groups": []
+    },
+    {
+      "template": "V28",
+      "spanish": "pero es locura",
+      "english": "But it's madness",
+      "decision": "lexical mapping retained; multi-source constructions use paired display focus",
+      "rationale": "Individual word correspondence; inflected verbs and required English grammatical completions share their source event.",
+      "lexicalCorrection": null,
+      "groups": []
+    },
+    {
+      "template": "V29",
+      "spanish": "temer lo que podría",
+      "english": "to fear what might happen",
+      "decision": "lexical mapping retained; multi-source constructions use paired display focus",
+      "rationale": "Podría is elliptical; happen supplies the event implied by could, without inventing a specific feared outcome.",
+      "lexicalCorrection": null,
+      "groups": []
+    },
+    {
+      "template": "V30",
+      "spanish": "y dejar de hacer lo que uno desearía,",
+      "english": "and stop doing what one would wish.",
+      "decision": "lexical mapping retained; multi-source constructions use paired display focus",
+      "rationale": "Dejar de is the cessative unit stop; lo que is what.",
+      "lexicalCorrection": null,
+      "groups": []
+    },
+    {
+      "template": "V31",
+      "spanish": "lo que yo sé que deseo",
+      "english": "What I know that I desire",
+      "decision": "lexical mapping retained; multi-source constructions use paired display focus",
+      "rationale": "Relative What and inflected I desire are complete; explicit I / know / that remain independently linked.",
+      "lexicalCorrection": null,
+      "groups": []
+    },
+    {
+      "template": "V32",
+      "spanish": "es llenarme con tu compañía",
+      "english": "is to fill myself with your company.",
+      "decision": "lexical mapping retained; multi-source constructions use paired display focus",
+      "rationale": "Llenarme already highlights to fill myself completely; explicit your company remains word-specific.",
+      "lexicalCorrection": null,
+      "groups": []
+    },
+    {
+      "template": "V33",
+      "spanish": "porque sos lo que me inspira",
+      "english": "Because you're what inspires me.",
+      "decision": "paired complete phrase including inflected subject",
+      "rationale": "Preverbal clitic me is the object of inspira; the English predicate includes me while the verb is active.",
+      "lexicalCorrection": null,
+      "groups": [
+        {
+          "id": "inspires-me",
+          "targetIndices": [
+            4,
+            5
+          ],
+          "sourceIndices": [
+            5,
+            6
+          ],
+          "reason": "Preverbal clitic me is the object of inspira; the English predicate includes me while the verb is active."
+        }
+      ]
+    },
+    {
+      "template": "V34",
+      "spanish": "porque con vos la vida es más",
+      "english": "Because with you life is more.",
+      "decision": "lexical mapping retained; multi-source constructions use paired display focus",
+      "rationale": "Generic la vida becomes bare life; keep the deliberately open-ended more.",
+      "lexicalCorrection": null,
+      "groups": []
+    },
+    {
+      "template": "V35",
+      "spanish": "me sumás, me aumentás,",
+      "english": "You add to me, you expand me,",
+      "decision": "paired complete phrase including inflected subject",
+      "rationale": "Pair me sumás with You add to me, including the inflected subject; do not split either language across the clitic and verb. Pair me aumentás with you expand me, including the inflected subject. The two neighboring predicates remain independent.",
+      "lexicalCorrection": null,
+      "groups": [
+        {
+          "id": "add-to-me",
+          "targetIndices": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "sourceIndices": [
+            1,
+            2
+          ],
+          "reason": "Pair me sumás with You add to me, including the inflected subject; do not split either language across the clitic and verb."
+        },
+        {
+          "id": "expand-me",
+          "targetIndices": [
+            5,
+            6,
+            7
+          ],
+          "sourceIndices": [
+            3,
+            4
+          ],
+          "reason": "Pair me aumentás with you expand me, including the inflected subject. The two neighboring predicates remain independent."
+        }
+      ]
+    },
+    {
+      "template": "V36",
+      "spanish": "me hacés más capaz",
+      "english": "you make me more capable.",
+      "decision": "paired complete phrase including inflected subject",
+      "rationale": "Pair me hacés with you make me, including the inflected subject, leaving más / more and capaz / capable independently timed.",
+      "lexicalCorrection": null,
+      "groups": [
+        {
+          "id": "make-me",
+          "targetIndices": [
+            1,
+            2,
+            3
+          ],
+          "sourceIndices": [
+            1,
+            2
+          ],
+          "reason": "Pair me hacés with you make me, including the inflected subject, leaving más / more and capaz / capable independently timed."
+        }
+      ]
+    },
+    {
+      "template": "V37",
+      "spanish": "por eso y por mucho, mucho, mucho más",
+      "english": "For that and for much, much, much more.",
+      "decision": "lexical mapping retained; multi-source constructions use paired display focus",
+      "rationale": "The live delivery repeats mucho three times. Each repetition receives its own independent acoustic event.",
+      "lexicalCorrection": null,
+      "groups": []
+    },
+    {
+      "template": "B01",
+      "spanish": "ay, que me robó el corazón",
+      "english": "Oh, he stole my heart.",
+      "decision": "paired complete phrase including inflected subject",
+      "rationale": "The affected possessor me becomes my in my heart. Complete that noun phrase at the possessor and heart events; stole remains separate.",
+      "lexicalCorrection": null,
+      "groups": [
+        {
+          "id": "my-heart",
+          "targetIndices": [
+            4,
+            5
+          ],
+          "sourceIndices": [
+            3,
+            5,
+            6
+          ],
+          "reason": "The affected possessor me becomes my in my heart. Complete that noun phrase at the possessor and heart events; stole remains separate."
+        }
+      ]
+    },
+    {
+      "template": "B02",
+      "spanish": "ese muchacho me robó el corazón",
+      "english": "That boy stole my heart.",
+      "decision": "paired complete phrase including inflected subject",
+      "rationale": "Complete the affected-possession phrase my heart without extending it through the independent verb stole.",
+      "lexicalCorrection": null,
+      "groups": [
+        {
+          "id": "my-heart",
+          "targetIndices": [
+            4,
+            5
+          ],
+          "sourceIndices": [
+            3,
+            5,
+            6
+          ],
+          "reason": "Complete the affected-possession phrase my heart without extending it through the independent verb stole."
+        }
+      ]
+    },
+    {
+      "template": "B03",
+      "spanish": "y si laten mis costillas",
+      "english": "And if my ribs beat,",
+      "decision": "lexical mapping retained; multi-source constructions use paired display focus",
+      "rationale": "The explicit possessive mis belongs to my, not a displaced affected-possessor clitic. Reordered ribs / beat remain independent.",
+      "lexicalCorrection": null,
+      "groups": []
+    },
+    {
+      "template": "B04",
+      "spanish": "es porque te quiero",
+      "english": "it's because I love you.",
+      "decision": "paired complete phrase including inflected subject",
+      "rationale": "Pair te quiero with the complete I love you, including the inflected subject. Es / it is and porque / because remain independent.",
+      "lexicalCorrection": null,
+      "groups": [
+        {
+          "id": "love-you",
+          "targetIndices": [
+            3,
+            4,
+            5
+          ],
+          "sourceIndices": [
+            3,
+            4
+          ],
+          "reason": "Pair te quiero with the complete I love you, including the inflected subject. Es / it is and porque / because remain independent."
+        }
+      ]
+    },
+    {
+      "template": "B05",
+      "spanish": "y si tiemblan mis rodillas",
+      "english": "And if my knees tremble,",
+      "decision": "lexical mapping retained; multi-source constructions use paired display focus",
+      "rationale": "Explicit my / knees and reordered tremble retain individual events; no clitic completion is missing.",
+      "lexicalCorrection": null,
+      "groups": []
+    },
+    {
+      "template": "B06",
+      "spanish": "y si nos separan millas",
+      "english": "And if miles separate us,",
+      "decision": "paired complete phrase including inflected subject",
+      "rationale": "The preverbal clitic nos is the object of separan; complete separate us while retaining miles at its own source event.",
+      "lexicalCorrection": null,
+      "groups": [
+        {
+          "id": "separate-us",
+          "targetIndices": [
+            4,
+            5
+          ],
+          "sourceIndices": [
+            3,
+            4
+          ],
+          "reason": "The preverbal clitic nos is the object of separan; complete separate us while retaining miles at its own source event."
+        }
+      ]
+    },
+    {
+      "template": "B07",
+      "spanish": "yo aún te quiero",
+      "english": "I still love you.",
+      "decision": "paired complete phrase including inflected subject",
+      "rationale": "Complete love you throughout te / quiero. The explicit yo and long held aún remain independently focused as I and still.",
+      "lexicalCorrection": null,
+      "groups": [
+        {
+          "id": "love-you",
+          "targetIndices": [
+            3,
+            4
+          ],
+          "sourceIndices": [
+            3,
+            4
+          ],
+          "reason": "Complete love you throughout te / quiero. The explicit yo and long held aún remain independently focused as I and still."
+        }
+      ]
+    },
+    {
+      "template": "B08",
+      "spanish": "aunque millones de millas",
+      "english": "Despite millions of miles,",
+      "decision": "lexical mapping retained; multi-source constructions use paired display focus",
+      "rationale": "The elliptical distance concession stays elliptical; no extra action or subject is supplied.",
+      "lexicalCorrection": null,
+      "groups": []
+    },
+    {
+      "template": "B09",
+      "spanish": "Esto se acabó",
+      "english": "This is over.",
+      "decision": "lexical mapping retained; multi-source constructions use paired display focus",
+      "rationale": "Short live closing tag, absent from the supplied lyric reference; independently recovered in bounded original-mix and isolated-vocal transcription. Se acabó is the completed-state construction is over.",
+      "lexicalCorrection": null,
+      "groups": []
+    }
+  ],
+  "pairedUnits": [
+    {
+      "cue": "C001",
+      "sourceIds": [
+        "P001-s01",
+        "P001-s02"
+      ],
+      "spanish": "Ay, que",
+      "english": "Oh,",
+      "intervals": [
+        {
+          "start": 0.7910884353741496,
+          "end": 0.9113378684807256
+        },
+        {
+          "start": 1.01,
+          "end": 1.07
+        }
+      ]
+    },
+    {
+      "cue": "C001",
+      "sourceIds": [
+        "P001-s03",
+        "P001-s05"
+      ],
+      "spanish": "te decir",
+      "english": "to tell you",
+      "intervals": [
+        {
+          "start": 1.07,
+          "end": 1.21
+        },
+        {
+          "start": 1.65,
+          "end": 1.97
+        }
+      ]
+    },
+    {
+      "cue": "C001",
+      "sourceIds": [
+        "P001-s06",
+        "P001-s07"
+      ],
+      "spanish": "lo que",
+      "english": "how much",
+      "intervals": [
+        {
+          "start": 1.97,
+          "end": 2.153832199546485
+        },
+        {
+          "start": 2.21,
+          "end": 2.29
+        }
+      ]
+    },
+    {
+      "cue": "C001",
+      "sourceIds": [
+        "P001-s08",
+        "P001-s09"
+      ],
+      "spanish": "te quiero",
+      "english": "I love you.",
+      "intervals": [
+        {
+          "start": 2.29,
+          "end": 2.4343990929705215
+        },
+        {
+          "start": 2.47,
+          "end": 2.89
+        }
+      ]
+    },
+    {
+      "cue": "C003",
+      "sourceIds": [
+        "P002-s01",
+        "P002-s02"
+      ],
+      "spanish": "Ay, que",
+      "english": "Oh,",
+      "intervals": [
+        {
+          "start": 5.580975056689343,
+          "end": 5.721269841269841
+        },
+        {
+          "start": 5.84,
+          "end": 5.88
+        }
+      ]
+    },
+    {
+      "cue": "C003",
+      "sourceIds": [
+        "P002-s03",
+        "P002-s05"
+      ],
+      "spanish": "te decir",
+      "english": "to tell you",
+      "intervals": [
+        {
+          "start": 5.88,
+          "end": 6.021882086167801
+        },
+        {
+          "start": 6.46,
+          "end": 6.76
+        }
+      ]
+    },
+    {
+      "cue": "C003",
+      "sourceIds": [
+        "P002-s06",
+        "P002-s07"
+      ],
+      "spanish": "lo que",
+      "english": "how much",
+      "intervals": [
+        {
+          "start": 6.76,
+          "end": 6.963809523809524
+        },
+        {
+          "start": 7,
+          "end": 7.08
+        }
+      ]
+    },
+    {
+      "cue": "C003",
+      "sourceIds": [
+        "P002-s08",
+        "P002-s09"
+      ],
+      "spanish": "te quiero",
+      "english": "I love you.",
+      "intervals": [
+        {
+          "start": 7.08,
+          "end": 7.204308390022676
+        },
+        {
+          "start": 7.24,
+          "end": 7.66
+        }
+      ]
+    },
+    {
+      "cue": "C005",
+      "sourceIds": [
+        "P003-s01",
+        "P003-s02"
+      ],
+      "spanish": "Ay, que",
+      "english": "Oh,",
+      "intervals": [
+        {
+          "start": 10.391814058956916,
+          "end": 10.492222222222223
+        },
+        {
+          "start": 10.59,
+          "end": 10.65
+        }
+      ]
+    },
+    {
+      "cue": "C005",
+      "sourceIds": [
+        "P003-s03",
+        "P003-s05"
+      ],
+      "spanish": "te decir",
+      "english": "to tell you",
+      "intervals": [
+        {
+          "start": 10.65,
+          "end": 10.79
+        },
+        {
+          "start": 11.23,
+          "end": 11.55
+        }
+      ]
+    },
+    {
+      "cue": "C005",
+      "sourceIds": [
+        "P003-s06",
+        "P003-s07"
+      ],
+      "spanish": "lo que",
+      "english": "how much",
+      "intervals": [
+        {
+          "start": 11.55,
+          "end": 11.737324263038548
+        },
+        {
+          "start": 11.75,
+          "end": 11.85
+        }
+      ]
+    },
+    {
+      "cue": "C005",
+      "sourceIds": [
+        "P003-s08",
+        "P003-s09"
+      ],
+      "spanish": "te quiero",
+      "english": "I love you.",
+      "intervals": [
+        {
+          "start": 11.85,
+          "end": 11.978321995464853
+        },
+        {
+          "start": 12.03,
+          "end": 12.43
+        }
+      ]
+    },
+    {
+      "cue": "C007",
+      "sourceIds": [
+        "P004-s01",
+        "P004-s02"
+      ],
+      "spanish": "Ay, que",
+      "english": "Oh,",
+      "intervals": [
+        {
+          "start": 15.110748299319727,
+          "end": 15.231020408163266
+        },
+        {
+          "start": 15.33,
+          "end": 15.39
+        }
+      ]
+    },
+    {
+      "cue": "C007",
+      "sourceIds": [
+        "P004-s03",
+        "P004-s05"
+      ],
+      "spanish": "te decir",
+      "english": "to tell you",
+      "intervals": [
+        {
+          "start": 15.39,
+          "end": 15.531655328798186
+        },
+        {
+          "start": 15.97,
+          "end": 16.27
+        }
+      ]
+    },
+    {
+      "cue": "C007",
+      "sourceIds": [
+        "P004-s06",
+        "P004-s07"
+      ],
+      "spanish": "lo que",
+      "english": "how much",
+      "intervals": [
+        {
+          "start": 16.27,
+          "end": 16.453582766439908
+        },
+        {
+          "start": 16.49,
+          "end": 16.59
+        }
+      ]
+    },
+    {
+      "cue": "C007",
+      "sourceIds": [
+        "P004-s08",
+        "P004-s09"
+      ],
+      "spanish": "te quiero",
+      "english": "I love you.",
+      "intervals": [
+        {
+          "start": 16.59,
+          "end": 16.714126984126985
+        },
+        {
+          "start": 16.75,
+          "end": 17.17
+        }
+      ]
+    },
+    {
+      "cue": "C009",
+      "sourceIds": [
+        "P005-s01",
+        "P005-s02"
+      ],
+      "spanish": "Ay, que",
+      "english": "Oh,",
+      "intervals": [
+        {
+          "start": 19.871360544217687,
+          "end": 20.072222222222223
+        },
+        {
+          "start": 20.53,
+          "end": 20.594444444444445
+        }
+      ]
+    },
+    {
+      "cue": "C009",
+      "sourceIds": [
+        "P005-s03",
+        "P005-s05",
+        "P005-s06"
+      ],
+      "spanish": "me el corazón",
+      "english": "my heart.",
+      "intervals": [
+        {
+          "start": 20.61,
+          "end": 20.755124716553286
+        },
+        {
+          "start": 21.11,
+          "end": 21.176916099773244
+        },
+        {
+          "start": 21.23,
+          "end": 21.759410430839
+        }
+      ]
+    },
+    {
+      "cue": "C010",
+      "sourceIds": [
+        "P005-s09",
+        "P005-s11",
+        "P005-s12"
+      ],
+      "spanish": "me el corazón",
+      "english": "my heart.",
+      "intervals": [
+        {
+          "start": 22.97,
+          "end": 23.18546485260771
+        },
+        {
+          "start": 23.55,
+          "end": 23.58718820861678
+        },
+        {
+          "start": 23.61,
+          "end": 24.189750566893423
+        }
+      ]
+    },
+    {
+      "cue": "C011",
+      "sourceIds": [
+        "P006-s01",
+        "P006-s02"
+      ],
+      "spanish": "Ay, que",
+      "english": "Oh,",
+      "intervals": [
+        {
+          "start": 24.670884353741496,
+          "end": 24.891337868480726
+        },
+        {
+          "start": 25.31,
+          "end": 25.43
+        }
+      ]
+    },
+    {
+      "cue": "C011",
+      "sourceIds": [
+        "P006-s03",
+        "P006-s05",
+        "P006-s06"
+      ],
+      "spanish": "me el corazón",
+      "english": "my heart.",
+      "intervals": [
+        {
+          "start": 25.43,
+          "end": 25.57
+        },
+        {
+          "start": 25.91,
+          "end": 25.993650793650794
+        },
+        {
+          "start": 26.07,
+          "end": 26.574875283446712
+        }
+      ]
+    },
+    {
+      "cue": "C012",
+      "sourceIds": [
+        "P006-s09",
+        "P006-s11",
+        "P006-s12"
+      ],
+      "spanish": "me el corazón",
+      "english": "my heart.",
+      "intervals": [
+        {
+          "start": 27.83,
+          "end": 27.9778231292517
+        },
+        {
+          "start": 28.29,
+          "end": 28.398707482993196
+        },
+        {
+          "start": 28.41,
+          "end": 28.95986394557823
+        }
+      ]
+    },
+    {
+      "cue": "C013",
+      "sourceIds": [
+        "P007-s01",
+        "P007-s02"
+      ],
+      "spanish": "Ay, que",
+      "english": "Oh,",
+      "intervals": [
+        {
+          "start": 29.471746031746033,
+          "end": 29.65249433106576
+        },
+        {
+          "start": 30.07,
+          "end": 30.23
+        }
+      ]
+    },
+    {
+      "cue": "C013",
+      "sourceIds": [
+        "P007-s03",
+        "P007-s05",
+        "P007-s06"
+      ],
+      "spanish": "me el corazón",
+      "english": "my heart.",
+      "intervals": [
+        {
+          "start": 30.23,
+          "end": 30.37
+        },
+        {
+          "start": 30.73,
+          "end": 30.797256235827664
+        },
+        {
+          "start": 30.85,
+          "end": 31.379659863945577
+        }
+      ]
+    },
+    {
+      "cue": "C014",
+      "sourceIds": [
+        "P007-s09",
+        "P007-s11",
+        "P007-s12"
+      ],
+      "spanish": "me el corazón",
+      "english": "my heart.",
+      "intervals": [
+        {
+          "start": 32.61,
+          "end": 32.765419501133785
+        },
+        {
+          "start": 33.11,
+          "end": 33.18716553287982
+        },
+        {
+          "start": 33.21,
+          "end": 33.78965986394558
+        }
+      ]
+    },
+    {
+      "cue": "C015",
+      "sourceIds": [
+        "P008-s01",
+        "P008-s02"
+      ],
+      "spanish": "Ay, que",
+      "english": "Oh,",
+      "intervals": [
+        {
+          "start": 34.26185941043084,
+          "end": 34.4827664399093
+        },
+        {
+          "start": 34.8,
+          "end": 35.02503401360544
+        }
+      ]
+    },
+    {
+      "cue": "C015",
+      "sourceIds": [
+        "P008-s03",
+        "P008-s05",
+        "P008-s06"
+      ],
+      "spanish": "me el corazón",
+      "english": "my heart.",
+      "intervals": [
+        {
+          "start": 35.04,
+          "end": 35.18571428571428
+        },
+        {
+          "start": 35.54,
+          "end": 35.58739229024943
+        },
+        {
+          "start": 35.64,
+          "end": 36.16984126984127
+        }
+      ]
+    },
+    {
+      "cue": "C016",
+      "sourceIds": [
+        "P008-s09",
+        "P008-s11",
+        "P008-s12"
+      ],
+      "spanish": "me el corazón",
+      "english": "my heart.",
+      "intervals": [
+        {
+          "start": 37.34,
+          "end": 37.535555555555554
+        },
+        {
+          "start": 37.86,
+          "end": 37.937233560090704
+        },
+        {
+          "start": 37.98,
+          "end": 38.539750566893424
+        }
+      ]
+    },
+    {
+      "cue": "C017",
+      "sourceIds": [
+        "P009-s01",
+        "P009-s02"
+      ],
+      "spanish": "Ay, que",
+      "english": "Oh,",
+      "intervals": [
+        {
+          "start": 58.051043083900225,
+          "end": 58.17126984126984
+        },
+        {
+          "start": 58.27,
+          "end": 58.33
+        }
+      ]
+    },
+    {
+      "cue": "C017",
+      "sourceIds": [
+        "P009-s03",
+        "P009-s05"
+      ],
+      "spanish": "te decir",
+      "english": "to tell you",
+      "intervals": [
+        {
+          "start": 58.33,
+          "end": 58.47190476190476
+        },
+        {
+          "start": 58.89,
+          "end": 59.21
+        }
+      ]
+    },
+    {
+      "cue": "C017",
+      "sourceIds": [
+        "P009-s06",
+        "P009-s07"
+      ],
+      "spanish": "lo que",
+      "english": "how much",
+      "intervals": [
+        {
+          "start": 59.21,
+          "end": 59.3737641723356
+        },
+        {
+          "start": 59.41,
+          "end": 59.51
+        }
+      ]
+    },
+    {
+      "cue": "C017",
+      "sourceIds": [
+        "P009-s08",
+        "P009-s09"
+      ],
+      "spanish": "te quiero",
+      "english": "I love you.",
+      "intervals": [
+        {
+          "start": 59.51,
+          "end": 59.654331065759635
+        },
+        {
+          "start": 59.67,
+          "end": 60.09
+        }
+      ]
+    },
+    {
+      "cue": "C019",
+      "sourceIds": [
+        "P010-s01",
+        "P010-s02"
+      ],
+      "spanish": "Ay, que",
+      "english": "Oh,",
+      "intervals": [
+        {
+          "start": 62.72156462585034,
+          "end": 62.862154195011335
+        },
+        {
+          "start": 62.96,
+          "end": 63.02
+        }
+      ]
+    },
+    {
+      "cue": "C019",
+      "sourceIds": [
+        "P010-s03",
+        "P010-s05"
+      ],
+      "spanish": "te decir",
+      "english": "to tell you",
+      "intervals": [
+        {
+          "start": 63.02,
+          "end": 63.16
+        },
+        {
+          "start": 63.58,
+          "end": 63.86
+        }
+      ]
+    },
+    {
+      "cue": "C019",
+      "sourceIds": [
+        "P010-s06",
+        "P010-s07"
+      ],
+      "spanish": "lo que",
+      "english": "how much",
+      "intervals": [
+        {
+          "start": 63.86,
+          "end": 64.04727891156463
+        },
+        {
+          "start": 64.08,
+          "end": 64.18
+        }
+      ]
+    },
+    {
+      "cue": "C019",
+      "sourceIds": [
+        "P010-s08",
+        "P010-s09"
+      ],
+      "spanish": "te quiero",
+      "english": "I love you.",
+      "intervals": [
+        {
+          "start": 64.18,
+          "end": 64.32848072562358
+        },
+        {
+          "start": 64.34,
+          "end": 64.76
+        }
+      ]
+    },
+    {
+      "cue": "C021",
+      "sourceIds": [
+        "P011-s01",
+        "P011-s02"
+      ],
+      "spanish": "Ay, que",
+      "english": "Oh,",
+      "intervals": [
+        {
+          "start": 67.41154195011337,
+          "end": 67.53204081632653
+        },
+        {
+          "start": 67.63,
+          "end": 67.69
+        }
+      ]
+    },
+    {
+      "cue": "C021",
+      "sourceIds": [
+        "P011-s03",
+        "P011-s05"
+      ],
+      "spanish": "te decir",
+      "english": "to tell you",
+      "intervals": [
+        {
+          "start": 67.69,
+          "end": 67.83333333333333
+        },
+        {
+          "start": 68.29,
+          "end": 68.57
+        }
+      ]
+    },
+    {
+      "cue": "C021",
+      "sourceIds": [
+        "P011-s06",
+        "P011-s07"
+      ],
+      "spanish": "lo que",
+      "english": "how much",
+      "intervals": [
+        {
+          "start": 68.57,
+          "end": 68.73718820861679
+        },
+        {
+          "start": 68.77,
+          "end": 68.87
+        }
+      ]
+    },
+    {
+      "cue": "C021",
+      "sourceIds": [
+        "P011-s08",
+        "P011-s09"
+      ],
+      "spanish": "te quiero",
+      "english": "I love you.",
+      "intervals": [
+        {
+          "start": 68.87,
+          "end": 69.01836734693877
+        },
+        {
+          "start": 69.03,
+          "end": 69.43
+        }
+      ]
+    },
+    {
+      "cue": "C023",
+      "sourceIds": [
+        "P012-s01",
+        "P012-s02"
+      ],
+      "spanish": "Ay, que",
+      "english": "Oh,",
+      "intervals": [
+        {
+          "start": 72.09174603174603,
+          "end": 72.21238095238095
+        },
+        {
+          "start": 72.29,
+          "end": 72.35
+        }
+      ]
+    },
+    {
+      "cue": "C023",
+      "sourceIds": [
+        "P012-s03",
+        "P012-s05"
+      ],
+      "spanish": "te decir",
+      "english": "to tell you",
+      "intervals": [
+        {
+          "start": 72.35,
+          "end": 72.49
+        },
+        {
+          "start": 72.93,
+          "end": 73.19
+        }
+      ]
+    },
+    {
+      "cue": "C023",
+      "sourceIds": [
+        "P012-s06",
+        "P012-s07"
+      ],
+      "spanish": "lo que",
+      "english": "how much",
+      "intervals": [
+        {
+          "start": 73.19,
+          "end": 73.37834467120182
+        },
+        {
+          "start": 73.43,
+          "end": 73.53
+        }
+      ]
+    },
+    {
+      "cue": "C023",
+      "sourceIds": [
+        "P012-s08",
+        "P012-s09"
+      ],
+      "spanish": "te quiero",
+      "english": "I love you.",
+      "intervals": [
+        {
+          "start": 73.53,
+          "end": 73.65979591836735
+        },
+        {
+          "start": 73.67,
+          "end": 74.07
+        }
+      ]
+    },
+    {
+      "cue": "C025",
+      "sourceIds": [
+        "P013-s02",
+        "P013-s03"
+      ],
+      "spanish": "se levanta",
+      "english": "lifts",
+      "intervals": [
+        {
+          "start": 99.87,
+          "end": 100.13
+        },
+        {
+          "start": 100.13,
+          "end": 100.71383219954649
+        }
+      ]
+    },
+    {
+      "cue": "C026",
+      "sourceIds": [
+        "P013-s07",
+        "P013-s08"
+      ],
+      "spanish": "estás vos",
+      "english": "you're",
+      "intervals": [
+        {
+          "start": 101.77,
+          "end": 102.21780045351474
+        },
+        {
+          "start": 102.2779365079365,
+          "end": 102.47848072562358
+        }
+      ]
+    },
+    {
+      "cue": "C026",
+      "sourceIds": [
+        "P013-s09",
+        "P013-s10"
+      ],
+      "spanish": "al lado,",
+      "english": "close by,",
+      "intervals": [
+        {
+          "start": 102.63888888888889,
+          "end": 102.7191156462585
+        },
+        {
+          "start": 102.75,
+          "end": 102.99984126984127
+        }
+      ]
+    },
+    {
+      "cue": "C030",
+      "sourceIds": [
+        "P017-s06",
+        "P017-s07"
+      ],
+      "spanish": "estés empapado",
+      "english": "you be soaked",
+      "intervals": [
+        {
+          "start": 110.84,
+          "end": 111.17412698412699
+        },
+        {
+          "start": 111.18,
+          "end": 111.83965986394558
+        }
+      ]
+    },
+    {
+      "cue": "C035",
+      "sourceIds": [
+        "P022-s02",
+        "P022-s03"
+      ],
+      "spanish": "servirme de",
+      "english": "to draw on",
+      "intervals": [
+        {
+          "start": 121.72,
+          "end": 122.34421768707483
+        },
+        {
+          "start": 122.36,
+          "end": 122.48480725623583
+        }
+      ]
+    },
+    {
+      "cue": "C037",
+      "sourceIds": [
+        "P024-s04",
+        "P024-s05"
+      ],
+      "spanish": "los dos",
+      "english": "both of us,",
+      "intervals": [
+        {
+          "start": 127.13,
+          "end": 127.33
+        },
+        {
+          "start": 127.33,
+          "end": 127.55
+        }
+      ]
+    },
+    {
+      "cue": "C037",
+      "sourceIds": [
+        "P024-s06",
+        "P024-s07"
+      ],
+      "spanish": "dentro de",
+      "english": "within",
+      "intervals": [
+        {
+          "start": 127.55,
+          "end": 127.85
+        },
+        {
+          "start": 127.85,
+          "end": 128.0668934240363
+        }
+      ]
+    },
+    {
+      "cue": "C039",
+      "sourceIds": [
+        "P026-s01",
+        "P026-s02"
+      ],
+      "spanish": "Ay, que",
+      "english": "Oh,",
+      "intervals": [
+        {
+          "start": 132.67079365079366,
+          "end": 132.81108843537416
+        },
+        {
+          "start": 132.91,
+          "end": 132.97
+        }
+      ]
+    },
+    {
+      "cue": "C039",
+      "sourceIds": [
+        "P026-s03",
+        "P026-s05"
+      ],
+      "spanish": "te decir",
+      "english": "to tell you",
+      "intervals": [
+        {
+          "start": 132.97,
+          "end": 133.11
+        },
+        {
+          "start": 133.55,
+          "end": 133.85
+        }
+      ]
+    },
+    {
+      "cue": "C039",
+      "sourceIds": [
+        "P026-s06",
+        "P026-s07"
+      ],
+      "spanish": "lo que",
+      "english": "how much",
+      "intervals": [
+        {
+          "start": 133.85,
+          "end": 134.0135827664399
+        },
+        {
+          "start": 134.05,
+          "end": 134.1538775510204
+        }
+      ]
+    },
+    {
+      "cue": "C039",
+      "sourceIds": [
+        "P026-s08",
+        "P026-s09"
+      ],
+      "spanish": "te quiero",
+      "english": "I love you.",
+      "intervals": [
+        {
+          "start": 134.17,
+          "end": 134.2941723356009
+        },
+        {
+          "start": 134.33,
+          "end": 134.73
+        }
+      ]
+    },
+    {
+      "cue": "C041",
+      "sourceIds": [
+        "P027-s01",
+        "P027-s02"
+      ],
+      "spanish": "Ay, que",
+      "english": "Oh,",
+      "intervals": [
+        {
+          "start": 137.3206575963719,
+          "end": 137.52108843537414
+        },
+        {
+          "start": 137.6,
+          "end": 137.66
+        }
+      ]
+    },
+    {
+      "cue": "C041",
+      "sourceIds": [
+        "P027-s03",
+        "P027-s05"
+      ],
+      "spanish": "te decir",
+      "english": "to tell you",
+      "intervals": [
+        {
+          "start": 137.66,
+          "end": 137.8
+        },
+        {
+          "start": 138.22,
+          "end": 138.5
+        }
+      ]
+    },
+    {
+      "cue": "C041",
+      "sourceIds": [
+        "P027-s06",
+        "P027-s07"
+      ],
+      "spanish": "lo que",
+      "english": "how much",
+      "intervals": [
+        {
+          "start": 138.5,
+          "end": 138.70353741496598
+        },
+        {
+          "start": 138.74,
+          "end": 138.82
+        }
+      ]
+    },
+    {
+      "cue": "C041",
+      "sourceIds": [
+        "P027-s08",
+        "P027-s09"
+      ],
+      "spanish": "te quiero",
+      "english": "I love you.",
+      "intervals": [
+        {
+          "start": 138.82,
+          "end": 138.9640589569161
+        },
+        {
+          "start": 138.98,
+          "end": 139.4
+        }
+      ]
+    },
+    {
+      "cue": "C043",
+      "sourceIds": [
+        "P028-s01",
+        "P028-s02"
+      ],
+      "spanish": "Ay, que",
+      "english": "Oh,",
+      "intervals": [
+        {
+          "start": 142.02086167800454,
+          "end": 142.18120181405897
+        },
+        {
+          "start": 142.26,
+          "end": 142.34
+        }
+      ]
+    },
+    {
+      "cue": "C043",
+      "sourceIds": [
+        "P028-s03",
+        "P028-s05"
+      ],
+      "spanish": "te decir",
+      "english": "to tell you",
+      "intervals": [
+        {
+          "start": 142.34,
+          "end": 142.48183673469387
+        },
+        {
+          "start": 142.9,
+          "end": 143.2
+        }
+      ]
+    },
+    {
+      "cue": "C043",
+      "sourceIds": [
+        "P028-s06",
+        "P028-s07"
+      ],
+      "spanish": "lo que",
+      "english": "how much",
+      "intervals": [
+        {
+          "start": 143.2,
+          "end": 143.38369614512473
+        },
+        {
+          "start": 143.42,
+          "end": 143.52
+        }
+      ]
+    },
+    {
+      "cue": "C043",
+      "sourceIds": [
+        "P028-s08",
+        "P028-s09"
+      ],
+      "spanish": "te quiero",
+      "english": "I love you.",
+      "intervals": [
+        {
+          "start": 143.52,
+          "end": 143.66426303854874
+        },
+        {
+          "start": 143.68,
+          "end": 144.08
+        }
+      ]
+    },
+    {
+      "cue": "C045",
+      "sourceIds": [
+        "P029-s01",
+        "P029-s02"
+      ],
+      "spanish": "Ay, que",
+      "english": "Oh,",
+      "intervals": [
+        {
+          "start": 146.73108843537415,
+          "end": 146.85138321995464
+        },
+        {
+          "start": 146.97,
+          "end": 147.01
+        }
+      ]
+    },
+    {
+      "cue": "C045",
+      "sourceIds": [
+        "P029-s03",
+        "P029-s05"
+      ],
+      "spanish": "te decir",
+      "english": "to tell you",
+      "intervals": [
+        {
+          "start": 147.01,
+          "end": 147.15215419501135
+        },
+        {
+          "start": 147.57,
+          "end": 147.87
+        }
+      ]
+    },
+    {
+      "cue": "C045",
+      "sourceIds": [
+        "P029-s06",
+        "P029-s07"
+      ],
+      "spanish": "lo que",
+      "english": "how much",
+      "intervals": [
+        {
+          "start": 147.87,
+          "end": 148.07453514739228
+        },
+        {
+          "start": 148.11,
+          "end": 148.19485260770975
+        }
+      ]
+    },
+    {
+      "cue": "C045",
+      "sourceIds": [
+        "P029-s08",
+        "P029-s09"
+      ],
+      "spanish": "te quiero",
+      "english": "I love you.",
+      "intervals": [
+        {
+          "start": 148.21,
+          "end": 148.33521541950114
+        },
+        {
+          "start": 148.35,
+          "end": 148.75
+        }
+      ]
+    },
+    {
+      "cue": "C048",
+      "sourceIds": [
+        "P031-s02",
+        "P031-s03"
+      ],
+      "spanish": "se complementara",
+      "english": "It were made complete",
+      "intervals": [
+        {
+          "start": 177.14,
+          "end": 177.32
+        },
+        {
+          "start": 177.32,
+          "end": 178.26
+        }
+      ]
+    },
+    {
+      "cue": "C050",
+      "sourceIds": [
+        "P033-s02",
+        "P033-s03"
+      ],
+      "spanish": "la duda",
+      "english": "doubt",
+      "intervals": [
+        {
+          "start": 181.29,
+          "end": 181.47
+        },
+        {
+          "start": 181.47,
+          "end": 181.65
+        }
+      ]
+    },
+    {
+      "cue": "C050",
+      "sourceIds": [
+        "P033-s05",
+        "P033-s06"
+      ],
+      "spanish": "lo que",
+      "english": "what",
+      "intervals": [
+        {
+          "start": 181.81,
+          "end": 181.89
+        },
+        {
+          "start": 181.89,
+          "end": 182.03
+        }
+      ]
+    },
+    {
+      "cue": "C051",
+      "sourceIds": [
+        "P033-s08",
+        "P033-s09"
+      ],
+      "spanish": "Al corazón",
+      "english": "The heart",
+      "intervals": [
+        {
+          "start": 182.33,
+          "end": 182.39877551020408
+        },
+        {
+          "start": 182.41,
+          "end": 182.92195011337867
+        }
+      ]
+    },
+    {
+      "cue": "C053",
+      "sourceIds": [
+        "P034-s06",
+        "P034-s07",
+        "P034-s08"
+      ],
+      "spanish": "De las que",
+      "english": "For which",
+      "intervals": [
+        {
+          "start": 185.76,
+          "end": 185.9047619047619
+        },
+        {
+          "start": 185.94,
+          "end": 186.06
+        },
+        {
+          "start": 186.06,
+          "end": 186.18
+        }
+      ]
+    },
+    {
+      "cue": "C054",
+      "sourceIds": [
+        "P035-s05",
+        "P035-s06"
+      ],
+      "spanish": "lo que",
+      "english": "what",
+      "intervals": [
+        {
+          "start": 189.31,
+          "end": 189.43
+        },
+        {
+          "start": 189.43,
+          "end": 189.57
+        }
+      ]
+    },
+    {
+      "cue": "C055",
+      "sourceIds": [
+        "P036-s02",
+        "P036-s03"
+      ],
+      "spanish": "dejar de",
+      "english": "stop",
+      "intervals": [
+        {
+          "start": 190.15,
+          "end": 190.53
+        },
+        {
+          "start": 190.53,
+          "end": 190.67698412698414
+        }
+      ]
+    },
+    {
+      "cue": "C055",
+      "sourceIds": [
+        "P036-s05",
+        "P036-s06"
+      ],
+      "spanish": "lo que",
+      "english": "what",
+      "intervals": [
+        {
+          "start": 191.03,
+          "end": 191.18086167800453
+        },
+        {
+          "start": 191.19,
+          "end": 191.32192743764173
+        }
+      ]
+    },
+    {
+      "cue": "C056",
+      "sourceIds": [
+        "P037-s01",
+        "P037-s02"
+      ],
+      "spanish": "Lo que",
+      "english": "What",
+      "intervals": [
+        {
+          "start": 192.72206349206348,
+          "end": 192.7924036281179
+        },
+        {
+          "start": 192.81,
+          "end": 192.9732426303855
+        }
+      ]
+    },
+    {
+      "cue": "C058",
+      "sourceIds": [
+        "P038-s03",
+        "P038-s04"
+      ],
+      "spanish": "lo que",
+      "english": "what",
+      "intervals": [
+        {
+          "start": 198.15,
+          "end": 198.31
+        },
+        {
+          "start": 198.31,
+          "end": 198.45
+        }
+      ]
+    },
+    {
+      "cue": "C058",
+      "sourceIds": [
+        "P038-s05",
+        "P038-s06"
+      ],
+      "spanish": "me inspira",
+      "english": "inspires me.",
+      "intervals": [
+        {
+          "start": 198.45,
+          "end": 198.55700680272108
+        },
+        {
+          "start": 198.57,
+          "end": 198.9391156462585
+        }
+      ]
+    },
+    {
+      "cue": "C059",
+      "sourceIds": [
+        "P039-s04",
+        "P039-s05"
+      ],
+      "spanish": "la vida",
+      "english": "life",
+      "intervals": [
+        {
+          "start": 200.05,
+          "end": 200.25603174603174
+        },
+        {
+          "start": 200.29,
+          "end": 200.65
+        }
+      ]
+    },
+    {
+      "cue": "C060",
+      "sourceIds": [
+        "P040-s01",
+        "P040-s02"
+      ],
+      "spanish": "Me sumás,",
+      "english": "You add to me,",
+      "intervals": [
+        {
+          "start": 201.18056689342404,
+          "end": 201.27090702947845
+        },
+        {
+          "start": 201.35,
+          "end": 201.8330612244898
+        }
+      ]
+    },
+    {
+      "cue": "C060",
+      "sourceIds": [
+        "P040-s03",
+        "P040-s04"
+      ],
+      "spanish": "me aumentás,",
+      "english": "you expand me,",
+      "intervals": [
+        {
+          "start": 201.93,
+          "end": 201.95351473922904
+        },
+        {
+          "start": 201.97,
+          "end": 202.55
+        }
+      ]
+    },
+    {
+      "cue": "C060",
+      "sourceIds": [
+        "P040-s05",
+        "P040-s06"
+      ],
+      "spanish": "me hacés",
+      "english": "you make me",
+      "intervals": [
+        {
+          "start": 202.55,
+          "end": 202.67625850340136
+        },
+        {
+          "start": 202.71,
+          "end": 202.9171655328798
+        }
+      ]
+    },
+    {
+      "cue": "C062",
+      "sourceIds": [
+        "P042-s01",
+        "P042-s02"
+      ],
+      "spanish": "Ay, que",
+      "english": "Oh,",
+      "intervals": [
+        {
+          "start": 207.51179138321996,
+          "end": 207.64233560090702
+        },
+        {
+          "start": 207.74,
+          "end": 207.8
+        }
+      ]
+    },
+    {
+      "cue": "C062",
+      "sourceIds": [
+        "P042-s03",
+        "P042-s05"
+      ],
+      "spanish": "te decir",
+      "english": "to tell you",
+      "intervals": [
+        {
+          "start": 207.8,
+          "end": 207.94360544217687
+        },
+        {
+          "start": 208.38,
+          "end": 208.68
+        }
+      ]
+    },
+    {
+      "cue": "C062",
+      "sourceIds": [
+        "P042-s06",
+        "P042-s07"
+      ],
+      "spanish": "lo que",
+      "english": "how much",
+      "intervals": [
+        {
+          "start": 208.68,
+          "end": 208.84736961451247
+        },
+        {
+          "start": 208.88,
+          "end": 208.98
+        }
+      ]
+    },
+    {
+      "cue": "C062",
+      "sourceIds": [
+        "P042-s08",
+        "P042-s09"
+      ],
+      "spanish": "te quiero",
+      "english": "I love you.",
+      "intervals": [
+        {
+          "start": 208.98,
+          "end": 209.10845804988662
+        },
+        {
+          "start": 209.12,
+          "end": 209.54
+        }
+      ]
+    },
+    {
+      "cue": "C064",
+      "sourceIds": [
+        "P043-s01",
+        "P043-s02"
+      ],
+      "spanish": "Ay, que",
+      "english": "Oh,",
+      "intervals": [
+        {
+          "start": 212.18154195011337,
+          "end": 212.32215419501134
+        },
+        {
+          "start": 212.4,
+          "end": 212.46
+        }
+      ]
+    },
+    {
+      "cue": "C064",
+      "sourceIds": [
+        "P043-s03",
+        "P043-s05"
+      ],
+      "spanish": "te decir",
+      "english": "to tell you",
+      "intervals": [
+        {
+          "start": 212.46,
+          "end": 212.6033560090703
+        },
+        {
+          "start": 213.06,
+          "end": 213.34
+        }
+      ]
+    },
+    {
+      "cue": "C064",
+      "sourceIds": [
+        "P043-s06",
+        "P043-s07"
+      ],
+      "spanish": "lo que",
+      "english": "how much",
+      "intervals": [
+        {
+          "start": 213.34,
+          "end": 213.5273015873016
+        },
+        {
+          "start": 213.56,
+          "end": 213.64
+        }
+      ]
+    },
+    {
+      "cue": "C064",
+      "sourceIds": [
+        "P043-s08",
+        "P043-s09"
+      ],
+      "spanish": "te quiero",
+      "english": "I love you.",
+      "intervals": [
+        {
+          "start": 213.64,
+          "end": 213.78841269841269
+        },
+        {
+          "start": 213.8,
+          "end": 214.22
+        }
+      ]
+    },
+    {
+      "cue": "C066",
+      "sourceIds": [
+        "P044-s01",
+        "P044-s02"
+      ],
+      "spanish": "Ay, que",
+      "english": "Oh,",
+      "intervals": [
+        {
+          "start": 216.8618820861678,
+          "end": 216.9824036281179
+        },
+        {
+          "start": 217.08,
+          "end": 217.14
+        }
+      ]
+    },
+    {
+      "cue": "C066",
+      "sourceIds": [
+        "P044-s03",
+        "P044-s05"
+      ],
+      "spanish": "te decir",
+      "english": "to tell you",
+      "intervals": [
+        {
+          "start": 217.14,
+          "end": 217.2836961451247
+        },
+        {
+          "start": 217.68,
+          "end": 218
+        }
+      ]
+    },
+    {
+      "cue": "C066",
+      "sourceIds": [
+        "P044-s06",
+        "P044-s07"
+      ],
+      "spanish": "lo que",
+      "english": "how much",
+      "intervals": [
+        {
+          "start": 218,
+          "end": 218.207641723356
+        },
+        {
+          "start": 218.22,
+          "end": 218.32
+        }
+      ]
+    },
+    {
+      "cue": "C066",
+      "sourceIds": [
+        "P044-s08",
+        "P044-s09"
+      ],
+      "spanish": "te quiero",
+      "english": "I love you.",
+      "intervals": [
+        {
+          "start": 218.32,
+          "end": 218.46875283446713
+        },
+        {
+          "start": 218.48,
+          "end": 218.86
+        }
+      ]
+    },
+    {
+      "cue": "C068",
+      "sourceIds": [
+        "P045-s01",
+        "P045-s02"
+      ],
+      "spanish": "Ay, que",
+      "english": "Oh,",
+      "intervals": [
+        {
+          "start": 221.5324716553288,
+          "end": 221.66308390022675
+        },
+        {
+          "start": 221.76,
+          "end": 221.82
+        }
+      ]
+    },
+    {
+      "cue": "C068",
+      "sourceIds": [
+        "P045-s03",
+        "P045-s05"
+      ],
+      "spanish": "te decir",
+      "english": "to tell you",
+      "intervals": [
+        {
+          "start": 221.82,
+          "end": 221.96
+        },
+        {
+          "start": 222.36,
+          "end": 222.68
+        }
+      ]
+    },
+    {
+      "cue": "C068",
+      "sourceIds": [
+        "P045-s06",
+        "P045-s07"
+      ],
+      "spanish": "lo que",
+      "english": "how much",
+      "intervals": [
+        {
+          "start": 222.68,
+          "end": 222.88897959183674
+        },
+        {
+          "start": 222.9,
+          "end": 223
+        }
+      ]
+    },
+    {
+      "cue": "C068",
+      "sourceIds": [
+        "P045-s08",
+        "P045-s09"
+      ],
+      "spanish": "te quiero",
+      "english": "I love you.",
+      "intervals": [
+        {
+          "start": 223,
+          "end": 223.15024943310658
+        },
+        {
+          "start": 223.16,
+          "end": 223.54
+        }
+      ]
+    },
+    {
+      "cue": "C070",
+      "sourceIds": [
+        "P046-s01",
+        "P046-s02"
+      ],
+      "spanish": "Ay, que",
+      "english": "Oh,",
+      "intervals": [
+        {
+          "start": 226.1926530612245,
+          "end": 226.40351473922902
+        },
+        {
+          "start": 226.8,
+          "end": 226.8854648526077
+        }
+      ]
+    },
+    {
+      "cue": "C070",
+      "sourceIds": [
+        "P046-s03",
+        "P046-s05",
+        "P046-s06"
+      ],
+      "spanish": "me el corazón",
+      "english": "my heart.",
+      "intervals": [
+        {
+          "start": 226.9,
+          "end": 227.04
+        },
+        {
+          "start": 227.38,
+          "end": 227.48
+        },
+        {
+          "start": 227.48,
+          "end": 228.0702947845805
+        }
+      ]
+    },
+    {
+      "cue": "C071",
+      "sourceIds": [
+        "P046-s09",
+        "P046-s11",
+        "P046-s12"
+      ],
+      "spanish": "me el corazón",
+      "english": "my heart.",
+      "intervals": [
+        {
+          "start": 229.22,
+          "end": 229.39566893424038
+        },
+        {
+          "start": 229.7,
+          "end": 229.79730158730158
+        },
+        {
+          "start": 229.82,
+          "end": 230.3595918367347
+        }
+      ]
+    },
+    {
+      "cue": "C072",
+      "sourceIds": [
+        "P047-s01",
+        "P047-s02"
+      ],
+      "spanish": "Ay, que",
+      "english": "Oh,",
+      "intervals": [
+        {
+          "start": 230.83265306122448,
+          "end": 231.02342403628117
+        },
+        {
+          "start": 231.44,
+          "end": 231.52
+        }
+      ]
+    },
+    {
+      "cue": "C072",
+      "sourceIds": [
+        "P047-s03",
+        "P047-s05",
+        "P047-s06"
+      ],
+      "spanish": "me el corazón",
+      "english": "my heart.",
+      "intervals": [
+        {
+          "start": 231.52,
+          "end": 231.68609977324263
+        },
+        {
+          "start": 232.04,
+          "end": 232.10780045351473
+        },
+        {
+          "start": 232.12,
+          "end": 232.69015873015874
+        }
+      ]
+    },
+    {
+      "cue": "C073",
+      "sourceIds": [
+        "P047-s09",
+        "P047-s11",
+        "P047-s12"
+      ],
+      "spanish": "me el corazón",
+      "english": "my heart.",
+      "intervals": [
+        {
+          "start": 233.82,
+          "end": 233.99544217687074
+        },
+        {
+          "start": 234.32,
+          "end": 234.4171655328798
+        },
+        {
+          "start": 234.42,
+          "end": 234.99950113378685
+        }
+      ]
+    },
+    {
+      "cue": "C074",
+      "sourceIds": [
+        "P048-s01",
+        "P048-s02"
+      ],
+      "spanish": "Ay, que",
+      "english": "Oh,",
+      "intervals": [
+        {
+          "start": 235.43124716553288,
+          "end": 235.6316553287982
+        },
+        {
+          "start": 236.05,
+          "end": 236.13
+        }
+      ]
+    },
+    {
+      "cue": "C074",
+      "sourceIds": [
+        "P048-s03",
+        "P048-s05",
+        "P048-s06"
+      ],
+      "spanish": "me el corazón",
+      "english": "my heart.",
+      "intervals": [
+        {
+          "start": 236.13,
+          "end": 236.29
+        },
+        {
+          "start": 236.65,
+          "end": 236.69380952380953
+        },
+        {
+          "start": 236.73,
+          "end": 237.2749886621315
+        }
+      ]
+    },
+    {
+      "cue": "C075",
+      "sourceIds": [
+        "P048-s09",
+        "P048-s11",
+        "P048-s12"
+      ],
+      "spanish": "me el corazón",
+      "english": "my heart.",
+      "intervals": [
+        {
+          "start": 238.43,
+          "end": 238.61768707482995
+        },
+        {
+          "start": 238.91,
+          "end": 238.9984580498866
+        },
+        {
+          "start": 239.03,
+          "end": 239.5796371882086
+        }
+      ]
+    },
+    {
+      "cue": "C076",
+      "sourceIds": [
+        "P049-s01",
+        "P049-s02"
+      ],
+      "spanish": "Ay, que",
+      "english": "Oh,",
+      "intervals": [
+        {
+          "start": 240.03242630385486,
+          "end": 240.24331065759637
+        },
+        {
+          "start": 240.64,
+          "end": 240.72532879818593
+        }
+      ]
+    },
+    {
+      "cue": "C076",
+      "sourceIds": [
+        "P049-s03",
+        "P049-s05",
+        "P049-s06"
+      ],
+      "spanish": "me el corazón",
+      "english": "my heart.",
+      "intervals": [
+        {
+          "start": 240.74,
+          "end": 240.8659410430839
+        },
+        {
+          "start": 241.26,
+          "end": 241.30780045351474
+        },
+        {
+          "start": 241.32,
+          "end": 241.91034013605443
+        }
+      ]
+    },
+    {
+      "cue": "C077",
+      "sourceIds": [
+        "P049-s09",
+        "P049-s11",
+        "P049-s12"
+      ],
+      "spanish": "me el corazón",
+      "english": "my heart.",
+      "intervals": [
+        {
+          "start": 243,
+          "end": 243.21585034013606
+        },
+        {
+          "start": 243.54,
+          "end": 243.61755102040817
+        },
+        {
+          "start": 243.66,
+          "end": 244.15984126984128
+        }
+      ]
+    },
+    {
+      "cue": "C079",
+      "sourceIds": [
+        "P050-s08",
+        "P050-s09"
+      ],
+      "spanish": "te quiero",
+      "english": "I love you.",
+      "intervals": [
+        {
+          "start": 247.64621315192744,
+          "end": 247.72657596371883
+        },
+        {
+          "start": 247.75,
+          "end": 248.28916099773244
+        }
+      ]
+    },
+    {
+      "cue": "C081",
+      "sourceIds": [
+        "P051-s08",
+        "P051-s09"
+      ],
+      "spanish": "te quiero",
+      "english": "I love you.",
+      "intervals": [
+        {
+          "start": 252.31637188208617,
+          "end": 252.38
+        },
+        {
+          "start": 252.38,
+          "end": 252.91909297052155
+        }
+      ]
+    },
+    {
+      "cue": "C082",
+      "sourceIds": [
+        "P052-s03",
+        "P052-s04"
+      ],
+      "spanish": "nos separan",
+      "english": "separate us,",
+      "intervals": [
+        {
+          "start": 253.88,
+          "end": 254.1
+        },
+        {
+          "start": 254.1,
+          "end": 254.72657596371883
+        }
+      ]
+    },
+    {
+      "cue": "C083",
+      "sourceIds": [
+        "P052-s08",
+        "P052-s09"
+      ],
+      "spanish": "te quiero",
+      "english": "love you.",
+      "intervals": [
+        {
+          "start": 256.86,
+          "end": 257.04
+        },
+        {
+          "start": 257.04,
+          "end": 257.53902494331066
+        }
+      ]
+    },
+    {
+      "cue": "C085",
+      "sourceIds": [
+        "P054-s03",
+        "P054-s04"
+      ],
+      "spanish": "te quiero",
+      "english": "love you.",
+      "intervals": [
+        {
+          "start": 265.31496598639455,
+          "end": 265.4
+        },
+        {
+          "start": 265.4,
+          "end": 266.0772562358277
+        }
+      ]
+    },
+    {
+      "cue": "C086",
+      "sourceIds": [
+        "P055-s02",
+        "P055-s03"
+      ],
+      "spanish": "se acabó",
+      "english": "is over.",
+      "intervals": [
+        {
+          "start": 289.22,
+          "end": 289.44
+        },
+        {
+          "start": 289.44,
+          "end": 290.0076190476191
+        }
+      ]
+    }
+  ],
+  "method": "Audited every translation template and performed cue. Both display languages share each declared semantic group, including subjects encoded by Spanish verb inflection. Every visible frame is checked against real source-event unions. Acoustic events and display focus remain separate.",
+  "limits": "No new audio alignment, listening signoff or production authorization. Delivered v1 and superseded v2 preview evidence remain historical.",
+  "inputHashes": {
+    "src/cues.json": "eb4170c6f083263210e2458bb6818874bacf2e4f2239106dc32136db22fea430",
+    "source/translation-templates.json": "ceda88d5747093805f2d456eb89c126388efe70fe1dcc3b62ba5f9213bb1564a",
+    "src/focus.ts": "5118451b91744e075e7b496ffe7086bc7d270d39c37695b7bb98a842160e1591",
+    "src/schema.ts": "1ac7b6835986a6e7b2ed9c246e7cba6d602ffbc724fce946bd384b179cd46971",
+    "src/translation.ts": "961f83297fcbb252b456027a65d21576adfa82ebfb78caf3921fe6fbb0a6836d"
+  }
+}

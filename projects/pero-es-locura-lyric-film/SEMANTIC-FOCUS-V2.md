@@ -1,6 +1,6 @@
 # Complete English focus — preview revision 2
 
-**Status: corrected playable preview; no replacement film rendered.** The delivered v1 files remain unchanged. Review and production authorization for this changed focus are pending.
+**Historical v2 preview, superseded by [paired-focus v3](PAIRED-FOCUS-V3.md).** This pass corrected the English object span but left Spanish source groups incomplete and implied English subjects briefly independent. No replacement film was rendered. The delivered v1 files remain unchanged. Review and production authorization for this changed focus are pending.
 
 ## Problem and correction
 

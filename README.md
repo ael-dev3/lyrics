@@ -10,15 +10,15 @@ Music films with synchronized lyrics, meaning-linked translations, and audio-rea
 
 ## Pero es locura
 
-**Fémina · Vivo en La Oreja Negra · Spanish + English · semantic-focus v2 preview**
+**Fémina · Vivo en La Oreja Negra · Spanish + English · paired bilingual-focus v3 preview**
 
-![Pero es locura: live performance, warm bilingual word focus and restrained spectrum](assets/pero-es-locura-final-109.png)
+![Pero es locura: live performance, warm bilingual word focus and restrained spectrum](assets/pero-es-locura-preview-v3-paired-landscape.png)
 
-*Delivered v1 landscape frame at 01:49.000. Music and performance: Fémina. Production: La Oreja Negra. Film: FLAN Audiovisual.*
+*Current v3 landscape diagnostic preview at 00:02.350. Music and performance: Fémina. Production: La Oreja Negra. Film: FLAN Audiovisual.*
 
 The full 4:54.104 live recording has 86 displayed cues, with sentence-case Spanish and English, restored Spanish accents, independently aligned live repeats and source-linked word emphasis. The original performance supplies the motion; warm serif text and a compact measured spectrum support it. Both layouts retain the source ending and credits.
 
-The delivered v1 films passed frame-timestamp and decoded word-state checks against their approved map, with original audio unchanged. A subsequent semantic audit identified incomplete English spans such as “love you.” The corrected **v2 preview** updates 58 phrase occurrences across 40 cues while preserving Spanish timing, wording and layout. Its affected audiovisual review and new rendering remain pending; the v1 videos and upload kit stay unchanged. [Correction details](projects/pero-es-locura-lyric-film/SEMANTIC-FOCUS-V2.md).
+The delivered v1 films passed frame-timestamp and decoded word-state checks against their approved map, with original audio unchanged. A subsequent semantic audit identified incomplete English spans such as “love you.” The corrected **v3 preview** pairs complete Spanish and English meanings, including **te quiero / I love you**, across 53 affected cues. Acoustic timing, wording and layout stay fixed. The late spoken landscape cue also gains soft reading contrast over its bright background. Its affected audiovisual review and new rendering remain pending; the v1 videos and upload kit stay unchanged. [Correction details](projects/pero-es-locura-lyric-film/PAIRED-FOCUS-V3.md).
 
 [Delivery and reproduction](projects/pero-es-locura-lyric-film/README.md) · [Timing and wording](projects/pero-es-locura-lyric-film/SYNC-NOTES.md) · [Workflow findings](projects/pero-es-locura-lyric-film/WORKFLOW-NOTES.md) · [Original performance](https://www.youtube.com/watch?v=uvLVcEBIn-4)
 

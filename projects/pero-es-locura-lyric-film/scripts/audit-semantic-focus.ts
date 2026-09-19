@@ -3,7 +3,7 @@ import {createHash} from 'node:crypto';
 import assert from 'node:assert/strict';
 import {parseData} from '../src/schema.ts';
 import type {SourceWord} from '../src/schema.ts';
-import {activeTargets,activeSource,targetFocusIds} from '../src/focus.ts';
+import {activeTargets,activeSource,activeDisplaySource,sourceFocusIds,targetFocusIds,visibleCue} from '../src/focus.ts';
 import {revision} from '../src/identity.ts';
 import type {TranslationTemplate} from '../src/translation.ts';
 
@@ -32,7 +32,7 @@ const retainedReasons:Record<string,string>={
  B05:'Explicit my / knees and reordered tremble retain individual events; no clitic completion is missing.'
 };
 const editorial=templates.map(t=>({template:t.id,spanish:t.es,english:t.en,
-  decision:t.focusGroups?.length?'corrected complete English focus':'retained after audit',
+  decision:t.focusGroups?.length?'paired complete phrase including inflected subject':'lexical mapping retained; multi-source constructions use paired display focus',
   rationale:t.focusGroups?.map(g=>g.reason).join(' ')??retainedReasons[t.id]??t.note,
   lexicalCorrection:t.id==='V07'?'you and be follow estés; to follows que; soaked follows empapado':null,
   groups:t.focusGroups??[]}));
@@ -64,9 +64,25 @@ for(let frame=0;frame<data.frames;frame++){
   }
 }
 assert.equal(editorial.length,50);assert.equal(changedCues.length,40);assert.equal(groups.length,58);assert.equal(lexicalChanges.length,3);
-const report={revision,status:'PASS — editorial and technical preview audit',templatesReviewed:editorial.length,cuesReviewed:data.cues.length,affectedCues:changedCues,groupOccurrences:groups.length,lexicalChanges,frames:data.frames,englishWordStates:wordStates,changedEnglishFrameStates:changedStates,sourceTimingChanges:0,displayedTextChanges:0,layoutGeometryChanges:0,editorial,groups,
-  method:'All fifty translation templates inspected for displaced clitics, attached clitics, possession, auxiliaries, negation, reciprocal/reflexive constructions and reordered explicit words. Separate semantic regression tests require complete English predicates and reject the old lexical-only behavior. All frame focus states checked against real source-event unions.',
-  limits:'The original recording clock and word boundaries are unchanged. This is a revised semantic preview, not new listening signoff or render authorization.',
-  inputHashes:Object.fromEntries(['src/cues.json','source/translation-templates.json','src/focus.ts','src/schema.ts','src/translation.ts'].map(p=>[p,createHash('sha256').update(readFileSync(p)).digest('hex')]))};
-writeFileSync('evidence/semantic-focus-v2.json',JSON.stringify(report,null,2)+'\n');
-console.log({templates:editorial.length,affectedCues:changedCues.length,groups:groups.length,lexicalChanges:lexicalChanges.length,englishWordStates:wordStates,changedStates});
+const previousPreview=read('evidence/history/preview-v2/semantic-ledger.json') as {id:string;en:{id:string;sourceIds:string[];focusSourceIds?:string[]}[]}[];
+const pairedUnits=data.cues.flatMap(cue=>{
+ const seen=new Set<string>();
+ return cue.es.flatMap(word=>{
+  const ids=sourceFocusIds(cue,word.id),key=ids.join('|');if(ids.length<2||seen.has(key))return [];seen.add(key);
+  return [{cue:cue.id,sourceIds:ids,spanish:cue.es.filter(w=>ids.includes(w.id)).map(w=>w.text).join(' '),english:cue.en.filter(w=>targetFocusIds(w).some(id=>ids.includes(id))).map(w=>w.text).join(' '),intervals:cue.es.filter(w=>ids.includes(w.id)).map(w=>({start:w.startSample/data.sampleRate,end:w.endSample/data.sampleRate}))}];
+ });
+});
+const affected=new Set<string>();let sourceStates=0,sourceChanges=0,targetChanges=0;
+for(let frame=0;frame<data.frames;frame++){
+ const cue=visibleCue(data,frame);if(!cue)continue;
+ const acoustic=activeSource(cue,frame,data),display=activeDisplaySource(cue,frame,data),targets=activeTargets(cue,frame,data);
+ const previous=previousPreview.find(c=>c.id===cue.id)!;
+ for(const w of cue.es){sourceStates++;const expected=sourceFocusIds(cue,w.id).some(id=>acoustic.has(id));assert.equal(display.has(w.id),expected);if(display.has(w.id)!==acoustic.has(w.id)){sourceChanges++;affected.add(cue.id);}}
+ for(const w of cue.en){const before=previous.en.find(t=>t.id===w.id)!;assert.deepEqual(w.sourceIds,before.sourceIds);if((before.focusSourceIds??before.sourceIds).some(id=>acoustic.has(id))!==targets.has(w.id)){targetChanges++;affected.add(cue.id);}}
+}
+const report={revision,status:'PASS — paired Spanish and English preview audit',templatesReviewed:editorial.length,cuesReviewed:data.cues.length,affectedCues:[...affected],pairedUnitOccurrences:pairedUnits.length,distinctPairings:new Set(pairedUnits.map(g=>g.spanish.toLowerCase()+' / '+g.english.toLowerCase())).size,sourceWordStates:sourceStates,englishWordStates:wordStates,changedSpanishFrameStatesFromV2:sourceChanges,changedEnglishFrameStatesFromV2:targetChanges,frames:data.frames,sourceTimingChanges:0,displayedTextChanges:0,layoutGeometryChanges:0,lexicalChangesFromV2:0,editorial,pairedUnits,
+ method:'Audited every translation template and performed cue. Both display languages share each declared semantic group, including subjects encoded by Spanish verb inflection. Every visible frame is checked against real source-event unions. Acoustic events and display focus remain separate.',
+ limits:'No new audio alignment, listening signoff or production authorization. Delivered v1 and superseded v2 preview evidence remain historical.',
+ inputHashes:Object.fromEntries(['src/cues.json','source/translation-templates.json','src/focus.ts','src/schema.ts','src/translation.ts'].map(p=>[p,createHash('sha256').update(readFileSync(p)).digest('hex')]))};
+writeFileSync('evidence/semantic-focus-v3.json',JSON.stringify(report,null,2)+'\n');
+console.log({templates:report.templatesReviewed,affectedCues:affected.size,pairedUnits:pairedUnits.length,distinctPairings:report.distinctPairings,sourceStates,englishStates:wordStates,sourceChanges,targetChanges});
