@@ -12,6 +12,8 @@ Revision 3 highlights **te quiero ↔ I love you** as matching complete phrases,
 
 The new focus is technically checked; affected audiovisual review and new render authorization remain pending. The delivered v1 videos are preserved and have known incomplete English highlight spans. [Paired-focus correction and visual audit](PAIRED-FOCUS-V3.md) · [Current review](evidence/cross-language-sync-review.json) · [Current identity](evidence/preview-identity.json)
 
+The review includes the complete original moving picture in both formats. If the browser displays black or frozen footage while audio continues, **Reload preview** recreates the video surface at the same position, layout and speed, retaining review notes and resuming paused for inspection. This recovery control is available even when the browser reports no media error. See [browser picture verification](evidence/preview-video-recovery.json).
+
 ## Historical v1 delivery
 
 The complete **4:54.104** live recording is delivered in 1920×1080 and 1080×1920 at 60 fps, with Spanish lyrics and meaning-linked English highlighting. Original live cuts and motion remain intact; warm serif text, continuous shading and a compact measured spectrum support the performance. Both languages have equal size, weight and focus strength, with stable word positions. Portrait retains the full source width above dedicated reading space. Added decoration clears before the source credits; the late spoken tag remains subtitled.

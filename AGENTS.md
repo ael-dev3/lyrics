@@ -2,6 +2,8 @@
 
 **Preview before render:** follow [the mandatory preview-first workflow](docs/preview-before-render.md). Deliver a playable review preview before full production. Complete synchronization review and obtain explicit render approval for the current song and reviewed revision before capture or encoding. A preview-only request stops at review delivery; passing tests, positive feedback, saved review notes, a merged PR or approval of an earlier song do not authorize rendering.
 
+Preview completeness includes the actual moving picture, artwork and every intended visual layer. Never silently replace the full review preview with an isolated lyrics diagnostic. Verify visible video motion in the user's browser in both formats after loading, seeking and switching layouts; advancing audio or media time alone does not establish a working picture. Follow the visual-completeness and recovery checks in the preview-first workflow.
+
 Production workflows use original-language lyrics and meaning-based translations. Do not include pronunciation guides, phonetic respellings, romanized singing aids or pronunciation practice subtitles in source projects, rendered films, covers, publishing copy, archives or releases. Keep any separate personal learning material outside the production workflow and repository.
 
 Read `docs/track-workflow-preferences-and-known-issues.md` for the established production and handoff preferences.
