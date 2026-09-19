@@ -8,3 +8,10 @@
 6. **Review source credits in every format.** A soft portrait edge can obscure lower source lettering even with an uncropped image. Clear both decorative overlays and the edge mask before the original credits.
 7. **Audit the displayed frame, not an unrounded sample.** A time just inside a cue can round onto the neighboring video frame. Geometry tests should verify the cue actually selected by that frame before asserting its word count or positions.
 8. **Keep preview completion separate from listening signoff.** Full-recording playback, typed text coverage, technical tests, screenshots and a merged source PR do not constitute production authorization.
+
+## Production findings
+
+- Keep explicit human listening attestation separate from machine-observed telemetry. A confirmed full/slow/both-format review can complete the strict record without pretending individual checkbox events were observed. General acceptance alone is insufficient.
+- Cached text-color reconstruction must include full descenders and isolate neighboring wrapped rows. Use whitespace boundaries between rows and verify the production pixels against the approved SVG before encoding.
+- Opaque Canvas raw pixels can avoid an unnecessary ImageData copy. Verify byte equivalence and await the encoder write before mutating the canvas.
+- Preserve source cadence with an explicit sample-and-hold rule, and verify every converted frame against the original source. A 60 fps graphics clock does not create new source-video detail.

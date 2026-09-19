@@ -1,0 +1,54 @@
+# Production and verification
+
+## Approval and strict listening review
+
+Production is bound to `preview-v1-live-capitalized`. The project owner accepted the available full-recording preview, authorized both renders and requested a Desktop posting kit and repository update. The owner explicitly confirmed actual-audio review, reduced-speed checks of uncertain events and both 16:9 and 9:16 layouts.
+
+The strict gate is unchanged. No scoped waiver is used. Its completed rows are based on that explicit human attestation, supplemented by a separate editorial meaning review and technical evidence; they are not fabricated automated listening telemetry. The original pending preview record is retained in `evidence/history/`. Raw alignment disagreements and the original model `reviewRequired` flags remain provenance, not a claim that a machine independently heard every boundary.
+
+## Frozen presentation
+
+Recording, lyrics, accents, capitalization, performed sequence, source-word timing, meaning maps, palette, layout and scene are hash-identical to the accepted preview. The production adapter changes the capture mechanism only. Both languages remain equal in font size, weight and focus strength. Original stage motion and cuts supply the moving image.
+
+At the end, source metadata and spectrum clear by 04:47, and the portrait mask becomes opaque to retain source credit text. The spoken closing tag stays independent of decorative fades. The last source picture holds through the remaining original audio.
+
+## Capture and encode
+
+1. Capture two lossless Chromium typography layers per cue—resting and active—plus title metadata, at twice delivery resolution with the bundled font.
+2. Reconstruct current source-linked focus by selecting complete, nonoverlapping word regions. Vertical regions follow the midpoint between reading rows; descenders retain their full ink. Cache hashes bind each layer to the approved preview.
+3. Decode the original source to RGBA at 60 fps using sample-and-hold. All 17,647 frame identities were compared against the original 24000/1001 fps cadence; the converter matches the source frame at or before each graphics timestamp. No interpolated motion is generated.
+4. Composite the source, approved masks/shading, exact text and measured spectrum at 2×. Pass raw opaque pixels to FFmpeg and await each write before changing the canvas. Downsample once with Lanczos.
+5. Encode HEVC Main10 using VideoToolbox at a 24 Mb/s target and 32 Mb/s maximum. The hardware diagnostic differs from the software x265 CRF17 reference by an average 53.294 dB PSNR; both pass decoded-word checks. Segment capture runs in isolated processes to bound memory.
+6. Concatenate verified video segments on the exact 60 fps clock and remux the untouched original AAC. Do not normalize, offset, resample or shorten the delivered audio.
+
+## Verification layers
+
+- Strict review, exact approved preview hashes and explicit current-song authorization are checked before capture.
+- 22 overlay proofs compare native composition with the approved Chromium SVG. Remaining differences are small gradient/edge quantization; full numeric results are retained.
+- Dense bilingual encoded samples pass every visible-word classification. An intentionally shifted control confirms the checker detects wrong timing.
+- Full-delivery verification checks dimensions, HEVC Main10/BT.709/range/pixel aspect, every frame timestamp, strict complete decode, fast-start layout, original AAC packet payloads/timestamps and decoded PCM identity.
+- Full-delivery focus auditing classifies every visible source and translated word in every decoded frame. It certifies agreement with the approved map. Human acoustic review remains separately attributed.
+- Decoded intro, repeated hook, dense verse, held note and ending frames receive visual inspection in both formats.
+
+## Reproduction
+
+Restore the locked local source and install the pinned dependencies. The repository excludes full media, generated caches and machine logs.
+
+```sh
+npm run check
+npm run sync:gate
+node --expose-gc scripts/raster-cache.ts landscape
+node --expose-gc scripts/raster-cache.ts portrait
+node scripts/raster-contract.ts --bind
+node --expose-gc scripts/raster-proof.ts landscape
+node --expose-gc scripts/raster-proof.ts portrait
+node scripts/source-frame-audit.ts
+node scripts/final-sync-audit.ts
+# Produce and verify diagnostic intervals before binding production.
+node scripts/adopt-raster.ts
+npm run production:gate
+npm run render -- --production --format landscape
+npm run render -- --production --format portrait
+```
+
+The production contract includes adapter and audit hashes. A changed adapter requires affected proofs and a new binding; a changed approved scene or timing requires renewed relevant review. A cached segment is reused only after its range, complete fingerprint and encoded checksum match.
