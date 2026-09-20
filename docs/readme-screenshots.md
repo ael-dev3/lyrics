@@ -1,9 +1,10 @@
 # README song screenshots
 
-Updated 19 September 2026. All fourteen featured songs in the main README have a representative screenshot with its edition and preview/final status, and each song's project README has an associated image. Promotional covers and supplementary frames remain separate from the representative screenshot.
+Updated 20 September 2026. All fifteen featured songs in the main README have a representative screenshot with its edition and preview/final status, and each song's project README has an associated image. Promotional covers and supplementary frames remain separate from the representative screenshot.
 
 | Song | Representative image | Time | Edition / provenance |
 | --- | --- | --- | --- |
+| Ведьмы | [Steady forest scene and equal Russian / English focus](../assets/vedmy-preview-v4-94-55.png) | 01:34.550 | Preview v4 visual retained in v5; selected native Chromium still, no final film |
 | Pero es locura | [Original live performance and complete paired focus](../assets/pero-es-locura-v3-final-paired.png) | 02:14.450 | Verified paired-focus v3 final landscape film |
 | La Lune (version acoustique) | [Lunar scene and equal French / English focus](../assets/la-lune-acoustic-celestial-v3-46-8.png) | 00:46.800 | Verified Celestial v3 final landscape film |
 | каждый, кто делал тебе больно | [Source illustration, shadow texture and equal bilingual focus](../assets/kazhdyy-72-2.png) | 01:12.200 | Verified final v6 landscape film |
@@ -53,3 +54,7 @@ Frame 2808 at 46.800 seconds is decoded from the checksum-verified final landsca
 ## Pero es locura final paired-focus frame
 
 Frame 8067 at 134.450 seconds is decoded from the verified v3 landscape film at native 1920×1080. The complete **te quiero / I love you** emphasis sits beneath the original live performance, with equal warm typography and the restrained spectrum visible. Both READMEs share the full unmodified frame; the structured inventory records its final-video identity. Earlier preview and delivery imagery remains historical.
+
+## Ведьмы preview frame
+
+The representative v4 image is a native 1920×1080 Chromium still at frame 5673 (94.550 seconds), captured through the project’s selected-still tool from the same scene used by the full player. It preserves the original release photograph, restrained falling leaves and complete bilingual нужны / need correspondence. This is preview evidence, not a decoded production frame or a listening attestation.
