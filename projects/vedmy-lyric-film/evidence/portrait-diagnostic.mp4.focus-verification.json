@@ -1,0 +1,15 @@
+{
+  "revision": "preview-v5-autumn-sync",
+  "inputFile": "diagnostic.mp4",
+  "inputSha256": "eb7244491bee6ae1d86dcb0e4c30b2fc8375f1dbc5fa9eaa84cc667d16357266",
+  "status": "passed",
+  "format": "portrait",
+  "offset": 7008,
+  "negativeControl": false,
+  "decodedFrames": 240,
+  "wordStates": 2345,
+  "ambiguous": 0,
+  "mismatchCount": 0,
+  "mismatches": [],
+  "method": "Bundled-font masks select eroded glyph-interior pixels. Median RGB distance to the frozen autumn-active and warm-ivory inactive colors classifies all visible Russian and English words in every decoded frame; ambiguous or distant pixels fail closed. Verifies displayed state, not acoustic truth."
+}

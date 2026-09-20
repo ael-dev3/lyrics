@@ -12,7 +12,11 @@
     "preview": "npm run review:build && node scripts/review-server.ts",
     "preview:freeze": "node scripts/freeze-preview.ts && npm run review:build",
     "sync:gate": "node scripts/production-gate.ts",
-    "render": "node scripts/render.ts"
+    "render": "node scripts/render.ts",
+    "production:landscape": "node --expose-gc scripts/render.ts --production --format landscape",
+    "production:portrait": "node --expose-gc scripts/render.ts --production --format portrait",
+    "covers": "node scripts/covers.ts",
+    "package:posting": "node scripts/package-posting-kit.ts"
   },
   "dependencies": {
     "@napi-rs/canvas": "0.1.100",

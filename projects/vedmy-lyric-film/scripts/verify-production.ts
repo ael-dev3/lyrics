@@ -1,0 +1,26 @@
+import {spawnSync} from 'node:child_process';
+import {readFileSync,writeFileSync} from 'node:fs';
+import {basename} from 'node:path';
+import {createHash} from 'node:crypto';
+import {assertProductionGate} from './production-gate.ts';
+import {parseData,array,object,str} from '../src/schema.ts';
+assertProductionGate();const output=process.argv[2],format=process.argv[3];if(!output||(format!=='landscape'&&format!=='portrait'))throw Error('Usage: video landscape|portrait');
+const command=(bin:string,args:string[])=>{const r=spawnSync(bin,args,{encoding:'utf8',maxBuffer:64*1024*1024});if(r.status!==0)throw Error(bin+' failed: '+r.stderr);return r.stdout;};
+const data=parseData(JSON.parse(readFileSync('src/cues.json','utf8')));
+const probe=object(JSON.parse(command('ffprobe',['-v','error','-threads','4','-count_frames','-show_streams','-show_format','-show_frames','-show_entries','frame=best_effort_timestamp_time,media_type,nb_samples','-of','json',output]))),streams=array(probe.streams).map(object),video=streams.find(s=>s.codec_type==='video'),audio=streams.find(s=>s.codec_type==='audio');
+if(!video||!audio)throw Error('Expected video and audio');
+if(audio.codec_name!=='aac'||audio.sample_rate!=='44100'||audio.channels!==2||audio.time_base!=='1/44100')throw Error('Audio clock/format changed');
+if(video.codec_name!=='hevc'||video.codec_tag_string!=='hvc1'||video.pix_fmt!=='yuv420p10le'||video.r_frame_rate!=='60/1'||Number(video.nb_read_frames)!==data.frames)throw Error('Video contract failed');
+if(video.width!==(format==='portrait'?1080:1920)||video.height!==(format==='portrait'?1920:1080))throw Error('Wrong dimensions');
+if(video.color_range!=='tv'||video.sample_aspect_ratio!=='1:1')throw Error('Range or pixel aspect mismatch');
+for(const key of ['color_space','color_transfer','color_primaries'])if(video[key]!=='bt709')throw Error('Color metadata '+key);
+const frames=array(probe.frames).map(object).filter(f=>f.media_type==='video');if(frames.length!==data.frames)throw Error('Frame inventory mismatch');frames.forEach((f,i)=>{if(Math.abs(Number(f.best_effort_timestamp_time)-i/60)>.000002)throw Error('Frame clock drift '+i);});
+const bytes=readFileSync(output),atoms:{type:string;offset:number;size:number}[]=[];let position=0;while(position<bytes.length){if(position+8>bytes.length)throw Error('Truncated atom');let size=bytes.readUInt32BE(position);const type=bytes.toString('ascii',position+4,position+8);if(size===1)size=Number(bytes.readBigUInt64BE(position+8));if(size===0)size=bytes.length-position;if(size<8||position+size>bytes.length)throw Error('Atom size');atoms.push({type,offset:position,size});position+=size;}
+const moov=atoms.find(a=>a.type==='moov'),mdat=atoms.find(a=>a.type==='mdat');if(!moov||!mdat||moov.offset>mdat.offset)throw Error('Fast start absent');
+const packets=(path:string)=>array(object(JSON.parse(command('ffprobe',['-v','error','-select_streams','a:0','-show_packets','-show_data_hash','sha256','-show_entries','packet=pts,dts,duration,size,data_hash','-of','json',path]))).packets).map(object);
+const original=packets('public/soundtrack.m4a'),delivered=packets(output);if(JSON.stringify(original)!==JSON.stringify(delivered))throw Error('AAC packets/timestamps changed');
+const decodedSamples=array(probe.frames).map(object).filter(f=>f.media_type==='audio').reduce((sum,f)=>sum+Number(f.nb_samples),0);if(decodedSamples!==data.sampleCount)throw Error('Decoded audio sample count changed');
+const decodedPcmSha256=command('ffmpeg',['-v','error','-i',output,'-map','0:a:0','-ac','2','-ar','44100','-c:a','pcm_f32le','-f','hash','-hash','sha256','-']).trim().replace(/^SHA256=/,'');
+if(decodedPcmSha256!==JSON.parse(readFileSync('source/media-manifest.json','utf8')).audio.pcmSha256)throw Error('Decoded original PCM identity changed');
+command('ffmpeg',['-v','error','-xerror','-err_detect','explode','-threads','4','-i',output,'-f','null','-']);
+const report={status:'passed technical verification',format,video,audio,frames:frames.length,allFrameTimestamps:true,aacPackets:original.length,audioIdentity:'Original payloads, PTS, DTS, durations and sizes identical',decodedSamples,decodedPcmSha256,strictFullDecode:true,fastStart:true,atoms,bytes:bytes.length,sha256:createHash('sha256').update(bytes).digest('hex')};writeFileSync('evidence/'+basename(output)+'.verification.json',JSON.stringify(report,null,2)+'\n');console.log({format,frames:frames.length,aacPackets:original.length,bytes:bytes.length,status:'passed'});
