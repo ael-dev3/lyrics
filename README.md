@@ -6,7 +6,21 @@ Music films with synchronized lyrics, meaning-linked translations, and audio-rea
 
 **Current style default:** [cinematic lyric presentation](docs/cinematic-lyric-workflow.md) — stable, color-only word or phrase emphasis, precise vocal timing, smooth scene shading and equally prominent bilingual lyrics. Motion intensity follows the song: gentle arrangements can use compact, subdued audio-reactive graphics. The guide includes implemented references and review requirements for future tracks.
 
-[**Pero es locura**](#pero-es-locura) · [**La Lune**](#la-lune) · [**каждый, кто делал тебе больно**](#каждый-кто-делал-тебе-больно) · [**Sugar Glass**](#sugar-glass) · [**Твои глаза**](#твои-глаза) · [**Прости за любовь — accepted with known gaps**](#прости-за-любовь) · [**Половинка**](#половинка) · [**Life Letters**](#life-letters) · [**Joyride**](#joyride) · [**midnight love**](#midnight-love) · [**Пожары**](#пожары) · [**Отменяй**](#отменяй) · [**Roi × Adore**](#roi--adore) · [**TikTok edition**](#tiktok-edition) · [**Tanisea**](#tanisea) · [**Build and workflow**](#build-and-workflow)
+[**Ведьмы**](#ведьмы) · [**Pero es locura**](#pero-es-locura) · [**La Lune**](#la-lune) · [**каждый, кто делал тебе больно**](#каждый-кто-делал-тебе-больно) · [**Sugar Glass**](#sugar-glass) · [**Твои глаза**](#твои-глаза) · [**Прости за любовь — accepted with known gaps**](#прости-за-любовь) · [**Половинка**](#половинка) · [**Life Letters**](#life-letters) · [**Joyride**](#joyride) · [**midnight love**](#midnight-love) · [**Пожары**](#пожары) · [**Отменяй**](#отменяй) · [**Roi × Adore**](#roi--adore) · [**TikTok edition**](#tiktok-edition) · [**Tanisea**](#tanisea) · [**Build and workflow**](#build-and-workflow)
+
+## Ведьмы
+
+**BALKON · Russian + English · complete playable autumn preview v5**
+
+![Ведьмы: the original woodland photograph, falling leaves and equal bilingual word focus](assets/vedmy-preview-v4-94-55.png)
+
+*Native landscape preview still at 01:34.550, captured from the shared browser scene. Music and original release photograph: BALKON; photographer not identified in the available metadata.*
+
+A fixed autumn palette, sparse falling leaves and a compact straight spectrum accompany the complete recording. Equal Russian and English lyrics use source-linked word and meaning focus. The photograph stays steady, and decorative color cycling, corner branches and opposing leaf-shaped spectrum rows are omitted.
+
+Both formats are available for review. Source-audio identity, word-state tests, typography and bounded motion checks pass; complete actual-audio listening review remains pending, and no full film has been rendered. The preview includes instrumental passages and the outro.
+
+[Project and review status](projects/vedmy-lyric-film/README.md) · [Design and alignment lessons](projects/vedmy-lyric-film/PRODUCTION-LESSONS.md) · [Original recording](https://www.youtube.com/watch?v=VZfNfjhc8E8)
 
 ## Pero es locura
 
