@@ -1,20 +1,33 @@
 # BALKON — Ведьмы
 
-**Russian + English · approved autumn edition · production in progress**
+**Russian + English · verified autumn edition · YouTube and TikTok delivery complete**
 
-![Original bonfire photograph, falling leaves and equal Russian–English focus](../../assets/vedmy-preview-v4-94-55.png)
+![Original bonfire photograph, falling leaves and equal Russian–English focus](../../assets/vedmy-final-94-55.png)
 
-*Selected native 1920×1080 browser-rendered preview still at 01:34.550, from the shared scene. This is not a decoded final video. Music and original release photograph: BALKON; the available release metadata does not identify the photographer.*
+*Native 1920×1080 frame decoded from the verified final landscape film at 01:34.550. Music and original release photograph: BALKON; the available release metadata does not identify the photographer.*
 
 The complete **3:21.134** recording accompanies the original woodland photograph, one warm autumn palette, drifting veined leaves and a compact 64-band spectrum. Stable Russian and English text receives equal size, weight and complete meaning-linked highlighting. Both 1920×1080 and 1080×1920 layouts run at a 60 fps scene clock driven by the actual soundtrack.
 
 ## Review status
 
-This is a complete playable preview, including the instrumental opening, all four chorus performances and the outro. Its 54 cues contain 218 Russian words and 281 English words. Original AAC packet payloads, decoded stereo PCM and analysis PCM match exactly. Automated word-state and browser geometry checks are recorded under `evidence/`.
+The complete playable preview preceded the full films, including the instrumental opening, all four chorus performances and the outro. Its 54 cues contain 218 Russian words and 281 English words. Original AAC packet payloads, decoded stereo PCM and analysis PCM match exactly. Automated word-state and browser geometry checks are recorded under `evidence/`.
 
 The complete frozen preview has passed editorial and technical checks, followed by explicit human attestation of full normal-speed listening, reduced-speed checks of uncertain words and held endings, and both layouts. Production is authorized for **preview-v5-autumn-sync**. The [review record](evidence/cross-language-sync-review.json) preserves the reviewer role, scope and exact input identity.
 
 Seven alignment configurations from two model families remain documented as preparation evidence. One short negation uses a stable original-mix candidate; eight held-vowel proposals were included in the attested review. Model confidence is not presented as listening evidence or a guarantee of physically exact word boundaries.
+
+## Verified delivery
+
+| File | Composition | Frames | Size |
+| --- | --- | ---: | ---: |
+| `Vedmy-landscape-1920x1080-60fps.mp4` | 1920×1080, 16:9 | 12,069 | 53,004,015 bytes |
+| `Vedmy-portrait-1080x1920-60fps.mp4` | 1080×1920, 9:16 | 12,069 | 47,451,421 bytes |
+
+Both files use 60 fps HEVC Main10, limited-range Rec.709 and fast-start MP4. Their original stereo 44.1 kHz AAC audio is unchanged. All frame timestamps, complete decoding, 120,834 visible word states and source-picture presence throughout both films pass. Thirty decoded checkpoints cover the opening, lyric sections, repeated choruses and ending; selected frames were also inspected at native size.
+
+The new local Desktop posting kit contains fourteen files: two videos, a 1920×1080 YouTube thumbnail, a 1200×1600 portrait TikTok cover, platform titles/descriptions, three optional SRT files, a guide, manifest and checksums. Every destination copy matches its source hash. Source, publishing assets and sanitized evidence are public; complete films stay local.
+
+[Verification and limits](evidence/final-verification.md) · [Delivery manifest](evidence/delivery-receipt.json) · [Checksums](evidence/delivery-checksums.sha256) · [Desktop copy receipt](evidence/desktop-delivery-receipt.json)
 
 ## Open the local preview
 

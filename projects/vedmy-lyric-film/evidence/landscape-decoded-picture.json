@@ -1,0 +1,98 @@
+{
+  "status": "PASS",
+  "revision": "preview-v5-autumn-sync",
+  "inputFile": "Vedmy-landscape-1920x1080-60fps.mp4",
+  "inputSha256": "3975fbda57b94ec52fb800dfcdbd81880f5ba33059c98d89d8a3fba2ddda14c7",
+  "format": "landscape",
+  "frames": 12069,
+  "failureCount": 0,
+  "maxMeanAbsoluteChannelError": 4.884584780092593,
+  "threshold": 8,
+  "samples": [
+    {
+      "frame": 0,
+      "meanAbsoluteChannelError": 4.826208043981482
+    },
+    {
+      "frame": 600,
+      "meanAbsoluteChannelError": 4.798611111111111
+    },
+    {
+      "frame": 1200,
+      "meanAbsoluteChannelError": 4.798611111111111
+    },
+    {
+      "frame": 1800,
+      "meanAbsoluteChannelError": 4.802662037037037
+    },
+    {
+      "frame": 2400,
+      "meanAbsoluteChannelError": 4.806423611111111
+    },
+    {
+      "frame": 3000,
+      "meanAbsoluteChannelError": 4.809714988425926
+    },
+    {
+      "frame": 3600,
+      "meanAbsoluteChannelError": 4.801106770833333
+    },
+    {
+      "frame": 4200,
+      "meanAbsoluteChannelError": 4.7837094907407405
+    },
+    {
+      "frame": 4800,
+      "meanAbsoluteChannelError": 4.815827546296297
+    },
+    {
+      "frame": 5400,
+      "meanAbsoluteChannelError": 4.812680844907407
+    },
+    {
+      "frame": 6000,
+      "meanAbsoluteChannelError": 4.789207175925926
+    },
+    {
+      "frame": 6600,
+      "meanAbsoluteChannelError": 4.806712962962963
+    },
+    {
+      "frame": 7200,
+      "meanAbsoluteChannelError": 4.778247974537037
+    },
+    {
+      "frame": 7800,
+      "meanAbsoluteChannelError": 4.781575520833333
+    },
+    {
+      "frame": 8400,
+      "meanAbsoluteChannelError": 4.816116898148148
+    },
+    {
+      "frame": 9000,
+      "meanAbsoluteChannelError": 4.806315104166667
+    },
+    {
+      "frame": 9600,
+      "meanAbsoluteChannelError": 4.806857638888889
+    },
+    {
+      "frame": 10200,
+      "meanAbsoluteChannelError": 4.782371238425926
+    },
+    {
+      "frame": 10800,
+      "meanAbsoluteChannelError": 4.78833912037037
+    },
+    {
+      "frame": 11400,
+      "meanAbsoluteChannelError": 4.803349247685185
+    },
+    {
+      "frame": 12000,
+      "meanAbsoluteChannelError": 4.810510706018518
+    }
+  ],
+  "method": "Every decoded frame retains the central source-photograph region, compared at 96×96 against the approved shaded background. Falling leaves and encoding introduce bounded differences. Detects missing/black/displaced picture; this is not an all-pixel identity test."
+}

@@ -4,7 +4,7 @@ Updated 20 September 2026. All fifteen featured songs in the main README have a 
 
 | Song | Representative image | Time | Edition / provenance |
 | --- | --- | --- | --- |
-| Ведьмы | [Steady forest scene and equal Russian / English focus](../assets/vedmy-preview-v4-94-55.png) | 01:34.550 | Preview v4 visual retained in v5; selected native Chromium still, no final film |
+| Ведьмы | [Steady forest scene and equal Russian / English focus](../assets/vedmy-final-94-55.png) | 01:34.550 | Verified final autumn landscape film |
 | Pero es locura | [Original live performance and complete paired focus](../assets/pero-es-locura-v3-final-paired.png) | 02:14.450 | Verified paired-focus v3 final landscape film |
 | La Lune (version acoustique) | [Lunar scene and equal French / English focus](../assets/la-lune-acoustic-celestial-v3-46-8.png) | 00:46.800 | Verified Celestial v3 final landscape film |
 | каждый, кто делал тебе больно | [Source illustration, shadow texture and equal bilingual focus](../assets/kazhdyy-72-2.png) | 01:12.200 | Verified final v6 landscape film |
@@ -55,6 +55,6 @@ Frame 2808 at 46.800 seconds is decoded from the checksum-verified final landsca
 
 Frame 8067 at 134.450 seconds is decoded from the verified v3 landscape film at native 1920×1080. The complete **te quiero / I love you** emphasis sits beneath the original live performance, with equal warm typography and the restrained spectrum visible. Both READMEs share the full unmodified frame; the structured inventory records its final-video identity. Earlier preview and delivery imagery remains historical.
 
-## Ведьмы preview frame
+## Ведьмы final autumn frame
 
-The representative v4 image is a native 1920×1080 Chromium still at frame 5673 (94.550 seconds), captured through the project’s selected-still tool from the same scene used by the full player. It preserves the original release photograph, restrained falling leaves and complete bilingual нужны / need correspondence. This is preview evidence, not a decoded production frame or a listening attestation.
+Frame 5673 at 94.550 seconds is decoded from the verified final autumn landscape film at native 1920×1080. It preserves the original release photograph, restrained falling leaves and complete bilingual нужны / need correspondence. Both READMEs share the unmodified frame, and the inventory records its final-video identity. Thirty decoded checkpoints were compared at reduced size, with selected native-size inspections of bilingual focus and late-lyric contrast. The earlier Chromium preview still remains historical; screenshot review is separate from the attested acoustic review.
