@@ -13,3 +13,7 @@ Translation editorial review covers all unique constructions and their repeated 
 The production review record stays incomplete until actual listening review and current-revision authorization exist. Automated geometry, color, source-audio identity and motion checks cannot change those statuses. Saving proposed edits or merging source into the repository is not render approval.
 
 The [three-pass report](three-pass-review.md) distinguishes the completed editorial and technical checks from unresolved listening work.
+
+## Production review completion
+
+The reviewer subsequently explicitly attested full normal-speed listening, reduced-speed checks of uncertain words and held endings, and both delivery layouts for this exact frozen preview, then authorized production and local delivery. The prior pending status above describes the machine-review stage. The current signed-by-role review scope and input hashes are in `cross-language-sync-review.json`; no automated listening telemetry is invented.

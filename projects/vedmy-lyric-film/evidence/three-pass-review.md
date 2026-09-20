@@ -35,3 +35,7 @@ No blanket offset, averaging or minimum highlight duration was applied. All cand
 - The representative scene at 94.55 s is byte-identical as SVG in both formats to the accepted v4 stills. The photograph, autumn palette, leaf treatment, spectrum geometry and typography are unchanged.
 
 The current frozen review identity is in `evidence/preview-identity.json`. Runtime evidence is in `evidence/browser-visual-state.json`; glyph results are in `evidence/browser-geometry.json`. The source handoff and visual acceptance do not authorize a production render or certify unresolved acoustic boundaries.
+
+## Production review completion
+
+The reviewer subsequently explicitly attested full normal-speed listening, reduced-speed checks of uncertain words and held endings, and both delivery layouts for this exact frozen preview, then authorized production and local delivery. The prior pending status above describes the machine-review stage. The current signed-by-role review scope and input hashes are in `cross-language-sync-review.json`; no automated listening telemetry is invented.

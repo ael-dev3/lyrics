@@ -1,4 +1,4 @@
-# Woodland preview lessons
+# Woodland film lessons
 
 ## Keep the scene continuous
 
@@ -31,3 +31,11 @@ The discontinuous idiom **в глаза кидал … пыль** maps to a comp
 The full preview always includes the original artwork, animated leaves, spectrum, lyrics and complete soundtrack. Native stills supplement a playable preview; they do not replace it or establish synchronization approval. Browser glyph bounds caught a narrow right margin and insufficient portrait row spacing before handoff. Technical checks and selected visual inspections remain distinct from complete actual-audio review.
 
 Place M4A metadata before media data with a lossless `-c:a copy -movflags +faststart` remux. A valid range-capable server alone did not prevent stalled metadata loading in the in-app player. After moving the metadata, the requested seek and playback initialized normally; AAC packet payloads and decoded PCM remained identical to the original recording. Verify actual media readiness and visible highlights after a fresh load, not merely successful HTTP responses.
+
+## Preserve the approved picture through encoding
+
+Build production from the frozen preview identity. Lossless Chromium layers preserve the exact text shapes and complete focus states; deterministic nature geometry can be composited separately after direct image comparisons. Apply a leaf's overall opacity after its fill and veins have been composited together. Applying the opacity independently to overlapping paths changes their visual weight.
+
+Keep proof scope explicit. Sparse vector-edge antialiasing differences are measured separately from text and scene geometry. A deliberate timing offset must fail the decoded highlight checker; a passing checker alone cannot establish acoustic truth. The completed listening review is recorded as human attestation, while final encoded files receive independent frame-clock, original-AAC, decoded-PCM, picture-presence and every-frame visible-word checks.
+
+Use one high-quality downsample from the 2× composition and retain 10-bit gradients through delivery encoding. Upload covers need their own layout and small-size inspection; enlarging the artist name in a portrait cover can improve profile readability while preserving the original image.

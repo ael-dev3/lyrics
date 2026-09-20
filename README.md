@@ -10,17 +10,17 @@ Music films with synchronized lyrics, meaning-linked translations, and audio-rea
 
 ## Ведьмы
 
-**BALKON · Russian + English · complete playable autumn preview v5**
+**BALKON · Russian + English · verified autumn films for YouTube and TikTok**
 
-![Ведьмы: the original woodland photograph, falling leaves and equal bilingual word focus](assets/vedmy-preview-v4-94-55.png)
+![Ведьмы: the original woodland photograph, falling leaves and equal bilingual word focus](assets/vedmy-final-94-55.png)
 
-*Native landscape preview still at 01:34.550, captured from the shared browser scene. Music and original release photograph: BALKON; photographer not identified in the available metadata.*
+*Decoded final landscape frame at 01:34.550. Music and original release photograph: BALKON; photographer not identified in the available metadata.*
 
 A fixed autumn palette, sparse falling leaves and a compact straight spectrum accompany the complete recording. Equal Russian and English lyrics use source-linked word and meaning focus. The photograph stays steady, and decorative color cycling, corner branches and opposing leaf-shaped spectrum rows are omitted.
 
-Both formats are available for review. Source-audio identity, word-state tests, typography and bounded motion checks pass; complete actual-audio listening review remains pending, and no full film has been rendered. The preview includes instrumental passages and the outro.
+Both full 1080p60 films preserve the approved autumn preview, including instrumental passages and the outro. Complete normal-speed listening, uncertain-event reduced-speed review and both layouts were explicitly attested before production. Final-file checks pass all 12,069 frame timestamps per film, unchanged original AAC and decoded PCM, picture presence throughout, and 120,834 visible bilingual word states with zero mismatches or ambiguous colors. The verified local posting kit includes both videos, separate platform covers, titles, descriptions and optional captions.
 
-[Project and review status](projects/vedmy-lyric-film/README.md) · [Design and alignment lessons](projects/vedmy-lyric-film/PRODUCTION-LESSONS.md) · [Original recording](https://www.youtube.com/watch?v=VZfNfjhc8E8)
+[Production and delivery](projects/vedmy-lyric-film/README.md) · [Final verification](projects/vedmy-lyric-film/evidence/final-verification.md) · [Design and alignment lessons](projects/vedmy-lyric-film/PRODUCTION-LESSONS.md) · [Original recording](https://www.youtube.com/watch?v=VZfNfjhc8E8)
 
 ## Pero es locura
 

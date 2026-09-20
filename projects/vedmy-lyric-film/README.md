@@ -1,18 +1,33 @@
 # BALKON — Ведьмы
 
-**Russian + English · steady autumn preview v5 · listening review pending · no full render**
+**Russian + English · verified autumn edition · YouTube and TikTok delivery complete**
 
-![Original bonfire photograph, falling leaves and equal Russian–English focus](../../assets/vedmy-preview-v4-94-55.png)
+![Original bonfire photograph, falling leaves and equal Russian–English focus](../../assets/vedmy-final-94-55.png)
 
-*Selected native 1920×1080 browser-rendered preview still at 01:34.550, from the shared scene. This is not a decoded final video. Music and original release photograph: BALKON; the available release metadata does not identify the photographer.*
+*Native 1920×1080 frame decoded from the verified final landscape film at 01:34.550. Music and original release photograph: BALKON; the available release metadata does not identify the photographer.*
 
 The complete **3:21.134** recording accompanies the original woodland photograph, one warm autumn palette, drifting veined leaves and a compact 64-band spectrum. Stable Russian and English text receives equal size, weight and complete meaning-linked highlighting. Both 1920×1080 and 1080×1920 layouts run at a 60 fps scene clock driven by the actual soundtrack.
 
 ## Review status
 
-This is a complete playable preview, including the instrumental opening, all four chorus performances and the outro. Its 54 cues contain 218 Russian words and 281 English words. Original AAC packet payloads, decoded stereo PCM and analysis PCM match exactly. Automated word-state and browser geometry checks are recorded under `evidence/`.
+The complete playable preview preceded the full films, including the instrumental opening, all four chorus performances and the outro. Its 54 cues contain 218 Russian words and 281 English words. Original AAC packet payloads, decoded stereo PCM and analysis PCM match exactly. Automated word-state and browser geometry checks are recorded under `evidence/`.
 
-**Acoustic timing remains provisional.** Seven alignment configurations across MMS and Whisper provide candidates, including full large-v3 and expanded-context passes; one short negation uses a documented stable original-mix candidate, and eight sustained vowel endings additionally use documented vocal energy and periodicity. Model agreement, a good still and automated timing checks do not establish perceptually exact synchronization. Full normal/slow actual-audio review remains pending, particularly held vowels, short prepositions, final releases and the unusual wording in VE-028. The [review record](evidence/cross-language-sync-review.json) is bound to the exact preview inputs. The production command fails closed until complete current-revision review and explicit render approval are recorded.
+The complete frozen preview has passed editorial and technical checks, followed by explicit human attestation of full normal-speed listening, reduced-speed checks of uncertain words and held endings, and both layouts. Production is authorized for **preview-v5-autumn-sync**. The [review record](evidence/cross-language-sync-review.json) preserves the reviewer role, scope and exact input identity.
+
+Seven alignment configurations from two model families remain documented as preparation evidence. One short negation uses a stable original-mix candidate; eight held-vowel proposals were included in the attested review. Model confidence is not presented as listening evidence or a guarantee of physically exact word boundaries.
+
+## Verified delivery
+
+| File | Composition | Frames | Size |
+| --- | --- | ---: | ---: |
+| `Vedmy-landscape-1920x1080-60fps.mp4` | 1920×1080, 16:9 | 12,069 | 53,004,015 bytes |
+| `Vedmy-portrait-1080x1920-60fps.mp4` | 1080×1920, 9:16 | 12,069 | 47,451,421 bytes |
+
+Both files use 60 fps HEVC Main10, limited-range Rec.709 and fast-start MP4. Their original stereo 44.1 kHz AAC audio is unchanged. All frame timestamps, complete decoding, 120,834 visible word states and source-picture presence throughout both films pass. Thirty decoded checkpoints cover the opening, lyric sections, repeated choruses and ending; selected frames were also inspected at native size.
+
+The new local Desktop posting kit contains fourteen files: two videos, a 1920×1080 YouTube thumbnail, a 1200×1600 portrait TikTok cover, platform titles/descriptions, three optional SRT files, a guide, manifest and checksums. Every destination copy matches its source hash. Source, publishing assets and sanitized evidence are public; complete films stay local.
+
+[Verification and limits](evidence/final-verification.md) · [Delivery manifest](evidence/delivery-receipt.json) · [Checksums](evidence/delivery-checksums.sha256) · [Desktop copy receipt](evidence/desktop-delivery-receipt.json)
 
 ## Open the local preview
 
@@ -29,7 +44,20 @@ The exact TypeScript compiler is pinned to 7.0.2 and dependencies are locked. No
 3. Run `npm run features`. `ALIGN_PYTHON` selects the local model environment for `scripts/infer.ts` and `scripts/align.ts`. Text, mappings and independent section/line windows are in `source/`. Mixed/stem MMS, bounded Whisper, full large-v3 section alignment and extended MMS windows remain separate from the adopted cue map. Use `source/extended-sections.json` for the context-sensitivity pass; `source/timing-corrections.json` records selected exceptions. Full large-v3 weights live in ignored `models/`.
 4. Run `node scripts/build-cues.ts`, `node scripts/held-vowels.ts`, then `node scripts/build-cues.ts`, `npm run layout` and `node scripts/nature-motion.ts`. The held-vowel tool always references the original model candidate, so it does not repeatedly extend already-adjusted words.
 5. Run `node scripts/alignment-audit.ts`, `npm run check`, `node scripts/verify-source.ts` and `npm run preview:freeze`. Build `src/geometry-audit.ts` with esbuild to `review/geometry.js` and open `/review/geometry.html` for actual-browser glyph checks.
-6. `node scripts/stills.ts` captures selected diagnostic stills only. `npm run render` is a guarded entry point, not a production encoder for this preview edition. A verified capture/encoding adapter is prepared only after the render gate has been satisfied.
+6. Selected stills remain available through `node scripts/stills.ts`. Production uses the approved scene's lossless 2× Chromium layers and deterministic nature geometry, verified against direct browser frames. The current encoder uses macOS VideoToolbox HEVC Main10; FFmpeg performs one Lanczos downsample.
+
+## Production and delivery tools
+
+All full renders check the completed current-revision review before capture. Rebuild and revalidate the production cache when its inputs change.
+
+- `scripts/raster-cache.ts` extracts lossless layers for each format. `--reuse-raw` can finish cropping existing captures; it does not authorize reuse of stale scene inputs.
+- `scripts/raster-proof.ts` compares fourteen native scene checkpoints at 2× resolution. `scripts/adopt-raster.ts` also requires passing encoded highlight diagnostics and a detected deliberate timing-offset control.
+- `node --expose-gc scripts/render.ts --production --format landscape` and the corresponding `portrait` command encode the complete film in resumable, verified segments, then stream-copy the original AAC audio.
+- `scripts/finalize-color.ts` writes explicit Rec.709 tags without re-encoding pixels, then compares every native 10-bit decoded frame hash and timestamp before/after the remux.
+- `scripts/verify-production.ts`, `scripts/audit-decoded-focus.ts` and `scripts/audit-decoded-picture.ts` verify the actual delivery files. Selected decoded frames are extracted with `scripts/extract-delivery-proofs.ts`.
+- `scripts/covers.ts` creates dedicated YouTube and TikTok posters. `scripts/package-posting-kit.ts` refuses unverified video/cover files; `scripts/deliver-desktop.ts` verifies the copied kit and records a receipt without local account paths.
+
+Publishing copy and optional line-level captions are under [publishing/](publishing/README.md). Full video files remain local; the repository carries source, verification evidence, representative imagery and delivery hashes.
 
 Public source excludes full audio/video, model WAVs, machine paths and private review progress. Original artist rights are not transferred by this repository's code license. Cormorant Garamond is bundled with its SIL Open Font License.
 

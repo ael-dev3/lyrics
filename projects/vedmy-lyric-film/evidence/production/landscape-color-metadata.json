@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "format": "landscape",
+  "beforeSha256": "cfb87f3204896ce30b01574a0559f40261303b7de89dc605b99f7a9d763a0464",
+  "afterSha256": "3975fbda57b94ec52fb800dfcdbd81880f5ba33059c98d89d8a3fba2ddda14c7",
+  "untaggedBackup": "output/landscape-capture-untagged.mp4",
+  "output": "output/Vedmy-landscape-1920x1080-60fps.mp4",
+  "decodedFrames": 12069,
+  "allNativePixelHashesAndTimestampsIdentical": true,
+  "frameLedgerSha256": "41b268acf85fe777a111dffe38a0502b45da4ca80b2dc5feaed6064a47621c87",
+  "method": "Stream-copy remux sets HEVC VUI and MP4 BT.709 primaries/transfer/matrix and limited range. No pixel re-encoding, scaling, timing edits or audio re-encoding. Every native yuv420p10le decoded frame hash and timestamp is identical before and after.",
+  "reason": "VideoToolbox omitted primaries and transfer metadata despite encoder options; the delivery verifier rejected missing tags.",
+  "scriptSha256": "62b1d711b7bffb83b803ca74b24c69606b68b7b118d707960c7dac96f44562a9"
+}

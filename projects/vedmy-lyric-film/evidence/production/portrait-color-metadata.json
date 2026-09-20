@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "format": "portrait",
+  "beforeSha256": "3a3eb8490227574cd0438bd2d6409e2f3852971d4e888b943fbbe43e99cbca7a",
+  "afterSha256": "4f2c15f79bd45d57ca15c7824fd658d448e7955ac6a62199680e875bee6eba9c",
+  "untaggedBackup": "output/portrait-capture-untagged.mp4",
+  "output": "output/Vedmy-portrait-1080x1920-60fps.mp4",
+  "decodedFrames": 12069,
+  "allNativePixelHashesAndTimestampsIdentical": true,
+  "frameLedgerSha256": "82e3ef3cb6d217a532a87ad81ab7faef603fbb9199d2b02c32f29b30f5c821e9",
+  "method": "Stream-copy remux sets HEVC VUI and MP4 BT.709 primaries/transfer/matrix and limited range. No pixel re-encoding, scaling, timing edits or audio re-encoding. Every native yuv420p10le decoded frame hash and timestamp is identical before and after.",
+  "reason": "VideoToolbox omitted primaries and transfer metadata despite encoder options; the delivery verifier rejected missing tags.",
+  "scriptSha256": "62b1d711b7bffb83b803ca74b24c69606b68b7b118d707960c7dac96f44562a9"
+}
