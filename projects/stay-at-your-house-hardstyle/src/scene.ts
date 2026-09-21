@@ -5,7 +5,7 @@ import {montageAt,shotAt} from './trailer.ts';
 import {clamp,ease,mixAt} from './score.ts';
 export const palette={ink:'#03050b',rest:'#f1f3ed',active:'#fcee0a',cyan:'#00f0ff',violet:'#a879db'};
 export type MotionFrame={bass:number;kick:number;strength:number};
-export type Media={art:CanvasImageSource;dropOne:CanvasImageSource;dropTwo:CanvasImageSource};
+export type Media={art:CanvasImageSource;dropOne:CanvasImageSource;dropTwo:CanvasImageSource;pictureTime?:number};
 const cover=(ctx:CanvasRenderingContext2D,img:CanvasImageSource,x:number,y:number,w:number,h:number,iw:number,ih:number,fx=.5,fy=.5)=>{const scale=Math.max(w/iw,h/ih),sw=w/scale,sh=h/scale;ctx.drawImage(img,(iw-sw)*fx,(ih-sh)*fy,sw,sh,x,y,w,h);};
 export function drawScene(ctx:CanvasRenderingContext2D,t:number,format:Format,data:ProductionData,layouts:Layouts,bands:readonly number[][],motion:readonly MotionFrame[],media:Media){
  const l=layouts[format],w=l.width,h=l.height,p=format==='portrait',frame=Math.min(data.frames-1,Math.max(0,Math.round(t*60))),m=motion[frame]!,strength=m.strength,hard=mixAt(t);
@@ -13,7 +13,7 @@ export function drawScene(ctx:CanvasRenderingContext2D,t:number,format:Format,da
  // Quiet passages preserve the original artwork. The two selected trailer edits
  // enter on the locked music timeline; no 3D scene remains in the composition.
  cover(ctx,media.art,0,0,w,p?1230:h,1254,720,p?.78:.5,.5);
- const montage=montageAt(t),shot=shotAt(t);
+ const montage=montageAt(t),shot=shotAt(media.pictureTime??t);
  if(montage&&hard>0){
   ctx.globalAlpha=hard;
   ctx.fillStyle=palette.ink;ctx.fillRect(0,0,w,h);
