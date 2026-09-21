@@ -27,7 +27,8 @@ times = np.array([float(f['best_effort_timestamp_time']) for f in
                   probe(source, '-select_streams', 'v:0', '-show_entries', 'frame=best_effort_timestamp_time')['frames']])
 report = {'scope': 'Silent footage assets only. Pixel comparisons of selected source motion frames; not acoustic lyric accuracy or end-to-end device latency.',
           'method': 'FFmpeg strict decode; 160x90 grayscale reference compared with edited frames. Near-match span has MSE within 0.3 grayscale squared units of the minimum to allow inter-frame encoding variation.',
-          'editSha256': sha('source/trailer-edit.json'), 'sourceSha256': sha(source), 'assets': [], 'accents': []}
+          'trimEndpointMethod': 'Compare each bounded clip first/final output frame with its retained source frame at 160x90 grayscale. Upward FPS rounding defines the last visible source tick. Per-endpoint MSE must be below 16 grayscale squared units.',
+          'editSha256': sha('source/trailer-edit.json'), 'sourceSha256': sha(source), 'assets': [], 'accents': [], 'trimEndpoints': []}
 references = {}
 for montage in edit['montages']:
     path = 'public/' + montage['id'] + '.mp4'
@@ -38,9 +39,29 @@ for montage in edit['montages']:
     assert stream['width'] == 1920 and stream['height'] == 1080 and stream['r_frame_rate'] == '60/1'
     assert int(stream['nb_frames']) == montage['frames']
     report['assets'].append({'path': path, 'sha256': sha(path), 'strictDecode': 'passed', **stream})
+    # Frame-address the decoded stream. A decimal timestamp seek near a cut can
+    # round into the following shot and cannot establish the final frame's pixels.
+    bounded_frames = decode(path, 0, montage['frames']) if montage.get('strictSourceBounds') else None
     for shot in montage['shots']:
         actual_first = times[np.searchsorted(times, shot['sourceIn'])]
         assert abs(actual_first - shot['sourceFirstFrame']) < 1e-6
+        if montage.get('strictSourceBounds'):
+            # With upward FPS rounding, a source frame mapped after the final
+            # output tick is outside the asset even when it precedes sourceOut.
+            last_source_tick = actual_first + (shot['sourceOut'] - actual_first) * (shot['frames'] - 1) / shot['frames']
+            actual_last = times[np.searchsorted(times, last_source_tick, side='right') - 1]
+            endpoints = []
+            for label, reference_time, output_frame in [
+                ('first', actual_first, shot['startFrame']),
+                ('last', actual_last, shot['startFrame'] + shot['frames'] - 1),
+            ]:
+                reference = decode(source, float(reference_time) - .0005, 1)[0]
+                encoded = bounded_frames[output_frame]
+                mse = float(((reference - encoded) ** 2).mean())
+                assert mse < 16, (montage['id'], shot['name'], label, mse)
+                endpoints.append({'endpoint': label, 'sourceTime': float(reference_time),
+                                  'outputFrame': output_frame, 'mse': round(mse, 4)})
+            report['trimEndpoints'].append({'montage': montage['id'], 'shot': shot['name'], 'comparisons': endpoints})
         if 'accent' not in shot:
             continue
         accent = shot['accent']
@@ -64,4 +85,4 @@ report['status'] = 'passed'
 with open('evidence/trailer-asset-verification.json', 'w') as f:
     json.dump(report, f, indent=2)
     f.write('\n')
-print('Verified', len(report['assets']), 'silent assets and', len(report['accents']), 'motion accents at their target output frames.')
+print('Verified', len(report['assets']), 'silent assets and', len(report['accents']), 'motion accents and', len(report['trimEndpoints']) * 2, 'trim endpoints.')

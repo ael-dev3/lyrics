@@ -16,7 +16,7 @@ Local media preparation is required on a fresh clone. Source recordings and edit
 
 1. Obtain the selected music upload as `public/source.mp4`; stream-copy its audio to `public/soundtrack.m4a`. The existing source artwork and locked timings are supplied.
 2. Obtain the Netflix trailer as `public/trailer.mp4` (1920×1080, 24000/1001 fps for this edition).
-3. Run `node scripts/build-trailer-assets.ts` to create the two **silent footage assets**, without rendering the song. This preserves the edit decision list, fixed output frame counts and source framing.
+3. Run `node scripts/build-trailer-assets.ts` to create the two **silent footage assets**, without rendering the song. This preserves the edit decision list, fixed output frame counts and source framing. Pass `drop-two` to rebuild only that asset, leaving the first encoded edit untouched.
 4. Run `npm run check`, `npm run review:build`, then `node scripts/review-server.ts`.
 
 Node 24+, FFmpeg with libx264, npm dependencies and the included OFL fonts are required. Alignment reproduction additionally uses Demucs, torchaudio MMS and stable-whisper through `ALIGN_PYTHON`; it is not required merely to play the preview. `scripts/analyze.ts` consumes original decoded stereo float PCM in `analysis/audio-delivery.f32`; `ALIGN_PYTHON=python3 node scripts/analyze-beats.ts` additionally measures broadband attacks with NumPy; `scripts/motion.ts` derives presentation intensity from the spectrum and attack events. `python3 scripts/verify-trailer-assets.py` checks source-frame timestamps, decoded action accents and both complete silent assets. These analysis tools are optional for playback; committed measurement data is included.
@@ -29,14 +29,19 @@ Node 24+, FFmpeg with libx264, npm dependencies and the included OFL fonts are r
 
 - First asset: **01:42.350–02:09.150**, 1,608 frames.
 - Second asset: **02:59.150–03:33.550**, 2,064 frames.
-- Short dissolves make the trailer fully visible inside the selected intensity windows. Cuts use quarter-note groups of the measured 150 BPM pulse. All 36 boundaries moved 66.7 ms earlier after attack analysis; their median absolute residual against nearby spectral-flux peaks fell from 67.097 ms to 0.657 ms. These peaks are signal estimates, not manually certified beat annotations.
+- The first edit is unchanged. The second contains **28 fresh shots**, with no overlapping source ranges from the first edit and no repeats within itself. Its first 6.4 seconds favor character reactions beneath the closing vocal lines; physical action takes over at 03:05.550, followed by shorter details and a quiet closing image at 03:31.150 as the bass recedes.
+- Short dissolves keep the trailer inside the selected intensity windows. Cuts use quarter-note groups of the measured 150 BPM pulse. The current 43 shot starts have a median absolute residual of **0.703 ms** against nearby spectral-flux peaks. These peaks are signal estimates around an editorial grid, not manually certified beat annotations.
 - Characters, speed trails, city scale and physical action carry the impact. Trailer dialogue, subtitles, promotional cards and added full-screen flashes are omitted from the selected edit. Short action shots receive shorter holds; atmospheric views can breathe.
 - Portrait uses a shot-specific horizontal focal point and continuous bottom shading. Landscape opens the whole picture during instrumental drops. The remaining chorus lyrics retain fixed geometry and contrast during their overlap with the second edit.
-- Thirteen selected source action frames are retimed to quarter-note accents inside the shots. Source timestamp rounding and FFmpeg frame rounding are explicitly handled; the encoded assets are checked against source pixels.
+- The first edit retains six selected source action frames retimed to quarter-note accents. The second uses clean frame-bounded trims and a new shot rhythm, with 0.4, 0.8, 1.6 and 2.4-second holds. Encoded trim endpoints are checked against source pixels to catch adjacent-shot leakage. Portrait framing is inspected separately, including off-center faces and moving subjects.
 - The preview decodes 200 ms ahead and selects cached pictures by their actual frame timestamps on the music clock. Seeking primes the picture before music resumes; portrait crops follow the selected picture frame.
 - Abstract 3D assets are not loaded or required by this edition.
 
-[Portrait composition](evidence/preview-portrait.png) · [Edit decision list](source/trailer-edit.json) · [Asset identities](evidence/trailer-assets.json) · [Beat measurements](evidence/beat-audit.json) · [Encoded action-frame checks](evidence/trailer-asset-verification.json)
+![Fresh second-drop action](evidence/preview-second.png)
+
+*Composition still from the second edit at 03:16; original trailer animation, not a full-film render.*
+
+[Portrait composition](evidence/preview-portrait.png) · [Edit decision list](source/trailer-edit.json) · [Asset identities](evidence/trailer-assets.json) · [Freshness and unchanged-input audit](evidence/edit-freshness.json) · [Beat measurements](evidence/beat-audit.json) · [Encoded action-frame checks](evidence/trailer-asset-verification.json)
 
 ## Lyrics and review limits
 
