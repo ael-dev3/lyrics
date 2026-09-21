@@ -1,0 +1,81 @@
+{
+  "status": "passed",
+  "identity": {
+    "song": "stay-hardstyle",
+    "revision": "trailer-preview-v5-action-sync",
+    "inputsSha256": "1df59a81f478d0c29f0c4fa48957dac7a6d0d38108ebe3ad16531e8184fa584d"
+  },
+  "files": [
+    {
+      "format": "landscape",
+      "file": "Stay-at-Your-House-landscape-1920x1080-60fps.mp4",
+      "sha256": "0bea3a219cf9632f5179b81a4c16827e6fd6950318e0162ba84adff63164e472",
+      "checks": [
+        {
+          "file": "evidence/verification-landscape.json",
+          "sha256": "9859d6e861facc08c6fa03c7f35c7e9bf0a4c2b02601367b1f10788276889cd0",
+          "status": "passed"
+        },
+        {
+          "file": "evidence/focus-landscape.json",
+          "sha256": "f8bc66098c3afb653eb1a4c01fb9c14a4cd4a569377e5c1fdfa2ec4b60c00e51",
+          "status": "passed"
+        },
+        {
+          "file": "evidence/picture-landscape.json",
+          "sha256": "8ef1b7520d9ca7852349c28080d27d1d1798a573c71e67d02972c5c14ab89ab8",
+          "status": "passed"
+        },
+        {
+          "file": "evidence/checkpoints-landscape.json",
+          "sha256": "549423d741ff2d928e60eb12b3d47c6e39854a4a74d3359923fdd722f99c6e32",
+          "status": "passed"
+        },
+        {
+          "file": "evidence/container-landscape.json",
+          "sha256": "4e9e90b56d6707d5e3d8a3501715daa248151ef4c7c8d5a88e210058a05eb539",
+          "status": "passed"
+        }
+      ],
+      "criticalEventsChecked": 66,
+      "criticalEventsBetterMatchingAnotherFrame": 0
+    },
+    {
+      "format": "portrait",
+      "file": "Stay-at-Your-House-portrait-1080x1920-60fps.mp4",
+      "sha256": "4c6349e971764f4f8f0a9be4c15974a1e51e22e71c9bb273266363479450cdf4",
+      "checks": [
+        {
+          "file": "evidence/verification-portrait.json",
+          "sha256": "3ebe6d08b26c81c0454d22bbcc1075c1cdbaf54b8fca3e3497418e63fa6a2420",
+          "status": "passed"
+        },
+        {
+          "file": "evidence/focus-portrait.json",
+          "sha256": "016cf742ef16d3d3becf7b4134af845d7c8ccf7fcb051050fe40d73150d9e839",
+          "status": "passed"
+        },
+        {
+          "file": "evidence/picture-portrait.json",
+          "sha256": "49217a72a3ab72b8d4788e4dc4926e9c50791a6f0ca72dcae2d3add25499a8c1",
+          "status": "passed"
+        },
+        {
+          "file": "evidence/checkpoints-portrait.json",
+          "sha256": "4eb1a101e9211c008fd5d540a142a400d7c8e09636757be898e0bf742c15e858",
+          "status": "passed"
+        },
+        {
+          "file": "evidence/container-portrait.json",
+          "sha256": "576d13553f3eea2695237699874fa0672790b080d84bf34e148df16156325bd6",
+          "status": "passed"
+        }
+      ],
+      "criticalEventsChecked": 66,
+      "criticalEventsBetterMatchingAnotherFrame": 0
+    }
+  ],
+  "tests": "TypeScript and nine focused tests passed; approved inputs unchanged.",
+  "visualReview": "Decoded full-resolution and contact-sheet checkpoints inspected in both formats, including source art, montage entries and exits, action peaks, last chorus clearance and ending. Covers inspected separately at small sizes.",
+  "scope": "Final encoded output behavior verified separately from the explicit human acoustic-review attestation."
+}

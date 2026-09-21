@@ -12,9 +12,9 @@ Music films with synchronized lyrics, meaning-linked translations, and audio-rea
 
 **English · Edgerunners yellow · complete playable preview · no full-song render**
 
-![Stay at Your House: source artwork and stable yellow English word focus](assets/stay-house-hardstyle-preview.png)
+![Stay at Your House: source artwork and stable yellow English word focus](assets/stay-house-hardstyle-final-64.png)
 
-*Representative preview composition at 01:04, generated with the same scene function as the player. Artwork: xiaocha81269, as credited by the selected music upload.*
+*Frame at 01:04 decoded from the verified v1 landscape film. Artwork: xiaocha81269, as credited by the selected music upload.*
 
 The complete 3:47.718 hardstyle recording uses steady word highlighting in #FCEE0A and a measured spectrum. Two selected edits from the official Netflix Edgerunners trailer carry the hard electronic peaks, with independent landscape and portrait framing. Quieter sections retain the source illustration. The second edit develops a separate arc with 28 fresh shots: restrained character moments beneath the last vocal lines, faster physical action and a quiet release. Its source ranges do not repeat the first edit. Cuts follow measured beat attacks, and decoded preview pictures are selected on the music clock. Seventeen second-edit action accents now align movement within the shots; a smooth clearance zone keeps the strongest spectrum bars below the lyrics.
 

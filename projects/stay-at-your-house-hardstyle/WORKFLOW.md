@@ -62,9 +62,10 @@ The owner explicitly attested full normal-speed listening, uncertain-event reduc
 
 The production renderer calls the same scene function at exact `frame / 60` times. It consumes each silent trailer asset in complete decoded frame order and uses its native portrait crop at that frame. This avoids real-time browser scheduling delays in the output timeline. Full-resolution RGBA frames feed an H.264 CRF 16 encode with explicit limited-range Rec.709 conversion, square pixels, fast-start MP4 and stream-copied original AAC. Each format contains 13,664 frames; the final video tick differs from the exact audio duration by less than one frame.
 
-Run for each output:
+Finalize explicit square-pixel metadata without re-encoding, then run the audits for each output. The finalization receipt compares the entire decoded YUV stream before and after.
 
 ```sh
+node scripts/finalize-container.ts output/<video>.mp4 landscape
 node scripts/verify-production.ts output/<video>.mp4 landscape
 node scripts/audit-decoded-focus.ts output/<video>.mp4 landscape
 node scripts/audit-decoded-picture.ts output/<video>.mp4 landscape

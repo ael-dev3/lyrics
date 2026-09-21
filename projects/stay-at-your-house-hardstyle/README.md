@@ -2,9 +2,9 @@
 
 **English · approved full-recording edition · 16:9 and 9:16 · production authorized**
 
-![Stable yellow word focus beside Lucy](../../assets/stay-house-hardstyle-preview.png)
+![Stable yellow word focus beside Lucy](../../assets/stay-house-hardstyle-final-64.png)
 
-*Representative composition still at 01:04 using the same drawing function as the live preview. Source artwork: xiaocha81269, credited by the music upload. This is not a frame from a rendered full film.*
+*Frame at 01:04 decoded from the verified v1 landscape film. Source artwork: xiaocha81269, credited by the music upload.*
 
 The complete 3:47.718 recording pairs fixed English lyrics with Edgerunners yellow **#FCEE0A**. Quiet sections retain the source illustration. Two silent edits of the official Netflix trailer replace it during the hard electronic sections; measured spectrum travel rises with the arrangement. The original music is the only soundtrack.
 
