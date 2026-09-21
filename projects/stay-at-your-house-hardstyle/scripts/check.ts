@@ -8,4 +8,4 @@ for(const c of d.cues){assert.ok(c.visibleFrom>=previousEnd,c.id+' cue overlap')
 }
 assert.deepEqual(short,[],'Words lost during frame quantization');
 for(const p of ['public/science.json','public/motion.json'])assert.equal(read(p).length,d.frames,p+' incomplete');
-const report={status:'passed',scope:'Structural and geometric checks; listening review remains pending',cues:d.cues.length,words:d.cues.flatMap(c=>c.source).length,wordLayoutStates:states,frames:d.frames,duration:d.duration,unresolvedWords:d.cues.flatMap(c=>c.source).filter(w=>w.reviewRequired).length};writeFileSync('evidence/structural-check.json',JSON.stringify(report,null,2)+'\n');console.log(report);
+const report={status:'passed',scope:'Structural and geometric checks only; human listening status is recorded separately in owner-acceptance-v5.json',cues:d.cues.length,words:d.cues.flatMap(c=>c.source).length,wordLayoutStates:states,frames:d.frames,duration:d.duration,modelFlaggedWords:d.cues.flatMap(c=>c.source).filter(w=>w.reviewRequired).length};writeFileSync('evidence/structural-check.json',JSON.stringify(report,null,2)+'\n');console.log(report);

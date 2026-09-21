@@ -1,6 +1,6 @@
 # I Really Want to Stay at Your House — Hardstyle
 
-**English · full-recording preview · 16:9 and 9:16 · production not authorized**
+**English · approved full-recording edition · 16:9 and 9:16 · production authorized**
 
 ![Stable yellow word focus beside Lucy](../../assets/stay-house-hardstyle-preview.png)
 
@@ -50,13 +50,13 @@ The original lyric sheet is preserved in `source/lyrics-supplied.txt`. This remi
 
 Original-mix and isolated-vocal MMS candidates, wider-context candidates and independent Whisper alignment were compared. Wider context repaired several clipped first onsets; it also failed in part of the second chorus, so it is not adopted wholesale. Raw model scores are not treated as calibrated accuracy. Every candidate and final adopted interval is retained in `analysis/word-candidates.json`.
 
-**Listening review remains pending.** In particular, inspect the processed vocal textures at 01:16–02:11, the held words around 02:30–02:38, chorus title-line endings and the final “no one” wording at 03:37–03:42. Inconsistent recognition of texture-heavy passages is not displayed as invented lyrics. The 121 flagged events are candidates for review, not proven errors. Structural interval tests and visible browser playback cannot establish exact acoustic accuracy or complete lexical coverage.
+**Listening review is complete by explicit human attestation.** The owner confirmed the complete recording at normal speed, uncertain events and held endings at reduced speed, and both delivery layouts for the unchanged v5 preview. This includes the processed textures, repeated chorus endings and final vocal. The 121 model-flagged events remain preserved as candidate evidence; their raw scores are not rewritten into a machine accuracy claim. [Review scope and frozen identity](evidence/owner-acceptance-v5.json).
 
-Production remains blocked by incomplete listening evidence and absent current-revision approval. `npm run render` refuses before capture or encoding. This preview edition has no full-film renderer and no final upload kit.
+Production was explicitly authorized for the reviewed v5 inputs. The render entry point checks both listening review and authorization against current hashes before encoding. Run `npm run render -- landscape` or `npm run render -- portrait`; existing output files are preserved rather than silently overwritten. The renderer uses the same scene function at exact 60 fps times, sequentially decoded trailer frames and stream-copied original AAC. [Complete production workflow](WORKFLOW.md).
 
 ## Verification and credits
 
-[Technical checks](evidence/structural-check.json) · [Browser review](evidence/preview-verification.md) · [Per-event playback measurements](evidence/playback-sync.json) · [Production gate](evidence/production-status.json) · [Reusable lessons](PRODUCTION-LESSONS.md)
+[Complete workflow](WORKFLOW.md) · [Technical checks](evidence/structural-check.json) · [Browser review](evidence/preview-verification.md) · [Per-event playback measurements](evidence/playback-sync.json) · [Production gate](evidence/production-status.json) · [Reusable lessons](PRODUCTION-LESSONS.md)
 
 - [Selected music upload](https://www.youtube.com/watch?v=tXFVl2Qb4zc): Laaemel. Its description links an Oblivion remix and credits the Samuel Kim / Lorien cover.
 - Original song: Rosa Walton / Hallie Coggins. [Cover credited by the upload](https://www.youtube.com/watch?v=_AAdae7diOU).

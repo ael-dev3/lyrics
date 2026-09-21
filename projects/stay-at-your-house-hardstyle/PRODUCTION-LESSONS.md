@@ -1,4 +1,4 @@
-# Editorial lessons — hardstyle trailer preview
+# Production lessons — hardstyle trailer edition
 
 ## Let the source world supply the motion
 
@@ -47,3 +47,9 @@ Window edges can attract alignment failures, especially before a verse following
 ## Keep the preview boundary explicit
 
 Silent footage edits and still images are preparatory assets. They do not authorize a full-song encode. Keep listening completion and current-revision render authorization separately bound to the actual media, timing and presentation hashes. Public notes should describe editorial decisions and evidence limits without personal quotations or private review details.
+
+## Preserve the reviewed scene through deterministic output
+
+A real-time preview has scheduling jitter; a final file should be composed at exact output frame times. Decode each prepared footage asset in order and supply the corresponding frame to the same reviewed drawing function. Bind renderer code separately from approved presentation inputs, preserve original audio packets and verify the encoded result. Check every timestamp and word state, image presence through both edits, and native-resolution checkpoints. Keep human acoustic review distinct from these software checks.
+
+A complete handoff includes platform-specific videos, readable dedicated covers, credit-bearing upload copy, optional captions and a checksum-verified destination folder. The [full workflow](WORKFLOW.md) records the commands and evidence boundary.
