@@ -4,7 +4,7 @@
     "revision": "trailer-preview-v5-action-sync",
     "inputsSha256": "1df59a81f478d0c29f0c4fa48957dac7a6d0d38108ebe3ad16531e8184fa584d"
   },
-  "stage": "production-verified",
+  "stage": "delivered-local",
   "review": {
     "song": "stay-hardstyle",
     "revision": "trailer-preview-v5-action-sync",
@@ -24,5 +24,8 @@
   },
   "productionRendered": true,
   "note": "Explicit owner attestation covers full normal-speed playback, uncertain-event reduced-speed checks and both delivery formats. Render authorization applies to the unchanged reviewed preview. Technical final-file verification remains separate.",
-  "finalVerification": "evidence/final-verification.json"
+  "finalVerification": "evidence/final-verification.json",
+  "deliveryReceipt": "evidence/delivery-receipt.json",
+  "desktopCopyVerified": true,
+  "publication": "Source/workflow handoff only; no public binary release or platform upload"
 }

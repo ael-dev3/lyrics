@@ -1,5 +1,5 @@
 {
-  "status": "encoded; final-file verification pending",
+  "status": "encoded; final artifact verified after lossless metadata normalization",
   "identity": {
     "song": "stay-hardstyle",
     "revision": "trailer-preview-v5-action-sync",
@@ -65,8 +65,10 @@
     "-movflags",
     "+faststart",
     "-metadata",
-    "title=I Really Want to Stay at Your House (Hardstyle) — English Lyrics",
+    "title=I Really Want to Stay at Your House (Hardstyle) \u2014 English Lyrics",
     "output/Stay-at-Your-House-landscape-1920x1080-60fps.mp4"
   ],
-  "elapsedSeconds": 1603.249
+  "elapsedSeconds": 1603.249,
+  "finalVerification": "evidence/verification-landscape.json",
+  "finalSha256": "0bea3a219cf9632f5179b81a4c16827e6fd6950318e0162ba84adff63164e472"
 }

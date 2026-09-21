@@ -1,12 +1,20 @@
 # I Really Want to Stay at Your House — Hardstyle
 
-**English · approved full-recording edition · 16:9 and 9:16 · production authorized**
+**English · verified v1 films · 16:9 and 9:16 · local posting kit delivered**
 
 ![Stable yellow word focus beside Lucy](../../assets/stay-house-hardstyle-final-64.png)
 
 *Frame at 01:04 decoded from the verified v1 landscape film. Source artwork: xiaocha81269, credited by the music upload.*
 
 The complete 3:47.718 recording pairs fixed English lyrics with Edgerunners yellow **#FCEE0A**. Quiet sections retain the source illustration. Two silent edits of the official Netflix trailer replace it during the hard electronic sections; measured spectrum travel rises with the arrangement. The original music is the only soundtrack.
+
+## Final delivery
+
+The local posting kit contains full **1920×1080** YouTube and **1080×1920** TikTok videos at **60 fps**, H.264 / Rec.709, with the original stereo AAC unchanged. Each platform has its own title, description and thumbnail; TikTok uses a dedicated **1200×1600 portrait profile cover**. Optional English SRT, a start guide, manifest and checksums are included.
+
+Both films passed complete decoding, every frame timestamp, every visible word state, full-song picture-region checks and native-resolution checkpoints. The Desktop copy contains 12 hash-verified files. No public binary release or platform upload was performed.
+
+[Delivery and verification summary](PRODUCTION.md) · [Complete workflow](WORKFLOW.md) · [Posting materials](publishing/README.md) · [Delivery receipt](evidence/delivery-receipt.json) · [Desktop copy verification](evidence/desktop-delivery-receipt.json)
 
 ## Preview
 
