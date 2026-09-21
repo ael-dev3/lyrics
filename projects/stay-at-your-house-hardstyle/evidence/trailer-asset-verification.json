@@ -1,7 +1,8 @@
 {
   "scope": "Silent footage assets only. Pixel comparisons of selected source motion frames; not acoustic lyric accuracy or end-to-end device latency.",
   "method": "FFmpeg strict decode; 160x90 grayscale reference compared with edited frames. Near-match span has MSE within 0.3 grayscale squared units of the minimum to allow inter-frame encoding variation.",
-  "editSha256": "4d7e81a7e5e6bb24d3c766ffacbadd5321adb3b469a6eba1b8a584b28c0d40c5",
+  "trimEndpointMethod": "Compare each bounded clip first/final output frame with its retained source frame at 160x90 grayscale. Upward FPS rounding defines the last visible source tick. Per-endpoint MSE must be below 16 grayscale squared units.",
+  "editSha256": "1a9356bbf099bfd14fb6422e7ea0d96c1de8ee415dad195f8ecbc58b693b7d53",
   "sourceSha256": "7b683f4be4b1fcdc3fda54b7a1b3ae9576a603dff560ec06e55df69ab4322395",
   "assets": [
     {
@@ -17,7 +18,7 @@
     },
     {
       "path": "public/drop-two.mp4",
-      "sha256": "15dd2180e73c69f18f32f7cedbfdb75fe8723cc143fc7c3ff602d2efb9074a6e",
+      "sha256": "a0d86c8f8fb086a6fd5e8036668c2c9d1a873fccd6f8938b1a92c1b147f9d423",
       "strictDecode": "passed",
       "codec_type": "video",
       "width": 1920,
@@ -117,111 +118,512 @@
       ],
       "minimumMSE": 0.1644,
       "musicTime": 117.15
+    }
+  ],
+  "trimEndpoints": [
+    {
+      "montage": "drop-two",
+      "shot": "strained-look",
+      "comparisons": [
+        {
+          "endpoint": "first",
+          "sourceTime": 42.835,
+          "outputFrame": 0,
+          "mse": 0.1353
+        },
+        {
+          "endpoint": "last",
+          "sourceTime": 43.544,
+          "outputFrame": 143,
+          "mse": 0.1935
+        }
+      ]
     },
     {
       "montage": "drop-two",
-      "shot": "car",
-      "sourceTime": 103.562,
-      "targetFrame": 408,
-      "firstNearMatchFrame": 408,
-      "nearMatchFrames": [
-        408,
-        409,
-        410,
-        411,
-        412
-      ],
-      "minimumMSE": 0.1644,
-      "musicTime": 185.95
+      "shot": "lucy-resolve",
+      "comparisons": [
+        {
+          "endpoint": "first",
+          "sourceTime": 67.651,
+          "outputFrame": 144,
+          "mse": 0.0994
+        },
+        {
+          "endpoint": "last",
+          "sourceTime": 68.151,
+          "outputFrame": 239,
+          "mse": 0.1603
+        }
+      ]
     },
     {
       "montage": "drop-two",
-      "shot": "speed",
-      "sourceTime": 40.123,
-      "targetFrame": 504,
-      "firstNearMatchFrame": 504,
-      "nearMatchFrames": [
-        504,
-        505,
-        506,
-        507
-      ],
-      "minimumMSE": 0.2535,
-      "musicTime": 187.55
+      "shot": "david-struggle",
+      "comparisons": [
+        {
+          "endpoint": "first",
+          "sourceTime": 66.9,
+          "outputFrame": 240,
+          "mse": 0.1147
+        },
+        {
+          "endpoint": "last",
+          "sourceTime": 67.567,
+          "outputFrame": 383,
+          "mse": 0.1589
+        }
+      ]
     },
     {
       "montage": "drop-two",
-      "shot": "david",
-      "sourceTime": 93.093,
-      "targetFrame": 648,
-      "firstNearMatchFrame": 648,
-      "nearMatchFrames": [
-        648,
-        649,
-        650
-      ],
-      "minimumMSE": 0.1414,
-      "musicTime": 189.95
+      "shot": "lucy-counter",
+      "comparisons": [
+        {
+          "endpoint": "first",
+          "sourceTime": 81.039,
+          "outputFrame": 384,
+          "mse": 0.1425
+        },
+        {
+          "endpoint": "last",
+          "sourceTime": 81.707,
+          "outputFrame": 479,
+          "mse": 0.3424
+        }
+      ]
     },
     {
       "montage": "drop-two",
-      "shot": "gunfight",
-      "sourceTime": 86.712,
-      "targetFrame": 792,
-      "firstNearMatchFrame": 792,
-      "nearMatchFrames": [
-        792,
-        793,
-        794,
-        795
-      ],
-      "minimumMSE": 0.1903,
-      "musicTime": 192.35
+      "shot": "maine-return-fire",
+      "comparisons": [
+        {
+          "endpoint": "first",
+          "sourceTime": 84.793,
+          "outputFrame": 480,
+          "mse": 0.2111
+        },
+        {
+          "endpoint": "last",
+          "sourceTime": 85.586,
+          "outputFrame": 575,
+          "mse": 0.2517
+        }
+      ]
     },
     {
       "montage": "drop-two",
-      "shot": "rebecca",
-      "sourceTime": 100.892,
-      "targetFrame": 936,
-      "firstNearMatchFrame": 936,
-      "nearMatchFrames": [
-        936,
-        937,
-        938,
-        939,
-        940
-      ],
-      "minimumMSE": 0.1423,
-      "musicTime": 194.75
+      "shot": "rebecca-side-fire",
+      "comparisons": [
+        {
+          "endpoint": "first",
+          "sourceTime": 81.832,
+          "outputFrame": 576,
+          "mse": 0.1799
+        },
+        {
+          "endpoint": "last",
+          "sourceTime": 82.249,
+          "outputFrame": 623,
+          "mse": 0.1826
+        }
+      ]
     },
     {
       "montage": "drop-two",
-      "shot": "street",
-      "sourceTime": 64.064,
-      "targetFrame": 1008,
-      "firstNearMatchFrame": 1008,
-      "nearMatchFrames": [
-        1008,
-        1009,
-        1010
-      ],
-      "minimumMSE": 0.1157,
-      "musicTime": 195.95
+      "shot": "shell-impact",
+      "comparisons": [
+        {
+          "endpoint": "first",
+          "sourceTime": 44.378,
+          "outputFrame": 624,
+          "mse": 0.1167
+        },
+        {
+          "endpoint": "last",
+          "sourceTime": 44.628,
+          "outputFrame": 671,
+          "mse": 0.3176
+        }
+      ]
     },
     {
       "montage": "drop-two",
-      "shot": "speed",
-      "sourceTime": 40.123,
-      "targetFrame": 1272,
-      "firstNearMatchFrame": 1272,
-      "nearMatchFrames": [
-        1272,
-        1273,
-        1274,
-        1275
-      ],
-      "minimumMSE": 0.2535,
-      "musicTime": 200.35
+      "shot": "dual-cannons",
+      "comparisons": [
+        {
+          "endpoint": "first",
+          "sourceTime": 48.59,
+          "outputFrame": 672,
+          "mse": 0.1441
+        },
+        {
+          "endpoint": "last",
+          "sourceTime": 49.424,
+          "outputFrame": 767,
+          "mse": 0.1971
+        }
+      ]
+    },
+    {
+      "montage": "drop-two",
+      "shot": "fireball",
+      "comparisons": [
+        {
+          "endpoint": "first",
+          "sourceTime": 62.479,
+          "outputFrame": 768,
+          "mse": 0.0937
+        },
+        {
+          "endpoint": "last",
+          "sourceTime": 63.439,
+          "outputFrame": 863,
+          "mse": 0.1955
+        }
+      ]
+    },
+    {
+      "montage": "drop-two",
+      "shot": "wire-run",
+      "comparisons": [
+        {
+          "endpoint": "first",
+          "sourceTime": 95.095,
+          "outputFrame": 864,
+          "mse": 0.2177
+        },
+        {
+          "endpoint": "last",
+          "sourceTime": 95.429,
+          "outputFrame": 911,
+          "mse": 0.2982
+        }
+      ]
+    },
+    {
+      "montage": "drop-two",
+      "shot": "wire-turn",
+      "comparisons": [
+        {
+          "endpoint": "first",
+          "sourceTime": 95.512,
+          "outputFrame": 912,
+          "mse": 0.0222
+        },
+        {
+          "endpoint": "last",
+          "sourceTime": 95.971,
+          "outputFrame": 959,
+          "mse": 0.1687
+        }
+      ]
+    },
+    {
+      "montage": "drop-two",
+      "shot": "wire-dive",
+      "comparisons": [
+        {
+          "endpoint": "first",
+          "sourceTime": 96.179,
+          "outputFrame": 960,
+          "mse": 0.1949
+        },
+        {
+          "endpoint": "last",
+          "sourceTime": 96.847,
+          "outputFrame": 1055,
+          "mse": 0.3243
+        }
+      ]
+    },
+    {
+      "montage": "drop-two",
+      "shot": "blade-launch",
+      "comparisons": [
+        {
+          "endpoint": "first",
+          "sourceTime": 98.765,
+          "outputFrame": 1056,
+          "mse": 0.1877
+        },
+        {
+          "endpoint": "last",
+          "sourceTime": 99.015,
+          "outputFrame": 1103,
+          "mse": 0.2201
+        }
+      ]
+    },
+    {
+      "montage": "drop-two",
+      "shot": "david-dodge",
+      "comparisons": [
+        {
+          "endpoint": "first",
+          "sourceTime": 99.558,
+          "outputFrame": 1104,
+          "mse": 0.1796
+        },
+        {
+          "endpoint": "last",
+          "sourceTime": 100.016,
+          "outputFrame": 1151,
+          "mse": 0.3985
+        }
+      ]
+    },
+    {
+      "montage": "drop-two",
+      "shot": "neon-orb",
+      "comparisons": [
+        {
+          "endpoint": "first",
+          "sourceTime": 43.71,
+          "outputFrame": 1152,
+          "mse": 0.1206
+        },
+        {
+          "endpoint": "last",
+          "sourceTime": 44.253,
+          "outputFrame": 1247,
+          "mse": 0.1701
+        }
+      ]
+    },
+    {
+      "montage": "drop-two",
+      "shot": "neon-crew",
+      "comparisons": [
+        {
+          "endpoint": "first",
+          "sourceTime": 42.084,
+          "outputFrame": 1248,
+          "mse": 0.1672
+        },
+        {
+          "endpoint": "last",
+          "sourceTime": 42.626,
+          "outputFrame": 1295,
+          "mse": 0.2594
+        }
+      ]
+    },
+    {
+      "montage": "drop-two",
+      "shot": "heavy-recoil",
+      "comparisons": [
+        {
+          "endpoint": "first",
+          "sourceTime": 87.212,
+          "outputFrame": 1296,
+          "mse": 0.2697
+        },
+        {
+          "endpoint": "last",
+          "sourceTime": 87.713,
+          "outputFrame": 1343,
+          "mse": 0.2849
+        }
+      ]
+    },
+    {
+      "montage": "drop-two",
+      "shot": "rain-ambush",
+      "comparisons": [
+        {
+          "endpoint": "first",
+          "sourceTime": 90.966,
+          "outputFrame": 1344,
+          "mse": 0.1372
+        },
+        {
+          "endpoint": "last",
+          "sourceTime": 92.093,
+          "outputFrame": 1439,
+          "mse": 0.3037
+        }
+      ]
+    },
+    {
+      "montage": "drop-two",
+      "shot": "alarm",
+      "comparisons": [
+        {
+          "endpoint": "first",
+          "sourceTime": 46.88,
+          "outputFrame": 1440,
+          "mse": 0.1444
+        },
+        {
+          "endpoint": "last",
+          "sourceTime": 47.088,
+          "outputFrame": 1463,
+          "mse": 0.1147
+        }
+      ]
+    },
+    {
+      "montage": "drop-two",
+      "shot": "optic-flare",
+      "comparisons": [
+        {
+          "endpoint": "first",
+          "sourceTime": 47.213,
+          "outputFrame": 1464,
+          "mse": 0.0426
+        },
+        {
+          "endpoint": "last",
+          "sourceTime": 47.38,
+          "outputFrame": 1487,
+          "mse": 0.2962
+        }
+      ]
+    },
+    {
+      "montage": "drop-two",
+      "shot": "barrel-flare",
+      "comparisons": [
+        {
+          "endpoint": "first",
+          "sourceTime": 47.672,
+          "outputFrame": 1488,
+          "mse": 0.1553
+        },
+        {
+          "endpoint": "last",
+          "sourceTime": 48.381,
+          "outputFrame": 1535,
+          "mse": 0.16
+        }
+      ]
+    },
+    {
+      "montage": "drop-two",
+      "shot": "lucy-sprint",
+      "comparisons": [
+        {
+          "endpoint": "first",
+          "sourceTime": 106.482,
+          "outputFrame": 1536,
+          "mse": 0.1848
+        },
+        {
+          "endpoint": "last",
+          "sourceTime": 107.108,
+          "outputFrame": 1631,
+          "mse": 0.1501
+        }
+      ]
+    },
+    {
+      "montage": "drop-two",
+      "shot": "armored-turn",
+      "comparisons": [
+        {
+          "endpoint": "first",
+          "sourceTime": 83.458,
+          "outputFrame": 1632,
+          "mse": 0.1944
+        },
+        {
+          "endpoint": "last",
+          "sourceTime": 83.959,
+          "outputFrame": 1679,
+          "mse": 0.1032
+        }
+      ]
+    },
+    {
+      "montage": "drop-two",
+      "shot": "rebecca-front",
+      "comparisons": [
+        {
+          "endpoint": "first",
+          "sourceTime": 87.796,
+          "outputFrame": 1680,
+          "mse": 0.1752
+        },
+        {
+          "endpoint": "last",
+          "sourceTime": 88.297,
+          "outputFrame": 1727,
+          "mse": 0.165
+        }
+      ]
+    },
+    {
+      "montage": "drop-two",
+      "shot": "flame-sweep",
+      "comparisons": [
+        {
+          "endpoint": "first",
+          "sourceTime": 88.547,
+          "outputFrame": 1728,
+          "mse": 0.0892
+        },
+        {
+          "endpoint": "last",
+          "sourceTime": 89.173,
+          "outputFrame": 1823,
+          "mse": 0.1867
+        }
+      ]
+    },
+    {
+      "montage": "drop-two",
+      "shot": "road-detonation",
+      "comparisons": [
+        {
+          "endpoint": "first",
+          "sourceTime": 64.981,
+          "outputFrame": 1824,
+          "mse": 0.2157
+        },
+        {
+          "endpoint": "last",
+          "sourceTime": 65.524,
+          "outputFrame": 1871,
+          "mse": 0.3025
+        }
+      ]
+    },
+    {
+      "montage": "drop-two",
+      "shot": "red-eyes",
+      "comparisons": [
+        {
+          "endpoint": "first",
+          "sourceTime": 65.815,
+          "outputFrame": 1872,
+          "mse": 0.0929
+        },
+        {
+          "endpoint": "last",
+          "sourceTime": 66.274,
+          "outputFrame": 1919,
+          "mse": 0.105
+        }
+      ]
+    },
+    {
+      "montage": "drop-two",
+      "shot": "lucy-release",
+      "comparisons": [
+        {
+          "endpoint": "first",
+          "sourceTime": 6.548,
+          "outputFrame": 1920,
+          "mse": 0.1352
+        },
+        {
+          "endpoint": "last",
+          "sourceTime": 7.174,
+          "outputFrame": 2063,
+          "mse": 0.238
+        }
+      ]
     }
   ],
   "status": "passed"

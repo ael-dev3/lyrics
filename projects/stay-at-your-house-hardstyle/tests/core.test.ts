@@ -47,3 +47,14 @@ test('paused and overlapping seeks can capture native frame timestamps without a
   deck.clear();
  }finally{if(original)Object.defineProperty(globalThis,'VideoFrame',original);else Reflect.deleteProperty(globalThis,'VideoFrame');}
 });
+
+// Different imagery must survive future timing edits and refactors.
+test('the second edit contains no recycled source ranges or repeated shots',()=>{
+ const [first,second]=edit.montages;
+ assert.equal(new Set(second!.shots.map(s=>s.name)).size,second!.shots.length);
+ const overlap=(a:{sourceIn:number;sourceOut:number},b:{sourceIn:number;sourceOut:number})=>Math.max(0,Math.min(a.sourceOut,b.sourceOut)-Math.max(a.sourceIn,b.sourceIn));
+ for(const [i,s] of second!.shots.entries()){
+  for(const prior of first!.shots)assert.equal(overlap(s,prior),0,s.name+' repeats the first edit');
+  for(const prior of second!.shots.slice(0,i))assert.equal(overlap(s,prior),0,s.name+' repeats within the second edit');
+ }
+});

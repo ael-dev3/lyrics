@@ -27,14 +27,13 @@ errors=np.array([e['time']-e['grid'] for e in quarters]);cuts=json.load(open('so
 cutcheck=[]
 for m in cuts['montages']:
  for s in m['shots']:
-  t=m.get('previousSongStart',m['songStart'])+s['startFrame']/60
-  grid=round((t-.35)/.4)*.4+.35
-  around=a[np.abs(a[:,0]-grid)<.012];p=around[np.argmax(around[:,1])]
-  cutcheck.append({'montage':m['id'],'shot':s['name'],'oldCut':round(t,6),'measuredAttack':round(float(p[0]),6),'oldErrorMs':round((t-p[0])*1000,3),'newCut':round(m['songStart']+s['startFrame']/60,6),'newErrorMs':round((m['songStart']+s['startFrame']/60-p[0])*1000,3)})
-report={'method':'512-sample Hann STFT, 44-sample hop (~0.998 ms), positive log-magnitude spectral flux averaged over FFT bins 5–115; center timestamp. Local attack candidates near a 150 BPM grid, qualified against the local median. Not a human-certified beat annotation.','audioPcmSha256':hashlib.sha256(open('analysis/audio-delivery.f32','rb').read()).hexdigest(),'periodSeconds':.4,'phaseSeconds':.35,'qualifiedQuarterAttacks':len(quarters),'quarterGridResidualMs':{'medianAbs':round(float(np.median(abs(errors)))*1000,3),'p95Abs':round(float(np.quantile(abs(errors),.95))*1000,3),'maxAbs':round(float(max(abs(errors)))*1000,3)},'cutComparison':cutcheck,'scope':'Measures arrangement attacks and edit boundaries, not word timing or device output latency.'}
+  t=m['songStart']+s['startFrame']/60
+  around=a[np.abs(a[:,0]-t)<.012];p=around[np.argmax(around[:,1])]
+  cutcheck.append({'montage':m['id'],'shot':s['name'],'cut':round(t,6),'measuredAttack':round(float(p[0]),6),'errorMs':round((t-p[0])*1000,3)})
+report={'method':'512-sample Hann STFT, 44-sample hop (~0.998 ms), positive log-magnitude spectral flux averaged over FFT bins 5–115; center timestamp. Local attack candidates near a 150 BPM grid, qualified against the local median. Not a human-certified beat annotation.','audioPcmSha256':hashlib.sha256(open('analysis/audio-delivery.f32','rb').read()).hexdigest(),'periodSeconds':.4,'phaseSeconds':.35,'qualifiedQuarterAttacks':len(quarters),'quarterGridResidualMs':{'medianAbs':round(float(np.median(abs(errors)))*1000,3),'p95Abs':round(float(np.quantile(abs(errors),.95))*1000,3),'maxAbs':round(float(max(abs(errors)))*1000,3)},'cutAudit':cutcheck,'scope':'Measures arrangement attacks and edit boundaries, not word timing or device output latency.'}
 json.dump(report,open('evidence/beat-audit.json','w'),indent=2)
 json.dump(events,open('public/beat-pulses.json','w'),separators=(',',':'))
 print(json.dumps({k:report[k] for k in ['qualifiedQuarterAttacks','quarterGridResidualMs']}))
-print('Cuts',len(cutcheck),'previous median error ms',round(float(np.median([abs(c['oldErrorMs']) for c in cutcheck])),3),'new median',round(float(np.median([abs(c['newErrorMs']) for c in cutcheck])),3))
+print('Cuts',len(cutcheck),'median absolute residual ms',round(float(np.median([abs(c['errorMs']) for c in cutcheck])),3))
 `;
 const r=spawnSync(python,['-c',bridge],{stdio:'inherit'});if(r.status!==0)throw Error('Beat analysis failed');

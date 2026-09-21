@@ -10,6 +10,12 @@ Keep the vocal sections readable and reserve the largest picture change and spec
 
 Cut placement, lyric focus and spectrum measurements are separate decisions sharing one audio clock. Do not use bass attacks as inferred word onsets. Preview source motion at normal and reduced speed after seeking; time counters alone do not establish a moving picture.
 
+## Give repeated drops a new visual development
+
+A second musical peak needs its own progression. Reordering mostly identical footage can feel repetitive even when every cut lands on the grid. Audit source-time overlap, select distinct actions and vary shot duration according to the local arrangement. When a drop begins beneath the last sung lines, let closeups hold the emotional context before escalating into physical action. Reserve a quieter image for the musical release.
+
+Review encoded clip heads and tails, not only source thumbnails: frame rounding can leak a neighboring shot or a promotional card into an otherwise clean selection. Bound retiming to retained source frames and compare encoded endpoints with the source. Check portrait crops throughout motion; a centered crop can show a weapon or empty ground while losing the character. Preserve an accepted section exactly when revising its counterpart.
+
 ## Measure both cut timing and action timing
 
 A correct BPM does not establish the phase of the beat. Compare the edit grid with measured attacks over both drops. Record the detector, its resolution and residuals, and keep the distinction between signal evidence and listening. For this recording, refining the grid phase removed roughly 67 ms of systematic cut delay.
