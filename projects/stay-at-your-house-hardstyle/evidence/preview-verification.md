@@ -1,6 +1,6 @@
 # Preview verification — action timing and lyric clearance
 
-Date: 21 September 2026. Revision: `trailer-preview-v5-action-sync`. This covers the playable preview, not a rendered film or completed listening review. [Current input identities](input-identity.json).
+Date: 21 September 2026. These measurements were recorded before production authorization; the later [human review and authorization record](owner-acceptance-v5.json) closes the listening/approval gate without changing the reviewed inputs. Revision: `trailer-preview-v5-action-sync`. This covers the playable preview, not a rendered film or completed listening review. [Current input identities](input-identity.json).
 
 ## Editorial and encoded-frame checks
 
@@ -17,7 +17,7 @@ The former landscape spectrum intersected actual glyph descenders on 151 lyric-v
 
 The current full-song audit uses the actual font descenders and bar/facet geometry in both formats: **832,855 comparisons, zero collisions, minimum clearance 37.524 pixels**. [Baseline](visual-clearance-baseline.json) · [Current audit](visual-clearance.json) · [Former worst-time composition](preview-lyric-clearance.png).
 
-TypeScript and eight focused tests pass, including production gates, coverage, section visibility, decoded-picture selection, ordered action anchors, overlapping seeks, source freshness and per-event playback observations. The structural audit passes 45 cues / 284 source words / 568 word-layout states. Soundtrack, word timing, layout, artwork, section score, spectrum, motion data and beat pulses remain unchanged. No full-song film was created; production authorization and listener review remain false in the current identity-bound gate.
+TypeScript and eight focused tests pass, including production gates, coverage, section visibility, decoded-picture selection, ordered action anchors, overlapping seeks, source freshness and per-event playback observations. The structural audit passes 45 cues / 284 source words / 568 word-layout states. Soundtrack, word timing, layout, artwork, section score, spectrum, motion data and beat pulses remain unchanged. At the time of these preview measurements, no full-song film had been created and listening/authorization were still pending. See the subsequent acceptance record above.
 
 ## Beat evidence
 
@@ -44,4 +44,4 @@ The player decodes 200 ms ahead, caches native frame timestamps and selects the 
 
 ## Evidence limits
 
-Picture and signal checks do not complete acoustic lyric review. The 121 flagged word events, processed vocal coverage, held endings and final-word transcription still need listening review. No current-revision full-song render approval is recorded. The complete preview remains the review deliverable.
+Picture and signal checks do not complete acoustic lyric review. The 121 flagged word events, processed vocal coverage, held endings and final-word transcription were the pending listening items at this measurement stage. Subsequent human attestation and render authorization are recorded separately above; these browser measurements do not retroactively become acoustic review telemetry.

@@ -1,0 +1,76 @@
+{
+  "status": "passed",
+  "inputFile": "Stay-at-Your-House-portrait-1080x1920-60fps.mp4",
+  "inputSha256": "4c6349e971764f4f8f0a9be4c15974a1e51e22e71c9bb273266363479450cdf4",
+  "format": "portrait",
+  "method": "Full-resolution decoded checkpoint pixels compared with the native Canvas frame supplied to the encoder; threshold mean absolute RGB error 5/255.",
+  "comparisons": [
+    {
+      "frame": 0,
+      "time": 0,
+      "meanAbsoluteChannelError": 2.121961484053498
+    },
+    {
+      "frame": 3840,
+      "time": 64,
+      "meanAbsoluteChannelError": 2.2385900527263374
+    },
+    {
+      "frame": 6141,
+      "time": 102.35,
+      "meanAbsoluteChannelError": 2.1307915380658438
+    },
+    {
+      "frame": 6720,
+      "time": 112,
+      "meanAbsoluteChannelError": 2.5415853266460906
+    },
+    {
+      "frame": 7748,
+      "time": 129.13333333333333,
+      "meanAbsoluteChannelError": 2.1744140625
+    },
+    {
+      "frame": 10749,
+      "time": 179.15,
+      "meanAbsoluteChannelError": 2.4130463927469137
+    },
+    {
+      "frame": 10882,
+      "time": 181.36666666666667,
+      "meanAbsoluteChannelError": 2.5772128986625513
+    },
+    {
+      "frame": 11253,
+      "time": 187.55,
+      "meanAbsoluteChannelError": 2.5511189879115226
+    },
+    {
+      "frame": 11748,
+      "time": 195.8,
+      "meanAbsoluteChannelError": 2.5454997749485595
+    },
+    {
+      "frame": 12465,
+      "time": 207.75,
+      "meanAbsoluteChannelError": 2.544274530606996
+    },
+    {
+      "frame": 12812,
+      "time": 213.53333333333333,
+      "meanAbsoluteChannelError": 2.141361400462963
+    },
+    {
+      "frame": 13020,
+      "time": 217,
+      "meanAbsoluteChannelError": 2.1056102109053496
+    },
+    {
+      "frame": 13662,
+      "time": 227.7,
+      "meanAbsoluteChannelError": 2.068979230967078
+    }
+  ],
+  "originalVerifiedSha256": "aa161cc5b8e250d337d7cc3f7b8ad1639ee666a54da92720bbffb484fbbf4fe2",
+  "identityTransfer": "container-portrait.json proves complete decoded pixels unchanged through metadata-only remuxes"
+}

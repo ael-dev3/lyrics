@@ -73,3 +73,10 @@ test('playback onset audit measures late pictures once and excludes events befor
  assert.deepEqual(audit.observations.map(x=>x.id),['hit']);
  audit.begin(10.5);audit.sample(10.6,10.6,'one');assert.equal(audit.observations.length,0);
 });
+
+test('raw frame input handles arbitrary pipe chunks and rejects a truncated final frame',async()=>{
+ const {Readable}=await import('node:stream');const {rawFrames}=await import('../scripts/frame-io.ts');
+ const frames=[];for await(const frame of rawFrames(Readable.from([Buffer.from([1]),Buffer.from([2,3,4,5]),Buffer.from([6])]),3))frames.push([...frame]);
+ assert.deepEqual(frames,[[1,2,3],[4,5,6]]);
+ await assert.rejects(async()=>{for await(const frame of rawFrames(Readable.from([Buffer.from([1,2,3,4])]),3))void frame;},/Truncated/);
+});
