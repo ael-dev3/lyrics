@@ -6,7 +6,21 @@ Music films with synchronized lyrics, meaning-linked translations, and audio-rea
 
 **Current style default:** [cinematic lyric presentation](docs/cinematic-lyric-workflow.md) — stable, color-only word or phrase emphasis, precise vocal timing, smooth scene shading and equally prominent bilingual lyrics. Motion intensity follows the song: gentle arrangements can use compact, subdued audio-reactive graphics. The guide includes implemented references and review requirements for future tracks.
 
-[**Ведьмы**](#ведьмы) · [**Pero es locura**](#pero-es-locura) · [**La Lune**](#la-lune) · [**каждый, кто делал тебе больно**](#каждый-кто-делал-тебе-больно) · [**Sugar Glass**](#sugar-glass) · [**Твои глаза**](#твои-глаза) · [**Прости за любовь — accepted with known gaps**](#прости-за-любовь) · [**Половинка**](#половинка) · [**Life Letters**](#life-letters) · [**Joyride**](#joyride) · [**midnight love**](#midnight-love) · [**Пожары**](#пожары) · [**Отменяй**](#отменяй) · [**Roi × Adore**](#roi--adore) · [**TikTok edition**](#tiktok-edition) · [**Tanisea**](#tanisea) · [**Build and workflow**](#build-and-workflow)
+[**Stay at Your House — Hardstyle preview**](#stay-at-your-house--hardstyle) · [**Ведьмы**](#ведьмы) · [**Pero es locura**](#pero-es-locura) · [**La Lune**](#la-lune) · [**каждый, кто делал тебе больно**](#каждый-кто-делал-тебе-больно) · [**Sugar Glass**](#sugar-glass) · [**Твои глаза**](#твои-глаза) · [**Прости за любовь — accepted with known gaps**](#прости-за-любовь) · [**Половинка**](#половинка) · [**Life Letters**](#life-letters) · [**Joyride**](#joyride) · [**midnight love**](#midnight-love) · [**Пожары**](#пожары) · [**Отменяй**](#отменяй) · [**Roi × Adore**](#roi--adore) · [**TikTok edition**](#tiktok-edition) · [**Tanisea**](#tanisea) · [**Build and workflow**](#build-and-workflow)
+
+## Stay at Your House — Hardstyle
+
+**English · Edgerunners yellow · complete playable preview · no full-song render**
+
+![Stay at Your House: source artwork and stable yellow English word focus](assets/stay-house-hardstyle-preview.png)
+
+*Representative preview composition at 01:04, generated with the same scene function as the player. Artwork: xiaocha81269, as credited by the selected music upload.*
+
+The complete 3:47.718 hardstyle recording uses steady word highlighting in #FCEE0A and a measured spectrum. Two selected edits from the official Netflix Edgerunners trailer carry the hard electronic peaks, with independent landscape and portrait framing. Quieter sections retain the source illustration.
+
+The preview includes 45 lyric phrases and 284 provisional word events, both layouts, seeking and reduced-speed playback. Acoustic and coverage questions remain explicitly marked; listening completion and current-revision production approval are still pending. No full-song video or upload package has been rendered.
+
+[Playable-preview setup and credits](projects/stay-at-your-house-hardstyle/README.md) · [Trailer edit and lessons](projects/stay-at-your-house-hardstyle/PRODUCTION-LESSONS.md) · [Selected music upload](https://www.youtube.com/watch?v=tXFVl2Qb4zc)
 
 ## Ведьмы
 
@@ -364,6 +378,7 @@ Each project has its own setup instructions. Use the release source archive when
 
 | Project | Starting point |
 | --- | --- |
+| Stay at Your House — Hardstyle | [Full preview setup](projects/stay-at-your-house-hardstyle/README.md); English lyrics, official trailer edits and closed production gate |
 | Прости за любовь v1.2 | [Accepted delivery record and known gaps](projects/prosti-za-lyubov-lyric-film/README.md); preserve the existing films and apply the new sync gate to the next song |
 | Joyride | Follow the [reproduction steps](projects/joyride-lyric-film/README.md#reproduce); full-recording coverage, sample-based color focus, original video and separate landscape/portrait compositions |
 | Midnight Love | Follow the [v1.1.0 reproduction steps](projects/midnight-love-lyric-film/README.md#reproduction); includes the restored ending, cinematic focus and verified landscape/portrait delivery |
@@ -399,6 +414,7 @@ The reusable workflow covers soundtrack locking, lyric alignment, semantic trans
 
 ```text
 assets/                          Film screenshots and artwork
+projects/stay-at-your-house-hardstyle/ Full hardstyle preview; production remains unapproved
 projects/prosti-za-lyubov-lyric-film/ Accepted v1.2 record, known gaps and delivery evidence
 docs/cross-language-sync-gate.md  Mandatory synchronization review before production rendering
 docs/templates/                  Reusable review records
