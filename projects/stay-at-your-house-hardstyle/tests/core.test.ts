@@ -13,15 +13,18 @@ test('choose a decoded picture at or before the soundtrack, including gaps and u
  assert.equal(chooseFrame([],1),undefined);
 });
 
-test('cuts and selected motion anchors stay on quarter notes inside valid footage',()=>{
+test('cuts and action anchors stay on measured quarter/eighth notes inside valid footage',()=>{
  for(const m of edit.montages)for(const s of m.shots){
   const cut=m.songStart+s.startFrame/60;
   assert.ok(Math.abs((cut-.35)/.4-Math.round((cut-.35)/.4))<1e-6);
   assert.ok(s.sourceFirstFrame>=s.sourceIn&&s.sourceFirstFrame<s.sourceOut);
-  if('accent' in s&&s.accent){
-   assert.ok(s.accent.sourceTime>s.sourceFirstFrame&&s.accent.sourceTime<s.sourceOut);
-   assert.ok(s.accent.frame>0&&s.accent.frame<s.frames);
-   assert.equal(s.accent.frame%24,0);
+  const accents='accents' in s?s.accents:('accent' in s&&s.accent?[s.accent]:[]);
+  let previousSource=s.sourceFirstFrame,previousFrame=0;
+  for(const a of accents){
+   assert.ok(a.sourceTime>previousSource&&a.sourceTime<s.sourceOut);
+   assert.ok(a.frame>previousFrame&&a.frame<s.frames);
+   assert.equal(a.frame%12,0,'quarter- or eighth-note movement accent');
+   previousSource=a.sourceTime;previousFrame=a.frame;
   }
  }
 });
@@ -57,4 +60,16 @@ test('the second edit contains no recycled source ranges or repeated shots',()=>
   for(const prior of first!.shots)assert.equal(overlap(s,prior),0,s.name+' repeats the first edit');
   for(const prior of second!.shots.slice(0,i))assert.equal(overlap(s,prior),0,s.name+' repeats within the second edit');
  }
+});
+
+
+test('playback onset audit measures late pictures once and excludes events before a seek',async()=>{
+ const {PlaybackAudit}=await import('../src/playback-audit.ts');
+ const audit=new PlaybackAudit([{id:'cut',time:10,montage:'one',kind:'cut'},{id:'hit',time:10.4,montage:'one',kind:'action'}]);
+ audit.begin(9.9);audit.sample(10.01,9.99,'one');assert.equal(audit.observations.length,0);
+ audit.sample(10.02,10,'one');audit.sample(10.03,10,'one');
+ assert.equal(audit.observations.length,1);assert.ok(Math.abs(audit.observations[0]!.delayMs-20)<1e-6);
+ audit.begin(10.2);audit.sample(10.401,10.4,'one');
+ assert.deepEqual(audit.observations.map(x=>x.id),['hit']);
+ audit.begin(10.5);audit.sample(10.6,10.6,'one');assert.equal(audit.observations.length,0);
 });

@@ -22,6 +22,14 @@ A correct BPM does not establish the phase of the beat. Compare the edit grid wi
 
 A cut on a beat can still contain movement that lands between beats. Select a limited set of meaningful movement frames and map those onto pulses inside the shot. Use the first retained source-frame timestamp after trimming, not merely the requested seek time. Choose output-frame rounding deliberately, then inspect the encoded pixels: source cadence, trim rounding and the FPS filter can otherwise move an accent early.
 
+## Verify action onsets and reading space separately
+
+Identify meaningful source events with the preceding and following frames. A brightness peak alone can be late relative to a flash onset; a body pose can be the intended movement accent even without a flash. Retiming can support more than one event within a shot, provided the source and output knots remain ordered. Use measured eighth-note attacks for repeated bursts when the arrangement supports them. Verify the first matching encoded frame, not just the edit formula.
+
+Track actual browser appearances of cuts and movement accents, resetting measurements after each seek. Distinguish encoded placement, software presentation delay and physical audio/display latency. Good averages can conceal a late critical cut, and browser results are observations rather than an absolute device guarantee.
+
+High-energy spectrum bars need a glyph-clearance audit over every lyric-visible frame. Geometry tests for words alone miss bars rising into descenders. Reserve the reading space with smooth approach/release outside cue visibility, preserving the spectrum shape and full instrumental reach.
+
 ## Select the picture by its timestamp
 
 A video element's moving playback clock does not prove which frame was painted. Decode ahead, preserve actual decoded-frame timestamps and select a cached frame against the music clock. Keep the cache bounded and close released frames. Seek and recovery paths need separate checks, including repeated same-position seeks, quick transport changes and returning from the second edit to the first. A paused compositor may not emit another frame callback for an unchanged frame; capture the actual decoded frame after seeking as well. Preserve its native timestamp rather than assigning the requested seek time; see the [WebCodecs constructor specification](https://w3c.github.io/webcodecs/#videoframe-constructors).

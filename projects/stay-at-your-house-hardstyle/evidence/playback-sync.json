@@ -1,0 +1,67 @@
+{
+  "revision": "trailer-preview-v5-action-sync",
+  "method": "Read canvas DOM audit after normal-speed uninterrupted playback through each montage. Count the first paint whose selected decoded picture reaches each cut/action event. Every transport seek starts a new observation pass.",
+  "scope": "Software-clock observations, not physical speaker/display latency or acoustic word review.",
+  "passes": [
+    {
+      "montage": "drop-one",
+      "format": "landscape",
+      "start": 101.9,
+      "events": 21,
+      "cuts": 15,
+      "actions": 6,
+      "onsetP95Ms": 17.855,
+      "onsetMaxMs": 27.226,
+      "pictureP95Ms": 16.189,
+      "pictureMaxMs": 33.159,
+      "pictureSamples": 1608,
+      "missedFirstEventFrame": 2,
+      "worstEvent": "drop-one/mask/cut"
+    },
+    {
+      "montage": "drop-one",
+      "format": "portrait",
+      "start": 101.9,
+      "events": 21,
+      "cuts": 15,
+      "actions": 6,
+      "onsetP95Ms": 10.731,
+      "onsetMaxMs": 10.776,
+      "pictureP95Ms": 11.546,
+      "pictureMaxMs": 26.574,
+      "pictureSamples": 1608,
+      "missedFirstEventFrame": 0,
+      "worstEvent": "drop-one/sky/cut"
+    },
+    {
+      "montage": "drop-two",
+      "format": "landscape",
+      "start": 178.9,
+      "events": 45,
+      "cuts": 28,
+      "actions": 17,
+      "onsetP95Ms": 16.53,
+      "onsetMaxMs": 17.386,
+      "pictureP95Ms": 15.966,
+      "pictureMaxMs": 33.134,
+      "pictureSamples": 2063,
+      "missedFirstEventFrame": 2,
+      "worstEvent": "drop-two/shell-impact/24"
+    },
+    {
+      "montage": "drop-two",
+      "format": "portrait",
+      "start": 178.9,
+      "events": 45,
+      "cuts": 28,
+      "actions": 17,
+      "onsetP95Ms": 15.252,
+      "onsetMaxMs": 15.526,
+      "pictureP95Ms": 15.078,
+      "pictureMaxMs": 31.724,
+      "pictureSamples": 2064,
+      "missedFirstEventFrame": 0,
+      "worstEvent": "drop-two/wire-run/24"
+    }
+  ]
+}

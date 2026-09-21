@@ -1,6 +1,7 @@
 import dataJSON from './cues.json';import layoutJSON from './layout.json';
 import {parseData} from './schema.ts';import type {Format} from './schema.ts';import type {Layouts} from './layout-types.ts';
 import {FrameDeck} from './frame-deck.ts';
+import {PlaybackAudit,type SyncEvent} from './playback-audit.ts';
 import {montages} from './trailer.ts';
 import {drawScene} from './scene.ts';import type {MotionFrame} from './scene.ts';import {chapters} from './score.ts';import {visibleCues,activeSource} from './focus.ts';
 const data=parseData(dataJSON),layouts=layoutJSON as Layouts;
@@ -9,6 +10,11 @@ const canvas=el<HTMLCanvasElement>('film'),ctx=canvas.getContext('2d')!,audio=el
 const params=new URLSearchParams(location.search);let format:Format=params.get('format')==='portrait'?'portrait':'landscape',ready=false,bands:number[][]=[],motion:MotionFrame[]=[],lastCue='',lastTick=0,paintFrames=0,restoreCount=0,busy=false,transportToken=0,intendedPlaying=false;
 const decks=[new FrameDeck(dropOne,()=>{if(audio.paused)paint();}),new FrameDeck(dropTwo,()=>{if(audio.paused)paint();})];
 const pictureErrors:number[]=[];
+const events:SyncEvent[]=montages.flatMap(m=>m.shots.flatMap(s=>{
+ const accents='accents' in s?s.accents:('accent' in s&&s.accent?[s.accent]:[]);
+ return [{id:`${m.id}/${s.name}/cut`,time:m.songStart+s.startFrame/60,montage:m.id,kind:'cut' as const},...accents.map(a=>({id:`${m.id}/${s.name}/${a.frame}`,time:m.songStart+(s.startFrame+a.frame)/60,montage:m.id,kind:'action' as const}))];
+}));
+const onsetAudit=new PlaybackAudit(events);
 let requestedTime=Number(params.get('t')??0);
 const art=new Image();art.src='/public/source-artwork.png';
 if(params.get('clean')==='1')document.body.classList.add('clean');
@@ -20,7 +26,7 @@ function size(){const l=layouts[format];canvas.width=l.width;canvas.height=l.hei
 function paint(){if(!ready||busy)return;const t=audio.currentTime,index=montages.findIndex(m=>t>=m.songStart&&t<m.songStart+m.duration),pictures=decks.map((deck,i)=>deck.picture(Math.max(0,t-montages[i]!.songStart)));
  let pictureTime=t;
  if(index>=0){const picture=pictures[index];if(!picture)return;pictureTime=picture.time+montages[index]!.songStart;const errorMs=(t-pictureTime)*1000;
-  if(!audio.paused){pictureErrors.push(errorMs);if(pictureErrors.length>3600)pictureErrors.shift();}
+  if(!audio.paused){pictureErrors.push(errorMs);if(pictureErrors.length>3600)pictureErrors.shift();onsetAudit.sample(t,pictureTime,montages[index]!.id);}
   canvas.dataset.pictureTime=pictureTime.toFixed(6);canvas.dataset.pictureErrorMs=errorMs.toFixed(3);
  }
  drawScene(ctx,t,format,data,layouts,bands,motion,{art,dropOne:pictures[0]?.image??dropOne,dropTwo:pictures[1]?.image??dropTwo,pictureTime});paintFrames++;
@@ -32,7 +38,7 @@ async function transport(t:number,play:boolean,reload=false){const token=++trans
   if(reload){for(const d of decks){d.clear();d.video.load();}await Promise.all(decks.map(d=>mediaReady(d.video)));}
   if(token!==transportToken)return;audio.currentTime=target;
   await Promise.all(decks.map((deck,i)=>{const m=montages[i]!,local=target-m.songStart;return deck.prime(local>=0&&local<m.duration?local:0,play&&local>=0&&local<m.duration);}));
-  if(token!==transportToken)return;busy=false;lastCue='';paint();if(play)await audio.play();syncAssets();
+  if(token!==transportToken)return;busy=false;lastCue='';onsetAudit.begin(target);pictureErrors.length=0;paint();if(play)await audio.play();syncAssets();
  }catch(e){if(token===transportToken){busy=false;error(String(e));}}
  finally{if(token===transportToken)el<HTMLButtonElement>('play').disabled=false;}
 }
@@ -40,7 +46,7 @@ function words(){const cues=visibleCues(data,Math.round(audio.currentTime*60)),c
  const active=cue?activeSource(cue,Math.round(audio.currentTime*60),data):new Set<string>();el('words').querySelectorAll<HTMLElement>('[data-word]').forEach(s=>s.classList.toggle('current',active.has(s.dataset.word!)));
  el('review-count').textContent=`${reviews.length} / ${data.cues.length} phrases marked`;
 }
-function tick(now:number){if(ready){syncAssets();paint();if(now-lastTick>100){lastTick=now;seek.value=String(audio.currentTime);el('time').textContent=`${time(audio.currentTime)} / ${time(data.duration)}`;el('play').textContent=audio.paused?'Play':'Pause';el('part').textContent=chapters.filter(c=>c.time<=audio.currentTime).at(-1)?.name??'Opening';if(el<HTMLDetailsElement>('timing').open)words();el('clock-status').textContent=audio.paused?'Paused · seek freely':'Playing · frames selected on the audio clock';if(pictureErrors.length){const sorted=[...pictureErrors].sort((a,b)=>a-b);canvas.dataset.pictureSamples=String(sorted.length);canvas.dataset.pictureP95Ms=sorted[Math.floor(sorted.length*.95)]!.toFixed(3);canvas.dataset.pictureMaxMs=sorted.at(-1)!.toFixed(3);}}}requestAnimationFrame(tick);}
+function tick(now:number){if(ready){syncAssets();paint();if(now-lastTick>100){lastTick=now;seek.value=String(audio.currentTime);el('time').textContent=`${time(audio.currentTime)} / ${time(data.duration)}`;el('play').textContent=audio.paused?'Play':'Pause';el('part').textContent=chapters.filter(c=>c.time<=audio.currentTime).at(-1)?.name??'Opening';if(el<HTMLDetailsElement>('timing').open)words();el('clock-status').textContent=audio.paused?'Paused · seek freely':'Playing · frames selected on the audio clock';canvas.dataset.onsetAudit=JSON.stringify(onsetAudit.observations);if(pictureErrors.length){const sorted=[...pictureErrors].sort((a,b)=>a-b);canvas.dataset.pictureSamples=String(sorted.length);canvas.dataset.pictureP95Ms=sorted[Math.floor(sorted.length*.95)]!.toFixed(3);canvas.dataset.pictureMaxMs=sorted.at(-1)!.toFixed(3);}}}requestAnimationFrame(tick);}
 async function go(t:number){requestedTime=t;if(!ready)return;await transport(t,intendedPlaying);}
 async function restore(){const t=audio.currentTime,playing=intendedPlaying;restoreCount++;ready=true;await transport(t,playing,true);if(ready){el('loading').hidden=true;canvas.dataset.restoreCount=String(restoreCount);el('ready').textContent='Full scene ready · frame-timed trailer edits';}}
 el('play').onclick=()=>{if(!ready||busy)return;if(audio.paused)void transport(audio.currentTime,true);else{intendedPlaying=false;audio.pause();syncAssets();}};

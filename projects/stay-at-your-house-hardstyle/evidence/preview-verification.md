@@ -1,32 +1,47 @@
-# Preview verification — fresh second edit
+# Preview verification — action timing and lyric clearance
 
-Date: 21 September 2026. Revision: `trailer-preview-v4-fresh-second-edit`. This covers the playable preview, not a rendered film or completed listening review. [Current input identities](input-identity.json).
+Date: 21 September 2026. Revision: `trailer-preview-v5-action-sync`. This covers the playable preview, not a rendered film or completed listening review. [Current input identities](input-identity.json).
 
-## Editorial and technical checks
+## Editorial and encoded-frame checks
 
-- The first edit decision list and its encoded MP4 are unchanged from the preceding revision. Its SHA-256 remains `528dceec367af5d4df251a962f645d0d47d7ce5287b93021f47f737300395db1`.
-- The second edit has 28 unique shots, zero overlapping source ranges with the first edit and zero repeated source ranges within itself. Holds: two at 0.4 seconds, thirteen at 0.8, ten at 1.6 and three at 2.4. [Freshness and preserved-input audit](edit-freshness.json).
-- From 02:59.150–03:05.550, reactions accompany the remaining vocal lines. Physical action then develops into shorter details and an escalation, followed by a quieter image at 03:31.150 as the bass recedes. Portrait crops were adjusted to retain off-center faces and moving subjects. Source promotional cards and selected white-flash interstitials were trimmed away; native action lighting remains.
-- TypeScript and seven focused tests pass, covering production gates, complete shot coverage, section visibility, decoded-frame selection, beat/anchor bounds, overlapping seeks and source-range freshness.
-- 45 cues / 284 source words / 568 word-layout states pass interval, containment, layout and 60 fps visibility checks. Soundtrack, cues, layouts, scene drawing, spectrum and motion data are hash-identical to the preceding revision.
-- Both silent MP4 assets pass strict complete FFmpeg decoding: 1,608 and 2,064 frames at 1920×1080 / 60 fps, without audio streams. The original animation cadence is retimed through repeated frames, without optical-flow synthesis.
-- Six retained internal action accents in the first edit match their target encoded frames. All 56 first/final-frame comparisons for the new second edit match the retained source pixels; maximum grayscale MSE is 0.3985, below the audit threshold of 16. Source-frame bounds and upward frame rounding are accounted for explicitly. [Encoded asset audit](trailer-asset-verification.json).
-- No full-song film was created. Production authorization and listener review remain false in the current identity-bound gate.
+- The first edit decision list and encoded MP4 are unchanged from the preceding revision. Its SHA-256 remains `528dceec367af5d4df251a962f645d0d47d7ce5287b93021f47f737300395db1`.
+- Every second-edit shot boundary, duration, source range and portrait crop remains unchanged. Its 28 unique shots have zero overlapping source ranges with the first edit and zero repeats within the second. [Preserved-input audit](edit-freshness.json).
+- Seventeen new action accents across 15 second-edit shots align selected muzzle flashes, recoil poses and impact frames to quarter/eighth-note attacks. Two shots use two ordered retiming anchors. Preceding and following source frames were inspected to distinguish movement onset from a later bright frame. Natural character holds remain unchanged.
+- Relative to the previous linear mapping, the selected source moments had an estimated median absolute offset of 66.334 ms from the new targets, with a maximum of 158.845 ms. These are mapping estimates, not measurements of old encoded pixels.
+- Both silent MP4 assets pass strict complete FFmpeg decoding: 1,608 and 2,064 frames at 1920×1080 / 60 fps, without audio streams. Every output timestamp matches its 60 fps position within 0.000333 ms of decimal timestamp rounding. Original animation cadence is retimed through repeated frames, without optical-flow synthesis.
+- All 23 selected action frames (six retained and 17 new) first match the intended encoded output frame. All 56 second-edit first/final-frame comparisons match the retained source pixels; maximum grayscale MSE is 0.3995, below the audit threshold of 16. Comparisons use decoded frame indices to avoid seek-time rounding near cuts. [Encoded asset audit](trailer-asset-verification.json).
+
+## Lyric reading space and source preservation
+
+The former landscape spectrum intersected actual glyph descenders on 151 lyric-visible frames, producing 802 colliding bar/word states and up to 39.715 pixels of overlap. The scene now reserves reading space with a 200 ms approach and release, scaling the whole spectrum travel while retaining its measured shape. Full instrumental reach returns outside the clearance window.
+
+The current full-song audit uses the actual font descenders and bar/facet geometry in both formats: **832,855 comparisons, zero collisions, minimum clearance 37.524 pixels**. [Baseline](visual-clearance-baseline.json) · [Current audit](visual-clearance.json) · [Former worst-time composition](preview-lyric-clearance.png).
+
+TypeScript and eight focused tests pass, including production gates, coverage, section visibility, decoded-picture selection, ordered action anchors, overlapping seeks, source freshness and per-event playback observations. The structural audit passes 45 cues / 284 source words / 568 word-layout states. Soundtrack, word timing, layout, artwork, section score, spectrum, motion data and beat pulses remain unchanged. No full-song film was created; production authorization and listener review remain false in the current identity-bound gate.
 
 ## Beat evidence
 
-The 150 BPM grid uses a 0.350-second phase. A 512-sample Hann-window spectral-flux analysis with 44-sample hops (~0.998 ms) finds 162 qualified quarter-note attack candidates. Their median absolute grid residual is 0.681 ms; p95 is 1.877 ms and maximum is 10.181 ms. The 43 current shot starts have a median absolute residual of 0.703 ms against nearby detected attacks. This measures signal changes around an editorial grid, not independently certified beat annotations or sung-word onsets. [Measurements](beat-audit.json).
+The 150 BPM grid uses a 0.350-second phase. A 512-sample Hann-window spectral-flux analysis with 44-sample hops (~0.998 ms) finds 162 qualified quarter-note attack candidates. Their median absolute grid residual is 0.681 ms; p95 is 1.877 ms and maximum is 10.181 ms. The 43 shot starts have a median absolute residual of 0.703 ms against nearby detected attacks. The 23 action targets have a median absolute residual of **0.658 ms**, maximum **2.109 ms**. This measures signal changes near an editorial grid, not independently certified beats or sung-word onsets. [Measurements](beat-audit.json).
 
-The prior beat-phase correction and audio-clock picture selection remain in place. The visualizer continues to combine measured spectrum values with a bounded 45 ms attack decay; its authored response is unchanged.
+The prior beat-phase correction and audio-clock picture selection remain in place. The visualizer still combines the original measured spectrum values with a bounded 45 ms attack decay; only its lyric clearance changes.
 
-## Actual browser checks
+## Actual browser playback
 
-The second edit played through at normal speed in both layouts, including its return to the original artwork. Reduced-speed checks and successive screenshots showed distinct footage and poses. Portrait and landscape inspection included the entrance beneath lyrics, action footage and the quieter closing image. Layout switching preserved the moving picture. A seek to 195.8 seconds and **Restore visuals** also recovered the correct portrait action frame.
+Both complete montages played through at normal speed in both layouts, including the return to the artwork. The player records the first paint whose selected decoded picture reaches each cut/action event, separately from the rolling picture-age measurements. All **66 events appeared in each layout**, for 132 observed event appearances. [Playback measurements](playback-sync.json).
 
-The complete portrait pass produced 2,063 picture-age observations: p95 **15.280 ms**, maximum **31.026 ms**. The landscape pass from 179.6 seconds through the edit's end produced 2,041 observations: p95 **16.074 ms**, maximum **34.160 ms**. A sampled half-speed portrait run retained 2,251 observations with p95 **16.017 ms** and maximum **47.938 ms**. These are observed software-clock results, not a guarantee on every frame or a speaker/display latency measurement.
+| Montage / layout | Events | Onset delay p95 / max | Picture age p95 / max | Picture samples | First event frame missed |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| First / landscape | 21 | 17.855 / 27.226 ms | 16.189 / 33.159 ms | 1,608 | 2 |
+| First / portrait | 21 | 10.731 / 10.776 ms | 11.546 / 26.574 ms | 1,608 | 0 |
+| Second / landscape | 45 | 16.530 / 17.386 ms | 15.966 / 33.134 ms | 2,063 | 2 |
+| Second / portrait | 45 | 15.252 / 15.526 ms | 15.078 / 31.724 ms | 2,064 | 0 |
 
-The unchanged player decodes ahead, caches native frame timestamps and selects the latest picture at or before the audio clock. Portrait framing follows the selected picture's timestamp. Paused seeks also capture the native decoded frame, and obsolete transport requests cannot replace the latest request.
+A missed first event frame means the browser first painted that event on a later decoded frame; the event itself was still observed. The slowest event appearance was the first montage's mask cut, 27.226 ms after its target. These software-clock observations do not guarantee every future playback or measure physical speaker/display latency.
+
+Reduced-speed inspection showed distinct action poses across the revised second edit. Switching between landscape and portrait preserved moving footage. A paused seek to 195.8 seconds and **Restore visuals** recovered the correct portrait action picture. Resuming, switching from 0.5× to 1× and jumping backward to Drop I also recovered the correct first-edit footage.
+
+The player decodes 200 ms ahead, caches native frame timestamps and selects the latest picture at or before the audio clock. Portrait framing follows the selected picture's timestamp. Paused seeks capture a native decoded frame; obsolete transport requests cannot replace the latest request. Measurement passes reset after transport changes.
 
 ## Evidence limits
 
-Picture checks do not complete acoustic lyric review. The 121 flagged word events, processed vocal coverage, held endings and final-word transcription still need listening review. No current-revision full-song render approval is recorded. The preview remains the review deliverable.
+Picture and signal checks do not complete acoustic lyric review. The 121 flagged word events, processed vocal coverage, held endings and final-word transcription still need listening review. No current-revision full-song render approval is recorded. The complete preview remains the review deliverable.

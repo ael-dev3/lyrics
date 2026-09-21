@@ -2,13 +2,14 @@
   "scope": "Silent footage assets only. Pixel comparisons of selected source motion frames; not acoustic lyric accuracy or end-to-end device latency.",
   "method": "FFmpeg strict decode; 160x90 grayscale reference compared with edited frames. Near-match span has MSE within 0.3 grayscale squared units of the minimum to allow inter-frame encoding variation.",
   "trimEndpointMethod": "Compare each bounded clip first/final output frame with its retained source frame at 160x90 grayscale. Upward FPS rounding defines the last visible source tick. Per-endpoint MSE must be below 16 grayscale squared units.",
-  "editSha256": "1a9356bbf099bfd14fb6422e7ea0d96c1de8ee415dad195f8ecbc58b693b7d53",
+  "editSha256": "972379c2f84265a724d8856be0968a8e564b54506a36946c74df1439733f66b8",
   "sourceSha256": "7b683f4be4b1fcdc3fda54b7a1b3ae9576a603dff560ec06e55df69ab4322395",
   "assets": [
     {
       "path": "public/drop-one.mp4",
       "sha256": "528dceec367af5d4df251a962f645d0d47d7ce5287b93021f47f737300395db1",
       "strictDecode": "passed",
+      "timestampGridMaxErrorMs": 0.000333,
       "codec_type": "video",
       "width": 1920,
       "height": 1080,
@@ -18,8 +19,9 @@
     },
     {
       "path": "public/drop-two.mp4",
-      "sha256": "a0d86c8f8fb086a6fd5e8036668c2c9d1a873fccd6f8938b1a92c1b147f9d423",
+      "sha256": "29ceb3976f1f101f18cd7e5903e11804c451e5fc72a94eca64f5a0fb1147555c",
       "strictDecode": "passed",
+      "timestampGridMaxErrorMs": 0.000333,
       "codec_type": "video",
       "width": 1920,
       "height": 1080,
@@ -32,6 +34,7 @@
     {
       "montage": "drop-one",
       "shot": "speed",
+      "basis": "Selected movement or shot-impact frame, identified from source-frame changes; mapped to a quarter-note pulse.",
       "sourceTime": 40.123,
       "targetFrame": 24,
       "firstNearMatchFrame": 24,
@@ -47,6 +50,7 @@
     {
       "montage": "drop-one",
       "shot": "street",
+      "basis": "Selected movement or shot-impact frame, identified from source-frame changes; mapped to a quarter-note pulse.",
       "sourceTime": 64.064,
       "targetFrame": 528,
       "firstNearMatchFrame": 528,
@@ -61,6 +65,7 @@
     {
       "montage": "drop-one",
       "shot": "gunfight",
+      "basis": "Selected movement or shot-impact frame, identified from source-frame changes; mapped to a quarter-note pulse.",
       "sourceTime": 86.712,
       "targetFrame": 648,
       "firstNearMatchFrame": 648,
@@ -76,6 +81,7 @@
     {
       "montage": "drop-one",
       "shot": "david",
+      "basis": "Selected movement or shot-impact frame, identified from source-frame changes; mapped to a quarter-note pulse.",
       "sourceTime": 93.093,
       "targetFrame": 744,
       "firstNearMatchFrame": 744,
@@ -90,6 +96,7 @@
     {
       "montage": "drop-one",
       "shot": "rebecca",
+      "basis": "Selected movement or shot-impact frame, identified from source-frame changes; mapped to a quarter-note pulse.",
       "sourceTime": 100.892,
       "targetFrame": 792,
       "firstNearMatchFrame": 792,
@@ -106,6 +113,7 @@
     {
       "montage": "drop-one",
       "shot": "car",
+      "basis": "Selected movement or shot-impact frame, identified from source-frame changes; mapped to a quarter-note pulse.",
       "sourceTime": 103.562,
       "targetFrame": 888,
       "firstNearMatchFrame": 888,
@@ -118,6 +126,302 @@
       ],
       "minimumMSE": 0.1644,
       "musicTime": 117.15
+    },
+    {
+      "montage": "drop-two",
+      "shot": "maine-return-fire",
+      "basis": "Blue muzzle bloom expands across the raised weapon.",
+      "sourceTime": 85.044,
+      "targetFrame": 504,
+      "firstNearMatchFrame": 504,
+      "nearMatchFrames": [
+        504,
+        505,
+        506,
+        507,
+        508,
+        509
+      ],
+      "minimumMSE": 0.1448,
+      "musicTime": 187.55
+    },
+    {
+      "montage": "drop-two",
+      "shot": "rebecca-side-fire",
+      "basis": "First interior muzzle flash begins.",
+      "sourceTime": 81.999,
+      "targetFrame": 600,
+      "firstNearMatchFrame": 600,
+      "nearMatchFrames": [
+        600,
+        601,
+        602
+      ],
+      "minimumMSE": 0.1416,
+      "musicTime": 189.15
+    },
+    {
+      "montage": "drop-two",
+      "shot": "rebecca-side-fire",
+      "basis": "Following muzzle flash begins on the measured eighth-note attack.",
+      "sourceTime": 82.166,
+      "targetFrame": 612,
+      "firstNearMatchFrame": 612,
+      "nearMatchFrames": [
+        612,
+        613,
+        614,
+        615
+      ],
+      "minimumMSE": 0.1901,
+      "musicTime": 189.35
+    },
+    {
+      "montage": "drop-two",
+      "shot": "shell-impact",
+      "basis": "Red shell impact and smoke first enter the frame.",
+      "sourceTime": 44.503,
+      "targetFrame": 648,
+      "firstNearMatchFrame": 648,
+      "nearMatchFrames": [
+        648,
+        649,
+        650,
+        651,
+        652,
+        653,
+        654,
+        655
+      ],
+      "minimumMSE": 0.0828,
+      "musicTime": 189.95
+    },
+    {
+      "montage": "drop-two",
+      "shot": "dual-cannons",
+      "basis": "Raised cannon snaps into its near-vertical position.",
+      "sourceTime": 49.049,
+      "targetFrame": 720,
+      "firstNearMatchFrame": 720,
+      "nearMatchFrames": [
+        720,
+        721,
+        722,
+        723,
+        724,
+        725,
+        726,
+        727
+      ],
+      "minimumMSE": 0.1338,
+      "musicTime": 191.15
+    },
+    {
+      "montage": "drop-two",
+      "shot": "fireball",
+      "basis": "The central fire plume expands into its larger silhouette.",
+      "sourceTime": 62.938,
+      "targetFrame": 816,
+      "firstNearMatchFrame": 816,
+      "nearMatchFrames": [
+        816,
+        817,
+        818,
+        819
+      ],
+      "minimumMSE": 0.1452,
+      "musicTime": 192.75
+    },
+    {
+      "montage": "drop-two",
+      "shot": "wire-run",
+      "basis": "Lucy reaches the forward attack pose before extending the wire.",
+      "sourceTime": 95.304,
+      "targetFrame": 888,
+      "firstNearMatchFrame": 888,
+      "nearMatchFrames": [
+        888,
+        889,
+        890,
+        891,
+        892,
+        893,
+        894
+      ],
+      "minimumMSE": 0.2367,
+      "musicTime": 193.95
+    },
+    {
+      "montage": "drop-two",
+      "shot": "david-dodge",
+      "basis": "David completes the low body fold beneath the blade.",
+      "sourceTime": 99.766,
+      "targetFrame": 1128,
+      "firstNearMatchFrame": 1128,
+      "nearMatchFrames": [
+        1128,
+        1129,
+        1130,
+        1131,
+        1132,
+        1133,
+        1134,
+        1135
+      ],
+      "minimumMSE": 0.1756,
+      "musicTime": 197.95
+    },
+    {
+      "montage": "drop-two",
+      "shot": "neon-orb",
+      "basis": "The green edge flare expands around the orb.",
+      "sourceTime": 43.877,
+      "targetFrame": 1176,
+      "firstNearMatchFrame": 1176,
+      "nearMatchFrames": [
+        1176,
+        1177,
+        1178,
+        1179,
+        1180,
+        1181,
+        1182,
+        1183
+      ],
+      "minimumMSE": 0.099,
+      "musicTime": 198.75
+    },
+    {
+      "montage": "drop-two",
+      "shot": "heavy-recoil",
+      "basis": "The body reaches the deep recoil pose beneath the blast.",
+      "sourceTime": 87.504,
+      "targetFrame": 1320,
+      "firstNearMatchFrame": 1320,
+      "nearMatchFrames": [
+        1320,
+        1321,
+        1322,
+        1323,
+        1324
+      ],
+      "minimumMSE": 0.1651,
+      "musicTime": 201.15
+    },
+    {
+      "montage": "drop-two",
+      "shot": "rain-ambush",
+      "basis": "The explosion reaches its bright impact frame.",
+      "sourceTime": 91.634,
+      "targetFrame": 1392,
+      "firstNearMatchFrame": 1392,
+      "nearMatchFrames": [
+        1392,
+        1393,
+        1394,
+        1395
+      ],
+      "minimumMSE": 0.1306,
+      "musicTime": 202.35
+    },
+    {
+      "montage": "drop-two",
+      "shot": "lucy-sprint",
+      "basis": "The layered action changes into the forward arm pose.",
+      "sourceTime": 106.774,
+      "targetFrame": 1584,
+      "firstNearMatchFrame": 1584,
+      "nearMatchFrames": [
+        1584,
+        1585,
+        1586,
+        1587,
+        1588,
+        1589
+      ],
+      "minimumMSE": 0.1641,
+      "musicTime": 205.55
+    },
+    {
+      "montage": "drop-two",
+      "shot": "armored-turn",
+      "basis": "The forearm crosses the foreground in the strike pose.",
+      "sourceTime": 83.75,
+      "targetFrame": 1656,
+      "firstNearMatchFrame": 1656,
+      "nearMatchFrames": [
+        1656,
+        1657,
+        1658,
+        1659,
+        1660
+      ],
+      "minimumMSE": 0.0751,
+      "musicTime": 206.75
+    },
+    {
+      "montage": "drop-two",
+      "shot": "rebecca-front",
+      "basis": "First front-facing muzzle flash begins.",
+      "sourceTime": 87.963,
+      "targetFrame": 1704,
+      "firstNearMatchFrame": 1704,
+      "nearMatchFrames": [
+        1704,
+        1705,
+        1706,
+        1707
+      ],
+      "minimumMSE": 0.1206,
+      "musicTime": 207.55
+    },
+    {
+      "montage": "drop-two",
+      "shot": "rebecca-front",
+      "basis": "Following muzzle flash begins on the measured eighth-note attack.",
+      "sourceTime": 88.13,
+      "targetFrame": 1716,
+      "firstNearMatchFrame": 1716,
+      "nearMatchFrames": [
+        1716,
+        1717,
+        1718
+      ],
+      "minimumMSE": 0.2027,
+      "musicTime": 207.75
+    },
+    {
+      "montage": "drop-two",
+      "shot": "road-detonation",
+      "basis": "The road blast spreads into the broad lateral shock pattern.",
+      "sourceTime": 65.357,
+      "targetFrame": 1848,
+      "firstNearMatchFrame": 1848,
+      "nearMatchFrames": [
+        1848,
+        1849,
+        1850,
+        1851,
+        1852
+      ],
+      "minimumMSE": 0.216,
+      "musicTime": 209.95
+    },
+    {
+      "montage": "drop-two",
+      "shot": "red-eyes",
+      "basis": "The eye flare settles into the horizontal beam silhouette.",
+      "sourceTime": 66.024,
+      "targetFrame": 1896,
+      "firstNearMatchFrame": 1896,
+      "nearMatchFrames": [
+        1896,
+        1897,
+        1898,
+        1899
+      ],
+      "minimumMSE": 0.1291,
+      "musicTime": 210.75
     }
   ],
   "trimEndpoints": [
@@ -201,13 +505,13 @@
           "endpoint": "first",
           "sourceTime": 84.793,
           "outputFrame": 480,
-          "mse": 0.2111
+          "mse": 0.203
         },
         {
           "endpoint": "last",
           "sourceTime": 85.586,
           "outputFrame": 575,
-          "mse": 0.2517
+          "mse": 0.2378
         }
       ]
     },
@@ -219,13 +523,13 @@
           "endpoint": "first",
           "sourceTime": 81.832,
           "outputFrame": 576,
-          "mse": 0.1799
+          "mse": 0.1633
         },
         {
           "endpoint": "last",
           "sourceTime": 82.249,
           "outputFrame": 623,
-          "mse": 0.1826
+          "mse": 0.1976
         }
       ]
     },
@@ -237,7 +541,7 @@
           "endpoint": "first",
           "sourceTime": 44.378,
           "outputFrame": 624,
-          "mse": 0.1167
+          "mse": 0.1183
         },
         {
           "endpoint": "last",
@@ -255,7 +559,7 @@
           "endpoint": "first",
           "sourceTime": 48.59,
           "outputFrame": 672,
-          "mse": 0.1441
+          "mse": 0.15
         },
         {
           "endpoint": "last",
@@ -273,13 +577,13 @@
           "endpoint": "first",
           "sourceTime": 62.479,
           "outputFrame": 768,
-          "mse": 0.0937
+          "mse": 0.0965
         },
         {
           "endpoint": "last",
           "sourceTime": 63.439,
           "outputFrame": 863,
-          "mse": 0.1955
+          "mse": 0.1858
         }
       ]
     },
@@ -291,13 +595,13 @@
           "endpoint": "first",
           "sourceTime": 95.095,
           "outputFrame": 864,
-          "mse": 0.2177
+          "mse": 0.2338
         },
         {
           "endpoint": "last",
           "sourceTime": 95.429,
           "outputFrame": 911,
-          "mse": 0.2982
+          "mse": 0.2863
         }
       ]
     },
@@ -363,13 +667,13 @@
           "endpoint": "first",
           "sourceTime": 99.558,
           "outputFrame": 1104,
-          "mse": 0.1796
+          "mse": 0.1837
         },
         {
           "endpoint": "last",
           "sourceTime": 100.016,
           "outputFrame": 1151,
-          "mse": 0.3985
+          "mse": 0.3995
         }
       ]
     },
@@ -381,13 +685,13 @@
           "endpoint": "first",
           "sourceTime": 43.71,
           "outputFrame": 1152,
-          "mse": 0.1206
+          "mse": 0.1204
         },
         {
           "endpoint": "last",
-          "sourceTime": 44.253,
+          "sourceTime": 44.294,
           "outputFrame": 1247,
-          "mse": 0.1701
+          "mse": 0.2816
         }
       ]
     },
@@ -417,13 +721,13 @@
           "endpoint": "first",
           "sourceTime": 87.212,
           "outputFrame": 1296,
-          "mse": 0.2697
+          "mse": 0.2747
         },
         {
           "endpoint": "last",
           "sourceTime": 87.713,
           "outputFrame": 1343,
-          "mse": 0.2849
+          "mse": 0.2774
         }
       ]
     },
@@ -435,13 +739,13 @@
           "endpoint": "first",
           "sourceTime": 90.966,
           "outputFrame": 1344,
-          "mse": 0.1372
+          "mse": 0.1367
         },
         {
           "endpoint": "last",
           "sourceTime": 92.093,
           "outputFrame": 1439,
-          "mse": 0.3037
+          "mse": 0.2399
         }
       ]
     },
@@ -507,13 +811,13 @@
           "endpoint": "first",
           "sourceTime": 106.482,
           "outputFrame": 1536,
-          "mse": 0.1848
+          "mse": 0.1833
         },
         {
           "endpoint": "last",
           "sourceTime": 107.108,
           "outputFrame": 1631,
-          "mse": 0.1501
+          "mse": 0.1509
         }
       ]
     },
@@ -525,13 +829,13 @@
           "endpoint": "first",
           "sourceTime": 83.458,
           "outputFrame": 1632,
-          "mse": 0.1944
+          "mse": 0.2012
         },
         {
           "endpoint": "last",
           "sourceTime": 83.959,
           "outputFrame": 1679,
-          "mse": 0.1032
+          "mse": 0.0978
         }
       ]
     },
@@ -543,13 +847,13 @@
           "endpoint": "first",
           "sourceTime": 87.796,
           "outputFrame": 1680,
-          "mse": 0.1752
+          "mse": 0.1501
         },
         {
           "endpoint": "last",
           "sourceTime": 88.297,
           "outputFrame": 1727,
-          "mse": 0.165
+          "mse": 0.1948
         }
       ]
     },
@@ -579,13 +883,13 @@
           "endpoint": "first",
           "sourceTime": 64.981,
           "outputFrame": 1824,
-          "mse": 0.2157
+          "mse": 0.2258
         },
         {
           "endpoint": "last",
           "sourceTime": 65.524,
           "outputFrame": 1871,
-          "mse": 0.3025
+          "mse": 0.3419
         }
       ]
     },
@@ -597,13 +901,13 @@
           "endpoint": "first",
           "sourceTime": 65.815,
           "outputFrame": 1872,
-          "mse": 0.0929
+          "mse": 0.0942
         },
         {
           "endpoint": "last",
           "sourceTime": 66.274,
           "outputFrame": 1919,
-          "mse": 0.105
+          "mse": 0.139
         }
       ]
     },
