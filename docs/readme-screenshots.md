@@ -1,9 +1,10 @@
 # README song screenshots
 
-Updated 20 September 2026. All fifteen featured songs in the main README have a representative screenshot with its edition and preview/final status, and each song's project README has an associated image. Promotional covers and supplementary frames remain separate from the representative screenshot.
+Updated 21 September 2026. All sixteen featured songs in the main README have a representative screenshot with its edition and preview/final status, and each song's project README has an associated image. Promotional covers and supplementary frames remain separate from the representative screenshot.
 
 | Song | Representative image | Time | Edition / provenance |
 | --- | --- | --- | --- |
+| Stay at Your House — Hardstyle | [Lucy artwork and yellow English word focus](../assets/stay-house-hardstyle-preview.png) | 01:04.000 | Preview composition still from the shared scene function; no full film rendered |
 | Ведьмы | [Steady forest scene and equal Russian / English focus](../assets/vedmy-final-94-55.png) | 01:34.550 | Verified final autumn landscape film |
 | Pero es locura | [Original live performance and complete paired focus](../assets/pero-es-locura-v3-final-paired.png) | 02:14.450 | Verified paired-focus v3 final landscape film |
 | La Lune (version acoustique) | [Lunar scene and equal French / English focus](../assets/la-lune-acoustic-celestial-v3-46-8.png) | 00:46.800 | Verified Celestial v3 final landscape film |
@@ -58,3 +59,7 @@ Frame 8067 at 134.450 seconds is decoded from the verified v3 landscape film at 
 ## Ведьмы final autumn frame
 
 Frame 5673 at 94.550 seconds is decoded from the verified final autumn landscape film at native 1920×1080. It preserves the original release photograph, restrained falling leaves and complete bilingual нужны / need correspondence. Both READMEs share the unmodified frame, and the inventory records its final-video identity. Thirty decoded checkpoints were compared at reduced size, with selected native-size inspections of bilingual focus and late-lyric contrast. The earlier Chromium preview still remains historical; screenshot review is separate from the attested acoustic review.
+
+## Stay at Your House hardstyle preview
+
+The landscape still at 64 seconds uses the live preview composition function at native resolution. It shows the complete source artwork and stable yellow word focus. It is explicitly a composition still, not a decoded production frame or a browser screenshot. Trailer motion was separately observed in the actual preview browser after playback, seeking, layout switching and recovery. Both layouts and the original audio remain available for listening review.

@@ -2,6 +2,12 @@
 
 **We are not the creators of the original music, lyrics, performances, musical remixes, anime footage, characters or source illustrations. We do not take credit for that work.** Our contribution is the additional lyric-film presentation and production workflow. Artist and source-upload links below distinguish those roles; a source uploader is not necessarily the owner of every element in an upload.
 
+## I Really Want to Stay at Your House — Hardstyle
+
+The [selected upload](https://www.youtube.com/watch?v=tXFVl2Qb4zc) is by **Laaemel**; its description links an **Oblivion** remix and credits the **Samuel Kim / Lorien** cover. Original song: **Rosa Walton / Hallie Coggins**. Artwork: **xiaocha81269**, as credited by that upload. Selected animation comes from the [official Netflix Cyberpunk: Edgerunners trailer](https://www.youtube.com/watch?v=JtqIas3bYhg).
+
+Ael, with OpenAI Codex assistance, adds the lyric presentation, trailer edit, audio-reactive graphics and preview implementation. Original music, lyrics, animation, characters and source artwork remain third-party material. This is an unofficial preview, with no full-song render or endorsement. [Project and evidence limits](projects/stay-at-your-house-hardstyle/README.md).
+
 ## Sugar Glass
 
 **Anya Nami — Sugar Glass**: original song, performance and immediate source upload, [Sugar Glass (mood video)](https://www.youtube.com/watch?v=-NsQ8_WLq2s). Individual production and writing credits beyond the identified source are not inferred.
