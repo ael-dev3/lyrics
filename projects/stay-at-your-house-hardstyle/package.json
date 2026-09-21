@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "typecheck": "tsc --noEmit",
-    "check": "npm run typecheck && node --test tests/*.test.ts && node scripts/check.ts",
+    "check": "npm run typecheck && node --test tests/*.test.ts && node scripts/check.ts && node scripts/verify-visual-clearance.mjs",
     "features": "node scripts/analyze.ts",
     "review:build": "esbuild src/review-client.ts --bundle --format=esm --outfile=review/client.js",
     "preview": "npm run review:build && node scripts/review-server.ts",

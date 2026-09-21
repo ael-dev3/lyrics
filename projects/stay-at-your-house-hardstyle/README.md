@@ -33,7 +33,8 @@ Node 24+, FFmpeg with libx264, npm dependencies and the included OFL fonts are r
 - Short dissolves keep the trailer inside the selected intensity windows. Cuts use quarter-note groups of the measured 150 BPM pulse. The current 43 shot starts have a median absolute residual of **0.703 ms** against nearby spectral-flux peaks. These peaks are signal estimates around an editorial grid, not manually certified beat annotations.
 - Characters, speed trails, city scale and physical action carry the impact. Trailer dialogue, subtitles, promotional cards and added full-screen flashes are omitted from the selected edit. Short action shots receive shorter holds; atmospheric views can breathe.
 - Portrait uses a shot-specific horizontal focal point and continuous bottom shading. Landscape opens the whole picture during instrumental drops. The remaining chorus lyrics retain fixed geometry and contrast during their overlap with the second edit.
-- The first edit retains six selected source action frames retimed to quarter-note accents. The second uses clean frame-bounded trims and a new shot rhythm, with 0.4, 0.8, 1.6 and 2.4-second holds. Encoded trim endpoints are checked against source pixels to catch adjacent-shot leakage. Portrait framing is inspected separately, including off-center faces and moving subjects.
+- The first edit retains six selected source action frames. The second adds **17 authored action accents** across 15 shots: muzzle flashes, recoil poses and impact frames meet measured quarter/eighth-note attacks while preserving every shot boundary and source range. All 23 action frames and 56 trim endpoints are verified against encoded pixels. Natural character holds remain unchanged.
+- The spectrum keeps a smooth clearance zone below visible lyrics, then regains full instrumental reach. A full-song audit checks actual glyph descenders against every intersecting bar and facet in both layouts: 832,855 comparisons, zero collisions and at least 37.524 pixels of clearance.
 - The preview decodes 200 ms ahead and selects cached pictures by their actual frame timestamps on the music clock. Seeking primes the picture before music resumes; portrait crops follow the selected picture frame.
 - Abstract 3D assets are not loaded or required by this edition.
 
@@ -41,7 +42,7 @@ Node 24+, FFmpeg with libx264, npm dependencies and the included OFL fonts are r
 
 *Composition still from the second edit at 03:16; original trailer animation, not a full-film render.*
 
-[Portrait composition](evidence/preview-portrait.png) · [Edit decision list](source/trailer-edit.json) · [Asset identities](evidence/trailer-assets.json) · [Freshness and unchanged-input audit](evidence/edit-freshness.json) · [Beat measurements](evidence/beat-audit.json) · [Encoded action-frame checks](evidence/trailer-asset-verification.json)
+[Lyric clearance still](evidence/preview-lyric-clearance.png) · [Full-frame clearance audit](evidence/visual-clearance.json) · [Portrait composition](evidence/preview-portrait.png) · [Edit decision list](source/trailer-edit.json) · [Asset identities](evidence/trailer-assets.json) · [Freshness and unchanged-input audit](evidence/edit-freshness.json) · [Beat measurements](evidence/beat-audit.json) · [Encoded action-frame checks](evidence/trailer-asset-verification.json)
 
 ## Lyrics and review limits
 
@@ -55,7 +56,7 @@ Production remains blocked by incomplete listening evidence and absent current-r
 
 ## Verification and credits
 
-[Technical checks](evidence/structural-check.json) · [Browser review](evidence/preview-verification.md) · [Production gate](evidence/production-status.json) · [Reusable lessons](PRODUCTION-LESSONS.md)
+[Technical checks](evidence/structural-check.json) · [Browser review](evidence/preview-verification.md) · [Per-event playback measurements](evidence/playback-sync.json) · [Production gate](evidence/production-status.json) · [Reusable lessons](PRODUCTION-LESSONS.md)
 
 - [Selected music upload](https://www.youtube.com/watch?v=tXFVl2Qb4zc): Laaemel. Its description links an Oblivion remix and credits the Samuel Kim / Lorien cover.
 - Original song: Rosa Walton / Hallie Coggins. [Cover credited by the upload](https://www.youtube.com/watch?v=_AAdae7diOU).

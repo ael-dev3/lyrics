@@ -24,13 +24,21 @@ for lo,hi in [(102.35,129.16),(174.35,213.56)]:
   events.append({'time':round(float(peak[0]),6),'flux':round(float(peak[1]),6),'contrast':round(contrast,4),'grid':round(float(grid),6)})
 quarters=[e for e in events if abs((e['grid']-.35)/.4-round((e['grid']-.35)/.4))<1e-4 and e['contrast']>=1.45]
 errors=np.array([e['time']-e['grid'] for e in quarters]);cuts=json.load(open('source/trailer-edit.json'))
-cutcheck=[]
+cutcheck=[];actioncheck=[]
 for m in cuts['montages']:
  for s in m['shots']:
   t=m['songStart']+s['startFrame']/60
   around=a[np.abs(a[:,0]-t)<.012];p=around[np.argmax(around[:,1])]
   cutcheck.append({'montage':m['id'],'shot':s['name'],'cut':round(t,6),'measuredAttack':round(float(p[0]),6),'errorMs':round((t-p[0])*1000,3)})
-report={'method':'512-sample Hann STFT, 44-sample hop (~0.998 ms), positive log-magnitude spectral flux averaged over FFT bins 5–115; center timestamp. Local attack candidates near a 150 BPM grid, qualified against the local median. Not a human-certified beat annotation.','audioPcmSha256':hashlib.sha256(open('analysis/audio-delivery.f32','rb').read()).hexdigest(),'periodSeconds':.4,'phaseSeconds':.35,'qualifiedQuarterAttacks':len(quarters),'quarterGridResidualMs':{'medianAbs':round(float(np.median(abs(errors)))*1000,3),'p95Abs':round(float(np.quantile(abs(errors),.95))*1000,3),'maxAbs':round(float(max(abs(errors)))*1000,3)},'cutAudit':cutcheck,'scope':'Measures arrangement attacks and edit boundaries, not word timing or device output latency.'}
+  for accent in s.get('accents',[s['accent']] if 'accent' in s else []):
+   target=t+accent['frame']/60
+   around=a[np.abs(a[:,0]-target)<.012];peak=around[np.argmax(around[:,1])]
+   row={'montage':m['id'],'shot':s['name'],'basis':accent['basis'],'sourceTime':accent['sourceTime'],'targetFrame':s['startFrame']+accent['frame'],'musicTime':round(target,6),'measuredAttack':round(float(peak[0]),6),'errorMs':round((target-peak[0])*1000,3)}
+   if m['id']=='drop-two':
+    previous=t+(accent['sourceTime']-s['sourceFirstFrame'])/(s['sourceOut']-s['sourceFirstFrame'])*s['frames']/60
+    row['previousLinearTimeEstimate']=round(previous,6);row['previousLinearOffsetFromTargetMs']=round((previous-target)*1000,3)
+   actioncheck.append(row)
+report={'method':'512-sample Hann STFT, 44-sample hop (~0.998 ms), positive log-magnitude spectral flux averaged over FFT bins 5–115; center timestamp. Local attack candidates near a 150 BPM grid, qualified against the local median. Not a human-certified beat annotation.','audioPcmSha256':hashlib.sha256(open('analysis/audio-delivery.f32','rb').read()).hexdigest(),'periodSeconds':.4,'phaseSeconds':.35,'qualifiedQuarterAttacks':len(quarters),'quarterGridResidualMs':{'medianAbs':round(float(np.median(abs(errors)))*1000,3),'p95Abs':round(float(np.quantile(abs(errors),.95))*1000,3),'maxAbs':round(float(max(abs(errors)))*1000,3)},'cutAudit':cutcheck,'actionAudit':actioncheck,'scope':'Measures arrangement attacks and edit boundaries, not word timing or device output latency.'}
 json.dump(report,open('evidence/beat-audit.json','w'),indent=2)
 json.dump(events,open('public/beat-pulses.json','w'),separators=(',',':'))
 print(json.dumps({k:report[k] for k in ['qualifiedQuarterAttacks','quarterGridResidualMs']}))

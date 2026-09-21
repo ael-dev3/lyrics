@@ -13,8 +13,15 @@ for(const montage of edit.montages){
   const out=`analysis/trailer-clips/${montage.id}-${i}.mp4`,duration=shot.frames/edit.fps;
   const span=shot.sourceOut-(montage.strictSourceBounds?shot.sourceFirstFrame:shot.sourceIn),rate=span/duration;
   const trim=montage.strictSourceBounds?`trim=end=${span},`:'';
-  const accent=shot.accent,anchor=accent?accent.sourceTime-shot.sourceFirstFrame:0,at=accent?accent.frame/edit.fps:0;
-  const warp=accent?`if(lt(T\\,${anchor})\\,T/${anchor/at}\\,${at}+(T-${anchor})/${(span-anchor)/(duration-at)})/TB`:`PTS/${rate}`;
+  const accents=shot.accents??(shot.accent?[shot.accent]:[]);
+  const accent=accents[0],anchor=accent?accent.sourceTime-shot.sourceFirstFrame:0,at=accent?accent.frame/edit.fps:0;
+  let warp=accent?`if(lt(T\\,${anchor})\\,T/${anchor/at}\\,${at}+(T-${anchor})/${(span-anchor)/(duration-at)})/TB`:`PTS/${rate}`;
+  if(accents.length>1){
+   const knots=[{source:0,output:0},...accents.map((a:{sourceTime:number;frame:number})=>({source:a.sourceTime-shot.sourceFirstFrame,output:a.frame/edit.fps})),{source:span,output:duration}];
+   let expression='';
+   for(let k=knots.length-2;k>=0;k--){const a=knots[k]!,b=knots[k+1]!,part=`${a.output}+(T-${a.source})/${(b.source-a.source)/(b.output-a.output)}`;expression=expression?`if(lt(T\\,${b.source})\\,${part}\\,${expression})`:part;}
+   warp=`(${expression})/TB`;
+  }
   execFileSync('ffmpeg',['-hide_banner','-loglevel','error','-y','-ss',String(shot.sourceIn),'-t',String(shot.sourceOut-shot.sourceIn),'-i','public/trailer.mp4','-map','0:v:0','-an','-vf',`settb=1/60000,setpts=PTS-STARTPTS,${trim}setpts=${warp},fps=60:round=up,scale=1920:1080,setsar=1,tpad=stop_mode=clone:stop_duration=0.1`,'-frames:v',String(shot.frames),'-c:v','libx264','-preset','fast','-crf','18','-pix_fmt','yuv420p','-g','30',out],{stdio:'inherit'});
   files.push(`file '${montage.id}-${i}.mp4'`);console.log(montage.id,i+1,'/',montage.shots.length);
  }

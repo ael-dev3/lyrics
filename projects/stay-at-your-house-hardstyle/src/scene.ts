@@ -6,6 +6,19 @@ import {clamp,ease,mixAt} from './score.ts';
 export const palette={ink:'#03050b',rest:'#f1f3ed',active:'#fcee0a',cyan:'#00f0ff',violet:'#a879db'};
 export type MotionFrame={bass:number;kick:number;strength:number};
 export type Media={art:CanvasImageSource;dropOne:CanvasImageSource;dropTwo:CanvasImageSource;pictureTime?:number};
+/** Reserve the actual reading area, with a short approach/release outside cue visibility. */
+export function spectrumTravelAt(t:number,format:Format,data:ProductionData,layouts:Layouts,nominal:number){
+ const p=format==='portrait',baseline=p?1735:997;let travel=nominal;
+ for(const cue of data.cues){
+  const from=cue.visibleFrom/data.sampleRate,until=cue.visibleUntil/data.sampleRate;
+  if(t<from-.2||t>until+.2)continue;
+  const l=layouts[format].cues[cue.id]!,floor=Math.max(...l.source.map(w=>w.y))+l.fontSize*.25+(p?40:32);
+  // Two pixels of minimum height and the four-pixel facet sit above this travel.
+  const safe=Math.max(0,baseline-floor-6),weight=ease((t-from+.2)/.2)*(1-ease((t-until)/.2));
+  travel=Math.min(travel,nominal+(Math.min(nominal,safe)-nominal)*weight);
+ }
+ return travel;
+}
 const cover=(ctx:CanvasRenderingContext2D,img:CanvasImageSource,x:number,y:number,w:number,h:number,iw:number,ih:number,fx=.5,fy=.5)=>{const scale=Math.max(w/iw,h/ih),sw=w/scale,sh=h/scale;ctx.drawImage(img,(iw-sw)*fx,(ih-sh)*fy,sw,sh,x,y,w,h);};
 export function drawScene(ctx:CanvasRenderingContext2D,t:number,format:Format,data:ProductionData,layouts:Layouts,bands:readonly number[][],motion:readonly MotionFrame[],media:Media){
  const l=layouts[format],w=l.width,h=l.height,p=format==='portrait',frame=Math.min(data.frames-1,Math.max(0,Math.round(t*60))),m=motion[frame]!,strength=m.strength,hard=mixAt(t);
@@ -51,9 +64,10 @@ export function drawScene(ctx:CanvasRenderingContext2D,t:number,format:Format,da
  const dbs=bands[frame]??[],baseline=p?1735:997,barWidth=p?8:16,step=p?14:26,origin=(w-step*63-barWidth)/2;
  const maxTravel=p?38+212*strength**1.8:20+187*strength**1.8;
  const gain=1+.16*m.kick*strength;
+ const travel=spectrumTravelAt(t,format,data,layouts,maxTravel*gain);
  ctx.globalAlpha=fade*(.50+.47*strength);
  const gradient=ctx.createLinearGradient(origin,0,origin+step*64,0);gradient.addColorStop(0,palette.cyan);gradient.addColorStop(.52,palette.active);gradient.addColorStop(1,palette.cyan);
- for(let i=0;i<64;i++){const amp=clamp(((dbs[i]??-120)+65)/48),height=2+amp**1.45*maxTravel*gain,x=origin+i*step,y=baseline-height;
+ for(let i=0;i<64;i++){const amp=clamp(((dbs[i]??-120)+65)/48),height=2+amp**1.45*travel,x=origin+i*step,y=baseline-height;
   ctx.fillStyle=gradient;ctx.fillRect(x,y,barWidth,height);
   if(strength>.55){ctx.fillStyle='rgba(252,238,10,.32)';ctx.beginPath();ctx.moveTo(x+barWidth,y);ctx.lineTo(x+barWidth+3,y-4);ctx.lineTo(x+barWidth+3,baseline-4);ctx.lineTo(x+barWidth,baseline);ctx.fill();}
  }
