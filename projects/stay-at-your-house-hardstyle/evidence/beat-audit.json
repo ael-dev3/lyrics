@@ -1,0 +1,339 @@
+{
+  "method": "512-sample Hann STFT, 44-sample hop (~0.998 ms), positive log-magnitude spectral flux averaged over FFT bins 5\u2013115; center timestamp. Local attack candidates near a 150 BPM grid, qualified against the local median. Not a human-certified beat annotation.",
+  "audioPcmSha256": "fdd2be74a2b83b3e476ce9c3996fd06fd89b47b46451d74a380094b4d22488a4",
+  "periodSeconds": 0.4,
+  "phaseSeconds": 0.35,
+  "qualifiedQuarterAttacks": 162,
+  "quarterGridResidualMs": {
+    "medianAbs": 0.681,
+    "p95Abs": 1.877,
+    "maxAbs": 10.181
+  },
+  "cutComparison": [
+    {
+      "montage": "drop-one",
+      "shot": "speed",
+      "oldCut": 102.416667,
+      "measuredAttack": 102.350204,
+      "oldErrorMs": 66.463,
+      "newCut": 102.35,
+      "newErrorMs": -0.204
+    },
+    {
+      "montage": "drop-one",
+      "shot": "mask",
+      "oldCut": 104.016667,
+      "measuredAttack": 103.950567,
+      "oldErrorMs": 66.1,
+      "newCut": 103.95,
+      "newErrorMs": -0.567
+    },
+    {
+      "montage": "drop-one",
+      "shot": "boots",
+      "oldCut": 104.816667,
+      "measuredAttack": 104.749751,
+      "oldErrorMs": 66.916,
+      "newCut": 104.75,
+      "newErrorMs": 0.249
+    },
+    {
+      "montage": "drop-one",
+      "shot": "eye",
+      "oldCut": 106.416667,
+      "measuredAttack": 106.350113,
+      "oldErrorMs": 66.553,
+      "newCut": 106.35,
+      "newErrorMs": -0.113
+    },
+    {
+      "montage": "drop-one",
+      "shot": "faces",
+      "oldCut": 107.216667,
+      "measuredAttack": 107.149297,
+      "oldErrorMs": 67.37,
+      "newCut": 107.15,
+      "newErrorMs": 0.703
+    },
+    {
+      "montage": "drop-one",
+      "shot": "street",
+      "oldCut": 110.416667,
+      "measuredAttack": 110.349025,
+      "oldErrorMs": 67.642,
+      "newCut": 110.35,
+      "newErrorMs": 0.975
+    },
+    {
+      "montage": "drop-one",
+      "shot": "gunfight",
+      "oldCut": 112.016667,
+      "measuredAttack": 111.949388,
+      "oldErrorMs": 67.279,
+      "newCut": 111.95,
+      "newErrorMs": 0.612
+    },
+    {
+      "montage": "drop-one",
+      "shot": "david",
+      "oldCut": 113.616667,
+      "measuredAttack": 113.550748,
+      "oldErrorMs": 65.918,
+      "newCut": 113.55,
+      "newErrorMs": -0.748
+    },
+    {
+      "montage": "drop-one",
+      "shot": "rebecca",
+      "oldCut": 115.216667,
+      "measuredAttack": 115.151111,
+      "oldErrorMs": 65.556,
+      "newCut": 115.15,
+      "newErrorMs": -1.111
+    },
+    {
+      "montage": "drop-one",
+      "shot": "cannon",
+      "oldCut": 116.016667,
+      "measuredAttack": 115.949297,
+      "oldErrorMs": 67.37,
+      "newCut": 115.95,
+      "newErrorMs": 0.703
+    },
+    {
+      "montage": "drop-one",
+      "shot": "car",
+      "oldCut": 116.816667,
+      "measuredAttack": 116.749478,
+      "oldErrorMs": 67.188,
+      "newCut": 116.75,
+      "newErrorMs": 0.522
+    },
+    {
+      "montage": "drop-one",
+      "shot": "rocket",
+      "oldCut": 118.416667,
+      "measuredAttack": 118.349841,
+      "oldErrorMs": 66.825,
+      "newCut": 118.35,
+      "newErrorMs": 0.159
+    },
+    {
+      "montage": "drop-one",
+      "shot": "sky",
+      "oldCut": 120.816667,
+      "measuredAttack": 120.749388,
+      "oldErrorMs": 67.279,
+      "newCut": 120.75,
+      "newErrorMs": 0.612
+    },
+    {
+      "montage": "drop-one",
+      "shot": "lucy",
+      "oldCut": 124.016667,
+      "measuredAttack": 123.950113,
+      "oldErrorMs": 66.553,
+      "newCut": 123.95,
+      "newErrorMs": -0.113
+    },
+    {
+      "montage": "drop-one",
+      "shot": "city",
+      "oldCut": 127.216667,
+      "measuredAttack": 127.150839,
+      "oldErrorMs": 65.828,
+      "newCut": 127.15,
+      "newErrorMs": -0.839
+    },
+    {
+      "montage": "drop-two",
+      "shot": "faces",
+      "oldCut": 179.216667,
+      "measuredAttack": 179.148662,
+      "oldErrorMs": 68.005,
+      "newCut": 179.15,
+      "newErrorMs": 1.338
+    },
+    {
+      "montage": "drop-two",
+      "shot": "city",
+      "oldCut": 182.416667,
+      "measuredAttack": 182.349388,
+      "oldErrorMs": 67.279,
+      "newCut": 182.35,
+      "newErrorMs": 0.612
+    },
+    {
+      "montage": "drop-two",
+      "shot": "close",
+      "oldCut": 184.016667,
+      "measuredAttack": 183.948753,
+      "oldErrorMs": 67.914,
+      "newCut": 183.95,
+      "newErrorMs": 1.247
+    },
+    {
+      "montage": "drop-two",
+      "shot": "eye",
+      "oldCut": 184.816667,
+      "measuredAttack": 184.739955,
+      "oldErrorMs": 76.712,
+      "newCut": 184.75,
+      "newErrorMs": 10.045
+    },
+    {
+      "montage": "drop-two",
+      "shot": "car",
+      "oldCut": 185.616667,
+      "measuredAttack": 185.548118,
+      "oldErrorMs": 68.549,
+      "newCut": 185.55,
+      "newErrorMs": 1.882
+    },
+    {
+      "montage": "drop-two",
+      "shot": "speed",
+      "oldCut": 187.216667,
+      "measuredAttack": 187.151474,
+      "oldErrorMs": 65.193,
+      "newCut": 187.15,
+      "newErrorMs": -1.474
+    },
+    {
+      "montage": "drop-two",
+      "shot": "david",
+      "oldCut": 188.816667,
+      "measuredAttack": 188.748844,
+      "oldErrorMs": 67.823,
+      "newCut": 188.75,
+      "newErrorMs": 1.156
+    },
+    {
+      "montage": "drop-two",
+      "shot": "mask",
+      "oldCut": 190.416667,
+      "measuredAttack": 190.349206,
+      "oldErrorMs": 67.46,
+      "newCut": 190.35,
+      "newErrorMs": 0.794
+    },
+    {
+      "montage": "drop-two",
+      "shot": "gunfight",
+      "oldCut": 191.216667,
+      "measuredAttack": 191.149388,
+      "oldErrorMs": 67.279,
+      "newCut": 191.15,
+      "newErrorMs": 0.612
+    },
+    {
+      "montage": "drop-two",
+      "shot": "cannon",
+      "oldCut": 192.816667,
+      "measuredAttack": 192.749751,
+      "oldErrorMs": 66.916,
+      "newCut": 192.75,
+      "newErrorMs": 0.249
+    },
+    {
+      "montage": "drop-two",
+      "shot": "rain",
+      "oldCut": 193.616667,
+      "measuredAttack": 193.549932,
+      "oldErrorMs": 66.735,
+      "newCut": 193.55,
+      "newErrorMs": 0.068
+    },
+    {
+      "montage": "drop-two",
+      "shot": "rebecca",
+      "oldCut": 194.416667,
+      "measuredAttack": 194.349116,
+      "oldErrorMs": 67.551,
+      "newCut": 194.35,
+      "newErrorMs": 0.884
+    },
+    {
+      "montage": "drop-two",
+      "shot": "street",
+      "oldCut": 195.216667,
+      "measuredAttack": 195.150295,
+      "oldErrorMs": 66.372,
+      "newCut": 195.15,
+      "newErrorMs": -0.295
+    },
+    {
+      "montage": "drop-two",
+      "shot": "standoff",
+      "oldCut": 196.816667,
+      "measuredAttack": 196.74966,
+      "oldErrorMs": 67.007,
+      "newCut": 196.75,
+      "newErrorMs": 0.34
+    },
+    {
+      "montage": "drop-two",
+      "shot": "rocket",
+      "oldCut": 197.616667,
+      "measuredAttack": 197.549841,
+      "oldErrorMs": 66.825,
+      "newCut": 197.55,
+      "newErrorMs": 0.159
+    },
+    {
+      "montage": "drop-two",
+      "shot": "speed",
+      "oldCut": 200.016667,
+      "measuredAttack": 199.952381,
+      "oldErrorMs": 64.286,
+      "newCut": 199.95,
+      "newErrorMs": -2.381
+    },
+    {
+      "montage": "drop-two",
+      "shot": "boots",
+      "oldCut": 201.616667,
+      "measuredAttack": 201.549751,
+      "oldErrorMs": 66.916,
+      "newCut": 201.55,
+      "newErrorMs": 0.249
+    },
+    {
+      "montage": "drop-two",
+      "shot": "eye",
+      "oldCut": 203.216667,
+      "measuredAttack": 203.149116,
+      "oldErrorMs": 67.551,
+      "newCut": 203.15,
+      "newErrorMs": 0.884
+    },
+    {
+      "montage": "drop-two",
+      "shot": "sky",
+      "oldCut": 204.016667,
+      "measuredAttack": 203.949297,
+      "oldErrorMs": 67.37,
+      "newCut": 203.95,
+      "newErrorMs": 0.703
+    },
+    {
+      "montage": "drop-two",
+      "shot": "lucy",
+      "oldCut": 207.216667,
+      "measuredAttack": 207.149025,
+      "oldErrorMs": 67.642,
+      "newCut": 207.15,
+      "newErrorMs": 0.975
+    },
+    {
+      "montage": "drop-two",
+      "shot": "city",
+      "oldCut": 210.416667,
+      "measuredAttack": 210.349751,
+      "oldErrorMs": 66.916,
+      "newCut": 210.35,
+      "newErrorMs": 0.249
+    }
+  ],
+  "scope": "Measures arrangement attacks and edit boundaries, not word timing or device output latency."
+}

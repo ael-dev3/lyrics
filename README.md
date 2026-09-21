@@ -16,7 +16,7 @@ Music films with synchronized lyrics, meaning-linked translations, and audio-rea
 
 *Representative preview composition at 01:04, generated with the same scene function as the player. Artwork: xiaocha81269, as credited by the selected music upload.*
 
-The complete 3:47.718 hardstyle recording uses steady word highlighting in #FCEE0A and a measured spectrum. Two selected edits from the official Netflix Edgerunners trailer carry the hard electronic peaks, with independent landscape and portrait framing. Quieter sections retain the source illustration.
+The complete 3:47.718 hardstyle recording uses steady word highlighting in #FCEE0A and a measured spectrum. Two selected edits from the official Netflix Edgerunners trailer carry the hard electronic peaks, with independent landscape and portrait framing. Quieter sections retain the source illustration. The current revision refines the cuts against measured beat attacks, maps selected action frames onto those pulses and selects decoded preview pictures on the music clock.
 
 The preview includes 45 lyric phrases and 284 provisional word events, both layouts, seeking and reduced-speed playback. Acoustic and coverage questions remain explicitly marked; listening completion and current-revision production approval are still pending. No full-song video or upload package has been rendered.
 

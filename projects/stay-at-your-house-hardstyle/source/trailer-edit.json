@@ -3,11 +3,11 @@
   "title": "Cyberpunk: Edgerunners | Official NSFW Trailer | Netflix",
   "uploader": "Netflix",
   "fps": 60,
-  "clock": "Music source seconds. Most cuts use four-beat 1.6-second groups on the observed 150 BPM pulse; no claim of sample-exact musical ground truth.",
+  "clock": "Original music seconds. Cut grid refined to the measured 0.350-second phase of the 150 BPM pulse; see evidence/beat-audit.json for measured residuals and limits.",
   "montages": [
     {
       "id": "drop-one",
-      "songStart": 102.41666666666667,
+      "songStart": 102.35,
       "frames": 1608,
       "duration": 26.8,
       "shots": [
@@ -17,7 +17,13 @@
           "sourceOut": 40.94,
           "startFrame": 0,
           "frames": 96,
-          "portraitFocusX": 0.5
+          "portraitFocusX": 0.5,
+          "accent": {
+            "sourceTime": 40.123,
+            "frame": 24,
+            "basis": "Selected movement or shot-impact frame, identified from source-frame changes; mapped to a quarter-note pulse."
+          },
+          "sourceFirstFrame": 39.748
         },
         {
           "name": "mask",
@@ -25,7 +31,8 @@
           "sourceOut": 30.62,
           "startFrame": 96,
           "frames": 48,
-          "portraitFocusX": 0.59
+          "portraitFocusX": 0.59,
+          "sourceFirstFrame": 30.197
         },
         {
           "name": "boots",
@@ -33,7 +40,8 @@
           "sourceOut": 27.63,
           "startFrame": 144,
           "frames": 96,
-          "portraitFocusX": 0.52
+          "portraitFocusX": 0.52,
+          "sourceFirstFrame": 26.61
         },
         {
           "name": "eye",
@@ -41,7 +49,8 @@
           "sourceOut": 29.22,
           "startFrame": 240,
           "frames": 48,
-          "portraitFocusX": 0.32
+          "portraitFocusX": 0.32,
+          "sourceFirstFrame": 28.57
         },
         {
           "name": "faces",
@@ -49,7 +58,8 @@
           "sourceOut": 60.83,
           "startFrame": 288,
           "frames": 192,
-          "portraitFocusX": 0.5
+          "portraitFocusX": 0.5,
+          "sourceFirstFrame": 58.225
         },
         {
           "name": "street",
@@ -57,7 +67,13 @@
           "sourceOut": 64.69,
           "startFrame": 480,
           "frames": 96,
-          "portraitFocusX": 0.52
+          "portraitFocusX": 0.52,
+          "accent": {
+            "sourceTime": 64.064,
+            "frame": 48,
+            "basis": "Selected movement or shot-impact frame, identified from source-frame changes; mapped to a quarter-note pulse."
+          },
+          "sourceFirstFrame": 63.689
         },
         {
           "name": "gunfight",
@@ -65,7 +81,13 @@
           "sourceOut": 86.98,
           "startFrame": 576,
           "frames": 96,
-          "portraitFocusX": 0.55
+          "portraitFocusX": 0.55,
+          "accent": {
+            "sourceTime": 86.712,
+            "frame": 72,
+            "basis": "Selected movement or shot-impact frame, identified from source-frame changes; mapped to a quarter-note pulse."
+          },
+          "sourceFirstFrame": 85.919
         },
         {
           "name": "david",
@@ -73,7 +95,13 @@
           "sourceOut": 93.45,
           "startFrame": 672,
           "frames": 96,
-          "portraitFocusX": 0.55
+          "portraitFocusX": 0.55,
+          "accent": {
+            "sourceTime": 93.093,
+            "frame": 72,
+            "basis": "Selected movement or shot-impact frame, identified from source-frame changes; mapped to a quarter-note pulse."
+          },
+          "sourceFirstFrame": 92.176
         },
         {
           "name": "rebecca",
@@ -81,7 +109,13 @@
           "sourceOut": 101.07,
           "startFrame": 768,
           "frames": 48,
-          "portraitFocusX": 0.51
+          "portraitFocusX": 0.51,
+          "accent": {
+            "sourceTime": 100.892,
+            "frame": 24,
+            "basis": "Selected movement or shot-impact frame, identified from source-frame changes; mapped to a quarter-note pulse."
+          },
+          "sourceFirstFrame": 100.725
         },
         {
           "name": "cannon",
@@ -89,7 +123,8 @@
           "sourceOut": 102.6,
           "startFrame": 816,
           "frames": 48,
-          "portraitFocusX": 0.45
+          "portraitFocusX": 0.45,
+          "sourceFirstFrame": 102.227
         },
         {
           "name": "car",
@@ -97,7 +132,13 @@
           "sourceOut": 104.17,
           "startFrame": 864,
           "frames": 96,
-          "portraitFocusX": 0.5
+          "portraitFocusX": 0.5,
+          "accent": {
+            "sourceTime": 103.562,
+            "frame": 24,
+            "basis": "Selected movement or shot-impact frame, identified from source-frame changes; mapped to a quarter-note pulse."
+          },
+          "sourceFirstFrame": 103.228
         },
         {
           "name": "rocket",
@@ -105,7 +146,8 @@
           "sourceOut": 73.5,
           "startFrame": 960,
           "frames": 144,
-          "portraitFocusX": 0.5
+          "portraitFocusX": 0.5,
+          "sourceFirstFrame": 72.03
         },
         {
           "name": "sky",
@@ -113,7 +155,8 @@
           "sourceOut": 111.08,
           "startFrame": 1104,
           "frames": 192,
-          "portraitFocusX": 0.5
+          "portraitFocusX": 0.5,
+          "sourceFirstFrame": 109.067
         },
         {
           "name": "lucy",
@@ -121,7 +164,8 @@
           "sourceOut": 113.28,
           "startFrame": 1296,
           "frames": 192,
-          "portraitFocusX": 0.48
+          "portraitFocusX": 0.48,
+          "sourceFirstFrame": 111.778
         },
         {
           "name": "city",
@@ -129,13 +173,15 @@
           "sourceOut": 5.78,
           "startFrame": 1488,
           "frames": 120,
-          "portraitFocusX": 0.5
+          "portraitFocusX": 0.5,
+          "sourceFirstFrame": 4.588
         }
-      ]
+      ],
+      "previousSongStart": 102.41666666666667
     },
     {
       "id": "drop-two",
-      "songStart": 179.21666666666667,
+      "songStart": 179.15,
       "frames": 2064,
       "duration": 34.4,
       "shots": [
@@ -145,7 +191,8 @@
           "sourceOut": 60.83,
           "startFrame": 0,
           "frames": 192,
-          "portraitFocusX": 0.5
+          "portraitFocusX": 0.5,
+          "sourceFirstFrame": 58.225
         },
         {
           "name": "city",
@@ -153,7 +200,8 @@
           "sourceOut": 5.78,
           "startFrame": 192,
           "frames": 96,
-          "portraitFocusX": 0.5
+          "portraitFocusX": 0.5,
+          "sourceFirstFrame": 4.588
         },
         {
           "name": "close",
@@ -161,7 +209,8 @@
           "sourceOut": 7.12,
           "startFrame": 288,
           "frames": 48,
-          "portraitFocusX": 0.48
+          "portraitFocusX": 0.48,
+          "sourceFirstFrame": 6.548
         },
         {
           "name": "eye",
@@ -169,7 +218,8 @@
           "sourceOut": 29.22,
           "startFrame": 336,
           "frames": 48,
-          "portraitFocusX": 0.32
+          "portraitFocusX": 0.32,
+          "sourceFirstFrame": 28.57
         },
         {
           "name": "car",
@@ -177,7 +227,13 @@
           "sourceOut": 104.17,
           "startFrame": 384,
           "frames": 96,
-          "portraitFocusX": 0.5
+          "portraitFocusX": 0.5,
+          "accent": {
+            "sourceTime": 103.562,
+            "frame": 24,
+            "basis": "Selected movement or shot-impact frame, identified from source-frame changes; mapped to a quarter-note pulse."
+          },
+          "sourceFirstFrame": 103.228
         },
         {
           "name": "speed",
@@ -185,7 +241,13 @@
           "sourceOut": 40.94,
           "startFrame": 480,
           "frames": 96,
-          "portraitFocusX": 0.5
+          "portraitFocusX": 0.5,
+          "accent": {
+            "sourceTime": 40.123,
+            "frame": 24,
+            "basis": "Selected movement or shot-impact frame, identified from source-frame changes; mapped to a quarter-note pulse."
+          },
+          "sourceFirstFrame": 39.748
         },
         {
           "name": "david",
@@ -193,7 +255,13 @@
           "sourceOut": 93.45,
           "startFrame": 576,
           "frames": 96,
-          "portraitFocusX": 0.55
+          "portraitFocusX": 0.55,
+          "accent": {
+            "sourceTime": 93.093,
+            "frame": 72,
+            "basis": "Selected movement or shot-impact frame, identified from source-frame changes; mapped to a quarter-note pulse."
+          },
+          "sourceFirstFrame": 92.176
         },
         {
           "name": "mask",
@@ -201,7 +269,8 @@
           "sourceOut": 30.62,
           "startFrame": 672,
           "frames": 48,
-          "portraitFocusX": 0.59
+          "portraitFocusX": 0.59,
+          "sourceFirstFrame": 30.197
         },
         {
           "name": "gunfight",
@@ -209,7 +278,13 @@
           "sourceOut": 86.98,
           "startFrame": 720,
           "frames": 96,
-          "portraitFocusX": 0.55
+          "portraitFocusX": 0.55,
+          "accent": {
+            "sourceTime": 86.712,
+            "frame": 72,
+            "basis": "Selected movement or shot-impact frame, identified from source-frame changes; mapped to a quarter-note pulse."
+          },
+          "sourceFirstFrame": 85.919
         },
         {
           "name": "cannon",
@@ -217,7 +292,8 @@
           "sourceOut": 102.6,
           "startFrame": 816,
           "frames": 48,
-          "portraitFocusX": 0.45
+          "portraitFocusX": 0.45,
+          "sourceFirstFrame": 102.227
         },
         {
           "name": "rain",
@@ -225,7 +301,8 @@
           "sourceOut": 90.92,
           "startFrame": 864,
           "frames": 48,
-          "portraitFocusX": 0.42
+          "portraitFocusX": 0.42,
+          "sourceFirstFrame": 90.382
         },
         {
           "name": "rebecca",
@@ -233,7 +310,13 @@
           "sourceOut": 101.07,
           "startFrame": 912,
           "frames": 48,
-          "portraitFocusX": 0.51
+          "portraitFocusX": 0.51,
+          "accent": {
+            "sourceTime": 100.892,
+            "frame": 24,
+            "basis": "Selected movement or shot-impact frame, identified from source-frame changes; mapped to a quarter-note pulse."
+          },
+          "sourceFirstFrame": 100.725
         },
         {
           "name": "street",
@@ -241,7 +324,13 @@
           "sourceOut": 64.69,
           "startFrame": 960,
           "frames": 96,
-          "portraitFocusX": 0.52
+          "portraitFocusX": 0.52,
+          "accent": {
+            "sourceTime": 64.064,
+            "frame": 48,
+            "basis": "Selected movement or shot-impact frame, identified from source-frame changes; mapped to a quarter-note pulse."
+          },
+          "sourceFirstFrame": 63.689
         },
         {
           "name": "standoff",
@@ -249,7 +338,8 @@
           "sourceOut": 69.67,
           "startFrame": 1056,
           "frames": 48,
-          "portraitFocusX": 0.72
+          "portraitFocusX": 0.72,
+          "sourceFirstFrame": 69.277
         },
         {
           "name": "rocket",
@@ -257,7 +347,8 @@
           "sourceOut": 73.5,
           "startFrame": 1104,
           "frames": 144,
-          "portraitFocusX": 0.5
+          "portraitFocusX": 0.5,
+          "sourceFirstFrame": 72.03
         },
         {
           "name": "speed",
@@ -265,7 +356,13 @@
           "sourceOut": 40.94,
           "startFrame": 1248,
           "frames": 96,
-          "portraitFocusX": 0.5
+          "portraitFocusX": 0.5,
+          "accent": {
+            "sourceTime": 40.123,
+            "frame": 24,
+            "basis": "Selected movement or shot-impact frame, identified from source-frame changes; mapped to a quarter-note pulse."
+          },
+          "sourceFirstFrame": 39.748
         },
         {
           "name": "boots",
@@ -273,7 +370,8 @@
           "sourceOut": 27.63,
           "startFrame": 1344,
           "frames": 96,
-          "portraitFocusX": 0.52
+          "portraitFocusX": 0.52,
+          "sourceFirstFrame": 26.61
         },
         {
           "name": "eye",
@@ -281,7 +379,8 @@
           "sourceOut": 29.22,
           "startFrame": 1440,
           "frames": 48,
-          "portraitFocusX": 0.32
+          "portraitFocusX": 0.32,
+          "sourceFirstFrame": 28.57
         },
         {
           "name": "sky",
@@ -289,7 +388,8 @@
           "sourceOut": 111.08,
           "startFrame": 1488,
           "frames": 192,
-          "portraitFocusX": 0.5
+          "portraitFocusX": 0.5,
+          "sourceFirstFrame": 109.067
         },
         {
           "name": "lucy",
@@ -297,7 +397,8 @@
           "sourceOut": 113.28,
           "startFrame": 1680,
           "frames": 192,
-          "portraitFocusX": 0.48
+          "portraitFocusX": 0.48,
+          "sourceFirstFrame": 111.778
         },
         {
           "name": "city",
@@ -305,9 +406,11 @@
           "sourceOut": 5.78,
           "startFrame": 1872,
           "frames": 192,
-          "portraitFocusX": 0.5
+          "portraitFocusX": 0.5,
+          "sourceFirstFrame": 4.588
         }
-      ]
+      ],
+      "previousSongStart": 179.21666666666667
     }
   ]
 }

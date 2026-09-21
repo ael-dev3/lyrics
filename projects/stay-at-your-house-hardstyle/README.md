@@ -19,7 +19,7 @@ Local media preparation is required on a fresh clone. Source recordings and edit
 3. Run `node scripts/build-trailer-assets.ts` to create the two **silent footage assets**, without rendering the song. This preserves the edit decision list, fixed output frame counts and source framing.
 4. Run `npm run check`, `npm run review:build`, then `node scripts/review-server.ts`.
 
-Node 24+, FFmpeg with libx264, npm dependencies and the included OFL fonts are required. Alignment reproduction additionally uses Demucs, torchaudio MMS and stable-whisper through `ALIGN_PYTHON`; it is not required merely to play the preview. `scripts/analyze.ts` consumes original decoded stereo float PCM in `analysis/audio-delivery.f32`; `scripts/motion.ts` derives presentation intensity from those measurements.
+Node 24+, FFmpeg with libx264, npm dependencies and the included OFL fonts are required. Alignment reproduction additionally uses Demucs, torchaudio MMS and stable-whisper through `ALIGN_PYTHON`; it is not required merely to play the preview. `scripts/analyze.ts` consumes original decoded stereo float PCM in `analysis/audio-delivery.f32`; `ALIGN_PYTHON=python3 node scripts/analyze-beats.ts` additionally measures broadband attacks with NumPy; `scripts/motion.ts` derives presentation intensity from the spectrum and attack events. `python3 scripts/verify-trailer-assets.py` checks source-frame timestamps, decoded action accents and both complete silent assets. These analysis tools are optional for playback; committed measurement data is included.
 
 ## Picture edit
 
@@ -27,14 +27,16 @@ Node 24+, FFmpeg with libx264, npm dependencies and the included OFL fonts are r
 
 *Composition still at 01:52; animation from the [official Netflix trailer](https://www.youtube.com/watch?v=JtqIas3bYhg). Original Netflix identification remains in the source picture.*
 
-- First asset: **01:42.417–02:09.217**, 1,608 frames.
-- Second asset: **02:59.217–03:33.617**, 2,064 frames.
-- Short dissolves make the trailer fully visible inside the selected intensity windows. Most cuts fall on 0.8/1.6/3.2-second groups of the observed approximately 150 BPM pulse. The edit does not claim a manually certified beat grid.
+- First asset: **01:42.350–02:09.150**, 1,608 frames.
+- Second asset: **02:59.150–03:33.550**, 2,064 frames.
+- Short dissolves make the trailer fully visible inside the selected intensity windows. Cuts use quarter-note groups of the measured 150 BPM pulse. All 36 boundaries moved 66.7 ms earlier after attack analysis; their median absolute residual against nearby spectral-flux peaks fell from 67.097 ms to 0.657 ms. These peaks are signal estimates, not manually certified beat annotations.
 - Characters, speed trails, city scale and physical action carry the impact. Trailer dialogue, subtitles, promotional cards and added full-screen flashes are omitted from the selected edit. Short action shots receive shorter holds; atmospheric views can breathe.
 - Portrait uses a shot-specific horizontal focal point and continuous bottom shading. Landscape opens the whole picture during instrumental drops. The remaining chorus lyrics retain fixed geometry and contrast during their overlap with the second edit.
+- Thirteen selected source action frames are retimed to quarter-note accents inside the shots. Source timestamp rounding and FFmpeg frame rounding are explicitly handled; the encoded assets are checked against source pixels.
+- The preview decodes 200 ms ahead and selects cached pictures by their actual frame timestamps on the music clock. Seeking primes the picture before music resumes; portrait crops follow the selected picture frame.
 - Abstract 3D assets are not loaded or required by this edition.
 
-[Portrait composition](evidence/preview-portrait.png) · [Edit decision list](source/trailer-edit.json) · [Asset identities](evidence/trailer-assets.json)
+[Portrait composition](evidence/preview-portrait.png) · [Edit decision list](source/trailer-edit.json) · [Asset identities](evidence/trailer-assets.json) · [Beat measurements](evidence/beat-audit.json) · [Encoded action-frame checks](evidence/trailer-asset-verification.json)
 
 ## Lyrics and review limits
 

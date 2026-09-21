@@ -10,6 +10,18 @@ Keep the vocal sections readable and reserve the largest picture change and spec
 
 Cut placement, lyric focus and spectrum measurements are separate decisions sharing one audio clock. Do not use bass attacks as inferred word onsets. Preview source motion at normal and reduced speed after seeking; time counters alone do not establish a moving picture.
 
+## Measure both cut timing and action timing
+
+A correct BPM does not establish the phase of the beat. Compare the edit grid with measured attacks over both drops. Record the detector, its resolution and residuals, and keep the distinction between signal evidence and listening. For this recording, refining the grid phase removed roughly 67 ms of systematic cut delay.
+
+A cut on a beat can still contain movement that lands between beats. Select a limited set of meaningful movement frames and map those onto pulses inside the shot. Use the first retained source-frame timestamp after trimming, not merely the requested seek time. Choose output-frame rounding deliberately, then inspect the encoded pixels: source cadence, trim rounding and the FPS filter can otherwise move an accent early.
+
+## Select the picture by its timestamp
+
+A video element's moving playback clock does not prove which frame was painted. Decode ahead, preserve actual decoded-frame timestamps and select a cached frame against the music clock. Keep the cache bounded and close released frames. Seek and recovery paths need separate checks, including repeated same-position seeks, quick transport changes and returning from the second edit to the first. A paused compositor may not emit another frame callback for an unchanged frame; capture the actual decoded frame after seeking as well. Preserve its native timestamp rather than assigning the requested seek time; see the [WebCodecs constructor specification](https://w3c.github.io/webcodecs/#videoframe-constructors).
+
+Keep native-video lead correction separate from picture selection. Do not chase tiny clock differences with repeated visible seeks. Compare screenshots as well as timing telemetry, and document device/display latency as outside the browser timestamp measurement.
+
 ## Protect crops and short events
 
 Portrait needs its own shot framing. Check moving characters through the shot, not only a centered first frame. Fade image edges continuously into reading areas, preserve complete phrases and reduce title clutter during action.

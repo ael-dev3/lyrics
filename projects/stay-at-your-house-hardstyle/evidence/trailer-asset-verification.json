@@ -1,0 +1,228 @@
+{
+  "scope": "Silent footage assets only. Pixel comparisons of selected source motion frames; not acoustic lyric accuracy or end-to-end device latency.",
+  "method": "FFmpeg strict decode; 160x90 grayscale reference compared with edited frames. Near-match span has MSE within 0.3 grayscale squared units of the minimum to allow inter-frame encoding variation.",
+  "editSha256": "4d7e81a7e5e6bb24d3c766ffacbadd5321adb3b469a6eba1b8a584b28c0d40c5",
+  "sourceSha256": "7b683f4be4b1fcdc3fda54b7a1b3ae9576a603dff560ec06e55df69ab4322395",
+  "assets": [
+    {
+      "path": "public/drop-one.mp4",
+      "sha256": "528dceec367af5d4df251a962f645d0d47d7ce5287b93021f47f737300395db1",
+      "strictDecode": "passed",
+      "codec_type": "video",
+      "width": 1920,
+      "height": 1080,
+      "r_frame_rate": "60/1",
+      "duration": "26.800000",
+      "nb_frames": "1608"
+    },
+    {
+      "path": "public/drop-two.mp4",
+      "sha256": "15dd2180e73c69f18f32f7cedbfdb75fe8723cc143fc7c3ff602d2efb9074a6e",
+      "strictDecode": "passed",
+      "codec_type": "video",
+      "width": 1920,
+      "height": 1080,
+      "r_frame_rate": "60/1",
+      "duration": "34.400000",
+      "nb_frames": "2064"
+    }
+  ],
+  "accents": [
+    {
+      "montage": "drop-one",
+      "shot": "speed",
+      "sourceTime": 40.123,
+      "targetFrame": 24,
+      "firstNearMatchFrame": 24,
+      "nearMatchFrames": [
+        24,
+        25,
+        26,
+        27
+      ],
+      "minimumMSE": 0.2535,
+      "musicTime": 102.75
+    },
+    {
+      "montage": "drop-one",
+      "shot": "street",
+      "sourceTime": 64.064,
+      "targetFrame": 528,
+      "firstNearMatchFrame": 528,
+      "nearMatchFrames": [
+        528,
+        529,
+        530
+      ],
+      "minimumMSE": 0.1157,
+      "musicTime": 111.15
+    },
+    {
+      "montage": "drop-one",
+      "shot": "gunfight",
+      "sourceTime": 86.712,
+      "targetFrame": 648,
+      "firstNearMatchFrame": 648,
+      "nearMatchFrames": [
+        648,
+        649,
+        650,
+        651
+      ],
+      "minimumMSE": 0.1903,
+      "musicTime": 113.15
+    },
+    {
+      "montage": "drop-one",
+      "shot": "david",
+      "sourceTime": 93.093,
+      "targetFrame": 744,
+      "firstNearMatchFrame": 744,
+      "nearMatchFrames": [
+        744,
+        745,
+        746
+      ],
+      "minimumMSE": 0.1414,
+      "musicTime": 114.75
+    },
+    {
+      "montage": "drop-one",
+      "shot": "rebecca",
+      "sourceTime": 100.892,
+      "targetFrame": 792,
+      "firstNearMatchFrame": 792,
+      "nearMatchFrames": [
+        792,
+        793,
+        794,
+        795,
+        796
+      ],
+      "minimumMSE": 0.1423,
+      "musicTime": 115.55
+    },
+    {
+      "montage": "drop-one",
+      "shot": "car",
+      "sourceTime": 103.562,
+      "targetFrame": 888,
+      "firstNearMatchFrame": 888,
+      "nearMatchFrames": [
+        888,
+        889,
+        890,
+        891,
+        892
+      ],
+      "minimumMSE": 0.1644,
+      "musicTime": 117.15
+    },
+    {
+      "montage": "drop-two",
+      "shot": "car",
+      "sourceTime": 103.562,
+      "targetFrame": 408,
+      "firstNearMatchFrame": 408,
+      "nearMatchFrames": [
+        408,
+        409,
+        410,
+        411,
+        412
+      ],
+      "minimumMSE": 0.1644,
+      "musicTime": 185.95
+    },
+    {
+      "montage": "drop-two",
+      "shot": "speed",
+      "sourceTime": 40.123,
+      "targetFrame": 504,
+      "firstNearMatchFrame": 504,
+      "nearMatchFrames": [
+        504,
+        505,
+        506,
+        507
+      ],
+      "minimumMSE": 0.2535,
+      "musicTime": 187.55
+    },
+    {
+      "montage": "drop-two",
+      "shot": "david",
+      "sourceTime": 93.093,
+      "targetFrame": 648,
+      "firstNearMatchFrame": 648,
+      "nearMatchFrames": [
+        648,
+        649,
+        650
+      ],
+      "minimumMSE": 0.1414,
+      "musicTime": 189.95
+    },
+    {
+      "montage": "drop-two",
+      "shot": "gunfight",
+      "sourceTime": 86.712,
+      "targetFrame": 792,
+      "firstNearMatchFrame": 792,
+      "nearMatchFrames": [
+        792,
+        793,
+        794,
+        795
+      ],
+      "minimumMSE": 0.1903,
+      "musicTime": 192.35
+    },
+    {
+      "montage": "drop-two",
+      "shot": "rebecca",
+      "sourceTime": 100.892,
+      "targetFrame": 936,
+      "firstNearMatchFrame": 936,
+      "nearMatchFrames": [
+        936,
+        937,
+        938,
+        939,
+        940
+      ],
+      "minimumMSE": 0.1423,
+      "musicTime": 194.75
+    },
+    {
+      "montage": "drop-two",
+      "shot": "street",
+      "sourceTime": 64.064,
+      "targetFrame": 1008,
+      "firstNearMatchFrame": 1008,
+      "nearMatchFrames": [
+        1008,
+        1009,
+        1010
+      ],
+      "minimumMSE": 0.1157,
+      "musicTime": 195.95
+    },
+    {
+      "montage": "drop-two",
+      "shot": "speed",
+      "sourceTime": 40.123,
+      "targetFrame": 1272,
+      "firstNearMatchFrame": 1272,
+      "nearMatchFrames": [
+        1272,
+        1273,
+        1274,
+        1275
+      ],
+      "minimumMSE": 0.2535,
+      "musicTime": 200.35
+    }
+  ],
+  "status": "passed"
+}
