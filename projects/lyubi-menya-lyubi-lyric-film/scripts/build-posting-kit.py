@@ -76,6 +76,7 @@ for format, platform, width, height in [('landscape', 'YouTube', 1920, 1080), ('
 for platform, cover in [('YouTube', 'Lyubi-Menya-Lyubi-YouTube-Thumbnail-1920x1080.jpg'), ('TikTok', 'Lyubi-Menya-Lyubi-TikTok-Cover-Profile-1200x1600.jpg')]:
     for name in [cover, platform + '-Title.txt', platform + '-Description.txt']:
         source = Path('publishing') / name
+        if name == cover and str(source) not in cover_hashes: raise SystemExit('Missing cover identity: ' + str(source))
         if not source.is_file(): raise SystemExit('Missing posting asset: ' + str(source))
         planned.append((source, Path(platform) / name))
 for language in ['ru', 'en', 'bilingual']:

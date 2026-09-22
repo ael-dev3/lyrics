@@ -10,17 +10,17 @@ Music films with synchronized lyrics, meaning-linked translations, and audio-rea
 
 ## Люби меня, люби
 
-**Гречка · Russian + English · rose paper preview v2 · listening review pending**
+**Гречка · Russian + English · verified YouTube and TikTok films**
 
-![Люби меня, люби: original album print on warm paper, dark bilingual lyrics and berry meaning focus](assets/lyubi-preview-33-2.png)
+![Люби меня, люби: original album print on warm paper, dark bilingual lyrics and berry meaning focus](assets/lyubi-final-33-2.png)
 
-*Rendered preview reference at 00:33.200 from the shared v2 scene, with the unchanged album image placed at its exact fixed transform. This still is not a browser capture or a decoded production frame. Original recording and album artwork: Гречка and their respective creators.*
+*Frame at 00:33.200 decoded from the verified v1 landscape film. Original recording and album artwork: Гречка and their respective creators.*
 
 The complete 187.402-second recording pairs 33 bilingual cues with the original album portrait, presented as a stationary print on textured rose paper. Equal Russian and English words keep stable geometry, dark ink and berry focus. A single smooth ribbon responds to 64 measured frequency bands; immediate feature attacks and a short decay give it musical contact without moving the picture. Its shape is an artistic spectrum display.
 
-The current map contains 147 Russian events and 167 English words. Independent repeated performances, complete English meanings and uncertain vocal releases retain separate evidence. Full normal-speed listening, reduced-speed checks and both-layout review remain pending. Production rendering is not authorized, and no final films or posting kit have been created.
+The delivered map contains 147 Russian events and 167 English words, approved through comprehensive human review of the full recording and both layouts. Both 60 fps films preserve the original audio and pass full-frame focus and picture checks: 90,306 word states per format with zero mismatches. The verified Desktop kit includes both videos, covers, publishing copy, optional captions and checksums.
 
-[Preview setup and credits](projects/lyubi-menya-lyubi-lyric-film/README.md) · [Current workflow](projects/lyubi-menya-lyubi-lyric-film/WORKFLOW.md) · [Timing evidence](projects/lyubi-menya-lyubi-lyric-film/evidence/timing-review.md) · [Original recording](https://www.youtube.com/watch?v=DBGCHjBSNzo)
+[Delivery, preview and credits](projects/lyubi-menya-lyubi-lyric-film/README.md) · [Current workflow](projects/lyubi-menya-lyubi-lyric-film/WORKFLOW.md) · [Production lessons](projects/lyubi-menya-lyubi-lyric-film/PRODUCTION-LESSONS.md) · [Timing evidence](projects/lyubi-menya-lyubi-lyric-film/evidence/timing-review.md) · [Original recording](https://www.youtube.com/watch?v=DBGCHjBSNzo)
 
 ## Stay at Your House — Hardstyle
 
@@ -392,7 +392,7 @@ Each project has its own setup instructions. Use the release source archive when
 
 | Project | Starting point |
 | --- | --- |
-| Люби меня, люби | [Full Russian / English preview](projects/lyubi-menya-lyubi-lyric-film/README.md); rose paper composition, source-linked focus and pending listening review |
+| Люби меня, люби | [Verified Russian / English films](projects/lyubi-menya-lyubi-lyric-film/README.md); rose paper composition, source-linked focus and complete posting kit |
 | Stay at Your House — Hardstyle | [Full preview setup](projects/stay-at-your-house-hardstyle/README.md); English lyrics, official trailer edits, verified films and identity-bound production gate |
 | Прости за любовь v1.2 | [Accepted delivery record and known gaps](projects/prosti-za-lyubov-lyric-film/README.md); preserve the existing films and apply the new sync gate to the next song |
 | Joyride | Follow the [reproduction steps](projects/joyride-lyric-film/README.md#reproduce); full-recording coverage, sample-based color focus, original video and separate landscape/portrait compositions |
@@ -429,7 +429,7 @@ The reusable workflow covers soundtrack locking, lyric alignment, semantic trans
 
 ```text
 assets/                          Film screenshots and artwork
-projects/lyubi-menya-lyubi-lyric-film/ Russian / English rose paper preview; review and render approval pending
+projects/lyubi-menya-lyubi-lyric-film/ Verified Russian / English rose paper films and posting kit
 projects/stay-at-your-house-hardstyle/ Verified hardstyle films, complete preview and delivery evidence
 projects/prosti-za-lyubov-lyric-film/ Accepted v1.2 record, known gaps and delivery evidence
 docs/cross-language-sync-gate.md  Mandatory synchronization review before production rendering

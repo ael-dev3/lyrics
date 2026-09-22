@@ -1,12 +1,12 @@
 # Гречка — Люби меня, люби
 
-**Russian / English review preview · `preview-v2-rose-paper` · production not authorized.**
+**Russian / English · rose paper edition v1.0.0 · verified YouTube and TikTok films.**
 
-A full-recording, 187.402-second preview with 33 lyric cues, 147 Russian word events and 167 English words. Landscape and portrait use equal bilingual typography, stable color-only highlighting and the same original soundtrack. Word timings remain provisional: complete actual-audio listening and audiovisual review are pending.
+A full-recording, 187.402-second film with 33 lyric cues, 147 Russian word events and 167 English words. Landscape and portrait use equal bilingual typography, stable color-only highlighting and the same original soundtrack. The unchanged preview inputs received comprehensive human listening and audiovisual review, followed by explicit render authorization. Model candidates and their uncertainty remain documented separately.
 
-![Rose paper composition with the original album print, equal bilingual lyrics and berry focus on жарким / with blazing](evidence/preview/landscape-33-2.png)
+![Rose paper composition with the original album print, equal bilingual lyrics and berry focus on жарким / with blazing](evidence/final/landscape-33-2.png)
 
-*Rendered preview reference at 00:33.200, revision v2, 1920×1080. The shared scene supplies the graphics; the unchanged source image is composited at its exact fixed transform. This is a still reference, not a browser capture or a frame decoded from a production film. Original recording and album artwork: Гречка and their respective creators.*
+*Frame 1992 at 00:33.200, decoded directly from the verified v1 landscape film. Original recording and album artwork: Гречка and their respective creators.*
 
 ## Picture and sound
 
@@ -37,18 +37,55 @@ Open [the local review preview](http://127.0.0.1:4324/). It starts at the beginn
 | Area | Current status |
 | --- | --- |
 | Translation and correspondence | Model-assisted editorial review and independent semantic regression expectations recorded |
-| Acoustic timing | Bounded original-mix and vocal-stem candidates retained; every word still requires listening review |
-| Complete recording and both layouts | Pending actual-audio and audiovisual review |
-| Production authorization | Absent; preview-only |
-| Final films and posting kit | Not produced |
+| Acoustic timing | Bounded original-mix and vocal-stem evidence retained; comprehensive human review recorded |
+| Complete recording and both layouts | Complete by explicit human attestation for the frozen input identity |
+| Production authorization | Recorded for the exact reviewed preview inputs |
+| Final films and posting kit | Both films verified; complete 14-file Desktop posting kit copied and checksummed |
 
-Check short conjunctions, held vowels, all four bridge repetitions and the final vocal release. The supplied lyric inventory and model agreement cannot certify full vocal coverage or perfect synchronization. See [timing evidence and questions](evidence/timing-review.md), [translation decisions](evidence/translation-review.md) and the [current synchronization record](evidence/cross-language-sync-review.json).
+Review priorities included short conjunctions, held vowels, all four bridge repetitions and the final vocal release. The supplied lyric inventory and model agreement alone cannot certify full vocal coverage or perfect synchronization. See [timing evidence and questions](evidence/timing-review.md), [translation decisions](evidence/translation-review.md) and the [current synchronization record](evidence/cross-language-sync-review.json).
 
 The [instrumental-phrase refinement](evidence/phrase-focus-refinement.json) keeps “with blazing” together on «жарким», followed by “fire” on «огнём», across all four occurrences. It preserves the acoustic events and word geometry.
 
 The [full correspondence scan](evidence/correspondence-scan.json) refines six verse cues to **Те / Those**, then **же / same**. It checks complete English expressions and all repeated patterns while preserving necessary English word-order changes and every acoustic event.
 
-Run `npm run check` for TypeScript, semantic and authorization tests. `npm run sync:gate` is expected to reject the pending review. `npm run render` cannot produce a film: it checks the gate and this edition has no production renderer.
+## Render and verify
+
+The production renderer reuses the frozen scene and source-linked focus at 2× dimensions, then performs one Lanczos reduction to 1920×1080 or 1080×1920. H.264 High-profile video uses 60 fps, CRF 16 and limited-range BT.709. The original AAC is copied without trimming, normalization or re-encoding; MP4 metadata precedes the media for fast loading.
+
+The native SVG decoder omits embedded images and some static text attributes. Explicit adapters preserve the original picture transform and metadata spacing/opacity, with separate native-browser inspection and short encoded proofs. Cached/shared-scene raster agreement is supporting evidence, not a claim of browser pixel equality. See [renderer adoption](evidence/render-adoption.json).
+
+```sh
+npm run check
+npm run sync:gate
+npm run render:proof -- landscape
+npm run render:proof -- portrait
+npm run render -- landscape
+npm run render -- portrait
+node scripts/verify-production.ts output/Lyubi-Menya-Lyubi-landscape-1920x1080-60fps.mp4 landscape
+node scripts/verify-production.ts output/Lyubi-Menya-Lyubi-portrait-1080x1920-60fps.mp4 portrait
+node scripts/audit-decoded-focus.ts output/Lyubi-Menya-Lyubi-landscape-1920x1080-60fps.mp4 landscape
+node scripts/audit-decoded-focus.ts output/Lyubi-Menya-Lyubi-portrait-1080x1920-60fps.mp4 portrait
+node scripts/extract-delivery-proofs.ts
+```
+
+Production requires the current gate, renderer parity and native-browser adoption records. Output files are never silently overwritten. Changing a renderer or verification script requires refreshing its bound evidence. The technical verifier checks the complete frame clock and decode, original AAC packets and decoded PCM; the separate focus audit inspects visible word colors, lyric gaps and original picture presence on every decoded frame.
+
+[Posting assets and optional captions](publishing/README.md) · [Production lessons](PRODUCTION-LESSONS.md) · [Human review and render authorization](evidence/render-authorization.json)
+
+## Verified delivery
+
+| Video | Dimensions | Frames / cadence | File size |
+| --- | --- | --- | --- |
+| YouTube | 1920×1080 | 11,245 / 60 fps | 27,573,157 bytes |
+| TikTok | 1080×1920 | 11,245 / 60 fps | 29,329,059 bytes |
+
+Both final H.264 files pass complete decoding, constant presentation timestamps, square-pixel/BT.709 checks and fast-start placement. All **8,073 original AAC packets**, their timing and priming information, and the decoded **8,265,152 samples per channel** remain identical. Video duration is 187.416667 seconds, the 60 fps frame extent covering the 187.401995-second presented audio.
+
+The independent decoded-focus audit checks **90,306 visible word states per format**, all 33 cues and all 314 displayed source/target words in active and resting states. It finds zero mismatches, ambiguous colors or stale lyrics in gaps. The original picture is present on all 11,245 frames. These are encoded-display and media-integrity checks; comprehensive listening approval is recorded separately as human attestation.
+
+The posting kit contains platform-specific videos, a 1920×1080 YouTube thumbnail, a 1200×1600 portrait TikTok profile cover, both titles/descriptions, three optional SRT files, a manifest and checksums. Every one of the 14 Desktop files matches the verified kit. Source, publishing assets, workflow and evidence are tracked here; no platform upload or public media release was performed.
+
+[Delivery receipt](evidence/delivery-receipt.json) · [Desktop copy receipt](evidence/desktop-delivery-receipt.json) · [Decoded final screenshots](evidence/final/manifest.json) · [Final visual review](evidence/final-visual-review.json)
 
 ## Reproduction and credits
 
