@@ -1,0 +1,210 @@
+{
+  "status": "verified local posting kit",
+  "edition": "rose-paper-v1.0.0",
+  "song": "DBGCHjBSNzo",
+  "revision": "preview-v2-rose-paper",
+  "sourceCommit": "d74fb270dafd5741ee4962ac79faf689ddbd68fc",
+  "previewHashes": {
+    "public/soundtrack.m4a": "5b43ec60846e709797299f51deece06922c76ad2dea3f5746f6468d64fe42e50",
+    "public/artwork.png": "5760920d4b418fa21a7a44cacb14bd0df558a674b5bd07b1d430cafaf0161d2a",
+    "public/fonts/Oswald-Medium.ttf": "edca7f2098242ead25675251ac9c35ecd2a9d001e4bcb641e07471148b6c365b",
+    "public/science.json": "03f8841a7eae0490f52b6a9e1dda2a1c51896dcd2823e98ee61a3c092b926d28",
+    "src/cues.json": "864374d61396c16479ab342175f879d11fe1d9c2a277edbbd2256515ee4bcc5e",
+    "src/layout.json": "8084d57f06bebb44eb069c56c8ad3299d5e378f75c1323c7f0647ed676a3a599",
+    "src/scene.ts": "05fb9c08150dec4524777e9a638477098e0ac44ec1284d762ba87c1bc1d71c2e",
+    "src/preview-painter.ts": "f3c407c1eb447f5b9ee45f35508cadd7e77d2f704942f73ace2bf9c4f864fe1e",
+    "src/focus.ts": "2dd5c77d698f89e683c7b541481bb7dd617b9e735e6abaa1b23930dee2cd2ad4",
+    "src/schema.ts": "212bdab1b01ec37dc6e87362198b546f81e6fa5ea6530c048f6635f65ff79964",
+    "src/review-client.ts": "70b11bbf73a487ea0913d39898dcd77f575964394f1f0e5f6f03ed911fac89db",
+    "review/index.html": "0b42cd5aae8794d1781b21aaa03db03777027b745849ea3d6d6dcf7e04867ecf",
+    "review/client.js": "8c369ec50dcd9e813368f49cd398c07f815c5791e861afbf71e6adb6ced0eb15"
+  },
+  "videos": [
+    {
+      "format": "landscape",
+      "file": "YouTube/Lyubi-Menya-Lyubi-landscape-1920x1080-60fps.mp4",
+      "width": 1920,
+      "height": 1080,
+      "frames": 11245,
+      "fps": 60,
+      "bytes": 27573157,
+      "sha256": "f7c30e0a9b0279db806086552e02c954e77a232477fd5807b0a488d4ed38c406",
+      "audioIdentity": "All packet payload hashes, PTS, DTS, durations, sizes, skip samples and discard padding identical to original soundtrack",
+      "decodedSamples": 8265152,
+      "decodedPcmSha256": "eb6294bf6b4e904b5f1e9ce8a5ef9a5fe048390943817f7d7ef29c53e76407e9",
+      "focusVerification": {
+        "status": "PASS",
+        "inputIdentitySha256": "5f17c488190222fddabdc7a3fab6510182c938bdf61f7fa0fecd9903a73f3261",
+        "verifierSha256": "5538b2bf6197fe018d59af923263e99ef9911955e038f6fd5d6c1c0f7b4f140d",
+        "revision": "preview-v2-rose-paper",
+        "inputFile": "Lyubi-Menya-Lyubi-landscape-1920x1080-60fps.mp4",
+        "inputSha256": "f7c30e0a9b0279db806086552e02c954e77a232477fd5807b0a488d4ed38c406",
+        "sha256": "f7c30e0a9b0279db806086552e02c954e77a232477fd5807b0a488d4ed38c406",
+        "auditScriptSha256": "5538b2bf6197fe018d59af923263e99ef9911955e038f6fd5d6c1c0f7b4f140d",
+        "negativeOffsetSensitivity": {
+          "checked": true,
+          "offsetFrames": 30,
+          "detectedMismatches": 370,
+          "diagnosticInputSha256": "22c895e32befc33f01713ecd18eee217280cb3c42f21518f448b6904faa2c178"
+        },
+        "format": "landscape",
+        "diagnostic": false,
+        "startFrame": 0,
+        "expectedOffset": 0,
+        "decodedFrames": 11245,
+        "expectedFrames": 11245,
+        "frameCountOk": true,
+        "wordStates": 90306,
+        "ambiguous": 0,
+        "mismatchCount": 0,
+        "gapContaminationFrames": 0,
+        "seenCueCount": 33,
+        "expectedCueCount": 33,
+        "missingCues": [],
+        "missingWordStates": [],
+        "mismatchExamples": [],
+        "ambiguousExamples": [],
+        "artwork": {
+          "checkedFrames": 11245,
+          "crop": {
+            "x": 1143,
+            "y": 235,
+            "size": 589
+          },
+          "thumbnailSize": 64,
+          "maximumMeanAbsoluteRgbError": 3.49951171875,
+          "meanAbsoluteRgbError": 3.495056715021658,
+          "mismatchFrames": 0,
+          "threshold": 16,
+          "sourceSha256": "5760920d4b418fa21a7a44cacb14bd0df558a674b5bd07b1d430cafaf0161d2a"
+        },
+        "method": "Every decoded frame: compare eroded glyph-interior median colors with frozen active/rest colors; derive Russian and English expected states directly from sample-indexed source events and semantic relations, without renderer focus code. Reject ambiguous pixels; inspect empty lyric intervals for stale ink. Compare central 76% artwork thumbnail against independently projected original artwork on every frame. This establishes encoded display states and source-picture presence, not acoustic alignment truth or complete visual quality."
+      }
+    },
+    {
+      "format": "portrait",
+      "file": "TikTok/Lyubi-Menya-Lyubi-portrait-1080x1920-60fps.mp4",
+      "width": 1080,
+      "height": 1920,
+      "frames": 11245,
+      "fps": 60,
+      "bytes": 29329059,
+      "sha256": "0b85a811fd6952dc79e3d8cddc3d6937d0339b73f8098685c95eb951eee46f66",
+      "audioIdentity": "All packet payload hashes, PTS, DTS, durations, sizes, skip samples and discard padding identical to original soundtrack",
+      "decodedSamples": 8265152,
+      "decodedPcmSha256": "eb6294bf6b4e904b5f1e9ce8a5ef9a5fe048390943817f7d7ef29c53e76407e9",
+      "focusVerification": {
+        "status": "PASS",
+        "inputIdentitySha256": "5f17c488190222fddabdc7a3fab6510182c938bdf61f7fa0fecd9903a73f3261",
+        "verifierSha256": "5538b2bf6197fe018d59af923263e99ef9911955e038f6fd5d6c1c0f7b4f140d",
+        "revision": "preview-v2-rose-paper",
+        "inputFile": "Lyubi-Menya-Lyubi-portrait-1080x1920-60fps.mp4",
+        "inputSha256": "0b85a811fd6952dc79e3d8cddc3d6937d0339b73f8098685c95eb951eee46f66",
+        "sha256": "0b85a811fd6952dc79e3d8cddc3d6937d0339b73f8098685c95eb951eee46f66",
+        "auditScriptSha256": "5538b2bf6197fe018d59af923263e99ef9911955e038f6fd5d6c1c0f7b4f140d",
+        "negativeOffsetSensitivity": {
+          "checked": true,
+          "offsetFrames": 30,
+          "detectedMismatches": 362,
+          "diagnosticInputSha256": "a768bae8d5dddc5c6583ffe26b6abb62b85a6ff3d1c3f45394012f3aad22ff5d"
+        },
+        "format": "portrait",
+        "diagnostic": false,
+        "startFrame": 0,
+        "expectedOffset": 0,
+        "decodedFrames": 11245,
+        "expectedFrames": 11245,
+        "frameCountOk": true,
+        "wordStates": 90306,
+        "ambiguous": 0,
+        "mismatchCount": 0,
+        "gapContaminationFrames": 0,
+        "seenCueCount": 33,
+        "expectedCueCount": 33,
+        "missingCues": [],
+        "missingWordStates": [],
+        "mismatchExamples": [],
+        "ambiguousExamples": [],
+        "artwork": {
+          "checkedFrames": 11245,
+          "crop": {
+            "x": 190,
+            "y": 201,
+            "size": 699
+          },
+          "thumbnailSize": 64,
+          "maximumMeanAbsoluteRgbError": 3.5264485677083335,
+          "meanAbsoluteRgbError": 3.5216978017428855,
+          "mismatchFrames": 0,
+          "threshold": 16,
+          "sourceSha256": "5760920d4b418fa21a7a44cacb14bd0df558a674b5bd07b1d430cafaf0161d2a"
+        },
+        "method": "Every decoded frame: compare eroded glyph-interior median colors with frozen active/rest colors; derive Russian and English expected states directly from sample-indexed source events and semantic relations, without renderer focus code. Reject ambiguous pixels; inspect empty lyric intervals for stale ink. Compare central 76% artwork thumbnail against independently projected original artwork on every frame. This establishes encoded display states and source-picture presence, not acoustic alignment truth or complete visual quality."
+      }
+    }
+  ],
+  "files": [
+    {
+      "file": "Captions/Lyubi-Menya-Lyubi-bilingual.srt",
+      "bytes": 3362,
+      "sha256": "0da39f2ae03bb3a018de4abf422fa7a462d6c92d438a745f33ddf8e6089654ae"
+    },
+    {
+      "file": "Captions/Lyubi-Menya-Lyubi-en.srt",
+      "bytes": 2004,
+      "sha256": "0d2897945ad954fb53d00db879464fb2f3f19d56f4fb88d6cf50538bdaf42642"
+    },
+    {
+      "file": "Captions/Lyubi-Menya-Lyubi-ru.srt",
+      "bytes": 2470,
+      "sha256": "083644c4da7ab42b6587fd4ab65ecb4f61a8b6903f89ffb9e25e39c2e9c4affd"
+    },
+    {
+      "file": "START-HERE.txt",
+      "bytes": 677,
+      "sha256": "ed51721d03cb9af9e82b54c6d42f4f9bdc90708b70cf834e73b442c37e360bbc"
+    },
+    {
+      "file": "TikTok/Lyubi-Menya-Lyubi-TikTok-Cover-Profile-1200x1600.jpg",
+      "bytes": 200068,
+      "sha256": "2f7690fe3e8ba77a3ee999ff51f70f8ca642c9a2ad82674eb8a7b2d2bf1e745b"
+    },
+    {
+      "file": "TikTok/Lyubi-Menya-Lyubi-portrait-1080x1920-60fps.mp4",
+      "bytes": 29329059,
+      "sha256": "0b85a811fd6952dc79e3d8cddc3d6937d0339b73f8098685c95eb951eee46f66"
+    },
+    {
+      "file": "TikTok/TikTok-Description.txt",
+      "bytes": 384,
+      "sha256": "2b6112aeaca22e62c6dd19b2b3f1da96c4cd69cf49d7e7aeacecc5bb86fa1b29"
+    },
+    {
+      "file": "TikTok/TikTok-Title.txt",
+      "bytes": 45,
+      "sha256": "bbf64065ad5c49d381ae8d64ac193bb376a4f17d646d26df968ddbafff2af503"
+    },
+    {
+      "file": "YouTube/Lyubi-Menya-Lyubi-YouTube-Thumbnail-1920x1080.jpg",
+      "bytes": 202785,
+      "sha256": "012658be19f506b5e79ffda530afa54ccfce0b3de17154ca33bbbf446254aa64"
+    },
+    {
+      "file": "YouTube/Lyubi-Menya-Lyubi-landscape-1920x1080-60fps.mp4",
+      "bytes": 27573157,
+      "sha256": "f7c30e0a9b0279db806086552e02c954e77a232477fd5807b0a488d4ed38c406"
+    },
+    {
+      "file": "YouTube/YouTube-Description.txt",
+      "bytes": 581,
+      "sha256": "f274bb3471412c5b9d3aba58f4909dc3f9b8f08ef250089d456bc975cd4f97fd"
+    },
+    {
+      "file": "YouTube/YouTube-Title.txt",
+      "bytes": 84,
+      "sha256": "cafb65cc0adfe3453be8ec4562f9b41eb0959d294932ec918bc0a665a70ce5b3"
+    }
+  ],
+  "builtAt": "2026-09-22T10:59:38.179111+00:00",
+  "scope": "Comprehensive human review of the frozen preview plus independent encoded-file verification; local delivery and source repository update. No public media release or platform upload."
+}

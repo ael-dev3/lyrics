@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "edition": "rose-paper-v1.0.0",
+  "reviewedOn": "2026-09-22",
+  "sourceCommit": "d74fb270dafd5741ee4962ac79faf689ddbd68fc",
+  "inputIdentitySha256": "5f17c488190222fddabdc7a3fab6510182c938bdf61f7fa0fecd9903a73f3261",
+  "videoSha256": {
+    "landscape": "f7c30e0a9b0279db806086552e02c954e77a232477fd5807b0a488d4ed38c406",
+    "portrait": "0b85a811fd6952dc79e3d8cddc3d6937d0339b73f8098685c95eb951eee46f66"
+  },
+  "checks": {
+    "decodedNativeAndContactProofs": "Six actual decoded checkpoints per format, including intro, Those/same verse, instrumental-case focus, late chorus, final held word and empty outro. Native representative frames and both contact sheets inspected.",
+    "picture": "Original album art and fixed sleeve transform remain present; no shaking or missing picture.",
+    "typography": "Equal font size and stable RU/EN positions; complete phrase focus and refined individual focus; no visible clipping in selected proofs.",
+    "metadata": "Artist/title/footer letter spacing and opacity match the native-browser-adopted export implementation.",
+    "animation": "Shared deterministic ribbon geometry with complete source clock; sampled shapes vary with the supplied measured features and decay at the ending.",
+    "encodedFocus": {
+      "wordStatesPerFormat": 90306,
+      "mismatches": 0,
+      "ambiguousStates": 0,
+      "staleGapFrames": 0,
+      "pictureFailures": 0
+    }
+  },
+  "evidence": [
+    "final/manifest.json",
+    "render-adoption.json",
+    "production/landscape-verification.json",
+    "production/portrait-verification.json",
+    "production/landscape-focus-audit.json",
+    "production/portrait-focus-audit.json"
+  ],
+  "scope": "Sampled visual inspection plus every-frame encoded focus/artwork and media checks. Listening approval is the separate recorded human attestation; no absolute claim of perceptual perfection."
+}

@@ -1,4 +1,4 @@
-import {createReadStream,readFileSync,writeFileSync,mkdirSync,mkdtempSync,readdirSync,renameSync,rmSync} from 'node:fs';
+import {createReadStream,readFileSync,writeFileSync,mkdirSync,mkdtempSync,readdirSync,renameSync,rmSync,existsSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {spawnSync} from 'node:child_process';
 import {basename,join} from 'node:path';
@@ -7,13 +7,14 @@ import {createCanvas,loadImage} from '@napi-rs/canvas';
 // This entry point only decodes already verified delivery bytes. It never
 // captures the preview, rerenders the composition, or modifies the films.
 const root='evidence/final',formats=['landscape','portrait'] as const;
-const checkpoints=[0,22.2,33.2,152.2,180.62,186.9];
+const checkpoints=[0,11.5,13.85,78.8,81,186.9];
 const fps=60,frames=11245;
 const sha256=async(path:string)=>{const hash=createHash('sha256');for await(const part of createReadStream(path))hash.update(part);return hash.digest('hex');};
 const json=(path:string):Record<string,unknown>=>JSON.parse(readFileSync(path,'utf8'));
 const requireCheck=(condition:unknown,message:string)=>{if(!condition)throw Error(message);};
 const run=(args:string[])=>{const result=spawnSync('ffmpeg',args,{encoding:'utf8',maxBuffer:8*1024*1024});if(result.error)throw result.error;if(result.status!==0)throw Error('Proof extraction failed: '+result.stderr);};
 const inputIdentitySha256=await sha256('evidence/preview-identity.json');
+const extractorSha256=await sha256('scripts/extract-delivery-proofs.ts');
 const inventories=[];
 
 // Verify both complete inputs before creating even the first proof image.
@@ -29,6 +30,10 @@ for(const format of formats){
  inventories.push({format,width,height,sourceFile,sourceFileSha256,verificationPath,verificationSha256:await sha256(verificationPath)});
 }
 
+if(existsSync(`${root}/manifest.json`)){
+ const previous=json(`${root}/manifest.json`),sources=previous.sources as Array<{format:string;sourceFileSha256:string}>|undefined;
+ requireCheck(previous.inputIdentitySha256===inputIdentitySha256&&previous.extractorSha256===extractorSha256&&inventories.every(entry=>sources?.some(source=>source.format===entry.format&&source.sourceFileSha256===entry.sourceFileSha256)),'Archive the previous decoded proofs before replacing their input, extractor or delivery identity');
+}
 mkdirSync(root,{recursive:true});
 const temporary=mkdtempSync(join(root,'.extract-'));
 const proofs:Array<{path:string;format:string;width:number;height:number;requestedSeconds:number;frame:number;seconds:number;sourceFile:string;sourceFileSha256:string;sha256:string}>=[];
@@ -67,7 +72,7 @@ try{
  }
  requireCheck(await sha256('evidence/preview-identity.json')===inputIdentitySha256,'Preview identity changed during extraction');
  for(const entry of [...proofs,...sheets])renameSync(join(temporary,basename(entry.path)),entry.path);
- const manifest={status:'PASS',scope:'Native-size PNG frames decoded directly from the exact SHA-256-verified final MP4s. Frame numbers are zero-based at 60 fps; requested decimal times are rounded to their nearest frame.',fps,inputIdentitySha256,extractorSha256:await sha256('scripts/extract-delivery-proofs.ts'),sources:inventories,readmeSelection:{landscape:`${root}/landscape-33-2.png`,portrait:`${root}/portrait-22-2.png`},proofs,contactSheets:sheets};
+ const manifest={status:'PASS',scope:'Native-size PNG frames decoded directly from the exact SHA-256-verified final MP4s. Frame numbers are zero-based at 60 fps; requested decimal times are rounded to their nearest frame.',fps,inputIdentitySha256,extractorSha256,sources:inventories,readmeSelection:{landscape:`${root}/landscape-13-85.png`,portrait:`${root}/portrait-78-8.png`},proofs,contactSheets:sheets};
  writeFileSync(`${root}/manifest.json`,JSON.stringify(manifest,null,2)+'\n');
  console.log(JSON.stringify({status:'PASS',proofs:proofs.length,contactSheets:sheets.length,manifest:`${root}/manifest.json`},null,2));
 }finally{rmSync(temporary,{recursive:true,force:true});}

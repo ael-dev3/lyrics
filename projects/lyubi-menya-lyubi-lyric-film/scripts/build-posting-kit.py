@@ -1,11 +1,14 @@
 """Assemble a verified local posting kit; no publishing or Desktop writes."""
 from pathlib import Path
-import argparse, datetime, hashlib, json, shutil, subprocess
+import argparse, datetime, hashlib, json, re, shutil, subprocess
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--source-commit', required=True)
-parser.add_argument('--destination', default='output/posting-kit-v1.0.0')
+parser.add_argument('--edition', default='rose-paper-v1.1.0', help='Delivery edition, for example rose-paper-v1.1.0')
+parser.add_argument('--destination', help='New kit folder; defaults to output/posting-kit-v<edition version>')
 args = parser.parse_args()
+if not re.fullmatch(r'rose-paper-v\d+\.\d+\.\d+', args.edition):
+    parser.error('--edition must use rose-paper-vMAJOR.MINOR.PATCH')
 root = Path('.').resolve()
 def sha(path):
     h = hashlib.sha256()
@@ -15,7 +18,7 @@ def sha(path):
     return h.hexdigest()
 subprocess.run(['node', 'scripts/production-gate.ts'], check=True)
 subprocess.run(['git', 'cat-file', '-e', args.source_commit + '^{commit}'], check=True)
-destination = Path(args.destination)
+destination = Path(args.destination or ('output/posting-kit-' + args.edition.removeprefix('rose-paper-')))
 if destination.exists():
     raise SystemExit('Destination already exists; select a new kit path instead of overwriting.')
 identity = json.loads(Path('evidence/preview-identity.json').read_text())
@@ -91,10 +94,10 @@ for source, relative in planned:
     shutil.copy2(source, out)
     if sha(out) != sha(source): raise SystemExit('Copy verification failed: ' + str(relative))
 readme = destination / 'START-HERE.txt'
-readme.write_text('ГРЕЧКА — ЛЮБИ МЕНЯ, ЛЮБИ\nRose paper edition · Russian + English\n\nYouTube/: full landscape video, thumbnail, title and description.\nTikTok/: full vertical video, portrait profile cover, title and description.\nCaptions/: optional Russian, English and bilingual SRT files. The videos already include both lyric rows and word highlighting.\n\nChoose the matching video and cover for each platform, then copy the supplied title and description. All files in this folder are final upload assets; no platform upload has been performed.\n\nOriginal recording and artwork: Гречка and their respective creators.\nSource: https://www.youtube.com/watch?v=DBGCHjBSNzo\n', encoding='utf-8')
+readme.write_text(f'ГРЕЧКА — ЛЮБИ МЕНЯ, ЛЮБИ\n{args.edition} · Russian + English\n\nYouTube/: full landscape video, thumbnail, title and description.\nTikTok/: full vertical video, portrait profile cover, title and description.\nCaptions/: optional Russian, English and bilingual SRT files. The videos already include both lyric rows and word highlighting.\n\nChoose the matching video and cover for each platform, then copy the supplied title and description. All files in this folder are final upload assets; no platform upload has been performed.\n\nOriginal recording and artwork: Гречка and their respective creators.\nSource: https://www.youtube.com/watch?v=DBGCHjBSNzo\n', encoding='utf-8')
 for source in sorted(destination.rglob('*')):
     if source.is_file(): files.append({'file': str(source.relative_to(destination)), 'bytes': source.stat().st_size, 'sha256': sha(source)})
-receipt = {'status': 'verified local posting kit', 'edition': 'rose-paper-v1.0.0', 'song': identity['song'],
+receipt = {'status': 'verified local posting kit', 'edition': args.edition, 'song': identity['song'],
            'revision': identity['revision'], 'sourceCommit': args.source_commit, 'previewHashes': identity['hashes'],
            'videos': videos, 'files': files, 'builtAt': datetime.datetime.now(datetime.timezone.utc).isoformat(),
            'scope': 'Comprehensive human review of the frozen preview plus independent encoded-file verification; local delivery and source repository update. No public media release or platform upload.'}
