@@ -20,6 +20,8 @@ The complete 187.402-second recording pairs 33 bilingual cues with the original 
 
 The delivered map contains 147 Russian events and 167 English words, approved through comprehensive human review of the full recording and both layouts. Both 60 fps films preserve the original audio and pass full-frame focus and picture checks: 90,306 word states per format with zero mismatches. The verified Desktop kit includes both videos, covers, publishing copy, optional captions and checksums.
 
+The subsequent `preview-v3-duration-focus` revision refines both «уже который год» passages to “for years now,” separates their performed word highlights and extends four shortened vowel endings. This corrected preview is under review; the v1 films and their technical checks retain their original identities. See the [duration-focus correction](projects/lyubi-menya-lyubi-lyric-film/evidence/duration-focus-refinement.json).
+
 [Delivery, preview and credits](projects/lyubi-menya-lyubi-lyric-film/README.md) · [Current workflow](projects/lyubi-menya-lyubi-lyric-film/WORKFLOW.md) · [Production lessons](projects/lyubi-menya-lyubi-lyric-film/PRODUCTION-LESSONS.md) · [Timing evidence](projects/lyubi-menya-lyubi-lyric-film/evidence/timing-review.md) · [Original recording](https://www.youtube.com/watch?v=DBGCHjBSNzo)
 
 ## Stay at Your House — Hardstyle

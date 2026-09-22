@@ -1,0 +1,1492 @@
+{
+  "schemaVersion": 1,
+  "scope": "Four end-only preview corrections in the two independently measured temporal phrases. Previous values explicitly refer to the delivered v2 cue baseline.",
+  "status": "signal-supported preview candidates; not listening-attested",
+  "humanListeningAttested": false,
+  "sourceSampleRate": 44100,
+  "method": {
+    "script": "scripts/audit-duration-focus-v3.py",
+    "sha256": "8c1d00b85213404a693cf118d6fac64591ba0a5b23085c8033dbd28b33b16b3f",
+    "torchVersion": "2.14.0",
+    "torchaudioVersion": "2.11.0",
+    "model": "torchaudio.pipelines.MMS_FA, with_star=False, CPU, 3 threads",
+    "emission": "Unforced model emissions on independent bounded mix/stem windows; no text constraint. Romanized grapheme posteriors are model anchors, not validated phonemes. Time uses crop sample zero plus frame index times crop-duration/frame-count, matching the existing aligner.",
+    "waveform": "20 ms centered vocal-stem RMS and demeaned normalized lag correlation, 10 ms spacing, lags 30–160 at 16 kHz. Periodicity supports voiced continuation but cannot identify the word alone.",
+    "selection": "The chosen releases are explicit editorial signal estimates from the decay before independently anchored next-word consonants. No minimum hold, averaged repeat offset, global delay or blanket phrase fill is applied."
+  },
+  "inputs": {
+    "analysis/vocals16.wav": {
+      "sha256": "a5640d9c746a42919610e0adb4a1956585282b64e706674377d7be0d37db43bc",
+      "sampleRate": 16000,
+      "samples": 2998695
+    },
+    "analysis/mix16.wav": {
+      "sha256": "67ff7ead3f4a99abbb4143c509aaca4b5ac41f0272698b7e1e3965ce51a78570",
+      "sampleRate": 16000,
+      "samples": 2998695
+    }
+  },
+  "observations": [
+    {
+      "cueId": "LM-002",
+      "audio": "vocals",
+      "crop": [
+        7.8,
+        14.8
+      ],
+      "emissionStepSeconds": 0.02005730659025788,
+      "greedyNonblankEvents": [
+        {
+          "time": 10.748424,
+          "top": [
+            [
+              "o",
+              0.655522
+            ],
+            [
+              "-",
+              0.180838
+            ],
+            [
+              "u",
+              0.092148
+            ],
+            [
+              "a",
+              0.03158
+            ]
+          ]
+        },
+        {
+          "time": 11.049284,
+          "top": [
+            [
+              "s",
+              0.564
+            ],
+            [
+              "j",
+              0.132671
+            ],
+            [
+              "r",
+              0.128262
+            ],
+            [
+              "t",
+              0.060736
+            ]
+          ]
+        },
+        {
+          "time": 11.189685,
+          "top": [
+            [
+              "e",
+              0.671841
+            ],
+            [
+              "a",
+              0.103167
+            ],
+            [
+              "o",
+              0.072274
+            ],
+            [
+              "-",
+              0.070062
+            ]
+          ]
+        },
+        {
+          "time": 11.911748,
+          "top": [
+            [
+              "k",
+              0.654681
+            ],
+            [
+              "g",
+              0.271656
+            ],
+            [
+              "-",
+              0.058028
+            ],
+            [
+              "c",
+              0.003684
+            ]
+          ]
+        },
+        {
+          "time": 12.012034,
+          "top": [
+            [
+              "a",
+              0.898962
+            ],
+            [
+              "-",
+              0.060901
+            ],
+            [
+              "o",
+              0.032898
+            ],
+            [
+              "e",
+              0.002558
+            ]
+          ]
+        },
+        {
+          "time": 12.373066,
+          "top": [
+            [
+              "t",
+              0.941529
+            ],
+            [
+              "-",
+              0.045494
+            ],
+            [
+              "d",
+              0.006738
+            ],
+            [
+              "j",
+              0.001314
+            ]
+          ]
+        },
+        {
+          "time": 12.473352,
+          "top": [
+            [
+              "o",
+              0.839779
+            ],
+            [
+              "-",
+              0.075206
+            ],
+            [
+              "a",
+              0.037064
+            ],
+            [
+              "w",
+              0.021041
+            ]
+          ]
+        }
+      ],
+      "nextWordAnchors": {
+        "initialVelar": {
+          "searchWindow": [
+            11.85,
+            11.96
+          ],
+          "time": 11.911748,
+          "graphemes": {
+            "k": 0.654681,
+            "g": 0.271656
+          }
+        },
+        "followingVowel": {
+          "searchWindow": [
+            11.96,
+            12.08
+          ],
+          "time": 12.012034,
+          "graphemes": {
+            "a": 0.898962,
+            "o": 0.032898
+          }
+        },
+        "medialStop": {
+          "searchWindow": [
+            12.32,
+            12.42
+          ],
+          "time": 12.373066,
+          "graphemes": {
+            "t": 0.941529,
+            "d": 0.006738
+          }
+        }
+      },
+      "previousNeutralGap": {
+        "start": 11.209750566893424,
+        "end": 11.911746031746032,
+        "rms": 0.109015849071691
+      }
+    },
+    {
+      "cueId": "LM-002",
+      "audio": "mix",
+      "crop": [
+        7.8,
+        14.8
+      ],
+      "emissionStepSeconds": 0.02005730659025788,
+      "greedyNonblankEvents": [
+        {
+          "time": 10.648138,
+          "top": [
+            [
+              "g",
+              0.431379
+            ],
+            [
+              "-",
+              0.351193
+            ],
+            [
+              "m",
+              0.099531
+            ],
+            [
+              "n",
+              0.031788
+            ]
+          ]
+        },
+        {
+          "time": 10.748424,
+          "top": [
+            [
+              "u",
+              0.774278
+            ],
+            [
+              "o",
+              0.180099
+            ],
+            [
+              "-",
+              0.027151
+            ],
+            [
+              "e",
+              0.007969
+            ]
+          ]
+        },
+        {
+          "time": 11.049284,
+          "top": [
+            [
+              "r",
+              0.715845
+            ],
+            [
+              "j",
+              0.151924
+            ],
+            [
+              "z",
+              0.055367
+            ],
+            [
+              "-",
+              0.038348
+            ]
+          ]
+        },
+        {
+          "time": 11.169628,
+          "top": [
+            [
+              "e",
+              0.78614
+            ],
+            [
+              "i",
+              0.114371
+            ],
+            [
+              "a",
+              0.040298
+            ],
+            [
+              "-",
+              0.032843
+            ]
+          ]
+        },
+        {
+          "time": 11.911748,
+          "top": [
+            [
+              "g",
+              0.74164
+            ],
+            [
+              "k",
+              0.154873
+            ],
+            [
+              "-",
+              0.056882
+            ],
+            [
+              "c",
+              0.037482
+            ]
+          ]
+        },
+        {
+          "time": 11.991977,
+          "top": [
+            [
+              "a",
+              0.96716
+            ],
+            [
+              "-",
+              0.020091
+            ],
+            [
+              "o",
+              0.007481
+            ],
+            [
+              "e",
+              0.002737
+            ]
+          ]
+        },
+        {
+          "time": 12.373066,
+          "top": [
+            [
+              "t",
+              0.577788
+            ],
+            [
+              "d",
+              0.405668
+            ],
+            [
+              "-",
+              0.012608
+            ],
+            [
+              "l",
+              0.000561
+            ]
+          ]
+        },
+        {
+          "time": 12.473352,
+          "top": [
+            [
+              "o",
+              0.896971
+            ],
+            [
+              "-",
+              0.041393
+            ],
+            [
+              "u",
+              0.035107
+            ],
+            [
+              "a",
+              0.022004
+            ]
+          ]
+        }
+      ],
+      "nextWordAnchors": {
+        "initialVelar": {
+          "searchWindow": [
+            11.85,
+            11.96
+          ],
+          "time": 11.911748,
+          "graphemes": {
+            "k": 0.154873,
+            "g": 0.74164
+          }
+        },
+        "followingVowel": {
+          "searchWindow": [
+            11.96,
+            12.08
+          ],
+          "time": 11.991977,
+          "graphemes": {
+            "a": 0.96716,
+            "o": 0.007481
+          }
+        },
+        "medialStop": {
+          "searchWindow": [
+            12.32,
+            12.42
+          ],
+          "time": 12.373066,
+          "graphemes": {
+            "t": 0.577788,
+            "d": 0.405668
+          }
+        }
+      },
+      "previousNeutralGap": {
+        "start": 11.209750566893424,
+        "end": 11.911746031746032,
+        "rms": 0.3091030059323043
+      }
+    },
+    {
+      "cueId": "LM-013",
+      "audio": "vocals",
+      "crop": [
+        75.0,
+        81.9
+      ],
+      "emissionStepSeconds": 0.020058139534883723,
+      "greedyNonblankEvents": [
+        {
+          "time": 78.028779,
+          "top": [
+            [
+              "o",
+              0.705437
+            ],
+            [
+              "-",
+              0.155486
+            ],
+            [
+              "u",
+              0.09287
+            ],
+            [
+              "e",
+              0.011531
+            ]
+          ]
+        },
+        {
+          "time": 78.289535,
+          "top": [
+            [
+              "s",
+              0.314225
+            ],
+            [
+              "j",
+              0.291624
+            ],
+            [
+              "z",
+              0.255281
+            ],
+            [
+              "r",
+              0.053423
+            ]
+          ]
+        },
+        {
+          "time": 78.409884,
+          "top": [
+            [
+              "e",
+              0.614023
+            ],
+            [
+              "o",
+              0.150796
+            ],
+            [
+              "i",
+              0.147611
+            ],
+            [
+              "-",
+              0.033832
+            ]
+          ]
+        },
+        {
+          "time": 79.172093,
+          "top": [
+            [
+              "k",
+              0.926909
+            ],
+            [
+              "g",
+              0.046848
+            ],
+            [
+              "-",
+              0.009914
+            ],
+            [
+              "c",
+              0.007479
+            ]
+          ]
+        },
+        {
+          "time": 79.292442,
+          "top": [
+            [
+              "a",
+              0.977885
+            ],
+            [
+              "-",
+              0.009779
+            ],
+            [
+              "o",
+              0.007159
+            ],
+            [
+              "u",
+              0.002192
+            ]
+          ]
+        },
+        {
+          "time": 79.593314,
+          "top": [
+            [
+              "t",
+              0.968012
+            ],
+            [
+              "-",
+              0.014376
+            ],
+            [
+              "d",
+              0.006869
+            ],
+            [
+              "j",
+              0.004792
+            ]
+          ]
+        },
+        {
+          "time": 79.713663,
+          "top": [
+            [
+              "o",
+              0.883189
+            ],
+            [
+              "-",
+              0.051452
+            ],
+            [
+              "u",
+              0.019458
+            ],
+            [
+              "w",
+              0.018274
+            ]
+          ]
+        }
+      ],
+      "nextWordAnchors": {
+        "initialVelar": {
+          "searchWindow": [
+            79.12,
+            79.24
+          ],
+          "time": 79.172093,
+          "graphemes": {
+            "k": 0.926909,
+            "g": 0.046848
+          }
+        },
+        "followingVowel": {
+          "searchWindow": [
+            79.24,
+            79.36
+          ],
+          "time": 79.292442,
+          "graphemes": {
+            "a": 0.977885,
+            "o": 0.007159
+          }
+        },
+        "medialStop": {
+          "searchWindow": [
+            79.54,
+            79.65
+          ],
+          "time": 79.593314,
+          "graphemes": {
+            "t": 0.968012,
+            "d": 0.006869
+          }
+        }
+      },
+      "previousNeutralGap": {
+        "start": 78.42993197278912,
+        "end": 79.17208616780046,
+        "rms": 0.11389281327041821
+      }
+    },
+    {
+      "cueId": "LM-013",
+      "audio": "mix",
+      "crop": [
+        75.0,
+        81.9
+      ],
+      "emissionStepSeconds": 0.020058139534883723,
+      "greedyNonblankEvents": [
+        {
+          "time": 77.848256,
+          "top": [
+            [
+              "n",
+              0.253534
+            ],
+            [
+              "g",
+              0.147239
+            ],
+            [
+              "-",
+              0.142396
+            ],
+            [
+              "k",
+              0.096278
+            ]
+          ]
+        },
+        {
+          "time": 77.968605,
+          "top": [
+            [
+              "u",
+              0.483163
+            ],
+            [
+              "o",
+              0.309598
+            ],
+            [
+              "-",
+              0.100682
+            ],
+            [
+              "a",
+              0.052246
+            ]
+          ]
+        },
+        {
+          "time": 78.289535,
+          "top": [
+            [
+              "j",
+              0.495466
+            ],
+            [
+              "r",
+              0.267404
+            ],
+            [
+              "-",
+              0.061337
+            ],
+            [
+              "s",
+              0.057364
+            ]
+          ]
+        },
+        {
+          "time": 78.409884,
+          "top": [
+            [
+              "e",
+              0.321012
+            ],
+            [
+              "i",
+              0.268716
+            ],
+            [
+              "o",
+              0.166365
+            ],
+            [
+              "u",
+              0.12628
+            ]
+          ]
+        },
+        {
+          "time": 78.911337,
+          "top": [
+            [
+              "i",
+              0.348231
+            ],
+            [
+              "-",
+              0.316725
+            ],
+            [
+              "u",
+              0.142355
+            ],
+            [
+              "e",
+              0.109988
+            ]
+          ]
+        },
+        {
+          "time": 79.192151,
+          "top": [
+            [
+              "g",
+              0.690125
+            ],
+            [
+              "k",
+              0.166737
+            ],
+            [
+              "-",
+              0.104937
+            ],
+            [
+              "c",
+              0.011544
+            ]
+          ]
+        },
+        {
+          "time": 79.292442,
+          "top": [
+            [
+              "a",
+              0.851943
+            ],
+            [
+              "-",
+              0.052231
+            ],
+            [
+              "o",
+              0.049607
+            ],
+            [
+              "e",
+              0.025133
+            ]
+          ]
+        },
+        {
+          "time": 79.593314,
+          "top": [
+            [
+              "t",
+              0.874754
+            ],
+            [
+              "d",
+              0.055575
+            ],
+            [
+              "-",
+              0.041618
+            ],
+            [
+              "j",
+              0.012333
+            ]
+          ]
+        },
+        {
+          "time": 79.713663,
+          "top": [
+            [
+              "o",
+              0.635874
+            ],
+            [
+              "u",
+              0.131508
+            ],
+            [
+              "-",
+              0.10519
+            ],
+            [
+              "a",
+              0.07791
+            ]
+          ]
+        }
+      ],
+      "nextWordAnchors": {
+        "initialVelar": {
+          "searchWindow": [
+            79.12,
+            79.24
+          ],
+          "time": 79.192151,
+          "graphemes": {
+            "k": 0.166737,
+            "g": 0.690125
+          }
+        },
+        "followingVowel": {
+          "searchWindow": [
+            79.24,
+            79.36
+          ],
+          "time": 79.292442,
+          "graphemes": {
+            "a": 0.851943,
+            "o": 0.049607
+          }
+        },
+        "medialStop": {
+          "searchWindow": [
+            79.54,
+            79.65
+          ],
+          "time": 79.593314,
+          "graphemes": {
+            "t": 0.874754,
+            "d": 0.055575
+          }
+        }
+      },
+      "previousNeutralGap": {
+        "start": 78.42993197278912,
+        "end": 79.17208616780046,
+        "rms": 0.25791170559471244
+      }
+    }
+  ],
+  "corrections": [
+    {
+      "id": "LM-002-s04",
+      "text": "уже",
+      "startSample": 474006,
+      "previousEndSample": 494350,
+      "chosenEndSample": 523908,
+      "nextStartSample": 525308,
+      "uncertaintySeconds": 0.025,
+      "rationale": "The strongly periodic held vowel decays around 11.83–11.89 s, before the independent mix/stem k/g anchor near 11.912 s. Retain the existing next-word onset; extend only this release to 11.880 s. This does not imply a perfectly separable sung/reverberant boundary.",
+      "previousStartSeconds": 10.74843537414966,
+      "previousEndSeconds": 11.209750566893424,
+      "chosenStartSeconds": 10.74843537414966,
+      "chosenEndSeconds": 11.88,
+      "nextStartSeconds": 11.911746031746032,
+      "remainingGapSeconds": 0.031746031746031744,
+      "vocalBodyTrace": [
+        {
+          "time": 11.72,
+          "rms": 0.11894,
+          "periodicity": 0.900027
+        },
+        {
+          "time": 11.73,
+          "rms": 0.140172,
+          "periodicity": 0.933487
+        },
+        {
+          "time": 11.74,
+          "rms": 0.147935,
+          "periodicity": 0.96892
+        },
+        {
+          "time": 11.75,
+          "rms": 0.145518,
+          "periodicity": 0.966659
+        },
+        {
+          "time": 11.76,
+          "rms": 0.150202,
+          "periodicity": 0.984151
+        },
+        {
+          "time": 11.77,
+          "rms": 0.1486,
+          "periodicity": 0.983859
+        },
+        {
+          "time": 11.78,
+          "rms": 0.13878,
+          "periodicity": 0.976025
+        },
+        {
+          "time": 11.79,
+          "rms": 0.127903,
+          "periodicity": 0.977386
+        },
+        {
+          "time": 11.8,
+          "rms": 0.114129,
+          "periodicity": 0.96056
+        },
+        {
+          "time": 11.81,
+          "rms": 0.095762,
+          "periodicity": 0.941228
+        },
+        {
+          "time": 11.82,
+          "rms": 0.080238,
+          "periodicity": 0.919225
+        },
+        {
+          "time": 11.83,
+          "rms": 0.070824,
+          "periodicity": 0.805341
+        },
+        {
+          "time": 11.84,
+          "rms": 0.059019,
+          "periodicity": 0.69484
+        },
+        {
+          "time": 11.85,
+          "rms": 0.045398,
+          "periodicity": 0.778946
+        },
+        {
+          "time": 11.86,
+          "rms": 0.046722,
+          "periodicity": 0.790738
+        },
+        {
+          "time": 11.87,
+          "rms": 0.048097,
+          "periodicity": 0.861874
+        },
+        {
+          "time": 11.88,
+          "rms": 0.036198,
+          "periodicity": 0.803698
+        },
+        {
+          "time": 11.89,
+          "rms": 0.026827,
+          "periodicity": 0.534444
+        },
+        {
+          "time": 11.9,
+          "rms": 0.021305,
+          "periodicity": 0.602898
+        },
+        {
+          "time": 11.91,
+          "rms": 0.032619,
+          "periodicity": 0.366584
+        },
+        {
+          "time": 11.92,
+          "rms": 0.037598,
+          "periodicity": 0.314485
+        },
+        {
+          "time": 11.93,
+          "rms": 0.053462,
+          "periodicity": 0.574114
+        },
+        {
+          "time": 11.94,
+          "rms": 0.090783,
+          "periodicity": 0.873499
+        },
+        {
+          "time": 11.95,
+          "rms": 0.135561,
+          "periodicity": 0.92259
+        },
+        {
+          "time": 11.96,
+          "rms": 0.155216,
+          "periodicity": 0.951664
+        }
+      ]
+    },
+    {
+      "id": "LM-013-s04",
+      "text": "уже",
+      "startSample": 3441069,
+      "previousEndSample": 3458760,
+      "chosenEndSample": 3489192,
+      "nextStartSample": 3491489,
+      "uncertaintySeconds": 0.04,
+      "rationale": "The strong held vowel decays around 79.07–79.12 s. A quieter periodic tail continues toward 79.17 s and may contain reverberation; the mix/stem k/g anchor follows at 79.172–79.192 s. Choose the conservative 79.120 s release, retain the next onset, and record wider release uncertainty.",
+      "previousStartSeconds": 78.02877551020408,
+      "previousEndSeconds": 78.42993197278912,
+      "chosenStartSeconds": 78.02877551020408,
+      "chosenEndSeconds": 79.12,
+      "nextStartSeconds": 79.17208616780046,
+      "remainingGapSeconds": 0.05208616780045351,
+      "vocalBodyTrace": [
+        {
+          "time": 79.0,
+          "rms": 0.111863,
+          "periodicity": 0.985788
+        },
+        {
+          "time": 79.01,
+          "rms": 0.109121,
+          "periodicity": 0.981726
+        },
+        {
+          "time": 79.02,
+          "rms": 0.100713,
+          "periodicity": 0.976627
+        },
+        {
+          "time": 79.03,
+          "rms": 0.094228,
+          "periodicity": 0.983442
+        },
+        {
+          "time": 79.04,
+          "rms": 0.090795,
+          "periodicity": 0.985446
+        },
+        {
+          "time": 79.05,
+          "rms": 0.089715,
+          "periodicity": 0.967106
+        },
+        {
+          "time": 79.06,
+          "rms": 0.083177,
+          "periodicity": 0.973115
+        },
+        {
+          "time": 79.07,
+          "rms": 0.065292,
+          "periodicity": 0.951198
+        },
+        {
+          "time": 79.08,
+          "rms": 0.050344,
+          "periodicity": 0.846828
+        },
+        {
+          "time": 79.09,
+          "rms": 0.03783,
+          "periodicity": 0.747524
+        },
+        {
+          "time": 79.1,
+          "rms": 0.039503,
+          "periodicity": 0.765621
+        },
+        {
+          "time": 79.11,
+          "rms": 0.040309,
+          "periodicity": 0.772209
+        },
+        {
+          "time": 79.12,
+          "rms": 0.026702,
+          "periodicity": 0.641728
+        },
+        {
+          "time": 79.13,
+          "rms": 0.023582,
+          "periodicity": 0.727004
+        },
+        {
+          "time": 79.14,
+          "rms": 0.021207,
+          "periodicity": 0.796022
+        },
+        {
+          "time": 79.15,
+          "rms": 0.019713,
+          "periodicity": 0.853542
+        },
+        {
+          "time": 79.16,
+          "rms": 0.018827,
+          "periodicity": 0.900444
+        },
+        {
+          "time": 79.17,
+          "rms": 0.018566,
+          "periodicity": 0.907501
+        },
+        {
+          "time": 79.18,
+          "rms": 0.02221,
+          "periodicity": 0.59469
+        },
+        {
+          "time": 79.19,
+          "rms": 0.043049,
+          "periodicity": 0.372534
+        },
+        {
+          "time": 79.2,
+          "rms": 0.043529,
+          "periodicity": 0.305279
+        },
+        {
+          "time": 79.21,
+          "rms": 0.03992,
+          "periodicity": 0.486686
+        },
+        {
+          "time": 79.22,
+          "rms": 0.073684,
+          "periodicity": 0.741724
+        },
+        {
+          "time": 79.23,
+          "rms": 0.108327,
+          "periodicity": 0.916265
+        }
+      ]
+    },
+    {
+      "id": "LM-002-s05",
+      "text": "который",
+      "startSample": 525308,
+      "previousEndSample": 592532,
+      "chosenEndSample": 597996,
+      "nextStartSample": 600493,
+      "uncertaintySeconds": 0.025,
+      "rationale": "Periodic vowel energy continues beyond the CTC core release at 13.436 s and decays around 13.53–13.57 s. End at 13.560 s before the low-energy consonant transition and independently located next word near 13.617 s.",
+      "previousStartSeconds": 11.911746031746032,
+      "previousEndSeconds": 13.436099773242631,
+      "chosenStartSeconds": 11.911746031746032,
+      "chosenEndSeconds": 13.56,
+      "nextStartSeconds": 13.616621315192743,
+      "remainingGapSeconds": 0.056621315192743764,
+      "vocalBodyTrace": [
+        {
+          "time": 13.4,
+          "rms": 0.076172,
+          "periodicity": 0.909155
+        },
+        {
+          "time": 13.41,
+          "rms": 0.070102,
+          "periodicity": 0.915861
+        },
+        {
+          "time": 13.42,
+          "rms": 0.071949,
+          "periodicity": 0.926325
+        },
+        {
+          "time": 13.43,
+          "rms": 0.078084,
+          "periodicity": 0.926194
+        },
+        {
+          "time": 13.44,
+          "rms": 0.080486,
+          "periodicity": 0.935494
+        },
+        {
+          "time": 13.45,
+          "rms": 0.090826,
+          "periodicity": 0.949082
+        },
+        {
+          "time": 13.46,
+          "rms": 0.10161,
+          "periodicity": 0.958455
+        },
+        {
+          "time": 13.47,
+          "rms": 0.095952,
+          "periodicity": 0.979628
+        },
+        {
+          "time": 13.48,
+          "rms": 0.080963,
+          "periodicity": 0.89977
+        },
+        {
+          "time": 13.49,
+          "rms": 0.071333,
+          "periodicity": 0.919027
+        },
+        {
+          "time": 13.5,
+          "rms": 0.06372,
+          "periodicity": 0.920592
+        },
+        {
+          "time": 13.51,
+          "rms": 0.063286,
+          "periodicity": 0.944941
+        },
+        {
+          "time": 13.52,
+          "rms": 0.062389,
+          "periodicity": 0.920476
+        },
+        {
+          "time": 13.53,
+          "rms": 0.048716,
+          "periodicity": 0.804222
+        },
+        {
+          "time": 13.54,
+          "rms": 0.035511,
+          "periodicity": 0.637425
+        },
+        {
+          "time": 13.55,
+          "rms": 0.029971,
+          "periodicity": 0.626296
+        },
+        {
+          "time": 13.56,
+          "rms": 0.023145,
+          "periodicity": 0.691636
+        },
+        {
+          "time": 13.57,
+          "rms": 0.016562,
+          "periodicity": 0.419387
+        },
+        {
+          "time": 13.58,
+          "rms": 0.017361,
+          "periodicity": 0.576167
+        },
+        {
+          "time": 13.59,
+          "rms": 0.019211,
+          "periodicity": 0.634593
+        },
+        {
+          "time": 13.6,
+          "rms": 0.032081,
+          "periodicity": 0.597256
+        },
+        {
+          "time": 13.61,
+          "rms": 0.033661,
+          "periodicity": 0.55592
+        },
+        {
+          "time": 13.62,
+          "rms": 0.057691,
+          "periodicity": 0.799175
+        },
+        {
+          "time": 13.63,
+          "rms": 0.110961,
+          "periodicity": 0.954904
+        },
+        {
+          "time": 13.64,
+          "rms": 0.142095,
+          "periodicity": 0.958764
+        }
+      ]
+    },
+    {
+      "id": "LM-013-s05",
+      "text": "который",
+      "startSample": 3491489,
+      "previousEndSample": 3555178,
+      "chosenEndSample": 3563280,
+      "nextStartSample": 3564908,
+      "uncertaintySeconds": 0.025,
+      "rationale": "Periodic vowel energy persists beyond the CTC core release at 80.616 s and decays around 80.78–80.82 s. End at 80.800 s, before the low-energy closure and next-word onset near 80.837 s. The two repeats are measured separately.",
+      "previousStartSeconds": 79.17208616780046,
+      "previousEndSeconds": 80.61628117913833,
+      "chosenStartSeconds": 79.17208616780046,
+      "chosenEndSeconds": 80.8,
+      "nextStartSeconds": 80.83691609977325,
+      "remainingGapSeconds": 0.03691609977324263,
+      "vocalBodyTrace": [
+        {
+          "time": 80.58,
+          "rms": 0.099501,
+          "periodicity": 0.908058
+        },
+        {
+          "time": 80.59,
+          "rms": 0.115346,
+          "periodicity": 0.869844
+        },
+        {
+          "time": 80.6,
+          "rms": 0.113974,
+          "periodicity": 0.791457
+        },
+        {
+          "time": 80.61,
+          "rms": 0.096631,
+          "periodicity": 0.854702
+        },
+        {
+          "time": 80.62,
+          "rms": 0.084512,
+          "periodicity": 0.824027
+        },
+        {
+          "time": 80.63,
+          "rms": 0.097442,
+          "periodicity": 0.739695
+        },
+        {
+          "time": 80.64,
+          "rms": 0.10229,
+          "periodicity": 0.858966
+        },
+        {
+          "time": 80.65,
+          "rms": 0.092191,
+          "periodicity": 0.91957
+        },
+        {
+          "time": 80.66,
+          "rms": 0.097807,
+          "periodicity": 0.955423
+        },
+        {
+          "time": 80.67,
+          "rms": 0.096295,
+          "periodicity": 0.953001
+        },
+        {
+          "time": 80.68,
+          "rms": 0.095007,
+          "periodicity": 0.969002
+        },
+        {
+          "time": 80.69,
+          "rms": 0.09301,
+          "periodicity": 0.958361
+        },
+        {
+          "time": 80.7,
+          "rms": 0.089042,
+          "periodicity": 0.955466
+        },
+        {
+          "time": 80.71,
+          "rms": 0.08848,
+          "periodicity": 0.942286
+        },
+        {
+          "time": 80.72,
+          "rms": 0.084615,
+          "periodicity": 0.964432
+        },
+        {
+          "time": 80.73,
+          "rms": 0.077821,
+          "periodicity": 0.938106
+        },
+        {
+          "time": 80.74,
+          "rms": 0.068435,
+          "periodicity": 0.940745
+        },
+        {
+          "time": 80.75,
+          "rms": 0.064218,
+          "periodicity": 0.965089
+        },
+        {
+          "time": 80.76,
+          "rms": 0.066969,
+          "periodicity": 0.950331
+        },
+        {
+          "time": 80.77,
+          "rms": 0.060304,
+          "periodicity": 0.964097
+        },
+        {
+          "time": 80.78,
+          "rms": 0.046185,
+          "periodicity": 0.931456
+        },
+        {
+          "time": 80.79,
+          "rms": 0.03667,
+          "periodicity": 0.793983
+        },
+        {
+          "time": 80.8,
+          "rms": 0.029237,
+          "periodicity": 0.805874
+        },
+        {
+          "time": 80.81,
+          "rms": 0.022744,
+          "periodicity": 0.704388
+        },
+        {
+          "time": 80.82,
+          "rms": 0.016003,
+          "periodicity": 0.436637
+        },
+        {
+          "time": 80.83,
+          "rms": 0.012969,
+          "periodicity": 0.359169
+        },
+        {
+          "time": 80.84,
+          "rms": 0.019582,
+          "periodicity": 0.551862
+        },
+        {
+          "time": 80.85,
+          "rms": 0.033187,
+          "periodicity": 0.634673
+        },
+        {
+          "time": 80.86,
+          "rms": 0.042101,
+          "periodicity": 0.854273
+        },
+        {
+          "time": 80.87,
+          "rms": 0.07278,
+          "periodicity": 0.891078
+        },
+        {
+          "time": 80.88,
+          "rms": 0.119044,
+          "periodicity": 0.945537
+        }
+      ]
+    }
+  ],
+  "interpretation": "Mix and stem locate the k/g–a/o–t/d sequence of который near the existing next-word onsets in each repeat. The long intervening voiced body therefore supports a held ending of уже, rather than advancing который to the early Whisper assignment. Current year-after-year grouping is a separate semantic issue. CTC blank is not acoustic silence.",
+  "limitations": [
+    "This is signal/model inspection, not a claim of normal-speed or reduced-speed human listening.",
+    "MMS mix and stem are separate observations from the same model family, not independent model votes.",
+    "Exact sung release versus residual room/reverb remains uncertain at the stated scale, particularly LM-013-s04.",
+    "Encoded focus audits establish conformance to cue intervals, not their acoustic correctness."
+  ]
+}

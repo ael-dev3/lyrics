@@ -19,19 +19,19 @@ const paintIntervals:number[]=[];
 const records=data.cues.map(c=>({id:c.id,normalAudio:false,slowAudio:false,landscape:false,portrait:false,notes:''}));
 const storageKey='lyubi-menya-lyubi-review-v1';
 const requiredInputPaths=['public/soundtrack.m4a','public/artwork.png','public/fonts/Oswald-Medium.ttf','public/science.json','src/cues.json','src/layout.json','src/scene.ts','src/preview-painter.ts','src/focus.ts','src/schema.ts','src/review-client.ts','review/index.html','review/client.js'];
-type PreviewIdentity={song:'DBGCHjBSNzo';revision:'preview-v2-rose-paper';hashes:Record<string,string>};
+type PreviewIdentity={song:'DBGCHjBSNzo';revision:'preview-v3-duration-focus';hashes:Record<string,string>};
 let previewIdentity:PreviewIdentity|undefined;
 async function fetchIdentity():Promise<PreviewIdentity>{
  const response=await fetch('/evidence/preview-identity.json',{cache:'no-store'});if(!response.ok)throw Error('The complete preview identity is not ready. Restart the preview after its inputs are frozen.');
  const value:unknown=await response.json();
  if(!value||typeof value!=='object'||Array.isArray(value))throw Error('The preview identity is invalid.');
  const manifest=value as Record<string,unknown>,hashes=manifest.hashes;
- if(manifest.song!=='DBGCHjBSNzo'||manifest.revision!=='preview-v2-rose-paper'||!hashes||typeof hashes!=='object'||Array.isArray(hashes))throw Error('The preview identity belongs to different inputs.');
+ if(manifest.song!=='DBGCHjBSNzo'||manifest.revision!=='preview-v3-duration-focus'||!hashes||typeof hashes!=='object'||Array.isArray(hashes))throw Error('The preview identity belongs to different inputs.');
  const entries=Object.entries(hashes);
  if(requiredInputPaths.some(path=>!(path in hashes))||entries.some(([path,hash])=>path.startsWith('/')||path.includes('\\')||path.split('/').some(part=>!part||part==='.'||part==='..')||typeof hash!=='string'||!/^[a-f0-9]{64}$/.test(hash)))throw Error('The preview identity does not cover all required inputs.');
  const sorted=Object.fromEntries(entries.sort(([a],[b])=>a.localeCompare(b))) as Record<string,string>;
  if(sorted['public/soundtrack.m4a']!==data.audioSha256)throw Error('The recording identity does not match the lyric timeline.');
- return {song:'DBGCHjBSNzo',revision:'preview-v2-rose-paper',hashes:sorted};
+ return {song:'DBGCHjBSNzo',revision:'preview-v3-duration-focus',hashes:sorted};
 }
 const timestamp=(t:number)=>`${Math.floor(t/60)}:${String(Math.floor(t%60)).padStart(2,'0')}`;
 const clampTime=(t:number)=>Math.max(0,Math.min(data.duration-.001,Number.isFinite(t)?t:0));

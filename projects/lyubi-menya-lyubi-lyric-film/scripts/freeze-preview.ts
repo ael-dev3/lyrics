@@ -2,7 +2,7 @@ import {readFileSync,writeFileSync,existsSync,mkdirSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {requiredInputPaths} from './production-gate.ts';
 const hashes=Object.fromEntries(requiredInputPaths.map(path=>[path,createHash('sha256').update(readFileSync(path)).digest('hex')]));
-const identity={song:'DBGCHjBSNzo',revision:'preview-v2-rose-paper',hashes};
+const identity={song:'DBGCHjBSNzo',revision:'preview-v3-duration-focus',hashes};
 const old=existsSync('evidence/preview-identity.json')?JSON.parse(readFileSync('evidence/preview-identity.json','utf8')):undefined;
 const changed=JSON.stringify(old?.hashes)!==JSON.stringify(hashes);
 if(changed&&existsSync('evidence/cross-language-sync-review.json')){mkdirSync('evidence/history',{recursive:true});writeFileSync(`evidence/history/review-before-${Date.now()}.json`,readFileSync('evidence/cross-language-sync-review.json'));}
