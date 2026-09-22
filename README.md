@@ -12,15 +12,15 @@ Music films with synchronized lyrics, meaning-linked translations, and audio-rea
 
 **Гречка · Russian + English · verified YouTube and TikTok films**
 
-![Люби меня, люби: original album print on warm paper, dark bilingual lyrics and berry meaning focus](assets/lyubi-final-33-2.png)
+![Люби меня, люби: original album print on warm paper, dark bilingual lyrics and berry meaning focus](assets/lyubi-v1-1-final-13-85.png)
 
-*Frame at 00:33.200 decoded from the verified v1 landscape film. Original recording and album artwork: Гречка and their respective creators.*
+*Frame at 00:13.850 decoded from the verified v1.1.0 landscape film. Original recording and album artwork: Гречка and their respective creators.*
 
 The complete 187.402-second recording pairs 33 bilingual cues with the original album portrait, presented as a stationary print on textured rose paper. Equal Russian and English words keep stable geometry, dark ink and berry focus. A single smooth ribbon responds to 64 measured frequency bands; immediate feature attacks and a short decay give it musical contact without moving the picture. Its shape is an artistic spectrum display.
 
-The delivered map contains 147 Russian events and 167 English words, approved through comprehensive human review of the full recording and both layouts. Both 60 fps films preserve the original audio and pass full-frame focus and picture checks: 90,306 word states per format with zero mismatches. The verified Desktop kit includes both videos, covers, publishing copy, optional captions and checksums.
+The delivered v1.1.0 map contains 147 Russian events and 169 English words. All Russian words highlight individually; English uses the smallest meaningful word or grammatical expression. The accepted correction retains the comprehensive review of unchanged cues and has its own review for both revised passages. Both 60 fps films preserve the original audio and pass every-frame focus and picture checks: 91,033 word states per format with zero mismatches. All 14 files in the new Desktop kit match the verified videos, covers, publishing copy, captions and checksums.
 
-The subsequent `preview-v3-duration-focus` revision refines both «уже который год» passages to “for years now,” separates their performed word highlights and extends four shortened vowel endings. This corrected preview is under review; the v1 films and their technical checks retain their original identities. See the [duration-focus correction](projects/lyubi-menya-lyubi-lyric-film/evidence/duration-focus-refinement.json).
+The delivered `preview-v3-duration-focus` correction refines both «уже который год» passages to “for years now,” separates their word highlights and extends four shortened vowel endings. Natural English reading order is retained while each display anchor follows the corresponding source event. Earlier v1 files and evidence retain their original identities in the [delivery archive](projects/lyubi-menya-lyubi-lyric-film/evidence/releases/rose-paper-v1.0.0/README.md). See the [duration-focus correction](projects/lyubi-menya-lyubi-lyric-film/evidence/duration-focus-refinement.json).
 
 [Delivery, preview and credits](projects/lyubi-menya-lyubi-lyric-film/README.md) · [Current workflow](projects/lyubi-menya-lyubi-lyric-film/WORKFLOW.md) · [Production lessons](projects/lyubi-menya-lyubi-lyric-film/PRODUCTION-LESSONS.md) · [Timing evidence](projects/lyubi-menya-lyubi-lyric-film/evidence/timing-review.md) · [Original recording](https://www.youtube.com/watch?v=DBGCHjBSNzo)
 

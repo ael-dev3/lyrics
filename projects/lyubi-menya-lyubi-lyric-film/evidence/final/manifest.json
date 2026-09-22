@@ -2,31 +2,31 @@
   "status": "PASS",
   "scope": "Native-size PNG frames decoded directly from the exact SHA-256-verified final MP4s. Frame numbers are zero-based at 60 fps; requested decimal times are rounded to their nearest frame.",
   "fps": 60,
-  "inputIdentitySha256": "5f17c488190222fddabdc7a3fab6510182c938bdf61f7fa0fecd9903a73f3261",
-  "extractorSha256": "ac68d4d7599c1e89f2b93de75fab2c92dd24edf4441881d4caf2ce05f55477d3",
+  "inputIdentitySha256": "64825d8546d9ebc6464958b32ab0d2e57dee7b8e799e7d3411dddc6d91fa3744",
+  "extractorSha256": "b56cc0e3ef3f6a7eabbd076e29404efd162f17ecf365f59f25635b7804c627cd",
   "sources": [
     {
       "format": "landscape",
       "width": 1920,
       "height": 1080,
       "sourceFile": "output/Lyubi-Menya-Lyubi-landscape-1920x1080-60fps.mp4",
-      "sourceFileSha256": "f7c30e0a9b0279db806086552e02c954e77a232477fd5807b0a488d4ed38c406",
+      "sourceFileSha256": "ef93cfb05aa98df76e6bfe61544b18bf83aec74f36a2d61f28533443e686a1df",
       "verificationPath": "evidence/production/landscape-verification.json",
-      "verificationSha256": "d0eea0dcb0ffa9cea4d44a66bf1aae6e9c0bfaff3dffc0093a1f8f3ba6b56f5d"
+      "verificationSha256": "9b9cb7adfbc22581bcc4b8cbc06609992409483a6e27ab75e2ad3d1e04a1035a"
     },
     {
       "format": "portrait",
       "width": 1080,
       "height": 1920,
       "sourceFile": "output/Lyubi-Menya-Lyubi-portrait-1080x1920-60fps.mp4",
-      "sourceFileSha256": "0b85a811fd6952dc79e3d8cddc3d6937d0339b73f8098685c95eb951eee46f66",
+      "sourceFileSha256": "10bad69f5540d886e2ade1f6469e0b9caa68f2ca489b3063ddac78a0a5a6e913",
       "verificationPath": "evidence/production/portrait-verification.json",
-      "verificationSha256": "d8edd301b552c88afaed71539c63f33f7a7d7fd14e5b1222b14cdcb0962045dc"
+      "verificationSha256": "0b9c6cf2d4eb6ba9e21782f8bf34ef206276ba0246e835d2f0f9a7539d5b2fc6"
     }
   ],
   "readmeSelection": {
-    "landscape": "evidence/final/landscape-33-2.png",
-    "portrait": "evidence/final/portrait-22-2.png"
+    "landscape": "evidence/final/landscape-13-85.png",
+    "portrait": "evidence/final/portrait-78-8.png"
   },
   "proofs": [
     {
@@ -38,56 +38,56 @@
       "frame": 0,
       "seconds": 0,
       "sourceFile": "output/Lyubi-Menya-Lyubi-landscape-1920x1080-60fps.mp4",
-      "sourceFileSha256": "f7c30e0a9b0279db806086552e02c954e77a232477fd5807b0a488d4ed38c406",
+      "sourceFileSha256": "ef93cfb05aa98df76e6bfe61544b18bf83aec74f36a2d61f28533443e686a1df",
       "sha256": "faecbb4316b771f6c42b9ec7b405935559df1483b730004ed095f922ec881a71"
     },
     {
-      "path": "evidence/final/landscape-22-2.png",
+      "path": "evidence/final/landscape-11-5.png",
       "format": "landscape",
       "width": 1920,
       "height": 1080,
-      "requestedSeconds": 22.2,
-      "frame": 1332,
-      "seconds": 22.2,
+      "requestedSeconds": 11.5,
+      "frame": 690,
+      "seconds": 11.5,
       "sourceFile": "output/Lyubi-Menya-Lyubi-landscape-1920x1080-60fps.mp4",
-      "sourceFileSha256": "f7c30e0a9b0279db806086552e02c954e77a232477fd5807b0a488d4ed38c406",
-      "sha256": "f242f1fb4972703007cf3069423f6ec1d4596a3487f9a9447f595707ea800fe8"
+      "sourceFileSha256": "ef93cfb05aa98df76e6bfe61544b18bf83aec74f36a2d61f28533443e686a1df",
+      "sha256": "3749c19052cff3decda0f07c6d86fbcf464872a624010fef6fbfe16a0d9b97b6"
     },
     {
-      "path": "evidence/final/landscape-33-2.png",
+      "path": "evidence/final/landscape-13-85.png",
       "format": "landscape",
       "width": 1920,
       "height": 1080,
-      "requestedSeconds": 33.2,
-      "frame": 1992,
-      "seconds": 33.2,
+      "requestedSeconds": 13.85,
+      "frame": 831,
+      "seconds": 13.85,
       "sourceFile": "output/Lyubi-Menya-Lyubi-landscape-1920x1080-60fps.mp4",
-      "sourceFileSha256": "f7c30e0a9b0279db806086552e02c954e77a232477fd5807b0a488d4ed38c406",
-      "sha256": "284de729321a3875d86b193d29001d9b2f148f4a38904811998cad8febd1bf7e"
+      "sourceFileSha256": "ef93cfb05aa98df76e6bfe61544b18bf83aec74f36a2d61f28533443e686a1df",
+      "sha256": "dd2dd7bd1cbe7eebd46f9ea98db91cb883a940b4bba0c3fa4c55b7258288b1c1"
     },
     {
-      "path": "evidence/final/landscape-152-2.png",
+      "path": "evidence/final/landscape-78-8.png",
       "format": "landscape",
       "width": 1920,
       "height": 1080,
-      "requestedSeconds": 152.2,
-      "frame": 9132,
-      "seconds": 152.2,
+      "requestedSeconds": 78.8,
+      "frame": 4728,
+      "seconds": 78.8,
       "sourceFile": "output/Lyubi-Menya-Lyubi-landscape-1920x1080-60fps.mp4",
-      "sourceFileSha256": "f7c30e0a9b0279db806086552e02c954e77a232477fd5807b0a488d4ed38c406",
-      "sha256": "a751b4a9d3432b7955b90c3fca3a9cc963600e6aec041f3383b9849699bbf6c5"
+      "sourceFileSha256": "ef93cfb05aa98df76e6bfe61544b18bf83aec74f36a2d61f28533443e686a1df",
+      "sha256": "1c4678532f234329e5c561e3109e03cda807af6b30478d705213abcfb2ba78ad"
     },
     {
-      "path": "evidence/final/landscape-180-62.png",
+      "path": "evidence/final/landscape-81.png",
       "format": "landscape",
       "width": 1920,
       "height": 1080,
-      "requestedSeconds": 180.62,
-      "frame": 10837,
-      "seconds": 180.61666666666667,
+      "requestedSeconds": 81,
+      "frame": 4860,
+      "seconds": 81,
       "sourceFile": "output/Lyubi-Menya-Lyubi-landscape-1920x1080-60fps.mp4",
-      "sourceFileSha256": "f7c30e0a9b0279db806086552e02c954e77a232477fd5807b0a488d4ed38c406",
-      "sha256": "20af7066a4d7bc2550c3ec97d0c47f54c1190e7ca04fb260ff704f9dadba4ddd"
+      "sourceFileSha256": "ef93cfb05aa98df76e6bfe61544b18bf83aec74f36a2d61f28533443e686a1df",
+      "sha256": "e2b796261867edc4dde52ae0e985b24d5567022ae5dfb10acc909d2dda66ba2c"
     },
     {
       "path": "evidence/final/landscape-186-9.png",
@@ -98,7 +98,7 @@
       "frame": 11214,
       "seconds": 186.9,
       "sourceFile": "output/Lyubi-Menya-Lyubi-landscape-1920x1080-60fps.mp4",
-      "sourceFileSha256": "f7c30e0a9b0279db806086552e02c954e77a232477fd5807b0a488d4ed38c406",
+      "sourceFileSha256": "ef93cfb05aa98df76e6bfe61544b18bf83aec74f36a2d61f28533443e686a1df",
       "sha256": "90a5916a78741fda34bccd98651b3bf4f4d781113178b9681fe7893c6a1cc603"
     },
     {
@@ -110,56 +110,56 @@
       "frame": 0,
       "seconds": 0,
       "sourceFile": "output/Lyubi-Menya-Lyubi-portrait-1080x1920-60fps.mp4",
-      "sourceFileSha256": "0b85a811fd6952dc79e3d8cddc3d6937d0339b73f8098685c95eb951eee46f66",
+      "sourceFileSha256": "10bad69f5540d886e2ade1f6469e0b9caa68f2ca489b3063ddac78a0a5a6e913",
       "sha256": "f8daf91ec329442527e27a43286f853b239e5ea771eaf500337c214965081a30"
     },
     {
-      "path": "evidence/final/portrait-22-2.png",
+      "path": "evidence/final/portrait-11-5.png",
       "format": "portrait",
       "width": 1080,
       "height": 1920,
-      "requestedSeconds": 22.2,
-      "frame": 1332,
-      "seconds": 22.2,
+      "requestedSeconds": 11.5,
+      "frame": 690,
+      "seconds": 11.5,
       "sourceFile": "output/Lyubi-Menya-Lyubi-portrait-1080x1920-60fps.mp4",
-      "sourceFileSha256": "0b85a811fd6952dc79e3d8cddc3d6937d0339b73f8098685c95eb951eee46f66",
-      "sha256": "5a198ce893cb82e3ee1c34fc0ac9970b17255856c65907db5e4ebed2d21df854"
+      "sourceFileSha256": "10bad69f5540d886e2ade1f6469e0b9caa68f2ca489b3063ddac78a0a5a6e913",
+      "sha256": "b6059d36dc5a731a7a8a60e9078081dc095f5cde9cb918e7f773ade0a1b1db15"
     },
     {
-      "path": "evidence/final/portrait-33-2.png",
+      "path": "evidence/final/portrait-13-85.png",
       "format": "portrait",
       "width": 1080,
       "height": 1920,
-      "requestedSeconds": 33.2,
-      "frame": 1992,
-      "seconds": 33.2,
+      "requestedSeconds": 13.85,
+      "frame": 831,
+      "seconds": 13.85,
       "sourceFile": "output/Lyubi-Menya-Lyubi-portrait-1080x1920-60fps.mp4",
-      "sourceFileSha256": "0b85a811fd6952dc79e3d8cddc3d6937d0339b73f8098685c95eb951eee46f66",
-      "sha256": "4d21f2d4cedd26cee5258923c285e16febc4543efe7d071fce74c3923df1ae09"
+      "sourceFileSha256": "10bad69f5540d886e2ade1f6469e0b9caa68f2ca489b3063ddac78a0a5a6e913",
+      "sha256": "20c652672dd7a77d29405cf955dca98083e986220b667500b69ed362d158d28b"
     },
     {
-      "path": "evidence/final/portrait-152-2.png",
+      "path": "evidence/final/portrait-78-8.png",
       "format": "portrait",
       "width": 1080,
       "height": 1920,
-      "requestedSeconds": 152.2,
-      "frame": 9132,
-      "seconds": 152.2,
+      "requestedSeconds": 78.8,
+      "frame": 4728,
+      "seconds": 78.8,
       "sourceFile": "output/Lyubi-Menya-Lyubi-portrait-1080x1920-60fps.mp4",
-      "sourceFileSha256": "0b85a811fd6952dc79e3d8cddc3d6937d0339b73f8098685c95eb951eee46f66",
-      "sha256": "fe18edc0d2a85c98883d30b572d96846f486e4d42cead6dd632c1fa09f5c5b76"
+      "sourceFileSha256": "10bad69f5540d886e2ade1f6469e0b9caa68f2ca489b3063ddac78a0a5a6e913",
+      "sha256": "90d3259b8802e6753bcfe58d5e4be8868578927a73377d7b18044d43b06dabc3"
     },
     {
-      "path": "evidence/final/portrait-180-62.png",
+      "path": "evidence/final/portrait-81.png",
       "format": "portrait",
       "width": 1080,
       "height": 1920,
-      "requestedSeconds": 180.62,
-      "frame": 10837,
-      "seconds": 180.61666666666667,
+      "requestedSeconds": 81,
+      "frame": 4860,
+      "seconds": 81,
       "sourceFile": "output/Lyubi-Menya-Lyubi-portrait-1080x1920-60fps.mp4",
-      "sourceFileSha256": "0b85a811fd6952dc79e3d8cddc3d6937d0339b73f8098685c95eb951eee46f66",
-      "sha256": "3d5c37afbe93cfbe3f2260dcdc94822c36621e3e009be0fddf85f74cb0be0eab"
+      "sourceFileSha256": "10bad69f5540d886e2ade1f6469e0b9caa68f2ca489b3063ddac78a0a5a6e913",
+      "sha256": "eb8f6c37bb251e4750e6336b3efbcfd1e1ad4a88bff36a938b906d02687743b8"
     },
     {
       "path": "evidence/final/portrait-186-9.png",
@@ -170,7 +170,7 @@
       "frame": 11214,
       "seconds": 186.9,
       "sourceFile": "output/Lyubi-Menya-Lyubi-portrait-1080x1920-60fps.mp4",
-      "sourceFileSha256": "0b85a811fd6952dc79e3d8cddc3d6937d0339b73f8098685c95eb951eee46f66",
+      "sourceFileSha256": "10bad69f5540d886e2ade1f6469e0b9caa68f2ca489b3063ddac78a0a5a6e913",
       "sha256": "3468c40d3aaf28004276c554c44e765b2461b6e03bd34f78202264d05c89abc6"
     }
   ],
@@ -180,7 +180,7 @@
       "format": "landscape",
       "width": 1920,
       "height": 804,
-      "sha256": "57eb8bac7b331513a25f847f51711f494896fc195395c205403e5c13013cdc92",
+      "sha256": "623595955045dddf2c1d37f5679c537154793e3169e875d0053863476bea34d4",
       "scope": "Annotated, resized overview only. Individual proof PNGs remain native decoded frames."
     },
     {
@@ -188,7 +188,7 @@
       "format": "portrait",
       "width": 810,
       "height": 1044,
-      "sha256": "47a41a17b2f0a2a1fc155e1c1f7d5327700dd4395aafa5f67492192c58af9e93",
+      "sha256": "bf5cd8017cc65ef502931db06612c4a8cdddc8c4c405ab70de4298b81c983be8",
       "scope": "Annotated, resized overview only. Individual proof PNGs remain native decoded frames."
     }
   ]

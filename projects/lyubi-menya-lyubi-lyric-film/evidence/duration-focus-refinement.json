@@ -1,6 +1,6 @@
 {
   "revision": "preview-v3-duration-focus",
-  "status": "preview-ready; affected listening review pending",
+  "status": "corrected preview accepted; replacement production authorized",
   "previousDeliveryCommit": "a2f9145dc1060502bf4939c10f52b90157dc9acb",
   "inputIdentitySha256": "64825d8546d9ebc6464958b32ab0d2e57dee7b8e799e7d3411dddc6d91fa3744",
   "affectedCues": [
@@ -92,5 +92,12 @@
   "limits": "Model and signal evidence support the four vowel-release candidates; they are not a new human listening attestation. Prior final-file checks certify the original v1 mapping/bytes and do not validate the revised semantics or acoustic ends.",
   "filmRendered": false,
   "desktopFilesReplaced": false,
-  "productionAuthorized": false
+  "productionAuthorized": false,
+  "statusAtPreparation": "preview-ready; affected listening review pending",
+  "reviewFollowup": {
+    "revision": "preview-v3-duration-focus",
+    "review": "cross-language-sync-review.json",
+    "authorization": "render-authorization.json",
+    "basis": "Prior comprehensive human review retained for unchanged cues; current scoped acceptance covers both corrected duration passages. Model and signal evidence remain supporting observations."
+  }
 }

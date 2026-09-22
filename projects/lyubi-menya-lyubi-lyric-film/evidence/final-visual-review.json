@@ -1,25 +1,27 @@
 {
   "status": "PASS",
-  "edition": "rose-paper-v1.0.0",
+  "edition": "rose-paper-v1.1.0",
   "reviewedOn": "2026-09-22",
-  "sourceCommit": "d74fb270dafd5741ee4962ac79faf689ddbd68fc",
-  "inputIdentitySha256": "5f17c488190222fddabdc7a3fab6510182c938bdf61f7fa0fecd9903a73f3261",
+  "sourceCommit": "d2394d583a89634077cd69020396279da2194eb6",
+  "inputIdentitySha256": "64825d8546d9ebc6464958b32ab0d2e57dee7b8e799e7d3411dddc6d91fa3744",
   "videoSha256": {
-    "landscape": "f7c30e0a9b0279db806086552e02c954e77a232477fd5807b0a488d4ed38c406",
-    "portrait": "0b85a811fd6952dc79e3d8cddc3d6937d0339b73f8098685c95eb951eee46f66"
+    "landscape": "ef93cfb05aa98df76e6bfe61544b18bf83aec74f36a2d61f28533443e686a1df",
+    "portrait": "10bad69f5540d886e2ade1f6469e0b9caa68f2ca489b3063ddac78a0a5a6e913"
   },
   "checks": {
-    "decodedNativeAndContactProofs": "Six actual decoded checkpoints per format, including intro, Those/same verse, instrumental-case focus, late chorus, final held word and empty outro. Native representative frames and both contact sheets inspected.",
+    "decodedNativeAndContactProofs": "Six actual decoded checkpoints per format (0, 11.5, 13.85, 78.8, 81 and 186.9 seconds): intro, both corrected duration passages with уже/now and год/years focus, and empty outro. Both contact sheets and native landscape 13.85s / portrait 78.8s representatives inspected.",
     "picture": "Original album art and fixed sleeve transform remain present; no shaking or missing picture.",
-    "typography": "Equal font size and stable RU/EN positions; complete phrase focus and refined individual focus; no visible clipping in selected proofs.",
+    "typography": "Equal type size and stable RU/EN positions; Russian words remain individual, English now and years activate independently, and the corrected English text fits two rows. No visible clipping in selected proofs.",
     "metadata": "Artist/title/footer letter spacing and opacity match the native-browser-adopted export implementation.",
     "animation": "Shared deterministic ribbon geometry with complete source clock; sampled shapes vary with the supplied measured features and decay at the ending.",
     "encodedFocus": {
-      "wordStatesPerFormat": 90306,
+      "wordStatesPerFormat": 91033,
       "mismatches": 0,
       "ambiguousStates": 0,
       "staleGapFrames": 0,
-      "pictureFailures": 0
+      "pictureFailures": 0,
+      "displayedWords": 316,
+      "cues": 33
     }
   },
   "evidence": [
@@ -30,5 +32,6 @@
     "production/landscape-focus-audit.json",
     "production/portrait-focus-audit.json"
   ],
-  "scope": "Sampled visual inspection plus every-frame encoded focus/artwork and media checks. Listening approval is the separate recorded human attestation; no absolute claim of perceptual perfection."
+  "scope": "Sampled visual inspection plus every-frame encoded focus/artwork and media checks. Listening approval is the separate recorded human attestation; no absolute claim of perceptual perfection.",
+  "preservedPriorEdition": "releases/rose-paper-v1.0.0/README.md"
 }

@@ -1,6 +1,6 @@
 # Rose paper film lessons
 
-The verified `rose-paper-v1.0.0` files remain the earlier delivery. The subsequent `preview-v3-duration-focus` revision is under review; its wording and display changes have not produced replacement videos or an updated Desktop kit. Historical final-file checks describe their identified v1 bytes.
+The verified `rose-paper-v1.0.0` files remain the earlier delivery, with [their evidence archived by edition](evidence/releases/rose-paper-v1.0.0/delivery-receipt.json). The corrected `preview-v3-duration-focus` produced the verified **`rose-paper-v1.1.0`** replacement films and a new 14-file Desktop kit. Both formats passed full media and decoded-focus checks, followed by an exact-file Desktop copy check. Historical final-file checks retain their identified v1 scope; the [current receipt](evidence/delivery-receipt.json) binds the replacement to its own source and bytes.
 
 ## Let the artwork establish the material and palette
 
@@ -18,6 +18,8 @@ The ribbon's sinusoidal spatial profile is designed geometry; it is neither a ph
 
 Complete English meanings must receive complete highlights. «Вслух / out loud», «улетай / fly away» and «умоляю / am begging» retain their full expansions on the corresponding source event. Explicit subjects, objects, conjunctions and negation remain separate when independently sung.
 
+Use the smallest meaningful correspondence available. A whole-song scan confirms that all 147 Russian events can stay individual: 125 map to one English token and 22 to complete two-word expressions. Shared auxiliaries, articles and phrasal meanings warrant paired English focus; an arbitrary one-to-one rule would invent target-language timing or fragment the translation. The scan checks all repeated patterns, including short grammatical words.
+
 The instrumental construction «жарким огнём» does not contain a separate preposition. English still needs “with”: anchoring **with blazing** to «жарким» and **fire** to «огнём» completes the meaning and permits a natural handoff without an invented timestamp. Attaching “with” only to the final noun created a disconnected focus state.
 
 Natural wording can also enable finer correspondence. **Those same** preserves the demonstrative in «Те же» and allows each word to follow its own event. The wider word requires a fresh geometry check in both layouts. Conversely, **My untamed love** and **burning the heart** keep natural English order even when their highlights move backward. Never distort meaning merely to make every focus move left to right.
@@ -30,7 +32,7 @@ A multi-word source construction can support a complete English meaning without 
 
 The v3 duration line in LM-002 and LM-013 selects **“Has loved, but not me, for years now.”** The complete construction **который год** supports **for years**. For display, **for** begins on «который» and **years** follows «год»; “for” marks the onset of the construction rather than a literal dictionary meaning of «который». **Уже → now** remains independent. **Любит → Has loved**, **не → but not** and **меня → me** keep their own complete target spans. The present-perfect wording expresses the continuing duration without adding an unstated lover.
 
-Do not adjust source intervals merely to accommodate an English translation. Preserve Russian word identity and review any acoustic boundary correction against the recording as a separate decision. Check both repetitions, every handoff and gap, both languages and both layouts. Natural English word order can require focus to move back from “now” to “for years”; that movement is preferable to changing the meaning or inventing target-language syllable times. The new preview requires review with the actual audio before production.
+Do not adjust source intervals merely to accommodate an English translation. Preserve Russian word identity and review any acoustic boundary correction against the recording as a separate decision. Check both repetitions, every handoff and gap, both languages and both layouts. Natural English word order can require focus to move back from “now” to “for years”; that movement preserves the meaning and the source timing. The corrected preview received scoped human acceptance before replacement production was authorized.
 
 An encoded-focus audit proves agreement with its frozen display specification. A later editorial correction can improve that specification without invalidating the old file's byte-integrity or frame-clock results. Label earlier results with their edition rather than presenting them as certification of the revised map.
 
@@ -44,7 +46,7 @@ Signal energy can establish that a passage warrants review, but it does not inde
 
 Bounded alignment, independent models, vocal-stem traces and retained timing candidates support word-level preparation. They do not prove performed coverage or perceptual boundaries. In particular, short coarticulated conjunctions and sustained releases require listening; a one-frame neutral gap cannot be repaired solely because it looks unusual in data.
 
-The earlier v1 inputs received comprehensive human review and explicit production authorization bound to their frozen preview. The evidence identifies that reviewer role without inventing automated listening telemetry. It does not authorize the changed v3 duration wording or focus. The renderer and final-file checks must preserve the exact currently approved inputs, original audio, all intended visual layers and paired focus. A changed renderer requires its own visual and encoded-output checks even if the reviewed composition stays unchanged.
+The earlier v1 inputs received comprehensive human review and explicit production authorization bound to their frozen preview. The v1.1.0 record retains that review for unchanged cues and adds acceptance of the two corrected passages with current replacement-render authorization. The evidence identifies the reviewer role without inventing automated listening telemetry. The renderer and final-file checks must preserve the exact currently approved inputs, original audio, all intended visual layers and paired focus. A changed renderer requires its own visual and encoded-output checks even if the reviewed composition stays unchanged.
 
 ## Compare a new rasterizer against the actual preview
 
@@ -59,3 +61,5 @@ When streaming native canvas buffers to an encoder, wait for each write callback
 The review screen includes the full recording, original artwork, both lyric rows and the ribbon in both aspect ratios. Diagnostic views and isolated text checks supplement that complete preview. A successful audio seek or an image preload does not establish visible picture presence; inspect the actual composition after load, seeking and format changes.
 
 Keep the 16:9 and 9:16 films as separate compositions. Upload covers are separate poster layouts with the complete artist and title, including the established 1200×1600 portrait profile cover. Inspect small-size and crop proofs, then hash the delivered copies. Final checks distinguish exact frame and audio integrity from human perception; neither replaces the other.
+
+A correction can reuse unchanged, hash-verified covers and publishing copy while requiring fresh films and captions. Keep earlier receipts and final-frame evidence under their original edition, prepare the replacement in a new folder, and bind its own checksum manifest to the new source checkpoint and verified video bytes. Preparing assets or authorizing a render does not establish that the new delivery is complete.

@@ -2,9 +2,9 @@
 
 ## Scope and status
 
-**Current revision: `preview-v3-duration-focus`, under review.** This record covers 33 cue instances with ten distinct line patterns, 147 Russian events and 169 English words. LM-002 and LM-013 receive revised duration wording and finer display anchors; Russian wording is preserved. Four model-supported exclusive-end corrections are recorded separately from these semantic decisions. Editorial rationale and semantic regression checks support this revision, but they do not establish actual-audio synchronization or authorize production.
+**Current revision: `preview-v3-duration-focus`, accepted for replacement production.** This record covers 33 cue instances with ten distinct line patterns, 147 Russian events and 169 English words. LM-002 and LM-013 receive revised duration wording and finer display anchors; Russian wording is preserved. Four model-supported exclusive-end corrections are recorded separately from these semantic decisions. Editorial rationale and semantic regression checks support this revision, but they do not establish actual-audio synchronization or authorize production.
 
-The earlier v1 films and their human review, decoded-focus checks and delivery receipts remain historical evidence for their frozen inputs and exact bytes. They do not certify the changed preview. No v3 film or replacement Desktop kit is reported here.
+The earlier v1 films and their human review, decoded-focus checks and delivery receipts remain historical evidence for their frozen inputs and exact bytes. The changed preview now has separate scoped human acceptance and current render authorization in [the synchronization review](cross-language-sync-review.json) and [authorization record](render-authorization.json). Final-file and Desktop delivery evidence are recorded separately; this editorial review does not establish encoded output quality.
 
 Method: model-assisted Russian/English editorial review followed by independent semantic expectations in [`tests/semantic.test.ts`](../tests/semantic.test.ts). The expectations are authored from the selected meanings, not calculated from the generator's correspondence indices. The tests exercise both language lanes with deliberately separated synthetic source intervals. Synthetic intervals are display test fixtures, not sung timing evidence.
 
