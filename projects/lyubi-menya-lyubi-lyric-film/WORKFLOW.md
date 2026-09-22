@@ -1,6 +1,6 @@
-# Preview workflow — Люби меня, люби
+# Production workflow — Люби меня, люби
 
-The current edition, **`preview-v2-rose-paper`**, is **preview-only**. Source preparation, inferred timings and technical checks do not establish completed listening or authorize production.
+The production edition **`rose-paper-v1.0.0`** uses the comprehensively reviewed **`preview-v2-rose-paper`** input identity. Human review and explicit render authorization are recorded in [the bound authorization](evidence/render-authorization.json). Source preparation and technical checks remain supporting evidence, not listening telemetry.
 
 ## 1. Preserve the source clock
 
@@ -59,14 +59,16 @@ REVIEW_PORT=4324 node scripts/review-server.ts
 
 The manifest binds the soundtrack, artwork, font, spectrum, cues, layout, focus/schema code, scene, painter, review client, HTML and compiled bundle. Build the bundle before freezing; the client fetches the identity at load time, avoiding a circular embedded hash. Changed input identities archive prior notes and invalidate affected review flags.
 
-Inspect a fresh load, seeking, normal and reduced-speed playback, both layouts and recovery at a known lyric moment. The preview includes the full 187.402-second recording and all intended layers. Saved notes are progress only. Complete review requires listening to the entire recording, reduced-speed checks of uncertainty and both bilingual layouts; no such attestation is recorded yet.
+Inspect a fresh load, seeking, normal and reduced-speed playback, both layouts and recovery at a known lyric moment. The preview includes the full 187.402-second recording and all intended layers. Saved notes are progress only. Complete review requires listening to the entire recording, reduced-speed checks of uncertainty and both bilingual layouts. The current attestation records comprehensive human completion of the pending review requirements and explicit production authorization.
 
 ### Still-reference provenance
 
 `node scripts/preview-still.ts` generates landscape and portrait references at **33.200 seconds / frame 1992** from the shared scene. The local N-API canvas SVG rasterizer omits embedded raster images, so the script separately places the unchanged artwork PNG at the scene's exact dimensions, position and fixed −2° rotation. [The landscape reference](evidence/preview/landscape-33-2.png) illustrates the current composition and paired **жарким / with blazing** focus. These are rendered reference stills, not browser captures or decoded production frames; they cannot establish actual playback, browser pixel equality or audible synchronization.
 
-## 6. Keep production closed
+## 6. Enforce review before production
 
 `npm run sync:gate` recomputes every declared project-relative file hash, rejects missing required inputs and prevents traversal outside the project. It also requires complete cue review and separate authorization bound to the same song, revision and hashes. Tests include changed scene bytes after a valid fixture freeze.
 
-The current record retains pending listening/layout flags and `approved: false`. `npm run render` checks the same gate and has no encoder or capture implementation. A future production pass needs explicit approval of the reviewed revision, completed synchronization evidence and independent final-file verification. A preview screenshot or passing test suite cannot replace those steps.
+The current record has complete human-attested review flags and authorization for the unchanged inputs. New changes to reviewed content invalidate that approval. The production renderer checks the gate before capture, retains the original AAC packets, and binds its own implementation to separate compositor and encoded-output evidence. A preview screenshot or passing test suite cannot replace these requirements.
+
+Final verification checks the entire video clock and decode, original audio packet and PCM identity, visible word focus, picture presence, native-size composition and sampled encoded frames. Posting-kit construction requires the verified file hashes; the Desktop copy receives a separate complete-file hash check. See [production lessons](PRODUCTION-LESSONS.md) for the design and mapping decisions.

@@ -1,0 +1,48 @@
+{
+  "status": "PASS",
+  "inputIdentitySha256": "5f17c488190222fddabdc7a3fab6510182c938bdf61f7fa0fecd9903a73f3261",
+  "verifierSha256": "5538b2bf6197fe018d59af923263e99ef9911955e038f6fd5d6c1c0f7b4f140d",
+  "revision": "preview-v2-rose-paper",
+  "inputFile": "Lyubi-Menya-Lyubi-landscape-1920x1080-60fps.mp4",
+  "inputSha256": "f7c30e0a9b0279db806086552e02c954e77a232477fd5807b0a488d4ed38c406",
+  "sha256": "f7c30e0a9b0279db806086552e02c954e77a232477fd5807b0a488d4ed38c406",
+  "auditScriptSha256": "5538b2bf6197fe018d59af923263e99ef9911955e038f6fd5d6c1c0f7b4f140d",
+  "negativeOffsetSensitivity": {
+    "checked": true,
+    "offsetFrames": 30,
+    "detectedMismatches": 370,
+    "diagnosticInputSha256": "22c895e32befc33f01713ecd18eee217280cb3c42f21518f448b6904faa2c178"
+  },
+  "format": "landscape",
+  "diagnostic": false,
+  "startFrame": 0,
+  "expectedOffset": 0,
+  "decodedFrames": 11245,
+  "expectedFrames": 11245,
+  "frameCountOk": true,
+  "wordStates": 90306,
+  "ambiguous": 0,
+  "mismatchCount": 0,
+  "gapContaminationFrames": 0,
+  "seenCueCount": 33,
+  "expectedCueCount": 33,
+  "missingCues": [],
+  "missingWordStates": [],
+  "mismatchExamples": [],
+  "ambiguousExamples": [],
+  "artwork": {
+    "checkedFrames": 11245,
+    "crop": {
+      "x": 1143,
+      "y": 235,
+      "size": 589
+    },
+    "thumbnailSize": 64,
+    "maximumMeanAbsoluteRgbError": 3.49951171875,
+    "meanAbsoluteRgbError": 3.495056715021658,
+    "mismatchFrames": 0,
+    "threshold": 16,
+    "sourceSha256": "5760920d4b418fa21a7a44cacb14bd0df558a674b5bd07b1d430cafaf0161d2a"
+  },
+  "method": "Every decoded frame: compare eroded glyph-interior median colors with frozen active/rest colors; derive Russian and English expected states directly from sample-indexed source events and semantic relations, without renderer focus code. Reject ambiguous pixels; inspect empty lyric intervals for stale ink. Compare central 76% artwork thumbnail against independently projected original artwork on every frame. This establishes encoded display states and source-picture presence, not acoustic alignment truth or complete visual quality."
+}

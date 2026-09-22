@@ -1,0 +1,126 @@
+{
+  "status": "PASS",
+  "scope": "2x cached compositor compared with full shared-scene SVG rasterization, both using explicit adapters for the unchanged artwork and parsed static text spacing/opacity omitted by the SVG decoder. This measures code-native raster parity, not browser pixel equality or acoustic accuracy. Independent native-browser comparison is required to adopt the adapter.",
+  "format": "portrait",
+  "captureWidth": 2160,
+  "captureHeight": 3840,
+  "thresholds": {
+    "meanAbsoluteRGB": 0.01,
+    "rootMeanSquareRGB": 0.1,
+    "maximumChannelDifference": 4,
+    "pixelsOver4": 0
+  },
+  "compositor": {
+    "art": {
+      "x": 80,
+      "y": 91,
+      "width": 920,
+      "height": 920,
+      "angle": -2,
+      "cx": 540,
+      "cy": 551
+    },
+    "metadata": [
+      {
+        "text": "ЛЮБИ МЕНЯ, ЛЮБИ",
+        "attributes": {
+          "font-family": "LyubiSans",
+          "font-weight": "500",
+          "x": "540",
+          "y": "1100",
+          "text-anchor": "middle",
+          "font-size": "27",
+          "letter-spacing": "2.3",
+          "fill": "#a22c50"
+        }
+      },
+      {
+        "text": "ГРЕЧКА · ЗВЁЗДЫ ТОЛЬКО НОЧЬЮ",
+        "attributes": {
+          "x": "540",
+          "y": "1850",
+          "text-anchor": "middle",
+          "font-family": "LyubiSans",
+          "font-size": "19",
+          "letter-spacing": "2.1",
+          "fill": "#30252d",
+          "opacity": ".52"
+        }
+      }
+    ],
+    "stroke": "#a22c50",
+    "lineWidth": 4,
+    "lineCap": "round",
+    "spectrumBaseOpacity": 0.72,
+    "baseSha256": "ef9d18fe8d3d0ebfa022c9cf9557d0d19dd5c6205d602c96840e8461f416d408",
+    "scope": "Shared SVG static scene and focus markup; original PNG at parsed shared-scene transform; static metadata Canvas adapter preserves parsed SVG letter spacing, opacity, font, anchor and geometry; shared dynamics/ribbon path. One static surface and at most one current text surface retained."
+  },
+  "rendererHashes": {
+    "scripts/render.ts": "8c104a05f195b0dbde1276cbb5e42c306d6a1958711cf7596928f4752609c0b5",
+    "scripts/raster-compositor.ts": "cc5d87a15e7cf39e9b8f2fe9f275751b2bfadd142858ba667d5fcf50acb73cca",
+    "scripts/render-proof.ts": "a78d40d74c9e59533b9d76bfbcf841b9f9a62b084afbbca1fdae84db3ca2f10b"
+  },
+  "inputIdentitySha256": "5f17c488190222fddabdc7a3fab6510182c938bdf61f7fa0fecd9903a73f3261",
+  "results": [
+    {
+      "time": 0,
+      "frame": 0,
+      "meanAbsoluteRGB": 0.0019859985853909463,
+      "rootMeanSquareRGB": 0.05485158731211373,
+      "maximumChannelDifference": 2,
+      "differingPixels": 12732,
+      "pixelsOver4": 0,
+      "totalPixels": 8294400
+    },
+    {
+      "time": 22.2,
+      "frame": 1332,
+      "meanAbsoluteRGB": 0.0028224665637860084,
+      "rootMeanSquareRGB": 0.06183480893217842,
+      "maximumChannelDifference": 3,
+      "differingPixels": 29714,
+      "pixelsOver4": 0,
+      "totalPixels": 8294400
+    },
+    {
+      "time": 33.2,
+      "frame": 1992,
+      "meanAbsoluteRGB": 0.0028937596450617285,
+      "rootMeanSquareRGB": 0.06299635722533924,
+      "maximumChannelDifference": 3,
+      "differingPixels": 28973,
+      "pixelsOver4": 0,
+      "totalPixels": 8294400
+    },
+    {
+      "time": 152.2,
+      "frame": 9132,
+      "meanAbsoluteRGB": 0.0029761847350823047,
+      "rootMeanSquareRGB": 0.06417477051199708,
+      "maximumChannelDifference": 3,
+      "differingPixels": 29179,
+      "pixelsOver4": 0,
+      "totalPixels": 8294400
+    },
+    {
+      "time": 180.62,
+      "frame": 10837,
+      "meanAbsoluteRGB": 0.0025453719778806582,
+      "rootMeanSquareRGB": 0.06013630939211789,
+      "maximumChannelDifference": 3,
+      "differingPixels": 22225,
+      "pixelsOver4": 0,
+      "totalPixels": 8294400
+    },
+    {
+      "time": 186.9,
+      "frame": 11214,
+      "meanAbsoluteRGB": 0.0015777713477366255,
+      "rootMeanSquareRGB": 0.04081892224912665,
+      "maximumChannelDifference": 2,
+      "differingPixels": 12728,
+      "pixelsOver4": 0,
+      "totalPixels": 8294400
+    }
+  ]
+}

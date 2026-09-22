@@ -1,0 +1,68 @@
+{
+  "status": "PASS",
+  "scope": "Short-codec diagnostics only. Independent full production-file verification still required.",
+  "results": [
+    {
+      "path": "output/diagnostics/Lyubi-Menya-Lyubi-landscape-1920x1080-60fps-diagnostic-1860-252.mp4",
+      "format": "landscape",
+      "status": "PASS",
+      "fullDecode": "PASS",
+      "frames": 252,
+      "globalFirstFrame": 1860,
+      "elapsedRenderSeconds": 4.579,
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "video": {
+        "codec": "h264",
+        "profile": "High",
+        "pixelFormat": "yuv420p",
+        "fps": "60/1",
+        "colorRange": "tv",
+        "colorMatrix": "bt709",
+        "colorTransfer": "bt709",
+        "colorPrimaries": "bt709",
+        "startTime": "0.000000",
+        "duration": "4.200000"
+      },
+      "sha256": "22c895e32befc33f01713ecd18eee217280cb3c42f21518f448b6904faa2c178",
+      "rendererHashes": {
+        "scripts/render.ts": "8c104a05f195b0dbde1276cbb5e42c306d6a1958711cf7596928f4752609c0b5",
+        "scripts/raster-compositor.ts": "cc5d87a15e7cf39e9b8f2fe9f275751b2bfadd142858ba667d5fcf50acb73cca",
+        "scripts/render-proof.ts": "a78d40d74c9e59533b9d76bfbcf841b9f9a62b084afbbca1fdae84db3ca2f10b"
+      }
+    },
+    {
+      "path": "output/diagnostics/Lyubi-Menya-Lyubi-portrait-1080x1920-60fps-diagnostic-1260-252.mp4",
+      "format": "portrait",
+      "status": "PASS",
+      "fullDecode": "PASS",
+      "frames": 252,
+      "globalFirstFrame": 1260,
+      "elapsedRenderSeconds": 4.586,
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "video": {
+        "codec": "h264",
+        "profile": "High",
+        "pixelFormat": "yuv420p",
+        "fps": "60/1",
+        "colorRange": "tv",
+        "colorMatrix": "bt709",
+        "colorTransfer": "bt709",
+        "colorPrimaries": "bt709",
+        "startTime": "0.000000",
+        "duration": "4.200000"
+      },
+      "sha256": "a768bae8d5dddc5c6583ffe26b6abb62b85a6ff3d1c3f45394012f3aad22ff5d",
+      "rendererHashes": {
+        "scripts/render.ts": "8c104a05f195b0dbde1276cbb5e42c306d6a1958711cf7596928f4752609c0b5",
+        "scripts/raster-compositor.ts": "cc5d87a15e7cf39e9b8f2fe9f275751b2bfadd142858ba667d5fcf50acb73cca",
+        "scripts/render-proof.ts": "a78d40d74c9e59533b9d76bfbcf841b9f9a62b084afbbca1fdae84db3ca2f10b"
+      }
+    }
+  ]
+}
