@@ -14,7 +14,7 @@ The album picture is static in the inspected source samples. Preserve the actual
 
 Keep the supplied text separately from the performed sequence. Remove unrelated recommendation links. The current map has **33 cues, 147 Russian events and 167 English words**; each repeated occurrence has its own timing candidates.
 
-Use natural English order with explicit source correspondences. Preserve independently sung pronouns, negation and conjunctions. Complete expansions such as “out loud,” “fly away” and “am begging” share their source meaning event. Document irreducible constructions, including “the same” and “year after year,” and use the union of participating source intervals rather than filling gaps between them. Do not add unstated ownership to “the heart.”
+Use natural English order with explicit source correspondences. Preserve independently sung pronouns, negation and conjunctions. Complete expansions such as “out loud,” “fly away” and “am begging” share their source meaning event. Document irreducible constructions, including “the same” and “year after year,” and use the union of participating source intervals rather than filling gaps between them. Do not add unstated ownership to “the heart.” The case-based completion “with” begins with “жарким / with blazing”; “огнём / fire” retains its own following event. This avoids a detached preposition and backward highlight jump without changing the audio timing.
 
 [Translation decisions and coverage](evidence/translation-review.md) retain the editorial rationale. `tests/semantic.test.ts` uses independently authored expectations and deliberately defective examples; reproducing a generated mapping alone would not establish correct meaning.
 
@@ -63,7 +63,7 @@ Inspect a fresh load, seeking, normal and reduced-speed playback, both layouts a
 
 ### Still-reference provenance
 
-`node scripts/preview-still.ts` generates landscape and portrait references at **33.200 seconds / frame 1992** from the shared scene. The local N-API canvas SVG rasterizer omits embedded raster images, so the script separately places the unchanged artwork PNG at the scene's exact dimensions, position and fixed −2° rotation. [The landscape reference](evidence/preview/landscape-33-2.png) illustrates the current composition and paired **жарким / blazing** focus. These are rendered reference stills, not browser captures or decoded production frames; they cannot establish actual playback, browser pixel equality or audible synchronization.
+`node scripts/preview-still.ts` generates landscape and portrait references at **33.200 seconds / frame 1992** from the shared scene. The local N-API canvas SVG rasterizer omits embedded raster images, so the script separately places the unchanged artwork PNG at the scene's exact dimensions, position and fixed −2° rotation. [The landscape reference](evidence/preview/landscape-33-2.png) illustrates the current composition and paired **жарким / with blazing** focus. These are rendered reference stills, not browser captures or decoded production frames; they cannot establish actual playback, browser pixel equality or audible synchronization.
 
 ## 6. Keep production closed
 

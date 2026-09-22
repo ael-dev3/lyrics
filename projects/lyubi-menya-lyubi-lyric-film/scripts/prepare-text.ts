@@ -8,7 +8,7 @@ const verse:Line[]=[
  {key:'v4',ru:'Те же мысли и слова вслух',en:'The|0,1 same|0,1 thoughts|2 and|3 words|4 out|5 loud|5',note:'Те же is a compound determiner. Вслух maps to the complete expression out loud.'},
 ];
 const chorus:Line[]=[
- {key:'c1',ru:'Люби меня, люби жарким огнём',en:'Love|0 me,|1 love|2 with|4 blazing|3 fire|4',note:'Explicit меня remains independent. Instrumental огнём supplies with and fire; жарким alone supplies blazing. Do not add an object after the second люби.'},
+ {key:'c1',ru:'Люби меня, люби жарким огнём',en:'Love|0 me,|1 love|2 with|3 blazing|3 fire|4',note:'Explicit меня remains independent. The instrumental construction marks both adjective and noun; English with is a grammatical completion anchored to the phrase onset in жарким, so with blazing highlights together and огнём supplies fire. Do not add an object after the second люби.'},
  {key:'c2',ru:'Ночью и днём, сердце сжигая',en:'Night|0 and|1 day,|2 burning|4 the|3 heart|3',note:'Keep night/day, explicit conjunction, and reversed burning/heart correspondence. Do not add my or your to сердце.'},
  {key:'c3',ru:'Люби меня, люби, не улетай',en:"Love|0 me,|1 love,|2 don't|3 fly|4 away|4",note:'Keep explicit me and negation independent. Улетай maps to the complete fly away event.'},
  {key:'c4',ru:'Не исчезай, я умоляю',en:"Don't|0 disappear,|1 I|2 am|3 begging|3",note:'Keep explicit я independent; умоляю supplies am begging. Do not add an unstated object.'},

@@ -116,11 +116,11 @@ const meaningContracts: Record<string, (cue: PlannedCue) => void> = {
   },
   c1(cue) {
     imperative(cue);
-    independent(cue, 'жарким', ['blazing']);
-    independent(cue, 'огнём', ['with', 'fire']);
+    independent(cue, 'жарким', ['with', 'blazing']);
+    independent(cue, 'огнём', ['fire']);
     const targetWords = words(cue.en);
-    assert.equal(targetWords.indexOf('fire') - targetWords.indexOf('with'), 2, 'Instrumental with + fire are deliberately noncontiguous');
-    assert.equal(targetWords[targetWords.indexOf('with') + 1], 'blazing', 'The intervening adjective keeps its own source event');
+    assert.equal(targetWords.indexOf('blazing') - targetWords.indexOf('with'), 1, 'The grammatical completion begins with its adjacent adjective');
+    assert.equal(targetWords[targetWords.indexOf('with') + 1], 'blazing', 'The adjective leads the phrase; fire keeps the following independent source event');
   },
   c2(cue) {
     independent(cue, 'ночью', ['night']);
@@ -197,6 +197,7 @@ test('semantic expectations reject incomplete, over-broad and meaning-changing r
   altered('c4', cue => { cue.en.find(word => normalized(word.text) === 'am')!.sourceIds = []; });
   altered('c4', cue => { cue.en.find(word => normalized(word.text) === 'i')!.sourceIds = [sourceId(cue, 'умоляю')]; });
   altered('c1', cue => { cue.en.find(word => normalized(word.text) === 'blazing')!.sourceIds = [sourceId(cue, 'огнём')]; });
+  altered('c1', cue => { cue.en.find(word => normalized(word.text) === 'with')!.sourceIds = [sourceId(cue, 'огнём')]; });
   altered('r1', cue => { cue.en.find(word => normalized(word.text) === 'me')!.focusSourceIds = [sourceId(cue, 'меня'), sourceId(cue, 'люби')]; });
   altered('c2', cue => { cue.en.find(word => normalized(word.text) === 'the')!.text = 'my'; });
   altered('v1', cue => { cue.en.find(word => normalized(word.text) === 'my')!.sourceIds = [sourceId(cue, 'непокорная')]; });

@@ -1,0 +1,50 @@
+{
+  "revision": "preview-v2-rose-paper",
+  "change": "instrumental-phrase-focus",
+  "affectedCues": [
+    "LM-006",
+    "LM-017",
+    "LM-025",
+    "LM-029"
+  ],
+  "sourceFocus": {
+    "жарким": [
+      "with",
+      "blazing"
+    ],
+    "огнём": [
+      "fire"
+    ]
+  },
+  "rationale": "English with expresses instrumental case across the adjective-noun construction. Anchor the completion to the first inflected source word; retain separate source adjective and noun events. No invented preposition timing.",
+  "all147AcousticEventsUnchanged": true,
+  "allGlyphGeometryUnchanged": true,
+  "typecheck": "pass",
+  "testsPassed": 47,
+  "regression": "The old with/fire mapping is rejected by an independently reviewed semantic expectation.",
+  "browserObservations": [
+    {
+      "seconds": 33.2,
+      "formats": [
+        "landscape",
+        "portrait"
+      ],
+      "focus": [
+        "жарким",
+        "with",
+        "blazing"
+      ]
+    },
+    {
+      "seconds": 34.406,
+      "format": "landscape",
+      "focus": [
+        "огнём",
+        "fire"
+      ]
+    }
+  ],
+  "inputIdentitySha256": "2ab274692be848dbf59143e955ae68b1ae1bd596cd06be12bea1afdc017d091c",
+  "actualAudioReviewComplete": false,
+  "productionApproved": false
+}
