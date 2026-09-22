@@ -4,7 +4,7 @@
 
 A full-recording, 187.402-second preview with 33 lyric cues, 147 Russian word events and 167 English words. Landscape and portrait use equal bilingual typography, stable color-only highlighting and the same original soundtrack. Word timings remain provisional: complete actual-audio listening and audiovisual review are pending.
 
-![Rose paper composition with the original album print, equal bilingual lyrics and berry focus on жарким / blazing](evidence/preview/landscape-33-2.png)
+![Rose paper composition with the original album print, equal bilingual lyrics and berry focus on жарким / with blazing](evidence/preview/landscape-33-2.png)
 
 *Rendered preview reference at 00:33.200, revision v2, 1920×1080. The shared scene supplies the graphics; the unchanged source image is composited at its exact fixed transform. This is a still reference, not a browser capture or a frame decoded from a production film. Original recording and album artwork: Гречка and their respective creators.*
 
@@ -43,6 +43,8 @@ Open [the local review preview](http://127.0.0.1:4324/). It starts at the beginn
 | Final films and posting kit | Not produced |
 
 Check short conjunctions, held vowels, all four bridge repetitions and the final vocal release. The supplied lyric inventory and model agreement cannot certify full vocal coverage or perfect synchronization. See [timing evidence and questions](evidence/timing-review.md), [translation decisions](evidence/translation-review.md) and the [current synchronization record](evidence/cross-language-sync-review.json).
+
+The [instrumental-phrase refinement](evidence/phrase-focus-refinement.json) keeps “with blazing” together on «жарким», followed by “fire” on «огнём», across all four occurrences. It preserves the acoustic events and word geometry.
 
 Run `npm run check` for TypeScript, semantic and authorization tests. `npm run sync:gate` is expected to reject the pending review. `npm run render` cannot produce a film: it checks the gate and this edition has no production renderer.
 

@@ -10,8 +10,8 @@ Reviewed inputs:
 
 | Input | SHA-256 |
 | --- | --- |
-| `scripts/prepare-text.ts` | `dcf7b60e16199e0b2ae10ad396678d59efbf84e9c29ae7b1eed7e8d087afd9b7` |
-| `source/text-and-mapping.json` | `a9fe31c99b509522c847d15b4e35102d547067714643dd68efa9205ccf2f3def` |
+| `scripts/prepare-text.ts` | `b779959058136b192550aa00fb32f3462d60b04410898dfc99e949a0bf3d7fa4` |
+| `source/text-and-mapping.json` | `50ac55c6d965f59966dd88d3caf6e404af19e1b144bce2f4e47f7415cba27553` |
 
 Any change to lyric text, translation or correspondence requires an affected semantic recheck. Changes to performed repetitions also require a revised cue inventory and independent recording evidence.
 
@@ -40,7 +40,7 @@ The two clauses beginning “Те же” are separate display cues. Annotation 
 - **The same:** “те же” is a compound determiner. Both English words and both Russian words receive the paired display focus of the participating intervals. Keep the nouns and conjunction independent.
 - **Poems:** preserve the literary noun “стихи”; do not reinterpret it as song lyrics.
 - **Love me, love:** keep the explicitly sung object “меня” separate from both imperative verbs. Do not add another “me” after the repeated imperative or generalize another song's complete-phrase presentation exception to this line.
-- **With blazing fire:** “жарким” supplies “blazing.” Instrumental “огнём” supplies the noncontiguous English words “with” and “fire.” The intervening adjective must not light during the noun merely to create one continuous English block.
+- **With blazing fire:** instrumental case is marked on both the adjective and noun. English “with” is a grammatical completion of that construction, introduced at its first spoken word: “жарким” activates **with blazing**, followed by “огнём” activating **fire**. This preserves natural forward reading without inventing a sung preposition, moving any acoustic boundary or grouping both Russian words. The earlier split “with + fire” focus returned to the front of the phrase and is superseded.
 - **Burning the heart:** preserve the unspecified ownership of “сердце.” Its grammatical article shares the noun event. “Burning” follows “сжигая,” even though English places it earlier in the displayed phrase. No “my” or “your” is introduced.
 - **Complete expansions:** “вслух” covers both “out loud”; “улетай” covers both “fly away”; “умоляю” covers both “am begging.” Keep explicit “не” and “я” independent. Do not add an unstated addressee to “begging.”
 
@@ -48,7 +48,7 @@ The two clauses beginning “Те же” are separate display cues. Annotation 
 
 Every Russian word has a target meaning, and every English word has a source correspondence. There are no intentionally neutral grammar words in this edition. Multi-source phrases use the union of participating source intervals, with focus released in real gaps. Acoustic source events remain distinct from paired display grouping.
 
-The semantic suite checks every planned cue and repeated occurrence for complete target coverage, independent pronouns/negation/conjunctions, reversed English order, noncontiguous targets, matching Russian display groups, onset, last-active frame, exclusive release and gap behavior. Deliberately defective fixtures establish that the expectations reject missing “loud,” “away” or “am,” swallowed explicit subjects/objects, an over-broad fire highlight, invented heart ownership, and reversed possessive correspondence.
+The semantic suite checks every planned cue and repeated occurrence for complete target coverage, independent pronouns/negation/conjunctions, reversed English order, forward instrumental completion, matching Russian display groups, onset, last-active frame, exclusive release and gap behavior. Deliberately defective fixtures establish that the expectations reject missing “loud,” “away” or “am,” swallowed explicit subjects/objects, an over-broad fire highlight, the previous disconnected with/fire focus, invented heart ownership, and reversed possessive correspondence.
 
 Run from the project directory:
 
