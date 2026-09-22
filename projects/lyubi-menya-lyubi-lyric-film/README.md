@@ -1,8 +1,10 @@
 # Гречка — Люби меня, люби
 
-**Russian / English · rose paper edition v1.0.0 · verified YouTube and TikTok films.**
+**Russian / English · duration-focus preview v3 under review · v1.0.0 films retained as the earlier delivery.**
 
-A full-recording, 187.402-second film with 33 lyric cues, 147 Russian word events and 167 English words. Landscape and portrait use equal bilingual typography, stable color-only highlighting and the same original soundtrack. The unchanged preview inputs received comprehensive human listening and audiovisual review, followed by explicit render authorization. Model candidates and their uncertainty remain documented separately.
+A full-recording, 187.402-second composition with 33 lyric cues, 147 Russian word events and 169 English words. Landscape and portrait use equal bilingual typography, stable color-only highlighting and the same original soundtrack. The current **`preview-v3-duration-focus`** revision refines the English duration line and its paired focus in LM-002 and LM-013 while preserving the Russian wording. Four held-word release corrections are documented separately from the meaning-map changes.
+
+The earlier **`rose-paper-v1.0.0`** delivery used 167 English words and the reviewed `preview-v2-rose-paper` identity. Its human review, authorization and final-file checks apply to those exact v1 bytes. They do not certify or authorize the new preview. No replacement film or updated Desktop kit is claimed for v3.
 
 ![Rose paper composition with the original album print, equal bilingual lyrics and berry focus on жарким / with blazing](evidence/final/landscape-33-2.png)
 
@@ -32,23 +34,29 @@ Open [the local review preview](http://127.0.0.1:4324/). It starts at the beginn
 
 `npm run preview` rebuilds the client and starts the same server. After changing inputs, run the explicit build-and-freeze sequence above so the manifest includes the newly compiled client. Changed inputs invalidate previous review flags. Missing required media or an incomplete identity prevents preview readiness.
 
-## Review status
+## Current preview review status
 
 | Area | Current status |
 | --- | --- |
-| Translation and correspondence | Model-assisted editorial review and independent semantic regression expectations recorded |
-| Acoustic timing | Bounded original-mix and vocal-stem evidence retained; comprehensive human review recorded |
-| Complete recording and both layouts | Complete by explicit human attestation for the frozen input identity |
-| Production authorization | Recorded for the exact reviewed preview inputs |
-| Final films and posting kit | Both films verified; complete 14-file Desktop posting kit copied and checksummed |
+| Translation and correspondence | Duration wording and finer paired focus revised in LM-002 and LM-013; v3 review pending |
+| Acoustic timing | Four exclusive word ends revised from model/signal evidence; current actual-audio review remains pending |
+| Complete recording and both layouts | Prior review retained for the 31 unchanged cues; LM-002 and LM-013 listening review reopened |
+| Production authorization | New preview requires current review and explicit render authorization |
+| Final films and posting kit | Earlier v1 films and 14-file Desktop kit retained; no v3 delivery yet |
 
 Review priorities included short conjunctions, held vowels, all four bridge repetitions and the final vocal release. The supplied lyric inventory and model agreement alone cannot certify full vocal coverage or perfect synchronization. See [timing evidence and questions](evidence/timing-review.md), [translation decisions](evidence/translation-review.md) and the [current synchronization record](evidence/cross-language-sync-review.json).
 
-The [instrumental-phrase refinement](evidence/phrase-focus-refinement.json) keeps “with blazing” together on «жарким», followed by “fire” on «огнём», across all four occurrences. It preserves the acoustic events and word geometry.
+The retained [instrumental-phrase refinement](evidence/phrase-focus-refinement.json) keeps “with blazing” together on «жарким», followed by “fire” on «огнём», across all four occurrences. It preserves the acoustic events and word geometry.
 
 The [full correspondence scan](evidence/correspondence-scan.json) refines six verse cues to **Те / Those**, then **же / same**. It checks complete English expressions and all repeated patterns while preserving necessary English word-order changes and every acoustic event.
 
-## Render and verify
+### Duration-focus revision
+
+LM-002 and LM-013 now read **“Has loved, but not me, for years now.”** The English focus follows **Любит → Has loved**, **не → but not**, **меня → me**, and **уже → now**. The complete construction **который год** supplies the lexical meaning **for years**. Its finer display anchors are **который → for**, then **год → years**; the first anchor marks the construction's onset, not a literal translation of «который» as “for.” Russian word highlights remain distinct. Acoustic release/onset checks are recorded separately from this display decision. See [the translation review](evidence/translation-review.md) for the distinction between lexical coverage and performed display anchoring.
+
+Fresh unforced MMS observations of the original mix and vocal stem, together with signal inspection, support extending the ends of «уже» and «который» in both performances. All onsets, the other 143 word intervals, and cue/visibility clocks remain unchanged; 32–57 ms inter-word gaps remain. These are model-supported corrections for review, not a new listening attestation. The [v3 refinement record](evidence/duration-focus-refinement.json) separates those acoustic changes from the translation and focus changes.
+
+## Render and verify after current review
 
 The production renderer reuses the frozen scene and source-linked focus at 2× dimensions, then performs one Lanczos reduction to 1920×1080 or 1080×1920. H.264 High-profile video uses 60 fps, CRF 16 and limited-range BT.709. The original AAC is copied without trimming, normalization or re-encoding; MP4 metadata precedes the media for fast loading.
 
@@ -70,20 +78,22 @@ node scripts/extract-delivery-proofs.ts
 
 Production requires the current gate, renderer parity and native-browser adoption records. Output files are never silently overwritten. Changing a renderer or verification script requires refreshing its bound evidence. The technical verifier checks the complete frame clock and decode, original AAC packets and decoded PCM; the separate focus audit inspects visible word colors, lyric gaps and original picture presence on every decoded frame.
 
+The commands above describe the production procedure. The v3 preview remains under review; v1 approval and verification records must not be used to pass its production gate.
+
 [Posting assets and optional captions](publishing/README.md) · [Production lessons](PRODUCTION-LESSONS.md) · [Human review and render authorization](evidence/render-authorization.json)
 
-## Verified delivery
+## Earlier verified delivery — v1.0.0
 
 | Video | Dimensions | Frames / cadence | File size |
 | --- | --- | --- | --- |
 | YouTube | 1920×1080 | 11,245 / 60 fps | 27,573,157 bytes |
 | TikTok | 1080×1920 | 11,245 / 60 fps | 29,329,059 bytes |
 
-Both final H.264 files pass complete decoding, constant presentation timestamps, square-pixel/BT.709 checks and fast-start placement. All **8,073 original AAC packets**, their timing and priming information, and the decoded **8,265,152 samples per channel** remain identical. Video duration is 187.416667 seconds, the 60 fps frame extent covering the 187.401995-second presented audio.
+Both v1 H.264 files passed complete decoding, constant presentation timestamps, square-pixel/BT.709 checks and fast-start placement. All **8,073 original AAC packets**, their timing and priming information, and the decoded **8,265,152 samples per channel** remain identical. Video duration is 187.416667 seconds, the 60 fps frame extent covering the 187.401995-second presented audio.
 
-The independent decoded-focus audit checks **90,306 visible word states per format**, all 33 cues and all 314 displayed source/target words in active and resting states. It finds zero mismatches, ambiguous colors or stale lyrics in gaps. The original picture is present on all 11,245 frames. These are encoded-display and media-integrity checks; comprehensive listening approval is recorded separately as human attestation.
+The v1 independent decoded-focus audit checked **90,306 visible word states per format**, all 33 cues and all 314 displayed source/target words in active and resting states. It found zero mismatches against the v1 specification, ambiguous colors or stale lyrics in gaps. The original picture was present on all 11,245 frames. These encoded-display and media-integrity results remain valid for the identified v1 files; they neither assess the new duration-focus specification nor certify its synchronization. The earlier comprehensive listening approval is recorded separately as human attestation.
 
-The posting kit contains platform-specific videos, a 1920×1080 YouTube thumbnail, a 1200×1600 portrait TikTok profile cover, both titles/descriptions, three optional SRT files, a manifest and checksums. Every one of the 14 Desktop files matches the verified kit. Source, publishing assets, workflow and evidence are tracked here; no platform upload or public media release was performed.
+The delivered v1 posting kit contains platform-specific videos, a 1920×1080 YouTube thumbnail, a 1200×1600 portrait TikTok profile cover, both titles/descriptions, three optional SRT files, a manifest and checksums. Every one of its 14 Desktop files matched the verified kit at handoff. The v3 preview has not replaced these files. Source, publishing assets, workflow and evidence are tracked here; no platform upload or public media release was performed.
 
 [Delivery receipt](evidence/delivery-receipt.json) · [Desktop copy receipt](evidence/desktop-delivery-receipt.json) · [Decoded final screenshots](evidence/final/manifest.json) · [Final visual review](evidence/final-visual-review.json)
 

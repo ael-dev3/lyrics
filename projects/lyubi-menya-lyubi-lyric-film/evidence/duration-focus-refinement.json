@@ -1,0 +1,96 @@
+{
+  "revision": "preview-v3-duration-focus",
+  "status": "preview-ready; affected listening review pending",
+  "previousDeliveryCommit": "a2f9145dc1060502bf4939c10f52b90157dc9acb",
+  "inputIdentitySha256": "64825d8546d9ebc6464958b32ab0d2e57dee7b8e799e7d3411dddc6d91fa3744",
+  "affectedCues": [
+    "LM-002",
+    "LM-013"
+  ],
+  "wording": "Has loved, but not me, for years now",
+  "displayCorrespondence": {
+    "Любит": [
+      "Has",
+      "loved"
+    ],
+    "не": [
+      "but",
+      "not"
+    ],
+    "меня": [
+      "me"
+    ],
+    "уже": [
+      "now"
+    ],
+    "который": [
+      "for"
+    ],
+    "год": [
+      "years"
+    ]
+  },
+  "semanticBasis": "For years retains который год as shared sourceIds. Documented singleton focusSourceIds anchor the duration preposition to the construction onset and the noun to год, without claiming a literal который/for translation.",
+  "acousticChanges": [
+    {
+      "id": "LM-002-s04",
+      "oldEndSample": 494350,
+      "newEndSample": 523908
+    },
+    {
+      "id": "LM-002-s05",
+      "oldEndSample": 592532,
+      "newEndSample": 597996
+    },
+    {
+      "id": "LM-013-s04",
+      "oldEndSample": 3458760,
+      "newEndSample": 3489192
+    },
+    {
+      "id": "LM-013-s05",
+      "oldEndSample": 3555178,
+      "newEndSample": 3563280
+    }
+  ],
+  "acousticEvidence": "../analysis/duration-focus-v3-signal.json",
+  "preservation": {
+    "all147RussianWordsAndOnsetsUnchanged": true,
+    "other143WordIntervalsUnchanged": true,
+    "allCueAndVisibilityClocksUnchanged": true,
+    "other31CuesAndLayoutsUnchanged": true,
+    "originalAudioArtworkPaletteTypographyAndRibbonUnchanged": true
+  },
+  "verification": {
+    "typecheck": "PASS",
+    "testsPassed": 49,
+    "affectedFramesChecked": 727,
+    "pairedFocusMismatches": 0,
+    "unrelatedWordFocus": 0,
+    "negationObjectAndDurationRowsIntactBothFormats": true,
+    "browserSamples": [
+      {
+        "format": "landscape",
+        "seconds": [
+          11.5,
+          12.3,
+          13.85
+        ]
+      },
+      {
+        "format": "portrait",
+        "seconds": [
+          78.8,
+          79.8,
+          81
+        ]
+      }
+    ],
+    "productionGateRejectsPriorApproval": true,
+    "signalMethodHashVerified": true
+  },
+  "limits": "Model and signal evidence support the four vowel-release candidates; they are not a new human listening attestation. Prior final-file checks certify the original v1 mapping/bytes and do not validate the revised semantics or acoustic ends.",
+  "filmRendered": false,
+  "desktopFilesReplaced": false,
+  "productionAuthorized": false
+}

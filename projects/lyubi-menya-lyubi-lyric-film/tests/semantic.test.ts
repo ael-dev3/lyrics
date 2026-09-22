@@ -2,6 +2,7 @@ import {readFileSync} from 'node:fs';
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {activeDisplaySource, activeSource, activeTargets, sourceFocusIds, targetFocusIds} from '../src/focus.ts';
+import {parseData} from '../src/schema.ts';
 import type {Cue, ProductionData, TargetWord} from '../src/schema.ts';
 
 type PlannedCue = {
@@ -15,8 +16,8 @@ type PlannedCue = {
 const planned: PlannedCue[] = JSON.parse(readFileSync(new URL('../source/text-and-mapping.json', import.meta.url), 'utf8'));
 const normalized = (text: string) => text.toLowerCase().replace(/[.,!?;:]+$/u, '');
 const words = (items: {text: string}[]) => items.map(word => normalized(word.text));
-const members = (cue: PlannedCue, key: string) => cue.ru.filter(word => normalized(word.text) === key);
-const sourceId = (cue: PlannedCue, key: string, occurrence = 0) => {
+const members = (cue: Pick<PlannedCue, 'id' | 'ru'>, key: string) => cue.ru.filter(word => normalized(word.text) === key);
+const sourceId = (cue: Pick<PlannedCue, 'id' | 'ru'>, key: string, occurrence = 0) => {
   const found = members(cue, key)[occurrence];
   assert.ok(found, `${cue.id}: expected source word ${key} #${occurrence + 1}`);
   return found.id;
@@ -30,10 +31,10 @@ function fixture(cue: PlannedCue): {cue: Cue; data: ProductionData} {
   return {cue: timed, data: {sampleRate: 1000, sampleCount: 10000, duration: 10, fps: 100, frames: 1000, audioSha256: 'synthetic-display-contract-only', cues: [timed]}};
 }
 
-function assertMeaning(cue: PlannedCue, source: string, expected: string[], occurrence = 0, pairedSource?: string[]) {
+function assertMeaning(cue: PlannedCue, source: string, expected: string[], occurrence = 0, pairedSource?: string[], semanticSpan = expected) {
   const id = sourceId(cue, source, occurrence);
   const targets = cue.en.filter(word => word.sourceIds.includes(id));
-  assert.deepEqual(words(targets), expected, `${cue.id}: complete lexical meaning of ${source}`);
+  assert.deepEqual(words(targets), semanticSpan, `${cue.id}: complete lexical meaning of ${source}`);
   assert.deepEqual(words(cue.en.filter(word => targetFocusIds(word).includes(id))), expected, `${cue.id}: display must neither omit nor broaden ${source}`);
   const {cue: timed, data} = fixture(cue);
   const sourceIndex = cue.ru.findIndex(word => word.id === id);
@@ -84,12 +85,18 @@ const meaningContracts: Record<string, (cue: PlannedCue) => void> = {
     assert.ok(cue.en.findIndex(word => word.sourceIds.includes(sourceId(cue, 'моя'))) < cue.en.findIndex(word => word.sourceIds.includes(sourceId(cue, 'непокорная'))), 'Natural My untamed order requires reversed focus');
   },
   v2(cue) {
-    independent(cue, 'любит', ['loves']);
+    assert.deepEqual(words(cue.en), ['has', 'loved', 'but', 'not', 'me', 'for', 'years', 'now']);
+    independent(cue, 'любит', ['has', 'loved']);
     independent(cue, 'не', ['but', 'not']);
     independent(cue, 'меня', ['me']);
-    const duration = ['уже', 'который', 'год'];
-    for (const source of duration) assertMeaning(cue, source, ['year', 'after', 'year'], 0, duration);
-    for (const word of cue.en.filter(word => ['year', 'after'].includes(normalized(word.text)))) assert.deepEqual(word.sourceIds, duration.map(key => sourceId(cue, key)));
+    independent(cue, 'уже', ['now']);
+    const duration = ['который', 'год'];
+    assertMeaning(cue, 'который', ['for'], 0, undefined, ['for', 'years']);
+    assertMeaning(cue, 'год', ['years'], 0, undefined, ['for', 'years']);
+    for (const word of cue.en.filter(word => ['for', 'years'].includes(normalized(word.text)))) {
+      assert.deepEqual(word.sourceIds, duration.map(key => sourceId(cue, key)), 'Preserve the construction meaning instead of claiming который literally means for');
+      assert.ok(word.focusRationale?.trim(), 'Finer display needs an explicit editorial basis');
+    }
     assert.ok(!words(cue.en).some(word => ['someone', 'somebody', 'else', 'she', 'he', 'her', 'him', 'you'].includes(word)), 'No invented lover, addressee or gender');
   },
   v3a(cue) {
@@ -203,4 +210,35 @@ test('semantic expectations reject incomplete, over-broad and meaning-changing r
   });
   altered('c2', cue => { cue.en.find(word => normalized(word.text) === 'the')!.text = 'my'; });
   altered('v1', cue => { cue.en.find(word => normalized(word.text) === 'my')!.sourceIds = [sourceId(cue, 'непокорная')]; });
+  altered('v2', cue => { for (const word of cue.en.filter(word => ['for', 'years', 'now'].includes(normalized(word.text)))) word.focusSourceIds = ['уже', 'который', 'год'].map(key => sourceId(cue, key)); });
+  altered('v2', cue => { delete cue.en.find(word => word.text === 'for')!.focusSourceIds; });
+  altered('v2', cue => { cue.en.find(word => word.text === 'now')!.sourceIds = [sourceId(cue, 'год')]; });
+});
+
+test('a refined display retains semantic membership and cannot omit construction events', () => {
+  const cue = planned.find(cue => cue.key === 'v2')!;
+  const {data} = fixture(cue);
+  assert.deepEqual(parseData(data).cues[0]!.en, data.cues[0]!.en, 'Both semantic membership and documented focus must survive parsing');
+  const invalid = (edit: (cue: Cue) => void) => {
+    const altered = structuredClone(data);
+    edit(altered.cues[0]!);
+    assert.throws(() => parseData(altered));
+  };
+  invalid(cue => { delete cue.en.find(word => word.text === 'for')!.focusRationale; });
+  invalid(cue => { cue.en.find(word => word.text === 'for')!.focusSourceIds = [sourceId(cue, 'уже')]; });
+  invalid(cue => { cue.en.find(word => word.text === 'years')!.focusSourceIds = [sourceId(cue, 'который')]; });
+});
+
+test('complete phrase expansion still requires a consistent, fully covered group', () => {
+  const {data} = fixture(planned.find(cue => cue.key === 'r1')!);
+  const cue = data.cues[0]!;
+  const pair = cue.ru.slice(0, 2).map(word => word.id);
+  for (const word of cue.en.slice(0, 2)) Object.assign(word, {focusSourceIds: pair, focusGroup: 'test-complete-object'});
+  assert.deepEqual(parseData(data).cues[0]!.en, cue.en);
+  const missingGroup = structuredClone(data);
+  delete missingGroup.cues[0]!.en[0]!.focusGroup;
+  assert.throws(() => parseData(missingGroup));
+  const inconsistentGroup = structuredClone(data);
+  inconsistentGroup.cues[0]!.en[1]!.focusSourceIds = [pair[1]!];
+  assert.throws(() => parseData(inconsistentGroup));
 });
