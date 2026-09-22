@@ -11,7 +11,8 @@
     "review:build": "esbuild src/review-client.ts --bundle --format=esm --outfile=review/client.js",
     "preview": "npm run review:build && node scripts/review-server.ts",
     "sync:gate": "node scripts/production-gate.ts",
-    "render": "node scripts/production-gate.ts --production"
+    "render": "node --expose-gc scripts/render.ts",
+    "render:proof": "node --expose-gc scripts/render-proof.ts"
   },
   "dependencies": {
     "@napi-rs/canvas": "0.1.100",

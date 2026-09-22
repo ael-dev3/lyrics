@@ -1,6 +1,6 @@
 # Timing preparation — review preview v2
 
-**Status: provisional preview timing. Actual-audio listening and complete bilingual audiovisual review remain pending.** These measurements do not authorize a production render.
+**Status: timing-preparation evidence preserved; subsequent comprehensive human review is complete for the frozen production inputs.** See [the current review and authorization](render-authorization.json). The model observations and review priorities below retain their original scope; they are not automated listening evidence.
 
 ## Locked clock and coverage
 
@@ -16,7 +16,7 @@ The 33 cues and 147 Russian words preserve the supplied performed sequence. Repe
 | 96.4–120.6 s | Both full-recording observations recover the second chorus. Four cues. |
 | 120.5–132.75 s | Full stem ASR recovers four separate “Люби меня, люби” repetitions. Bounded bridge ASR invents a music label; section and line MMS independently recover the corresponding word sequences. The failed recognition is retained as evidence, not displayed text. |
 | 132.75–181.5 s | Full stem ASR and independently bounded MMS recover two final choruses and the final repetition. Nine cues. |
-| Final vocal to 187.401995 s | Full stem and bounded ending transcription support no additional lyric after the final repetition. Its selected release is 180.75 s, near the recognizer's 180.76 s ending. The mixed recognizer invents a subtitle credit at 186.68 s; it is absent from the supplied text and stem observation and is rejected. Tail classification still requires listening. |
+| Final vocal to 187.401995 s | Full stem and bounded ending transcription support no additional lyric after the final repetition. Its selected release is 180.75 s, near the recognizer's 180.76 s ending. The mixed recognizer invents a subtitle credit at 186.68 s; it is absent from the supplied text and stem observation and is rejected. Tail classification was included in the subsequent comprehensive human review. |
 
 ## Boundary observations
 
@@ -49,11 +49,11 @@ Two conjunction releases need a particularly careful handoff review: **LM-007 at
 
 Every repetition keeps its own measurements. No global offset, copied chorus timing, generic minimum word duration or uniform tail extension is applied. Original model candidates remain unchanged beneath the explicit correction layer. The cue builder rejects unknown or duplicate correction IDs and invalid intervals.
 
-## Verification and remaining review
+## Technical verification and recorded listening priorities
 
 The rebuilt 33 cues and 147 source intervals are positive, ordered and within the locked sample range. No source intervals or displayed cue windows overlap. The shortest line entrance lead is approximately 210.16 ms and shortest exit clearance is approximately 210.18 ms after the revised releases. TypeScript checks pass.
 
-All source boundaries and complete English meaning spans still require actual-audio review. Priorities are:
+The following source boundaries and complete English meaning spans were identified for the subsequent actual-audio review:
 
 - the two neighbor-limited conjunction handoffs and other coarticulated short words;
 - the opening “моя любовь” handoff and both independent “вслух” onsets;
@@ -62,7 +62,7 @@ All source boundaries and complete English meaning spans still require actual-au
 - confirmation that the rejected music label and subtitle credit are not performed lyrics;
 - the complete original recording at normal speed, uncertain events at reduced speed, and both 16:9 and 9:16 bilingual layouts.
 
-An independent evidence review found no clear neighboring-word crossing or long quiet-gap hold in the selected corrections. It did not establish alternate exact boundaries or complete listening. The technical checks do not close the cross-language synchronization gate or certify perfect sync.
+An independent evidence review found no clear neighboring-word crossing or long quiet-gap hold in the selected corrections. It did not establish alternate exact boundaries or complete listening. The technical checks alone do not close the cross-language synchronization gate or certify perfect sync. The later comprehensive human attestation closes the listening requirement separately; the underlying candidate uncertainty remains documented.
 
 ## Reproduction
 
