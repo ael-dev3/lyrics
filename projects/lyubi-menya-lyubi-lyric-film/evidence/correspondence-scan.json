@@ -1,0 +1,108 @@
+{
+  "revision": "preview-v2-rose-paper",
+  "change": "full-correspondence-scan-and-independent-demonstrative-focus",
+  "checkedOn": "2026-09-22",
+  "inputIdentitySha256": "5f17c488190222fddabdc7a3fab6510182c938bdf61f7fa0fecd9903a73f3261",
+  "inventory": {
+    "cues": 33,
+    "russianEvents": 147,
+    "englishWords": 167,
+    "distinctPatterns": 10
+  },
+  "affectedCues": [
+    "LM-003",
+    "LM-004",
+    "LM-005",
+    "LM-014",
+    "LM-015",
+    "LM-016"
+  ],
+  "correspondence": {
+    "Те": [
+      "Those"
+    ],
+    "же": [
+      "same"
+    ]
+  },
+  "rationale": "Retain the explicit demonstrative in natural English and follow each independently sung word. The prior The same translation used a broader two-source display group.",
+  "preservation": {
+    "all147AcousticEventsUnchanged": true,
+    "allCueAndVisibilityClocksUnchanged": true,
+    "audioUnchanged": true,
+    "visualDesignUnchanged": true,
+    "geometry": "Recomputed for the wider Those wording; equal font sizes and maximum two-row layouts preserved."
+  },
+  "editorialReview": {
+    "method": "Independent model-assisted editorial and mechanical reviews; not listening evidence.",
+    "completeExpansions": [
+      "вслух / out loud",
+      "улетай / fly away",
+      "умоляю / am begging",
+      "жарким / with blazing"
+    ],
+    "retainedReordering": [
+      "моя / My in My untamed love",
+      "сжигая / burning in burning the heart"
+    ],
+    "retainedIrreducibleGroup": "уже который год / year after year; union of source intervals releases in stored gaps.",
+    "retainedContrast": "but not shares the explicit не event; меня / me remains independent."
+  },
+  "verification": {
+    "typescript": "pass",
+    "testsPassed": 47,
+    "semanticTestsPassed": 36,
+    "allCueGlyphBoundsBothLayouts": "pass",
+    "independentFrameScan": {
+      "method": "Read-only inline scan over frozen cue/layout data and current focus functions; reported separately from persistent regression suite.",
+      "lyricVisibleFrames": 9116,
+      "disconnectedEnglishFocusStates": 0,
+      "transitivePairedMismatches": 0,
+      "activeSourceOrTargetOrphans": 0,
+      "zeroFrameWords": 0,
+      "meaningGroupsSplitAcrossRows": 0,
+      "staleLayoutMappings": 0,
+      "repeatPolicyDifferences": 0
+    },
+    "regression": "Independent expectations reject the prior broad determiner group even when Those same wording is present."
+  },
+  "browserObservations": [
+    {
+      "seconds": 22.201599,
+      "format": "portrait",
+      "focus": [
+        "Те",
+        "Those"
+      ],
+      "result": "Both lyric rows, full original artwork and sound ribbon visible; new wording fits in stable rows."
+    },
+    {
+      "seconds": 22.5828,
+      "formats": [
+        "portrait",
+        "landscape"
+      ],
+      "focus": [
+        "же",
+        "same"
+      ],
+      "result": "Independent focus verified after seeking and switching formats; full artwork and sound ribbon present, no visible clipping."
+    }
+  ],
+  "remainingTimingReview": [
+    {
+      "cue": "LM-007",
+      "seconds": 37.2166667,
+      "detail": "One all-neutral frame falls in stored 7.846ms conjunction/day gap."
+    },
+    {
+      "cue": "LM-018",
+      "seconds": 104.5166667,
+      "detail": "One all-neutral frame falls in stored 10.249ms conjunction/day gap."
+    }
+  ],
+  "limits": "Stored acoustic boundaries and gaps were preserved. Mechanical focus and sampled browser checks do not establish actual-audio synchronization or replace full listening review.",
+  "actualAudioReviewComplete": false,
+  "productionApproved": false,
+  "filmRendered": false
+}
