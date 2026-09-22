@@ -1,0 +1,34 @@
+{
+  "name": "lyubi-menya-lyubi-bilingual-preview",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "check": "npm run typecheck && node --test tests/*.test.ts",
+    "features": "node scripts/analyze.ts",
+    "layout": "node scripts/layout.ts",
+    "review:build": "esbuild src/review-client.ts --bundle --format=esm --outfile=review/client.js",
+    "preview": "npm run review:build && node scripts/review-server.ts",
+    "sync:gate": "node scripts/production-gate.ts",
+    "render": "node scripts/production-gate.ts --production"
+  },
+  "dependencies": {
+    "@napi-rs/canvas": "0.1.100",
+    "@remotion/bundler": "4.0.518",
+    "@remotion/cli": "4.0.518",
+    "@remotion/media": "4.0.518",
+    "@remotion/media-utils": "4.0.518",
+    "@remotion/renderer": "4.0.518",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "remotion": "4.0.518"
+  },
+  "devDependencies": {
+    "@types/node": "26.4.0",
+    "@types/react": "19.2.18",
+    "@types/react-dom": "19.2.5",
+    "typescript": "7.0.2",
+    "vitest": "4.1.11"
+  }
+}

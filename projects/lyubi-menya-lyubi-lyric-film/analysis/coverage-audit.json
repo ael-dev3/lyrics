@@ -1,0 +1,33 @@
+{
+  "status": "model-and-signal-preparation-only",
+  "actualAudioListeningComplete": false,
+  "fullMixTranscription": "analysis/transcription-mix.json",
+  "fullVocalTranscription": "analysis/transcription-vocals.json",
+  "boundedEvidence": [
+    "analysis/transcription-vocals-opening.json",
+    "analysis/transcription-vocals-verse2.json",
+    "analysis/transcription-vocals-bridge.json",
+    "analysis/transcription-vocals-ending.json"
+  ],
+  "cueCount": 33,
+  "sourceWords": 147,
+  "firstVocalCandidate": 1.7029024943310658,
+  "lastVocalCandidate": 180.4952380952381,
+  "tail": "No extra performed lyric supported by stem transcription; residual tail needs listening",
+  "rejectedRecognition": [
+    {
+      "time": [
+        186.68,
+        187.34
+      ],
+      "reason": "MixedASR invents subtitlecredit notcorroboratedbystem orsuppliedtext"
+    },
+    {
+      "time": [
+        123.2,
+        126.5
+      ],
+      "reason": "BoundedstemASR inventsmusiclabel; fullstem+MMS recoverfour bridge repetitions"
+    }
+  ]
+}

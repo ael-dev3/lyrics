@@ -1,0 +1,105 @@
+{
+  "revision": "preview-v2-rose-paper",
+  "status": "technical preview checks; listening and production approval pending",
+  "checkedOn": "2026-09-22",
+  "source": {
+    "presentedSeconds": 187.401995,
+    "fps": 60,
+    "frames": 11245,
+    "russianWords": 147,
+    "englishWords": 167,
+    "cues": 33,
+    "unchangedAudioPackets": 8073
+  },
+  "checks": {
+    "typescript": "pass",
+    "tests": 47,
+    "allCueGlyphBoundsBothLayouts": "pass",
+    "allFiniteSpectrumValues": 719680,
+    "completeSemanticCorrespondence": "pass",
+    "nearestFrameQuantizationBoundMs": 8.333334,
+    "quantizationLimit": "Mathematical display placement only; this is not an end-to-end audible latency measurement."
+  },
+  "browser": {
+    "engine": "Codex in-app browser",
+    "observations": [
+      {
+        "position": 33.2,
+        "formats": [
+          "landscape",
+          "portrait"
+        ],
+        "result": "Complete original artwork, equal bilingual focus, ribbon and titles visible. Paired жарким / blazing focus inspected."
+      },
+      {
+        "position": 152.2,
+        "format": "portrait",
+        "viewport": [
+          1080,
+          1920
+        ],
+        "result": "Native composition and multi-row English fit; all glyph boxes remain inside the composition."
+      },
+      {
+        "position": 33.2,
+        "format": "landscape",
+        "viewport": [
+          1920,
+          1080
+        ],
+        "result": "Native composition inspected; full source picture, title, equal bilingual words and ribbon present."
+      },
+      {
+        "position": 149.6,
+        "format": "portrait",
+        "speed": 0.75,
+        "action": "Restore visuals",
+        "result": "Artwork reloads; position149.6, portrait format and0.75speed preserved after recovery fix."
+      },
+      {
+        "from": 138.9,
+        "toObserved": 172.722192,
+        "format": "portrait",
+        "result": "Original audio advances; ribbon shape changes and lyric cues update. At172.72s artwork reportsloaded and sceneRebuilds remains1 across several cue handoffs."
+      },
+      {
+        "position": 186.9,
+        "format": "portrait",
+        "result": "Full187.401995s recording remainsavailable; zero lyricwords; artworkpresent; ribbonreleases toward end."
+      },
+      {
+        "position": 17.12,
+        "format": "landscape",
+        "result": "Current compiled preview highlights и / and together inside refined conjunction interval."
+      },
+      {
+        "position": 180.62,
+        "format": "portrait",
+        "result": "Current compiled preview retains final люби / love focus to the refined held ending; artwork present."
+      }
+    ],
+    "limitations": "Sampled browser playback and screenshots do not certify all-cue perceptual synchronization. No actual-listening approval was inferred."
+  },
+  "contrast": {
+    "restMinimumRatio": 11.35,
+    "activeMinimumRatio": 5.38,
+    "scope": "sRGB relative-luminance ratios against the two authored paper-gradient endpoints; image area is separate from lyric region."
+  },
+  "fixes": [
+    "Trim derived spectrum rows to presented container frames while preserving original decoded AAC padding.",
+    "Keep artwork mounted across cue transitions.",
+    "Widen portrait glyph gutter and reflow long English without shrinking text.",
+    "Preserve playbackRate when restoring audio and scene."
+  ],
+  "production": {
+    "rendered": false,
+    "approved": false
+  },
+  "inputIdentitySha256": "b4e245b9f21014c3705a14c1e4b82bd3439476eeb9c17f8d6c88424cd1f0eaf3",
+  "timingRefinement": {
+    "explicitCorrections": 24,
+    "additionalV2Corrections": 22,
+    "lastVocalSeconds": 180.75,
+    "independentReview": "No clear neighboring-word crossing or long quiet-gap hold in selected corrections. LM-007 and LM-018 conjunction endings are provisional coarticulated handoffs requiring listening."
+  }
+}
