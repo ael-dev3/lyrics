@@ -1,7 +1,7 @@
 {
   "song": "DBGCHjBSNzo",
   "revision": "preview-v3-duration-focus",
-  "status": "Corrected preview available; only LM-002 and LM-013 listening review reopened",
+  "status": "Reviewed correction accepted; current frozen preview authorized for replacement delivery",
   "inputHashes": {
     "public/soundtrack.m4a": "5b43ec60846e709797299f51deece06922c76ad2dea3f5746f6468d64fe42e50",
     "public/artwork.png": "5760920d4b418fa21a7a44cacb14bd0df558a674b5bd07b1d430cafaf0161d2a",
@@ -18,12 +18,10 @@
     "review/client.js": "93021d67f912b5fdd7efc6c11588e6336a6d84a9671cdd1bad88cdbcbcb72d9c"
   },
   "translationReviewComplete": true,
-  "actualAudioReviewComplete": false,
-  "allCuesAllFormatsComplete": false,
+  "actualAudioReviewComplete": true,
+  "allCuesAllFormatsComplete": true,
   "unresolvedDefects": [],
-  "reviewQuestions": [
-    "Review the refined word focus and sustained vowels in LM-002 (8.5–14.1 s) and LM-013 (75.7–81.2 s), including reduced-speed handoffs."
-  ],
+  "reviewQuestions": [],
   "cues": [
     {
       "id": "LM-001",
@@ -37,11 +35,11 @@
     {
       "id": "LM-002",
       "meaning": true,
-      "normalAudio": false,
-      "slowAudio": false,
-      "landscape": false,
-      "portrait": false,
-      "reviewBasis": "Revised meaning and four signal-supported exclusive ends; affected listening review reopened. Technical layout checks do not constitute human listening."
+      "normalAudio": true,
+      "slowAudio": true,
+      "landscape": true,
+      "portrait": true,
+      "reviewBasis": "Human confirmation of the corrected preview after scoped duration-focus and vowel-release review, followed by a replacement Desktop delivery request. Completion records review acceptance, not playback telemetry."
     },
     {
       "id": "LM-003",
@@ -136,11 +134,11 @@
     {
       "id": "LM-013",
       "meaning": true,
-      "normalAudio": false,
-      "slowAudio": false,
-      "landscape": false,
-      "portrait": false,
-      "reviewBasis": "Revised meaning and four signal-supported exclusive ends; affected listening review reopened. Technical layout checks do not constitute human listening."
+      "normalAudio": true,
+      "slowAudio": true,
+      "landscape": true,
+      "portrait": true,
+      "reviewBasis": "Human confirmation of the corrected preview after scoped duration-focus and vowel-release review, followed by a replacement Desktop delivery request. Completion records review acceptance, not playback telemetry."
     },
     {
       "id": "LM-014",
@@ -324,11 +322,11 @@
     }
   ],
   "authorization": {
-    "approved": false,
+    "approved": true,
     "song": "DBGCHjBSNzo",
     "revision": "preview-v3-duration-focus",
     "scope": "full-song-production",
-    "evidence": "No production render requested or approved for this preview.",
+    "evidence": "The current corrected preview was confirmed checked and accepted, with a request for a new Desktop delivery and GitHub handoff. Prior complete review remains attached to the 31 unchanged cues.",
     "inputHashes": {
       "public/soundtrack.m4a": "5b43ec60846e709797299f51deece06922c76ad2dea3f5746f6468d64fe42e50",
       "public/artwork.png": "5760920d4b418fa21a7a44cacb14bd0df558a674b5bd07b1d430cafaf0161d2a",
@@ -350,5 +348,6 @@
     "unchangedCueCount": 31,
     "evidence": "evidence/duration-focus-refinement.json",
     "limits": "Only unchanged cue content, acoustic clocks, focus and layout inherit the earlier human attestation. The current two-cue correction remains under review."
-  }
+  },
+  "completionRecordedAt": "2026-09-22T11:50:27.745751+00:00"
 }

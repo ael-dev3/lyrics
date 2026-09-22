@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "formats": [
+    "landscape",
+    "portrait"
+  ],
+  "recordedAt": "2026-09-22T10:50:55.749813+00:00",
+  "inputIdentitySha256": "5f17c488190222fddabdc7a3fab6510182c938bdf61f7fa0fecd9903a73f3261",
+  "rendererHashes": {
+    "scripts/render.ts": "8c104a05f195b0dbde1276cbb5e42c306d6a1958711cf7596928f4752609c0b5",
+    "scripts/raster-compositor.ts": "cc5d87a15e7cf39e9b8f2fe9f275751b2bfadd142858ba667d5fcf50acb73cca",
+    "scripts/render-proof.ts": "a78d40d74c9e59533b9d76bfbcf841b9f9a62b084afbbca1fdae84db3ca2f10b"
+  },
+  "method": "Native-size in-app browser composition at landscape33.2s(1920x1080) and portrait22.2s(1080x1920) compared visually with corrected2x compositor stills and decoded short H.264 diagnostic frames. Artist/title/footer spacing and opacity, original album image and sleeve transform, bilingual word geometry, paired highlight states and ribbon placement were inspected.",
+  "fixes": [
+    "Explicit static-text adapter preserves SVG letter-spacing and opacity omitted by the native SVG decoder.",
+    "Original image is drawn at the transform parsed from the frozen shared scene.",
+    "Each encoder write callback completes before the next native canvas buffer access.",
+    "Explicit BT.709 frame parameters survive encoder color metadata."
+  ],
+  "limits": "Visual adoption of an export implementation for the unchanged approved scene; not a new listening attestation or an assertion of browser pixel equality. The full outputs still require independent encoded-file verification."
+}

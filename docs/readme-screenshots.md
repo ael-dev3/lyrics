@@ -4,7 +4,7 @@ Updated 22 September 2026. All seventeen featured songs in the main README have 
 
 | Song | Representative image | Time | Edition / provenance |
 | --- | --- | --- | --- |
-| Люби меня, люби | [Album print on rose paper and paired жарким / with blazing focus](../assets/lyubi-final-33-2.png) | 00:33.200 | Verified v1 final landscape film; exact decoded frame 1992 |
+| Люби меня, люби | [Album print on rose paper and individual год / years focus](../assets/lyubi-v1-1-final-13-85.png) | 00:13.850 | Verified v1.1.0 final landscape film; exact decoded frame 831 |
 | Stay at Your House — Hardstyle | [Lucy artwork and yellow English word focus](../assets/stay-house-hardstyle-final-64.png) | 01:04.000 | Verified v1 final landscape film |
 | Ведьмы | [Steady forest scene and equal Russian / English focus](../assets/vedmy-final-94-55.png) | 01:34.550 | Verified final autumn landscape film |
 | Pero es locura | [Original live performance and complete paired focus](../assets/pero-es-locura-v3-final-paired.png) | 02:14.450 | Verified paired-focus v3 final landscape film |
@@ -26,9 +26,9 @@ The [structured inventory](../assets/readme-screenshots.json) records image dime
 
 ## Люби меня, люби final rose paper frame
 
-The 1920×1080 image is **33.200 seconds / frame 1992** of the verified v1 landscape film. It shows the stationary original album print, warm paper, complete bilingual cue, berry **жарким / with blazing** focus and measured ribbon response. Original recording and album artwork: Гречка and their respective creators.
+The 1920×1080 image is **13.850 seconds / frame 831** of the verified v1.1.0 landscape film. It shows the stationary original album print, warm paper, complete bilingual cue, independent berry **год / years** focus in the corrected duration phrase and measured ribbon response. Original recording and album artwork: Гречка and their respective creators.
 
-The [extraction script](../projects/lyubi-menya-lyubi-lyric-film/scripts/extract-delivery-proofs.ts) checks the final MP4 hash and technical verification record, then selects the actual decoded frame without cropping, recoloring or reconstructed text. The [project image](../projects/lyubi-menya-lyubi-lyric-film/evidence/final/landscape-33-2.png) and main README image are byte-identical. [The manifest](../projects/lyubi-menya-lyubi-lyric-film/evidence/final/manifest.json) binds all twelve native screenshots and two annotated overview sheets to their exact delivery files. Historical preview references remain identified in their original evidence paths.
+The [extraction script](../projects/lyubi-menya-lyubi-lyric-film/scripts/extract-delivery-proofs.ts) checks the final MP4 hash and technical verification record, then selects the actual decoded frame without cropping, recoloring or reconstructed text. The [project image](../projects/lyubi-menya-lyubi-lyric-film/evidence/final/landscape-13-85.png) and main README image are byte-identical. [The manifest](../projects/lyubi-menya-lyubi-lyric-film/evidence/final/manifest.json) binds all twelve native screenshots and two annotated overview sheets to their exact delivery files. The original v1 frame remains in the [preserved delivery evidence](../projects/lyubi-menya-lyubi-lyric-film/evidence/releases/rose-paper-v1.0.0/final/landscape-33-2.png). Historical preview references retain their original status.
 
 ## Selection and verification
 
