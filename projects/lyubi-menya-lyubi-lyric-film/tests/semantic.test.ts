@@ -68,12 +68,9 @@ function imperative(cue: PlannedCue) {
 }
 
 function sameDeterminer(cue: PlannedCue) {
-  const ids = [sourceId(cue, 'те'), sourceId(cue, 'же')];
-  assertMeaning(cue, 'те', ['the', 'same'], 0, ['те', 'же']);
-  assertMeaning(cue, 'же', ['the', 'same'], 0, ['те', 'же']);
-  for (const word of cue.en.filter(word => ['the', 'same'].includes(normalized(word.text)))) {
-    assert.deepEqual(word.sourceIds, ids, 'The compound determiner is one meaning with two source events');
-  }
+  independent(cue, 'те', ['those']);
+  independent(cue, 'же', ['same']);
+  assert.deepEqual(words(cue.en).slice(0, 2), ['those', 'same'], 'Natural Those same wording preserves the demonstrative and permits two distinct source events');
 }
 
 // These are editorial expectations for the supplied text, independent of the
@@ -199,6 +196,11 @@ test('semantic expectations reject incomplete, over-broad and meaning-changing r
   altered('c1', cue => { cue.en.find(word => normalized(word.text) === 'blazing')!.sourceIds = [sourceId(cue, 'огнём')]; });
   altered('c1', cue => { cue.en.find(word => normalized(word.text) === 'with')!.sourceIds = [sourceId(cue, 'огнём')]; });
   altered('r1', cue => { cue.en.find(word => normalized(word.text) === 'me')!.focusSourceIds = [sourceId(cue, 'меня'), sourceId(cue, 'люби')]; });
+  altered('v3a', cue => {
+    for (const word of cue.en.filter(word => ['those', 'same'].includes(normalized(word.text)))) {
+      word.sourceIds = [sourceId(cue, 'те'), sourceId(cue, 'же')];
+    }
+  });
   altered('c2', cue => { cue.en.find(word => normalized(word.text) === 'the')!.text = 'my'; });
   altered('v1', cue => { cue.en.find(word => normalized(word.text) === 'my')!.sourceIds = [sourceId(cue, 'непокорная')]; });
 });

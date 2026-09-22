@@ -46,6 +46,8 @@ Check short conjunctions, held vowels, all four bridge repetitions and the final
 
 The [instrumental-phrase refinement](evidence/phrase-focus-refinement.json) keeps “with blazing” together on «жарким», followed by “fire” on «огнём», across all four occurrences. It preserves the acoustic events and word geometry.
 
+The [full correspondence scan](evidence/correspondence-scan.json) refines six verse cues to **Те / Those**, then **же / same**. It checks complete English expressions and all repeated patterns while preserving necessary English word-order changes and every acoustic event.
+
 Run `npm run check` for TypeScript, semantic and authorization tests. `npm run sync:gate` is expected to reject the pending review. `npm run render` cannot produce a film: it checks the gate and this edition has no production renderer.
 
 ## Reproduction and credits

@@ -3,9 +3,9 @@ type Line={key:string;ru:string;en:string;note?:string};
 const verse:Line[]=[
  {key:'v1',ru:'Непокорная моя любовь',en:'My|1 untamed|0 love|2',note:'Preserve personified untamed love and the explicit possessive in natural English order.'},
  {key:'v2',ru:'Любит не меня уже который год',en:'Loves,|0 but|1 not|1 me,|2 year|3,4,5 after|3,4,5 year|3,4,5',note:'Preserve loves-but-not-me contrast, present tense, and unstated alternative object. Уже который год is one temporal idiom, year after year; focus uses the union of those source intervals.'},
- {key:'v3a',ru:'Те же стены и цветы',en:'The|0,1 same|0,1 walls|2 and|3 flowers|4',note:'Те же is a compound determiner, the same. Both language lanes use the union of its two source intervals.'},
- {key:'v3b',ru:'Те же люди и стихи',en:'The|0,1 same|0,1 people|2 and|3 poems|4',note:'Те же is a compound determiner. Стихи retains poems without interpreting it as song lyrics.'},
- {key:'v4',ru:'Те же мысли и слова вслух',en:'The|0,1 same|0,1 thoughts|2 and|3 words|4 out|5 loud|5',note:'Те же is a compound determiner. Вслух maps to the complete expression out loud.'},
+ {key:'v3a',ru:'Те же стены и цветы',en:'Those|0 same|1 walls|2 and|3 flowers|4',note:'The explicit demonstrative is retained as Those; те and же each have an independent natural English counterpart and source event.'},
+ {key:'v3b',ru:'Те же люди и стихи',en:'Those|0 same|1 people|2 and|3 poems|4',note:'Те maps independently to Those and же to same. Стихи retains poems without interpreting it as song lyrics.'},
+ {key:'v4',ru:'Те же мысли и слова вслух',en:'Those|0 same|1 thoughts|2 and|3 words|4 out|5 loud|5',note:'Те maps independently to Those and же to same. Вслух maps to the complete expression out loud.'},
 ];
 const chorus:Line[]=[
  {key:'c1',ru:'Люби меня, люби жарким огнём',en:'Love|0 me,|1 love|2 with|3 blazing|3 fire|4',note:'Explicit меня remains independent. The instrumental construction marks both adjective and noun; English with is a grammatical completion anchored to the phrase onset in жарким, so with blazing highlights together and огнём supplies fire. Do not add an object after the second люби.'},

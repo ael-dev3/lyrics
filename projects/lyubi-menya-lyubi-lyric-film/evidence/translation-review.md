@@ -10,8 +10,8 @@ Reviewed inputs:
 
 | Input | SHA-256 |
 | --- | --- |
-| `scripts/prepare-text.ts` | `b779959058136b192550aa00fb32f3462d60b04410898dfc99e949a0bf3d7fa4` |
-| `source/text-and-mapping.json` | `50ac55c6d965f59966dd88d3caf6e404af19e1b144bce2f4e47f7415cba27553` |
+| `scripts/prepare-text.ts` | `d50db336ad7f4f3cbb06f7a61013560391952c02494b7f160b8af06cfbe4c158` |
+| `source/text-and-mapping.json` | `c3f6bf374c8d4c16d383c23868b4967dbcae805b9dc9aefd7156f56f7b92a2d4` |
 
 Any change to lyric text, translation or correspondence requires an affected semantic recheck. Changes to performed repetitions also require a revised cue inventory and independent recording evidence.
 
@@ -21,9 +21,9 @@ Any change to lyric text, translation or correspondence requires an affected sem
 | --- | --- | --- | --- |
 | `v1` | Непокорная моя любовь | My untamed love | LM-001, LM-012 |
 | `v2` | Любит не меня уже который год | Loves, but not me, year after year | LM-002, LM-013 |
-| `v3a` | Те же стены и цветы | The same walls and flowers | LM-003, LM-014 |
-| `v3b` | Те же люди и стихи | The same people and poems | LM-004, LM-015 |
-| `v4` | Те же мысли и слова вслух | The same thoughts and words out loud | LM-005, LM-016 |
+| `v3a` | Те же стены и цветы | Those same walls and flowers | LM-003, LM-014 |
+| `v3b` | Те же люди и стихи | Those same people and poems | LM-004, LM-015 |
+| `v4` | Те же мысли и слова вслух | Those same thoughts and words out loud | LM-005, LM-016 |
 | `c1` | Люби меня, люби жарким огнём | Love me, love with blazing fire | LM-006, LM-017, LM-025, LM-029 |
 | `c2` | Ночью и днём, сердце сжигая | Night and day, burning the heart | LM-007, LM-018, LM-026, LM-030 |
 | `c3` | Люби меня, люби, не улетай | Love me, love, don't fly away | LM-008, LM-019, LM-027, LM-031 |
@@ -37,7 +37,7 @@ The two clauses beginning “Те же” are separate display cues. Annotation 
 - **Untamed love:** preserve personification and the explicit possessive without selecting a beloved's gender. English keeps natural “My untamed love” word order while its focus follows the reversed source correspondence.
 - **Loves, but not me:** preserve present-tense loving and the contrast expressed by “не меня.” Do not replace it with a broader denial of loving or introduce an unstated alternative lover. English “but” expresses the source contrast and shares the negation event with “not.” Explicit “me” remains independent.
 - **Year after year:** the temporal construction “уже который год” becomes an idiomatic expression of continuing years. Its three participating source events jointly support the three English words. This is a documented idiom rather than a claim that each English word has an independent sung equivalent.
-- **The same:** “те же” is a compound determiner. Both English words and both Russian words receive the paired display focus of the participating intervals. Keep the nouns and conjunction independent.
+- **Those same:** the revised English retains the source demonstrative explicitly, allowing **Те → Those** and **же → same** to follow their own sung events. This replaces the earlier “The same” wording and shared determiner display span across all six verse cues. Nouns and conjunctions remain independent; no acoustic boundaries change.
 - **Poems:** preserve the literary noun “стихи”; do not reinterpret it as song lyrics.
 - **Love me, love:** keep the explicitly sung object “меня” separate from both imperative verbs. Do not add another “me” after the repeated imperative or generalize another song's complete-phrase presentation exception to this line.
 - **With blazing fire:** instrumental case is marked on both the adjective and noun. English “with” is a grammatical completion of that construction, introduced at its first spoken word: “жарким” activates **with blazing**, followed by “огнём” activating **fire**. This preserves natural forward reading without inventing a sung preposition, moving any acoustic boundary or grouping both Russian words. The earlier split “with + fire” focus returned to the front of the phrase and is superseded.
@@ -48,7 +48,7 @@ The two clauses beginning “Те же” are separate display cues. Annotation 
 
 Every Russian word has a target meaning, and every English word has a source correspondence. There are no intentionally neutral grammar words in this edition. Multi-source phrases use the union of participating source intervals, with focus released in real gaps. Acoustic source events remain distinct from paired display grouping.
 
-The semantic suite checks every planned cue and repeated occurrence for complete target coverage, independent pronouns/negation/conjunctions, reversed English order, forward instrumental completion, matching Russian display groups, onset, last-active frame, exclusive release and gap behavior. Deliberately defective fixtures establish that the expectations reject missing “loud,” “away” or “am,” swallowed explicit subjects/objects, an over-broad fire highlight, the previous disconnected with/fire focus, invented heart ownership, and reversed possessive correspondence.
+The semantic suite checks every planned cue and repeated occurrence for complete target coverage, independent pronouns/negation/conjunctions, reversed English order, forward instrumental completion, independent demonstrative and particle focus, matching Russian display groups, onset, last-active frame, exclusive release and gap behavior. Deliberately defective fixtures establish that the expectations reject missing “loud,” “away” or “am,” swallowed explicit subjects/objects, an over-broad fire highlight, the previous disconnected with/fire focus, the previous over-broad determiner group, invented heart ownership, and reversed possessive correspondence.
 
 Run from the project directory:
 
