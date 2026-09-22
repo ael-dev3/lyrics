@@ -56,6 +56,12 @@ LM-002 and LM-013 now read **“Has loved, but not me, for years now.”** The E
 
 Fresh unforced MMS observations of the original mix and vocal stem, together with signal inspection, support extending the ends of «уже» and «который» in both performances. All onsets, the other 143 word intervals, and cue/visibility clocks remain unchanged; 32–57 ms inter-word gaps remain. These are model-supported corrections for review, not a new listening attestation. The [v3 refinement record](evidence/duration-focus-refinement.json) separates those acoustic changes from the translation and focus changes.
 
+### Whole-song word highlighting
+
+All **147 Russian words highlight individually**. English has **125 independent word highlights** and **22 necessary two-word expressions**, such as «вслух / out loud» and «улетай / fly away». Auxiliaries, articles and required grammatical completions stay with the single sung event that supplies their meaning; they do not receive invented English timestamps. “For / years / now” each has its own display anchor. The [whole-song audit](evidence/word-granularity-audit.json) checks all 11,245 presentation frames in both layouts, covering 182,066 generated word-color states with no skipped words or unnecessary groups. [Live browser samples](evidence/word-granularity-browser.json) separately verify twelve focus states in the complete preview. These checks preserve the current inputs and do not replace the pending two-cue listening review or final encoded-file verification.
+
+Run `node scripts/audit-word-granularity.ts` to repeat the generated-markup audit. Its regression tests reject broad Russian groups, missing English focus and unreviewed multi-word expansions.
+
 ## Render and verify after current review
 
 The production renderer reuses the frozen scene and source-linked focus at 2× dimensions, then performs one Lanczos reduction to 1920×1080 or 1080×1920. H.264 High-profile video uses 60 fps, CRF 16 and limited-range BT.709. The original AAC is copied without trimming, normalization or re-encoding; MP4 metadata precedes the media for fast loading.

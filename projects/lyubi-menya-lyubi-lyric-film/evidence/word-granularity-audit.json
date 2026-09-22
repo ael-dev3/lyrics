@@ -1,0 +1,94 @@
+{
+  "revision": "preview-v3-duration-focus",
+  "status": "PASS",
+  "inputIdentitySha256": "64825d8546d9ebc6464958b32ab0d2e57dee7b8e799e7d3411dddc6d91fa3744",
+  "method": "Independent sample-to-frame windows and an explicit editorial exception list checked against both formats of shared lyric SVG markup.",
+  "cues": 33,
+  "russianWords": 147,
+  "englishWords": 169,
+  "russianWordsAlwaysIndependent": true,
+  "singleEnglishEvents": 125,
+  "necessaryEnglishPairs": [
+    {
+      "source": "Любит",
+      "english": "has loved",
+      "reason": "One Russian verb carries the continuing-duration English verb expression.",
+      "events": [
+        "LM-002-s01",
+        "LM-013-s01"
+      ]
+    },
+    {
+      "source": "не",
+      "english": "but not",
+      "reason": "The contrasting negation has no separate sung conjunction.",
+      "events": [
+        "LM-002-s02",
+        "LM-013-s02"
+      ]
+    },
+    {
+      "source": "вслух",
+      "english": "out loud",
+      "reason": "One Russian adverb requires a complete English expression.",
+      "events": [
+        "LM-005-s06",
+        "LM-016-s06"
+      ]
+    },
+    {
+      "source": "жарким",
+      "english": "with blazing",
+      "reason": "Instrumental grammar enters at the inflected adjective; fire retains its own noun event.",
+      "events": [
+        "LM-006-s04",
+        "LM-017-s04",
+        "LM-025-s04",
+        "LM-029-s04"
+      ]
+    },
+    {
+      "source": "сердце",
+      "english": "the heart",
+      "reason": "The necessary article belongs with its noun.",
+      "events": [
+        "LM-007-s04",
+        "LM-018-s04",
+        "LM-026-s04",
+        "LM-030-s04"
+      ]
+    },
+    {
+      "source": "улетай",
+      "english": "fly away",
+      "reason": "The complete phrasal verb translates one Russian verb.",
+      "events": [
+        "LM-008-s05",
+        "LM-019-s05",
+        "LM-027-s05",
+        "LM-031-s05"
+      ]
+    },
+    {
+      "source": "умоляю",
+      "english": "am begging",
+      "reason": "The auxiliary belongs to the verb; explicitly sung I stays separate.",
+      "events": [
+        "LM-009-s04",
+        "LM-020-s04",
+        "LM-028-s04",
+        "LM-032-s04"
+      ]
+    }
+  ],
+  "presentationFrames": 11245,
+  "formats": 2,
+  "wordColorStatesChecked": 182066,
+  "emptyFramesPerFormat": 2129,
+  "skippedWords": 0,
+  "unnecessaryGroups": 0,
+  "focusColorMismatches": 0,
+  "limits": "This verifies word granularity, complete focus coverage and generated colors. It is not an encoded-file pixel audit or a new human listening attestation. The two revised duration cues retain their pending listening status.",
+  "productionInputsChanged": false,
+  "filmRendered": false
+}
