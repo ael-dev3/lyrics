@@ -89,6 +89,8 @@ The explicitly commissioned [Life Letters Russian / Argentinian Spanish edition]
 
 ### Media and handoff
 
+- Follow the [local storage and recovery policy](storage-and-recovery.md) after completed productions: verify remote source and media coverage, preserve unique files, then clear reproducible capture caches and confirmed duplicate deliveries. Keep one usable local copy of current posting kits when practical.
+
 - Preserve the approved audio timing and source-media identity through the render pipeline.
 - Prefer a high-quality master render followed by a controlled delivery encode with recorded metadata and checksums.
 - Make changes reversible and traceable: keep source data, scripts, composition variants, audit reports, and release notes together.
