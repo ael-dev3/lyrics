@@ -1,0 +1,149 @@
+{
+  "scope": "Historical preview completion audit. Current render authorization and final delivery are recorded separately in render-authorization.json and delivery-receipt.json; this earlier audit is not a final-file verification.",
+  "revision": "word-atmosphere-v5",
+  "requirements": [
+    {
+      "requirement": "Keep the original full moving picture and source aspect ratio in the original-format preview",
+      "status": "verified",
+      "evidence": [
+        "src/player.js:drawPicture",
+        "review/index.html",
+        "evidence/sunfire-v2.json"
+      ]
+    },
+    {
+      "requirement": "Individually highlight every supplied English word without moving the glyphs",
+      "status": "verified structurally",
+      "evidence": [
+        "scripts/check-preview.mjs",
+        "scripts/preview-core.test.mjs",
+        "src/player.js:showCue"
+      ],
+      "coverage": "44 lines,254 independent word events; no timeline changes during fire work."
+    },
+    {
+      "requirement": "Precise perceived word-to-vocal timing throughout the recording",
+      "status": "targeted listening accepted; full listening coverage not established",
+      "evidence": [
+        "evidence/alignment-v6.json",
+        "evidence/review-status-v6.json"
+      ],
+      "remaining": "Full-recording and remaining uncertain passages cannot be certified by model agreement or muted transport tests."
+    },
+    {
+      "requirement": "Keep native picture/audio on one source clock with reliable foreground playback",
+      "status": "complete earlier fire-revision playback plus targeted playback for subsequent effects; current full-length run not claimed",
+      "evidence": [
+        "src/preview-core.js",
+        "src/player.js",
+        "evidence/sunfire-v2.json",
+        "evidence/foreground-runtime-sunfire-v2.json",
+        "evidence/sunbeam-v1.json",
+        "evidence/darkness-v1.json",
+        "evidence/damage-v1.json"
+      ]
+    },
+    {
+      "requirement": "Burn only the sun burns/burnt out tonight phrases, responding gently to quiet vocals and strongly to forceful vocals",
+      "status": "implemented and technically verified; current artistic feedback pending",
+      "evidence": [
+        "public/fire-dynamics.json",
+        "src/fire-dynamics.js",
+        "src/sunfire.js",
+        "evidence/fire-dynamics-audit.json",
+        "scripts/sunfire.test.mjs"
+      ],
+      "coverage": "12 hooks,14057 source-time rows; deterministic phase, bounded clearances and unchanged word timing."
+    },
+    {
+      "requirement": "Leave a complete playable preview open; do not render the song",
+      "status": "verified",
+      "evidence": [
+        "browser preview at http://127.0.0.1:4325/?t=199.6&format=landscape&fire=on",
+        "evidence/sunfire-v2.json"
+      ]
+    },
+    {
+      "requirement": "Aim gentle sunlight at every sung exact light token during its individual highlight",
+      "status": "implemented and technically verified",
+      "evidence": [
+        "src/sunbeam.js",
+        "evidence/sunbeam-v1.json"
+      ],
+      "coverage": "One exact occurrence43.955\u201344.420s; both-layout boundary and geometry checks, nonsequential seeks, reduced-speed playback."
+    },
+    {
+      "requirement": "Apply mild gentle freeze animation to colder and freezing",
+      "status": "implemented and technically verified",
+      "evidence": [
+        "src/frost.js",
+        "evidence/frost-v1.json"
+      ],
+      "coverage": "Both exact word intervals;26both-layout boundary/inter-effect observations,normal-speed playback and stable glyph geometry."
+    },
+    {
+      "requirement": "Mild gentle purple glow around every Supernova word",
+      "status": "implemented and technically verified",
+      "evidence": [
+        "src/player.js:paintSupernova",
+        "evidence/supernova-glow-v1.json"
+      ],
+      "coverage": "Two exact word intervals,24both-layout observations,stationary gold text,clean handoffs and targeted playback."
+    },
+    {
+      "requirement": "Add local shadowy animation around each darkness highlight",
+      "status": "implemented and technically verified",
+      "evidence": [
+        "src/darkness.js",
+        "src/player.js:paintDarkness",
+        "evidence/darkness-v1.json"
+      ],
+      "coverage": "Two exact word intervals; 24 both-layout boundary observations, stable glyph geometry, clean inter-effect seeks and targeted normal-speed playback."
+    },
+    {
+      "requirement": "Mild gentle damage animation on hurt words",
+      "status": "implemented and technically verified",
+      "evidence": [
+        "src/damage.js",
+        "src/player.js:paintDamage",
+        "evidence/damage-v1.json"
+      ],
+      "coverage": "Both hurts occurrences; 20 both-layout boundary observations, unchanged glyph geometry, reverse-seek cleanup and targeted normal-speed playback."
+    },
+    {
+      "requirement": "Combine darkness and Supernova animations on void",
+      "status": "implemented and technically verified",
+      "evidence": [
+        "src/player.js:paintSupernova",
+        "src/player.js:paintDarkness",
+        "review/index.html",
+        "evidence/void-v1.json"
+      ],
+      "coverage": "Both exact occurrences; 20 both-layout boundary/composition observations, unchanged gold glyphs, independent standalone effects and targeted playback."
+    },
+    {
+      "requirement": "Gentle sunlight on you in all I need is you",
+      "status": "implemented and technically verified",
+      "evidence": [
+        "src/sunbeam.js:isSunbeamWord",
+        "src/player.js:paintSunbeam",
+        "evidence/sunbeam-you-v1.json"
+      ],
+      "coverage": "Four matching occurrences including darkness-prefixed lines; six unrelated you contexts excluded. 32 both-layout boundary/context observations and shortest-cue playback."
+    }
+  ],
+  "completion": "Not certified as perfect. Existing acceptance supports selected timings; current fire dynamics are open for review. No production render approval inferred.",
+  "regressionPolicy": "Do not keep rerunning passed checks or replace accepted timing from inconclusive model disagreements; act on concrete failures or new review feedback.",
+  "currentTechnicalWork": "Current word effects verified at their target occurrences in both layouts. Earlier full fire-revision playback remains historical.",
+  "remainingInput": "Current preview feedback and listening judgment; no deterministic defect identified by the audit.",
+  "currentFilesSha256": {
+    "src/frost.js": "c19993cb1c8aa201fd9173816facaf0b6cdadc08e2d00a4bc6b8381b44f21ead",
+    "src/player.js": "202c4ee2ad392d2cedc99aed324afad7c153af8bb997aa60d548a08c2aa9eb4b",
+    "review/index.html": "8069ddf3b6963d1856970f5902b323710954631bd1eb100061701986b6dc6752",
+    "src/timeline.json": "b71c6ea2e7c39a56843cd51be74bae10c1dcf095f81025b9c7af8ffd7f9ccba4",
+    "src/sunfire.js": "67b6ca5e08903d9bcaae43672a1afa91b65616d105543ecab7e15fa78d369d1c",
+    "src/sunbeam.js": "3a284df76fbe29deadcafd6362bd8a20513dd12728bedbcbab6e40092424cf48",
+    "src/darkness.js": "f1accaf00a477c1203fe87c0206bc68049ac20026391bb332f9a77b98f006fcc",
+    "src/damage.js": "7bafc4501671a593282759c537c5979ddc66e946d44431faaf858ffbefd63edd"
+  }
+}

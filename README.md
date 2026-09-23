@@ -6,7 +6,23 @@ Music films with synchronized lyrics, meaning-linked translations, and audio-rea
 
 **Current style default:** [cinematic lyric presentation](docs/cinematic-lyric-workflow.md) — stable, color-only word or phrase emphasis, precise vocal timing, smooth scene shading and equally prominent bilingual lyrics. Motion intensity follows the song: gentle arrangements can use compact, subdued audio-reactive graphics. The guide includes implemented references and review requirements for future tracks.
 
-[**Люби меня, люби**](#люби-меня-люби) · [**Stay at Your House — Hardstyle**](#stay-at-your-house--hardstyle) · [**Ведьмы**](#ведьмы) · [**Pero es locura**](#pero-es-locura) · [**La Lune**](#la-lune) · [**каждый, кто делал тебе больно**](#каждый-кто-делал-тебе-больно) · [**Sugar Glass**](#sugar-glass) · [**Твои глаза**](#твои-глаза) · [**Прости за любовь — accepted with known gaps**](#прости-за-любовь) · [**Половинка**](#половинка) · [**Life Letters**](#life-letters) · [**Joyride**](#joyride) · [**midnight love**](#midnight-love) · [**Пожары**](#пожары) · [**Отменяй**](#отменяй) · [**Roi × Adore**](#roi--adore) · [**TikTok edition**](#tiktok-edition) · [**Tanisea**](#tanisea) · [**Build and workflow**](#build-and-workflow)
+**Starting another song:** use the [single-prompt template, agent quickstart and complete quality checklist](docs/source-clocked-word-effects-workflow.md). The [If The Sun Burns Out Tonight handoff](projects/if-the-sun-burns-out-tonight-lyric-film/AGENT-HANDOFF.md) and [production lessons](projects/if-the-sun-burns-out-tonight-lyric-film/PRODUCTION-LESSONS.md) show how exact word/phrase effects, measured intensity and dependable full-picture playback fit the shared workflow.
+
+[**If The Sun Burns Out Tonight**](#if-the-sun-burns-out-tonight) · [**Люби меня, люби**](#люби-меня-люби) · [**Stay at Your House — Hardstyle**](#stay-at-your-house--hardstyle) · [**Ведьмы**](#ведьмы) · [**Pero es locura**](#pero-es-locura) · [**La Lune**](#la-lune) · [**каждый, кто делал тебе больно**](#каждый-кто-делал-тебе-больно) · [**Sugar Glass**](#sugar-glass) · [**Твои глаза**](#твои-глаза) · [**Прости за любовь — accepted with known gaps**](#прости-за-любовь) · [**Половинка**](#половинка) · [**Life Letters**](#life-letters) · [**Joyride**](#joyride) · [**midnight love**](#midnight-love) · [**Пожары**](#пожары) · [**Отменяй**](#отменяй) · [**Roi × Adore**](#roi--adore) · [**TikTok edition**](#tiktok-edition) · [**Tanisea**](#tanisea) · [**Build and workflow**](#build-and-workflow)
+
+## If The Sun Burns Out Tonight
+
+**Grabbitz · Oli Sykes · Courtney LaPlante · English · verified landscape and portrait films**
+
+![If The Sun Burns Out Tonight: original panoramic action, solar word fire and gold depth spectrum](assets/sun-burns-out-final-200-7.png)
+
+*Exact final frame at 03:20.700, decoded at native 1920×818. Original music video: VALORANT. Music and performance: Grabbitz, Oli Sykes and Courtney LaPlante.*
+
+The complete 234.266-second recording retains the original source aspect and soundtrack. All 254 English words have individual fixed-position focus. Measured gold columns support the music; vocal-responsive solar flames mark twelve burning-sun phrases. Exact word and phrase selectors add gentle sunlight, frost, purple glow, drifting darkness, tiny damage cuts and combined void effects. Quiet and forceful vocals produce different fire intensity without shifting the lyrics.
+
+Both 60 fps films passed complete frame/decode, unchanged-audio and source-picture dropout checks. Each also passed 254 word-midpoint checks and neutral-gap sampling: 399 encoded frames and 2,169 glyph checks, with no suspects. The verified 13-file local upload kit contains two videos, separate platform covers, titles/descriptions, captions and checksums. Human listening acceptance remains separate from the technical pixel checks.
+
+[Delivery and credits](projects/if-the-sun-burns-out-tonight-lyric-film/README.md) · [Agent quickstart](projects/if-the-sun-burns-out-tonight-lyric-film/AGENT-HANDOFF.md) · [Reproduction commands](projects/if-the-sun-burns-out-tonight-lyric-film/WORKFLOW.md) · [Every animation and timing rule](projects/if-the-sun-burns-out-tonight-lyric-film/PRODUCTION-LESSONS.md) · [Reusable one-prompt workflow](docs/source-clocked-word-effects-workflow.md)
 
 ## Люби меня, люби
 

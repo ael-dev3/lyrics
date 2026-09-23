@@ -1,0 +1,581 @@
+{
+  "schema": "encoded-word-focus-audit/v1",
+  "createdAt": "2026-09-23T15:08:01.354Z",
+  "format": "portrait",
+  "scope": "available still proofs only; not a final-master all-word audit",
+  "input": null,
+  "inputSha256": null,
+  "timelineSha256": "b71c6ea2e7c39a56843cd51be74bae10c1dcf095f81025b9c7af8ffd7f9ccba4",
+  "layoutSha256": "e576ed185f84327eeff672a9dd0ed231c548c0e67206ddd60af21d96c9891b5b",
+  "fontSha256": "c00afa86f42dfa48fd073ebc8152f85caa11a6e36fb28dae017cefcd8594e8d3",
+  "fps": 60,
+  "lyricCrop": {
+    "x": 0,
+    "y": 1237,
+    "width": 1080,
+    "height": 230
+  },
+  "summary": {
+    "encodedFramesInspected": 5,
+    "wordMidpointsCovered": 0,
+    "expectedWordCount": 254,
+    "individualGlyphChecks": 28,
+    "suspects": 0,
+    "ambiguous": 0,
+    "unexpectedCueGapText": 0
+  },
+  "status": "passed",
+  "methods": [
+    "Decode actual encoded pixels at integer master frame indices; no scene.paint or runtime highlight selector imported.",
+    "Independently derive expected active words from source start/end intervals and frozen browser layout.",
+    "Rasterize color-independent glyph masks with approved font; inspect sparse eroded interior points and nearby non-glyph controls.",
+    "Check amber active glyphs, ivory inactive glyphs, and the approved amber-to-ice frost color locus. Narrow damage cuts and chroma compression are tolerated.",
+    "Search limited3-pixel offsets for possible glyph displacement; inspect neighbouring cue shapes in truly empty gaps."
+  ],
+  "limits": [
+    "This verifies encoded word focus/color and coarse fixed glyph geometry at sampled frames, not acoustic correctness of the timeline.",
+    "It cannot certify every frame, highlight handoff, kerning detail, or arbitrary visual effects; midpoint sampling is deliberate.",
+    "The font rasterizer dependency is shared with production, although timing selection, color classification, sampling and decoded-image measurement are independent.",
+    "Warm/bright backgrounds or thin glyphs may be ambiguous; control-pixel contrast reduces but cannot eliminate confusion. Suspects require actual image inspection, not automatic timing edits."
+  ],
+  "suspects": [],
+  "ambiguous": [],
+  "results": [
+    {
+      "frame": 3605,
+      "timeSeconds": 60.083333,
+      "reasons": [
+        "production-still-proof:portrait-colder.png.json"
+      ],
+      "expectedCueId": "L11",
+      "expectedActiveWordId": "L11-W03",
+      "wordChecks": [
+        {
+          "id": "L11-W01",
+          "text": "It’s",
+          "expectedColor": "paper",
+          "coreMatch": 1,
+          "controlMatch": 0,
+          "shapeContrast": 1,
+          "paperCore": 1,
+          "goldCore": 0,
+          "bestSearchOffset": [
+            0,
+            0
+          ],
+          "bestSearchMatch": 1,
+          "samplePoints": 384,
+          "status": "passed"
+        },
+        {
+          "id": "L11-W02",
+          "text": "getting",
+          "expectedColor": "paper",
+          "coreMatch": 1,
+          "controlMatch": 0,
+          "shapeContrast": 1,
+          "paperCore": 1,
+          "goldCore": 0,
+          "bestSearchOffset": [
+            0,
+            0
+          ],
+          "bestSearchMatch": 1,
+          "samplePoints": 384,
+          "status": "passed"
+        },
+        {
+          "id": "L11-W03",
+          "text": "colder",
+          "expectedColor": "frost",
+          "coreMatch": 1,
+          "controlMatch": 0,
+          "shapeContrast": 1,
+          "paperCore": 0,
+          "goldCore": 0.0026,
+          "bestSearchOffset": [
+            0,
+            0
+          ],
+          "bestSearchMatch": 1,
+          "samplePoints": 384,
+          "status": "passed"
+        }
+      ],
+      "unexpectedTextInCueGap": []
+    },
+    {
+      "frame": 3726,
+      "timeSeconds": 62.1,
+      "reasons": [
+        "production-still-proof:portrait-freezing.png.json"
+      ],
+      "expectedCueId": "L12",
+      "expectedActiveWordId": "L12-W02",
+      "wordChecks": [
+        {
+          "id": "L12-W01",
+          "text": "Hell’s",
+          "expectedColor": "paper",
+          "coreMatch": 1,
+          "controlMatch": 0,
+          "shapeContrast": 1,
+          "paperCore": 1,
+          "goldCore": 0,
+          "bestSearchOffset": [
+            0,
+            0
+          ],
+          "bestSearchMatch": 1,
+          "samplePoints": 384,
+          "status": "passed"
+        },
+        {
+          "id": "L12-W02",
+          "text": "freezing",
+          "expectedColor": "frost",
+          "coreMatch": 1,
+          "controlMatch": 0,
+          "shapeContrast": 1,
+          "paperCore": 0,
+          "goldCore": 0,
+          "bestSearchOffset": [
+            0,
+            0
+          ],
+          "bestSearchMatch": 1,
+          "samplePoints": 384,
+          "status": "passed"
+        },
+        {
+          "id": "L12-W03",
+          "text": "over",
+          "expectedColor": "paper",
+          "coreMatch": 1,
+          "controlMatch": 0,
+          "shapeContrast": 1,
+          "paperCore": 1,
+          "goldCore": 0,
+          "bestSearchOffset": [
+            0,
+            0
+          ],
+          "bestSearchMatch": 1,
+          "samplePoints": 384,
+          "status": "passed"
+        }
+      ],
+      "unexpectedTextInCueGap": []
+    },
+    {
+      "frame": 7566,
+      "timeSeconds": 126.1,
+      "reasons": [
+        "production-still-proof:portrait-hurts.png.json"
+      ],
+      "expectedCueId": "L25",
+      "expectedActiveWordId": "L25-W05",
+      "wordChecks": [
+        {
+          "id": "L25-W01",
+          "text": "Hit",
+          "expectedColor": "paper",
+          "coreMatch": 1,
+          "controlMatch": 0,
+          "shapeContrast": 1,
+          "paperCore": 1,
+          "goldCore": 0,
+          "bestSearchOffset": [
+            0,
+            0
+          ],
+          "bestSearchMatch": 1,
+          "samplePoints": 384,
+          "status": "passed"
+        },
+        {
+          "id": "L25-W02",
+          "text": "me",
+          "expectedColor": "paper",
+          "coreMatch": 1,
+          "controlMatch": 0,
+          "shapeContrast": 1,
+          "paperCore": 1,
+          "goldCore": 0,
+          "bestSearchOffset": [
+            0,
+            0
+          ],
+          "bestSearchMatch": 1,
+          "samplePoints": 384,
+          "status": "passed"
+        },
+        {
+          "id": "L25-W03",
+          "text": "where",
+          "expectedColor": "paper",
+          "coreMatch": 1,
+          "controlMatch": 0,
+          "shapeContrast": 1,
+          "paperCore": 1,
+          "goldCore": 0,
+          "bestSearchOffset": [
+            0,
+            0
+          ],
+          "bestSearchMatch": 1,
+          "samplePoints": 384,
+          "status": "passed"
+        },
+        {
+          "id": "L25-W04",
+          "text": "it",
+          "expectedColor": "paper",
+          "coreMatch": 1,
+          "controlMatch": 0,
+          "shapeContrast": 1,
+          "paperCore": 1,
+          "goldCore": 0,
+          "bestSearchOffset": [
+            0,
+            0
+          ],
+          "bestSearchMatch": 1,
+          "samplePoints": 384,
+          "status": "passed"
+        },
+        {
+          "id": "L25-W05",
+          "text": "hurts",
+          "expectedColor": "gold",
+          "coreMatch": 0.9505,
+          "controlMatch": 0,
+          "shapeContrast": 0.9505,
+          "paperCore": 0,
+          "goldCore": 0.9505,
+          "bestSearchOffset": [
+            0,
+            0
+          ],
+          "bestSearchMatch": 0.9505,
+          "samplePoints": 384,
+          "status": "passed"
+        }
+      ],
+      "unexpectedTextInCueGap": []
+    },
+    {
+      "frame": 2004,
+      "timeSeconds": 33.4,
+      "reasons": [
+        "production-still-proof:portrait-wrapped-fire.png.json"
+      ],
+      "expectedCueId": "L02",
+      "expectedActiveWordId": null,
+      "wordChecks": [
+        {
+          "id": "L02-W01",
+          "text": "I",
+          "expectedColor": "paper",
+          "coreMatch": 1,
+          "controlMatch": 0,
+          "shapeContrast": 1,
+          "paperCore": 1,
+          "goldCore": 0,
+          "bestSearchOffset": [
+            0,
+            0
+          ],
+          "bestSearchMatch": 1,
+          "samplePoints": 225,
+          "status": "passed"
+        },
+        {
+          "id": "L02-W02",
+          "text": "wonder",
+          "expectedColor": "paper",
+          "coreMatch": 1,
+          "controlMatch": 0,
+          "shapeContrast": 1,
+          "paperCore": 1,
+          "goldCore": 0,
+          "bestSearchOffset": [
+            0,
+            0
+          ],
+          "bestSearchMatch": 1,
+          "samplePoints": 384,
+          "status": "passed"
+        },
+        {
+          "id": "L02-W03",
+          "text": "if",
+          "expectedColor": "paper",
+          "coreMatch": 1,
+          "controlMatch": 0,
+          "shapeContrast": 1,
+          "paperCore": 1,
+          "goldCore": 0,
+          "bestSearchOffset": [
+            0,
+            0
+          ],
+          "bestSearchMatch": 1,
+          "samplePoints": 384,
+          "status": "passed"
+        },
+        {
+          "id": "L02-W04",
+          "text": "the",
+          "expectedColor": "paper",
+          "coreMatch": 1,
+          "controlMatch": 0,
+          "shapeContrast": 1,
+          "paperCore": 1,
+          "goldCore": 0,
+          "bestSearchOffset": [
+            0,
+            0
+          ],
+          "bestSearchMatch": 1,
+          "samplePoints": 384,
+          "status": "passed"
+        },
+        {
+          "id": "L02-W05",
+          "text": "sun",
+          "expectedColor": "paper",
+          "coreMatch": 1,
+          "controlMatch": 0,
+          "shapeContrast": 1,
+          "paperCore": 1,
+          "goldCore": 0,
+          "bestSearchOffset": [
+            0,
+            0
+          ],
+          "bestSearchMatch": 1,
+          "samplePoints": 384,
+          "status": "passed"
+        },
+        {
+          "id": "L02-W06",
+          "text": "burnt",
+          "expectedColor": "paper",
+          "coreMatch": 1,
+          "controlMatch": 0,
+          "shapeContrast": 1,
+          "paperCore": 1,
+          "goldCore": 0,
+          "bestSearchOffset": [
+            0,
+            0
+          ],
+          "bestSearchMatch": 1,
+          "samplePoints": 384,
+          "status": "passed"
+        },
+        {
+          "id": "L02-W07",
+          "text": "out",
+          "expectedColor": "paper",
+          "coreMatch": 1,
+          "controlMatch": 0,
+          "shapeContrast": 1,
+          "paperCore": 1,
+          "goldCore": 0,
+          "bestSearchOffset": [
+            0,
+            0
+          ],
+          "bestSearchMatch": 1,
+          "samplePoints": 384,
+          "status": "passed"
+        },
+        {
+          "id": "L02-W08",
+          "text": "tonight",
+          "expectedColor": "paper",
+          "coreMatch": 1,
+          "controlMatch": 0,
+          "shapeContrast": 1,
+          "paperCore": 1,
+          "goldCore": 0,
+          "bestSearchOffset": [
+            0,
+            0
+          ],
+          "bestSearchMatch": 1,
+          "samplePoints": 384,
+          "status": "passed"
+        }
+      ],
+      "unexpectedTextInCueGap": []
+    },
+    {
+      "frame": 9630,
+      "timeSeconds": 160.5,
+      "reasons": [
+        "production-still-proof:portrait-you.png.json"
+      ],
+      "expectedCueId": "L33",
+      "expectedActiveWordId": "L33-W09",
+      "wordChecks": [
+        {
+          "id": "L33-W01",
+          "text": "And",
+          "expectedColor": "paper",
+          "coreMatch": 1,
+          "controlMatch": 0,
+          "shapeContrast": 1,
+          "paperCore": 1,
+          "goldCore": 0,
+          "bestSearchOffset": [
+            0,
+            0
+          ],
+          "bestSearchMatch": 1,
+          "samplePoints": 384,
+          "status": "passed"
+        },
+        {
+          "id": "L33-W02",
+          "text": "in",
+          "expectedColor": "paper",
+          "coreMatch": 1,
+          "controlMatch": 0,
+          "shapeContrast": 1,
+          "paperCore": 1,
+          "goldCore": 0,
+          "bestSearchOffset": [
+            0,
+            0
+          ],
+          "bestSearchMatch": 1,
+          "samplePoints": 384,
+          "status": "passed"
+        },
+        {
+          "id": "L33-W03",
+          "text": "the",
+          "expectedColor": "paper",
+          "coreMatch": 1,
+          "controlMatch": 0,
+          "shapeContrast": 1,
+          "paperCore": 1,
+          "goldCore": 0,
+          "bestSearchOffset": [
+            0,
+            0
+          ],
+          "bestSearchMatch": 1,
+          "samplePoints": 384,
+          "status": "passed"
+        },
+        {
+          "id": "L33-W04",
+          "text": "darkness",
+          "expectedColor": "paper",
+          "coreMatch": 1,
+          "controlMatch": 0,
+          "shapeContrast": 1,
+          "paperCore": 1,
+          "goldCore": 0,
+          "bestSearchOffset": [
+            0,
+            0
+          ],
+          "bestSearchMatch": 1,
+          "samplePoints": 384,
+          "status": "passed"
+        },
+        {
+          "id": "L33-W05",
+          "text": "all",
+          "expectedColor": "paper",
+          "coreMatch": 1,
+          "controlMatch": 0,
+          "shapeContrast": 1,
+          "paperCore": 1,
+          "goldCore": 0,
+          "bestSearchOffset": [
+            0,
+            0
+          ],
+          "bestSearchMatch": 1,
+          "samplePoints": 384,
+          "status": "passed"
+        },
+        {
+          "id": "L33-W06",
+          "text": "I",
+          "expectedColor": "paper",
+          "coreMatch": 1,
+          "controlMatch": 0,
+          "shapeContrast": 1,
+          "paperCore": 1,
+          "goldCore": 0,
+          "bestSearchOffset": [
+            0,
+            0
+          ],
+          "bestSearchMatch": 1,
+          "samplePoints": 225,
+          "status": "passed"
+        },
+        {
+          "id": "L33-W07",
+          "text": "need",
+          "expectedColor": "paper",
+          "coreMatch": 1,
+          "controlMatch": 0,
+          "shapeContrast": 1,
+          "paperCore": 1,
+          "goldCore": 0,
+          "bestSearchOffset": [
+            0,
+            0
+          ],
+          "bestSearchMatch": 1,
+          "samplePoints": 384,
+          "status": "passed"
+        },
+        {
+          "id": "L33-W08",
+          "text": "is",
+          "expectedColor": "paper",
+          "coreMatch": 1,
+          "controlMatch": 0,
+          "shapeContrast": 1,
+          "paperCore": 1,
+          "goldCore": 0,
+          "bestSearchOffset": [
+            0,
+            0
+          ],
+          "bestSearchMatch": 1,
+          "samplePoints": 384,
+          "status": "passed"
+        },
+        {
+          "id": "L33-W09",
+          "text": "you",
+          "expectedColor": "gold",
+          "coreMatch": 1,
+          "controlMatch": 0,
+          "shapeContrast": 1,
+          "paperCore": 0,
+          "goldCore": 1,
+          "bestSearchOffset": [
+            0,
+            0
+          ],
+          "bestSearchMatch": 1,
+          "samplePoints": 384,
+          "status": "passed"
+        }
+      ],
+      "unexpectedTextInCueGap": []
+    }
+  ]
+}

@@ -1,0 +1,828 @@
+{
+  "status": "relative-waveform evidence; absolute lyric boundaries remain provisional",
+  "analysisRate": 16000,
+  "originalSourceRate": 44100,
+  "methods": {
+    "waveform": "Normalized FFT cross-correlation over source-mix and isolated-vocal windows; highest positive peak selected within explicit bounded search range.",
+    "local": "Same normalized correlation on 250–3500Hz filtered isolated-vocal slices. Filter applied to complete retained isolated-vocal signal to avoid local crop edge artifacts.",
+    "spectralDTW": "64-bin log-mel spectral features,200–4500Hz,32ms FFT,10ms hop,per-band normalization,cosine distance,±200ms path constraint. Diagnostic spectral warp only; no word timing moved by DTW."
+  },
+  "wholePhrase": [
+    {
+      "reference": "L23",
+      "target": "L42",
+      "referenceRange": [
+        103.661,
+        107.604
+      ],
+      "searchRange": [
+        198.36,
+        204.893
+      ],
+      "mix": {
+        "offset": 96.0,
+        "correlation": 0.24153003096580505,
+        "predictedWordStarts": [
+          199.761,
+          199.962,
+          200.243,
+          200.875,
+          201.36,
+          202.079
+        ]
+      },
+      "vocals": {
+        "offset": 96.0,
+        "correlation": 0.31282690167427063,
+        "predictedWordStarts": [
+          199.761,
+          199.962,
+          200.243,
+          200.875,
+          201.36,
+          202.079
+        ]
+      }
+    },
+    {
+      "reference": "L24",
+      "target": "L43",
+      "referenceRange": [
+        113.26100000000001,
+        117.46100000000001
+      ],
+      "searchRange": [
+        208.26000000000002,
+        213.9
+      ],
+      "mix": {
+        "offset": 96.00000000000001,
+        "correlation": 0.3801770508289337,
+        "predictedWordStarts": [
+          209.361,
+          209.582,
+          209.802,
+          210.425,
+          211.167,
+          211.669
+        ]
+      },
+      "vocals": {
+        "offset": 96.00000000000001,
+        "correlation": 0.4067768454551697,
+        "predictedWordStarts": [
+          209.361,
+          209.582,
+          209.802,
+          210.425,
+          211.167,
+          211.669
+        ]
+      }
+    },
+    {
+      "reference": "L24",
+      "target": "L44",
+      "referenceRange": [
+        113.26100000000001,
+        117.46100000000001
+      ],
+      "searchRange": [
+        217.98000000000002,
+        224.12
+      ],
+      "mix": {
+        "offset": 105.60000000000001,
+        "correlation": 0.3984730541706085,
+        "predictedWordStarts": [
+          218.961,
+          219.182,
+          219.402,
+          220.025,
+          220.767,
+          221.269
+        ]
+      },
+      "vocals": {
+        "offset": 105.60000000000001,
+        "correlation": 0.3740414083003998,
+        "predictedWordStarts": [
+          218.961,
+          219.182,
+          219.402,
+          220.025,
+          220.767,
+          221.269
+        ]
+      }
+    },
+    {
+      "reference": "L23",
+      "target": "L43",
+      "referenceRange": [
+        103.661,
+        107.604
+      ],
+      "searchRange": [
+        208.26000000000002,
+        213.9
+      ],
+      "mix": {
+        "offset": 105.61806250000001,
+        "correlation": 0.12918716669082642,
+        "predictedWordStarts": [
+          209.3791,
+          209.5801,
+          209.8611,
+          210.4931,
+          210.9781,
+          211.6971
+        ]
+      },
+      "vocals": {
+        "offset": 105.60000000000002,
+        "correlation": 0.17419244349002838,
+        "predictedWordStarts": [
+          209.361,
+          209.562,
+          209.843,
+          210.475,
+          210.96,
+          211.679
+        ]
+      }
+    },
+    {
+      "reference": "L23",
+      "target": "L44",
+      "referenceRange": [
+        103.661,
+        107.604
+      ],
+      "searchRange": [
+        217.98000000000002,
+        224.12
+      ],
+      "mix": {
+        "offset": 115.20000000000002,
+        "correlation": 0.1119079440832138,
+        "predictedWordStarts": [
+          218.961,
+          219.162,
+          219.443,
+          220.075,
+          220.56,
+          221.279
+        ]
+      },
+      "vocals": {
+        "offset": 115.20000000000002,
+        "correlation": 0.21481060981750488,
+        "predictedWordStarts": [
+          218.961,
+          219.162,
+          219.443,
+          220.075,
+          220.56,
+          221.279
+        ]
+      }
+    },
+    {
+      "reference": "L01",
+      "target": "L43",
+      "referenceRange": [
+        26.805,
+        29.81
+      ],
+      "searchRange": [
+        208.26000000000002,
+        213.9
+      ],
+      "mix": {
+        "offset": 182.4,
+        "correlation": 0.08349208533763885,
+        "predictedWordStarts": [
+          209.305,
+          209.606,
+          209.806,
+          210.428,
+          211.151,
+          211.536
+        ]
+      },
+      "vocals": {
+        "offset": 182.4,
+        "correlation": 0.11301339417695999,
+        "predictedWordStarts": [
+          209.305,
+          209.606,
+          209.806,
+          210.428,
+          211.151,
+          211.536
+        ]
+      }
+    },
+    {
+      "reference": "L01",
+      "target": "L44",
+      "referenceRange": [
+        26.805,
+        29.81
+      ],
+      "searchRange": [
+        217.98000000000002,
+        224.12
+      ],
+      "mix": {
+        "offset": 192.0,
+        "correlation": 0.08923758566379547,
+        "predictedWordStarts": [
+          218.905,
+          219.206,
+          219.406,
+          220.028,
+          220.751,
+          221.136
+        ]
+      },
+      "vocals": {
+        "offset": 192.0,
+        "correlation": 0.14255191385746002,
+        "predictedWordStarts": [
+          218.905,
+          219.206,
+          219.406,
+          220.028,
+          220.751,
+          221.136
+        ]
+      }
+    },
+    {
+      "reference": "L19",
+      "target": "L43",
+      "referenceRange": [
+        84.46100000000001,
+        88.426
+      ],
+      "searchRange": [
+        208.26000000000002,
+        213.9
+      ],
+      "mix": {
+        "offset": 124.80000000000001,
+        "correlation": 0.24950318038463593,
+        "predictedWordStarts": [
+          209.361,
+          209.562,
+          209.843,
+          210.466,
+          211.084,
+          211.801
+        ]
+      },
+      "vocals": {
+        "offset": 124.80000000000001,
+        "correlation": 0.2183012217283249,
+        "predictedWordStarts": [
+          209.361,
+          209.562,
+          209.843,
+          210.466,
+          211.084,
+          211.801
+        ]
+      }
+    },
+    {
+      "reference": "L19",
+      "target": "L44",
+      "referenceRange": [
+        84.46100000000001,
+        88.426
+      ],
+      "searchRange": [
+        217.98000000000002,
+        224.12
+      ],
+      "mix": {
+        "offset": 134.4,
+        "correlation": 0.2488134205341339,
+        "predictedWordStarts": [
+          218.961,
+          219.162,
+          219.443,
+          220.066,
+          220.684,
+          221.401
+        ]
+      },
+      "vocals": {
+        "offset": 134.4,
+        "correlation": 0.21548402309417725,
+        "predictedWordStarts": [
+          218.961,
+          219.162,
+          219.443,
+          220.066,
+          220.684,
+          221.401
+        ]
+      }
+    },
+    {
+      "reference": "L24",
+      "target": "L01",
+      "referenceRange": [
+        113.26100000000001,
+        117.46100000000001
+      ],
+      "searchRange": [
+        25.705000000000002,
+        31.16
+      ],
+      "mix": {
+        "offset": -86.3808125,
+        "correlation": 0.10240943729877472,
+        "predictedWordStarts": [
+          26.9802,
+          27.2012,
+          27.4212,
+          28.0442,
+          28.7862,
+          29.2882
+        ]
+      },
+      "vocals": {
+        "offset": -86.97843750000001,
+        "correlation": 0.032752491533756256,
+        "predictedWordStarts": [
+          26.3826,
+          26.6036,
+          26.8236,
+          27.4466,
+          28.1886,
+          28.6906
+        ]
+      }
+    },
+    {
+      "reference": "L17",
+      "target": "L28",
+      "referenceRange": [
+        74.84100000000001,
+        78.35
+      ],
+      "searchRange": [
+        131.342,
+        137.45
+      ],
+      "mix": {
+        "offset": 57.599999999999994,
+        "correlation": 0.36831897497177124,
+        "predictedWordStarts": [
+          132.541,
+          132.782,
+          133.044,
+          133.666,
+          134.265,
+          134.786
+        ]
+      },
+      "vocals": {
+        "offset": 57.599999999999994,
+        "correlation": 0.4169800281524658,
+        "predictedWordStarts": [
+          132.541,
+          132.782,
+          133.044,
+          133.666,
+          134.265,
+          134.786
+        ]
+      }
+    },
+    {
+      "reference": "L19",
+      "target": "L30",
+      "referenceRange": [
+        84.46100000000001,
+        88.426
+      ],
+      "searchRange": [
+        140.96200000000002,
+        147.075
+      ],
+      "mix": {
+        "offset": 57.599999999999994,
+        "correlation": 0.2864740788936615,
+        "predictedWordStarts": [
+          142.161,
+          142.362,
+          142.643,
+          143.266,
+          143.884,
+          144.601
+        ]
+      },
+      "vocals": {
+        "offset": 57.599999999999994,
+        "correlation": 0.4406161904335022,
+        "predictedWordStarts": [
+          142.161,
+          142.362,
+          142.643,
+          143.266,
+          143.884,
+          144.601
+        ]
+      }
+    },
+    {
+      "reference": "L23",
+      "target": "L24",
+      "referenceRange": [
+        103.661,
+        107.604
+      ],
+      "searchRange": [
+        112.161,
+        118.955
+      ],
+      "mix": {
+        "offset": 9.599999999999994,
+        "correlation": 0.3117455840110779,
+        "predictedWordStarts": [
+          113.361,
+          113.562,
+          113.843,
+          114.475,
+          114.96,
+          115.679
+        ]
+      },
+      "vocals": {
+        "offset": 9.599999999999994,
+        "correlation": 0.046140607446432114,
+        "predictedWordStarts": [
+          113.361,
+          113.562,
+          113.843,
+          114.475,
+          114.96,
+          115.679
+        ]
+      }
+    },
+    {
+      "reference": "L43",
+      "target": "L44",
+      "referenceRange": [
+        209.36,
+        212.55
+      ],
+      "searchRange": [
+        217.98000000000002,
+        224.12
+      ],
+      "mix": {
+        "offset": 9.599999999999994,
+        "correlation": 0.6650376319885254,
+        "predictedWordStarts": [
+          219.06,
+          219.24,
+          219.42,
+          220.023,
+          220.7,
+          221.16
+        ]
+      },
+      "vocals": {
+        "offset": 9.599999999999994,
+        "correlation": 0.7263789176940918,
+        "predictedWordStarts": [
+          219.06,
+          219.24,
+          219.42,
+          220.023,
+          220.7,
+          221.16
+        ]
+      }
+    }
+  ],
+  "localSlices": [
+    {
+      "test": "final_if",
+      "referenceRange": [
+        209.25,
+        209.67
+      ],
+      "offset": 9.6,
+      "correlation": 0.519727
+    },
+    {
+      "test": "final_the",
+      "referenceRange": [
+        209.58,
+        209.87
+      ],
+      "offset": 9.6,
+      "correlation": 0.32382
+    },
+    {
+      "test": "final_sun",
+      "referenceRange": [
+        209.8,
+        210.34
+      ],
+      "offset": 9.6,
+      "correlation": 0.839151
+    },
+    {
+      "test": "final_burns",
+      "referenceRange": [
+        210.4,
+        211.0
+      ],
+      "offset": 9.6,
+      "correlation": 0.778601
+    },
+    {
+      "test": "final_out",
+      "referenceRange": [
+        211.06,
+        211.52
+      ],
+      "offset": 9.6,
+      "correlation": 0.804766
+    },
+    {
+      "test": "final_tonight",
+      "referenceRange": [
+        211.58,
+        212.33
+      ],
+      "offset": 9.6,
+      "correlation": 0.704247
+    },
+    {
+      "test": "prior_if",
+      "referenceRange": [
+        113.24,
+        113.62
+      ],
+      "offset": 96.0,
+      "correlation": 0.520596
+    },
+    {
+      "test": "prior_sun",
+      "referenceRange": [
+        113.78,
+        114.35
+      ],
+      "offset": 96.0,
+      "correlation": 0.55162
+    },
+    {
+      "test": "prior_burns",
+      "referenceRange": [
+        114.4,
+        115.08
+      ],
+      "offset": 96.0,
+      "correlation": 0.476509
+    },
+    {
+      "test": "prior_out",
+      "referenceRange": [
+        115.12,
+        115.62
+      ],
+      "offset": 96.0,
+      "correlation": 0.4581
+    },
+    {
+      "test": "prior_tonight",
+      "referenceRange": [
+        115.65,
+        116.6
+      ],
+      "offset": 96.0,
+      "correlation": 0.432671
+    },
+    {
+      "test": "opening_sun",
+      "referenceRange": [
+        27.35,
+        27.9
+      ],
+      "offset": 182.400062,
+      "correlation": 0.134813
+    },
+    {
+      "test": "opening_burns",
+      "referenceRange": [
+        28.0,
+        28.68
+      ],
+      "offset": 182.4,
+      "correlation": 0.103845
+    },
+    {
+      "test": "opening_out",
+      "referenceRange": [
+        28.7,
+        29.13
+      ],
+      "offset": 182.400062,
+      "correlation": 0.185022
+    }
+  ],
+  "spectralDtw": [
+    {
+      "referenceRange": [
+        209.2,
+        213.0
+      ],
+      "targetRange": [
+        218.8,
+        222.60000000000002
+      ],
+      "baseOffset": 9.600000000000023,
+      "medianLocalOffset": 0.0,
+      "p90AbsoluteLocalWarp": 0.07,
+      "pathMeanCosineCost": 0.2039748579263687,
+      "localWarpRange": [
+        -0.14,
+        0.0
+      ]
+    },
+    {
+      "referenceRange": [
+        113.2,
+        117.0
+      ],
+      "targetRange": [
+        209.2,
+        213.0
+      ],
+      "baseOffset": 95.99999999999999,
+      "medianLocalOffset": 0.0,
+      "p90AbsoluteLocalWarp": 0.02,
+      "pathMeanCosineCost": 0.3913266062736511,
+      "localWarpRange": [
+        -0.01,
+        0.04
+      ]
+    },
+    {
+      "referenceRange": [
+        26.8,
+        29.8
+      ],
+      "targetRange": [
+        209.2,
+        212.2
+      ],
+      "baseOffset": 182.39999999999998,
+      "medianLocalOffset": 0.02,
+      "p90AbsoluteLocalWarp": 0.05,
+      "pathMeanCosineCost": 0.28744345903396606,
+      "localWarpRange": [
+        0.0,
+        0.05
+      ]
+    },
+    {
+      "referenceRange": [
+        103.6,
+        107.39999999999999
+      ],
+      "targetRange": [
+        199.6,
+        203.4
+      ],
+      "baseOffset": 96.0,
+      "medianLocalOffset": 0.0,
+      "p90AbsoluteLocalWarp": 0.05,
+      "pathMeanCosineCost": 0.1565159559249878,
+      "localWarpRange": [
+        -0.05,
+        0.09
+      ]
+    }
+  ],
+  "refinements": [
+    {
+      "id": "L44-W01",
+      "text": "If",
+      "before": {
+        "start": 219.18,
+        "end": 219.442,
+        "startSample": 9665838,
+        "endSample": 9677392
+      },
+      "after": {
+        "start": 219.06,
+        "end": 219.24,
+        "startSample": 9660546,
+        "endSample": 9668484
+      },
+      "referenceId": "L43-W01"
+    },
+    {
+      "id": "L44-W02",
+      "text": "the",
+      "before": {
+        "start": 219.442,
+        "end": 219.8,
+        "startSample": 9677392,
+        "endSample": 9693180
+      },
+      "after": {
+        "start": 219.24,
+        "end": 219.42,
+        "startSample": 9668484,
+        "endSample": 9676422
+      },
+      "referenceId": "L43-W02"
+    },
+    {
+      "id": "L44-W03",
+      "text": "sun",
+      "before": {
+        "start": 219.8,
+        "end": 220.004,
+        "startSample": 9693180,
+        "endSample": 9702176
+      },
+      "after": {
+        "start": 219.42,
+        "end": 220.023,
+        "startSample": 9676422,
+        "endSample": 9703014
+      },
+      "referenceId": "L43-W03"
+    },
+    {
+      "id": "L44-W04",
+      "text": "burns",
+      "before": {
+        "start": 220.004,
+        "end": 220.64,
+        "startSample": 9702176,
+        "endSample": 9730224
+      },
+      "after": {
+        "start": 220.023,
+        "end": 220.7,
+        "startSample": 9703014,
+        "endSample": 9732870
+      },
+      "referenceId": "L43-W04"
+    },
+    {
+      "id": "L44-W05",
+      "text": "out",
+      "before": {
+        "start": 220.64,
+        "end": 221.22,
+        "startSample": 9730224,
+        "endSample": 9755802
+      },
+      "after": {
+        "start": 220.7,
+        "end": 221.16,
+        "startSample": 9732870,
+        "endSample": 9753156
+      },
+      "referenceId": "L43-W05"
+    },
+    {
+      "id": "L44-W06",
+      "text": "tonight",
+      "before": {
+        "start": 221.22,
+        "end": 222.52,
+        "startSample": 9755802,
+        "endSample": 9813132
+      },
+      "after": {
+        "start": 221.16,
+        "end": 221.9,
+        "startSample": 9753156,
+        "endSample": 9785790
+      },
+      "referenceId": "L43-W06"
+    }
+  ],
+  "assessment": {
+    "finalPair": "L43 and L44 whole-vocal correlation0.726 at exactly9.6s; local sun/burns/out/tonight0.839/0.779/0.805/0.704 at the same exact shift. All six local slice peaks agree.",
+    "priorToFinal": "L24 to L43 local filtered correlations0.43–0.55 at96s. Existing L43 sun and burns agree with transferred prior anchors within18ms and2ms, respectively; retained L43 absolute anchors because the evidence does not warrant replacing uncertain anchors wholesale.",
+    "opening": "Opening to first final hook has much weaker raw local correlation0.104–0.185, but every tested slice peaks at182.4s (within one16k sample) and log-mel DTW median local warp20ms,90th percentile50ms. This supports shared processed material, not precise absolute opening onsets. Opening timing not changed.",
+    "release": "The mapped final word endpoint uses the source hook’s selected sung-core release. It does not claim an independently measured exact termination of reverb."
+  }
+}

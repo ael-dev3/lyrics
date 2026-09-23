@@ -1,0 +1,56 @@
+{
+  "schema": "lyric-film/cover-review/v1",
+  "coverHashes": [
+    {
+      "path": "publishing/youtube-thumbnail.jpg",
+      "sha256": "14980f498679bc944bde0703adfee18a28f29b6ecb022b08c0f9dbcb73b7af00"
+    },
+    {
+      "path": "publishing/tiktok-profile-cover.jpg",
+      "sha256": "4bdffdc5aba78d10989d13174db4113d29657e5a4389e62f86102da2780ec06b"
+    }
+  ],
+  "visualInspection": {
+    "fullSize": {
+      "youtube": [
+        1920,
+        1080
+      ],
+      "tiktok": [
+        1200,
+        1600
+      ]
+    },
+    "smallSize": {
+      "youtube": [
+        320,
+        180
+      ],
+      "tiktok": [
+        150,
+        200
+      ]
+    },
+    "observations": [
+      "Complete song title remains readable in both full-size and small cover views.",
+      "All three performers are visible, with dedicated credit rows and no collisions.",
+      "Eclipse source image is retained without recoloring or generated content; its dark center supplies title contrast.",
+      "No player controls, error states, private review notes or workflow details appear in either cover.",
+      "No cropped text or glyphs intersect the frame edges."
+    ],
+    "scope": "Visual inspection of the final JPG cover files only; this does not certify film rendering."
+  },
+  "captionValidation": {
+    "srt": {
+      "codec": "subrip",
+      "ffprobePacketCount": 44
+    },
+    "vtt": {
+      "codec": "webvtt",
+      "ffprobePacketCount": 44
+    },
+    "cueCount": 44,
+    "sourceDisplayWindowsUnchanged": true
+  },
+  "sourceHashVerified": true
+}

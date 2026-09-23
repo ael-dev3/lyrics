@@ -1,0 +1,79 @@
+{
+  "revision": "word-atmosphere-v1",
+  "effect": "Mild lavender/violet halo on exact sung Supernova tokens",
+  "targets": [
+    {
+      "id": "L18-W01",
+      "start": 79.002,
+      "end": 81.27
+    },
+    {
+      "id": "L29-W01",
+      "start": 136.501,
+      "end": 138.81
+    }
+  ],
+  "envelope": {
+    "attackSeconds": 0.18,
+    "releaseSeconds": 0.28,
+    "clock": "source media time",
+    "pulse": false
+  },
+  "style": {
+    "inner": {
+      "rgb": [
+        209,
+        166,
+        255
+      ],
+      "alphaMax": 0.52,
+      "blurEm": 0.16
+    },
+    "outer": {
+      "rgb": [
+        154,
+        88,
+        235
+      ],
+      "alphaMax": 0.3,
+      "blurEm": 0.43
+    },
+    "goldFillPreserved": true,
+    "glyphMotion": false
+  },
+  "browserChecks": {
+    "layouts": [
+      "landscape",
+      "portrait"
+    ],
+    "observations": 24,
+    "absentDuringPreroll": true,
+    "bothWordsGoldWithSoftPurpleHalo": true,
+    "gentleRiseAndRelease": true,
+    "clearsForAllAt81_27And138_81": true,
+    "wordGeometryUnchangedBothLayouts": true,
+    "fireSeekCleanup": true,
+    "mobileSizeVisuallyReviewed": true
+  },
+  "playback": {
+    "sourceRange": [
+      78.5,
+      107.535754
+    ],
+    "speed": 1,
+    "muted": true,
+    "nativeDrops": 0,
+    "foregroundFrameGaps": 0,
+    "maximumCallbackDelayMs": 1.1,
+    "pictureError": null,
+    "consoleErrors": []
+  },
+  "existingRegressionTestsPassed": 30,
+  "filesSha256": {
+    "src/player.js": "d969cc04dcea8963de2d561caef04be8b6b48983c67fc6b244a8d5c01fcb22ab",
+    "review/index.html": "9484309be1dd8117932b098d9f68778a1983fe9f7801f7693aaa9784d0348871",
+    "src/timeline.json": "b71c6ea2e7c39a56843cd51be74bae10c1dcf095f81025b9c7af8ffd7f9ccba4"
+  },
+  "limits": "Targeted effect verification and muted playback; no new full-song acoustic or runtime claim.",
+  "productionRendered": false
+}

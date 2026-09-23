@@ -1,0 +1,3129 @@
+{
+  "revision": "preview-v6-audio-evidence",
+  "duration": 234.266122,
+  "alignmentStatus": "provisional",
+  "alignmentMethod": "Bounded transcript-conditioned alignment with cached MMS_FA and English wav2vec2 CTC on original mix and Demucs HTDemucs vocals, plus independent stable-whisper large-v3-turbo forced alignment on isolated vocals. Candidate disagreement and selected rationale preserved per word in evidence/alignment-v6.json. Opening hook has unforced recognition and visible voiced-spectrum support; no repeated-hook timing template remains. Full human listening review has not been recorded; sample indices encode selected estimates, not sample-accurate claims.",
+  "sections": [
+    {
+      "name": "Opening verse",
+      "start": 26.905,
+      "end": 48.8,
+      "lines": [
+        {
+          "text": "If the sun burns out tonight",
+          "start": 26.905,
+          "end": 29.56,
+          "words": [
+            {
+              "text": "If",
+              "start": 26.905,
+              "end": 27.206,
+              "id": "L01-W01",
+              "startSample": 1186510,
+              "endSample": 1199785,
+              "timingEvidence": "L01-W01",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "the",
+              "start": 27.206,
+              "end": 27.406,
+              "id": "L01-W02",
+              "startSample": 1199785,
+              "endSample": 1208605,
+              "timingEvidence": "L01-W02",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "sun",
+              "start": 27.406,
+              "end": 28.028,
+              "id": "L01-W03",
+              "startSample": 1208605,
+              "endSample": 1236035,
+              "timingEvidence": "L01-W03",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "burns",
+              "start": 28.028,
+              "end": 28.751,
+              "id": "L01-W04",
+              "startSample": 1236035,
+              "endSample": 1267919,
+              "timingEvidence": "L01-W04",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "out",
+              "start": 28.751,
+              "end": 29.136,
+              "id": "L01-W05",
+              "startSample": 1267919,
+              "endSample": 1284898,
+              "timingEvidence": "L01-W05",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "tonight",
+              "start": 29.136,
+              "end": 29.56,
+              "id": "L01-W06",
+              "startSample": 1284898,
+              "endSample": 1303596,
+              "timingEvidence": "L01-W06",
+              "timingConfidence": "provisional"
+            }
+          ],
+          "timingQuality": "Independent transcript-conditioned MMS, wav2vec2 and large Whisper candidates; explicit disagreements retained in evidence/alignment-v6.json. Listening review remains outstanding.",
+          "id": "L01",
+          "startSample": 1186510,
+          "endSample": 1303596
+        },
+        {
+          "text": "I wonder if the sun burnt out tonight",
+          "start": 30.7,
+          "end": 34.855,
+          "words": [
+            {
+              "text": "I",
+              "start": 30.7,
+              "end": 31.042,
+              "id": "L02-W01",
+              "startSample": 1353870,
+              "endSample": 1368952,
+              "timingEvidence": "L02-W01",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "wonder",
+              "start": 31.042,
+              "end": 31.764,
+              "id": "L02-W02",
+              "startSample": 1368952,
+              "endSample": 1400792,
+              "timingEvidence": "L02-W02",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "if",
+              "start": 31.764,
+              "end": 31.885,
+              "id": "L02-W03",
+              "startSample": 1400792,
+              "endSample": 1406128,
+              "timingEvidence": "L02-W03",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "the",
+              "start": 31.885,
+              "end": 32.226,
+              "id": "L02-W04",
+              "startSample": 1406128,
+              "endSample": 1421167,
+              "timingEvidence": "L02-W04",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "sun",
+              "start": 32.226,
+              "end": 32.848,
+              "id": "L02-W05",
+              "startSample": 1421167,
+              "endSample": 1448597,
+              "timingEvidence": "L02-W05",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "burnt",
+              "start": 32.848,
+              "end": 33.35,
+              "id": "L02-W06",
+              "startSample": 1448597,
+              "endSample": 1470735,
+              "timingEvidence": "L02-W06",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "out",
+              "start": 33.591,
+              "end": 34.032,
+              "id": "L02-W07",
+              "startSample": 1481363,
+              "endSample": 1500811,
+              "timingEvidence": "L02-W07",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "tonight",
+              "start": 34.032,
+              "end": 34.855,
+              "id": "L02-W08",
+              "startSample": 1500811,
+              "endSample": 1537105,
+              "timingEvidence": "L02-W08",
+              "timingConfidence": "provisional"
+            }
+          ],
+          "timingQuality": "Independent transcript-conditioned MMS, wav2vec2 and large Whisper candidates; explicit disagreements retained in evidence/alignment-v6.json. Listening review remains outstanding.",
+          "id": "L02",
+          "startSample": 1353870,
+          "endSample": 1537105
+        },
+        {
+          "text": "Would you let me go or hold me tight?",
+          "start": 35.861,
+          "end": 40.04,
+          "words": [
+            {
+              "text": "Would",
+              "start": 35.861,
+              "end": 36.182,
+              "id": "L03-W01",
+              "startSample": 1581470,
+              "endSample": 1595626,
+              "timingEvidence": "L03-W01",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "you",
+              "start": 36.182,
+              "end": 36.483,
+              "id": "L03-W02",
+              "startSample": 1595626,
+              "endSample": 1608900,
+              "timingEvidence": "L03-W02",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "let",
+              "start": 36.483,
+              "end": 36.764,
+              "id": "L03-W03",
+              "startSample": 1608900,
+              "endSample": 1621292,
+              "timingEvidence": "L03-W03",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "me",
+              "start": 36.764,
+              "end": 37.045,
+              "id": "L03-W04",
+              "startSample": 1621292,
+              "endSample": 1633684,
+              "timingEvidence": "L03-W04",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "go",
+              "start": 37.045,
+              "end": 37.48,
+              "id": "L03-W05",
+              "startSample": 1633684,
+              "endSample": 1652868,
+              "timingEvidence": "L03-W05",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "or",
+              "start": 37.768,
+              "end": 38.23,
+              "id": "L03-W06",
+              "startSample": 1665569,
+              "endSample": 1685943,
+              "timingEvidence": "L03-W06",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "hold",
+              "start": 38.23,
+              "end": 38.792,
+              "id": "L03-W07",
+              "startSample": 1685943,
+              "endSample": 1710727,
+              "timingEvidence": "L03-W07",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "me",
+              "start": 38.792,
+              "end": 39.093,
+              "id": "L03-W08",
+              "startSample": 1710727,
+              "endSample": 1724001,
+              "timingEvidence": "L03-W08",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "tight?",
+              "start": 39.093,
+              "end": 40.04,
+              "id": "L03-W09",
+              "startSample": 1724001,
+              "endSample": 1765764,
+              "timingEvidence": "L03-W09",
+              "timingConfidence": "provisional"
+            }
+          ],
+          "timingQuality": "Independent transcript-conditioned MMS, wav2vec2 and large Whisper candidates; explicit disagreements retained in evidence/alignment-v6.json. Listening review remains outstanding.",
+          "id": "L03",
+          "startSample": 1581470,
+          "endSample": 1765764
+        },
+        {
+          "text": "Just one touch could erase the light",
+          "start": 40.7,
+          "end": 44.42,
+          "words": [
+            {
+              "text": "Just",
+              "start": 40.7,
+              "end": 41.12,
+              "id": "L04-W01",
+              "startSample": 1794870,
+              "endSample": 1813392,
+              "timingEvidence": "L04-W01",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "one",
+              "start": 41.444,
+              "end": 41.653,
+              "id": "L04-W02",
+              "startSample": 1827680,
+              "endSample": 1836897,
+              "timingEvidence": "L04-W02",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "touch",
+              "start": 41.653,
+              "end": 42.378,
+              "id": "L04-W03",
+              "startSample": 1836897,
+              "endSample": 1868870,
+              "timingEvidence": "L04-W03",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "could",
+              "start": 42.378,
+              "end": 42.775,
+              "id": "L04-W04",
+              "startSample": 1868870,
+              "endSample": 1886378,
+              "timingEvidence": "L04-W04",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "erase",
+              "start": 42.775,
+              "end": 43.674,
+              "id": "L04-W05",
+              "startSample": 1886378,
+              "endSample": 1926023,
+              "timingEvidence": "L04-W05",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "the",
+              "start": 43.674,
+              "end": 43.955,
+              "id": "L04-W06",
+              "startSample": 1926023,
+              "endSample": 1938416,
+              "timingEvidence": "L04-W06",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "light",
+              "start": 43.955,
+              "end": 44.42,
+              "id": "L04-W07",
+              "startSample": 1938416,
+              "endSample": 1958922,
+              "timingEvidence": "L04-W07",
+              "timingConfidence": "provisional"
+            }
+          ],
+          "timingQuality": "Independent transcript-conditioned MMS, wav2vec2 and large Whisper candidates; explicit disagreements retained in evidence/alignment-v6.json. Listening review remains outstanding.",
+          "id": "L04",
+          "startSample": 1794870,
+          "endSample": 1958922
+        },
+        {
+          "text": "Say we’ll be alright",
+          "start": 44.84,
+          "end": 46.48,
+          "words": [
+            {
+              "text": "Say",
+              "start": 44.84,
+              "end": 45.164,
+              "id": "L05-W01",
+              "startSample": 1977444,
+              "endSample": 1991732,
+              "timingEvidence": "L05-W01",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "we’ll",
+              "start": 45.164,
+              "end": 45.426,
+              "id": "L05-W02",
+              "startSample": 1991732,
+              "endSample": 2003287,
+              "timingEvidence": "L05-W02",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "be",
+              "start": 45.426,
+              "end": 45.754,
+              "id": "L05-W03",
+              "startSample": 2003287,
+              "endSample": 2017751,
+              "timingEvidence": "L05-W03",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "alright",
+              "start": 45.754,
+              "end": 46.48,
+              "id": "L05-W04",
+              "startSample": 2017751,
+              "endSample": 2049768,
+              "timingEvidence": "L05-W04",
+              "timingConfidence": "provisional"
+            }
+          ],
+          "timingQuality": "Independent transcript-conditioned MMS, wav2vec2 and large Whisper candidates; explicit disagreements retained in evidence/alignment-v6.json. Listening review remains outstanding.",
+          "id": "L05",
+          "startSample": 1977444,
+          "endSample": 2049768
+        },
+        {
+          "text": "Say we’ll be alright",
+          "start": 47.202,
+          "end": 48.8,
+          "words": [
+            {
+              "text": "Say",
+              "start": 47.202,
+              "end": 47.545,
+              "id": "L06-W01",
+              "startSample": 2081608,
+              "endSample": 2096734,
+              "timingEvidence": "L06-W01",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "we’ll",
+              "start": 47.545,
+              "end": 47.76,
+              "id": "L06-W02",
+              "startSample": 2096734,
+              "endSample": 2106216,
+              "timingEvidence": "L06-W02",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "be",
+              "start": 47.76,
+              "end": 48.04,
+              "id": "L06-W03",
+              "startSample": 2106216,
+              "endSample": 2118564,
+              "timingEvidence": "L06-W03",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "alright",
+              "start": 48.04,
+              "end": 48.8,
+              "id": "L06-W04",
+              "startSample": 2118564,
+              "endSample": 2152080,
+              "timingEvidence": "L06-W04",
+              "timingConfidence": "provisional"
+            }
+          ],
+          "timingQuality": "Independent transcript-conditioned MMS, wav2vec2 and large Whisper candidates; explicit disagreements retained in evidence/alignment-v6.json. Listening review remains outstanding.",
+          "id": "L06",
+          "startSample": 2081608,
+          "endSample": 2152080
+        }
+      ],
+      "startSample": 1186731,
+      "endSample": 2162664
+    },
+    {
+      "name": "Build",
+      "start": 49.3,
+      "end": 65.253,
+      "lines": [
+        {
+          "text": "Tell me you mean it",
+          "start": 49.3,
+          "end": 51.06,
+          "words": [
+            {
+              "text": "Tell",
+              "start": 49.3,
+              "end": 49.664,
+              "id": "L07-W01",
+              "startSample": 2174130,
+              "endSample": 2190182,
+              "timingEvidence": "L07-W01",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "me",
+              "start": 49.664,
+              "end": 49.946,
+              "id": "L07-W02",
+              "startSample": 2190182,
+              "endSample": 2202619,
+              "timingEvidence": "L07-W02",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "you",
+              "start": 49.946,
+              "end": 50.114,
+              "id": "L07-W03",
+              "startSample": 2202619,
+              "endSample": 2210027,
+              "timingEvidence": "L07-W03",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "mean",
+              "start": 50.114,
+              "end": 50.62,
+              "id": "L07-W04",
+              "startSample": 2210027,
+              "endSample": 2232342,
+              "timingEvidence": "L07-W04",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "it",
+              "start": 50.62,
+              "end": 51.06,
+              "id": "L07-W05",
+              "startSample": 2232342,
+              "endSample": 2251746,
+              "timingEvidence": "L07-W05",
+              "timingConfidence": "provisional"
+            }
+          ],
+          "timingQuality": "Independent transcript-conditioned MMS, wav2vec2 and large Whisper candidates; explicit disagreements retained in evidence/alignment-v6.json. Listening review remains outstanding.",
+          "id": "L07",
+          "startSample": 2174130,
+          "endSample": 2251746
+        },
+        {
+          "text": "Make me believe it",
+          "start": 51.742,
+          "end": 53.46,
+          "words": [
+            {
+              "text": "Make",
+              "start": 51.742,
+              "end": 52.044,
+              "id": "L08-W01",
+              "startSample": 2281822,
+              "endSample": 2295140,
+              "timingEvidence": "L08-W01",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "me",
+              "start": 52.044,
+              "end": 52.346,
+              "id": "L08-W02",
+              "startSample": 2295140,
+              "endSample": 2308459,
+              "timingEvidence": "L08-W02",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "believe",
+              "start": 52.346,
+              "end": 52.82,
+              "id": "L08-W03",
+              "startSample": 2308459,
+              "endSample": 2329362,
+              "timingEvidence": "L08-W03",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "it",
+              "start": 52.82,
+              "end": 53.46,
+              "id": "L08-W04",
+              "startSample": 2329362,
+              "endSample": 2357586,
+              "timingEvidence": "L08-W04",
+              "timingConfidence": "provisional"
+            }
+          ],
+          "timingQuality": "Independent transcript-conditioned MMS, wav2vec2 and large Whisper candidates; explicit disagreements retained in evidence/alignment-v6.json. Listening review remains outstanding.",
+          "id": "L08",
+          "startSample": 2281822,
+          "endSample": 2357586
+        },
+        {
+          "text": "I’m barely breathing",
+          "start": 54.081,
+          "end": 55.754,
+          "words": [
+            {
+              "text": "I’m",
+              "start": 54.081,
+              "end": 54.465,
+              "id": "L09-W01",
+              "startSample": 2384972,
+              "endSample": 2401906,
+              "timingEvidence": "L09-W01",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "barely",
+              "start": 54.465,
+              "end": 55.049,
+              "id": "L09-W02",
+              "startSample": 2401906,
+              "endSample": 2427661,
+              "timingEvidence": "L09-W02",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "breathing",
+              "start": 55.049,
+              "end": 55.754,
+              "id": "L09-W03",
+              "startSample": 2427661,
+              "endSample": 2458751,
+              "timingEvidence": "L09-W03",
+              "timingConfidence": "provisional"
+            }
+          ],
+          "timingQuality": "Independent transcript-conditioned MMS, wav2vec2 and large Whisper candidates; explicit disagreements retained in evidence/alignment-v6.json. Listening review remains outstanding.",
+          "id": "L09",
+          "startSample": 2384972,
+          "endSample": 2458751
+        },
+        {
+          "text": "Help me kill the curse",
+          "start": 56.24,
+          "end": 58.62,
+          "words": [
+            {
+              "text": "Help",
+              "start": 56.24,
+              "end": 56.825,
+              "id": "L10-W01",
+              "startSample": 2480184,
+              "endSample": 2505982,
+              "timingEvidence": "L10-W01",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "me",
+              "start": 56.825,
+              "end": 57.399,
+              "id": "L10-W02",
+              "startSample": 2505982,
+              "endSample": 2531296,
+              "timingEvidence": "L10-W02",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "kill",
+              "start": 57.399,
+              "end": 57.86,
+              "id": "L10-W03",
+              "startSample": 2531296,
+              "endSample": 2551626,
+              "timingEvidence": "L10-W03",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "the",
+              "start": 58.083,
+              "end": 58.334,
+              "id": "L10-W04",
+              "startSample": 2561460,
+              "endSample": 2572529,
+              "timingEvidence": "L10-W04",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "curse",
+              "start": 58.334,
+              "end": 58.62,
+              "id": "L10-W05",
+              "startSample": 2572529,
+              "endSample": 2585142,
+              "timingEvidence": "L10-W05",
+              "timingConfidence": "provisional"
+            }
+          ],
+          "timingQuality": "Independent transcript-conditioned MMS, wav2vec2 and large Whisper candidates; explicit disagreements retained in evidence/alignment-v6.json. Listening review remains outstanding.",
+          "id": "L10",
+          "startSample": 2480184,
+          "endSample": 2585142
+        },
+        {
+          "text": "It’s getting colder",
+          "start": 58.781,
+          "end": 60.32,
+          "words": [
+            {
+              "text": "It’s",
+              "start": 58.781,
+              "end": 59.244,
+              "id": "L11-W01",
+              "startSample": 2592242,
+              "endSample": 2612660,
+              "timingEvidence": "L11-W01",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "getting",
+              "start": 59.244,
+              "end": 59.827,
+              "id": "L11-W02",
+              "startSample": 2612660,
+              "endSample": 2638371,
+              "timingEvidence": "L11-W02",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "colder",
+              "start": 59.827,
+              "end": 60.32,
+              "id": "L11-W03",
+              "startSample": 2638371,
+              "endSample": 2660112,
+              "timingEvidence": "L11-W03",
+              "timingConfidence": "provisional"
+            }
+          ],
+          "timingQuality": "Independent transcript-conditioned MMS, wav2vec2 and large Whisper candidates; explicit disagreements retained in evidence/alignment-v6.json. Listening review remains outstanding.",
+          "id": "L11",
+          "startSample": 2592242,
+          "endSample": 2660112
+        },
+        {
+          "text": "Hell’s freezing over",
+          "start": 61.341,
+          "end": 62.78,
+          "words": [
+            {
+              "text": "Hell’s",
+              "start": 61.341,
+              "end": 61.684,
+              "id": "L12-W01",
+              "startSample": 2705138,
+              "endSample": 2720264,
+              "timingEvidence": "L12-W01",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "freezing",
+              "start": 61.684,
+              "end": 62.449,
+              "id": "L12-W02",
+              "startSample": 2720264,
+              "endSample": 2754001,
+              "timingEvidence": "L12-W02",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "over",
+              "start": 62.449,
+              "end": 62.78,
+              "id": "L12-W03",
+              "startSample": 2754001,
+              "endSample": 2768598,
+              "timingEvidence": "L12-W03",
+              "timingConfidence": "provisional"
+            }
+          ],
+          "timingQuality": "Independent transcript-conditioned MMS, wav2vec2 and large Whisper candidates; explicit disagreements retained in evidence/alignment-v6.json. Listening review remains outstanding.",
+          "id": "L12",
+          "startSample": 2705138,
+          "endSample": 2768598
+        },
+        {
+          "text": "So pull me closer",
+          "start": 63.742,
+          "end": 65.253,
+          "words": [
+            {
+              "text": "So",
+              "start": 63.742,
+              "end": 64.004,
+              "id": "L13-W01",
+              "startSample": 2811022,
+              "endSample": 2822576,
+              "timingEvidence": "L13-W01",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "pull",
+              "start": 64.004,
+              "end": 64.356,
+              "id": "L13-W02",
+              "startSample": 2822576,
+              "endSample": 2838100,
+              "timingEvidence": "L13-W02",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "me",
+              "start": 64.356,
+              "end": 64.56,
+              "id": "L13-W03",
+              "startSample": 2838100,
+              "endSample": 2847096,
+              "timingEvidence": "L13-W03",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "closer",
+              "start": 64.56,
+              "end": 65.253,
+              "id": "L13-W04",
+              "startSample": 2847096,
+              "endSample": 2877657,
+              "timingEvidence": "L13-W04",
+              "timingConfidence": "provisional"
+            }
+          ],
+          "timingQuality": "Independent transcript-conditioned MMS, wav2vec2 and large Whisper candidates; explicit disagreements retained in evidence/alignment-v6.json. Listening review remains outstanding.",
+          "id": "L13",
+          "startSample": 2811022,
+          "endSample": 2877657
+        }
+      ],
+      "startSample": 2191329,
+      "endSample": 2889432
+    },
+    {
+      "name": "Refrain I",
+      "start": 65.841,
+      "end": 88.176,
+      "lines": [
+        {
+          "text": "Hit me where it hurts",
+          "start": 65.841,
+          "end": 68.62,
+          "words": [
+            {
+              "text": "Hit",
+              "start": 65.841,
+              "end": 66.16,
+              "id": "L14-W01",
+              "startSample": 2903588,
+              "endSample": 2917656,
+              "timingEvidence": "L14-W01",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "me",
+              "start": 66.454,
+              "end": 66.68,
+              "id": "L14-W02",
+              "startSample": 2930621,
+              "endSample": 2940588,
+              "timingEvidence": "L14-W02",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "where",
+              "start": 67.027,
+              "end": 67.38,
+              "id": "L14-W03",
+              "startSample": 2955891,
+              "endSample": 2971458,
+              "timingEvidence": "L14-W03",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "it",
+              "start": 67.38,
+              "end": 68.252,
+              "id": "L14-W04",
+              "startSample": 2971458,
+              "endSample": 3009913,
+              "timingEvidence": "L14-W04",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "hurts",
+              "start": 68.252,
+              "end": 68.62,
+              "id": "L14-W05",
+              "startSample": 3009913,
+              "endSample": 3026142,
+              "timingEvidence": "L14-W05",
+              "timingConfidence": "provisional"
+            }
+          ],
+          "timingQuality": "Independent transcript-conditioned MMS, wav2vec2 and large Whisper candidates; explicit disagreements retained in evidence/alignment-v6.json. Listening review remains outstanding.",
+          "id": "L14",
+          "startSample": 2903588,
+          "endSample": 3026142
+        },
+        {
+          "text": "End of the world",
+          "start": 69.622,
+          "end": 71.2,
+          "words": [
+            {
+              "text": "End",
+              "start": 69.622,
+              "end": 69.864,
+              "id": "L15-W01",
+              "startSample": 3070330,
+              "endSample": 3081002,
+              "timingEvidence": "L15-W01",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "of",
+              "start": 69.864,
+              "end": 70.12,
+              "id": "L15-W02",
+              "startSample": 3081002,
+              "endSample": 3092292,
+              "timingEvidence": "L15-W02",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "the",
+              "start": 70.12,
+              "end": 70.34,
+              "id": "L15-W03",
+              "startSample": 3092292,
+              "endSample": 3101994,
+              "timingEvidence": "L15-W03",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "world",
+              "start": 70.34,
+              "end": 71.2,
+              "id": "L15-W04",
+              "startSample": 3101994,
+              "endSample": 3139920,
+              "timingEvidence": "L15-W04",
+              "timingConfidence": "provisional"
+            }
+          ],
+          "timingQuality": "Independent transcript-conditioned MMS, wav2vec2 and large Whisper candidates; explicit disagreements retained in evidence/alignment-v6.json. Listening review remains outstanding.",
+          "id": "L15",
+          "startSample": 3070330,
+          "endSample": 3139920
+        },
+        {
+          "text": "All I need is you",
+          "start": 71.902,
+          "end": 74.48,
+          "words": [
+            {
+              "text": "All",
+              "start": 71.902,
+              "end": 72.16,
+              "id": "L16-W01",
+              "startSample": 3170878,
+              "endSample": 3182256,
+              "timingEvidence": "L16-W01",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "I",
+              "start": 72.16,
+              "end": 72.706,
+              "id": "L16-W02",
+              "startSample": 3182256,
+              "endSample": 3206335,
+              "timingEvidence": "L16-W02",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "need",
+              "start": 72.706,
+              "end": 73.42,
+              "id": "L16-W03",
+              "startSample": 3206335,
+              "endSample": 3237822,
+              "timingEvidence": "L16-W03",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "is",
+              "start": 73.42,
+              "end": 74.02,
+              "id": "L16-W04",
+              "startSample": 3237822,
+              "endSample": 3264282,
+              "timingEvidence": "L16-W04",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "you",
+              "start": 74.02,
+              "end": 74.48,
+              "id": "L16-W05",
+              "startSample": 3264282,
+              "endSample": 3284568,
+              "timingEvidence": "L16-W05",
+              "timingConfidence": "provisional"
+            }
+          ],
+          "timingQuality": "Independent transcript-conditioned MMS, wav2vec2 and large Whisper candidates; explicit disagreements retained in evidence/alignment-v6.json. Listening review remains outstanding.",
+          "id": "L16",
+          "startSample": 3170878,
+          "endSample": 3284568
+        },
+        {
+          "text": "If the sun burns out tonight",
+          "start": 74.941,
+          "end": 78.1,
+          "words": [
+            {
+              "text": "If",
+              "start": 74.941,
+              "end": 75.182,
+              "id": "L17-W01",
+              "startSample": 3304898,
+              "endSample": 3315526,
+              "timingEvidence": "L17-W01",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "the",
+              "start": 75.182,
+              "end": 75.444,
+              "id": "L17-W02",
+              "startSample": 3315526,
+              "endSample": 3327080,
+              "timingEvidence": "L17-W02",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "sun",
+              "start": 75.444,
+              "end": 76.066,
+              "id": "L17-W03",
+              "startSample": 3327080,
+              "endSample": 3354511,
+              "timingEvidence": "L17-W03",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "burns",
+              "start": 76.066,
+              "end": 76.665,
+              "id": "L17-W04",
+              "startSample": 3354511,
+              "endSample": 3380927,
+              "timingEvidence": "L17-W04",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "out",
+              "start": 76.665,
+              "end": 77.186,
+              "id": "L17-W05",
+              "startSample": 3380927,
+              "endSample": 3403903,
+              "timingEvidence": "L17-W05",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "tonight",
+              "start": 77.186,
+              "end": 78.1,
+              "id": "L17-W06",
+              "startSample": 3403903,
+              "endSample": 3444210,
+              "timingEvidence": "L17-W06",
+              "timingConfidence": "provisional"
+            }
+          ],
+          "timingQuality": "Independent transcript-conditioned MMS, wav2vec2 and large Whisper candidates; explicit disagreements retained in evidence/alignment-v6.json. Listening review remains outstanding.",
+          "id": "L17",
+          "startSample": 3304898,
+          "endSample": 3444210
+        },
+        {
+          "text": "Supernova, all I see is you",
+          "start": 79.002,
+          "end": 83.74,
+          "words": [
+            {
+              "text": "Supernova,",
+              "start": 79.002,
+              "end": 81.27,
+              "id": "L18-W01",
+              "startSample": 3483988,
+              "endSample": 3584007,
+              "timingEvidence": "L18-W01",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "all",
+              "start": 81.27,
+              "end": 81.6,
+              "id": "L18-W02",
+              "startSample": 3584007,
+              "endSample": 3598560,
+              "timingEvidence": "L18-W02",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "I",
+              "start": 81.6,
+              "end": 82.1,
+              "id": "L18-W03",
+              "startSample": 3598560,
+              "endSample": 3620610,
+              "timingEvidence": "L18-W03",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "see",
+              "start": 82.1,
+              "end": 82.74,
+              "id": "L18-W04",
+              "startSample": 3620610,
+              "endSample": 3648834,
+              "timingEvidence": "L18-W04",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "is",
+              "start": 82.74,
+              "end": 83.48,
+              "id": "L18-W05",
+              "startSample": 3648834,
+              "endSample": 3681468,
+              "timingEvidence": "L18-W05",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "you",
+              "start": 83.48,
+              "end": 83.74,
+              "id": "L18-W06",
+              "startSample": 3681468,
+              "endSample": 3692934,
+              "timingEvidence": "L18-W06",
+              "timingConfidence": "provisional"
+            }
+          ],
+          "timingQuality": "Independent transcript-conditioned MMS, wav2vec2 and large Whisper candidates; explicit disagreements retained in evidence/alignment-v6.json. Listening review remains outstanding.",
+          "id": "L18",
+          "startSample": 3483988,
+          "endSample": 3692934
+        },
+        {
+          "text": "If the sun burns out tonight",
+          "start": 84.561,
+          "end": 88.176,
+          "words": [
+            {
+              "text": "If",
+              "start": 84.561,
+              "end": 84.762,
+              "id": "L19-W01",
+              "startSample": 3729140,
+              "endSample": 3738004,
+              "timingEvidence": "L19-W01",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "the",
+              "start": 84.762,
+              "end": 85.043,
+              "id": "L19-W02",
+              "startSample": 3738004,
+              "endSample": 3750396,
+              "timingEvidence": "L19-W02",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "sun",
+              "start": 85.043,
+              "end": 85.666,
+              "id": "L19-W03",
+              "startSample": 3750396,
+              "endSample": 3777871,
+              "timingEvidence": "L19-W03",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "burns",
+              "start": 85.666,
+              "end": 86.284,
+              "id": "L19-W04",
+              "startSample": 3777871,
+              "endSample": 3805124,
+              "timingEvidence": "L19-W04",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "out",
+              "start": 86.284,
+              "end": 87.001,
+              "id": "L19-W05",
+              "startSample": 3805124,
+              "endSample": 3836744,
+              "timingEvidence": "L19-W05",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "tonight",
+              "start": 87.001,
+              "end": 88.176,
+              "id": "L19-W06",
+              "startSample": 3836744,
+              "endSample": 3888562,
+              "timingEvidence": "L19-W06",
+              "timingConfidence": "provisional"
+            }
+          ],
+          "timingQuality": "Independent transcript-conditioned MMS, wav2vec2 and large Whisper candidates; explicit disagreements retained in evidence/alignment-v6.json. Listening review remains outstanding.",
+          "id": "L19",
+          "startSample": 3729140,
+          "endSample": 3888562
+        }
+      ],
+      "startSample": 2947644,
+      "endSample": 3898440
+    },
+    {
+      "name": "Void passage I",
+      "start": 88.95,
+      "end": 103.0,
+      "lines": [
+        {
+          "text": "Now the void calls out my name",
+          "start": 88.95,
+          "end": 92.72,
+          "words": [
+            {
+              "text": "Now",
+              "start": 88.95,
+              "end": 89.242,
+              "id": "L20-W01",
+              "startSample": 3922695,
+              "endSample": 3935572,
+              "timingEvidence": "L20-W01",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "the",
+              "start": 89.242,
+              "end": 89.523,
+              "id": "L20-W02",
+              "startSample": 3935572,
+              "endSample": 3947964,
+              "timingEvidence": "L20-W02",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "void",
+              "start": 89.523,
+              "end": 90.04,
+              "id": "L20-W03",
+              "startSample": 3947964,
+              "endSample": 3970764,
+              "timingEvidence": "L20-W03",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "calls",
+              "start": 90.416,
+              "end": 90.854,
+              "id": "L20-W04",
+              "startSample": 3987346,
+              "endSample": 4006661,
+              "timingEvidence": "L20-W04",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "out",
+              "start": 90.854,
+              "end": 91.38,
+              "id": "L20-W05",
+              "startSample": 4006661,
+              "endSample": 4029858,
+              "timingEvidence": "L20-W05",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "my",
+              "start": 91.38,
+              "end": 91.932,
+              "id": "L20-W06",
+              "startSample": 4029858,
+              "endSample": 4054201,
+              "timingEvidence": "L20-W06",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "name",
+              "start": 91.932,
+              "end": 92.72,
+              "id": "L20-W07",
+              "startSample": 4054201,
+              "endSample": 4088952,
+              "timingEvidence": "L20-W07",
+              "timingConfidence": "provisional"
+            }
+          ],
+          "timingQuality": "Independent transcript-conditioned MMS, wav2vec2 and large Whisper candidates; explicit disagreements retained in evidence/alignment-v6.json. Listening review remains outstanding.",
+          "id": "L20",
+          "startSample": 3922695,
+          "endSample": 4088952
+        },
+        {
+          "text": "It gets louder every day",
+          "start": 93.821,
+          "end": 97.24,
+          "words": [
+            {
+              "text": "It",
+              "start": 93.821,
+              "end": 94.022,
+              "id": "L21-W01",
+              "startSample": 4137506,
+              "endSample": 4146370,
+              "timingEvidence": "L21-W01",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "gets",
+              "start": 94.022,
+              "end": 94.32,
+              "id": "L21-W02",
+              "startSample": 4146370,
+              "endSample": 4159512,
+              "timingEvidence": "L21-W02",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "louder",
+              "start": 94.32,
+              "end": 95.18,
+              "id": "L21-W03",
+              "startSample": 4159512,
+              "endSample": 4197438,
+              "timingEvidence": "L21-W03",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "every",
+              "start": 95.18,
+              "end": 96.64,
+              "id": "L21-W04",
+              "startSample": 4197438,
+              "endSample": 4261824,
+              "timingEvidence": "L21-W04",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "day",
+              "start": 96.64,
+              "end": 97.24,
+              "id": "L21-W05",
+              "startSample": 4261824,
+              "endSample": 4288284,
+              "timingEvidence": "L21-W05",
+              "timingConfidence": "provisional"
+            }
+          ],
+          "timingQuality": "Independent transcript-conditioned MMS, wav2vec2 and large Whisper candidates; explicit disagreements retained in evidence/alignment-v6.json. Listening review remains outstanding.",
+          "id": "L21",
+          "startSample": 4137506,
+          "endSample": 4288284
+        },
+        {
+          "text": "And in the darkness all I need is you",
+          "start": 98.001,
+          "end": 103.0,
+          "words": [
+            {
+              "text": "And",
+              "start": 98.001,
+              "end": 98.302,
+              "id": "L22-W01",
+              "startSample": 4321844,
+              "endSample": 4335118,
+              "timingEvidence": "L22-W01",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "in",
+              "start": 98.302,
+              "end": 98.543,
+              "id": "L22-W02",
+              "startSample": 4335118,
+              "endSample": 4345746,
+              "timingEvidence": "L22-W02",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "the",
+              "start": 98.543,
+              "end": 99.065,
+              "id": "L22-W03",
+              "startSample": 4345746,
+              "endSample": 4368766,
+              "timingEvidence": "L22-W03",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "darkness",
+              "start": 99.065,
+              "end": 100.149,
+              "id": "L22-W04",
+              "startSample": 4368766,
+              "endSample": 4416571,
+              "timingEvidence": "L22-W04",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "all",
+              "start": 100.43,
+              "end": 101.092,
+              "id": "L22-W05",
+              "startSample": 4428963,
+              "endSample": 4458157,
+              "timingEvidence": "L22-W05",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "I",
+              "start": 101.092,
+              "end": 101.493,
+              "id": "L22-W06",
+              "startSample": 4458157,
+              "endSample": 4475841,
+              "timingEvidence": "L22-W06",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "need",
+              "start": 101.493,
+              "end": 102.3,
+              "id": "L22-W07",
+              "startSample": 4475841,
+              "endSample": 4511430,
+              "timingEvidence": "L22-W07",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "is",
+              "start": 102.3,
+              "end": 102.8,
+              "id": "L22-W08",
+              "startSample": 4511430,
+              "endSample": 4533480,
+              "timingEvidence": "L22-W08",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "you",
+              "start": 102.8,
+              "end": 103.0,
+              "id": "L22-W09",
+              "startSample": 4533480,
+              "endSample": 4542300,
+              "timingEvidence": "L22-W09",
+              "timingConfidence": "provisional"
+            }
+          ],
+          "timingQuality": "Independent transcript-conditioned MMS, wav2vec2 and large Whisper candidates; explicit disagreements retained in evidence/alignment-v6.json. Listening review remains outstanding.",
+          "id": "L22",
+          "startSample": 4321844,
+          "endSample": 4542300
+        }
+      ],
+      "startSample": 3970323,
+      "endSample": 4552002
+    },
+    {
+      "name": "Sun pickup I",
+      "start": 103.761,
+      "end": 117.355,
+      "lines": [
+        {
+          "text": "If the sun burns out tonight",
+          "start": 103.761,
+          "end": 107.354,
+          "words": [
+            {
+              "text": "If",
+              "start": 103.761,
+              "end": 103.962,
+              "id": "L23-W01",
+              "startSample": 4575860,
+              "endSample": 4584724,
+              "timingEvidence": "L23-W01",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "the",
+              "start": 103.962,
+              "end": 104.243,
+              "id": "L23-W02",
+              "startSample": 4584724,
+              "endSample": 4597116,
+              "timingEvidence": "L23-W02",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "sun",
+              "start": 104.243,
+              "end": 104.875,
+              "id": "L23-W03",
+              "startSample": 4597116,
+              "endSample": 4624988,
+              "timingEvidence": "L23-W03",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "burns",
+              "start": 104.875,
+              "end": 105.36,
+              "id": "L23-W04",
+              "startSample": 4624988,
+              "endSample": 4646376,
+              "timingEvidence": "L23-W04",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "out",
+              "start": 105.36,
+              "end": 106.079,
+              "id": "L23-W05",
+              "startSample": 4646376,
+              "endSample": 4678084,
+              "timingEvidence": "L23-W05",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "tonight",
+              "start": 106.079,
+              "end": 107.354,
+              "id": "L23-W06",
+              "startSample": 4678084,
+              "endSample": 4734311,
+              "timingEvidence": "L23-W06",
+              "timingConfidence": "provisional"
+            }
+          ],
+          "timingQuality": "Independent transcript-conditioned MMS, wav2vec2 and large Whisper candidates; explicit disagreements retained in evidence/alignment-v6.json. Listening review remains outstanding.",
+          "id": "L23",
+          "startSample": 4575860,
+          "endSample": 4734311
+        },
+        {
+          "text": "If the sun burns out tonight",
+          "start": 113.361,
+          "end": 117.355,
+          "words": [
+            {
+              "text": "If",
+              "start": 113.361,
+              "end": 113.582,
+              "id": "L24-W01",
+              "startSample": 4999220,
+              "endSample": 5008966,
+              "timingEvidence": "L24-W01",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "the",
+              "start": 113.582,
+              "end": 113.802,
+              "id": "L24-W02",
+              "startSample": 5008966,
+              "endSample": 5018668,
+              "timingEvidence": "L24-W02",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "sun",
+              "start": 113.802,
+              "end": 114.425,
+              "id": "L24-W03",
+              "startSample": 5018668,
+              "endSample": 5046142,
+              "timingEvidence": "L24-W03",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "burns",
+              "start": 114.425,
+              "end": 115.167,
+              "id": "L24-W04",
+              "startSample": 5046142,
+              "endSample": 5078865,
+              "timingEvidence": "L24-W04",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "out",
+              "start": 115.167,
+              "end": 115.669,
+              "id": "L24-W05",
+              "startSample": 5078865,
+              "endSample": 5101003,
+              "timingEvidence": "L24-W05",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "tonight",
+              "start": 115.669,
+              "end": 117.355,
+              "id": "L24-W06",
+              "startSample": 5101003,
+              "endSample": 5175356,
+              "timingEvidence": "L24-W06",
+              "timingConfidence": "provisional"
+            }
+          ],
+          "timingQuality": "Independent transcript-conditioned MMS, wav2vec2 and large Whisper candidates; explicit disagreements retained in evidence/alignment-v6.json. Listening review remains outstanding.",
+          "id": "L24",
+          "startSample": 4999220,
+          "endSample": 5175356
+        }
+      ],
+      "startSample": 4600071,
+      "endSample": 5177340
+    },
+    {
+      "name": "Refrain II",
+      "start": 123.351,
+      "end": 145.475,
+      "lines": [
+        {
+          "text": "Hit me where it hurts",
+          "start": 123.351,
+          "end": 126.52,
+          "words": [
+            {
+              "text": "Hit",
+              "start": 123.351,
+              "end": 123.78,
+              "id": "L25-W01",
+              "startSample": 5439779,
+              "endSample": 5458698,
+              "timingEvidence": "L25-W01",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "me",
+              "start": 124.024,
+              "end": 124.28,
+              "id": "L25-W02",
+              "startSample": 5469458,
+              "endSample": 5480748,
+              "timingEvidence": "L25-W02",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "where",
+              "start": 124.667,
+              "end": 125.04,
+              "id": "L25-W03",
+              "startSample": 5497815,
+              "endSample": 5514264,
+              "timingEvidence": "L25-W03",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "it",
+              "start": 125.04,
+              "end": 125.803,
+              "id": "L25-W04",
+              "startSample": 5514264,
+              "endSample": 5547912,
+              "timingEvidence": "L25-W04",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "hurts",
+              "start": 125.803,
+              "end": 126.52,
+              "id": "L25-W05",
+              "startSample": 5547912,
+              "endSample": 5579532,
+              "timingEvidence": "L25-W05",
+              "timingConfidence": "provisional"
+            }
+          ],
+          "timingQuality": "Independent transcript-conditioned MMS, wav2vec2 and large Whisper candidates; explicit disagreements retained in evidence/alignment-v6.json. Listening review remains outstanding.",
+          "id": "L25",
+          "startSample": 5439779,
+          "endSample": 5579532
+        },
+        {
+          "text": "End of the world",
+          "start": 127.021,
+          "end": 128.54,
+          "words": [
+            {
+              "text": "End",
+              "start": 127.021,
+              "end": 127.445,
+              "id": "L26-W01",
+              "startSample": 5601626,
+              "endSample": 5620324,
+              "timingEvidence": "L26-W01",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "of",
+              "start": 127.445,
+              "end": 127.667,
+              "id": "L26-W02",
+              "startSample": 5620324,
+              "endSample": 5630115,
+              "timingEvidence": "L26-W02",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "the",
+              "start": 127.667,
+              "end": 127.96,
+              "id": "L26-W03",
+              "startSample": 5630115,
+              "endSample": 5643036,
+              "timingEvidence": "L26-W03",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "world",
+              "start": 127.96,
+              "end": 128.54,
+              "id": "L26-W04",
+              "startSample": 5643036,
+              "endSample": 5668614,
+              "timingEvidence": "L26-W04",
+              "timingConfidence": "provisional"
+            }
+          ],
+          "timingQuality": "Independent transcript-conditioned MMS, wav2vec2 and large Whisper candidates; explicit disagreements retained in evidence/alignment-v6.json. Listening review remains outstanding.",
+          "id": "L26",
+          "startSample": 5601626,
+          "endSample": 5668614
+        },
+        {
+          "text": "All I need is you",
+          "start": 129.42,
+          "end": 131.8,
+          "words": [
+            {
+              "text": "All",
+              "start": 129.42,
+              "end": 129.82,
+              "id": "L27-W01",
+              "startSample": 5707422,
+              "endSample": 5725062,
+              "timingEvidence": "L27-W01",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "I",
+              "start": 129.82,
+              "end": 130.16,
+              "id": "L27-W02",
+              "startSample": 5725062,
+              "endSample": 5740056,
+              "timingEvidence": "L27-W02",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "need",
+              "start": 130.16,
+              "end": 130.76,
+              "id": "L27-W03",
+              "startSample": 5740056,
+              "endSample": 5766516,
+              "timingEvidence": "L27-W03",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "is",
+              "start": 130.76,
+              "end": 131.52,
+              "id": "L27-W04",
+              "startSample": 5766516,
+              "endSample": 5800032,
+              "timingEvidence": "L27-W04",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "you",
+              "start": 131.52,
+              "end": 131.8,
+              "id": "L27-W05",
+              "startSample": 5800032,
+              "endSample": 5812380,
+              "timingEvidence": "L27-W05",
+              "timingConfidence": "provisional"
+            }
+          ],
+          "timingQuality": "Independent transcript-conditioned MMS, wav2vec2 and large Whisper candidates; explicit disagreements retained in evidence/alignment-v6.json. Listening review remains outstanding.",
+          "id": "L27",
+          "startSample": 5707422,
+          "endSample": 5812380
+        },
+        {
+          "text": "If the sun burns out tonight",
+          "start": 132.542,
+          "end": 135.85,
+          "words": [
+            {
+              "text": "If",
+              "start": 132.542,
+              "end": 132.763,
+              "id": "L28-W01",
+              "startSample": 5845102,
+              "endSample": 5854848,
+              "timingEvidence": "L28-W01",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "the",
+              "start": 132.763,
+              "end": 133.044,
+              "id": "L28-W02",
+              "startSample": 5854848,
+              "endSample": 5867240,
+              "timingEvidence": "L28-W02",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "sun",
+              "start": 133.044,
+              "end": 133.62,
+              "id": "L28-W03",
+              "startSample": 5867240,
+              "endSample": 5892642,
+              "timingEvidence": "L28-W03",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "burns",
+              "start": 133.62,
+              "end": 134.4,
+              "id": "L28-W04",
+              "startSample": 5892642,
+              "endSample": 5927040,
+              "timingEvidence": "L28-W04",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "out",
+              "start": 134.4,
+              "end": 134.832,
+              "id": "L28-W05",
+              "startSample": 5927040,
+              "endSample": 5946091,
+              "timingEvidence": "L28-W05",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "tonight",
+              "start": 134.832,
+              "end": 135.85,
+              "id": "L28-W06",
+              "startSample": 5946091,
+              "endSample": 5990985,
+              "timingEvidence": "L28-W06",
+              "timingConfidence": "provisional"
+            }
+          ],
+          "timingQuality": "Independent transcript-conditioned MMS, wav2vec2 and large Whisper candidates; explicit disagreements retained in evidence/alignment-v6.json. Listening review remains outstanding.",
+          "id": "L28",
+          "startSample": 5845102,
+          "endSample": 5990985
+        },
+        {
+          "text": "Supernova, all I see is you",
+          "start": 136.501,
+          "end": 141.3,
+          "words": [
+            {
+              "text": "Supernova,",
+              "start": 136.501,
+              "end": 138.81,
+              "id": "L29-W01",
+              "startSample": 6019694,
+              "endSample": 6121521,
+              "timingEvidence": "L29-W01",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "all",
+              "start": 138.81,
+              "end": 139.14,
+              "id": "L29-W02",
+              "startSample": 6121521,
+              "endSample": 6136074,
+              "timingEvidence": "L29-W02",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "I",
+              "start": 139.14,
+              "end": 139.62,
+              "id": "L29-W03",
+              "startSample": 6136074,
+              "endSample": 6157242,
+              "timingEvidence": "L29-W03",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "see",
+              "start": 139.62,
+              "end": 140.38,
+              "id": "L29-W04",
+              "startSample": 6157242,
+              "endSample": 6190758,
+              "timingEvidence": "L29-W04",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "is",
+              "start": 140.38,
+              "end": 141.1,
+              "id": "L29-W05",
+              "startSample": 6190758,
+              "endSample": 6222510,
+              "timingEvidence": "L29-W05",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "you",
+              "start": 141.1,
+              "end": 141.3,
+              "id": "L29-W06",
+              "startSample": 6222510,
+              "endSample": 6231330,
+              "timingEvidence": "L29-W06",
+              "timingConfidence": "provisional"
+            }
+          ],
+          "timingQuality": "Independent transcript-conditioned MMS, wav2vec2 and large Whisper candidates; explicit disagreements retained in evidence/alignment-v6.json. Listening review remains outstanding.",
+          "id": "L29",
+          "startSample": 6019694,
+          "endSample": 6231330
+        },
+        {
+          "text": "If the sun burns out tonight",
+          "start": 142.162,
+          "end": 145.475,
+          "words": [
+            {
+              "text": "If",
+              "start": 142.162,
+              "end": 142.322,
+              "id": "L30-W01",
+              "startSample": 6269344,
+              "endSample": 6276400,
+              "timingEvidence": "L30-W01",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "the",
+              "start": 142.322,
+              "end": 142.603,
+              "id": "L30-W02",
+              "startSample": 6276400,
+              "endSample": 6288792,
+              "timingEvidence": "L30-W02",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "sun",
+              "start": 142.603,
+              "end": 143.236,
+              "id": "L30-W03",
+              "startSample": 6288792,
+              "endSample": 6316708,
+              "timingEvidence": "L30-W03",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "burns",
+              "start": 143.236,
+              "end": 143.58,
+              "id": "L30-W04",
+              "startSample": 6316708,
+              "endSample": 6331878,
+              "timingEvidence": "L30-W04",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "out",
+              "start": 143.58,
+              "end": 144.335,
+              "id": "L30-W05",
+              "startSample": 6331878,
+              "endSample": 6365174,
+              "timingEvidence": "L30-W05",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "tonight",
+              "start": 144.335,
+              "end": 145.475,
+              "id": "L30-W06",
+              "startSample": 6365174,
+              "endSample": 6415448,
+              "timingEvidence": "L30-W06",
+              "timingConfidence": "provisional"
+            }
+          ],
+          "timingQuality": "Independent transcript-conditioned MMS, wav2vec2 and large Whisper candidates; explicit disagreements retained in evidence/alignment-v6.json. Listening review remains outstanding.",
+          "id": "L30",
+          "startSample": 6269344,
+          "endSample": 6415448
+        }
+      ],
+      "startSample": 5441940,
+      "endSample": 6435072
+    },
+    {
+      "name": "Void passage II",
+      "start": 146.561,
+      "end": 160.68,
+      "lines": [
+        {
+          "text": "Now the void calls out my name",
+          "start": 146.561,
+          "end": 150.24,
+          "words": [
+            {
+              "text": "Now",
+              "start": 146.561,
+              "end": 146.822,
+              "id": "L31-W01",
+              "startSample": 6463340,
+              "endSample": 6474850,
+              "timingEvidence": "L31-W01",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "the",
+              "start": 146.822,
+              "end": 147.153,
+              "id": "L31-W02",
+              "startSample": 6474850,
+              "endSample": 6489447,
+              "timingEvidence": "L31-W02",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "void",
+              "start": 147.153,
+              "end": 148.077,
+              "id": "L31-W03",
+              "startSample": 6489447,
+              "endSample": 6530196,
+              "timingEvidence": "L31-W03",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "calls",
+              "start": 148.077,
+              "end": 148.494,
+              "id": "L31-W04",
+              "startSample": 6530196,
+              "endSample": 6548585,
+              "timingEvidence": "L31-W04",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "out",
+              "start": 148.494,
+              "end": 149.301,
+              "id": "L31-W05",
+              "startSample": 6548585,
+              "endSample": 6584174,
+              "timingEvidence": "L31-W05",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "my",
+              "start": 149.301,
+              "end": 149.602,
+              "id": "L31-W06",
+              "startSample": 6584174,
+              "endSample": 6597448,
+              "timingEvidence": "L31-W06",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "name",
+              "start": 149.602,
+              "end": 150.24,
+              "id": "L31-W07",
+              "startSample": 6597448,
+              "endSample": 6625584,
+              "timingEvidence": "L31-W07",
+              "timingConfidence": "provisional"
+            }
+          ],
+          "timingQuality": "Independent transcript-conditioned MMS, wav2vec2 and large Whisper candidates; explicit disagreements retained in evidence/alignment-v6.json. Listening review remains outstanding.",
+          "id": "L31",
+          "startSample": 6463340,
+          "endSample": 6625584
+        },
+        {
+          "text": "It gets louder every day",
+          "start": 151.401,
+          "end": 154.72,
+          "words": [
+            {
+              "text": "It",
+              "start": 151.401,
+              "end": 151.622,
+              "id": "L32-W01",
+              "startSample": 6676784,
+              "endSample": 6686530,
+              "timingEvidence": "L32-W01",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "gets",
+              "start": 151.622,
+              "end": 152.044,
+              "id": "L32-W02",
+              "startSample": 6686530,
+              "endSample": 6705140,
+              "timingEvidence": "L32-W02",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "louder",
+              "start": 152.044,
+              "end": 152.86,
+              "id": "L32-W03",
+              "startSample": 6705140,
+              "endSample": 6741126,
+              "timingEvidence": "L32-W03",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "every",
+              "start": 152.86,
+              "end": 154.14,
+              "id": "L32-W04",
+              "startSample": 6741126,
+              "endSample": 6797574,
+              "timingEvidence": "L32-W04",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "day",
+              "start": 154.14,
+              "end": 154.72,
+              "id": "L32-W05",
+              "startSample": 6797574,
+              "endSample": 6823152,
+              "timingEvidence": "L32-W05",
+              "timingConfidence": "provisional"
+            }
+          ],
+          "timingQuality": "Independent transcript-conditioned MMS, wav2vec2 and large Whisper candidates; explicit disagreements retained in evidence/alignment-v6.json. Listening review remains outstanding.",
+          "id": "L32",
+          "startSample": 6676784,
+          "endSample": 6823152
+        },
+        {
+          "text": "And in the darkness all I need is you",
+          "start": 155.621,
+          "end": 160.68,
+          "words": [
+            {
+              "text": "And",
+              "start": 155.621,
+              "end": 155.922,
+              "id": "L33-W01",
+              "startSample": 6862886,
+              "endSample": 6876160,
+              "timingEvidence": "L33-W01",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "in",
+              "start": 155.922,
+              "end": 156.163,
+              "id": "L33-W02",
+              "startSample": 6876160,
+              "endSample": 6886788,
+              "timingEvidence": "L33-W02",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "the",
+              "start": 156.163,
+              "end": 156.765,
+              "id": "L33-W03",
+              "startSample": 6886788,
+              "endSample": 6913336,
+              "timingEvidence": "L33-W03",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "darkness",
+              "start": 156.765,
+              "end": 157.829,
+              "id": "L33-W04",
+              "startSample": 6913336,
+              "endSample": 6960259,
+              "timingEvidence": "L33-W04",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "all",
+              "start": 158.05,
+              "end": 158.692,
+              "id": "L33-W05",
+              "startSample": 6970005,
+              "endSample": 6998317,
+              "timingEvidence": "L33-W05",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "I",
+              "start": 158.692,
+              "end": 159.174,
+              "id": "L33-W06",
+              "startSample": 6998317,
+              "endSample": 7019573,
+              "timingEvidence": "L33-W06",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "need",
+              "start": 159.174,
+              "end": 159.56,
+              "id": "L33-W07",
+              "startSample": 7019573,
+              "endSample": 7036596,
+              "timingEvidence": "L33-W07",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "is",
+              "start": 159.56,
+              "end": 160.36,
+              "id": "L33-W08",
+              "startSample": 7036596,
+              "endSample": 7071876,
+              "timingEvidence": "L33-W08",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "you",
+              "start": 160.36,
+              "end": 160.68,
+              "id": "L33-W09",
+              "startSample": 7071876,
+              "endSample": 7085988,
+              "timingEvidence": "L33-W09",
+              "timingConfidence": "provisional"
+            }
+          ],
+          "timingQuality": "Independent transcript-conditioned MMS, wav2vec2 and large Whisper candidates; explicit disagreements retained in evidence/alignment-v6.json. Listening review remains outstanding.",
+          "id": "L33",
+          "startSample": 6862886,
+          "endSample": 7085988
+        }
+      ],
+      "startSample": 6502104,
+      "endSample": 7084224
+    },
+    {
+      "name": "Sun pickup II",
+      "start": 161.342,
+      "end": 164.14,
+      "lines": [
+        {
+          "text": "If the sun burns out tonight",
+          "start": 161.342,
+          "end": 164.14,
+          "words": [
+            {
+              "text": "If",
+              "start": 161.342,
+              "end": 161.543,
+              "id": "L34-W01",
+              "startSample": 7115182,
+              "endSample": 7124046,
+              "timingEvidence": "L34-W01",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "the",
+              "start": 161.543,
+              "end": 161.804,
+              "id": "L34-W02",
+              "startSample": 7124046,
+              "endSample": 7135556,
+              "timingEvidence": "L34-W02",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "sun",
+              "start": 161.804,
+              "end": 162.447,
+              "id": "L34-W03",
+              "startSample": 7135556,
+              "endSample": 7163913,
+              "timingEvidence": "L34-W03",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "burns",
+              "start": 162.447,
+              "end": 163.085,
+              "id": "L34-W04",
+              "startSample": 7163913,
+              "endSample": 7192048,
+              "timingEvidence": "L34-W04",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "out",
+              "start": 163.085,
+              "end": 163.663,
+              "id": "L34-W05",
+              "startSample": 7192048,
+              "endSample": 7217538,
+              "timingEvidence": "L34-W05",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "tonight",
+              "start": 163.663,
+              "end": 164.14,
+              "id": "L34-W06",
+              "startSample": 7217538,
+              "endSample": 7238574,
+              "timingEvidence": "L34-W06",
+              "timingConfidence": "provisional"
+            }
+          ],
+          "timingQuality": "Independent transcript-conditioned MMS, wav2vec2 and large Whisper candidates; explicit disagreements retained in evidence/alignment-v6.json. Listening review remains outstanding.",
+          "id": "L34",
+          "startSample": 7115182,
+          "endSample": 7238574
+        }
+      ],
+      "startSample": 7124796,
+      "endSample": 7249599
+    },
+    {
+      "name": "Bridge",
+      "start": 164.841,
+      "end": 182.6,
+      "lines": [
+        {
+          "text": "Cos the silence is deafening now",
+          "start": 164.841,
+          "end": 167.94,
+          "words": [
+            {
+              "text": "Cos",
+              "start": 164.841,
+              "end": 165.142,
+              "id": "L35-W01",
+              "startSample": 7269488,
+              "endSample": 7282762,
+              "timingEvidence": "L35-W01",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "the",
+              "start": 165.142,
+              "end": 165.383,
+              "id": "L35-W02",
+              "startSample": 7282762,
+              "endSample": 7293390,
+              "timingEvidence": "L35-W02",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "silence",
+              "start": 165.383,
+              "end": 166.147,
+              "id": "L35-W03",
+              "startSample": 7293390,
+              "endSample": 7327083,
+              "timingEvidence": "L35-W03",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "is",
+              "start": 166.147,
+              "end": 166.348,
+              "id": "L35-W04",
+              "startSample": 7327083,
+              "endSample": 7335947,
+              "timingEvidence": "L35-W04",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "deafening",
+              "start": 166.348,
+              "end": 167.32,
+              "id": "L35-W05",
+              "startSample": 7335947,
+              "endSample": 7378812,
+              "timingEvidence": "L35-W05",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "now",
+              "start": 167.32,
+              "end": 167.94,
+              "id": "L35-W06",
+              "startSample": 7378812,
+              "endSample": 7406154,
+              "timingEvidence": "L35-W06",
+              "timingConfidence": "provisional"
+            }
+          ],
+          "timingQuality": "Independent transcript-conditioned MMS, wav2vec2 and large Whisper candidates; explicit disagreements retained in evidence/alignment-v6.json. Listening review remains outstanding.",
+          "id": "L35",
+          "startSample": 7269488,
+          "endSample": 7406154
+        },
+        {
+          "text": "Only the sound of our hearts still beating",
+          "start": 168.781,
+          "end": 173.02,
+          "words": [
+            {
+              "text": "Only",
+              "start": 168.781,
+              "end": 169.644,
+              "id": "L36-W01",
+              "startSample": 7443242,
+              "endSample": 7481300,
+              "timingEvidence": "L36-W01",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "the",
+              "start": 169.644,
+              "end": 169.845,
+              "id": "L36-W02",
+              "startSample": 7481300,
+              "endSample": 7490164,
+              "timingEvidence": "L36-W02",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "sound",
+              "start": 169.845,
+              "end": 170.638,
+              "id": "L36-W03",
+              "startSample": 7490164,
+              "endSample": 7525136,
+              "timingEvidence": "L36-W03",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "of",
+              "start": 170.638,
+              "end": 170.814,
+              "id": "L36-W04",
+              "startSample": 7525136,
+              "endSample": 7532897,
+              "timingEvidence": "L36-W04",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "our",
+              "start": 170.814,
+              "end": 171.13,
+              "id": "L36-W05",
+              "startSample": 7532897,
+              "endSample": 7546833,
+              "timingEvidence": "L36-W05",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "hearts",
+              "start": 171.13,
+              "end": 171.672,
+              "id": "L36-W06",
+              "startSample": 7546833,
+              "endSample": 7570735,
+              "timingEvidence": "L36-W06",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "still",
+              "start": 171.672,
+              "end": 172.1,
+              "id": "L36-W07",
+              "startSample": 7570735,
+              "endSample": 7589610,
+              "timingEvidence": "L36-W07",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "beating",
+              "start": 172.1,
+              "end": 173.02,
+              "id": "L36-W08",
+              "startSample": 7589610,
+              "endSample": 7630182,
+              "timingEvidence": "L36-W08",
+              "timingConfidence": "provisional"
+            }
+          ],
+          "timingQuality": "Independent transcript-conditioned MMS, wav2vec2 and large Whisper candidates; explicit disagreements retained in evidence/alignment-v6.json. Listening review remains outstanding.",
+          "id": "L36",
+          "startSample": 7443242,
+          "endSample": 7630182
+        },
+        {
+          "text": "Please drag me out",
+          "start": 174.452,
+          "end": 176.56,
+          "words": [
+            {
+              "text": "Please",
+              "start": 174.452,
+              "end": 175.085,
+              "id": "L37-W01",
+              "startSample": 7693333,
+              "endSample": 7721248,
+              "timingEvidence": "L37-W01",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "drag",
+              "start": 175.085,
+              "end": 175.697,
+              "id": "L37-W02",
+              "startSample": 7721248,
+              "endSample": 7748238,
+              "timingEvidence": "L37-W02",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "me",
+              "start": 175.697,
+              "end": 175.84,
+              "id": "L37-W03",
+              "startSample": 7748238,
+              "endSample": 7754544,
+              "timingEvidence": "L37-W03",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "out",
+              "start": 175.84,
+              "end": 176.56,
+              "id": "L37-W04",
+              "startSample": 7754544,
+              "endSample": 7786296,
+              "timingEvidence": "L37-W04",
+              "timingConfidence": "provisional"
+            }
+          ],
+          "timingQuality": "Independent transcript-conditioned MMS, wav2vec2 and large Whisper candidates; explicit disagreements retained in evidence/alignment-v6.json. Listening review remains outstanding.",
+          "id": "L37",
+          "startSample": 7693333,
+          "endSample": 7786296
+        },
+        {
+          "text": "Give me a reason to keep on breathing",
+          "start": 178.362,
+          "end": 182.6,
+          "words": [
+            {
+              "text": "Give",
+              "start": 178.362,
+              "end": 178.984,
+              "id": "L38-W01",
+              "startSample": 7865764,
+              "endSample": 7893194,
+              "timingEvidence": "L38-W01",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "me",
+              "start": 178.984,
+              "end": 179.375,
+              "id": "L38-W02",
+              "startSample": 7893194,
+              "endSample": 7910438,
+              "timingEvidence": "L38-W02",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "a",
+              "start": 179.375,
+              "end": 179.54,
+              "id": "L38-W03",
+              "startSample": 7910438,
+              "endSample": 7917714,
+              "timingEvidence": "L38-W03",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "reason",
+              "start": 179.54,
+              "end": 180.509,
+              "id": "L38-W04",
+              "startSample": 7917714,
+              "endSample": 7960447,
+              "timingEvidence": "L38-W04",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "to",
+              "start": 180.509,
+              "end": 180.71,
+              "id": "L38-W05",
+              "startSample": 7960447,
+              "endSample": 7969311,
+              "timingEvidence": "L38-W05",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "keep",
+              "start": 180.71,
+              "end": 181.386,
+              "id": "L38-W06",
+              "startSample": 7969311,
+              "endSample": 7999123,
+              "timingEvidence": "L38-W06",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "on",
+              "start": 181.386,
+              "end": 181.974,
+              "id": "L38-W07",
+              "startSample": 7999123,
+              "endSample": 8025053,
+              "timingEvidence": "L38-W07",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "breathing",
+              "start": 181.974,
+              "end": 182.6,
+              "id": "L38-W08",
+              "startSample": 8025053,
+              "endSample": 8052660,
+              "timingEvidence": "L38-W08",
+              "timingConfidence": "provisional"
+            }
+          ],
+          "timingQuality": "Independent transcript-conditioned MMS, wav2vec2 and large Whisper candidates; explicit disagreements retained in evidence/alignment-v6.json. Listening review remains outstanding.",
+          "id": "L38",
+          "startSample": 7865764,
+          "endSample": 8052660
+        }
+      ],
+      "startSample": 7285761,
+      "endSample": 8057511
+    },
+    {
+      "name": "Final lift",
+      "start": 184.362,
+      "end": 221.9,
+      "lines": [
+        {
+          "text": "The heavens open, the sky’s black and blue",
+          "start": 184.362,
+          "end": 188.26,
+          "words": [
+            {
+              "text": "The",
+              "start": 184.362,
+              "end": 184.603,
+              "id": "L39-W01",
+              "startSample": 8130364,
+              "endSample": 8140992,
+              "timingEvidence": "L39-W01",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "heavens",
+              "start": 184.603,
+              "end": 185.686,
+              "id": "L39-W02",
+              "startSample": 8140992,
+              "endSample": 8188753,
+              "timingEvidence": "L39-W02",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "open,",
+              "start": 185.686,
+              "end": 186.78,
+              "id": "L39-W03",
+              "startSample": 8188753,
+              "endSample": 8236998,
+              "timingEvidence": "L39-W03",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "the",
+              "start": 186.78,
+              "end": 186.931,
+              "id": "L39-W04",
+              "startSample": 8236998,
+              "endSample": 8243657,
+              "timingEvidence": "L39-W04",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "sky’s",
+              "start": 186.931,
+              "end": 187.373,
+              "id": "L39-W05",
+              "startSample": 8243657,
+              "endSample": 8263149,
+              "timingEvidence": "L39-W05",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "black",
+              "start": 187.373,
+              "end": 187.774,
+              "id": "L39-W06",
+              "startSample": 8263149,
+              "endSample": 8280833,
+              "timingEvidence": "L39-W06",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "and",
+              "start": 187.774,
+              "end": 187.955,
+              "id": "L39-W07",
+              "startSample": 8280833,
+              "endSample": 8288816,
+              "timingEvidence": "L39-W07",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "blue",
+              "start": 187.955,
+              "end": 188.26,
+              "id": "L39-W08",
+              "startSample": 8288816,
+              "endSample": 8302266,
+              "timingEvidence": "L39-W08",
+              "timingConfidence": "provisional"
+            }
+          ],
+          "timingQuality": "Independent transcript-conditioned MMS, wav2vec2 and large Whisper candidates; explicit disagreements retained in evidence/alignment-v6.json. Listening review remains outstanding.",
+          "id": "L39",
+          "startSample": 8130364,
+          "endSample": 8302266
+        },
+        {
+          "text": "The end’s approaching for me and you",
+          "start": 189.192,
+          "end": 193.38,
+          "words": [
+            {
+              "text": "The",
+              "start": 189.192,
+              "end": 189.573,
+              "id": "L40-W01",
+              "startSample": 8343367,
+              "endSample": 8360169,
+              "timingEvidence": "L40-W01",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "end’s",
+              "start": 189.573,
+              "end": 189.912,
+              "id": "L40-W02",
+              "startSample": 8360169,
+              "endSample": 8375119,
+              "timingEvidence": "L40-W02",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "approaching",
+              "start": 189.912,
+              "end": 191.0,
+              "id": "L40-W03",
+              "startSample": 8375119,
+              "endSample": 8423100,
+              "timingEvidence": "L40-W03",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "for",
+              "start": 191.0,
+              "end": 191.53,
+              "id": "L40-W04",
+              "startSample": 8423100,
+              "endSample": 8446473,
+              "timingEvidence": "L40-W04",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "me",
+              "start": 191.53,
+              "end": 191.94,
+              "id": "L40-W05",
+              "startSample": 8446473,
+              "endSample": 8464554,
+              "timingEvidence": "L40-W05",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "and",
+              "start": 191.94,
+              "end": 193.038,
+              "id": "L40-W06",
+              "startSample": 8464554,
+              "endSample": 8512976,
+              "timingEvidence": "L40-W06",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "you",
+              "start": 193.038,
+              "end": 193.38,
+              "id": "L40-W07",
+              "startSample": 8512976,
+              "endSample": 8528058,
+              "timingEvidence": "L40-W07",
+              "timingConfidence": "provisional"
+            }
+          ],
+          "timingQuality": "Independent transcript-conditioned MMS, wav2vec2 and large Whisper candidates; explicit disagreements retained in evidence/alignment-v6.json. Listening review remains outstanding.",
+          "id": "L40",
+          "startSample": 8343367,
+          "endSample": 8528058
+        },
+        {
+          "text": "We’ll survive, just you and I",
+          "start": 194.262,
+          "end": 197.96,
+          "words": [
+            {
+              "text": "We’ll",
+              "start": 194.262,
+              "end": 194.603,
+              "id": "L41-W01",
+              "startSample": 8566954,
+              "endSample": 8581992,
+              "timingEvidence": "L41-W01",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "survive,",
+              "start": 194.603,
+              "end": 195.48,
+              "id": "L41-W02",
+              "startSample": 8581992,
+              "endSample": 8620668,
+              "timingEvidence": "L41-W02",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "just",
+              "start": 196.108,
+              "end": 196.46,
+              "id": "L41-W03",
+              "startSample": 8648363,
+              "endSample": 8663886,
+              "timingEvidence": "L41-W03",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "you",
+              "start": 196.751,
+              "end": 197.112,
+              "id": "L41-W04",
+              "startSample": 8676719,
+              "endSample": 8692639,
+              "timingEvidence": "L41-W04",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "and",
+              "start": 197.112,
+              "end": 197.58,
+              "id": "L41-W05",
+              "startSample": 8692639,
+              "endSample": 8713278,
+              "timingEvidence": "L41-W05",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "I",
+              "start": 197.58,
+              "end": 197.96,
+              "id": "L41-W06",
+              "startSample": 8713278,
+              "endSample": 8730036,
+              "timingEvidence": "L41-W06",
+              "timingConfidence": "provisional"
+            }
+          ],
+          "timingQuality": "Independent transcript-conditioned MMS, wav2vec2 and large Whisper candidates; explicit disagreements retained in evidence/alignment-v6.json. Listening review remains outstanding.",
+          "id": "L41",
+          "startSample": 8566954,
+          "endSample": 8730036
+        },
+        {
+          "text": "If the sun burns out tonight",
+          "start": 199.56,
+          "end": 203.293,
+          "words": [
+            {
+              "text": "If",
+              "start": 199.56,
+              "end": 199.971,
+              "id": "L42-W01",
+              "startSample": 8800596,
+              "endSample": 8818721,
+              "timingEvidence": "L42-W01",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "the",
+              "start": 199.971,
+              "end": 200.201,
+              "id": "L42-W02",
+              "startSample": 8818721,
+              "endSample": 8828864,
+              "timingEvidence": "L42-W02",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "sun",
+              "start": 200.201,
+              "end": 200.845,
+              "id": "L42-W03",
+              "startSample": 8828864,
+              "endSample": 8857264,
+              "timingEvidence": "L42-W03",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "burns",
+              "start": 200.845,
+              "end": 201.387,
+              "id": "L42-W04",
+              "startSample": 8857264,
+              "endSample": 8881167,
+              "timingEvidence": "L42-W04",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "out",
+              "start": 201.808,
+              "end": 201.96,
+              "id": "L42-W05",
+              "startSample": 8899733,
+              "endSample": 8906436,
+              "timingEvidence": "L42-W05",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "tonight",
+              "start": 201.96,
+              "end": 203.293,
+              "id": "L42-W06",
+              "startSample": 8906436,
+              "endSample": 8965221,
+              "timingEvidence": "L42-W06",
+              "timingConfidence": "provisional"
+            }
+          ],
+          "timingQuality": "Independent transcript-conditioned MMS, wav2vec2 and large Whisper candidates; explicit disagreements retained in evidence/alignment-v6.json. Listening review remains outstanding.",
+          "id": "L42",
+          "startSample": 8800596,
+          "endSample": 8965221
+        },
+        {
+          "text": "If the sun burns out tonight",
+          "start": 209.46,
+          "end": 212.3,
+          "words": [
+            {
+              "text": "If",
+              "start": 209.46,
+              "end": 209.64,
+              "id": "L43-W01",
+              "startSample": 9237186,
+              "endSample": 9245124,
+              "timingEvidence": "L43-W01",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "the",
+              "start": 209.64,
+              "end": 209.82,
+              "id": "L43-W02",
+              "startSample": 9245124,
+              "endSample": 9253062,
+              "timingEvidence": "L43-W02",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "sun",
+              "start": 209.82,
+              "end": 210.423,
+              "id": "L43-W03",
+              "startSample": 9253062,
+              "endSample": 9279654,
+              "timingEvidence": "L43-W03",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "burns",
+              "start": 210.423,
+              "end": 211.1,
+              "id": "L43-W04",
+              "startSample": 9279654,
+              "endSample": 9309510,
+              "timingEvidence": "L43-W04",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "out",
+              "start": 211.1,
+              "end": 211.56,
+              "id": "L43-W05",
+              "startSample": 9309510,
+              "endSample": 9329796,
+              "timingEvidence": "L43-W05",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "tonight",
+              "start": 211.56,
+              "end": 212.3,
+              "id": "L43-W06",
+              "startSample": 9329796,
+              "endSample": 9362430,
+              "timingEvidence": "L43-W06",
+              "timingConfidence": "provisional"
+            }
+          ],
+          "timingQuality": "Independent transcript-conditioned MMS, wav2vec2 and large Whisper candidates; explicit disagreements retained in evidence/alignment-v6.json. Listening review remains outstanding.",
+          "id": "L43",
+          "startSample": 9237186,
+          "endSample": 9362430
+        },
+        {
+          "text": "If the sun burns out tonight",
+          "start": 219.06,
+          "end": 221.9,
+          "words": [
+            {
+              "text": "If",
+              "start": 219.06,
+              "end": 219.24,
+              "id": "L44-W01",
+              "startSample": 9660546,
+              "endSample": 9668484,
+              "timingEvidence": "L44-W01",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "the",
+              "start": 219.24,
+              "end": 219.42,
+              "id": "L44-W02",
+              "startSample": 9668484,
+              "endSample": 9676422,
+              "timingEvidence": "L44-W02",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "sun",
+              "start": 219.42,
+              "end": 220.023,
+              "id": "L44-W03",
+              "startSample": 9676422,
+              "endSample": 9703014,
+              "timingEvidence": "L44-W03",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "burns",
+              "start": 220.023,
+              "end": 220.7,
+              "id": "L44-W04",
+              "startSample": 9703014,
+              "endSample": 9732870,
+              "timingEvidence": "L44-W04",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "out",
+              "start": 220.7,
+              "end": 221.16,
+              "id": "L44-W05",
+              "startSample": 9732870,
+              "endSample": 9753156,
+              "timingEvidence": "L44-W05",
+              "timingConfidence": "provisional"
+            },
+            {
+              "text": "tonight",
+              "start": 221.16,
+              "end": 221.9,
+              "id": "L44-W06",
+              "startSample": 9753156,
+              "endSample": 9785790,
+              "timingEvidence": "L44-W06",
+              "timingConfidence": "provisional"
+            }
+          ],
+          "timingQuality": "Independent transcript-conditioned MMS, wav2vec2 and large Whisper candidates; explicit disagreements retained in evidence/alignment-v6.json. Listening review remains outstanding. Final hook also has directly measured+9.6 second sample correlation to L43; absolute source anchors remain provisional.",
+          "id": "L44",
+          "startSample": 9660546,
+          "endSample": 9785790
+        }
+      ],
+      "startSample": 8123220,
+      "endSample": 9813132
+    }
+  ],
+  "timebase": {
+    "unit": "source-sample index",
+    "sampleRate": 44100,
+    "origin": "first presented decoded AAC sample; source video and soundtrack both begin at zero",
+    "precisionNote": "Indices preserve the candidate timeline on the source sample grid. Their integer form does not imply acoustic timing accuracy."
+  },
+  "alignmentEvidence": "evidence/alignment-v6.json"
+}

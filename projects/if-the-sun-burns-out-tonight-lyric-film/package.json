@@ -1,0 +1,15 @@
+{
+  "name": "if-the-sun-burns-out-tonight-preview",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "preview": "node scripts/preview-server.mjs",
+    "check": "node scripts/check-preview.mjs && node --test scripts/preview-core.test.mjs scripts/sunfire.test.mjs scripts/render-gate.test.mjs",
+    "render": "node scripts/render-production.mjs --production",
+    "render:proof": "node scripts/render-production.mjs --still",
+    "font:prepare": "python3 scripts/extract-approved-font.py output/runtime/AvenirNextCondensed-DemiBold.ttf"
+  },
+  "dependencies": {
+    "@napi-rs/canvas": "0.1.100"
+  }
+}

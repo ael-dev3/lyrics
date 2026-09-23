@@ -1,0 +1,104 @@
+{
+  "revision": "sunfire-v2-sunbeam-v1",
+  "scope": "Preview-only gentle sunlight on sung light tokens",
+  "matchedWords": [
+    {
+      "id": "L04-W07",
+      "text": "light",
+      "start": 43.955,
+      "end": 44.42
+    }
+  ],
+  "envelope": {
+    "attackSeconds": 0.1,
+    "releaseSeconds": 0.14,
+    "exclusiveEnd": true,
+    "usesOriginalWordInterval": true
+  },
+  "visualCheck": {
+    "landscapeAt": 44.15,
+    "portraitAt": 44.15,
+    "beamLandsOnMeasuredWord": true,
+    "gentleWarmFeatheredShafts": true,
+    "originalPictureVisible": true,
+    "glyphGeometryUnchanged": true
+  },
+  "boundaryChecksBothLayouts": [
+    {
+      "time": 43.94,
+      "beam": false,
+      "activeWord": "the"
+    },
+    {
+      "time": 44.06,
+      "beam": true,
+      "activeWord": "light",
+      "glow": 0.32
+    },
+    {
+      "time": 44.15,
+      "beam": true,
+      "activeWord": "light",
+      "glow": 0.32
+    },
+    {
+      "time": 44.35,
+      "beam": true,
+      "activeWord": "light",
+      "glow": 0.16
+    },
+    {
+      "time": 44.42,
+      "beam": false,
+      "activeWord": null
+    },
+    {
+      "time": 44.7,
+      "beam": false,
+      "activeWord": null
+    },
+    {
+      "time": 33.2,
+      "beam": false,
+      "activeWord": "burnt",
+      "sunfireWordCount": 4
+    },
+    {
+      "time": 44.15,
+      "beam": true,
+      "activeWord": "light",
+      "afterNonsequentialSeek": true
+    }
+  ],
+  "playback": {
+    "range": [
+      43.5,
+      56.909721
+    ],
+    "speed": 0.5,
+    "format": "landscape",
+    "muted": true,
+    "nativeDroppedFramesBefore": 0,
+    "nativeDroppedFramesAfter": 0,
+    "foregroundSkippedFrames": 0,
+    "maxCallbackDelayMs": 1,
+    "pictureError": null,
+    "consoleErrors": []
+  },
+  "regressionChecks": {
+    "command": "npm run check",
+    "passingExistingTests": 30,
+    "newUnitTestsAdded": false,
+    "lyricTimesChanged": false,
+    "sourceVideoChanged": false,
+    "fireRendererChanged": false
+  },
+  "filesSha256": {
+    "src/sunbeam.js": "4eed89309da76f9c78cdde2ed19da42ba853a16c38fcfe1b3da24c9c97b40c52",
+    "src/player.js": "831409e708a33e47e26bd32c25c69de3e9056e6780b64c13a2772136f3f1043a",
+    "review/index.html": "6653ab0c52702a8a0ea85bf1d48fb7c434aed58548477bed8d6b0437596d8046",
+    "src/timeline.json": "b71c6ea2e7c39a56843cd51be74bae10c1dcf095f81025b9c7af8ffd7f9ccba4"
+  },
+  "limitations": "Targeted visual and muted playback verification; not a new full-song run or acoustic listening review.",
+  "productionRendered": false
+}

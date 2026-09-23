@@ -1,0 +1,88 @@
+{
+  "timingRevision": "preview-v6-audio-evidence",
+  "timelineSha256": "b71c6ea2e7c39a56843cd51be74bae10c1dcf095f81025b9c7af8ffd7f9ccba4",
+  "visualRevision": "word-atmosphere-v5",
+  "updatedAt": "2026-09-23T15:24:11.736611+00:00",
+  "status": "owner-attested current preview accepted; both production masters and Desktop kit verified",
+  "reviewEvidence": {
+    "generalSynchronizationFeedback": "positive",
+    "fullNormalSpeedReview": "not separately recorded",
+    "uncertainPassagesAtReducedSpeed": "targeted passages accepted; exact playback rate not separately recorded",
+    "bothLayoutListeningReview": "not separately recorded",
+    "targetedPassageListening": "accepted by reviewer after manually checking the requested preview passages",
+    "productionRenderApproval": "explicitly granted for current word-atmosphere-v5 preview",
+    "currentOverallReview": "owner attested complete"
+  },
+  "technicalEvidence": [
+    "alignment-v6.json",
+    "repeat-correlation-v6.json",
+    "repeated-chorus-relative-audit-v6.json",
+    "audio-features-audit.json",
+    "spectrum-depth-v1.json",
+    "fire-dynamics-audit.json",
+    "sunfire-v2.json",
+    "foreground-runtime-sunfire-v2.json",
+    "preview-completion-audit-v2.json",
+    "sunbeam-v1.json",
+    "frost-v1.json",
+    "supernova-glow-v1.json",
+    "darkness-v1.json",
+    "damage-v1.json",
+    "void-v1.json",
+    "sunbeam-you-v1.json"
+  ],
+  "limits": "Current overall preview review and render authorization are explicitly recorded in render-authorization.json. Earlier targeted review and acoustic-model uncertainty remain as historical evidence; separate per-cue, per-speed or per-layout listening telemetry was not invented. Historical open review ranges below predate current overall acceptance and are not an outstanding production-approval request.",
+  "acceptedTargetedListeningRanges": [
+    {
+      "start": 26.7,
+      "end": 30.0,
+      "reason": "Processed opening word attacks and held ending"
+    },
+    {
+      "start": 71.7,
+      "end": 84.2,
+      "reason": "First chorus short pronouns and long Supernova"
+    },
+    {
+      "start": 129.2,
+      "end": 141.8,
+      "reason": "Second chorus short pronouns and long Supernova"
+    },
+    {
+      "start": 209.2,
+      "end": 222.8,
+      "reason": "Processed final hooks and sung-core endings"
+    }
+  ],
+  "targetedAcceptanceScope": {
+    "timelineRevision": "preview-v6-audio-evidence",
+    "visualRevisionAtTimingReview": "spectrum-depth-v1",
+    "coverage": "Opening, short chorus words in both choruses, and processed final hooks as specifically requested; broader full-recording or both-layout attestation not inferred.",
+    "furtherVisualWork": "Word-specific effects, including sunlight on you in all I need is you, are verified in their recorded technical scopes; current artistic review remains separate from earlier timing acceptance."
+  },
+  "productionRecord": "render-authorization.json",
+  "historicalRemainingListeningRangesBeforeCurrentAcceptance": [
+    {
+      "start": 93.5,
+      "end": 107.6,
+      "reason": "Every day, connected darkness line, hook release"
+    },
+    {
+      "start": 113.2,
+      "end": 117.6,
+      "reason": "Held hook release"
+    },
+    {
+      "start": 155.4,
+      "end": 160.9,
+      "reason": "Connected darkness phrase"
+    },
+    {
+      "start": 199.3,
+      "end": 203.6,
+      "reason": "Held hook release"
+    }
+  ],
+  "finalVerification": "evidence/final-verification.md",
+  "deliveryReceipt": "evidence/delivery-receipt.json"
+}

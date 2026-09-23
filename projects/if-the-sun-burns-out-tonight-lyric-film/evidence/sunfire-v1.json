@@ -1,0 +1,132 @@
+{
+  "visualRevision": "sunfire-v1",
+  "timingRevision": "preview-v6-audio-evidence",
+  "recordedAt": "2026-09-23T13:34:34.864608+00:00",
+  "scope": "Preview-only solar fire added behind stable lyric glyphs; all source media and selected word boundaries retained.",
+  "hooks": [
+    {
+      "cue": "L01",
+      "start": 27.406,
+      "sungEnd": 29.56
+    },
+    {
+      "cue": "L02",
+      "start": 32.226,
+      "sungEnd": 34.855
+    },
+    {
+      "cue": "L17",
+      "start": 75.444,
+      "sungEnd": 78.1
+    },
+    {
+      "cue": "L19",
+      "start": 85.043,
+      "sungEnd": 88.176
+    },
+    {
+      "cue": "L23",
+      "start": 104.243,
+      "sungEnd": 107.354
+    },
+    {
+      "cue": "L24",
+      "start": 113.802,
+      "sungEnd": 117.355
+    },
+    {
+      "cue": "L28",
+      "start": 133.044,
+      "sungEnd": 135.85
+    },
+    {
+      "cue": "L30",
+      "start": 142.603,
+      "sungEnd": 145.475
+    },
+    {
+      "cue": "L34",
+      "start": 161.804,
+      "sungEnd": 164.14
+    },
+    {
+      "cue": "L42",
+      "start": 200.201,
+      "sungEnd": 203.293
+    },
+    {
+      "cue": "L43",
+      "start": 209.82,
+      "sungEnd": 212.3
+    },
+    {
+      "cue": "L44",
+      "start": 219.42,
+      "sungEnd": 221.9
+    }
+  ],
+  "design": {
+    "glyphGeometry": "Measured DOM character ranges; source-time reconstruction; no accumulated particles.",
+    "flameRiseCapEm": 0.85,
+    "emberRiseCapEm": 1.25,
+    "maximumEmbers": 2,
+    "crop": "Tight glyph bounds rather than a full-stage effect canvas",
+    "blurCssPixels": 0.3,
+    "wrappedLines": "Stable increased row spacing; lower-row flame reach limited below preceding text row; detached embers suppressed when space is restricted.",
+    "comparison": "Sunfire on/off changes the decoration only, preserving time and reading geometry."
+  },
+  "browserVerification": {
+    "optimizedOriginalPlaybackRange": [
+      75.3,
+      90.254649
+    ],
+    "nativeDroppedFrames": 0,
+    "foregroundMissedSourceFrames": 0,
+    "maximumCallbackDelayMs": 1,
+    "pictureError": null,
+    "originalAndPortraitVisuallyInspected": true,
+    "wrappedPortraitCue": "L02",
+    "boundaryChecks": [
+      {
+        "time": 75.3,
+        "litWords": 0
+      },
+      {
+        "time": 76.35,
+        "litWords": 4
+      },
+      {
+        "time": 78.29,
+        "litWords": 0
+      },
+      {
+        "time": 80,
+        "litWords": 0
+      },
+      {
+        "time": 33.2,
+        "litWords": 4
+      }
+    ],
+    "offOnComparison": {
+      "timeRetained": 33.2,
+      "readingGeometryUnchanged": true,
+      "offLitWords": 0,
+      "onLitWords": 4
+    }
+  },
+  "optimizationFinding": "The initial full-stage, per-tongue-shadow implementation recorded decoder/frame gaps in a seek-plus-play session. The cropped overlay and gradient reuse eliminated per-tongue blur passes; the subsequent isolated two-refrain run recorded zero drops or gaps.",
+  "testsPassed": 20,
+  "limits": [
+    "Technical playback checks are not acoustic listening review.",
+    "The new fire treatment awaits visual feedback; no production render authorization is inferred."
+  ],
+  "sha256": {
+    "src/sunfire.js": "01b74e409d72496fb052144f7909c0a5a1adb803fe23b1d1bc6e5f449ecffdb5",
+    "src/player.js": "685fbd6a0ac68b128955a478355a42353bd7c1e623941d1c74431b2bc54a54ac",
+    "src/preview-core.js": "f67e077e7e98a31e06f9d4ed0701c295d0b7417569d6481e6b2b1eee734f33c2",
+    "src/spectrum-view.js": "33a939ceebf3d079c784dceeaaa6a7ea25a47205be7ec2d743274b75881d18bd",
+    "src/timeline.json": "b71c6ea2e7c39a56843cd51be74bae10c1dcf095f81025b9c7af8ffd7f9ccba4",
+    "review/index.html": "7e30922f6b8c99a44344b105985e4ac1e70fd4ce81a8ea37c14f7963df02dbb7"
+  }
+}

@@ -1,0 +1,137 @@
+{
+  "schema": "lyric-film/production-still-review/v1",
+  "status": "PASS",
+  "images": [
+    {
+      "path": "output/proofs/landscape-light.png",
+      "sha256": "7bbce3b56692d6b70d8280360c4b81d8122e41336a193808bd66af98509819ed",
+      "width": 1920,
+      "height": 818,
+      "sourceTime": 44.15
+    },
+    {
+      "path": "output/proofs/landscape-supernova.png",
+      "sha256": "fb6b2799e46afe44a7ca3d9dfc3e244fdaa2b338187fd9c8bf0426c719cb11a5",
+      "width": 1920,
+      "height": 818,
+      "sourceTime": 79.8
+    },
+    {
+      "path": "output/proofs/landscape-darkness.png",
+      "sha256": "3f9d582e1870b22512e5af28f3f6939953c9d693327c3ae4ab736ef99bb7f505",
+      "width": 1920,
+      "height": 818,
+      "sourceTime": 99.65
+    },
+    {
+      "path": "output/proofs/portrait-freezing.png",
+      "sha256": "ac6bbb5bad99c5da824c14e73f1b7a239b1970d06d46c015ef550fa0e8a8ae34",
+      "width": 1080,
+      "height": 1920,
+      "sourceTime": 62.1
+    },
+    {
+      "path": "output/proofs/portrait-you.png",
+      "sha256": "cc7149974984f296c14782864045ebc46dee9fb3c484f604d87bca9488ef5113",
+      "width": 1080,
+      "height": 1920,
+      "sourceTime": 160.5
+    },
+    {
+      "path": "output/proofs/landscape-ending.png",
+      "sha256": "30dbf8bb59b49688589ed3cb03d9148ed3a83aa19046648b20c7100ec1782e11",
+      "width": 1920,
+      "height": 818,
+      "sourceTime": 234.1
+    },
+    {
+      "path": "output/proofs/landscape-source-dark.png",
+      "sha256": "bccbae5e3d34ab3ef817a1844880a2f8b78a39e901c26f1e8f6d1656803bb9b9",
+      "width": 1920,
+      "height": 818,
+      "sourceTime": 209.43333333333334
+    },
+    {
+      "path": "output/proofs/portrait-hurts.png",
+      "sha256": "7d9411c80e6df0d6ac76535c232adfee54583a439a7e2b69d182520641e37761",
+      "width": 1080,
+      "height": 1920,
+      "sourceTime": 126.1
+    }
+  ],
+  "scope": "Independent visual inspection of eight regenerated native production PNG proofs at original resolution after correcting text-shadow compositing. PASS applies only to these stills and inspected layout/effect states; no movie, acoustic-sync or complete sequence claim.",
+  "layout": {
+    "result": "PASS",
+    "observations": [
+      "Landscape proofs retain native 1920×818 canvas without added letterbox bands.",
+      "Portrait source picture remains panoramic and uncropped above the lyric area, with same-scene blurred fill.",
+      "Text is fully readable and contained; spectrum columns, caps and reflection remain separated from lyrics.",
+      "Corrected hurts treatment retains all letter shapes with restrained interior cracks.",
+      "Ending card has no lingering captions, spectrum or added shading.",
+      "Source-dark still at209.433333s falls inside independently recorded source-black interval209.416667–209.458333s; neutral pre-roll words remain visible.",
+      "Corrected Supernova proof shows a gentle purple aura; light/you beam landing, freezing ice fill, darkness shadow and restrained hurts cracks remain clear."
+    ]
+  },
+  "findings": [
+    {
+      "id": "native-shadow-culling",
+      "severity": "must-fix",
+      "file": "scripts/production-scene.mjs",
+      "line": 80,
+      "observation": "The Supernova word lacks the expected visible purple halo; all text-shadow layers use an off-canvas drawImage displacement.",
+      "runtimeEvidence": {
+        "nativeCanvasVersion": "0.1.100",
+        "probe": "20×20 bitmap containing12×12 opaque square;100×100target;shadowBlur8;purplealpha.3;drawat(40,40) versus(-260,40)withshadowOffsetX300",
+        "onCanvas": {
+          "nonzeroPixels": 400,
+          "alphaSum": 37920
+        },
+        "displaced": {
+          "nonzeroPixels": 0,
+          "alphaSum": 0
+        }
+      },
+      "conclusion": "Native canvas culls the off-canvas body and its shadow. This removes glow and readability-shadow layers despite correct word fills.",
+      "requiredCorrection": "Render shadows on an on-canvas intermediate mask/layer, composite them at the intended word coordinates, then draw the glyph body once. Regenerate affected proofs.",
+      "status": "RESOLVED",
+      "correction": "Replaced displaced off-canvas drawImage shadows with on-canvas tinted alpha masks, Gaussian blur and one glyph-body composite.",
+      "verification": "All eight proofs were regenerated and visually re-inspected. Supernova now has the intended gentle purple halo; other text shadows are visible without glyph motion, fill duplication, clipping or reduced legibility."
+    }
+  ],
+  "limits": "Stills establish layout and the visible state at inspected times only. Parent is reviewing encoded motion and final-delivery verification separately.",
+  "priorProofHashes": [
+    {
+      "path": "output/proofs/landscape-light.png",
+      "sha256": "2ee174b68be498320b43f9ba51edd8f8b4e2a4e973ddce1d09c9d3f579ad64a9"
+    },
+    {
+      "path": "output/proofs/landscape-supernova.png",
+      "sha256": "676918014d879c21e05f05d0ce45b9196a0db0ec1ad55a3f703f3c59dd74abf9"
+    },
+    {
+      "path": "output/proofs/landscape-darkness.png",
+      "sha256": "37eca67b3810ebcd0b0ac548b6efff59a136a062d12877c8648564cf599dd437"
+    },
+    {
+      "path": "output/proofs/portrait-freezing.png",
+      "sha256": "b0ca3528349a03c9e5337a89076851521b0aab5daf4f517a0343ede9fb72aa13"
+    },
+    {
+      "path": "output/proofs/portrait-you.png",
+      "sha256": "21f775636fc17d11a062988735329818763f0785d413446ee5cacf5c9bd48a35"
+    },
+    {
+      "path": "output/proofs/landscape-ending.png",
+      "sha256": "30dbf8bb59b49688589ed3cb03d9148ed3a83aa19046648b20c7100ec1782e11"
+    },
+    {
+      "path": "output/proofs/landscape-source-dark.png",
+      "sha256": "f8544249256e2d3e1e77ae311f1f5e4866ed7c2c1b0193a8e239db7a0f54bc5d"
+    },
+    {
+      "path": "output/proofs/portrait-hurts.png",
+      "sha256": "a2c577f021ab29e734c0cdfa79240ecd0c998cb1b7c67613bace36847aa4fcd1"
+    }
+  ],
+  "productionSceneSha256": "6fec67467ec0622104922c698c45e1cef5a989868c5efffaaadddc3a6544aaf5"
+}

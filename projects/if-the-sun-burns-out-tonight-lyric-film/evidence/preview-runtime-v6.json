@@ -1,0 +1,123 @@
+{
+  "revision": "preview-v6-audio-evidence",
+  "recordedAt": "2026-09-23T12:58:41.659942+00:00",
+  "scope": "Browser layout, native picture/audio transport, deterministic visualizer and runtime recovery. Muted playback is not a human listening review or acoustic timing certification.",
+  "fullPlayback": {
+    "view": "original 1920x818 ratio",
+    "viewport": [
+      1280,
+      720
+    ],
+    "muted": true,
+    "startSeconds": 0,
+    "endSeconds": 234.266122,
+    "ended": true,
+    "droppedVideoFrames": 0,
+    "presentedFrameCallbacks": 5620,
+    "lastFrameTime": 234.166667,
+    "maxFrameCallbackDelayMs": 2.1000000000058208,
+    "pictureError": null,
+    "frameCallbackPendingAfterEnd": false,
+    "timingOfRun": "Completed before the final L44 sample-correlation refinement and the added intro/outro shade envelope. The media transport, source file, spectrum data, frame pump and picture layout were unchanged by those final refinements; targeted checks below cover them."
+  },
+  "layoutSweep": {
+    "lyricCues": 44,
+    "views": [
+      "original",
+      "portrait"
+    ],
+    "observations": 88,
+    "allVisible": true,
+    "allWithinStage": true,
+    "allStagesWithinViewport": true,
+    "allLyricsClearOfSpectrum": true,
+    "minimumClearancePixels": 25.8984375,
+    "viewport": [
+      1280,
+      720
+    ],
+    "regressionFixed": "Native media rounds exact cue-display starts to microseconds. Cue jump now advances 1 ms beyond displayStart; the repeat sweep had no blank cue jumps."
+  },
+  "finalTargetedChecks": {
+    "originalFrame": {
+      "timeSeconds": 77.9,
+      "stagePixels": [
+        583,
+        248.375
+      ],
+      "videoPixels": [
+        583,
+        248.375
+      ],
+      "lyricsInsideVideo": true,
+      "activeWord": "tonight",
+      "pictureError": null
+    },
+    "outro": {
+      "timeSeconds": 230,
+      "shadeOpacity": 0,
+      "spectrumOpacity": 0,
+      "captionText": "",
+      "screenshotInspected": true
+    },
+    "restorePicture": {
+      "timeBeforeSeconds": 55,
+      "timeAfterSeconds": 55,
+      "speedBefore": 0.5,
+      "speedAfter": 0.5,
+      "mutedBefore": true,
+      "mutedAfter": true,
+      "pausedAfter": true,
+      "readyStateAfter": 4,
+      "pictureError": null
+    },
+    "portraitMotion": {
+      "speed": 0.5,
+      "muted": true,
+      "observedStartSeconds": 55,
+      "observedEndSeconds": 66.748972,
+      "differentDecodedFramesVisuallyVerified": true,
+      "droppedVideoFrames": 0,
+      "singlePendingCallbackChain": true,
+      "pictureError": null
+    },
+    "refinedFinalHook": {
+      "timeSeconds": 219.43,
+      "highlightText": "sun",
+      "highlightId": "L44-W03",
+      "closingReplay": {
+        "fromSeconds": 218.8,
+        "toSeconds": 234.266122,
+        "ended": true,
+        "pictureError": null,
+        "cumulativeDroppedVideoFrames": 4,
+        "scope": "Counter includes prior seeks, recovery and playback in this QA tab; no baseline was captured immediately after the final seek, so these four drops cannot be assigned to steady playback."
+      }
+    },
+    "browserConsoleErrors": [],
+    "additionalClosingReplay": {
+      "scored": false,
+      "reason": "Source position changed discontinuously during the attempted isolated playback, so the run was not a controlled repeat. No inference about timing or dropped frames is taken from it."
+    }
+  },
+  "verification": {
+    "command": "npm run check",
+    "passingTests": 13,
+    "lyricLines": 44,
+    "wordRecords": 254
+  },
+  "files": {
+    "review/index.html": "42086f8653302a0b1fe1b178c7e1f554d2f49988239dddb3aaca9cf3dfca9362",
+    "src/player.js": "1849b345ee89a9d486ab64a8cecdc4cd0df29e287b1dfc91320a31fc8c3c80bd",
+    "src/preview-core.js": "c6f3f87fe2ceae9fd3936508c77d51060055fa261a1d61e014c9b140c23e76de",
+    "src/timeline.json": "b71c6ea2e7c39a56843cd51be74bae10c1dcf095f81025b9c7af8ffd7f9ccba4",
+    "public/audio-features.bin": "d0740000740c2ce2e9dc9250a83105949ecc7fd747db9f2fd699ebe7722becea",
+    "evidence/alignment-v6.json": "622619f830c9408a4e0a3214857345f4ec52cee79cdf9fb623ce38228ec04a98",
+    "evidence/repeat-correlation-v6.json": "1b5afe929b230d2f96f53fac2ec4762e1e5426e33bb6d83ce9b9dc2751cffc8b"
+  },
+  "limits": [
+    "Full human normal-speed and reduced-speed listening review has not been recorded.",
+    "Processed opening/final hooks and selected pronouns/releases retain documented acoustic uncertainty.",
+    "No production video was rendered."
+  ]
+}

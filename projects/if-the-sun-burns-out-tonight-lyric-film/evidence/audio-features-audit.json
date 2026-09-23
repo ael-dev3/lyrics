@@ -1,0 +1,36 @@
+{
+  "status": "pass",
+  "sourceSha256": "d4f742d4197dbd30b07e2e5dbd0f648a5aec6e310162865c28f65f19a65ff5b5",
+  "featuresSha256": "d0740000740c2ce2e9dc9250a83105949ecc7fd747db9f2fd699ebe7722becea",
+  "checks": {
+    "lockedSourceMatchesManifest": true,
+    "all64BandsHaveFrequencyCoverage": true,
+    "all64BandsVaryOnThisRecording": true,
+    "all64BandsRiseAboveFloorOnThisRecording": true,
+    "all64BandsHaveP95AboveMinus70Dbfs": true,
+    "independentWindowSeekOrdering": true,
+    "seekFramesCheckedInBothDirections": 512,
+    "syntheticSilenceIsExactlyFloor": true,
+    "terminalFrameIsExactlyFloor": true,
+    "coversFullDeclaredAudioDuration": true,
+    "binaryRoundTripIsExact": true
+  },
+  "summary": {
+    "frameCount": 14057,
+    "bandCount": 64,
+    "byteLength": 1799296,
+    "durationSeconds": 234.2661224489796,
+    "lastFrameSeconds": 234.26666666666668,
+    "fftBinHz": 10.7666015625,
+    "windowDurationMilliseconds": 92.87981859410431,
+    "globalMaximumDbfs": -15.72,
+    "silentFloorFractionAcrossAllBandFrames": 0.014439,
+    "bandsNarrowerThanOneFftBin": 16,
+    "packetPaddingSamplesDiscarded": 0
+  },
+  "limits": [
+    "This measures audio energy; it does not identify beats, lyrics, syllables or vocal identity.",
+    "A time-centered 92.88 ms window has 46.44 ms of support on either side; it introduces no causal playback delay, but cannot distinguish events below that analysis resolution.",
+    "Display smoothing can add visual lag; use source-time deterministic lookup rather than stateful smoothing after seeking."
+  ]
+}

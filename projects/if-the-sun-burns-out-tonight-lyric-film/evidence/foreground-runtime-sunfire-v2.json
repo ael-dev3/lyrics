@@ -1,0 +1,86 @@
+{
+  "timingRevision": "preview-v6-audio-evidence",
+  "visualRevision": "sunfire-v2-vocal-dynamics",
+  "recordedAt": "2026-09-23T13:52:12.648975+00:00",
+  "scope": "Complete original-ratio muted technical playback of the current solar-fire preview. Acoustic listening is separate.",
+  "sourceTimeRange": [
+    0,
+    234.266122
+  ],
+  "ended": true,
+  "nativeFrames": 5621,
+  "nativeDroppedFrames": 0,
+  "foregroundCallbacks": 5620,
+  "foregroundSkippedSourceFrames": 0,
+  "maximumConsecutiveForegroundGap": 0,
+  "maximumCallbackDelayMs": 2,
+  "lastFrameTime": 234.166667,
+  "callbackPendingAfterEnd": false,
+  "pausedRefreshPendingAfterEnd": false,
+  "pictureError": null,
+  "consoleErrors": [],
+  "sourcePresentedFrames": 5621,
+  "finalState": {
+    "paused": true,
+    "seeking": false,
+    "reading": "",
+    "activeWord": null,
+    "fireAnchorCount": 0,
+    "fireDrive": 0,
+    "shadeOpacity": 0,
+    "spectrumOpacity": 0
+  },
+  "samples": [
+    {
+      "time": 0.244776,
+      "frame": 0.208333,
+      "callbacks": 5,
+      "nativeDropped": 0,
+      "foregroundSkipped": 0
+    },
+    {
+      "time": 39.931044,
+      "frame": 39.916667,
+      "callbacks": 958,
+      "nativeDropped": 0,
+      "foregroundSkipped": 0
+    },
+    {
+      "time": 87.031125,
+      "frame": 87.041667,
+      "callbacks": 2089,
+      "nativeDropped": 0,
+      "foregroundSkipped": 0
+    },
+    {
+      "time": 143.028655,
+      "frame": 143.041667,
+      "callbacks": 3433,
+      "nativeDropped": 0,
+      "foregroundSkipped": 0
+    },
+    {
+      "time": 199.612771,
+      "frame": 199.625,
+      "callbacks": 4791,
+      "nativeDropped": 0,
+      "foregroundSkipped": 0
+    }
+  ],
+  "filesSha256": {
+    "src/player.js": "8b99c738235cabf12ee5e4febdaccc9408af8ffa735e4060f04f5dcc2aee6e48",
+    "src/preview-core.js": "f67e077e7e98a31e06f9d4ed0701c295d0b7417569d6481e6b2b1eee734f33c2",
+    "src/sunfire.js": "67b6ca5e08903d9bcaae43672a1afa91b65616d105543ecab7e15fa78d369d1c",
+    "src/fire-dynamics.js": "4ec53ed906aaf4486f7e2fb35bf5c739c6d6b5afb268cda9549a54c45b5f2e1b",
+    "src/spectrum-view.js": "33a939ceebf3d079c784dceeaaa6a7ea25a47205be7ec2d743274b75881d18bd",
+    "src/timeline.json": "b71c6ea2e7c39a56843cd51be74bae10c1dcf095f81025b9c7af8ffd7f9ccba4",
+    "review/index.html": "7e30922f6b8c99a44344b105985e4ac1e70fd4ce81a8ea37c14f7963df02dbb7",
+    "public/fire-dynamics.json": "2dff41fb074cf320c1f15ecee26b1bbdc5a2311cb964337080f15db38983526d"
+  },
+  "limitations": [
+    "Muted technical playback does not certify perceived word-to-vocal timing.",
+    "The complete run uses the original aspect ratio; current portrait evidence covers targeted passages separately.",
+    "Source frame timestamps include normal24fps presentation quantization; asynchronous telemetry samples are not a physical screen/speaker latency measurement."
+  ],
+  "productionRendered": false
+}

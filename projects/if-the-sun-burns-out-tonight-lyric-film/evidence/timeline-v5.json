@@ -1,0 +1,2620 @@
+{
+  "revision": "preview-v5-individual-word-clock",
+  "duration": 234.266122,
+  "alignmentStatus": "provisional",
+  "alignmentMethod": "Fresh unforced whisper.cpp 1.9.2 small.en full-track word-window output compared with the earlier separate token-level DTW candidate map. The supplied lyric remains authoritative where ASR disagrees. The first hook is missed by unforced recognition and its candidate shape is borrowed from later clear repetitions. Every supplied word has an independent candidate start/end and is highlighted alone; very short events may be hard to perceive at ordinary playback speed. No complete human listening review has been recorded. Sample indices below are integer conversions of estimated second values, not sample-accurate acoustic claims.",
+  "sections": [
+    {
+      "name": "Opening verse",
+      "start": 26.91,
+      "end": 49.04,
+      "lines": [
+        {
+          "text": "If the sun burns out tonight",
+          "start": 26.91,
+          "end": 30.84,
+          "words": [
+            {
+              "text": "If",
+              "start": 26.91,
+              "end": 27.47,
+              "id": "L01-W01",
+              "startSample": 1186731,
+              "endSample": 1211427
+            },
+            {
+              "text": "the",
+              "start": 27.47,
+              "end": 27.76,
+              "id": "L01-W02",
+              "startSample": 1211427,
+              "endSample": 1224216
+            },
+            {
+              "text": "sun",
+              "start": 27.76,
+              "end": 28.27,
+              "id": "L01-W03",
+              "startSample": 1224216,
+              "endSample": 1246707
+            },
+            {
+              "text": "burns",
+              "start": 28.27,
+              "end": 29.13,
+              "id": "L01-W04",
+              "startSample": 1246707,
+              "endSample": 1284633
+            },
+            {
+              "text": "out",
+              "start": 29.13,
+              "end": 29.64,
+              "id": "L01-W05",
+              "startSample": 1284633,
+              "endSample": 1307124
+            },
+            {
+              "text": "tonight",
+              "start": 29.64,
+              "end": 30.84,
+              "id": "L01-W06",
+              "startSample": 1307124,
+              "endSample": 1360044
+            }
+          ],
+          "timingQuality": "repeated-hook template; opening phrase missed by both model passes; manual listening still required",
+          "id": "L01",
+          "startSample": 1186731,
+          "endSample": 1360044
+        },
+        {
+          "text": "I wonder if the sun burnt out tonight",
+          "start": 30.84,
+          "end": 32.94,
+          "words": [
+            {
+              "text": "I",
+              "start": 30.84,
+              "end": 30.974,
+              "id": "L02-W01",
+              "startSample": 1360044,
+              "endSample": 1365953
+            },
+            {
+              "text": "wonder",
+              "start": 30.974,
+              "end": 31.241,
+              "id": "L02-W02",
+              "startSample": 1365953,
+              "endSample": 1377728
+            },
+            {
+              "text": "if",
+              "start": 31.241,
+              "end": 31.375,
+              "id": "L02-W03",
+              "startSample": 1377728,
+              "endSample": 1383638
+            },
+            {
+              "text": "the",
+              "start": 31.375,
+              "end": 31.509,
+              "id": "L02-W04",
+              "startSample": 1383638,
+              "endSample": 1389547
+            },
+            {
+              "text": "sun",
+              "start": 31.509,
+              "end": 31.642,
+              "id": "L02-W05",
+              "startSample": 1389547,
+              "endSample": 1395412
+            },
+            {
+              "text": "burnt",
+              "start": 31.642,
+              "end": 31.776,
+              "id": "L02-W06",
+              "startSample": 1395412,
+              "endSample": 1401322
+            },
+            {
+              "text": "out",
+              "start": 31.776,
+              "end": 31.91,
+              "id": "L02-W07",
+              "startSample": 1401322,
+              "endSample": 1407231
+            },
+            {
+              "text": "tonight",
+              "start": 31.91,
+              "end": 32.94,
+              "id": "L02-W08",
+              "startSample": 1407231,
+              "endSample": 1452654
+            }
+          ],
+          "timingQuality": "DTW token anchors cross-checked; collapsed opening tokens distributed between anchors; provisional pending listening",
+          "id": "L02",
+          "startSample": 1360044,
+          "endSample": 1452654
+        },
+        {
+          "text": "Would you let me go or hold me tight?",
+          "start": 36.95,
+          "end": 40.19,
+          "words": [
+            {
+              "text": "Would",
+              "start": 36.95,
+              "end": 36.98,
+              "id": "L03-W01",
+              "startSample": 1629495,
+              "endSample": 1630818
+            },
+            {
+              "text": "you",
+              "start": 36.98,
+              "end": 37.39,
+              "id": "L03-W02",
+              "startSample": 1630818,
+              "endSample": 1648899
+            },
+            {
+              "text": "let",
+              "start": 37.39,
+              "end": 37.8,
+              "id": "L03-W03",
+              "startSample": 1648899,
+              "endSample": 1666980
+            },
+            {
+              "text": "me",
+              "start": 37.8,
+              "end": 38.09,
+              "id": "L03-W04",
+              "startSample": 1666980,
+              "endSample": 1679769
+            },
+            {
+              "text": "go",
+              "start": 38.09,
+              "end": 38.37,
+              "id": "L03-W05",
+              "startSample": 1679769,
+              "endSample": 1692117
+            },
+            {
+              "text": "or",
+              "start": 38.37,
+              "end": 38.65,
+              "id": "L03-W06",
+              "startSample": 1692117,
+              "endSample": 1704465
+            },
+            {
+              "text": "hold",
+              "start": 38.65,
+              "end": 39.21,
+              "id": "L03-W07",
+              "startSample": 1704465,
+              "endSample": 1729161
+            },
+            {
+              "text": "me",
+              "start": 39.21,
+              "end": 39.49,
+              "id": "L03-W08",
+              "startSample": 1729161,
+              "endSample": 1741509
+            },
+            {
+              "text": "tight?",
+              "start": 39.49,
+              "end": 40.19,
+              "id": "L03-W09",
+              "startSample": 1741509,
+              "endSample": 1772379
+            }
+          ],
+          "timingQuality": "DTW token timing; supplied lyric text retained and mismatches mapped by position; provisional pending listening",
+          "id": "L03",
+          "startSample": 1629495,
+          "endSample": 1772379
+        },
+        {
+          "text": "Just one touch could erase the light",
+          "start": 41.02,
+          "end": 44.44,
+          "words": [
+            {
+              "text": "Just",
+              "start": 41.02,
+              "end": 41.48,
+              "id": "L04-W01",
+              "startSample": 1808982,
+              "endSample": 1829268
+            },
+            {
+              "text": "one",
+              "start": 41.75,
+              "end": 41.82,
+              "id": "L04-W02",
+              "startSample": 1841175,
+              "endSample": 1844262
+            },
+            {
+              "text": "touch",
+              "start": 41.82,
+              "end": 42.39,
+              "id": "L04-W03",
+              "startSample": 1844262,
+              "endSample": 1869399
+            },
+            {
+              "text": "could",
+              "start": 42.39,
+              "end": 42.96,
+              "id": "L04-W04",
+              "startSample": 1869399,
+              "endSample": 1894536
+            },
+            {
+              "text": "erase",
+              "start": 42.96,
+              "end": 43.53,
+              "id": "L04-W05",
+              "startSample": 1894536,
+              "endSample": 1919673
+            },
+            {
+              "text": "the",
+              "start": 43.53,
+              "end": 43.87,
+              "id": "L04-W06",
+              "startSample": 1919673,
+              "endSample": 1934667
+            },
+            {
+              "text": "light",
+              "start": 43.87,
+              "end": 44.44,
+              "id": "L04-W07",
+              "startSample": 1934667,
+              "endSample": 1959804
+            }
+          ],
+          "timingQuality": "DTW token timing cross-check; provisional pending listening",
+          "id": "L04",
+          "startSample": 1808982,
+          "endSample": 1959804
+        },
+        {
+          "text": "Say we’ll be alright",
+          "start": 45.14,
+          "end": 46.85,
+          "words": [
+            {
+              "text": "Say",
+              "start": 45.14,
+              "end": 45.44,
+              "id": "L05-W01",
+              "startSample": 1990674,
+              "endSample": 2003904
+            },
+            {
+              "text": "we’ll",
+              "start": 45.44,
+              "end": 45.94,
+              "id": "L05-W02",
+              "startSample": 2003904,
+              "endSample": 2025954
+            },
+            {
+              "text": "be",
+              "start": 45.94,
+              "end": 46.14,
+              "id": "L05-W03",
+              "startSample": 2025954,
+              "endSample": 2034774
+            },
+            {
+              "text": "alright",
+              "start": 46.14,
+              "end": 46.85,
+              "id": "L05-W04",
+              "startSample": 2034774,
+              "endSample": 2066085
+            }
+          ],
+          "timingQuality": "DTW token timing cross-check; provisional pending listening",
+          "id": "L05",
+          "startSample": 1990674,
+          "endSample": 2066085
+        },
+        {
+          "text": "Say we’ll be alright",
+          "start": 47.47,
+          "end": 49.04,
+          "words": [
+            {
+              "text": "Say",
+              "start": 47.47,
+              "end": 47.75,
+              "id": "L06-W01",
+              "startSample": 2093427,
+              "endSample": 2105775
+            },
+            {
+              "text": "we’ll",
+              "start": 47.75,
+              "end": 48.21,
+              "id": "L06-W02",
+              "startSample": 2105775,
+              "endSample": 2126061
+            },
+            {
+              "text": "be",
+              "start": 48.27,
+              "end": 48.39,
+              "id": "L06-W03",
+              "startSample": 2128707,
+              "endSample": 2133999
+            },
+            {
+              "text": "alright",
+              "start": 48.39,
+              "end": 49.04,
+              "id": "L06-W04",
+              "startSample": 2133999,
+              "endSample": 2162664
+            }
+          ],
+          "timingQuality": "DTW token timing cross-check; provisional pending listening",
+          "id": "L06",
+          "startSample": 2093427,
+          "endSample": 2162664
+        }
+      ],
+      "startSample": 1186731,
+      "endSample": 2162664
+    },
+    {
+      "name": "Build",
+      "start": 49.69,
+      "end": 65.52,
+      "lines": [
+        {
+          "text": "Tell me you mean it",
+          "start": 49.69,
+          "end": 51.34,
+          "words": [
+            {
+              "text": "Tell",
+              "start": 49.69,
+              "end": 50.13,
+              "id": "L07-W01",
+              "startSample": 2191329,
+              "endSample": 2210733
+            },
+            {
+              "text": "me",
+              "start": 50.25,
+              "end": 50.43,
+              "id": "L07-W02",
+              "startSample": 2216025,
+              "endSample": 2223963
+            },
+            {
+              "text": "you",
+              "start": 50.43,
+              "end": 50.68,
+              "id": "L07-W03",
+              "startSample": 2223963,
+              "endSample": 2234988
+            },
+            {
+              "text": "mean",
+              "start": 50.68,
+              "end": 51.12,
+              "id": "L07-W04",
+              "startSample": 2234988,
+              "endSample": 2254392
+            },
+            {
+              "text": "it",
+              "start": 51.12,
+              "end": 51.34,
+              "id": "L07-W05",
+              "startSample": 2254392,
+              "endSample": 2264094
+            }
+          ],
+          "timingQuality": "DTW token timing cross-check; provisional pending listening",
+          "id": "L07",
+          "startSample": 2191329,
+          "endSample": 2264094
+        },
+        {
+          "text": "Make me believe it",
+          "start": 52.06,
+          "end": 53.79,
+          "words": [
+            {
+              "text": "Make",
+              "start": 52.06,
+              "end": 52.52,
+              "id": "L08-W01",
+              "startSample": 2295846,
+              "endSample": 2316132
+            },
+            {
+              "text": "me",
+              "start": 52.62,
+              "end": 52.79,
+              "id": "L08-W02",
+              "startSample": 2320542,
+              "endSample": 2328039
+            },
+            {
+              "text": "believe",
+              "start": 52.79,
+              "end": 53.56,
+              "id": "L08-W03",
+              "startSample": 2328039,
+              "endSample": 2361996
+            },
+            {
+              "text": "it",
+              "start": 53.56,
+              "end": 53.79,
+              "id": "L08-W04",
+              "startSample": 2361996,
+              "endSample": 2372139
+            }
+          ],
+          "timingQuality": "DTW token timing cross-check; provisional pending listening",
+          "id": "L08",
+          "startSample": 2295846,
+          "endSample": 2372139
+        },
+        {
+          "text": "I’m barely breathing",
+          "start": 54.41,
+          "end": 55.94,
+          "words": [
+            {
+              "text": "I’m",
+              "start": 54.41,
+              "end": 54.66,
+              "id": "L09-W01",
+              "startSample": 2399481,
+              "endSample": 2410506
+            },
+            {
+              "text": "barely",
+              "start": 55.17,
+              "end": 55.23,
+              "id": "L09-W02",
+              "startSample": 2432997,
+              "endSample": 2435643
+            },
+            {
+              "text": "breathing",
+              "start": 55.23,
+              "end": 55.94,
+              "id": "L09-W03",
+              "startSample": 2435643,
+              "endSample": 2466954
+            }
+          ],
+          "timingQuality": "DTW token timing cross-check; provisional pending listening",
+          "id": "L09",
+          "startSample": 2399481,
+          "endSample": 2466954
+        },
+        {
+          "text": "Help me kill the curse",
+          "start": 56.59,
+          "end": 58.6,
+          "words": [
+            {
+              "text": "Help",
+              "start": 56.59,
+              "end": 57.06,
+              "id": "L10-W01",
+              "startSample": 2495619,
+              "endSample": 2516346
+            },
+            {
+              "text": "me",
+              "start": 57.16,
+              "end": 57.32,
+              "id": "L10-W02",
+              "startSample": 2520756,
+              "endSample": 2527812
+            },
+            {
+              "text": "kill",
+              "start": 57.32,
+              "end": 57.77,
+              "id": "L10-W03",
+              "startSample": 2527812,
+              "endSample": 2547657
+            },
+            {
+              "text": "the",
+              "start": 57.77,
+              "end": 58.13,
+              "id": "L10-W04",
+              "startSample": 2547657,
+              "endSample": 2563533
+            },
+            {
+              "text": "curse",
+              "start": 58.13,
+              "end": 58.6,
+              "id": "L10-W05",
+              "startSample": 2563533,
+              "endSample": 2584260
+            }
+          ],
+          "timingQuality": "DTW token timing; supplied lyric text retained and mismatches mapped by position; provisional pending listening",
+          "id": "L10",
+          "startSample": 2495619,
+          "endSample": 2584260
+        },
+        {
+          "text": "It’s getting colder",
+          "start": 59.3,
+          "end": 61.04,
+          "words": [
+            {
+              "text": "It’s",
+              "start": 59.3,
+              "end": 59.7,
+              "id": "L11-W01",
+              "startSample": 2615130,
+              "endSample": 2632770
+            },
+            {
+              "text": "getting",
+              "start": 60.07,
+              "end": 60.42,
+              "id": "L11-W02",
+              "startSample": 2649087,
+              "endSample": 2664522
+            },
+            {
+              "text": "colder",
+              "start": 60.42,
+              "end": 61.04,
+              "id": "L11-W03",
+              "startSample": 2664522,
+              "endSample": 2691864
+            }
+          ],
+          "timingQuality": "DTW token timing cross-check; provisional pending listening",
+          "id": "L11",
+          "startSample": 2615130,
+          "endSample": 2691864
+        },
+        {
+          "text": "Hell’s freezing over",
+          "start": 61.68,
+          "end": 63.4,
+          "words": [
+            {
+              "text": "Hell’s",
+              "start": 61.68,
+              "end": 62.25,
+              "id": "L12-W01",
+              "startSample": 2720088,
+              "endSample": 2745225
+            },
+            {
+              "text": "freezing",
+              "start": 62.47,
+              "end": 63.02,
+              "id": "L12-W02",
+              "startSample": 2754927,
+              "endSample": 2779182
+            },
+            {
+              "text": "over",
+              "start": 63.02,
+              "end": 63.4,
+              "id": "L12-W03",
+              "startSample": 2779182,
+              "endSample": 2795940
+            }
+          ],
+          "timingQuality": "DTW token timing cross-check; provisional pending listening",
+          "id": "L12",
+          "startSample": 2720088,
+          "endSample": 2795940
+        },
+        {
+          "text": "So pull me closer",
+          "start": 64.03,
+          "end": 65.52,
+          "words": [
+            {
+              "text": "So",
+              "start": 64.03,
+              "end": 64.24,
+              "id": "L13-W01",
+              "startSample": 2823723,
+              "endSample": 2832984
+            },
+            {
+              "text": "pull",
+              "start": 64.24,
+              "end": 64.79,
+              "id": "L13-W02",
+              "startSample": 2832984,
+              "endSample": 2857239
+            },
+            {
+              "text": "me",
+              "start": 64.79,
+              "end": 64.88,
+              "id": "L13-W03",
+              "startSample": 2857239,
+              "endSample": 2861208
+            },
+            {
+              "text": "closer",
+              "start": 64.88,
+              "end": 65.52,
+              "id": "L13-W04",
+              "startSample": 2861208,
+              "endSample": 2889432
+            }
+          ],
+          "timingQuality": "DTW token timing; supplied lyric text retained and mismatches mapped by position; provisional pending listening",
+          "id": "L13",
+          "startSample": 2823723,
+          "endSample": 2889432
+        }
+      ],
+      "startSample": 2191329,
+      "endSample": 2889432
+    },
+    {
+      "name": "Refrain I",
+      "start": 66.84,
+      "end": 88.4,
+      "lines": [
+        {
+          "text": "Hit me where it hurts",
+          "start": 66.84,
+          "end": 69.08,
+          "words": [
+            {
+              "text": "Hit",
+              "start": 66.84,
+              "end": 66.95,
+              "id": "L14-W01",
+              "startSample": 2947644,
+              "endSample": 2952495
+            },
+            {
+              "text": "me",
+              "start": 66.95,
+              "end": 67.16,
+              "id": "L14-W02",
+              "startSample": 2952495,
+              "endSample": 2961756
+            },
+            {
+              "text": "where",
+              "start": 67.16,
+              "end": 67.96,
+              "id": "L14-W03",
+              "startSample": 2961756,
+              "endSample": 2997036
+            },
+            {
+              "text": "it",
+              "start": 67.96,
+              "end": 68.28,
+              "id": "L14-W04",
+              "startSample": 2997036,
+              "endSample": 3011148
+            },
+            {
+              "text": "hurts",
+              "start": 68.28,
+              "end": 69.08,
+              "id": "L14-W05",
+              "startSample": 3011148,
+              "endSample": 3046428
+            }
+          ],
+          "timingQuality": "DTW token timing; supplied lyric text retained and mismatches mapped by position; provisional pending listening",
+          "id": "L14",
+          "startSample": 2947644,
+          "endSample": 3046428
+        },
+        {
+          "text": "End of the world",
+          "start": 69.96,
+          "end": 71.52,
+          "words": [
+            {
+              "text": "End",
+              "start": 69.96,
+              "end": 70.32,
+              "id": "L15-W01",
+              "startSample": 3085236,
+              "endSample": 3101112
+            },
+            {
+              "text": "of",
+              "start": 70.56,
+              "end": 70.67,
+              "id": "L15-W02",
+              "startSample": 3111696,
+              "endSample": 3116547
+            },
+            {
+              "text": "the",
+              "start": 70.67,
+              "end": 70.92,
+              "id": "L15-W03",
+              "startSample": 3116547,
+              "endSample": 3127572
+            },
+            {
+              "text": "world",
+              "start": 70.92,
+              "end": 71.52,
+              "id": "L15-W04",
+              "startSample": 3127572,
+              "endSample": 3154032
+            }
+          ],
+          "timingQuality": "DTW token timing cross-check; provisional pending listening",
+          "id": "L15",
+          "startSample": 3085236,
+          "endSample": 3154032
+        },
+        {
+          "text": "All I need is you",
+          "start": 72.38,
+          "end": 74.41,
+          "words": [
+            {
+              "text": "All",
+              "start": 72.38,
+              "end": 72.85,
+              "id": "L16-W01",
+              "startSample": 3191958,
+              "endSample": 3212685
+            },
+            {
+              "text": "I",
+              "start": 72.9,
+              "end": 73.0,
+              "id": "L16-W02",
+              "startSample": 3214890,
+              "endSample": 3219300
+            },
+            {
+              "text": "need",
+              "start": 73.0,
+              "end": 73.63,
+              "id": "L16-W03",
+              "startSample": 3219300,
+              "endSample": 3247083
+            },
+            {
+              "text": "is",
+              "start": 73.63,
+              "end": 73.94,
+              "id": "L16-W04",
+              "startSample": 3247083,
+              "endSample": 3260754
+            },
+            {
+              "text": "you",
+              "start": 73.94,
+              "end": 74.41,
+              "id": "L16-W05",
+              "startSample": 3260754,
+              "endSample": 3281481
+            }
+          ],
+          "timingQuality": "DTW token timing cross-check; provisional pending listening",
+          "id": "L16",
+          "startSample": 3191958,
+          "endSample": 3281481
+        },
+        {
+          "text": "If the sun burns out tonight",
+          "start": 75.32,
+          "end": 78.42,
+          "words": [
+            {
+              "text": "If",
+              "start": 75.32,
+              "end": 75.59,
+              "id": "L17-W01",
+              "startSample": 3321612,
+              "endSample": 3333519
+            },
+            {
+              "text": "the",
+              "start": 75.59,
+              "end": 75.99,
+              "id": "L17-W02",
+              "startSample": 3333519,
+              "endSample": 3351159
+            },
+            {
+              "text": "sun",
+              "start": 75.99,
+              "end": 76.39,
+              "id": "L17-W03",
+              "startSample": 3351159,
+              "endSample": 3368799
+            },
+            {
+              "text": "burns",
+              "start": 76.39,
+              "end": 77.07,
+              "id": "L17-W04",
+              "startSample": 3368799,
+              "endSample": 3398787
+            },
+            {
+              "text": "out",
+              "start": 77.07,
+              "end": 77.47,
+              "id": "L17-W05",
+              "startSample": 3398787,
+              "endSample": 3416427
+            },
+            {
+              "text": "tonight",
+              "start": 77.47,
+              "end": 78.42,
+              "id": "L17-W06",
+              "startSample": 3416427,
+              "endSample": 3458322
+            }
+          ],
+          "timingQuality": "DTW token timing cross-check; provisional pending listening",
+          "id": "L17",
+          "startSample": 3321612,
+          "endSample": 3458322
+        },
+        {
+          "text": "Supernova, all I see is you",
+          "start": 79.33,
+          "end": 83.38,
+          "words": [
+            {
+              "text": "Supernova,",
+              "start": 79.33,
+              "end": 81.58,
+              "id": "L18-W01",
+              "startSample": 3498453,
+              "endSample": 3597678
+            },
+            {
+              "text": "all",
+              "start": 81.58,
+              "end": 82.03,
+              "id": "L18-W02",
+              "startSample": 3597678,
+              "endSample": 3617523
+            },
+            {
+              "text": "I",
+              "start": 82.03,
+              "end": 82.18,
+              "id": "L18-W03",
+              "startSample": 3617523,
+              "endSample": 3624138
+            },
+            {
+              "text": "see",
+              "start": 82.18,
+              "end": 82.63,
+              "id": "L18-W04",
+              "startSample": 3624138,
+              "endSample": 3643983
+            },
+            {
+              "text": "is",
+              "start": 82.63,
+              "end": 82.93,
+              "id": "L18-W05",
+              "startSample": 3643983,
+              "endSample": 3657213
+            },
+            {
+              "text": "you",
+              "start": 82.93,
+              "end": 83.38,
+              "id": "L18-W06",
+              "startSample": 3657213,
+              "endSample": 3677058
+            }
+          ],
+          "timingQuality": "DTW token timing cross-check; provisional pending listening",
+          "id": "L18",
+          "startSample": 3498453,
+          "endSample": 3677058
+        },
+        {
+          "text": "If the sun burns out tonight",
+          "start": 84.6,
+          "end": 88.4,
+          "words": [
+            {
+              "text": "If",
+              "start": 84.6,
+              "end": 84.75,
+              "id": "L19-W01",
+              "startSample": 3730860,
+              "endSample": 3737475
+            },
+            {
+              "text": "the",
+              "start": 84.75,
+              "end": 85.27,
+              "id": "L19-W02",
+              "startSample": 3737475,
+              "endSample": 3760407
+            },
+            {
+              "text": "sun",
+              "start": 85.67,
+              "end": 85.79,
+              "id": "L19-W03",
+              "startSample": 3778047,
+              "endSample": 3783339
+            },
+            {
+              "text": "burns",
+              "start": 85.79,
+              "end": 86.66,
+              "id": "L19-W04",
+              "startSample": 3783339,
+              "endSample": 3821706
+            },
+            {
+              "text": "out",
+              "start": 86.66,
+              "end": 87.18,
+              "id": "L19-W05",
+              "startSample": 3821706,
+              "endSample": 3844638
+            },
+            {
+              "text": "tonight",
+              "start": 87.18,
+              "end": 88.4,
+              "id": "L19-W06",
+              "startSample": 3844638,
+              "endSample": 3898440
+            }
+          ],
+          "timingQuality": "DTW token timing cross-check; provisional pending listening",
+          "id": "L19",
+          "startSample": 3730860,
+          "endSample": 3898440
+        }
+      ],
+      "startSample": 2947644,
+      "endSample": 3898440
+    },
+    {
+      "name": "Void passage I",
+      "start": 90.03,
+      "end": 103.22,
+      "lines": [
+        {
+          "text": "Now the void calls out my name",
+          "start": 90.03,
+          "end": 93.27,
+          "words": [
+            {
+              "text": "Now",
+              "start": 90.03,
+              "end": 90.12,
+              "id": "L20-W01",
+              "startSample": 3970323,
+              "endSample": 3974292
+            },
+            {
+              "text": "the",
+              "start": 90.12,
+              "end": 90.5,
+              "id": "L20-W02",
+              "startSample": 3974292,
+              "endSample": 3991050
+            },
+            {
+              "text": "void",
+              "start": 90.5,
+              "end": 91.12,
+              "id": "L20-W03",
+              "startSample": 3991050,
+              "endSample": 4018392
+            },
+            {
+              "text": "calls",
+              "start": 91.12,
+              "end": 91.89,
+              "id": "L20-W04",
+              "startSample": 4018392,
+              "endSample": 4052349
+            },
+            {
+              "text": "out",
+              "start": 91.89,
+              "end": 92.35,
+              "id": "L20-W05",
+              "startSample": 4052349,
+              "endSample": 4072635
+            },
+            {
+              "text": "my",
+              "start": 92.35,
+              "end": 92.66,
+              "id": "L20-W06",
+              "startSample": 4072635,
+              "endSample": 4086306
+            },
+            {
+              "text": "name",
+              "start": 92.66,
+              "end": 93.27,
+              "id": "L20-W07",
+              "startSample": 4086306,
+              "endSample": 4113207
+            }
+          ],
+          "timingQuality": "DTW token timing; supplied lyric text retained and mismatches mapped by position; provisional pending listening",
+          "id": "L20",
+          "startSample": 3970323,
+          "endSample": 4113207
+        },
+        {
+          "text": "It gets louder every day",
+          "start": 94.29,
+          "end": 97.59,
+          "words": [
+            {
+              "text": "It",
+              "start": 94.29,
+              "end": 94.62,
+              "id": "L21-W01",
+              "startSample": 4158189,
+              "endSample": 4172742
+            },
+            {
+              "text": "gets",
+              "start": 94.87,
+              "end": 95.28,
+              "id": "L21-W02",
+              "startSample": 4183767,
+              "endSample": 4201848
+            },
+            {
+              "text": "louder",
+              "start": 95.28,
+              "end": 96.27,
+              "id": "L21-W03",
+              "startSample": 4201848,
+              "endSample": 4245507
+            },
+            {
+              "text": "every",
+              "start": 96.27,
+              "end": 97.1,
+              "id": "L21-W04",
+              "startSample": 4245507,
+              "endSample": 4282110
+            },
+            {
+              "text": "day",
+              "start": 97.1,
+              "end": 97.59,
+              "id": "L21-W05",
+              "startSample": 4282110,
+              "endSample": 4303719
+            }
+          ],
+          "timingQuality": "DTW token timing cross-check; provisional pending listening",
+          "id": "L21",
+          "startSample": 4158189,
+          "endSample": 4303719
+        },
+        {
+          "text": "And in the darkness all I need is you",
+          "start": 98.42,
+          "end": 103.22,
+          "words": [
+            {
+              "text": "And",
+              "start": 98.42,
+              "end": 98.73,
+              "id": "L22-W01",
+              "startSample": 4340322,
+              "endSample": 4353993
+            },
+            {
+              "text": "in",
+              "start": 98.73,
+              "end": 98.93,
+              "id": "L22-W02",
+              "startSample": 4353993,
+              "endSample": 4362813
+            },
+            {
+              "text": "the",
+              "start": 99.19,
+              "end": 99.24,
+              "id": "L22-W03",
+              "startSample": 4374279,
+              "endSample": 4376484
+            },
+            {
+              "text": "darkness",
+              "start": 99.24,
+              "end": 100.06,
+              "id": "L22-W04",
+              "startSample": 4376484,
+              "endSample": 4412646
+            },
+            {
+              "text": "all",
+              "start": 101.4,
+              "end": 101.55,
+              "id": "L22-W05",
+              "startSample": 4471740,
+              "endSample": 4478355
+            },
+            {
+              "text": "I",
+              "start": 101.55,
+              "end": 101.63,
+              "id": "L22-W06",
+              "startSample": 4478355,
+              "endSample": 4481883
+            },
+            {
+              "text": "need",
+              "start": 101.63,
+              "end": 102.34,
+              "id": "L22-W07",
+              "startSample": 4481883,
+              "endSample": 4513194
+            },
+            {
+              "text": "is",
+              "start": 102.34,
+              "end": 102.69,
+              "id": "L22-W08",
+              "startSample": 4513194,
+              "endSample": 4528629
+            },
+            {
+              "text": "you",
+              "start": 102.69,
+              "end": 103.22,
+              "id": "L22-W09",
+              "startSample": 4528629,
+              "endSample": 4552002
+            }
+          ],
+          "timingQuality": "DTW token timing cross-check; provisional pending listening",
+          "id": "L22",
+          "startSample": 4340322,
+          "endSample": 4552002
+        }
+      ],
+      "startSample": 3970323,
+      "endSample": 4552002
+    },
+    {
+      "name": "Sun pickup I",
+      "start": 104.31,
+      "end": 117.4,
+      "lines": [
+        {
+          "text": "If the sun burns out tonight",
+          "start": 104.31,
+          "end": 108.24,
+          "words": [
+            {
+              "text": "If",
+              "start": 104.31,
+              "end": 104.65,
+              "id": "L23-W01",
+              "startSample": 4600071,
+              "endSample": 4615065
+            },
+            {
+              "text": "the",
+              "start": 104.87,
+              "end": 105.16,
+              "id": "L23-W02",
+              "startSample": 4624767,
+              "endSample": 4637556
+            },
+            {
+              "text": "sun",
+              "start": 105.16,
+              "end": 105.67,
+              "id": "L23-W03",
+              "startSample": 4637556,
+              "endSample": 4660047
+            },
+            {
+              "text": "burns",
+              "start": 105.67,
+              "end": 106.53,
+              "id": "L23-W04",
+              "startSample": 4660047,
+              "endSample": 4697973
+            },
+            {
+              "text": "out",
+              "start": 106.53,
+              "end": 107.04,
+              "id": "L23-W05",
+              "startSample": 4697973,
+              "endSample": 4720464
+            },
+            {
+              "text": "tonight",
+              "start": 107.04,
+              "end": 108.24,
+              "id": "L23-W06",
+              "startSample": 4720464,
+              "endSample": 4773384
+            }
+          ],
+          "timingQuality": "DTW token timing cross-check; provisional pending listening",
+          "id": "L23",
+          "startSample": 4600071,
+          "endSample": 4773384
+        },
+        {
+          "text": "If the sun burns out tonight",
+          "start": 113.44,
+          "end": 117.4,
+          "words": [
+            {
+              "text": "If",
+              "start": 113.44,
+              "end": 113.707,
+              "id": "L24-W01",
+              "startSample": 5002704,
+              "endSample": 5014479
+            },
+            {
+              "text": "the",
+              "start": 113.707,
+              "end": 113.975,
+              "id": "L24-W02",
+              "startSample": 5014479,
+              "endSample": 5026298
+            },
+            {
+              "text": "sun",
+              "start": 113.975,
+              "end": 114.242,
+              "id": "L24-W03",
+              "startSample": 5026298,
+              "endSample": 5038072
+            },
+            {
+              "text": "burns",
+              "start": 114.242,
+              "end": 114.51,
+              "id": "L24-W04",
+              "startSample": 5038072,
+              "endSample": 5049891
+            },
+            {
+              "text": "out",
+              "start": 114.51,
+              "end": 115.08,
+              "id": "L24-W05",
+              "startSample": 5049891,
+              "endSample": 5075028
+            },
+            {
+              "text": "tonight",
+              "start": 115.08,
+              "end": 117.4,
+              "id": "L24-W06",
+              "startSample": 5075028,
+              "endSample": 5177340
+            }
+          ],
+          "timingQuality": "DTW token anchors cross-checked; collapsed opening tokens distributed between anchors; provisional pending listening",
+          "id": "L24",
+          "startSample": 5002704,
+          "endSample": 5177340
+        }
+      ],
+      "startSample": 4600071,
+      "endSample": 5177340
+    },
+    {
+      "name": "Refrain II",
+      "start": 123.4,
+      "end": 145.92,
+      "lines": [
+        {
+          "text": "Hit me where it hurts",
+          "start": 123.4,
+          "end": 126.25,
+          "words": [
+            {
+              "text": "Hit",
+              "start": 123.4,
+              "end": 123.51,
+              "id": "L25-W01",
+              "startSample": 5441940,
+              "endSample": 5446791
+            },
+            {
+              "text": "me",
+              "start": 123.51,
+              "end": 123.72,
+              "id": "L25-W02",
+              "startSample": 5446791,
+              "endSample": 5456052
+            },
+            {
+              "text": "where",
+              "start": 124.47,
+              "end": 124.6,
+              "id": "L25-W03",
+              "startSample": 5489127,
+              "endSample": 5494860
+            },
+            {
+              "text": "it",
+              "start": 124.6,
+              "end": 125.07,
+              "id": "L25-W04",
+              "startSample": 5494860,
+              "endSample": 5515587
+            },
+            {
+              "text": "hurts",
+              "start": 125.07,
+              "end": 126.25,
+              "id": "L25-W05",
+              "startSample": 5515587,
+              "endSample": 5567625
+            }
+          ],
+          "timingQuality": "DTW token timing; supplied lyric text retained and mismatches mapped by position; provisional pending listening",
+          "id": "L25",
+          "startSample": 5441940,
+          "endSample": 5567625
+        },
+        {
+          "text": "End of the world",
+          "start": 127.36,
+          "end": 128.92,
+          "words": [
+            {
+              "text": "End",
+              "start": 127.36,
+              "end": 127.72,
+              "id": "L26-W01",
+              "startSample": 5616576,
+              "endSample": 5632452
+            },
+            {
+              "text": "of",
+              "start": 127.96,
+              "end": 128.07,
+              "id": "L26-W02",
+              "startSample": 5643036,
+              "endSample": 5647887
+            },
+            {
+              "text": "the",
+              "start": 128.07,
+              "end": 128.32,
+              "id": "L26-W03",
+              "startSample": 5647887,
+              "endSample": 5658912
+            },
+            {
+              "text": "world",
+              "start": 128.32,
+              "end": 128.92,
+              "id": "L26-W04",
+              "startSample": 5658912,
+              "endSample": 5685372
+            }
+          ],
+          "timingQuality": "DTW token timing cross-check; provisional pending listening",
+          "id": "L26",
+          "startSample": 5616576,
+          "endSample": 5685372
+        },
+        {
+          "text": "All I need is you",
+          "start": 130.28,
+          "end": 131.88,
+          "words": [
+            {
+              "text": "All",
+              "start": 130.28,
+              "end": 130.39,
+              "id": "L27-W01",
+              "startSample": 5745348,
+              "endSample": 5750199
+            },
+            {
+              "text": "I",
+              "start": 130.39,
+              "end": 130.44,
+              "id": "L27-W02",
+              "startSample": 5750199,
+              "endSample": 5752404
+            },
+            {
+              "text": "need",
+              "start": 130.44,
+              "end": 131.08,
+              "id": "L27-W03",
+              "startSample": 5752404,
+              "endSample": 5780628
+            },
+            {
+              "text": "is",
+              "start": 131.08,
+              "end": 131.4,
+              "id": "L27-W04",
+              "startSample": 5780628,
+              "endSample": 5794740
+            },
+            {
+              "text": "you",
+              "start": 131.4,
+              "end": 131.88,
+              "id": "L27-W05",
+              "startSample": 5794740,
+              "endSample": 5815908
+            }
+          ],
+          "timingQuality": "DTW token timing; supplied lyric text retained and mismatches mapped by position; provisional pending listening",
+          "id": "L27",
+          "startSample": 5745348,
+          "endSample": 5815908
+        },
+        {
+          "text": "If the sun burns out tonight",
+          "start": 132.8,
+          "end": 135.94,
+          "words": [
+            {
+              "text": "If",
+              "start": 132.8,
+              "end": 133.07,
+              "id": "L28-W01",
+              "startSample": 5856480,
+              "endSample": 5868387
+            },
+            {
+              "text": "the",
+              "start": 133.42,
+              "end": 133.48,
+              "id": "L28-W02",
+              "startSample": 5883822,
+              "endSample": 5886468
+            },
+            {
+              "text": "sun",
+              "start": 133.48,
+              "end": 133.89,
+              "id": "L28-W03",
+              "startSample": 5886468,
+              "endSample": 5904549
+            },
+            {
+              "text": "burns",
+              "start": 133.89,
+              "end": 134.57,
+              "id": "L28-W04",
+              "startSample": 5904549,
+              "endSample": 5934537
+            },
+            {
+              "text": "out",
+              "start": 134.57,
+              "end": 134.98,
+              "id": "L28-W05",
+              "startSample": 5934537,
+              "endSample": 5952618
+            },
+            {
+              "text": "tonight",
+              "start": 134.98,
+              "end": 135.94,
+              "id": "L28-W06",
+              "startSample": 5952618,
+              "endSample": 5994954
+            }
+          ],
+          "timingQuality": "DTW token timing cross-check; provisional pending listening",
+          "id": "L28",
+          "startSample": 5856480,
+          "endSample": 5994954
+        },
+        {
+          "text": "Supernova, all I see is you",
+          "start": 136.85,
+          "end": 140.9,
+          "words": [
+            {
+              "text": "Supernova,",
+              "start": 136.85,
+              "end": 139.1,
+              "id": "L29-W01",
+              "startSample": 6035085,
+              "endSample": 6134310
+            },
+            {
+              "text": "all",
+              "start": 139.1,
+              "end": 139.55,
+              "id": "L29-W02",
+              "startSample": 6134310,
+              "endSample": 6154155
+            },
+            {
+              "text": "I",
+              "start": 139.55,
+              "end": 139.7,
+              "id": "L29-W03",
+              "startSample": 6154155,
+              "endSample": 6160770
+            },
+            {
+              "text": "see",
+              "start": 139.7,
+              "end": 140.15,
+              "id": "L29-W04",
+              "startSample": 6160770,
+              "endSample": 6180615
+            },
+            {
+              "text": "is",
+              "start": 140.15,
+              "end": 140.45,
+              "id": "L29-W05",
+              "startSample": 6180615,
+              "endSample": 6193845
+            },
+            {
+              "text": "you",
+              "start": 140.45,
+              "end": 140.9,
+              "id": "L29-W06",
+              "startSample": 6193845,
+              "endSample": 6213690
+            }
+          ],
+          "timingQuality": "DTW token timing cross-check; provisional pending listening",
+          "id": "L29",
+          "startSample": 6035085,
+          "endSample": 6213690
+        },
+        {
+          "text": "If the sun burns out tonight",
+          "start": 142.0,
+          "end": 145.92,
+          "words": [
+            {
+              "text": "If",
+              "start": 142.0,
+              "end": 142.27,
+              "id": "L30-W01",
+              "startSample": 6262200,
+              "endSample": 6274107
+            },
+            {
+              "text": "the",
+              "start": 142.27,
+              "end": 142.79,
+              "id": "L30-W02",
+              "startSample": 6274107,
+              "endSample": 6297039
+            },
+            {
+              "text": "sun",
+              "start": 143.07,
+              "end": 143.31,
+              "id": "L30-W03",
+              "startSample": 6309387,
+              "endSample": 6319971
+            },
+            {
+              "text": "burns",
+              "start": 143.31,
+              "end": 144.18,
+              "id": "L30-W04",
+              "startSample": 6319971,
+              "endSample": 6358338
+            },
+            {
+              "text": "out",
+              "start": 144.18,
+              "end": 144.7,
+              "id": "L30-W05",
+              "startSample": 6358338,
+              "endSample": 6381270
+            },
+            {
+              "text": "tonight",
+              "start": 144.7,
+              "end": 145.92,
+              "id": "L30-W06",
+              "startSample": 6381270,
+              "endSample": 6435072
+            }
+          ],
+          "timingQuality": "DTW token timing cross-check; provisional pending listening",
+          "id": "L30",
+          "startSample": 6262200,
+          "endSample": 6435072
+        }
+      ],
+      "startSample": 5441940,
+      "endSample": 6435072
+    },
+    {
+      "name": "Void passage II",
+      "start": 147.44,
+      "end": 160.64,
+      "lines": [
+        {
+          "text": "Now the void calls out my name",
+          "start": 147.44,
+          "end": 150.79,
+          "words": [
+            {
+              "text": "Now",
+              "start": 147.44,
+              "end": 147.55,
+              "id": "L31-W01",
+              "startSample": 6502104,
+              "endSample": 6506955
+            },
+            {
+              "text": "the",
+              "start": 147.55,
+              "end": 147.92,
+              "id": "L31-W02",
+              "startSample": 6506955,
+              "endSample": 6523272
+            },
+            {
+              "text": "void",
+              "start": 147.92,
+              "end": 148.56,
+              "id": "L31-W03",
+              "startSample": 6523272,
+              "endSample": 6551496
+            },
+            {
+              "text": "calls",
+              "start": 148.56,
+              "end": 149.36,
+              "id": "L31-W04",
+              "startSample": 6551496,
+              "endSample": 6586776
+            },
+            {
+              "text": "out",
+              "start": 149.36,
+              "end": 149.84,
+              "id": "L31-W05",
+              "startSample": 6586776,
+              "endSample": 6607944
+            },
+            {
+              "text": "my",
+              "start": 149.84,
+              "end": 150.16,
+              "id": "L31-W06",
+              "startSample": 6607944,
+              "endSample": 6622056
+            },
+            {
+              "text": "name",
+              "start": 150.16,
+              "end": 150.79,
+              "id": "L31-W07",
+              "startSample": 6622056,
+              "endSample": 6649839
+            }
+          ],
+          "timingQuality": "DTW token timing; supplied lyric text retained and mismatches mapped by position; provisional pending listening",
+          "id": "L31",
+          "startSample": 6502104,
+          "endSample": 6649839
+        },
+        {
+          "text": "It gets louder every day",
+          "start": 151.79,
+          "end": 154.96,
+          "words": [
+            {
+              "text": "It",
+              "start": 151.79,
+              "end": 152.11,
+              "id": "L32-W01",
+              "startSample": 6693939,
+              "endSample": 6708051
+            },
+            {
+              "text": "gets",
+              "start": 152.39,
+              "end": 152.74,
+              "id": "L32-W02",
+              "startSample": 6720399,
+              "endSample": 6735834
+            },
+            {
+              "text": "louder",
+              "start": 152.74,
+              "end": 153.69,
+              "id": "L32-W03",
+              "startSample": 6735834,
+              "endSample": 6777729
+            },
+            {
+              "text": "every",
+              "start": 153.69,
+              "end": 154.48,
+              "id": "L32-W04",
+              "startSample": 6777729,
+              "endSample": 6812568
+            },
+            {
+              "text": "day",
+              "start": 154.48,
+              "end": 154.96,
+              "id": "L32-W05",
+              "startSample": 6812568,
+              "endSample": 6833736
+            }
+          ],
+          "timingQuality": "DTW token timing cross-check; provisional pending listening",
+          "id": "L32",
+          "startSample": 6693939,
+          "endSample": 6833736
+        },
+        {
+          "text": "And in the darkness all I need is you",
+          "start": 155.79,
+          "end": 160.64,
+          "words": [
+            {
+              "text": "And",
+              "start": 155.79,
+              "end": 156.11,
+              "id": "L33-W01",
+              "startSample": 6870339,
+              "endSample": 6884451
+            },
+            {
+              "text": "in",
+              "start": 156.11,
+              "end": 156.32,
+              "id": "L33-W02",
+              "startSample": 6884451,
+              "endSample": 6893712
+            },
+            {
+              "text": "the",
+              "start": 156.55,
+              "end": 156.64,
+              "id": "L33-W03",
+              "startSample": 6903855,
+              "endSample": 6907824
+            },
+            {
+              "text": "darkness",
+              "start": 156.64,
+              "end": 157.49,
+              "id": "L33-W04",
+              "startSample": 6907824,
+              "endSample": 6945309
+            },
+            {
+              "text": "all",
+              "start": 158.89,
+              "end": 158.98,
+              "id": "L33-W05",
+              "startSample": 7007049,
+              "endSample": 7011018
+            },
+            {
+              "text": "I",
+              "start": 158.98,
+              "end": 159.06,
+              "id": "L33-W06",
+              "startSample": 7011018,
+              "endSample": 7014546
+            },
+            {
+              "text": "need",
+              "start": 159.06,
+              "end": 159.76,
+              "id": "L33-W07",
+              "startSample": 7014546,
+              "endSample": 7045416
+            },
+            {
+              "text": "is",
+              "start": 159.76,
+              "end": 160.11,
+              "id": "L33-W08",
+              "startSample": 7045416,
+              "endSample": 7060851
+            },
+            {
+              "text": "you",
+              "start": 160.11,
+              "end": 160.64,
+              "id": "L33-W09",
+              "startSample": 7060851,
+              "endSample": 7084224
+            }
+          ],
+          "timingQuality": "DTW token timing; supplied lyric text retained and mismatches mapped by position; provisional pending listening",
+          "id": "L33",
+          "startSample": 6870339,
+          "endSample": 7084224
+        }
+      ],
+      "startSample": 6502104,
+      "endSample": 7084224
+    },
+    {
+      "name": "Sun pickup II",
+      "start": 161.56,
+      "end": 164.39,
+      "lines": [
+        {
+          "text": "If the sun burns out tonight",
+          "start": 161.56,
+          "end": 164.39,
+          "words": [
+            {
+              "text": "If",
+              "start": 161.56,
+              "end": 161.8,
+              "id": "L34-W01",
+              "startSample": 7124796,
+              "endSample": 7135380
+            },
+            {
+              "text": "the",
+              "start": 162.12,
+              "end": 162.27,
+              "id": "L34-W02",
+              "startSample": 7149492,
+              "endSample": 7156107
+            },
+            {
+              "text": "sun",
+              "start": 162.27,
+              "end": 162.54,
+              "id": "L34-W03",
+              "startSample": 7156107,
+              "endSample": 7168014
+            },
+            {
+              "text": "burns",
+              "start": 162.54,
+              "end": 163.16,
+              "id": "L34-W04",
+              "startSample": 7168014,
+              "endSample": 7195356
+            },
+            {
+              "text": "out",
+              "start": 163.16,
+              "end": 163.53,
+              "id": "L34-W05",
+              "startSample": 7195356,
+              "endSample": 7211673
+            },
+            {
+              "text": "tonight",
+              "start": 163.53,
+              "end": 164.39,
+              "id": "L34-W06",
+              "startSample": 7211673,
+              "endSample": 7249599
+            }
+          ],
+          "timingQuality": "DTW token timing cross-check; provisional pending listening",
+          "id": "L34",
+          "startSample": 7124796,
+          "endSample": 7249599
+        }
+      ],
+      "startSample": 7124796,
+      "endSample": 7249599
+    },
+    {
+      "name": "Bridge",
+      "start": 165.21,
+      "end": 182.71,
+      "lines": [
+        {
+          "text": "Cos the silence is deafening now",
+          "start": 165.21,
+          "end": 168.3,
+          "words": [
+            {
+              "text": "Cos",
+              "start": 165.21,
+              "end": 165.74,
+              "id": "L35-W01",
+              "startSample": 7285761,
+              "endSample": 7309134
+            },
+            {
+              "text": "the",
+              "start": 165.87,
+              "end": 166.06,
+              "id": "L35-W02",
+              "startSample": 7314867,
+              "endSample": 7323246
+            },
+            {
+              "text": "silence",
+              "start": 166.06,
+              "end": 166.81,
+              "id": "L35-W03",
+              "startSample": 7323246,
+              "endSample": 7356321
+            },
+            {
+              "text": "is",
+              "start": 166.81,
+              "end": 167.02,
+              "id": "L35-W04",
+              "startSample": 7356321,
+              "endSample": 7365582
+            },
+            {
+              "text": "deafening",
+              "start": 167.02,
+              "end": 167.98,
+              "id": "L35-W05",
+              "startSample": 7365582,
+              "endSample": 7407918
+            },
+            {
+              "text": "now",
+              "start": 167.98,
+              "end": 168.3,
+              "id": "L35-W06",
+              "startSample": 7407918,
+              "endSample": 7422030
+            }
+          ],
+          "timingQuality": "DTW token timing cross-check; provisional pending listening",
+          "id": "L35",
+          "startSample": 7285761,
+          "endSample": 7422030
+        },
+        {
+          "text": "Only the sound of our hearts still beating",
+          "start": 169.04,
+          "end": 173.26,
+          "words": [
+            {
+              "text": "Only",
+              "start": 169.04,
+              "end": 169.52,
+              "id": "L36-W01",
+              "startSample": 7454664,
+              "endSample": 7475832
+            },
+            {
+              "text": "the",
+              "start": 169.75,
+              "end": 169.88,
+              "id": "L36-W02",
+              "startSample": 7485975,
+              "endSample": 7491708
+            },
+            {
+              "text": "sound",
+              "start": 169.88,
+              "end": 170.48,
+              "id": "L36-W03",
+              "startSample": 7491708,
+              "endSample": 7518168
+            },
+            {
+              "text": "of",
+              "start": 170.48,
+              "end": 170.72,
+              "id": "L36-W04",
+              "startSample": 7518168,
+              "endSample": 7528752
+            },
+            {
+              "text": "our",
+              "start": 170.72,
+              "end": 171.08,
+              "id": "L36-W05",
+              "startSample": 7528752,
+              "endSample": 7544628
+            },
+            {
+              "text": "hearts",
+              "start": 171.08,
+              "end": 171.81,
+              "id": "L36-W06",
+              "startSample": 7544628,
+              "endSample": 7576821
+            },
+            {
+              "text": "still",
+              "start": 171.81,
+              "end": 172.41,
+              "id": "L36-W07",
+              "startSample": 7576821,
+              "endSample": 7603281
+            },
+            {
+              "text": "beating",
+              "start": 172.41,
+              "end": 173.26,
+              "id": "L36-W08",
+              "startSample": 7603281,
+              "endSample": 7640766
+            }
+          ],
+          "timingQuality": "DTW token timing cross-check; provisional pending listening",
+          "id": "L36",
+          "startSample": 7454664,
+          "endSample": 7640766
+        },
+        {
+          "text": "Please drag me out",
+          "start": 175.39,
+          "end": 177.62,
+          "words": [
+            {
+              "text": "Please",
+              "start": 175.39,
+              "end": 175.97,
+              "id": "L37-W01",
+              "startSample": 7734699,
+              "endSample": 7760277
+            },
+            {
+              "text": "drag",
+              "start": 175.97,
+              "end": 176.7,
+              "id": "L37-W02",
+              "startSample": 7760277,
+              "endSample": 7792470
+            },
+            {
+              "text": "me",
+              "start": 176.7,
+              "end": 177.07,
+              "id": "L37-W03",
+              "startSample": 7792470,
+              "endSample": 7808787
+            },
+            {
+              "text": "out",
+              "start": 177.07,
+              "end": 177.62,
+              "id": "L37-W04",
+              "startSample": 7808787,
+              "endSample": 7833042
+            }
+          ],
+          "timingQuality": "DTW token timing; supplied lyric text retained and mismatches mapped by position; provisional pending listening",
+          "id": "L37",
+          "startSample": 7734699,
+          "endSample": 7833042
+        },
+        {
+          "text": "Give me a reason to keep on breathing",
+          "start": 179.15,
+          "end": 182.71,
+          "words": [
+            {
+              "text": "Give",
+              "start": 179.15,
+              "end": 179.27,
+              "id": "L38-W01",
+              "startSample": 7900515,
+              "endSample": 7905807
+            },
+            {
+              "text": "me",
+              "start": 179.27,
+              "end": 179.42,
+              "id": "L38-W02",
+              "startSample": 7905807,
+              "endSample": 7912422
+            },
+            {
+              "text": "a",
+              "start": 179.42,
+              "end": 179.55,
+              "id": "L38-W03",
+              "startSample": 7912422,
+              "endSample": 7918155
+            },
+            {
+              "text": "reason",
+              "start": 179.55,
+              "end": 180.38,
+              "id": "L38-W04",
+              "startSample": 7918155,
+              "endSample": 7954758
+            },
+            {
+              "text": "to",
+              "start": 180.38,
+              "end": 180.65,
+              "id": "L38-W05",
+              "startSample": 7954758,
+              "endSample": 7966665
+            },
+            {
+              "text": "keep",
+              "start": 180.65,
+              "end": 181.2,
+              "id": "L38-W06",
+              "startSample": 7966665,
+              "endSample": 7990920
+            },
+            {
+              "text": "on",
+              "start": 181.2,
+              "end": 181.47,
+              "id": "L38-W07",
+              "startSample": 7990920,
+              "endSample": 8002827
+            },
+            {
+              "text": "breathing",
+              "start": 181.47,
+              "end": 182.71,
+              "id": "L38-W08",
+              "startSample": 8002827,
+              "endSample": 8057511
+            }
+          ],
+          "timingQuality": "DTW token timing cross-check; provisional pending listening",
+          "id": "L38",
+          "startSample": 7900515,
+          "endSample": 8057511
+        }
+      ],
+      "startSample": 7285761,
+      "endSample": 8057511
+    },
+    {
+      "name": "Final lift",
+      "start": 184.2,
+      "end": 222.52,
+      "lines": [
+        {
+          "text": "The heavens open, the sky’s black and blue",
+          "start": 184.2,
+          "end": 188.54,
+          "words": [
+            {
+              "text": "The",
+              "start": 184.2,
+              "end": 184.34,
+              "id": "L39-W01",
+              "startSample": 8123220,
+              "endSample": 8129394
+            },
+            {
+              "text": "heavens",
+              "start": 184.34,
+              "end": 184.98,
+              "id": "L39-W02",
+              "startSample": 8129394,
+              "endSample": 8157618
+            },
+            {
+              "text": "open,",
+              "start": 185.27,
+              "end": 185.53,
+              "id": "L39-W03",
+              "startSample": 8170407,
+              "endSample": 8181873
+            },
+            {
+              "text": "the",
+              "start": 185.8,
+              "end": 186.21,
+              "id": "L39-W04",
+              "startSample": 8193780,
+              "endSample": 8211861
+            },
+            {
+              "text": "sky’s",
+              "start": 186.21,
+              "end": 186.89,
+              "id": "L39-W05",
+              "startSample": 8211861,
+              "endSample": 8241849
+            },
+            {
+              "text": "black",
+              "start": 186.89,
+              "end": 187.58,
+              "id": "L39-W06",
+              "startSample": 8241849,
+              "endSample": 8272278
+            },
+            {
+              "text": "and",
+              "start": 187.58,
+              "end": 187.99,
+              "id": "L39-W07",
+              "startSample": 8272278,
+              "endSample": 8290359
+            },
+            {
+              "text": "blue",
+              "start": 187.99,
+              "end": 188.54,
+              "id": "L39-W08",
+              "startSample": 8290359,
+              "endSample": 8314614
+            }
+          ],
+          "timingQuality": "DTW token timing cross-check; provisional pending listening",
+          "id": "L39",
+          "startSample": 8123220,
+          "endSample": 8314614
+        },
+        {
+          "text": "The end’s approaching for me and you",
+          "start": 189.44,
+          "end": 193.6,
+          "words": [
+            {
+              "text": "The",
+              "start": 189.44,
+              "end": 189.84,
+              "id": "L40-W01",
+              "startSample": 8354304,
+              "endSample": 8371944
+            },
+            {
+              "text": "end’s",
+              "start": 190.11,
+              "end": 190.38,
+              "id": "L40-W02",
+              "startSample": 8383851,
+              "endSample": 8395758
+            },
+            {
+              "text": "approaching",
+              "start": 190.78,
+              "end": 192.26,
+              "id": "L40-W03",
+              "startSample": 8413398,
+              "endSample": 8478666
+            },
+            {
+              "text": "for",
+              "start": 192.26,
+              "end": 192.53,
+              "id": "L40-W04",
+              "startSample": 8478666,
+              "endSample": 8490573
+            },
+            {
+              "text": "me",
+              "start": 192.53,
+              "end": 192.8,
+              "id": "L40-W05",
+              "startSample": 8490573,
+              "endSample": 8502480
+            },
+            {
+              "text": "and",
+              "start": 192.8,
+              "end": 193.19,
+              "id": "L40-W06",
+              "startSample": 8502480,
+              "endSample": 8519679
+            },
+            {
+              "text": "you",
+              "start": 193.19,
+              "end": 193.6,
+              "id": "L40-W07",
+              "startSample": 8519679,
+              "endSample": 8537760
+            }
+          ],
+          "timingQuality": "DTW token timing; supplied lyric text retained and mismatches mapped by position; provisional pending listening",
+          "id": "L40",
+          "startSample": 8354304,
+          "endSample": 8537760
+        },
+        {
+          "text": "We’ll survive, just you and I",
+          "start": 195.11,
+          "end": 198.45,
+          "words": [
+            {
+              "text": "We’ll",
+              "start": 195.11,
+              "end": 195.27,
+              "id": "L41-W01",
+              "startSample": 8604351,
+              "endSample": 8611407
+            },
+            {
+              "text": "survive,",
+              "start": 195.27,
+              "end": 196.51,
+              "id": "L41-W02",
+              "startSample": 8611407,
+              "endSample": 8666091
+            },
+            {
+              "text": "just",
+              "start": 196.51,
+              "end": 197.22,
+              "id": "L41-W03",
+              "startSample": 8666091,
+              "endSample": 8697402
+            },
+            {
+              "text": "you",
+              "start": 197.22,
+              "end": 197.75,
+              "id": "L41-W04",
+              "startSample": 8697402,
+              "endSample": 8720775
+            },
+            {
+              "text": "and",
+              "start": 197.75,
+              "end": 198.28,
+              "id": "L41-W05",
+              "startSample": 8720775,
+              "endSample": 8744148
+            },
+            {
+              "text": "I",
+              "start": 198.28,
+              "end": 198.45,
+              "id": "L41-W06",
+              "startSample": 8744148,
+              "endSample": 8751645
+            }
+          ],
+          "timingQuality": "DTW token timing; supplied lyric text retained and mismatches mapped by position; provisional pending listening",
+          "id": "L41",
+          "startSample": 8604351,
+          "endSample": 8751645
+        },
+        {
+          "text": "If the sun burns out tonight",
+          "start": 200.31,
+          "end": 204.24,
+          "words": [
+            {
+              "text": "If",
+              "start": 200.31,
+              "end": 200.65,
+              "id": "L42-W01",
+              "startSample": 8833671,
+              "endSample": 8848665
+            },
+            {
+              "text": "the",
+              "start": 200.87,
+              "end": 201.16,
+              "id": "L42-W02",
+              "startSample": 8858367,
+              "endSample": 8871156
+            },
+            {
+              "text": "sun",
+              "start": 201.16,
+              "end": 201.67,
+              "id": "L42-W03",
+              "startSample": 8871156,
+              "endSample": 8893647
+            },
+            {
+              "text": "burns",
+              "start": 201.67,
+              "end": 202.53,
+              "id": "L42-W04",
+              "startSample": 8893647,
+              "endSample": 8931573
+            },
+            {
+              "text": "out",
+              "start": 202.53,
+              "end": 203.04,
+              "id": "L42-W05",
+              "startSample": 8931573,
+              "endSample": 8954064
+            },
+            {
+              "text": "tonight",
+              "start": 203.04,
+              "end": 204.24,
+              "id": "L42-W06",
+              "startSample": 8954064,
+              "endSample": 9006984
+            }
+          ],
+          "timingQuality": "DTW token timing cross-check; provisional pending listening",
+          "id": "L42",
+          "startSample": 8833671,
+          "endSample": 9006984
+        },
+        {
+          "text": "If the sun burns out tonight",
+          "start": 209.8,
+          "end": 213.74,
+          "words": [
+            {
+              "text": "If",
+              "start": 209.8,
+              "end": 209.96,
+              "id": "L43-W01",
+              "startSample": 9252180,
+              "endSample": 9259236
+            },
+            {
+              "text": "the",
+              "start": 209.96,
+              "end": 210.12,
+              "id": "L43-W02",
+              "startSample": 9259236,
+              "endSample": 9266292
+            },
+            {
+              "text": "sun",
+              "start": 210.12,
+              "end": 210.3,
+              "id": "L43-W03",
+              "startSample": 9266292,
+              "endSample": 9274230
+            },
+            {
+              "text": "burns",
+              "start": 210.3,
+              "end": 210.87,
+              "id": "L43-W04",
+              "startSample": 9274230,
+              "endSample": 9299367
+            },
+            {
+              "text": "out",
+              "start": 210.87,
+              "end": 211.33,
+              "id": "L43-W05",
+              "startSample": 9299367,
+              "endSample": 9319653
+            },
+            {
+              "text": "tonight",
+              "start": 211.33,
+              "end": 213.74,
+              "id": "L43-W06",
+              "startSample": 9319653,
+              "endSample": 9425934
+            }
+          ],
+          "timingQuality": "DTW token anchors cross-checked; collapsed opening tokens distributed between anchors; provisional pending listening",
+          "id": "L43",
+          "startSample": 9252180,
+          "endSample": 9425934
+        },
+        {
+          "text": "If the sun burns out tonight",
+          "start": 219.48,
+          "end": 222.52,
+          "words": [
+            {
+              "text": "If",
+              "start": 219.48,
+              "end": 219.68,
+              "id": "L44-W01",
+              "startSample": 9679068,
+              "endSample": 9687888
+            },
+            {
+              "text": "the",
+              "start": 219.68,
+              "end": 219.88,
+              "id": "L44-W02",
+              "startSample": 9687888,
+              "endSample": 9696708
+            },
+            {
+              "text": "sun",
+              "start": 219.88,
+              "end": 220.15,
+              "id": "L44-W03",
+              "startSample": 9696708,
+              "endSample": 9708615
+            },
+            {
+              "text": "burns",
+              "start": 220.15,
+              "end": 220.43,
+              "id": "L44-W04",
+              "startSample": 9708615,
+              "endSample": 9720963
+            },
+            {
+              "text": "out",
+              "start": 220.43,
+              "end": 220.55,
+              "id": "L44-W05",
+              "startSample": 9720963,
+              "endSample": 9726255
+            },
+            {
+              "text": "tonight",
+              "start": 220.55,
+              "end": 222.52,
+              "id": "L44-W06",
+              "startSample": 9726255,
+              "endSample": 9813132
+            }
+          ],
+          "timingQuality": "DTW token anchors cross-checked; collapsed opening tokens distributed between anchors; provisional pending listening",
+          "id": "L44",
+          "startSample": 9679068,
+          "endSample": 9813132
+        }
+      ],
+      "startSample": 8123220,
+      "endSample": 9813132
+    }
+  ],
+  "timebase": {
+    "unit": "source-sample index",
+    "sampleRate": 44100,
+    "origin": "first presented decoded AAC sample; source video and soundtrack both begin at zero",
+    "precisionNote": "Indices preserve the candidate timeline on the source sample grid. Their integer form does not imply acoustic timing accuracy."
+  }
+}

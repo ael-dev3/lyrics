@@ -1,0 +1,39 @@
+{
+  "timingRevision": "preview-v6-audio-evidence",
+  "visualRevision": "spectrum-depth-v1",
+  "scope": "Full muted technical transport check after pause/end foreground fix; before sunfire visual addition.",
+  "recordedAt": "2026-09-23T13:18:50.629621+00:00",
+  "sourceTimeRange": [
+    0,
+    234.266122
+  ],
+  "ended": true,
+  "nativeFrames": 5621,
+  "nativeDroppedFrames": 0,
+  "foregroundCallbacks": 5620,
+  "foregroundSkippedSourceFrames": 0,
+  "maximumConsecutiveForegroundGap": 0,
+  "maximumCallbackDelayMs": 1.1000000000058208,
+  "lastFrameTime": 234.166667,
+  "callbackPendingAfterEnd": false,
+  "pausedRefreshPendingAfterEnd": false,
+  "pictureError": null,
+  "sampledMediaMinusFrameSeconds": [
+    0.009569,
+    0.008295,
+    0.016805,
+    0.024938
+  ],
+  "testsPassed": 20,
+  "files": {
+    "src/player.js": "9201af7d386fe2cd5ba27e00bdfe741c8e57c57df7a986747e152930122f3810",
+    "src/preview-core.js": "f67e077e7e98a31e06f9d4ed0701c295d0b7417569d6481e6b2b1eee734f33c2",
+    "src/spectrum-view.js": "33a939ceebf3d079c784dceeaaa6a7ea25a47205be7ec2d743274b75881d18bd",
+    "src/timeline.json": "b71c6ea2e7c39a56843cd51be74bae10c1dcf095f81025b9c7af8ffd7f9ccba4",
+    "review/index.html": "0a0603f543bb13178edeb751c318eac577dcd58717a8775d513129af30ec7cee"
+  },
+  "limitations": [
+    "Muted technical playback is not a human listening review.",
+    "Frame timestamps include ordinary24fps presentation quantization."
+  ]
+}
