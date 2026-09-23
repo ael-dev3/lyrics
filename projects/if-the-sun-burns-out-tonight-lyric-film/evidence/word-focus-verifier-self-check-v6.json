@@ -1,0 +1,64 @@
+{
+  "schema": "encoded-word-focus-verifier-self-check/v1",
+  "createdAt": "2026-09-23T15:13:09.077119+00:00",
+  "status": "passed",
+  "scope": "Available production stills and intentionally altered still fixtures only. Final encoded masters are not assessed by this calibration report.",
+  "script": "scripts/verify-word-focus.mjs",
+  "scriptSha256": "aabdb3e441ec079faaaeee0afcca07b5f97877746b94523cc9d4a23d0104bfb6",
+  "proofCalibration": {
+    "landscape": {
+      "report": "evidence/word-focus-landscape-proof-calibration.json",
+      "status": "passed",
+      "summary": {
+        "encodedFramesInspected": 7,
+        "wordMidpointsCovered": 0,
+        "expectedWordCount": 254,
+        "individualGlyphChecks": 41,
+        "suspects": 0,
+        "ambiguous": 0,
+        "unexpectedCueGapText": 0
+      }
+    },
+    "portrait": {
+      "report": "evidence/word-focus-portrait-proof-calibration.json",
+      "status": "passed",
+      "summary": {
+        "encodedFramesInspected": 5,
+        "wordMidpointsCovered": 0,
+        "expectedWordCount": 254,
+        "individualGlyphChecks": 28,
+        "suspects": 0,
+        "ambiguous": 0,
+        "unexpectedCueGapText": 0
+      }
+    }
+  },
+  "negativeFixtures": {
+    "scope": "Temporary copies of production still with amber glyphs replaced by ivory, and a separate copy displaced horizontally by five pixels.",
+    "summary": {
+      "encodedFramesInspected": 2,
+      "wordMidpointsCovered": 0,
+      "expectedWordCount": 254,
+      "individualGlyphChecks": 12,
+      "suspects": 7,
+      "ambiguous": 0,
+      "unexpectedCueGapText": 0
+    },
+    "detectedStatuses": [
+      "suspect-geometry",
+      "wrong-active-color"
+    ]
+  },
+  "checks": {
+    "proofFramesPass": true,
+    "wrongActiveColorDetected": true,
+    "fivePixelDisplacementDetected": true,
+    "full399FrameSelectionExpressionDecodes": true
+  },
+  "limits": [
+    "Still calibration is not a full encoded-master check.",
+    "Both production and verification share the font rasterizer dependency; focus expectations and decoded-pixel checks are independent.",
+    "These fixtures demonstrate sensitivity to specific color and position faults, not every possible visual defect."
+  ],
+  "selectionImplementation": "Balanced FFmpeg selection expression avoids parser-depth limits for hundreds of sparse frames."
+}

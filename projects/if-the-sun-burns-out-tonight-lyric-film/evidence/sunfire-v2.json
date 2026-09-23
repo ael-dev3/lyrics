@@ -1,0 +1,84 @@
+{
+  "revision": "sunfire-v2-vocal-dynamics",
+  "scope": "Preview-only audio-responsive lyric fire, confined to 12 sun burns/burnt out tonight hooks",
+  "date": "2026-09-23",
+  "sourceSha256": "d4f742d4197dbd30b07e2e5dbd0f648a5aec6e310162865c28f65f19a65ff5b5",
+  "filesSha256": {
+    "src/player.js": "8b99c738235cabf12ee5e4febdaccc9408af8ffa735e4060f04f5dcc2aee6e48",
+    "src/sunfire.js": "67b6ca5e08903d9bcaae43672a1afa91b65616d105543ecab7e15fa78d369d1c",
+    "src/fire-dynamics.js": "4ec53ed906aaf4486f7e2fb35bf5c739c6d6b5afb268cda9549a54c45b5f2e1b",
+    "review/index.html": "7e30922f6b8c99a44344b105985e4ac1e70fd4ce81a8ea37c14f7963df02dbb7",
+    "public/fire-dynamics.json": "2dff41fb074cf320c1f15ecee26b1bbdc5a2311cb964337080f15db38983526d",
+    "scripts/analyze-fire.py": "5c235ece0759af7dcd8d0789fc6f28c0ec7413da6d3d811fec07a4712e071836",
+    "scripts/sunfire.test.mjs": "a80058936755c43239522beffa37ddeabb6f4e8e3b1d066d20f933c4bd445aeb",
+    "src/timeline.json": "b71c6ea2e7c39a56843cd51be74bae10c1dcf095f81025b9c7af8ffd7f9ccba4"
+  },
+  "automatedChecks": {
+    "command": "npm run check",
+    "passed": 30,
+    "failed": 0,
+    "geometry": "540 phase/drive states across landscape and wrapped portrait; 240 lower-row clearance states",
+    "data": "All 14057 rows; stored phase integration, deterministic random seeks, source/timeline identity",
+    "limitations": "Drawing-command tests and muted browser playback do not certify acoustic listening."
+  },
+  "browserChecks": {
+    "type": "Muted technical playback in native in-app browser, full original picture retained",
+    "landscape": {
+      "start": 198.7,
+      "end": 211.153828,
+      "nativeDroppedVideoFrames": 0,
+      "canvasSkippedSourceFrames": 0,
+      "canvasMaximumFrameGap": 0,
+      "maximumCallbackDelayMs": 1.9,
+      "pictureError": null
+    },
+    "portrait": {
+      "start": 103.5,
+      "end": 140.154367,
+      "nativeDroppedVideoFrames": 0,
+      "canvasSkippedSourceFrames": 0,
+      "canvasMaximumFrameGap": 0,
+      "maximumCallbackDelayMs": 2.1,
+      "pictureError": null
+    },
+    "visualInspections": [
+      {
+        "time": 33.2,
+        "layouts": [
+          "landscape",
+          "portrait"
+        ],
+        "finding": "Compact low-intensity flames; wrapped row spacing clear; source picture visible."
+      },
+      {
+        "time": 201.88,
+        "layouts": [
+          "landscape",
+          "portrait"
+        ],
+        "finding": "Larger curled flames and brighter cores at drive0.98316, rate2.76914; text remains readable."
+      }
+    ],
+    "toggleAt201_88": {
+      "offLitWords": 0,
+      "onLitWords": 4,
+      "sameTime": true,
+      "sameReadingGeometry": true
+    },
+    "consoleErrors": []
+  },
+  "mapping": {
+    "amplitude": "Vocal RMS dominant; high-mid energy/texture plus smaller mix contribution",
+    "range": "Low-to-mid simmer; forceful peaks increase reach, speed, brightness, turbulence and sparse embers",
+    "phase": "Preintegrated measured rate sampled at video.currentTime, no browser history",
+    "riseFontHeights": [
+      0.4,
+      1.7
+    ],
+    "emberLimit": 6,
+    "wordGeometry": "Unchanged",
+    "wordTiming": "Unchanged",
+    "limitations": "Estimated vocal stem and energy/texture proxy; no semantic scream classifier."
+  },
+  "productionRendered": false
+}

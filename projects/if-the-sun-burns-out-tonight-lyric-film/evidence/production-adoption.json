@@ -1,0 +1,103 @@
+{
+  "status": "PASS",
+  "song": "x8jAY2CoOBg",
+  "revision": "word-atmosphere-v5",
+  "authorizationSha256": "697d2820b75be3f378ef49850d48302bc7673bfe27a033fac8ade51a04c3cd6c",
+  "recordedAt": "2026-09-23T15:08:58.440531+00:00",
+  "proofScope": "All effect classes inspected in final native stills in source-aspect and portrait layouts. Short encoded diagnostics decoded without error. Initial peak-fire clip played in browser; corrected shadow proof inspected as decoded frames. Final full-output checks remain required.",
+  "stillReview": "evidence/production-still-review.json",
+  "proofs": [
+    {
+      "path": "output/proofs/landscape-darkness.png",
+      "sha256": "3f9d582e1870b22512e5af28f3f6939953c9d693327c3ae4ab736ef99bb7f505"
+    },
+    {
+      "path": "output/proofs/landscape-ending.png",
+      "sha256": "30dbf8bb59b49688589ed3cb03d9148ed3a83aa19046648b20c7100ec1782e11"
+    },
+    {
+      "path": "output/proofs/landscape-light.png",
+      "sha256": "7bbce3b56692d6b70d8280360c4b81d8122e41336a193808bd66af98509819ed"
+    },
+    {
+      "path": "output/proofs/landscape-peak-fire.png",
+      "sha256": "1ca0a20d06844057c5e7e3f9211d3cad91672324fa72255c5b02726b4e3a1e08"
+    },
+    {
+      "path": "output/proofs/landscape-source-dark.png",
+      "sha256": "bccbae5e3d34ab3ef817a1844880a2f8b78a39e901c26f1e8f6d1656803bb9b9"
+    },
+    {
+      "path": "output/proofs/landscape-supernova.png",
+      "sha256": "fb6b2799e46afe44a7ca3d9dfc3e244fdaa2b338187fd9c8bf0426c719cb11a5"
+    },
+    {
+      "path": "output/proofs/landscape-void.png",
+      "sha256": "eba81e43ec07be10287e471024de64e5dce372d63df2554bc2b355b957934b5e"
+    },
+    {
+      "path": "output/proofs/portrait-colder.png",
+      "sha256": "383a64b8924f7a4dbefc4c10dc801d65acc94278f7de18e09334e9550dda4778"
+    },
+    {
+      "path": "output/proofs/portrait-freezing.png",
+      "sha256": "ac6bbb5bad99c5da824c14e73f1b7a239b1970d06d46c015ef550fa0e8a8ae34"
+    },
+    {
+      "path": "output/proofs/portrait-hurts.png",
+      "sha256": "7d9411c80e6df0d6ac76535c232adfee54583a439a7e2b69d182520641e37761"
+    },
+    {
+      "path": "output/proofs/portrait-wrapped-fire.png",
+      "sha256": "6711e10f84270268a685cc79e4a24a115a8311d33b5b0b53310b5db6f813f82f"
+    },
+    {
+      "path": "output/proofs/portrait-you.png",
+      "sha256": "cc7149974984f296c14782864045ebc46dee9fb3c484f604d87bca9488ef5113"
+    }
+  ],
+  "diagnostics": [
+    {
+      "path": "output/proofs/peak-fire-motion.mp4",
+      "sha256": "e0dea41e02c4ab1dce2ba4cfdfb3178bdbb331046924cc87203ed1618e5978ef",
+      "strictDecode": "PASS",
+      "audio": "not present; visual-only proof"
+    },
+    {
+      "path": "output/proofs/portrait-wrapped-fire-motion.mp4",
+      "sha256": "da5693abeb9b9f4ba11da9baab0431f504ef562f227d6ab5e5e82d605f773eab",
+      "strictDecode": "PASS",
+      "audio": "not present; visual-only proof"
+    }
+  ],
+  "layout": "Actual browser word boxes frozen for all 44 cues in both formats at 1160x494.203125 and 540x960; native glyph widths fit those boxes.",
+  "font": "Avenir Next Condensed DemiBold, explicit face 2 extraction; local system font not redistributed.",
+  "adapterCorrections": [
+    "Explicit DemiBold face rather than TTC fallback Bold.",
+    "Single body paint with on-canvas tinted blurred masks for shadows.",
+    "Explicit narrow clipped damage strips avoid native duplicate-stop gradient differences."
+  ],
+  "rasterLimit": "Native Skia and browser CSS rasterization differ; accepted geometry, shared effect math and visually inspected native proofs establish production adoption, not bitwise pixel equivalence.",
+  "runtime": {
+    "node": "v24.20.0",
+    "ffmpeg": "ffmpeg version 8.1.2 Copyright (c) 2000-2026 the FFmpeg developers",
+    "canvasVersion": "0.1.100",
+    "nativeModuleHashes": {
+      "canvas/package.json": "8379e15beeaecdedc863f8ff0e2548935eed4fb7505b93a207600a212d7bc2c5",
+      "canvas/index.js": "bbdad32cab670261983ea56d4625fc7d07b1382f8bb7d6d31232bb2834861597",
+      "canvas/js-binding.js": "be59c8d4888630cf88656f65b63dd150e60bdb1d5eab0ba5b47c0a6cb389533e",
+      "canvas-darwin-arm64/skia.darwin-arm64.node": "a9c429727b4a133e34e60c5ffa7f701541ffe941afa9574abe6273a1648c342d"
+    }
+  },
+  "inputHashes": {
+    "scripts/render-production.mjs": "9ca06e757f4fd1763905a5e264e57e813900a52d4852dc6fd20e9947ee18344d",
+    "scripts/production-scene.mjs": "6fec67467ec0622104922c698c45e1cef5a989868c5efffaaadddc3a6544aaf5",
+    "scripts/native-env.mjs": "e33c62692b5d99d7b991daa3376b68eeb2156f255748f983ca2be08e1f231c4e",
+    "scripts/render-gate.mjs": "07a1cfea67ad03f196c4886e0d4ed546293a620e369a5468d6408ef0cd30e0cd",
+    "src/production-layout.json": "e576ed185f84327eeff672a9dd0ed231c548c0e67206ddd60af21d96c9891b5b",
+    "output/runtime/AvenirNextCondensed-DemiBold.ttf": "c00afa86f42dfa48fd073ebc8152f85caa11a6e36fb28dae017cefcd8594e8d3",
+    "package.json": "3fa50769b3084cf3169bf522449617aa778699a25016db9c57bd8ad216ae8113",
+    "package-lock.json": "b51a34427a605f82e11f6aac194496fe09f87234245ee1304409d92d90152849",
+    "scripts/extract-approved-font.py": "d756b5966f6673b3e2332f88532685c8f874ccee28fcdc0bca109ba37449e1de"
+  }
+}

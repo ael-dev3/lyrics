@@ -1,0 +1,1700 @@
+{
+  "revision": "preview-v3-dtw-crosscheck",
+  "duration": 234.266122,
+  "alignmentStatus": "provisional",
+  "alignmentMethod": "Whisper.cpp small.en word-window and separate token-level DTW passes on the exact local source audio. Clear token anchors are used; contractions and model-split words are grouped, known lyric mismatches retain the supplied text and map by phrase position, and collapsed tokens are interpolated between neighboring anchors. Human full-speed and reduced-speed listening review is still required before approval; the opening hook and collapsed groups remain provisional.",
+  "sections": [
+    {
+      "name": "Opening verse",
+      "start": 26.91,
+      "end": 49.04,
+      "lines": [
+        {
+          "text": "If the sun burns out tonight",
+          "start": 26.91,
+          "end": 30.84,
+          "words": [
+            {
+              "text": "If",
+              "start": 26.91,
+              "end": 27.47
+            },
+            {
+              "text": "the",
+              "start": 27.47,
+              "end": 27.76
+            },
+            {
+              "text": "sun",
+              "start": 27.76,
+              "end": 28.27
+            },
+            {
+              "text": "burns",
+              "start": 28.27,
+              "end": 29.13
+            },
+            {
+              "text": "out",
+              "start": 29.13,
+              "end": 29.64
+            },
+            {
+              "text": "tonight",
+              "start": 29.64,
+              "end": 30.84
+            }
+          ],
+          "timingQuality": "repeated-hook template; opening phrase missed by both model passes; manual listening still required"
+        },
+        {
+          "text": "I wonder if the sun burnt out tonight",
+          "start": 30.84,
+          "end": 32.94,
+          "words": [
+            {
+              "text": "I",
+              "start": 30.84,
+              "end": 30.974
+            },
+            {
+              "text": "wonder",
+              "start": 30.974,
+              "end": 31.241
+            },
+            {
+              "text": "if",
+              "start": 31.241,
+              "end": 31.375
+            },
+            {
+              "text": "the",
+              "start": 31.375,
+              "end": 31.509
+            },
+            {
+              "text": "sun",
+              "start": 31.509,
+              "end": 31.642
+            },
+            {
+              "text": "burnt",
+              "start": 31.642,
+              "end": 31.776
+            },
+            {
+              "text": "out",
+              "start": 31.776,
+              "end": 31.91
+            },
+            {
+              "text": "tonight",
+              "start": 31.91,
+              "end": 32.94
+            }
+          ],
+          "timingQuality": "DTW token anchors cross-checked; collapsed opening tokens distributed between anchors; provisional pending listening"
+        },
+        {
+          "text": "Would you let me go or hold me tight?",
+          "start": 36.95,
+          "end": 40.19,
+          "words": [
+            {
+              "text": "Would",
+              "start": 36.95,
+              "end": 36.98
+            },
+            {
+              "text": "you",
+              "start": 36.98,
+              "end": 37.39
+            },
+            {
+              "text": "let",
+              "start": 37.39,
+              "end": 37.8
+            },
+            {
+              "text": "me",
+              "start": 37.8,
+              "end": 38.09
+            },
+            {
+              "text": "go",
+              "start": 38.09,
+              "end": 38.37
+            },
+            {
+              "text": "or",
+              "start": 38.37,
+              "end": 38.65
+            },
+            {
+              "text": "hold",
+              "start": 38.65,
+              "end": 39.21
+            },
+            {
+              "text": "me",
+              "start": 39.21,
+              "end": 39.49
+            },
+            {
+              "text": "tight?",
+              "start": 39.49,
+              "end": 40.19
+            }
+          ],
+          "timingQuality": "DTW token timing; supplied lyric text retained and mismatches mapped by position; provisional pending listening"
+        },
+        {
+          "text": "Just one touch could erase the light",
+          "start": 41.02,
+          "end": 44.44,
+          "words": [
+            {
+              "text": "Just",
+              "start": 41.02,
+              "end": 41.48
+            },
+            {
+              "text": "one",
+              "start": 41.75,
+              "end": 41.82
+            },
+            {
+              "text": "touch",
+              "start": 41.82,
+              "end": 42.39
+            },
+            {
+              "text": "could",
+              "start": 42.39,
+              "end": 42.96
+            },
+            {
+              "text": "erase",
+              "start": 42.96,
+              "end": 43.53
+            },
+            {
+              "text": "the",
+              "start": 43.53,
+              "end": 43.87
+            },
+            {
+              "text": "light",
+              "start": 43.87,
+              "end": 44.44
+            }
+          ],
+          "timingQuality": "DTW token timing cross-check; provisional pending listening"
+        },
+        {
+          "text": "Say we’ll be alright",
+          "start": 45.14,
+          "end": 46.85,
+          "words": [
+            {
+              "text": "Say",
+              "start": 45.14,
+              "end": 45.44
+            },
+            {
+              "text": "we’ll",
+              "start": 45.44,
+              "end": 45.94
+            },
+            {
+              "text": "be",
+              "start": 45.94,
+              "end": 46.14
+            },
+            {
+              "text": "alright",
+              "start": 46.14,
+              "end": 46.85
+            }
+          ],
+          "timingQuality": "DTW token timing cross-check; provisional pending listening"
+        },
+        {
+          "text": "Say we’ll be alright",
+          "start": 47.47,
+          "end": 49.04,
+          "words": [
+            {
+              "text": "Say",
+              "start": 47.47,
+              "end": 47.75
+            },
+            {
+              "text": "we’ll",
+              "start": 47.75,
+              "end": 48.21
+            },
+            {
+              "text": "be",
+              "start": 48.27,
+              "end": 48.39
+            },
+            {
+              "text": "alright",
+              "start": 48.39,
+              "end": 49.04
+            }
+          ],
+          "timingQuality": "DTW token timing cross-check; provisional pending listening"
+        }
+      ]
+    },
+    {
+      "name": "Build",
+      "start": 49.69,
+      "end": 65.52,
+      "lines": [
+        {
+          "text": "Tell me you mean it",
+          "start": 49.69,
+          "end": 51.34,
+          "words": [
+            {
+              "text": "Tell",
+              "start": 49.69,
+              "end": 50.13
+            },
+            {
+              "text": "me",
+              "start": 50.25,
+              "end": 50.43
+            },
+            {
+              "text": "you",
+              "start": 50.43,
+              "end": 50.68
+            },
+            {
+              "text": "mean",
+              "start": 50.68,
+              "end": 51.12
+            },
+            {
+              "text": "it",
+              "start": 51.12,
+              "end": 51.34
+            }
+          ],
+          "timingQuality": "DTW token timing cross-check; provisional pending listening"
+        },
+        {
+          "text": "Make me believe it",
+          "start": 52.06,
+          "end": 53.79,
+          "words": [
+            {
+              "text": "Make",
+              "start": 52.06,
+              "end": 52.52
+            },
+            {
+              "text": "me",
+              "start": 52.62,
+              "end": 52.79
+            },
+            {
+              "text": "believe",
+              "start": 52.79,
+              "end": 53.56
+            },
+            {
+              "text": "it",
+              "start": 53.56,
+              "end": 53.79
+            }
+          ],
+          "timingQuality": "DTW token timing cross-check; provisional pending listening"
+        },
+        {
+          "text": "I’m barely breathing",
+          "start": 54.41,
+          "end": 55.94,
+          "words": [
+            {
+              "text": "I’m",
+              "start": 54.41,
+              "end": 54.66
+            },
+            {
+              "text": "barely",
+              "start": 55.17,
+              "end": 55.23
+            },
+            {
+              "text": "breathing",
+              "start": 55.23,
+              "end": 55.94
+            }
+          ],
+          "timingQuality": "DTW token timing cross-check; provisional pending listening"
+        },
+        {
+          "text": "Help me kill the curse",
+          "start": 56.59,
+          "end": 58.6,
+          "words": [
+            {
+              "text": "Help",
+              "start": 56.59,
+              "end": 57.06
+            },
+            {
+              "text": "me",
+              "start": 57.16,
+              "end": 57.32
+            },
+            {
+              "text": "kill",
+              "start": 57.32,
+              "end": 57.77
+            },
+            {
+              "text": "the",
+              "start": 57.77,
+              "end": 58.13
+            },
+            {
+              "text": "curse",
+              "start": 58.13,
+              "end": 58.6
+            }
+          ],
+          "timingQuality": "DTW token timing; supplied lyric text retained and mismatches mapped by position; provisional pending listening"
+        },
+        {
+          "text": "It’s getting colder",
+          "start": 59.3,
+          "end": 61.04,
+          "words": [
+            {
+              "text": "It’s",
+              "start": 59.3,
+              "end": 59.7
+            },
+            {
+              "text": "getting",
+              "start": 60.07,
+              "end": 60.42
+            },
+            {
+              "text": "colder",
+              "start": 60.42,
+              "end": 61.04
+            }
+          ],
+          "timingQuality": "DTW token timing cross-check; provisional pending listening"
+        },
+        {
+          "text": "Hell’s freezing over",
+          "start": 61.68,
+          "end": 63.4,
+          "words": [
+            {
+              "text": "Hell’s",
+              "start": 61.68,
+              "end": 62.25
+            },
+            {
+              "text": "freezing",
+              "start": 62.47,
+              "end": 63.02
+            },
+            {
+              "text": "over",
+              "start": 63.02,
+              "end": 63.4
+            }
+          ],
+          "timingQuality": "DTW token timing cross-check; provisional pending listening"
+        },
+        {
+          "text": "So pull me closer",
+          "start": 64.03,
+          "end": 65.52,
+          "words": [
+            {
+              "text": "So",
+              "start": 64.03,
+              "end": 64.24
+            },
+            {
+              "text": "pull",
+              "start": 64.24,
+              "end": 64.79
+            },
+            {
+              "text": "me",
+              "start": 64.79,
+              "end": 64.88
+            },
+            {
+              "text": "closer",
+              "start": 64.88,
+              "end": 65.52
+            }
+          ],
+          "timingQuality": "DTW token timing; supplied lyric text retained and mismatches mapped by position; provisional pending listening"
+        }
+      ]
+    },
+    {
+      "name": "Refrain I",
+      "start": 66.84,
+      "end": 88.4,
+      "lines": [
+        {
+          "text": "Hit me where it hurts",
+          "start": 66.84,
+          "end": 69.08,
+          "words": [
+            {
+              "text": "Hit",
+              "start": 66.84,
+              "end": 66.95
+            },
+            {
+              "text": "me",
+              "start": 66.95,
+              "end": 67.16
+            },
+            {
+              "text": "where",
+              "start": 67.16,
+              "end": 67.96
+            },
+            {
+              "text": "it",
+              "start": 67.96,
+              "end": 68.28
+            },
+            {
+              "text": "hurts",
+              "start": 68.28,
+              "end": 69.08
+            }
+          ],
+          "timingQuality": "DTW token timing; supplied lyric text retained and mismatches mapped by position; provisional pending listening"
+        },
+        {
+          "text": "End of the world",
+          "start": 69.96,
+          "end": 71.52,
+          "words": [
+            {
+              "text": "End",
+              "start": 69.96,
+              "end": 70.32
+            },
+            {
+              "text": "of",
+              "start": 70.56,
+              "end": 70.67
+            },
+            {
+              "text": "the",
+              "start": 70.67,
+              "end": 70.92
+            },
+            {
+              "text": "world",
+              "start": 70.92,
+              "end": 71.52
+            }
+          ],
+          "timingQuality": "DTW token timing cross-check; provisional pending listening"
+        },
+        {
+          "text": "All I need is you",
+          "start": 72.38,
+          "end": 74.41,
+          "words": [
+            {
+              "text": "All",
+              "start": 72.38,
+              "end": 72.85
+            },
+            {
+              "text": "I",
+              "start": 72.9,
+              "end": 73.0
+            },
+            {
+              "text": "need",
+              "start": 73.0,
+              "end": 73.63
+            },
+            {
+              "text": "is",
+              "start": 73.63,
+              "end": 73.94
+            },
+            {
+              "text": "you",
+              "start": 73.94,
+              "end": 74.41
+            }
+          ],
+          "timingQuality": "DTW token timing cross-check; provisional pending listening"
+        },
+        {
+          "text": "If the sun burns out tonight",
+          "start": 75.32,
+          "end": 78.42,
+          "words": [
+            {
+              "text": "If",
+              "start": 75.32,
+              "end": 75.59
+            },
+            {
+              "text": "the",
+              "start": 75.59,
+              "end": 75.99
+            },
+            {
+              "text": "sun",
+              "start": 75.99,
+              "end": 76.39
+            },
+            {
+              "text": "burns",
+              "start": 76.39,
+              "end": 77.07
+            },
+            {
+              "text": "out",
+              "start": 77.07,
+              "end": 77.47
+            },
+            {
+              "text": "tonight",
+              "start": 77.47,
+              "end": 78.42
+            }
+          ],
+          "timingQuality": "DTW token timing cross-check; provisional pending listening"
+        },
+        {
+          "text": "Supernova, all I see is you",
+          "start": 79.33,
+          "end": 83.38,
+          "words": [
+            {
+              "text": "Supernova,",
+              "start": 79.33,
+              "end": 81.58
+            },
+            {
+              "text": "all",
+              "start": 81.58,
+              "end": 82.03
+            },
+            {
+              "text": "I",
+              "start": 82.03,
+              "end": 82.18
+            },
+            {
+              "text": "see",
+              "start": 82.18,
+              "end": 82.63
+            },
+            {
+              "text": "is",
+              "start": 82.63,
+              "end": 82.93
+            },
+            {
+              "text": "you",
+              "start": 82.93,
+              "end": 83.38
+            }
+          ],
+          "timingQuality": "DTW token timing cross-check; provisional pending listening"
+        },
+        {
+          "text": "If the sun burns out tonight",
+          "start": 84.6,
+          "end": 88.4,
+          "words": [
+            {
+              "text": "If",
+              "start": 84.6,
+              "end": 84.75
+            },
+            {
+              "text": "the",
+              "start": 84.75,
+              "end": 85.27
+            },
+            {
+              "text": "sun",
+              "start": 85.67,
+              "end": 85.79
+            },
+            {
+              "text": "burns",
+              "start": 85.79,
+              "end": 86.66
+            },
+            {
+              "text": "out",
+              "start": 86.66,
+              "end": 87.18
+            },
+            {
+              "text": "tonight",
+              "start": 87.18,
+              "end": 88.4
+            }
+          ],
+          "timingQuality": "DTW token timing cross-check; provisional pending listening"
+        }
+      ]
+    },
+    {
+      "name": "Void passage I",
+      "start": 90.03,
+      "end": 103.22,
+      "lines": [
+        {
+          "text": "Now the void calls out my name",
+          "start": 90.03,
+          "end": 93.27,
+          "words": [
+            {
+              "text": "Now",
+              "start": 90.03,
+              "end": 90.12
+            },
+          {
+            "text": "the",
+            "start": 90.12,
+            "end": 90.5
+            },
+            {
+              "text": "void",
+              "start": 90.5,
+              "end": 91.12
+            },
+            {
+              "text": "calls",
+              "start": 91.12,
+              "end": 91.89
+            },
+            {
+              "text": "out",
+              "start": 91.89,
+              "end": 92.35
+            },
+            {
+              "text": "my",
+              "start": 92.35,
+              "end": 92.66
+            },
+            {
+              "text": "name",
+              "start": 92.66,
+              "end": 93.27
+            }
+          ],
+          "timingQuality": "DTW token timing; supplied lyric text retained and mismatches mapped by position; provisional pending listening"
+        },
+        {
+          "text": "It gets louder every day",
+          "start": 94.29,
+          "end": 97.59,
+          "words": [
+            {
+              "text": "It",
+              "start": 94.29,
+              "end": 94.62
+            },
+            {
+              "text": "gets",
+              "start": 94.87,
+              "end": 95.28
+            },
+            {
+              "text": "louder",
+              "start": 95.28,
+              "end": 96.27
+            },
+            {
+              "text": "every",
+              "start": 96.27,
+              "end": 97.1
+            },
+            {
+              "text": "day",
+              "start": 97.1,
+              "end": 97.59
+            }
+          ],
+          "timingQuality": "DTW token timing cross-check; provisional pending listening"
+        },
+        {
+          "text": "And in the darkness all I need is you",
+          "start": 98.42,
+          "end": 103.22,
+          "words": [
+            {
+              "text": "And",
+              "start": 98.42,
+              "end": 98.73
+            },
+            {
+              "text": "in",
+              "start": 98.73,
+              "end": 98.93
+            },
+            {
+              "text": "the",
+              "start": 99.19,
+              "end": 99.24
+            },
+            {
+              "text": "darkness",
+              "start": 99.24,
+              "end": 100.06
+            },
+            {
+              "text": "all",
+              "start": 101.4,
+              "end": 101.55
+            },
+            {
+            "text": "I",
+            "start": 101.55,
+            "end": 101.63
+            },
+            {
+              "text": "need",
+              "start": 101.63,
+              "end": 102.34
+            },
+            {
+              "text": "is",
+              "start": 102.34,
+              "end": 102.69
+            },
+            {
+              "text": "you",
+              "start": 102.69,
+              "end": 103.22
+            }
+          ],
+          "timingQuality": "DTW token timing cross-check; provisional pending listening"
+        }
+      ]
+    },
+    {
+      "name": "Sun pickup I",
+      "start": 104.31,
+      "end": 117.4,
+      "lines": [
+        {
+          "text": "If the sun burns out tonight",
+          "start": 104.31,
+          "end": 108.24,
+          "words": [
+            {
+              "text": "If",
+              "start": 104.31,
+              "end": 104.65
+            },
+            {
+              "text": "the",
+              "start": 104.87,
+              "end": 105.16
+            },
+            {
+              "text": "sun",
+              "start": 105.16,
+              "end": 105.67
+            },
+            {
+              "text": "burns",
+              "start": 105.67,
+              "end": 106.53
+            },
+            {
+              "text": "out",
+              "start": 106.53,
+              "end": 107.04
+            },
+            {
+              "text": "tonight",
+              "start": 107.04,
+              "end": 108.24
+            }
+          ],
+          "timingQuality": "DTW token timing cross-check; provisional pending listening"
+        },
+        {
+          "text": "If the sun burns out tonight",
+          "start": 113.44,
+          "end": 117.4,
+          "words": [
+            {
+              "text": "If",
+              "start": 113.44,
+              "end": 113.707
+            },
+            {
+              "text": "the",
+              "start": 113.707,
+              "end": 113.975
+            },
+            {
+              "text": "sun",
+              "start": 113.975,
+              "end": 114.242
+            },
+            {
+              "text": "burns",
+              "start": 114.242,
+              "end": 114.51
+            },
+            {
+              "text": "out",
+              "start": 114.51,
+              "end": 115.08
+            },
+            {
+              "text": "tonight",
+              "start": 115.08,
+              "end": 117.4
+            }
+          ],
+          "timingQuality": "DTW token anchors cross-checked; collapsed opening tokens distributed between anchors; provisional pending listening"
+        }
+      ]
+    },
+    {
+      "name": "Refrain II",
+      "start": 123.4,
+      "end": 145.92,
+      "lines": [
+        {
+          "text": "Hit me where it hurts",
+          "start": 123.4,
+          "end": 126.25,
+          "words": [
+            {
+              "text": "Hit",
+              "start": 123.4,
+              "end": 123.51
+            },
+            {
+              "text": "me",
+              "start": 123.51,
+              "end": 123.72
+            },
+            {
+              "text": "where",
+              "start": 124.47,
+              "end": 124.6
+            },
+            {
+              "text": "it",
+              "start": 124.6,
+              "end": 125.07
+            },
+            {
+              "text": "hurts",
+              "start": 125.07,
+              "end": 126.25
+            }
+          ],
+          "timingQuality": "DTW token timing; supplied lyric text retained and mismatches mapped by position; provisional pending listening"
+        },
+        {
+          "text": "End of the world",
+          "start": 127.36,
+          "end": 128.92,
+          "words": [
+            {
+              "text": "End",
+              "start": 127.36,
+              "end": 127.72
+            },
+            {
+            "text": "of",
+            "start": 127.96,
+            "end": 128.07
+            },
+            {
+              "text": "the",
+              "start": 128.07,
+              "end": 128.32
+            },
+            {
+              "text": "world",
+              "start": 128.32,
+              "end": 128.92
+            }
+          ],
+          "timingQuality": "DTW token timing cross-check; provisional pending listening"
+        },
+        {
+          "text": "All I need is you",
+          "start": 130.28,
+          "end": 131.88,
+          "words": [
+            {
+              "text": "All",
+              "start": 130.28,
+              "end": 130.39
+            },
+            {
+              "text": "I",
+              "start": 130.39,
+              "end": 130.44
+            },
+            {
+              "text": "need",
+              "start": 130.44,
+              "end": 131.08
+            },
+            {
+              "text": "is",
+              "start": 131.08,
+              "end": 131.4
+            },
+            {
+              "text": "you",
+              "start": 131.4,
+              "end": 131.88
+            }
+          ],
+          "timingQuality": "DTW token timing; supplied lyric text retained and mismatches mapped by position; provisional pending listening"
+        },
+        {
+          "text": "If the sun burns out tonight",
+          "start": 132.8,
+          "end": 135.94,
+          "words": [
+            {
+              "text": "If",
+              "start": 132.8,
+              "end": 133.07
+            },
+            {
+              "text": "the",
+              "start": 133.42,
+              "end": 133.48
+            },
+            {
+              "text": "sun",
+              "start": 133.48,
+              "end": 133.89
+            },
+            {
+              "text": "burns",
+              "start": 133.89,
+              "end": 134.57
+            },
+            {
+              "text": "out",
+              "start": 134.57,
+              "end": 134.98
+            },
+            {
+              "text": "tonight",
+              "start": 134.98,
+              "end": 135.94
+            }
+          ],
+          "timingQuality": "DTW token timing cross-check; provisional pending listening"
+        },
+        {
+          "text": "Supernova, all I see is you",
+          "start": 136.85,
+          "end": 140.9,
+          "words": [
+            {
+              "text": "Supernova,",
+              "start": 136.85,
+              "end": 139.1
+            },
+            {
+              "text": "all",
+              "start": 139.1,
+              "end": 139.55
+            },
+            {
+              "text": "I",
+              "start": 139.55,
+              "end": 139.7
+            },
+            {
+              "text": "see",
+              "start": 139.7,
+              "end": 140.15
+            },
+            {
+              "text": "is",
+              "start": 140.15,
+              "end": 140.45
+            },
+            {
+              "text": "you",
+              "start": 140.45,
+              "end": 140.9
+            }
+          ],
+          "timingQuality": "DTW token timing cross-check; provisional pending listening"
+        },
+        {
+          "text": "If the sun burns out tonight",
+          "start": 142.0,
+          "end": 145.92,
+          "words": [
+            {
+              "text": "If",
+              "start": 142.0,
+              "end": 142.27
+            },
+            {
+              "text": "the",
+              "start": 142.27,
+              "end": 142.79
+            },
+            {
+              "text": "sun",
+              "start": 143.07,
+              "end": 143.31
+            },
+            {
+              "text": "burns",
+              "start": 143.31,
+              "end": 144.18
+            },
+            {
+              "text": "out",
+              "start": 144.18,
+              "end": 144.7
+            },
+            {
+              "text": "tonight",
+              "start": 144.7,
+              "end": 145.92
+            }
+          ],
+          "timingQuality": "DTW token timing cross-check; provisional pending listening"
+        }
+      ]
+    },
+    {
+      "name": "Void passage II",
+      "start": 147.44,
+      "end": 160.64,
+      "lines": [
+        {
+          "text": "Now the void calls out my name",
+          "start": 147.44,
+          "end": 150.79,
+          "words": [
+            {
+              "text": "Now",
+              "start": 147.44,
+              "end": 147.55
+            },
+            {
+              "text": "the",
+              "start": 147.55,
+              "end": 147.92
+            },
+            {
+              "text": "void",
+              "start": 147.92,
+              "end": 148.56
+            },
+            {
+              "text": "calls",
+              "start": 148.56,
+              "end": 149.36
+            },
+            {
+              "text": "out",
+              "start": 149.36,
+              "end": 149.84
+            },
+            {
+              "text": "my",
+              "start": 149.84,
+              "end": 150.16
+            },
+            {
+              "text": "name",
+              "start": 150.16,
+              "end": 150.79
+            }
+          ],
+          "timingQuality": "DTW token timing; supplied lyric text retained and mismatches mapped by position; provisional pending listening"
+        },
+        {
+          "text": "It gets louder every day",
+          "start": 151.79,
+          "end": 154.96,
+          "words": [
+            {
+              "text": "It",
+              "start": 151.79,
+              "end": 152.11
+            },
+            {
+              "text": "gets",
+              "start": 152.39,
+              "end": 152.74
+            },
+            {
+              "text": "louder",
+              "start": 152.74,
+              "end": 153.69
+            },
+            {
+              "text": "every",
+              "start": 153.69,
+              "end": 154.48
+            },
+            {
+              "text": "day",
+              "start": 154.48,
+              "end": 154.96
+            }
+          ],
+          "timingQuality": "DTW token timing cross-check; provisional pending listening"
+        },
+        {
+          "text": "And in the darkness all I need is you",
+          "start": 155.79,
+          "end": 160.64,
+          "words": [
+            {
+              "text": "And",
+              "start": 155.79,
+              "end": 156.11
+            },
+            {
+              "text": "in",
+              "start": 156.11,
+              "end": 156.32
+            },
+            {
+              "text": "the",
+              "start": 156.55,
+              "end": 156.64
+            },
+            {
+              "text": "darkness",
+              "start": 156.64,
+              "end": 157.49
+            },
+            {
+            "text": "all",
+            "start": 158.89,
+            "end": 158.98
+            },
+            {
+            "text": "I",
+            "start": 158.98,
+            "end": 159.06
+            },
+            {
+              "text": "need",
+              "start": 159.06,
+              "end": 159.76
+            },
+            {
+              "text": "is",
+              "start": 159.76,
+              "end": 160.11
+            },
+            {
+              "text": "you",
+              "start": 160.11,
+              "end": 160.64
+            }
+          ],
+          "timingQuality": "DTW token timing; supplied lyric text retained and mismatches mapped by position; provisional pending listening"
+        }
+      ]
+    },
+    {
+      "name": "Sun pickup II",
+      "start": 161.56,
+      "end": 164.39,
+      "lines": [
+        {
+          "text": "If the sun burns out tonight",
+          "start": 161.56,
+          "end": 164.39,
+          "words": [
+            {
+              "text": "If",
+              "start": 161.56,
+              "end": 161.8
+            },
+            {
+              "text": "the",
+              "start": 162.12,
+              "end": 162.27
+            },
+            {
+              "text": "sun",
+              "start": 162.27,
+              "end": 162.54
+            },
+            {
+              "text": "burns",
+              "start": 162.54,
+              "end": 163.16
+            },
+            {
+              "text": "out",
+              "start": 163.16,
+              "end": 163.53
+            },
+            {
+              "text": "tonight",
+              "start": 163.53,
+              "end": 164.39
+            }
+          ],
+          "timingQuality": "DTW token timing cross-check; provisional pending listening"
+        }
+      ]
+    },
+    {
+      "name": "Bridge",
+      "start": 165.21,
+      "end": 182.71,
+      "lines": [
+        {
+          "text": "Cos the silence is deafening now",
+          "start": 165.21,
+          "end": 168.3,
+          "words": [
+            {
+              "text": "Cos",
+              "start": 165.21,
+              "end": 165.74
+            },
+            {
+              "text": "the",
+              "start": 165.87,
+              "end": 166.06
+            },
+            {
+              "text": "silence",
+              "start": 166.06,
+              "end": 166.81
+            },
+            {
+              "text": "is",
+              "start": 166.81,
+              "end": 167.02
+            },
+            {
+              "text": "deafening",
+              "start": 167.02,
+              "end": 167.98
+            },
+            {
+              "text": "now",
+              "start": 167.98,
+              "end": 168.3
+            }
+          ],
+          "timingQuality": "DTW token timing cross-check; provisional pending listening"
+        },
+        {
+          "text": "Only the sound of our hearts still beating",
+          "start": 169.04,
+          "end": 173.26,
+          "words": [
+            {
+              "text": "Only",
+              "start": 169.04,
+              "end": 169.52
+            },
+            {
+              "text": "the",
+              "start": 169.75,
+              "end": 169.88
+            },
+            {
+              "text": "sound",
+              "start": 169.88,
+              "end": 170.48
+            },
+            {
+              "text": "of",
+              "start": 170.48,
+              "end": 170.72
+            },
+            {
+              "text": "our",
+              "start": 170.72,
+              "end": 171.08
+            },
+            {
+              "text": "hearts",
+              "start": 171.08,
+              "end": 171.81
+            },
+            {
+              "text": "still",
+              "start": 171.81,
+              "end": 172.41
+            },
+            {
+              "text": "beating",
+              "start": 172.41,
+              "end": 173.26
+            }
+          ],
+          "timingQuality": "DTW token timing cross-check; provisional pending listening"
+        },
+        {
+          "text": "Please drag me out",
+          "start": 175.39,
+          "end": 177.62,
+          "words": [
+            {
+              "text": "Please",
+              "start": 175.39,
+              "end": 175.97
+            },
+            {
+              "text": "drag",
+              "start": 175.97,
+              "end": 176.7
+            },
+            {
+              "text": "me",
+              "start": 176.7,
+              "end": 177.07
+            },
+            {
+              "text": "out",
+              "start": 177.07,
+              "end": 177.62
+            }
+          ],
+          "timingQuality": "DTW token timing; supplied lyric text retained and mismatches mapped by position; provisional pending listening"
+        },
+        {
+          "text": "Give me a reason to keep on breathing",
+          "start": 179.15,
+          "end": 182.71,
+          "words": [
+            {
+              "text": "Give",
+              "start": 179.15,
+              "end": 179.27
+            },
+            {
+              "text": "me",
+              "start": 179.27,
+              "end": 179.42
+            },
+            {
+              "text": "a",
+              "start": 179.42,
+              "end": 179.55
+            },
+            {
+              "text": "reason",
+              "start": 179.55,
+              "end": 180.38
+            },
+            {
+              "text": "to",
+              "start": 180.38,
+              "end": 180.65
+            },
+            {
+              "text": "keep",
+              "start": 180.65,
+              "end": 181.2
+            },
+            {
+              "text": "on",
+              "start": 181.2,
+              "end": 181.47
+            },
+            {
+              "text": "breathing",
+              "start": 181.47,
+              "end": 182.71
+            }
+          ],
+          "timingQuality": "DTW token timing cross-check; provisional pending listening"
+        }
+      ]
+    },
+    {
+      "name": "Final lift",
+      "start": 184.2,
+      "end": 222.52,
+      "lines": [
+        {
+          "text": "The heavens open, the sky’s black and blue",
+          "start": 184.2,
+          "end": 188.54,
+          "words": [
+            {
+              "text": "The",
+              "start": 184.2,
+              "end": 184.34
+            },
+            {
+            "text": "heavens",
+            "start": 184.34,
+            "end": 184.98
+            },
+            {
+              "text": "open,",
+              "start": 185.27,
+              "end": 185.53
+            },
+            {
+              "text": "the",
+              "start": 185.8,
+              "end": 186.21
+            },
+            {
+              "text": "sky’s",
+              "start": 186.21,
+              "end": 186.89
+            },
+            {
+              "text": "black",
+              "start": 186.89,
+              "end": 187.58
+            },
+            {
+              "text": "and",
+              "start": 187.58,
+              "end": 187.99
+            },
+            {
+              "text": "blue",
+              "start": 187.99,
+              "end": 188.54
+            }
+          ],
+          "timingQuality": "DTW token timing cross-check; provisional pending listening"
+        },
+        {
+          "text": "The end’s approaching for me and you",
+          "start": 189.44,
+          "end": 193.6,
+          "words": [
+            {
+              "text": "The",
+              "start": 189.44,
+              "end": 189.84
+            },
+            {
+              "text": "end’s",
+              "start": 190.11,
+              "end": 190.38
+            },
+            {
+              "text": "approaching",
+              "start": 190.78,
+              "end": 192.26
+            },
+            {
+              "text": "for",
+              "start": 192.26,
+              "end": 192.53
+            },
+            {
+              "text": "me",
+              "start": 192.53,
+              "end": 192.8
+            },
+            {
+              "text": "and",
+              "start": 192.8,
+              "end": 193.19
+            },
+            {
+              "text": "you",
+              "start": 193.19,
+              "end": 193.6
+            }
+          ],
+          "timingQuality": "DTW token timing; supplied lyric text retained and mismatches mapped by position; provisional pending listening"
+        },
+        {
+          "text": "We’ll survive, just you and I",
+          "start": 195.11,
+          "end": 198.45,
+          "words": [
+            {
+              "text": "We’ll",
+              "start": 195.11,
+              "end": 195.27
+            },
+            {
+              "text": "survive,",
+              "start": 195.27,
+              "end": 196.51
+            },
+            {
+              "text": "just",
+              "start": 196.51,
+              "end": 197.22
+            },
+            {
+              "text": "you",
+              "start": 197.22,
+              "end": 197.75
+            },
+            {
+              "text": "and",
+              "start": 197.75,
+              "end": 198.28
+            },
+            {
+              "text": "I",
+              "start": 198.28,
+              "end": 198.45
+            }
+          ],
+          "timingQuality": "DTW token timing; supplied lyric text retained and mismatches mapped by position; provisional pending listening"
+        },
+        {
+          "text": "If the sun burns out tonight",
+          "start": 200.31,
+          "end": 204.24,
+          "words": [
+            {
+              "text": "If",
+              "start": 200.31,
+              "end": 200.65
+            },
+            {
+              "text": "the",
+              "start": 200.87,
+              "end": 201.16
+            },
+            {
+              "text": "sun",
+              "start": 201.16,
+              "end": 201.67
+            },
+            {
+              "text": "burns",
+              "start": 201.67,
+              "end": 202.53
+            },
+            {
+              "text": "out",
+              "start": 202.53,
+              "end": 203.04
+            },
+            {
+              "text": "tonight",
+              "start": 203.04,
+              "end": 204.24
+            }
+          ],
+          "timingQuality": "DTW token timing cross-check; provisional pending listening"
+        },
+        {
+          "text": "If the sun burns out tonight",
+          "start": 209.8,
+          "end": 213.74,
+          "words": [
+            {
+              "text": "If",
+              "start": 209.8,
+              "end": 209.96
+            },
+            {
+              "text": "the",
+              "start": 209.96,
+              "end": 210.12
+            },
+            {
+              "text": "sun",
+              "start": 210.12,
+              "end": 210.3
+            },
+            {
+              "text": "burns",
+              "start": 210.3,
+              "end": 210.87
+            },
+            {
+              "text": "out",
+              "start": 210.87,
+              "end": 211.33
+            },
+            {
+              "text": "tonight",
+              "start": 211.33,
+              "end": 213.74
+            }
+          ],
+          "timingQuality": "DTW token anchors cross-checked; collapsed opening tokens distributed between anchors; provisional pending listening"
+        },
+        {
+          "text": "If the sun burns out tonight",
+          "start": 219.48,
+          "end": 222.52,
+          "words": [
+            {
+              "text": "If",
+              "start": 219.48,
+              "end": 219.68
+            },
+            {
+              "text": "the",
+              "start": 219.68,
+              "end": 219.88
+            },
+            {
+              "text": "sun",
+              "start": 219.88,
+              "end": 220.15
+            },
+            {
+              "text": "burns",
+              "start": 220.15,
+              "end": 220.43
+            },
+            {
+              "text": "out",
+              "start": 220.43,
+              "end": 220.55
+            },
+            {
+              "text": "tonight",
+              "start": 220.55,
+              "end": 222.52
+            }
+          ],
+          "timingQuality": "DTW token anchors cross-checked; collapsed opening tokens distributed between anchors; provisional pending listening"
+        }
+      ]
+    }
+  ]
+}

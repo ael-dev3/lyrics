@@ -1,0 +1,66 @@
+{
+  "visualRevision": "word-atmosphere-v4",
+  "checkedAt": "2026-09-23T14:38:49.919647+00:00",
+  "scope": "Targeted combination of existing darkness and Supernova effects on exact void words.",
+  "occurrences": [
+    {
+      "wordId": "L20-W03",
+      "start": 89.523,
+      "end": 90.04
+    },
+    {
+      "wordId": "L31-W03",
+      "start": 147.153,
+      "end": 148.077
+    }
+  ],
+  "implementation": "Both exact-token matchers include void; an explicit combined CSS selector composes the purple inner/outer halo, readable base shadow and moving dark shadow. Charcoal canvas remains behind stationary gold lettering.",
+  "browserChecks": {
+    "layouts": [
+      "landscape",
+      "portrait"
+    ],
+    "timesPerLayout": [
+      89.51,
+      89.6,
+      89.75,
+      90.02,
+      90.04,
+      90.42,
+      147.14,
+      147.4,
+      147.8,
+      148.08
+    ],
+    "observations": 20,
+    "failures": 0,
+    "computedPurpleAndDarkLayersPresent": true,
+    "glyphGeometryUnchanged": true,
+    "activeFill": "rgb(255, 218, 133)",
+    "standaloneAndCleanupChecks": {
+      "80.2": "Supernova halo only",
+      "99.65": "darkness shadow only",
+      "147.6": "void combines both",
+      "90.42": "calls has neither"
+    },
+    "inactiveResidualStyles": false,
+    "visualInspection": "Both layouts retain readable gold text and visible source picture; local shadows and halo remain soft."
+  },
+  "targetedPlayback": {
+    "format": "landscape",
+    "muted": true,
+    "speed": 1,
+    "start": 89,
+    "end": 110.121997,
+    "nativeFramesAdded": 507,
+    "nativeDroppedFramesAdded": 0,
+    "foregroundCallbacks": 506,
+    "foregroundFrameGaps": 0,
+    "maximumCallbackDelayMs": 1,
+    "pictureError": null,
+    "consoleErrors": []
+  },
+  "existingTestsPassed": 30,
+  "timelineSha256": "b71c6ea2e7c39a56843cd51be74bae10c1dcf095f81025b9c7af8ffd7f9ccba4",
+  "limits": "Targeted visual/technical check, not a full-song rerun or acoustic listening certification; no production render."
+}

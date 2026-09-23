@@ -1,0 +1,215 @@
+{
+  "schema": "lyric-film/final-visual-review/v1",
+  "status": "PASS",
+  "scope": "Independent visual inspection of ten exact presentation frames decoded from completed final MP4 files at native resolution. Each master hash matched its completed render receipt before extraction. No claim of full-motion playback, acoustic listening or exhaustive visual coverage.",
+  "masters": [
+    {
+      "format": "landscape",
+      "master": "output/if-the-sun-burns-out-tonight-landscape.mp4",
+      "masterSha256": "7e1afd73d28edf7546e412ac54879ba9e5e4fe3d34d2618fd21da45ced7d8bd2",
+      "receiptSha256": "1eb11bf7f942cabb11de8ff7f50d0681e4f3aed4f720f178f3332ddcc457cdb7",
+      "selection": "Decoded exact zero-based presentation frame indices with FFmpeg select, no input seek.",
+      "images": [
+        {
+          "path": "output/final-visual-checks/landscape-light.png",
+          "sha256": "749cf064d34cdc491651a1691d4ef81f8f2687ff776ee999678b6a4a0913f180",
+          "frame": 2649,
+          "requestedTime": 44.15,
+          "actualTime": 44.15,
+          "width": 1920,
+          "height": 818
+        },
+        {
+          "path": "output/final-visual-checks/landscape-supernova.png",
+          "sha256": "0e67b958a013fa1440aa895822acd3f494b6072e5b169362a69c135db125c081",
+          "frame": 4788,
+          "requestedTime": 79.8,
+          "actualTime": 79.8,
+          "width": 1920,
+          "height": 818
+        },
+        {
+          "path": "output/final-visual-checks/landscape-void.png",
+          "sha256": "d2f5c6524ac2f645bf641a784c82ee4cdf7d8193269c50fc4fbe5e2962aa2ba7",
+          "frame": 8856,
+          "requestedTime": 147.6,
+          "actualTime": 147.6,
+          "width": 1920,
+          "height": 818
+        },
+        {
+          "path": "output/final-visual-checks/landscape-peak-fire.png",
+          "sha256": "9aa8b53fa0c7a21fa8945b6b7155bd11862f90db534a3a9c6c7aa7a89dec8704",
+          "frame": 12042,
+          "requestedTime": 200.7,
+          "actualTime": 200.7,
+          "width": 1920,
+          "height": 818
+        },
+        {
+          "path": "output/final-visual-checks/landscape-ending.png",
+          "sha256": "4a1e39eeabf38bc9e8f0593db371a4e7f84d85ee131b1d9f5c4981e1d5deaa3f",
+          "frame": 14046,
+          "requestedTime": 234.1,
+          "actualTime": 234.1,
+          "width": 1920,
+          "height": 818
+        }
+      ]
+    },
+    {
+      "format": "portrait",
+      "master": "output/if-the-sun-burns-out-tonight-portrait.mp4",
+      "masterSha256": "cdb8d01c01a16451a993aeef6b1a6286153d0738769ccc609efc3caf1fd5cf0a",
+      "receiptSha256": "f4f77a1c83d548c7a4e71cecf60c10d0b273a7d1825360e5573315cd7b70573b",
+      "selection": "Decoded exact zero-based presentation frame indices with FFmpeg select, no input seek.",
+      "images": [
+        {
+          "path": "output/final-visual-checks/portrait-wrapped-fire.png",
+          "sha256": "653fd4ae3f4318ec4e2217662fe163048e93e767f0cfe188a9fda14e8d4d6164",
+          "frame": 2004,
+          "requestedTime": 33.4,
+          "actualTime": 33.4,
+          "width": 1080,
+          "height": 1920
+        },
+        {
+          "path": "output/final-visual-checks/portrait-colder.png",
+          "sha256": "3f4fac97d30644e942fd57916416d332de36689a943d8ec9a6f60a03d4b6a1b5",
+          "frame": 3605,
+          "requestedTime": 60.08,
+          "actualTime": 60.083333333333336,
+          "width": 1080,
+          "height": 1920
+        },
+        {
+          "path": "output/final-visual-checks/portrait-freezing.png",
+          "sha256": "30569684aeefa49d5fa4bcd12fc21f58dfd29b47dab38565b267f7482565e08a",
+          "frame": 3726,
+          "requestedTime": 62.1,
+          "actualTime": 62.1,
+          "width": 1080,
+          "height": 1920
+        },
+        {
+          "path": "output/final-visual-checks/portrait-hurts.png",
+          "sha256": "75d4ec3ffb898b830b43166c92725b26525d27f98d701b8b52c13e00214d79f4",
+          "frame": 7566,
+          "requestedTime": 126.1,
+          "actualTime": 126.1,
+          "width": 1080,
+          "height": 1920
+        },
+        {
+          "path": "output/final-visual-checks/portrait-you.png",
+          "sha256": "e562eb719970625b9e67d4d0c561910034e57ca21bcf1e9aeaeb4662e7f27f11",
+          "frame": 9630,
+          "requestedTime": 160.5,
+          "actualTime": 160.5,
+          "width": 1080,
+          "height": 1920
+        }
+      ]
+    }
+  ],
+  "observations": {
+    "landscape": [
+      "Native 1920×818 composition retains the complete source frame with no added letterbox area.",
+      "At 44.15 s the beam lands on highlighted light; the line and spectrum remain clear.",
+      "At 79.8 s Supernova retains a faint purple aura and gold fill after encoding.",
+      "At 147.6 s void retains the combined local darkness and purple glow over the eclipse shot.",
+      "At 200.7 s sun is individually highlighted with contained fire above the phrase; other glyphs remain readable.",
+      "At 234.1 s the original ending card is visible without lingering captions, spectrum or added shading."
+    ],
+    "portrait": [
+      "All five decoded 1080×1920 frames retain the panoramic source image and matching blurred fill.",
+      "At 33.4 s the wrapped lyric rows remain separated and contained; compact quiet flames do not reach the preceding row. No word is gold at this sample because 33.4 s falls between burnt ending at 33.35 s and out starting at 33.591 s in the approved timeline.",
+      "At 60.083333 s colder and 62.1 s freezing retain readable pale ice fill and fine frozen details.",
+      "At 126.1 s hurts retains stationary readable gold glyphs with restrained interior cracks.",
+      "At 160.5 s the sunlight beam lands on the final you in all I need is you; the two lyric rows and spectrum remain clear.",
+      "No visible clipped glyphs, UI controls, source-image loss, rectangular mask artifacts or broken spectrum geometry were observed."
+    ]
+  },
+  "proofComparison": {
+    "method": "Same-frame PNG references versus final decoded MP4 frames; mean absolute RGB channel difference is reported without treating lossy encoding differences as failures.",
+    "results": [
+      {
+        "framePath": "output/final-visual-checks/landscape-light.png",
+        "proofPath": "output/proofs/landscape-light.png",
+        "proofSha256": "7bbce3b56692d6b70d8280360c4b81d8122e41336a193808bd66af98509819ed",
+        "meanChannelDifference": 0.8171060004074979,
+        "maximumChannelDifference": 69
+      },
+      {
+        "framePath": "output/final-visual-checks/landscape-supernova.png",
+        "proofPath": "output/proofs/landscape-supernova.png",
+        "proofSha256": "fb6b2799e46afe44a7ca3d9dfc3e244fdaa2b338187fd9c8bf0426c719cb11a5",
+        "meanChannelDifference": 0.8925621009915784,
+        "maximumChannelDifference": 74
+      },
+      {
+        "framePath": "output/final-visual-checks/landscape-void.png",
+        "proofPath": "output/proofs/landscape-void.png",
+        "proofSha256": "eba81e43ec07be10287e471024de64e5dce372d63df2554bc2b355b957934b5e",
+        "meanChannelDifference": 0.732004083469166,
+        "maximumChannelDifference": 65
+      },
+      {
+        "framePath": "output/final-visual-checks/landscape-peak-fire.png",
+        "proofPath": "output/proofs/landscape-peak-fire.png",
+        "proofSha256": "1ca0a20d06844057c5e7e3f9211d3cad91672324fa72255c5b02726b4e3a1e08",
+        "meanChannelDifference": 1.3204307168568323,
+        "maximumChannelDifference": 53
+      },
+      {
+        "framePath": "output/final-visual-checks/landscape-ending.png",
+        "proofPath": "output/proofs/landscape-ending.png",
+        "proofSha256": "30dbf8bb59b49688589ed3cb03d9148ed3a83aa19046648b20c7100ec1782e11",
+        "meanChannelDifference": 0.5555118344199945,
+        "maximumChannelDifference": 25
+      },
+      {
+        "framePath": "output/final-visual-checks/portrait-wrapped-fire.png",
+        "proofPath": "output/proofs/portrait-wrapped-fire.png",
+        "proofSha256": "6711e10f84270268a685cc79e4a24a115a8311d33b5b0b53310b5db6f813f82f",
+        "meanChannelDifference": 2.1741832240226335,
+        "maximumChannelDifference": 68
+      },
+      {
+        "framePath": "output/final-visual-checks/portrait-colder.png",
+        "proofPath": "output/proofs/portrait-colder.png",
+        "proofSha256": "383a64b8924f7a4dbefc4c10dc801d65acc94278f7de18e09334e9550dda4778",
+        "meanChannelDifference": 2.317564943415638,
+        "maximumChannelDifference": 62
+      },
+      {
+        "framePath": "output/final-visual-checks/portrait-freezing.png",
+        "proofPath": "output/proofs/portrait-freezing.png",
+        "proofSha256": "ac6bbb5bad99c5da824c14e73f1b7a239b1970d06d46c015ef550fa0e8a8ae34",
+        "meanChannelDifference": 1.9545987654320989,
+        "maximumChannelDifference": 51
+      },
+      {
+        "framePath": "output/final-visual-checks/portrait-hurts.png",
+        "proofPath": "output/proofs/portrait-hurts.png",
+        "proofSha256": "7d9411c80e6df0d6ac76535c232adfee54583a439a7e2b69d182520641e37761",
+        "meanChannelDifference": 2.252164834104938,
+        "maximumChannelDifference": 67
+      },
+      {
+        "framePath": "output/final-visual-checks/portrait-you.png",
+        "proofPath": "output/proofs/portrait-you.png",
+        "proofSha256": "cc7149974984f296c14782864045ebc46dee9fb3c484f604d87bca9488ef5113",
+        "meanChannelDifference": 1.9649742798353909,
+        "maximumChannelDifference": 63
+      }
+    ],
+    "interpretation": "Observed effect appearance and source composition match the inspected production proofs. Reported differences are consistent with encoded images; these measurements are supplemental and do not certify all-frame quality."
+  },
+  "findings": [],
+  "limitations": [
+    "No audio was listened to during this static review.",
+    "Temporal smoothness and all-word highlight coverage are outside this static review; consult their separate delivery audits.",
+    "Only the ten named presentation frames are covered by this visual result."
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "visualRevision": "spectrum-depth-v1",
+  "timingRevision": "preview-v6-audio-evidence",
+  "recordedAt": "2026-09-23T13:07:29.023876+00:00",
+  "scope": "Display-only revision; source video/audio, measured bands and all word timings unchanged.",
+  "treatment": {
+    "bands": 64,
+    "heightMapping": "clamp((dBFS + 58) / 34, 0, 1)^1.6",
+    "faces": "warm front, bright top, dark side",
+    "bloom": "single bounded pass",
+    "reflection": "short per-column fade",
+    "temporalHistory": false,
+    "separateAudioPath": false
+  },
+  "geometryAudit": {
+    "sourceFrames": 14057,
+    "additionalFixtures": [
+      "silence",
+      "all bands at maximum"
+    ],
+    "canvasSizes": [
+      [
+        400,
+        34
+      ],
+      [
+        215,
+        52
+      ],
+      [
+        210,
+        17
+      ],
+      [
+        150,
+        36
+      ],
+      [
+        812,
+        67
+      ]
+    ],
+    "finiteFaceCapReflectionCoordinates": true,
+    "coordinateEscapes": 0
+  },
+  "browserReview": {
+    "originalPlayback": {
+      "fromSeconds": 77.9,
+      "observedThroughSeconds": 126.376667,
+      "droppedVideoFrames": 0,
+      "pictureError": null
+    },
+    "portraitPlayback": {
+      "fromSeconds": 200,
+      "observedThroughSeconds": 229.901959,
+      "cumulativeDroppedVideoFrames": 0,
+      "pictureError": null
+    },
+    "quietComparisonSeconds": 40,
+    "smallOriginalLyricClearancePixels": 6.21875,
+    "portraitLyricClearancePixels": 15.5390625,
+    "actualPictureMotionVerified": true,
+    "endingOverlayClear": true,
+    "consoleErrors": [],
+    "scope": "Muted technical visual/transport check, not an acoustic listening review."
+  },
+  "checks": {
+    "existingCoreTestsPassed": 13,
+    "sourceAndTimelineHashPreservation": true
+  },
+  "sha256": {
+    "src/spectrum-view.js": "33a939ceebf3d079c784dceeaaa6a7ea25a47205be7ec2d743274b75881d18bd",
+    "src/preview-core.js": "77d98648ca596d7ee179bd96b1adc4a1318733faa07f83c82ef8e7526407b808",
+    "src/player.js": "aa09405227fc661334eafa20ed0937a562ecc788c1ebbbdf03a0e5ad029f657d",
+    "review/index.html": "0a0603f543bb13178edeb751c318eac577dcd58717a8775d513129af30ec7cee",
+    "src/timeline.json": "b71c6ea2e7c39a56843cd51be74bae10c1dcf095f81025b9c7af8ffd7f9ccba4",
+    "public/audio-features.bin": "d0740000740c2ce2e9dc9250a83105949ecc7fd747db9f2fd699ebe7722becea"
+  }
+}

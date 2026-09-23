@@ -1,9 +1,10 @@
 # README song screenshots
 
-Updated 22 September 2026. All seventeen featured songs in the main README have a representative image with its edition and preview/final status, and each song's project README has an associated image. Rendered preview references are identified separately from browser captures and decoded final-film frames. Promotional covers and supplementary frames remain separate from the representative image.
+Updated 23 September 2026. All eighteen featured songs in the main README have a representative image with its edition and preview/final status, and each song's project README has an associated image. Rendered preview references are identified separately from browser captures and decoded final-film frames. Promotional covers and supplementary frames remain separate from the representative image.
 
 | Song | Representative image | Time | Edition / provenance |
 | --- | --- | --- | --- |
+| If The Sun Burns Out Tonight | [Native panorama, solar word fire and gold depth spectrum](../assets/sun-burns-out-final-200-7.png) | 03:20.700 | Verified production-v1 final landscape film; exact decoded frame 12042 |
 | Люби меня, люби | [Album print on rose paper and individual год / years focus](../assets/lyubi-v1-1-final-13-85.png) | 00:13.850 | Verified v1.1.0 final landscape film; exact decoded frame 831 |
 | Stay at Your House — Hardstyle | [Lucy artwork and yellow English word focus](../assets/stay-house-hardstyle-final-64.png) | 01:04.000 | Verified v1 final landscape film |
 | Ведьмы | [Steady forest scene and equal Russian / English focus](../assets/vedmy-final-94-55.png) | 01:34.550 | Verified final autumn landscape film |
@@ -70,3 +71,7 @@ Frame 5673 at 94.550 seconds is decoded from the verified final autumn landscape
 ## Stay at Your House hardstyle final frame
 
 Frame 3840 at 64.000 seconds is decoded from the technically verified v1 landscape film at native 1920×1080, without cropping or recoloring. It shows the source illustration, stable English words and yellow focus. The structured inventory binds its final-video hash. The earlier preview composition still remains historical. Trailer action and word display receive separate full-file checks; human listening review and authorization are recorded independently.
+
+## If The Sun Burns Out Tonight final source-aspect frame
+
+Frame 12042 at 200.700 seconds was decoded at native 1920×818 from the verified final landscape MP4. It preserves the complete official VALORANT source picture, English sun focus, measured solar fire and gold spectrum. Both READMEs use the byte-identical unmodified frame, with its final-video identity in the inventory. Music/performance: Grabbitz, Oli Sykes and Courtney LaPlante; original music video: VALORANT. The [final screenshot manifest](../projects/if-the-sun-burns-out-tonight-lyric-film/evidence/final/manifest.json) also records a portrait frame at 160.500 seconds.

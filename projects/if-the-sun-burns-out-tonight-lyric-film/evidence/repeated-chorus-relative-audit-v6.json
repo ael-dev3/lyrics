@@ -1,0 +1,2049 @@
+{
+  "revision": "preview-v6-audio-evidence",
+  "timelineSha256AtAudit": "b71c6ea2e7c39a56843cd51be74bae10c1dcf095f81025b9c7af8ffd7f9ccba4",
+  "status": "read-only relative waveform audit; no timing changes made",
+  "methods": {
+    "analysisRate": 16000,
+    "signals": [
+      "retained original mono mix",
+      "HTDemucs isolated mono vocals",
+      "same vocals with full-signal FFT bandpass250–3500Hz"
+    ],
+    "correlation": "Normalized linear FFT cross-correlation; each phrase searched within expected musical offset±500ms, without fixing the lag. Local slices use±250ms searches and are capped at900ms to reduce beat-period ambiguity. Reported offsets are measured maxima, not assumed grid shifts.",
+    "selection": "Positive correlation peak; exact sample offset agreement across mix, vocals and local windows supports repeated/sample-derived components. Scores are not calibrated probability of phonetic accuracy."
+  },
+  "keyFindings": [
+    "L15/L26, L16/L27, L17/L28, L18/L29 and L19/L30 all maximize at exactly57.6s in mix, isolated vocals and filtered vocals.",
+    "Several independently aligned word windows on these shared components differ by100–304ms. These are relative inconsistencies worth reviewing, even if both model candidates individually appear plausible.",
+    "Supernova following pronouns mostly agree within80ms; the first word onset differs101ms, but its absolute beginning still needs a trusted anchor.",
+    "Now the void, every day and darkness lines do not show a strong coherent waveform match. Their musical similarity does not justify copied word timing.",
+    "Acoustic-release/reverb differences can remain even on a shared component; correlation does not automatically establish the end of the sung core."
+  ],
+  "onsetCandidatesWithMoreThan80msDiscrepancy": [
+    {
+      "referenceWordId": "L15-W01",
+      "targetWordId": "L26-W01",
+      "text": "End",
+      "measuredOffsetSeconds": 57.6,
+      "localVocalCorrelation": 0.558572,
+      "currentTargetStart": 127.021,
+      "targetStartIfReferenceRetained": 127.222,
+      "discrepancySeconds": -0.201,
+      "selectionStatus": "candidate only; neither absolute anchor is automatically preferred",
+      "anchorQualityAssessment": "Source CTCs69.602/69.622 agree; translated target CTCs69.483/69.624 disagree by141ms and Whisper69.36 is earlier. Potential changed leading layer/attack; moderate0.559 correlation does not justify transferring source onset.",
+      "recommendation": "retain current selection pending direct foreground-vocal boundary evidence; not an approved timestamp change",
+      "sourceAndTargetEvidence": {
+        "mms-vocals": {
+          "first": {
+            "start": 69.622329,
+            "end": 69.783425,
+            "score": 0.207721
+          },
+          "second": {
+            "start": 127.082763,
+            "end": 127.364605,
+            "score": 0.12779
+          },
+          "secondMappedBack": {
+            "start": 69.482763,
+            "end": 69.764605,
+            "score": 0.12779
+          }
+        },
+        "wav2vec-vocals": {
+          "first": {
+            "start": 69.602192,
+            "end": 69.783425,
+            "score": 0.452226
+          },
+          "second": {
+            "start": 127.223684,
+            "end": 127.384737,
+            "score": 0.14742
+          },
+          "secondMappedBack": {
+            "start": 69.623684,
+            "end": 69.784737,
+            "score": 0.14742
+          }
+        },
+        "whisper-large-vocals": {
+          "first": {
+            "start": 69.58,
+            "end": 69.82,
+            "score": 0.211785
+          },
+          "second": {
+            "start": 126.96,
+            "end": 127.36,
+            "score": 0.099171
+          },
+          "secondMappedBack": {
+            "start": 69.36,
+            "end": 69.76,
+            "score": 0.099171
+          }
+        }
+      }
+    },
+    {
+      "referenceWordId": "L16-W01",
+      "targetWordId": "L27-W01",
+      "text": "All",
+      "measuredOffsetSeconds": 57.6,
+      "localVocalCorrelation": 0.597221,
+      "currentTargetStart": 129.42,
+      "targetStartIfReferenceRetained": 129.502,
+      "discrepancySeconds": -0.082,
+      "selectionStatus": "candidate only; neither absolute anchor is automatically preferred",
+      "anchorQualityAssessment": "Source MMS71.902 and translated target MMS71.882 agree20ms, but target English CTC path score is near zero and Whisper differs100ms.82ms selected discrepancy is too small/ambiguous to revise under moderate correlation alone.",
+      "recommendation": "retain current selection pending direct foreground-vocal boundary evidence; not an approved timestamp change",
+      "sourceAndTargetEvidence": {
+        "mms-vocals": {
+          "first": {
+            "start": 71.901556,
+            "end": 72.183111,
+            "score": 0.34949
+          },
+          "second": {
+            "start": 129.481989,
+            "end": 130.085304,
+            "score": 0.233731
+          },
+          "secondMappedBack": {
+            "start": 71.881989,
+            "end": 72.485304,
+            "score": 0.233731
+          }
+        },
+        "wav2vec-vocals": {
+          "first": {
+            "start": 72.082556,
+            "end": 72.203222,
+            "score": 0.315263
+          },
+          "second": {
+            "start": 129.240663,
+            "end": 129.321105,
+            "score": 0.004322
+          },
+          "secondMappedBack": {
+            "start": 71.640663,
+            "end": 71.721105,
+            "score": 0.004322
+          }
+        },
+        "whisper-large-vocals": {
+          "first": {
+            "start": 71.92,
+            "end": 72.16,
+            "score": 0.472673
+          },
+          "second": {
+            "start": 129.42,
+            "end": 129.82,
+            "score": 0.865582
+          },
+          "secondMappedBack": {
+            "start": 71.82,
+            "end": 72.22,
+            "score": 0.865582
+          }
+        }
+      }
+    },
+    {
+      "referenceWordId": "L16-W03",
+      "targetWordId": "L27-W03",
+      "text": "need",
+      "measuredOffsetSeconds": 57.6,
+      "localVocalCorrelation": 0.461733,
+      "currentTargetStart": 130.16,
+      "targetStartIfReferenceRetained": 130.306,
+      "discrepancySeconds": -0.146,
+      "selectionStatus": "candidate only; neither absolute anchor is automatically preferred",
+      "anchorQualityAssessment": "Strongest onset candidate for further acoustic inspection: MMS source72.706/target-back72.706519 agree within1ms; English CTC72.746222/72.746740 also agree within1ms. Source initial-N path scores0.599(MMS)/0.747(English); target0.331/0.0057. This supports checking target130.306–130.347 against selected130.160, but lower target confidence and local correlation0.462 do not independently certify exact onset.",
+      "recommendation": "retain current selection pending direct foreground-vocal boundary evidence; not an approved timestamp change",
+      "sourceAndTargetEvidence": {
+        "mms-vocals": {
+          "first": {
+            "start": 72.706,
+            "end": 74.878,
+            "score": 0.32321
+          },
+          "second": {
+            "start": 130.306519,
+            "end": 131.332155,
+            "score": 0.213716
+          },
+          "secondMappedBack": {
+            "start": 72.706519,
+            "end": 73.732155,
+            "score": 0.213716
+          }
+        },
+        "wav2vec-vocals": {
+          "first": {
+            "start": 72.746222,
+            "end": 73.932778,
+            "score": 0.375157
+          },
+          "second": {
+            "start": 130.34674,
+            "end": 131.55337,
+            "score": 0.029286
+          },
+          "secondMappedBack": {
+            "start": 72.74674,
+            "end": 73.95337,
+            "score": 0.029286
+          }
+        },
+        "whisper-large-vocals": {
+          "first": {
+            "start": 72.66,
+            "end": 73.42,
+            "score": 0.960909
+          },
+          "second": {
+            "start": 130.16,
+            "end": 130.76,
+            "score": 0.973398
+          },
+          "secondMappedBack": {
+            "start": 72.56,
+            "end": 73.16,
+            "score": 0.973398
+          }
+        }
+      }
+    },
+    {
+      "referenceWordId": "L16-W04",
+      "targetWordId": "L27-W04",
+      "text": "is",
+      "measuredOffsetSeconds": 57.6,
+      "localVocalCorrelation": 0.534439,
+      "currentTargetStart": 130.76,
+      "targetStartIfReferenceRetained": 131.02,
+      "discrepancySeconds": -0.26,
+      "selectionStatus": "candidate only; neither absolute anchor is automatically preferred",
+      "anchorQualityAssessment": "Do not transfer first selection73.420 automatically: first CTCs spill into next hook74.958/74.999. Target MMS translates back to73.792 with low initial-I score0.130; English target-back74.074 has score0.027. Both Whisper candidates differ260ms. No trustworthy absolute onset recovered here.",
+      "recommendation": "retain current selection pending direct foreground-vocal boundary evidence; not an approved timestamp change",
+      "sourceAndTargetEvidence": {
+        "mms-vocals": {
+          "first": {
+            "start": 74.958444,
+            "end": 75.119333,
+            "score": 0.196013
+          },
+          "second": {
+            "start": 131.392486,
+            "end": 131.53326,
+            "score": 0.1914
+          },
+          "secondMappedBack": {
+            "start": 73.792486,
+            "end": 73.93326,
+            "score": 0.1914
+          }
+        },
+        "wav2vec-vocals": {
+          "first": {
+            "start": 74.998667,
+            "end": 75.079111,
+            "score": 0.919923
+          },
+          "second": {
+            "start": 131.674033,
+            "end": 131.734365,
+            "score": 0.01997
+          },
+          "secondMappedBack": {
+            "start": 74.074033,
+            "end": 74.134365,
+            "score": 0.01997
+          }
+        },
+        "whisper-large-vocals": {
+          "first": {
+            "start": 73.42,
+            "end": 74.02,
+            "score": 0.763245
+          },
+          "second": {
+            "start": 130.76,
+            "end": 131.52,
+            "score": 0.989067
+          },
+          "secondMappedBack": {
+            "start": 73.16,
+            "end": 73.92,
+            "score": 0.989067
+          }
+        }
+      }
+    },
+    {
+      "referenceWordId": "L16-W05",
+      "targetWordId": "L27-W05",
+      "text": "you",
+      "measuredOffsetSeconds": 57.6,
+      "localVocalCorrelation": 0.647494,
+      "currentTargetStart": 131.52,
+      "targetStartIfReferenceRetained": 131.62,
+      "discrepancySeconds": -0.1,
+      "selectionStatus": "candidate only; neither absolute anchor is automatically preferred",
+      "anchorQualityAssessment": "Both CTC passes show next-line drift and low scores. Whisper source74.020 vs target-back73.920 differs100ms. Local correlation0.647 supports a common component but does not choose the foreground vocal onset or release.",
+      "recommendation": "retain current selection pending direct foreground-vocal boundary evidence; not an approved timestamp change",
+      "sourceAndTargetEvidence": {
+        "mms-vocals": {
+          "first": {
+            "start": 75.159556,
+            "end": 75.24,
+            "score": 0.02684
+          },
+          "second": {
+            "start": 132.176796,
+            "end": 132.558895,
+            "score": 0.165776
+          },
+          "secondMappedBack": {
+            "start": 74.576796,
+            "end": 74.958895,
+            "score": 0.165776
+          }
+        },
+        "wav2vec-vocals": {
+          "first": {
+            "start": 75.139444,
+            "end": 75.24,
+            "score": 0.000516
+          },
+          "second": {
+            "start": 132.579006,
+            "end": 132.639337,
+            "score": 0.008933
+          },
+          "secondMappedBack": {
+            "start": 74.979006,
+            "end": 75.039337,
+            "score": 0.008933
+          }
+        },
+        "whisper-large-vocals": {
+          "first": {
+            "start": 74.02,
+            "end": 74.48,
+            "score": 0.979977
+          },
+          "second": {
+            "start": 131.52,
+            "end": 131.8,
+            "score": 0.972906
+          },
+          "secondMappedBack": {
+            "start": 73.92,
+            "end": 74.2,
+            "score": 0.972906
+          }
+        }
+      }
+    },
+    {
+      "referenceWordId": "L18-W01",
+      "targetWordId": "L29-W01",
+      "text": "Supernova,",
+      "measuredOffsetSeconds": 57.6,
+      "localVocalCorrelation": 0.547324,
+      "currentTargetStart": 136.501,
+      "targetStartIfReferenceRetained": 136.602,
+      "discrepancySeconds": -0.101,
+      "selectionStatus": "candidate only; neither absolute anchor is automatically preferred",
+      "anchorQualityAssessment": "MMS source79.002 vs target-back78.901 differs101ms; English78.841/78.921 and Whisper78.880/78.840 point earlier. Multiple possible breath/phoneme entrances; moderate0.547 correlation does not establish which is perceptually correct.",
+      "recommendation": "retain current selection pending direct foreground-vocal boundary evidence; not an approved timestamp change",
+      "sourceAndTargetEvidence": {
+        "mms-vocals": {
+          "first": {
+            "start": 79.001505,
+            "end": 80.687527,
+            "score": 0.292117
+          },
+          "second": {
+            "start": 136.50129,
+            "end": 138.247527,
+            "score": 0.288711
+          },
+          "secondMappedBack": {
+            "start": 78.90129,
+            "end": 80.647527,
+            "score": 0.288711
+          }
+        },
+        "wav2vec-vocals": {
+          "first": {
+            "start": 78.840932,
+            "end": 80.707599,
+            "score": 0.280959
+          },
+          "second": {
+            "start": 136.521362,
+            "end": 138.267599,
+            "score": 0.165686
+          },
+          "secondMappedBack": {
+            "start": 78.921362,
+            "end": 80.667599,
+            "score": 0.165686
+          }
+        },
+        "whisper-large-vocals": {
+          "first": {
+            "start": 78.88,
+            "end": 81.32,
+            "score": 0.863453
+          },
+          "second": {
+            "start": 136.44,
+            "end": 138.74,
+            "score": 0.254903
+          },
+          "secondMappedBack": {
+            "start": 78.84,
+            "end": 81.14,
+            "score": 0.254903
+          }
+        }
+      }
+    },
+    {
+      "referenceWordId": "L19-W05",
+      "targetWordId": "L30-W05",
+      "text": "out",
+      "measuredOffsetSeconds": 57.6,
+      "localVocalCorrelation": 0.54524,
+      "currentTargetStart": 143.58,
+      "targetStartIfReferenceRetained": 143.884,
+      "discrepancySeconds": -0.304,
+      "selectionStatus": "candidate only; neither absolute anchor is automatically preferred",
+      "anchorQualityAssessment": "MMS source86.348/target-back86.328 agree20ms; English86.629/86.610 agree19ms; however families disagree281ms on vowel contact. Whisper86.220/85.980 differs240ms. Relative mismatch likely deserves attention, but exact absolute onset is unresolved and0.545 local correlation alone is insufficient for a timing change.",
+      "recommendation": "retain current selection pending direct foreground-vocal boundary evidence; not an approved timestamp change",
+      "sourceAndTargetEvidence": {
+        "mms-vocals": {
+          "first": {
+            "start": 86.348273,
+            "end": 86.830201,
+            "score": 0.103768
+          },
+          "second": {
+            "start": 143.928492,
+            "end": 144.370238,
+            "score": 0.03163
+          },
+          "secondMappedBack": {
+            "start": 86.328492,
+            "end": 86.770238,
+            "score": 0.03163
+          }
+        },
+        "wav2vec-vocals": {
+          "first": {
+            "start": 86.629398,
+            "end": 86.830201,
+            "score": 0.53178
+          },
+          "second": {
+            "start": 144.209603,
+            "end": 144.410397,
+            "score": 0.385817
+          },
+          "secondMappedBack": {
+            "start": 86.609603,
+            "end": 86.810397,
+            "score": 0.385817
+          }
+        },
+        "whisper-large-vocals": {
+          "first": {
+            "start": 86.22,
+            "end": 86.76,
+            "score": 0.68008
+          },
+          "second": {
+            "start": 143.58,
+            "end": 144.28,
+            "score": 0.91636
+          },
+          "secondMappedBack": {
+            "start": 85.98,
+            "end": 86.68,
+            "score": 0.91636
+          }
+        }
+      }
+    }
+  ],
+  "notEligibleForSampleTransfer": [
+    {
+      "reference": "L20",
+      "target": "L31",
+      "reason": "No sufficiently strong coherent waveform match. Do not transfer lyric timing between these performances."
+    },
+    {
+      "reference": "L21",
+      "target": "L32",
+      "reason": "No sufficiently strong coherent waveform match. Do not transfer lyric timing between these performances."
+    },
+    {
+      "reference": "L22",
+      "target": "L33",
+      "reason": "No sufficiently strong coherent waveform match. Do not transfer lyric timing between these performances."
+    }
+  ],
+  "comparisons": [
+    {
+      "reference": "L15",
+      "target": "L26",
+      "text": "End of the world",
+      "referenceRange": [
+        69.472,
+        71.35000000000001
+      ],
+      "searchRange": [
+        126.572,
+        129.45000000000002
+      ],
+      "wholePhrase": {
+        "mix": {
+          "offsetSeconds": 57.6,
+          "correlation": 0.400792
+        },
+        "vocals": {
+          "offsetSeconds": 57.6,
+          "correlation": 0.570114
+        },
+        "filteredVocals": {
+          "offsetSeconds": 57.6,
+          "correlation": 0.575372
+        }
+      },
+      "words": [
+        {
+          "referenceWordId": "L15-W01",
+          "targetWordId": "L26-W01",
+          "text": "End",
+          "referenceRange": [
+            69.542,
+            69.944
+          ],
+          "searchRange": [
+            126.892,
+            127.794
+          ],
+          "offsetSeconds": 57.6,
+          "correlation": 0.558572,
+          "referenceSelected": {
+            "start": 69.622,
+            "end": 69.864
+          },
+          "targetSelected": {
+            "start": 127.021,
+            "end": 127.445
+          },
+          "targetStartFromMeasuredOffset": 127.222,
+          "targetEndFromMeasuredOffset": 127.464,
+          "startDiscrepancySeconds": -0.201,
+          "endDiscrepancySeconds": -0.019
+        },
+        {
+          "referenceWordId": "L15-W02",
+          "targetWordId": "L26-W02",
+          "text": "of",
+          "referenceRange": [
+            69.784,
+            70.2
+          ],
+          "searchRange": [
+            127.134,
+            128.05
+          ],
+          "offsetSeconds": 57.6,
+          "correlation": 0.617793,
+          "referenceSelected": {
+            "start": 69.864,
+            "end": 70.12
+          },
+          "targetSelected": {
+            "start": 127.445,
+            "end": 127.667
+          },
+          "targetStartFromMeasuredOffset": 127.464,
+          "targetEndFromMeasuredOffset": 127.72,
+          "startDiscrepancySeconds": -0.019,
+          "endDiscrepancySeconds": -0.053
+        },
+        {
+          "referenceWordId": "L15-W03",
+          "targetWordId": "L26-W03",
+          "text": "the",
+          "referenceRange": [
+            70.04,
+            70.42
+          ],
+          "searchRange": [
+            127.39,
+            128.27
+          ],
+          "offsetSeconds": 57.6,
+          "correlation": 0.729545,
+          "referenceSelected": {
+            "start": 70.12,
+            "end": 70.34
+          },
+          "targetSelected": {
+            "start": 127.667,
+            "end": 127.96
+          },
+          "targetStartFromMeasuredOffset": 127.72,
+          "targetEndFromMeasuredOffset": 127.94,
+          "startDiscrepancySeconds": -0.053,
+          "endDiscrepancySeconds": 0.02
+        },
+        {
+          "referenceWordId": "L15-W04",
+          "targetWordId": "L26-W04",
+          "text": "world",
+          "referenceRange": [
+            70.26,
+            71.16
+          ],
+          "searchRange": [
+            127.61,
+            129.01
+          ],
+          "offsetSeconds": 57.6,
+          "correlation": 0.586501,
+          "referenceSelected": {
+            "start": 70.34,
+            "end": 71.2
+          },
+          "targetSelected": {
+            "start": 127.96,
+            "end": 128.54
+          },
+          "targetStartFromMeasuredOffset": 127.94,
+          "targetEndFromMeasuredOffset": 128.8,
+          "startDiscrepancySeconds": 0.02,
+          "endDiscrepancySeconds": -0.26
+        }
+      ],
+      "assessment": "Repeated audio component supported by coherent exact waveform shift in all three signals and local slices; absolute phonetic anchors remain unverified."
+    },
+    {
+      "reference": "L16",
+      "target": "L27",
+      "text": "All I need is you",
+      "referenceRange": [
+        71.752,
+        74.63000000000001
+      ],
+      "searchRange": [
+        128.852,
+        132.73000000000002
+      ],
+      "wholePhrase": {
+        "mix": {
+          "offsetSeconds": 57.6,
+          "correlation": 0.303004
+        },
+        "vocals": {
+          "offsetSeconds": 57.6,
+          "correlation": 0.52541
+        },
+        "filteredVocals": {
+          "offsetSeconds": 57.6,
+          "correlation": 0.532547
+        }
+      },
+      "words": [
+        {
+          "referenceWordId": "L16-W01",
+          "targetWordId": "L27-W01",
+          "text": "All",
+          "referenceRange": [
+            71.822,
+            72.24
+          ],
+          "searchRange": [
+            129.172,
+            130.09
+          ],
+          "offsetSeconds": 57.6,
+          "correlation": 0.597221,
+          "referenceSelected": {
+            "start": 71.902,
+            "end": 72.16
+          },
+          "targetSelected": {
+            "start": 129.42,
+            "end": 129.82
+          },
+          "targetStartFromMeasuredOffset": 129.502,
+          "targetEndFromMeasuredOffset": 129.76,
+          "startDiscrepancySeconds": -0.082,
+          "endDiscrepancySeconds": 0.06
+        },
+        {
+          "referenceWordId": "L16-W02",
+          "targetWordId": "L27-W02",
+          "text": "I",
+          "referenceRange": [
+            72.08,
+            72.786
+          ],
+          "searchRange": [
+            129.43,
+            130.636
+          ],
+          "offsetSeconds": 57.6,
+          "correlation": 0.49909,
+          "referenceSelected": {
+            "start": 72.16,
+            "end": 72.706
+          },
+          "targetSelected": {
+            "start": 129.82,
+            "end": 130.16
+          },
+          "targetStartFromMeasuredOffset": 129.76,
+          "targetEndFromMeasuredOffset": 130.306,
+          "startDiscrepancySeconds": 0.06,
+          "endDiscrepancySeconds": -0.146
+        },
+        {
+          "referenceWordId": "L16-W03",
+          "targetWordId": "L27-W03",
+          "text": "need",
+          "referenceRange": [
+            72.626,
+            73.5
+          ],
+          "searchRange": [
+            129.976,
+            131.35
+          ],
+          "offsetSeconds": 57.6,
+          "correlation": 0.461733,
+          "referenceSelected": {
+            "start": 72.706,
+            "end": 73.42
+          },
+          "targetSelected": {
+            "start": 130.16,
+            "end": 130.76
+          },
+          "targetStartFromMeasuredOffset": 130.306,
+          "targetEndFromMeasuredOffset": 131.02,
+          "startDiscrepancySeconds": -0.146,
+          "endDiscrepancySeconds": -0.26
+        },
+        {
+          "referenceWordId": "L16-W04",
+          "targetWordId": "L27-W04",
+          "text": "is",
+          "referenceRange": [
+            73.34,
+            74.1
+          ],
+          "searchRange": [
+            130.69,
+            131.95
+          ],
+          "offsetSeconds": 57.6,
+          "correlation": 0.534439,
+          "referenceSelected": {
+            "start": 73.42,
+            "end": 74.02
+          },
+          "targetSelected": {
+            "start": 130.76,
+            "end": 131.52
+          },
+          "targetStartFromMeasuredOffset": 131.02,
+          "targetEndFromMeasuredOffset": 131.62,
+          "startDiscrepancySeconds": -0.26,
+          "endDiscrepancySeconds": -0.1
+        },
+        {
+          "referenceWordId": "L16-W05",
+          "targetWordId": "L27-W05",
+          "text": "you",
+          "referenceRange": [
+            73.94,
+            74.56
+          ],
+          "searchRange": [
+            131.29,
+            132.41
+          ],
+          "offsetSeconds": 57.6,
+          "correlation": 0.647494,
+          "referenceSelected": {
+            "start": 74.02,
+            "end": 74.48
+          },
+          "targetSelected": {
+            "start": 131.52,
+            "end": 131.8
+          },
+          "targetStartFromMeasuredOffset": 131.62,
+          "targetEndFromMeasuredOffset": 132.08,
+          "startDiscrepancySeconds": -0.1,
+          "endDiscrepancySeconds": -0.28
+        }
+      ],
+      "assessment": "Repeated audio component supported by coherent exact waveform shift in all three signals and local slices; absolute phonetic anchors remain unverified."
+    },
+    {
+      "reference": "L17",
+      "target": "L28",
+      "text": "If the sun burns out tonight",
+      "referenceRange": [
+        74.791,
+        78.25
+      ],
+      "searchRange": [
+        131.891,
+        136.35
+      ],
+      "wholePhrase": {
+        "mix": {
+          "offsetSeconds": 57.6,
+          "correlation": 0.374295
+        },
+        "vocals": {
+          "offsetSeconds": 57.6,
+          "correlation": 0.413947
+        },
+        "filteredVocals": {
+          "offsetSeconds": 57.6,
+          "correlation": 0.417468
+        }
+      },
+      "words": [
+        {
+          "referenceWordId": "L17-W01",
+          "targetWordId": "L28-W01",
+          "text": "If",
+          "referenceRange": [
+            74.861,
+            75.262
+          ],
+          "searchRange": [
+            132.211,
+            133.112
+          ],
+          "offsetSeconds": 57.6,
+          "correlation": 0.457308,
+          "referenceSelected": {
+            "start": 74.941,
+            "end": 75.182
+          },
+          "targetSelected": {
+            "start": 132.542,
+            "end": 132.763
+          },
+          "targetStartFromMeasuredOffset": 132.541,
+          "targetEndFromMeasuredOffset": 132.782,
+          "startDiscrepancySeconds": 0.001,
+          "endDiscrepancySeconds": -0.019
+        },
+        {
+          "referenceWordId": "L17-W02",
+          "targetWordId": "L28-W02",
+          "text": "the",
+          "referenceRange": [
+            75.102,
+            75.524
+          ],
+          "searchRange": [
+            132.452,
+            133.374
+          ],
+          "offsetSeconds": 57.6,
+          "correlation": 0.473441,
+          "referenceSelected": {
+            "start": 75.182,
+            "end": 75.444
+          },
+          "targetSelected": {
+            "start": 132.763,
+            "end": 133.044
+          },
+          "targetStartFromMeasuredOffset": 132.782,
+          "targetEndFromMeasuredOffset": 133.044,
+          "startDiscrepancySeconds": -0.019,
+          "endDiscrepancySeconds": 0.0
+        },
+        {
+          "referenceWordId": "L17-W03",
+          "targetWordId": "L28-W03",
+          "text": "sun",
+          "referenceRange": [
+            75.364,
+            76.146
+          ],
+          "searchRange": [
+            132.714,
+            133.996
+          ],
+          "offsetSeconds": 57.6,
+          "correlation": 0.509078,
+          "referenceSelected": {
+            "start": 75.444,
+            "end": 76.066
+          },
+          "targetSelected": {
+            "start": 133.044,
+            "end": 133.62
+          },
+          "targetStartFromMeasuredOffset": 133.044,
+          "targetEndFromMeasuredOffset": 133.666,
+          "startDiscrepancySeconds": 0.0,
+          "endDiscrepancySeconds": -0.046
+        },
+        {
+          "referenceWordId": "L17-W04",
+          "targetWordId": "L28-W04",
+          "text": "burns",
+          "referenceRange": [
+            75.986,
+            76.745
+          ],
+          "searchRange": [
+            133.336,
+            134.595
+          ],
+          "offsetSeconds": 57.6,
+          "correlation": 0.505716,
+          "referenceSelected": {
+            "start": 76.066,
+            "end": 76.665
+          },
+          "targetSelected": {
+            "start": 133.62,
+            "end": 134.4
+          },
+          "targetStartFromMeasuredOffset": 133.666,
+          "targetEndFromMeasuredOffset": 134.265,
+          "startDiscrepancySeconds": -0.046,
+          "endDiscrepancySeconds": 0.135
+        },
+        {
+          "referenceWordId": "L17-W05",
+          "targetWordId": "L28-W05",
+          "text": "out",
+          "referenceRange": [
+            76.585,
+            77.266
+          ],
+          "searchRange": [
+            133.935,
+            135.116
+          ],
+          "offsetSeconds": 57.6,
+          "correlation": 0.403891,
+          "referenceSelected": {
+            "start": 76.665,
+            "end": 77.186
+          },
+          "targetSelected": {
+            "start": 134.4,
+            "end": 134.832
+          },
+          "targetStartFromMeasuredOffset": 134.265,
+          "targetEndFromMeasuredOffset": 134.786,
+          "startDiscrepancySeconds": 0.135,
+          "endDiscrepancySeconds": 0.046
+        },
+        {
+          "referenceWordId": "L17-W06",
+          "targetWordId": "L28-W06",
+          "text": "tonight",
+          "referenceRange": [
+            77.106,
+            78.006
+          ],
+          "searchRange": [
+            134.456,
+            135.856
+          ],
+          "offsetSeconds": 57.6,
+          "correlation": 0.322955,
+          "referenceSelected": {
+            "start": 77.186,
+            "end": 78.1
+          },
+          "targetSelected": {
+            "start": 134.832,
+            "end": 135.85
+          },
+          "targetStartFromMeasuredOffset": 134.786,
+          "targetEndFromMeasuredOffset": 135.7,
+          "startDiscrepancySeconds": 0.046,
+          "endDiscrepancySeconds": 0.15
+        }
+      ],
+      "assessment": "Repeated audio component supported by coherent exact waveform shift in all three signals and local slices; absolute phonetic anchors remain unverified."
+    },
+    {
+      "reference": "L18",
+      "target": "L29",
+      "text": "Supernova, all I see is you",
+      "referenceRange": [
+        78.85199999999999,
+        83.89
+      ],
+      "searchRange": [
+        135.952,
+        141.99
+      ],
+      "wholePhrase": {
+        "mix": {
+          "offsetSeconds": 57.6,
+          "correlation": 0.325186
+        },
+        "vocals": {
+          "offsetSeconds": 57.6,
+          "correlation": 0.578881
+        },
+        "filteredVocals": {
+          "offsetSeconds": 57.6,
+          "correlation": 0.591024
+        }
+      },
+      "words": [
+        {
+          "referenceWordId": "L18-W01",
+          "targetWordId": "L29-W01",
+          "text": "Supernova,",
+          "referenceRange": [
+            78.922,
+            79.822
+          ],
+          "searchRange": [
+            136.272,
+            137.672
+          ],
+          "offsetSeconds": 57.6,
+          "correlation": 0.547324,
+          "referenceSelected": {
+            "start": 79.002,
+            "end": 81.27
+          },
+          "targetSelected": {
+            "start": 136.501,
+            "end": 138.81
+          },
+          "targetStartFromMeasuredOffset": 136.602,
+          "targetEndFromMeasuredOffset": 138.87,
+          "startDiscrepancySeconds": -0.101,
+          "endDiscrepancySeconds": -0.06
+        },
+        {
+          "referenceWordId": "L18-W02",
+          "targetWordId": "L29-W02",
+          "text": "all",
+          "referenceRange": [
+            81.19,
+            81.68
+          ],
+          "searchRange": [
+            138.54,
+            139.53
+          ],
+          "offsetSeconds": 57.600063,
+          "correlation": 0.661986,
+          "referenceSelected": {
+            "start": 81.27,
+            "end": 81.6
+          },
+          "targetSelected": {
+            "start": 138.81,
+            "end": 139.14
+          },
+          "targetStartFromMeasuredOffset": 138.870063,
+          "targetEndFromMeasuredOffset": 139.200063,
+          "startDiscrepancySeconds": -0.060063,
+          "endDiscrepancySeconds": -0.060063
+        },
+        {
+          "referenceWordId": "L18-W03",
+          "targetWordId": "L29-W03",
+          "text": "I",
+          "referenceRange": [
+            81.52,
+            82.18
+          ],
+          "searchRange": [
+            138.87,
+            140.03
+          ],
+          "offsetSeconds": 57.6,
+          "correlation": 0.60566,
+          "referenceSelected": {
+            "start": 81.6,
+            "end": 82.1
+          },
+          "targetSelected": {
+            "start": 139.14,
+            "end": 139.62
+          },
+          "targetStartFromMeasuredOffset": 139.2,
+          "targetEndFromMeasuredOffset": 139.7,
+          "startDiscrepancySeconds": -0.06,
+          "endDiscrepancySeconds": -0.08
+        },
+        {
+          "referenceWordId": "L18-W04",
+          "targetWordId": "L29-W04",
+          "text": "see",
+          "referenceRange": [
+            82.02,
+            82.82
+          ],
+          "searchRange": [
+            139.37,
+            140.67
+          ],
+          "offsetSeconds": 57.6,
+          "correlation": 0.587277,
+          "referenceSelected": {
+            "start": 82.1,
+            "end": 82.74
+          },
+          "targetSelected": {
+            "start": 139.62,
+            "end": 140.38
+          },
+          "targetStartFromMeasuredOffset": 139.7,
+          "targetEndFromMeasuredOffset": 140.34,
+          "startDiscrepancySeconds": -0.08,
+          "endDiscrepancySeconds": 0.04
+        },
+        {
+          "referenceWordId": "L18-W05",
+          "targetWordId": "L29-W05",
+          "text": "is",
+          "referenceRange": [
+            82.66,
+            83.56
+          ],
+          "searchRange": [
+            140.01,
+            141.41
+          ],
+          "offsetSeconds": 57.6,
+          "correlation": 0.589289,
+          "referenceSelected": {
+            "start": 82.74,
+            "end": 83.48
+          },
+          "targetSelected": {
+            "start": 140.38,
+            "end": 141.1
+          },
+          "targetStartFromMeasuredOffset": 140.34,
+          "targetEndFromMeasuredOffset": 141.08,
+          "startDiscrepancySeconds": 0.04,
+          "endDiscrepancySeconds": 0.02
+        },
+        {
+          "referenceWordId": "L18-W06",
+          "targetWordId": "L29-W06",
+          "text": "you",
+          "referenceRange": [
+            83.4,
+            83.82
+          ],
+          "searchRange": [
+            140.75,
+            141.67
+          ],
+          "offsetSeconds": 57.6,
+          "correlation": 0.742882,
+          "referenceSelected": {
+            "start": 83.48,
+            "end": 83.74
+          },
+          "targetSelected": {
+            "start": 141.1,
+            "end": 141.3
+          },
+          "targetStartFromMeasuredOffset": 141.08,
+          "targetEndFromMeasuredOffset": 141.34,
+          "startDiscrepancySeconds": 0.02,
+          "endDiscrepancySeconds": -0.04
+        }
+      ],
+      "assessment": "Repeated audio component supported by coherent exact waveform shift in all three signals and local slices; absolute phonetic anchors remain unverified."
+    },
+    {
+      "reference": "L19",
+      "target": "L30",
+      "text": "If the sun burns out tonight",
+      "referenceRange": [
+        84.411,
+        88.32600000000001
+      ],
+      "searchRange": [
+        141.511,
+        146.42600000000002
+      ],
+      "wholePhrase": {
+        "mix": {
+          "offsetSeconds": 57.6,
+          "correlation": 0.287385
+        },
+        "vocals": {
+          "offsetSeconds": 57.6,
+          "correlation": 0.445081
+        },
+        "filteredVocals": {
+          "offsetSeconds": 57.6,
+          "correlation": 0.457441
+        }
+      },
+      "words": [
+        {
+          "referenceWordId": "L19-W01",
+          "targetWordId": "L30-W01",
+          "text": "If",
+          "referenceRange": [
+            84.481,
+            84.842
+          ],
+          "searchRange": [
+            141.831,
+            142.692
+          ],
+          "offsetSeconds": 57.6,
+          "correlation": 0.56131,
+          "referenceSelected": {
+            "start": 84.561,
+            "end": 84.762
+          },
+          "targetSelected": {
+            "start": 142.162,
+            "end": 142.322
+          },
+          "targetStartFromMeasuredOffset": 142.161,
+          "targetEndFromMeasuredOffset": 142.362,
+          "startDiscrepancySeconds": 0.001,
+          "endDiscrepancySeconds": -0.04
+        },
+        {
+          "referenceWordId": "L19-W02",
+          "targetWordId": "L30-W02",
+          "text": "the",
+          "referenceRange": [
+            84.682,
+            85.123
+          ],
+          "searchRange": [
+            142.032,
+            142.973
+          ],
+          "offsetSeconds": 57.6,
+          "correlation": 0.545336,
+          "referenceSelected": {
+            "start": 84.762,
+            "end": 85.043
+          },
+          "targetSelected": {
+            "start": 142.322,
+            "end": 142.603
+          },
+          "targetStartFromMeasuredOffset": 142.362,
+          "targetEndFromMeasuredOffset": 142.643,
+          "startDiscrepancySeconds": -0.04,
+          "endDiscrepancySeconds": -0.04
+        },
+        {
+          "referenceWordId": "L19-W03",
+          "targetWordId": "L30-W03",
+          "text": "sun",
+          "referenceRange": [
+            84.963,
+            85.746
+          ],
+          "searchRange": [
+            142.313,
+            143.596
+          ],
+          "offsetSeconds": 57.6,
+          "correlation": 0.459408,
+          "referenceSelected": {
+            "start": 85.043,
+            "end": 85.666
+          },
+          "targetSelected": {
+            "start": 142.603,
+            "end": 143.236
+          },
+          "targetStartFromMeasuredOffset": 142.643,
+          "targetEndFromMeasuredOffset": 143.266,
+          "startDiscrepancySeconds": -0.04,
+          "endDiscrepancySeconds": -0.03
+        },
+        {
+          "referenceWordId": "L19-W04",
+          "targetWordId": "L30-W04",
+          "text": "burns",
+          "referenceRange": [
+            85.586,
+            86.364
+          ],
+          "searchRange": [
+            142.936,
+            144.214
+          ],
+          "offsetSeconds": 57.6,
+          "correlation": 0.60881,
+          "referenceSelected": {
+            "start": 85.666,
+            "end": 86.284
+          },
+          "targetSelected": {
+            "start": 143.236,
+            "end": 143.58
+          },
+          "targetStartFromMeasuredOffset": 143.266,
+          "targetEndFromMeasuredOffset": 143.884,
+          "startDiscrepancySeconds": -0.03,
+          "endDiscrepancySeconds": -0.304
+        },
+        {
+          "referenceWordId": "L19-W05",
+          "targetWordId": "L30-W05",
+          "text": "out",
+          "referenceRange": [
+            86.204,
+            87.081
+          ],
+          "searchRange": [
+            143.554,
+            144.931
+          ],
+          "offsetSeconds": 57.6,
+          "correlation": 0.54524,
+          "referenceSelected": {
+            "start": 86.284,
+            "end": 87.001
+          },
+          "targetSelected": {
+            "start": 143.58,
+            "end": 144.335
+          },
+          "targetStartFromMeasuredOffset": 143.884,
+          "targetEndFromMeasuredOffset": 144.601,
+          "startDiscrepancySeconds": -0.304,
+          "endDiscrepancySeconds": -0.266
+        },
+        {
+          "referenceWordId": "L19-W06",
+          "targetWordId": "L30-W06",
+          "text": "tonight",
+          "referenceRange": [
+            86.921,
+            87.821
+          ],
+          "searchRange": [
+            144.271,
+            145.671
+          ],
+          "offsetSeconds": 57.6,
+          "correlation": 0.2897,
+          "referenceSelected": {
+            "start": 87.001,
+            "end": 88.176
+          },
+          "targetSelected": {
+            "start": 144.335,
+            "end": 145.475
+          },
+          "targetStartFromMeasuredOffset": 144.601,
+          "targetEndFromMeasuredOffset": 145.776,
+          "startDiscrepancySeconds": -0.266,
+          "endDiscrepancySeconds": -0.301
+        }
+      ],
+      "assessment": "Repeated audio component supported by coherent exact waveform shift in all three signals and local slices; absolute phonetic anchors remain unverified."
+    },
+    {
+      "reference": "L20",
+      "target": "L31",
+      "text": "Now the void calls out my name",
+      "referenceRange": [
+        88.8,
+        92.87
+      ],
+      "searchRange": [
+        145.9,
+        150.97
+      ],
+      "wholePhrase": {
+        "mix": {
+          "offsetSeconds": 57.857125,
+          "correlation": 0.082719
+        },
+        "vocals": {
+          "offsetSeconds": 57.857125,
+          "correlation": 0.131147
+        },
+        "filteredVocals": {
+          "offsetSeconds": 57.857125,
+          "correlation": 0.140497
+        }
+      },
+      "words": [
+        {
+          "referenceWordId": "L20-W01",
+          "targetWordId": "L31-W01",
+          "text": "Now",
+          "referenceRange": [
+            88.87,
+            89.322
+          ],
+          "searchRange": [
+            146.477125,
+            147.429125
+          ],
+          "offsetSeconds": 57.628562,
+          "correlation": 0.268087,
+          "referenceSelected": {
+            "start": 88.95,
+            "end": 89.242
+          },
+          "targetSelected": {
+            "start": 146.561,
+            "end": 146.822
+          },
+          "targetStartFromMeasuredOffset": 146.578562,
+          "targetEndFromMeasuredOffset": 146.870563,
+          "startDiscrepancySeconds": -0.017562,
+          "endDiscrepancySeconds": -0.048563
+        },
+        {
+          "referenceWordId": "L20-W02",
+          "targetWordId": "L31-W02",
+          "text": "the",
+          "referenceRange": [
+            89.162,
+            89.603
+          ],
+          "searchRange": [
+            146.769125,
+            147.710125
+          ],
+          "offsetSeconds": 57.628625,
+          "correlation": 0.175674,
+          "referenceSelected": {
+            "start": 89.242,
+            "end": 89.523
+          },
+          "targetSelected": {
+            "start": 146.822,
+            "end": 147.153
+          },
+          "targetStartFromMeasuredOffset": 146.870625,
+          "targetEndFromMeasuredOffset": 147.151625,
+          "startDiscrepancySeconds": -0.048625,
+          "endDiscrepancySeconds": 0.001375
+        },
+        {
+          "referenceWordId": "L20-W03",
+          "targetWordId": "L31-W03",
+          "text": "void",
+          "referenceRange": [
+            89.443,
+            90.12
+          ],
+          "searchRange": [
+            147.050125,
+            148.227125
+          ],
+          "offsetSeconds": 57.657875,
+          "correlation": 0.357538,
+          "referenceSelected": {
+            "start": 89.523,
+            "end": 90.04
+          },
+          "targetSelected": {
+            "start": 147.153,
+            "end": 148.077
+          },
+          "targetStartFromMeasuredOffset": 147.180875,
+          "targetEndFromMeasuredOffset": 147.697875,
+          "startDiscrepancySeconds": -0.027875,
+          "endDiscrepancySeconds": 0.379125
+        },
+        {
+          "referenceWordId": "L20-W04",
+          "targetWordId": "L31-W04",
+          "text": "calls",
+          "referenceRange": [
+            90.336,
+            90.934
+          ],
+          "searchRange": [
+            147.943125,
+            149.041125
+          ],
+          "offsetSeconds": 58.10175,
+          "correlation": 0.147979,
+          "referenceSelected": {
+            "start": 90.416,
+            "end": 90.854
+          },
+          "targetSelected": {
+            "start": 148.077,
+            "end": 148.494
+          },
+          "targetStartFromMeasuredOffset": 148.51775,
+          "targetEndFromMeasuredOffset": 148.95575,
+          "startDiscrepancySeconds": -0.44075,
+          "endDiscrepancySeconds": -0.46175
+        },
+        {
+          "referenceWordId": "L20-W05",
+          "targetWordId": "L31-W05",
+          "text": "out",
+          "referenceRange": [
+            90.774,
+            91.46
+          ],
+          "searchRange": [
+            148.381125,
+            149.567125
+          ],
+          "offsetSeconds": 57.658687,
+          "correlation": 0.296531,
+          "referenceSelected": {
+            "start": 90.854,
+            "end": 91.38
+          },
+          "targetSelected": {
+            "start": 148.494,
+            "end": 149.301
+          },
+          "targetStartFromMeasuredOffset": 148.512687,
+          "targetEndFromMeasuredOffset": 149.038687,
+          "startDiscrepancySeconds": -0.018687,
+          "endDiscrepancySeconds": 0.262313
+        },
+        {
+          "referenceWordId": "L20-W06",
+          "targetWordId": "L31-W06",
+          "text": "my",
+          "referenceRange": [
+            91.3,
+            92.012
+          ],
+          "searchRange": [
+            148.907125,
+            150.119125
+          ],
+          "offsetSeconds": 57.6535,
+          "correlation": 0.256957,
+          "referenceSelected": {
+            "start": 91.38,
+            "end": 91.932
+          },
+          "targetSelected": {
+            "start": 149.301,
+            "end": 149.602
+          },
+          "targetStartFromMeasuredOffset": 149.0335,
+          "targetEndFromMeasuredOffset": 149.5855,
+          "startDiscrepancySeconds": 0.2675,
+          "endDiscrepancySeconds": 0.0165
+        },
+        {
+          "referenceWordId": "L20-W07",
+          "targetWordId": "L31-W07",
+          "text": "name",
+          "referenceRange": [
+            91.852,
+            92.752
+          ],
+          "searchRange": [
+            149.459125,
+            150.859125
+          ],
+          "offsetSeconds": 57.70925,
+          "correlation": 0.239837,
+          "referenceSelected": {
+            "start": 91.932,
+            "end": 92.72
+          },
+          "targetSelected": {
+            "start": 149.602,
+            "end": 150.24
+          },
+          "targetStartFromMeasuredOffset": 149.64125,
+          "targetEndFromMeasuredOffset": 150.42925,
+          "startDiscrepancySeconds": -0.03925,
+          "endDiscrepancySeconds": -0.18925
+        }
+      ],
+      "assessment": "No sufficiently strong coherent waveform match. Do not transfer lyric timing between these performances."
+    },
+    {
+      "reference": "L21",
+      "target": "L32",
+      "text": "It gets louder every day",
+      "referenceRange": [
+        93.67099999999999,
+        97.39
+      ],
+      "searchRange": [
+        150.771,
+        155.49
+      ],
+      "wholePhrase": {
+        "mix": {
+          "offsetSeconds": 57.644875,
+          "correlation": 0.060293
+        },
+        "vocals": {
+          "offsetSeconds": 57.644875,
+          "correlation": 0.096409
+        },
+        "filteredVocals": {
+          "offsetSeconds": 57.644875,
+          "correlation": 0.100156
+        }
+      },
+      "words": [
+        {
+          "referenceWordId": "L21-W01",
+          "targetWordId": "L32-W01",
+          "text": "It",
+          "referenceRange": [
+            93.741,
+            94.102
+          ],
+          "searchRange": [
+            151.135875,
+            151.996875
+          ],
+          "offsetSeconds": 57.618813,
+          "correlation": 0.103551,
+          "referenceSelected": {
+            "start": 93.821,
+            "end": 94.022
+          },
+          "targetSelected": {
+            "start": 151.401,
+            "end": 151.622
+          },
+          "targetStartFromMeasuredOffset": 151.439813,
+          "targetEndFromMeasuredOffset": 151.640813,
+          "startDiscrepancySeconds": -0.038813,
+          "endDiscrepancySeconds": -0.018812
+        },
+        {
+          "referenceWordId": "L21-W02",
+          "targetWordId": "L32-W02",
+          "text": "gets",
+          "referenceRange": [
+            93.942,
+            94.4
+          ],
+          "searchRange": [
+            151.336875,
+            152.294875
+          ],
+          "offsetSeconds": 57.618813,
+          "correlation": 0.087645,
+          "referenceSelected": {
+            "start": 94.022,
+            "end": 94.32
+          },
+          "targetSelected": {
+            "start": 151.622,
+            "end": 152.044
+          },
+          "targetStartFromMeasuredOffset": 151.640813,
+          "targetEndFromMeasuredOffset": 151.938813,
+          "startDiscrepancySeconds": -0.018813,
+          "endDiscrepancySeconds": 0.105187
+        },
+        {
+          "referenceWordId": "L21-W03",
+          "targetWordId": "L32-W03",
+          "text": "louder",
+          "referenceRange": [
+            94.24,
+            95.14
+          ],
+          "searchRange": [
+            151.634875,
+            153.034875
+          ],
+          "offsetSeconds": 57.740375,
+          "correlation": 0.068168,
+          "referenceSelected": {
+            "start": 94.32,
+            "end": 95.18
+          },
+          "targetSelected": {
+            "start": 152.044,
+            "end": 152.86
+          },
+          "targetStartFromMeasuredOffset": 152.060375,
+          "targetEndFromMeasuredOffset": 152.920375,
+          "startDiscrepancySeconds": -0.016375,
+          "endDiscrepancySeconds": -0.060375
+        },
+        {
+          "referenceWordId": "L21-W04",
+          "targetWordId": "L32-W04",
+          "text": "every",
+          "referenceRange": [
+            95.1,
+            96.0
+          ],
+          "searchRange": [
+            152.494875,
+            153.894875
+          ],
+          "offsetSeconds": 57.757125,
+          "correlation": 0.204228,
+          "referenceSelected": {
+            "start": 95.18,
+            "end": 96.64
+          },
+          "targetSelected": {
+            "start": 152.86,
+            "end": 154.14
+          },
+          "targetStartFromMeasuredOffset": 152.937125,
+          "targetEndFromMeasuredOffset": 154.397125,
+          "startDiscrepancySeconds": -0.077125,
+          "endDiscrepancySeconds": -0.257125
+        },
+        {
+          "referenceWordId": "L21-W05",
+          "targetWordId": "L32-W05",
+          "text": "day",
+          "referenceRange": [
+            96.56,
+            97.32
+          ],
+          "searchRange": [
+            153.954875,
+            155.214875
+          ],
+          "offsetSeconds": 57.555625,
+          "correlation": 0.372632,
+          "referenceSelected": {
+            "start": 96.64,
+            "end": 97.24
+          },
+          "targetSelected": {
+            "start": 154.14,
+            "end": 154.72
+          },
+          "targetStartFromMeasuredOffset": 154.195625,
+          "targetEndFromMeasuredOffset": 154.795625,
+          "startDiscrepancySeconds": -0.055625,
+          "endDiscrepancySeconds": -0.075625
+        }
+      ],
+      "assessment": "No sufficiently strong coherent waveform match. Do not transfer lyric timing between these performances."
+    },
+    {
+      "reference": "L22",
+      "target": "L33",
+      "text": "And in the darkness all I need is you",
+      "referenceRange": [
+        97.851,
+        103.15
+      ],
+      "searchRange": [
+        154.951,
+        161.25
+      ],
+      "wholePhrase": {
+        "mix": {
+          "offsetSeconds": 57.563875,
+          "correlation": 0.05953
+        },
+        "vocals": {
+          "offsetSeconds": 57.604187,
+          "correlation": 0.063957
+        },
+        "filteredVocals": {
+          "offsetSeconds": 57.604187,
+          "correlation": 0.068338
+        }
+      },
+      "words": [
+        {
+          "referenceWordId": "L22-W01",
+          "targetWordId": "L33-W01",
+          "text": "And",
+          "referenceRange": [
+            97.921,
+            98.382
+          ],
+          "searchRange": [
+            155.275187,
+            156.236187
+          ],
+          "offsetSeconds": 57.631625,
+          "correlation": 0.363986,
+          "referenceSelected": {
+            "start": 98.001,
+            "end": 98.302
+          },
+          "targetSelected": {
+            "start": 155.621,
+            "end": 155.922
+          },
+          "targetStartFromMeasuredOffset": 155.632625,
+          "targetEndFromMeasuredOffset": 155.933625,
+          "startDiscrepancySeconds": -0.011625,
+          "endDiscrepancySeconds": -0.011625
+        },
+        {
+          "referenceWordId": "L22-W02",
+          "targetWordId": "L33-W02",
+          "text": "in",
+          "referenceRange": [
+            98.222,
+            98.623
+          ],
+          "searchRange": [
+            155.576187,
+            156.477187
+          ],
+          "offsetSeconds": 57.703312,
+          "correlation": 0.219711,
+          "referenceSelected": {
+            "start": 98.302,
+            "end": 98.543
+          },
+          "targetSelected": {
+            "start": 155.922,
+            "end": 156.163
+          },
+          "targetStartFromMeasuredOffset": 156.005312,
+          "targetEndFromMeasuredOffset": 156.246312,
+          "startDiscrepancySeconds": -0.083312,
+          "endDiscrepancySeconds": -0.083312
+        },
+        {
+          "referenceWordId": "L22-W03",
+          "targetWordId": "L33-W03",
+          "text": "the",
+          "referenceRange": [
+            98.463,
+            99.145
+          ],
+          "searchRange": [
+            155.817187,
+            156.999187
+          ],
+          "offsetSeconds": 57.627187,
+          "correlation": 0.362213,
+          "referenceSelected": {
+            "start": 98.543,
+            "end": 99.065
+          },
+          "targetSelected": {
+            "start": 156.163,
+            "end": 156.765
+          },
+          "targetStartFromMeasuredOffset": 156.170187,
+          "targetEndFromMeasuredOffset": 156.692187,
+          "startDiscrepancySeconds": -0.007187,
+          "endDiscrepancySeconds": 0.072813
+        },
+        {
+          "referenceWordId": "L22-W04",
+          "targetWordId": "L33-W04",
+          "text": "darkness",
+          "referenceRange": [
+            98.985,
+            99.885
+          ],
+          "searchRange": [
+            156.339187,
+            157.739187
+          ],
+          "offsetSeconds": 57.594,
+          "correlation": 0.119798,
+          "referenceSelected": {
+            "start": 99.065,
+            "end": 100.149
+          },
+          "targetSelected": {
+            "start": 156.765,
+            "end": 157.829
+          },
+          "targetStartFromMeasuredOffset": 156.658999,
+          "targetEndFromMeasuredOffset": 157.742999,
+          "startDiscrepancySeconds": 0.106,
+          "endDiscrepancySeconds": 0.086001
+        },
+        {
+          "referenceWordId": "L22-W05",
+          "targetWordId": "L33-W05",
+          "text": "all",
+          "referenceRange": [
+            100.35,
+            101.172
+          ],
+          "searchRange": [
+            157.704187,
+            159.026187
+          ],
+          "offsetSeconds": 57.52975,
+          "correlation": 0.037015,
+          "referenceSelected": {
+            "start": 100.43,
+            "end": 101.092
+          },
+          "targetSelected": {
+            "start": 158.05,
+            "end": 158.692
+          },
+          "targetStartFromMeasuredOffset": 157.95975,
+          "targetEndFromMeasuredOffset": 158.62175,
+          "startDiscrepancySeconds": 0.09025,
+          "endDiscrepancySeconds": 0.07025
+        },
+        {
+          "referenceWordId": "L22-W06",
+          "targetWordId": "L33-W06",
+          "text": "I",
+          "referenceRange": [
+            101.012,
+            101.573
+          ],
+          "searchRange": [
+            158.366187,
+            159.427187
+          ],
+          "offsetSeconds": 57.573374,
+          "correlation": 0.042268,
+          "referenceSelected": {
+            "start": 101.092,
+            "end": 101.493
+          },
+          "targetSelected": {
+            "start": 158.692,
+            "end": 159.174
+          },
+          "targetStartFromMeasuredOffset": 158.665374,
+          "targetEndFromMeasuredOffset": 159.066374,
+          "startDiscrepancySeconds": 0.026626,
+          "endDiscrepancySeconds": 0.107626
+        },
+        {
+          "referenceWordId": "L22-W07",
+          "targetWordId": "L33-W07",
+          "text": "need",
+          "referenceRange": [
+            101.413,
+            102.313
+          ],
+          "searchRange": [
+            158.767187,
+            160.167187
+          ],
+          "offsetSeconds": 57.686062,
+          "correlation": 0.031613,
+          "referenceSelected": {
+            "start": 101.493,
+            "end": 102.3
+          },
+          "targetSelected": {
+            "start": 159.174,
+            "end": 159.56
+          },
+          "targetStartFromMeasuredOffset": 159.179062,
+          "targetEndFromMeasuredOffset": 159.986062,
+          "startDiscrepancySeconds": -0.005062,
+          "endDiscrepancySeconds": -0.426062
+        },
+        {
+          "referenceWordId": "L22-W08",
+          "targetWordId": "L33-W08",
+          "text": "is",
+          "referenceRange": [
+            102.22,
+            102.88
+          ],
+          "searchRange": [
+            159.574187,
+            160.734187
+          ],
+          "offsetSeconds": 57.59475,
+          "correlation": 0.035601,
+          "referenceSelected": {
+            "start": 102.3,
+            "end": 102.8
+          },
+          "targetSelected": {
+            "start": 159.56,
+            "end": 160.36
+          },
+          "targetStartFromMeasuredOffset": 159.894749,
+          "targetEndFromMeasuredOffset": 160.394749,
+          "startDiscrepancySeconds": -0.334749,
+          "endDiscrepancySeconds": -0.034749
+        },
+        {
+          "referenceWordId": "L22-W09",
+          "targetWordId": "L33-W09",
+          "text": "you",
+          "referenceRange": [
+            102.72,
+            103.08
+          ],
+          "searchRange": [
+            160.074187,
+            160.934187
+          ],
+          "offsetSeconds": 57.773875,
+          "correlation": 0.08479,
+          "referenceSelected": {
+            "start": 102.8,
+            "end": 103.0
+          },
+          "targetSelected": {
+            "start": 160.36,
+            "end": 160.68
+          },
+          "targetStartFromMeasuredOffset": 160.573874,
+          "targetEndFromMeasuredOffset": 160.773875,
+          "startDiscrepancySeconds": -0.213874,
+          "endDiscrepancySeconds": -0.093874
+        }
+      ],
+      "assessment": "No sufficiently strong coherent waveform match. Do not transfer lyric timing between these performances."
+    }
+  ],
+  "limits": [
+    "Same-waveform correlation supports relative temporal consistency and shared components, not full identity of all layers or proof of absolute word onsets.",
+    "All original CTC/Whisper observations and absolute uncertainty remain relevant.",
+    "No listening review was performed or claimed in this audit.",
+    "No timing interval was changed by this bounded audit.",
+    "A shared component or accompaniment leak can correlate at an exact lag while a foreground voice attacks differently. Do not infer identical foreground phonetic events from0.4–0.6 correlation alone."
+  ],
+  "decision": "No timing changes recommended solely from this audit. None of the >80ms candidate onset discrepancies has local vocal correlation above0.7; moderate exact-lag agreement may partly reflect shared accompaniment leakage or a layered component. The need onset has useful corroborating cross-model boundary agreement, but target phonetic confidence is uneven and requires direct foreground inspection."
+}

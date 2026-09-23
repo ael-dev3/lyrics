@@ -1,0 +1,77 @@
+{
+  "revision": "sunfire-v2-sunbeam-v1-frost-v1",
+  "scope": "Mild word-anchored frost in preview only",
+  "targets": [
+    {
+      "id": "L11-W03",
+      "word": "colder",
+      "start": 59.827,
+      "end": 60.32
+    },
+    {
+      "id": "L12-W02",
+      "word": "freezing",
+      "start": 61.684,
+      "end": 62.449
+    }
+  ],
+  "treatment": {
+    "iceTint": "rgb(180,225,246)",
+    "spread": "Smooth source-time front reaching the end at72% of the word interval",
+    "attackSeconds": 0.12,
+    "releaseSeconds": "min(0.15,0.3*wordDuration)",
+    "crystalReachFontHeightsMax": 0.167,
+    "glyphMovement": false,
+    "shake": false,
+    "flashing": false,
+    "clearAtExclusiveWordEnd": true
+  },
+  "verification": {
+    "layouts": [
+      "landscape",
+      "portrait"
+    ],
+    "observations": 26,
+    "beforeOnsetsClear": true,
+    "midWordFrostOnlyOnTarget": true,
+    "colderClearAt60_32": true,
+    "freezingClearBy62_45OverHighlighted": true,
+    "exact62_449BoundaryCheckedInSourceFunction": true,
+    "wordGeometryUnchanged": true,
+    "emptyGapAt60_7Clear": true,
+    "sunlightAt44_15Preserved": true,
+    "fireAt75_8Preserved": true,
+    "contrastCorrectedAndVisuallyChecked": true,
+    "portraitAt62_1VisuallyChecked": true
+  },
+  "playback": {
+    "sourceRange": [
+      58.6,
+      118.038782
+    ],
+    "speed": 1,
+    "format": "landscape",
+    "muted": true,
+    "nativeDroppedFramesBefore": 0,
+    "nativeDroppedFramesAfter": 0,
+    "foregroundSkippedFrames": 0,
+    "maximumCallbackDelayMs": 1,
+    "pictureError": null,
+    "consoleErrors": []
+  },
+  "existingRegressionChecks": {
+    "command": "npm run check",
+    "passed": 30,
+    "timingAndMediaIdentityPreserved": true
+  },
+  "filesSha256": {
+    "src/frost.js": "c19993cb1c8aa201fd9173816facaf0b6cdadc08e2d00a4bc6b8381b44f21ead",
+    "src/player.js": "afca55669d9eaa69d24a2172e880999c938e9db1e4de82b2b2ca2158eca3e7f7",
+    "review/index.html": "a6ec9c38ebe07ed8ffb7c61282c36f9090a189692450ccc11f65dd4ca759248d",
+    "src/timeline.json": "b71c6ea2e7c39a56843cd51be74bae10c1dcf095f81025b9c7af8ffd7f9ccba4",
+    "src/sunfire.js": "67b6ca5e08903d9bcaae43672a1afa91b65616d105543ecab7e15fa78d369d1c",
+    "src/sunbeam.js": "4eed89309da76f9c78cdde2ed19da42ba853a16c38fcfe1b3da24c9c97b40c52"
+  },
+  "limits": "Targeted visual and muted playback checks; no new full-song or acoustic listening claim.",
+  "productionRendered": false
+}

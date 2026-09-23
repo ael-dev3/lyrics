@@ -1,0 +1,87 @@
+{
+  "visualRevision": "word-atmosphere-v5",
+  "checkedAt": "2026-09-23T14:42:09.134071+00:00",
+  "scope": "Gentle sunbeam on you only when the five tokens ending at the active word are all I need is you; existing light event preserved.",
+  "occurrences": [
+    {
+      "wordId": "L16-W05",
+      "start": 74.02,
+      "end": 74.48
+    },
+    {
+      "wordId": "L22-W09",
+      "start": 102.8,
+      "end": 103
+    },
+    {
+      "wordId": "L27-W05",
+      "start": 131.52,
+      "end": 131.8
+    },
+    {
+      "wordId": "L33-W09",
+      "start": 160.36,
+      "end": 160.68
+    }
+  ],
+  "phraseAudit": {
+    "expectedBeamEvents": 5,
+    "existingLightEvents": 1,
+    "newYouEvents": 4,
+    "excludedYouIds": [
+      "L03-W02",
+      "L07-W03",
+      "L18-W06",
+      "L29-W06",
+      "L40-W07",
+      "L41-W04"
+    ],
+    "startAndExclusiveEndEnvelopeChecks": "passed"
+  },
+  "browserChecks": {
+    "layouts": [
+      "landscape",
+      "portrait"
+    ],
+    "timesPerLayout": [
+      74.01,
+      74.18,
+      74.48,
+      102.79,
+      102.89,
+      103,
+      131.51,
+      131.65,
+      131.8,
+      160.35,
+      160.5,
+      160.68,
+      83.6,
+      141.2,
+      44.15,
+      99.65
+    ],
+    "observations": 32,
+    "failures": 0,
+    "glyphGeometryStable": true,
+    "inactiveResidualBeamClass": false,
+    "visualInspection": "The shaft lands on the final you in both short and wrapped darkness-prefixed lines. Gold letters remain readable. Original light event still works; see-is-you lookalikes have no beam."
+  },
+  "targetedPlayback": {
+    "format": "portrait",
+    "muted": true,
+    "speed": 1,
+    "start": 102.5,
+    "end": 122.385425,
+    "nativeFramesAdded": 477,
+    "nativeDroppedFramesAdded": 0,
+    "foregroundCallbacks": 477,
+    "foregroundFrameGaps": 0,
+    "maximumCallbackDelayMs": 2,
+    "pictureError": null,
+    "consoleErrors": []
+  },
+  "existingTestsPassed": 30,
+  "timelineSha256": "b71c6ea2e7c39a56843cd51be74bae10c1dcf095f81025b9c7af8ffd7f9ccba4",
+  "limits": "Targeted technical/visual checks; no full-song rerun or acoustic listening certification. No production render."
+}

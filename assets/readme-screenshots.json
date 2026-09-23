@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "reviewedOn": "2026-09-22",
-  "scope": "The seventeen featured song sections in the main README and their project README entry points.",
+  "reviewedOn": "2026-09-23",
+  "scope": "The eighteen featured song sections in the main README and their project README entry points.",
   "newExtraction": {
     "fps": 60,
     "frameNumbering": "zero-based",
@@ -9,8 +9,24 @@
     "sourceIdentity": "New source files matched the recorded delivery SHA-256 before selecting their frames.",
     "scope": "Completed-film screenshots only; preview entries specify their diagnostic capture method individually."
   },
-  "review": "Every featured song has an associated representative image. Ведьмы and Pero es locura use decoded frames from their verified final landscape deliveries; historical editions retain their recorded status and limitations.",
+  "review": "Every featured song has an associated representative image. The new Sun edition uses an exact decoded verified final frame; historical editions retain their recorded status and limitations.",
   "screenshots": [
+    {
+      "song": "If The Sun Burns Out Tonight",
+      "image": "assets/sun-burns-out-final-200-7.png",
+      "project": "projects/if-the-sun-burns-out-tonight-lyric-film/README.md",
+      "timestampSeconds": 200.7,
+      "frame": 12042,
+      "edition": "Verified word-atmosphere-v5 / production-v1 landscape film",
+      "selection": "Original panoramic action, stable English sun focus, audio-scaled solar fire and measured gold depth spectrum.",
+      "method": "Exact zero-indexed decoded final frame; full native composition, no cropping, recoloring, replacement text or generated imagery. Inspected at native and README size.",
+      "width": 1920,
+      "height": 818,
+      "bytes": 908032,
+      "sha256": "07e8e9337fbb3130067341d28e77e05ea99127d419822e2fc6563de3d2aa61da",
+      "encoding": "PNG",
+      "sourceVideoSha256": "7e1afd73d28edf7546e412ac54879ba9e5e4fe3d34d2618fd21da45ced7d8bd2"
+    },
     {
       "song": "Люби меня, люби",
       "image": "assets/lyubi-v1-1-final-13-85.png",

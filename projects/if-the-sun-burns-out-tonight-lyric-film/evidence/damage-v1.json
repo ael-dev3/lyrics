@@ -1,0 +1,76 @@
+{
+  "visualRevision": "word-atmosphere-v3",
+  "checkedAt": "2026-09-23T14:35:53.993439+00:00",
+  "scope": "Targeted verification of gentle damage on exact hurt/hurts tokens. This recording contains two hurts tokens; related words with different meanings are excluded.",
+  "occurrences": [
+    {
+      "wordId": "L14-W05",
+      "start": 68.252,
+      "end": 68.62
+    },
+    {
+      "wordId": "L25-W05",
+      "start": 125.803,
+      "end": 126.52
+    }
+  ],
+  "treatment": {
+    "description": "A brief soft copper contact glow, three narrow hairline cuts clipped inside stationary gold lettering, and three tiny drifting flecks.",
+    "attackMaximumSeconds": 0.07,
+    "releaseMaximumSeconds": 0.14,
+    "fractureDevelopmentMaximumSeconds": 0.16,
+    "fleckTravelFontHeights": 0.24,
+    "timing": "Duration-adaptive envelopes remain entirely inside existing individual word intervals. Motion reconstructs from source time."
+  },
+  "verification": {
+    "existingTestsPassed": 30,
+    "exactStartAndEndEnvelopeChecks": "passed",
+    "finiteBoundedEnvelopeSamplesPerOccurrence": 101,
+    "browserLayouts": [
+      "landscape",
+      "portrait"
+    ],
+    "browserTimesPerLayout": [
+      68.24,
+      68.3,
+      68.4,
+      68.58,
+      68.62,
+      125.79,
+      125.88,
+      126.15,
+      126.49,
+      126.52
+    ],
+    "browserObservations": 20,
+    "browserFailures": 0,
+    "glyphGeometryUnchanged": true,
+    "lettering": "Gold base fill remains readable; cuts are local and mild. Ordinary fill returns after release.",
+    "visualInspection": "Both layouts show the complete source picture and readable lyrics. The tiny flecks remain above the visualizer; transparent canvas padding is not the visible extent.",
+    "reverseAndInterEffectSeeks": [
+      125.95,
+      68.4,
+      67.8,
+      99.65,
+      126.15,
+      80.2
+    ],
+    "residualDamageStyles": false
+  },
+  "targetedPlayback": {
+    "format": "portrait",
+    "muted": true,
+    "speed": 1,
+    "start": 125.4,
+    "end": 149.907001,
+    "nativeFramesAdded": 589,
+    "nativeDroppedFramesAdded": 0,
+    "foregroundCallbacks": 588,
+    "foregroundFrameGaps": 0,
+    "maximumCallbackDelayMs": 1.1000000000058208,
+    "pictureError": null,
+    "consoleErrors": []
+  },
+  "timelineSha256": "b71c6ea2e7c39a56843cd51be74bae10c1dcf095f81025b9c7af8ffd7f9ccba4",
+  "limits": "Targeted technical and visual checks; no claim of full-song rerun, acoustic listening certification or production rendering."
+}

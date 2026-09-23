@@ -1,0 +1,88 @@
+{
+  "visualRevision": "word-atmosphere-v2",
+  "checkedAt": "2026-09-23T14:30:49.177916+00:00",
+  "scope": "Targeted technical and visual verification of soft shadow motion on exact darkness words; no full-song rerun or acoustic listening claim.",
+  "occurrences": [
+    {
+      "wordId": "L22-W04",
+      "start": 99.065,
+      "end": 100.149
+    },
+    {
+      "wordId": "L33-W04",
+      "start": 156.765,
+      "end": 157.829
+    }
+  ],
+  "treatment": {
+    "attackSeconds": 0.18,
+    "releaseSeconds": 0.22,
+    "glyphs": "Stationary gold fill; five feathered charcoal wisps behind the word, with a small moving text shadow.",
+    "clock": "Source-time progress, deterministic after seeks; no particle history."
+  },
+  "browserChecks": {
+    "layouts": [
+      "landscape",
+      "portrait"
+    ],
+    "timesPerLayout": [
+      99.05,
+      99.2,
+      99.65,
+      100.13,
+      100.15,
+      100.43,
+      156.75,
+      156.9,
+      157.35,
+      157.81,
+      157.83,
+      158.05
+    ],
+    "observations": 24,
+    "failures": 0,
+    "sourceTimesMatchedRequested": true,
+    "exclusiveWordBounds": true,
+    "classAndCanvasCleanup": true,
+    "glyphGeometryUnchanged": true,
+    "activeFill": "rgb(255, 218, 133)",
+    "shadowAlphaSamples": {
+      "99.20": 0.632812500000024,
+      "99.65": 0.75,
+      "100.13": 0.01581578700226275
+    },
+    "visualInspection": "Original and portrait views preserve readable letters and source picture; wisps remain local to the word."
+  },
+  "nonsequentialSeekChecks": {
+    "times": [
+      80.2,
+      99.65,
+      44.15,
+      157.35,
+      60.08,
+      75.8,
+      100.43
+    ],
+    "result": "Purple glow, darkness, sunlight, darkness, frost, fire and ordinary highlighting switch without stale darkness canvas or class."
+  },
+  "targetedPlayback": {
+    "format": "landscape",
+    "muted": true,
+    "speed": 1,
+    "start": 98.6,
+    "end": 117.771236,
+    "nativeFramesAdded": 461,
+    "nativeDroppedFramesAdded": 0,
+    "foregroundCallbacks": 460,
+    "foregroundFrameGaps": 0,
+    "maxCallbackDelayMs": 2.1000000000058208,
+    "pictureError": null,
+    "consoleErrors": []
+  },
+  "existingChecks": {
+    "passed": 30,
+    "command": "npm run check"
+  },
+  "timelineSha256": "b71c6ea2e7c39a56843cd51be74bae10c1dcf095f81025b9c7af8ffd7f9ccba4",
+  "limits": "Small-effect verification only. Earlier full-song runtime evidence retains its earlier revision; no production render performed."
+}
