@@ -32,6 +32,8 @@ Follow the language scope commissioned for the current edition. When a translati
 
 ## Match motion intensity to the song
 
+Use the [scene-integration guide](scene-integrated-visuals.md) to choose the spectrum's visual role, scene-compatible lighting and surface behavior. An accurate audio response can still have excessive prominence: review emission, bright caps and reflections separately from band timing and height. Compare complete moving previews at normal speed and realistic player sizes; protect the source subject and lyric before adding finer effects.
+
 Choose the visualizer's role before tuning its response. Gentle, intimate or contemplative arrangements benefit from a small supporting spectrum, limited vertical travel and subdued opacity. Let source animation, composition and lyric meaning provide the expression. A sustained or emotionally important passage may retain that restraint throughout.
 
 Use **Твои глаза** as an implemented example of this approach: 64 square-ended pale-gold bars, maximum group opacity 0.60, height caps of 24 px in landscape and 42 px in portrait, and equal, stable bilingual text. The spectrum and title fade out together before the source ending. The [production lessons](../projects/tvoi-glaza-lyric-film/PRODUCTION-LESSONS.md#the-restrained-visualizer) record the actual formula, geometry and limits.

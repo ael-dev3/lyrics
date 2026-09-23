@@ -54,6 +54,8 @@ The explicitly commissioned [Life Letters Russian / Argentinian Spanish edition]
 
 ### Visual language
 
+- Follow the [scene-integration guide](scene-integrated-visuals.md): assign each reactive layer a role in the composition, match the picture's light and material, and compare simpler treatments at normal speed and actual viewing sizes. Tune spectrum glare/reflections separately from measured audio response. Keep effective primary motifs; extra effect types and barely visible detail are not independent quality goals.
+
 - Default to a cinematic lyric presentation with stable word positions and color-only emphasis on the current word or semantic group. Keep the source imagery, composition and broader motion expressive while the reading position stays calm.
 - Do not add karaoke underlines, word boxes or pills, or bouncing glyphs unless explicitly requested. A historical reference containing these treatments does not override this default. Color and luminance should distinguish focus while both active and inactive words remain readable over the actual background, including bright or busy frames and mobile-size views.
 - Apply this treatment to the current Midnight Love revision and future productions. Other published films, finalized timing data and release archives remain historical records; this default does not itself request their revision.

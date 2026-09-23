@@ -144,3 +144,11 @@ The production adapter shares the deterministic effect functions but reconstruct
 - **Verify the encoded result.** Different font rasterizers, blur kernels and blend implementations can diverge despite shared effect math. Inspect every effect class, composed “void”, wrapped fire, neutral gaps and the source ending. The short diagnostic MP4s contain no audio and therefore establish visual behavior and decode health, not listening or final audio-mux correctness.
 
 The production gate binds all 15 approved preview inputs, the exact song/revision and completed owner review. Its separate adapter record binds the authorization hash, renderer, layout, native loader, extracted font and package files. Negative tests reject empty hash maps, omitted inputs, changed bytes, foreign/stale records, path traversal and unapproved font overrides. Runtime module/binding hashes are retained as environment provenance; final output verification remains a separate step.
+
+## 9. Future scene-integration comparisons
+
+The delivered spectrum's faces, caps, bloom and reflection are distinct display layers over the same measured bands. For a future treatment, compare reduced cap/bloom and reflected brightness in intimate or dark imagery while retaining band timing and response. Added depth can improve a graphic's finish without establishing a convincing place for it in the source scene. Evaluate any reflection against an actual receiving surface or choose a simpler supporting graphic.
+
+Solar fire and frost provide useful primary motifs for this lyric vocabulary. Fine damage marks, wisps and halos should be evaluated for their contribution during ordinary playback at realistic player sizes. They can remain quiet texture, but increasing their count is not evidence of greater impact. If small details disappear while the spectrum keeps attracting attention, prioritize text, subject and spectrum balance before adding more effects.
+
+These are prospective artistic comparisons from design review, not a new render, a demonstrated improvement or a technical fault in the accepted files. Existing synchronization and soundtrack evidence retains its documented scope. Use the shared [scene-integration guide](../../docs/scene-integrated-visuals.md) for the next song's visual brief, A/B review and compact decision record; choose its own imagery and motifs.
