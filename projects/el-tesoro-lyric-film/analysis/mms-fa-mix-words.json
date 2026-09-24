@@ -1,0 +1,4594 @@
+{
+  "method": "torchaudio MMS_FA CTC forced alignment against supplied normalized transcript on original stereo-downmixed mix",
+  "sourceSha256": "a94238e7b20a812b10a307eb4b9b167cac78061c18862a908c512ec4abdd7c40",
+  "sampleRate": 16000,
+  "notes": [
+    "Forced alignment yields plausible timestamps even if the supplied lyric is wrong; these scores are not a transcript truth test.",
+    "Mix contains instruments/reverb; manually review weak scores and endings.",
+    "Window bounds came from independent whisper.cpp small and medium passes, not from listening."
+  ],
+  "lines": [
+    {
+      "id": "L01",
+      "window": [
+        15.7,
+        25.8
+      ],
+      "text": "Ah, paso todo el día pensando en vos",
+      "words": [
+        {
+          "text": "Ah,",
+          "normalized": "ah",
+          "start": 17.544,
+          "end": 17.764,
+          "score": 0.4925,
+          "spans": [
+            {
+              "start": 17.544,
+              "end": 17.564,
+              "score": 0.9808
+            },
+            {
+              "start": 17.744,
+              "end": 17.764,
+              "score": 0.0042
+            }
+          ]
+        },
+        {
+          "text": "paso",
+          "normalized": "paso",
+          "start": 20.67,
+          "end": 21.051,
+          "score": 0.7785,
+          "spans": [
+            {
+              "start": 20.67,
+              "end": 20.69,
+              "score": 0.8569
+            },
+            {
+              "start": 20.75,
+              "end": 20.77,
+              "score": 0.9963
+            },
+            {
+              "start": 20.93,
+              "end": 20.95,
+              "score": 0.8765
+            },
+            {
+              "start": 21.031,
+              "end": 21.051,
+              "score": 0.3842
+            }
+          ]
+        },
+        {
+          "text": "todo",
+          "normalized": "todo",
+          "start": 21.191,
+          "end": 21.572,
+          "score": 0.5873,
+          "spans": [
+            {
+              "start": 21.191,
+              "end": 21.211,
+              "score": 0.9589
+            },
+            {
+              "start": 21.311,
+              "end": 21.331,
+              "score": 0.5907
+            },
+            {
+              "start": 21.491,
+              "end": 21.512,
+              "score": 0.7989
+            },
+            {
+              "start": 21.552,
+              "end": 21.572,
+              "score": 0.0008
+            }
+          ]
+        },
+        {
+          "text": "el",
+          "normalized": "el",
+          "start": 21.592,
+          "end": 21.772,
+          "score": 0.4305,
+          "spans": [
+            {
+              "start": 21.592,
+              "end": 21.612,
+              "score": 0.0079
+            },
+            {
+              "start": 21.752,
+              "end": 21.772,
+              "score": 0.8532
+            }
+          ]
+        },
+        {
+          "text": "día",
+          "normalized": "dia",
+          "start": 21.872,
+          "end": 22.353,
+          "score": 0.6749,
+          "spans": [
+            {
+              "start": 21.872,
+              "end": 21.892,
+              "score": 0.0556
+            },
+            {
+              "start": 21.992,
+              "end": 22.012,
+              "score": 0.9845
+            },
+            {
+              "start": 22.333,
+              "end": 22.353,
+              "score": 0.9845
+            }
+          ]
+        },
+        {
+          "text": "pensando",
+          "normalized": "pensando",
+          "start": 22.794,
+          "end": 23.656,
+          "score": 0.8121,
+          "spans": [
+            {
+              "start": 22.794,
+              "end": 22.814,
+              "score": 0.2539
+            },
+            {
+              "start": 22.894,
+              "end": 22.914,
+              "score": 0.9707
+            },
+            {
+              "start": 23.035,
+              "end": 23.055,
+              "score": 0.9212
+            },
+            {
+              "start": 23.175,
+              "end": 23.195,
+              "score": 0.9116
+            },
+            {
+              "start": 23.295,
+              "end": 23.315,
+              "score": 0.9923
+            },
+            {
+              "start": 23.495,
+              "end": 23.515,
+              "score": 0.8186
+            },
+            {
+              "start": 23.556,
+              "end": 23.576,
+              "score": 0.9668
+            },
+            {
+              "start": 23.636,
+              "end": 23.656,
+              "score": 0.6613
+            }
+          ]
+        },
+        {
+          "text": "en",
+          "normalized": "en",
+          "start": 23.716,
+          "end": 23.836,
+          "score": 0.4522,
+          "spans": [
+            {
+              "start": 23.716,
+              "end": 23.736,
+              "score": 0.8616
+            },
+            {
+              "start": 23.816,
+              "end": 23.836,
+              "score": 0.0429
+            }
+          ]
+        },
+        {
+          "text": "vos",
+          "normalized": "vos",
+          "start": 23.856,
+          "end": 24.437,
+          "score": 0.2286,
+          "spans": [
+            {
+              "start": 23.856,
+              "end": 23.876,
+              "score": 0.0014
+            },
+            {
+              "start": 23.956,
+              "end": 23.976,
+              "score": 0.6806
+            },
+            {
+              "start": 24.417,
+              "end": 24.437,
+              "score": 0.0036
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L02",
+      "window": [
+        25.0,
+        34.1
+      ],
+      "text": "Ah, qué hay de malo en todo esto?",
+      "words": [
+        {
+          "text": "Ah,",
+          "normalized": "ah",
+          "start": 26.042,
+          "end": 27.967,
+          "score": 0.4807,
+          "spans": [
+            {
+              "start": 26.042,
+              "end": 26.062,
+              "score": 0.9254
+            },
+            {
+              "start": 27.946,
+              "end": 27.967,
+              "score": 0.0361
+            }
+          ]
+        },
+        {
+          "text": "qué",
+          "normalized": "que",
+          "start": 29.129,
+          "end": 29.209,
+          "score": 0.0442,
+          "spans": [
+            {
+              "start": 29.129,
+              "end": 29.149,
+              "score": 0.0053
+            },
+            {
+              "start": 29.169,
+              "end": 29.189,
+              "score": 0.0418
+            },
+            {
+              "start": 29.189,
+              "end": 29.209,
+              "score": 0.0856
+            }
+          ]
+        },
+        {
+          "text": "hay",
+          "normalized": "hay",
+          "start": 29.209,
+          "end": 29.43,
+          "score": 0.4531,
+          "spans": [
+            {
+              "start": 29.209,
+              "end": 29.229,
+              "score": 0.0001
+            },
+            {
+              "start": 29.249,
+              "end": 29.269,
+              "score": 0.996
+            },
+            {
+              "start": 29.41,
+              "end": 29.43,
+              "score": 0.3631
+            }
+          ]
+        },
+        {
+          "text": "de",
+          "normalized": "de",
+          "start": 29.47,
+          "end": 29.57,
+          "score": 0.8937,
+          "spans": [
+            {
+              "start": 29.47,
+              "end": 29.49,
+              "score": 0.8652
+            },
+            {
+              "start": 29.55,
+              "end": 29.57,
+              "score": 0.9221
+            }
+          ]
+        },
+        {
+          "text": "malo",
+          "normalized": "malo",
+          "start": 29.69,
+          "end": 30.091,
+          "score": 0.5583,
+          "spans": [
+            {
+              "start": 29.69,
+              "end": 29.71,
+              "score": 0.9942
+            },
+            {
+              "start": 29.791,
+              "end": 29.811,
+              "score": 0.9972
+            },
+            {
+              "start": 29.991,
+              "end": 30.011,
+              "score": 0.2132
+            },
+            {
+              "start": 30.071,
+              "end": 30.091,
+              "score": 0.0287
+            }
+          ]
+        },
+        {
+          "text": "en",
+          "normalized": "en",
+          "start": 30.111,
+          "end": 30.171,
+          "score": 0.4725,
+          "spans": [
+            {
+              "start": 30.111,
+              "end": 30.131,
+              "score": 0.002
+            },
+            {
+              "start": 30.151,
+              "end": 30.171,
+              "score": 0.943
+            }
+          ]
+        },
+        {
+          "text": "todo",
+          "normalized": "todo",
+          "start": 30.292,
+          "end": 30.893,
+          "score": 0.966,
+          "spans": [
+            {
+              "start": 30.292,
+              "end": 30.312,
+              "score": 0.9827
+            },
+            {
+              "start": 30.392,
+              "end": 30.412,
+              "score": 0.9878
+            },
+            {
+              "start": 30.753,
+              "end": 30.773,
+              "score": 0.9447
+            },
+            {
+              "start": 30.873,
+              "end": 30.893,
+              "score": 0.949
+            }
+          ]
+        },
+        {
+          "text": "esto?",
+          "normalized": "esto",
+          "start": 31.414,
+          "end": 32.176,
+          "score": 0.9258,
+          "spans": [
+            {
+              "start": 31.414,
+              "end": 31.434,
+              "score": 0.9375
+            },
+            {
+              "start": 31.895,
+              "end": 31.915,
+              "score": 0.9334
+            },
+            {
+              "start": 32.056,
+              "end": 32.076,
+              "score": 0.9091
+            },
+            {
+              "start": 32.156,
+              "end": 32.176,
+              "score": 0.9231
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L03",
+      "window": [
+        33.5,
+        42.8
+      ],
+      "text": "Ah, paso todo el día pensando en vos",
+      "words": [
+        {
+          "text": "Ah,",
+          "normalized": "ah",
+          "start": 34.522,
+          "end": 34.803,
+          "score": 0.4348,
+          "spans": [
+            {
+              "start": 34.522,
+              "end": 34.542,
+              "score": 0.8692
+            },
+            {
+              "start": 34.783,
+              "end": 34.803,
+              "score": 0.0004
+            }
+          ]
+        },
+        {
+          "text": "paso",
+          "normalized": "paso",
+          "start": 37.649,
+          "end": 38.05,
+          "score": 0.8096,
+          "spans": [
+            {
+              "start": 37.649,
+              "end": 37.669,
+              "score": 0.3676
+            },
+            {
+              "start": 37.729,
+              "end": 37.749,
+              "score": 0.9929
+            },
+            {
+              "start": 37.93,
+              "end": 37.95,
+              "score": 0.9456
+            },
+            {
+              "start": 38.03,
+              "end": 38.05,
+              "score": 0.9323
+            }
+          ]
+        },
+        {
+          "text": "todo",
+          "normalized": "todo",
+          "start": 38.21,
+          "end": 38.591,
+          "score": 0.5562,
+          "spans": [
+            {
+              "start": 38.21,
+              "end": 38.23,
+              "score": 0.8317
+            },
+            {
+              "start": 38.31,
+              "end": 38.33,
+              "score": 0.9406
+            },
+            {
+              "start": 38.471,
+              "end": 38.491,
+              "score": 0.4082
+            },
+            {
+              "start": 38.571,
+              "end": 38.591,
+              "score": 0.0441
+            }
+          ]
+        },
+        {
+          "text": "el",
+          "normalized": "el",
+          "start": 38.691,
+          "end": 38.731,
+          "score": 0.3126,
+          "spans": [
+            {
+              "start": 38.691,
+              "end": 38.711,
+              "score": 0.625
+            },
+            {
+              "start": 38.711,
+              "end": 38.731,
+              "score": 0.0002
+            }
+          ]
+        },
+        {
+          "text": "día",
+          "normalized": "dia",
+          "start": 38.852,
+          "end": 39.373,
+          "score": 0.9623,
+          "spans": [
+            {
+              "start": 38.852,
+              "end": 38.872,
+              "score": 0.9615
+            },
+            {
+              "start": 38.952,
+              "end": 38.972,
+              "score": 0.9526
+            },
+            {
+              "start": 39.353,
+              "end": 39.373,
+              "score": 0.9729
+            }
+          ]
+        },
+        {
+          "text": "pensando",
+          "normalized": "pensando",
+          "start": 39.794,
+          "end": 40.655,
+          "score": 0.805,
+          "spans": [
+            {
+              "start": 39.794,
+              "end": 39.814,
+              "score": 0.6687
+            },
+            {
+              "start": 39.894,
+              "end": 39.914,
+              "score": 0.9889
+            },
+            {
+              "start": 40.034,
+              "end": 40.054,
+              "score": 0.8116
+            },
+            {
+              "start": 40.174,
+              "end": 40.194,
+              "score": 0.9072
+            },
+            {
+              "start": 40.295,
+              "end": 40.315,
+              "score": 0.9887
+            },
+            {
+              "start": 40.515,
+              "end": 40.535,
+              "score": 0.4302
+            },
+            {
+              "start": 40.555,
+              "end": 40.575,
+              "score": 0.912
+            },
+            {
+              "start": 40.635,
+              "end": 40.655,
+              "score": 0.7324
+            }
+          ]
+        },
+        {
+          "text": "en",
+          "normalized": "en",
+          "start": 40.736,
+          "end": 40.856,
+          "score": 0.4428,
+          "spans": [
+            {
+              "start": 40.736,
+              "end": 40.756,
+              "score": 0.8812
+            },
+            {
+              "start": 40.836,
+              "end": 40.856,
+              "score": 0.0045
+            }
+          ]
+        },
+        {
+          "text": "vos",
+          "normalized": "vos",
+          "start": 40.896,
+          "end": 41.517,
+          "score": 0.3055,
+          "spans": [
+            {
+              "start": 40.896,
+              "end": 40.916,
+              "score": 0.0
+            },
+            {
+              "start": 40.996,
+              "end": 41.016,
+              "score": 0.9157
+            },
+            {
+              "start": 41.497,
+              "end": 41.517,
+              "score": 0.0009
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L04",
+      "window": [
+        42.0,
+        51.2
+      ],
+      "text": "Ah, vos pensás que pierdo el tiempo",
+      "words": [
+        {
+          "text": "Ah,",
+          "normalized": "ah",
+          "start": 43.062,
+          "end": 45.347,
+          "score": 0.2946,
+          "spans": [
+            {
+              "start": 43.062,
+              "end": 43.082,
+              "score": 0.5831
+            },
+            {
+              "start": 45.327,
+              "end": 45.347,
+              "score": 0.0061
+            }
+          ]
+        },
+        {
+          "text": "vos",
+          "normalized": "vos",
+          "start": 46.129,
+          "end": 46.369,
+          "score": 0.5337,
+          "spans": [
+            {
+              "start": 46.129,
+              "end": 46.149,
+              "score": 0.047
+            },
+            {
+              "start": 46.229,
+              "end": 46.249,
+              "score": 0.8748
+            },
+            {
+              "start": 46.349,
+              "end": 46.369,
+              "score": 0.6792
+            }
+          ]
+        },
+        {
+          "text": "pensás",
+          "normalized": "pensas",
+          "start": 46.43,
+          "end": 46.951,
+          "score": 0.9584,
+          "spans": [
+            {
+              "start": 46.43,
+              "end": 46.45,
+              "score": 0.9838
+            },
+            {
+              "start": 46.51,
+              "end": 46.53,
+              "score": 0.9768
+            },
+            {
+              "start": 46.61,
+              "end": 46.63,
+              "score": 0.9705
+            },
+            {
+              "start": 46.67,
+              "end": 46.69,
+              "score": 0.9457
+            },
+            {
+              "start": 46.79,
+              "end": 46.81,
+              "score": 0.9854
+            },
+            {
+              "start": 46.931,
+              "end": 46.951,
+              "score": 0.8881
+            }
+          ]
+        },
+        {
+          "text": "que",
+          "normalized": "que",
+          "start": 47.011,
+          "end": 47.111,
+          "score": 0.844,
+          "spans": [
+            {
+              "start": 47.011,
+              "end": 47.031,
+              "score": 0.8121
+            },
+            {
+              "start": 47.031,
+              "end": 47.051,
+              "score": 0.8507
+            },
+            {
+              "start": 47.091,
+              "end": 47.111,
+              "score": 0.8692
+            }
+          ]
+        },
+        {
+          "text": "pierdo",
+          "normalized": "pierdo",
+          "start": 47.171,
+          "end": 47.933,
+          "score": 0.4987,
+          "spans": [
+            {
+              "start": 47.171,
+              "end": 47.191,
+              "score": 0.0501
+            },
+            {
+              "start": 47.312,
+              "end": 47.332,
+              "score": 0.8189
+            },
+            {
+              "start": 47.412,
+              "end": 47.432,
+              "score": 0.7611
+            },
+            {
+              "start": 47.652,
+              "end": 47.672,
+              "score": 0.8279
+            },
+            {
+              "start": 47.813,
+              "end": 47.833,
+              "score": 0.2437
+            },
+            {
+              "start": 47.913,
+              "end": 47.933,
+              "score": 0.2907
+            }
+          ]
+        },
+        {
+          "text": "el",
+          "normalized": "el",
+          "start": 48.033,
+          "end": 48.133,
+          "score": 0.2796,
+          "spans": [
+            {
+              "start": 48.033,
+              "end": 48.053,
+              "score": 0.012
+            },
+            {
+              "start": 48.113,
+              "end": 48.133,
+              "score": 0.5473
+            }
+          ]
+        },
+        {
+          "text": "tiempo",
+          "normalized": "tiempo",
+          "start": 48.294,
+          "end": 49.196,
+          "score": 0.232,
+          "spans": [
+            {
+              "start": 48.294,
+              "end": 48.314,
+              "score": 0.047
+            },
+            {
+              "start": 48.354,
+              "end": 48.374,
+              "score": 0.0786
+            },
+            {
+              "start": 48.474,
+              "end": 48.494,
+              "score": 0.6113
+            },
+            {
+              "start": 48.875,
+              "end": 48.895,
+              "score": 0.2325
+            },
+            {
+              "start": 49.095,
+              "end": 49.115,
+              "score": 0.0312
+            },
+            {
+              "start": 49.176,
+              "end": 49.196,
+              "score": 0.3912
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L05",
+      "window": [
+        50.9,
+        57.1
+      ],
+      "text": "Perdón si estoy de nuevo acá",
+      "words": [
+        {
+          "text": "Perdón",
+          "normalized": "perdon",
+          "start": 52.786,
+          "end": 53.248,
+          "score": 0.3282,
+          "spans": [
+            {
+              "start": 52.786,
+              "end": 52.806,
+              "score": 0.0856
+            },
+            {
+              "start": 52.886,
+              "end": 52.906,
+              "score": 0.7262
+            },
+            {
+              "start": 52.987,
+              "end": 53.007,
+              "score": 0.2123
+            },
+            {
+              "start": 53.047,
+              "end": 53.067,
+              "score": 0.2462
+            },
+            {
+              "start": 53.147,
+              "end": 53.167,
+              "score": 0.6139
+            },
+            {
+              "start": 53.228,
+              "end": 53.248,
+              "score": 0.0847
+            }
+          ]
+        },
+        {
+          "text": "si",
+          "normalized": "si",
+          "start": 53.348,
+          "end": 53.408,
+          "score": 0.3417,
+          "spans": [
+            {
+              "start": 53.348,
+              "end": 53.368,
+              "score": 0.6685
+            },
+            {
+              "start": 53.388,
+              "end": 53.408,
+              "score": 0.0148
+            }
+          ]
+        },
+        {
+          "text": "estoy",
+          "normalized": "estoy",
+          "start": 53.448,
+          "end": 54.13,
+          "score": 0.3924,
+          "spans": [
+            {
+              "start": 53.448,
+              "end": 53.468,
+              "score": 0.2124
+            },
+            {
+              "start": 53.569,
+              "end": 53.589,
+              "score": 0.7213
+            },
+            {
+              "start": 53.649,
+              "end": 53.669,
+              "score": 0.035
+            },
+            {
+              "start": 53.709,
+              "end": 53.729,
+              "score": 0.5422
+            },
+            {
+              "start": 54.11,
+              "end": 54.13,
+              "score": 0.4513
+            }
+          ]
+        },
+        {
+          "text": "de",
+          "normalized": "de",
+          "start": 54.351,
+          "end": 54.451,
+          "score": 0.2082,
+          "spans": [
+            {
+              "start": 54.351,
+              "end": 54.371,
+              "score": 0.0156
+            },
+            {
+              "start": 54.431,
+              "end": 54.451,
+              "score": 0.4008
+            }
+          ]
+        },
+        {
+          "text": "nuevo",
+          "normalized": "nuevo",
+          "start": 54.512,
+          "end": 55.053,
+          "score": 0.3821,
+          "spans": [
+            {
+              "start": 54.512,
+              "end": 54.532,
+              "score": 0.7446
+            },
+            {
+              "start": 54.692,
+              "end": 54.712,
+              "score": 0.1333
+            },
+            {
+              "start": 54.772,
+              "end": 54.793,
+              "score": 0.4532
+            },
+            {
+              "start": 54.953,
+              "end": 54.973,
+              "score": 0.0118
+            },
+            {
+              "start": 55.033,
+              "end": 55.053,
+              "score": 0.5676
+            }
+          ]
+        },
+        {
+          "text": "acá",
+          "normalized": "aca",
+          "start": 55.415,
+          "end": 55.635,
+          "score": 0.3802,
+          "spans": [
+            {
+              "start": 55.415,
+              "end": 55.435,
+              "score": 0.5435
+            },
+            {
+              "start": 55.555,
+              "end": 55.575,
+              "score": 0.0009
+            },
+            {
+              "start": 55.615,
+              "end": 55.635,
+              "score": 0.596
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L06",
+      "window": [
+        56.5,
+        61.1
+      ],
+      "text": "Pensé que habías preguntado por mí",
+      "words": [
+        {
+          "text": "Pensé",
+          "normalized": "pense",
+          "start": 57.022,
+          "end": 57.424,
+          "score": 0.3829,
+          "spans": [
+            {
+              "start": 57.022,
+              "end": 57.042,
+              "score": 0.0128
+            },
+            {
+              "start": 57.123,
+              "end": 57.143,
+              "score": 0.1366
+            },
+            {
+              "start": 57.183,
+              "end": 57.203,
+              "score": 0.2224
+            },
+            {
+              "start": 57.263,
+              "end": 57.283,
+              "score": 0.5611
+            },
+            {
+              "start": 57.404,
+              "end": 57.424,
+              "score": 0.9815
+            }
+          ]
+        },
+        {
+          "text": "que",
+          "normalized": "que",
+          "start": 57.565,
+          "end": 57.645,
+          "score": 0.3279,
+          "spans": [
+            {
+              "start": 57.565,
+              "end": 57.585,
+              "score": 0.0107
+            },
+            {
+              "start": 57.585,
+              "end": 57.605,
+              "score": 0.0791
+            },
+            {
+              "start": 57.625,
+              "end": 57.645,
+              "score": 0.8938
+            }
+          ]
+        },
+        {
+          "text": "habías",
+          "normalized": "habias",
+          "start": 57.685,
+          "end": 58.308,
+          "score": 0.791,
+          "spans": [
+            {
+              "start": 57.685,
+              "end": 57.705,
+              "score": 0.0067
+            },
+            {
+              "start": 57.725,
+              "end": 57.745,
+              "score": 0.9873
+            },
+            {
+              "start": 57.866,
+              "end": 57.886,
+              "score": 0.8329
+            },
+            {
+              "start": 57.946,
+              "end": 57.966,
+              "score": 0.9859
+            },
+            {
+              "start": 58.187,
+              "end": 58.207,
+              "score": 0.9925
+            },
+            {
+              "start": 58.288,
+              "end": 58.308,
+              "score": 0.9408
+            }
+          ]
+        },
+        {
+          "text": "preguntado",
+          "normalized": "preguntado",
+          "start": 58.388,
+          "end": 59.332,
+          "score": 0.6331,
+          "spans": [
+            {
+              "start": 58.388,
+              "end": 58.408,
+              "score": 0.031
+            },
+            {
+              "start": 58.448,
+              "end": 58.469,
+              "score": 0.0057
+            },
+            {
+              "start": 58.489,
+              "end": 58.509,
+              "score": 0.9482
+            },
+            {
+              "start": 58.649,
+              "end": 58.669,
+              "score": 0.9395
+            },
+            {
+              "start": 58.73,
+              "end": 58.75,
+              "score": 0.9407
+            },
+            {
+              "start": 58.79,
+              "end": 58.81,
+              "score": 0.8782
+            },
+            {
+              "start": 58.91,
+              "end": 58.931,
+              "score": 0.9506
+            },
+            {
+              "start": 58.991,
+              "end": 59.011,
+              "score": 0.9858
+            },
+            {
+              "start": 59.212,
+              "end": 59.232,
+              "score": 0.1493
+            },
+            {
+              "start": 59.312,
+              "end": 59.332,
+              "score": 0.502
+            }
+          ]
+        },
+        {
+          "text": "por",
+          "normalized": "por",
+          "start": 59.473,
+          "end": 59.734,
+          "score": 0.5311,
+          "spans": [
+            {
+              "start": 59.473,
+              "end": 59.493,
+              "score": 0.1734
+            },
+            {
+              "start": 59.573,
+              "end": 59.593,
+              "score": 0.7818
+            },
+            {
+              "start": 59.714,
+              "end": 59.734,
+              "score": 0.6379
+            }
+          ]
+        },
+        {
+          "text": "mí",
+          "normalized": "mi",
+          "start": 59.794,
+          "end": 59.895,
+          "score": 0.5817,
+          "spans": [
+            {
+              "start": 59.794,
+              "end": 59.814,
+              "score": 0.3226
+            },
+            {
+              "start": 59.875,
+              "end": 59.895,
+              "score": 0.8407
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L07",
+      "window": [
+        60.5,
+        65.1
+      ],
+      "text": "Me gusta estar de nuevo acá",
+      "words": [
+        {
+          "text": "Me",
+          "normalized": "me",
+          "start": 61.283,
+          "end": 61.444,
+          "score": 0.3707,
+          "spans": [
+            {
+              "start": 61.283,
+              "end": 61.303,
+              "score": 0.0064
+            },
+            {
+              "start": 61.424,
+              "end": 61.444,
+              "score": 0.7351
+            }
+          ]
+        },
+        {
+          "text": "gusta",
+          "normalized": "gusta",
+          "start": 61.585,
+          "end": 61.906,
+          "score": 0.1139,
+          "spans": [
+            {
+              "start": 61.585,
+              "end": 61.605,
+              "score": 0.001
+            },
+            {
+              "start": 61.665,
+              "end": 61.685,
+              "score": 0.1269
+            },
+            {
+              "start": 61.766,
+              "end": 61.786,
+              "score": 0.4066
+            },
+            {
+              "start": 61.846,
+              "end": 61.866,
+              "score": 0.0236
+            },
+            {
+              "start": 61.886,
+              "end": 61.906,
+              "score": 0.0114
+            }
+          ]
+        },
+        {
+          "text": "estar",
+          "normalized": "estar",
+          "start": 61.926,
+          "end": 62.509,
+          "score": 0.6848,
+          "spans": [
+            {
+              "start": 61.926,
+              "end": 61.946,
+              "score": 0.7633
+            },
+            {
+              "start": 62.027,
+              "end": 62.047,
+              "score": 0.8782
+            },
+            {
+              "start": 62.107,
+              "end": 62.127,
+              "score": 0.8272
+            },
+            {
+              "start": 62.248,
+              "end": 62.268,
+              "score": 0.8716
+            },
+            {
+              "start": 62.489,
+              "end": 62.509,
+              "score": 0.0837
+            }
+          ]
+        },
+        {
+          "text": "de",
+          "normalized": "de",
+          "start": 62.609,
+          "end": 62.91,
+          "score": 0.249,
+          "spans": [
+            {
+              "start": 62.609,
+              "end": 62.629,
+              "score": 0.0674
+            },
+            {
+              "start": 62.89,
+              "end": 62.91,
+              "score": 0.4305
+            }
+          ]
+        },
+        {
+          "text": "nuevo",
+          "normalized": "nuevo",
+          "start": 63.051,
+          "end": 63.553,
+          "score": 0.3208,
+          "spans": [
+            {
+              "start": 63.051,
+              "end": 63.071,
+              "score": 0.5654
+            },
+            {
+              "start": 63.212,
+              "end": 63.232,
+              "score": 0.0192
+            },
+            {
+              "start": 63.272,
+              "end": 63.292,
+              "score": 0.2979
+            },
+            {
+              "start": 63.453,
+              "end": 63.473,
+              "score": 0.0988
+            },
+            {
+              "start": 63.533,
+              "end": 63.553,
+              "score": 0.6226
+            }
+          ]
+        },
+        {
+          "text": "acá",
+          "normalized": "aca",
+          "start": 63.814,
+          "end": 64.096,
+          "score": 0.2809,
+          "spans": [
+            {
+              "start": 63.814,
+              "end": 63.834,
+              "score": 0.6963
+            },
+            {
+              "start": 64.015,
+              "end": 64.035,
+              "score": 0.0055
+            },
+            {
+              "start": 64.076,
+              "end": 64.096,
+              "score": 0.1408
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L08",
+      "window": [
+        64.5,
+        69.1
+      ],
+      "text": "Aunque no hayas preguntado por mí",
+      "words": [
+        {
+          "text": "Aunque",
+          "normalized": "aunque",
+          "start": 65.565,
+          "end": 65.906,
+          "score": 0.1795,
+          "spans": [
+            {
+              "start": 65.565,
+              "end": 65.585,
+              "score": 0.0192
+            },
+            {
+              "start": 65.665,
+              "end": 65.685,
+              "score": 0.1242
+            },
+            {
+              "start": 65.685,
+              "end": 65.705,
+              "score": 0.0914
+            },
+            {
+              "start": 65.786,
+              "end": 65.806,
+              "score": 0.0071
+            },
+            {
+              "start": 65.806,
+              "end": 65.826,
+              "score": 0.0025
+            },
+            {
+              "start": 65.886,
+              "end": 65.906,
+              "score": 0.8325
+            }
+          ]
+        },
+        {
+          "text": "no",
+          "normalized": "no",
+          "start": 66.067,
+          "end": 66.167,
+          "score": 0.7249,
+          "spans": [
+            {
+              "start": 66.067,
+              "end": 66.087,
+              "score": 0.9594
+            },
+            {
+              "start": 66.147,
+              "end": 66.167,
+              "score": 0.4904
+            }
+          ]
+        },
+        {
+          "text": "hayas",
+          "normalized": "hayas",
+          "start": 66.288,
+          "end": 66.609,
+          "score": 0.4235,
+          "spans": [
+            {
+              "start": 66.288,
+              "end": 66.308,
+              "score": 0.0018
+            },
+            {
+              "start": 66.388,
+              "end": 66.408,
+              "score": 0.9432
+            },
+            {
+              "start": 66.469,
+              "end": 66.489,
+              "score": 0.0004
+            },
+            {
+              "start": 66.489,
+              "end": 66.509,
+              "score": 0.2622
+            },
+            {
+              "start": 66.589,
+              "end": 66.609,
+              "score": 0.9099
+            }
+          ]
+        },
+        {
+          "text": "preguntado",
+          "normalized": "preguntado",
+          "start": 66.77,
+          "end": 67.794,
+          "score": 0.4056,
+          "spans": [
+            {
+              "start": 66.77,
+              "end": 66.79,
+              "score": 0.0032
+            },
+            {
+              "start": 66.89,
+              "end": 66.91,
+              "score": 0.0482
+            },
+            {
+              "start": 66.971,
+              "end": 66.991,
+              "score": 0.8311
+            },
+            {
+              "start": 67.131,
+              "end": 67.152,
+              "score": 0.1212
+            },
+            {
+              "start": 67.212,
+              "end": 67.232,
+              "score": 0.4345
+            },
+            {
+              "start": 67.272,
+              "end": 67.292,
+              "score": 0.5205
+            },
+            {
+              "start": 67.393,
+              "end": 67.413,
+              "score": 0.5991
+            },
+            {
+              "start": 67.473,
+              "end": 67.493,
+              "score": 0.9162
+            },
+            {
+              "start": 67.694,
+              "end": 67.714,
+              "score": 0.0129
+            },
+            {
+              "start": 67.774,
+              "end": 67.794,
+              "score": 0.5691
+            }
+          ]
+        },
+        {
+          "text": "por",
+          "normalized": "por",
+          "start": 67.875,
+          "end": 68.256,
+          "score": 0.2192,
+          "spans": [
+            {
+              "start": 67.875,
+              "end": 67.895,
+              "score": 0.024
+            },
+            {
+              "start": 68.076,
+              "end": 68.096,
+              "score": 0.6166
+            },
+            {
+              "start": 68.236,
+              "end": 68.256,
+              "score": 0.0169
+            }
+          ]
+        },
+        {
+          "text": "mí",
+          "normalized": "mi",
+          "start": 68.276,
+          "end": 68.397,
+          "score": 0.0794,
+          "spans": [
+            {
+              "start": 68.276,
+              "end": 68.297,
+              "score": 0.0989
+            },
+            {
+              "start": 68.377,
+              "end": 68.397,
+              "score": 0.06
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L09",
+      "window": [
+        68.5,
+        74.1
+      ],
+      "text": "Voy a quedarme un poco acá",
+      "words": [
+        {
+          "text": "Voy",
+          "normalized": "voy",
+          "start": 69.744,
+          "end": 70.025,
+          "score": 0.5581,
+          "spans": [
+            {
+              "start": 69.744,
+              "end": 69.765,
+              "score": 0.017
+            },
+            {
+              "start": 69.825,
+              "end": 69.845,
+              "score": 0.7676
+            },
+            {
+              "start": 70.005,
+              "end": 70.025,
+              "score": 0.8899
+            }
+          ]
+        },
+        {
+          "text": "a",
+          "normalized": "a",
+          "start": 70.106,
+          "end": 70.126,
+          "score": 0.9419,
+          "spans": [
+            {
+              "start": 70.106,
+              "end": 70.126,
+              "score": 0.9419
+            }
+          ]
+        },
+        {
+          "text": "quedarme",
+          "normalized": "quedarme",
+          "start": 70.327,
+          "end": 71.19,
+          "score": 0.373,
+          "spans": [
+            {
+              "start": 70.327,
+              "end": 70.347,
+              "score": 0.0041
+            },
+            {
+              "start": 70.367,
+              "end": 70.387,
+              "score": 0.0059
+            },
+            {
+              "start": 70.407,
+              "end": 70.427,
+              "score": 0.3784
+            },
+            {
+              "start": 70.587,
+              "end": 70.608,
+              "score": 0.1251
+            },
+            {
+              "start": 70.688,
+              "end": 70.708,
+              "score": 0.9364
+            },
+            {
+              "start": 70.949,
+              "end": 70.969,
+              "score": 0.7325
+            },
+            {
+              "start": 71.069,
+              "end": 71.089,
+              "score": 0.4431
+            },
+            {
+              "start": 71.17,
+              "end": 71.19,
+              "score": 0.3584
+            }
+          ]
+        },
+        {
+          "text": "un",
+          "normalized": "un",
+          "start": 71.732,
+          "end": 71.912,
+          "score": 0.0553,
+          "spans": [
+            {
+              "start": 71.732,
+              "end": 71.752,
+              "score": 0.0678
+            },
+            {
+              "start": 71.892,
+              "end": 71.912,
+              "score": 0.0428
+            }
+          ]
+        },
+        {
+          "text": "poco",
+          "normalized": "poco",
+          "start": 71.932,
+          "end": 72.334,
+          "score": 0.0209,
+          "spans": [
+            {
+              "start": 71.932,
+              "end": 71.952,
+              "score": 0.0199
+            },
+            {
+              "start": 72.053,
+              "end": 72.073,
+              "score": 0.0513
+            },
+            {
+              "start": 72.213,
+              "end": 72.233,
+              "score": 0.0035
+            },
+            {
+              "start": 72.314,
+              "end": 72.334,
+              "score": 0.009
+            }
+          ]
+        },
+        {
+          "text": "acá",
+          "normalized": "aca",
+          "start": 72.534,
+          "end": 73.317,
+          "score": 0.3933,
+          "spans": [
+            {
+              "start": 72.534,
+              "end": 72.554,
+              "score": 0.8036
+            },
+            {
+              "start": 73.237,
+              "end": 73.257,
+              "score": 0.0053
+            },
+            {
+              "start": 73.297,
+              "end": 73.317,
+              "score": 0.3708
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L10",
+      "window": [
+        73.5,
+        78.3
+      ],
+      "text": "Cuidarte siempre a vos en la derrota",
+      "words": [
+        {
+          "text": "Cuidarte",
+          "normalized": "cuidarte",
+          "start": 74.103,
+          "end": 74.665,
+          "score": 0.6889,
+          "spans": [
+            {
+              "start": 74.103,
+              "end": 74.123,
+              "score": 0.0109
+            },
+            {
+              "start": 74.123,
+              "end": 74.143,
+              "score": 0.0359
+            },
+            {
+              "start": 74.183,
+              "end": 74.203,
+              "score": 0.949
+            },
+            {
+              "start": 74.263,
+              "end": 74.283,
+              "score": 0.8707
+            },
+            {
+              "start": 74.364,
+              "end": 74.384,
+              "score": 0.9971
+            },
+            {
+              "start": 74.484,
+              "end": 74.504,
+              "score": 0.9873
+            },
+            {
+              "start": 74.564,
+              "end": 74.585,
+              "score": 0.8554
+            },
+            {
+              "start": 74.645,
+              "end": 74.665,
+              "score": 0.8053
+            }
+          ]
+        },
+        {
+          "text": "siempre",
+          "normalized": "siempre",
+          "start": 74.785,
+          "end": 75.207,
+          "score": 0.7968,
+          "spans": [
+            {
+              "start": 74.785,
+              "end": 74.805,
+              "score": 0.5635
+            },
+            {
+              "start": 74.866,
+              "end": 74.886,
+              "score": 0.9684
+            },
+            {
+              "start": 74.946,
+              "end": 74.966,
+              "score": 0.9687
+            },
+            {
+              "start": 75.026,
+              "end": 75.046,
+              "score": 0.7763
+            },
+            {
+              "start": 75.087,
+              "end": 75.107,
+              "score": 0.941
+            },
+            {
+              "start": 75.147,
+              "end": 75.167,
+              "score": 0.9424
+            },
+            {
+              "start": 75.187,
+              "end": 75.207,
+              "score": 0.4176
+            }
+          ]
+        },
+        {
+          "text": "a",
+          "normalized": "a",
+          "start": 75.227,
+          "end": 75.287,
+          "score": 0.7955,
+          "spans": [
+            {
+              "start": 75.227,
+              "end": 75.287,
+              "score": 0.7955
+            }
+          ]
+        },
+        {
+          "text": "vos",
+          "normalized": "vos",
+          "start": 75.388,
+          "end": 75.649,
+          "score": 0.6686,
+          "spans": [
+            {
+              "start": 75.388,
+              "end": 75.408,
+              "score": 0.3162
+            },
+            {
+              "start": 75.468,
+              "end": 75.488,
+              "score": 0.8624
+            },
+            {
+              "start": 75.629,
+              "end": 75.649,
+              "score": 0.8271
+            }
+          ]
+        },
+        {
+          "text": "en",
+          "normalized": "en",
+          "start": 75.749,
+          "end": 75.85,
+          "score": 0.7457,
+          "spans": [
+            {
+              "start": 75.749,
+              "end": 75.769,
+              "score": 0.6387
+            },
+            {
+              "start": 75.83,
+              "end": 75.85,
+              "score": 0.8526
+            }
+          ]
+        },
+        {
+          "text": "la",
+          "normalized": "la",
+          "start": 75.93,
+          "end": 76.051,
+          "score": 0.9903,
+          "spans": [
+            {
+              "start": 75.93,
+              "end": 75.95,
+              "score": 0.987
+            },
+            {
+              "start": 76.031,
+              "end": 76.051,
+              "score": 0.9936
+            }
+          ]
+        },
+        {
+          "text": "derrota",
+          "normalized": "derrota",
+          "start": 76.231,
+          "end": 76.995,
+          "score": 0.3259,
+          "spans": [
+            {
+              "start": 76.231,
+              "end": 76.251,
+              "score": 0.7364
+            },
+            {
+              "start": 76.332,
+              "end": 76.352,
+              "score": 0.9281
+            },
+            {
+              "start": 76.513,
+              "end": 76.533,
+              "score": 0.3685
+            },
+            {
+              "start": 76.573,
+              "end": 76.593,
+              "score": 0.0534
+            },
+            {
+              "start": 76.633,
+              "end": 76.653,
+              "score": 0.1749
+            },
+            {
+              "start": 76.774,
+              "end": 76.794,
+              "score": 0.0021
+            },
+            {
+              "start": 76.974,
+              "end": 76.995,
+              "score": 0.0177
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L11",
+      "window": [
+        77.6,
+        84.1
+      ],
+      "text": "Hasta el final, el final",
+      "words": [
+        {
+          "text": "Hasta",
+          "normalized": "hasta",
+          "start": 78.242,
+          "end": 78.623,
+          "score": 0.6428,
+          "spans": [
+            {
+              "start": 78.242,
+              "end": 78.262,
+              "score": 0.0039
+            },
+            {
+              "start": 78.322,
+              "end": 78.342,
+              "score": 0.9197
+            },
+            {
+              "start": 78.443,
+              "end": 78.463,
+              "score": 0.9521
+            },
+            {
+              "start": 78.523,
+              "end": 78.543,
+              "score": 0.3874
+            },
+            {
+              "start": 78.603,
+              "end": 78.623,
+              "score": 0.9507
+            }
+          ]
+        },
+        {
+          "text": "el",
+          "normalized": "el",
+          "start": 78.723,
+          "end": 78.764,
+          "score": 0.407,
+          "spans": [
+            {
+              "start": 78.723,
+              "end": 78.744,
+              "score": 0.0031
+            },
+            {
+              "start": 78.744,
+              "end": 78.764,
+              "score": 0.8109
+            }
+          ]
+        },
+        {
+          "text": "final,",
+          "normalized": "final",
+          "start": 78.864,
+          "end": 80.128,
+          "score": 0.413,
+          "spans": [
+            {
+              "start": 78.864,
+              "end": 78.884,
+              "score": 0.3425
+            },
+            {
+              "start": 78.984,
+              "end": 79.004,
+              "score": 0.0498
+            },
+            {
+              "start": 79.145,
+              "end": 79.165,
+              "score": 0.4997
+            },
+            {
+              "start": 79.265,
+              "end": 79.285,
+              "score": 0.914
+            },
+            {
+              "start": 80.108,
+              "end": 80.128,
+              "score": 0.2588
+            }
+          ]
+        },
+        {
+          "text": "el",
+          "normalized": "el",
+          "start": 80.208,
+          "end": 80.389,
+          "score": 0.8044,
+          "spans": [
+            {
+              "start": 80.208,
+              "end": 80.228,
+              "score": 0.789
+            },
+            {
+              "start": 80.369,
+              "end": 80.389,
+              "score": 0.8198
+            }
+          ]
+        },
+        {
+          "text": "final",
+          "normalized": "final",
+          "start": 80.589,
+          "end": 81.452,
+          "score": 0.4194,
+          "spans": [
+            {
+              "start": 80.589,
+              "end": 80.609,
+              "score": 0.194
+            },
+            {
+              "start": 80.71,
+              "end": 80.73,
+              "score": 0.1116
+            },
+            {
+              "start": 80.95,
+              "end": 80.97,
+              "score": 0.8678
+            },
+            {
+              "start": 81.051,
+              "end": 81.071,
+              "score": 0.9162
+            },
+            {
+              "start": 81.432,
+              "end": 81.452,
+              "score": 0.0071
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L12",
+      "window": [
+        97.5,
+        106.1
+      ],
+      "text": "Ah, todo lo que hago es para vos",
+      "words": [
+        {
+          "text": "Ah,",
+          "normalized": "ah",
+          "start": 98.202,
+          "end": 98.322,
+          "score": 0.328,
+          "spans": [
+            {
+              "start": 98.202,
+              "end": 98.222,
+              "score": 0.636
+            },
+            {
+              "start": 98.302,
+              "end": 98.322,
+              "score": 0.02
+            }
+          ]
+        },
+        {
+          "text": "todo",
+          "normalized": "todo",
+          "start": 101.369,
+          "end": 101.77,
+          "score": 0.9698,
+          "spans": [
+            {
+              "start": 101.369,
+              "end": 101.389,
+              "score": 0.9748
+            },
+            {
+              "start": 101.469,
+              "end": 101.489,
+              "score": 0.9461
+            },
+            {
+              "start": 101.67,
+              "end": 101.69,
+              "score": 0.9842
+            },
+            {
+              "start": 101.75,
+              "end": 101.77,
+              "score": 0.9742
+            }
+          ]
+        },
+        {
+          "text": "lo",
+          "normalized": "lo",
+          "start": 101.93,
+          "end": 102.051,
+          "score": 0.9502,
+          "spans": [
+            {
+              "start": 101.93,
+              "end": 101.95,
+              "score": 0.9526
+            },
+            {
+              "start": 102.031,
+              "end": 102.051,
+              "score": 0.9478
+            }
+          ]
+        },
+        {
+          "text": "que",
+          "normalized": "que",
+          "start": 102.211,
+          "end": 102.351,
+          "score": 0.8095,
+          "spans": [
+            {
+              "start": 102.211,
+              "end": 102.231,
+              "score": 0.8043
+            },
+            {
+              "start": 102.231,
+              "end": 102.271,
+              "score": 0.7363
+            },
+            {
+              "start": 102.331,
+              "end": 102.351,
+              "score": 0.9609
+            }
+          ]
+        },
+        {
+          "text": "hago",
+          "normalized": "hago",
+          "start": 102.572,
+          "end": 103.113,
+          "score": 0.5402,
+          "spans": [
+            {
+              "start": 102.572,
+              "end": 102.592,
+              "score": 0.0075
+            },
+            {
+              "start": 102.672,
+              "end": 102.692,
+              "score": 0.9011
+            },
+            {
+              "start": 102.993,
+              "end": 103.013,
+              "score": 0.3269
+            },
+            {
+              "start": 103.093,
+              "end": 103.113,
+              "score": 0.9252
+            }
+          ]
+        },
+        {
+          "text": "es",
+          "normalized": "es",
+          "start": 103.594,
+          "end": 103.755,
+          "score": 0.9033,
+          "spans": [
+            {
+              "start": 103.594,
+              "end": 103.614,
+              "score": 0.9131
+            },
+            {
+              "start": 103.734,
+              "end": 103.755,
+              "score": 0.8934
+            }
+          ]
+        },
+        {
+          "text": "para",
+          "normalized": "para",
+          "start": 103.815,
+          "end": 104.216,
+          "score": 0.9736,
+          "spans": [
+            {
+              "start": 103.815,
+              "end": 103.835,
+              "score": 0.9747
+            },
+            {
+              "start": 103.915,
+              "end": 103.935,
+              "score": 0.986
+            },
+            {
+              "start": 104.095,
+              "end": 104.115,
+              "score": 0.9478
+            },
+            {
+              "start": 104.196,
+              "end": 104.216,
+              "score": 0.9859
+            }
+          ]
+        },
+        {
+          "text": "vos",
+          "normalized": "vos",
+          "start": 104.356,
+          "end": 105.639,
+          "score": 0.6103,
+          "spans": [
+            {
+              "start": 104.356,
+              "end": 104.376,
+              "score": 0.2888
+            },
+            {
+              "start": 104.456,
+              "end": 104.476,
+              "score": 0.7863
+            },
+            {
+              "start": 105.619,
+              "end": 105.639,
+              "score": 0.7556
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L13",
+      "window": [
+        105.5,
+        114.1
+      ],
+      "text": "Ah, el tesoro se está hundiendo",
+      "words": [
+        {
+          "text": "Ah,",
+          "normalized": "ah",
+          "start": 106.783,
+          "end": 109.85,
+          "score": 0.4475,
+          "spans": [
+            {
+              "start": 106.783,
+              "end": 106.803,
+              "score": 0.893
+            },
+            {
+              "start": 109.83,
+              "end": 109.85,
+              "score": 0.0019
+            }
+          ]
+        },
+        {
+          "text": "el",
+          "normalized": "el",
+          "start": 109.91,
+          "end": 110.091,
+          "score": 0.9196,
+          "spans": [
+            {
+              "start": 109.91,
+              "end": 109.93,
+              "score": 0.9454
+            },
+            {
+              "start": 110.071,
+              "end": 110.091,
+              "score": 0.8938
+            }
+          ]
+        },
+        {
+          "text": "tesoro",
+          "normalized": "tesoro",
+          "start": 110.171,
+          "end": 110.832,
+          "score": 0.625,
+          "spans": [
+            {
+              "start": 110.171,
+              "end": 110.191,
+              "score": 0.9459
+            },
+            {
+              "start": 110.251,
+              "end": 110.271,
+              "score": 0.9255
+            },
+            {
+              "start": 110.431,
+              "end": 110.452,
+              "score": 0.9331
+            },
+            {
+              "start": 110.552,
+              "end": 110.572,
+              "score": 0.924
+            },
+            {
+              "start": 110.732,
+              "end": 110.752,
+              "score": 0.0159
+            },
+            {
+              "start": 110.812,
+              "end": 110.832,
+              "score": 0.0054
+            }
+          ]
+        },
+        {
+          "text": "se",
+          "normalized": "se",
+          "start": 110.953,
+          "end": 111.113,
+          "score": 0.8832,
+          "spans": [
+            {
+              "start": 110.953,
+              "end": 110.973,
+              "score": 0.8418
+            },
+            {
+              "start": 111.093,
+              "end": 111.113,
+              "score": 0.9245
+            }
+          ]
+        },
+        {
+          "text": "está",
+          "normalized": "esta",
+          "start": 111.233,
+          "end": 111.614,
+          "score": 0.6694,
+          "spans": [
+            {
+              "start": 111.233,
+              "end": 111.253,
+              "score": 0.0081
+            },
+            {
+              "start": 111.334,
+              "end": 111.354,
+              "score": 0.8596
+            },
+            {
+              "start": 111.474,
+              "end": 111.494,
+              "score": 0.874
+            },
+            {
+              "start": 111.594,
+              "end": 111.614,
+              "score": 0.9359
+            }
+          ]
+        },
+        {
+          "text": "hundiendo",
+          "normalized": "hundiendo",
+          "start": 111.795,
+          "end": 112.957,
+          "score": 0.4879,
+          "spans": [
+            {
+              "start": 111.795,
+              "end": 111.815,
+              "score": 0.0025
+            },
+            {
+              "start": 111.855,
+              "end": 111.875,
+              "score": 0.255
+            },
+            {
+              "start": 111.935,
+              "end": 111.955,
+              "score": 0.4936
+            },
+            {
+              "start": 112.015,
+              "end": 112.035,
+              "score": 0.2483
+            },
+            {
+              "start": 112.095,
+              "end": 112.115,
+              "score": 0.369
+            },
+            {
+              "start": 112.176,
+              "end": 112.196,
+              "score": 0.7892
+            },
+            {
+              "start": 112.717,
+              "end": 112.737,
+              "score": 0.6153
+            },
+            {
+              "start": 112.837,
+              "end": 112.857,
+              "score": 0.8623
+            },
+            {
+              "start": 112.937,
+              "end": 112.957,
+              "score": 0.7558
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L14",
+      "window": [
+        113.5,
+        123.1
+      ],
+      "text": "Ah, todo lo que hago es para vos",
+      "words": [
+        {
+          "text": "Ah,",
+          "normalized": "ah",
+          "start": 115.184,
+          "end": 115.745,
+          "score": 0.4789,
+          "spans": [
+            {
+              "start": 115.184,
+              "end": 115.204,
+              "score": 0.952
+            },
+            {
+              "start": 115.725,
+              "end": 115.745,
+              "score": 0.0058
+            }
+          ]
+        },
+        {
+          "text": "todo",
+          "normalized": "todo",
+          "start": 118.35,
+          "end": 118.751,
+          "score": 0.9324,
+          "spans": [
+            {
+              "start": 118.35,
+              "end": 118.37,
+              "score": 0.8484
+            },
+            {
+              "start": 118.45,
+              "end": 118.47,
+              "score": 0.9743
+            },
+            {
+              "start": 118.651,
+              "end": 118.671,
+              "score": 0.9513
+            },
+            {
+              "start": 118.731,
+              "end": 118.751,
+              "score": 0.9558
+            }
+          ]
+        },
+        {
+          "text": "lo",
+          "normalized": "lo",
+          "start": 118.911,
+          "end": 119.032,
+          "score": 0.9041,
+          "spans": [
+            {
+              "start": 118.911,
+              "end": 118.931,
+              "score": 0.8732
+            },
+            {
+              "start": 119.011,
+              "end": 119.032,
+              "score": 0.9351
+            }
+          ]
+        },
+        {
+          "text": "que",
+          "normalized": "que",
+          "start": 119.172,
+          "end": 119.292,
+          "score": 0.4752,
+          "spans": [
+            {
+              "start": 119.172,
+              "end": 119.192,
+              "score": 0.1346
+            },
+            {
+              "start": 119.212,
+              "end": 119.232,
+              "score": 0.3525
+            },
+            {
+              "start": 119.272,
+              "end": 119.292,
+              "score": 0.9386
+            }
+          ]
+        },
+        {
+          "text": "hago",
+          "normalized": "hago",
+          "start": 119.452,
+          "end": 120.074,
+          "score": 0.6625,
+          "spans": [
+            {
+              "start": 119.452,
+              "end": 119.472,
+              "score": 0.0044
+            },
+            {
+              "start": 119.553,
+              "end": 119.573,
+              "score": 0.9415
+            },
+            {
+              "start": 119.953,
+              "end": 119.973,
+              "score": 0.7691
+            },
+            {
+              "start": 120.054,
+              "end": 120.074,
+              "score": 0.9351
+            }
+          ]
+        },
+        {
+          "text": "es",
+          "normalized": "es",
+          "start": 120.615,
+          "end": 120.755,
+          "score": 0.9172,
+          "spans": [
+            {
+              "start": 120.615,
+              "end": 120.635,
+              "score": 0.9088
+            },
+            {
+              "start": 120.735,
+              "end": 120.755,
+              "score": 0.9256
+            }
+          ]
+        },
+        {
+          "text": "para",
+          "normalized": "para",
+          "start": 120.835,
+          "end": 121.196,
+          "score": 0.9209,
+          "spans": [
+            {
+              "start": 120.835,
+              "end": 120.855,
+              "score": 0.9712
+            },
+            {
+              "start": 120.915,
+              "end": 120.935,
+              "score": 0.9854
+            },
+            {
+              "start": 121.096,
+              "end": 121.116,
+              "score": 0.7568
+            },
+            {
+              "start": 121.176,
+              "end": 121.196,
+              "score": 0.9701
+            }
+          ]
+        },
+        {
+          "text": "vos",
+          "normalized": "vos",
+          "start": 121.356,
+          "end": 123.08,
+          "score": 0.2931,
+          "spans": [
+            {
+              "start": 121.356,
+              "end": 121.376,
+              "score": 0.1441
+            },
+            {
+              "start": 121.437,
+              "end": 121.457,
+              "score": 0.7323
+            },
+            {
+              "start": 123.06,
+              "end": 123.08,
+              "score": 0.003
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L15",
+      "window": [
+        122.5,
+        132.1
+      ],
+      "text": "Ah, vos pensás que pierdo el tiempo",
+      "words": [
+        {
+          "text": "Ah,",
+          "normalized": "ah",
+          "start": 123.803,
+          "end": 124.364,
+          "score": 0.3344,
+          "spans": [
+            {
+              "start": 123.803,
+              "end": 123.823,
+              "score": 0.6676
+            },
+            {
+              "start": 124.344,
+              "end": 124.364,
+              "score": 0.0012
+            }
+          ]
+        },
+        {
+          "text": "vos",
+          "normalized": "vos",
+          "start": 126.849,
+          "end": 127.07,
+          "score": 0.5628,
+          "spans": [
+            {
+              "start": 126.849,
+              "end": 126.869,
+              "score": 0.008
+            },
+            {
+              "start": 126.909,
+              "end": 126.929,
+              "score": 0.8404
+            },
+            {
+              "start": 127.049,
+              "end": 127.07,
+              "score": 0.8399
+            }
+          ]
+        },
+        {
+          "text": "pensás",
+          "normalized": "pensas",
+          "start": 127.13,
+          "end": 127.651,
+          "score": 0.9721,
+          "spans": [
+            {
+              "start": 127.13,
+              "end": 127.15,
+              "score": 0.9788
+            },
+            {
+              "start": 127.21,
+              "end": 127.23,
+              "score": 0.9779
+            },
+            {
+              "start": 127.31,
+              "end": 127.33,
+              "score": 0.981
+            },
+            {
+              "start": 127.39,
+              "end": 127.41,
+              "score": 0.9758
+            },
+            {
+              "start": 127.49,
+              "end": 127.51,
+              "score": 0.9757
+            },
+            {
+              "start": 127.631,
+              "end": 127.651,
+              "score": 0.9434
+            }
+          ]
+        },
+        {
+          "text": "que",
+          "normalized": "que",
+          "start": 127.711,
+          "end": 127.811,
+          "score": 0.3028,
+          "spans": [
+            {
+              "start": 127.711,
+              "end": 127.731,
+              "score": 0.0048
+            },
+            {
+              "start": 127.731,
+              "end": 127.751,
+              "score": 0.0076
+            },
+            {
+              "start": 127.791,
+              "end": 127.811,
+              "score": 0.8959
+            }
+          ]
+        },
+        {
+          "text": "pierdo",
+          "normalized": "pierdo",
+          "start": 127.971,
+          "end": 128.613,
+          "score": 0.7656,
+          "spans": [
+            {
+              "start": 127.971,
+              "end": 127.991,
+              "score": 0.9662
+            },
+            {
+              "start": 128.072,
+              "end": 128.092,
+              "score": 0.9581
+            },
+            {
+              "start": 128.152,
+              "end": 128.172,
+              "score": 0.9443
+            },
+            {
+              "start": 128.352,
+              "end": 128.372,
+              "score": 0.9646
+            },
+            {
+              "start": 128.452,
+              "end": 128.472,
+              "score": 0.5445
+            },
+            {
+              "start": 128.593,
+              "end": 128.613,
+              "score": 0.2156
+            }
+          ]
+        },
+        {
+          "text": "el",
+          "normalized": "el",
+          "start": 128.753,
+          "end": 128.813,
+          "score": 0.1001,
+          "spans": [
+            {
+              "start": 128.753,
+              "end": 128.773,
+              "score": 0.0239
+            },
+            {
+              "start": 128.793,
+              "end": 128.813,
+              "score": 0.1764
+            }
+          ]
+        },
+        {
+          "text": "tiempo",
+          "normalized": "tiempo",
+          "start": 128.994,
+          "end": 129.915,
+          "score": 0.3305,
+          "spans": [
+            {
+              "start": 128.994,
+              "end": 129.014,
+              "score": 0.2024
+            },
+            {
+              "start": 129.034,
+              "end": 129.054,
+              "score": 0.0104
+            },
+            {
+              "start": 129.134,
+              "end": 129.154,
+              "score": 0.7637
+            },
+            {
+              "start": 129.595,
+              "end": 129.615,
+              "score": 0.6954
+            },
+            {
+              "start": 129.775,
+              "end": 129.795,
+              "score": 0.0841
+            },
+            {
+              "start": 129.895,
+              "end": 129.915,
+              "score": 0.2269
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L16",
+      "window": [
+        131.5,
+        138.1
+      ],
+      "text": "Perdón si estoy de nuevo acá",
+      "words": [
+        {
+          "text": "Perdón",
+          "normalized": "perdon",
+          "start": 133.526,
+          "end": 133.967,
+          "score": 0.182,
+          "spans": [
+            {
+              "start": 133.526,
+              "end": 133.546,
+              "score": 0.0627
+            },
+            {
+              "start": 133.626,
+              "end": 133.647,
+              "score": 0.1539
+            },
+            {
+              "start": 133.707,
+              "end": 133.727,
+              "score": 0.3863
+            },
+            {
+              "start": 133.787,
+              "end": 133.807,
+              "score": 0.1955
+            },
+            {
+              "start": 133.867,
+              "end": 133.887,
+              "score": 0.0555
+            },
+            {
+              "start": 133.947,
+              "end": 133.967,
+              "score": 0.238
+            }
+          ]
+        },
+        {
+          "text": "si",
+          "normalized": "si",
+          "start": 134.068,
+          "end": 134.168,
+          "score": 0.2657,
+          "spans": [
+            {
+              "start": 134.068,
+              "end": 134.088,
+              "score": 0.4727
+            },
+            {
+              "start": 134.148,
+              "end": 134.168,
+              "score": 0.0587
+            }
+          ]
+        },
+        {
+          "text": "estoy",
+          "normalized": "estoy",
+          "start": 134.248,
+          "end": 134.73,
+          "score": 0.1525,
+          "spans": [
+            {
+              "start": 134.248,
+              "end": 134.268,
+              "score": 0.0096
+            },
+            {
+              "start": 134.268,
+              "end": 134.288,
+              "score": 0.502
+            },
+            {
+              "start": 134.349,
+              "end": 134.369,
+              "score": 0.006
+            },
+            {
+              "start": 134.549,
+              "end": 134.569,
+              "score": 0.1894
+            },
+            {
+              "start": 134.71,
+              "end": 134.73,
+              "score": 0.0554
+            }
+          ]
+        },
+        {
+          "text": "de",
+          "normalized": "de",
+          "start": 134.83,
+          "end": 135.151,
+          "score": 0.0858,
+          "spans": [
+            {
+              "start": 134.83,
+              "end": 134.85,
+              "score": 0.031
+            },
+            {
+              "start": 135.131,
+              "end": 135.151,
+              "score": 0.1407
+            }
+          ]
+        },
+        {
+          "text": "nuevo",
+          "normalized": "nuevo",
+          "start": 135.231,
+          "end": 136.395,
+          "score": 0.1581,
+          "spans": [
+            {
+              "start": 135.231,
+              "end": 135.251,
+              "score": 0.6341
+            },
+            {
+              "start": 135.693,
+              "end": 135.713,
+              "score": 0.007
+            },
+            {
+              "start": 135.994,
+              "end": 136.014,
+              "score": 0.1214
+            },
+            {
+              "start": 136.315,
+              "end": 136.335,
+              "score": 0.0144
+            },
+            {
+              "start": 136.375,
+              "end": 136.395,
+              "score": 0.0136
+            }
+          ]
+        },
+        {
+          "text": "acá",
+          "normalized": "aca",
+          "start": 136.495,
+          "end": 136.836,
+          "score": 0.121,
+          "spans": [
+            {
+              "start": 136.495,
+              "end": 136.515,
+              "score": 0.2231
+            },
+            {
+              "start": 136.756,
+              "end": 136.776,
+              "score": 0.0052
+            },
+            {
+              "start": 136.816,
+              "end": 136.836,
+              "score": 0.1345
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L17",
+      "window": [
+        137.5,
+        142.1
+      ],
+      "text": "Pensé que habías preguntado por mí",
+      "words": [
+        {
+          "text": "Pensé",
+          "normalized": "pense",
+          "start": 137.741,
+          "end": 138.123,
+          "score": 0.3955,
+          "spans": [
+            {
+              "start": 137.741,
+              "end": 137.761,
+              "score": 0.0015
+            },
+            {
+              "start": 137.862,
+              "end": 137.882,
+              "score": 0.0142
+            },
+            {
+              "start": 137.882,
+              "end": 137.902,
+              "score": 0.1211
+            },
+            {
+              "start": 137.982,
+              "end": 138.002,
+              "score": 0.8644
+            },
+            {
+              "start": 138.103,
+              "end": 138.123,
+              "score": 0.9764
+            }
+          ]
+        },
+        {
+          "text": "que",
+          "normalized": "que",
+          "start": 138.263,
+          "end": 138.364,
+          "score": 0.2677,
+          "spans": [
+            {
+              "start": 138.263,
+              "end": 138.283,
+              "score": 0.001
+            },
+            {
+              "start": 138.283,
+              "end": 138.303,
+              "score": 0.0046
+            },
+            {
+              "start": 138.344,
+              "end": 138.364,
+              "score": 0.7973
+            }
+          ]
+        },
+        {
+          "text": "habías",
+          "normalized": "habias",
+          "start": 138.404,
+          "end": 139.007,
+          "score": 0.7244,
+          "spans": [
+            {
+              "start": 138.404,
+              "end": 138.424,
+              "score": 0.0103
+            },
+            {
+              "start": 138.424,
+              "end": 138.444,
+              "score": 0.9747
+            },
+            {
+              "start": 138.565,
+              "end": 138.585,
+              "score": 0.6831
+            },
+            {
+              "start": 138.665,
+              "end": 138.685,
+              "score": 0.9449
+            },
+            {
+              "start": 138.886,
+              "end": 138.906,
+              "score": 0.9812
+            },
+            {
+              "start": 138.986,
+              "end": 139.007,
+              "score": 0.752
+            }
+          ]
+        },
+        {
+          "text": "preguntado",
+          "normalized": "preguntado",
+          "start": 139.087,
+          "end": 140.051,
+          "score": 0.5733,
+          "spans": [
+            {
+              "start": 139.087,
+              "end": 139.107,
+              "score": 0.1192
+            },
+            {
+              "start": 139.107,
+              "end": 139.127,
+              "score": 0.001
+            },
+            {
+              "start": 139.187,
+              "end": 139.207,
+              "score": 0.9189
+            },
+            {
+              "start": 139.348,
+              "end": 139.368,
+              "score": 0.7047
+            },
+            {
+              "start": 139.408,
+              "end": 139.428,
+              "score": 0.6189
+            },
+            {
+              "start": 139.489,
+              "end": 139.509,
+              "score": 0.8807
+            },
+            {
+              "start": 139.629,
+              "end": 139.649,
+              "score": 0.9604
+            },
+            {
+              "start": 139.71,
+              "end": 139.73,
+              "score": 0.979
+            },
+            {
+              "start": 139.931,
+              "end": 139.951,
+              "score": 0.036
+            },
+            {
+              "start": 140.031,
+              "end": 140.051,
+              "score": 0.5139
+            }
+          ]
+        },
+        {
+          "text": "por",
+          "normalized": "por",
+          "start": 140.192,
+          "end": 140.433,
+          "score": 0.3574,
+          "spans": [
+            {
+              "start": 140.192,
+              "end": 140.212,
+              "score": 0.0272
+            },
+            {
+              "start": 140.272,
+              "end": 140.292,
+              "score": 0.8739
+            },
+            {
+              "start": 140.413,
+              "end": 140.433,
+              "score": 0.1712
+            }
+          ]
+        },
+        {
+          "text": "mí",
+          "normalized": "mi",
+          "start": 140.513,
+          "end": 140.614,
+          "score": 0.4694,
+          "spans": [
+            {
+              "start": 140.513,
+              "end": 140.533,
+              "score": 0.0849
+            },
+            {
+              "start": 140.593,
+              "end": 140.614,
+              "score": 0.8539
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L18",
+      "window": [
+        141.5,
+        146.1
+      ],
+      "text": "Me gusta estar de nuevo acá",
+      "words": [
+        {
+          "text": "Me",
+          "normalized": "me",
+          "start": 142.022,
+          "end": 142.143,
+          "score": 0.3598,
+          "spans": [
+            {
+              "start": 142.022,
+              "end": 142.042,
+              "score": 0.0026
+            },
+            {
+              "start": 142.123,
+              "end": 142.143,
+              "score": 0.717
+            }
+          ]
+        },
+        {
+          "text": "gusta",
+          "normalized": "gusta",
+          "start": 142.303,
+          "end": 142.645,
+          "score": 0.2862,
+          "spans": [
+            {
+              "start": 142.303,
+              "end": 142.324,
+              "score": 0.0033
+            },
+            {
+              "start": 142.364,
+              "end": 142.384,
+              "score": 0.6969
+            },
+            {
+              "start": 142.484,
+              "end": 142.504,
+              "score": 0.3373
+            },
+            {
+              "start": 142.545,
+              "end": 142.565,
+              "score": 0.0262
+            },
+            {
+              "start": 142.625,
+              "end": 142.645,
+              "score": 0.3671
+            }
+          ]
+        },
+        {
+          "text": "estar",
+          "normalized": "estar",
+          "start": 142.705,
+          "end": 143.248,
+          "score": 0.3177,
+          "spans": [
+            {
+              "start": 142.705,
+              "end": 142.725,
+              "score": 0.0139
+            },
+            {
+              "start": 142.745,
+              "end": 142.766,
+              "score": 0.439
+            },
+            {
+              "start": 142.786,
+              "end": 142.806,
+              "score": 0.0017
+            },
+            {
+              "start": 142.886,
+              "end": 142.906,
+              "score": 0.6438
+            },
+            {
+              "start": 143.228,
+              "end": 143.248,
+              "score": 0.4898
+            }
+          ]
+        },
+        {
+          "text": "de",
+          "normalized": "de",
+          "start": 143.308,
+          "end": 143.428,
+          "score": 0.2277,
+          "spans": [
+            {
+              "start": 143.308,
+              "end": 143.328,
+              "score": 0.0036
+            },
+            {
+              "start": 143.408,
+              "end": 143.428,
+              "score": 0.4518
+            }
+          ]
+        },
+        {
+          "text": "nuevo",
+          "normalized": "nuevo",
+          "start": 143.75,
+          "end": 144.272,
+          "score": 0.2384,
+          "spans": [
+            {
+              "start": 143.75,
+              "end": 143.77,
+              "score": 0.5664
+            },
+            {
+              "start": 143.971,
+              "end": 143.991,
+              "score": 0.0052
+            },
+            {
+              "start": 144.071,
+              "end": 144.091,
+              "score": 0.0449
+            },
+            {
+              "start": 144.172,
+              "end": 144.192,
+              "score": 0.0029
+            },
+            {
+              "start": 144.252,
+              "end": 144.272,
+              "score": 0.5727
+            }
+          ]
+        },
+        {
+          "text": "acá",
+          "normalized": "aca",
+          "start": 144.493,
+          "end": 145.618,
+          "score": 0.2291,
+          "spans": [
+            {
+              "start": 144.493,
+              "end": 144.513,
+              "score": 0.3226
+            },
+            {
+              "start": 145.317,
+              "end": 145.337,
+              "score": 0.0115
+            },
+            {
+              "start": 145.598,
+              "end": 145.618,
+              "score": 0.3531
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L19",
+      "window": [
+        145.5,
+        150.1
+      ],
+      "text": "Aunque no hayas preguntado por mí",
+      "words": [
+        {
+          "text": "Aunque",
+          "normalized": "aunque",
+          "start": 146.223,
+          "end": 146.605,
+          "score": 0.2835,
+          "spans": [
+            {
+              "start": 146.223,
+              "end": 146.243,
+              "score": 0.0109
+            },
+            {
+              "start": 146.243,
+              "end": 146.263,
+              "score": 0.082
+            },
+            {
+              "start": 146.364,
+              "end": 146.384,
+              "score": 0.6451
+            },
+            {
+              "start": 146.484,
+              "end": 146.504,
+              "score": 0.0003
+            },
+            {
+              "start": 146.504,
+              "end": 146.524,
+              "score": 0.0088
+            },
+            {
+              "start": 146.585,
+              "end": 146.605,
+              "score": 0.954
+            }
+          ]
+        },
+        {
+          "text": "no",
+          "normalized": "no",
+          "start": 146.766,
+          "end": 146.886,
+          "score": 0.6832,
+          "spans": [
+            {
+              "start": 146.766,
+              "end": 146.786,
+              "score": 0.9654
+            },
+            {
+              "start": 146.866,
+              "end": 146.886,
+              "score": 0.401
+            }
+          ]
+        },
+        {
+          "text": "hayas",
+          "normalized": "hayas",
+          "start": 147.047,
+          "end": 147.509,
+          "score": 0.4307,
+          "spans": [
+            {
+              "start": 147.047,
+              "end": 147.067,
+              "score": 0.0154
+            },
+            {
+              "start": 147.107,
+              "end": 147.127,
+              "score": 0.9692
+            },
+            {
+              "start": 147.288,
+              "end": 147.308,
+              "score": 0.0002
+            },
+            {
+              "start": 147.388,
+              "end": 147.408,
+              "score": 0.3805
+            },
+            {
+              "start": 147.489,
+              "end": 147.509,
+              "score": 0.7881
+            }
+          ]
+        },
+        {
+          "text": "preguntado",
+          "normalized": "preguntado",
+          "start": 147.569,
+          "end": 148.513,
+          "score": 0.5152,
+          "spans": [
+            {
+              "start": 147.569,
+              "end": 147.589,
+              "score": 0.1978
+            },
+            {
+              "start": 147.589,
+              "end": 147.609,
+              "score": 0.0156
+            },
+            {
+              "start": 147.69,
+              "end": 147.71,
+              "score": 0.8893
+            },
+            {
+              "start": 147.85,
+              "end": 147.87,
+              "score": 0.3035
+            },
+            {
+              "start": 147.91,
+              "end": 147.931,
+              "score": 0.8496
+            },
+            {
+              "start": 147.991,
+              "end": 148.011,
+              "score": 0.6908
+            },
+            {
+              "start": 148.091,
+              "end": 148.111,
+              "score": 0.8136
+            },
+            {
+              "start": 148.192,
+              "end": 148.212,
+              "score": 0.9728
+            },
+            {
+              "start": 148.393,
+              "end": 148.413,
+              "score": 0.0995
+            },
+            {
+              "start": 148.493,
+              "end": 148.513,
+              "score": 0.3196
+            }
+          ]
+        },
+        {
+          "text": "por",
+          "normalized": "por",
+          "start": 148.674,
+          "end": 148.935,
+          "score": 0.2427,
+          "spans": [
+            {
+              "start": 148.674,
+              "end": 148.694,
+              "score": 0.0531
+            },
+            {
+              "start": 148.794,
+              "end": 148.814,
+              "score": 0.6494
+            },
+            {
+              "start": 148.915,
+              "end": 148.935,
+              "score": 0.0255
+            }
+          ]
+        },
+        {
+          "text": "mí",
+          "normalized": "mi",
+          "start": 148.995,
+          "end": 149.096,
+          "score": 0.3066,
+          "spans": [
+            {
+              "start": 148.995,
+              "end": 149.015,
+              "score": 0.0485
+            },
+            {
+              "start": 149.076,
+              "end": 149.096,
+              "score": 0.5646
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L20",
+      "window": [
+        149.5,
+        155.1
+      ],
+      "text": "Voy a quedarme un poco acá",
+      "words": [
+        {
+          "text": "Voy",
+          "normalized": "voy",
+          "start": 150.484,
+          "end": 150.785,
+          "score": 0.3396,
+          "spans": [
+            {
+              "start": 150.484,
+              "end": 150.504,
+              "score": 0.0222
+            },
+            {
+              "start": 150.584,
+              "end": 150.604,
+              "score": 0.4597
+            },
+            {
+              "start": 150.765,
+              "end": 150.785,
+              "score": 0.537
+            }
+          ]
+        },
+        {
+          "text": "a",
+          "normalized": "a",
+          "start": 150.825,
+          "end": 150.845,
+          "score": 0.6891,
+          "spans": [
+            {
+              "start": 150.825,
+              "end": 150.845,
+              "score": 0.6891
+            }
+          ]
+        },
+        {
+          "text": "quedarme",
+          "normalized": "quedarme",
+          "start": 151.066,
+          "end": 151.949,
+          "score": 0.2384,
+          "spans": [
+            {
+              "start": 151.066,
+              "end": 151.086,
+              "score": 0.0119
+            },
+            {
+              "start": 151.126,
+              "end": 151.146,
+              "score": 0.0504
+            },
+            {
+              "start": 151.226,
+              "end": 151.246,
+              "score": 0.27
+            },
+            {
+              "start": 151.347,
+              "end": 151.367,
+              "score": 0.0275
+            },
+            {
+              "start": 151.447,
+              "end": 151.467,
+              "score": 0.6582
+            },
+            {
+              "start": 151.728,
+              "end": 151.748,
+              "score": 0.5021
+            },
+            {
+              "start": 151.828,
+              "end": 151.848,
+              "score": 0.1551
+            },
+            {
+              "start": 151.929,
+              "end": 151.949,
+              "score": 0.2315
+            }
+          ]
+        },
+        {
+          "text": "un",
+          "normalized": "un",
+          "start": 152.129,
+          "end": 152.21,
+          "score": 0.0574,
+          "spans": [
+            {
+              "start": 152.129,
+              "end": 152.149,
+              "score": 0.002
+            },
+            {
+              "start": 152.19,
+              "end": 152.21,
+              "score": 0.1128
+            }
+          ]
+        },
+        {
+          "text": "poco",
+          "normalized": "poco",
+          "start": 152.35,
+          "end": 152.792,
+          "score": 0.1968,
+          "spans": [
+            {
+              "start": 152.35,
+              "end": 152.37,
+              "score": 0.0266
+            },
+            {
+              "start": 152.43,
+              "end": 152.451,
+              "score": 0.3159
+            },
+            {
+              "start": 152.711,
+              "end": 152.732,
+              "score": 0.0346
+            },
+            {
+              "start": 152.772,
+              "end": 152.792,
+              "score": 0.4099
+            }
+          ]
+        },
+        {
+          "text": "acá",
+          "normalized": "aca",
+          "start": 153.053,
+          "end": 155.06,
+          "score": 0.2396,
+          "spans": [
+            {
+              "start": 153.053,
+              "end": 153.073,
+              "score": 0.5967
+            },
+            {
+              "start": 153.655,
+              "end": 153.675,
+              "score": 0.0266
+            },
+            {
+              "start": 155.04,
+              "end": 155.06,
+              "score": 0.0957
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L21",
+      "window": [
+        154.5,
+        159.3
+      ],
+      "text": "Cuidarte siempre a vos en la derrota",
+      "words": [
+        {
+          "text": "Cuidarte",
+          "normalized": "cuidarte",
+          "start": 154.841,
+          "end": 155.364,
+          "score": 0.6958,
+          "spans": [
+            {
+              "start": 154.841,
+              "end": 154.862,
+              "score": 0.0011
+            },
+            {
+              "start": 154.862,
+              "end": 154.882,
+              "score": 0.0013
+            },
+            {
+              "start": 154.902,
+              "end": 154.922,
+              "score": 0.9195
+            },
+            {
+              "start": 154.982,
+              "end": 155.002,
+              "score": 0.7366
+            },
+            {
+              "start": 155.082,
+              "end": 155.103,
+              "score": 0.9913
+            },
+            {
+              "start": 155.203,
+              "end": 155.223,
+              "score": 0.9684
+            },
+            {
+              "start": 155.283,
+              "end": 155.303,
+              "score": 0.9743
+            },
+            {
+              "start": 155.344,
+              "end": 155.364,
+              "score": 0.9742
+            }
+          ]
+        },
+        {
+          "text": "siempre",
+          "normalized": "siempre",
+          "start": 155.504,
+          "end": 155.906,
+          "score": 0.8623,
+          "spans": [
+            {
+              "start": 155.504,
+              "end": 155.524,
+              "score": 0.9273
+            },
+            {
+              "start": 155.585,
+              "end": 155.605,
+              "score": 0.9115
+            },
+            {
+              "start": 155.645,
+              "end": 155.665,
+              "score": 0.9657
+            },
+            {
+              "start": 155.725,
+              "end": 155.745,
+              "score": 0.9397
+            },
+            {
+              "start": 155.805,
+              "end": 155.826,
+              "score": 0.944
+            },
+            {
+              "start": 155.866,
+              "end": 155.886,
+              "score": 0.9413
+            },
+            {
+              "start": 155.886,
+              "end": 155.906,
+              "score": 0.4068
+            }
+          ]
+        },
+        {
+          "text": "a",
+          "normalized": "a",
+          "start": 155.946,
+          "end": 155.986,
+          "score": 0.834,
+          "spans": [
+            {
+              "start": 155.946,
+              "end": 155.986,
+              "score": 0.834
+            }
+          ]
+        },
+        {
+          "text": "vos",
+          "normalized": "vos",
+          "start": 156.087,
+          "end": 156.368,
+          "score": 0.6574,
+          "spans": [
+            {
+              "start": 156.087,
+              "end": 156.107,
+              "score": 0.3613
+            },
+            {
+              "start": 156.187,
+              "end": 156.207,
+              "score": 0.8156
+            },
+            {
+              "start": 156.348,
+              "end": 156.368,
+              "score": 0.7953
+            }
+          ]
+        },
+        {
+          "text": "en",
+          "normalized": "en",
+          "start": 156.448,
+          "end": 156.549,
+          "score": 0.5943,
+          "spans": [
+            {
+              "start": 156.448,
+              "end": 156.468,
+              "score": 0.5001
+            },
+            {
+              "start": 156.528,
+              "end": 156.549,
+              "score": 0.6886
+            }
+          ]
+        },
+        {
+          "text": "la",
+          "normalized": "la",
+          "start": 156.629,
+          "end": 156.749,
+          "score": 0.9616,
+          "spans": [
+            {
+              "start": 156.629,
+              "end": 156.649,
+              "score": 0.9634
+            },
+            {
+              "start": 156.729,
+              "end": 156.749,
+              "score": 0.9598
+            }
+          ]
+        },
+        {
+          "text": "derrota",
+          "normalized": "derrota",
+          "start": 156.95,
+          "end": 157.693,
+          "score": 0.4447,
+          "spans": [
+            {
+              "start": 156.95,
+              "end": 156.97,
+              "score": 0.0159
+            },
+            {
+              "start": 157.031,
+              "end": 157.051,
+              "score": 0.7898
+            },
+            {
+              "start": 157.171,
+              "end": 157.191,
+              "score": 0.2371
+            },
+            {
+              "start": 157.251,
+              "end": 157.272,
+              "score": 0.5284
+            },
+            {
+              "start": 157.352,
+              "end": 157.372,
+              "score": 0.2849
+            },
+            {
+              "start": 157.613,
+              "end": 157.633,
+              "score": 0.8358
+            },
+            {
+              "start": 157.673,
+              "end": 157.693,
+              "score": 0.4213
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L22",
+      "window": [
+        158.6,
+        164.1
+      ],
+      "text": "Hasta el final, el final",
+      "words": [
+        {
+          "text": "Hasta",
+          "normalized": "hasta",
+          "start": 158.981,
+          "end": 159.343,
+          "score": 0.6781,
+          "spans": [
+            {
+              "start": 158.981,
+              "end": 159.001,
+              "score": 0.0101
+            },
+            {
+              "start": 159.042,
+              "end": 159.062,
+              "score": 0.8187
+            },
+            {
+              "start": 159.142,
+              "end": 159.162,
+              "score": 0.8946
+            },
+            {
+              "start": 159.242,
+              "end": 159.262,
+              "score": 0.795
+            },
+            {
+              "start": 159.323,
+              "end": 159.343,
+              "score": 0.8722
+            }
+          ]
+        },
+        {
+          "text": "el",
+          "normalized": "el",
+          "start": 159.443,
+          "end": 159.483,
+          "score": 0.3731,
+          "spans": [
+            {
+              "start": 159.443,
+              "end": 159.463,
+              "score": 0.003
+            },
+            {
+              "start": 159.463,
+              "end": 159.483,
+              "score": 0.7433
+            }
+          ]
+        },
+        {
+          "text": "final,",
+          "normalized": "final",
+          "start": 159.584,
+          "end": 160.286,
+          "score": 0.4822,
+          "spans": [
+            {
+              "start": 159.584,
+              "end": 159.604,
+              "score": 0.2202
+            },
+            {
+              "start": 159.664,
+              "end": 159.684,
+              "score": 0.386
+            },
+            {
+              "start": 159.865,
+              "end": 159.885,
+              "score": 0.8412
+            },
+            {
+              "start": 159.965,
+              "end": 159.985,
+              "score": 0.822
+            },
+            {
+              "start": 160.266,
+              "end": 160.286,
+              "score": 0.1415
+            }
+          ]
+        },
+        {
+          "text": "el",
+          "normalized": "el",
+          "start": 160.928,
+          "end": 161.109,
+          "score": 0.5953,
+          "spans": [
+            {
+              "start": 160.928,
+              "end": 160.949,
+              "score": 0.6052
+            },
+            {
+              "start": 161.089,
+              "end": 161.109,
+              "score": 0.5853
+            }
+          ]
+        },
+        {
+          "text": "final",
+          "normalized": "final",
+          "start": 161.29,
+          "end": 162.053,
+          "score": 0.3098,
+          "spans": [
+            {
+              "start": 161.29,
+              "end": 161.31,
+              "score": 0.1099
+            },
+            {
+              "start": 161.41,
+              "end": 161.43,
+              "score": 0.4561
+            },
+            {
+              "start": 161.611,
+              "end": 161.631,
+              "score": 0.2169
+            },
+            {
+              "start": 161.772,
+              "end": 161.792,
+              "score": 0.7599
+            },
+            {
+              "start": 162.032,
+              "end": 162.053,
+              "score": 0.0059
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L23",
+      "window": [
+        169.5,
+        177.3
+      ],
+      "text": "Es la depresión sin épica",
+      "words": [
+        {
+          "text": "Es",
+          "normalized": "es",
+          "start": 170.503,
+          "end": 171.746,
+          "score": 0.5046,
+          "spans": [
+            {
+              "start": 170.503,
+              "end": 170.523,
+              "score": 0.7883
+            },
+            {
+              "start": 171.726,
+              "end": 171.746,
+              "score": 0.2209
+            }
+          ]
+        },
+        {
+          "text": "la",
+          "normalized": "la",
+          "start": 173.29,
+          "end": 173.43,
+          "score": 0.6047,
+          "spans": [
+            {
+              "start": 173.29,
+              "end": 173.31,
+              "score": 0.2559
+            },
+            {
+              "start": 173.41,
+              "end": 173.43,
+              "score": 0.9535
+            }
+          ]
+        },
+        {
+          "text": "depresión",
+          "normalized": "depresion",
+          "start": 173.57,
+          "end": 174.593,
+          "score": 0.4215,
+          "spans": [
+            {
+              "start": 173.57,
+              "end": 173.59,
+              "score": 0.6094
+            },
+            {
+              "start": 173.691,
+              "end": 173.711,
+              "score": 0.8722
+            },
+            {
+              "start": 173.871,
+              "end": 173.891,
+              "score": 0.4651
+            },
+            {
+              "start": 173.951,
+              "end": 173.971,
+              "score": 0.1927
+            },
+            {
+              "start": 174.012,
+              "end": 174.032,
+              "score": 0.6961
+            },
+            {
+              "start": 174.232,
+              "end": 174.252,
+              "score": 0.7497
+            },
+            {
+              "start": 174.332,
+              "end": 174.352,
+              "score": 0.0467
+            },
+            {
+              "start": 174.372,
+              "end": 174.393,
+              "score": 0.0707
+            },
+            {
+              "start": 174.573,
+              "end": 174.593,
+              "score": 0.0909
+            }
+          ]
+        },
+        {
+          "text": "sin",
+          "normalized": "sin",
+          "start": 174.713,
+          "end": 175.154,
+          "score": 0.3294,
+          "spans": [
+            {
+              "start": 174.713,
+              "end": 174.733,
+              "score": 0.8666
+            },
+            {
+              "start": 174.874,
+              "end": 174.894,
+              "score": 0.0419
+            },
+            {
+              "start": 175.134,
+              "end": 175.154,
+              "score": 0.0797
+            }
+          ]
+        },
+        {
+          "text": "épica",
+          "normalized": "epica",
+          "start": 175.255,
+          "end": 175.876,
+          "score": 0.6895,
+          "spans": [
+            {
+              "start": 175.255,
+              "end": 175.275,
+              "score": 0.5791
+            },
+            {
+              "start": 175.415,
+              "end": 175.435,
+              "score": 0.2853
+            },
+            {
+              "start": 175.556,
+              "end": 175.576,
+              "score": 0.8004
+            },
+            {
+              "start": 175.716,
+              "end": 175.736,
+              "score": 0.8512
+            },
+            {
+              "start": 175.856,
+              "end": 175.876,
+              "score": 0.9315
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L24",
+      "window": [
+        176.7,
+        181.3
+      ],
+      "text": "La depresión sin épica",
+      "words": [
+        {
+          "text": "La",
+          "normalized": "la",
+          "start": 177.584,
+          "end": 177.684,
+          "score": 0.4876,
+          "spans": [
+            {
+              "start": 177.584,
+              "end": 177.604,
+              "score": 0.0094
+            },
+            {
+              "start": 177.664,
+              "end": 177.684,
+              "score": 0.9659
+            }
+          ]
+        },
+        {
+          "text": "depresión",
+          "normalized": "depresion",
+          "start": 177.825,
+          "end": 178.749,
+          "score": 0.9092,
+          "spans": [
+            {
+              "start": 177.825,
+              "end": 177.845,
+              "score": 0.9085
+            },
+            {
+              "start": 177.925,
+              "end": 177.945,
+              "score": 0.9426
+            },
+            {
+              "start": 178.126,
+              "end": 178.146,
+              "score": 0.9375
+            },
+            {
+              "start": 178.207,
+              "end": 178.227,
+              "score": 0.7583
+            },
+            {
+              "start": 178.267,
+              "end": 178.287,
+              "score": 0.9679
+            },
+            {
+              "start": 178.448,
+              "end": 178.468,
+              "score": 0.9634
+            },
+            {
+              "start": 178.528,
+              "end": 178.548,
+              "score": 0.9127
+            },
+            {
+              "start": 178.608,
+              "end": 178.628,
+              "score": 0.9589
+            },
+            {
+              "start": 178.729,
+              "end": 178.749,
+              "score": 0.8329
+            }
+          ]
+        },
+        {
+          "text": "sin",
+          "normalized": "sin",
+          "start": 178.93,
+          "end": 179.372,
+          "score": 0.445,
+          "spans": [
+            {
+              "start": 178.93,
+              "end": 178.95,
+              "score": 0.8696
+            },
+            {
+              "start": 179.11,
+              "end": 179.131,
+              "score": 0.394
+            },
+            {
+              "start": 179.352,
+              "end": 179.372,
+              "score": 0.0713
+            }
+          ]
+        },
+        {
+          "text": "épica",
+          "normalized": "epica",
+          "start": 179.472,
+          "end": 180.356,
+          "score": 0.58,
+          "spans": [
+            {
+              "start": 179.472,
+              "end": 179.492,
+              "score": 0.8528
+            },
+            {
+              "start": 179.693,
+              "end": 179.713,
+              "score": 0.0735
+            },
+            {
+              "start": 179.914,
+              "end": 179.934,
+              "score": 0.709
+            },
+            {
+              "start": 180.135,
+              "end": 180.155,
+              "score": 0.6019
+            },
+            {
+              "start": 180.336,
+              "end": 180.356,
+              "score": 0.6627
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
