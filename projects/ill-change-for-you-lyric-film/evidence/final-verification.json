@@ -1,0 +1,220 @@
+{
+  "schema": "ill-change-for-you-render-qa/v1",
+  "sourceSha256": "5af79acdcb8d708a6d53f901dee814f2a8038e2c775e806635e4286a57d01309",
+  "sourceAudioPacketSha256": "6516db46bd617517348d3ebc11b1d4a3f3ebc729f95b59219f6dcf31651170ef",
+  "sourceAudioPackets": 8461,
+  "sourceIntentionalBlackIntervals": [
+    [
+      0.0,
+      0.333667
+    ],
+    [
+      192.859333,
+      196.362833
+    ]
+  ],
+  "outputs": {
+    "original-4x3": {
+      "path": "output/Ill-Change-for-You-original-4x3.mp4",
+      "sha256": "4b3076311ccdf60e9996a602bb26d9670f3f5672d45125545bd8f0e85ba8bc04",
+      "sizeBytes": 178257011,
+      "width": 1440,
+      "height": 1080,
+      "fps": 60.0,
+      "frameCount": 11788,
+      "videoDurationSeconds": 196.466667,
+      "audioDurationSeconds": 196.464036,
+      "audioPacketSha256": "6516db46bd617517348d3ebc11b1d4a3f3ebc729f95b59219f6dcf31651170ef",
+      "audioPacketCount": 8461,
+      "maximumAudioPacketTimestampShiftSeconds": 0.0,
+      "blackIntervals": [
+        [
+          0.0,
+          0.35
+        ],
+        [
+          193.0,
+          196.45
+        ]
+      ],
+      "sourcePictureContinuity": {
+        "testableSamples": 382,
+        "sampleRateHz": 2,
+        "medianCorrelation": 0.9999,
+        "lowSimilaritySamples": [],
+        "method": "Central unobstructed picture region, 2 Hz, grayscale Pearson correlation."
+      }
+    },
+    "portrait-9x16": {
+      "path": "output/Ill-Change-for-You-portrait-9x16.mp4",
+      "sha256": "ca45673173f7af3886e66a8a18c22f12276f6f587c0b283b4d1a3140eba12f64",
+      "sizeBytes": 179808850,
+      "width": 1080,
+      "height": 1920,
+      "fps": 60.0,
+      "frameCount": 11788,
+      "videoDurationSeconds": 196.466667,
+      "audioDurationSeconds": 196.464036,
+      "audioPacketSha256": "6516db46bd617517348d3ebc11b1d4a3f3ebc729f95b59219f6dcf31651170ef",
+      "audioPacketCount": 8461,
+      "maximumAudioPacketTimestampShiftSeconds": 0.0,
+      "blackIntervals": [
+        [
+          0.0,
+          0.35
+        ],
+        [
+          192.866667,
+          196.45
+        ]
+      ],
+      "sourcePictureContinuity": {
+        "testableSamples": 382,
+        "sampleRateHz": 2,
+        "medianCorrelation": 0.9994,
+        "lowSimilaritySamples": [],
+        "method": "Central unobstructed picture region, 2 Hz, grayscale Pearson correlation."
+      }
+    }
+  },
+  "limits": [
+    "Picture continuity compares unobstructed central image regions at 2 Hz; inspect contact sheets and full files for local defects.",
+    "Expected-word labels on contact sheets come from the approved timing map; they are not OCR or acoustic listening proof."
+  ],
+  "contactSheets": [
+    "evidence/final-contact-sheets/original-4x3-review.png",
+    "evidence/final-contact-sheets/portrait-9x16-review.png"
+  ],
+  "encodedFrameParity": {
+    "original-4x3": [
+      {
+        "frame": 2700,
+        "timeSeconds": 45.0,
+        "wholeRgbMae": 0.991,
+        "lyricZoneRgbMae": 1.265,
+        "referenceSha256": "f553375f1c44381a90d781532f1d1664d3fa6813529afd646c78e2c3c26faa22"
+      },
+      {
+        "frame": 3678,
+        "timeSeconds": 61.3,
+        "wholeRgbMae": 1.276,
+        "lyricZoneRgbMae": 1.213,
+        "referenceSha256": "0e4376614a3b03ff8359fd4692adbf8ffa029a256d755e6f8804051a8aac185b"
+      },
+      {
+        "frame": 3726,
+        "timeSeconds": 62.1,
+        "wholeRgbMae": 0.959,
+        "lyricZoneRgbMae": 1.131,
+        "referenceSha256": "f9dde5e124175663f3ce1e8936a3f5ccce4ca4773eecbfd66e8ec5cb61b0b555"
+      },
+      {
+        "frame": 6186,
+        "timeSeconds": 103.1,
+        "wholeRgbMae": 1.091,
+        "lyricZoneRgbMae": 1.255,
+        "referenceSha256": "2303434239c6b0928405b10c767d4d25f2f26f961929aa7c84cd547e3c93e510"
+      },
+      {
+        "frame": 7776,
+        "timeSeconds": 129.6,
+        "wholeRgbMae": 1.225,
+        "lyricZoneRgbMae": 1.494,
+        "referenceSha256": "7651ddff842ce7ef1c21bb86e2fb1f35a15266d1dd49d9ca59faa26b6bf54dba"
+      },
+      {
+        "frame": 9210,
+        "timeSeconds": 153.5,
+        "wholeRgbMae": 0.843,
+        "lyricZoneRgbMae": 1.167,
+        "referenceSha256": "9eefd96e7bb67b901a4a28ba68a88a6ccf375679c2d21d0f8030b230c63f00b6"
+      },
+      {
+        "frame": 10461,
+        "timeSeconds": 174.35,
+        "wholeRgbMae": 1.091,
+        "lyricZoneRgbMae": 1.206,
+        "referenceSha256": "ba6e8a7ae579897cb479d7658e650a386523e899fe5e9054143daf66964a1ef1"
+      },
+      {
+        "frame": 11400,
+        "timeSeconds": 190.0,
+        "wholeRgbMae": 1.026,
+        "lyricZoneRgbMae": 1.092,
+        "referenceSha256": "9230bd0b1b61f3bf1af1e0c7c0e54a7d059030101de899fb850ff3c0fe0ad640"
+      },
+      {
+        "frame": 11592,
+        "timeSeconds": 193.2,
+        "wholeRgbMae": 0.118,
+        "lyricZoneRgbMae": 0.365,
+        "referenceSha256": "46d1433889f91b41f1f51ed33094978009412378463c16d81a5b7f3e46e13aa6"
+      }
+    ],
+    "portrait-9x16": [
+      {
+        "frame": 2700,
+        "timeSeconds": 45.0,
+        "wholeRgbMae": 2.091,
+        "lyricZoneRgbMae": 2.201,
+        "referenceSha256": "0409cead3c70a9b30c763aea8bf6ac24bef9d2391c33ed24947d67520f54d149"
+      },
+      {
+        "frame": 3678,
+        "timeSeconds": 61.3,
+        "wholeRgbMae": 2.124,
+        "lyricZoneRgbMae": 2.121,
+        "referenceSha256": "77f87bd82ac635540941257533848d2b0ecb072de9a67141747359f0777c1efe"
+      },
+      {
+        "frame": 3726,
+        "timeSeconds": 62.1,
+        "wholeRgbMae": 2.104,
+        "lyricZoneRgbMae": 2.419,
+        "referenceSha256": "6a7aa08b1fa32d07030846b029dba4d0ca4aa8fc5e1224c1ad3448a33d6964a1"
+      },
+      {
+        "frame": 6186,
+        "timeSeconds": 103.1,
+        "wholeRgbMae": 2.189,
+        "lyricZoneRgbMae": 2.27,
+        "referenceSha256": "9d2be7ce4685af63070b07a7a4f13e53efc25626a32d9c72118fab78dbebcaac"
+      },
+      {
+        "frame": 7776,
+        "timeSeconds": 129.6,
+        "wholeRgbMae": 2.291,
+        "lyricZoneRgbMae": 2.225,
+        "referenceSha256": "515ca4bdb2e502257b0266fbba2ee8045f02c8db8ea340bdc7d15a1eae7a36d4"
+      },
+      {
+        "frame": 9210,
+        "timeSeconds": 153.5,
+        "wholeRgbMae": 2.056,
+        "lyricZoneRgbMae": 2.176,
+        "referenceSha256": "686b283f5347d473db1f2c6080b16508939ab5b78f8054e69b0c7c12070bd212"
+      },
+      {
+        "frame": 10461,
+        "timeSeconds": 174.35,
+        "wholeRgbMae": 2.1,
+        "lyricZoneRgbMae": 2.085,
+        "referenceSha256": "58504abff5afa5b030db0cc59b873ae0e1f223b21c7bd829cf8bd53340abac0a"
+      },
+      {
+        "frame": 11400,
+        "timeSeconds": 190.0,
+        "wholeRgbMae": 2.166,
+        "lyricZoneRgbMae": 2.167,
+        "referenceSha256": "0581f21d5ad4f06ff84edfd67cb7a0d6fd31f9162e1b29136f02df56ddb8d28d"
+      },
+      {
+        "frame": 11592,
+        "timeSeconds": 193.2,
+        "wholeRgbMae": 0.79,
+        "lyricZoneRgbMae": 1.663,
+        "referenceSha256": "267a8a6468ee85afd6fa2a3b03c3305a955505857755daf9a2f84d8b16e88777"
+      }
+    ]
+  }
+}

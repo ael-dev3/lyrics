@@ -1,9 +1,10 @@
 # README song screenshots
 
-Updated 23 September 2026. All eighteen featured songs in the main README have a representative image with its edition and preview/final status, and each song's project README has an associated image. Rendered preview references are identified separately from browser captures and decoded final-film frames. Promotional covers and supplementary frames remain separate from the representative image.
+Updated 24 September 2026. All nineteen featured songs in the main README have a representative image with its edition and preview/final status, and each song's project README has an associated image. Rendered preview references are identified separately from browser captures and decoded final-film frames. Promotional covers and supplementary frames remain separate from the representative image.
 
 | Song | Representative image | Time | Edition / provenance |
 | --- | --- | --- | --- |
+| I'll Change for You | [Original room scene and individual “mean” focus](../assets/ill-change-for-you-final-45.png) | 00:45.000 | Exact decoded frame 2700 of the verified 4:3 final film |
 | If The Sun Burns Out Tonight | [Native panorama, solar word fire and gold depth spectrum](../assets/sun-burns-out-final-200-7.png) | 03:20.700 | Verified production-v1 final landscape film; exact decoded frame 12042 |
 | Люби меня, люби | [Album print on rose paper and individual год / years focus](../assets/lyubi-v1-1-final-13-85.png) | 00:13.850 | Verified v1.1.0 final landscape film; exact decoded frame 831 |
 | Stay at Your House — Hardstyle | [Lucy artwork and yellow English word focus](../assets/stay-house-hardstyle-final-64.png) | 01:04.000 | Verified v1 final landscape film |
@@ -24,6 +25,10 @@ Updated 23 September 2026. All eighteen featured songs in the main README have a
 | Tanisea | [Square composition and English focus](../assets/tanisea-vnext-hero.png) | 00:48.000 | Historical square vNext reference; time visible in frame |
 
 The [structured inventory](../assets/readme-screenshots.json) records image dimensions, hashes, project associations and selection reasons. Original-creator credits remain with the song entries and project documentation.
+
+## I'll Change for You final original-aspect frame
+
+Frame 2700 at 45.000 seconds was decoded from the final 1440×1080, 60 fps 4:3 film. It retains the whole original room shot, the quiet edge-print response and the two-line English cue with **mean** in focus. The same unmodified PNG appears in the main and project READMEs; its SHA-256, dimensions, byte count and exact final-film identity are in the structured inventory. The earlier editorial still remains only as preview history. The publishing thumbnail is a separate cover design.
 
 ## Люби меня, люби final rose paper frame
 
