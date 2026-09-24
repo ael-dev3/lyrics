@@ -11,7 +11,7 @@ for(const name of ['city-landscape.png','city-portrait.png','city-airship.png','
 }
 const audio=`data:audio/mp4;base64,${readFileSync('public/soundtrack.m4a').toString('base64')}`;
 assets['soundtrack.m4a']=audio;
-if(!existsSync('evidence/preview-identity.json'))throw new Error('Current preview is not frozen. Build and review the v3 street scene, then run preview:freeze.');
+if(!existsSync('evidence/preview-identity.json'))throw new Error(`Current ${REVISION} preview is not frozen. Build the scene, then run preview:freeze.`);
 const identity=JSON.parse(readFileSync('evidence/preview-identity.json','utf8')) as {song:string;revision:string;identitySha256:string;hashes:Record<string,string>};
 const fileHash=(bytes:Buffer|string)=>createHash('sha256').update(bytes).digest('hex');
 const currentHashes=Object.fromEntries(previewIdentityPaths.map(path=>[path,fileHash(readFileSync(path))]));

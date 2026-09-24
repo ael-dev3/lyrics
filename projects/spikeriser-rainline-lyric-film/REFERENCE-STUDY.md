@@ -48,7 +48,7 @@ The left billboard changes roughly every 10.3 s: red at sampled seconds 0–2, 1
 
 **Walkers and flashes.** The two large umbrella variants are several times the scale of the distant figures. Their detected dark-pixel cores in the first cycle are 3.73–6.43 s and 18.00–20.53 s; canopies remain visible outside these threshold intervals. Paired sky flashes have detected cores 6.50–7.03 and 20.93–21.33 s. Both motions and flashes recur close to +30.9 s, with small timing/threshold differences in later cycles.
 
-## V3 adaptation against this soundtrack
+## V4 adaptation against this soundtrack
 
 This is the **new** film's implemented choreography, not an assertion that the source video tells this lyric story. All cue text and timing remain provisional in `src/word-cues.json` and `TRANSCRIPTION.md`. The 18 cue hosts in `src/city-choreography.ts` are five shop phrases, five moving train phrases, seven building-ad phrases, and one airship word. The four-car train is one recurring service on the existing viaduct; the airship makes several ambient flights, but only `CH-03` carries a lyric. Portrait shop cues have the individual words across native shop fascia **and** a full-line municipal-board relay for legibility.
 
@@ -56,16 +56,18 @@ This is the **new** film's implemented choreography, not an assertion that the s
 | ---: | --- |
 | 0–47.77 s | Establish the original city, dense rain, opposing taxis, rail service, umbrellas, ring, tower-panel spectrum, and sparse hover traffic. Ambient sign text carries the architecture before the first mapped word. |
 | 47.77–65.22 s | `V1-01`, `V1-03`, `V1-04` flow through adjacent shop fascia; `V1-02` uses the civic building ad. Portrait relays each shop line on the civic board while its individual shop words remain visible. |
-| 69.04–88.48 s | `V1-05`, `V1-06`, `V1-08` run on the passing train LED. `V1-07` moves to a left tower ad in landscape or the civic board in portrait. |
+| 69.04–88.48 s | `V1-05`, `V1-06`, `V1-08` run on the passing train LED, with a 1.42× portrait rail push during those train cues. `V1-07` moves to a left tower ad in landscape or the civic board in portrait. |
 | 93.76–103.21 s | `CH-01` splits its repeated words between side neon and civic board; `CH-02` occupies the civic board. Weather and the 12-band architectural response continue. |
 | 105.46–107.03 s | `CH-03` gives “Lightning” to the airship LED at ordinary skyline scale, with a brief source-clocked bolt. Other ship flights retain ambient service text. |
-| 109.92–129.14 s | `CH-04` travels on the rail display; `CH-05` splits between side neon and civic board; `CH-06` uses the civic board with falling light accents. |
+| 109.92–129.14 s | `CH-04` travels on the rail display with a 1.2× portrait push that keeps the airship context; `CH-05` splits between side neon and civic board; `CH-06` uses the civic board with falling light accents. |
 | 129.14–163.79 s | Instrumental city life: train, taxis, gait-cycled pedestrians, hover traffic, rain, and measured lighting, without invented sung words. |
 | 163.79–173.29 s | `V2-01` and `V2-02` return to the shop row, with source-clocked steam and taxi emphasis. |
 | 173.3–183.2 s | Camera approaches the amber cat apartment from 173.3 to 175.1 s, holds to 180.5 s, then releases by 183.2 s. `V2-03` (175.34–179.01 s) appears in a built-in board beside the enlarged window, where the shutter reveals the cat and its light warms on “yellow.” The current peak zoom is 2.2× landscape and 1.72× portrait. |
-| 181.08–186.94 s | `V2-04` runs on the same rail service as the camera returns to the viaduct. |
+| 181.08–186.94 s | `V2-04` runs on the same rail service as the camera returns to the viaduct; portrait reaches a 1.42× rail push. |
 | 186.94–247.253 s | Instrumental tail retains environmental motion and measured spectrum; no additional lyric text is inferred. |
 
-Canvas evaluates up to 1,410 rain-streak candidates per landscape frame or 1,050 per portrait frame across near and far layers, with lyric surfaces protected from foreground streaks. A gait module moves the small and near umbrella pedestrians; five small hover cars cross the open sky canyon. Twelve measured spectrum bands fill the two vertical building panels and a short strip under the civic board. The generated art, native sign layouts, cars, and cat window are original to this film; the cat and hover cars are new editorial elements, not verified semantic events in the reference.
+The v4 lettering uses the original asset's glass apertures rather than new opaque rectangles. Approximate *padded* logical boxes are landscape civic ad `x234–406, y159–183`, portrait civic ad `x71–268, y302–339` (ending before the cat module at x270), landscape shop fascia about `y247–259`, and portrait shop fascia about `y453–466`. The drawn train car has a native inner LED of about `97 × 11.5` logical pixels; short cues use one row and the final line uses “WATCHING THE” / “LAST AXIS TRAIN” on two fitted rows. The airship LED is about `104 × 11.6` logical pixels in landscape or `79 × 8.8` in portrait. Letter cells use fractional local coordinates so they stay fixed against moving frames. The font tint matches each host's light color, with only the active word warming.
 
-Selected v3 stills were checked in both layouts, including the cat shot. They establish visual composition at those times, not gait smoothness, word timing by ear, or whole-film continuity. The current word map is unverified and the film has not passed a full sync review.
+Canvas evaluates up to 1,410 rain-streak candidates per landscape frame or 1,050 per portrait frame across near and far layers, with lyric surfaces protected from foreground streaks. The sidewalk gait module places feet on three paved depth lanes above the road edge (landscape y≈303–310 before y315 curb; portrait y≈534–545 before y551 curb). Five small hover cars cross the open sky canyon. Twelve measured spectrum bands fill the two vertical building panels and a short strip under the civic board. The generated art, native sign layouts, cars, and cat window are original to this film; the cat and hover cars are new editorial elements, not verified semantic events in the reference.
+
+Selected v4 stills were checked in both layouts, including shop, train, airship, and cat moments. They establish visual composition at those times, not gait smoothness, word timing by ear, phone-size readability, or whole-film continuity. The current word map is unverified and the film has not passed a full sync review.

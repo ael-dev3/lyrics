@@ -1,6 +1,6 @@
 import spectrum from './spectrum.json';
 import {GLYPHS} from './pixel-font.ts';
-import {paintPedestrian} from './pedestrians.ts';
+import {paintSidewalkPedestrians} from './pedestrian-paths.ts';
 import {cityCues,cityGeometry,cityCamera,cueHost,getCityCue,shopSigns,lyricSurfaces,surfacePlacements,trainPose,airshipPose,catWindow,type Format,type Cue,type Box} from './city-choreography.ts';
 export {cityCues,cityGeometry,cityCamera,cueHost,getCityCue,lyricLayout,lyricPose,lyricSurfaces,trainPose,airshipPose} from './city-choreography.ts';
 export type {Format,Cue,Word} from './city-choreography.ts';
@@ -23,21 +23,26 @@ function line(c:Ctx,x0:number,y0:number,x1:number,y1:number,color:string,size=1,
   for(let i=0;i<2000;i++){R(c,x0,y0,size,size,color,a);if(x0===x1&&y0===y1)break;const e=2*err;if(e>=dy){err+=dy;x0+=sx;}if(e<=dx){err+=dx;y0+=sy;}}
 }
 function text(c:Ctx,value:string,x:number,y:number,unit:number,color:string,a=1){
+  c.fillStyle=color;c.globalAlpha=a;
   for(let i=0;i<value.length;i++){const g=GLYPHS[value.toUpperCase().charAt(i)]??GLYPHS['?'];if(!g)continue;
-    for(let r=0;r<7;r++)for(let col=0;col<5;col++)if(g[r]?.charAt(col)==='1')R(c,x+(i*6+col)*unit,y+r*unit,unit,unit,color,a);
+    // Keep cells on the same fractional transform as their glass and vehicle.
+    // Rounding world coordinates independently made the lettering crawl across bezels.
+    for(let r=0;r<7;r++)for(let col=0;col<5;col++)if(g[r]?.charAt(col)==='1')c.fillRect(x+(i*6+col+.06)*unit,y+(r+.05)*unit,unit*.88,unit*.9);
   }
+  c.globalAlpha=1;
 }
-function centered(c:Ctx,value:string,b:Box,u:number,color:string,a=1){text(c,value,b.x+(b.w-(value.length*6-1)*u)/2,b.y+(b.h-7*u)/2,u,color,a);}
+function centered(c:Ctx,value:string,b:Box,u:number,color:string,a=1){u=Math.min(u,(b.w-2)/(value.length*6-1),(b.h-1)/7);text(c,value,b.x+(b.w-(value.length*6-1)*u)/2,b.y+(b.h-7*u)/2,u,color,a);}
 
 function wordStart(id:string,word:string,fallback:number){return cityCues.find(q=>q.id===id)?.words.find(w=>w.text.toLowerCase().replace(/[^a-z]/g,'')===word)?.start??fallback;}
 function pulse(t:number,start:number,length:number){return smooth((t-start)/.18)*(1-smooth((t-start-length)/1.1));}
 function bandAt(frame:number){return spectrum.values[Math.min(spectrum.values.length-1,Math.max(0,frame))]??Array<number>(12).fill(0);}
 function signage(c:Ctx,g:G,t:number,cue:Cue|undefined,bands:number[]){
  const format=g.portrait?'portrait':'landscape';
- for(const b of shopSigns(format))centered(c,b.name,b,b.w<26?.5:1,b.color,.64);
- if(cue?.id==='V2-03')R(c,g.tower.x,g.tower.y,g.tower.w,g.tower.h,'#080e21');else centered(c,'SPINWARD',g.tower,2,C.pink,.58);
+ const surfaces=cue?lyricSurfaces(cue,t,format):[],occupied=(b:Box)=>surfaces.some(s=>s.box.x<b.x+b.w&&s.box.x+s.box.w>b.x&&s.box.y<b.y+b.h&&s.box.y+s.box.h>b.y);
+ for(const [i,b] of shopSigns(format).entries())if(!surfaces.some(s=>s.name===`shop-${i}`))centered(c,b.name,b,1,b.color,.72);
+ if(!occupied(g.tower))centered(c,'SPINWARD',g.tower,2,C.pink,.58);
  const panels=g.portrait?[{x:0,y:32,w:16,h:48},{x:322,y:70,w:17,h:87}]:[{x:19,y:48,w:45,h:45},{x:573,y:31,w:21,h:75}];
- panels.forEach((p,side)=>{for(let k=0;k<6;k++){const v=bands[k+side*6]??0,bw=Math.max(1,Math.floor((p.w-4)/6)-1),bx=p.x+2+k*(p.w-4)/6;
+ panels.forEach((p,side)=>{if(occupied(p))return;for(let k=0;k<6;k++){const v=bands[k+side*6]??0,bw=Math.max(1,Math.floor((p.w-4)/6)-1),bx=p.x+2+k*(p.w-4)/6;
  for(let row=0;row<12;row++)R(c,bx,p.y+p.h-3-row*(p.h-6)/12,bw,Math.max(1,(p.h-6)/12-1),row<v?(side?C.teal:C.pink):'#1b2344',row<v?.78:.4);}});
  for(let i=0;i<12;i++)R(c,g.tower.x+i*g.tower.w/12,g.tower.y+g.tower.h+3,Math.floor(g.tower.w/12)-2,1,(bands[i]??0)>5?C.teal:C.violet,.55);
 }
@@ -49,8 +54,7 @@ function trains(c:Ctx,g:G,t:number){
  if(!trainImage)return;const p=trainPose(t,g.portrait?'portrait':'landscape');if(!p.visible)return;
  for(let i=p.count-1;i>=0;i--){const x=p.x-i*p.spacing;
   if(i===0)c.drawImage(trainImage,x,p.y,p.width,p.height);else c.drawImage(trainImage,0,0,1820,724,x,p.y,p.width,p.height);
-  const b=i===0?p.box:{x:x+p.width*.341,y:p.y+p.height*.37,w:118,h:10};
-  if(i===0){R(c,b.x-1,b.y-1,b.w+2,b.h+2,'#123c55');R(c,b.x,b.y,b.w,b.h,'#091b2c');R(c,b.x,b.y,b.w,1,C.teal,.5);R(c,b.x,b.y+b.h-1,b.w,1,C.teal,.4);}
+  const b=i===0?p.box:{x:x+72,y:p.y+18,w:115,h:11.5};
   if(i>0||cueHost(getCityCue(t))!=='train')centered(c,i===0?'AXIS / NIGHT LINE':'AXIS',b,1,C.teal,.6);
   if(i>0){R(c,x+p.width-1,g.railY-7,p.spacing-p.width+3,3,'#26324c');R(c,x+p.width,g.railY-5,p.spacing-p.width+2,1,C.teal,.3);}
  }
@@ -62,12 +66,15 @@ function lyricSigns(c:Ctx,g:G,q:Cue|undefined,t:number){
  const emission=smooth((t-q.start+.55)/.35)*(1-smooth((t-q.end-.2)/.7));
  for(const surface of lyricSurfaces(q,t,format)){
   const b=surface.box;
-  // Paint into the material of each existing display; no floating caption carrier.
-  R(c,b.x,b.y,b.w,b.h,surface.name.startsWith('shop')?'#131026':'#080e21');
-  for(const p of surfacePlacements(q,surface)){const word=q.words[p.index],active=!!word&&t>=word.start&&t<word.end,col=active?C.cream:C.white;
+  const tint=surface.name.startsWith('shop-')?shopSigns(format)[Number(surface.name.slice(5))]?.color??C.teal:surface.name==='train-led'?C.teal:surface.name==='cat-apartment-sign'?C.warm:C.pink;
+  // Only light the native glass. Its texture, frame and reflection remain the original art.
+  c.save();c.beginPath();c.moveTo(b.x,b.y);c.lineTo(b.x+b.w,b.y);c.lineTo(b.x+b.w,b.y+b.h);c.lineTo(b.x,b.y+b.h);c.closePath();c.clip();
+  for(const p of surfacePlacements(q,surface)){const word=q.words[p.index],active=!!word&&t>=word.start&&t<word.end,col=active?C.cream:tint;
+   c.shadowColor=active?C.warm:tint;c.shadowBlur=p.unit*.9;
    if(p.vertical){for(let i=0;i<p.word.length;i++)text(c,p.word[i]!,p.x,p.y+i*8*p.unit,p.unit,col,(active?1:.82)*emission);}
-   else {if(active){text(c,p.word,p.x-.5,p.y,p.unit,C.warm,.08);text(c,p.word,p.x+.5,p.y,p.unit,C.warm,.08);}text(c,p.word,p.x,p.y,p.unit,col,(active?1:.84)*emission);}
+   else text(c,p.word,p.x,p.y,p.unit,col,(active?1:.86)*emission);
   }
+  c.restore();
  }
 }
 function car(c:Ctx,x:number,y:number,s:number,color:string,direction:number,taxi=false){
@@ -88,12 +95,7 @@ function street(c:Ctx,g:G,t:number){
  car(c,g.w+65-((t*43+120)%(g.w+130)),road+2,.85,C.warm,-1,true);
  car(c,(t*58+240)%(g.w+180)-90,road+21,1.15,'#414873',1);
  if(special){const xx=clamp((t-taxi+.5)/6.5)*(g.w+130)-70;car(c,xx,road+9,1.12,C.warm,1,true);}
- for(let i=0;i<(g.portrait?5:8);i++){const direction=i%2?1:-1,speed=6.2+(i%3)*1.1,x=(seed(i+11)*g.w+t*direction*speed+g.w*30)%(g.w+45)-22;
- paintPedestrian(c,spriteImage,{x,footY:road-2+(i%2),height:25+(i%3)*2,direction,time:t,speed,phase:seed(i+41),variant:i%2?'violet':'teal'});}
- // Foreground walkers cross entirely through the frame; gait cadence follows actual travel.
- for(let i=0;i<2;i++){const height=g.portrait?65:58,speed=g.portrait?28:37,period=(g.w+140)/speed+9,phaseTime=(t+i*period*.51)%period,travel=phaseTime*speed;
-  if(travel<g.w+140){const direction=i?1:-1,x=i?travel-70:g.w+70-travel;
-  paintPedestrian(c,spriteImage,{x,footY:g.h-5,height,direction,time:t,speed,phase:i*.37,variant:i?'violet':'teal'});}}
+ paintSidewalkPedestrians(c,spriteImage,t,g.portrait?'portrait':'landscape');
 }
 function cat(c:Ctx,g:G,t:number){
   if(!spriteImage)return;
