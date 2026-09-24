@@ -8,7 +8,21 @@ Music films with synchronized lyrics, meaning-linked translations, and audio-rea
 
 **Starting another song:** use the [single-prompt template, agent quickstart and complete quality checklist](docs/source-clocked-word-effects-workflow.md), including [how to make reactive visuals belong to the picture](docs/scene-integrated-visuals.md). The [If The Sun Burns Out Tonight handoff](projects/if-the-sun-burns-out-tonight-lyric-film/AGENT-HANDOFF.md) and [production lessons](projects/if-the-sun-burns-out-tonight-lyric-film/PRODUCTION-LESSONS.md) show how exact word/phrase effects, measured intensity and dependable full-picture playback fit the shared workflow.
 
-[**If The Sun Burns Out Tonight**](#if-the-sun-burns-out-tonight) · [**Люби меня, люби**](#люби-меня-люби) · [**Stay at Your House — Hardstyle**](#stay-at-your-house--hardstyle) · [**Ведьмы**](#ведьмы) · [**Pero es locura**](#pero-es-locura) · [**La Lune**](#la-lune) · [**каждый, кто делал тебе больно**](#каждый-кто-делал-тебе-больно) · [**Sugar Glass**](#sugar-glass) · [**Твои глаза**](#твои-глаза) · [**Прости за любовь — accepted with known gaps**](#прости-за-любовь) · [**Половинка**](#половинка) · [**Life Letters**](#life-letters) · [**Joyride**](#joyride) · [**midnight love**](#midnight-love) · [**Пожары**](#пожары) · [**Отменяй**](#отменяй) · [**Roi × Adore**](#roi--adore) · [**TikTok edition**](#tiktok-edition) · [**Tanisea**](#tanisea) · [**Build and workflow**](#build-and-workflow)
+[**I'll Change for You — preview**](#ill-change-for-you--preview) · [**If The Sun Burns Out Tonight**](#if-the-sun-burns-out-tonight) · [**Люби меня, люби**](#люби-меня-люби) · [**Stay at Your House — Hardstyle**](#stay-at-your-house--hardstyle) · [**Ведьмы**](#ведьмы) · [**Pero es locura**](#pero-es-locura) · [**La Lune**](#la-lune) · [**каждый, кто делал тебе больно**](#каждый-кто-делал-тебе-больно) · [**Sugar Glass**](#sugar-glass) · [**Твои глаза**](#твои-глаза) · [**Прости за любовь — accepted with known gaps**](#прости-за-любовь) · [**Половинка**](#половинка) · [**Life Letters**](#life-letters) · [**Joyride**](#joyride) · [**midnight love**](#midnight-love) · [**Пожары**](#пожары) · [**Отменяй**](#отменяй) · [**Roi × Adore**](#roi--adore) · [**TikTok edition**](#tiktok-edition) · [**Tanisea**](#tanisea) · [**Build and workflow**](#build-and-workflow)
+
+## I'll Change for You — preview
+
+**Mitski · English · complete original-film preview, awaiting listening review**
+
+![I'll Change for You: original printed-film room scene with individually focused English lyric](assets/ill-change-for-you-preview-45.png)
+
+*Representative static preview still at 00:45, composed from the locked source frame and current cue map. It is not a browser capture or an encoded final frame. Original music: Mitski; original video directed by Lexie Alley and edited by Rena Johnson.*
+
+The playable preview preserves the entire 4:3 source film and soundtrack, with an uncropped 9:16 review layout. All 118 supplied words have independent timing events across 25 lines. Source-light-aware ink, a quiet 64-band film-edge response and a tiny printed double register on “change” belong to the video's texture without covering its moving picture. The last source-black frames remain visible as part of the original ending.
+
+Six bounded model alignment passes support the timing candidate; connected short words and held endings still require normal-speed and reduced-speed listening in both layouts. This project is **preview only**: no complete production film or posting kit has been rendered. The local source media is excluded from Git.
+
+[Preview setup, credits and current status](projects/ill-change-for-you-lyric-film/README.md) · [Agent handoff](projects/ill-change-for-you-lyric-film/AGENT-HANDOFF.md) · [Timing review priorities](projects/ill-change-for-you-lyric-film/evidence/timing-review.md) · [Original video](https://www.youtube.com/watch?v=BPy1NIiKKW0)
 
 ## If The Sun Burns Out Tonight
 

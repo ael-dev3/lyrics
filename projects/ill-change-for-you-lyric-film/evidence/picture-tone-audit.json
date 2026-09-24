@@ -1,0 +1,277 @@
+{
+  "schema": "source-picture-tone-audit/v1",
+  "sourceSha256": "5af79acdcb8d708a6d53f901dee814f2a8038e2c775e806635e4286a57d01309",
+  "sourceVideo": {
+    "width": 1440,
+    "height": 1080,
+    "avgFrameRate": "17658750/736517",
+    "containerDurationSeconds": 196.464036
+  },
+  "sampling": {
+    "rateHz": 2,
+    "proxySize": [
+      160,
+      120
+    ],
+    "roiNormalized": [
+      0.1,
+      0.58,
+      0.9,
+      0.88
+    ],
+    "roiPixels": [
+      16,
+      70,
+      144,
+      106
+    ],
+    "luma": "(54R + 183G + 19B) / 256 on gamma-encoded RGB proxy",
+    "downsample": "FFmpeg area filter; suppresses fine grain and print dots",
+    "brightPixelAtLeast": 185,
+    "darkPixelAtMost": 75,
+    "lightIf": "median >= 156 or bright fraction >= 0.4",
+    "darkIf": "median <= 102 and bright fraction <= 0.26",
+    "hysteresis": "two consecutive 0.5s observations; minimum 2.0s after a switch"
+  },
+  "summary": {
+    "sampleCount": 393,
+    "firstSampleSeconds": 0.0,
+    "lastSampleSeconds": 196.0,
+    "modeCounts": {
+      "light": 141,
+      "dark": 252
+    },
+    "modeSwitches": 20,
+    "medianLumaRange": [
+      0,
+      253
+    ],
+    "contraryExtremeCount": 15
+  },
+  "modeRuns": [
+    {
+      "start": 0.0,
+      "end": 11.0,
+      "mode": "dark",
+      "samples": 23
+    },
+    {
+      "start": 11.5,
+      "end": 13.0,
+      "mode": "light",
+      "samples": 4
+    },
+    {
+      "start": 13.5,
+      "end": 24.5,
+      "mode": "dark",
+      "samples": 23
+    },
+    {
+      "start": 25.0,
+      "end": 35.5,
+      "mode": "light",
+      "samples": 22
+    },
+    {
+      "start": 36.0,
+      "end": 42.5,
+      "mode": "dark",
+      "samples": 14
+    },
+    {
+      "start": 43.0,
+      "end": 45.5,
+      "mode": "light",
+      "samples": 6
+    },
+    {
+      "start": 46.0,
+      "end": 52.5,
+      "mode": "dark",
+      "samples": 14
+    },
+    {
+      "start": 53.0,
+      "end": 62.0,
+      "mode": "light",
+      "samples": 19
+    },
+    {
+      "start": 62.5,
+      "end": 84.5,
+      "mode": "dark",
+      "samples": 45
+    },
+    {
+      "start": 85.0,
+      "end": 95.5,
+      "mode": "light",
+      "samples": 22
+    },
+    {
+      "start": 96.0,
+      "end": 120.0,
+      "mode": "dark",
+      "samples": 49
+    },
+    {
+      "start": 120.5,
+      "end": 122.0,
+      "mode": "light",
+      "samples": 4
+    },
+    {
+      "start": 122.5,
+      "end": 145.5,
+      "mode": "dark",
+      "samples": 47
+    },
+    {
+      "start": 146.0,
+      "end": 154.5,
+      "mode": "light",
+      "samples": 18
+    },
+    {
+      "start": 155.0,
+      "end": 162.0,
+      "mode": "dark",
+      "samples": 15
+    },
+    {
+      "start": 162.5,
+      "end": 169.0,
+      "mode": "light",
+      "samples": 14
+    },
+    {
+      "start": 169.5,
+      "end": 172.0,
+      "mode": "dark",
+      "samples": 6
+    },
+    {
+      "start": 172.5,
+      "end": 175.5,
+      "mode": "light",
+      "samples": 7
+    },
+    {
+      "start": 176.0,
+      "end": 180.0,
+      "mode": "dark",
+      "samples": 9
+    },
+    {
+      "start": 180.5,
+      "end": 192.5,
+      "mode": "light",
+      "samples": 25
+    },
+    {
+      "start": 193.0,
+      "end": 196.0,
+      "mode": "dark",
+      "samples": 7
+    }
+  ],
+  "manualReviewCandidates": [
+    {
+      "time": 5.5,
+      "mode": "dark",
+      "medianLuma": 240,
+      "brightFraction": 0.6762
+    },
+    {
+      "time": 13.0,
+      "mode": "light",
+      "medianLuma": 59,
+      "brightFraction": 0.0421
+    },
+    {
+      "time": 17.5,
+      "mode": "dark",
+      "medianLuma": 244,
+      "brightFraction": 0.8496
+    },
+    {
+      "time": 18.5,
+      "mode": "dark",
+      "medianLuma": 244,
+      "brightFraction": 0.7578
+    },
+    {
+      "time": 37.0,
+      "mode": "dark",
+      "medianLuma": 249,
+      "brightFraction": 0.8783
+    },
+    {
+      "time": 64.0,
+      "mode": "dark",
+      "medianLuma": 224,
+      "brightFraction": 0.658
+    },
+    {
+      "time": 66.5,
+      "mode": "dark",
+      "medianLuma": 236,
+      "brightFraction": 0.6252
+    },
+    {
+      "time": 69.5,
+      "mode": "dark",
+      "medianLuma": 206,
+      "brightFraction": 0.5321
+    },
+    {
+      "time": 75.5,
+      "mode": "dark",
+      "medianLuma": 250,
+      "brightFraction": 0.7821
+    },
+    {
+      "time": 101.5,
+      "mode": "dark",
+      "medianLuma": 244,
+      "brightFraction": 0.7046
+    },
+    {
+      "time": 116.0,
+      "mode": "dark",
+      "medianLuma": 210,
+      "brightFraction": 0.5645
+    },
+    {
+      "time": 122.0,
+      "mode": "light",
+      "medianLuma": 41,
+      "brightFraction": 0.0473
+    },
+    {
+      "time": 140.0,
+      "mode": "dark",
+      "medianLuma": 253,
+      "brightFraction": 0.9963
+    },
+    {
+      "time": 168.5,
+      "mode": "light",
+      "medianLuma": 64,
+      "brightFraction": 0.0681
+    },
+    {
+      "time": 175.0,
+      "mode": "light",
+      "medianLuma": 12,
+      "brightFraction": 0.0
+    }
+  ],
+  "limitations": [
+    "This measures a provisional lower source region, not final text pixels or portrait framing.",
+    "Half-second sampling can miss shorter cuts, white leaders and flashes; held modes deliberately avoid chasing them.",
+    "A luma proxy cannot certify glyph contrast over detailed faces or colored film marks; review the complete source-backed preview at normal and small-player sizes.",
+    "Mode estimates are artistic suggestions. Do not retime lyrics or treat these values as acoustic evidence."
+  ]
+}

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "reviewedOn": "2026-09-23",
-  "scope": "The eighteen featured song sections in the main README and their project README entry points.",
+  "reviewedOn": "2026-09-24",
+  "scope": "The nineteen featured song sections in the main README and their project README entry points.",
   "newExtraction": {
     "fps": 60,
     "frameNumbering": "zero-based",
@@ -9,8 +9,23 @@
     "sourceIdentity": "New source files matched the recorded delivery SHA-256 before selecting their frames.",
     "scope": "Completed-film screenshots only; preview entries specify their diagnostic capture method individually."
   },
-  "review": "Every featured song has an associated representative image. The new Sun edition uses an exact decoded verified final frame; historical editions retain their recorded status and limitations.",
+  "review": "Every featured song has an associated representative image. The new Mitski entry is explicitly a static preview reference; the Sun edition uses an exact decoded verified final frame; historical editions retain their recorded status and limitations.",
   "screenshots": [
+    {
+      "song": "I'll Change for You",
+      "image": "assets/ill-change-for-you-preview-45.png",
+      "project": "projects/ill-change-for-you-lyric-film/README.md",
+      "timestampSeconds": 45,
+      "edition": "Preview-only model-assisted candidate; no full film rendered",
+      "selection": "Uncropped original room scene, two-line English lyric and individual focus on I.",
+      "method": "Editorial still from the exact source frame at 45 seconds, composited with the current cue map by scripts/make-readme-still.py. It is not a browser screenshot or encoded final frame; inspect the playable preview for actual video, effects and timing.",
+      "width": 1440,
+      "height": 1080,
+      "bytes": 851703,
+      "sha256": "c7040880a5e13613d6eaecfdf9ab7cd29bb436f1bca1353ffbe8bc5df19dbaec",
+      "encoding": "PNG",
+      "sourceVideoSha256": "5af79acdcb8d708a6d53f901dee814f2a8038e2c775e806635e4286a57d01309"
+    },
     {
       "song": "If The Sun Burns Out Tonight",
       "image": "assets/sun-burns-out-final-200-7.png",
