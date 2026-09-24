@@ -1,0 +1,63 @@
+{
+  "status": "automated timing candidate; actual-audio/perceptual review pending",
+  "actualAudioReviewComplete": false,
+  "approvedForProduction": false,
+  "sourceMp4Sha256": "939d24391e68d460a4d21fee88196c738b6f491362f192cabdcf33d15153a9b0",
+  "sourceAudioSampleRate": 48000,
+  "decodedSamplesPerChannel": 11868160,
+  "decodedPcmS16LeSha256": "bd08ff2be1c8c68fb30f8ac6c38d555a1725df5b96ab039686b6f1da25c7b704",
+  "analysisWavSha256": "923077ad46756c19b4d4632c505ece17ea7293e2a203c63e3132f713b9e6879b",
+  "vocalStemSha256": "f2eb7c1a85d0a06b648cbf4cbad8125391ea48457fa80a6dc30911afd295e2f5",
+  "vocalStemLagVsSourceSeconds": 0.0,
+  "wordCueCount": 76,
+  "lineCueCount": 18,
+  "wordCueFileSha256": "ac0b02f17886490e34bc6a199ad3992985e0a5c3a0c932ed7b42d7028be4b5c2",
+  "candidateEvidenceFileSha256": "29d4d1ab8b695ff257caaa653371de472c385ffc0162f7a7da31bea80645ce15",
+  "forcedAlignmentPasses": [
+    {
+      "id": "mms-mix",
+      "architecture": "MMS FA",
+      "audio": "original mix",
+      "rawObservationSha256": "edae83e210d2bb36c0e337e12cbe8df27fcf0ba825fba193085e674d10fde87b"
+    },
+    {
+      "id": "wav2vec-mix",
+      "architecture": "Wav2Vec2 ASR Base 960h",
+      "audio": "original mix",
+      "rawObservationSha256": "72c10a59dfdc2e5dbd2b3f071d02ff13c6c249ebd2d8ef6eb4b25141a513061e"
+    },
+    {
+      "id": "mms-stem",
+      "architecture": "MMS FA",
+      "audio": "HTDemucs vocal stem",
+      "rawObservationSha256": "7d188d9219057efa56fe4997ff11a7846e13670dbffce39b4c8a01b5b19bbc0c"
+    },
+    {
+      "id": "wav2vec-stem",
+      "architecture": "Wav2Vec2 ASR Base 960h",
+      "audio": "HTDemucs vocal stem",
+      "rawObservationSha256": "ed9963192e0e668435b590f5134581eda4adc253a61c4206de1665f15f69f6ff"
+    },
+    {
+      "id": "stable-stem",
+      "architecture": "stable Whisper",
+      "audio": "HTDemucs vocal stem",
+      "rawObservationSha256": "98f6d70f4526d00a6d68ff05ddc74669d7ca31da3412766be9cd2cf7e62c3995"
+    },
+    {
+      "id": "stable-mix",
+      "architecture": "stable Whisper",
+      "audio": "original mix",
+      "rawObservationSha256": "57d95e1bce272bd2277f7595fb0ac56eb1c982b5b9898657cd370e572809c49d"
+    }
+  ],
+  "method": "Selected word boundaries are snapped observations from six independent forced-alignment passes, never proportional subdivisions. Original mix and HTDemucs stem were aligned separately. The stem had measured 0 s latency in four source regions. Word release candidates include held vowels and possible reverberation; all disagreement remains in word-alignment-candidates.json.",
+  "reviewBoundaryRule": "The lyrics repository requires manual review of independent boundary candidates with spread greater than 25 ms, and actual-audio review before production.",
+  "ctcWordsOver25MsSpread": 73,
+  "ctcWordsOver250MsSpread": 30,
+  "ctcWordsOver500MsSpread": 24,
+  "uncertainTextCueIds": [
+    "V1-02"
+  ],
+  "postVocalTail": "No lexical words detected by ASR after about 187 s; complete tail classification requires actual-audio listening."
+}

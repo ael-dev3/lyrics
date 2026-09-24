@@ -1,0 +1,43 @@
+{
+  "song": "2102888874858959029",
+  "revision": "preview-v2-city",
+  "previewIdentitySha256": "232a60673a1c05eb5dceb184aa7cafbd5a09510171364e6bd1f2944c423782ba",
+  "recordedAtUtc": "2026-09-24 15:54:24 UTC",
+  "scope": "Technical preview verification only; no lyric accuracy or acoustic synchronization approval is claimed.",
+  "automatedChecks": {
+    "strictTypeScript": "passed",
+    "tests": "13 passed, 0 failed; includes cue ownership, lyric geometry, camera, occlusion, and production-gate rejection cases",
+    "timingStructure": "76 words in 18 lines verified on the locked 48 kHz source clock; 73 words still await perceptual review",
+    "reviewBundle": "passed; regenerated after preview freeze with all 27 frozen input hashes unchanged",
+    "remotionBundle": "passed without media capture or full production rendering",
+    "sourceAudioSha256": "f6f1be0de55b8a7b63e761ff62962de82d87ab143bafb3680c9029b441fe5ba8"
+  },
+  "localServerBrowserChecks": {
+    "browser": "Chrome, separate agent-created QA tab",
+    "fullRecordingDurationSeconds": 247.253333,
+    "landscapeBacking": "1920x1080; canvas ready with complete scene and all five images",
+    "portraitBacking": "1080x1920; canvas ready with complete scene and all five images",
+    "pausedSeek": "Seeking to 125.000 seconds remained paused at 125.000 seconds in both formats; frame 7500",
+    "switching": "Switching formats retained soundtrack position and repainted the correct native backing",
+    "playPause": "Playback advanced from the selected source position and Pause held the reached position in both formats; 0.5x speed was also checked",
+    "visibleMotion": "At a seek to 176 seconds, scene frames advanced from 10560 to 10645 in landscape and 10560 to 10647 in portrait during playback; scene-only screenshot clips changed in both formats and showed moving city layers",
+    "console": "No browser warnings or errors during the final server preview check",
+    "finalQaTabState": "Paused at 0:00 in landscape format"
+  },
+  "portableArtifactStaticChecks": {
+    "artifact": "outputs/Rainline Preview.html",
+    "bytes": 19663777,
+    "sha256": "fb69084623de2d4b36681cd46f5d5ae0feab9ce53957c3e65f8b2db2bbd7e25a",
+    "embeddedIdentityMatchesFrozen": true,
+    "embeddedAssets": "Source AAC and five PNGs; decoded bytes match the project files by SHA-256",
+    "manifestMatchesArtifact": true,
+    "externalMediaOrClientPathsRemain": false
+  },
+  "portableFileBrowserPlayback": {
+    "checked": false,
+    "reason": "The browser-use security policy blocked direct file:// navigation and prohibited indirect workarounds. Static artifact integrity checks passed; no standalone browser-playback claim is made."
+  },
+  "productionGate": "blocked: complete actual-audio and both-format synchronization review is pending",
+  "manualAudioListeningPerformed": false,
+  "fullProductionFilmRendered": false
+}

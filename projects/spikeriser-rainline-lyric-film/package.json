@@ -1,0 +1,38 @@
+{
+  "name": "spikeriser-rainline-lyric-film",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/*.test.ts",
+    "typecheck": "tsc --noEmit",
+    "timing:verify": "node scripts/verify-word-timing.ts",
+    "test:gate": "node --test tests/production-gate.test.ts",
+    "test:city": "node --test tests/city-integration.test.ts",
+    "features": "node scripts/build-spectrum.ts",
+    "review:build": "esbuild src/review-client.ts --bundle --format=esm --outfile=review/client.js",
+    "preview:freeze": "node scripts/freeze-preview.ts",
+    "preview": "npm run review:build && node scripts/review-server.ts",
+    "production:gate": "node scripts/render-gate.ts",
+    "render": "node scripts/render.ts"
+  },
+  "dependencies": {
+    "@napi-rs/canvas": "0.1.100",
+    "@remotion/bundler": "4.0.518",
+    "@remotion/cli": "4.0.518",
+    "@remotion/media": "4.0.518",
+    "@remotion/media-utils": "4.0.518",
+    "@remotion/renderer": "4.0.518",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "remotion": "4.0.518"
+  },
+  "devDependencies": {
+    "@types/node": "26.4.0",
+    "@types/react": "19.2.18",
+    "@types/react-dom": "19.2.5",
+    "esbuild": "0.28.1",
+    "typescript": "7.0.2",
+    "vitest": "4.1.11"
+  }
+}
