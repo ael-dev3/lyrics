@@ -42,6 +42,24 @@ test('changed scene bytes invalidate a frozen preview', () => {
   assert.throws(() => checkProductionGate(input), /Preview input changed: src\/city.ts/);
 });
 
+test('changed street pedestrian code invalidates a frozen preview', () => {
+  const input = ready();
+  input.currentHashes['src/pedestrians.ts'] = sha256('changed pedestrian motion');
+  assert.throws(() => checkProductionGate(input), /Preview input changed: src\/pedestrians.ts/);
+});
+
+test('changed camera, vehicle, or lyric choreography invalidates a frozen preview', () => {
+  const input = ready();
+  input.currentHashes['src/city-choreography.ts'] = sha256('changed street choreography');
+  assert.throws(() => checkProductionGate(input), /Preview input changed: src\/city-choreography.ts/);
+});
+
+test('the archived v2 identity cannot authorize the v3 street revision', () => {
+  const input = ready();
+  input.identity = {...input.identity as object, revision: 'preview-v2-city'};
+  assert.throws(() => checkProductionGate(input), /another song or revision/);
+});
+
 test('missing or changed city art invalidates a frozen preview', () => {
   const missing = ready();
   const hashes = {...(missing.identity as {hashes: Record<string, string>}).hashes};

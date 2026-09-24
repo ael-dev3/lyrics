@@ -22,33 +22,42 @@ test('every timed word remains assigned to its performed cue', () => {
   }
 });
 
-test('each lyric word fits its host and camera in both layouts', () => {
+test('every active word fits its moving surface and the camera on every 60 fps frame', () => {
+  let checked = 0;
   for (const format of ['landscape', 'portrait'] as const) {
     const geometry = city.cityGeometry(format);
     for (const cue of city.cityCues) {
       const host = city.cueHost(cue);
       assert(host, `${cue.id} host`);
-      const box = geometry[host];
-      const layout = city.lyricLayout(cue, box, format, host);
-      assert.equal(layout.placements.length, cue.words.length, `${cue.id} ${format} placements`);
-      for (const placement of layout.placements) {
-        const word = cue.words[placement.index];
-        assert(word, `${cue.id} ${format} placed word`);
-        const width = (placement.word.length * 6 - 1) * layout.unit;
-        const height = 7 * layout.unit;
-        assert(placement.x >= box.x && placement.x + width <= box.x + box.w,
-          `${cue.id} ${format} ${placement.word} overflows host horizontally`);
-        assert(placement.y >= box.y && placement.y + height <= box.y + box.h,
-          `${cue.id} ${format} ${placement.word} overflows host vertically`);
-        const time = (word.start + word.end) / 2;
-        const camera = city.cityCamera(time, format);
-        const left = camera.x - geometry.w / (2 * camera.zoom);
-        const right = camera.x + geometry.w / (2 * camera.zoom);
-        const top = camera.y - geometry.h / (2 * camera.zoom);
-        const bottom = camera.y + geometry.h / (2 * camera.zoom);
-        assert(placement.x >= left && placement.x + width <= right && placement.y >= top && placement.y + height <= bottom,
-          `${cue.id} ${format} ${placement.word} outside camera at ${time.toFixed(3)} s`);
+      for (const [wordIndex, word] of cue.words.entries()) {
+        const first = Math.ceil(word.start * 60);
+        const last = Math.ceil(word.end * 60) - 1;
+        assert(first <= last, `${cue.id} ${word.text} has no visible 60 fps focus frame`);
+        for (let frame = first; frame <= last; frame++) {
+          const time = frame / 60;
+          assert.equal(city.getCityCue(time)?.id, cue.id, `${cue.id} ${word.text} loses its cue at ${time.toFixed(3)} s`);
+          if (host === 'train') assert(city.trainPose(time, format).visible, `${cue.id} ${word.text} loses the track train`);
+          if (host === 'airship') assert(city.airshipPose(time, format).visible, `${cue.id} ${word.text} loses the airship`);
+          const placements = city.lyricPose(cue, time, format);
+          const camera = city.cityCamera(time, format);
+          const left = camera.x - geometry.w / (2 * camera.zoom);
+          const right = camera.x + geometry.w / (2 * camera.zoom);
+          const top = camera.y - geometry.h / (2 * camera.zoom);
+          const bottom = camera.y + geometry.h / (2 * camera.zoom);
+          let visible = false;
+          for (const placement of placements) {
+            assert(placement.width > 0 && placement.height > 0 && placement.unit > 0, `${cue.id} ${placement.word} invalid glyph geometry`);
+            assert(placement.x >= placement.surface.x - 1e-6 && placement.x + placement.width <= placement.surface.x + placement.surface.w + 1e-6 &&
+              placement.y >= placement.surface.y - 1e-6 && placement.y + placement.height <= placement.surface.y + placement.surface.h + 1e-6,
+            `${format} ${cue.id} ${placement.word} overflows its ${host} surface at ${time.toFixed(3)} s`);
+            if (placement.index === wordIndex && placement.x >= left - 1e-6 && placement.x + placement.width <= right + 1e-6 &&
+              placement.y >= top - 1e-6 && placement.y + placement.height <= bottom + 1e-6) visible = true;
+          }
+          assert(visible, `${format} ${cue.id} ${word.text} has no fully visible placement at ${time.toFixed(3)} s`);
+          checked++;
+        }
       }
     }
   }
+  assert(checked >= 152, 'Every word was checked in both layouts');
 });

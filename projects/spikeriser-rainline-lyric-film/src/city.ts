@@ -1,18 +1,13 @@
-import rawCues from './word-cues.json';
 import spectrum from './spectrum.json';
 import {GLYPHS} from './pixel-font.ts';
-
-export type Format = 'landscape' | 'portrait';
-export type Word = {text:string; start:number; end:number; startSample?:number; endSampleExclusive?:number; requiresReview?:boolean};
-export type Cue = {id:string; text:string; start:number; end:number; uncertain?:boolean; words:Word[]};
-export const cityCues = rawCues as Cue[];
-type Ctx = CanvasRenderingContext2D;
-type Box = {x:number;y:number;w:number;h:number};
-type Host = 'airship'|'tower'|'shop'|'train';
+import {paintPedestrian} from './pedestrians.ts';
+import {cityCues,cityGeometry,cityCamera,cueHost,getCityCue,shopSigns,lyricSurfaces,surfacePlacements,trainPose,airshipPose,catWindow,type Format,type Cue,type Box} from './city-choreography.ts';
+export {cityCues,cityGeometry,cityCamera,cueHost,getCityCue,lyricLayout,lyricPose,lyricSurfaces,trainPose,airshipPose} from './city-choreography.ts';
+export type {Format,Cue,Word} from './city-choreography.ts';
+type Ctx=CanvasRenderingContext2D;
+type G=ReturnType<typeof cityGeometry>;
 const backgrounds:Partial<Record<Format,CanvasImageSource>>={};
-let airshipImage:CanvasImageSource|undefined;
-let trainImage:CanvasImageSource|undefined;
-let spriteImage:CanvasImageSource|undefined;
+let airshipImage:CanvasImageSource|undefined,trainImage:CanvasImageSource|undefined,spriteImage:CanvasImageSource|undefined;
 export function setCityBackground(format:Format,image:CanvasImageSource){backgrounds[format]=image;}
 export function setCityAirship(image:CanvasImageSource){airshipImage=image;}
 export function setCityTrain(image:CanvasImageSource){trainImage=image;}
@@ -33,146 +28,48 @@ function text(c:Ctx,value:string,x:number,y:number,unit:number,color:string,a=1)
   }
 }
 function centered(c:Ctx,value:string,b:Box,u:number,color:string,a=1){text(c,value,b.x+(b.w-(value.length*6-1)*u)/2,b.y+(b.h-7*u)/2,u,color,a);}
-export function getCityCue(t:number):Cue|undefined{
-  // A new line's pre-roll must never steal the previous line's held final vowel.
-  const singing=cityCues.find(q=>t>=q.start&&t<q.end);if(singing)return singing;
-  return cityCues.find(q=>t>=q.start-.55&&t<q.start)??cityCues.find(q=>t>=q.end&&t<q.end+.7);
-}
-const HOSTS:Record<string,Host>={
-  'V1-01':'shop','V1-02':'tower','V1-03':'tower','V1-04':'airship','V1-05':'train','V1-06':'train',
-  'V1-07':'airship','V1-08':'airship','CH-01':'airship','CH-02':'airship','CH-03':'tower','CH-04':'tower',
-  'CH-05':'airship','CH-06':'airship','V2-01':'shop','V2-02':'shop','V2-03':'tower','V2-04':'train',
-};
-export const cueHost=(cue:Cue|undefined):Host|undefined=>cue?HOSTS[cue.id]??'airship':undefined;
+
 function wordStart(id:string,word:string,fallback:number){return cityCues.find(q=>q.id===id)?.words.find(w=>w.text.toLowerCase().replace(/[^a-z]/g,'')===word)?.start??fallback;}
 function pulse(t:number,start:number,length:number){return smooth((t-start)/.18)*(1-smooth((t-start-length)/1.1));}
 function bandAt(frame:number){return spectrum.values[Math.min(spectrum.values.length-1,Math.max(0,frame))]??Array<number>(12).fill(0);}
-export function cityGeometry(format:Format){
-  const portrait=format==='portrait';return {portrait,w:portrait?360:640,h:portrait?640:360,
-    horizon:portrait?374:195,shopY:portrait?450:245,roadY:portrait?551:315,
-    tower:{x:portrait?68:231,y:portrait?300:157,w:portrait?224:177,h:portrait?41:28},
-    // Airship geometry names the actual LED skin, not its entire silhouette.
-    airship:{x:portrait?26:141,y:portrait?210:77,w:portrait?308:356,h:portrait?44:51},
-    shop:{x:portrait?68:231,y:portrait?300:157,w:portrait?224:177,h:portrait?41:28},
-    train:{x:portrait?93:233,y:portrait?308:129,w:202,h:34},
-  };
+function signage(c:Ctx,g:G,t:number,cue:Cue|undefined,bands:number[]){
+ const format=g.portrait?'portrait':'landscape';
+ for(const b of shopSigns(format))centered(c,b.name,b,b.w<26?.5:1,b.color,.64);
+ if(cue?.id==='V2-03')R(c,g.tower.x,g.tower.y,g.tower.w,g.tower.h,'#080e21');else centered(c,'SPINWARD',g.tower,2,C.pink,.58);
+ const panels=g.portrait?[{x:0,y:32,w:16,h:48},{x:322,y:70,w:17,h:87}]:[{x:19,y:48,w:45,h:45},{x:573,y:31,w:21,h:75}];
+ panels.forEach((p,side)=>{for(let k=0;k<6;k++){const v=bands[k+side*6]??0,bw=Math.max(1,Math.floor((p.w-4)/6)-1),bx=p.x+2+k*(p.w-4)/6;
+ for(let row=0;row<12;row++)R(c,bx,p.y+p.h-3-row*(p.h-6)/12,bw,Math.max(1,(p.h-6)/12-1),row<v?(side?C.teal:C.pink):'#1b2344',row<v?.78:.4);}});
+ for(let i=0;i<12;i++)R(c,g.tower.x+i*g.tower.w/12,g.tower.y+g.tower.h+3,Math.floor(g.tower.w/12)-2,1,(bands[i]??0)>5?C.teal:C.violet,.55);
 }
-type G=ReturnType<typeof cityGeometry>;
-type WordPlacement={word:string;index:number;x:number;y:number};
-const LINE_BREAKS:Record<string,number[]>={
-  'V1-01':[2],'V1-02':[2],'V1-03':[2],'V1-04':[2],
-  'CH-02':[3],'CH-06':[4],'V2-01':[3],'V2-02':[2],'V2-03':[2],
-};
-export function lyricLayout(cue:Cue,box:Box,format:Format,host:Host):{unit:number;placements:WordPlacement[];height:number}{
-  const maxUnit=host==='airship'||host==='train'||format==='portrait'?2:1;
-  for(let unit=maxUnit;unit>=1;unit--){
-    const max=Math.floor((box.w-8)/(unit*6));
-    const words=cue.text.toUpperCase().split(/\s+/);const rows:{word:string;index:number}[][]=[[]];let count=0;
-    words.forEach((word,index)=>{if(count&&(LINE_BREAKS[cue.id]?.includes(index)||count+word.length+1>max)){rows.push([]);count=0;}rows[rows.length-1]?.push({word,index});count+=word.length+(count?1:0);});
-    const height=rows.length*unit*9-unit*2;if(height>box.h-2&&unit>1)continue;
-    const placements:WordPlacement[]=[];const startY=Math.round(box.y+(box.h-height)/2);
-    rows.forEach((row,ri)=>{const chars=row.reduce((n,w)=>n+w.word.length,0)+Math.max(0,row.length-1);let x=Math.round(box.x+(box.w-chars*unit*6+unit)/2);
-      row.forEach(w=>{placements.push({...w,x,y:startY+ri*unit*9});x+=(w.word.length+1)*unit*6;});});
-    return {unit,placements,height};
+function airship(c:Ctx,g:G,t:number){
+ if(!airshipImage)return;const p=airshipPose(t,g.portrait?'portrait':'landscape');if(!p.visible)return;
+ c.drawImage(airshipImage,p.x,p.y,p.width,p.height);if(cueHost(getCityCue(t))!=='airship')centered(c,'NIGHT SERVICE',p.box,1,C.teal,.7);
+}
+function trains(c:Ctx,g:G,t:number){
+ if(!trainImage)return;const p=trainPose(t,g.portrait?'portrait':'landscape');if(!p.visible)return;
+ for(let i=p.count-1;i>=0;i--){const x=p.x-i*p.spacing;
+  if(i===0)c.drawImage(trainImage,x,p.y,p.width,p.height);else c.drawImage(trainImage,0,0,1820,724,x,p.y,p.width,p.height);
+  const b=i===0?p.box:{x:x+p.width*.341,y:p.y+p.height*.37,w:118,h:10};
+  if(i===0){R(c,b.x-1,b.y-1,b.w+2,b.h+2,'#123c55');R(c,b.x,b.y,b.w,b.h,'#091b2c');R(c,b.x,b.y,b.w,1,C.teal,.5);R(c,b.x,b.y+b.h-1,b.w,1,C.teal,.4);}
+  if(i>0||cueHost(getCityCue(t))!=='train')centered(c,i===0?'AXIS / NIGHT LINE':'AXIS',b,1,C.teal,.6);
+  if(i>0){R(c,x+p.width-1,g.railY-7,p.spacing-p.width+3,3,'#26324c');R(c,x+p.width,g.railY-5,p.spacing-p.width+2,1,C.teal,.3);}
+ }
+ // The existing viaduct foreground beam places the wheels on a real continuous rail.
+ R(c,0,g.railY,g.w,1,'#495b77',.55);
+}
+function lyricSigns(c:Ctx,g:G,q:Cue|undefined,t:number){
+ if(!q)return;const format=g.portrait?'portrait':'landscape';
+ const emission=smooth((t-q.start+.55)/.35)*(1-smooth((t-q.end-.2)/.7));
+ for(const surface of lyricSurfaces(q,t,format)){
+  const b=surface.box;
+  // Paint into the material of each existing display; no floating caption carrier.
+  R(c,b.x,b.y,b.w,b.h,surface.name.startsWith('shop')?'#131026':'#080e21');
+  for(const p of surfacePlacements(q,surface)){const word=q.words[p.index],active=!!word&&t>=word.start&&t<word.end,col=active?C.cream:C.white;
+   if(p.vertical){for(let i=0;i<p.word.length;i++)text(c,p.word[i]!,p.x,p.y+i*8*p.unit,p.unit,col,(active?1:.82)*emission);}
+   else {if(active){text(c,p.word,p.x-.5,p.y,p.unit,C.warm,.08);text(c,p.word,p.x+.5,p.y,p.unit,C.warm,.08);}text(c,p.word,p.x,p.y,p.unit,col,(active?1:.84)*emission);}
   }
-  throw new Error(`Lyric layout failed for ${cue.id}`);
+ }
 }
-function lyrics(c:Ctx,cue:Cue,b:Box,format:Format,host:Host,t:number){
-  const layout=lyricLayout(cue,b,format,host);
-  for(const p of layout.placements){const w=cue.words[p.index],active=w!==undefined&&t>=w.start&&t<w.end;
-    text(c,p.word,p.x,p.y+1,layout.unit,C.ink,.8);
-    if(active){text(c,p.word,p.x-1,p.y,layout.unit,C.warm,.12);text(c,p.word,p.x+1,p.y,layout.unit,C.warm,.12);}
-    text(c,p.word,p.x,p.y,layout.unit,active?C.cream:C.white,active?1:.86);
-  }
-}
-
-// Shop lettering is authored separately so the painted scene has legible native names.
-function shopSigns(g:G){return g.portrait?[
-  {x:11,y:450,w:54,h:15,name:'MONSOON',color:C.pink},{x:88,y:450,w:42,h:15,name:'LAUNDRY',color:C.teal},
-  {x:152,y:450,w:48,h:15,name:'ARCADE',color:C.pink},{x:222,y:450,w:46,h:15,name:'LANTERN',color:C.warm},
-  {x:293,y:450,w:49,h:15,name:'GLASS',color:C.teal},
-]:[
-  {x:0,y:248,w:46,h:9,name:'MONSOON',color:C.pink},{x:64,y:249,w:47,h:8,name:'LAUNDRY',color:C.teal},
-  {x:134,y:252,w:17,h:6,name:'AXIS',color:C.pink},{x:178,y:248,w:55,h:9,name:'NOODLES',color:C.warm},
-  {x:274,y:246,w:64,h:11,name:'LANTERN',color:C.pink},{x:375,y:249,w:36,h:8,name:'GLASS',color:C.teal},
-  {x:434,y:249,w:47,h:8,name:'ARCADE',color:C.violet},{x:503,y:249,w:47,h:8,name:'YELLOW',color:C.warm},
-  {x:568,y:249,w:23,h:8,name:'CAT',color:C.teal},
-];}
-function nativeSigns(c:Ctx,g:G,t:number,cue:Cue|undefined){
-  const signs=shopSigns(g);for(const b of signs){if(b.w<26)centered(c,b.name,b,.5,b.color,.9);else centered(c,b.name,b,1,b.color,.85);}
-  // Word echoes illuminate the actual business connected to the sung image.
-  const associations:Record<string,number>={'neon':0,'gutter':0,'steam':g.portrait?0:3,'noodle':g.portrait?0:3,'stalls':g.portrait?0:3,'window':g.portrait?3:4,'lantern':g.portrait?3:4,'glass':g.portrait?4:5,'cat':g.portrait?4:8};
-  const current=cue?.words.find(w=>t>=w.start&&t<w.end);const slot=current?associations[current.text.toLowerCase().replace(/[^a-z]/g,'')]:undefined;
-  if(slot!==undefined){const b=signs[slot];if(b){R(c,b.x,b.y,b.w,b.h,C.ink,.87);centered(c,current?.text??b.name,b,b.w<26?.5:1,C.cream);}}
-}
-function billboards(c:Ctx,g:G,cue:Cue|undefined,t:number,bands:number[]){
-  const format=g.portrait?'portrait':'landscape',b=g.tower;
-  const host=cueHost(cue);
-  if(cue&&(host==='tower'||host==='shop')){R(c,b.x,b.y,b.w,b.h,'#090d23',.95);lyrics(c,cue,b,format,host,t);}
-  else {
-    centered(c,'SPINWARD',b,g.portrait?2:2,C.pink,.72);
-    // Instrumental title belongs to the central municipal sign.
-    if(g.portrait)text(c,'NIGHT SERVICE / 07',b.x+62,b.y+31,.5,C.teal,.75);
-  }
-  // Two permanent music displays, precisely inside the empty tower sign skins.
-  const panels=g.portrait?[{x:0,y:32,w:16,h:48},{x:322,y:70,w:17,h:87}]:[{x:19,y:48,w:45,h:45},{x:573,y:31,w:21,h:75}];
-  panels.forEach((p,side)=>{for(let k=0;k<6;k++){
-    const v=bands[k+side*6]??0;const bw=Math.max(1,Math.floor((p.w-4)/6)-1),bx=p.x+2+k*(p.w-4)/6;
-    for(let row=0;row<12;row++){const yy=p.y+p.h-3-row*(p.h-6)/12;R(c,bx,yy,bw,Math.max(1,(p.h-6)/12-1),row<v?(side?C.teal:C.pink):'#1b2344',row<v?.85:.45);}
-  }});
-  // Low, fixed LED strip under the civic billboard follows the same measured bands.
-  for(let i=0;i<12;i++)R(c,b.x+i*b.w/12,b.y+b.h+3,Math.floor(b.w/12)-2,1,(bands[i]??0)>5?C.teal:C.violet,.55);
-}
-function flightGroup(t:number):{start:number;end:number}|undefined{
-  const flights:{start:number;end:number}[]=[];
-  for(const q of cityCues.filter(c=>cueHost(c)==='airship')){const prev=flights[flights.length-1];if(prev&&q.start-prev.end<7)prev.end=q.end;else flights.push({start:q.start,end:q.end});}
-  return flights.find(f=>t>f.start-3&&t<f.end+3);
-}
-function airship(c:Ctx,g:G,cue:Cue|undefined,t:number){
-  if(!airshipImage)return;
-  const flight=flightGroup(t);const active=cue&&cueHost(cue)==='airship';
-  if(flight&&(!cue||active)){
-    const width=g.portrait?540:624,height=width/3,x=(g.w-width)/2,y=g.portrait?146:3;
-    const enter=1-smooth((t-(flight.start-3))/2.3),leave=smooth((t-(flight.end+.8))/2.2);
-    const shift=enter*(g.w+width)-leave*(g.w+width);
-    c.save();c.translate(Math.round(shift),0);c.drawImage(airshipImage,x,y,width,height);
-    const b=g.airship;
-    if(active)lyrics(c,cue,b,g.portrait?'portrait':'landscape','airship',t);
-    else centered(c,'SPINWARD / NIGHT SERVICE',b,g.portrait?1:1,C.teal,.75);
-    // Engine light reflected in rain; the luminous core remains part of the sprite.
-    for(const px of [x+width*.23,x+width*.49,x+width*.77])for(let j=0;j<3;j++)R(c,px-3-j,y+height*.89+j*3,7+j*2,2,C.teal,(.05+.015*Math.sin(t*13))*(3-j));
-    c.restore();
-  } else {
-    const phase=(t%30.9)/30.9;const x=g.w+145-phase*(g.w+290),y=g.portrait?174:47;const w=g.portrait?180:220;
-    c.drawImage(airshipImage,Math.round(x),y,w,w/3);
-    centered(c,'NIGHT SERVICE',{x:x+w*.216,y:y+w*.119,w:w*.57,h:w*.08},1,C.teal,.7);
-  }
-}
-function trainGroup(t:number){const list=cityCues.filter(q=>cueHost(q)==='train');return list.find(q=>t>q.start-2.5&&t<q.end+2.4);}
-function trainCar(c:Ctx,x:number,y:number,w:number,h:number,label:string,tail=false){
-  R(c,x+4,y,w-8,h,C.ink);R(c,x,y+5,w,h-10,C.ink);R(c,x+4,y+2,w-8,h-5,C.rim);R(c,x+5,y+4,w-10,h-9,C.steel);
-  R(c,x+9,y+3,w-18,1,C.teal,.9);R(c,x+7,y+h-8,w-14,2,C.pink,.8);R(c,x+7,y+h-5,w-14,2,'#152647');
-  for(let k=0;k<Math.floor(w/24);k++){const xx=x+13+k*24;R(c,xx,y+6,17,h-18,C.ink);R(c,xx+1,y+7,15,h-20,k%3===0?'#56536b':'#32556f');R(c,xx+4,y+9,3,5,C.warm,.6);R(c,xx+6,y+14,5,3,C.ink);}
-  for(const xx of [x+15,x+w-28]){R(c,xx,y+h-4,14,5,C.ink);R(c,xx+3,y+h-2,8,2,C.rim);}
-  R(c,x+(tail?1:w-4),y+h-13,3,3,tail?C.pink:C.cream);
-  if(label)text(c,label,x+12,y+h-7,.5,C.cyan,.8);
-}
-function trains(c:Ctx,g:G,cue:Cue|undefined,t:number){
-  if(!trainImage)return;
-  const stopped=trainGroup(t),active=cue&&cueHost(cue)==='train';
-  if(stopped&&(!cue||active)){
-    const b=g.train,enter=1-smooth((t-stopped.start+2.5)/1.9),leave=smooth((t-stopped.end-.8)/1.6),shift=-enter*(g.w+410)+leave*(g.w+410);
-    c.save();c.translate(Math.round(shift),0);
-    c.drawImage(trainImage,b.x-116.85,b.y-47.15,410,410/3);
-    if(active)lyrics(c,cue,b,g.portrait?'portrait':'landscape','train',t);else centered(c,'AXIS / LAST SERVICE',b,1,C.cyan,.8);
-    c.restore();
-  }else {
-    // The far rail sits below the sign; passing trains never mask a sung word.
-    const speed=g.portrait?70:105,x=(t*speed)%(g.w+540)-540,y=g.horizon-6;
-    for(let car=0;car<4;car++){const xx=Math.round(x+car*134);c.drawImage(trainImage,xx,y,139,139/3);centered(c,'AXIS',{x:xx+40,y:y+16,w:68,h:12},1,C.teal,.65);}
-  }
-}
-
 function car(c:Ctx,x:number,y:number,s:number,color:string,direction:number,taxi=false){
   if(!spriteImage)return;
   c.save();c.translate(Math.round(x),Math.round(y));c.scale(s*direction,s);
@@ -184,39 +81,23 @@ function car(c:Ctx,x:number,y:number,s:number,color:string,direction:number,taxi
   for(let j=0;j<5;j++)R(c,53+j*3,7-j,4,4+j*2,C.cream,.065-j*.01);
   c.restore();
 }
-
-function person(c:Ctx,x:number,y:number,s:number,color:string,phase:number,umbrella=true){
-  if(spriteImage){
-    const violet=color===C.violet||color===C.pink;
-    const sx=violet?162:729,sw=violet?366:358;
-    c.drawImage(spriteImage,sx,646,sw,576,Math.round(x),y+Math.sin(phase*2)*.15,19*s,30*s);
-    return;
-  }
-  c.save();c.translate(Math.round(x),Math.round(y));c.scale(s,s);
-  R(c,7,7,4,4,'#c3a0a0');R(c,6,7,6,2,C.ink);R(c,5,11,8,10,C.ink);R(c,6,12,5,7,'#354055');R(c,4,14,2,6,C.ink);R(c,12,13,2,7,C.ink);
-  const step=Math.floor(phase)%4;R(c,6-(step===1?1:0),21,2,6,C.ink);R(c,10+(step===3?1:0),21,2,6,C.ink);R(c,4-(step===1?1:0),26,4,1,C.rim);R(c,10,26,4,1,C.rim);
-  if(umbrella){R(c,8,2,1,16,C.rim);R(c,6,0,6,1,color);R(c,3,1,12,2,color);R(c,1,3,16,2,color);R(c,-1,5,20,1,color);R(c,7,1,1,5,C.cream,.35);R(c,2,5,3,1,C.ink,.5);R(c,12,5,3,1,C.ink,.5);}
-  c.restore();
-}
 function street(c:Ctx,g:G,t:number){
-  const road=g.roadY;
-  // Thin moving reflection fragments preserve the painted wet asphalt.
-  for(let i=0;i<75;i++){const phase=(t*.23+seed(i*11))%1,x=seed(i*17)*g.w,y=road+phase*(g.h-road);R(c,x+Math.sin(t*1.5+i)*2,y,2+seed(i+7)*12,1,i%3?C.teal:C.pink,.03+.055*Math.sin(phase*Math.PI));}
-  const taxi=wordStart('V2-02','taxi',169.56),special=t>=taxi-.5&&t<taxi+7;
-  car(c,g.w+65-((t*57+120)%(g.w+130)),road+2,.85,C.warm,-1,true);
-  car(c,(t*83+240)%(g.w+180)-90,road+21,1.15,'#414873',1);
-  if(special){const xx=clamp((t-taxi+.5)/6.5)*(g.w+130)-70;car(c,xx,road+9,1.12,C.warm,1,true);}
-  for(let i=0;i<(g.portrait?5:9);i++){const direction=i%2?1:-1,x=(seed(i+11)*g.w+t*direction*5+g.w*30)%(g.w+35)-18;person(c,x,road-25,.8,[C.teal,C.violet,C.pink,C.warm][i%4]??C.pink,t*2.3+i,true);}
-  const cycle=t%30.9;
-  if(spriteImage){
-    if(cycle>2&&cycle<11){const x=g.w-(cycle-2)*(g.w+90)/9,y=g.h-71+Math.sin(t*5)*.35;c.drawImage(spriteImage,162,646,366,576,x,y,47,74);}
-    if(cycle>17&&cycle<25){const x=(cycle-17)*(g.w+90)/8-50,y=g.h-75+Math.sin(t*5)*.35;c.drawImage(spriteImage,729,646,358,576,x,y,49,79);}
-  }
-
+ if(!spriteImage)return;const road=g.roadY;
+ for(let i=0;i<110;i++){const phase=(t*.36+seed(i*11))%1,x=seed(i*17)*g.w,y=road+phase*(g.h-road);R(c,x+Math.sin(t*2+i)*2,y,2+seed(i+7)*15,1,i%3?C.teal:C.pink,.04+.09*Math.sin(phase*Math.PI));}
+ const taxi=wordStart('V2-02','taxi',169.56),special=t>=taxi-.5&&t<taxi+7;
+ car(c,g.w+65-((t*43+120)%(g.w+130)),road+2,.85,C.warm,-1,true);
+ car(c,(t*58+240)%(g.w+180)-90,road+21,1.15,'#414873',1);
+ if(special){const xx=clamp((t-taxi+.5)/6.5)*(g.w+130)-70;car(c,xx,road+9,1.12,C.warm,1,true);}
+ for(let i=0;i<(g.portrait?5:8);i++){const direction=i%2?1:-1,speed=6.2+(i%3)*1.1,x=(seed(i+11)*g.w+t*direction*speed+g.w*30)%(g.w+45)-22;
+ paintPedestrian(c,spriteImage,{x,footY:road-2+(i%2),height:25+(i%3)*2,direction,time:t,speed,phase:seed(i+41),variant:i%2?'violet':'teal'});}
+ // Foreground walkers cross entirely through the frame; gait cadence follows actual travel.
+ for(let i=0;i<2;i++){const height=g.portrait?65:58,speed=g.portrait?28:37,period=(g.w+140)/speed+9,phaseTime=(t+i*period*.51)%period,travel=phaseTime*speed;
+  if(travel<g.w+140){const direction=i?1:-1,x=i?travel-70:g.w+70-travel;
+  paintPedestrian(c,spriteImage,{x,footY:g.h-5,height,direction,time:t,speed,phase:i*.37,variant:i?'violet':'teal'});}}
 }
 function cat(c:Ctx,g:G,t:number){
   if(!spriteImage)return;
-  const onset=wordStart('V2-03','cat',176.14),awake=pulse(t,onset,11),x=g.portrait?299:417,y=g.portrait?293:148,w=g.portrait?40:43,h=w*1.27;
+  const onset=wordStart('V2-03','cat',176.14),awake=pulse(t,onset,11),{x,y,w,h}=catWindow(g.portrait?'portrait':'landscape');
   c.drawImage(spriteImage,713,35,446,567,x,y,w,h);
   // The apartment shutter rises on the sung CAT, revealing the resident.
   const shutter=(1-awake)*h*.515;
@@ -228,7 +109,6 @@ function cat(c:Ctx,g:G,t:number){
   if(awake>.1){R(c,ex,ey,w*.025,.5,C.cream,.8);R(c,ex+w*.05,ey,w*.025,.5,C.cream,.8);}
   const yellow=pulse(t,wordStart('V2-03','yellow',177.56),4);R(c,x+w*.24,y+h*.76,w*.55,.6,C.cream,yellow*.6);
 }
-
 function semantics(c:Ctx,g:G,t:number){
   const steam=wordStart('V2-01','steam',163.78),density=.35+pulse(t,steam,8)*.65;
   const sx=g.portrait?41:201,sy=g.portrait?497:283;
@@ -247,34 +127,33 @@ function semantics(c:Ctx,g:G,t:number){
   if(dt>=0&&dt<.7){const a=(1-dt/.7)*.8;const p=[[g.w*.66,0],[g.w*.61,24],[g.w*.65,24],[g.w*.58,57],[g.w*.62,55],[g.w*.55,93]];
     for(let i=1;i<p.length;i++){const u=p[i-1],v=p[i];if(u&&v)line(c,u[0]??0,u[1]??0,v[0]??0,v[1]??0,C.cyan,2,a);}R(c,0,0,g.w,g.h,C.cyan,a*.055);
   }else if(ambient)R(c,0,0,g.w,g.h,C.cyan,ambient);
+}function flyingTraffic(c:Ctx,g:G,t:number){
+ // Clip distant traffic to the open sky canyon so buildings remain foreground occluders.
+ c.save();c.beginPath();
+ if(g.portrait){c.moveTo(70,25);c.lineTo(290,25);c.lineTo(284,278);c.lineTo(88,278);}else{c.moveTo(88,18);c.lineTo(559,18);c.lineTo(534,148);c.lineTo(110,148);}c.closePath();c.clip();
+ for(let i=0;i<5;i++){const direction=i%2?1:-1,speed=36+i*9,period=(g.w+110)/speed+5,cycle=(t+i*7.13)%period,x=direction===1?cycle*speed-55:g.w+55-cycle*speed,y=(g.portrait?62:25)+i*(g.portrait?40:24),scale=i<2?.55:i<4?.8:1;
+  c.save();c.translate(x,y+Math.sin(t*.65+i)*.7);c.scale(direction*scale,scale);
+  // The detailed taxi body becomes a hover conversion with wheel-free crop and lift nacelles.
+  if(spriteImage)c.drawImage(spriteImage,27,201,589,210,0,0,32,11.4);
+  R(c,3,10,26,2,'#1b233d');R(c,4,10,6,1,'#728498');R(c,23,10,6,1,'#728498');R(c,5,12,5,1,C.teal,.9);R(c,23,12,5,1,C.teal,.9);R(c,30,7,2,1,C.cream,.8);
+  for(let k=0;k<5;k++){R(c,-3-k*5,9,5,1,i%2?C.pink:C.teal,.28-k*.045);R(c,4-k,13+k*2,8+k*2,1,C.teal,.07-k*.01);}c.restore();
+ }
+ c.restore();
 }
-function rain(c:Ctx,g:G,t:number,cue:Cue|undefined){
-  const monsoon=pulse(t,wordStart('CH-02','monsoon',99.0),7),host=cueHost(cue),safe=host?g[host]:undefined;
-  for(let i=0;i<(g.portrait?430:540);i++){const depth=i%5,speed=depth<2?32:depth<4?62:112,y=(seed(i*11+7)*g.h+t*speed)%(g.h+22)-12,x=(seed(i*19+31)*g.w-y*.15+t*2+g.w*10)%g.w;
-    if(safe&&x>safe.x-3&&x<safe.x+safe.w+3&&y>safe.y-3&&y<safe.y+safe.h+3)continue;
-    line(c,x,y,x-1,y+(depth<2?2:depth<4?4:7),depth===4?C.cyan:'#6091bb',1,(depth===4?.24:.1)+monsoon*.09);
-  }
-  for(let i=0;i<36;i++){const p=(t*1.4+seed(i*17))%1,x=seed(i*13)*g.w,y=g.roadY+3+seed(i*21)*(g.h-g.roadY-6);if(p<.17){R(c,x-2,y,5,1,C.teal,.3);R(c,x,y-1,1,1,C.cyan,.3);}}
-}
-export function cityCamera(t:number,format:Format){
-  const g=cityGeometry(format);let selected:Cue|undefined;
-  for(const q of cityCues){if(t>=q.start-1.8&&t<=q.end+1.6){selected=q;if(t>=q.start&&t<q.end)break;}}
-  if(!selected)return {zoom:1,x:g.w/2,y:g.h/2};
-  const host=cueHost(selected),catShot=selected.id==='V2-03';
-  const inAmount=smooth((t-selected.start+1.8)/1.25),outAmount=1-smooth((t-selected.end-.5)/1.1),weight=inAmount*outAmount;
-  let targetZoom=1,targetX=g.w/2,targetY=g.h/2;
-  if(host==='tower'){targetZoom=g.portrait?1.32:catShot?2.3:2.55;targetX=catShot?(g.portrait?195:346):g.w/2;targetY=g.portrait?328:176;}
-  if(host==='shop'){targetZoom=g.portrait?1.1:1.75;targetY=g.portrait?393:224;}
-  if(host==='train'){targetZoom=g.portrait?1.32:2.25;targetY=g.portrait?345:165;}
-  if(host==='airship'){targetZoom=g.portrait?1:1.08;targetY=g.portrait?320:164;}
-  const zoom=1+(targetZoom-1)*weight;
-  return {zoom,x:clamp(g.w/2+(targetX-g.w/2)*weight,g.w/2/zoom,g.w-g.w/2/zoom),y:clamp(g.h/2+(targetY-g.h/2)*weight,g.h/2/zoom,g.h-g.h/2/zoom)};
+function rain(c:Ctx,g:G,t:number,cue:Cue|undefined,near=false){
+ const monsoon=pulse(t,wordStart('CH-02','monsoon',99.0),8),format=g.portrait?'portrait':'landscape',safe=cue?lyricSurfaces(cue,t,format).map(s=>s.box):[];
+ const count=near?(g.portrait?270:360):(g.portrait?780:1050);
+ for(let i=0;i<count;i++){const id=i+(near?2300:0),depth=near?3+i%2:i%3,speed=near?140+depth*21:65+depth*21,y=(seed(id*11+7)*g.h+t*speed)%(g.h+30)-18,x=(seed(id*19+31)*g.w-y*.19+t*4+g.w*20)%g.w;
+  if(safe.some(b=>x>b.x-2&&x<b.x+b.w+2&&y>b.y-2&&y<b.y+b.h+3))continue;
+  const length=near?9+(i%5):3+depth*2;line(c,x,y,x-2-(near?1:0),y+length,near?C.cyan:'#719bc0',1,(near?.19:.09)+depth*.035+monsoon*.06);
+ }
+ if(near)for(let i=0;i<95;i++){const p=(t*2.7+seed(i*17))%1,x=seed(i*13)*g.w,y=g.roadY+2+seed(i*21)*(g.h-g.roadY-4);if(p<.24){const r=1+p*15;R(c,x-r,y,r*2,1,C.teal,(.24-p)*1.1);R(c,x,y-1-p*8,1,1,C.cyan,(.24-p)*1.6);}}
 }
 export function paintCity(c:Ctx,frame:number,format:Format){
-  const g=cityGeometry(format),t=Math.max(0,frame/60),cue=getCityCue(t),bands=bandAt(frame),camera=cityCamera(t,format),background=backgrounds[format];
-  if(!background||!airshipImage||!trainImage||!spriteImage)throw new Error('City artwork must be decoded before painting');
-  c.save();c.imageSmoothingEnabled=false;c.clearRect(0,0,c.canvas.width,c.canvas.height);c.scale(c.canvas.width/g.w,c.canvas.height/g.h);
-  c.translate(g.w/2,g.h/2);c.scale(camera.zoom,camera.zoom);c.translate(-camera.x,-camera.y);
-  c.drawImage(background,0,0,g.w,g.h);nativeSigns(c,g,t,cue);billboards(c,g,cue,t,bands);semantics(c,g,t);cat(c,g,t);airship(c,g,cue,t);trains(c,g,cue,t);street(c,g,t);rain(c,g,t,cue);
-  c.restore();
+ const g=cityGeometry(format),t=Math.max(0,frame/60),cue=getCityCue(t),bands=bandAt(frame),camera=cityCamera(t,format),background=backgrounds[format];
+ if(!background||!airshipImage||!trainImage||!spriteImage)throw new Error('City artwork must be decoded before painting');
+ c.save();c.imageSmoothingEnabled=false;c.clearRect(0,0,c.canvas.width,c.canvas.height);c.scale(c.canvas.width/g.w,c.canvas.height/g.h);
+ c.translate(g.w/2,g.h/2);c.scale(camera.zoom,camera.zoom);c.translate(-camera.x,-camera.y);
+ c.drawImage(background,0,0,g.w,g.h);flyingTraffic(c,g,t);rain(c,g,t,cue,false);signage(c,g,t,cue,bands);semantics(c,g,t);airship(c,g,t);cat(c,g,t);trains(c,g,t);street(c,g,t);lyricSigns(c,g,cue,t);rain(c,g,t,cue,true);
+ c.restore();
 }
