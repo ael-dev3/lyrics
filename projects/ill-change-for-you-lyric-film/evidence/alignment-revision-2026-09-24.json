@@ -1,0 +1,3185 @@
+{
+  "status": "INDEPENDENT_ACOUSTIC_PROPOSAL_NOT_LISTENING_CERTIFIED",
+  "sourceSha256": "5af79acdcb8d708a6d53f901dee814f2a8038e2c775e806635e4286a57d01309",
+  "sampleRate": 44100,
+  "totalWords": 118,
+  "changedWords": 72,
+  "method": "Independent review of exact 16 kHz HTDemucs vocal stem spectrogram, four CTC paths and bounded attention candidates; selected intervals are not treated as ground truth. Starts are generally set near coherent CTC phoneme onsets, except sustained tokens where CTC lands late; word releases are extended only when coherent CTC and spectral structure support them. Distinct silence gaps remain unhighlighted.",
+  "limitations": [
+    "A spectrogram cannot certify lexical identity.",
+    "ASR/CTC models share errors; confidence is qualitative, not probabilistic.",
+    "No human slow listening performed by this agent; user must review ambiguous wording and held-token boundaries in playable preview."
+  ],
+  "words": [
+    {
+      "id": "L01-W01",
+      "lineId": "L01",
+      "text": "How",
+      "old": [
+        8.28,
+        9.33
+      ],
+      "proposed": [
+        8.28,
+        9.33
+      ],
+      "ctcMedian": [
+        8.306,
+        9.203
+      ],
+      "ctcRange": [
+        8.286,
+        8.347,
+        8.669,
+        10.059
+      ],
+      "reasons": [],
+      "uncertainty": "high"
+    },
+    {
+      "id": "L02-W01",
+      "lineId": "L02",
+      "text": "Do",
+      "old": [
+        12.1,
+        12.26
+      ],
+      "proposed": [
+        12.06,
+        12.39
+      ],
+      "ctcMedian": [
+        12.063,
+        12.224
+      ],
+      "ctcRange": [
+        12.043,
+        12.063,
+        12.184,
+        12.284
+      ],
+      "reasons": [
+        "manual_spectral_and_model_review",
+        "Raw greedy CTC D12.06 O12.25 then word blank12.37; old Do end12.26 clips its vowel."
+      ],
+      "uncertainty": "normal"
+    },
+    {
+      "id": "L02-W02",
+      "lineId": "L02",
+      "text": "I",
+      "old": [
+        12.26,
+        12.66
+      ],
+      "proposed": [
+        12.55,
+        12.65
+      ],
+      "ctcMedian": [
+        12.626,
+        12.646
+      ],
+      "ctcRange": [
+        12.525,
+        12.646,
+        12.545,
+        12.666
+      ],
+      "reasons": [
+        "manual_spectral_and_model_review",
+        "After Do blank, raw greedy I vowel peaks12.65 before let L12.69; old start12.26 overlaps Do.",
+        "overlap_clamp"
+      ],
+      "uncertainty": "normal"
+    },
+    {
+      "id": "L02-W03",
+      "lineId": "L02",
+      "text": "let",
+      "old": [
+        12.66,
+        13.16
+      ],
+      "proposed": [
+        12.66,
+        13.16
+      ],
+      "ctcMedian": [
+        12.766,
+        13.138
+      ],
+      "ctcRange": [
+        12.746,
+        12.766,
+        13.128,
+        13.148
+      ],
+      "reasons": [],
+      "uncertainty": "normal"
+    },
+    {
+      "id": "L02-W04",
+      "lineId": "L02",
+      "text": "our",
+      "old": [
+        13.16,
+        13.7
+      ],
+      "proposed": [
+        13.16,
+        13.7
+      ],
+      "ctcMedian": [
+        13.399,
+        13.65
+      ],
+      "ctcRange": [
+        13.248,
+        13.57,
+        13.65,
+        13.69
+      ],
+      "reasons": [],
+      "uncertainty": "normal"
+    },
+    {
+      "id": "L02-W05",
+      "lineId": "L02",
+      "text": "love",
+      "old": [
+        13.7,
+        14.38
+      ],
+      "proposed": [
+        13.7,
+        14.38
+      ],
+      "ctcMedian": [
+        13.801,
+        14.413
+      ],
+      "ctcRange": [
+        13.791,
+        13.811,
+        14.393,
+        14.453
+      ],
+      "reasons": [],
+      "uncertainty": "normal"
+    },
+    {
+      "id": "L02-W06",
+      "lineId": "L02",
+      "text": "die",
+      "old": [
+        14.48,
+        15.5
+      ],
+      "proposed": [
+        14.48,
+        15.5
+      ],
+      "ctcMedian": [
+        14.494,
+        15.488
+      ],
+      "ctcRange": [
+        14.494,
+        14.514,
+        15.197,
+        15.558
+      ],
+      "reasons": [],
+      "uncertainty": "high"
+    },
+    {
+      "id": "L03-W01",
+      "lineId": "L03",
+      "text": "When",
+      "old": [
+        17.44,
+        17.94
+      ],
+      "proposed": [
+        17.5,
+        18.27
+      ],
+      "ctcMedian": [
+        17.532,
+        18.265
+      ],
+      "ctcRange": [
+        17.442,
+        17.582,
+        18.224,
+        18.285
+      ],
+      "reasons": [
+        "manual_spectral_and_model_review",
+        "Four CTC ends 18.22–18.28; the first line is otherwise advanced by the old attention alignment."
+      ],
+      "uncertainty": "normal"
+    },
+    {
+      "id": "L03-W02",
+      "lineId": "L03",
+      "text": "you’re",
+      "old": [
+        17.94,
+        18.88
+      ],
+      "proposed": [
+        18.3,
+        18.93
+      ],
+      "ctcMedian": [
+        18.345,
+        18.937
+      ],
+      "ctcRange": [
+        18.345,
+        18.345,
+        18.887,
+        18.947
+      ],
+      "reasons": [
+        "manual_spectral_and_model_review",
+        "Four CTC onsets 18.30–18.38; preserve a short inter-word gap."
+      ],
+      "uncertainty": "normal"
+    },
+    {
+      "id": "L03-W03",
+      "lineId": "L03",
+      "text": "the",
+      "old": [
+        18.88,
+        19.26
+      ],
+      "proposed": [
+        18.94,
+        19.45
+      ],
+      "ctcMedian": [
+        18.997,
+        19.147
+      ],
+      "ctcRange": [
+        18.987,
+        19.027,
+        19.127,
+        19.188
+      ],
+      "reasons": [
+        "manual_spectral_and_model_review",
+        "Raw mix greedy word blank for the around19.47; sustained vowel after CTC phoneme token19.19. Extend through sung release."
+      ],
+      "uncertainty": "normal"
+    },
+    {
+      "id": "L03-W04",
+      "lineId": "L03",
+      "text": "only",
+      "old": [
+        19.26,
+        20.82
+      ],
+      "proposed": [
+        19.5,
+        20.96
+      ],
+      "ctcMedian": [
+        19.619,
+        20.913
+      ],
+      "ctcRange": [
+        19.408,
+        20.592,
+        20.873,
+        21.013
+      ],
+      "reasons": [
+        "manual_spectral_and_model_review",
+        "MMS stem/mix begin only19.49/19.41, raw mix new token19.67, release near20.99; short gap after held the."
+      ],
+      "uncertainty": "normal"
+    },
+    {
+      "id": "L03-W05",
+      "lineId": "L03",
+      "text": "other",
+      "old": [
+        20.82,
+        21.76
+      ],
+      "proposed": [
+        21.15,
+        21.91
+      ],
+      "ctcMedian": [
+        21.284,
+        21.896
+      ],
+      "ctcRange": [
+        21.154,
+        21.475,
+        21.856,
+        21.936
+      ],
+      "reasons": [
+        "manual_spectral_and_model_review",
+        "MMS stem/mix other onset21.15; wav2vec delayed inside word. Previous only release20.96."
+      ],
+      "uncertainty": "normal"
+    },
+    {
+      "id": "L03-W06",
+      "lineId": "L03",
+      "text": "keeper",
+      "old": [
+        21.76,
+        22.38
+      ],
+      "proposed": [
+        22.0,
+        23.02
+      ],
+      "ctcMedian": [
+        22.037,
+        23.0
+      ],
+      "ctcRange": [
+        22.017,
+        22.077,
+        22.939,
+        23.1
+      ],
+      "reasons": [
+        "manual_spectral_and_model_review",
+        "Four CTC ends 22.94–23.10; old 22.38 clips release."
+      ],
+      "uncertainty": "normal"
+    },
+    {
+      "id": "L04-W01",
+      "lineId": "L04",
+      "text": "Of",
+      "old": [
+        23.9,
+        24.18
+      ],
+      "proposed": [
+        23.9,
+        24.18
+      ],
+      "ctcMedian": [
+        24.005,
+        24.166
+      ],
+      "ctcRange": [
+        23.905,
+        24.106,
+        24.146,
+        24.186
+      ],
+      "reasons": [],
+      "uncertainty": "high"
+    },
+    {
+      "id": "L04-W02",
+      "lineId": "L04",
+      "text": "my",
+      "old": [
+        24.2,
+        24.66
+      ],
+      "proposed": [
+        24.2,
+        24.66
+      ],
+      "ctcMedian": [
+        24.326,
+        24.688
+      ],
+      "ctcRange": [
+        24.306,
+        24.346,
+        24.648,
+        24.708
+      ],
+      "reasons": [],
+      "uncertainty": "normal"
+    },
+    {
+      "id": "L04-W03",
+      "lineId": "L04",
+      "text": "most",
+      "old": [
+        24.66,
+        25.72
+      ],
+      "proposed": [
+        24.84,
+        25.72
+      ],
+      "ctcMedian": [
+        24.878,
+        25.721
+      ],
+      "ctcRange": [
+        24.868,
+        24.948,
+        25.691,
+        25.751
+      ],
+      "reasons": [
+        "coherent_ctc_onset"
+      ],
+      "uncertainty": "normal"
+    },
+    {
+      "id": "L04-W04",
+      "lineId": "L04",
+      "text": "precious",
+      "old": [
+        25.72,
+        26.4
+      ],
+      "proposed": [
+        25.85,
+        26.74
+      ],
+      "ctcMedian": [
+        25.882,
+        26.745
+      ],
+      "ctcRange": [
+        25.872,
+        25.892,
+        26.714,
+        26.775
+      ],
+      "reasons": [
+        "manual_spectral_and_model_review",
+        "Four CTC ends 26.71–26.77; old 26.40 clips the second syllable."
+      ],
+      "uncertainty": "normal"
+    },
+    {
+      "id": "L04-W05",
+      "lineId": "L04",
+      "text": "memories",
+      "old": [
+        26.6,
+        27.65
+      ],
+      "proposed": [
+        26.89,
+        28.4
+      ],
+      "ctcMedian": [
+        26.935,
+        28.39
+      ],
+      "ctcRange": [
+        26.915,
+        26.955,
+        28.239,
+        28.4
+      ],
+      "reasons": [
+        "manual_spectral_and_model_review",
+        "Four CTC ends 28.24–28.40; old 27.65 truncates held vocal; start after precious."
+      ],
+      "uncertainty": "high"
+    },
+    {
+      "id": "L05-W01",
+      "lineId": "L05",
+      "text": "Yeah",
+      "old": [
+        30.08,
+        31.16
+      ],
+      "proposed": [
+        30.08,
+        31.4
+      ],
+      "ctcMedian": [
+        30.187,
+        31.396
+      ],
+      "ctcRange": [
+        29.704,
+        30.489,
+        31.154,
+        31.96
+      ],
+      "reasons": [
+        "manual_spectral_and_model_review",
+        "Isolated Yeah; CTC stem/mix release near 31.3–31.5, later mix candidate 31.96 is uncertain."
+      ],
+      "uncertainty": "high"
+    },
+    {
+      "id": "L06-W01",
+      "lineId": "L06",
+      "text": "I’ve",
+      "old": [
+        34.84,
+        35.32
+      ],
+      "proposed": [
+        34.84,
+        35.32
+      ],
+      "ctcMedian": [
+        34.997,
+        35.258
+      ],
+      "ctcRange": [
+        33.86,
+        35.087,
+        35.208,
+        35.308
+      ],
+      "reasons": [],
+      "uncertainty": "normal"
+    },
+    {
+      "id": "L06-W02",
+      "lineId": "L06",
+      "text": "been",
+      "old": [
+        35.34,
+        35.7
+      ],
+      "proposed": [
+        35.34,
+        35.7
+      ],
+      "ctcMedian": [
+        35.349,
+        35.67
+      ],
+      "ctcRange": [
+        35.328,
+        35.369,
+        35.63,
+        35.691
+      ],
+      "reasons": [],
+      "uncertainty": "normal"
+    },
+    {
+      "id": "L06-W03",
+      "lineId": "L06",
+      "text": "drinking",
+      "old": [
+        35.7,
+        36.76
+      ],
+      "proposed": [
+        35.8,
+        37.36
+      ],
+      "ctcMedian": [
+        35.861,
+        37.35
+      ],
+      "ctcRange": [
+        35.851,
+        35.892,
+        36.998,
+        37.38
+      ],
+      "reasons": [
+        "manual_spectral_and_model_review",
+        "Four CTC ends 37.0–37.38; old 36.76 truncates sung tail."
+      ],
+      "uncertainty": "high"
+    },
+    {
+      "id": "L07-W01",
+      "lineId": "L07",
+      "text": "Why’s",
+      "old": [
+        40.96,
+        42.76
+      ],
+      "proposed": [
+        40.96,
+        42.76
+      ],
+      "ctcMedian": [
+        41.012,
+        42.745
+      ],
+      "ctcRange": [
+        40.921,
+        41.062,
+        42.685,
+        42.765
+      ],
+      "reasons": [],
+      "uncertainty": "normal"
+    },
+    {
+      "id": "L07-W02",
+      "lineId": "L07",
+      "text": "that",
+      "old": [
+        42.76,
+        43.36
+      ],
+      "proposed": [
+        42.76,
+        43.36
+      ],
+      "ctcMedian": [
+        42.835,
+        43.386
+      ],
+      "ctcRange": [
+        42.825,
+        42.865,
+        43.366,
+        43.406
+      ],
+      "reasons": [],
+      "uncertainty": "normal"
+    },
+    {
+      "id": "L07-W03",
+      "lineId": "L07",
+      "text": "gotta",
+      "old": [
+        43.36,
+        43.98
+      ],
+      "proposed": [
+        43.56,
+        43.98
+      ],
+      "ctcMedian": [
+        43.596,
+        44.047
+      ],
+      "ctcRange": [
+        43.586,
+        43.606,
+        44.027,
+        44.087
+      ],
+      "reasons": [
+        "coherent_ctc_onset"
+      ],
+      "uncertainty": "normal"
+    },
+    {
+      "id": "L07-W04",
+      "lineId": "L07",
+      "text": "mean",
+      "old": [
+        43.98,
+        44.9
+      ],
+      "proposed": [
+        44.17,
+        45.28
+      ],
+      "ctcMedian": [
+        44.188,
+        45.209
+      ],
+      "ctcRange": [
+        44.167,
+        44.208,
+        45.049,
+        45.29
+      ],
+      "reasons": [
+        "manual_spectral_and_model_review",
+        "Raw greedy CTC stem has M~44.20 and N~45.09, followed by a word blank 45.25; old end 44.90 clips mean."
+      ],
+      "uncertainty": "normal"
+    },
+    {
+      "id": "L07-W05",
+      "lineId": "L07",
+      "text": "I",
+      "old": [
+        44.9,
+        46.12
+      ],
+      "proposed": [
+        46.02,
+        46.24
+      ],
+      "ctcMedian": [
+        46.141,
+        46.161
+      ],
+      "ctcRange": [
+        46.111,
+        46.171,
+        46.131,
+        46.191
+      ],
+      "reasons": [
+        "manual_spectral_and_model_review",
+        "Raw greedy CTC stem vowel token 46.13–46.17 and mix vowel 46.09–46.17; previous start 45.18 occupies silence after mean."
+      ],
+      "uncertainty": "normal"
+    },
+    {
+      "id": "L07-W06",
+      "lineId": "L07",
+      "text": "can’t",
+      "old": [
+        46.12,
+        46.82
+      ],
+      "proposed": [
+        46.31,
+        46.82
+      ],
+      "ctcMedian": [
+        46.352,
+        46.752
+      ],
+      "ctcRange": [
+        46.332,
+        46.392,
+        46.732,
+        46.752
+      ],
+      "reasons": [
+        "coherent_ctc_onset"
+      ],
+      "uncertainty": "normal"
+    },
+    {
+      "id": "L07-W07",
+      "lineId": "L07",
+      "text": "call",
+      "old": [
+        46.82,
+        47.44
+      ],
+      "proposed": [
+        46.82,
+        47.44
+      ],
+      "ctcMedian": [
+        46.883,
+        47.484
+      ],
+      "ctcRange": [
+        46.853,
+        46.933,
+        47.414,
+        47.534
+      ],
+      "reasons": [],
+      "uncertainty": "normal"
+    },
+    {
+      "id": "L07-W08",
+      "lineId": "L07",
+      "text": "you",
+      "old": [
+        47.44,
+        47.76
+      ],
+      "proposed": [
+        47.44,
+        47.76
+      ],
+      "ctcMedian": [
+        47.614,
+        47.754
+      ],
+      "ctcRange": [
+        47.594,
+        47.614,
+        47.754,
+        47.774
+      ],
+      "reasons": [],
+      "uncertainty": "normal"
+    },
+    {
+      "id": "L07-W09",
+      "lineId": "L07",
+      "text": "‘bout",
+      "old": [
+        47.76,
+        48.52
+      ],
+      "proposed": [
+        47.76,
+        48.52
+      ],
+      "ctcMedian": [
+        47.905,
+        48.506
+      ],
+      "ctcRange": [
+        47.874,
+        47.915,
+        48.395,
+        48.576
+      ],
+      "reasons": [],
+      "uncertainty": "normal"
+    },
+    {
+      "id": "L07-W10",
+      "lineId": "L07",
+      "text": "you",
+      "old": [
+        48.52,
+        48.96
+      ],
+      "proposed": [
+        48.52,
+        48.96
+      ],
+      "ctcMedian": [
+        48.676,
+        48.896
+      ],
+      "ctcRange": [
+        48.676,
+        48.696,
+        48.856,
+        48.977
+      ],
+      "reasons": [],
+      "uncertainty": "normal"
+    },
+    {
+      "id": "L07-W11",
+      "lineId": "L07",
+      "text": "and",
+      "old": [
+        48.96,
+        49.54
+      ],
+      "proposed": [
+        49.25,
+        49.54
+      ],
+      "ctcMedian": [
+        49.287,
+        49.498
+      ],
+      "ctcRange": [
+        49.217,
+        49.357,
+        49.498,
+        49.558
+      ],
+      "reasons": [
+        "coherent_ctc_onset"
+      ],
+      "uncertainty": "normal"
+    },
+    {
+      "id": "L07-W12",
+      "lineId": "L07",
+      "text": "me?",
+      "old": [
+        49.54,
+        50.0
+      ],
+      "proposed": [
+        49.54,
+        50.0
+      ],
+      "ctcMedian": [
+        49.678,
+        49.888
+      ],
+      "ctcRange": [
+        49.678,
+        49.738,
+        49.818,
+        49.998
+      ],
+      "reasons": [],
+      "uncertainty": "normal"
+    },
+    {
+      "id": "L08-W01",
+      "lineId": "L08",
+      "text": "‘Cause",
+      "old": [
+        52.1,
+        52.54
+      ],
+      "proposed": [
+        52.1,
+        52.54
+      ],
+      "ctcMedian": [
+        52.072,
+        52.653
+      ],
+      "ctcRange": [
+        52.062,
+        52.122,
+        52.523,
+        52.683
+      ],
+      "reasons": [],
+      "uncertainty": "normal"
+    },
+    {
+      "id": "L08-W02",
+      "lineId": "L08",
+      "text": "I’ll",
+      "old": [
+        52.54,
+        57.22
+      ],
+      "proposed": [
+        52.54,
+        57.22
+      ],
+      "ctcMedian": [
+        55.199,
+        56.792
+      ],
+      "ctcRange": [
+        53.425,
+        56.031,
+        56.051,
+        57.113
+      ],
+      "reasons": [
+        "manual_spectral_and_model_review",
+        "Long held I’ll; CTC late-token alignment inside vowel is not a true onset. Targeted ASR wording varies."
+      ],
+      "uncertainty": "high"
+    },
+    {
+      "id": "L08-W03",
+      "lineId": "L08",
+      "text": "do",
+      "old": [
+        57.23,
+        57.6
+      ],
+      "proposed": [
+        57.23,
+        57.6
+      ],
+      "ctcMedian": [
+        57.243,
+        57.464
+      ],
+      "ctcRange": [
+        57.213,
+        57.273,
+        57.374,
+        57.614
+      ],
+      "reasons": [],
+      "uncertainty": "high"
+    },
+    {
+      "id": "L08-W04",
+      "lineId": "L08",
+      "text": "anything",
+      "old": [
+        57.6,
+        60.0
+      ],
+      "proposed": [
+        57.6,
+        60.82
+      ],
+      "ctcMedian": [
+        59.078,
+        60.11
+      ],
+      "ctcRange": [
+        57.734,
+        59.258,
+        60.08,
+        60.18
+      ],
+      "reasons": [
+        "manual_spectral_and_model_review",
+        "Anything: vocal first syllables around 57.6; later 59.75–60.8 sustained emission before a pause."
+      ],
+      "uncertainty": "high"
+    },
+    {
+      "id": "L09-W01",
+      "lineId": "L09",
+      "text": "For",
+      "old": [
+        60.0,
+        62.14
+      ],
+      "proposed": [
+        61.95,
+        62.31
+      ],
+      "ctcMedian": [
+        62.028,
+        62.239
+      ],
+      "ctcRange": [
+        59.701,
+        62.048,
+        60.523,
+        62.289
+      ],
+      "reasons": [
+        "manual_spectral_and_model_review",
+        "Raw greedy CTC stem explicitly emits FOR phonemes 62.04–62.26; the preceding 59.7–60.8 phrase is not a confidently isolated For."
+      ],
+      "uncertainty": "high"
+    },
+    {
+      "id": "L09-W02",
+      "lineId": "L09",
+      "text": "you",
+      "old": [
+        62.14,
+        62.68
+      ],
+      "proposed": [
+        62.38,
+        62.8
+      ],
+      "ctcMedian": [
+        62.409,
+        62.71
+      ],
+      "ctcRange": [
+        62.389,
+        62.449,
+        62.569,
+        62.79
+      ],
+      "reasons": [
+        "manual_spectral_and_model_review",
+        "Raw greedy CTC stem emits YOU phonemes 62.40–62.58 with final blank 62.78–62.82."
+      ],
+      "uncertainty": "normal"
+    },
+    {
+      "id": "L09-W03",
+      "lineId": "L09",
+      "text": "to",
+      "old": [
+        62.68,
+        63.16
+      ],
+      "proposed": [
+        62.91,
+        63.17
+      ],
+      "ctcMedian": [
+        62.91,
+        63.171
+      ],
+      "ctcRange": [
+        62.89,
+        62.931,
+        63.051,
+        63.252
+      ],
+      "reasons": [
+        "manual_spectral_and_model_review",
+        "Raw greedy CTC stem emits TO phonemes 62.94–63.06."
+      ],
+      "uncertainty": "normal"
+    },
+    {
+      "id": "L09-W04",
+      "lineId": "L09",
+      "text": "love",
+      "old": [
+        63.16,
+        64.02
+      ],
+      "proposed": [
+        63.43,
+        64.06
+      ],
+      "ctcMedian": [
+        63.482,
+        64.064
+      ],
+      "ctcRange": [
+        63.472,
+        63.512,
+        63.934,
+        64.174
+      ],
+      "reasons": [
+        "manual_spectral_and_model_review",
+        "Love: CTC consensus 63.47–63.51; old onset 63.16 early."
+      ],
+      "uncertainty": "normal"
+    },
+    {
+      "id": "L09-W05",
+      "lineId": "L09",
+      "text": "me",
+      "old": [
+        64.02,
+        64.58
+      ],
+      "proposed": [
+        64.17,
+        64.48
+      ],
+      "ctcMedian": [
+        64.214,
+        64.365
+      ],
+      "ctcRange": [
+        64.114,
+        64.254,
+        64.214,
+        64.435
+      ],
+      "reasons": [
+        "manual_spectral_and_model_review",
+        "Me: CTC phoneme interval ~64.2–64.4; old 64.02 early.",
+        "overlap_clamp"
+      ],
+      "uncertainty": "normal"
+    },
+    {
+      "id": "L09-W06",
+      "lineId": "L09",
+      "text": "again",
+      "old": [
+        64.58,
+        65.32
+      ],
+      "proposed": [
+        64.93,
+        65.7
+      ],
+      "ctcMedian": [
+        65.087,
+        65.689
+      ],
+      "ctcRange": [
+        65.057,
+        65.137,
+        65.639,
+        65.779
+      ],
+      "reasons": [
+        "manual_spectral_and_model_review",
+        "Again: four CTC ends 65.64–65.78; old 65.32 clips release; onset between attention and CTC."
+      ],
+      "uncertainty": "normal"
+    },
+    {
+      "id": "L10-W01",
+      "lineId": "L10",
+      "text": "If",
+      "old": [
+        68.3,
+        68.62
+      ],
+      "proposed": [
+        68.3,
+        68.62
+      ],
+      "ctcMedian": [
+        68.402,
+        68.572
+      ],
+      "ctcRange": [
+        68.382,
+        68.442,
+        68.442,
+        68.582
+      ],
+      "reasons": [],
+      "uncertainty": "normal"
+    },
+    {
+      "id": "L10-W02",
+      "lineId": "L10",
+      "text": "you",
+      "old": [
+        68.68,
+        69.06
+      ],
+      "proposed": [
+        68.68,
+        69.06
+      ],
+      "ctcMedian": [
+        68.662,
+        68.943
+      ],
+      "ctcRange": [
+        68.622,
+        68.682,
+        68.843,
+        69.765
+      ],
+      "reasons": [],
+      "uncertainty": "high"
+    },
+    {
+      "id": "L10-W03",
+      "lineId": "L10",
+      "text": "don’t",
+      "old": [
+        69.06,
+        73.78
+      ],
+      "proposed": [
+        69.06,
+        73.78
+      ],
+      "ctcMedian": [
+        73.103,
+        73.734
+      ],
+      "ctcRange": [
+        71.409,
+        73.113,
+        71.81,
+        73.754
+      ],
+      "reasons": [
+        "manual_spectral_and_model_review",
+        "Held don’t from after you to consonant release; CTC anchors within final part of sustained vowel."
+      ],
+      "uncertainty": "high"
+    },
+    {
+      "id": "L10-W04",
+      "lineId": "L10",
+      "text": "like",
+      "old": [
+        73.78,
+        74.32
+      ],
+      "proposed": [
+        73.78,
+        74.32
+      ],
+      "ctcMedian": [
+        73.824,
+        74.376
+      ],
+      "ctcRange": [
+        73.173,
+        73.895,
+        73.674,
+        74.456
+      ],
+      "reasons": [],
+      "uncertainty": "normal"
+    },
+    {
+      "id": "L10-W05",
+      "lineId": "L10",
+      "text": "me",
+      "old": [
+        74.32,
+        74.72
+      ],
+      "proposed": [
+        74.49,
+        74.72
+      ],
+      "ctcMedian": [
+        74.526,
+        74.686
+      ],
+      "ctcRange": [
+        74.496,
+        74.536,
+        74.656,
+        74.777
+      ],
+      "reasons": [
+        "coherent_ctc_onset"
+      ],
+      "uncertainty": "normal"
+    },
+    {
+      "id": "L10-W06",
+      "lineId": "L10",
+      "text": "now",
+      "old": [
+        74.72,
+        75.28
+      ],
+      "proposed": [
+        74.72,
+        75.28
+      ],
+      "ctcMedian": [
+        74.877,
+        75.488
+      ],
+      "ctcRange": [
+        74.817,
+        75.318,
+        75.298,
+        75.739
+      ],
+      "reasons": [],
+      "uncertainty": "normal"
+    },
+    {
+      "id": "L11-W01",
+      "lineId": "L11",
+      "text": "I",
+      "old": [
+        77.92,
+        78.2
+      ],
+      "proposed": [
+        77.89,
+        78.2
+      ],
+      "ctcMedian": [
+        77.882,
+        77.903
+      ],
+      "ctcRange": [
+        77.32,
+        78.184,
+        77.34,
+        78.204
+      ],
+      "reasons": [
+        "manual_spectral_and_model_review",
+        "I: ASR often hears contracted I’ll, but preserve user-supplied I will and do not treat tiny CTC token as whole syllable."
+      ],
+      "uncertainty": "high"
+    },
+    {
+      "id": "L11-W02",
+      "lineId": "L11",
+      "text": "will",
+      "old": [
+        78.2,
+        78.5
+      ],
+      "proposed": [
+        78.2,
+        78.44
+      ],
+      "ctcMedian": [
+        77.923,
+        78.385
+      ],
+      "ctcRange": [
+        77.903,
+        78.224,
+        78.324,
+        78.425
+      ],
+      "reasons": [
+        "manual_spectral_and_model_review",
+        "Will: short following syllable per bounded attention, with CTC end ~78.38.",
+        "overlap_clamp"
+      ],
+      "uncertainty": "high"
+    },
+    {
+      "id": "L11-W03",
+      "lineId": "L11",
+      "text": "change",
+      "old": [
+        78.5,
+        79.48
+      ],
+      "proposed": [
+        78.5,
+        79.48
+      ],
+      "ctcMedian": [
+        78.575,
+        79.529
+      ],
+      "ctcRange": [
+        78.545,
+        78.606,
+        79.509,
+        79.61
+      ],
+      "reasons": [],
+      "uncertainty": "normal"
+    },
+    {
+      "id": "L11-W04",
+      "lineId": "L11",
+      "text": "for",
+      "old": [
+        79.48,
+        79.86
+      ],
+      "proposed": [
+        79.48,
+        79.86
+      ],
+      "ctcMedian": [
+        79.63,
+        79.931
+      ],
+      "ctcRange": [
+        79.59,
+        79.75,
+        79.67,
+        80.494
+      ],
+      "reasons": [],
+      "uncertainty": "normal"
+    },
+    {
+      "id": "L11-W05",
+      "lineId": "L11",
+      "text": "you",
+      "old": [
+        79.86,
+        80.5
+      ],
+      "proposed": [
+        79.9,
+        80.55
+      ],
+      "ctcMedian": [
+        80.142,
+        80.664
+      ],
+      "ctcRange": [
+        79.77,
+        81.096,
+        80.152,
+        81.156
+      ],
+      "reasons": [
+        "manual_spectral_and_model_review",
+        "You: both attention and CTC suggest release 80.3–80.8; old 80.50 retained near consensus."
+      ],
+      "uncertainty": "high"
+    },
+    {
+      "id": "L12-W01",
+      "lineId": "L12",
+      "text": "Bars",
+      "old": [
+        91.06,
+        92.5
+      ],
+      "proposed": [
+        91.06,
+        92.5
+      ],
+      "ctcMedian": [
+        91.072,
+        92.444
+      ],
+      "ctcRange": [
+        91.062,
+        91.082,
+        92.353,
+        93.039
+      ],
+      "reasons": [],
+      "uncertainty": "high"
+    },
+    {
+      "id": "L13-W01",
+      "lineId": "L13",
+      "text": "Such",
+      "old": [
+        94.88,
+        95.38
+      ],
+      "proposed": [
+        95.06,
+        95.38
+      ],
+      "ctcMedian": [
+        95.095,
+        95.397
+      ],
+      "ctcRange": [
+        95.085,
+        95.146,
+        95.367,
+        95.407
+      ],
+      "reasons": [
+        "coherent_ctc_onset"
+      ],
+      "uncertainty": "normal"
+    },
+    {
+      "id": "L13-W02",
+      "lineId": "L13",
+      "text": "magic",
+      "old": [
+        95.44,
+        96.06
+      ],
+      "proposed": [
+        95.44,
+        96.33
+      ],
+      "ctcMedian": [
+        95.528,
+        96.312
+      ],
+      "ctcRange": [
+        95.528,
+        95.548,
+        96.03,
+        96.332
+      ],
+      "reasons": [
+        "coherent_ctc_release"
+      ],
+      "uncertainty": "normal"
+    },
+    {
+      "id": "L13-W03",
+      "lineId": "L13",
+      "text": "places",
+      "old": [
+        96.06,
+        97.28
+      ],
+      "proposed": [
+        96.43,
+        97.7
+      ],
+      "ctcMedian": [
+        96.472,
+        97.598
+      ],
+      "ctcRange": [
+        96.432,
+        96.493,
+        97.236,
+        97.98
+      ],
+      "reasons": [
+        "manual_spectral_and_model_review",
+        "Places: separated-vocal harmonics continue after old 97.28; three CTC ends 97.5–97.98, one early mix path 97.24."
+      ],
+      "uncertainty": "normal"
+    },
+    {
+      "id": "L14-W01",
+      "lineId": "L14",
+      "text": "You",
+      "old": [
+        100.96,
+        101.36
+      ],
+      "proposed": [
+        100.96,
+        101.36
+      ],
+      "ctcMedian": [
+        101.052,
+        101.313
+      ],
+      "ctcRange": [
+        100.921,
+        101.142,
+        101.303,
+        101.463
+      ],
+      "reasons": [],
+      "uncertainty": "normal"
+    },
+    {
+      "id": "L14-W02",
+      "lineId": "L14",
+      "text": "can",
+      "old": [
+        101.36,
+        101.8
+      ],
+      "proposed": [
+        101.52,
+        101.8
+      ],
+      "ctcMedian": [
+        101.564,
+        101.905
+      ],
+      "ctcRange": [
+        101.544,
+        101.584,
+        101.885,
+        101.925
+      ],
+      "reasons": [
+        "coherent_ctc_onset"
+      ],
+      "uncertainty": "normal"
+    },
+    {
+      "id": "L14-W03",
+      "lineId": "L14",
+      "text": "be",
+      "old": [
+        101.8,
+        102.64
+      ],
+      "proposed": [
+        102.08,
+        103.42
+      ],
+      "ctcMedian": [
+        102.126,
+        102.286
+      ],
+      "ctcRange": [
+        102.126,
+        102.146,
+        102.246,
+        102.407
+      ],
+      "reasons": [
+        "manual_spectral_and_model_review",
+        "Be: sustained vocal harmonics and ~−12 to −14 dBFS vocal RMS continue 102.2–103.4; CTC only anchors vowel onset ~102.13 and with consonants ~103.47. No silence gap."
+      ],
+      "uncertainty": "normal"
+    },
+    {
+      "id": "L14-W04",
+      "lineId": "L14",
+      "text": "with",
+      "old": [
+        102.64,
+        103.78
+      ],
+      "proposed": [
+        103.42,
+        103.8
+      ],
+      "ctcMedian": [
+        103.501,
+        103.761
+      ],
+      "ctcRange": [
+        103.41,
+        103.531,
+        103.691,
+        103.812
+      ],
+      "reasons": [
+        "manual_spectral_and_model_review",
+        "With: four CTC onsets 103.41–103.53; old 102.64 sits in gap. Wording itself warrants slow listen."
+      ],
+      "uncertainty": "high"
+    },
+    {
+      "id": "L14-W05",
+      "lineId": "L14",
+      "text": "other",
+      "old": [
+        103.91,
+        104.34
+      ],
+      "proposed": [
+        103.9,
+        104.55
+      ],
+      "ctcMedian": [
+        103.972,
+        104.574
+      ],
+      "ctcRange": [
+        103.912,
+        104.032,
+        104.554,
+        104.996
+      ],
+      "reasons": [
+        "manual_spectral_and_model_review",
+        "Other: consensus end ~104.55; old 104.34 clips tail."
+      ],
+      "uncertainty": "high"
+    },
+    {
+      "id": "L14-W06",
+      "lineId": "L14",
+      "text": "people",
+      "old": [
+        104.34,
+        105.54
+      ],
+      "proposed": [
+        104.78,
+        105.94
+      ],
+      "ctcMedian": [
+        104.815,
+        105.919
+      ],
+      "ctcRange": [
+        104.795,
+        105.538,
+        105.618,
+        105.979
+      ],
+      "reasons": [
+        "manual_spectral_and_model_review",
+        "People: consensus starts 104.8 and release ~105.9; old 104.34 early and 105.54 short."
+      ],
+      "uncertainty": "normal"
+    },
+    {
+      "id": "L15-W01",
+      "lineId": "L15",
+      "text": "Without",
+      "old": [
+        106.52,
+        107.34
+      ],
+      "proposed": [
+        106.52,
+        107.34
+      ],
+      "ctcMedian": [
+        106.592,
+        107.475
+      ],
+      "ctcRange": [
+        106.562,
+        106.622,
+        107.405,
+        107.505
+      ],
+      "reasons": [],
+      "uncertainty": "normal"
+    },
+    {
+      "id": "L15-W02",
+      "lineId": "L15",
+      "text": "having",
+      "old": [
+        107.34,
+        108.34
+      ],
+      "proposed": [
+        107.55,
+        108.7
+      ],
+      "ctcMedian": [
+        107.585,
+        108.679
+      ],
+      "ctcRange": [
+        107.545,
+        107.585,
+        108.649,
+        108.709
+      ],
+      "reasons": [
+        "manual_spectral_and_model_review",
+        "Having: four CTC ends 108.65–108.71; old end 108.34 short."
+      ],
+      "uncertainty": "normal"
+    },
+    {
+      "id": "L15-W03",
+      "lineId": "L15",
+      "text": "any",
+      "old": [
+        108.34,
+        109.1
+      ],
+      "proposed": [
+        108.78,
+        109.18
+      ],
+      "ctcMedian": [
+        108.829,
+        109.14
+      ],
+      "ctcRange": [
+        108.749,
+        108.93,
+        109.11,
+        109.171
+      ],
+      "reasons": [
+        "manual_spectral_and_model_review",
+        "Any: CTC onset 108.75–108.93; old 108.34 early. Any/one is sung as a connected compound."
+      ],
+      "uncertainty": "normal"
+    },
+    {
+      "id": "L15-W04",
+      "lineId": "L15",
+      "text": "one",
+      "old": [
+        109.1,
+        109.74
+      ],
+      "proposed": [
+        109.47,
+        110.25
+      ],
+      "ctcMedian": [
+        109.562,
+        110.234
+      ],
+      "ctcRange": [
+        109.431,
+        109.933,
+        110.114,
+        110.254
+      ],
+      "reasons": [
+        "manual_spectral_and_model_review",
+        "One: CTC ends 110.11–110.25; old 109.74 short."
+      ],
+      "uncertainty": "normal"
+    },
+    {
+      "id": "L15-W05",
+      "lineId": "L15",
+      "text": "at",
+      "old": [
+        109.74,
+        110.52
+      ],
+      "proposed": [
+        110.29,
+        110.53
+      ],
+      "ctcMedian": [
+        110.334,
+        110.515
+      ],
+      "ctcRange": [
+        110.274,
+        110.816,
+        110.334,
+        110.936
+      ],
+      "reasons": [
+        "manual_spectral_and_model_review",
+        "At: CTC onset ~110.3; old 109.74 early."
+      ],
+      "uncertainty": "normal"
+    },
+    {
+      "id": "L15-W06",
+      "lineId": "L15",
+      "text": "all",
+      "old": [
+        110.52,
+        111.14
+      ],
+      "proposed": [
+        110.6,
+        111.65
+      ],
+      "ctcMedian": [
+        110.615,
+        111.589
+      ],
+      "ctcRange": [
+        110.495,
+        111.217,
+        110.876,
+        111.9
+      ],
+      "reasons": [
+        "manual_spectral_and_model_review",
+        "All: three model ends near 111.5–111.9; old 111.14 clips held vowel."
+      ],
+      "uncertainty": "normal"
+    },
+    {
+      "id": "L16-W01",
+      "lineId": "L16",
+      "text": "But",
+      "old": [
+        112.78,
+        112.94
+      ],
+      "proposed": [
+        112.75,
+        113.03
+      ],
+      "ctcMedian": [
+        112.785,
+        113.048
+      ],
+      "ctcRange": [
+        112.745,
+        112.947,
+        112.886,
+        113.149
+      ],
+      "reasons": [
+        "manual_spectral_and_model_review",
+        "CTC onset ~112.75 and raw greedy transition before now N113.13; old But end112.94 may clip release."
+      ],
+      "uncertainty": "high"
+    },
+    {
+      "id": "L16-W02",
+      "lineId": "L16",
+      "text": "now",
+      "old": [
+        112.94,
+        113.6
+      ],
+      "proposed": [
+        113.1,
+        113.8
+      ],
+      "ctcMedian": [
+        113.29,
+        113.663
+      ],
+      "ctcRange": [
+        113.088,
+        113.794,
+        113.431,
+        113.855
+      ],
+      "reasons": [
+        "manual_spectral_and_model_review",
+        "Raw greedy stem NOW N113.13 A113.35 and final blank113.78–113.86; old 112.94 starts before phoneme."
+      ],
+      "uncertainty": "high"
+    },
+    {
+      "id": "L17-W01",
+      "lineId": "L17",
+      "text": "They",
+      "old": [
+        117.16,
+        117.42
+      ],
+      "proposed": [
+        117.16,
+        117.42
+      ],
+      "ctcMedian": [
+        117.244,
+        117.425
+      ],
+      "ctcRange": [
+        117.224,
+        117.284,
+        117.425,
+        117.445
+      ],
+      "reasons": [],
+      "uncertainty": "normal"
+    },
+    {
+      "id": "L17-W02",
+      "lineId": "L17",
+      "text": "say",
+      "old": [
+        117.42,
+        117.9
+      ],
+      "proposed": [
+        117.42,
+        117.9
+      ],
+      "ctcMedian": [
+        117.586,
+        117.887
+      ],
+      "ctcRange": [
+        117.566,
+        117.586,
+        117.867,
+        117.907
+      ],
+      "reasons": [],
+      "uncertainty": "normal"
+    },
+    {
+      "id": "L17-W03",
+      "lineId": "L17",
+      "text": "they’re",
+      "old": [
+        117.9,
+        118.52
+      ],
+      "proposed": [
+        117.9,
+        118.52
+      ],
+      "ctcMedian": [
+        118.078,
+        118.41
+      ],
+      "ctcRange": [
+        118.068,
+        118.088,
+        118.37,
+        118.47
+      ],
+      "reasons": [],
+      "uncertainty": "normal"
+    },
+    {
+      "id": "L17-W04",
+      "lineId": "L17",
+      "text": "closing",
+      "old": [
+        118.52,
+        119.36
+      ],
+      "proposed": [
+        118.53,
+        120.05
+      ],
+      "ctcMedian": [
+        118.571,
+        119.908
+      ],
+      "ctcRange": [
+        118.551,
+        118.611,
+        119.717,
+        120.26
+      ],
+      "reasons": [
+        "manual_spectral_and_model_review",
+        "Closing: CTC stem/mix end 119.7–120.26; old 119.36 truncates tail."
+      ],
+      "uncertainty": "high"
+    },
+    {
+      "id": "L18-W01",
+      "lineId": "L18",
+      "text": "So",
+      "old": [
+        122.9,
+        123.36
+      ],
+      "proposed": [
+        122.9,
+        123.36
+      ],
+      "ctcMedian": [
+        122.993,
+        123.244
+      ],
+      "ctcRange": [
+        122.441,
+        123.023,
+        122.742,
+        123.384
+      ],
+      "reasons": [],
+      "uncertainty": "normal"
+    },
+    {
+      "id": "L18-W02",
+      "lineId": "L18",
+      "text": "I’m",
+      "old": [
+        123.36,
+        124.16
+      ],
+      "proposed": [
+        123.84,
+        124.1
+      ],
+      "ctcMedian": [
+        123.936,
+        124.026
+      ],
+      "ctcRange": [
+        123.906,
+        123.946,
+        124.026,
+        124.046
+      ],
+      "reasons": [
+        "manual_spectral_and_model_review",
+        "Raw greedy CTC stem spells I’M from I123.89 to M124.04 after So release123.35; old 123.36 begins in gap.",
+        "overlap_clamp"
+      ],
+      "uncertainty": "normal"
+    },
+    {
+      "id": "L18-W03",
+      "lineId": "L18",
+      "text": "loitering",
+      "old": [
+        124.16,
+        126.36
+      ],
+      "proposed": [
+        124.16,
+        126.36
+      ],
+      "ctcMedian": [
+        124.157,
+        126.394
+      ],
+      "ctcRange": [
+        124.147,
+        124.187,
+        125.832,
+        126.394
+      ],
+      "reasons": [],
+      "uncertainty": "normal"
+    },
+    {
+      "id": "L18-W04",
+      "lineId": "L18",
+      "text": "outside",
+      "old": [
+        126.36,
+        127.2
+      ],
+      "proposed": [
+        126.5,
+        127.96
+      ],
+      "ctcMedian": [
+        126.545,
+        127.93
+      ],
+      "ctcRange": [
+        126.475,
+        126.595,
+        127.639,
+        127.98
+      ],
+      "reasons": [
+        "manual_spectral_and_model_review",
+        "Outside: four CTC ends 127.64–127.98; old 127.20 clips release."
+      ],
+      "uncertainty": "high"
+    },
+    {
+      "id": "L19-W01",
+      "lineId": "L19",
+      "text": "Watching",
+      "old": [
+        128.6,
+        129.22
+      ],
+      "proposed": [
+        128.6,
+        129.38
+      ],
+      "ctcMedian": [
+        128.643,
+        129.345
+      ],
+      "ctcRange": [
+        128.623,
+        128.643,
+        129.325,
+        129.365
+      ],
+      "reasons": [
+        "manual_spectral_and_model_review",
+        "Raw greedy final Watching IN129.25–129.31 and blank129.37–129.41; four forced CTC releases 129.33–129.37."
+      ],
+      "uncertainty": "high"
+    },
+    {
+      "id": "L19-W02",
+      "lineId": "L19",
+      "text": "all",
+      "old": [
+        129.22,
+        129.92
+      ],
+      "proposed": [
+        129.5,
+        130.25
+      ],
+      "ctcMedian": [
+        129.817,
+        130.168
+      ],
+      "ctcRange": [
+        129.506,
+        130.128,
+        130.068,
+        130.288
+      ],
+      "reasons": [
+        "manual_spectral_and_model_review",
+        "MMS stem/mix onsets129.51/129.57 and sustained vowel through130.2; wav2vec token130.07 is late inside held all."
+      ],
+      "uncertainty": "normal"
+    },
+    {
+      "id": "L19-W03",
+      "lineId": "L19",
+      "text": "the",
+      "old": [
+        129.92,
+        130.48
+      ],
+      "proposed": [
+        130.29,
+        130.46
+      ],
+      "ctcMedian": [
+        130.329,
+        130.449
+      ],
+      "ctcRange": [
+        130.309,
+        130.349,
+        130.429,
+        130.469
+      ],
+      "reasons": [
+        "manual_spectral_and_model_review",
+        "The: four CTC onsets ~130.3; old 129.92 early.",
+        "overlap_clamp"
+      ],
+      "uncertainty": "normal"
+    },
+    {
+      "id": "L19-W04",
+      "lineId": "L19",
+      "text": "cars",
+      "old": [
+        130.48,
+        131.26
+      ],
+      "proposed": [
+        130.63,
+        131.26
+      ],
+      "ctcMedian": [
+        130.67,
+        131.282
+      ],
+      "ctcRange": [
+        130.65,
+        130.73,
+        131.252,
+        131.292
+      ],
+      "reasons": [
+        "coherent_ctc_onset"
+      ],
+      "uncertainty": "normal"
+    },
+    {
+      "id": "L19-W05",
+      "lineId": "L19",
+      "text": "passing",
+      "old": [
+        131.26,
+        132.14
+      ],
+      "proposed": [
+        131.26,
+        132.14
+      ],
+      "ctcMedian": [
+        131.392,
+        132.275
+      ],
+      "ctcRange": [
+        131.372,
+        131.412,
+        132.215,
+        132.456
+      ],
+      "reasons": [],
+      "uncertainty": "normal"
+    },
+    {
+      "id": "L19-W06",
+      "lineId": "L19",
+      "text": "by",
+      "old": [
+        132.14,
+        133.28
+      ],
+      "proposed": [
+        132.42,
+        133.51
+      ],
+      "ctcMedian": [
+        132.606,
+        133.469
+      ],
+      "ctcRange": [
+        132.416,
+        133.639,
+        132.556,
+        133.68
+      ],
+      "reasons": [
+        "manual_spectral_and_model_review",
+        "By: at least two CTC paths and spectrum support onset after 132.4 and held ending ~133.5."
+      ],
+      "uncertainty": "high"
+    },
+    {
+      "id": "L20-W01",
+      "lineId": "L20",
+      "text": "Like",
+      "old": [
+        134.08,
+        134.48
+      ],
+      "proposed": [
+        134.08,
+        134.48
+      ],
+      "ctcMedian": [
+        134.102,
+        134.503
+      ],
+      "ctcRange": [
+        134.082,
+        134.162,
+        134.443,
+        134.563
+      ],
+      "reasons": [],
+      "uncertainty": "high"
+    },
+    {
+      "id": "L20-W02",
+      "lineId": "L20",
+      "text": "a",
+      "old": [
+        134.58,
+        134.82
+      ],
+      "proposed": [
+        134.58,
+        134.79
+      ],
+      "ctcMedian": [
+        134.613,
+        134.633
+      ],
+      "ctcRange": [
+        134.563,
+        135.005,
+        134.583,
+        135.025
+      ],
+      "reasons": [
+        "overlap_clamp"
+      ],
+      "uncertainty": "high"
+    },
+    {
+      "id": "L20-W03",
+      "lineId": "L20",
+      "text": "kid",
+      "old": [
+        134.86,
+        135.66
+      ],
+      "proposed": [
+        134.8,
+        136.1
+      ],
+      "ctcMedian": [
+        134.804,
+        136.098
+      ],
+      "ctcRange": [
+        134.764,
+        135.406,
+        136.088,
+        136.108
+      ],
+      "reasons": [
+        "manual_spectral_and_model_review",
+        "Kid: four CTC ends ~136.1; old 135.66 clips tail."
+      ],
+      "uncertainty": "normal"
+    },
+    {
+      "id": "L20-W04",
+      "lineId": "L20",
+      "text": "waiting",
+      "old": [
+        135.66,
+        136.62
+      ],
+      "proposed": [
+        136.18,
+        136.78
+      ],
+      "ctcMedian": [
+        136.228,
+        136.76
+      ],
+      "ctcRange": [
+        136.208,
+        136.228,
+        136.75,
+        136.79
+      ],
+      "reasons": [
+        "manual_spectral_and_model_review",
+        "Waiting: CTC onsets ~136.2; old 135.66 early."
+      ],
+      "uncertainty": "normal"
+    },
+    {
+      "id": "L20-W05",
+      "lineId": "L20",
+      "text": "for",
+      "old": [
+        136.62,
+        137.22
+      ],
+      "proposed": [
+        136.86,
+        137.22
+      ],
+      "ctcMedian": [
+        136.9,
+        137.242
+      ],
+      "ctcRange": [
+        136.89,
+        136.931,
+        137.171,
+        137.352
+      ],
+      "reasons": [
+        "coherent_ctc_onset"
+      ],
+      "uncertainty": "normal"
+    },
+    {
+      "id": "L20-W06",
+      "lineId": "L20",
+      "text": "my",
+      "old": [
+        137.22,
+        137.82
+      ],
+      "proposed": [
+        137.22,
+        137.82
+      ],
+      "ctcMedian": [
+        137.472,
+        137.813
+      ],
+      "ctcRange": [
+        137.432,
+        137.793,
+        137.733,
+        137.893
+      ],
+      "reasons": [],
+      "uncertainty": "normal"
+    },
+    {
+      "id": "L20-W07",
+      "lineId": "L20",
+      "text": "ride",
+      "old": [
+        137.82,
+        139.24
+      ],
+      "proposed": [
+        137.91,
+        139.83
+      ],
+      "ctcMedian": [
+        138.114,
+        139.799
+      ],
+      "ctcRange": [
+        137.813,
+        139.739,
+        138.054,
+        139.86
+      ],
+      "reasons": [
+        "manual_spectral_and_model_review",
+        "Ride: stem and wav2vec mix support held ending ~139.8; old 139.24 short."
+      ],
+      "uncertainty": "high"
+    },
+    {
+      "id": "L21-W01",
+      "lineId": "L21",
+      "text": "I’ll",
+      "old": [
+        144.2,
+        145.52
+      ],
+      "proposed": [
+        144.2,
+        145.52
+      ],
+      "ctcMedian": [
+        144.356,
+        145.329
+      ],
+      "ctcRange": [
+        143.503,
+        145.67,
+        144.667,
+        145.971
+      ],
+      "reasons": [
+        "manual_spectral_and_model_review",
+        "Second I’ll: mix/stem CTC conflict; old onset preserved rather than borrowing first refrain."
+      ],
+      "uncertainty": "high"
+    },
+    {
+      "id": "L21-W02",
+      "lineId": "L21",
+      "text": "do",
+      "old": [
+        145.52,
+        145.9
+      ],
+      "proposed": [
+        145.52,
+        145.9
+      ],
+      "ctcMedian": [
+        145.56,
+        145.821
+      ],
+      "ctcRange": [
+        145.53,
+        146.794,
+        145.65,
+        146.874
+      ],
+      "reasons": [],
+      "uncertainty": "high"
+    },
+    {
+      "id": "L21-W03",
+      "lineId": "L21",
+      "text": "anything",
+      "old": [
+        145.9,
+        148.4
+      ],
+      "proposed": [
+        145.9,
+        148.42
+      ],
+      "ctcMedian": [
+        146.593,
+        148.39
+      ],
+      "ctcRange": [
+        146.011,
+        147.155,
+        148.259,
+        148.48
+      ],
+      "reasons": [
+        "manual_spectral_and_model_review",
+        "Anything: old onset preserved; CTC beginning may be late within held phrase."
+      ],
+      "uncertainty": "high"
+    },
+    {
+      "id": "L22-W01",
+      "lineId": "L22",
+      "text": "For",
+      "old": [
+        150.32,
+        150.5
+      ],
+      "proposed": [
+        150.32,
+        150.5
+      ],
+      "ctcMedian": [
+        150.293,
+        150.504
+      ],
+      "ctcRange": [
+        150.283,
+        150.303,
+        150.444,
+        150.585
+      ],
+      "reasons": [],
+      "uncertainty": "normal"
+    },
+    {
+      "id": "L22-W02",
+      "lineId": "L22",
+      "text": "you",
+      "old": [
+        150.5,
+        150.9
+      ],
+      "proposed": [
+        150.5,
+        150.9
+      ],
+      "ctcMedian": [
+        150.675,
+        150.916
+      ],
+      "ctcRange": [
+        150.544,
+        150.685,
+        150.806,
+        151.067
+      ],
+      "reasons": [],
+      "uncertainty": "normal"
+    },
+    {
+      "id": "L22-W03",
+      "lineId": "L22",
+      "text": "to",
+      "old": [
+        150.9,
+        151.44
+      ],
+      "proposed": [
+        151.16,
+        151.44
+      ],
+      "ctcMedian": [
+        151.197,
+        151.378
+      ],
+      "ctcRange": [
+        151.167,
+        151.268,
+        151.328,
+        151.488
+      ],
+      "reasons": [
+        "coherent_ctc_onset"
+      ],
+      "uncertainty": "normal"
+    },
+    {
+      "id": "L22-W04",
+      "lineId": "L22",
+      "text": "love",
+      "old": [
+        151.44,
+        152.38
+      ],
+      "proposed": [
+        151.78,
+        152.38
+      ],
+      "ctcMedian": [
+        151.82,
+        152.463
+      ],
+      "ctcRange": [
+        151.79,
+        151.85,
+        152.392,
+        152.553
+      ],
+      "reasons": [
+        "coherent_ctc_onset"
+      ],
+      "uncertainty": "normal"
+    },
+    {
+      "id": "L22-W05",
+      "lineId": "L22",
+      "text": "me",
+      "old": [
+        152.48,
+        152.86
+      ],
+      "proposed": [
+        152.48,
+        152.86
+      ],
+      "ctcMedian": [
+        152.563,
+        152.714
+      ],
+      "ctcRange": [
+        152.553,
+        152.673,
+        152.653,
+        152.774
+      ],
+      "reasons": [],
+      "uncertainty": "normal"
+    },
+    {
+      "id": "L22-W06",
+      "lineId": "L22",
+      "text": "again",
+      "old": [
+        152.86,
+        153.68
+      ],
+      "proposed": [
+        153.3,
+        154.0
+      ],
+      "ctcMedian": [
+        153.377,
+        153.969
+      ],
+      "ctcRange": [
+        153.356,
+        153.437,
+        153.899,
+        153.979
+      ],
+      "reasons": [
+        "manual_spectral_and_model_review",
+        "Again: four CTC ends 153.9–153.98; old 153.68 short. Onset near CTC 153.3."
+      ],
+      "uncertainty": "normal"
+    },
+    {
+      "id": "L23-W01",
+      "lineId": "L23",
+      "text": "If",
+      "old": [
+        156.52,
+        156.82
+      ],
+      "proposed": [
+        156.52,
+        156.82
+      ],
+      "ctcMedian": [
+        156.612,
+        156.752
+      ],
+      "ctcRange": [
+        156.602,
+        156.662,
+        156.682,
+        156.802
+      ],
+      "reasons": [],
+      "uncertainty": "normal"
+    },
+    {
+      "id": "L23-W02",
+      "lineId": "L23",
+      "text": "you",
+      "old": [
+        156.82,
+        157.54
+      ],
+      "proposed": [
+        156.82,
+        157.54
+      ],
+      "ctcMedian": [
+        156.973,
+        158.657
+      ],
+      "ctcRange": [
+        156.882,
+        157.223,
+        157.083,
+        161.233
+      ],
+      "reasons": [],
+      "uncertainty": "high"
+    },
+    {
+      "id": "L23-W03",
+      "lineId": "L23",
+      "text": "don’t",
+      "old": [
+        157.54,
+        162.0
+      ],
+      "proposed": [
+        157.54,
+        162.0
+      ],
+      "ctcMedian": [
+        161.373,
+        161.954
+      ],
+      "ctcRange": [
+        160.03,
+        161.413,
+        160.792,
+        161.975
+      ],
+      "reasons": [
+        "manual_spectral_and_model_review",
+        "Second held don’t: preserve early onset; CTC late token is inside held vowel."
+      ],
+      "uncertainty": "high"
+    },
+    {
+      "id": "L23-W04",
+      "lineId": "L23",
+      "text": "like",
+      "old": [
+        162.0,
+        162.62
+      ],
+      "proposed": [
+        162.0,
+        162.56
+      ],
+      "ctcMedian": [
+        162.135,
+        162.817
+      ],
+      "ctcRange": [
+        161.453,
+        162.395,
+        161.854,
+        162.977
+      ],
+      "reasons": [
+        "overlap_clamp"
+      ],
+      "uncertainty": "normal"
+    },
+    {
+      "id": "L23-W05",
+      "lineId": "L23",
+      "text": "me",
+      "old": [
+        162.62,
+        163.0
+      ],
+      "proposed": [
+        162.57,
+        163.17
+      ],
+      "ctcMedian": [
+        163.057,
+        163.147
+      ],
+      "ctcRange": [
+        162.756,
+        163.338,
+        162.917,
+        163.659
+      ],
+      "reasons": [
+        "manual_spectral_and_model_review",
+        "Raw greedy CTC separates preceding like near162.51, me through163.15; preserve short me interval."
+      ],
+      "uncertainty": "normal"
+    },
+    {
+      "id": "L23-W06",
+      "lineId": "L23",
+      "text": "now",
+      "old": [
+        163.0,
+        163.7
+      ],
+      "proposed": [
+        163.33,
+        163.9
+      ],
+      "ctcMedian": [
+        163.488,
+        163.739
+      ],
+      "ctcRange": [
+        163.097,
+        163.899,
+        163.719,
+        163.959
+      ],
+      "reasons": [
+        "manual_spectral_and_model_review",
+        "Raw greedy CTC word separation after me163.15 and now vowel/token near163.68; old 163.00 early."
+      ],
+      "uncertainty": "normal"
+    },
+    {
+      "id": "L24-W01",
+      "lineId": "L24",
+      "text": "I",
+      "old": [
+        166.2,
+        166.46
+      ],
+      "proposed": [
+        165.72,
+        166.16
+      ],
+      "ctcMedian": [
+        165.751,
+        165.771
+      ],
+      "ctcRange": [
+        165.601,
+        166.445,
+        165.621,
+        166.465
+      ],
+      "reasons": [
+        "manual_spectral_and_model_review",
+        "Second I: strong separated-vocal onset about 165.7 and CTC 165.6–165.8; old 166.20 is late.",
+        "overlap_clamp"
+      ],
+      "uncertainty": "high"
+    },
+    {
+      "id": "L24-W02",
+      "lineId": "L24",
+      "text": "will",
+      "old": [
+        166.46,
+        166.68
+      ],
+      "proposed": [
+        166.16,
+        166.68
+      ],
+      "ctcMedian": [
+        166.193,
+        166.625
+      ],
+      "ctcRange": [
+        166.163,
+        166.485,
+        166.585,
+        166.666
+      ],
+      "reasons": [
+        "manual_spectral_and_model_review",
+        "Will: CTC onset around 166.16–166.2; preserve user-supplied split despite contracted ASR."
+      ],
+      "uncertainty": "high"
+    },
+    {
+      "id": "L24-W03",
+      "lineId": "L24",
+      "text": "change",
+      "old": [
+        166.68,
+        167.64
+      ],
+      "proposed": [
+        166.68,
+        167.64
+      ],
+      "ctcMedian": [
+        166.846,
+        167.731
+      ],
+      "ctcRange": [
+        166.806,
+        166.887,
+        167.69,
+        167.751
+      ],
+      "reasons": [],
+      "uncertainty": "normal"
+    },
+    {
+      "id": "L24-W04",
+      "lineId": "L24",
+      "text": "for",
+      "old": [
+        167.64,
+        168.1
+      ],
+      "proposed": [
+        167.8,
+        168.1
+      ],
+      "ctcMedian": [
+        167.841,
+        168.283
+      ],
+      "ctcRange": [
+        167.811,
+        167.871,
+        167.911,
+        168.354
+      ],
+      "reasons": [
+        "coherent_ctc_onset"
+      ],
+      "uncertainty": "normal"
+    },
+    {
+      "id": "L24-W05",
+      "lineId": "L24",
+      "text": "you",
+      "old": [
+        168.1,
+        169.02
+      ],
+      "proposed": [
+        168.31,
+        169.38
+      ],
+      "ctcMedian": [
+        168.836,
+        169.358
+      ],
+      "ctcRange": [
+        168.354,
+        169.6,
+        169.218,
+        169.66
+      ],
+      "reasons": [
+        "manual_spectral_and_model_review",
+        "You: model onsets disagree but old 168.10 is early; substantial sung release ~169.3–169.5."
+      ],
+      "uncertainty": "high"
+    },
+    {
+      "id": "L25-W01",
+      "lineId": "L25",
+      "text": "I’ll",
+      "old": [
+        171.4,
+        172.36
+      ],
+      "proposed": [
+        171.4,
+        172.5
+      ],
+      "ctcMedian": [
+        171.454,
+        171.956
+      ],
+      "ctcRange": [
+        171.042,
+        171.745,
+        171.443,
+        172.488
+      ],
+      "reasons": [
+        "manual_spectral_and_model_review",
+        "Final I’ll: CTC late/duration disagreement; old onset retained, release extended toward next word."
+      ],
+      "uncertainty": "high"
+    },
+    {
+      "id": "L25-W02",
+      "lineId": "L25",
+      "text": "change",
+      "old": [
+        172.36,
+        173.56
+      ],
+      "proposed": [
+        172.68,
+        173.96
+      ],
+      "ctcMedian": [
+        172.709,
+        173.964
+      ],
+      "ctcRange": [
+        172.668,
+        172.829,
+        173.813,
+        174.436
+      ],
+      "reasons": [
+        "manual_spectral_and_model_review",
+        "Change: three CTC start near 172.7 and end ~174.0; old starts 172.36 early and ends 173.56 short."
+      ],
+      "uncertainty": "normal"
+    },
+    {
+      "id": "L25-W03",
+      "lineId": "L25",
+      "text": "for",
+      "old": [
+        173.56,
+        174.18
+      ],
+      "proposed": [
+        174.0,
+        174.21
+      ],
+      "ctcMedian": [
+        174.004,
+        174.185
+      ],
+      "ctcRange": [
+        173.994,
+        174.556,
+        174.094,
+        174.797
+      ],
+      "reasons": [
+        "manual_spectral_and_model_review",
+        "For: CTC onset ~174.0; old 173.56 early."
+      ],
+      "uncertainty": "normal"
+    },
+    {
+      "id": "L25-W04",
+      "lineId": "L25",
+      "text": "you",
+      "old": [
+        174.18,
+        174.76
+      ],
+      "proposed": [
+        174.28,
+        174.86
+      ],
+      "ctcMedian": [
+        174.335,
+        174.857
+      ],
+      "ctcRange": [
+        174.275,
+        175.239,
+        174.777,
+        175.299
+      ],
+      "reasons": [
+        "manual_spectral_and_model_review",
+        "You: CTC stem/mix release 174.78–174.86; old 174.76 slightly short."
+      ],
+      "uncertainty": "high"
+    }
+  ],
+  "crossCheck": "Independent 10 ms vocal-stem silence scan compared with revised proposal; first refrain For had the only long low-RMS span inside a selected word. Held words were cross-checked against spectral harmonics and raw phoneme decoding. RMS alone is not a lexical decision."
+}

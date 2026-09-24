@@ -42,8 +42,9 @@ Audio output is `public/audio-features.json` plus the binary; picture output is 
 | --- | --- |
 | `source/media-manifest.json` | Exact local media hash, picture geometry, streams and durations |
 | `source/lyrics-supplied.txt` | Supplied English text, kept separate from acoustic decisions |
-| `src/timeline.json` | Preliminary line and word IDs, sample indices and display wording |
+| `src/timeline.json` | Revised preview line and word IDs, sample indices and display wording |
 | `evidence/alignment-candidate-preliminary.json` | Preliminary model-assisted timing basis and uncertainty; not a listening certificate |
+| `evidence/alignment-revision-2026-09-24.json` | Old and revised interval ledger from independent vocal/CTC/spectral comparison; not a listening certificate |
 | `evidence/alignment-audit.json`, `evidence/timing-review.md` | Six bounded model observations per word and the actual-audio review priorities |
 | `evidence/browser-preview-review.md` | Sampled browser picture/control checks and their limits |
 | `src/preview-core.js` | Source-time cue/word lookup, feature interpolation and frame/paused-refresh logic |
@@ -52,6 +53,6 @@ Audio output is `public/audio-features.json` plus the binary; picture output is 
 | `public/audio-features.*`, `evidence/audio-features-audit.json` | Raw 60 Hz band data, units, source hash and reproducibility checks |
 | `public/picture-tones.json`, `evidence/picture-tone-audit.json` | Broad source brightness samples, switch proposal and known limits |
 
-Prioritize listening to the full track at normal speed, then uncertain connected short words and held endings at reduced speed. Review each performed repeat independently, including both “I will change for you” passages, and confirm whether any audible words extend beyond the supplied closing text. Inspect lyric contrast over changing source shots and at realistic phone size in both layouts. Record reviewer/method/scope and frozen input hashes without inventing per-cue telemetry.
+Prioritize listening to the full track at normal speed, then uncertain connected short words and held endings at reduced speed. Review each performed repeat independently, including both “I will change for you” passages. The 24 September acoustic revision moved the first refrain’s “For” behind a vocal pause and corrected short-word starts and held endings. Pay particular attention to the extended first “I’ll” and “anything” at 52–61 s, “with other people” at 102–106 s, and the two “I will” phrases, whose articulation can be ambiguous to speech models. Confirm whether any audible words extend beyond the supplied closing text. Inspect lyric contrast over changing source shots and at realistic phone size in both layouts. Record reviewer/method/scope and frozen input hashes without inventing per-cue telemetry.
 
 The production gate is still closed. Before any full-film capture or encoding, the current complete preview must pass synchronization review and receive explicit render authorization for this song and revision. Material changes to source, lyric inventory, word timing, scene or format composition require affected re-review. When production is authorized, add a renderer with a separate guarded entry point, prove same-time preview/renderer parity in both formats and verify encoded picture, word focus, audio identity and ending. Repository source updates follow the standing checked-and-merged GitHub handoff; public media release and posting are separate actions.
