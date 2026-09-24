@@ -1,0 +1,33 @@
+import {REVISION, SONG_ID} from './config.ts';
+
+export const previewIdentityPaths = [
+  'public/soundtrack.m4a',
+  'public/city-landscape.png',
+  'public/city-portrait.png',
+  'public/city-airship.png',
+  'public/city-train.png',
+  'public/city-sprites.png',
+  'src/spectrum.json',
+  'src/word-cues.json',
+  'src/pixel-font.ts',
+  'src/city.ts',
+  'src/config.ts',
+  'src/identity.ts',
+  'src/Film.tsx',
+  'src/index.tsx',
+  'src/review-client.ts',
+  'review/index.html',
+  'review/client.js',
+  'scripts/review-server.ts',
+  'scripts/dsp.ts',
+  'scripts/build-spectrum.ts',
+  'scripts/build-portable.ts',
+  'scripts/freeze-preview.ts',
+  'scripts/production-contract.ts',
+  'scripts/render-gate.ts',
+  'scripts/render.ts',
+  'package.json',
+  'package-lock.json',
+] as const;
+
+export {REVISION, SONG_ID};

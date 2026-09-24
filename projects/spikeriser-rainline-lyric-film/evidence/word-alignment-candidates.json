@@ -1,0 +1,3425 @@
+{
+  "method": "Four CTC passes (two architectures times original mix/stem) and two Whisper stable forced passes; selected boundaries are actual model observations, never evenly subdivided. Vocal stem lag checked by band-pass cross-correlation in four regions.",
+  "observations": [
+    {
+      "id": "V1-01:1",
+      "text": "Neon",
+      "selected": {
+        "start": "mms-stem",
+        "end": "mms-stem"
+      },
+      "candidateSpreadMsCtc": {
+        "start": 80.3,
+        "end": 40.2
+      },
+      "candidates": {
+        "mms-mix": {
+          "start": 47.788636,
+          "end": 48.29053,
+          "modelProbability": 0.3613
+        },
+        "wav2vec-mix": {
+          "start": 47.848864,
+          "end": 48.29053,
+          "modelProbability": 0.3433
+        },
+        "mms-stem": {
+          "start": 47.768561,
+          "end": 48.270455,
+          "modelProbability": 0.2502
+        },
+        "wav2vec-stem": {
+          "start": 47.828788,
+          "end": 48.250379,
+          "modelProbability": 0.2462
+        },
+        "stable-stem": {
+          "start": 47.78,
+          "end": 48.34,
+          "modelProbability": 0.5437
+        },
+        "stable-mix": {
+          "start": 45.5,
+          "end": 48.32,
+          "modelProbability": 0.7817
+        }
+      },
+      "reviewNote": "CTC spread exceeds 25 ms; inspect source mix and spectrogram before final approval."
+    },
+    {
+      "id": "V1-01:2",
+      "text": "bleeding",
+      "selected": {
+        "start": "mms-stem",
+        "end": "mms-stem"
+      },
+      "candidateSpreadMsCtc": {
+        "start": 60.2,
+        "end": 321.2
+      },
+      "candidates": {
+        "mms-mix": {
+          "start": 48.350758,
+          "end": 49.274242,
+          "modelProbability": 0.1386
+        },
+        "wav2vec-mix": {
+          "start": 48.390909,
+          "end": 48.973106,
+          "modelProbability": 0.1727
+        },
+        "mms-stem": {
+          "start": 48.330682,
+          "end": 49.294318,
+          "modelProbability": 0.2181
+        },
+        "wav2vec-stem": {
+          "start": 48.330682,
+          "end": 48.993182,
+          "modelProbability": 0.49
+        },
+        "stable-stem": {
+          "start": 48.34,
+          "end": 48.82,
+          "modelProbability": 0.9389
+        },
+        "stable-mix": {
+          "start": 48.32,
+          "end": 48.84,
+          "modelProbability": 0.9577
+        }
+      },
+      "reviewNote": "CTC spread exceeds 25 ms; inspect source mix and spectrogram before final approval."
+    },
+    {
+      "id": "V1-01:3",
+      "text": "in",
+      "selected": {
+        "start": "mms-stem",
+        "end": "mms-stem"
+      },
+      "candidateSpreadMsCtc": {
+        "start": 80.3,
+        "end": 100.4
+      },
+      "candidates": {
+        "mms-mix": {
+          "start": 49.374621,
+          "end": 49.61553,
+          "modelProbability": 0.4306
+        },
+        "wav2vec-mix": {
+          "start": 49.414773,
+          "end": 49.515152,
+          "modelProbability": 0.4971
+        },
+        "mms-stem": {
+          "start": 49.394697,
+          "end": 49.575379,
+          "modelProbability": 0.5051
+        },
+        "wav2vec-stem": {
+          "start": 49.454924,
+          "end": 49.515152,
+          "modelProbability": 0.6102
+        },
+        "stable-stem": {
+          "start": 48.82,
+          "end": 49.6,
+          "modelProbability": 0.9172
+        },
+        "stable-mix": {
+          "start": 48.84,
+          "end": 49.6,
+          "modelProbability": 0.9775
+        }
+      },
+      "reviewNote": "CTC spread exceeds 25 ms; inspect source mix and spectrogram before final approval."
+    },
+    {
+      "id": "V1-01:4",
+      "text": "the",
+      "selected": {
+        "start": "wav2vec-stem",
+        "end": "wav2vec-stem"
+      },
+      "candidateSpreadMsCtc": {
+        "start": 220.8,
+        "end": 240.9
+      },
+      "candidates": {
+        "mms-mix": {
+          "start": 49.61553,
+          "end": 49.715909,
+          "modelProbability": 0.0078
+        },
+        "wav2vec-mix": {
+          "start": 49.675758,
+          "end": 49.735985,
+          "modelProbability": 0.1933
+        },
+        "mms-stem": {
+          "start": 49.836364,
+          "end": 49.956818,
+          "modelProbability": 0.0175
+        },
+        "wav2vec-stem": {
+          "start": 49.675758,
+          "end": 49.756061,
+          "modelProbability": 0.6686
+        },
+        "stable-stem": {
+          "start": 49.6,
+          "end": 49.86,
+          "modelProbability": 0.9422
+        },
+        "stable-mix": {
+          "start": 49.6,
+          "end": 49.84,
+          "modelProbability": 0.9949
+        }
+      },
+      "reviewNote": "Stem MMS delays 'the' and 'gutter'; other CTC paths and stem spectrogram support the earlier handoff."
+    },
+    {
+      "id": "V1-01:5",
+      "text": "gutter",
+      "selected": {
+        "start": "wav2vec-stem",
+        "end": "wav2vec-stem"
+      },
+      "candidateSpreadMsCtc": {
+        "start": 220.8,
+        "end": 261.0
+      },
+      "candidates": {
+        "mms-mix": {
+          "start": 49.836364,
+          "end": 50.639394,
+          "modelProbability": 0.0261
+        },
+        "wav2vec-mix": {
+          "start": 49.856439,
+          "end": 50.418561,
+          "modelProbability": 0.3095
+        },
+        "mms-stem": {
+          "start": 50.057197,
+          "end": 50.65947,
+          "modelProbability": 0.0242
+        },
+        "wav2vec-stem": {
+          "start": 49.856439,
+          "end": 50.679545,
+          "modelProbability": 0.3184
+        },
+        "stable-stem": {
+          "start": 49.86,
+          "end": 50.46,
+          "modelProbability": 0.347
+        },
+        "stable-mix": {
+          "start": 49.84,
+          "end": 50.48,
+          "modelProbability": 0.3096
+        }
+      },
+      "reviewNote": "CTC spread exceeds 25 ms; inspect source mix and spectrogram before final approval."
+    },
+    {
+      "id": "V1-02:1",
+      "text": "Ceiling",
+      "selected": {
+        "start": "mms-stem",
+        "end": "mms-stem"
+      },
+      "candidateSpreadMsCtc": {
+        "start": 20.1,
+        "end": 40.1
+      },
+      "candidates": {
+        "mms-mix": {
+          "start": 50.681387,
+          "end": 51.143066,
+          "modelProbability": 0.2124
+        },
+        "wav2vec-mix": {
+          "start": 50.681387,
+          "end": 51.122993,
+          "modelProbability": 0.3111
+        },
+        "mms-stem": {
+          "start": 50.70146,
+          "end": 51.143066,
+          "modelProbability": 0.2914
+        },
+        "wav2vec-stem": {
+          "start": 50.70146,
+          "end": 51.163139,
+          "modelProbability": 0.4951
+        },
+        "stable-stem": {
+          "start": 50.3,
+          "end": 51.12,
+          "modelProbability": 0.4665
+        },
+        "stable-mix": {
+          "start": 50.3,
+          "end": 51.14,
+          "modelProbability": 0.4245
+        }
+      },
+      "reviewNote": "CTC spread exceeds 25 ms; inspect source mix and spectrogram before final approval."
+    },
+    {
+      "id": "V1-02:2",
+      "text": "city",
+      "selected": {
+        "start": "mms-stem",
+        "end": "mms-stem"
+      },
+      "candidateSpreadMsCtc": {
+        "start": 20.1,
+        "end": 220.8
+      },
+      "candidates": {
+        "mms-mix": {
+          "start": 51.263504,
+          "end": 51.765328,
+          "modelProbability": 0.1493
+        },
+        "wav2vec-mix": {
+          "start": 51.263504,
+          "end": 51.825547,
+          "modelProbability": 0.5252
+        },
+        "mms-stem": {
+          "start": 51.263504,
+          "end": 51.986131,
+          "modelProbability": 0.1569
+        },
+        "wav2vec-stem": {
+          "start": 51.283577,
+          "end": 51.825547,
+          "modelProbability": 0.6369
+        },
+        "stable-stem": {
+          "start": 51.12,
+          "end": 51.68,
+          "modelProbability": 0.4452
+        },
+        "stable-mix": {
+          "start": 51.14,
+          "end": 51.72,
+          "modelProbability": 0.623
+        }
+      },
+      "reviewNote": "CTC spread exceeds 25 ms; inspect source mix and spectrogram before final approval."
+    },
+    {
+      "id": "V1-02:3",
+      "text": "upside",
+      "selected": {
+        "start": "mms-stem",
+        "end": "mms-stem"
+      },
+      "candidateSpreadMsCtc": {
+        "start": 100.4,
+        "end": 140.5
+      },
+      "candidates": {
+        "mms-mix": {
+          "start": 52.086496,
+          "end": 52.608394,
+          "modelProbability": 0.2014
+        },
+        "wav2vec-mix": {
+          "start": 52.106569,
+          "end": 52.668613,
+          "modelProbability": 0.2721
+        },
+        "mms-stem": {
+          "start": 52.066423,
+          "end": 52.748905,
+          "modelProbability": 0.2179
+        },
+        "wav2vec-stem": {
+          "start": 52.166788,
+          "end": 52.688686,
+          "modelProbability": 0.9887
+        },
+        "stable-stem": {
+          "start": 51.68,
+          "end": 52.42,
+          "modelProbability": 0.9856
+        },
+        "stable-mix": {
+          "start": 51.72,
+          "end": 52.44,
+          "modelProbability": 0.97
+        }
+      },
+      "reviewNote": "CTC spread exceeds 25 ms; inspect source mix and spectrogram before final approval."
+    },
+    {
+      "id": "V1-02:4",
+      "text": "down",
+      "selected": {
+        "start": "mms-stem",
+        "end": "mms-stem"
+      },
+      "candidateSpreadMsCtc": {
+        "start": 682.5,
+        "end": 2208.0
+      },
+      "candidates": {
+        "mms-mix": {
+          "start": 52.768978,
+          "end": 53.25073,
+          "modelProbability": 0.1924
+        },
+        "wav2vec-mix": {
+          "start": 52.789051,
+          "end": 53.190511,
+          "modelProbability": 0.4897
+        },
+        "mms-stem": {
+          "start": 52.748905,
+          "end": 53.25073,
+          "modelProbability": 0.4592
+        },
+        "wav2vec-stem": {
+          "start": 53.431387,
+          "end": 55.39854,
+          "modelProbability": 0.0033
+        },
+        "stable-stem": {
+          "start": 52.42,
+          "end": 53.28,
+          "modelProbability": 0.987
+        },
+        "stable-mix": {
+          "start": 52.44,
+          "end": 53.26,
+          "modelProbability": 0.9717
+        }
+      },
+      "reviewNote": "CTC spread exceeds 25 ms; inspect source mix and spectrogram before final approval."
+    },
+    {
+      "id": "V1-03:1",
+      "text": "Every",
+      "selected": {
+        "start": "mms-stem",
+        "end": "mms-stem"
+      },
+      "candidateSpreadMsCtc": {
+        "start": 100.5,
+        "end": 60.3
+      },
+      "candidates": {
+        "mms-mix": {
+          "start": 59.565608,
+          "end": 59.826984,
+          "modelProbability": 0.698
+        },
+        "wav2vec-mix": {
+          "start": 59.625926,
+          "end": 59.867196,
+          "modelProbability": 0.6726
+        },
+        "mms-stem": {
+          "start": 59.545503,
+          "end": 59.84709,
+          "modelProbability": 0.5862
+        },
+        "wav2vec-stem": {
+          "start": 59.646032,
+          "end": 59.887302,
+          "modelProbability": 0.9868
+        },
+        "stable-stem": {
+          "start": 59.46,
+          "end": 59.9,
+          "modelProbability": 0.9084
+        },
+        "stable-mix": {
+          "start": 58.5,
+          "end": 59.88,
+          "modelProbability": 0.8792
+        }
+      },
+      "reviewNote": "CTC spread exceeds 25 ms; inspect source mix and spectrogram before final approval."
+    },
+    {
+      "id": "V1-03:2",
+      "text": "window",
+      "selected": {
+        "start": "mms-stem",
+        "end": "mms-stem"
+      },
+      "candidateSpreadMsCtc": {
+        "start": 80.4,
+        "end": 60.3
+      },
+      "candidates": {
+        "mms-mix": {
+          "start": 60.048148,
+          "end": 60.71164,
+          "modelProbability": 0.4018
+        },
+        "wav2vec-mix": {
+          "start": 60.08836,
+          "end": 60.671429,
+          "modelProbability": 0.4069
+        },
+        "mms-stem": {
+          "start": 60.007937,
+          "end": 60.691534,
+          "modelProbability": 0.2608
+        },
+        "wav2vec-stem": {
+          "start": 60.028042,
+          "end": 60.651323,
+          "modelProbability": 0.4305
+        },
+        "stable-stem": {
+          "start": 59.9,
+          "end": 60.52,
+          "modelProbability": 0.9983
+        },
+        "stable-mix": {
+          "start": 59.88,
+          "end": 60.54,
+          "modelProbability": 0.9985
+        }
+      },
+      "reviewNote": "CTC spread exceeds 25 ms; inspect source mix and spectrogram before final approval."
+    },
+    {
+      "id": "V1-03:3",
+      "text": "is",
+      "selected": {
+        "start": "mms-stem",
+        "end": "mms-stem"
+      },
+      "candidateSpreadMsCtc": {
+        "start": 160.8,
+        "end": 20.1
+      },
+      "candidates": {
+        "mms-mix": {
+          "start": 60.993122,
+          "end": 61.174074,
+          "modelProbability": 0.3788
+        },
+        "wav2vec-mix": {
+          "start": 61.053439,
+          "end": 61.174074,
+          "modelProbability": 0.5782
+        },
+        "mms-stem": {
+          "start": 60.95291,
+          "end": 61.174074,
+          "modelProbability": 0.3988
+        },
+        "wav2vec-stem": {
+          "start": 60.892593,
+          "end": 61.153968,
+          "modelProbability": 0.4694
+        },
+        "stable-stem": {
+          "start": 60.52,
+          "end": 61.2,
+          "modelProbability": 0.9973
+        },
+        "stable-mix": {
+          "start": 60.54,
+          "end": 61.22,
+          "modelProbability": 0.9932
+        }
+      },
+      "reviewNote": "CTC spread exceeds 25 ms; inspect source mix and spectrogram before final approval."
+    },
+    {
+      "id": "V1-03:4",
+      "text": "a",
+      "selected": {
+        "start": "stable-stem",
+        "end": "stable-stem"
+      },
+      "candidateSpreadMsCtc": {
+        "start": 100.5,
+        "end": 100.5
+      },
+      "candidates": {
+        "mms-mix": {
+          "start": 61.274603,
+          "end": 61.294709,
+          "modelProbability": 0.2497
+        },
+        "wav2vec-mix": {
+          "start": 61.294709,
+          "end": 61.314815,
+          "modelProbability": 0.2268
+        },
+        "mms-stem": {
+          "start": 61.274603,
+          "end": 61.294709,
+          "modelProbability": 0.1997
+        },
+        "wav2vec-stem": {
+          "start": 61.375132,
+          "end": 61.395238,
+          "modelProbability": 0.8946
+        },
+        "stable-stem": {
+          "start": 61.2,
+          "end": 61.52,
+          "modelProbability": 0.9993
+        },
+        "stable-mix": {
+          "start": 61.22,
+          "end": 61.52,
+          "modelProbability": 0.9993
+        }
+      },
+      "reviewNote": "All CTC paths collapse the unstressed 'a' to about 20 ms; stable Whisper preserves the audible-syllable window before 'lantern'."
+    },
+    {
+      "id": "V1-03:5",
+      "text": "lantern",
+      "selected": {
+        "start": "wav2vec-stem",
+        "end": "mms-stem"
+      },
+      "candidateSpreadMsCtc": {
+        "start": 40.2,
+        "end": 120.6
+      },
+      "candidates": {
+        "mms-mix": {
+          "start": 61.515873,
+          "end": 62.199471,
+          "modelProbability": 0.4346
+        },
+        "wav2vec-mix": {
+          "start": 61.556085,
+          "end": 62.239683,
+          "modelProbability": 0.4138
+        },
+        "mms-stem": {
+          "start": 61.515873,
+          "end": 62.159259,
+          "modelProbability": 0.4396
+        },
+        "wav2vec-stem": {
+          "start": 61.535979,
+          "end": 62.279894,
+          "modelProbability": 0.6639
+        },
+        "stable-stem": {
+          "start": 61.52,
+          "end": 61.94,
+          "modelProbability": 0.9997
+        },
+        "stable-mix": {
+          "start": 61.52,
+          "end": 61.94,
+          "modelProbability": 0.9995
+        }
+      },
+      "reviewNote": "CTC spread exceeds 25 ms; inspect source mix and spectrogram before final approval."
+    },
+    {
+      "id": "V1-04:1",
+      "text": "Hanging",
+      "selected": {
+        "start": "wav2vec-stem",
+        "end": "wav2vec-stem"
+      },
+      "candidateSpreadMsCtc": {
+        "start": 783.7,
+        "end": 160.8
+      },
+      "candidates": {
+        "mms-mix": {
+          "start": 61.680383,
+          "end": 62.986603,
+          "modelProbability": 0.2863
+        },
+        "wav2vec-mix": {
+          "start": 61.901435,
+          "end": 62.845933,
+          "modelProbability": 0.2537
+        },
+        "mms-stem": {
+          "start": 61.660287,
+          "end": 63.006699,
+          "modelProbability": 0.2901
+        },
+        "wav2vec-stem": {
+          "start": 62.444019,
+          "end": 62.886124,
+          "modelProbability": 0.741
+        },
+        "stable-stem": {
+          "start": 61.6,
+          "end": 62.86,
+          "modelProbability": 0.5959
+        },
+        "stable-mix": {
+          "start": 61.6,
+          "end": 62.9,
+          "modelProbability": 0.6128
+        }
+      },
+      "reviewNote": "Lantern/Hanging line boundary has substantial model disagreement; Wav2Vec stem follows the visible harmonic transition near 62.44 s."
+    },
+    {
+      "id": "V1-04:2",
+      "text": "over",
+      "selected": {
+        "start": "mms-stem",
+        "end": "mms-stem"
+      },
+      "candidateSpreadMsCtc": {
+        "start": 100.5,
+        "end": 20.1
+      },
+      "candidates": {
+        "mms-mix": {
+          "start": 63.066986,
+          "end": 63.529187,
+          "modelProbability": 0.2573
+        },
+        "wav2vec-mix": {
+          "start": 63.107177,
+          "end": 63.549282,
+          "modelProbability": 0.4209
+        },
+        "mms-stem": {
+          "start": 63.087081,
+          "end": 63.549282,
+          "modelProbability": 0.3246
+        },
+        "wav2vec-stem": {
+          "start": 63.167464,
+          "end": 63.529187,
+          "modelProbability": 0.4062
+        },
+        "stable-stem": {
+          "start": 62.86,
+          "end": 63.42,
+          "modelProbability": 0.9791
+        },
+        "stable-mix": {
+          "start": 62.9,
+          "end": 63.44,
+          "modelProbability": 0.9863
+        }
+      },
+      "reviewNote": "CTC spread exceeds 25 ms; inspect source mix and spectrogram before final approval."
+    },
+    {
+      "id": "V1-04:3",
+      "text": "someone's",
+      "selected": {
+        "start": "mms-stem",
+        "end": "mms-stem"
+      },
+      "candidateSpreadMsCtc": {
+        "start": 40.2,
+        "end": 40.2
+      },
+      "candidates": {
+        "mms-mix": {
+          "start": 63.689952,
+          "end": 64.513876,
+          "modelProbability": 0.8029
+        },
+        "wav2vec-mix": {
+          "start": 63.730144,
+          "end": 64.513876,
+          "modelProbability": 0.2368
+        },
+        "mms-stem": {
+          "start": 63.689952,
+          "end": 64.513876,
+          "modelProbability": 0.4743
+        },
+        "wav2vec-stem": {
+          "start": 63.710048,
+          "end": 64.473684,
+          "modelProbability": 0.9254
+        },
+        "stable-stem": {
+          "start": 63.42,
+          "end": 64.58,
+          "modelProbability": 0.9902
+        },
+        "stable-mix": {
+          "start": 63.44,
+          "end": 64.6,
+          "modelProbability": 0.9915
+        }
+      },
+      "reviewNote": "CTC spread exceeds 25 ms; inspect source mix and spectrogram before final approval."
+    },
+    {
+      "id": "V1-04:4",
+      "text": "town",
+      "selected": {
+        "start": "mms-stem",
+        "end": "mms-stem"
+      },
+      "candidateSpreadMsCtc": {
+        "start": 20.1,
+        "end": 140.7
+      },
+      "candidates": {
+        "mms-mix": {
+          "start": 64.594258,
+          "end": 65.277512,
+          "modelProbability": 0.8038
+        },
+        "wav2vec-mix": {
+          "start": 64.614354,
+          "end": 65.177033,
+          "modelProbability": 0.5447
+        },
+        "mms-stem": {
+          "start": 64.594258,
+          "end": 65.217225,
+          "modelProbability": 0.6089
+        },
+        "wav2vec-stem": {
+          "start": 64.614354,
+          "end": 65.136842,
+          "modelProbability": 0.9763
+        },
+        "stable-stem": {
+          "start": 64.58,
+          "end": 64.92,
+          "modelProbability": 0.9956
+        },
+        "stable-mix": {
+          "start": 64.6,
+          "end": 64.94,
+          "modelProbability": 0.992
+        }
+      },
+      "reviewNote": "CTC spread exceeds 25 ms; inspect source mix and spectrogram before final approval."
+    },
+    {
+      "id": "V1-05:1",
+      "text": "Hold",
+      "selected": {
+        "start": "mms-stem",
+        "end": "mms-stem"
+      },
+      "candidateSpreadMsCtc": {
+        "start": 100.5,
+        "end": 100.5
+      },
+      "candidates": {
+        "mms-mix": {
+          "start": 69.002392,
+          "end": 69.504785,
+          "modelProbability": 0.246
+        },
+        "wav2vec-mix": {
+          "start": 69.062679,
+          "end": 69.404306,
+          "modelProbability": 0.5793
+        },
+        "mms-stem": {
+          "start": 69.042584,
+          "end": 69.504785,
+          "modelProbability": 0.0914
+        },
+        "wav2vec-stem": {
+          "start": 69.102871,
+          "end": 69.404306,
+          "modelProbability": 0.3696
+        },
+        "stable-stem": {
+          "start": 68.5,
+          "end": 69.58,
+          "modelProbability": 0.6035
+        },
+        "stable-mix": {
+          "start": 68.5,
+          "end": 69.56,
+          "modelProbability": 0.8375
+        }
+      },
+      "reviewNote": "CTC spread exceeds 25 ms; inspect source mix and spectrogram before final approval."
+    },
+    {
+      "id": "V1-05:2",
+      "text": "the",
+      "selected": {
+        "start": "mms-stem",
+        "end": "mms-stem"
+      },
+      "candidateSpreadMsCtc": {
+        "start": 60.3,
+        "end": 281.3
+      },
+      "candidates": {
+        "mms-mix": {
+          "start": 69.52488,
+          "end": 69.685646,
+          "modelProbability": 0.0826
+        },
+        "wav2vec-mix": {
+          "start": 69.585167,
+          "end": 69.786124,
+          "modelProbability": 0.6367
+        },
+        "mms-stem": {
+          "start": 69.52488,
+          "end": 69.705742,
+          "modelProbability": 0.0745
+        },
+        "wav2vec-stem": {
+          "start": 69.565072,
+          "end": 69.966986,
+          "modelProbability": 0.0581
+        },
+        "stable-stem": {
+          "start": 69.58,
+          "end": 69.82,
+          "modelProbability": 0.9391
+        },
+        "stable-mix": {
+          "start": 69.56,
+          "end": 69.92,
+          "modelProbability": 0.9709
+        }
+      },
+      "reviewNote": "CTC spread exceeds 25 ms; inspect source mix and spectrogram before final approval."
+    },
+    {
+      "id": "V1-05:3",
+      "text": "rail",
+      "selected": {
+        "start": "mms-mix",
+        "end": "wav2vec-stem"
+      },
+      "candidateSpreadMsCtc": {
+        "start": 321.5,
+        "end": 1547.4
+      },
+      "candidates": {
+        "mms-mix": {
+          "start": 70.127751,
+          "end": 71.936364,
+          "modelProbability": 0.1698
+        },
+        "wav2vec-mix": {
+          "start": 70.027273,
+          "end": 71.011962,
+          "modelProbability": 0.3125
+        },
+        "mms-stem": {
+          "start": 69.80622,
+          "end": 72.55933,
+          "modelProbability": 0.1331
+        },
+        "wav2vec-stem": {
+          "start": 70.127751,
+          "end": 72.338278,
+          "modelProbability": 0.1105
+        },
+        "stable-stem": {
+          "start": 69.82,
+          "end": 70.48,
+          "modelProbability": 0.4918
+        },
+        "stable-mix": {
+          "start": 69.92,
+          "end": 70.46,
+          "modelProbability": 0.4932
+        }
+      },
+      "reviewNote": "Rail has a held vowel; mix Wav2Vec drops early. End is the stem Wav2Vec observation, with MMS stem supporting a long hold."
+    },
+    {
+      "id": "V1-06:1",
+      "text": "The",
+      "selected": {
+        "start": "mms-stem",
+        "end": "mms-stem"
+      },
+      "candidateSpreadMsCtc": {
+        "start": 723.4,
+        "end": 542.6
+      },
+      "candidates": {
+        "mms-mix": {
+          "start": 74.424402,
+          "end": 74.544976,
+          "modelProbability": 0.1375
+        },
+        "wav2vec-mix": {
+          "start": 74.786124,
+          "end": 74.846411,
+          "modelProbability": 0.0079
+        },
+        "mms-stem": {
+          "start": 74.062679,
+          "end": 74.303828,
+          "modelProbability": 0.0135
+        },
+        "wav2vec-stem": {
+          "start": 74.464593,
+          "end": 74.544976,
+          "modelProbability": 0.0052
+        },
+        "stable-stem": {
+          "start": 74.02,
+          "end": 74.62,
+          "modelProbability": 0.3857
+        },
+        "stable-mix": {
+          "start": 73.5,
+          "end": 74.68,
+          "modelProbability": 0.6684
+        }
+      },
+      "reviewNote": "Soft 'The' onset: MMS stem and stable stem are earlier than mix CTC."
+    },
+    {
+      "id": "V1-06:2",
+      "text": "floor",
+      "selected": {
+        "start": "mms-stem",
+        "end": "mms-stem"
+      },
+      "candidateSpreadMsCtc": {
+        "start": 160.8,
+        "end": 140.7
+      },
+      "candidates": {
+        "mms-mix": {
+          "start": 74.725837,
+          "end": 75.449282,
+          "modelProbability": 0.3219
+        },
+        "wav2vec-mix": {
+          "start": 74.886603,
+          "end": 75.308612,
+          "modelProbability": 0.2178
+        },
+        "mms-stem": {
+          "start": 74.725837,
+          "end": 75.449282,
+          "modelProbability": 0.2826
+        },
+        "wav2vec-stem": {
+          "start": 74.786124,
+          "end": 75.449282,
+          "modelProbability": 0.5858
+        },
+        "stable-stem": {
+          "start": 74.62,
+          "end": 75.42,
+          "modelProbability": 0.9571
+        },
+        "stable-mix": {
+          "start": 74.68,
+          "end": 75.42,
+          "modelProbability": 0.9674
+        }
+      },
+      "reviewNote": "CTC spread exceeds 25 ms; inspect source mix and spectrogram before final approval."
+    },
+    {
+      "id": "V1-06:3",
+      "text": "is",
+      "selected": {
+        "start": "mms-stem",
+        "end": "mms-stem"
+      },
+      "candidateSpreadMsCtc": {
+        "start": 60.3,
+        "end": 80.4
+      },
+      "candidates": {
+        "mms-mix": {
+          "start": 75.549761,
+          "end": 75.811005,
+          "modelProbability": 0.6365
+        },
+        "wav2vec-mix": {
+          "start": 75.549761,
+          "end": 75.730622,
+          "modelProbability": 0.4476
+        },
+        "mms-stem": {
+          "start": 75.549761,
+          "end": 75.770813,
+          "modelProbability": 0.3204
+        },
+        "wav2vec-stem": {
+          "start": 75.610048,
+          "end": 75.811005,
+          "modelProbability": 0.9058
+        },
+        "stable-stem": {
+          "start": 75.42,
+          "end": 75.94,
+          "modelProbability": 0.9922
+        },
+        "stable-mix": {
+          "start": 75.42,
+          "end": 75.96,
+          "modelProbability": 0.9964
+        }
+      },
+      "reviewNote": "CTC spread exceeds 25 ms; inspect source mix and spectrogram before final approval."
+    },
+    {
+      "id": "V1-06:4",
+      "text": "turning",
+      "selected": {
+        "start": "mms-stem",
+        "end": "mms-stem"
+      },
+      "candidateSpreadMsCtc": {
+        "start": 20.1,
+        "end": 602.9
+      },
+      "candidates": {
+        "mms-mix": {
+          "start": 75.931579,
+          "end": 76.855981,
+          "modelProbability": 0.2771
+        },
+        "wav2vec-mix": {
+          "start": 75.951675,
+          "end": 77.458852,
+          "modelProbability": 0.4466
+        },
+        "mms-stem": {
+          "start": 75.931579,
+          "end": 77.398565,
+          "modelProbability": 0.2372
+        },
+        "wav2vec-stem": {
+          "start": 75.951675,
+          "end": 76.976555,
+          "modelProbability": 0.3055
+        },
+        "stable-stem": {
+          "start": 75.94,
+          "end": 76.76,
+          "modelProbability": 0.8979
+        },
+        "stable-mix": {
+          "start": 75.96,
+          "end": 76.74,
+          "modelProbability": 0.9507
+        }
+      },
+      "reviewNote": "CTC spread exceeds 25 ms; inspect source mix and spectrogram before final approval."
+    },
+    {
+      "id": "V1-07:1",
+      "text": "Stars",
+      "selected": {
+        "start": "mms-stem",
+        "end": "mms-stem"
+      },
+      "candidateSpreadMsCtc": {
+        "start": 20.1,
+        "end": 40.2
+      },
+      "candidates": {
+        "mms-mix": {
+          "start": 80.605804,
+          "end": 81.168304,
+          "modelProbability": 0.649
+        },
+        "wav2vec-mix": {
+          "start": 80.625893,
+          "end": 81.148214,
+          "modelProbability": 0.8913
+        },
+        "mms-stem": {
+          "start": 80.605804,
+          "end": 81.168304,
+          "modelProbability": 0.7917
+        },
+        "wav2vec-stem": {
+          "start": 80.625893,
+          "end": 81.128125,
+          "modelProbability": 0.9888
+        },
+        "stable-stem": {
+          "start": 80.46,
+          "end": 81.16,
+          "modelProbability": 0.8682
+        },
+        "stable-mix": {
+          "start": 79.3,
+          "end": 81.14,
+          "modelProbability": 0.8806
+        }
+      },
+      "reviewNote": "CTC spread exceeds 25 ms; inspect source mix and spectrogram before final approval."
+    },
+    {
+      "id": "V1-07:2",
+      "text": "go",
+      "selected": {
+        "start": "mms-stem",
+        "end": "mms-stem"
+      },
+      "candidateSpreadMsCtc": {
+        "start": 20.1,
+        "end": 100.4
+      },
+      "candidates": {
+        "mms-mix": {
+          "start": 81.248661,
+          "end": 81.369196,
+          "modelProbability": 0.8176
+        },
+        "wav2vec-mix": {
+          "start": 81.26875,
+          "end": 81.429464,
+          "modelProbability": 0.3501
+        },
+        "mms-stem": {
+          "start": 81.248661,
+          "end": 81.369196,
+          "modelProbability": 0.8025
+        },
+        "wav2vec-stem": {
+          "start": 81.26875,
+          "end": 81.469643,
+          "modelProbability": 0.9402
+        },
+        "stable-stem": {
+          "start": 81.16,
+          "end": 81.62,
+          "modelProbability": 0.9323
+        },
+        "stable-mix": {
+          "start": 81.14,
+          "end": 81.58,
+          "modelProbability": 0.9779
+        }
+      },
+      "reviewNote": "CTC spread exceeds 25 ms; inspect source mix and spectrogram before final approval."
+    },
+    {
+      "id": "V1-07:3",
+      "text": "wheeling",
+      "selected": {
+        "start": "mms-mix",
+        "end": "wav2vec-stem"
+      },
+      "candidateSpreadMsCtc": {
+        "start": 200.9,
+        "end": 622.8
+      },
+      "candidates": {
+        "mms-mix": {
+          "start": 81.670536,
+          "end": 83.679464,
+          "modelProbability": 0.2006
+        },
+        "wav2vec-mix": {
+          "start": 81.670536,
+          "end": 83.056696,
+          "modelProbability": 0.1396
+        },
+        "mms-stem": {
+          "start": 81.851339,
+          "end": 83.599107,
+          "modelProbability": 0.2929
+        },
+        "wav2vec-stem": {
+          "start": 81.871429,
+          "end": 83.538839,
+          "modelProbability": 0.1081
+        },
+        "stable-stem": {
+          "start": 81.62,
+          "end": 83.54,
+          "modelProbability": 0.5878
+        },
+        "stable-mix": {
+          "start": 81.58,
+          "end": 83.52,
+          "modelProbability": 0.6431
+        }
+      },
+      "reviewNote": "CTC spread exceeds 25 ms; inspect source mix and spectrogram before final approval."
+    },
+    {
+      "id": "V1-08:1",
+      "text": "Through",
+      "selected": {
+        "start": "mms-stem",
+        "end": "mms-stem"
+      },
+      "candidateSpreadMsCtc": {
+        "start": 822.6,
+        "end": 2788.7
+      },
+      "candidates": {
+        "mms-mix": {
+          "start": 84.64326,
+          "end": 86.248276,
+          "modelProbability": 0.0204
+        },
+        "wav2vec-mix": {
+          "start": 83.860815,
+          "end": 84.482759,
+          "modelProbability": 0.0384
+        },
+        "mms-stem": {
+          "start": 84.623197,
+          "end": 87.271473,
+          "modelProbability": 0.0714
+        },
+        "wav2vec-stem": {
+          "start": 84.683386,
+          "end": 85.004389,
+          "modelProbability": 0.6871
+        },
+        "stable-stem": {
+          "start": 83.6,
+          "end": 85.06,
+          "modelProbability": 0.0868
+        },
+        "stable-mix": {
+          "start": 83.6,
+          "end": 85.04,
+          "modelProbability": 0.0191
+        }
+      },
+      "reviewNote": "Through is prolonged. Mix Wav2Vec absorbs the prior phrase; stem MMS follows the visible vocal transition near 84.6 s."
+    },
+    {
+      "id": "V1-08:2",
+      "text": "the",
+      "selected": {
+        "start": "mms-stem",
+        "end": "mms-stem"
+      },
+      "candidateSpreadMsCtc": {
+        "start": 2548.0,
+        "end": 2608.2
+      },
+      "candidates": {
+        "mms-mix": {
+          "start": 87.291536,
+          "end": 87.411912,
+          "modelProbability": 0.2094
+        },
+        "wav2vec-mix": {
+          "start": 84.763636,
+          "end": 84.86395,
+          "modelProbability": 0.1953
+        },
+        "mms-stem": {
+          "start": 87.311599,
+          "end": 87.431975,
+          "modelProbability": 0.1496
+        },
+        "wav2vec-stem": {
+          "start": 87.291536,
+          "end": 87.4721,
+          "modelProbability": 0.337
+        },
+        "stable-stem": {
+          "start": 85.06,
+          "end": 87.5,
+          "modelProbability": 0.4084
+        },
+        "stable-mix": {
+          "start": 85.04,
+          "end": 87.46,
+          "modelProbability": 0.5999
+        }
+      },
+      "reviewNote": "CTC spread exceeds 25 ms; inspect source mix and spectrogram before final approval."
+    },
+    {
+      "id": "V1-08:3",
+      "text": "glass",
+      "selected": {
+        "start": "wav2vec-stem",
+        "end": "wav2vec-stem"
+      },
+      "candidateSpreadMsCtc": {
+        "start": 1063.3,
+        "end": 1464.6
+      },
+      "candidates": {
+        "mms-mix": {
+          "start": 87.572414,
+          "end": 88.575549,
+          "modelProbability": 0.4984
+        },
+        "wav2vec-mix": {
+          "start": 86.549216,
+          "end": 88.575549,
+          "modelProbability": 0.0738
+        },
+        "mms-stem": {
+          "start": 87.552351,
+          "end": 89.939812,
+          "modelProbability": 0.4187
+        },
+        "wav2vec-stem": {
+          "start": 87.612539,
+          "end": 88.475235,
+          "modelProbability": 0.9122
+        },
+        "stable-stem": {
+          "start": 87.5,
+          "end": 88.0,
+          "modelProbability": 0.9341
+        },
+        "stable-mix": {
+          "start": 87.46,
+          "end": 88.02,
+          "modelProbability": 0.9875
+        }
+      },
+      "reviewNote": "Glass stem MMS includes a longer tail; selected Wav2Vec stem release limits probable reverb."
+    },
+    {
+      "id": "CH-01:1",
+      "text": "Spinward,",
+      "selected": {
+        "start": "mms-stem",
+        "end": "mms-stem"
+      },
+      "candidateSpreadMsCtc": {
+        "start": 40.1,
+        "end": 782.8
+      },
+      "candidates": {
+        "mms-mix": {
+          "start": 93.721864,
+          "end": 94.74552,
+          "modelProbability": 0.1168
+        },
+        "wav2vec-mix": {
+          "start": 93.762007,
+          "end": 95.046595,
+          "modelProbability": 0.0777
+        },
+        "mms-stem": {
+          "start": 93.762007,
+          "end": 94.725448,
+          "modelProbability": 0.1832
+        },
+        "wav2vec-stem": {
+          "start": 93.762007,
+          "end": 95.508244,
+          "modelProbability": 0.2605
+        },
+        "stable-stem": {
+          "start": 93.2,
+          "end": 95.64,
+          "modelProbability": 0.2887
+        },
+        "stable-mix": {
+          "start": 93.2,
+          "end": 96.76,
+          "modelProbability": 0.5002
+        }
+      },
+      "reviewNote": "CTC spread exceeds 25 ms; inspect source mix and spectrogram before final approval."
+    },
+    {
+      "id": "CH-01:2",
+      "text": "spinward",
+      "selected": {
+        "start": "mms-stem",
+        "end": "mms-stem"
+      },
+      "candidateSpreadMsCtc": {
+        "start": 40.1,
+        "end": 662.4
+      },
+      "candidates": {
+        "mms-mix": {
+          "start": 96.692473,
+          "end": 97.675986,
+          "modelProbability": 0.103
+        },
+        "wav2vec-mix": {
+          "start": 96.732616,
+          "end": 98.017204,
+          "modelProbability": 0.0951
+        },
+        "mms-stem": {
+          "start": 96.712545,
+          "end": 97.655914,
+          "modelProbability": 0.2511
+        },
+        "wav2vec-stem": {
+          "start": 96.712545,
+          "end": 98.31828,
+          "modelProbability": 0.2497
+        },
+        "stable-stem": {
+          "start": 96.54,
+          "end": 97.7,
+          "modelProbability": 0.8706
+        },
+        "stable-mix": {
+          "start": 96.76,
+          "end": 97.68,
+          "modelProbability": 0.7646
+        }
+      },
+      "reviewNote": "CTC spread exceeds 25 ms; inspect source mix and spectrogram before final approval."
+    },
+    {
+      "id": "CH-02:1",
+      "text": "Monsoon",
+      "selected": {
+        "start": "mms-stem",
+        "end": "mms-stem"
+      },
+      "candidateSpreadMsCtc": {
+        "start": 100.3,
+        "end": 421.4
+      },
+      "candidates": {
+        "mms-mix": {
+          "start": 99.001294,
+          "end": 100.486084,
+          "modelProbability": 0.4727
+        },
+        "wav2vec-mix": {
+          "start": 99.101618,
+          "end": 100.064725,
+          "modelProbability": 0.3519
+        },
+        "mms-stem": {
+          "start": 99.001294,
+          "end": 100.486084,
+          "modelProbability": 0.4422
+        },
+        "wav2vec-stem": {
+          "start": 99.041424,
+          "end": 100.466019,
+          "modelProbability": 0.5894
+        },
+        "stable-stem": {
+          "start": 98.94,
+          "end": 100.14,
+          "modelProbability": 0.537
+        },
+        "stable-mix": {
+          "start": 98.6,
+          "end": 100.16,
+          "modelProbability": 0.8742
+        }
+      },
+      "reviewNote": "CTC spread exceeds 25 ms; inspect source mix and spectrogram before final approval."
+    },
+    {
+      "id": "CH-02:2",
+      "text": "on",
+      "selected": {
+        "start": "mms-stem",
+        "end": "mms-stem"
+      },
+      "candidateSpreadMsCtc": {
+        "start": 80.3,
+        "end": 100.3
+      },
+      "candidates": {
+        "mms-mix": {
+          "start": 100.706796,
+          "end": 100.827184,
+          "modelProbability": 0.2621
+        },
+        "wav2vec-mix": {
+          "start": 100.646602,
+          "end": 100.726861,
+          "modelProbability": 0.7578
+        },
+        "mms-stem": {
+          "start": 100.626537,
+          "end": 100.746926,
+          "modelProbability": 0.389
+        },
+        "wav2vec-stem": {
+          "start": 100.686731,
+          "end": 100.746926,
+          "modelProbability": 0.9832
+        },
+        "stable-stem": {
+          "start": 100.14,
+          "end": 100.86,
+          "modelProbability": 0.8619
+        },
+        "stable-mix": {
+          "start": 100.16,
+          "end": 100.82,
+          "modelProbability": 0.9338
+        }
+      },
+      "reviewNote": "CTC spread exceeds 25 ms; inspect source mix and spectrogram before final approval."
+    },
+    {
+      "id": "CH-02:3",
+      "text": "the",
+      "selected": {
+        "start": "mms-stem",
+        "end": "mms-stem"
+      },
+      "candidateSpreadMsCtc": {
+        "start": 40.1,
+        "end": 80.3
+      },
+      "candidates": {
+        "mms-mix": {
+          "start": 100.827184,
+          "end": 100.927508,
+          "modelProbability": 0.0581
+        },
+        "wav2vec-mix": {
+          "start": 100.847249,
+          "end": 100.967638,
+          "modelProbability": 0.3351
+        },
+        "mms-stem": {
+          "start": 100.827184,
+          "end": 100.967638,
+          "modelProbability": 0.0184
+        },
+        "wav2vec-stem": {
+          "start": 100.867314,
+          "end": 101.007767,
+          "modelProbability": 0.4023
+        },
+        "stable-stem": {
+          "start": 100.86,
+          "end": 101.06,
+          "modelProbability": 0.9863
+        },
+        "stable-mix": {
+          "start": 100.82,
+          "end": 101.02,
+          "modelProbability": 0.9975
+        }
+      },
+      "reviewNote": "CTC spread exceeds 25 ms; inspect source mix and spectrogram before final approval."
+    },
+    {
+      "id": "CH-02:4",
+      "text": "inside",
+      "selected": {
+        "start": "mms-stem",
+        "end": "mms-stem"
+      },
+      "candidateSpreadMsCtc": {
+        "start": 60.2,
+        "end": 200.6
+      },
+      "candidates": {
+        "mms-mix": {
+          "start": 101.108091,
+          "end": 101.850485,
+          "modelProbability": 0.316
+        },
+        "wav2vec-mix": {
+          "start": 101.14822,
+          "end": 102.011003,
+          "modelProbability": 0.3804
+        },
+        "mms-stem": {
+          "start": 101.108091,
+          "end": 101.890615,
+          "modelProbability": 0.3942
+        },
+        "wav2vec-stem": {
+          "start": 101.168285,
+          "end": 101.810356,
+          "modelProbability": 0.9465
+        },
+        "stable-stem": {
+          "start": 101.06,
+          "end": 101.64,
+          "modelProbability": 0.9863
+        },
+        "stable-mix": {
+          "start": 101.02,
+          "end": 101.6,
+          "modelProbability": 0.9952
+        }
+      },
+      "reviewNote": "CTC spread exceeds 25 ms; inspect source mix and spectrogram before final approval."
+    },
+    {
+      "id": "CH-02:5",
+      "text": "of",
+      "selected": {
+        "start": "mms-stem",
+        "end": "mms-stem"
+      },
+      "candidateSpreadMsCtc": {
+        "start": 381.2,
+        "end": 361.2
+      },
+      "candidates": {
+        "mms-mix": {
+          "start": 101.890615,
+          "end": 102.031068,
+          "modelProbability": 0.034
+        },
+        "wav2vec-mix": {
+          "start": 102.271845,
+          "end": 102.352104,
+          "modelProbability": 0.0016
+        },
+        "mms-stem": {
+          "start": 101.890615,
+          "end": 102.031068,
+          "modelProbability": 0.0294
+        },
+        "wav2vec-stem": {
+          "start": 101.950809,
+          "end": 101.990939,
+          "modelProbability": 0.9464
+        },
+        "stable-stem": {
+          "start": 101.64,
+          "end": 102.06,
+          "modelProbability": 0.9845
+        },
+        "stable-mix": {
+          "start": 101.6,
+          "end": 102.04,
+          "modelProbability": 0.9938
+        }
+      },
+      "reviewNote": "CTC spread exceeds 25 ms; inspect source mix and spectrogram before final approval."
+    },
+    {
+      "id": "CH-02:6",
+      "text": "the",
+      "selected": {
+        "start": "mms-stem",
+        "end": "mms-stem"
+      },
+      "candidateSpreadMsCtc": {
+        "start": 923.0,
+        "end": 1003.2
+      },
+      "candidates": {
+        "mms-mix": {
+          "start": 102.111327,
+          "end": 102.25178,
+          "modelProbability": 0.2272
+        },
+        "wav2vec-mix": {
+          "start": 103.034304,
+          "end": 103.255016,
+          "modelProbability": 0.1283
+        },
+        "mms-stem": {
+          "start": 102.111327,
+          "end": 102.25178,
+          "modelProbability": 0.2168
+        },
+        "wav2vec-stem": {
+          "start": 102.171521,
+          "end": 102.352104,
+          "modelProbability": 0.9283
+        },
+        "stable-stem": {
+          "start": 102.06,
+          "end": 102.38,
+          "modelProbability": 0.9891
+        },
+        "stable-mix": {
+          "start": 102.04,
+          "end": 102.36,
+          "modelProbability": 0.9969
+        }
+      },
+      "reviewNote": "CTC spread exceeds 25 ms; inspect source mix and spectrogram before final approval."
+    },
+    {
+      "id": "CH-02:7",
+      "text": "sky",
+      "selected": {
+        "start": "mms-stem",
+        "end": "mms-stem"
+      },
+      "candidateSpreadMsCtc": {
+        "start": 1244.0,
+        "end": 923.0
+      },
+      "candidates": {
+        "mms-mix": {
+          "start": 102.492557,
+          "end": 103.234951,
+          "modelProbability": 0.4394
+        },
+        "wav2vec-mix": {
+          "start": 103.73657,
+          "end": 104.097735,
+          "modelProbability": 0.0117
+        },
+        "mms-stem": {
+          "start": 102.492557,
+          "end": 103.214887,
+          "modelProbability": 0.446
+        },
+        "wav2vec-stem": {
+          "start": 102.552751,
+          "end": 103.174757,
+          "modelProbability": 0.982
+        },
+        "stable-stem": {
+          "start": 102.38,
+          "end": 102.96,
+          "modelProbability": 0.9941
+        },
+        "stable-mix": {
+          "start": 102.36,
+          "end": 103.16,
+          "modelProbability": 0.9972
+        }
+      },
+      "reviewNote": "CTC spread exceeds 25 ms; inspect source mix and spectrogram before final approval."
+    },
+    {
+      "id": "CH-03:1",
+      "text": "Lightning",
+      "selected": {
+        "start": "mms-stem",
+        "end": "wav2vec-stem"
+      },
+      "candidateSpreadMsCtc": {
+        "start": 1445.7,
+        "end": 1967.7
+      },
+      "candidates": {
+        "mms-mix": {
+          "start": 105.462598,
+          "end": 106.566929,
+          "modelProbability": 0.1229
+        },
+        "wav2vec-mix": {
+          "start": 106.908268,
+          "end": 108.15315,
+          "modelProbability": 0.1083
+        },
+        "mms-stem": {
+          "start": 105.462598,
+          "end": 108.534646,
+          "modelProbability": 0.1529
+        },
+        "wav2vec-stem": {
+          "start": 105.482677,
+          "end": 107.02874,
+          "modelProbability": 0.1932
+        },
+        "stable-stem": {
+          "start": 104.8,
+          "end": 106.2,
+          "modelProbability": 0.1897
+        },
+        "stable-mix": {
+          "start": 104.8,
+          "end": 106.18,
+          "modelProbability": 0.3548
+        }
+      },
+      "reviewNote": "Lightning mix Wav2Vec begins late; separated stem and mix MMS agree on onset. Spectrogram and stem Wav2Vec support release near 107.0 s, before the near-silent interval."
+    },
+    {
+      "id": "CH-04:1",
+      "text": "Shows",
+      "selected": {
+        "start": "mms-stem",
+        "end": "mms-stem"
+      },
+      "candidateSpreadMsCtc": {
+        "start": 20.1,
+        "end": 140.4
+      },
+      "candidates": {
+        "mms-mix": {
+          "start": 109.941855,
+          "end": 110.302757,
+          "modelProbability": 0.2257
+        },
+        "wav2vec-mix": {
+          "start": 109.941855,
+          "end": 110.182456,
+          "modelProbability": 0.2334
+        },
+        "mms-stem": {
+          "start": 109.921805,
+          "end": 110.322807,
+          "modelProbability": 0.313
+        },
+        "wav2vec-stem": {
+          "start": 109.921805,
+          "end": 110.282707,
+          "modelProbability": 0.9899
+        },
+        "stable-stem": {
+          "start": 109.8,
+          "end": 110.28,
+          "modelProbability": 0.8497
+        },
+        "stable-mix": {
+          "start": 109.2,
+          "end": 110.26,
+          "modelProbability": 0.7532
+        }
+      },
+      "reviewNote": "CTC spread exceeds 25 ms; inspect source mix and spectrogram before final approval."
+    },
+    {
+      "id": "CH-04:2",
+      "text": "the",
+      "selected": {
+        "start": "mms-stem",
+        "end": "mms-stem"
+      },
+      "candidateSpreadMsCtc": {
+        "start": 40.1,
+        "end": 60.2
+      },
+      "candidates": {
+        "mms-mix": {
+          "start": 110.342857,
+          "end": 110.463158,
+          "modelProbability": 0.0592
+        },
+        "wav2vec-mix": {
+          "start": 110.362907,
+          "end": 110.503258,
+          "modelProbability": 0.1492
+        },
+        "mms-stem": {
+          "start": 110.342857,
+          "end": 110.443108,
+          "modelProbability": 0.0261
+        },
+        "wav2vec-stem": {
+          "start": 110.382957,
+          "end": 110.503258,
+          "modelProbability": 0.9678
+        },
+        "stable-stem": {
+          "start": 110.28,
+          "end": 110.58,
+          "modelProbability": 0.9848
+        },
+        "stable-mix": {
+          "start": 110.26,
+          "end": 110.56,
+          "modelProbability": 0.9843
+        }
+      },
+      "reviewNote": "CTC spread exceeds 25 ms; inspect source mix and spectrogram before final approval."
+    },
+    {
+      "id": "CH-04:3",
+      "text": "other",
+      "selected": {
+        "start": "mms-mix",
+        "end": "mms-mix"
+      },
+      "candidateSpreadMsCtc": {
+        "start": 782.0,
+        "end": 3348.4
+      },
+      "candidates": {
+        "mms-mix": {
+          "start": 110.623559,
+          "end": 111.084712,
+          "modelProbability": 0.0274
+        },
+        "wav2vec-mix": {
+          "start": 111.405514,
+          "end": 112.929323,
+          "modelProbability": 0.045
+        },
+        "mms-stem": {
+          "start": 110.623559,
+          "end": 114.433083,
+          "modelProbability": 0.0959
+        },
+        "wav2vec-stem": {
+          "start": 110.663659,
+          "end": 111.124812,
+          "modelProbability": 0.4554
+        },
+        "stable-stem": {
+          "start": 110.58,
+          "end": 110.98,
+          "modelProbability": 0.9594
+        },
+        "stable-mix": {
+          "start": 110.56,
+          "end": 111.0,
+          "modelProbability": 0.9676
+        }
+      },
+      "reviewNote": "Other is early in MMS mix and Wav2Vec stem; MMS stem holds it over the following word."
+    },
+    {
+      "id": "CH-04:4",
+      "text": "side",
+      "selected": {
+        "start": "wav2vec-stem",
+        "end": "wav2vec-stem"
+      },
+      "candidateSpreadMsCtc": {
+        "start": 3990.0,
+        "end": 1343.4
+      },
+      "candidates": {
+        "mms-mix": {
+          "start": 111.205013,
+          "end": 117.17995,
+          "modelProbability": 0.1389
+        },
+        "wav2vec-mix": {
+          "start": 113.270175,
+          "end": 115.836591,
+          "modelProbability": 0.0287
+        },
+        "mms-stem": {
+          "start": 115.194987,
+          "end": 116.919298,
+          "modelProbability": 0.0315
+        },
+        "wav2vec-stem": {
+          "start": 111.245113,
+          "end": 116.959398,
+          "modelProbability": 0.2786
+        },
+        "stable-stem": {
+          "start": 110.98,
+          "end": 111.62,
+          "modelProbability": 0.7858
+        },
+        "stable-mix": {
+          "start": 111.0,
+          "end": 111.8,
+          "modelProbability": 0.9497
+        }
+      },
+      "reviewNote": "Side onset is early in Wav2Vec stem/MMS mix/stable stem, though MMS stem pushes it to 115.19 s. Held release remains uncertain."
+    },
+    {
+      "id": "CH-05:1",
+      "text": "Spinward,",
+      "selected": {
+        "start": "wav2vec-stem",
+        "end": "wav2vec-stem"
+      },
+      "candidateSpreadMsCtc": {
+        "start": 2890.3,
+        "end": 2328.3
+      },
+      "candidates": {
+        "mms-mix": {
+          "start": 117.181362,
+          "end": 119.850896,
+          "modelProbability": 0.1413
+        },
+        "wav2vec-mix": {
+          "start": 118.767025,
+          "end": 120.97491,
+          "modelProbability": 0.135
+        },
+        "mms-stem": {
+          "start": 120.071685,
+          "end": 121.195699,
+          "modelProbability": 0.1184
+        },
+        "wav2vec-stem": {
+          "start": 117.181362,
+          "end": 118.867384,
+          "modelProbability": 0.2782
+        },
+        "stable-stem": {
+          "start": 116.8,
+          "end": 120.14,
+          "modelProbability": 0.2969
+        },
+        "stable-mix": {
+          "start": 116.8,
+          "end": 119.48,
+          "modelProbability": 0.5232
+        }
+      },
+      "reviewNote": "First Spinward onset agrees between Wav2Vec stem and MMS mix; the mix Wav2Vec path slips late."
+    },
+    {
+      "id": "CH-05:2",
+      "text": "spinward",
+      "selected": {
+        "start": "wav2vec-stem",
+        "end": "wav2vec-stem"
+      },
+      "candidateSpreadMsCtc": {
+        "start": 1264.5,
+        "end": 642.3
+      },
+      "candidates": {
+        "mms-mix": {
+          "start": 120.071685,
+          "end": 121.396416,
+          "modelProbability": 0.2466
+        },
+        "wav2vec-mix": {
+          "start": 121.336201,
+          "end": 121.737634,
+          "modelProbability": 0.1448
+        },
+        "mms-stem": {
+          "start": 121.195699,
+          "end": 121.938351,
+          "modelProbability": 0.0227
+        },
+        "wav2vec-stem": {
+          "start": 120.091756,
+          "end": 122.03871,
+          "modelProbability": 0.3053
+        },
+        "stable-stem": {
+          "start": 120.14,
+          "end": 121.2,
+          "modelProbability": 0.533
+        },
+        "stable-mix": {
+          "start": 119.48,
+          "end": 121.12,
+          "modelProbability": 0.5881
+        }
+      },
+      "reviewNote": "Second Spinward is independently aligned; Wav2Vec stem onset agrees with MMS mix, not with the stem MMS path that collapsed the two words."
+    },
+    {
+      "id": "CH-06:1",
+      "text": "All",
+      "selected": {
+        "start": "mms-stem",
+        "end": "mms-stem"
+      },
+      "candidateSpreadMsCtc": {
+        "start": 60.1,
+        "end": 40.1
+      },
+      "candidates": {
+        "mms-mix": {
+          "start": 122.481132,
+          "end": 122.581368,
+          "modelProbability": 0.1314
+        },
+        "wav2vec-mix": {
+          "start": 122.541274,
+          "end": 122.621462,
+          "modelProbability": 0.024
+        },
+        "mms-stem": {
+          "start": 122.481132,
+          "end": 122.581368,
+          "modelProbability": 0.1005
+        },
+        "wav2vec-stem": {
+          "start": 122.521226,
+          "end": 122.601415,
+          "modelProbability": 0.1304
+        },
+        "stable-stem": {
+          "start": 122.44,
+          "end": 122.62,
+          "modelProbability": 0.6192
+        },
+        "stable-mix": {
+          "start": 122.0,
+          "end": 122.62,
+          "modelProbability": 0.7099
+        }
+      },
+      "reviewNote": "CTC spread exceeds 25 ms; inspect source mix and spectrogram before final approval."
+    },
+    {
+      "id": "CH-06:2",
+      "text": "the",
+      "selected": {
+        "start": "mms-stem",
+        "end": "mms-stem"
+      },
+      "candidateSpreadMsCtc": {
+        "start": 40.1,
+        "end": 80.2
+      },
+      "candidates": {
+        "mms-mix": {
+          "start": 122.621462,
+          "end": 122.741745,
+          "modelProbability": 0.7081
+        },
+        "wav2vec-mix": {
+          "start": 122.661557,
+          "end": 122.761792,
+          "modelProbability": 0.3186
+        },
+        "mms-stem": {
+          "start": 122.641509,
+          "end": 122.741745,
+          "modelProbability": 0.0816
+        },
+        "wav2vec-stem": {
+          "start": 122.641509,
+          "end": 122.821934,
+          "modelProbability": 0.9561
+        },
+        "stable-stem": {
+          "start": 122.62,
+          "end": 122.86,
+          "modelProbability": 0.992
+        },
+        "stable-mix": {
+          "start": 122.62,
+          "end": 122.9,
+          "modelProbability": 0.9945
+        }
+      },
+      "reviewNote": "CTC spread exceeds 25 ms; inspect source mix and spectrogram before final approval."
+    },
+    {
+      "id": "CH-06:3",
+      "text": "lights",
+      "selected": {
+        "start": "mms-stem",
+        "end": "mms-stem"
+      },
+      "candidateSpreadMsCtc": {
+        "start": 320.8,
+        "end": 140.3
+      },
+      "candidates": {
+        "mms-mix": {
+          "start": 123.122642,
+          "end": 123.84434,
+          "modelProbability": 0.4989
+        },
+        "wav2vec-mix": {
+          "start": 122.841981,
+          "end": 123.704009,
+          "modelProbability": 0.0395
+        },
+        "mms-stem": {
+          "start": 123.102594,
+          "end": 123.824292,
+          "modelProbability": 0.3453
+        },
+        "wav2vec-stem": {
+          "start": 123.162736,
+          "end": 123.824292,
+          "modelProbability": 0.4212
+        },
+        "stable-stem": {
+          "start": 122.86,
+          "end": 123.78,
+          "modelProbability": 0.9847
+        },
+        "stable-mix": {
+          "start": 122.9,
+          "end": 123.72,
+          "modelProbability": 0.9938
+        }
+      },
+      "reviewNote": "CTC spread exceeds 25 ms; inspect source mix and spectrogram before final approval."
+    },
+    {
+      "id": "CH-06:4",
+      "text": "are",
+      "selected": {
+        "start": "mms-stem",
+        "end": "mms-stem"
+      },
+      "candidateSpreadMsCtc": {
+        "start": 240.6,
+        "end": 160.4
+      },
+      "candidates": {
+        "mms-mix": {
+          "start": 123.964623,
+          "end": 124.345519,
+          "modelProbability": 0.3067
+        },
+        "wav2vec-mix": {
+          "start": 124.205189,
+          "end": 124.425708,
+          "modelProbability": 0.1062
+        },
+        "mms-stem": {
+          "start": 123.98467,
+          "end": 124.26533,
+          "modelProbability": 0.1842
+        },
+        "wav2vec-stem": {
+          "start": 124.165094,
+          "end": 124.325472,
+          "modelProbability": 0.3368
+        },
+        "stable-stem": {
+          "start": 123.78,
+          "end": 124.28,
+          "modelProbability": 0.9695
+        },
+        "stable-mix": {
+          "start": 123.72,
+          "end": 124.3,
+          "modelProbability": 0.9807
+        }
+      },
+      "reviewNote": "CTC spread exceeds 25 ms; inspect source mix and spectrogram before final approval."
+    },
+    {
+      "id": "CH-06:5",
+      "text": "falling",
+      "selected": {
+        "start": "mms-stem",
+        "end": "mms-stem"
+      },
+      "candidateSpreadMsCtc": {
+        "start": 80.2,
+        "end": 721.7
+      },
+      "candidates": {
+        "mms-mix": {
+          "start": 124.545991,
+          "end": 125.167453,
+          "modelProbability": 0.3348
+        },
+        "wav2vec-mix": {
+          "start": 124.626179,
+          "end": 125.768868,
+          "modelProbability": 0.1003
+        },
+        "mms-stem": {
+          "start": 124.545991,
+          "end": 125.1875,
+          "modelProbability": 0.3606
+        },
+        "wav2vec-stem": {
+          "start": 124.586085,
+          "end": 125.04717,
+          "modelProbability": 0.8514
+        },
+        "stable-stem": {
+          "start": 124.28,
+          "end": 124.98,
+          "modelProbability": 0.8286
+        },
+        "stable-mix": {
+          "start": 124.3,
+          "end": 125.0,
+          "modelProbability": 0.8956
+        }
+      },
+      "reviewNote": "CTC spread exceeds 25 ms; inspect source mix and spectrogram before final approval."
+    },
+    {
+      "id": "CH-06:6",
+      "text": "out",
+      "selected": {
+        "start": "mms-stem",
+        "end": "mms-stem"
+      },
+      "candidateSpreadMsCtc": {
+        "start": 1523.6,
+        "end": 2145.0
+      },
+      "candidates": {
+        "mms-mix": {
+          "start": 125.227594,
+          "end": 125.387972,
+          "modelProbability": 0.2285
+        },
+        "wav2vec-mix": {
+          "start": 126.751179,
+          "end": 127.533019,
+          "modelProbability": 0.0252
+        },
+        "mms-stem": {
+          "start": 125.247642,
+          "end": 125.408019,
+          "modelProbability": 0.112
+        },
+        "wav2vec-stem": {
+          "start": 125.307783,
+          "end": 125.408019,
+          "modelProbability": 0.6045
+        },
+        "stable-stem": {
+          "start": 124.98,
+          "end": 125.46,
+          "modelProbability": 0.8485
+        },
+        "stable-mix": {
+          "start": 125.0,
+          "end": 125.46,
+          "modelProbability": 0.7695
+        }
+      },
+      "reviewNote": "CTC spread exceeds 25 ms; inspect source mix and spectrogram before final approval."
+    },
+    {
+      "id": "CH-06:7",
+      "text": "tonight",
+      "selected": {
+        "start": "mms-stem",
+        "end": "mms-stem"
+      },
+      "candidateSpreadMsCtc": {
+        "start": 2846.7,
+        "end": 1182.8
+      },
+      "candidates": {
+        "mms-mix": {
+          "start": 125.508255,
+          "end": 129.337264,
+          "modelProbability": 0.3231
+        },
+        "wav2vec-mix": {
+          "start": 128.354953,
+          "end": 130.199292,
+          "modelProbability": 0.0444
+        },
+        "mms-stem": {
+          "start": 125.508255,
+          "end": 129.136792,
+          "modelProbability": 0.2252
+        },
+        "wav2vec-stem": {
+          "start": 125.528302,
+          "end": 129.016509,
+          "modelProbability": 0.4222
+        },
+        "stable-stem": {
+          "start": 125.46,
+          "end": 126.06,
+          "modelProbability": 0.9819
+        },
+        "stable-mix": {
+          "start": 125.46,
+          "end": 126.14,
+          "modelProbability": 0.9853
+        }
+      },
+      "reviewNote": "Tonight has a held note. Stem Wav2Vec and MMS agree on release around 129.0\u2013129.1 s, while stable Whisper truncates it."
+    },
+    {
+      "id": "V2-01:1",
+      "text": "Steam",
+      "selected": {
+        "start": "mms-mix",
+        "end": "mms-stem"
+      },
+      "candidateSpreadMsCtc": {
+        "start": 120.2,
+        "end": 200.4
+      },
+      "candidates": {
+        "mms-mix": {
+          "start": 163.789391,
+          "end": 164.330452,
+          "modelProbability": 0.2084
+        },
+        "wav2vec-mix": {
+          "start": 163.789391,
+          "end": 164.230255,
+          "modelProbability": 0.1493
+        },
+        "mms-stem": {
+          "start": 163.729273,
+          "end": 164.39057,
+          "modelProbability": 0.0486
+        },
+        "wav2vec-stem": {
+          "start": 163.849509,
+          "end": 164.430648,
+          "modelProbability": 0.0702
+        },
+        "stable-stem": {
+          "start": 159.0,
+          "end": 160.48,
+          "modelProbability": 0.0001
+        },
+        "stable-mix": {
+          "start": 159.0,
+          "end": 164.18,
+          "modelProbability": 0.4441
+        }
+      },
+      "reviewNote": "CTC spread exceeds 25 ms; inspect source mix and spectrogram before final approval."
+    },
+    {
+      "id": "V2-01:2",
+      "text": "from",
+      "selected": {
+        "start": "mms-stem",
+        "end": "mms-stem"
+      },
+      "candidateSpreadMsCtc": {
+        "start": 20.0,
+        "end": 240.5
+      },
+      "candidates": {
+        "mms-mix": {
+          "start": 164.530845,
+          "end": 165.051866,
+          "modelProbability": 0.1161
+        },
+        "wav2vec-mix": {
+          "start": 164.550884,
+          "end": 164.811395,
+          "modelProbability": 0.2983
+        },
+        "mms-stem": {
+          "start": 164.550884,
+          "end": 164.95167,
+          "modelProbability": 0.3196
+        },
+        "wav2vec-stem": {
+          "start": 164.550884,
+          "end": 164.831434,
+          "modelProbability": 0.5176
+        },
+        "stable-stem": {
+          "start": 163.88,
+          "end": 164.78,
+          "modelProbability": 0.0005
+        },
+        "stable-mix": {
+          "start": 164.18,
+          "end": 165.02,
+          "modelProbability": 0.969
+        }
+      },
+      "reviewNote": "CTC spread exceeds 25 ms; inspect source mix and spectrogram before final approval."
+    },
+    {
+      "id": "V2-01:3",
+      "text": "noodle",
+      "selected": {
+        "start": "mms-stem",
+        "end": "mms-stem"
+      },
+      "candidateSpreadMsCtc": {
+        "start": 60.1,
+        "end": 80.2
+      },
+      "candidates": {
+        "mms-mix": {
+          "start": 165.252259,
+          "end": 165.612967,
+          "modelProbability": 0.0376
+        },
+        "wav2vec-mix": {
+          "start": 165.312377,
+          "end": 165.673084,
+          "modelProbability": 0.3293
+        },
+        "mms-stem": {
+          "start": 165.292338,
+          "end": 165.612967,
+          "modelProbability": 0.1323
+        },
+        "wav2vec-stem": {
+          "start": 165.292338,
+          "end": 165.693124,
+          "modelProbability": 0.6655
+        },
+        "stable-stem": {
+          "start": 164.78,
+          "end": 165.5,
+          "modelProbability": 0.0
+        },
+        "stable-mix": {
+          "start": 165.02,
+          "end": 165.62,
+          "modelProbability": 0.7615
+        }
+      },
+      "reviewNote": "CTC spread exceeds 25 ms; inspect source mix and spectrogram before final approval."
+    },
+    {
+      "id": "V2-01:4",
+      "text": "stalls",
+      "selected": {
+        "start": "mms-stem",
+        "end": "mms-stem"
+      },
+      "candidateSpreadMsCtc": {
+        "start": 20.0,
+        "end": 20.0
+      },
+      "candidates": {
+        "mms-mix": {
+          "start": 165.773281,
+          "end": 166.37446,
+          "modelProbability": 0.5142
+        },
+        "wav2vec-mix": {
+          "start": 165.79332,
+          "end": 166.35442,
+          "modelProbability": 0.713
+        },
+        "mms-stem": {
+          "start": 165.773281,
+          "end": 166.37446,
+          "modelProbability": 0.394
+        },
+        "wav2vec-stem": {
+          "start": 165.773281,
+          "end": 166.35442,
+          "modelProbability": 0.7862
+        },
+        "stable-stem": {
+          "start": 165.5,
+          "end": 166.2,
+          "modelProbability": 0.8511
+        },
+        "stable-mix": {
+          "start": 165.62,
+          "end": 166.18,
+          "modelProbability": 0.9781
+        }
+      },
+      "reviewNote": "Four CTC paths converge within 25 ms."
+    },
+    {
+      "id": "V2-01:5",
+      "text": "and",
+      "selected": {
+        "start": "mms-stem",
+        "end": "mms-stem"
+      },
+      "candidateSpreadMsCtc": {
+        "start": 20.0,
+        "end": 40.1
+      },
+      "candidates": {
+        "mms-mix": {
+          "start": 166.454617,
+          "end": 166.594892,
+          "modelProbability": 0.4964
+        },
+        "wav2vec-mix": {
+          "start": 166.474656,
+          "end": 166.554813,
+          "modelProbability": 0.9523
+        },
+        "mms-stem": {
+          "start": 166.454617,
+          "end": 166.574853,
+          "modelProbability": 0.5564
+        },
+        "wav2vec-stem": {
+          "start": 166.454617,
+          "end": 166.554813,
+          "modelProbability": 0.8859
+        },
+        "stable-stem": {
+          "start": 166.2,
+          "end": 166.6,
+          "modelProbability": 0.9707
+        },
+        "stable-mix": {
+          "start": 166.18,
+          "end": 166.58,
+          "modelProbability": 0.9779
+        }
+      },
+      "reviewNote": "CTC spread exceeds 25 ms; inspect source mix and spectrogram before final approval."
+    },
+    {
+      "id": "V2-01:6",
+      "text": "engines",
+      "selected": {
+        "start": "mms-stem",
+        "end": "mms-stem"
+      },
+      "candidateSpreadMsCtc": {
+        "start": 120.2,
+        "end": 100.2
+      },
+      "candidates": {
+        "mms-mix": {
+          "start": 166.65501,
+          "end": 167.79725,
+          "modelProbability": 0.3811
+        },
+        "wav2vec-mix": {
+          "start": 166.775246,
+          "end": 167.717092,
+          "modelProbability": 0.568
+        },
+        "mms-stem": {
+          "start": 166.675049,
+          "end": 167.817289,
+          "modelProbability": 0.321
+        },
+        "wav2vec-stem": {
+          "start": 166.775246,
+          "end": 167.717092,
+          "modelProbability": 0.6915
+        },
+        "stable-stem": {
+          "start": 166.6,
+          "end": 167.28,
+          "modelProbability": 0.9773
+        },
+        "stable-mix": {
+          "start": 166.58,
+          "end": 167.38,
+          "modelProbability": 0.9883
+        }
+      },
+      "reviewNote": "CTC spread exceeds 25 ms; inspect source mix and spectrogram before final approval."
+    },
+    {
+      "id": "V2-02:1",
+      "text": "Taxi",
+      "selected": {
+        "start": "mms-stem",
+        "end": "mms-stem"
+      },
+      "candidateSpreadMsCtc": {
+        "start": 40.1,
+        "end": 100.3
+      },
+      "candidates": {
+        "mms-mix": {
+          "start": 169.582407,
+          "end": 170.104012,
+          "modelProbability": 0.7007
+        },
+        "wav2vec-mix": {
+          "start": 169.602469,
+          "end": 170.204321,
+          "modelProbability": 0.7822
+        },
+        "mms-stem": {
+          "start": 169.562346,
+          "end": 170.104012,
+          "modelProbability": 0.6781
+        },
+        "wav2vec-stem": {
+          "start": 169.602469,
+          "end": 170.164198,
+          "modelProbability": 0.9541
+        },
+        "stable-stem": {
+          "start": 169.54,
+          "end": 170.5,
+          "modelProbability": 0.8605
+        },
+        "stable-mix": {
+          "start": 168.8,
+          "end": 170.56,
+          "modelProbability": 0.7345
+        }
+      },
+      "reviewNote": "CTC spread exceeds 25 ms; inspect source mix and spectrogram before final approval."
+    },
+    {
+      "id": "V2-02:2",
+      "text": "halos",
+      "selected": {
+        "start": "mms-stem",
+        "end": "mms-stem"
+      },
+      "candidateSpreadMsCtc": {
+        "start": 20.1,
+        "end": 60.2
+      },
+      "candidates": {
+        "mms-mix": {
+          "start": 171.026852,
+          "end": 171.829321,
+          "modelProbability": 0.5038
+        },
+        "wav2vec-mix": {
+          "start": 171.026852,
+          "end": 171.769136,
+          "modelProbability": 0.5964
+        },
+        "mms-stem": {
+          "start": 171.026852,
+          "end": 171.809259,
+          "modelProbability": 0.4699
+        },
+        "wav2vec-stem": {
+          "start": 171.00679,
+          "end": 171.769136,
+          "modelProbability": 0.8017
+        },
+        "stable-stem": {
+          "start": 170.5,
+          "end": 171.82,
+          "modelProbability": 0.879
+        },
+        "stable-mix": {
+          "start": 170.56,
+          "end": 171.82,
+          "modelProbability": 0.7808
+        }
+      },
+      "reviewNote": "CTC spread exceeds 25 ms; inspect source mix and spectrogram before final approval."
+    },
+    {
+      "id": "V2-02:3",
+      "text": "in",
+      "selected": {
+        "start": "mms-stem",
+        "end": "mms-stem"
+      },
+      "candidateSpreadMsCtc": {
+        "start": 40.1,
+        "end": 60.2
+      },
+      "candidates": {
+        "mms-mix": {
+          "start": 171.889506,
+          "end": 172.029938,
+          "modelProbability": 0.4377
+        },
+        "wav2vec-mix": {
+          "start": 171.92963,
+          "end": 171.989815,
+          "modelProbability": 0.5379
+        },
+        "mms-stem": {
+          "start": 171.889506,
+          "end": 172.05,
+          "modelProbability": 0.5181
+        },
+        "wav2vec-stem": {
+          "start": 171.92963,
+          "end": 172.009877,
+          "modelProbability": 0.9345
+        },
+        "stable-stem": {
+          "start": 171.82,
+          "end": 172.08,
+          "modelProbability": 0.997
+        },
+        "stable-mix": {
+          "start": 171.82,
+          "end": 172.1,
+          "modelProbability": 0.9907
+        }
+      },
+      "reviewNote": "CTC spread exceeds 25 ms; inspect source mix and spectrogram before final approval."
+    },
+    {
+      "id": "V2-02:4",
+      "text": "the",
+      "selected": {
+        "start": "mms-stem",
+        "end": "mms-stem"
+      },
+      "candidateSpreadMsCtc": {
+        "start": 40.1,
+        "end": 60.2
+      },
+      "candidates": {
+        "mms-mix": {
+          "start": 172.130247,
+          "end": 172.230556,
+          "modelProbability": 0.0584
+        },
+        "wav2vec-mix": {
+          "start": 172.17037,
+          "end": 172.290741,
+          "modelProbability": 0.1113
+        },
+        "mms-stem": {
+          "start": 172.130247,
+          "end": 172.250617,
+          "modelProbability": 0.1311
+        },
+        "wav2vec-stem": {
+          "start": 172.150309,
+          "end": 172.290741,
+          "modelProbability": 0.5706
+        },
+        "stable-stem": {
+          "start": 172.08,
+          "end": 172.28,
+          "modelProbability": 0.9998
+        },
+        "stable-mix": {
+          "start": 172.1,
+          "end": 172.28,
+          "modelProbability": 0.9987
+        }
+      },
+      "reviewNote": "CTC spread exceeds 25 ms; inspect source mix and spectrogram before final approval."
+    },
+    {
+      "id": "V2-02:5",
+      "text": "rain",
+      "selected": {
+        "start": "mms-stem",
+        "end": "mms-stem"
+      },
+      "candidateSpreadMsCtc": {
+        "start": 180.6,
+        "end": 100.3
+      },
+      "candidates": {
+        "mms-mix": {
+          "start": 172.330864,
+          "end": 173.253704,
+          "modelProbability": 0.3332
+        },
+        "wav2vec-mix": {
+          "start": 172.51142,
+          "end": 173.233642,
+          "modelProbability": 0.209
+        },
+        "mms-stem": {
+          "start": 172.350926,
+          "end": 173.293827,
+          "modelProbability": 0.4871
+        },
+        "wav2vec-stem": {
+          "start": 172.391049,
+          "end": 173.193519,
+          "modelProbability": 0.529
+        },
+        "stable-stem": {
+          "start": 172.28,
+          "end": 173.0,
+          "modelProbability": 0.9975
+        },
+        "stable-mix": {
+          "start": 172.28,
+          "end": 173.04,
+          "modelProbability": 0.9976
+        }
+      },
+      "reviewNote": "CTC spread exceeds 25 ms; inspect source mix and spectrogram before final approval."
+    },
+    {
+      "id": "V2-03:1",
+      "text": "Someone's",
+      "selected": {
+        "start": "mms-stem",
+        "end": "mms-stem"
+      },
+      "candidateSpreadMsCtc": {
+        "start": 0.0,
+        "end": 20.1
+      },
+      "candidates": {
+        "mms-mix": {
+          "start": 175.341641,
+          "end": 176.023708,
+          "modelProbability": 0.5184
+        },
+        "wav2vec-mix": {
+          "start": 175.341641,
+          "end": 176.003647,
+          "modelProbability": 0.8463
+        },
+        "mms-stem": {
+          "start": 175.341641,
+          "end": 176.023708,
+          "modelProbability": 0.6164
+        },
+        "wav2vec-stem": {
+          "start": 175.341641,
+          "end": 176.003647,
+          "modelProbability": 0.8111
+        },
+        "stable-stem": {
+          "start": 175.2,
+          "end": 176.1,
+          "modelProbability": 0.7061
+        },
+        "stable-mix": {
+          "start": 174.8,
+          "end": 176.1,
+          "modelProbability": 0.8077
+        }
+      },
+      "reviewNote": "Four CTC paths converge within 25 ms."
+    },
+    {
+      "id": "V2-03:2",
+      "text": "cat",
+      "selected": {
+        "start": "wav2vec-mix",
+        "end": "wav2vec-mix"
+      },
+      "candidateSpreadMsCtc": {
+        "start": 40.1,
+        "end": 601.8
+      },
+      "candidates": {
+        "mms-mix": {
+          "start": 176.103951,
+          "end": 176.685714,
+          "modelProbability": 0.2801
+        },
+        "wav2vec-mix": {
+          "start": 176.144073,
+          "end": 176.685714,
+          "modelProbability": 0.842
+        },
+        "mms-stem": {
+          "start": 176.103951,
+          "end": 177.207295,
+          "modelProbability": 0.3076
+        },
+        "wav2vec-stem": {
+          "start": 176.144073,
+          "end": 176.605471,
+          "modelProbability": 0.7571
+        },
+        "stable-stem": {
+          "start": 176.1,
+          "end": 176.54,
+          "modelProbability": 0.9788
+        },
+        "stable-mix": {
+          "start": 176.1,
+          "end": 176.62,
+          "modelProbability": 0.9861
+        }
+      },
+      "reviewNote": "CTC spread exceeds 25 ms; inspect source mix and spectrogram before final approval."
+    },
+    {
+      "id": "V2-03:3",
+      "text": "in",
+      "selected": {
+        "start": "mms-stem",
+        "end": "mms-stem"
+      },
+      "candidateSpreadMsCtc": {
+        "start": 20.1,
+        "end": 20.1
+      },
+      "candidates": {
+        "mms-mix": {
+          "start": 177.267477,
+          "end": 177.367781,
+          "modelProbability": 0.6121
+        },
+        "wav2vec-mix": {
+          "start": 177.287538,
+          "end": 177.34772,
+          "modelProbability": 0.8069
+        },
+        "mms-stem": {
+          "start": 177.267477,
+          "end": 177.367781,
+          "modelProbability": 0.5091
+        },
+        "wav2vec-stem": {
+          "start": 177.287538,
+          "end": 177.34772,
+          "modelProbability": 0.9254
+        },
+        "stable-stem": {
+          "start": 176.54,
+          "end": 177.38,
+          "modelProbability": 0.9075
+        },
+        "stable-mix": {
+          "start": 176.62,
+          "end": 177.36,
+          "modelProbability": 0.9046
+        }
+      },
+      "reviewNote": "Four CTC paths converge within 25 ms."
+    },
+    {
+      "id": "V2-03:4",
+      "text": "a",
+      "selected": {
+        "start": "stable-stem",
+        "end": "stable-stem"
+      },
+      "candidateSpreadMsCtc": {
+        "start": 60.2,
+        "end": 60.2
+      },
+      "candidates": {
+        "mms-mix": {
+          "start": 177.427964,
+          "end": 177.448024,
+          "modelProbability": 0.5643
+        },
+        "wav2vec-mix": {
+          "start": 177.468085,
+          "end": 177.488146,
+          "modelProbability": 0.9151
+        },
+        "mms-stem": {
+          "start": 177.407903,
+          "end": 177.427964,
+          "modelProbability": 0.0778
+        },
+        "wav2vec-stem": {
+          "start": 177.468085,
+          "end": 177.488146,
+          "modelProbability": 0.9351
+        },
+        "stable-stem": {
+          "start": 177.38,
+          "end": 177.56,
+          "modelProbability": 0.9919
+        },
+        "stable-mix": {
+          "start": 177.36,
+          "end": 177.56,
+          "modelProbability": 0.9972
+        }
+      },
+      "reviewNote": "CTC collapses the unstressed 'a' to about 20 ms; stable Whisper's 180 ms window is used before 'yellow'."
+    },
+    {
+      "id": "V2-03:5",
+      "text": "yellow",
+      "selected": {
+        "start": "wav2vec-stem",
+        "end": "wav2vec-stem"
+      },
+      "candidateSpreadMsCtc": {
+        "start": 40.1,
+        "end": 100.3
+      },
+      "candidates": {
+        "mms-mix": {
+          "start": 177.548328,
+          "end": 177.949544,
+          "modelProbability": 0.275
+        },
+        "wav2vec-mix": {
+          "start": 177.58845,
+          "end": 178.049848,
+          "modelProbability": 0.5448
+        },
+        "mms-stem": {
+          "start": 177.548328,
+          "end": 177.969605,
+          "modelProbability": 0.2139
+        },
+        "wav2vec-stem": {
+          "start": 177.568389,
+          "end": 177.969605,
+          "modelProbability": 0.7849
+        },
+        "stable-stem": {
+          "start": 177.56,
+          "end": 177.9,
+          "modelProbability": 0.9966
+        },
+        "stable-mix": {
+          "start": 177.56,
+          "end": 177.9,
+          "modelProbability": 0.9985
+        }
+      },
+      "reviewNote": "CTC spread exceeds 25 ms; inspect source mix and spectrogram before final approval."
+    },
+    {
+      "id": "V2-03:6",
+      "text": "window",
+      "selected": {
+        "start": "wav2vec-mix",
+        "end": "wav2vec-mix"
+      },
+      "candidateSpreadMsCtc": {
+        "start": 100.3,
+        "end": 2226.7
+      },
+      "candidates": {
+        "mms-mix": {
+          "start": 178.08997,
+          "end": 181.159271,
+          "modelProbability": 0.4619
+        },
+        "wav2vec-mix": {
+          "start": 178.190274,
+          "end": 179.012766,
+          "modelProbability": 0.5464
+        },
+        "mms-stem": {
+          "start": 178.11003,
+          "end": 181.199392,
+          "modelProbability": 0.5097
+        },
+        "wav2vec-stem": {
+          "start": 178.150152,
+          "end": 181.239514,
+          "modelProbability": 0.2355
+        },
+        "stable-stem": {
+          "start": 177.9,
+          "end": 178.96,
+          "modelProbability": 0.9933
+        },
+        "stable-mix": {
+          "start": 177.9,
+          "end": 178.92,
+          "modelProbability": 0.996
+        }
+      },
+      "reviewNote": "Window is a short word with lingering accompaniment/reverb; Wav2Vec mix and unforced Whisper resolve the word by roughly 179 s, while stem CTC extends it to 181.2 s."
+    },
+    {
+      "id": "V2-04:1",
+      "text": "Watching",
+      "selected": {
+        "start": "mms-stem",
+        "end": "mms-stem"
+      },
+      "candidateSpreadMsCtc": {
+        "start": 160.5,
+        "end": 120.3
+      },
+      "candidates": {
+        "mms-mix": {
+          "start": 181.121512,
+          "end": 182.064244,
+          "modelProbability": 0.4518
+        },
+        "wav2vec-mix": {
+          "start": 180.981105,
+          "end": 182.064244,
+          "modelProbability": 0.3487
+        },
+        "mms-stem": {
+          "start": 181.081395,
+          "end": 182.00407,
+          "modelProbability": 0.4596
+        },
+        "wav2vec-stem": {
+          "start": 181.14157,
+          "end": 181.943895,
+          "modelProbability": 0.5035
+        },
+        "stable-stem": {
+          "start": 181.0,
+          "end": 181.82,
+          "modelProbability": 0.2263
+        },
+        "stable-mix": {
+          "start": 180.6,
+          "end": 181.84,
+          "modelProbability": 0.8188
+        }
+      },
+      "reviewNote": "CTC spread exceeds 25 ms; inspect source mix and spectrogram before final approval."
+    },
+    {
+      "id": "V2-04:2",
+      "text": "the",
+      "selected": {
+        "start": "mms-stem",
+        "end": "mms-stem"
+      },
+      "candidateSpreadMsCtc": {
+        "start": 60.2,
+        "end": 40.1
+      },
+      "candidates": {
+        "mms-mix": {
+          "start": 182.54564,
+          "end": 182.665988,
+          "modelProbability": 0.0841
+        },
+        "wav2vec-mix": {
+          "start": 182.605814,
+          "end": 182.706105,
+          "modelProbability": 0.968
+        },
+        "mms-stem": {
+          "start": 182.54564,
+          "end": 182.665988,
+          "modelProbability": 0.1579
+        },
+        "wav2vec-stem": {
+          "start": 182.605814,
+          "end": 182.706105,
+          "modelProbability": 0.9883
+        },
+        "stable-stem": {
+          "start": 181.82,
+          "end": 182.72,
+          "modelProbability": 0.8846
+        },
+        "stable-mix": {
+          "start": 181.84,
+          "end": 182.76,
+          "modelProbability": 0.8344
+        }
+      },
+      "reviewNote": "CTC spread exceeds 25 ms; inspect source mix and spectrogram before final approval."
+    },
+    {
+      "id": "V2-04:3",
+      "text": "last",
+      "selected": {
+        "start": "mms-stem",
+        "end": "mms-stem"
+      },
+      "candidateSpreadMsCtc": {
+        "start": 40.1,
+        "end": 160.5
+      },
+      "candidates": {
+        "mms-mix": {
+          "start": 182.766279,
+          "end": 183.307849,
+          "modelProbability": 0.8448
+        },
+        "wav2vec-mix": {
+          "start": 182.786337,
+          "end": 183.147384,
+          "modelProbability": 0.9589
+        },
+        "mms-stem": {
+          "start": 182.746221,
+          "end": 183.307849,
+          "modelProbability": 0.8227
+        },
+        "wav2vec-stem": {
+          "start": 182.786337,
+          "end": 183.1875,
+          "modelProbability": 0.9863
+        },
+        "stable-stem": {
+          "start": 182.72,
+          "end": 183.2,
+          "modelProbability": 0.8506
+        },
+        "stable-mix": {
+          "start": 182.76,
+          "end": 183.18,
+          "modelProbability": 0.8438
+        }
+      },
+      "reviewNote": "CTC spread exceeds 25 ms; inspect source mix and spectrogram before final approval."
+    },
+    {
+      "id": "V2-04:4",
+      "text": "axis",
+      "selected": {
+        "start": "mms-stem",
+        "end": "mms-stem"
+      },
+      "candidateSpreadMsCtc": {
+        "start": 40.1,
+        "end": 20.1
+      },
+      "candidates": {
+        "mms-mix": {
+          "start": 183.40814,
+          "end": 183.869477,
+          "modelProbability": 0.6623
+        },
+        "wav2vec-mix": {
+          "start": 183.428198,
+          "end": 183.869477,
+          "modelProbability": 0.6614
+        },
+        "mms-stem": {
+          "start": 183.40814,
+          "end": 183.869477,
+          "modelProbability": 0.6369
+        },
+        "wav2vec-stem": {
+          "start": 183.448256,
+          "end": 183.889535,
+          "modelProbability": 0.6443
+        },
+        "stable-stem": {
+          "start": 183.2,
+          "end": 183.84,
+          "modelProbability": 0.5496
+        },
+        "stable-mix": {
+          "start": 183.18,
+          "end": 183.84,
+          "modelProbability": 0.642
+        }
+      },
+      "reviewNote": "CTC spread exceeds 25 ms; inspect source mix and spectrogram before final approval."
+    },
+    {
+      "id": "V2-04:5",
+      "text": "train",
+      "selected": {
+        "start": "mms-stem",
+        "end": "mms-stem"
+      },
+      "candidateSpreadMsCtc": {
+        "start": 20.1,
+        "end": 1063.1
+      },
+      "candidates": {
+        "mms-mix": {
+          "start": 183.989826,
+          "end": 186.196221,
+          "modelProbability": 0.3521
+        },
+        "wav2vec-mix": {
+          "start": 184.009884,
+          "end": 186.85814,
+          "modelProbability": 0.3195
+        },
+        "mms-stem": {
+          "start": 183.989826,
+          "end": 186.938372,
+          "modelProbability": 0.3215
+        },
+        "wav2vec-stem": {
+          "start": 183.989826,
+          "end": 187.259302,
+          "modelProbability": 0.4773
+        },
+        "stable-stem": {
+          "start": 183.84,
+          "end": 184.32,
+          "modelProbability": 0.7809
+        },
+        "stable-mix": {
+          "start": 183.84,
+          "end": 184.4,
+          "modelProbability": 0.2911
+        }
+      },
+      "reviewNote": "Train is held; stem CTC release range 186.94\u2013187.26 s. The selected 186.94 s needs perceptual review."
+    }
+  ]
+}
