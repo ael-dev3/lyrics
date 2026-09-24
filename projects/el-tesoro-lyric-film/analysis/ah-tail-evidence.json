@@ -1,0 +1,98 @@
+{
+  "method": "HTDemucs vocals, stereo-to-mono 100 ms RMS window / 20 ms hop. End is last window above peak-minus-18 dB before next word, excluding final 350 ms pickup.",
+  "caveats": [
+    "Envelope measures separated-vocal energy, not a certified phonetic boundary.",
+    "Reverb and stem leakage may extend the acoustic tail; visual hold may be shortened/extended after listening.",
+    "Raw MMS_FA Ah endpoints undercount some sustained vowels by over 2 s."
+  ],
+  "rows": [
+    {
+      "id": "L01",
+      "stem": "opening-vocals.wav",
+      "onset": 17.544,
+      "nextWordStart": 20.67,
+      "peakDbFS": -11.73,
+      "thresholdDbFS": -29.73,
+      "lastHighEnergyEnd": 18.744,
+      "recommendedAhEnd": 18.74,
+      "reviewToleranceSeconds": 0.2
+    },
+    {
+      "id": "L02",
+      "stem": "opening-vocals.wav",
+      "onset": 26.042,
+      "nextWordStart": 29.129,
+      "peakDbFS": -13.17,
+      "thresholdDbFS": -31.17,
+      "lastHighEnergyEnd": 28.682,
+      "recommendedAhEnd": 28.68,
+      "reviewToleranceSeconds": 0.2
+    },
+    {
+      "id": "L03",
+      "stem": "opening-vocals.wav",
+      "onset": 34.522,
+      "nextWordStart": 37.649,
+      "peakDbFS": -11.64,
+      "thresholdDbFS": -29.64,
+      "lastHighEnergyEnd": 35.962,
+      "recommendedAhEnd": 35.96,
+      "reviewToleranceSeconds": 0.2
+    },
+    {
+      "id": "L04",
+      "stem": "opening-vocals.wav",
+      "onset": 43.062,
+      "nextWordStart": 46.129,
+      "peakDbFS": -12.01,
+      "thresholdDbFS": -30.01,
+      "lastHighEnergyEnd": 45.622,
+      "recommendedAhEnd": 45.62,
+      "reviewToleranceSeconds": 0.2
+    },
+    {
+      "id": "L12",
+      "stem": "middle-vocals.wav",
+      "onset": 98.202,
+      "nextWordStart": 101.369,
+      "peakDbFS": -11.45,
+      "thresholdDbFS": -29.45,
+      "lastHighEnergyEnd": 99.442,
+      "recommendedAhEnd": 99.44,
+      "reviewToleranceSeconds": 0.2
+    },
+    {
+      "id": "L13",
+      "stem": "middle-vocals.wav",
+      "onset": 106.783,
+      "nextWordStart": 109.91,
+      "peakDbFS": -12.04,
+      "thresholdDbFS": -30.04,
+      "lastHighEnergyEnd": 109.463,
+      "recommendedAhEnd": 109.46,
+      "reviewToleranceSeconds": 0.2
+    },
+    {
+      "id": "L14",
+      "stem": "middle-vocals.wav",
+      "onset": 115.184,
+      "nextWordStart": 118.35,
+      "peakDbFS": -11.69,
+      "thresholdDbFS": -29.69,
+      "lastHighEnergyEnd": 116.804,
+      "recommendedAhEnd": 116.8,
+      "reviewToleranceSeconds": 0.2
+    },
+    {
+      "id": "L15",
+      "stem": "middle-vocals.wav",
+      "onset": 123.803,
+      "nextWordStart": 126.849,
+      "peakDbFS": -11.78,
+      "thresholdDbFS": -29.78,
+      "lastHighEnergyEnd": 126.563,
+      "recommendedAhEnd": 126.56,
+      "reviewToleranceSeconds": 0.2
+    }
+  ]
+}

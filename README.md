@@ -8,7 +8,19 @@ Music films with synchronized lyrics, meaning-linked translations, and audio-rea
 
 **Starting another song:** use the [single-prompt template, agent quickstart and complete quality checklist](docs/source-clocked-word-effects-workflow.md), including [how to make reactive visuals belong to the picture](docs/scene-integrated-visuals.md). The [If The Sun Burns Out Tonight handoff](projects/if-the-sun-burns-out-tonight-lyric-film/AGENT-HANDOFF.md) and [production lessons](projects/if-the-sun-burns-out-tonight-lyric-film/PRODUCTION-LESSONS.md) show how exact word/phrase effects, measured intensity and dependable full-picture playback fit the shared workflow.
 
-[**I'll Change for You**](#ill-change-for-you) · [**If The Sun Burns Out Tonight**](#if-the-sun-burns-out-tonight) · [**Люби меня, люби**](#люби-меня-люби) · [**Stay at Your House — Hardstyle**](#stay-at-your-house--hardstyle) · [**Ведьмы**](#ведьмы) · [**Pero es locura**](#pero-es-locura) · [**La Lune**](#la-lune) · [**каждый, кто делал тебе больно**](#каждый-кто-делал-тебе-больно) · [**Sugar Glass**](#sugar-glass) · [**Твои глаза**](#твои-глаза) · [**Прости за любовь — accepted with known gaps**](#прости-за-любовь) · [**Половинка**](#половинка) · [**Life Letters**](#life-letters) · [**Joyride**](#joyride) · [**midnight love**](#midnight-love) · [**Пожары**](#пожары) · [**Отменяй**](#отменяй) · [**Roi × Adore**](#roi--adore) · [**TikTok edition**](#tiktok-edition) · [**Tanisea**](#tanisea) · [**Build and workflow**](#build-and-workflow)
+[**El Tesoro — preview**](#el-tesoro--preview) · [**I'll Change for You**](#ill-change-for-you) · [**If The Sun Burns Out Tonight**](#if-the-sun-burns-out-tonight) · [**Люби меня, люби**](#люби-меня-люби) · [**Stay at Your House — Hardstyle**](#stay-at-your-house--hardstyle) · [**Ведьмы**](#ведьмы) · [**Pero es locura**](#pero-es-locura) · [**La Lune**](#la-lune) · [**каждый, кто делал тебе больно**](#каждый-кто-делал-тебе-больно) · [**Sugar Glass**](#sugar-glass) · [**Твои глаза**](#твои-глаза) · [**Прости за любовь — accepted with known gaps**](#прости-за-любовь) · [**Половинка**](#половинка) · [**Life Letters**](#life-letters) · [**Joyride**](#joyride) · [**midnight love**](#midnight-love) · [**Пожары**](#пожары) · [**Отменяй**](#отменяй) · [**Roi × Adore**](#roi--adore) · [**TikTok edition**](#tiktok-edition) · [**Tanisea**](#tanisea) · [**Build and workflow**](#build-and-workflow)
+
+## El Tesoro — preview
+
+**Él Mató a un Policía Motorizado · Spanish + English · full-recording browser preview for review**
+
+![The source video's magenta sword illustration, used as the anchor for El Tesoro's bilingual preview](projects/el-tesoro-lyric-film/public/source-poster.jpg)
+
+*Frame from the [official source upload](https://www.youtube.com/watch?v=vlneT-a-KkQ). It shows the source artwork; the playable preview adds equal Spanish/English lyric focus and restrained audio-responsive smoke and blade light. No lyric-film frame has been rendered yet.*
+
+The 4:31.534 local preview preserves the original soundtrack and picture in both 16:9 and 9:16. Its 24 paired lines and 153 Spanish word events use a separately documented meaning map; long interjections release during pauses, repetitions are timed independently and the extended coda stays free of invented lyrics. A measured, scene-integrated atmosphere moves with the recording while fixed bilingual typography protects the sword and hands. Browser picture, seek, format switch, ending and recovery checks passed at sampled points. Full every-cue listening and visual review remains open; no production render is authorized.
+
+[Preview setup and source identity](projects/el-tesoro-lyric-film/README.md) · [Agent handoff](projects/el-tesoro-lyric-film/AGENT-HANDOFF.md) · [Review status](projects/el-tesoro-lyric-film/evidence/cross-language-sync-review.md) · [Original recording](https://www.youtube.com/watch?v=vlneT-a-KkQ)
 
 ## I'll Change for You
 

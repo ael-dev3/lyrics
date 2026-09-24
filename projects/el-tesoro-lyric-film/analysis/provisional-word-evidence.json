@@ -1,0 +1,1644 @@
+{
+  "source": "source.mp4 (local, hash-locked; excluded from Git)",
+  "sourceSha256": "a94238e7b20a812b10a307eb4b9b167cac78061c18862a908c512ec4abdd7c40",
+  "durationSeconds": 271.53415,
+  "status": "provisional acoustic evidence, NOT a human-reviewed timing sheet",
+  "methods": [
+    "unprompted whisper.cpp small and medium-q5_0 Spanish ASR on mix and selected vocal crops",
+    "MMS_FA CTC on mix, bandpassed mix and HTDemucs vocal stems",
+    "100 ms RMS / 20 ms hop on separated vocals for held Ah tails"
+  ],
+  "warnings": [
+    "Whisper token offsets are interpolated; use CTC/stem evidence and listening instead.",
+    "Forced alignment will return times for wrong words; it does not verify a lyric.",
+    "The medium full-song model hallucinates repeated Ah chorus after ~188 s over the instrumental outro. Do not create lyric cues from that output.",
+    "Display spans are editorial suggestions, not certified acoustic start/end."
+  ],
+  "instrumentalOrNoLeadVocalApprox": [
+    [
+      0,
+      17.4
+    ],
+    [
+      82.7,
+      98.1
+    ],
+    [
+      163.8,
+      170.35
+    ],
+    [
+      180.9,
+      271.53415
+    ]
+  ],
+  "lines": [
+    {
+      "id": "L01",
+      "span": [
+        17.4,
+        25.3
+      ],
+      "text": "Ah, paso todo el día pensando en vos",
+      "words": [
+        {
+          "text": "Ah,",
+          "normalized": "ah",
+          "start": 17.544,
+          "end": 18.74,
+          "score": 0.1856,
+          "endEvidence": "HTDemucs vocal energy tail, approx ±0.2 s",
+          "reviewReasons": [
+            "low vocal CTC score",
+            "sustained Ah endpoint based on envelope, not raw CTC"
+          ]
+        },
+        {
+          "text": "paso",
+          "normalized": "paso",
+          "start": 20.65,
+          "end": 21.071,
+          "score": 0.8892,
+          "reviewReasons": []
+        },
+        {
+          "text": "todo",
+          "normalized": "todo",
+          "start": 21.211,
+          "end": 21.612,
+          "score": 0.4958,
+          "reviewReasons": []
+        },
+        {
+          "text": "el",
+          "normalized": "el",
+          "start": 21.712,
+          "end": 21.772,
+          "score": 0.2274,
+          "reviewReasons": [
+            "low vocal CTC score",
+            "collapsed very short token"
+          ]
+        },
+        {
+          "text": "día",
+          "normalized": "dia",
+          "start": 21.892,
+          "end": 22.373,
+          "score": 0.6577,
+          "reviewReasons": []
+        },
+        {
+          "text": "pensando",
+          "normalized": "pensando",
+          "start": 22.794,
+          "end": 23.656,
+          "score": 0.863,
+          "reviewReasons": []
+        },
+        {
+          "text": "en",
+          "normalized": "en",
+          "start": 23.736,
+          "end": 23.836,
+          "score": 0.3778,
+          "reviewReasons": []
+        },
+        {
+          "text": "vos",
+          "normalized": "vos",
+          "start": 23.876,
+          "end": 24.457,
+          "score": 0.3003,
+          "reviewReasons": []
+        }
+      ],
+      "lexicalReview": "Ah/Ay: open-A CTC preferred, verify by ear"
+    },
+    {
+      "id": "L02",
+      "span": [
+        25.9,
+        33.5
+      ],
+      "text": "Ah, qué hay de malo en todo esto?",
+      "words": [
+        {
+          "text": "Ah,",
+          "normalized": "ah",
+          "start": 26.042,
+          "end": 28.68,
+          "score": 0.2812,
+          "endEvidence": "HTDemucs vocal energy tail, approx ±0.2 s",
+          "reviewReasons": [
+            "vocal/mix boundary disagreement",
+            "sustained Ah endpoint based on envelope, not raw CTC"
+          ]
+        },
+        {
+          "text": "qué",
+          "normalized": "que",
+          "start": 29.129,
+          "end": 29.209,
+          "score": 0.1895,
+          "reviewReasons": [
+            "low vocal CTC score",
+            "collapsed very short token"
+          ]
+        },
+        {
+          "text": "hay",
+          "normalized": "hay",
+          "start": 29.249,
+          "end": 29.43,
+          "score": 0.3581,
+          "reviewReasons": []
+        },
+        {
+          "text": "de",
+          "normalized": "de",
+          "start": 29.47,
+          "end": 29.57,
+          "score": 0.8367,
+          "reviewReasons": []
+        },
+        {
+          "text": "malo",
+          "normalized": "malo",
+          "start": 29.71,
+          "end": 30.091,
+          "score": 0.8116,
+          "reviewReasons": []
+        },
+        {
+          "text": "en",
+          "normalized": "en",
+          "start": 30.131,
+          "end": 30.171,
+          "score": 0.48,
+          "reviewReasons": [
+            "collapsed very short token"
+          ]
+        },
+        {
+          "text": "todo",
+          "normalized": "todo",
+          "start": 30.292,
+          "end": 30.893,
+          "score": 0.8674,
+          "reviewReasons": []
+        },
+        {
+          "text": "esto?",
+          "normalized": "esto",
+          "start": 31.434,
+          "end": 32.176,
+          "score": 0.87,
+          "reviewReasons": []
+        }
+      ],
+      "lexicalReview": "Ah/Ay and qué hay fused: verify by ear"
+    },
+    {
+      "id": "L03",
+      "span": [
+        34.4,
+        42.3
+      ],
+      "text": "Ah, paso todo el día pensando en vos",
+      "words": [
+        {
+          "text": "Ah,",
+          "normalized": "ah",
+          "start": 34.522,
+          "end": 35.96,
+          "score": 0.4391,
+          "endEvidence": "HTDemucs vocal energy tail, approx ±0.2 s",
+          "reviewReasons": [
+            "sustained Ah endpoint based on envelope, not raw CTC"
+          ]
+        },
+        {
+          "text": "paso",
+          "normalized": "paso",
+          "start": 37.649,
+          "end": 38.05,
+          "score": 0.9224,
+          "reviewReasons": []
+        },
+        {
+          "text": "todo",
+          "normalized": "todo",
+          "start": 38.19,
+          "end": 38.591,
+          "score": 0.4901,
+          "reviewReasons": []
+        },
+        {
+          "text": "el",
+          "normalized": "el",
+          "start": 38.691,
+          "end": 38.771,
+          "score": 0.1019,
+          "reviewReasons": [
+            "low vocal CTC score",
+            "collapsed very short token"
+          ]
+        },
+        {
+          "text": "día",
+          "normalized": "dia",
+          "start": 38.852,
+          "end": 39.373,
+          "score": 0.9372,
+          "reviewReasons": []
+        },
+        {
+          "text": "pensando",
+          "normalized": "pensando",
+          "start": 39.794,
+          "end": 40.655,
+          "score": 0.9165,
+          "reviewReasons": []
+        },
+        {
+          "text": "en",
+          "normalized": "en",
+          "start": 40.736,
+          "end": 40.856,
+          "score": 0.3766,
+          "reviewReasons": []
+        },
+        {
+          "text": "vos",
+          "normalized": "vos",
+          "start": 40.896,
+          "end": 41.918,
+          "score": 0.3064,
+          "reviewReasons": [
+            "vocal/mix boundary disagreement"
+          ]
+        }
+      ],
+      "lexicalReview": "Ah/Ay: open-A CTC preferred, verify by ear"
+    },
+    {
+      "id": "L04",
+      "span": [
+        42.9,
+        50.2
+      ],
+      "text": "Ah, vos pensás que pierdo el tiempo",
+      "words": [
+        {
+          "text": "Ah,",
+          "normalized": "ah",
+          "start": 43.042,
+          "end": 45.62,
+          "score": 0.1399,
+          "endEvidence": "HTDemucs vocal energy tail, approx ±0.2 s",
+          "reviewReasons": [
+            "low vocal CTC score",
+            "vocal/mix boundary disagreement",
+            "sustained Ah endpoint based on envelope, not raw CTC"
+          ]
+        },
+        {
+          "text": "vos",
+          "normalized": "vos",
+          "start": 46.149,
+          "end": 46.369,
+          "score": 0.4186,
+          "reviewReasons": []
+        },
+        {
+          "text": "pensás",
+          "normalized": "pensas",
+          "start": 46.43,
+          "end": 46.951,
+          "score": 0.9184,
+          "reviewReasons": []
+        },
+        {
+          "text": "que",
+          "normalized": "que",
+          "start": 46.991,
+          "end": 47.091,
+          "score": 0.2667,
+          "reviewReasons": []
+        },
+        {
+          "text": "pierdo",
+          "normalized": "pierdo",
+          "start": 47.171,
+          "end": 47.933,
+          "score": 0.5561,
+          "reviewReasons": []
+        },
+        {
+          "text": "el",
+          "normalized": "el",
+          "start": 48.073,
+          "end": 48.153,
+          "score": 0.4545,
+          "reviewReasons": [
+            "collapsed very short token"
+          ]
+        },
+        {
+          "text": "tiempo",
+          "normalized": "tiempo",
+          "start": 48.294,
+          "end": 49.196,
+          "score": 0.4801,
+          "reviewReasons": []
+        }
+      ],
+      "lexicalReview": "Ah/Ay: open-A CTC preferred, verify by ear"
+    },
+    {
+      "id": "L05",
+      "span": [
+        52.65,
+        56.4
+      ],
+      "text": "Perdón si estoy de nuevo acá",
+      "words": [
+        {
+          "text": "Perdón",
+          "normalized": "perdon",
+          "start": 52.806,
+          "end": 53.248,
+          "score": 0.6883,
+          "reviewReasons": []
+        },
+        {
+          "text": "si",
+          "normalized": "si",
+          "start": 53.348,
+          "end": 53.408,
+          "score": 0.0693,
+          "reviewReasons": [
+            "low vocal CTC score",
+            "collapsed very short token"
+          ]
+        },
+        {
+          "text": "estoy",
+          "normalized": "estoy",
+          "start": 53.448,
+          "end": 54.05,
+          "score": 0.5792,
+          "reviewReasons": []
+        },
+        {
+          "text": "de",
+          "normalized": "de",
+          "start": 54.15,
+          "end": 54.291,
+          "score": 0.5255,
+          "reviewReasons": []
+        },
+        {
+          "text": "nuevo",
+          "normalized": "nuevo",
+          "start": 54.552,
+          "end": 55.073,
+          "score": 0.3844,
+          "reviewReasons": []
+        },
+        {
+          "text": "acá",
+          "normalized": "aca",
+          "start": 55.214,
+          "end": 55.455,
+          "score": 0.3054,
+          "reviewReasons": []
+        }
+      ],
+      "lexicalReview": "de nuevo acá: small ASR hallucinated Nueva York; medium and source text differ in connective"
+    },
+    {
+      "id": "L06",
+      "span": [
+        56.9,
+        60.6
+      ],
+      "text": "Pensé que habías preguntado por mí",
+      "words": [
+        {
+          "text": "Pensé",
+          "normalized": "pense",
+          "start": 57.022,
+          "end": 57.404,
+          "score": 0.8259,
+          "reviewReasons": []
+        },
+        {
+          "text": "que",
+          "normalized": "que",
+          "start": 57.565,
+          "end": 57.645,
+          "score": 0.429,
+          "reviewReasons": []
+        },
+        {
+          "text": "habías",
+          "normalized": "habias",
+          "start": 57.685,
+          "end": 58.308,
+          "score": 0.7661,
+          "reviewReasons": []
+        },
+        {
+          "text": "preguntado",
+          "normalized": "preguntado",
+          "start": 58.368,
+          "end": 59.332,
+          "score": 0.8458,
+          "reviewReasons": []
+        },
+        {
+          "text": "por",
+          "normalized": "por",
+          "start": 59.453,
+          "end": 59.734,
+          "score": 0.5847,
+          "reviewReasons": []
+        },
+        {
+          "text": "mí",
+          "normalized": "mi",
+          "start": 59.794,
+          "end": 59.915,
+          "score": 0.7123,
+          "reviewReasons": []
+        }
+      ],
+      "lexicalReview": null
+    },
+    {
+      "id": "L07",
+      "span": [
+        61.15,
+        64.6
+      ],
+      "text": "Me gusta estar de nuevo acá",
+      "words": [
+        {
+          "text": "Me",
+          "normalized": "me",
+          "start": 61.283,
+          "end": 61.424,
+          "score": 0.4332,
+          "reviewReasons": []
+        },
+        {
+          "text": "gusta",
+          "normalized": "gusta",
+          "start": 61.585,
+          "end": 61.906,
+          "score": 0.2757,
+          "reviewReasons": []
+        },
+        {
+          "text": "estar",
+          "normalized": "estar",
+          "start": 61.946,
+          "end": 62.509,
+          "score": 0.6845,
+          "reviewReasons": []
+        },
+        {
+          "text": "de",
+          "normalized": "de",
+          "start": 62.669,
+          "end": 62.83,
+          "score": 0.6619,
+          "reviewReasons": []
+        },
+        {
+          "text": "nuevo",
+          "normalized": "nuevo",
+          "start": 63.031,
+          "end": 63.553,
+          "score": 0.2919,
+          "reviewReasons": []
+        },
+        {
+          "text": "acá",
+          "normalized": "aca",
+          "start": 63.834,
+          "end": 64.377,
+          "score": 0.4132,
+          "reviewReasons": [
+            "vocal/mix boundary disagreement"
+          ]
+        }
+      ],
+      "lexicalReview": "de nuevo acá: small ASR hallucinated Nueva York"
+    },
+    {
+      "id": "L08",
+      "span": [
+        65.4,
+        68.7
+      ],
+      "text": "Aunque no hayas preguntado por mí",
+      "words": [
+        {
+          "text": "Aunque",
+          "normalized": "aunque",
+          "start": 65.545,
+          "end": 65.906,
+          "score": 0.548,
+          "reviewReasons": []
+        },
+        {
+          "text": "no",
+          "normalized": "no",
+          "start": 66.067,
+          "end": 66.187,
+          "score": 0.7366,
+          "reviewReasons": []
+        },
+        {
+          "text": "hayas",
+          "normalized": "hayas",
+          "start": 66.348,
+          "end": 66.79,
+          "score": 0.471,
+          "reviewReasons": []
+        },
+        {
+          "text": "preguntado",
+          "normalized": "preguntado",
+          "start": 66.85,
+          "end": 67.794,
+          "score": 0.8418,
+          "reviewReasons": []
+        },
+        {
+          "text": "por",
+          "normalized": "por",
+          "start": 67.995,
+          "end": 68.216,
+          "score": 0.6972,
+          "reviewReasons": []
+        },
+        {
+          "text": "mí",
+          "normalized": "mi",
+          "start": 68.297,
+          "end": 68.417,
+          "score": 0.9086,
+          "reviewReasons": []
+        }
+      ],
+      "lexicalReview": null
+    },
+    {
+      "id": "L09",
+      "span": [
+        69.6,
+        73.6
+      ],
+      "text": "Voy a quedarme un poco acá",
+      "words": [
+        {
+          "text": "Voy",
+          "normalized": "voy",
+          "start": 69.765,
+          "end": 70.025,
+          "score": 0.4973,
+          "reviewReasons": []
+        },
+        {
+          "text": "a",
+          "normalized": "a",
+          "start": 70.106,
+          "end": 70.126,
+          "score": 0.9148,
+          "reviewReasons": [
+            "collapsed very short token"
+          ]
+        },
+        {
+          "text": "quedarme",
+          "normalized": "quedarme",
+          "start": 70.306,
+          "end": 71.25,
+          "score": 0.4375,
+          "reviewReasons": []
+        },
+        {
+          "text": "un",
+          "normalized": "un",
+          "start": 71.33,
+          "end": 71.41,
+          "score": 0.1283,
+          "reviewReasons": [
+            "low vocal CTC score",
+            "vocal/mix boundary disagreement",
+            "collapsed very short token"
+          ]
+        },
+        {
+          "text": "poco",
+          "normalized": "poco",
+          "start": 71.591,
+          "end": 71.992,
+          "score": 0.2819,
+          "reviewReasons": [
+            "vocal/mix boundary disagreement"
+          ]
+        },
+        {
+          "text": "acá",
+          "normalized": "aca",
+          "start": 72.053,
+          "end": 72.334,
+          "score": 0.4874,
+          "reviewReasons": [
+            "vocal/mix boundary disagreement"
+          ]
+        }
+      ],
+      "lexicalReview": "un poco acá: small ASR hallucinated un poco más; medium hears acá"
+    },
+    {
+      "id": "L10",
+      "span": [
+        73.9,
+        77.5
+      ],
+      "text": "Cuidarte siempre a vos en la derrota",
+      "words": [
+        {
+          "text": "Cuidarte",
+          "normalized": "cuidarte",
+          "start": 74.022,
+          "end": 74.665,
+          "score": 0.7301,
+          "reviewReasons": []
+        },
+        {
+          "text": "siempre",
+          "normalized": "siempre",
+          "start": 74.785,
+          "end": 75.227,
+          "score": 0.7668,
+          "reviewReasons": []
+        },
+        {
+          "text": "a",
+          "normalized": "a",
+          "start": 75.247,
+          "end": 75.287,
+          "score": 0.8227,
+          "reviewReasons": [
+            "collapsed very short token"
+          ]
+        },
+        {
+          "text": "vos",
+          "normalized": "vos",
+          "start": 75.388,
+          "end": 75.649,
+          "score": 0.6619,
+          "reviewReasons": []
+        },
+        {
+          "text": "en",
+          "normalized": "en",
+          "start": 75.749,
+          "end": 75.85,
+          "score": 0.6767,
+          "reviewReasons": []
+        },
+        {
+          "text": "la",
+          "normalized": "la",
+          "start": 75.93,
+          "end": 76.051,
+          "score": 0.9294,
+          "reviewReasons": []
+        },
+        {
+          "text": "derrota",
+          "normalized": "derrota",
+          "start": 76.231,
+          "end": 77.055,
+          "score": 0.5542,
+          "reviewReasons": []
+        }
+      ],
+      "lexicalReview": null
+    },
+    {
+      "id": "L11",
+      "span": [
+        78.1,
+        82.7
+      ],
+      "text": "Hasta el final, el final",
+      "words": [
+        {
+          "text": "Hasta",
+          "normalized": "hasta",
+          "start": 78.282,
+          "end": 78.643,
+          "score": 0.5199,
+          "reviewReasons": []
+        },
+        {
+          "text": "el",
+          "normalized": "el",
+          "start": 78.703,
+          "end": 78.764,
+          "score": 0.2519,
+          "reviewReasons": [
+            "collapsed very short token"
+          ]
+        },
+        {
+          "text": "final,",
+          "normalized": "final",
+          "start": 78.864,
+          "end": 79.546,
+          "score": 0.6424,
+          "reviewReasons": [
+            "vocal/mix boundary disagreement"
+          ]
+        },
+        {
+          "text": "el",
+          "normalized": "el",
+          "start": 80.208,
+          "end": 80.389,
+          "score": 0.4546,
+          "reviewReasons": []
+        },
+        {
+          "text": "final",
+          "normalized": "final",
+          "start": 80.589,
+          "end": 82.7,
+          "score": 0.5312,
+          "endEvidence": "ASR phrase endpoint and vocal envelope; subjective review needed",
+          "reviewReasons": [
+            "held ending estimate"
+          ]
+        }
+      ],
+      "lexicalReview": "second el/del: CTC and both ASR passes prefer el"
+    },
+    {
+      "id": "L12",
+      "span": [
+        98.1,
+        105.8
+      ],
+      "text": "Ah, todo lo que hago es para vos",
+      "words": [
+        {
+          "text": "Ah,",
+          "normalized": "ah",
+          "start": 98.342,
+          "end": 99.44,
+          "score": 0.3941,
+          "endEvidence": "HTDemucs vocal energy tail, approx ±0.2 s",
+          "reviewReasons": [
+            "vocal/mix boundary disagreement",
+            "sustained Ah endpoint based on envelope, not raw CTC"
+          ]
+        },
+        {
+          "text": "todo",
+          "normalized": "todo",
+          "start": 101.369,
+          "end": 101.77,
+          "score": 0.9582,
+          "reviewReasons": []
+        },
+        {
+          "text": "lo",
+          "normalized": "lo",
+          "start": 101.93,
+          "end": 102.051,
+          "score": 0.8958,
+          "reviewReasons": []
+        },
+        {
+          "text": "que",
+          "normalized": "que",
+          "start": 102.211,
+          "end": 102.351,
+          "score": 0.7498,
+          "reviewReasons": []
+        },
+        {
+          "text": "hago",
+          "normalized": "hago",
+          "start": 102.572,
+          "end": 103.133,
+          "score": 0.6861,
+          "reviewReasons": []
+        },
+        {
+          "text": "es",
+          "normalized": "es",
+          "start": 103.614,
+          "end": 103.755,
+          "score": 0.8537,
+          "reviewReasons": []
+        },
+        {
+          "text": "para",
+          "normalized": "para",
+          "start": 103.815,
+          "end": 104.196,
+          "score": 0.9875,
+          "reviewReasons": []
+        },
+        {
+          "text": "vos",
+          "normalized": "vos",
+          "start": 104.356,
+          "end": 105.639,
+          "score": 0.5096,
+          "reviewReasons": []
+        }
+      ],
+      "lexicalReview": "Ah/Ay: open-A CTC preferred, verify by ear"
+    },
+    {
+      "id": "L13",
+      "span": [
+        106.65,
+        113.5
+      ],
+      "text": "Ah, el tesoro se está hundiendo",
+      "words": [
+        {
+          "text": "Ah,",
+          "normalized": "ah",
+          "start": 106.803,
+          "end": 109.46,
+          "score": 0.3461,
+          "endEvidence": "HTDemucs vocal energy tail, approx ±0.2 s",
+          "reviewReasons": [
+            "vocal/mix boundary disagreement",
+            "sustained Ah endpoint based on envelope, not raw CTC"
+          ]
+        },
+        {
+          "text": "el",
+          "normalized": "el",
+          "start": 109.91,
+          "end": 110.091,
+          "score": 0.8641,
+          "reviewReasons": []
+        },
+        {
+          "text": "tesoro",
+          "normalized": "tesoro",
+          "start": 110.171,
+          "end": 110.832,
+          "score": 0.6644,
+          "reviewReasons": []
+        },
+        {
+          "text": "se",
+          "normalized": "se",
+          "start": 110.953,
+          "end": 111.113,
+          "score": 0.8707,
+          "reviewReasons": []
+        },
+        {
+          "text": "está",
+          "normalized": "esta",
+          "start": 111.253,
+          "end": 111.614,
+          "score": 0.6012,
+          "reviewReasons": []
+        },
+        {
+          "text": "hundiendo",
+          "normalized": "hundiendo",
+          "start": 111.795,
+          "end": 112.957,
+          "score": 0.6608,
+          "reviewReasons": []
+        }
+      ],
+      "lexicalReview": "Ah/Ay: open-A CTC preferred, verify by ear"
+    },
+    {
+      "id": "L14",
+      "span": [
+        115.05,
+        122.8
+      ],
+      "text": "Ah, todo lo que hago es para vos",
+      "words": [
+        {
+          "text": "Ah,",
+          "normalized": "ah",
+          "start": 115.204,
+          "end": 116.8,
+          "score": 0.4631,
+          "endEvidence": "HTDemucs vocal energy tail, approx ±0.2 s",
+          "reviewReasons": [
+            "sustained Ah endpoint based on envelope, not raw CTC"
+          ]
+        },
+        {
+          "text": "todo",
+          "normalized": "todo",
+          "start": 118.35,
+          "end": 118.751,
+          "score": 0.9779,
+          "reviewReasons": []
+        },
+        {
+          "text": "lo",
+          "normalized": "lo",
+          "start": 118.931,
+          "end": 119.052,
+          "score": 0.9521,
+          "reviewReasons": []
+        },
+        {
+          "text": "que",
+          "normalized": "que",
+          "start": 119.172,
+          "end": 119.312,
+          "score": 0.848,
+          "reviewReasons": []
+        },
+        {
+          "text": "hago",
+          "normalized": "hago",
+          "start": 119.472,
+          "end": 120.094,
+          "score": 0.6016,
+          "reviewReasons": []
+        },
+        {
+          "text": "es",
+          "normalized": "es",
+          "start": 120.635,
+          "end": 120.755,
+          "score": 0.9199,
+          "reviewReasons": []
+        },
+        {
+          "text": "para",
+          "normalized": "para",
+          "start": 120.835,
+          "end": 121.216,
+          "score": 0.973,
+          "reviewReasons": []
+        },
+        {
+          "text": "vos",
+          "normalized": "vos",
+          "start": 121.356,
+          "end": 122.138,
+          "score": 0.3984,
+          "reviewReasons": [
+            "vocal/mix boundary disagreement"
+          ]
+        }
+      ],
+      "lexicalReview": "Ah/Ay: open-A CTC preferred, verify by ear"
+    },
+    {
+      "id": "L15",
+      "span": [
+        123.65,
+        130.6
+      ],
+      "text": "Ah, vos pensás que pierdo el tiempo",
+      "words": [
+        {
+          "text": "Ah,",
+          "normalized": "ah",
+          "start": 123.703,
+          "end": 126.56,
+          "score": 0.1083,
+          "endEvidence": "HTDemucs vocal energy tail, approx ±0.2 s",
+          "reviewReasons": [
+            "low vocal CTC score",
+            "sustained Ah endpoint based on envelope, not raw CTC"
+          ]
+        },
+        {
+          "text": "vos",
+          "normalized": "vos",
+          "start": 126.849,
+          "end": 127.07,
+          "score": 0.5654,
+          "reviewReasons": []
+        },
+        {
+          "text": "pensás",
+          "normalized": "pensas",
+          "start": 127.13,
+          "end": 127.651,
+          "score": 0.8658,
+          "reviewReasons": []
+        },
+        {
+          "text": "que",
+          "normalized": "que",
+          "start": 127.691,
+          "end": 127.811,
+          "score": 0.299,
+          "reviewReasons": []
+        },
+        {
+          "text": "pierdo",
+          "normalized": "pierdo",
+          "start": 127.971,
+          "end": 128.633,
+          "score": 0.7398,
+          "reviewReasons": []
+        },
+        {
+          "text": "el",
+          "normalized": "el",
+          "start": 128.753,
+          "end": 128.813,
+          "score": 0.3272,
+          "reviewReasons": [
+            "collapsed very short token"
+          ]
+        },
+        {
+          "text": "tiempo",
+          "normalized": "tiempo",
+          "start": 128.994,
+          "end": 129.915,
+          "score": 0.4134,
+          "reviewReasons": []
+        }
+      ],
+      "lexicalReview": "Ah/Ay: open-A CTC preferred, verify by ear"
+    },
+    {
+      "id": "L16",
+      "span": [
+        133.4,
+        137.6
+      ],
+      "text": "Perdón si estoy de nuevo acá",
+      "words": [
+        {
+          "text": "Perdón",
+          "normalized": "perdon",
+          "start": 133.526,
+          "end": 133.967,
+          "score": 0.2644,
+          "reviewReasons": []
+        },
+        {
+          "text": "si",
+          "normalized": "si",
+          "start": 134.048,
+          "end": 134.108,
+          "score": 0.1259,
+          "reviewReasons": [
+            "low vocal CTC score",
+            "collapsed very short token"
+          ]
+        },
+        {
+          "text": "estoy",
+          "normalized": "estoy",
+          "start": 134.148,
+          "end": 134.75,
+          "score": 0.2655,
+          "reviewReasons": []
+        },
+        {
+          "text": "de",
+          "normalized": "de",
+          "start": 134.89,
+          "end": 134.991,
+          "score": 0.2351,
+          "reviewReasons": [
+            "low vocal CTC score"
+          ]
+        },
+        {
+          "text": "nuevo",
+          "normalized": "nuevo",
+          "start": 135.271,
+          "end": 135.773,
+          "score": 0.1274,
+          "reviewReasons": [
+            "low vocal CTC score",
+            "vocal/mix boundary disagreement"
+          ]
+        },
+        {
+          "text": "acá",
+          "normalized": "aca",
+          "start": 136.174,
+          "end": 137.5,
+          "score": 0.1635,
+          "reviewReasons": [
+            "low vocal CTC score",
+            "vocal/mix boundary disagreement",
+            "uncertain held ending; handoff must be checked by ear"
+          ],
+          "endEvidence": "Joint two-line mix/stem alignment and separated-vocal tail: next Pensé begins at 137.75 s; likely CTC window spill"
+        }
+      ],
+      "lexicalReview": "de nuevo acá: entire forced-alignment line is low-score"
+    },
+    {
+      "id": "L17",
+      "span": [
+        137.6,
+        141.1
+      ],
+      "text": "Pensé que habías preguntado por mí",
+      "words": [
+        {
+          "text": "Pensé",
+          "normalized": "pense",
+          "start": 137.741,
+          "end": 138.103,
+          "score": 0.6464,
+          "reviewReasons": []
+        },
+        {
+          "text": "que",
+          "normalized": "que",
+          "start": 138.263,
+          "end": 138.364,
+          "score": 0.2665,
+          "reviewReasons": []
+        },
+        {
+          "text": "habías",
+          "normalized": "habias",
+          "start": 138.384,
+          "end": 139.007,
+          "score": 0.7341,
+          "reviewReasons": []
+        },
+        {
+          "text": "preguntado",
+          "normalized": "preguntado",
+          "start": 139.067,
+          "end": 140.031,
+          "score": 0.7635,
+          "reviewReasons": []
+        },
+        {
+          "text": "por",
+          "normalized": "por",
+          "start": 140.212,
+          "end": 140.433,
+          "score": 0.4746,
+          "reviewReasons": []
+        },
+        {
+          "text": "mí",
+          "normalized": "mi",
+          "start": 140.513,
+          "end": 140.634,
+          "score": 0.9627,
+          "reviewReasons": []
+        }
+      ],
+      "lexicalReview": null
+    },
+    {
+      "id": "L18",
+      "span": [
+        141.85,
+        145.5
+      ],
+      "text": "Me gusta estar de nuevo acá",
+      "words": [
+        {
+          "text": "Me",
+          "normalized": "me",
+          "start": 142.002,
+          "end": 142.143,
+          "score": 0.4685,
+          "reviewReasons": []
+        },
+        {
+          "text": "gusta",
+          "normalized": "gusta",
+          "start": 142.283,
+          "end": 142.605,
+          "score": 0.3773,
+          "reviewReasons": []
+        },
+        {
+          "text": "estar",
+          "normalized": "estar",
+          "start": 142.645,
+          "end": 143.228,
+          "score": 0.6937,
+          "reviewReasons": []
+        },
+        {
+          "text": "de",
+          "normalized": "de",
+          "start": 143.328,
+          "end": 143.489,
+          "score": 0.5081,
+          "reviewReasons": []
+        },
+        {
+          "text": "nuevo",
+          "normalized": "nuevo",
+          "start": 143.75,
+          "end": 144.272,
+          "score": 0.2396,
+          "reviewReasons": [
+            "low vocal CTC score"
+          ]
+        },
+        {
+          "text": "acá",
+          "normalized": "aca",
+          "start": 144.433,
+          "end": 144.674,
+          "score": 0.3146,
+          "reviewReasons": [
+            "vocal/mix boundary disagreement"
+          ]
+        }
+      ],
+      "lexicalReview": "de nuevo acá: small ASR hallucinated Nueva York"
+    },
+    {
+      "id": "L19",
+      "span": [
+        146.1,
+        149.5
+      ],
+      "text": "Aunque no hayas preguntado por mí",
+      "words": [
+        {
+          "text": "Aunque",
+          "normalized": "aunque",
+          "start": 146.243,
+          "end": 146.605,
+          "score": 0.6717,
+          "reviewReasons": []
+        },
+        {
+          "text": "no",
+          "normalized": "no",
+          "start": 146.766,
+          "end": 146.886,
+          "score": 0.6028,
+          "reviewReasons": []
+        },
+        {
+          "text": "hayas",
+          "normalized": "hayas",
+          "start": 147.087,
+          "end": 147.509,
+          "score": 0.4142,
+          "reviewReasons": []
+        },
+        {
+          "text": "preguntado",
+          "normalized": "preguntado",
+          "start": 147.549,
+          "end": 148.513,
+          "score": 0.6561,
+          "reviewReasons": []
+        },
+        {
+          "text": "por",
+          "normalized": "por",
+          "start": 148.694,
+          "end": 148.935,
+          "score": 0.8887,
+          "reviewReasons": []
+        },
+        {
+          "text": "mí",
+          "normalized": "mi",
+          "start": 148.995,
+          "end": 149.116,
+          "score": 0.9699,
+          "reviewReasons": []
+        }
+      ],
+      "lexicalReview": null
+    },
+    {
+      "id": "L20",
+      "span": [
+        149.8,
+        153.8
+      ],
+      "text": "Voy a quedarme un poco acá",
+      "words": [
+        {
+          "text": "Voy",
+          "normalized": "voy",
+          "start": 149.942,
+          "end": 150.785,
+          "score": 0.4838,
+          "reviewReasons": [
+            "vocal/mix boundary disagreement"
+          ]
+        },
+        {
+          "text": "a",
+          "normalized": "a",
+          "start": 150.865,
+          "end": 150.885,
+          "score": 0.8756,
+          "reviewReasons": [
+            "collapsed very short token"
+          ]
+        },
+        {
+          "text": "quedarme",
+          "normalized": "quedarme",
+          "start": 151.066,
+          "end": 151.969,
+          "score": 0.2817,
+          "reviewReasons": []
+        },
+        {
+          "text": "un",
+          "normalized": "un",
+          "start": 152.21,
+          "end": 152.27,
+          "score": 0.0372,
+          "reviewReasons": [
+            "low vocal CTC score",
+            "collapsed very short token"
+          ]
+        },
+        {
+          "text": "poco",
+          "normalized": "poco",
+          "start": 152.35,
+          "end": 152.752,
+          "score": 0.1732,
+          "reviewReasons": [
+            "low vocal CTC score"
+          ]
+        },
+        {
+          "text": "acá",
+          "normalized": "aca",
+          "start": 152.812,
+          "end": 153.073,
+          "score": 0.5294,
+          "reviewReasons": [
+            "vocal/mix boundary disagreement"
+          ]
+        }
+      ],
+      "lexicalReview": "un poco acá: short words unstable; medium hears acá"
+    },
+    {
+      "id": "L21",
+      "span": [
+        154.6,
+        158.3
+      ],
+      "text": "Cuidarte siempre a vos en la derrota",
+      "words": [
+        {
+          "text": "Cuidarte",
+          "normalized": "cuidarte",
+          "start": 154.741,
+          "end": 155.384,
+          "score": 0.6922,
+          "reviewReasons": []
+        },
+        {
+          "text": "siempre",
+          "normalized": "siempre",
+          "start": 155.504,
+          "end": 155.926,
+          "score": 0.823,
+          "reviewReasons": []
+        },
+        {
+          "text": "a",
+          "normalized": "a",
+          "start": 155.946,
+          "end": 155.986,
+          "score": 0.8474,
+          "reviewReasons": [
+            "collapsed very short token"
+          ]
+        },
+        {
+          "text": "vos",
+          "normalized": "vos",
+          "start": 156.087,
+          "end": 156.368,
+          "score": 0.7192,
+          "reviewReasons": []
+        },
+        {
+          "text": "en",
+          "normalized": "en",
+          "start": 156.448,
+          "end": 156.549,
+          "score": 0.5985,
+          "reviewReasons": []
+        },
+        {
+          "text": "la",
+          "normalized": "la",
+          "start": 156.629,
+          "end": 156.749,
+          "score": 0.8106,
+          "reviewReasons": []
+        },
+        {
+          "text": "derrota",
+          "normalized": "derrota",
+          "start": 156.95,
+          "end": 157.754,
+          "score": 0.4828,
+          "reviewReasons": []
+        }
+      ],
+      "lexicalReview": null
+    },
+    {
+      "id": "L22",
+      "span": [
+        158.85,
+        163.8
+      ],
+      "text": "Hasta el final, el final",
+      "words": [
+        {
+          "text": "Hasta",
+          "normalized": "hasta",
+          "start": 159.001,
+          "end": 159.363,
+          "score": 0.7757,
+          "reviewReasons": []
+        },
+        {
+          "text": "el",
+          "normalized": "el",
+          "start": 159.423,
+          "end": 159.483,
+          "score": 0.4827,
+          "reviewReasons": [
+            "collapsed very short token"
+          ]
+        },
+        {
+          "text": "final,",
+          "normalized": "final",
+          "start": 159.584,
+          "end": 160.266,
+          "score": 0.791,
+          "reviewReasons": []
+        },
+        {
+          "text": "el",
+          "normalized": "el",
+          "start": 160.908,
+          "end": 161.109,
+          "score": 0.9023,
+          "reviewReasons": []
+        },
+        {
+          "text": "final",
+          "normalized": "final",
+          "start": 161.29,
+          "end": 163.8,
+          "score": 0.7227,
+          "endEvidence": "ASR phrase endpoint and vocal envelope; subjective review needed",
+          "reviewReasons": [
+            "held ending estimate"
+          ]
+        }
+      ],
+      "lexicalReview": "second el/del: CTC and both ASR passes prefer el"
+    },
+    {
+      "id": "L23",
+      "span": [
+        170.35,
+        176.35
+      ],
+      "text": "Es la depresión sin épica",
+      "words": [
+        {
+          "text": "Es",
+          "normalized": "es",
+          "start": 170.503,
+          "end": 171.65,
+          "score": 0.3656,
+          "endEvidence": "ASR phrase endpoint and vocal envelope; subjective review needed",
+          "reviewReasons": [
+            "vocal/mix boundary disagreement",
+            "held ending estimate"
+          ]
+        },
+        {
+          "text": "la",
+          "normalized": "la",
+          "start": 173.31,
+          "end": 173.43,
+          "score": 0.9831,
+          "reviewReasons": []
+        },
+        {
+          "text": "depresión",
+          "normalized": "depresion",
+          "start": 173.57,
+          "end": 174.553,
+          "score": 0.93,
+          "reviewReasons": []
+        },
+        {
+          "text": "sin",
+          "normalized": "sin",
+          "start": 174.753,
+          "end": 175.094,
+          "score": 0.9801,
+          "reviewReasons": []
+        },
+        {
+          "text": "épica",
+          "normalized": "epica",
+          "start": 175.215,
+          "end": 176.3,
+          "score": 0.6095,
+          "endEvidence": "ASR phrase endpoint and vocal envelope; subjective review needed",
+          "reviewReasons": [
+            "held ending estimate"
+          ]
+        }
+      ],
+      "lexicalReview": "sin épica: medium mix ASR substituted sin réplica; vocal CTC prefers épica"
+    },
+    {
+      "id": "L24",
+      "span": [
+        177.4,
+        180.9
+      ],
+      "text": "La depresión sin épica",
+      "words": [
+        {
+          "text": "La",
+          "normalized": "la",
+          "start": 177.564,
+          "end": 177.684,
+          "score": 0.4552,
+          "reviewReasons": []
+        },
+        {
+          "text": "depresión",
+          "normalized": "depresion",
+          "start": 177.805,
+          "end": 178.749,
+          "score": 0.6828,
+          "reviewReasons": []
+        },
+        {
+          "text": "sin",
+          "normalized": "sin",
+          "start": 178.97,
+          "end": 179.331,
+          "score": 0.5928,
+          "reviewReasons": []
+        },
+        {
+          "text": "épica",
+          "normalized": "epica",
+          "start": 179.452,
+          "end": 180.8,
+          "score": 0.3486,
+          "endEvidence": "ASR phrase endpoint and vocal envelope; subjective review needed",
+          "reviewReasons": [
+            "held ending estimate"
+          ]
+        }
+      ],
+      "lexicalReview": "sin épica: vocal CTC prefers épica"
+    }
+  ]
+}

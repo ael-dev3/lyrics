@@ -1,0 +1,16 @@
+{
+  "name": "el-tesoro-bilingual-preview",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "esbuild src/player.ts --bundle --format=esm --outfile=review/client.js",
+    "preview": "npm run build && node scripts/preview-server.ts",
+    "check": "tsc --noEmit && node --test tests/*.test.ts && node scripts/check.ts",
+    "render:production": "node scripts/render-production.ts"
+  },
+  "devDependencies": {
+    "@types/node": "26.4.0",
+    "esbuild": "0.28.2",
+    "typescript": "7.0.2"
+  }
+}

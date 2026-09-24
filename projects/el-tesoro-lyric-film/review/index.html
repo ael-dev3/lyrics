@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#201329">
+  <title>El Tesoro — Spanish + English preview</title>
+  <style>
+    @font-face{font-family:Newsreader;src:url('/public/fonts/Newsreader.ttf') format('truetype');font-weight:200 800;font-style:normal;font-display:swap}
+    *{box-sizing:border-box}
+    html,body{margin:0;min-height:100%;background:#201329;color:#f8e9e5}
+    body{padding:12px 18px 20px;font-family:system-ui,-apple-system,sans-serif}
+    button,select,input,textarea{font:inherit}
+    button,select{background:#30203a;color:#f8e9e5;border:1px solid #72536e;border-radius:4px;padding:7px 10px;cursor:pointer}
+    button:hover,select:hover{border-color:#e8a8bf}
+    button:focus-visible,select:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid #ffe6c9;outline-offset:2px}
+    .shell{max-width:1120px;margin:auto}
+    header{max-width:1080px;margin:0 auto 10px;display:flex;align-items:end;justify-content:space-between;gap:16px}
+    header h1{font:600 18px Newsreader,Georgia,serif;margin:0 0 2px}
+    header p{font-size:10px;color:#bda9c0;margin:0}
+    .badge{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#f4c4d2;white-space:nowrap}
+    .stage-wrap{display:flex;justify-content:center}
+    .stage{position:relative;isolation:isolate;overflow:hidden;container-type:inline-size;width:min(100%,1080px,calc((100svh - 184px)*16/9));aspect-ratio:16/9;background:#db287d}
+    .stage.portrait{width:min(100%,480px,max(300px,calc((100svh - 184px)*9/16)));aspect-ratio:9/16;background:radial-gradient(ellipse 130% 80% at 50% 5%,#f6b6b7 0%,#e93988 53%,#8f245f 76%,#291331 100%)}
+    #source{position:absolute;inset:0;z-index:0;width:100%;height:100%;object-fit:cover;object-position:center;display:block;transform-origin:50% 48%;will-change:transform}
+    .stage.portrait #source{height:64%;object-position:50% 50%;-webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 76%,transparent 100%);mask-image:linear-gradient(to bottom,#000 0%,#000 76%,transparent 100%)}
+    #shade{position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(to top,rgba(32,8,43,.19),transparent 58%),linear-gradient(90deg,rgba(34,9,46,.84) 0%,rgba(39,11,47,.74) 25%,rgba(42,14,45,.12) 43%,rgba(42,14,45,.12) 57%,rgba(39,11,47,.74) 75%,rgba(34,9,46,.84) 100%)}
+    .stage.portrait #shade{background:linear-gradient(to bottom,transparent 34%,rgba(95,18,79,.12) 51%,rgba(52,13,55,.72) 65%,rgba(34,10,46,.94) 78%,rgba(28,9,39,.98) 100%)}
+    #smoke{position:absolute;inset:0;z-index:2;width:100%;height:100%;pointer-events:none}
+    #glint{position:absolute;z-index:3;left:50.1%;top:0;width:.18%;height:48%;transform:translateX(-50%);pointer-events:none;opacity:0;background:linear-gradient(to bottom,transparent,rgba(255,236,223,.66) 28%,rgba(221,214,255,.72) 74%,transparent);filter:blur(1px);mix-blend-mode:screen}
+    .lane{position:absolute;z-index:4;top:61%;width:39%;min-height:18%;text-align:center;font:600 3.15cqw/1.13 Newsreader,Georgia,serif;font-optical-sizing:auto;letter-spacing:-.025em;color:#f5e6e8;text-wrap:balance;text-shadow:0 2px 3px rgba(23,5,35,.90),0 0 12px rgba(24,7,40,.50)}
+    .lane.es{left:4%}.lane.en{right:4%}
+    .lane.empty{visibility:hidden}
+    .word{display:inline;color:inherit;white-space:nowrap;transition:color .09s linear,text-shadow .09s linear}
+    .word.active{color:#ffe4b9;text-shadow:0 1px 2px rgba(27,8,39,.95),0 0 12px rgba(255,226,184,.42)}
+    .stage.portrait .lane{left:6%;right:6%;width:88%;font-size:5.0cqw;min-height:8%;line-height:1.14}
+    .stage.portrait .lane.es{top:65%}.stage.portrait .lane.en{top:78%}
+    #title-state{position:absolute;z-index:4;left:5%;bottom:12%;color:#fff0e8;text-shadow:0 2px 9px rgba(24,6,35,.85);opacity:0;pointer-events:none}
+    #title-state strong{display:block;font:650 4.1cqw/.95 Newsreader,Georgia,serif;letter-spacing:-.04em}
+    #title-state small{display:block;margin-top:.6em;font:500 1.2cqw system-ui,sans-serif;letter-spacing:.12em;text-transform:uppercase}
+    .stage.portrait #title-state{left:8%;right:8%;bottom:17%;text-align:center}
+    .stage.portrait #title-state strong{font-size:7.5cqw}.stage.portrait #title-state small{font-size:2.3cqw}
+    #error{display:none;position:absolute;z-index:8;left:8%;right:8%;top:44%;padding:12px;background:rgba(32,10,42,.96);border:1px solid #edb9c3;font-size:12px;line-height:1.4}
+    #error.show{display:block}
+    .controls{max-width:1080px;margin:10px auto 0;display:flex;align-items:center;gap:7px;flex-wrap:wrap;font-size:11px}
+    #play{color:#ffe1b5;min-width:70px}#seek{flex:1;min-width:130px;accent-color:#efb0ca}
+    #clock{font-variant-numeric:tabular-nums;color:#d8c1d2;white-space:nowrap}
+    .formats{display:flex;gap:5px}.formats button[aria-pressed=true]{border-color:#ffe1bd;color:#ffe1bd}
+    .review-tools{max-width:1080px;margin:8px auto 0;display:flex;gap:7px;align-items:center;flex-wrap:wrap;font-size:11px}
+    #cue{max-width:490px;flex:1;min-width:190px}.spacer{flex:1}
+    #note{max-width:1080px;margin:8px auto 0;font-size:10px;color:#bfa8bf;line-height:1.5}
+    #note strong{color:#efdae7;font-weight:500}
+    #notes{max-width:1080px;width:100%;min-height:45px;margin-top:8px;padding:8px;background:#2b1b35;border:1px solid #60445f;color:#f8e9e5;border-radius:4px;resize:vertical;font-size:11px}
+    #preview-state:not([hidden]){display:block;max-width:1080px;margin:6px auto 0;color:#cbb7ce;font:10px/1.4 ui-monospace,monospace;overflow-wrap:anywhere}
+    @media(max-width:690px){body{padding:9px}header h1{font-size:15px}.badge{font-size:8px}.controls{gap:5px}.controls button,.controls select{padding:6px 7px}.review-tools{gap:5px}.spacer{display:none}}
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <header><div><h1>El Tesoro</h1><p>Él Mató a un Policía Motorizado · Spanish / English</p></div><div class="badge">Complete review preview</div></header>
+    <div class="stage-wrap"><section id="stage" class="stage" aria-label="Complete song preview with original artwork, bilingual lyrics and audio-responsive atmosphere">
+      <video id="source" playsinline preload="auto" poster="/public/source-poster.jpg"><source src="/public/source.mp4" type="video/mp4"></video>
+      <div id="shade" aria-hidden="true"></div><canvas id="smoke" aria-hidden="true"></canvas><div id="glint" aria-hidden="true"></div>
+      <div id="es" class="lane es empty" lang="es" aria-live="off"></div><div id="en" class="lane en empty" lang="en" aria-live="off"></div>
+      <div id="title-state" aria-hidden="true"><strong>El Tesoro</strong><small>Él Mató a un Policía Motorizado</small></div>
+      <div id="error" role="alert"></div>
+    </section></div>
+    <nav class="controls" aria-label="Playback">
+      <button id="play" type="button">▶ Play</button><button id="restart" type="button">↤ Start</button>
+      <input id="seek" type="range" min="0" max="271.534" step="0.001" value="0" aria-label="Seek through the song">
+      <span id="clock">0:00 / 4:31</span>
+      <select id="speed" aria-label="Playback speed"><option value="1">1×</option><option value="0.75">0.75×</option><option value="0.5">0.5×</option></select>
+      <div class="formats" role="group" aria-label="Preview format"><button id="landscape" type="button" aria-pressed="true">Original 16:9</button><button id="portrait" type="button" aria-pressed="false">9:16</button></div>
+    </nav>
+    <div class="review-tools"><label for="cue">Jump to line</label><select id="cue" aria-label="Jump to lyric line"></select><span class="spacer"></span><button id="mute" type="button">Sound on</button><button id="recover" type="button">Restore picture</button></div>
+    <div id="note"><strong>Preview only.</strong> The full source audio and artwork are present; word timings and two sung details remain under listening review. Seek and try both layouts, including at 0.5× speed. The final video has not been rendered.</div>
+    <textarea id="notes" aria-label="Private review notes saved in this browser" placeholder="Optional review notes — saved in this browser"></textarea>
+    <output id="preview-state" hidden></output>
+  </main>
+  <script type="module" src="/review/client.js"></script>
+</body>
+</html>
