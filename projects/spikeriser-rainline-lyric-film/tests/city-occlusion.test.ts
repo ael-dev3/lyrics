@@ -3,6 +3,7 @@ import {resolve} from 'node:path';
 import {test} from 'node:test';
 import {build} from 'esbuild';
 import {DURATION_FRAMES, FPS} from '../src/config.ts';
+import type {Placement} from '../src/city-choreography.ts';
 
 // Inspect the real painter as well as the poses it receives. Vehicle images are
 // unique markers, so their draw calls can be distinguished from background art.
@@ -13,20 +14,23 @@ const city = await import(`data:text/javascript;base64,${Buffer.from(bytes).toSt
 
 type DrawCall = {image: unknown; args: number[]};
 type FocusPixel = {x: number; y: number};
-function traceContext(width: number, height: number, captureFocus = false) {
+type SolidFill = {x: number; y: number; w: number; h: number};
+function traceContext(width: number, height: number, captureFocus = false, captureLargeFills = false) {
   const calls: DrawCall[] = [];
   const focusPixels: FocusPixel[] = [];
+  const solidFills: SolidFill[] = [];
   const canvas = {width, height};
   const context = {
     canvas, globalAlpha: 1, fillStyle: '', imageSmoothingEnabled: false,
     save() {}, restore() {}, clearRect() {}, scale() {}, translate() {},
-    fillRect(this: {fillStyle: string; globalAlpha: number}, x: number, y: number) {
+    fillRect(this: {fillStyle: string; globalAlpha: number}, x: number, y: number, w: number, h: number) {
       if (captureFocus && this.fillStyle === '#fff1b4' && this.globalAlpha === 1) focusPixels.push({x, y});
+      if (captureLargeFills && this.globalAlpha >= .85 && w >= 6 && h >= 5) solidFills.push({x, y, w, h});
     },
     beginPath() {}, moveTo() {}, lineTo() {}, closePath() {}, clip() {},
     drawImage(image: unknown, ...args: number[]) {calls.push({image, args});},
   } as unknown as CanvasRenderingContext2D;
-  return {context, calls, focusPixels};
+  return {context, calls, focusPixels, solidFills};
 }
 
 const near = (actual: number, expected: number, label: string) =>
@@ -149,6 +153,65 @@ test('the painter emits a source-timed focus color inside every sung word', () =
     }
   }
   assert.equal(checked, 152, 'All 76 words were inspected in both layouts');
+});
+
+test('lettering leaves the native sign glass visible without opaque panel fills', () => {
+  city.setCityAirship({} as CanvasImageSource);
+  city.setCityTrain({} as CanvasImageSource);
+  city.setCitySprites({} as CanvasImageSource);
+  city.setCityBackground('landscape', {} as CanvasImageSource);
+  city.setCityBackground('portrait', {} as CanvasImageSource);
+  for (const format of ['landscape', 'portrait'] as const) {
+    const geometry = city.cityGeometry(format);
+    for (const cue of city.cityCues) {
+      const frame = Math.round((cue.start + cue.end) * FPS / 2);
+      const time = frame / FPS;
+      const {context, solidFills} = traceContext(geometry.w, geometry.h, false, true);
+      city.paintCity(context, frame, format);
+      for (const surface of city.lyricSurfaces(cue, time, format)) {
+        const box = surface.box;
+        assert(!solidFills.some(fill =>
+          fill.x <= box.x + .5 && fill.y <= box.y + .5 &&
+          fill.x + fill.w >= box.x + box.w - .5 &&
+          fill.y + fill.h >= box.y + box.h - .5),
+        `${format} ${cue.id} ${surface.name} has an opaque rectangular backing over native art`);
+      }
+    }
+  }
+});
+
+test('focused glyph cells inherit subpixel motion from the train and airship', () => {
+  city.setCityAirship({} as CanvasImageSource);
+  city.setCityTrain({} as CanvasImageSource);
+  city.setCitySprites({} as CanvasImageSource);
+  city.setCityBackground('landscape', {} as CanvasImageSource);
+  city.setCityBackground('portrait', {} as CanvasImageSource);
+  for (const format of ['landscape', 'portrait'] as const) {
+    const geometry = city.cityGeometry(format);
+    for (const [id, wordIndex, frame] of [['CH-03', 0, 6360], ['CH-04', 3, 6720]] as const) {
+      const cue = city.cityCues.find(item => item.id === id);
+      assert(cue, `${id} cue exists`);
+      const word = cue.words[wordIndex];
+      assert(word && frame / FPS >= word.start && (frame + 1) / FPS < word.end, `${id} focus interval`);
+      const positions: number[] = [];
+      const anchors: number[] = [];
+      for (const currentFrame of [frame, frame + 1]) {
+        const time = currentFrame / FPS;
+        const {context, focusPixels} = traceContext(geometry.w, geometry.h, true);
+        city.paintCity(context, currentFrame, format);
+        assert(focusPixels.length > 0, `${format} ${id} draws focused glyphs`);
+        positions.push(Math.min(...focusPixels.map(pixel => pixel.x)));
+        const placement: Placement | undefined = city.lyricPose(cue, time, format).find((item: Placement) => item.index === wordIndex);
+        assert(placement, `${format} ${id} word placement`);
+        anchors.push(placement.x);
+      }
+      const expected = anchors[1]! - anchors[0]!;
+      const actual = positions[1]! - positions[0]!;
+      assert(Math.abs(expected) > .03 && Math.abs(expected) < .5,
+        `${format} ${id} needs an observable subpixel vehicle step`);
+      near(actual, expected, `${format} ${id} focus follows its moving native sign`);
+    }
+  }
 });
 
 test('camera travel is continuous across sung words and scene cuts', () => {

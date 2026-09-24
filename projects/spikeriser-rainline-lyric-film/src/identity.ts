@@ -11,6 +11,7 @@ export const previewIdentityPaths = [
   'src/word-cues.json',
   'src/pixel-font.ts',
   'src/pedestrians.ts',
+  'src/pedestrian-paths.ts',
   'src/city-choreography.ts',
   'src/city.ts',
   'src/config.ts',

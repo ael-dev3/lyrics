@@ -48,15 +48,21 @@ test('changed street pedestrian code invalidates a frozen preview', () => {
   assert.throws(() => checkProductionGate(input), /Preview input changed: src\/pedestrians.ts/);
 });
 
+test('changed sidewalk paths invalidate a frozen preview', () => {
+  const input = ready();
+  input.currentHashes['src/pedestrian-paths.ts'] = sha256('changed sidewalk path');
+  assert.throws(() => checkProductionGate(input), /Preview input changed: src\/pedestrian-paths.ts/);
+});
+
 test('changed camera, vehicle, or lyric choreography invalidates a frozen preview', () => {
   const input = ready();
   input.currentHashes['src/city-choreography.ts'] = sha256('changed street choreography');
   assert.throws(() => checkProductionGate(input), /Preview input changed: src\/city-choreography.ts/);
 });
 
-test('the archived v2 identity cannot authorize the v3 street revision', () => {
+test('the archived v3 identity cannot authorize the v4 native revision', () => {
   const input = ready();
-  input.identity = {...input.identity as object, revision: 'preview-v2-city'};
+  input.identity = {...input.identity as object, revision: 'preview-v3-street'};
   assert.throws(() => checkProductionGate(input), /another song or revision/);
 });
 
