@@ -1,16 +1,35 @@
 {
   "version": 1,
   "reviewedOn": "2026-09-24",
-  "scope": "The nineteen featured song sections in the main README and their project README entry points.",
+  "scope": "The twenty featured song sections in the main README and their project README entry points.",
   "newExtraction": {
-    "fps": 60,
+    "fps": [30, 60],
     "frameNumbering": "zero-based",
     "capture": "FFmpeg select=eq(n,FRAME), one full-frame PNG; no crop, recolor, text replacement or generated imagery.",
     "sourceIdentity": "New source files matched the recorded delivery SHA-256 before selecting their frames.",
     "scope": "Completed-film screenshots only; preview entries specify their diagnostic capture method individually."
   },
-  "review": "Every featured song has an associated representative image. The Mitski and Sun editions use exact decoded final frames; historical editions retain their recorded status and limitations.",
+  "review": "Every featured song has an associated representative image. The Mitski, Sun and Rainline editions use exact decoded final frames; historical editions retain their recorded status and limitations. Rainline's scoped delivery acceptance does not certify full acoustic synchronization review.",
   "screenshots": [
+    {
+      "song": "Rainline",
+      "image": "assets/rainline-wide-final-177.png",
+      "project": "projects/spikeriser-rainline-lyric-film/README.md",
+      "timestampSeconds": 177,
+      "frame": 5310,
+      "edition": "Verified Rainline v4 wide 16:9 film; scoped owner-approved-preview delivery",
+      "selection": "The sung cat lyric appears as native large-format city signage beside the lit cat window, with a hover taxi, viaduct train and heavy rain visible in the same composition.",
+      "method": "Exact zero-indexed frame 5310 decoded from the checksum-verified 30 fps final MP4 with FFmpeg select; complete 1920x1080 composition without cropping, recoloring, replacement text or added imagery. Inspected at native and README size.",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 2373395,
+      "sha256": "1e63db76fd381eb049d738cfec85a66ddab50355ce7e64f36b897562fc2e96bb",
+      "encoding": "PNG",
+      "sourceFile": "Rainline-X-Wide.mp4",
+      "sourceVideoSha256": "9248b02c412fa12cb937450aa59163e7206aaed837fb5754fa9f6432213d0721",
+      "previewIdentitySha256": "8933b9713474b0b9e42a7b19130d5f3a6728fde6eb80cf7e2dd463072be1f2cb",
+      "reviewLimit": "Detailed actual-audio, per-cue and both-format synchronization review remains pending."
+    },
     {
       "song": "I'll Change for You",
       "image": "assets/ill-change-for-you-final-45.png",

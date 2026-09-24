@@ -8,7 +8,21 @@ Music films with synchronized lyrics, meaning-linked translations, and audio-rea
 
 **Starting another song:** use the [single-prompt template, agent quickstart and complete quality checklist](docs/source-clocked-word-effects-workflow.md), including [how to make reactive visuals belong to the picture](docs/scene-integrated-visuals.md). The [If The Sun Burns Out Tonight handoff](projects/if-the-sun-burns-out-tonight-lyric-film/AGENT-HANDOFF.md) and [production lessons](projects/if-the-sun-burns-out-tonight-lyric-film/PRODUCTION-LESSONS.md) show how exact word/phrase effects, measured intensity and dependable full-picture playback fit the shared workflow.
 
-[**El Tesoro — preview**](#el-tesoro--preview) · [**I'll Change for You**](#ill-change-for-you) · [**If The Sun Burns Out Tonight**](#if-the-sun-burns-out-tonight) · [**Люби меня, люби**](#люби-меня-люби) · [**Stay at Your House — Hardstyle**](#stay-at-your-house--hardstyle) · [**Ведьмы**](#ведьмы) · [**Pero es locura**](#pero-es-locura) · [**La Lune**](#la-lune) · [**каждый, кто делал тебе больно**](#каждый-кто-делал-тебе-больно) · [**Sugar Glass**](#sugar-glass) · [**Твои глаза**](#твои-глаза) · [**Прости за любовь — accepted with known gaps**](#прости-за-любовь) · [**Половинка**](#половинка) · [**Life Letters**](#life-letters) · [**Joyride**](#joyride) · [**midnight love**](#midnight-love) · [**Пожары**](#пожары) · [**Отменяй**](#отменяй) · [**Roi × Adore**](#roi--adore) · [**TikTok edition**](#tiktok-edition) · [**Tanisea**](#tanisea) · [**Build and workflow**](#build-and-workflow)
+[**Rainline**](#rainline) · [**El Tesoro — preview**](#el-tesoro--preview) · [**I'll Change for You**](#ill-change-for-you) · [**If The Sun Burns Out Tonight**](#if-the-sun-burns-out-tonight) · [**Люби меня, люби**](#люби-меня-люби) · [**Stay at Your House — Hardstyle**](#stay-at-your-house--hardstyle) · [**Ведьмы**](#ведьмы) · [**Pero es locura**](#pero-es-locura) · [**La Lune**](#la-lune) · [**каждый, кто делал тебе больно**](#каждый-кто-делал-тебе-больно) · [**Sugar Glass**](#sugar-glass) · [**Твои глаза**](#твои-глаза) · [**Прости за любовь — accepted with known gaps**](#прости-за-любовь) · [**Половинка**](#половинка) · [**Life Letters**](#life-letters) · [**Joyride**](#joyride) · [**midnight love**](#midnight-love) · [**Пожары**](#пожары) · [**Отменяй**](#отменяй) · [**Roi × Adore**](#roi--adore) · [**TikTok edition**](#tiktok-edition) · [**Tanisea**](#tanisea) · [**Build and workflow**](#build-and-workflow)
+
+## Rainline
+
+**Original pixel-art city · English working transcription · technically verified wide and portrait local exports**
+
+![Rainline final landscape frame: rainy cyberpunk city, cat window, native lyric signage, rail and hover traffic](assets/rainline-wide-final-177.png)
+
+*Exact frame 5310 at 02:57.000 from the verified 1920 × 1080 final film. Scene artwork was generated for this project and animated in Canvas; the soundtrack is from [SpikeRiser's source post](https://x.com/SpikeRiser/status/2102888874858959029). The frame illustrates picture design, not vocal timing verification.*
+
+The full 4:07 source soundtrack drives an original rain-soaked district with independently composed wide and portrait views. Eighteen provisional lyric lines and 76 source-clocked words appear inside native shop fascia, tower ads, a recurring train display and one brief airship display. A cat window gets a sustained camera focus for its lyric; sidewalk pedestrians, small hover cars, layered rain, road taxis and 12 measured building-light bands keep the city alive between lines. Source video motion was measured across all decoded frames and sampled visually, then adapted into new art.
+
+Both local X-format MP4s passed complete decode and original-AAC packet identity checks. They were exported under separate scoped acceptance of the frozen v4 preview; the repository's normal production gate remains closed because complete actual-audio and both-format cue review is pending. The project record keeps that distinction and the unresolved transcription question visible.
+
+[Project and preview](projects/spikeriser-rainline-lyric-film/README.md) · [Complete production notes](projects/spikeriser-rainline-lyric-film/PRODUCTION-NOTES.md) · [Reference study](projects/spikeriser-rainline-lyric-film/REFERENCE-STUDY.md) · [Timing evidence](projects/spikeriser-rainline-lyric-film/TRANSCRIPTION.md) · [Delivery checks](projects/spikeriser-rainline-lyric-film/evidence/delivery/landscape.json)
 
 ## El Tesoro — preview
 
@@ -438,6 +452,7 @@ Each project has its own setup instructions. Use the release source archive when
 
 | Project | Starting point |
 | --- | --- |
+| Rainline | [Project preview and production process](projects/spikeriser-rainline-lyric-film/README.md); original pixel city, provisional source-clocked words, scoped verified MP4 exports and pending full sync review |
 | Люби меня, люби | [Verified Russian / English films](projects/lyubi-menya-lyubi-lyric-film/README.md); rose paper composition, source-linked focus and complete posting kit |
 | Stay at Your House — Hardstyle | [Full preview setup](projects/stay-at-your-house-hardstyle/README.md); English lyrics, official trailer edits, verified films and identity-bound production gate |
 | Прости за любовь v1.2 | [Accepted delivery record and known gaps](projects/prosti-za-lyubov-lyric-film/README.md); preserve the existing films and apply the new sync gate to the next song |
@@ -475,6 +490,7 @@ The reusable workflow covers soundtrack locking, lyric alignment, semantic trans
 
 ```text
 assets/                          Film screenshots and artwork
+projects/spikeriser-rainline-lyric-film/ Rainline source study, city, preview, scoped export and evidence
 projects/lyubi-menya-lyubi-lyric-film/ Verified Russian / English rose paper films and posting kit
 projects/stay-at-your-house-hardstyle/ Verified hardstyle films, complete preview and delivery evidence
 projects/prosti-za-lyubov-lyric-film/ Accepted v1.2 record, known gaps and delivery evidence

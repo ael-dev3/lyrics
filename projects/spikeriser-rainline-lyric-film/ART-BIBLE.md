@@ -10,8 +10,8 @@ The city is a place that can sing: lyric words appear on surfaces that already b
 
 | Element | Treatment |
 | --- | --- |
-| Output | Landscape 1920 × 1080 and portrait 1080 × 1920, 60 fps, 247.253 s. Both are composed, not cropped versions of one another. |
-| Pixel grid | Current Canvas working coordinates are 640 × 360 and 360 × 640, enlarged 3× with nearest-neighbor sampling. Verify against the implementation before final render. |
+| Output | Final scoped exports: landscape 1920 × 1080 and portrait 1080 × 1900, 30 fps, 247.266667 s. Both are composed independently and sample the 60 Hz scene clock. |
+| Pixel grid | The scene uses independent landscape and portrait logical coordinates, enlarged with nearest-neighbor sampling; the portrait export centers a 1920 px scene canvas in a 1900 px output, trimming ten physical pixels at both top and bottom. |
 | Landscape city | `public/city-landscape.png` (1672 × 941): original generated deep city, ring sky, rail, shop fronts, blank sign locations, and wet street. |
 | Portrait city | `public/city-portrait.png` (941 × 1672): independently composed vertical version with ring, rail, tower stack, shops, and street. |
 | Airship | `public/city-airship.png` (2172 × 724, transparent): original elongated craft with a large blank LED panel. It is animated as a separate foreground layer. |
@@ -47,4 +47,4 @@ Keep one continuous city shot with slow, source-clocked camera pushes toward lyr
 
 ## Review boundary
 
-Preview both formats with audio. Review each word's text and timing by ear, every host transition for readability, the train/vehicle depth order, and the 12-band response. Keep this as a preview until the explicit render approval and full synchronization review required by the repository workflow. No final render or approval is implied by this art bible.
+Review each word's text and timing by ear in both formats, every host transition for readability, the train/vehicle depth order, and the 12-band response. The [production record](PRODUCTION-NOTES.md) documents technically verified scoped local exports from this v4 scene. Detailed actual-audio and every-cue synchronization review remains pending, and the committed default production gate remains closed. This art bible describes the implemented visual design; it is not evidence of acoustic completion.

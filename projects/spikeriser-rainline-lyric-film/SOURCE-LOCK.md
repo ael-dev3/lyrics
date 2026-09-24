@@ -11,4 +11,4 @@
 | Preview audio SHA-256 | `f6f1be0de55b8a7b63e761ff62962de82d87ab143bafb3680c9029b441fe5ba8` |
 | Attribution | Post gives no song/artist credit; no lyric reference supplied; empty auto-generated caption track. Identify neither song title nor performer without further evidence. |
 
-`src/spectrum.json` is produced by `scripts/build-spectrum.ts` from the preview audio. The soundtrack drives the browser preview and is stream-copied without audio re-encoding during production assembly. Source media is used solely to prepare this local review preview and is not committed or published here.
+`src/spectrum.json` is produced by `scripts/build-spectrum.ts` from the locked audio. The soundtrack drives the browser preview and was stream-copied without audio re-encoding into the [scoped local exports](PRODUCTION-NOTES.md#5-scoped-final-exports-and-gate-distinction). The source video supplied visual study and soundtrack input; its frames were not incorporated into the new city. Neither the original media nor the full exports are committed or published here.

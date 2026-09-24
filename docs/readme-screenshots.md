@@ -1,9 +1,10 @@
 # README song screenshots
 
-Updated 24 September 2026. All nineteen featured songs in the main README have a representative image with its edition and preview/final status, and each song's project README has an associated image. Rendered preview references are identified separately from browser captures and decoded final-film frames. Promotional covers and supplementary frames remain separate from the representative image.
+Updated 24 September 2026. All twenty featured songs in the main README have a representative image with its edition and preview/final status, and each song's project README has an associated image. Rendered preview references are identified separately from browser captures and decoded final-film frames. Promotional covers and supplementary frames remain separate from the representative image.
 
 | Song | Representative image | Time | Edition / provenance |
 | --- | --- | --- | --- |
+| Rainline | [Native cat lyric sign, lit window, train and hover taxi](../assets/rainline-wide-final-177.png) | 02:57.000 | Verified v4 16:9 film; scoped owner-approved-preview delivery; detailed acoustic review pending |
 | I'll Change for You | [Original room scene and individual “mean” focus](../assets/ill-change-for-you-final-45.png) | 00:45.000 | Exact decoded frame 2700 of the verified 4:3 final film |
 | If The Sun Burns Out Tonight | [Native panorama, solar word fire and gold depth spectrum](../assets/sun-burns-out-final-200-7.png) | 03:20.700 | Verified production-v1 final landscape film; exact decoded frame 12042 |
 | Люби меня, люби | [Album print on rose paper and individual год / years focus](../assets/lyubi-v1-1-final-13-85.png) | 00:13.850 | Verified v1.1.0 final landscape film; exact decoded frame 831 |
@@ -25,6 +26,17 @@ Updated 24 September 2026. All nineteen featured songs in the main README have a
 | Tanisea | [Square composition and English focus](../assets/tanisea-vnext-hero.png) | 00:48.000 | Historical square vNext reference; time visible in frame |
 
 The [structured inventory](../assets/readme-screenshots.json) records image dimensions, hashes, project associations and selection reasons. Original-creator credits remain with the song entries and project documentation.
+
+## Rainline wide film frame
+
+Frame 5310 at 177.000 seconds was decoded from the checksum-verified 1920×1080, 30 fps wide MP4. It preserves the entire encoded composition: the lyric is built into a large city sign beside the lit cat window, while the recurring viaduct train, a flying taxi and heavy rain remain visible. The frame is an unmodified decoded PNG; it was not cropped, recolored or rebuilt from project source. It was inspected at native and README display sizes.
+
+The source MP4 SHA-256 is `9248b02c412fa12cb937450aa59163e7206aaed837fb5754fa9f6432213d0721`, matching its delivery verification record. The image's dimensions, byte count and SHA-256 are in the structured inventory. Its source preview identity is `8933b9713474b0b9e42a7b19130d5f3a6728fde6eb80cf7e2dd463072be1f2cb`. The film was exported after scoped acceptance of that preview revision; the separate actual-audio, per-cue and both-format synchronization review remains pending. This screenshot establishes visual presentation at one frame, not lyric timing accuracy.
+
+```sh
+ffmpeg -v error -i Rainline-X-Wide.mp4 -vf 'select=eq(n\,5310)' \
+  -frames:v 1 -fps_mode vfr -compression_level 8 rainline-wide-final-177.png
+```
 
 ## I'll Change for You final original-aspect frame
 
