@@ -1,0 +1,34 @@
+{
+  "schema": "ill-change-for-you-delivery/v1",
+  "edition": "acoustic-revision-2026-09-24",
+  "status": "production-verified; desktop-posting-kit-ready; not posted to video platforms",
+  "sourceSha256": "5af79acdcb8d708a6d53f901dee814f2a8038e2c775e806635e4286a57d01309",
+  "approvalRecord": "evidence/render-authorization.json",
+  "technicalVerification": {
+    "file": "evidence/final-verification.json",
+    "sha256": "54b1ca46f70786308162e33597581b38b44a39f7bbd9cce80f70587cb6690a77",
+    "result": "passed for both formats"
+  },
+  "masterVideos": {
+    "youtube": {
+      "filename": "Ill-Change-for-You-original-4x3.mp4",
+      "sha256": "4b3076311ccdf60e9996a602bb26d9670f3f5672d45125545bd8f0e85ba8bc04",
+      "bytes": 178257011,
+      "geometry": "1440x1080; 4:3; 60 fps"
+    },
+    "tiktok": {
+      "filename": "Ill-Change-for-You-portrait-9x16.mp4",
+      "sha256": "ca45673173f7af3886e66a8a18c22f12276f6f587c0b283b4d1a3140eba12f64",
+      "bytes": 179808850,
+      "geometry": "1080x1920; 9:16; 60 fps"
+    }
+  },
+  "desktopPackage": {
+    "folderName": "Mitski — I’ll Change for You — Upload Kit",
+    "fileCount": 14,
+    "manifestSha256": "cb0f2fb5dfb4e8359dbdd5397fad02d5868cad0d40a1b2788963ec2ca71ae6dc",
+    "checksumFileSha256": "442e0ff509d890ed61c5f074df741eea96f964866301b556e92176251364f0f0",
+    "copyVerification": "all 14 files match local staging bytes; all 13 checksummed posting/manifest files pass shasum -a 256 -c"
+  },
+  "repositoryMediaPolicy": "Full source and finished videos stay outside the public Git repository; source, methods, screenshots and receipts are published."
+}

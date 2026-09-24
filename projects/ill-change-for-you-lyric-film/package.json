@@ -4,6 +4,12 @@
   "type": "module",
   "scripts": {
     "preview": "node scripts/preview-server.mjs",
-    "check": "node scripts/check-preview.mjs && node --test scripts/preview-core.test.mjs"
+    "check": "node scripts/check-preview.mjs && node --test scripts/preview-core.test.mjs scripts/render-gate.test.mjs",
+    "render:proof": "node scripts/render-production.mjs --diagnostic",
+    "render:parity-stills": "node scripts/render-parity-stills.mjs",
+    "render:production": "node scripts/render-production.mjs --production"
+  },
+  "dependencies": {
+    "@napi-rs/canvas": "1.0.8"
   }
 }
