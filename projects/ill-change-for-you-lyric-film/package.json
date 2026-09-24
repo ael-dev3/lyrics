@@ -1,0 +1,9 @@
+{
+  "name": "ill-change-for-you-lyric-preview",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "preview": "node scripts/preview-server.mjs",
+    "check": "node scripts/check-preview.mjs && node --test scripts/preview-core.test.mjs"
+  }
+}
