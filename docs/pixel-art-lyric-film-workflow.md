@@ -92,3 +92,7 @@ Check each aspect ratio separately at native output dimensions and mobile displa
 - First/last frames, transition boundaries, repeated room states and all intended visual layers are present in the playable preview.
 - Portrait and landscape variants are both composed and reviewed at their encoded size.
 - Only after the preview and sync review are accepted does full production rendering proceed.
+
+## Worked city implementation: Rainline
+
+The [Rainline production record](../projects/spikeriser-rainline-lyric-film/PRODUCTION-NOTES.md) follows the reference study through original artwork, 18 lyric-host assignments, three preview revisions, scoped local exports and final-file verification. Its source video was measured numerically across every decoded frame, with visual inspection of contact sheets and selected sequences; those are distinct evidence claims. The implemented words occupy existing shop, tower, train and airship glass. One rail service travels on a continuous path, pedestrians remain above the curb, and a cat-focused camera hold covers the related line. Both compositions use the same source-clocked scene with separate framing. The 12-band response lights building panels, while words follow the provisional acoustic map. Its detailed actual-audio and both-format cue review remains pending; the separate scoped delivery record does not change this guide's default gate.

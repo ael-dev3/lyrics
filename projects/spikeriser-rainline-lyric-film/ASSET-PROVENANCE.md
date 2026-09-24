@@ -1,6 +1,6 @@
 # Generated artwork provenance
 
-This preview uses separately generated original city artwork and Canvas animation. The structural reference is [SpikeRiser's X video](https://x.com/SpikeRiser/status/2102888874858959029); the soundtrack and reference video are not embedded in the generated images. Artwork was requested through the **Codex built-in imagegen** route. The descriptions below are accurate **condensed briefs**, not verbatim tool prompts. Generation identifiers refer to the selected imagegen outputs; SHA-256 hashes identify the actual project files.
+The Rainline scene uses separately generated original city artwork and Canvas animation. The structural reference is [SpikeRiser's X video](https://x.com/SpikeRiser/status/2102888874858959029); the soundtrack and reference video are not embedded in the generated images. Artwork was requested through the **Codex built-in imagegen** route. The descriptions below are accurate **condensed briefs**, not verbatim tool prompts. Generation identifiers refer to the selected imagegen outputs; SHA-256 hashes identify the actual project files.
 
 | Project asset | Role | Selected generation output | Project file identity | Status |
 | --- | --- | --- | --- | --- |
@@ -18,4 +18,4 @@ This preview uses separately generated original city artwork and Canvas animatio
 - **Train:** A single transparent wide elevated-train side view with dense pixel-art texture, navy/cyan/magenta body, warm passenger windows, and a large blank LED side panel for timed lyrics.
 - **Sprite atlas:** Transparent 2 × 2 grid: upper-left yellow taxi facing right; upper-right black cat in a warm lit window; lower-left violet umbrella pedestrian facing right; lower-right teal umbrella pedestrian facing left. Keep the four cells consistent with the city artwork's pixel texture.
 
-The background images carry architectural density. Canvas supplies source-clocked rain, lightning, steam, train/taxi/pedestrian movement, signs, timed lyric focus, and measured 12-band spectrum lights. The generated airship, train, and sprites remain separate layers so their paths and occlusion can be checked in both aspect ratios. This inventory does not imply the full preview has passed review.
+The background images carry architectural density. Canvas supplies source-clocked rain, lightning, steam, train/taxi/pedestrian movement, signs, timed lyric focus, and measured 12-band spectrum lights. The generated airship, train, and sprites remain separate layers so their paths and occlusion can be checked in both aspect ratios. The [production record](PRODUCTION-NOTES.md) documents their use in the scoped final exports. This asset inventory does not establish complete actual-audio or both-format synchronization review.
