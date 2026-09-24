@@ -148,17 +148,24 @@ async function loadArt() {
   artLoading = true;
   artError = undefined;
   draw(true);
-  const decode = async (name: string) => {
+  const decode = (name: string): Promise<HTMLImageElement> => new Promise((resolve, reject) => {
     const picture = new Image();
+    // WebKit can leave decode() pending for detached images. The load event and
+    // intrinsic dimensions are sufficient for drawing an Image onto this canvas.
+    const timeout = setTimeout(() => finish(new Error(`${name} did not load within 15 seconds`)), 15000);
+    const finish = (error?: Error) => {
+      clearTimeout(timeout);
+      picture.onload = null;
+      picture.onerror = null;
+      if (error) reject(error);
+      else if (picture.naturalWidth && picture.naturalHeight) resolve(picture);
+      else reject(new Error(`${name} is empty`));
+    };
+    picture.onload = () => finish();
+    picture.onerror = () => finish(new Error(`${name} could not be loaded`));
     picture.src = assetUrl(name);
-    try {
-      await picture.decode();
-      if (!picture.naturalWidth || !picture.naturalHeight) throw new Error('Empty image');
-      return picture;
-    } catch (error) {
-      throw new Error(`${name} could not be decoded: ${String(error)}`);
-    }
-  };
+    if (picture.complete) queueMicrotask(() => finish());
+  });
   try {
     const [landscape, portrait, airship, train, sprites] = await Promise.all([
       decode('city-landscape.png'), decode('city-portrait.png'), decode('city-airship.png'),

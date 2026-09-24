@@ -10,6 +10,8 @@ export const previewIdentityPaths = [
   'src/spectrum.json',
   'src/word-cues.json',
   'src/pixel-font.ts',
+  'src/pedestrians.ts',
+  'src/city-choreography.ts',
   'src/city.ts',
   'src/config.ts',
   'src/identity.ts',

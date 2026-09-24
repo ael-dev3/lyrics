@@ -1,43 +1,42 @@
 {
   "song": "2102888874858959029",
-  "revision": "preview-v2-city",
-  "previewIdentitySha256": "232a60673a1c05eb5dceb184aa7cafbd5a09510171364e6bd1f2944c423782ba",
-  "recordedAtUtc": "2026-09-24 15:54:24 UTC",
-  "scope": "Technical preview verification only; no lyric accuracy or acoustic synchronization approval is claimed.",
+  "revision": "preview-v3-street",
+  "previewIdentitySha256": "21a5fcddbb9630caf98a64e25d4e60a4d06b3cf97ef5491a871adcef99bb95ed",
+  "recordedAtUtc": "2026-09-24 16:30:46 UTC",
+  "status": "technical preview verified; synchronization review pending",
+  "scope": "Automated structural checks and limited Chrome/in-app browser visual playback checks of the frozen v3 street preview. No perceptual lyric or full-render approval is claimed.",
   "automatedChecks": {
-    "strictTypeScript": "passed",
-    "tests": "13 passed, 0 failed; includes cue ownership, lyric geometry, camera, occlusion, and production-gate rejection cases",
-    "timingStructure": "76 words in 18 lines verified on the locked 48 kHz source clock; 73 words still await perceptual review",
-    "reviewBundle": "passed; regenerated after preview freeze with all 27 frozen input hashes unchanged",
-    "remotionBundle": "passed without media capture or full production rendering",
+    "strictTypeScript": "passed: npm run typecheck",
+    "tests": "18 passed, 0 failed: every active word remains in a physical sign and camera viewport on each 60 fps frame in both formats; every word emits a highlighted glyph at its source-timed focus frame; train and airship native poses and painter draw calls; continuous camera travel; production-gate rejection cases",
+    "timingStructure": "passed: 76 words in 18 lines on the locked 48 kHz source clock; 73 words still require perceptual review",
+    "reviewBundle": "passed: review/client.js regenerated before freezing all 29 current v3 inputs",
+    "remotionCodeBundle": "passed; composition discovery could not launch a local browser in this sandbox and no render was attempted",
     "sourceAudioSha256": "f6f1be0de55b8a7b63e761ff62962de82d87ab143bafb3680c9029b441fe5ba8"
   },
   "localServerBrowserChecks": {
+    "status": "visual spot checks only",
     "browser": "Chrome, separate agent-created QA tab",
-    "fullRecordingDurationSeconds": 247.253333,
-    "landscapeBacking": "1920x1080; canvas ready with complete scene and all five images",
-    "portraitBacking": "1080x1920; canvas ready with complete scene and all five images",
-    "pausedSeek": "Seeking to 125.000 seconds remained paused at 125.000 seconds in both formats; frame 7500",
-    "switching": "Switching formats retained soundtrack position and repainted the correct native backing",
-    "playPause": "Playback advanced from the selected source position and Pause held the reached position in both formats; 0.5x speed was also checked",
-    "visibleMotion": "At a seek to 176 seconds, scene frames advanced from 10560 to 10645 in landscape and 10560 to 10647 in portrait during playback; scene-only screenshot clips changed in both formats and showed moving city layers",
-    "console": "No browser warnings or errors during the final server preview check",
-    "finalQaTabState": "Paused at 0:00 in landscape format"
+    "landscapeVisibleMotion": "Playback screenshots at approximately 13.47–13.90 s and 20.17–20.60 s showed foreground walkers translating with changing leg silhouettes; rain, track train, cars, and airship also moved.",
+    "landscapeLyricSurfaces": "Track-train word panels were visibly readable at approximately 70, 85, 112, and 184 s; playback from 184 to 185.138 s showed the consist moving while a paused soundtrack position held stable. At approximately 105 s the airship remained above the civic board.",
+    "finalChorusTransition": "On the final v3 build, playback screenshots at approximately 115.865, 116.897, 117.931, and 118.965 s showed continuous right/up camera travel; the first CH-05 word was legible on the existing right vertical ad at 117.931 s. At a paused seek to 120.5 s, the next word was visible on the civic board while the right ad remained in view.",
+    "portrait": "Format switching fit the complete 9:16 canvas; playback at 20–20.957 s and 176–177.023 s advanced. A final-build paused seek to 177 s showed complete lyric board text and the cat in its warm window within the right edge.",
+    "inAppBrowser": "After the artwork-loading fix, the preview loaded and playback visibly advanced from the landscape shop scene at approximately 173 s to the train-word scene at 186 s. Portrait playback from approximately 175.5 to 183.5 s showed the shutter opening and the warm cat window with train motion; a paused seek to 177.4 s kept the cat and complete words in view.",
+    "scopeLimit": "These are visual/browser timing spot checks from agent-operated Chrome and in-app browser tabs. They are not an acoustic verification of lyric text or word synchronization."
   },
   "portableArtifactStaticChecks": {
+    "status": "passed",
     "artifact": "outputs/Rainline Preview.html",
-    "bytes": 19663777,
-    "sha256": "fb69084623de2d4b36681cd46f5d5ae0feab9ce53957c3e65f8b2db2bbd7e25a",
+    "bytes": 19674027,
+    "sha256": "86afc55fa9259cb7e1847238611f5fa7bf6e46923fcf4b2d48a5abb6fdebbf1e",
     "embeddedIdentityMatchesFrozen": true,
-    "embeddedAssets": "Source AAC and five PNGs; decoded bytes match the project files by SHA-256",
+    "embeddedAssets": "Five PNGs and the original source AAC; all six embedded byte streams match public/ source files exactly by SHA-256.",
+    "frozenInputHashesVerified": 29,
     "manifestMatchesArtifact": true,
     "externalMediaOrClientPathsRemain": false
   },
-  "portableFileBrowserPlayback": {
-    "checked": false,
-    "reason": "The browser-use security policy blocked direct file:// navigation and prohibited indirect workarounds. Static artifact integrity checks passed; no standalone browser-playback claim is made."
-  },
-  "productionGate": "blocked: complete actual-audio and both-format synchronization review is pending",
+  "portableFileBrowserPlayback": {"checked": false, "reason": "Standalone file playback was not verified in a browser; static embedding and identity checks passed."},
+  "productionGate": "blocked as expected: complete current-preview audio and both-format synchronization review is required",
   "manualAudioListeningPerformed": false,
+  "actualAudioReviewComplete": false,
   "fullProductionFilmRendered": false
 }

@@ -1,5 +1,5 @@
 export const SONG_ID = '2102888874858959029';
-export const REVISION = 'preview-v2-city';
+export const REVISION = 'preview-v3-street';
 export const FPS = 60;
 export const DURATION_SECONDS = 247.253333;
 export const DURATION_FRAMES = Math.ceil(DURATION_SECONDS * FPS);
