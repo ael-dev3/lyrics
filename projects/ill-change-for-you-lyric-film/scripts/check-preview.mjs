@@ -5,7 +5,7 @@ import {createReadStream} from 'node:fs';
 import {readFile, stat} from 'node:fs/promises';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
-import {createCues, cueAt} from '../src/preview-core.js';
+import {createCues, cueAt, wordIndexAt} from '../src/preview-core.js';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 const at = relative => path.join(root, relative);
@@ -21,8 +21,9 @@ async function sha256(relative) {
   return digest.digest('hex');
 }
 
-const [manifest, timeline, features, tones, supplied, html, player] = await Promise.all([
+const [manifest, timeline, revision, features, tones, supplied, html, player] = await Promise.all([
   json('source/media-manifest.json'), json('src/timeline.json'),
+  json('evidence/alignment-revision-2026-09-24.json'),
   json('public/audio-features.json'), json('public/picture-tones.json'),
   readFile(at('source/lyrics-supplied.txt'), 'utf8'),
   readFile(at('review/index.html'), 'utf8'),
@@ -42,6 +43,28 @@ assert.equal(new Set(lines.map(line => line.id)).size, lines.length, 'line IDs a
 assert.equal(new Set(words.map(word => word.id)).size, words.length, 'word IDs are unique');
 assert.equal(timeline.sourceSha256, manifest.sha256, 'timeline belongs to this media identity');
 assert.equal(timeline.sampleRate, manifest.audio.sampleRate, 'timeline follows locked audio samples');
+assert.equal(revision.sourceSha256, manifest.sha256, 'revision belongs to the locked source');
+assert.equal(revision.totalWords, words.length, 'revision covers every displayed word');
+assert.equal(revision.words.length, words.length, 'revision has one record per word');
+assert.equal(revision.changedWords,
+  revision.words.filter(word => word.old[0] !== word.proposed[0] || word.old[1] !== word.proposed[1]).length,
+  'revision change count matches its ledger');
+const activeById = new Map(words.map(word => [word.id, word]));
+for (const entry of revision.words) {
+  const active = activeById.get(entry.id);
+  assert.ok(active, `${entry.id} exists in the preview`);
+  assert.deepEqual([active.start, active.end], entry.proposed, `${entry.id} preview matches reviewed timing proposal`);
+}
+
+// The first-refrain pause was a real acoustic error in the earlier candidate:
+// "For" lit during the pause. Keep the gap unhighlighted before its entrance.
+const pause = 61.3;
+const pausedCue = cueAt(cues, pause);
+assert.equal(pausedCue ? wordIndexAt(pausedCue.words, pause) : -1, -1,
+  'first-refrain vocal pause has no active word');
+const firstFor = cueAt(cues, 62.1);
+assert.equal(firstFor?.words[wordIndexAt(firstFor.words, 62.1)]?.id, 'L09-W01',
+  'first-refrain For enters with the resumed vocal');
 
 let previousWordEnd = 0;
 let previousDisplayEnd = 0;
