@@ -1,0 +1,298 @@
+{
+  "version": 1,
+  "sourceSha256": "954ce98a308937e81a167ab740381cd46195abbad3279f3bc57319fa48bbd73c",
+  "dataSha256": "e2d8b629e721d82de2aa2724c44df2e35ed643a23be25a2274f7f287d01dbb78",
+  "dataFile": "audio-features.bin",
+  "analysisSampleRate": 22050,
+  "decodedSamples": 2975232,
+  "durationSeconds": 134.93115646258502,
+  "framesPerSecond": 60,
+  "frameCount": 8096,
+  "fftSize": 2048,
+  "window": "periodic Hann",
+  "windowCoherentGain": 0.4999999999999998,
+  "windowPower": 0.3749999999999996,
+  "supportSeconds": 0.09287981859410431,
+  "bandCount": 24,
+  "bandEdgesHz": [
+    55,
+    68.31471236414697,
+    84.85272591629338,
+    105.39435571427967,
+    130.9088199168292,
+    162.5999705190564,
+    201.96309484414758,
+    250.8554678627432,
+    311.58398421848756,
+    387.01400471201623,
+    480.7045529599639,
+    597.0762412290143,
+    741.6198487095663,
+    921.1553936024766,
+    1144.1539228479237,
+    1421.1372025393873,
+    1765.1741676630309,
+    2192.497555209501,
+    2723.2698153315005,
+    3382.5344386242737,
+    4201.3975861170675,
+    5218.495774963797,
+    6481.818869821236,
+    8050.974394333421,
+    10000
+  ],
+  "format": "Float32LE interleaved",
+  "scalarsPerFrame": 26,
+  "bytesPerFrame": 104,
+  "fields": [
+    "rmsDbFS",
+    "positiveMagnitudeFlux",
+    "band0DbFS",
+    "band1DbFS",
+    "band2DbFS",
+    "band3DbFS",
+    "band4DbFS",
+    "band5DbFS",
+    "band6DbFS",
+    "band7DbFS",
+    "band8DbFS",
+    "band9DbFS",
+    "band10DbFS",
+    "band11DbFS",
+    "band12DbFS",
+    "band13DbFS",
+    "band14DbFS",
+    "band15DbFS",
+    "band16DbFS",
+    "band17DbFS",
+    "band18DbFS",
+    "band19DbFS",
+    "band20DbFS",
+    "band21DbFS",
+    "band22DbFS",
+    "band23DbFS"
+  ],
+  "rmsDefinition": "Unwindowed mono RMS across supported samples in the centered analysis window; 20log10(amplitude), floored at -120 dBFS.",
+  "bandDefinition": "Integrated one-sided FFT band power, corrected by periodic-Hann power gain; 20log10(RMS), floored at -120 dBFS. DC and Nyquist excluded.",
+  "fluxDefinition": "Unsmoothed sum of positive changes in coherent-gain-corrected magnitude across bins 1..1023 relative to previous 60Hz frame; first frame is zero.",
+  "sourceClock": "Frame i is centered at i/60 seconds. Samples outside the decoded recording are zero-padded; RMS uses supported sample count. Final frame is before decoded end. Interpolate adjacent frames and clamp to final frame at media end. No source offset.",
+  "limitations": [
+    "Centered 92.88ms windows include approximately 46.44ms of future/past audio; these are musical-response features, not syllable-onset evidence.",
+    "Explicit 0.5L + 0.5R mono fold-down can cancel antiphase stereo content. No vocal/instrument separation or beat labels are inferred.",
+    "Band normalization is artistic and source-specific. Spectral flux is not proof of a drum hit, a scene cut, a vocal attack or a lyric boundary."
+  ],
+  "displayMapping": {
+    "formula": "clamp((raw - minimum) / (maximum - minimum), 0, 1)",
+    "rmsDb": {
+      "minimum": -15.344714787360436,
+      "maximum": -4.743940818552703,
+      "percentiles": [
+        0.1,
+        0.995
+      ]
+    },
+    "flux": {
+      "minimum": 0.3587628122826584,
+      "maximum": 3.43160172390939,
+      "percentiles": [
+        0.5,
+        0.995
+      ]
+    },
+    "bandsDb": [
+      {
+        "minimum": -55.76649900178374,
+        "maximum": -12.344915531661092,
+        "percentiles": [
+          0.1,
+          0.995
+        ]
+      },
+      {
+        "minimum": -51.43573331362137,
+        "maximum": -14.630470520398044,
+        "percentiles": [
+          0.1,
+          0.995
+        ]
+      },
+      {
+        "minimum": -46.464877482083956,
+        "maximum": -12.301558843350138,
+        "percentiles": [
+          0.1,
+          0.995
+        ]
+      },
+      {
+        "minimum": -47.2038873668416,
+        "maximum": -10.06930178781215,
+        "percentiles": [
+          0.1,
+          0.995
+        ]
+      },
+      {
+        "minimum": -41.089391586929594,
+        "maximum": -11.478276897947726,
+        "percentiles": [
+          0.1,
+          0.995
+        ]
+      },
+      {
+        "minimum": -50.15194965228544,
+        "maximum": -12.82760327468388,
+        "percentiles": [
+          0.1,
+          0.995
+        ]
+      },
+      {
+        "minimum": -40.41149402892222,
+        "maximum": -13.730714671608839,
+        "percentiles": [
+          0.1,
+          0.995
+        ]
+      },
+      {
+        "minimum": -37.23120652905267,
+        "maximum": -13.174829688188234,
+        "percentiles": [
+          0.1,
+          0.995
+        ]
+      },
+      {
+        "minimum": -29.921483195319418,
+        "maximum": -11.261367986196763,
+        "percentiles": [
+          0.1,
+          0.995
+        ]
+      },
+      {
+        "minimum": -41.95139998657979,
+        "maximum": -11.907764259236775,
+        "percentiles": [
+          0.1,
+          0.995
+        ]
+      },
+      {
+        "minimum": -45.534250343449436,
+        "maximum": -15.453948375151466,
+        "percentiles": [
+          0.1,
+          0.995
+        ]
+      },
+      {
+        "minimum": -41.40840049636271,
+        "maximum": -18.412365761422315,
+        "percentiles": [
+          0.1,
+          0.995
+        ]
+      },
+      {
+        "minimum": -47.211174936238336,
+        "maximum": -17.150827841773836,
+        "percentiles": [
+          0.1,
+          0.995
+        ]
+      },
+      {
+        "minimum": -44.59362975749055,
+        "maximum": -18.938400645379186,
+        "percentiles": [
+          0.1,
+          0.995
+        ]
+      },
+      {
+        "minimum": -52.48140690084533,
+        "maximum": -22.485164622421564,
+        "percentiles": [
+          0.1,
+          0.995
+        ]
+      },
+      {
+        "minimum": -52.53669608127353,
+        "maximum": -23.08141297484411,
+        "percentiles": [
+          0.1,
+          0.995
+        ]
+      },
+      {
+        "minimum": -55.618810658713485,
+        "maximum": -21.197830970626065,
+        "percentiles": [
+          0.1,
+          0.995
+        ]
+      },
+      {
+        "minimum": -57.23778707985202,
+        "maximum": -21.8263135392336,
+        "percentiles": [
+          0.1,
+          0.995
+        ]
+      },
+      {
+        "minimum": -57.85570896305887,
+        "maximum": -24.98263310199301,
+        "percentiles": [
+          0.1,
+          0.995
+        ]
+      },
+      {
+        "minimum": -62.03516644484496,
+        "maximum": -26.065344663644407,
+        "percentiles": [
+          0.1,
+          0.995
+        ]
+      },
+      {
+        "minimum": -66.30043597339929,
+        "maximum": -25.731712333111997,
+        "percentiles": [
+          0.1,
+          0.995
+        ]
+      },
+      {
+        "minimum": -70.85683441456061,
+        "maximum": -28.410065480187598,
+        "percentiles": [
+          0.1,
+          0.995
+        ]
+      },
+      {
+        "minimum": -73.30441466219207,
+        "maximum": -21.129143083936576,
+        "percentiles": [
+          0.1,
+          0.995
+        ]
+      },
+      {
+        "minimum": -68.33254672099991,
+        "maximum": -27.361763935190115,
+        "percentiles": [
+          0.1,
+          0.995
+        ]
+      }
+    ],
+    "note": "Source-specific artistic scaling, not loudness units. Bands are individually calibrated; compare absolute spectral balance using the raw dBFS values. Any release/smoothing belongs to deterministic source-time display logic, never vocal timing."
+  }
+}

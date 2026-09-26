@@ -1,0 +1,5076 @@
+{
+  "purpose": "Compare five versus six forced delay-echo words inside independently measured lead-restart windows.",
+  "limitations": "MMS internal scores are not word-presence probabilities. These thresholds are diagnostic flags only. A higher score or a plausible forced path does not establish the echo count. No candidate has been selected as final.",
+  "results": [
+    {
+      "audio": "mix",
+      "segments": [
+        {
+          "id": "intro-1-echoes-5",
+          "start": 0.412,
+          "end": 4.218,
+          "submittedEchoCount": 5,
+          "meanWordScore": 0.047871,
+          "meanEchoScore": 0.031969,
+          "minimumScore": 0.02705,
+          "flaggedWordCount": 1,
+          "words": [
+            {
+              "word": "Take",
+              "start": 0.49212631578947363,
+              "end": 1.1531684210526316,
+              "score": 0.13660257449373603,
+              "duration": 0.661042,
+              "flags": []
+            },
+            {
+              "word": "me",
+              "start": 1.2132631578947368,
+              "end": 1.413578947368421,
+              "score": 0.043293142691254616,
+              "duration": 0.200316,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 1.513736842105263,
+              "end": 1.9143684210526315,
+              "score": 0.043230289779603484,
+              "duration": 0.400632,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 1.9744631578947367,
+              "end": 2.415157894736842,
+              "score": 0.04219423588365316,
+              "duration": 0.440695,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 2.455221052631579,
+              "end": 2.9159473684210524,
+              "score": 0.027294116839766503,
+              "duration": 0.460726,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 2.956010526315789,
+              "end": 3.5369263157894735,
+              "score": 0.027049566619098186,
+              "duration": 0.580916,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 3.6571157894736843,
+              "end": 3.8574315789473683,
+              "score": 0.03500301167368889,
+              "duration": 0.200316,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 3.9175263157894737,
+              "end": 4.218,
+              "score": 0.028303760290145873,
+              "duration": 0.300474,
+              "flags": [
+                "touches-window-end"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "intro-1-echoes-6",
+          "start": 0.412,
+          "end": 4.218,
+          "submittedEchoCount": 6,
+          "meanWordScore": 0.045238,
+          "meanEchoScore": 0.030669,
+          "minimumScore": 0.025406,
+          "flaggedWordCount": 2,
+          "words": [
+            {
+              "word": "Take",
+              "start": 0.49212631578947363,
+              "end": 1.1531684210526316,
+              "score": 0.13660257449373603,
+              "duration": 0.661042,
+              "flags": []
+            },
+            {
+              "word": "me",
+              "start": 1.2132631578947368,
+              "end": 1.413578947368421,
+              "score": 0.043293142691254616,
+              "duration": 0.200316,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 1.513736842105263,
+              "end": 1.9143684210526315,
+              "score": 0.043230289779603484,
+              "duration": 0.400632,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 1.9744631578947367,
+              "end": 2.415157894736842,
+              "score": 0.04219423588365316,
+              "duration": 0.440695,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 2.455221052631579,
+              "end": 2.9159473684210524,
+              "score": 0.027294116839766503,
+              "duration": 0.460726,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 2.956010526315789,
+              "end": 3.3766736842105263,
+              "score": 0.025406086444854738,
+              "duration": 0.420663,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 3.416736842105263,
+              "end": 3.6571157894736843,
+              "score": 0.02581297727301717,
+              "duration": 0.240379,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 3.6571157894736843,
+              "end": 3.8574315789473683,
+              "score": 0.03500301167368889,
+              "duration": 0.200316,
+              "flags": [
+                "echo-shares-boundary-with-previous"
+              ]
+            },
+            {
+              "word": "there",
+              "start": 3.9175263157894737,
+              "end": 4.218,
+              "score": 0.028303760290145873,
+              "duration": 0.300474,
+              "flags": [
+                "touches-window-end"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "intro-2-echoes-5",
+          "start": 4.1979999999999995,
+          "end": 8.029,
+          "submittedEchoCount": 5,
+          "meanWordScore": 0.06341,
+          "meanEchoScore": 0.040335,
+          "minimumScore": 0.036323,
+          "flaggedWordCount": 6,
+          "words": [
+            {
+              "word": "Take",
+              "start": 4.278230366492147,
+              "end": 4.92007329842932,
+              "score": 0.1855810999404639,
+              "duration": 0.641843,
+              "flags": []
+            },
+            {
+              "word": "me",
+              "start": 5.04041884816754,
+              "end": 5.1005916230366495,
+              "score": 0.06830625236034393,
+              "duration": 0.060173,
+              "flags": [
+                "short-word-under-80ms"
+              ]
+            },
+            {
+              "word": "there",
+              "start": 5.321225130890053,
+              "end": 5.782549738219895,
+              "score": 0.05171508714556694,
+              "duration": 0.461325,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 5.782549738219895,
+              "end": 6.023240837696336,
+              "score": 0.045111840963363646,
+              "duration": 0.240691,
+              "flags": [
+                "echo-shares-boundary-with-previous"
+              ]
+            },
+            {
+              "word": "there",
+              "start": 6.263931937172775,
+              "end": 7.226696335078534,
+              "score": 0.03756176829338074,
+              "duration": 0.962764,
+              "flags": [
+                "long-echo-over-650ms"
+              ]
+            },
+            {
+              "word": "there",
+              "start": 7.226696335078534,
+              "end": 7.467387434554974,
+              "score": 0.0380232147872448,
+              "duration": 0.240691,
+              "flags": [
+                "echo-shares-boundary-with-previous"
+              ]
+            },
+            {
+              "word": "there",
+              "start": 7.467387434554974,
+              "end": 7.667963350785341,
+              "score": 0.044656867533922194,
+              "duration": 0.200576,
+              "flags": [
+                "echo-shares-boundary-with-previous"
+              ]
+            },
+            {
+              "word": "there",
+              "start": 7.7281361256544505,
+              "end": 8.008942408376964,
+              "score": 0.03632297813892364,
+              "duration": 0.280806,
+              "flags": [
+                "touches-window-end"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "intro-2-echoes-6",
+          "start": 4.1979999999999995,
+          "end": 8.029,
+          "submittedEchoCount": 6,
+          "meanWordScore": 0.058343,
+          "meanEchoScore": 0.036581,
+          "minimumScore": 0.018573,
+          "flaggedWordCount": 6,
+          "words": [
+            {
+              "word": "Take",
+              "start": 4.278230366492147,
+              "end": 4.92007329842932,
+              "score": 0.1855810999404639,
+              "duration": 0.641843,
+              "flags": []
+            },
+            {
+              "word": "me",
+              "start": 5.04041884816754,
+              "end": 5.1005916230366495,
+              "score": 0.06830625236034393,
+              "duration": 0.060173,
+              "flags": [
+                "short-word-under-80ms"
+              ]
+            },
+            {
+              "word": "there",
+              "start": 5.321225130890053,
+              "end": 5.782549738219895,
+              "score": 0.05171508714556694,
+              "duration": 0.461325,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 5.782549738219895,
+              "end": 6.023240837696336,
+              "score": 0.045111840963363646,
+              "duration": 0.240691,
+              "flags": [
+                "echo-shares-boundary-with-previous"
+              ]
+            },
+            {
+              "word": "there",
+              "start": 6.263931937172775,
+              "end": 7.226696335078534,
+              "score": 0.03756176829338074,
+              "duration": 0.962764,
+              "flags": [
+                "long-echo-over-650ms"
+              ]
+            },
+            {
+              "word": "there",
+              "start": 7.226696335078534,
+              "end": 7.467387434554974,
+              "score": 0.0380232147872448,
+              "duration": 0.240691,
+              "flags": [
+                "echo-shares-boundary-with-previous"
+              ]
+            },
+            {
+              "word": "there",
+              "start": 7.467387434554974,
+              "end": 7.667963350785341,
+              "score": 0.044656867533922194,
+              "duration": 0.200576,
+              "flags": [
+                "echo-shares-boundary-with-previous"
+              ]
+            },
+            {
+              "word": "there",
+              "start": 7.7281361256544505,
+              "end": 7.90865445026178,
+              "score": 0.035556888207793236,
+              "duration": 0.180518,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 7.928712041884817,
+              "end": 8.029,
+              "score": 0.018573272228240966,
+              "duration": 0.100288,
+              "flags": [
+                "low-internal-score-under-0.02",
+                "touches-window-end"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "intro-3-echoes-5",
+          "start": 8.009,
+          "end": 11.838,
+          "submittedEchoCount": 5,
+          "meanWordScore": 0.049837,
+          "meanEchoScore": 0.034052,
+          "minimumScore": 0.01059,
+          "flaggedWordCount": 3,
+          "words": [
+            {
+              "word": "Take",
+              "start": 8.109235602094241,
+              "end": 8.45003664921466,
+              "score": 0.1343500362127088,
+              "duration": 0.340801,
+              "flags": []
+            },
+            {
+              "word": "me",
+              "start": 8.530225130890052,
+              "end": 8.570319371727749,
+              "score": 0.010589946992695332,
+              "duration": 0.040094,
+              "flags": [
+                "short-word-under-80ms",
+                "low-internal-score-under-0.02"
+              ]
+            },
+            {
+              "word": "there",
+              "start": 8.630460732984293,
+              "end": 8.931167539267015,
+              "score": 0.08349987845867872,
+              "duration": 0.300707,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 9.111591623036649,
+              "end": 9.55262827225131,
+              "score": 0.04573300816118717,
+              "duration": 0.441037,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 9.592722513089006,
+              "end": 9.813240837696336,
+              "score": 0.04166902080178261,
+              "duration": 0.220518,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 10.073853403141362,
+              "end": 11.276680628272253,
+              "score": 0.02572054099291563,
+              "duration": 1.202827,
+              "flags": [
+                "long-echo-over-650ms"
+              ]
+            },
+            {
+              "word": "there",
+              "start": 11.276680628272253,
+              "end": 11.477151832460734,
+              "score": 0.03300466202199459,
+              "duration": 0.200471,
+              "flags": [
+                "echo-shares-boundary-with-previous"
+              ]
+            },
+            {
+              "word": "there",
+              "start": 11.537293193717279,
+              "end": 11.777858638743457,
+              "score": 0.024132839404046535,
+              "duration": 0.240565,
+              "flags": []
+            }
+          ]
+        },
+        {
+          "id": "intro-3-echoes-6",
+          "start": 8.009,
+          "end": 11.838,
+          "submittedEchoCount": 6,
+          "meanWordScore": 0.045879,
+          "meanEchoScore": 0.030745,
+          "minimumScore": 0.01059,
+          "flaggedWordCount": 4,
+          "words": [
+            {
+              "word": "Take",
+              "start": 8.109235602094241,
+              "end": 8.45003664921466,
+              "score": 0.1343500362127088,
+              "duration": 0.340801,
+              "flags": []
+            },
+            {
+              "word": "me",
+              "start": 8.530225130890052,
+              "end": 8.570319371727749,
+              "score": 0.010589946992695332,
+              "duration": 0.040094,
+              "flags": [
+                "short-word-under-80ms",
+                "low-internal-score-under-0.02"
+              ]
+            },
+            {
+              "word": "there",
+              "start": 8.630460732984293,
+              "end": 8.931167539267015,
+              "score": 0.08349987845867872,
+              "duration": 0.300707,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 9.111591623036649,
+              "end": 9.55262827225131,
+              "score": 0.04573300816118717,
+              "duration": 0.441037,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 9.592722513089006,
+              "end": 9.813240837696336,
+              "score": 0.04166902080178261,
+              "duration": 0.220518,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 10.073853403141362,
+              "end": 10.935879581151834,
+              "score": 0.02248538564890623,
+              "duration": 0.862026,
+              "flags": [
+                "long-echo-over-650ms"
+              ]
+            },
+            {
+              "word": "there",
+              "start": 11.056162303664923,
+              "end": 11.276680628272253,
+              "score": 0.017443059571087362,
+              "duration": 0.220518,
+              "flags": [
+                "low-internal-score-under-0.02"
+              ]
+            },
+            {
+              "word": "there",
+              "start": 11.276680628272253,
+              "end": 11.477151832460734,
+              "score": 0.03300466202199459,
+              "duration": 0.200471,
+              "flags": [
+                "echo-shares-boundary-with-previous"
+              ]
+            },
+            {
+              "word": "there",
+              "start": 11.537293193717279,
+              "end": 11.777858638743457,
+              "score": 0.024132839404046535,
+              "duration": 0.240565,
+              "flags": []
+            }
+          ]
+        },
+        {
+          "id": "middle-1-echoes-5",
+          "start": 30.92,
+          "end": 34.71,
+          "submittedEchoCount": 5,
+          "meanWordScore": 0.074438,
+          "meanEchoScore": 0.04502,
+          "minimumScore": 0.031907,
+          "flaggedWordCount": 0,
+          "words": [
+            {
+              "word": "Take",
+              "start": 31.000211640211642,
+              "end": 31.361164021164022,
+              "score": 0.1395414482394699,
+              "duration": 0.360952,
+              "flags": []
+            },
+            {
+              "word": "me",
+              "start": 31.521587301587303,
+              "end": 31.661957671957673,
+              "score": 0.1978166699409485,
+              "duration": 0.14037,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 32.002857142857145,
+              "end": 32.18333333333334,
+              "score": 0.033049756474792955,
+              "duration": 0.180476,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 32.444021164021166,
+              "end": 32.76486772486773,
+              "score": 0.049379699677228925,
+              "duration": 0.320847,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 32.96539682539683,
+              "end": 33.24613756613757,
+              "score": 0.031906563136726615,
+              "duration": 0.280741,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 33.42661375661376,
+              "end": 33.747460317460316,
+              "score": 0.05601809211075306,
+              "duration": 0.320847,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 33.9078835978836,
+              "end": 34.22873015873016,
+              "score": 0.05562013015151024,
+              "duration": 0.320847,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 34.38915343915344,
+              "end": 34.66989417989418,
+              "score": 0.03217443153262138,
+              "duration": 0.280741,
+              "flags": []
+            }
+          ]
+        },
+        {
+          "id": "middle-1-echoes-6",
+          "start": 30.92,
+          "end": 34.71,
+          "submittedEchoCount": 6,
+          "meanWordScore": 0.068603,
+          "meanEchoScore": 0.04117,
+          "minimumScore": 0.031907,
+          "flaggedWordCount": 0,
+          "words": [
+            {
+              "word": "Take",
+              "start": 31.000211640211642,
+              "end": 31.361164021164022,
+              "score": 0.1395414482394699,
+              "duration": 0.360952,
+              "flags": []
+            },
+            {
+              "word": "me",
+              "start": 31.521587301587303,
+              "end": 31.661957671957673,
+              "score": 0.1978166699409485,
+              "duration": 0.14037,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 32.002857142857145,
+              "end": 32.18333333333334,
+              "score": 0.033049756474792955,
+              "duration": 0.180476,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 32.444021164021166,
+              "end": 32.76486772486773,
+              "score": 0.049379699677228925,
+              "duration": 0.320847,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 32.96539682539683,
+              "end": 33.24613756613757,
+              "score": 0.031906563136726615,
+              "duration": 0.280741,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 33.42661375661376,
+              "end": 33.747460317460316,
+              "score": 0.05601809211075306,
+              "duration": 0.320847,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 33.9078835978836,
+              "end": 34.1084126984127,
+              "score": 0.03746812827885151,
+              "duration": 0.200529,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 34.12846560846561,
+              "end": 34.32899470899471,
+              "score": 0.04007059521973133,
+              "duration": 0.200529,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 34.38915343915344,
+              "end": 34.66989417989418,
+              "score": 0.03217443153262138,
+              "duration": 0.280741,
+              "flags": []
+            }
+          ]
+        },
+        {
+          "id": "middle-2-echoes-5",
+          "start": 34.690000000000005,
+          "end": 38.51,
+          "submittedEchoCount": 5,
+          "meanWordScore": 0.06166,
+          "meanEchoScore": 0.06148,
+          "minimumScore": 0.038834,
+          "flaggedWordCount": 1,
+          "words": [
+            {
+              "word": "Take",
+              "start": 34.810631578947365,
+              "end": 35.031789473684206,
+              "score": 0.03883425146341324,
+              "duration": 0.221158,
+              "flags": []
+            },
+            {
+              "word": "me",
+              "start": 35.09210526315789,
+              "end": 35.152421052631574,
+              "score": 0.07324807532131672,
+              "duration": 0.060316,
+              "flags": [
+                "short-word-under-80ms"
+              ]
+            },
+            {
+              "word": "there",
+              "start": 35.31326315789473,
+              "end": 35.67515789473684,
+              "score": 0.07380160987377167,
+              "duration": 0.361895,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 35.79578947368421,
+              "end": 36.11747368421052,
+              "score": 0.05433699265122414,
+              "duration": 0.321684,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 36.27831578947368,
+              "end": 36.49947368421052,
+              "score": 0.09302395656704902,
+              "duration": 0.221158,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 36.76084210526316,
+              "end": 37.06242105263158,
+              "score": 0.05158764645457268,
+              "duration": 0.301579,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 37.223263157894735,
+              "end": 37.54494736842105,
+              "score": 0.051849214173853395,
+              "duration": 0.321684,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 37.7258947368421,
+              "end": 38.02747368421053,
+              "score": 0.056600910425186154,
+              "duration": 0.301579,
+              "flags": []
+            }
+          ]
+        },
+        {
+          "id": "middle-2-echoes-6",
+          "start": 34.690000000000005,
+          "end": 38.51,
+          "submittedEchoCount": 6,
+          "meanWordScore": 0.058063,
+          "meanEchoScore": 0.056113,
+          "minimumScore": 0.037922,
+          "flaggedWordCount": 2,
+          "words": [
+            {
+              "word": "Take",
+              "start": 34.810631578947365,
+              "end": 35.031789473684206,
+              "score": 0.03883425146341324,
+              "duration": 0.221158,
+              "flags": []
+            },
+            {
+              "word": "me",
+              "start": 35.09210526315789,
+              "end": 35.152421052631574,
+              "score": 0.07324807532131672,
+              "duration": 0.060316,
+              "flags": [
+                "short-word-under-80ms"
+              ]
+            },
+            {
+              "word": "there",
+              "start": 35.31326315789473,
+              "end": 35.67515789473684,
+              "score": 0.07380160987377167,
+              "duration": 0.361895,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 35.79578947368421,
+              "end": 36.11747368421052,
+              "score": 0.05433699265122414,
+              "duration": 0.321684,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 36.27831578947368,
+              "end": 36.49947368421052,
+              "score": 0.09302395656704902,
+              "duration": 0.221158,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 36.76084210526316,
+              "end": 37.06242105263158,
+              "score": 0.05158764645457268,
+              "duration": 0.301579,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 37.223263157894735,
+              "end": 37.54494736842105,
+              "score": 0.051849214173853395,
+              "duration": 0.321684,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 37.7258947368421,
+              "end": 37.94705263157894,
+              "score": 0.03792229592800141,
+              "duration": 0.221158,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 37.94705263157894,
+              "end": 38.30894736842105,
+              "score": 0.04796067364513874,
+              "duration": 0.361895,
+              "flags": [
+                "echo-shares-boundary-with-previous"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "middle-3-echoes-5",
+          "start": 38.49,
+          "end": 42.32,
+          "submittedEchoCount": 5,
+          "meanWordScore": 0.060903,
+          "meanEchoScore": 0.056767,
+          "minimumScore": 0.039987,
+          "flaggedWordCount": 0,
+          "words": [
+            {
+              "word": "Take",
+              "start": 38.67047120418848,
+              "end": 39.23193717277487,
+              "score": 0.0914707079064101,
+              "duration": 0.561466,
+              "flags": []
+            },
+            {
+              "word": "me",
+              "start": 39.37230366492147,
+              "end": 39.45251308900524,
+              "score": 0.06395761901512742,
+              "duration": 0.080209,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 39.592879581151834,
+              "end": 39.91371727748691,
+              "score": 0.047962062433362006,
+              "duration": 0.320838,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 40.074136125654455,
+              "end": 40.39497382198953,
+              "score": 0.08129727877676488,
+              "duration": 0.320838,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 40.57544502617801,
+              "end": 40.89628272251309,
+              "score": 0.0399868231266737,
+              "duration": 0.320838,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 41.05670157068063,
+              "end": 41.357486910994766,
+              "score": 0.04752984046936035,
+              "duration": 0.300785,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 41.5179057591623,
+              "end": 41.83874345549739,
+              "score": 0.06547421589493752,
+              "duration": 0.320838,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 41.898900523560215,
+              "end": 42.119476439790574,
+              "score": 0.049547753483057025,
+              "duration": 0.220576,
+              "flags": []
+            }
+          ]
+        },
+        {
+          "id": "middle-3-echoes-6",
+          "start": 38.49,
+          "end": 42.32,
+          "submittedEchoCount": 6,
+          "meanWordScore": 0.058233,
+          "meanEchoScore": 0.053452,
+          "minimumScore": 0.039987,
+          "flaggedWordCount": 1,
+          "words": [
+            {
+              "word": "Take",
+              "start": 38.67047120418848,
+              "end": 39.23193717277487,
+              "score": 0.0914707079064101,
+              "duration": 0.561466,
+              "flags": []
+            },
+            {
+              "word": "me",
+              "start": 39.37230366492147,
+              "end": 39.45251308900524,
+              "score": 0.06395761901512742,
+              "duration": 0.080209,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 39.592879581151834,
+              "end": 39.91371727748691,
+              "score": 0.047962062433362006,
+              "duration": 0.320838,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 40.074136125654455,
+              "end": 40.39497382198953,
+              "score": 0.08129727877676488,
+              "duration": 0.320838,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 40.57544502617801,
+              "end": 40.89628272251309,
+              "score": 0.0399868231266737,
+              "duration": 0.320838,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 41.05670157068063,
+              "end": 41.357486910994766,
+              "score": 0.04752984046936035,
+              "duration": 0.300785,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 41.5179057591623,
+              "end": 41.75853403141362,
+              "score": 0.044689977914094924,
+              "duration": 0.240628,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 41.75853403141362,
+              "end": 41.979109947643984,
+              "score": 0.06489425748586655,
+              "duration": 0.220576,
+              "flags": [
+                "echo-shares-boundary-with-previous"
+              ]
+            },
+            {
+              "word": "there",
+              "start": 42.039267015706805,
+              "end": 42.27989528795812,
+              "score": 0.04231086820363998,
+              "duration": 0.240628,
+              "flags": []
+            }
+          ]
+        },
+        {
+          "id": "middle-4-echoes-5",
+          "start": 42.300000000000004,
+          "end": 46.16,
+          "submittedEchoCount": 5,
+          "meanWordScore": 0.063416,
+          "meanEchoScore": 0.048793,
+          "minimumScore": 0.043075,
+          "flaggedWordCount": 0,
+          "words": [
+            {
+              "word": "Take",
+              "start": 42.681979166666665,
+              "end": 43.02375,
+              "score": 0.09670386230573058,
+              "duration": 0.341771,
+              "flags": []
+            },
+            {
+              "word": "me",
+              "start": 43.18458333333333,
+              "end": 43.265,
+              "score": 0.10341230034828186,
+              "duration": 0.080417,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 43.42583333333333,
+              "end": 43.747499999999995,
+              "score": 0.06324733942747116,
+              "duration": 0.321667,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 43.88822916666666,
+              "end": 44.20989583333333,
+              "score": 0.04963165149092674,
+              "duration": 0.321667,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 44.350624999999994,
+              "end": 44.63208333333333,
+              "score": 0.04307521022856235,
+              "duration": 0.281458,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 44.8934375,
+              "end": 45.195,
+              "score": 0.05370570179075003,
+              "duration": 0.301563,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 45.33572916666667,
+              "end": 45.697604166666665,
+              "score": 0.054022166877985,
+              "duration": 0.361875,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 45.798125,
+              "end": 45.9790625,
+              "score": 0.0435295345261693,
+              "duration": 0.180937,
+              "flags": []
+            }
+          ]
+        },
+        {
+          "id": "middle-4-echoes-6",
+          "start": 42.300000000000004,
+          "end": 46.16,
+          "submittedEchoCount": 6,
+          "meanWordScore": 0.053149,
+          "meanEchoScore": 0.051202,
+          "minimumScore": 0.012102,
+          "flaggedWordCount": 1,
+          "words": [
+            {
+              "word": "Take",
+              "start": 42.420624999999994,
+              "end": 42.7825,
+              "score": 0.07788480049930513,
+              "duration": 0.361875,
+              "flags": []
+            },
+            {
+              "word": "me",
+              "start": 42.842812499999994,
+              "end": 42.923229166666665,
+              "score": 0.012101588770747185,
+              "duration": 0.080417,
+              "flags": [
+                "low-internal-score-under-0.02"
+              ]
+            },
+            {
+              "word": "there",
+              "start": 42.94333333333333,
+              "end": 43.265,
+              "score": 0.08114702031016349,
+              "duration": 0.321667,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 43.42583333333333,
+              "end": 43.747499999999995,
+              "score": 0.06324733942747116,
+              "duration": 0.321667,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 43.88822916666666,
+              "end": 44.20989583333333,
+              "score": 0.04963165149092674,
+              "duration": 0.321667,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 44.350624999999994,
+              "end": 44.63208333333333,
+              "score": 0.04307521022856235,
+              "duration": 0.281458,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 44.8934375,
+              "end": 45.195,
+              "score": 0.05370570179075003,
+              "duration": 0.301563,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 45.33572916666667,
+              "end": 45.697604166666665,
+              "score": 0.054022166877985,
+              "duration": 0.361875,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 45.798125,
+              "end": 45.9790625,
+              "score": 0.0435295345261693,
+              "duration": 0.180937,
+              "flags": []
+            }
+          ]
+        },
+        {
+          "id": "middle-5-echoes-5",
+          "start": 46.14,
+          "end": 49.94,
+          "submittedEchoCount": 5,
+          "meanWordScore": 0.064401,
+          "meanEchoScore": 0.052645,
+          "minimumScore": 0.035626,
+          "flaggedWordCount": 1,
+          "words": [
+            {
+              "word": "Take",
+              "start": 46.28074074074074,
+              "end": 46.582328042328044,
+              "score": 0.07338362472364679,
+              "duration": 0.301587,
+              "flags": []
+            },
+            {
+              "word": "me",
+              "start": 46.76328042328042,
+              "end": 46.86380952380952,
+              "score": 0.14297831803560257,
+              "duration": 0.100529,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 47.22571428571429,
+              "end": 47.446878306878304,
+              "score": 0.03562561478465796,
+              "duration": 0.221164,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 47.68814814814815,
+              "end": 48.13047619047619,
+              "score": 0.053432299941778186,
+              "duration": 0.442328,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 48.21089947089947,
+              "end": 48.492380952380955,
+              "score": 0.05025586597621441,
+              "duration": 0.281481,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 48.65322751322751,
+              "end": 48.995026455026455,
+              "score": 0.04666322022676468,
+              "duration": 0.341799,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 49.15587301587301,
+              "end": 49.477566137566136,
+              "score": 0.07559899725019932,
+              "duration": 0.321693,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 49.61830687830688,
+              "end": 49.91989417989418,
+              "score": 0.03727335352450609,
+              "duration": 0.301587,
+              "flags": [
+                "touches-window-end"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "middle-5-echoes-6",
+          "start": 46.14,
+          "end": 49.94,
+          "submittedEchoCount": 6,
+          "meanWordScore": 0.059673,
+          "meanEchoScore": 0.047512,
+          "minimumScore": 0.035626,
+          "flaggedWordCount": 1,
+          "words": [
+            {
+              "word": "Take",
+              "start": 46.28074074074074,
+              "end": 46.582328042328044,
+              "score": 0.07338362472364679,
+              "duration": 0.301587,
+              "flags": []
+            },
+            {
+              "word": "me",
+              "start": 46.76328042328042,
+              "end": 46.86380952380952,
+              "score": 0.14297831803560257,
+              "duration": 0.100529,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 47.22571428571429,
+              "end": 47.446878306878304,
+              "score": 0.03562561478465796,
+              "duration": 0.221164,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 47.68814814814815,
+              "end": 48.13047619047619,
+              "score": 0.053432299941778186,
+              "duration": 0.442328,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 48.21089947089947,
+              "end": 48.492380952380955,
+              "score": 0.05025586597621441,
+              "duration": 0.281481,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 48.65322751322751,
+              "end": 48.995026455026455,
+              "score": 0.04666322022676468,
+              "duration": 0.341799,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 49.15587301587301,
+              "end": 49.3368253968254,
+              "score": 0.04596677869558334,
+              "duration": 0.180952,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 49.39714285714286,
+              "end": 49.598201058201056,
+              "score": 0.05148081090301275,
+              "duration": 0.201058,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 49.61830687830688,
+              "end": 49.91989417989418,
+              "score": 0.03727335352450609,
+              "duration": 0.301587,
+              "flags": [
+                "touches-window-end"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "middle-6-echoes-5",
+          "start": 49.92,
+          "end": 53.754999999999995,
+          "submittedEchoCount": 5,
+          "meanWordScore": 0.061605,
+          "meanEchoScore": 0.048061,
+          "minimumScore": 0.036714,
+          "flaggedWordCount": 1,
+          "words": [
+            {
+              "word": "Take",
+              "start": 50.10070680628272,
+              "end": 50.40188481675393,
+              "score": 0.06756896700244397,
+              "duration": 0.301178,
+              "flags": []
+            },
+            {
+              "word": "me",
+              "start": 50.502277486911,
+              "end": 50.562513089005236,
+              "score": 0.12551437504589558,
+              "duration": 0.060236,
+              "flags": [
+                "short-word-under-80ms"
+              ]
+            },
+            {
+              "word": "there",
+              "start": 50.642827225130894,
+              "end": 50.903848167539266,
+              "score": 0.05944940373301506,
+              "duration": 0.261021,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 51.00424083769634,
+              "end": 51.345575916230366,
+              "score": 0.039815458655357364,
+              "duration": 0.341335,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 51.506204188481675,
+              "end": 51.706989528795816,
+              "score": 0.041223852336406706,
+              "duration": 0.200785,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 52.00816753926702,
+              "end": 52.26918848167539,
+              "score": 0.06567978598177433,
+              "duration": 0.261021,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 52.449895287958114,
+              "end": 52.79123036649215,
+              "score": 0.056870514154434205,
+              "duration": 0.341335,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 52.93178010471205,
+              "end": 53.27311518324608,
+              "score": 0.036714470200240615,
+              "duration": 0.341335,
+              "flags": []
+            }
+          ]
+        },
+        {
+          "id": "middle-6-echoes-6",
+          "start": 49.92,
+          "end": 53.754999999999995,
+          "submittedEchoCount": 6,
+          "meanWordScore": 0.056461,
+          "meanEchoScore": 0.042603,
+          "minimumScore": 0.02598,
+          "flaggedWordCount": 1,
+          "words": [
+            {
+              "word": "Take",
+              "start": 50.10070680628272,
+              "end": 50.40188481675393,
+              "score": 0.06756896700244397,
+              "duration": 0.301178,
+              "flags": []
+            },
+            {
+              "word": "me",
+              "start": 50.502277486911,
+              "end": 50.562513089005236,
+              "score": 0.12551437504589558,
+              "duration": 0.060236,
+              "flags": [
+                "short-word-under-80ms"
+              ]
+            },
+            {
+              "word": "there",
+              "start": 50.642827225130894,
+              "end": 50.903848167539266,
+              "score": 0.05944940373301506,
+              "duration": 0.261021,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 51.00424083769634,
+              "end": 51.345575916230366,
+              "score": 0.039815458655357364,
+              "duration": 0.341335,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 51.506204188481675,
+              "end": 51.706989528795816,
+              "score": 0.041223852336406706,
+              "duration": 0.200785,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 52.00816753926702,
+              "end": 52.26918848167539,
+              "score": 0.06567978598177433,
+              "duration": 0.261021,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 52.449895287958114,
+              "end": 52.79123036649215,
+              "score": 0.056870514154434205,
+              "duration": 0.341335,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 52.93178010471205,
+              "end": 53.13256544502618,
+              "score": 0.026045690663158892,
+              "duration": 0.200785,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 53.19280104712042,
+              "end": 53.53413612565445,
+              "score": 0.02597991153597832,
+              "duration": 0.341335,
+              "flags": []
+            }
+          ]
+        },
+        {
+          "id": "middle-7-echoes-5",
+          "start": 53.735,
+          "end": 57.565999999999995,
+          "submittedEchoCount": 5,
+          "meanWordScore": 0.075171,
+          "meanEchoScore": 0.076408,
+          "minimumScore": 0.010276,
+          "flaggedWordCount": 1,
+          "words": [
+            {
+              "word": "Take",
+              "start": 53.89546073298429,
+              "end": 54.21638219895288,
+              "score": 0.10206278576515615,
+              "duration": 0.320921,
+              "flags": []
+            },
+            {
+              "word": "me",
+              "start": 54.27655497382199,
+              "end": 54.31667015706806,
+              "score": 0.010275932028889656,
+              "duration": 0.040115,
+              "flags": [
+                "short-word-under-80ms",
+                "low-internal-score-under-0.02"
+              ]
+            },
+            {
+              "word": "there",
+              "start": 54.35678534031413,
+              "end": 54.69776439790576,
+              "score": 0.10698962286114692,
+              "duration": 0.340979,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 54.85822513089005,
+              "end": 55.1590890052356,
+              "score": 0.05813199020922184,
+              "duration": 0.300864,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 55.3195497382199,
+              "end": 55.62041361256544,
+              "score": 0.07832448072731495,
+              "duration": 0.300864,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 55.82098952879581,
+              "end": 56.12185340314136,
+              "score": 0.09039420560002327,
+              "duration": 0.300864,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 56.26225654450262,
+              "end": 56.60323560209424,
+              "score": 0.06865477338433265,
+              "duration": 0.340979,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 57.00438743455497,
+              "end": 57.52588481675393,
+              "score": 0.08653239607810974,
+              "duration": 0.521497,
+              "flags": []
+            }
+          ]
+        },
+        {
+          "id": "middle-7-echoes-6",
+          "start": 53.735,
+          "end": 57.565999999999995,
+          "submittedEchoCount": 6,
+          "meanWordScore": 0.069996,
+          "meanEchoScore": 0.06844,
+          "minimumScore": 0.010276,
+          "flaggedWordCount": 1,
+          "words": [
+            {
+              "word": "Take",
+              "start": 53.89546073298429,
+              "end": 54.21638219895288,
+              "score": 0.10206278576515615,
+              "duration": 0.320921,
+              "flags": []
+            },
+            {
+              "word": "me",
+              "start": 54.27655497382199,
+              "end": 54.31667015706806,
+              "score": 0.010275932028889656,
+              "duration": 0.040115,
+              "flags": [
+                "short-word-under-80ms",
+                "low-internal-score-under-0.02"
+              ]
+            },
+            {
+              "word": "there",
+              "start": 54.35678534031413,
+              "end": 54.69776439790576,
+              "score": 0.10698962286114692,
+              "duration": 0.340979,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 54.85822513089005,
+              "end": 55.1590890052356,
+              "score": 0.05813199020922184,
+              "duration": 0.300864,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 55.3195497382199,
+              "end": 55.62041361256544,
+              "score": 0.07832448072731495,
+              "duration": 0.300864,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 55.82098952879581,
+              "end": 56.12185340314136,
+              "score": 0.09039420560002327,
+              "duration": 0.300864,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 56.26225654450262,
+              "end": 56.60323560209424,
+              "score": 0.06865477338433265,
+              "duration": 0.340979,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 56.7436387434555,
+              "end": 56.984329842931935,
+              "score": 0.028601478971540927,
+              "duration": 0.240691,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 57.00438743455497,
+              "end": 57.52588481675393,
+              "score": 0.08653239607810974,
+              "duration": 0.521497,
+              "flags": []
+            }
+          ]
+        },
+        {
+          "id": "middle-8-echoes-5",
+          "start": 57.546,
+          "end": 62.239999999999995,
+          "submittedEchoCount": 5,
+          "meanWordScore": 0.05933,
+          "meanEchoScore": 0.043281,
+          "minimumScore": 0.019346,
+          "flaggedWordCount": 1,
+          "words": [
+            {
+              "word": "Take",
+              "start": 57.927136752136754,
+              "end": 58.36845299145299,
+              "score": 0.024562123464420438,
+              "duration": 0.441316,
+              "flags": []
+            },
+            {
+              "word": "me",
+              "start": 58.448692307692305,
+              "end": 58.528931623931626,
+              "score": 0.10105978697538376,
+              "duration": 0.080239,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 58.66935042735042,
+              "end": 59.05048717948718,
+              "score": 0.13261743746697902,
+              "duration": 0.381137,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 59.35138461538462,
+              "end": 59.61216239316239,
+              "score": 0.044891709461808205,
+              "duration": 0.260778,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 59.65228205128205,
+              "end": 59.85288034188034,
+              "score": 0.048851159308105706,
+              "duration": 0.200598,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 59.87294017094017,
+              "end": 60.17383760683761,
+              "score": 0.036572497058659795,
+              "duration": 0.300897,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 60.274136752136755,
+              "end": 60.75557264957265,
+              "score": 0.06674144226126373,
+              "duration": 0.481436,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 60.93611111111111,
+              "end": 61.45766666666667,
+              "score": 0.019346451200544835,
+              "duration": 0.521556,
+              "flags": [
+                "low-internal-score-under-0.02"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "middle-8-echoes-6",
+          "start": 57.546,
+          "end": 62.239999999999995,
+          "submittedEchoCount": 6,
+          "meanWordScore": 0.048216,
+          "meanEchoScore": 0.05817,
+          "minimumScore": 0.010091,
+          "flaggedWordCount": 3,
+          "words": [
+            {
+              "word": "Take",
+              "start": 57.927136752136754,
+              "end": 58.24809401709402,
+              "score": 0.01009093748871237,
+              "duration": 0.320957,
+              "flags": [
+                "low-internal-score-under-0.02"
+              ]
+            },
+            {
+              "word": "me",
+              "start": 58.32833333333333,
+              "end": 58.36845299145299,
+              "score": 0.033293466782197356,
+              "duration": 0.04012,
+              "flags": [
+                "short-word-under-80ms"
+              ]
+            },
+            {
+              "word": "there",
+              "start": 58.448692307692305,
+              "end": 58.6492905982906,
+              "score": 0.041541455779224634,
+              "duration": 0.200598,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 58.66935042735042,
+              "end": 59.05048717948718,
+              "score": 0.13261743746697902,
+              "duration": 0.381137,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 59.35138461538462,
+              "end": 59.61216239316239,
+              "score": 0.044891709461808205,
+              "duration": 0.260778,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 59.65228205128205,
+              "end": 59.85288034188034,
+              "score": 0.048851159308105706,
+              "duration": 0.200598,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 59.87294017094017,
+              "end": 60.17383760683761,
+              "score": 0.036572497058659795,
+              "duration": 0.300897,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 60.274136752136755,
+              "end": 60.75557264957265,
+              "score": 0.06674144226126373,
+              "duration": 0.481436,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 60.93611111111111,
+              "end": 61.45766666666667,
+              "score": 0.019346451200544835,
+              "duration": 0.521556,
+              "flags": [
+                "low-internal-score-under-0.02"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "final-1-echoes-5",
+          "start": 91.886,
+          "end": 95.67699999999999,
+          "submittedEchoCount": 5,
+          "meanWordScore": 0.102453,
+          "meanEchoScore": 0.069204,
+          "minimumScore": 0.046974,
+          "flaggedWordCount": 0,
+          "words": [
+            {
+              "word": "Take",
+              "start": 91.9662328042328,
+              "end": 92.34733862433862,
+              "score": 0.3047881168895401,
+              "duration": 0.381106,
+              "flags": []
+            },
+            {
+              "word": "me",
+              "start": 92.48774603174603,
+              "end": 92.62815343915344,
+              "score": 0.12183894217014313,
+              "duration": 0.140407,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 92.96914285714286,
+              "end": 93.35024867724867,
+              "score": 0.04697407018393278,
+              "duration": 0.381106,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 93.43048148148148,
+              "end": 93.73135449735449,
+              "score": 0.06699531488120555,
+              "duration": 0.300873,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 93.9319365079365,
+              "end": 94.23280952380952,
+              "score": 0.07328828126192093,
+              "duration": 0.300873,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 94.41333333333333,
+              "end": 94.73426455026454,
+              "score": 0.09899528045207262,
+              "duration": 0.320931,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 94.89473015873016,
+              "end": 95.07525396825396,
+              "score": 0.05878607574850321,
+              "duration": 0.180524,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 95.11537037037037,
+              "end": 95.45635978835978,
+              "score": 0.04795720428228378,
+              "duration": 0.340989,
+              "flags": []
+            }
+          ]
+        },
+        {
+          "id": "final-1-echoes-6",
+          "start": 91.886,
+          "end": 95.67699999999999,
+          "submittedEchoCount": 6,
+          "meanWordScore": 0.09394,
+          "meanEchoScore": 0.061977,
+          "minimumScore": 0.031401,
+          "flaggedWordCount": 0,
+          "words": [
+            {
+              "word": "Take",
+              "start": 91.9662328042328,
+              "end": 92.34733862433862,
+              "score": 0.3047881168895401,
+              "duration": 0.381106,
+              "flags": []
+            },
+            {
+              "word": "me",
+              "start": 92.48774603174603,
+              "end": 92.62815343915344,
+              "score": 0.12183894217014313,
+              "duration": 0.140407,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 92.96914285714286,
+              "end": 93.35024867724867,
+              "score": 0.04697407018393278,
+              "duration": 0.381106,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 93.43048148148148,
+              "end": 93.73135449735449,
+              "score": 0.06699531488120555,
+              "duration": 0.300873,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 93.9319365079365,
+              "end": 94.23280952380952,
+              "score": 0.07328828126192093,
+              "duration": 0.300873,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 94.41333333333333,
+              "end": 94.73426455026454,
+              "score": 0.09899528045207262,
+              "duration": 0.320931,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 94.89473015873016,
+              "end": 95.07525396825396,
+              "score": 0.05878607574850321,
+              "duration": 0.180524,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 95.11537037037037,
+              "end": 95.31595238095238,
+              "score": 0.042394992988556625,
+              "duration": 0.200582,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 95.37612698412698,
+              "end": 95.6368835978836,
+              "score": 0.03140141516923904,
+              "duration": 0.260757,
+              "flags": []
+            }
+          ]
+        },
+        {
+          "id": "final-2-echoes-5",
+          "start": 95.657,
+          "end": 99.492,
+          "submittedEchoCount": 5,
+          "meanWordScore": 0.070771,
+          "meanEchoScore": 0.0748,
+          "minimumScore": 0.037327,
+          "flaggedWordCount": 0,
+          "words": [
+            {
+              "word": "Take",
+              "start": 95.77747120418847,
+              "end": 96.13888481675393,
+              "score": 0.08304275036789477,
+              "duration": 0.361414,
+              "flags": []
+            },
+            {
+              "word": "me",
+              "start": 96.19912041884817,
+              "end": 96.27943455497382,
+              "score": 0.03732727002352476,
+              "duration": 0.080314,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 96.29951308900523,
+              "end": 96.62076963350785,
+              "score": 0.07179739437997341,
+              "duration": 0.321257,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 96.76131937172775,
+              "end": 97.08257591623037,
+              "score": 0.047021438181400296,
+              "duration": 0.321257,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 97.24320418848167,
+              "end": 97.5845392670157,
+              "score": 0.09628787189722061,
+              "duration": 0.341335,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 97.74516753926702,
+              "end": 98.04634554973822,
+              "score": 0.0866218477487564,
+              "duration": 0.301178,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 98.20697382198952,
+              "end": 98.52823036649214,
+              "score": 0.08259159252047539,
+              "duration": 0.321257,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 98.70893717277487,
+              "end": 99.29121465968586,
+              "score": 0.06147747226059437,
+              "duration": 0.582277,
+              "flags": []
+            }
+          ]
+        },
+        {
+          "id": "final-2-echoes-6",
+          "start": 95.657,
+          "end": 99.492,
+          "submittedEchoCount": 6,
+          "meanWordScore": 0.066496,
+          "meanEchoScore": 0.067716,
+          "minimumScore": 0.037327,
+          "flaggedWordCount": 0,
+          "words": [
+            {
+              "word": "Take",
+              "start": 95.77747120418847,
+              "end": 96.13888481675393,
+              "score": 0.08304275036789477,
+              "duration": 0.361414,
+              "flags": []
+            },
+            {
+              "word": "me",
+              "start": 96.19912041884817,
+              "end": 96.27943455497382,
+              "score": 0.03732727002352476,
+              "duration": 0.080314,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 96.29951308900523,
+              "end": 96.62076963350785,
+              "score": 0.07179739437997341,
+              "duration": 0.321257,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 96.76131937172775,
+              "end": 97.08257591623037,
+              "score": 0.047021438181400296,
+              "duration": 0.321257,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 97.24320418848167,
+              "end": 97.5845392670157,
+              "score": 0.09628787189722061,
+              "duration": 0.341335,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 97.74516753926702,
+              "end": 98.04634554973822,
+              "score": 0.0866218477487564,
+              "duration": 0.301178,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 98.20697382198952,
+              "end": 98.52823036649214,
+              "score": 0.08259159252047539,
+              "duration": 0.321257,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 98.70893717277487,
+              "end": 99.01011518324607,
+              "score": 0.05475264601409435,
+              "duration": 0.301178,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 99.21090052356021,
+              "end": 99.45184293193716,
+              "score": 0.03901895098388195,
+              "duration": 0.240942,
+              "flags": []
+            }
+          ]
+        },
+        {
+          "id": "final-3-echoes-5",
+          "start": 99.47200000000001,
+          "end": 103.301,
+          "submittedEchoCount": 5,
+          "meanWordScore": 0.078777,
+          "meanEchoScore": 0.064936,
+          "minimumScore": 0.032135,
+          "flaggedWordCount": 0,
+          "words": [
+            {
+              "word": "Take",
+              "start": 99.63237696335078,
+              "end": 100.19369633507853,
+              "score": 0.13544490397907794,
+              "duration": 0.561319,
+              "flags": []
+            },
+            {
+              "word": "me",
+              "start": 100.33402617801046,
+              "end": 100.4342617801047,
+              "score": 0.10441006254404783,
+              "duration": 0.100236,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 100.57459162303664,
+              "end": 100.89534554973821,
+              "score": 0.06567812673747539,
+              "duration": 0.320754,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 101.055722513089,
+              "end": 101.37647643979057,
+              "score": 0.06847959626466035,
+              "duration": 0.320754,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 101.5569005235602,
+              "end": 101.83756020942408,
+              "score": 0.06438119411468506,
+              "duration": 0.28066,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 102.0179842931937,
+              "end": 102.33873821989528,
+              "score": 0.06979075595736503,
+              "duration": 0.320754,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 102.49911518324606,
+              "end": 102.81986910994763,
+              "score": 0.08989258334040642,
+              "duration": 0.320754,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 103.00029319371727,
+              "end": 103.2609057591623,
+              "score": 0.03213496599346399,
+              "duration": 0.260613,
+              "flags": []
+            }
+          ]
+        },
+        {
+          "id": "final-3-echoes-6",
+          "start": 99.47200000000001,
+          "end": 103.301,
+          "submittedEchoCount": 6,
+          "meanWordScore": 0.069797,
+          "meanEchoScore": 0.06506,
+          "minimumScore": 0.015845,
+          "flaggedWordCount": 1,
+          "words": [
+            {
+              "word": "Take",
+              "start": 99.63237696335078,
+              "end": 99.9330837696335,
+              "score": 0.12613944575423375,
+              "duration": 0.300707,
+              "flags": []
+            },
+            {
+              "word": "me",
+              "start": 100.01327225130889,
+              "end": 100.0533664921466,
+              "score": 0.015845477115362883,
+              "duration": 0.040094,
+              "flags": [
+                "short-word-under-80ms",
+                "low-internal-score-under-0.02"
+              ]
+            },
+            {
+              "word": "there",
+              "start": 100.09346073298428,
+              "end": 100.4342617801047,
+              "score": 0.09583067707717419,
+              "duration": 0.340801,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 100.57459162303664,
+              "end": 100.89534554973821,
+              "score": 0.06567812673747539,
+              "duration": 0.320754,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 101.055722513089,
+              "end": 101.37647643979057,
+              "score": 0.06847959626466035,
+              "duration": 0.320754,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 101.5569005235602,
+              "end": 101.83756020942408,
+              "score": 0.06438119411468506,
+              "duration": 0.28066,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 102.0179842931937,
+              "end": 102.33873821989528,
+              "score": 0.06979075595736503,
+              "duration": 0.320754,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 102.49911518324606,
+              "end": 102.81986910994763,
+              "score": 0.08989258334040642,
+              "duration": 0.320754,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 103.00029319371727,
+              "end": 103.2609057591623,
+              "score": 0.03213496599346399,
+              "duration": 0.260613,
+              "flags": []
+            }
+          ]
+        },
+        {
+          "id": "final-4-echoes-5",
+          "start": 103.281,
+          "end": 107.146,
+          "submittedEchoCount": 5,
+          "meanWordScore": 0.074746,
+          "meanEchoScore": 0.070245,
+          "minimumScore": 0.047344,
+          "flaggedWordCount": 2,
+          "words": [
+            {
+              "word": "Take",
+              "start": 103.40115544041451,
+              "end": 103.62144041450777,
+              "score": 0.06862392742186785,
+              "duration": 0.220285,
+              "flags": []
+            },
+            {
+              "word": "me",
+              "start": 103.68151813471503,
+              "end": 103.76162176165803,
+              "score": 0.08939793449826539,
+              "duration": 0.080104,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 103.9018031088083,
+              "end": 104.26226943005182,
+              "score": 0.08872324777767063,
+              "duration": 0.360466,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 104.40245077720208,
+              "end": 105.18346113989638,
+              "score": 0.10449257530272008,
+              "duration": 0.78101,
+              "flags": [
+                "long-echo-over-650ms"
+              ]
+            },
+            {
+              "word": "there",
+              "start": 105.32364248704664,
+              "end": 106.24483419689119,
+              "score": 0.09150066524744034,
+              "duration": 0.921192,
+              "flags": [
+                "long-echo-over-650ms"
+              ]
+            },
+            {
+              "word": "there",
+              "start": 106.30491191709845,
+              "end": 106.46511917098447,
+              "score": 0.04734374806284904,
+              "duration": 0.160207,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 106.52519689119171,
+              "end": 106.70543005181348,
+              "score": 0.05327503271400928,
+              "duration": 0.180233,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 106.76550777202073,
+              "end": 106.96576683937825,
+              "score": 0.05461166203022003,
+              "duration": 0.200259,
+              "flags": []
+            }
+          ]
+        },
+        {
+          "id": "final-4-echoes-6",
+          "start": 103.281,
+          "end": 107.146,
+          "submittedEchoCount": 6,
+          "meanWordScore": 0.07092,
+          "meanEchoScore": 0.065256,
+          "minimumScore": 0.047344,
+          "flaggedWordCount": 1,
+          "words": [
+            {
+              "word": "Take",
+              "start": 103.40115544041451,
+              "end": 103.62144041450777,
+              "score": 0.06862392742186785,
+              "duration": 0.220285,
+              "flags": []
+            },
+            {
+              "word": "me",
+              "start": 103.68151813471503,
+              "end": 103.76162176165803,
+              "score": 0.08939793449826539,
+              "duration": 0.080104,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 103.9018031088083,
+              "end": 104.26226943005182,
+              "score": 0.08872324777767063,
+              "duration": 0.360466,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 104.40245077720208,
+              "end": 104.7228652849741,
+              "score": 0.08042431995272636,
+              "duration": 0.320415,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 104.86304663212435,
+              "end": 105.18346113989638,
+              "score": 0.06438053064048291,
+              "duration": 0.320415,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 105.32364248704664,
+              "end": 106.24483419689119,
+              "score": 0.09150066524744034,
+              "duration": 0.921192,
+              "flags": [
+                "long-echo-over-650ms"
+              ]
+            },
+            {
+              "word": "there",
+              "start": 106.30491191709845,
+              "end": 106.46511917098447,
+              "score": 0.04734374806284904,
+              "duration": 0.160207,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 106.52519689119171,
+              "end": 106.70543005181348,
+              "score": 0.05327503271400928,
+              "duration": 0.180233,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 106.76550777202073,
+              "end": 106.96576683937825,
+              "score": 0.05461166203022003,
+              "duration": 0.200259,
+              "flags": []
+            }
+          ]
+        },
+        {
+          "id": "intro-last-lead-only",
+          "start": 11.818,
+          "end": 13.85,
+          "submittedEchoCount": 0,
+          "meanWordScore": 0.09498,
+          "meanEchoScore": null,
+          "minimumScore": 0.059294,
+          "flaggedWordCount": 0,
+          "words": [
+            {
+              "word": "Take",
+              "start": 11.91859405940594,
+              "end": 12.542277227722773,
+              "score": 0.1283385558053851,
+              "duration": 0.623683,
+              "flags": []
+            },
+            {
+              "word": "me",
+              "start": 12.642871287128713,
+              "end": 12.723346534653466,
+              "score": 0.05929366126656532,
+              "duration": 0.080475,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 12.924534653465347,
+              "end": 13.20619801980198,
+              "score": 0.0973090399056673,
+              "duration": 0.281663,
+              "flags": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "audio": "vocals",
+      "segments": [
+        {
+          "id": "intro-1-echoes-5",
+          "start": 0.412,
+          "end": 4.218,
+          "submittedEchoCount": 5,
+          "meanWordScore": 0.064522,
+          "meanEchoScore": 0.04299,
+          "minimumScore": 0.026695,
+          "flaggedWordCount": 1,
+          "words": [
+            {
+              "word": "Take",
+              "start": 0.45206315789473683,
+              "end": 1.032978947368421,
+              "score": 0.16421612084377557,
+              "duration": 0.580916,
+              "flags": []
+            },
+            {
+              "word": "me",
+              "start": 1.0730421052631578,
+              "end": 1.1732,
+              "score": 0.07733726222068071,
+              "duration": 0.100158,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 1.513736842105263,
+              "end": 2.134715789473684,
+              "score": 0.059670761600136756,
+              "duration": 0.620979,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 2.455221052631579,
+              "end": 2.795757894736842,
+              "score": 0.026694975048303603,
+              "duration": 0.340537,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 2.935978947368421,
+              "end": 3.2364526315789472,
+              "score": 0.04611332081258297,
+              "duration": 0.300474,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 3.3366105263157895,
+              "end": 3.6571157894736843,
+              "score": 0.03342963010072708,
+              "duration": 0.320505,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 3.6571157894736843,
+              "end": 3.8574315789473683,
+              "score": 0.06076787859201431,
+              "duration": 0.200316,
+              "flags": [
+                "echo-shares-boundary-with-previous"
+              ]
+            },
+            {
+              "word": "there",
+              "start": 3.9175263157894737,
+              "end": 4.157905263157895,
+              "score": 0.047942955046892166,
+              "duration": 0.240379,
+              "flags": []
+            }
+          ]
+        },
+        {
+          "id": "intro-1-echoes-6",
+          "start": 0.412,
+          "end": 4.218,
+          "submittedEchoCount": 6,
+          "meanWordScore": 0.064272,
+          "meanEchoScore": 0.04577,
+          "minimumScore": 0.007749,
+          "flaggedWordCount": 2,
+          "words": [
+            {
+              "word": "Take",
+              "start": 0.45206315789473683,
+              "end": 0.8526947368421052,
+              "score": 0.1763635113602504,
+              "duration": 0.400632,
+              "flags": []
+            },
+            {
+              "word": "me",
+              "start": 0.8927578947368421,
+              "end": 0.9528526315789474,
+              "score": 0.0077490778639912605,
+              "duration": 0.060095,
+              "flags": [
+                "short-word-under-80ms",
+                "low-internal-score-under-0.02"
+              ]
+            },
+            {
+              "word": "there",
+              "start": 0.9528526315789474,
+              "end": 1.1732,
+              "score": 0.1197157426737249,
+              "duration": 0.220347,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 1.513736842105263,
+              "end": 2.134715789473684,
+              "score": 0.059670761600136756,
+              "duration": 0.620979,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 2.455221052631579,
+              "end": 2.795757894736842,
+              "score": 0.026694975048303603,
+              "duration": 0.340537,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 2.935978947368421,
+              "end": 3.2364526315789472,
+              "score": 0.04611332081258297,
+              "duration": 0.300474,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 3.3366105263157895,
+              "end": 3.6571157894736843,
+              "score": 0.03342963010072708,
+              "duration": 0.320505,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 3.6571157894736843,
+              "end": 3.8574315789473683,
+              "score": 0.06076787859201431,
+              "duration": 0.200316,
+              "flags": [
+                "echo-shares-boundary-with-previous"
+              ]
+            },
+            {
+              "word": "there",
+              "start": 3.9175263157894737,
+              "end": 4.157905263157895,
+              "score": 0.047942955046892166,
+              "duration": 0.240379,
+              "flags": []
+            }
+          ]
+        },
+        {
+          "id": "intro-2-echoes-5",
+          "start": 4.1979999999999995,
+          "end": 8.029,
+          "submittedEchoCount": 5,
+          "meanWordScore": 0.046319,
+          "meanEchoScore": 0.021209,
+          "minimumScore": 0.018729,
+          "flaggedWordCount": 2,
+          "words": [
+            {
+              "word": "Take",
+              "start": 4.25817277486911,
+              "end": 4.659324607329843,
+              "score": 0.1533382807392627,
+              "duration": 0.401152,
+              "flags": []
+            },
+            {
+              "word": "me",
+              "start": 4.819785340314136,
+              "end": 4.960188481675393,
+              "score": 0.08794557675719261,
+              "duration": 0.140403,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 5.321225130890053,
+              "end": 5.943010471204189,
+              "score": 0.0232232466340065,
+              "duration": 0.621785,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 6.263931937172775,
+              "end": 6.544738219895288,
+              "score": 0.01942395158112049,
+              "duration": 0.280806,
+              "flags": [
+                "low-internal-score-under-0.02"
+              ]
+            },
+            {
+              "word": "there",
+              "start": 6.7653717277486916,
+              "end": 7.146465968586388,
+              "score": 0.022702376637607814,
+              "duration": 0.381094,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 7.226696335078534,
+              "end": 7.4473298429319374,
+              "score": 0.018728752434253693,
+              "duration": 0.220634,
+              "flags": [
+                "low-internal-score-under-0.02"
+              ]
+            },
+            {
+              "word": "there",
+              "start": 7.467387434554974,
+              "end": 7.667963350785341,
+              "score": 0.022550922445952894,
+              "duration": 0.200576,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 7.7281361256544505,
+              "end": 7.968827225130891,
+              "score": 0.022637739405035974,
+              "duration": 0.240691,
+              "flags": []
+            }
+          ]
+        },
+        {
+          "id": "intro-2-echoes-6",
+          "start": 4.1979999999999995,
+          "end": 8.029,
+          "submittedEchoCount": 6,
+          "meanWordScore": 0.042349,
+          "meanEchoScore": 0.019438,
+          "minimumScore": 0.011064,
+          "flaggedWordCount": 3,
+          "words": [
+            {
+              "word": "Take",
+              "start": 4.25817277486911,
+              "end": 4.659324607329843,
+              "score": 0.1533382807392627,
+              "duration": 0.401152,
+              "flags": []
+            },
+            {
+              "word": "me",
+              "start": 4.819785340314136,
+              "end": 4.960188481675393,
+              "score": 0.08794557675719261,
+              "duration": 0.140403,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 5.321225130890053,
+              "end": 5.943010471204189,
+              "score": 0.0232232466340065,
+              "duration": 0.621785,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 6.263931937172775,
+              "end": 6.544738219895288,
+              "score": 0.01942395158112049,
+              "duration": 0.280806,
+              "flags": [
+                "low-internal-score-under-0.02"
+              ]
+            },
+            {
+              "word": "there",
+              "start": 6.7653717277486916,
+              "end": 7.146465968586388,
+              "score": 0.022702376637607814,
+              "duration": 0.381094,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 7.226696335078534,
+              "end": 7.4473298429319374,
+              "score": 0.018728752434253693,
+              "duration": 0.220634,
+              "flags": [
+                "low-internal-score-under-0.02"
+              ]
+            },
+            {
+              "word": "there",
+              "start": 7.467387434554974,
+              "end": 7.667963350785341,
+              "score": 0.022550922445952894,
+              "duration": 0.200576,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 7.7281361256544505,
+              "end": 7.90865445026178,
+              "score": 0.022161145322024824,
+              "duration": 0.180518,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 7.928712041884817,
+              "end": 8.029,
+              "score": 0.011063758656382561,
+              "duration": 0.100288,
+              "flags": [
+                "low-internal-score-under-0.02",
+                "touches-window-end"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "intro-3-echoes-5",
+          "start": 8.009,
+          "end": 11.838,
+          "submittedEchoCount": 5,
+          "meanWordScore": 0.073042,
+          "meanEchoScore": 0.040028,
+          "minimumScore": 0.030819,
+          "flaggedWordCount": 1,
+          "words": [
+            {
+              "word": "Take",
+              "start": 8.089188481675393,
+              "end": 8.429989528795812,
+              "score": 0.1230837721232092,
+              "duration": 0.340801,
+              "flags": []
+            },
+            {
+              "word": "me",
+              "start": 8.630460732984293,
+              "end": 8.750743455497382,
+              "score": 0.15423472225666046,
+              "duration": 0.120283,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 9.111591623036649,
+              "end": 9.713005235602095,
+              "score": 0.10687717720866204,
+              "duration": 0.601414,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 10.09390052356021,
+              "end": 10.514890052356021,
+              "score": 0.030819273134693504,
+              "duration": 0.42099,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 10.575031413612566,
+              "end": 10.855691099476442,
+              "score": 0.03973996806889772,
+              "duration": 0.28066,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 11.056162303664923,
+              "end": 11.276680628272253,
+              "score": 0.03804189069196582,
+              "duration": 0.220518,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 11.276680628272253,
+              "end": 11.477151832460734,
+              "score": 0.05699384231120348,
+              "duration": 0.200471,
+              "flags": [
+                "echo-shares-boundary-with-previous"
+              ]
+            },
+            {
+              "word": "there",
+              "start": 11.537293193717279,
+              "end": 11.777858638743457,
+              "score": 0.03454665374010801,
+              "duration": 0.240565,
+              "flags": []
+            }
+          ]
+        },
+        {
+          "id": "intro-3-echoes-6",
+          "start": 8.009,
+          "end": 11.838,
+          "submittedEchoCount": 6,
+          "meanWordScore": 0.058846,
+          "meanEchoScore": 0.05117,
+          "minimumScore": 0.030819,
+          "flaggedWordCount": 2,
+          "words": [
+            {
+              "word": "Take",
+              "start": 8.089188481675393,
+              "end": 8.429989528795812,
+              "score": 0.1230837721232092,
+              "duration": 0.340801,
+              "flags": []
+            },
+            {
+              "word": "me",
+              "start": 8.630460732984293,
+              "end": 8.67055497382199,
+              "score": 0.04187198402360082,
+              "duration": 0.040094,
+              "flags": [
+                "short-word-under-80ms"
+              ]
+            },
+            {
+              "word": "there",
+              "start": 8.67055497382199,
+              "end": 8.931167539267015,
+              "score": 0.057641204353421925,
+              "duration": 0.260613,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 9.111591623036649,
+              "end": 9.713005235602095,
+              "score": 0.10687717720866204,
+              "duration": 0.601414,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 10.09390052356021,
+              "end": 10.514890052356021,
+              "score": 0.030819273134693504,
+              "duration": 0.42099,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 10.575031413612566,
+              "end": 10.855691099476442,
+              "score": 0.03973996806889772,
+              "duration": 0.28066,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 11.056162303664923,
+              "end": 11.276680628272253,
+              "score": 0.03804189069196582,
+              "duration": 0.220518,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 11.276680628272253,
+              "end": 11.477151832460734,
+              "score": 0.05699384231120348,
+              "duration": 0.200471,
+              "flags": [
+                "echo-shares-boundary-with-previous"
+              ]
+            },
+            {
+              "word": "there",
+              "start": 11.537293193717279,
+              "end": 11.777858638743457,
+              "score": 0.03454665374010801,
+              "duration": 0.240565,
+              "flags": []
+            }
+          ]
+        },
+        {
+          "id": "middle-1-echoes-5",
+          "start": 30.92,
+          "end": 34.71,
+          "submittedEchoCount": 5,
+          "meanWordScore": 0.115643,
+          "meanEchoScore": 0.128179,
+          "minimumScore": 0.016419,
+          "flaggedWordCount": 2,
+          "words": [
+            {
+              "word": "Take",
+              "start": 31.000211640211642,
+              "end": 31.361164021164022,
+              "score": 0.16845876938896254,
+              "duration": 0.360952,
+              "flags": []
+            },
+            {
+              "word": "me",
+              "start": 31.521587301587303,
+              "end": 31.64190476190476,
+              "score": 0.09937002509832382,
+              "duration": 0.120317,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 32.022910052910056,
+              "end": 32.5242328042328,
+              "score": 0.01641852594912052,
+              "duration": 0.501323,
+              "flags": [
+                "low-internal-score-under-0.02"
+              ]
+            },
+            {
+              "word": "there",
+              "start": 32.564338624338625,
+              "end": 32.865132275132275,
+              "score": 0.1184150330722332,
+              "duration": 0.300794,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 32.96539682539683,
+              "end": 33.306296296296296,
+              "score": 0.17365918681025505,
+              "duration": 0.340899,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 33.446666666666665,
+              "end": 33.76751322751323,
+              "score": 0.07044070698320866,
+              "duration": 0.320847,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 33.92793650793651,
+              "end": 34.24878306878307,
+              "score": 0.21443071365356445,
+              "duration": 0.320847,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 34.42925925925926,
+              "end": 34.68994708994709,
+              "score": 0.06395051199942828,
+              "duration": 0.260688,
+              "flags": [
+                "touches-window-end"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "middle-1-echoes-6",
+          "start": 30.92,
+          "end": 34.71,
+          "submittedEchoCount": 6,
+          "meanWordScore": 0.102611,
+          "meanEchoScore": 0.106543,
+          "minimumScore": 0.016419,
+          "flaggedWordCount": 2,
+          "words": [
+            {
+              "word": "Take",
+              "start": 31.000211640211642,
+              "end": 31.361164021164022,
+              "score": 0.16845876938896254,
+              "duration": 0.360952,
+              "flags": []
+            },
+            {
+              "word": "me",
+              "start": 31.521587301587303,
+              "end": 31.64190476190476,
+              "score": 0.09937002509832382,
+              "duration": 0.120317,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 32.022910052910056,
+              "end": 32.5242328042328,
+              "score": 0.01641852594912052,
+              "duration": 0.501323,
+              "flags": [
+                "low-internal-score-under-0.02"
+              ]
+            },
+            {
+              "word": "there",
+              "start": 32.564338624338625,
+              "end": 32.865132275132275,
+              "score": 0.1184150330722332,
+              "duration": 0.300794,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 32.96539682539683,
+              "end": 33.306296296296296,
+              "score": 0.17365918681025505,
+              "duration": 0.340899,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 33.446666666666665,
+              "end": 33.76751322751323,
+              "score": 0.07044070698320866,
+              "duration": 0.320847,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 33.92793650793651,
+              "end": 34.12846560846561,
+              "score": 0.06237958911806345,
+              "duration": 0.200529,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 34.14851851851852,
+              "end": 34.34904761904762,
+              "score": 0.1504106055945158,
+              "duration": 0.200529,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 34.42925925925926,
+              "end": 34.68994708994709,
+              "score": 0.06395051199942828,
+              "duration": 0.260688,
+              "flags": [
+                "touches-window-end"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "middle-2-echoes-5",
+          "start": 34.690000000000005,
+          "end": 38.51,
+          "submittedEchoCount": 5,
+          "meanWordScore": 0.083696,
+          "meanEchoScore": 0.086626,
+          "minimumScore": 0.0358,
+          "flaggedWordCount": 1,
+          "words": [
+            {
+              "word": "Take",
+              "start": 34.79052631578947,
+              "end": 34.99157894736842,
+              "score": 0.07727567362599075,
+              "duration": 0.201053,
+              "flags": []
+            },
+            {
+              "word": "me",
+              "start": 35.333368421052626,
+              "end": 35.454,
+              "score": 0.09571894630789757,
+              "duration": 0.120632,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 35.79578947368421,
+              "end": 36.13757894736842,
+              "score": 0.06343938391655683,
+              "duration": 0.341789,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 36.31852631578947,
+              "end": 36.660315789473685,
+              "score": 0.08948136083781719,
+              "duration": 0.341789,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 36.78094736842105,
+              "end": 37.10263157894737,
+              "score": 0.11887878626585006,
+              "duration": 0.321684,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 37.263473684210524,
+              "end": 37.84652631578947,
+              "score": 0.07290373593568802,
+              "duration": 0.583053,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 37.96715789473684,
+              "end": 38.16821052631579,
+              "score": 0.11606744602322579,
+              "duration": 0.201053,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 38.24863157894737,
+              "end": 38.51,
+              "score": 0.03579992726445198,
+              "duration": 0.261368,
+              "flags": [
+                "touches-window-end"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "middle-2-echoes-6",
+          "start": 34.690000000000005,
+          "end": 38.51,
+          "submittedEchoCount": 6,
+          "meanWordScore": 0.07616,
+          "meanEchoScore": 0.074834,
+          "minimumScore": 0.0358,
+          "flaggedWordCount": 2,
+          "words": [
+            {
+              "word": "Take",
+              "start": 34.79052631578947,
+              "end": 34.99157894736842,
+              "score": 0.07727567362599075,
+              "duration": 0.201053,
+              "flags": []
+            },
+            {
+              "word": "me",
+              "start": 35.333368421052626,
+              "end": 35.454,
+              "score": 0.09571894630789757,
+              "duration": 0.120632,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 35.79578947368421,
+              "end": 36.13757894736842,
+              "score": 0.06343938391655683,
+              "duration": 0.341789,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 36.31852631578947,
+              "end": 36.660315789473685,
+              "score": 0.08948136083781719,
+              "duration": 0.341789,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 36.78094736842105,
+              "end": 37.10263157894737,
+              "score": 0.11887878626585006,
+              "duration": 0.321684,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 37.263473684210524,
+              "end": 37.705789473684206,
+              "score": 0.05083650983870029,
+              "duration": 0.442316,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 37.76610526315789,
+              "end": 37.96715789473684,
+              "score": 0.03793923407793045,
+              "duration": 0.201053,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 37.96715789473684,
+              "end": 38.16821052631579,
+              "score": 0.11606744602322579,
+              "duration": 0.201053,
+              "flags": [
+                "echo-shares-boundary-with-previous"
+              ]
+            },
+            {
+              "word": "there",
+              "start": 38.24863157894737,
+              "end": 38.51,
+              "score": 0.03579992726445198,
+              "duration": 0.261368,
+              "flags": [
+                "touches-window-end"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "middle-3-echoes-5",
+          "start": 38.49,
+          "end": 42.32,
+          "submittedEchoCount": 5,
+          "meanWordScore": 0.106212,
+          "meanEchoScore": 0.104856,
+          "minimumScore": 0.052942,
+          "flaggedWordCount": 1,
+          "words": [
+            {
+              "word": "Take",
+              "start": 38.67047120418848,
+              "end": 39.27204188481676,
+              "score": 0.1577956615947187,
+              "duration": 0.601571,
+              "flags": []
+            },
+            {
+              "word": "me",
+              "start": 39.39235602094241,
+              "end": 39.512670157068065,
+              "score": 0.08510090783238411,
+              "duration": 0.120314,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 39.612931937172775,
+              "end": 39.93376963350786,
+              "score": 0.08251958712935448,
+              "duration": 0.320838,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 40.094188481675396,
+              "end": 40.43507853403142,
+              "score": 0.12952192034572363,
+              "duration": 0.34089,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 40.57544502617801,
+              "end": 40.91633507853403,
+              "score": 0.139717286080122,
+              "duration": 0.34089,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 41.05670157068063,
+              "end": 41.437696335078535,
+              "score": 0.06866542845964432,
+              "duration": 0.380995,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 41.55801047120419,
+              "end": 41.898900523560215,
+              "score": 0.1334338616579771,
+              "duration": 0.34089,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 42.039267015706805,
+              "end": 42.32,
+              "score": 0.0529416412115097,
+              "duration": 0.280733,
+              "flags": [
+                "touches-window-end"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "middle-3-echoes-6",
+          "start": 38.49,
+          "end": 42.32,
+          "submittedEchoCount": 6,
+          "meanWordScore": 0.097682,
+          "meanEchoScore": 0.092287,
+          "minimumScore": 0.052942,
+          "flaggedWordCount": 2,
+          "words": [
+            {
+              "word": "Take",
+              "start": 38.67047120418848,
+              "end": 39.27204188481676,
+              "score": 0.1577956615947187,
+              "duration": 0.601571,
+              "flags": []
+            },
+            {
+              "word": "me",
+              "start": 39.39235602094241,
+              "end": 39.512670157068065,
+              "score": 0.08510090783238411,
+              "duration": 0.120314,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 39.612931937172775,
+              "end": 39.93376963350786,
+              "score": 0.08251958712935448,
+              "duration": 0.320838,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 40.094188481675396,
+              "end": 40.43507853403142,
+              "score": 0.12952192034572363,
+              "duration": 0.34089,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 40.57544502617801,
+              "end": 40.91633507853403,
+              "score": 0.139717286080122,
+              "duration": 0.34089,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 41.05670157068063,
+              "end": 41.437696335078535,
+              "score": 0.06866542845964432,
+              "duration": 0.380995,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 41.55801047120419,
+              "end": 41.77858638743456,
+              "score": 0.06126631889492273,
+              "duration": 0.220576,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 41.77858638743456,
+              "end": 41.979109947643984,
+              "score": 0.10161117073148489,
+              "duration": 0.200524,
+              "flags": [
+                "echo-shares-boundary-with-previous"
+              ]
+            },
+            {
+              "word": "there",
+              "start": 42.039267015706805,
+              "end": 42.32,
+              "score": 0.0529416412115097,
+              "duration": 0.280733,
+              "flags": [
+                "touches-window-end"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "middle-4-echoes-5",
+          "start": 42.300000000000004,
+          "end": 46.16,
+          "submittedEchoCount": 5,
+          "meanWordScore": 0.095635,
+          "meanEchoScore": 0.074374,
+          "minimumScore": 0.026427,
+          "flaggedWordCount": 0,
+          "words": [
+            {
+              "word": "Take",
+              "start": 42.52114583333333,
+              "end": 42.82270833333333,
+              "score": 0.19007250340655446,
+              "duration": 0.301563,
+              "flags": []
+            },
+            {
+              "word": "me",
+              "start": 42.923229166666665,
+              "end": 43.04385416666666,
+              "score": 0.17671040445566177,
+              "duration": 0.120625,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 43.30520833333333,
+              "end": 43.64697916666666,
+              "score": 0.02642660103738308,
+              "duration": 0.341771,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 43.6871875,
+              "end": 44.008854166666666,
+              "score": 0.053621760196983816,
+              "duration": 0.321667,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 44.410937499999996,
+              "end": 44.853229166666665,
+              "score": 0.06257295273244382,
+              "duration": 0.442292,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 44.93364583333333,
+              "end": 45.255312499999995,
+              "score": 0.056458833068609236,
+              "duration": 0.321667,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 45.33572916666667,
+              "end": 45.677499999999995,
+              "score": 0.057934374734759334,
+              "duration": 0.341771,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 45.81822916666666,
+              "end": 46.099687499999995,
+              "score": 0.14128255546092988,
+              "duration": 0.281458,
+              "flags": []
+            }
+          ]
+        },
+        {
+          "id": "middle-4-echoes-6",
+          "start": 42.300000000000004,
+          "end": 46.16,
+          "submittedEchoCount": 6,
+          "meanWordScore": 0.064796,
+          "meanEchoScore": 0.066383,
+          "minimumScore": 0.026427,
+          "flaggedWordCount": 0,
+          "words": [
+            {
+              "word": "Take",
+              "start": 42.3603125,
+              "end": 42.480937499999996,
+              "score": 0.036542130168527365,
+              "duration": 0.120625,
+              "flags": []
+            },
+            {
+              "word": "me",
+              "start": 42.52114583333333,
+              "end": 42.62166666666666,
+              "score": 0.06495128944516182,
+              "duration": 0.100521,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 42.74229166666667,
+              "end": 43.04385416666666,
+              "score": 0.08337230570614337,
+              "duration": 0.301562,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 43.30520833333333,
+              "end": 43.64697916666666,
+              "score": 0.02642660103738308,
+              "duration": 0.341771,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 43.6871875,
+              "end": 44.008854166666666,
+              "score": 0.053621760196983816,
+              "duration": 0.321667,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 44.410937499999996,
+              "end": 44.853229166666665,
+              "score": 0.06257295273244382,
+              "duration": 0.442292,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 44.93364583333333,
+              "end": 45.255312499999995,
+              "score": 0.056458833068609236,
+              "duration": 0.321667,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 45.33572916666667,
+              "end": 45.677499999999995,
+              "score": 0.057934374734759334,
+              "duration": 0.341771,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 45.81822916666666,
+              "end": 46.099687499999995,
+              "score": 0.14128255546092988,
+              "duration": 0.281458,
+              "flags": []
+            }
+          ]
+        },
+        {
+          "id": "middle-5-echoes-5",
+          "start": 46.14,
+          "end": 49.94,
+          "submittedEchoCount": 5,
+          "meanWordScore": 0.066892,
+          "meanEchoScore": 0.043836,
+          "minimumScore": 0.032044,
+          "flaggedWordCount": 2,
+          "words": [
+            {
+              "word": "Take",
+              "start": 46.30084656084656,
+              "end": 46.72306878306878,
+              "score": 0.08454599988181144,
+              "duration": 0.422222,
+              "flags": []
+            },
+            {
+              "word": "me",
+              "start": 46.76328042328042,
+              "end": 46.86380952380952,
+              "score": 0.14450519531965256,
+              "duration": 0.100529,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 47.24582010582011,
+              "end": 48.13047619047619,
+              "score": 0.08690792731940747,
+              "duration": 0.884656,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 48.21089947089947,
+              "end": 48.55269841269841,
+              "score": 0.0578462976962328,
+              "duration": 0.341799,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 48.67333333333333,
+              "end": 49.03523809523809,
+              "score": 0.04860085844993591,
+              "duration": 0.361905,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 49.17597883597884,
+              "end": 49.39714285714286,
+              "score": 0.032044025138020515,
+              "duration": 0.221164,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 49.39714285714286,
+              "end": 49.598201058201056,
+              "score": 0.04609624370932579,
+              "duration": 0.201058,
+              "flags": [
+                "echo-shares-boundary-with-previous"
+              ]
+            },
+            {
+              "word": "there",
+              "start": 49.65851851851852,
+              "end": 49.91989417989418,
+              "score": 0.03459111899137497,
+              "duration": 0.261376,
+              "flags": [
+                "touches-window-end"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "middle-5-echoes-6",
+          "start": 46.14,
+          "end": 49.94,
+          "submittedEchoCount": 6,
+          "meanWordScore": 0.061989,
+          "meanEchoScore": 0.043174,
+          "minimumScore": 0.032044,
+          "flaggedWordCount": 3,
+          "words": [
+            {
+              "word": "Take",
+              "start": 46.30084656084656,
+              "end": 46.72306878306878,
+              "score": 0.08454599988181144,
+              "duration": 0.422222,
+              "flags": []
+            },
+            {
+              "word": "me",
+              "start": 46.76328042328042,
+              "end": 46.86380952380952,
+              "score": 0.14450519531965256,
+              "duration": 0.100529,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 47.24582010582011,
+              "end": 47.90931216931217,
+              "score": 0.06980548687279224,
+              "duration": 0.663492,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 47.96962962962963,
+              "end": 48.21089947089947,
+              "score": 0.039865607395768166,
+              "duration": 0.24127,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 48.21089947089947,
+              "end": 48.55269841269841,
+              "score": 0.0578462976962328,
+              "duration": 0.341799,
+              "flags": [
+                "echo-shares-boundary-with-previous"
+              ]
+            },
+            {
+              "word": "there",
+              "start": 48.67333333333333,
+              "end": 49.03523809523809,
+              "score": 0.04860085844993591,
+              "duration": 0.361905,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 49.17597883597884,
+              "end": 49.39714285714286,
+              "score": 0.032044025138020515,
+              "duration": 0.221164,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 49.39714285714286,
+              "end": 49.598201058201056,
+              "score": 0.04609624370932579,
+              "duration": 0.201058,
+              "flags": [
+                "echo-shares-boundary-with-previous"
+              ]
+            },
+            {
+              "word": "there",
+              "start": 49.65851851851852,
+              "end": 49.91989417989418,
+              "score": 0.03459111899137497,
+              "duration": 0.261376,
+              "flags": [
+                "touches-window-end"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "middle-6-echoes-5",
+          "start": 49.92,
+          "end": 53.754999999999995,
+          "submittedEchoCount": 5,
+          "meanWordScore": 0.091007,
+          "meanEchoScore": 0.090371,
+          "minimumScore": 0.044619,
+          "flaggedWordCount": 1,
+          "words": [
+            {
+              "word": "Take",
+              "start": 50.00031413612566,
+              "end": 50.26133507853403,
+              "score": 0.08330954937264323,
+              "duration": 0.261021,
+              "flags": []
+            },
+            {
+              "word": "me",
+              "start": 50.502277486911,
+              "end": 50.70306282722513,
+              "score": 0.11749459430575371,
+              "duration": 0.200785,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 51.04439790575916,
+              "end": 51.40581151832461,
+              "score": 0.07539677694439888,
+              "duration": 0.361414,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 51.54636125654451,
+              "end": 51.88769633507854,
+              "score": 0.09150097128003835,
+              "duration": 0.341335,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 52.048324607329846,
+              "end": 52.4298167539267,
+              "score": 0.13433747477829455,
+              "duration": 0.381492,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 52.490052356020946,
+              "end": 53.092408376963355,
+              "score": 0.11921214871108532,
+              "duration": 0.602356,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 53.19280104712042,
+              "end": 53.41366492146597,
+              "score": 0.04461897667497396,
+              "duration": 0.220864,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 53.47390052356021,
+              "end": 53.73492146596859,
+              "score": 0.06218462288379669,
+              "duration": 0.261021,
+              "flags": [
+                "touches-window-end"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "middle-6-echoes-6",
+          "start": 49.92,
+          "end": 53.754999999999995,
+          "submittedEchoCount": 6,
+          "meanWordScore": 0.083702,
+          "meanEchoScore": 0.07952,
+          "minimumScore": 0.043755,
+          "flaggedWordCount": 1,
+          "words": [
+            {
+              "word": "Take",
+              "start": 50.00031413612566,
+              "end": 50.26133507853403,
+              "score": 0.08330954937264323,
+              "duration": 0.261021,
+              "flags": []
+            },
+            {
+              "word": "me",
+              "start": 50.502277486911,
+              "end": 50.70306282722513,
+              "score": 0.11749459430575371,
+              "duration": 0.200785,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 51.04439790575916,
+              "end": 51.40581151832461,
+              "score": 0.07539677694439888,
+              "duration": 0.361414,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 51.54636125654451,
+              "end": 51.88769633507854,
+              "score": 0.09150097128003835,
+              "duration": 0.341335,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 52.048324607329846,
+              "end": 52.4298167539267,
+              "score": 0.13433747477829455,
+              "duration": 0.381492,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 52.490052356020946,
+              "end": 52.891623036649214,
+              "score": 0.10072107128798961,
+              "duration": 0.401571,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 52.93178010471205,
+              "end": 53.092408376963355,
+              "score": 0.0437546631321311,
+              "duration": 0.160628,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 53.19280104712042,
+              "end": 53.41366492146597,
+              "score": 0.04461897667497396,
+              "duration": 0.220864,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 53.47390052356021,
+              "end": 53.73492146596859,
+              "score": 0.06218462288379669,
+              "duration": 0.261021,
+              "flags": [
+                "touches-window-end"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "middle-7-echoes-5",
+          "start": 53.735,
+          "end": 57.565999999999995,
+          "submittedEchoCount": 5,
+          "meanWordScore": 0.1211,
+          "meanEchoScore": 0.101729,
+          "minimumScore": 0.064883,
+          "flaggedWordCount": 1,
+          "words": [
+            {
+              "word": "Take",
+              "start": 53.9556335078534,
+              "end": 54.25649738219895,
+              "score": 0.14459369995165616,
+              "duration": 0.300864,
+              "flags": []
+            },
+            {
+              "word": "me",
+              "start": 54.37684293193717,
+              "end": 54.73787958115183,
+              "score": 0.18095692992210388,
+              "duration": 0.361037,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 54.85822513089005,
+              "end": 55.45995287958115,
+              "score": 0.1346012182533741,
+              "duration": 0.601728,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 55.58029842931937,
+              "end": 55.760816753926704,
+              "score": 0.0699595794081688,
+              "duration": 0.180518,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 55.84104712041885,
+              "end": 56.141910994764395,
+              "score": 0.1963142566382885,
+              "duration": 0.300864,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 56.30237172774869,
+              "end": 56.7436387434555,
+              "score": 0.06776194721460342,
+              "duration": 0.441267,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 56.78375392670157,
+              "end": 57.22502094240838,
+              "score": 0.10972711145877838,
+              "duration": 0.441267,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 57.26513612565445,
+              "end": 57.545942408376966,
+              "score": 0.06488265469670296,
+              "duration": 0.280806,
+              "flags": [
+                "touches-window-end"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "middle-7-echoes-6",
+          "start": 53.735,
+          "end": 57.565999999999995,
+          "submittedEchoCount": 6,
+          "meanWordScore": 0.109609,
+          "meanEchoScore": 0.095171,
+          "minimumScore": 0.062378,
+          "flaggedWordCount": 1,
+          "words": [
+            {
+              "word": "Take",
+              "start": 53.9556335078534,
+              "end": 54.25649738219895,
+              "score": 0.14459369995165616,
+              "duration": 0.300864,
+              "flags": []
+            },
+            {
+              "word": "me",
+              "start": 54.37684293193717,
+              "end": 54.73787958115183,
+              "score": 0.18095692992210388,
+              "duration": 0.361037,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 54.85822513089005,
+              "end": 55.17914659685864,
+              "score": 0.08990968540310859,
+              "duration": 0.320921,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 55.35966492146597,
+              "end": 55.5401832460733,
+              "score": 0.062377597019076345,
+              "duration": 0.180518,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 55.58029842931937,
+              "end": 55.760816753926704,
+              "score": 0.0699595794081688,
+              "duration": 0.180518,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 55.84104712041885,
+              "end": 56.141910994764395,
+              "score": 0.1963142566382885,
+              "duration": 0.300864,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 56.30237172774869,
+              "end": 56.7436387434555,
+              "score": 0.06776194721460342,
+              "duration": 0.441267,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 56.78375392670157,
+              "end": 57.22502094240838,
+              "score": 0.10972711145877838,
+              "duration": 0.441267,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 57.26513612565445,
+              "end": 57.545942408376966,
+              "score": 0.06488265469670296,
+              "duration": 0.280806,
+              "flags": [
+                "touches-window-end"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "middle-8-echoes-5",
+          "start": 57.546,
+          "end": 62.239999999999995,
+          "submittedEchoCount": 5,
+          "meanWordScore": 0.067364,
+          "meanEchoScore": 0.067855,
+          "minimumScore": 0.01055,
+          "flaggedWordCount": 2,
+          "words": [
+            {
+              "word": "Take",
+              "start": 57.646299145299146,
+              "end": 57.76665811965812,
+              "score": 0.05353128514252603,
+              "duration": 0.120359,
+              "flags": []
+            },
+            {
+              "word": "me",
+              "start": 57.76665811965812,
+              "end": 57.866957264957264,
+              "score": 0.11930626258254051,
+              "duration": 0.100299,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 57.90707692307692,
+              "end": 58.02743589743589,
+              "score": 0.02679709708318114,
+              "duration": 0.120359,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 58.18791452991453,
+              "end": 58.48881196581196,
+              "score": 0.12043482973240316,
+              "duration": 0.300897,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 58.66935042735042,
+              "end": 58.97024786324786,
+              "score": 0.09286202080547809,
+              "duration": 0.300897,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 59.65228205128205,
+              "end": 60.07353846153846,
+              "score": 0.10252176593057812,
+              "duration": 0.421256,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 61.77862393162393,
+              "end": 61.97922222222222,
+              "score": 0.012908789236098528,
+              "duration": 0.200598,
+              "flags": [
+                "low-internal-score-under-0.02"
+              ]
+            },
+            {
+              "word": "there",
+              "start": 61.99928205128205,
+              "end": 62.199880341880345,
+              "score": 0.010549656674265861,
+              "duration": 0.200598,
+              "flags": [
+                "low-internal-score-under-0.02"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "middle-8-echoes-6",
+          "start": 57.546,
+          "end": 62.239999999999995,
+          "submittedEchoCount": 6,
+          "meanWordScore": 0.061088,
+          "meanEchoScore": 0.058359,
+          "minimumScore": 0.01055,
+          "flaggedWordCount": 3,
+          "words": [
+            {
+              "word": "Take",
+              "start": 57.646299145299146,
+              "end": 57.76665811965812,
+              "score": 0.05353128514252603,
+              "duration": 0.120359,
+              "flags": []
+            },
+            {
+              "word": "me",
+              "start": 57.76665811965812,
+              "end": 57.866957264957264,
+              "score": 0.11930626258254051,
+              "duration": 0.100299,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 57.90707692307692,
+              "end": 58.02743589743589,
+              "score": 0.02679709708318114,
+              "duration": 0.120359,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 58.18791452991453,
+              "end": 58.48881196581196,
+              "score": 0.12043482973240316,
+              "duration": 0.300897,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 58.66935042735042,
+              "end": 58.97024786324786,
+              "score": 0.09286202080547809,
+              "duration": 0.300897,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 59.65228205128205,
+              "end": 60.07353846153846,
+              "score": 0.10252176593057812,
+              "duration": 0.421256,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 61.47772649572649,
+              "end": 61.838803418803415,
+              "score": 0.011154098715633155,
+              "duration": 0.361077,
+              "flags": [
+                "low-internal-score-under-0.02"
+              ]
+            },
+            {
+              "word": "there",
+              "start": 61.838803418803415,
+              "end": 61.97922222222222,
+              "score": 0.012630514660850167,
+              "duration": 0.140419,
+              "flags": [
+                "low-internal-score-under-0.02",
+                "echo-shares-boundary-with-previous"
+              ]
+            },
+            {
+              "word": "there",
+              "start": 61.99928205128205,
+              "end": 62.199880341880345,
+              "score": 0.010549656674265861,
+              "duration": 0.200598,
+              "flags": [
+                "low-internal-score-under-0.02"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "final-1-echoes-5",
+          "start": 91.886,
+          "end": 95.67699999999999,
+          "submittedEchoCount": 5,
+          "meanWordScore": 0.131114,
+          "meanEchoScore": 0.115172,
+          "minimumScore": 0.074233,
+          "flaggedWordCount": 2,
+          "words": [
+            {
+              "word": "Take",
+              "start": 91.986291005291,
+              "end": 92.34733862433862,
+              "score": 0.17898571904515848,
+              "duration": 0.361048,
+              "flags": []
+            },
+            {
+              "word": "me",
+              "start": 92.48774603174603,
+              "end": 92.60809523809523,
+              "score": 0.10242892429232597,
+              "duration": 0.120349,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 92.98920105820105,
+              "end": 93.8517037037037,
+              "score": 0.1916348647326231,
+              "duration": 0.862503,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 93.97205291005291,
+              "end": 94.27292592592592,
+              "score": 0.19958500936627388,
+              "duration": 0.300873,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 94.41333333333333,
+              "end": 94.73426455026454,
+              "score": 0.12698456272482872,
+              "duration": 0.320931,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 94.89473015873016,
+              "end": 95.19560317460316,
+              "score": 0.0797183595597744,
+              "duration": 0.300873,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 95.19560317460316,
+              "end": 95.33601058201057,
+              "score": 0.0953397068195045,
+              "duration": 0.140407,
+              "flags": [
+                "echo-shares-boundary-with-previous"
+              ]
+            },
+            {
+              "word": "there",
+              "start": 95.39618518518517,
+              "end": 95.6569417989418,
+              "score": 0.074233372323215,
+              "duration": 0.260757,
+              "flags": [
+                "touches-window-end"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "final-1-echoes-6",
+          "start": 91.886,
+          "end": 95.67699999999999,
+          "submittedEchoCount": 6,
+          "meanWordScore": 0.118337,
+          "meanEchoScore": 0.127008,
+          "minimumScore": 0.02157,
+          "flaggedWordCount": 2,
+          "words": [
+            {
+              "word": "Take",
+              "start": 91.986291005291,
+              "end": 92.34733862433862,
+              "score": 0.17898571904515848,
+              "duration": 0.361048,
+              "flags": []
+            },
+            {
+              "word": "me",
+              "start": 92.48774603174603,
+              "end": 92.60809523809523,
+              "score": 0.10242892429232597,
+              "duration": 0.120349,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 92.98920105820105,
+              "end": 93.35024867724867,
+              "score": 0.02156975045800209,
+              "duration": 0.361048,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 93.45053968253968,
+              "end": 93.8517037037037,
+              "score": 0.1861883929464966,
+              "duration": 0.401164,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 93.97205291005291,
+              "end": 94.27292592592592,
+              "score": 0.19958500936627388,
+              "duration": 0.300873,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 94.41333333333333,
+              "end": 94.73426455026454,
+              "score": 0.12698456272482872,
+              "duration": 0.320931,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 94.89473015873016,
+              "end": 95.19560317460316,
+              "score": 0.0797183595597744,
+              "duration": 0.300873,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 95.19560317460316,
+              "end": 95.33601058201057,
+              "score": 0.0953397068195045,
+              "duration": 0.140407,
+              "flags": [
+                "echo-shares-boundary-with-previous"
+              ]
+            },
+            {
+              "word": "there",
+              "start": 95.39618518518517,
+              "end": 95.6569417989418,
+              "score": 0.074233372323215,
+              "duration": 0.260757,
+              "flags": [
+                "touches-window-end"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "final-2-echoes-5",
+          "start": 95.657,
+          "end": 99.492,
+          "submittedEchoCount": 5,
+          "meanWordScore": 0.10751,
+          "meanEchoScore": 0.134666,
+          "minimumScore": 0.031938,
+          "flaggedWordCount": 2,
+          "words": [
+            {
+              "word": "Take",
+              "start": 95.657,
+              "end": 95.83770680628272,
+              "score": 0.06100643239915371,
+              "duration": 0.180707,
+              "flags": [
+                "touches-window-start"
+              ]
+            },
+            {
+              "word": "me",
+              "start": 95.87786387434555,
+              "end": 95.97825654450261,
+              "score": 0.0938030444085598,
+              "duration": 0.100393,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 96.27943455497382,
+              "end": 96.90186910994764,
+              "score": 0.03193839667364955,
+              "duration": 0.622435,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 97.2833612565445,
+              "end": 97.62469633507853,
+              "score": 0.17446545623242854,
+              "duration": 0.341335,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 97.76524607329843,
+              "end": 98.08650261780105,
+              "score": 0.2175627786666155,
+              "duration": 0.321257,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 98.22705235602093,
+              "end": 98.54830890052355,
+              "score": 0.13534143082797528,
+              "duration": 0.321257,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 98.64870157068063,
+              "end": 99.07035078534031,
+              "score": 0.10600710511207581,
+              "duration": 0.421649,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 99.21090052356021,
+              "end": 99.47192146596858,
+              "score": 0.03995527531951666,
+              "duration": 0.261021,
+              "flags": [
+                "touches-window-end"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "final-2-echoes-6",
+          "start": 95.657,
+          "end": 99.492,
+          "submittedEchoCount": 6,
+          "meanWordScore": 0.098652,
+          "meanEchoScore": 0.117545,
+          "minimumScore": 0.031938,
+          "flaggedWordCount": 2,
+          "words": [
+            {
+              "word": "Take",
+              "start": 95.657,
+              "end": 95.73731413612565,
+              "score": 0.04053096869029105,
+              "duration": 0.080314,
+              "flags": [
+                "touches-window-start"
+              ]
+            },
+            {
+              "word": "me",
+              "start": 95.75739267015706,
+              "end": 95.83770680628272,
+              "score": 0.052470555528998375,
+              "duration": 0.080314,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 95.87786387434555,
+              "end": 96.15896335078534,
+              "score": 0.08959557730704545,
+              "duration": 0.281099,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 96.27943455497382,
+              "end": 96.90186910994764,
+              "score": 0.03193839667364955,
+              "duration": 0.622435,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 97.2833612565445,
+              "end": 97.62469633507853,
+              "score": 0.17446545623242854,
+              "duration": 0.341335,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 97.76524607329843,
+              "end": 98.08650261780105,
+              "score": 0.2175627786666155,
+              "duration": 0.321257,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 98.22705235602093,
+              "end": 98.54830890052355,
+              "score": 0.13534143082797528,
+              "duration": 0.321257,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 98.64870157068063,
+              "end": 99.07035078534031,
+              "score": 0.10600710511207581,
+              "duration": 0.421649,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 99.21090052356021,
+              "end": 99.47192146596858,
+              "score": 0.03995527531951666,
+              "duration": 0.261021,
+              "flags": [
+                "touches-window-end"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "final-3-echoes-5",
+          "start": 99.47200000000001,
+          "end": 103.301,
+          "submittedEchoCount": 5,
+          "meanWordScore": 0.052341,
+          "meanEchoScore": 0.053693,
+          "minimumScore": 0.026657,
+          "flaggedWordCount": 0,
+          "words": [
+            {
+              "word": "Take",
+              "start": 99.55218848167539,
+              "end": 99.79275392670156,
+              "score": 0.060031014611013234,
+              "duration": 0.240565,
+              "flags": []
+            },
+            {
+              "word": "me",
+              "start": 99.79275392670156,
+              "end": 99.9330837696335,
+              "score": 0.02852538600564003,
+              "duration": 0.14033,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 100.03331937172774,
+              "end": 100.47435602094241,
+              "score": 0.06170586878433824,
+              "duration": 0.441037,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 100.59463874345549,
+              "end": 100.9755340314136,
+              "score": 0.04606243930757046,
+              "duration": 0.380895,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 101.0958167539267,
+              "end": 101.45666492146596,
+              "score": 0.09314320869743824,
+              "duration": 0.360848,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 101.5569005235602,
+              "end": 101.87765445026177,
+              "score": 0.05567408166825771,
+              "duration": 0.320754,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 102.03803141361256,
+              "end": 102.33873821989528,
+              "score": 0.026657381281256675,
+              "duration": 0.300707,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 102.39887958115183,
+              "end": 102.85996335078534,
+              "score": 0.04692578949034214,
+              "duration": 0.461084,
+              "flags": []
+            }
+          ]
+        },
+        {
+          "id": "final-3-echoes-6",
+          "start": 99.47200000000001,
+          "end": 103.301,
+          "submittedEchoCount": 6,
+          "meanWordScore": 0.049144,
+          "meanEchoScore": 0.048673,
+          "minimumScore": 0.023573,
+          "flaggedWordCount": 1,
+          "words": [
+            {
+              "word": "Take",
+              "start": 99.55218848167539,
+              "end": 99.79275392670156,
+              "score": 0.060031014611013234,
+              "duration": 0.240565,
+              "flags": []
+            },
+            {
+              "word": "me",
+              "start": 99.79275392670156,
+              "end": 99.9330837696335,
+              "score": 0.02852538600564003,
+              "duration": 0.14033,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 100.03331937172774,
+              "end": 100.47435602094241,
+              "score": 0.06170586878433824,
+              "duration": 0.441037,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 100.59463874345549,
+              "end": 100.9755340314136,
+              "score": 0.04606243930757046,
+              "duration": 0.380895,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 101.0958167539267,
+              "end": 101.45666492146596,
+              "score": 0.09314320869743824,
+              "duration": 0.360848,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 101.5569005235602,
+              "end": 101.87765445026177,
+              "score": 0.05567408166825771,
+              "duration": 0.320754,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 102.03803141361256,
+              "end": 102.33873821989528,
+              "score": 0.026657381281256675,
+              "duration": 0.300707,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 102.39887958115183,
+              "end": 102.85996335078534,
+              "score": 0.04692578949034214,
+              "duration": 0.461084,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 103.00029319371727,
+              "end": 103.28095287958115,
+              "score": 0.023572873324155807,
+              "duration": 0.28066,
+              "flags": [
+                "touches-window-end"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "final-4-echoes-5",
+          "start": 103.281,
+          "end": 107.146,
+          "submittedEchoCount": 5,
+          "meanWordScore": 0.078085,
+          "meanEchoScore": 0.059156,
+          "minimumScore": 0.037972,
+          "flaggedWordCount": 1,
+          "words": [
+            {
+              "word": "Take",
+              "start": 103.38112953367876,
+              "end": 103.60141450777202,
+              "score": 0.05753064504824579,
+              "duration": 0.220285,
+              "flags": []
+            },
+            {
+              "word": "me",
+              "start": 103.9018031088083,
+              "end": 104.0219585492228,
+              "score": 0.1954568587243557,
+              "duration": 0.120155,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 104.44250259067358,
+              "end": 105.04327979274612,
+              "score": 0.0759116992354393,
+              "duration": 0.600777,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 105.38372020725389,
+              "end": 105.94444559585493,
+              "score": 0.06330047622323036,
+              "duration": 0.560725,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 106.2848860103627,
+              "end": 106.4050414507772,
+              "score": 0.050050942413508895,
+              "duration": 0.120155,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 106.54522279792747,
+              "end": 106.70543005181348,
+              "score": 0.05513806641101837,
+              "duration": 0.160207,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 106.78553367875648,
+              "end": 106.985792746114,
+              "score": 0.08932015188038349,
+              "duration": 0.200259,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 107.0258445595855,
+              "end": 107.146,
+              "score": 0.03797248937189579,
+              "duration": 0.120155,
+              "flags": [
+                "touches-window-end"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "final-4-echoes-6",
+          "start": 103.281,
+          "end": 107.146,
+          "submittedEchoCount": 6,
+          "meanWordScore": 0.072317,
+          "meanEchoScore": 0.053658,
+          "minimumScore": 0.037972,
+          "flaggedWordCount": 2,
+          "words": [
+            {
+              "word": "Take",
+              "start": 103.38112953367876,
+              "end": 103.60141450777202,
+              "score": 0.05753064504824579,
+              "duration": 0.220285,
+              "flags": []
+            },
+            {
+              "word": "me",
+              "start": 103.9018031088083,
+              "end": 104.0219585492228,
+              "score": 0.1954568587243557,
+              "duration": 0.120155,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 104.44250259067358,
+              "end": 105.04327979274612,
+              "score": 0.0759116992354393,
+              "duration": 0.600777,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 105.38372020725389,
+              "end": 105.94444559585493,
+              "score": 0.06330047622323036,
+              "duration": 0.560725,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 106.2848860103627,
+              "end": 106.4050414507772,
+              "score": 0.050050942413508895,
+              "duration": 0.120155,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 106.54522279792747,
+              "end": 106.70543005181348,
+              "score": 0.05513806641101837,
+              "duration": 0.160207,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 106.78553367875648,
+              "end": 106.92571502590674,
+              "score": 0.06899303123354912,
+              "duration": 0.140181,
+              "flags": []
+            },
+            {
+              "word": "there",
+              "start": 106.92571502590674,
+              "end": 107.0258445595855,
+              "score": 0.0464946337044239,
+              "duration": 0.10013,
+              "flags": [
+                "echo-shares-boundary-with-previous"
+              ]
+            },
+            {
+              "word": "there",
+              "start": 107.0258445595855,
+              "end": 107.146,
+              "score": 0.03797248937189579,
+              "duration": 0.120155,
+              "flags": [
+                "touches-window-end",
+                "echo-shares-boundary-with-previous"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "intro-last-lead-only",
+          "start": 11.818,
+          "end": 13.85,
+          "submittedEchoCount": 0,
+          "meanWordScore": 0.11973,
+          "meanEchoScore": null,
+          "minimumScore": 0.02455,
+          "flaggedWordCount": 1,
+          "words": [
+            {
+              "word": "Take",
+              "start": 11.898475247524752,
+              "end": 12.260613861386139,
+              "score": 0.17848384703393094,
+              "duration": 0.362139,
+              "flags": []
+            },
+            {
+              "word": "me",
+              "start": 12.320970297029703,
+              "end": 12.36120792079208,
+              "score": 0.02454980555921793,
+              "duration": 0.040238,
+              "flags": [
+                "short-word-under-80ms"
+              ]
+            },
+            {
+              "word": "there",
+              "start": 12.441683168316832,
+              "end": 13.065366336633662,
+              "score": 0.15615575276315213,
+              "duration": 0.623683,
+              "flags": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

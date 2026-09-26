@@ -1,0 +1,586 @@
+{
+  "status": "Independent acoustic/model comparison; listening review remains pending",
+  "revision": "source-integrated-preview-v2",
+  "timelineSha256": "b6f347b95e4f0eec872e0f0e1ac9e52b808f4603b0e7a7e3f1fc75aaebf16bc5",
+  "builderSha256": "13f2f4d7b5dcc9a414a193c62d66f90b336dda134798d8996613b70ca6043978",
+  "beforeTimelineSha256": "0995d7635730fbe69a5f748db1e23aa37e59019a4d486060775b5428216a6574",
+  "question": "The first verse appeared early near19seconds. Determine whether an omitted second far, a sustained go, or an overbroad recognizer timestamp caused the focus error.",
+  "findings": [
+    {
+      "word": "far",
+      "selectedOnset": 19.06716553287982,
+      "previousOnset": 18.12,
+      "reason": "Both mix/stem MMS place the only well-supported far at19.067. A separate English CTC model identifies F19.087–19.127 p.942, A19.308 p.964 and R19.328 p.903. Similar Whisper timestamps18.10–19.4 incorrectly absorb preceding tail/silence; mix/stem agreement within one model family is insufficient phonetic corroboration."
+    },
+    {
+      "word": "go",
+      "selectedRelease": 18.12,
+      "previousRelease": 17.82340136054422,
+      "reason": "English CTC O18.044–18.064 p.996 and normal/slowed ASR GO releases18.076–18.120 establish a longer vowel than the old interval. Separator18.144 and energy decay support a conservative18.120 release, preserving a real pause before FAR."
+    },
+    {
+      "word": "room/anywhere",
+      "reason": "The same broad-ASR failure affected first ROOM and first/last ANYWHERE. Strong independent letters R21.053 p.850; A26.929 p.939/N26.969 p.964; A87.876 p.982 support the original MMS onsets21.013/26.808/87.816. The earlier ASR-only overrides were explicitly retracted."
+    },
+    {
+      "word": "second a room",
+      "reason": "The initial min(mix,stem) union picked a spurious ROOM66.091 from mix. Independent stem MMS66.833 and English CTC R66.853 p.701 support the later consonant. The preceding article releases66.320 based on ASR and the nearby English separator66.332; its exact onset remains weaker."
+    },
+    {
+      "word": "with/you/me",
+      "reason": "English CTC and distinct ASR support WITH75.277, with the preceding I'M ending75.237; positive late vowels justify minimal YOU76.140 and ME91.300 release extensions. Held tails were not indiscriminately stretched."
+    },
+    {
+      "word": "second closing true with",
+      "reason": "TRUE now releases126.732 and WITH starts126.833. English CTC W candidates126.792/126.812 and separator126.732 are supported by the corresponding third-reprise greedy W130.653 shifted back3.820s. The second W alone is weak, so this remains a listening candidate."
+    },
+    {
+      "word": "repeated lead there",
+      "reason": "Opening MMS mix1.504/stem1.525 and independent English CTC TH1.545/1.565 reject the prior1.430 onset. Selected1.525 transfers by measured lead recurrence to14 hook events while keeping prior lead releases and separate gaps. The locally aligned recovered45-second cue is untouched."
+    }
+  ],
+  "firstVerseAcousticComparison": {
+    "provenance": "Read-only independent feature-agent measurements from the same demixed stem; numerical outputs transcribed here, not a listening attestation.",
+    "method": "16-band100–1800Hz mean-centered log-power spectral cosine,512-sample Hann at4kHz,20ms hop; RMS in100ms centered windows.",
+    "spectralBody": {
+      "goTemplate": [
+        17.7,
+        17.95
+      ],
+      "farTemplate": [
+        19.07,
+        19.38
+      ],
+      "candidateWindows": [
+        [
+          18,
+          18.24
+        ],
+        [
+          18.24,
+          18.5
+        ],
+        [
+          18.5,
+          18.85
+        ]
+      ],
+      "goCosine": [
+        0.9681,
+        0.9747,
+        0.974
+      ],
+      "farCosine": [
+        0.7483,
+        0.7347,
+        0.7072
+      ]
+    },
+    "crossover": {
+      "times": [
+        19,
+        19.04,
+        19.06,
+        19.08,
+        19.1
+      ],
+      "goCosine": [
+        0.9494,
+        0.9135,
+        0.8819,
+        0.7708,
+        0.7095
+      ],
+      "farCosine": [
+        0.7534,
+        0.8049,
+        0.8367,
+        0.8768,
+        0.8735
+      ],
+      "windowDuration": 0.128
+    },
+    "energy": {
+      "times": [
+        17.8,
+        18.1,
+        18.4,
+        18.7,
+        18.95,
+        19.06,
+        19.2
+      ],
+      "rmsDb": [
+        -13.82,
+        -14.88,
+        -24.48,
+        -25.11,
+        -35.42,
+        -37.85,
+        -17.48
+      ]
+    },
+    "interpretation": "The pre19s sound remains spectrally GO-like but decays over20dB; it does not establish a second FAR or sustained full-strength lead to19s. The spectral transition near19.06–19.08 supports MMS FAR19.067, with window-limited precision."
+  },
+  "declinedChanges": [
+    {
+      "proposal": "Add a second FAR in the first verse",
+      "reason": "Full-phrase forced MMS early extra FAR has score.003 mix/.066 stem, and independent English CTC forced extra FAR score.002. Unprompted recognizers return one FAR. By contrast, both second-verse FAR tokens have strong distinct acoustic support. No added word."
+    },
+    {
+      "proposal": "Hold GO continuously until19.067",
+      "reason": "Spectral similarity alone measures vowel/reverb family, not continued lead articulation. The measured tail decays over20dB and stronger phonetic evidence supports release near18.12."
+    },
+    {
+      "proposal": "Advance BREATHE83.453 to Whisper83.24",
+      "reason": "Independent stem consonant83.493 and R83.533 p.889 support the existing onset. No change."
+    },
+    {
+      "proposal": "Shorten preceding YOU83.453 to83.352",
+      "reason": "A modest-confidence separator is insufficient by itself for another release change; existing nonoverlap and supported BREATHE onset retained."
+    },
+    {
+      "proposal": "Delay third closing WITH130.633 to forced CTC131.136",
+      "reason": "The same model greedy path already has W130.653 and agrees with MMS130.633; the forced late W is an alignment failure. No change."
+    },
+    {
+      "proposal": "Add words or fill every remaining gap from stem energy",
+      "reason": "Instrument leakage, delay and reverb do not establish lexical events. Late107–121s and intro tail remain explicitly uncertain."
+    }
+  ],
+  "changes": [
+    {
+      "cue": "intro-1",
+      "wordId": "intro-1-W03",
+      "text": "there",
+      "before": [
+        1.43,
+        1.9270068027210885
+      ],
+      "after": [
+        1.5250113378684806,
+        1.9270068027210885
+      ],
+      "evidence": "Measured lead recurrence; initial phonetic consensus; bounded mix MMS echo candidates"
+    },
+    {
+      "cue": "intro-2",
+      "wordId": "intro-2-W03",
+      "text": "there",
+      "before": [
+        5.215759637188208,
+        5.712743764172336
+      ],
+      "after": [
+        5.3107482993197275,
+        5.712743764172336
+      ],
+      "evidence": "Measured lead recurrence; initial phonetic consensus; bounded mix MMS echo candidates"
+    },
+    {
+      "cue": "intro-3",
+      "wordId": "intro-3-W03",
+      "text": "there",
+      "before": [
+        9.026757369614513,
+        9.523741496598639
+      ],
+      "after": [
+        9.121746031746031,
+        9.523741496598639
+      ],
+      "evidence": "Measured lead recurrence; initial phonetic consensus; bounded mix MMS echo candidates"
+    },
+    {
+      "cue": "intro-4",
+      "wordId": "intro-4-W03",
+      "text": "there",
+      "before": [
+        12.83575963718821,
+        13.332743764172335
+      ],
+      "after": [
+        12.930748299319728,
+        13.332743764172335
+      ],
+      "evidence": "Waveform restart + provisional initial word-boundary transfer"
+    },
+    {
+      "cue": "verse-one-a-a",
+      "wordId": "verse-one-a-a-W03",
+      "text": "go",
+      "before": [
+        17.68297052154195,
+        17.823401360544217
+      ],
+      "after": [
+        17.68297052154195,
+        18.12
+      ],
+      "evidence": "Word-specific independent English CTC, MMS and ASR review; no automatic silence filling; listening pending"
+    },
+    {
+      "cue": "verse-one-a-a",
+      "wordId": "verse-one-a-a-W04",
+      "text": "far",
+      "before": [
+        18.12,
+        19.38814058956916
+      ],
+      "after": [
+        19.06716553287982,
+        19.38814058956916
+      ],
+      "evidence": "MMS candidate onset corroborated by separate English CTC consonant evidence; prior early Whisper-only onset retracted; listening pending"
+    },
+    {
+      "cue": "verse-one-a-b",
+      "wordId": "verse-one-a-b-W03",
+      "text": "room",
+      "before": [
+        20.65,
+        21.474467120181405
+      ],
+      "after": [
+        21.013061224489796,
+        21.474467120181405
+      ],
+      "evidence": "MMS candidate onset corroborated by separate English CTC consonant evidence; prior early Whisper-only onset retracted; listening pending"
+    },
+    {
+      "cue": "verse-one-b-a",
+      "wordId": "verse-one-b-a-W05",
+      "text": "anywhere",
+      "before": [
+        26.04,
+        27.690861678004534
+      ],
+      "after": [
+        26.80825396825397,
+        27.690861678004534
+      ],
+      "evidence": "MMS candidate onset corroborated by separate English CTC consonant evidence; prior early Whisper-only onset retracted; listening pending"
+    },
+    {
+      "cue": "middle-1",
+      "wordId": "middle-1-W03",
+      "text": "there",
+      "before": [
+        31.926507936507935,
+        32.42349206349206
+      ],
+      "after": [
+        32.02149659863946,
+        32.42349206349206
+      ],
+      "evidence": "Measured lead recurrence; initial phonetic consensus; bounded mix MMS echo candidates"
+    },
+    {
+      "cue": "middle-2",
+      "wordId": "middle-2-W03",
+      "text": "there",
+      "before": [
+        35.70575963718821,
+        36.20274376417233
+      ],
+      "after": [
+        35.80074829931973,
+        36.20274376417233
+      ],
+      "evidence": "Measured lead recurrence; initial phonetic consensus; bounded mix MMS echo candidates"
+    },
+    {
+      "cue": "middle-3",
+      "wordId": "middle-3-W03",
+      "text": "there",
+      "before": [
+        39.512743764172335,
+        40.00975056689342
+      ],
+      "after": [
+        39.60775510204082,
+        40.00975056689342
+      ],
+      "evidence": "Measured lead recurrence; initial phonetic consensus; bounded mix MMS echo candidates"
+    },
+    {
+      "cue": "middle-5",
+      "wordId": "middle-5-W03",
+      "text": "there",
+      "before": [
+        47.156507936507936,
+        47.65349206349207
+      ],
+      "after": [
+        47.251496598639456,
+        47.65349206349207
+      ],
+      "evidence": "Measured lead recurrence; initial phonetic consensus; bounded mix MMS echo candidates"
+    },
+    {
+      "cue": "middle-6",
+      "wordId": "middle-6-W03",
+      "text": "there",
+      "before": [
+        50.93875283446712,
+        51.435759637188205
+      ],
+      "after": [
+        51.03374149659864,
+        51.435759637188205
+      ],
+      "evidence": "Measured lead recurrence; initial phonetic consensus; bounded mix MMS echo candidates"
+    },
+    {
+      "cue": "middle-7",
+      "wordId": "middle-7-W03",
+      "text": "there",
+      "before": [
+        54.75299319727891,
+        55.25
+      ],
+      "after": [
+        54.84800453514739,
+        55.25
+      ],
+      "evidence": "Measured lead recurrence; initial phonetic consensus; bounded mix MMS echo candidates"
+    },
+    {
+      "cue": "middle-8",
+      "wordId": "middle-8-W03",
+      "text": "there",
+      "before": [
+        58.56399092970521,
+        59.0609977324263
+      ],
+      "after": [
+        58.6590022675737,
+        59.0609977324263
+      ],
+      "evidence": "Measured lead recurrence; initial phonetic consensus; bounded mix MMS echo candidates"
+    },
+    {
+      "cue": "verse-two-a-b",
+      "wordId": "verse-two-a-b-W02",
+      "text": "a",
+      "before": [
+        66.05086167800454,
+        66.0909977324263
+      ],
+      "after": [
+        66.05086167800454,
+        66.32
+      ],
+      "evidence": "Independent unprompted ASR vowel-release support; MMS candidate onset; release capped before next word; listening pending"
+    },
+    {
+      "cue": "verse-two-a-b",
+      "wordId": "verse-two-a-b-W03",
+      "text": "room",
+      "before": [
+        66.0909977324263,
+        67.09390022675737
+      ],
+      "after": [
+        66.83312925170068,
+        67.09390022675737
+      ],
+      "evidence": "Word-specific independent English CTC, MMS and ASR review; no automatic silence filling; listening pending"
+    },
+    {
+      "cue": "verse-two-b-b",
+      "wordId": "verse-two-b-b-W05",
+      "text": "I'm",
+      "before": [
+        74.97582766439909,
+        75.37691609977324
+      ],
+      "after": [
+        74.97582766439909,
+        75.23653061224489
+      ],
+      "evidence": "Word-specific independent English CTC, MMS and ASR review; no automatic silence filling; listening pending"
+    },
+    {
+      "cue": "verse-two-b-b",
+      "wordId": "verse-two-b-b-W06",
+      "text": "with",
+      "before": [
+        75.43709750566893,
+        75.858231292517
+      ],
+      "after": [
+        75.27700680272109,
+        75.858231292517
+      ],
+      "evidence": "Word-specific independent English CTC, MMS and ASR review; no automatic silence filling; listening pending"
+    },
+    {
+      "cue": "verse-two-b-b",
+      "wordId": "verse-two-b-b-W07",
+      "text": "you",
+      "before": [
+        75.89834467120181,
+        76.07884353741497
+      ],
+      "after": [
+        75.89834467120181,
+        76.14
+      ],
+      "evidence": "Word-specific independent English CTC, MMS and ASR review; no automatic silence filling; listening pending"
+    },
+    {
+      "cue": "anywhere",
+      "wordId": "anywhere-W05",
+      "text": "anywhere",
+      "before": [
+        87.02,
+        88.6
+      ],
+      "after": [
+        87.81587301587301,
+        88.6
+      ],
+      "evidence": "MMS candidate onset corroborated by separate English CTC consonant evidence; prior early Whisper-only onset retracted; listening pending"
+    },
+    {
+      "cue": "with-me",
+      "wordId": "with-me-W07",
+      "text": "me",
+      "before": [
+        91.09560090702948,
+        91.21634920634921
+      ],
+      "after": [
+        91.09560090702948,
+        91.3
+      ],
+      "evidence": "Word-specific independent English CTC, MMS and ASR review; no automatic silence filling; listening pending"
+    },
+    {
+      "cue": "final-1",
+      "wordId": "final-1-W03",
+      "text": "there",
+      "before": [
+        92.90374149659864,
+        93.40074829931973
+      ],
+      "after": [
+        92.99875283446713,
+        93.40074829931973
+      ],
+      "evidence": "Measured lead recurrence; initial phonetic consensus; bounded mix MMS echo candidates"
+    },
+    {
+      "cue": "final-2",
+      "wordId": "final-2-W03",
+      "text": "there",
+      "before": [
+        96.67448979591836,
+        97.17149659863945
+      ],
+      "after": [
+        96.76950113378685,
+        97.17149659863945
+      ],
+      "evidence": "Measured lead recurrence; initial phonetic consensus; bounded mix MMS echo candidates"
+    },
+    {
+      "cue": "final-3",
+      "wordId": "final-3-W03",
+      "text": "there",
+      "before": [
+        100.48950113378685,
+        100.98650793650793
+      ],
+      "after": [
+        100.58448979591837,
+        100.98650793650793
+      ],
+      "evidence": "Measured lead recurrence; initial phonetic consensus; bounded mix MMS echo candidates"
+    },
+    {
+      "cue": "closing-two",
+      "wordId": "closing-two-W03",
+      "text": "true",
+      "before": [
+        126.26956916099773,
+        126.9934693877551
+      ],
+      "after": [
+        126.26956916099773,
+        126.7319954648526
+      ],
+      "evidence": "English CTC separator/W; corresponding W in waveform-correlated third refrain; listening pending"
+    },
+    {
+      "cue": "closing-two",
+      "wordId": "closing-two-W04",
+      "text": "with",
+      "before": [
+        127.09401360544217,
+        127.31521541950113
+      ],
+      "after": [
+        126.83299319727891,
+        127.31521541950113
+      ],
+      "evidence": "English CTC separator/W; corresponding W in waveform-correlated third refrain; listening pending"
+    }
+  ],
+  "sources": [
+    {
+      "path": "analysis/transcription-pass-a/mms-verse-review-mix.json",
+      "sha256": "1acb19c55c7088298e565f3dac5132cbe08787fec5cde80d463434013ac46fef"
+    },
+    {
+      "path": "analysis/transcription-pass-a/mms-verse-review-vocals.json",
+      "sha256": "dbbaf65369ed86f0192ca37b7b574e5108ee4a4f7c8e2793de89b05638a23ff7"
+    },
+    {
+      "path": "analysis/transcription-pass-a/wav2vec-verse-review.json",
+      "sha256": "f4e5bcf406003c79465f98e40b9a518dbc6f708101605afb526962c2180fee9f"
+    },
+    {
+      "path": "analysis/transcription-pass-a/english-ctc-comparison.json",
+      "sha256": "0f405e08782155c7b61175c414925f8f3f7ac9896926ae0d28335663ea3251e9"
+    },
+    {
+      "path": "analysis/transcription-pass-a/large-v3-turbo-mix-review-first-phrase.json",
+      "sha256": "499770aa2572dfc41d7c6553380db427c26e8c6aab8c3374c516a765a49edb20"
+    },
+    {
+      "path": "analysis/transcription-pass-a/large-v3-turbo-mix-review-first-phrase-slow.json",
+      "sha256": "4b8a7f2b6ce35458e84c560549a87637541bd8c22686d15922f16824acb7c84b"
+    },
+    {
+      "path": "analysis/transcription-pass-a/large-v3-turbo-vocals-review-first-phrase.json",
+      "sha256": "8d202aa920a858a31ba64781d7ecc549ec0239d91e9313d55a6af3a4cbec7742"
+    },
+    {
+      "path": "analysis/transcription-pass-a/large-v3-turbo-vocals-review-first-phrase-slow.json",
+      "sha256": "e833b8b78b168b1828f459843d63698dbdbafd29b6bb36704101d579eba6027a"
+    },
+    {
+      "path": "analysis/transcription-pass-a/mms-calibration-mix.json",
+      "sha256": "99a497e747d9f84c5d30a131f077db4af18bef5d0c6d724b9fe2553fd28a28ed"
+    },
+    {
+      "path": "analysis/transcription-pass-a/mms-calibration-vocals.json",
+      "sha256": "13091eab152f3553066d41ed29390ad4ed73e46594c3e17db0ee4b3b1a3065f2"
+    },
+    {
+      "path": "analysis/repetition-evidence.json",
+      "sha256": "3a1c5a94f228d0b401b5788da9dbb98e4794b30fc35f48d1bdb968241057b49c"
+    }
+  ],
+  "checks": {
+    "cues": 37,
+    "selectedWordEvents": 225,
+    "eventsVisibleAt60fps": 225,
+    "framesScanned": 8096,
+    "hiddenOrSimultaneousFocusFrames": 0,
+    "meaning": "Verifies event exposure and single-word display contracts, not perceptual timing accuracy."
+  },
+  "limits": "No direct listening attestation is claimed. Model probabilities are conditional acoustic evidence, not proof of text or exact perceptual boundaries. Sample-grid quantization does not imply sample-accurate vocal onset knowledge. Final listening approval remains required."
+}

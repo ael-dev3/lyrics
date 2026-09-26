@@ -1,0 +1,178 @@
+{
+  "text": " Can we go far away too?",
+  "segments": [
+    {
+      "start": 16.7,
+      "end": 20.24,
+      "text": " Can we go far away too?",
+      "seek": 0.0,
+      "tokens": [
+        1664,
+        321,
+        352,
+        1400,
+        1314,
+        886,
+        30
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.3986537218093872,
+      "compression_ratio": 0.7419354838709677,
+      "no_speech_prob": 3.363625697416772e-11,
+      "words": [
+        {
+          "word": " Can",
+          "start": 16.7,
+          "end": 17.34,
+          "probability": 0.1519247591495514,
+          "tokens": [
+            1664
+          ]
+        },
+        {
+          "word": " we",
+          "start": 17.34,
+          "end": 17.68,
+          "probability": 0.9876205325126648,
+          "tokens": [
+            321
+          ]
+        },
+        {
+          "word": " go",
+          "start": 17.68,
+          "end": 18.099999999999998,
+          "probability": 0.9944327473640442,
+          "tokens": [
+            352
+          ]
+        },
+        {
+          "word": " far",
+          "start": 18.099999999999998,
+          "end": 19.4,
+          "probability": 0.43465960025787354,
+          "tokens": [
+            1400
+          ]
+        },
+        {
+          "word": " away",
+          "start": 19.4,
+          "end": 19.939999999999998,
+          "probability": 0.9558398127555847,
+          "tokens": [
+            1314
+          ]
+        },
+        {
+          "word": " too?",
+          "start": 19.939999999999998,
+          "end": 20.24,
+          "probability": 0.24279528856277466,
+          "tokens": [
+            886,
+            30
+          ]
+        }
+      ]
+    }
+  ],
+  "language": "en",
+  "ori_dict": {
+    "text": " Can we go far away too?",
+    "segments": [
+      {
+        "id": 0,
+        "seek": 0.0,
+        "start": 0.0,
+        "end": 3.54,
+        "text": " Can we go far away too?",
+        "tokens": [
+          50365,
+          1664,
+          321,
+          352,
+          1400,
+          1314,
+          886,
+          30,
+          50545
+        ],
+        "temperature": 0.0,
+        "avg_logprob": -0.3986537218093872,
+        "compression_ratio": 0.7419354838709677,
+        "no_speech_prob": 3.363625697416772e-11,
+        "words": [
+          {
+            "word": " Can",
+            "start": 0.0,
+            "end": 0.64,
+            "probability": 0.1519247591495514,
+            "tokens": [
+              1664
+            ]
+          },
+          {
+            "word": " we",
+            "start": 0.64,
+            "end": 0.98,
+            "probability": 0.9876205325126648,
+            "tokens": [
+              321
+            ]
+          },
+          {
+            "word": " go",
+            "start": 0.98,
+            "end": 1.4,
+            "probability": 0.9944327473640442,
+            "tokens": [
+              352
+            ]
+          },
+          {
+            "word": " far",
+            "start": 1.4,
+            "end": 2.7,
+            "probability": 0.43465960025787354,
+            "tokens": [
+              1400
+            ]
+          },
+          {
+            "word": " away",
+            "start": 2.7,
+            "end": 3.24,
+            "probability": 0.9558398127555847,
+            "tokens": [
+              1314
+            ]
+          },
+          {
+            "word": " too?",
+            "start": 3.24,
+            "end": 3.54,
+            "probability": 0.24279528856277466,
+            "tokens": [
+              886,
+              30
+            ]
+          }
+        ]
+      }
+    ],
+    "language": "en",
+    "time_scale": null
+  },
+  "regroup_history": "",
+  "nonspeech_sections": [],
+  "analysisWindow": {
+    "id": "first-phrase",
+    "start": 16.7,
+    "end": 20.3,
+    "speed": 1
+  },
+  "sourceAudio": "mix",
+  "note": "Unprompted ASR on bounded audio; output timestamps manually transformed back to original source clock. ori_dict, if present, retains raw recognizer timing."
+}

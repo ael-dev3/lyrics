@@ -1,0 +1,129 @@
+{
+  "revision": "source-integrated-preview-v2",
+  "status": "visual spot checks and structural timing regressions complete; listening review remains pending",
+  "picture": "Original supplied moving video; generated-art prototype excluded",
+  "formats": [
+    "landscape",
+    "portrait"
+  ],
+  "fixedSpectrum": {
+    "landscape": {
+      "x": 250,
+      "y": 864,
+      "width": 1420,
+      "height": 146
+    },
+    "portrait": {
+      "x": 108,
+      "y": 1490,
+      "width": 864,
+      "height": 174
+    },
+    "behavior": "Same location, width and maximum height in every shot; measured band response continues through cuts"
+  },
+  "visibleChecks": [
+    {
+      "format": "landscape",
+      "seconds": [
+        42.8,
+        45,
+        52.35,
+        97.3
+      ],
+      "observation": "Original car/character/city imagery visible; lower spectrum visible, lyrics clear of its footprint."
+    },
+    {
+      "format": "portrait",
+      "seconds": [
+        42.8,
+        69.08,
+        74.05,
+        74.25
+      ],
+      "observation": "Original source crop visible; fixed lower spectrum and reflowed lyrics. The side-car crop was subsequently shifted left to keep the driver in frame."
+    },
+    {
+      "formats": [
+        "landscape",
+        "portrait"
+      ],
+      "observation": "Observed original picture and spectrum change during playback across source cuts. Spectrum remains at the same relative screen anchor."
+    },
+    {
+      "format": "landscape",
+      "seconds": [
+        18.5,
+        19.15
+      ],
+      "observation": "First-verse FAR remains neutral before corrected onset and is exclusively emphasized at19.15. Original picture and fixed spectrum are present."
+    },
+    {
+      "format": "landscape",
+      "seconds": [
+        134.931
+      ],
+      "observation": "Original authored dark ending and creator credit preserved; lyric and spectrum cleanly absent."
+    },
+    {
+      "format": "portrait",
+      "seconds": [
+        42.8
+      ],
+      "observation": "Final crop at source center0.34 keeps the driver visible and the lyric/spectrum gap clear."
+    }
+  ],
+  "technical": "13 passing project tests include a complete60fps scan of all225 events, fixed anchors, both-format text fit, exclusive focus and render-gate rejection. Original source and exact soundtrack identity verified.",
+  "actualAudioListening": "pending; analysis and UI inspection are not listening attestation",
+  "productionAuthorized": false,
+  "limits": [
+    "Selected visual spot checks are not frame-by-frame subject masking validation.",
+    "Window regions and dissolve handoffs are manually sampled, not dense motion tracking.",
+    "The primary spectrum is a screen-space graphic matched to source lighting; no claim of universal physical attachment.",
+    "Heavy delay/chopped vocals and selected held endings remain listening questions; automated timing passes do not establish perfect synchronization."
+  ],
+  "performanceSamples": {
+    "measurement": "Synchronous paintScene duration; excludes deferred GPU composition and physical presentation latency",
+    "before": [
+      {
+        "sourceTime": 26.883333,
+        "format": "landscape",
+        "paintMilliseconds": 40.5,
+        "state": "playing"
+      }
+    ],
+    "after": [
+      {
+        "sourceTime": 26.9,
+        "format": "landscape",
+        "paintMilliseconds": 8.1,
+        "state": "paused"
+      },
+      {
+        "sourceTime": 47.9,
+        "format": "landscape",
+        "paintMilliseconds": 9.1,
+        "state": "playing"
+      },
+      {
+        "sourceTime": 97.3,
+        "format": "landscape",
+        "paintMilliseconds": 8.1,
+        "state": "paused"
+      },
+      {
+        "sourceTime": 74.05,
+        "format": "portrait",
+        "paintMilliseconds": 9.8,
+        "state": "paused"
+      },
+      {
+        "sourceTime": 19.15,
+        "format": "landscape",
+        "paintMilliseconds": 7.4,
+        "state": "paused"
+      }
+    ],
+    "limit": "A few samples, not a frame-rate distribution or proof of uninterrupted60fps; code and screenshots independently checked for retained geometry."
+  },
+  "timingTimelineSha256": "b6f347b95e4f0eec872e0f0e1ac9e52b808f4603b0e7a7e3f1fc75aaebf16bc5"
+}

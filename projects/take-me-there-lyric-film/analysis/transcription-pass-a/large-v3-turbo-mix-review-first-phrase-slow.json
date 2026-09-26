@@ -1,0 +1,158 @@
+{
+  "text": " Can we go far away?",
+  "segments": [
+    {
+      "start": 16.7,
+      "end": 19.916,
+      "text": " Can we go far away?",
+      "seek": 0.0,
+      "tokens": [
+        1664,
+        321,
+        352,
+        1400,
+        1314,
+        30
+      ],
+      "temperature": 0.0,
+      "avg_logprob": -0.34047328101264107,
+      "compression_ratio": 0.7037037037037037,
+      "no_speech_prob": 2.643124434598132e-11,
+      "words": [
+        {
+          "word": " Can",
+          "start": 16.7,
+          "end": 17.372,
+          "probability": 0.1637185513973236,
+          "tokens": [
+            1664
+          ]
+        },
+        {
+          "word": " we",
+          "start": 17.372,
+          "end": 17.708,
+          "probability": 0.98736971616745,
+          "tokens": [
+            321
+          ]
+        },
+        {
+          "word": " go",
+          "start": 17.708,
+          "end": 18.108,
+          "probability": 0.9944557547569275,
+          "tokens": [
+            352
+          ]
+        },
+        {
+          "word": " far",
+          "start": 18.108,
+          "end": 19.276,
+          "probability": 0.49028337001800537,
+          "tokens": [
+            1400
+          ]
+        },
+        {
+          "word": " away?",
+          "start": 19.276,
+          "end": 19.916,
+          "probability": 0.9516968131065369,
+          "tokens": [
+            1314,
+            30
+          ]
+        }
+      ]
+    }
+  ],
+  "language": "en",
+  "ori_dict": {
+    "text": " Can we go far away?",
+    "segments": [
+      {
+        "id": 0,
+        "seek": 0.0,
+        "start": 0.0,
+        "end": 4.02,
+        "text": " Can we go far away?",
+        "tokens": [
+          50365,
+          1664,
+          321,
+          352,
+          1400,
+          1314,
+          30,
+          50589
+        ],
+        "temperature": 0.0,
+        "avg_logprob": -0.34047328101264107,
+        "compression_ratio": 0.7037037037037037,
+        "no_speech_prob": 2.643124434598132e-11,
+        "words": [
+          {
+            "word": " Can",
+            "start": 0.0,
+            "end": 0.84,
+            "probability": 0.1637185513973236,
+            "tokens": [
+              1664
+            ]
+          },
+          {
+            "word": " we",
+            "start": 0.84,
+            "end": 1.26,
+            "probability": 0.98736971616745,
+            "tokens": [
+              321
+            ]
+          },
+          {
+            "word": " go",
+            "start": 1.26,
+            "end": 1.76,
+            "probability": 0.9944557547569275,
+            "tokens": [
+              352
+            ]
+          },
+          {
+            "word": " far",
+            "start": 1.76,
+            "end": 3.22,
+            "probability": 0.49028337001800537,
+            "tokens": [
+              1400
+            ]
+          },
+          {
+            "word": " away?",
+            "start": 3.22,
+            "end": 4.02,
+            "probability": 0.9516968131065369,
+            "tokens": [
+              1314,
+              30
+            ]
+          }
+        ]
+      }
+    ],
+    "language": "en",
+    "time_scale": null
+  },
+  "regroup_history": "",
+  "nonspeech_sections": [],
+  "analysisWindow": {
+    "id": "first-phrase-slow",
+    "start": 16.7,
+    "end": 20.3,
+    "speed": 0.8
+  },
+  "sourceAudio": "mix",
+  "note": "Unprompted ASR on bounded audio; output timestamps manually transformed back to original source clock. ori_dict, if present, retains raw recognizer timing."
+}
