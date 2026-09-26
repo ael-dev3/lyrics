@@ -83,6 +83,8 @@ Production entry points must reject missing, incomplete or stale required review
 
 For a new renderer or scene change, compare the approved browser and renderer at the same source times in each format. Include clipped text, glow, composed shadows, blur, spectrum peaks, source crop boundaries and the clean ending. Record the actual resolved font and environment; fallback fonts, ignored SVG attributes or different blur/blend semantics can alter the result while structural checks still pass. Validate short encoded proofs before expensive full-length work.
 
+When a browser scene is also drawn by a native canvas, check variable-font axes explicitly: registering the correct font file can still select a lighter default weight than CSS. Compare saved frames at exact source timestamps, including a lyric-heavy frame in each format, and correct the renderer's font selection without changing the approved source input. For a source whose audio outlasts its picture by a few frames, hold the last decoded picture through the original audio tail and verify the final frame count, packet-level audio identity and encoded ending. Set and probe playback color and square-pixel metadata on the finished MP4; encoder flags alone do not prove that those tags survived.
+
 Check final files at three levels:
 
 1. **Container and soundtrack:** full decoding, dimensions/aspect, duration, frame count/cadence and timestamps, color metadata, audio packets/priming or documented intentional processing, decoded PCM and checksums.

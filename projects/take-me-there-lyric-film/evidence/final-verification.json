@@ -1,0 +1,108 @@
+{
+  "schema": "lyric-film/final-verification/v1",
+  "song": "CPznmfSbAiE",
+  "revision": "source-integrated-preview-v2",
+  "status": "passed",
+  "verifiedAt": "2026-09-26T10:12:44.208Z",
+  "source": {
+    "file": "source.mp4",
+    "sha256": "954ce98a308937e81a167ab740381cd46195abbad3279f3bc57319fa48bbd73c",
+    "aacPacketSha256": "cad0e9b829c5bc0b6dcf426ff2e8b8f5aab6938b14f09fb0d12d4c984fc96726",
+    "decodedPcmS32leSha256": "17dcb6b92c81f4ae830d7d9c38e40d8932e0d549ae5e70488468cdab0c718fc0",
+    "videoFrameCount": 8093,
+    "finalFramePolicy": "Source frame held through the original audio tail"
+  },
+  "formats": {
+    "landscape": {
+      "file": "TAKE-ME-THERE-landscape-1920x1080-60fps-final.mp4",
+      "sha256": "df885b3d752a93d3a54b8e9763b1a7a3163bc1b01c84bb155590b455eb75f3e0",
+      "metadata": {
+        "width": 1920,
+        "height": 1080,
+        "framesPerSecond": 60,
+        "frameCount": 8096,
+        "videoDurationSeconds": 134.933,
+        "audioDurationSeconds": 134.931156,
+        "videoCodec": "h264",
+        "audioCodec": "aac",
+        "pixelFormat": "yuv420p",
+        "colorPrimaries": "bt709",
+        "colorTransfer": "bt709",
+        "colorSpace": "bt709"
+      },
+      "maximumTimestampErrorSeconds": 3.333333467026023e-7,
+      "packetSha256": "cad0e9b829c5bc0b6dcf426ff2e8b8f5aab6938b14f09fb0d12d4c984fc96726",
+      "pcmSha256": "17dcb6b92c81f4ae830d7d9c38e40d8932e0d549ae5e70488468cdab0c718fc0",
+      "strictFullDecode": true,
+      "blackPicture": {
+        "sourceIntervals": [
+          {
+            "start": 134.8,
+            "end": 134.866667
+          }
+        ],
+        "renderedIntervals": [
+          {
+            "start": 134.8,
+            "end": 134.916667
+          }
+        ],
+        "unexpectedIntervals": [],
+        "method": "Strict full audio/video decode plus FFmpeg blackdetect at zero minimum duration; only source-equivalent dark intervals and the source ending are accepted."
+      },
+      "sourcePicture": {
+        "sampleRateHz": 1,
+        "testableSamples": 135,
+        "medianCorrelation": 0.9982,
+        "lowSimilaritySamples": [],
+        "method": "Decoded one-second grayscale samples compared with native full-frame source (landscape) or the shot-map 9:16 crop (portrait). Sampled picture pixels exclude the lyric reading box with an 80-pixel gutter and the fixed lower spectrum. Pearson correlation checks source continuity, not overlay parity."
+      }
+    },
+    "portrait": {
+      "file": "TAKE-ME-THERE-portrait-1080x1920-60fps-final.mp4",
+      "sha256": "fc78c19a447d9bc4a00e4b109165dbc3ab506544e8bf945d54cc2bdf50fbe950",
+      "metadata": {
+        "width": 1080,
+        "height": 1920,
+        "framesPerSecond": 60,
+        "frameCount": 8096,
+        "videoDurationSeconds": 134.933333,
+        "audioDurationSeconds": 134.931156,
+        "videoCodec": "h264",
+        "audioCodec": "aac",
+        "pixelFormat": "yuv420p",
+        "colorPrimaries": "bt709",
+        "colorTransfer": "bt709",
+        "colorSpace": "bt709"
+      },
+      "maximumTimestampErrorSeconds": 3.333333467026023e-7,
+      "packetSha256": "cad0e9b829c5bc0b6dcf426ff2e8b8f5aab6938b14f09fb0d12d4c984fc96726",
+      "pcmSha256": "17dcb6b92c81f4ae830d7d9c38e40d8932e0d549ae5e70488468cdab0c718fc0",
+      "strictFullDecode": true,
+      "blackPicture": {
+        "sourceIntervals": [
+          {
+            "start": 134.8,
+            "end": 134.866667
+          }
+        ],
+        "renderedIntervals": [
+          {
+            "start": 134.8,
+            "end": 134.916667
+          }
+        ],
+        "unexpectedIntervals": [],
+        "method": "Strict full audio/video decode plus FFmpeg blackdetect at zero minimum duration; only source-equivalent dark intervals and the source ending are accepted."
+      },
+      "sourcePicture": {
+        "sampleRateHz": 1,
+        "testableSamples": 135,
+        "medianCorrelation": 0.9949,
+        "lowSimilaritySamples": [],
+        "method": "Decoded one-second grayscale samples compared with native full-frame source (landscape) or the shot-map 9:16 crop (portrait). Sampled picture pixels exclude the lyric reading box with an 80-pixel gutter and the fixed lower spectrum. Pearson correlation checks source continuity, not overlay parity."
+      }
+    }
+  },
+  "limits": "Encoded-frame checks do not establish lyric transcription, perceptual timing, visual artistry or complete overlay pixel parity with the browser preview; inspect the final films with sound in both formats."
+}

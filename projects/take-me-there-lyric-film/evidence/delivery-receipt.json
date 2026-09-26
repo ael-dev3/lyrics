@@ -1,0 +1,60 @@
+{
+  "schema": "lyric-film/local-delivery/v1",
+  "song": "CPznmfSbAiE",
+  "revision": "source-integrated-preview-v2",
+  "status": "verified local delivery; no platform post",
+  "folderName": "excape. — TAKE ME THERE — Upload Kit",
+  "verification": {
+    "file": "final-verification.json",
+    "sha256": "9519fcdbd34a0941beb4e9f85f67e119bd5c6204b8b5e23edf6312406f4a73be",
+    "status": "passed",
+    "landscapeFocus": {
+      "file": "encoded-focus-landscape.json",
+      "sha256": "796c06d58e16fa4a525d8bb81f2217199b7561e1b76b5e37526b9f63c73159b9",
+      "status": "passed",
+      "selectedWordEvents": 225,
+      "ambiguousEvents": 0,
+      "mismatchedEvents": 0
+    },
+    "portraitFocus": {
+      "file": "encoded-focus-portrait.json",
+      "sha256": "9c54dbb33e70e82155ebc201653f264c5d7cb94b033f53d2ee4613620421f53e",
+      "status": "passed",
+      "selectedWordEvents": 225,
+      "ambiguousEvents": 0,
+      "mismatchedEvents": 0
+    },
+    "negativeControls": {
+      "landscapeReportSha256": "b90ee224c133cdb3e04a012783b5b026b0d82b544238eb0df110fd9924d824a6",
+      "portraitReportSha256": "db9d8cf3756ffa5433c34fc331a4625d0f730b93654dcdbd9608dc0a9d37b3e1",
+      "deliberatelyWrongFocusDetectedPerFormat": 219,
+      "singleSlotCasesWithoutAlternative": 6
+    }
+  },
+  "films": {
+    "youtubeLandscape": {
+      "packagePath": "YouTube/excape-Take-Me-There-YouTube-16x9.mp4",
+      "bytes": 211006444,
+      "sha256": "df885b3d752a93d3a54b8e9763b1a7a3163bc1b01c84bb155590b455eb75f3e0",
+      "size": "1920x1080",
+      "framesPerSecond": 60,
+      "frameCount": 8096
+    },
+    "tiktokPortrait": {
+      "packagePath": "TikTok/excape-Take-Me-There-TikTok-9x16.mp4",
+      "bytes": 175510538,
+      "sha256": "fc78c19a447d9bc4a00e4b109165dbc3ab506544e8bf945d54cc2bdf50fbe950",
+      "size": "1080x1920",
+      "framesPerSecond": 60,
+      "frameCount": 8096
+    }
+  },
+  "package": {
+    "manifestSha256": "d82aa78c912735ad0494d45a9a00713e5e1e0c76c6886241d41ea87dded2073e",
+    "checksumsSha256": "96aec34f333b68c2a5a26f13c6c9d97f9ed0f05a3f1c4578cd5223ac4fe86751",
+    "fileCount": 13,
+    "sha256Check": "all 12 listed files passed",
+    "copiedVideoProbe": "both files report BT.709, 60 fps, 8096 frames and intended dimensions"
+  },
+  "scope": "The two files are local posting masters; Git tracks code, artwork, copy and verification evidence, not the large media. Selected-frame focus checks do not independently prove sung phoneme timing."
+}

@@ -1,7 +1,7 @@
 {
   "version": 1,
   "reviewedOn": "2026-09-26",
-  "scope": "Featured song sections in the main README and their project README entry points; TAKE ME THERE is a preview addition.",
+  "scope": "Featured song sections in the main README and their project README entry points; TAKE ME THERE now uses a decoded final-film frame.",
   "newExtraction": {
     "fps": [
       30,
@@ -12,23 +12,26 @@
     "sourceIdentity": "New source files matched the recorded delivery SHA-256 before selecting their frames.",
     "scope": "Completed-film screenshots only; preview entries specify their diagnostic capture method individually."
   },
-  "review": "Every featured song has an associated representative image. The Mitski, Sun and Rainline editions use exact decoded final frames; historical editions retain their recorded status and limitations. Rainline's scoped delivery acceptance does not certify full acoustic synchronization review.",
+  "review": "Every featured song has an associated representative image. TAKE ME THERE, Mitski, Sun and Rainline use exact decoded final frames; historical editions retain their recorded status and limitations. Rainline's scoped delivery acceptance does not certify full acoustic synchronization review.",
   "screenshots": [
     {
       "song": "TAKE ME THERE",
-      "image": "projects/take-me-there-lyric-film/evidence/preview-landscape.png",
+      "image": "projects/take-me-there-lyric-film/evidence/final-landscape-97-30.png",
       "project": "projects/take-me-there-lyric-film/README.md",
       "timestampSeconds": 97.3,
-      "edition": "source-integrated-preview-v2; fixed spectrum preview",
+      "frame": 5838,
+      "edition": "Verified source-integrated-preview-v2 landscape production film, 1920x1080 at 60 fps",
       "selection": "Complete original city/car shot, visible individual THERE focus, fixed luminous spectrum and secondary source-light response.",
-      "method": "PNG exported by the complete browser canvas using its decoded original source video frame and current scene code; no production render.",
+      "method": "Exact zero-indexed frame 5838 decoded from the checksum-verified 60 fps final landscape MP4 with FFmpeg select; full original composition with no crop, recolor, replacement text or added imagery. Independently re-extracted byte-identically and inspected at native and README size.",
       "width": 1920,
       "height": 1080,
-      "bytes": 3071722,
-      "sha256": "90510d4b02ede0b72b25b6c4aa85027c47ed85ba9fffd6e9bd160beb7d9a7668",
+      "bytes": 1941801,
+      "sha256": "053e344ca203dea758a8b7aacc14b5bbfa8479b79d59fb1da3923818bcea9c95",
       "encoding": "PNG",
-      "sourceVideoSha256": "954ce98a308937e81a167ab740381cd46195abbad3279f3bc57319fa48bbd73c",
-      "reviewLimit": "Working transcription and word timing remain provisional. One still does not establish listening review or render approval."
+      "sourceFile": "TAKE-ME-THERE-landscape-1920x1080-60fps-final.mp4",
+      "sourceVideoSha256": "df885b3d752a93d3a54b8e9763b1a7a3163bc1b01c84bb155590b455eb75f3e0",
+      "originalMediaSha256": "954ce98a308937e81a167ab740381cd46195abbad3279f3bc57319fa48bbd73c",
+      "reviewLimit": "One decoded frame does not establish full-song audiovisual quality or exact sung-word boundaries; owner review and final-file checks are recorded separately."
     },
     {
       "song": "Rainline",
