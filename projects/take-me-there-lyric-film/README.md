@@ -1,12 +1,21 @@
 # excape. — TAKE ME THERE
 
-**Status: full-length source-video preview, with provisional lyric text and word timing.** Revision `source-integrated-preview-v2` contains 37 cues and 225 individually identified word events across the 134.931-second recording. Genuine listening review and current render authorization remain pending. No final film has been rendered.
+**Status: approved preview, verified 16:9 and 9:16 production exports, and local upload kit.** Revision `source-integrated-preview-v2` contains 37 cues and 225 individually identified word events across the 134.931-second recording. The [current review](evidence/sync-review.json) and [authorization](evidence/render-authorization.json) record the project owner's acceptance of the complete preview in both formats. [Production method and verification](PRODUCTION-NOTES.md) and the [local delivery receipt](evidence/delivery-receipt.json) document the final files separately from earlier preview evidence.
 
 Source: [TAKE ME THERE](https://www.youtube.com/watch?v=CPznmfSbAiE), uploaded by excape.
 
-![Source-integrated preview at 97.300 seconds](evidence/preview-landscape.png)
+![Encoded landscape film at 97.300 seconds: original night city and car, highlighted lyric and fixed spectrum](evidence/final-landscape-97-30.png)
 
-*Canvas still saved from the browser at 97.300 s. The original video supplies the city and car; the preview adds word focus, the fixed lower spectrum and measured response in existing lights. This is review evidence, not a final render or listening approval. [Portrait example](evidence/preview-portrait.png).*
+*Frame saved from the landscape MP4 at 97.300 s. The original video supplies the city and car; the scene adds word focus, the fixed lower spectrum and measured response in existing lights. [Portrait film frame](evidence/final-portrait-74-05.png). The earlier [landscape](evidence/preview-landscape.png) and [portrait](evidence/preview-portrait.png) browser stills remain as preview comparison evidence.*
+
+## Finished delivery
+
+| Format | Local posting file | Picture | SHA-256 |
+| --- | --- | --- | --- |
+| YouTube | `YouTube/excape-Take-Me-There-YouTube-16x9.mp4` | 1920×1080, 60 fps, 8,096 frames | `df885b3d752a93d3a54b8e9763b1a7a3163bc1b01c84bb155590b455eb75f3e0` |
+| TikTok | `TikTok/excape-Take-Me-There-TikTok-9x16.mp4` | 1080×1920, 60 fps, 8,096 frames | `fc78c19a447d9bc4a00e4b109165dbc3ab506544e8bf945d54cc2bdf50fbe950` |
+
+These films, two covers, platform copy and optional cue-level English captions are in a new local folder named `excape. — TAKE ME THERE — Upload Kit`. Git stores the [posting assets](publishing/README.md), source method and evidence; it does not store the large films or original source. The package [manifest and checksums](evidence/delivery-receipt.json) were checked after copying. [Final-file verification](evidence/final-verification.json) passed strict full decode, frame timestamps, audio packet and PCM identity, source-picture continuity, expected black intervals and color metadata. Encoded-frame checks sampled all 225 word events in [landscape](evidence/encoded-focus-landscape.json) and [portrait](evidence/encoded-focus-portrait.json) with no detected focus mismatch or ambiguity. Those selected frames do not establish every boundary frame or acoustic truth; the owner's scoped listening review is the separate evidence for approval.
 
 ## Intended picture and sound
 
@@ -57,7 +66,7 @@ The attached recording and supplied transcript establish the analysis inputs. In
 - Ordinary phrases highlight separate words. Repeated hook echoes relight a stable word slot while retaining separate event IDs and intervening rests.
 - Reading visibility has a short cue lead/release; it does not extend the active-word interval.
 - The feature-driven visualizer does not set word times. The map is not made by evenly dividing phrase duration.
-- Draft text and SRT files remain provisional exports, not verified subtitles.
+- The optional cue-level SRT and VTT are draft text exports; they were not separately certified as accessibility captions.
 
 The event count includes uncertain echo candidates and does not prove performed coverage. The decision log retains omitted or conflicting candidates rather than silently presenting a forced-alignment result as certainty.
 
@@ -65,15 +74,17 @@ A previously omitted three-word lead at approximately 44.288–45.870 seconds ha
 
 The subsequent phonetic audit corrected an early FAR highlight near19 seconds, linked article/ROOM boundaries, two ANYWHERE onsets, short pronouns and WITH transitions, and the calibrated THERE onset in measured repeated leads. It compares MMS with a separate English CTC model and explicitly retracts earlier Whisper-only onset assumptions. The timing tests scan all225 events on the source60fps grid; this proves focus visibility and exclusivity, not acoustic perfection.
 
-### Outstanding listening review
+### Review scope and remaining model uncertainty
+
+The project owner attested review of the full recording at normal speed, uncertain words and held endings at reduced speed, and both 16:9 and 9:16 layouts for this exact preview revision. That review supports the approved export. The following points remain *model uncertainty and future-revision priorities*, not a claim that an agent independently heard and resolved every phoneme:
 
 1. Resolve **“Leave” versus “Live”** around 78.18 seconds. The supplied spelling is retained; low-confidence recognizer agreement does not settle the sung vowel.
 2. Check the opening phrase's inner word boundaries, held endings and each hook's echo count. Local alignment can fit different repetition hypotheses into the same window.
 3. Review the “anywhere” substitution, chopped pairs, late echoes and uncertain lead around 117.65–121.20 seconds.
 4. Check all three closing phrases, especially individual word releases. Targeted recognition and recurrence corroborate their text, not a completed listening attestation.
-5. Review every cue against the original mixed recording at normal speed, uncertain words at reduced speed, and both layouts. Check the moving picture after fresh load, seek, restart, layout change and recovery.
+5. If the text, timing or picture changes later, review every affected cue against the original mixed recording and check the moving picture after fresh load, seek, restart, layout change and recovery.
 
-Structural tests, fit checks and screenshots establish different facts from listening and visual acceptance. No complete listening-review record is claimed here.
+Structural tests, fit checks and screenshots establish different facts from listening and visual acceptance. The owner's scoped review is recorded without inventing a per-cue observation log.
 
 ## Reproduction and edit map
 
@@ -88,7 +99,11 @@ Structural tests, fit checks and screenshots establish different facts from list
 | Recompute musical response | `npm run features` | Reads original MP4; writes feature data and audit |
 | Build browser bundle | `npm run build` | Generated `review/client.js` |
 | Validate project | `npm run check` | Type checking, model/gate tests and project checks; no listening approval |
-| Inspect production gate | `npm run render:production` | Expected to reject missing review/approval; no final encoder is implemented |
+| Diagnostic still from the gated renderer | `npm run render:still -- --format landscape --at 19.15` | Exact source frame in ignored `renders/diagnostic/` |
+| Render an approved format | `npm run render:production -- --format landscape` or `portrait` | Gated 60 fps MP4 in ignored `renders/`; refuses missing or stale approval |
+| Verify completed MP4s | `node scripts/verify-final.ts --landscape PATH --portrait PATH` | Strict file, audio and source-picture report |
+| Audit encoded word focus | `node scripts/verify-word-focus.ts --input PATH --format landscape` or `portrait` | Samples every timed event from the decoded MP4 |
+| Assemble an upload kit | `node scripts/package-delivery.ts --dest ABSOLUTE_NEW_FOLDER` | Checks verified master hashes before copying both films, covers, copy and captions |
 
 Musical response uses RMS level, positive spectral flux and 24 logarithmic bands at 60 Hz. The full-recording data use source-specific display calibration, with upper saturation near 0.51% per series. The centered analysis window spans about 92.88 ms; these are light-response features, not syllable-onset evidence. See [the feature audit](evidence/audio-features-audit.json).
 
@@ -98,7 +113,7 @@ Keep the primary spectrum's anchor independent of shot-specific lyric placement.
 
 Read this file, the [visual brief](VISUAL-BRIEF.md), [source integration plan](evidence/source-integration-plan.md), timeline review fields and timing priorities. Preserve the commissioned source picture unless a later request explicitly changes the project to original artwork. Techniques from Rainline or another authored scene do not themselves authorize replacing footage.
 
-Resolve the listening questions before changing review status. Check the exact revised complete preview, then obtain current render authorization. `scripts/render-gate.ts` checks cue coverage, both formats, normal/reduced listening, unresolved defects, revision identity and input hashes. Changed code, media, text or timing makes earlier evidence stale. Even a passing gate does not encode the song: implement and prove renderer parity before production.
+The owner reviewed this exact preview and authorized the current production. `scripts/render-gate.ts` checks cue coverage, both formats, normal/reduced listening, unresolved defects, revision identity and input hashes. Changed code, media, text or timing makes this evidence stale. The production renderer calls that gate before its first frame; it was compared with the approved browser scene at three source times in both formats. See [production notes](PRODUCTION-NOTES.md) for the source-clocked export and final checks.
 
 ## Source identity
 

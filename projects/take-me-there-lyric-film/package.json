@@ -9,7 +9,8 @@
     "typecheck": "tsc --noEmit",
     "check": "npm run typecheck && node --test tests/*.test.ts && node scripts/check.ts",
     "features": "node scripts/analyze-audio.ts",
-    "render:production": "node scripts/render-gate.ts"
+    "render:production": "node scripts/render-production.ts --production",
+    "render:still": "node scripts/render-production.ts --still"
   },
   "devDependencies": {
     "@types/node": "26.4.0",

@@ -1,0 +1,51 @@
+{
+  "schema": "lyric-film/render-parity/v1",
+  "song": "CPznmfSbAiE",
+  "revision": "source-integrated-preview-v2",
+  "rendererSha256": "f9ad4415943d6919403b6cb8a76e35a0713d971baaec7d6622d9f6b73e0d67cc",
+  "method": "Decode the approved source frame by ordinal with FFmpeg, paint the unchanged scene.ts in @napi-rs/canvas at frame/60, and compare RGB pixels against a saved native-browser Download still at the same source timestamp. Mean absolute difference is the average of absolute 8-bit RGB channel differences; values are not perceptual scores.",
+  "fontParity": "The approved SpaceGrotesk.ttf is variable. Native Skia registers its default 300-weight face, so the renderer sets Canvas2D fontVariationSettings to wght 700 to match the browser's CSS 700. On the portrait 74.05s lyric region, mean per-channel error fell from 17.567 to 4.377 after this correction.",
+  "comparisons": [
+    {
+      "format": "landscape",
+      "sourceTimeSeconds": 19.15,
+      "sourceFrame": 1149,
+      "nativeStill": "renders/diagnostic/TAKE-ME-THERE-landscape-1149.png",
+      "nativeStillSha256": "20290af0b771b624a917457ee4a499c957b004fe6b94aa06b9bbe4cf0e15de81",
+      "browserStill": "evidence/timing-far-19-15.png",
+      "browserStillSha256": "3a6871ed3512a60934ae881aefe5a51bb344d5ea4fc064c42006b49d1ede5ee8",
+      "overallMeanAbsoluteRgb": [1.0582, 1.27427, 1.47589],
+      "lyricRegion": [400, 630, 1500, 830],
+      "lyricMeanAbsoluteRgb": [2.86347, 3.07293, 3.36486]
+    },
+    {
+      "format": "landscape",
+      "sourceTimeSeconds": 97.3,
+      "sourceFrame": 5838,
+      "nativeStill": "renders/diagnostic/TAKE-ME-THERE-landscape-5838.png",
+      "nativeStillSha256": "b7eee73da9e86eb2de95bd3e103a5d2b7e09295a4a2fd2a18305644e7dac7a7d",
+      "browserStill": "evidence/preview-landscape.png",
+      "browserStillSha256": "90510d4b02ede0b72b25b6c4aa85027c47ed85ba9fffd6e9bd160beb7d9a7668",
+      "overallMeanAbsoluteRgb": [1.55223, 2.03013, 2.04134],
+      "lyricRegion": [250, 620, 1670, 850],
+      "lyricMeanAbsoluteRgb": [0.84246, 0.55239, 0.9788]
+    },
+    {
+      "format": "portrait",
+      "sourceTimeSeconds": 74.05,
+      "sourceFrame": 4443,
+      "nativeStill": "renders/diagnostic/TAKE-ME-THERE-portrait-4443.png",
+      "nativeStillSha256": "ee7ae6a309db2aeb1f77561e20078a406a9cb28072603ef2fe64634826245ab7",
+      "browserStill": "evidence/preview-portrait.png",
+      "browserStillSha256": "a2ace17e70bf8c6cb09c9a4fface65582c8cb0085f57a4ce7feec056a7281c18",
+      "overallMeanAbsoluteRgb": [1.81748, 1.36811, 1.74587],
+      "lyricRegion": [70, 235, 1010, 505],
+      "lyricMeanAbsoluteRgb": [4.50599, 4.16432, 4.46171]
+    }
+  ],
+  "limits": [
+    "These three stills establish sampled visual parity, not every-frame or acoustic synchronization accuracy.",
+    "Browser video decoding, native canvas rasterization, PNG writing, and color management can differ slightly even when scene geometry and source frame agree.",
+    "The original source media and native diagnostic stills are local inputs outside the public repository; hashes and renderer commands permit recreation when the locked source is available."
+  ]
+}
