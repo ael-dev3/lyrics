@@ -1,0 +1,1733 @@
+{
+  "status": "provisional; not production approved",
+  "method": "Source observations and supplied text; no uniformly divided phrase timings",
+  "decisions": [
+    {
+      "correction": "delay calibrated lead THERE focus by95ms",
+      "previousInitialOnset": 1.43,
+      "selectedInitialOnset": 1.525,
+      "evidence": {
+        "mmsMixOnset": 1.5044303797468355,
+        "mmsStemOnset": 1.5246835443037976,
+        "englishStemTH": [
+          1.545,
+          1.565
+        ],
+        "englishStemProbabilities": [
+          0.619,
+          0.657
+        ]
+      },
+      "sources": [
+        "analysis/transcription-pass-a/mms-calibration-mix.json",
+        "analysis/transcription-pass-a/mms-calibration-vocals.json",
+        "analysis/transcription-pass-a/english-ctc-comparison.json"
+      ],
+      "scope": "Measured repeated lead templates only; recovered45-second cue keeps its local MMS onset. Existing lead release and intervening gap retained.",
+      "status": "independent phonetic candidate; repeat transfer and exact releases pending listening"
+    },
+    {
+      "hook": "intro-3",
+      "omittedUnresolvedCandidate": {
+        "word": "there",
+        "start": 9.111591623036649,
+        "end": 9.55262827225131
+      },
+      "remainingDuration": 0.028878272251310122,
+      "reason": "Overlap with calibrated event leaves an unsupported sub-80ms fragment; do not manufacture a new echo onset"
+    },
+    {
+      "hook": "middle-2",
+      "omittedUnresolvedCandidate": {
+        "word": "there",
+        "start": 35.79578947368421,
+        "end": 36.11747368421052
+      },
+      "remainingDuration": -0.08527631578947847,
+      "reason": "Overlap with calibrated event leaves an unsupported sub-80ms fragment; do not manufacture a new echo onset"
+    },
+    {
+      "clause": "middle-extra-lead",
+      "correction": "restore omitted intermediate lead around 45 seconds",
+      "sourceGap": [
+        43.648157560355784,
+        46.2185
+      ],
+      "leadWaveformStart": 44.28775,
+      "leadWaveformCorrelation": 0.230209,
+      "takeBodyMatch": [
+        44.3225,
+        0.415754
+      ],
+      "meNucleusMatch": [
+        44.99525,
+        0.739326
+      ],
+      "thereBodyMatch": [
+        45.33175,
+        0.393606
+      ],
+      "sourceASR": "analysis/transcription-pass-a/large-v3-turbo-mix-gap-forty-five.json",
+      "sourceCTC": [
+        "analysis/transcription-pass-a/mms-gap-candidates-mix.json",
+        "analysis/transcription-pass-a/mms-gap-candidates-vocals.json"
+      ],
+      "status": "independently supported vocal sequence; supplied refrain word retained; exact boundaries pending listening"
+    },
+    {
+      "hook": "middle-6",
+      "omittedUnresolvedCandidate": {
+        "word": "there",
+        "start": 51.00424083769634,
+        "end": 51.345575916230366
+      },
+      "remainingDuration": -0.09017408376963232,
+      "reason": "Overlap with calibrated event leaves an unsupported sub-80ms fragment; do not manufacture a new echo onset"
+    },
+    {
+      "hook": "middle-7",
+      "omittedUnresolvedCandidate": {
+        "word": "there",
+        "start": 54.85822513089005,
+        "end": 55.1590890052356
+      },
+      "remainingDuration": -0.09091099476439979,
+      "reason": "Overlap with calibrated event leaves an unsupported sub-80ms fragment; do not manufacture a new echo onset"
+    },
+    {
+      "hook": "middle-8",
+      "omittedUnresolvedCandidate": {
+        "word": "there",
+        "start": 58.66935042735042,
+        "end": 59.05048717948718
+      },
+      "remainingDuration": -0.01051282051282243,
+      "reason": "Overlap with calibrated event leaves an unsupported sub-80ms fragment; do not manufacture a new echo onset"
+    },
+    {
+      "hook": "final-2",
+      "omittedUnresolvedCandidate": {
+        "word": "there",
+        "start": 96.76131937172775,
+        "end": 97.08257591623037
+      },
+      "remainingDuration": -0.08892408376962635,
+      "reason": "Overlap with calibrated event leaves an unsupported sub-80ms fragment; do not manufacture a new echo onset"
+    },
+    {
+      "hook": "final-3",
+      "omittedUnresolvedCandidate": {
+        "word": "there",
+        "start": 100.57459162303664,
+        "end": 100.89534554973821
+      },
+      "remainingDuration": -0.09115445026179714,
+      "reason": "Overlap with calibrated event leaves an unsupported sub-80ms fragment; do not manufacture a new echo onset"
+    },
+    {
+      "clause": "verse-one-a",
+      "word": "Can",
+      "stem": [
+        17.181458966565348,
+        17.422188449848022
+      ],
+      "mix": [
+        17.181458966565348,
+        17.3419452887538
+      ],
+      "selected": [
+        17.181458966565348,
+        17.422188449848022
+      ],
+      "status": "pending listening"
+    },
+    {
+      "clause": "verse-one-a",
+      "word": "we",
+      "stem": [
+        17.462310030395138,
+        17.54255319148936
+      ],
+      "mix": [
+        17.422188449848022,
+        17.56261398176292
+      ],
+      "selected": [
+        17.422188449848022,
+        17.56261398176292
+      ],
+      "status": "pending listening"
+    },
+    {
+      "clause": "verse-one-a",
+      "word": "go",
+      "stem": [
+        17.682978723404254,
+        17.823404255319147
+      ],
+      "mix": [
+        17.682978723404254,
+        17.803343465045593
+      ],
+      "selected": [
+        17.682978723404254,
+        17.823404255319147
+      ],
+      "status": "pending listening"
+    },
+    {
+      "clause": "verse-one-a",
+      "word": "far",
+      "stem": [
+        19.067173252279634,
+        19.388145896656532
+      ],
+      "mix": [
+        19.067173252279634,
+        19.388145896656532
+      ],
+      "selected": [
+        19.067173252279634,
+        19.388145896656532
+      ],
+      "status": "pending listening"
+    },
+    {
+      "clause": "verse-one-a",
+      "word": "away",
+      "stem": [
+        19.46838905775076,
+        19.849544072948326
+      ],
+      "mix": [
+        19.4483282674772,
+        19.849544072948326
+      ],
+      "selected": [
+        19.4483282674772,
+        19.849544072948326
+      ],
+      "status": "pending listening"
+    },
+    {
+      "clause": "verse-one-a",
+      "word": "to",
+      "stem": [
+        20.070212765957447,
+        20.230699088145897
+      ],
+      "mix": [
+        20.070212765957447,
+        20.21063829787234
+      ],
+      "selected": [
+        20.070212765957447,
+        20.230699088145897
+      ],
+      "status": "pending listening"
+    },
+    {
+      "clause": "verse-one-a",
+      "word": "a",
+      "stem": [
+        20.411246200607902,
+        20.43130699088146
+      ],
+      "mix": [
+        20.391185410334344,
+        20.411246200607902
+      ],
+      "selected": [
+        20.391185410334344,
+        20.43130699088146
+      ],
+      "status": "pending listening"
+    },
+    {
+      "clause": "verse-one-a",
+      "word": "room",
+      "stem": [
+        21.01306990881459,
+        21.47446808510638
+      ],
+      "mix": [
+        21.033130699088144,
+        21.454407294832826
+      ],
+      "selected": [
+        21.01306990881459,
+        21.47446808510638
+      ],
+      "status": "pending listening"
+    },
+    {
+      "clause": "verse-one-a",
+      "word": "with",
+      "stem": [
+        21.554711246200608,
+        22.23677811550152
+      ],
+      "mix": [
+        21.53465045592705,
+        22.256838905775076
+      ],
+      "selected": [
+        21.53465045592705,
+        22.256838905775076
+      ],
+      "status": "pending listening"
+    },
+    {
+      "clause": "verse-one-a",
+      "word": "a",
+      "stem": [
+        22.27689969604863,
+        22.296960486322188
+      ],
+      "mix": [
+        22.296960486322188,
+        22.317021276595742
+      ],
+      "selected": [
+        22.27689969604863,
+        22.317021276595742
+      ],
+      "status": "pending listening"
+    },
+    {
+      "clause": "verse-one-a",
+      "word": "view",
+      "stem": [
+        22.417325227963524,
+        22.738297872340425
+      ],
+      "mix": [
+        22.45744680851064,
+        22.9790273556231
+      ],
+      "selected": [
+        22.417325227963524,
+        22.9790273556231
+      ],
+      "status": "pending listening"
+    },
+    {
+      "clause": "verse-one-a",
+      "index": 3,
+      "word": "far",
+      "previousStart": 18.12,
+      "characterStart": 19.087,
+      "probability": 0.942,
+      "correction": "retract early Whisper-only onset",
+      "selectedStart": 19.067173252279634,
+      "sources": [
+        "analysis/transcription-pass-a/english-ctc-comparison.json",
+        "analysis/transcription-pass-a/mms-verse-review-vocals.json",
+        "analysis/transcription-pass-a/mms-vocals.json"
+      ],
+      "status": "independent phonetic evidence supports later onset; pending listening"
+    },
+    {
+      "clause": "verse-one-a",
+      "index": 7,
+      "word": "room",
+      "previousStart": 20.65,
+      "characterStart": 21.053,
+      "probability": 0.85,
+      "correction": "retract early Whisper-only onset",
+      "selectedStart": 21.01306990881459,
+      "sources": [
+        "analysis/transcription-pass-a/english-ctc-comparison.json",
+        "analysis/transcription-pass-a/mms-verse-review-vocals.json",
+        "analysis/transcription-pass-a/mms-vocals.json"
+      ],
+      "status": "independent phonetic evidence supports later onset; pending listening"
+    },
+    {
+      "clause": "verse-one-a",
+      "index": 2,
+      "word": "go",
+      "end": 18.12,
+      "reason": "English CTC O18.044–18.064 p.996 and separator18.144; normal/slow ASR GO releases18.076–18.120. Later GO-like spectrum decays by over20dB and does not prove continued lead articulation.",
+      "correction": "independently corroborated phonetic boundary",
+      "previous": [
+        17.682978723404254,
+        17.823404255319147
+      ],
+      "selected": [
+        17.682978723404254,
+        18.12
+      ],
+      "sources": [
+        "analysis/transcription-pass-a/english-ctc-comparison.json",
+        "analysis/transcription-pass-a/mms-vocals.json"
+      ],
+      "status": "model-supported boundary; pending listening"
+    },
+    {
+      "clause": "verse-one-a",
+      "word": "a",
+      "wordIndex": 6,
+      "correction": "short article release review",
+      "previousEnd": 20.43130699088146,
+      "proposedEnd": 20.65,
+      "selectedEnd": 20.65,
+      "asrReleases": [
+        20.66,
+        20.64,
+        20.66
+      ],
+      "sources": [
+        "analysis/transcription-pass-a/large-v3-turbo-mix.json",
+        "analysis/transcription-pass-a/large-v3-turbo-vocals.json",
+        "analysis/transcription-pass-a/large-v3-turbo-vocals-first-verse.json"
+      ],
+      "status": "model-supported release extension; pending listening"
+    },
+    {
+      "clause": "verse-one-a",
+      "word": "a",
+      "wordIndex": 9,
+      "correction": "short article release review",
+      "previousEnd": 22.317021276595742,
+      "proposedEnd": 22.4,
+      "selectedEnd": 22.4,
+      "asrReleases": [
+        22.4,
+        22.4
+      ],
+      "sources": [
+        "analysis/transcription-pass-a/large-v3-turbo-vocals.json",
+        "analysis/transcription-pass-a/large-v3-turbo-vocals-first-verse.json"
+      ],
+      "status": "model-supported release extension; pending listening"
+    },
+    {
+      "clause": "verse-one-b",
+      "word": "You",
+      "stem": [
+        24.82241887905605,
+        24.922713864306786
+      ],
+      "mix": [
+        24.782300884955752,
+        25.123303834808258
+      ],
+      "selected": [
+        24.782300884955752,
+        25.123303834808258
+      ],
+      "status": "pending listening"
+    },
+    {
+      "clause": "verse-one-b",
+      "word": "can",
+      "stem": [
+        25.04306784660767,
+        25.143362831858408
+      ],
+      "mix": [
+        25.26371681415929,
+        25.42418879056047
+      ],
+      "selected": [
+        25.04306784660767,
+        25.42418879056047
+      ],
+      "status": "pending listening"
+    },
+    {
+      "clause": "verse-one-b",
+      "word": "take",
+      "stem": [
+        25.26371681415929,
+        25.76519174041298
+      ],
+      "mix": [
+        25.464306784660767,
+        25.644837758112093
+      ],
+      "selected": [
+        25.26371681415929,
+        25.76519174041298
+      ],
+      "status": "pending listening"
+    },
+    {
+      "clause": "verse-one-b",
+      "word": "me",
+      "stem": [
+        25.805309734513273,
+        25.90560471976401
+      ],
+      "mix": [
+        25.805309734513273,
+        25.90560471976401
+      ],
+      "selected": [
+        25.805309734513273,
+        25.90560471976401
+      ],
+      "status": "pending listening"
+    },
+    {
+      "clause": "verse-one-b",
+      "word": "anywhere",
+      "stem": [
+        26.80825958702065,
+        27.490265486725665
+      ],
+      "mix": [
+        26.828318584070797,
+        27.791150442477875
+      ],
+      "selected": [
+        26.80825958702065,
+        27.791150442477875
+      ],
+      "status": "pending listening"
+    },
+    {
+      "clause": "verse-one-b",
+      "word": "just",
+      "stem": [
+        27.690855457227137,
+        27.93156342182891
+      ],
+      "mix": [
+        27.85132743362832,
+        27.93156342182891
+      ],
+      "selected": [
+        27.690855457227137,
+        27.93156342182891
+      ],
+      "status": "pending listening"
+    },
+    {
+      "clause": "verse-one-b",
+      "word": "as",
+      "stem": [
+        27.971681415929204,
+        28.132153392330384
+      ],
+      "mix": [
+        27.951622418879055,
+        28.112094395280238
+      ],
+      "selected": [
+        27.951622418879055,
+        28.132153392330384
+      ],
+      "status": "pending listening"
+    },
+    {
+      "clause": "verse-one-b",
+      "word": "long",
+      "stem": [
+        28.192330383480826,
+        28.633628318584073
+      ],
+      "mix": [
+        28.212389380530972,
+        28.633628318584073
+      ],
+      "selected": [
+        28.192330383480826,
+        28.633628318584073
+      ],
+      "status": "pending listening"
+    },
+    {
+      "clause": "verse-one-b",
+      "word": "as",
+      "stem": [
+        28.79410029498525,
+        29.11504424778761
+      ],
+      "mix": [
+        28.79410029498525,
+        29.11504424778761
+      ],
+      "selected": [
+        28.79410029498525,
+        29.11504424778761
+      ],
+      "status": "pending listening"
+    },
+    {
+      "clause": "verse-one-b",
+      "word": "I'm",
+      "stem": [
+        29.21533923303835,
+        29.456047197640117
+      ],
+      "mix": [
+        29.1952802359882,
+        29.43598820058997
+      ],
+      "selected": [
+        29.1952802359882,
+        29.456047197640117
+      ],
+      "status": "pending listening"
+    },
+    {
+      "clause": "verse-one-b",
+      "word": "with",
+      "stem": [
+        29.636578171091443,
+        30.037758112094394
+      ],
+      "mix": [
+        29.656637168141593,
+        30.057817109144544
+      ],
+      "selected": [
+        29.636578171091443,
+        30.057817109144544
+      ],
+      "status": "pending listening"
+    },
+    {
+      "clause": "verse-one-b",
+      "word": "you",
+      "stem": [
+        30.117994100294986,
+        30.278466076696166
+      ],
+      "mix": [
+        30.15811209439528,
+        30.338643067846608
+      ],
+      "selected": [
+        30.117994100294986,
+        30.338643067846608
+      ],
+      "status": "pending listening"
+    },
+    {
+      "clause": "verse-one-b",
+      "index": 4,
+      "word": "anywhere",
+      "previousStart": 26.04,
+      "characterStart": 26.929,
+      "probability": 0.939,
+      "correction": "retract early Whisper-only onset",
+      "selectedStart": 26.80825958702065,
+      "sources": [
+        "analysis/transcription-pass-a/english-ctc-comparison.json",
+        "analysis/transcription-pass-a/mms-verse-review-vocals.json",
+        "analysis/transcription-pass-a/mms-vocals.json"
+      ],
+      "status": "independent phonetic evidence supports later onset; pending listening"
+    },
+    {
+      "clause": "verse-one-b",
+      "word": "You",
+      "releaseCappedAtNextOnset": 25.04306784660767,
+      "previousEnd": 25.123303834808258
+    },
+    {
+      "clause": "verse-one-b",
+      "word": "can",
+      "releaseCappedAtNextOnset": 25.26371681415929,
+      "previousEnd": 25.42418879056047
+    },
+    {
+      "clause": "verse-one-b",
+      "word": "anywhere",
+      "releaseCappedAtNextOnset": 27.690855457227137,
+      "previousEnd": 27.791150442477875
+    },
+    {
+      "clause": "verse-two-a",
+      "word": "Can",
+      "stem": [
+        62.921802325581396,
+        63.18255813953488
+      ],
+      "mix": [
+        62.921802325581396,
+        63.18255813953488
+      ],
+      "selected": [
+        62.921802325581396,
+        63.18255813953488
+      ],
+      "status": "pending listening"
+    },
+    {
+      "clause": "verse-two-a",
+      "word": "we",
+      "stem": [
+        63.24273255813953,
+        63.30290697674418
+      ],
+      "mix": [
+        63.18255813953488,
+        63.30290697674418
+      ],
+      "selected": [
+        63.18255813953488,
+        63.30290697674418
+      ],
+      "status": "pending listening"
+    },
+    {
+      "clause": "verse-two-a",
+      "word": "go",
+      "stem": [
+        63.44331395348837,
+        63.56366279069767
+      ],
+      "mix": [
+        63.44331395348837,
+        63.804360465116275
+      ],
+      "selected": [
+        63.44331395348837,
+        63.804360465116275
+      ],
+      "status": "pending listening"
+    },
+    {
+      "clause": "verse-two-a",
+      "word": "far",
+      "stem": [
+        63.90465116279069,
+        64.20552325581394
+      ],
+      "mix": [
+        63.90465116279069,
+        64.08517441860465
+      ],
+      "selected": [
+        63.90465116279069,
+        64.20552325581394
+      ],
+      "status": "pending listening"
+    },
+    {
+      "clause": "verse-two-a",
+      "word": "far",
+      "stem": [
+        64.8875,
+        65.22848837209303
+      ],
+      "mix": [
+        64.8875,
+        65.24854651162791
+      ],
+      "selected": [
+        64.8875,
+        65.24854651162791
+      ],
+      "status": "pending listening"
+    },
+    {
+      "clause": "verse-two-a",
+      "word": "away",
+      "stem": [
+        65.28866279069767,
+        65.64970930232558
+      ],
+      "mix": [
+        65.30872093023255,
+        65.64970930232558
+      ],
+      "selected": [
+        65.28866279069767,
+        65.64970930232558
+      ],
+      "status": "pending listening"
+    },
+    {
+      "clause": "verse-two-a",
+      "word": "to",
+      "stem": [
+        65.8703488372093,
+        65.9906976744186
+      ],
+      "mix": [
+        65.85029069767441,
+        65.9906976744186
+      ],
+      "selected": [
+        65.85029069767441,
+        65.9906976744186
+      ],
+      "status": "pending listening"
+    },
+    {
+      "clause": "verse-two-a",
+      "word": "a",
+      "stem": [
+        66.19127906976743,
+        66.21133720930233
+      ],
+      "mix": [
+        66.05087209302326,
+        66.07093023255814
+      ],
+      "selected": [
+        66.05087209302326,
+        66.21133720930233
+      ],
+      "status": "pending listening"
+    },
+    {
+      "clause": "verse-two-a",
+      "word": "room",
+      "stem": [
+        66.83313953488371,
+        67.09389534883721
+      ],
+      "mix": [
+        66.09098837209302,
+        67.07383720930233
+      ],
+      "selected": [
+        66.09098837209302,
+        67.09389534883721
+      ],
+      "status": "pending listening"
+    },
+    {
+      "clause": "verse-two-a",
+      "word": "with",
+      "stem": [
+        67.3345930232558,
+        68.01656976744187
+      ],
+      "mix": [
+        67.31453488372092,
+        68.01656976744187
+      ],
+      "selected": [
+        67.31453488372092,
+        68.01656976744187
+      ],
+      "status": "pending listening"
+    },
+    {
+      "clause": "verse-two-a",
+      "word": "a",
+      "stem": [
+        68.07674418604651,
+        68.0968023255814
+      ],
+      "mix": [
+        68.07674418604651,
+        68.0968023255814
+      ],
+      "selected": [
+        68.07674418604651,
+        68.0968023255814
+      ],
+      "status": "pending listening"
+    },
+    {
+      "clause": "verse-two-a",
+      "word": "view",
+      "stem": [
+        68.17703488372092,
+        68.53808139534884
+      ],
+      "mix": [
+        68.17703488372092,
+        68.73866279069767
+      ],
+      "selected": [
+        68.17703488372092,
+        68.73866279069767
+      ],
+      "status": "pending listening"
+    },
+    {
+      "clause": "verse-two-a",
+      "index": 8,
+      "word": "room",
+      "start": 66.83313953488371,
+      "reason": "MMS stem66.833 and independent English CTC R66.853 p.701 reject mix-only66.091; retain the rest after the preceding article.",
+      "correction": "independently corroborated phonetic boundary",
+      "previous": [
+        66.09098837209302,
+        67.09389534883721
+      ],
+      "selected": [
+        66.83313953488371,
+        67.09389534883721
+      ],
+      "sources": [
+        "analysis/transcription-pass-a/english-ctc-comparison.json",
+        "analysis/transcription-pass-a/mms-vocals.json"
+      ],
+      "status": "model-supported boundary; pending listening"
+    },
+    {
+      "clause": "verse-two-a",
+      "word": "a",
+      "wordIndex": 7,
+      "correction": "short article release review",
+      "previousEnd": 66.21133720930233,
+      "proposedEnd": 66.32,
+      "selectedEnd": 66.32,
+      "asrReleases": [
+        66.32
+      ],
+      "sources": [
+        "analysis/transcription-pass-a/large-v3-turbo-vocals.json"
+      ],
+      "status": "model-supported release extension; pending listening"
+    },
+    {
+      "clause": "verse-two-a",
+      "word": "a",
+      "wordIndex": 10,
+      "correction": "short article release review",
+      "previousEnd": 68.0968023255814,
+      "proposedEnd": 68.16,
+      "selectedEnd": 68.16,
+      "asrReleases": [
+        68.16
+      ],
+      "sources": [
+        "analysis/transcription-pass-a/large-v3-turbo-vocals.json"
+      ],
+      "status": "model-supported release extension; pending listening"
+    },
+    {
+      "clause": "verse-two-b",
+      "word": "You",
+      "stem": [
+        70.56373626373626,
+        70.70412087912088
+      ],
+      "mix": [
+        70.56373626373626,
+        70.68406593406594
+      ],
+      "selected": [
+        70.56373626373626,
+        70.70412087912088
+      ],
+      "status": "pending listening"
+    },
+    {
+      "clause": "verse-two-b",
+      "word": "can",
+      "stem": [
+        70.78434065934066,
+        70.96483516483516
+      ],
+      "mix": [
+        70.78434065934066,
+        70.96483516483516
+      ],
+      "selected": [
+        70.78434065934066,
+        70.96483516483516
+      ],
+      "status": "pending listening"
+    },
+    {
+      "clause": "verse-two-b",
+      "word": "take",
+      "stem": [
+        71.0651098901099,
+        71.54642857142858
+      ],
+      "mix": [
+        71.0651098901099,
+        71.54642857142858
+      ],
+      "selected": [
+        71.0651098901099,
+        71.54642857142858
+      ],
+      "status": "pending listening"
+    },
+    {
+      "clause": "verse-two-b",
+      "word": "me",
+      "stem": [
+        71.58653846153847,
+        71.70686813186813
+      ],
+      "mix": [
+        71.58653846153847,
+        71.70686813186813
+      ],
+      "selected": [
+        71.58653846153847,
+        71.70686813186813
+      ],
+      "status": "pending listening"
+    },
+    {
+      "clause": "verse-two-b",
+      "word": "anywhere",
+      "stem": [
+        72.08791208791209,
+        72.8901098901099
+      ],
+      "mix": [
+        72.08791208791209,
+        72.76978021978022
+      ],
+      "selected": [
+        72.08791208791209,
+        72.8901098901099
+      ],
+      "status": "pending listening"
+    },
+    {
+      "clause": "verse-two-b",
+      "word": "just",
+      "stem": [
+        72.97032967032968,
+        73.4717032967033
+      ],
+      "mix": [
+        72.97032967032968,
+        73.4717032967033
+      ],
+      "selected": [
+        72.97032967032968,
+        73.4717032967033
+      ],
+      "status": "pending listening"
+    },
+    {
+      "clause": "verse-two-b",
+      "word": "as",
+      "stem": [
+        73.55192307692307,
+        73.8728021978022
+      ],
+      "mix": [
+        73.55192307692307,
+        73.8728021978022
+      ],
+      "selected": [
+        73.55192307692307,
+        73.8728021978022
+      ],
+      "status": "pending listening"
+    },
+    {
+      "clause": "verse-two-b",
+      "word": "long",
+      "stem": [
+        73.95302197802198,
+        74.47445054945055
+      ],
+      "mix": [
+        73.93296703296704,
+        74.39423076923077
+      ],
+      "selected": [
+        73.93296703296704,
+        74.47445054945055
+      ],
+      "status": "pending listening"
+    },
+    {
+      "clause": "verse-two-b",
+      "word": "as",
+      "stem": [
+        74.51456043956044,
+        74.8554945054945
+      ],
+      "mix": [
+        74.59478021978022,
+        74.8554945054945
+      ],
+      "selected": [
+        74.51456043956044,
+        74.8554945054945
+      ],
+      "status": "pending listening"
+    },
+    {
+      "clause": "verse-two-b",
+      "word": "I'm",
+      "stem": [
+        75.11620879120879,
+        75.23653846153846
+      ],
+      "mix": [
+        74.97582417582417,
+        75.37692307692308
+      ],
+      "selected": [
+        74.97582417582417,
+        75.37692307692308
+      ],
+      "status": "pending listening"
+    },
+    {
+      "clause": "verse-two-b",
+      "word": "with",
+      "stem": [
+        75.43708791208792,
+        75.85824175824176
+      ],
+      "mix": [
+        75.45714285714286,
+        75.85824175824176
+      ],
+      "selected": [
+        75.43708791208792,
+        75.85824175824176
+      ],
+      "status": "pending listening"
+    },
+    {
+      "clause": "verse-two-b",
+      "word": "you",
+      "stem": [
+        75.89835164835165,
+        76.07884615384616
+      ],
+      "mix": [
+        75.89835164835165,
+        76.0587912087912
+      ],
+      "selected": [
+        75.89835164835165,
+        76.07884615384616
+      ],
+      "status": "pending listening"
+    },
+    {
+      "clause": "verse-two-b",
+      "index": 9,
+      "word": "I'm",
+      "end": 75.23653846153846,
+      "reason": "MMS stem release75.237 precedes independently corroborated WITH75.277; reject the mix interval that spills across that consonant.",
+      "correction": "independently corroborated phonetic boundary",
+      "previous": [
+        74.97582417582417,
+        75.37692307692308
+      ],
+      "selected": [
+        74.97582417582417,
+        75.23653846153846
+      ],
+      "sources": [
+        "analysis/transcription-pass-a/english-ctc-comparison.json",
+        "analysis/transcription-pass-a/mms-vocals.json"
+      ],
+      "status": "model-supported boundary; pending listening"
+    },
+    {
+      "clause": "verse-two-b",
+      "index": 10,
+      "word": "with",
+      "start": 75.277,
+      "reason": "Independent English CTC greedy W75.277/forced p.458 agrees with mix/stem ASR75.280/75.300 and separate pass75.320.",
+      "correction": "independently corroborated phonetic boundary",
+      "previous": [
+        75.43708791208792,
+        75.85824175824176
+      ],
+      "selected": [
+        75.277,
+        75.85824175824176
+      ],
+      "sources": [
+        "analysis/transcription-pass-a/english-ctc-comparison.json",
+        "analysis/transcription-pass-a/mms-vocals.json"
+      ],
+      "status": "model-supported boundary; pending listening"
+    },
+    {
+      "clause": "verse-two-b",
+      "index": 11,
+      "word": "you",
+      "end": 76.14,
+      "reason": "Independent English CTC stem O76.099–76.119 p.717 and mix ASR release76.140 justify only this minimum vowel extension.",
+      "correction": "independently corroborated phonetic boundary",
+      "previous": [
+        75.89835164835165,
+        76.07884615384616
+      ],
+      "selected": [
+        75.89835164835165,
+        76.14
+      ],
+      "sources": [
+        "analysis/transcription-pass-a/english-ctc-comparison.json",
+        "analysis/transcription-pass-a/mms-vocals.json"
+      ],
+      "status": "model-supported boundary; pending listening"
+    },
+    {
+      "clause": "life",
+      "word": "Leave",
+      "stem": [
+        78.183908045977,
+        78.48563218390805
+      ],
+      "mix": [
+        78.183908045977,
+        78.52586206896552
+      ],
+      "selected": [
+        78.183908045977,
+        78.52586206896552
+      ],
+      "status": "pending listening"
+    },
+    {
+      "clause": "life",
+      "word": "a",
+      "stem": [
+        78.50574712643679,
+        78.52586206896552
+      ],
+      "mix": [
+        78.566091954023,
+        78.58620689655173
+      ],
+      "selected": [
+        78.50574712643679,
+        78.58620689655173
+      ],
+      "status": "pending listening"
+    },
+    {
+      "clause": "life",
+      "word": "life",
+      "stem": [
+        78.58620689655173,
+        79.20977011494253
+      ],
+      "mix": [
+        78.58620689655173,
+        78.76724137931035
+      ],
+      "selected": [
+        78.58620689655173,
+        79.20977011494253
+      ],
+      "status": "pending listening"
+    },
+    {
+      "clause": "life",
+      "word": "where",
+      "stem": [
+        79.20977011494253,
+        79.51149425287356
+      ],
+      "mix": [
+        79.14942528735632,
+        79.51149425287356
+      ],
+      "selected": [
+        79.14942528735632,
+        79.51149425287356
+      ],
+      "status": "pending listening"
+    },
+    {
+      "clause": "life",
+      "word": "dreams",
+      "stem": [
+        79.61206896551724,
+        80.09482758620689
+      ],
+      "mix": [
+        79.61206896551724,
+        80.09482758620689
+      ],
+      "selected": [
+        79.61206896551724,
+        80.09482758620689
+      ],
+      "status": "pending listening"
+    },
+    {
+      "clause": "life",
+      "word": "come",
+      "stem": [
+        80.15517241379311,
+        80.55747126436782
+      ],
+      "mix": [
+        80.15517241379311,
+        80.57758620689656
+      ],
+      "selected": [
+        80.15517241379311,
+        80.57758620689656
+      ],
+      "status": "pending listening"
+    },
+    {
+      "clause": "life",
+      "word": "true",
+      "stem": [
+        80.59770114942529,
+        80.91954022988506
+      ],
+      "mix": [
+        80.59770114942529,
+        80.97988505747126
+      ],
+      "selected": [
+        80.59770114942529,
+        80.97988505747126
+      ],
+      "status": "pending listening"
+    },
+    {
+      "clause": "life",
+      "word": "Leave",
+      "releaseCappedAtNextOnset": 78.50574712643679,
+      "previousEnd": 78.52586206896552
+    },
+    {
+      "clause": "life",
+      "word": "life",
+      "releaseCappedAtNextOnset": 79.14942528735632,
+      "previousEnd": 79.20977011494253
+    },
+    {
+      "clause": "world",
+      "word": "In",
+      "stem": [
+        81.16084656084657,
+        81.32169312169312
+      ],
+      "mix": [
+        81.14074074074074,
+        81.3015873015873
+      ],
+      "selected": [
+        81.14074074074074,
+        81.32169312169312
+      ],
+      "status": "pending listening"
+    },
+    {
+      "clause": "world",
+      "word": "a",
+      "stem": [
+        81.38201058201058,
+        81.4021164021164
+      ],
+      "mix": [
+        81.36190476190477,
+        81.38201058201058
+      ],
+      "selected": [
+        81.36190476190477,
+        81.4021164021164
+      ],
+      "status": "pending listening"
+    },
+    {
+      "clause": "world",
+      "word": "world",
+      "stem": [
+        81.52275132275132,
+        81.98518518518519
+      ],
+      "mix": [
+        81.52275132275132,
+        82.04550264550265
+      ],
+      "selected": [
+        81.52275132275132,
+        82.04550264550265
+      ],
+      "status": "pending listening"
+    },
+    {
+      "clause": "world",
+      "word": "that",
+      "stem": [
+        82.02539682539683,
+        82.24656084656084
+      ],
+      "mix": [
+        82.22645502645503,
+        82.5079365079365
+      ],
+      "selected": [
+        82.02539682539683,
+        82.5079365079365
+      ],
+      "status": "pending listening"
+    },
+    {
+      "clause": "world",
+      "word": "lets",
+      "stem": [
+        82.34708994708994,
+        82.95026455026455
+      ],
+      "mix": [
+        82.70899470899471,
+        82.99047619047619
+      ],
+      "selected": [
+        82.34708994708994,
+        82.99047619047619
+      ],
+      "status": "pending listening"
+    },
+    {
+      "clause": "world",
+      "word": "you",
+      "stem": [
+        83.03068783068782,
+        83.27195767195767
+      ],
+      "mix": [
+        83.19153439153439,
+        83.5936507936508
+      ],
+      "selected": [
+        83.03068783068782,
+        83.5936507936508
+      ],
+      "status": "pending listening"
+    },
+    {
+      "clause": "world",
+      "word": "breathe",
+      "stem": [
+        83.45291005291006,
+        84.39788359788359
+      ],
+      "mix": [
+        83.6941798941799,
+        84.47830687830688
+      ],
+      "selected": [
+        83.45291005291006,
+        84.47830687830688
+      ],
+      "status": "pending listening"
+    },
+    {
+      "clause": "world",
+      "word": "a",
+      "wordIndex": 1,
+      "correction": "short article release review",
+      "previousEnd": 81.4021164021164,
+      "proposedEnd": 81.5,
+      "selectedEnd": 81.5,
+      "asrReleases": [
+        81.5,
+        81.5,
+        81.52
+      ],
+      "sources": [
+        "analysis/transcription-pass-a/large-v3-turbo-mix.json",
+        "analysis/transcription-pass-a/large-v3-turbo-vocals.json",
+        "analysis/transcription-pass-a/large-v3-turbo-vocals-life.json"
+      ],
+      "status": "model-supported release extension; pending listening"
+    },
+    {
+      "clause": "world",
+      "word": "world",
+      "releaseCappedAtNextOnset": 82.02539682539683,
+      "previousEnd": 82.04550264550265
+    },
+    {
+      "clause": "world",
+      "word": "that",
+      "releaseCappedAtNextOnset": 82.34708994708994,
+      "previousEnd": 82.5079365079365
+    },
+    {
+      "clause": "world",
+      "word": "you",
+      "releaseCappedAtNextOnset": 83.45291005291006,
+      "previousEnd": 83.5936507936508
+    },
+    {
+      "clause": "anywhere",
+      "word": "You",
+      "stem": [
+        85.78518518518518,
+        85.88571428571429
+      ],
+      "mix": [
+        85.78518518518518,
+        85.88571428571429
+      ],
+      "selected": [
+        85.78518518518518,
+        85.88571428571429
+      ],
+      "status": "pending listening"
+    },
+    {
+      "clause": "anywhere",
+      "word": "can",
+      "stem": [
+        86.0063492063492,
+        86.12698412698413
+      ],
+      "mix": [
+        86.0063492063492,
+        86.18730158730159
+      ],
+      "selected": [
+        86.0063492063492,
+        86.18730158730159
+      ],
+      "status": "pending listening"
+    },
+    {
+      "clause": "anywhere",
+      "word": "take",
+      "stem": [
+        86.24761904761904,
+        86.62962962962963
+      ],
+      "mix": [
+        86.24761904761904,
+        86.62962962962963
+      ],
+      "selected": [
+        86.24761904761904,
+        86.62962962962963
+      ],
+      "status": "pending listening"
+    },
+    {
+      "clause": "anywhere",
+      "word": "me",
+      "stem": [
+        86.77037037037037,
+        86.89100529100529
+      ],
+      "mix": [
+        86.77037037037037,
+        86.87089947089947
+      ],
+      "selected": [
+        86.77037037037037,
+        86.89100529100529
+      ],
+      "status": "pending listening"
+    },
+    {
+      "clause": "anywhere",
+      "word": "anywhere",
+      "stem": [
+        87.81587301587301,
+        88.6
+      ],
+      "mix": [
+        87.81587301587301,
+        88.6
+      ],
+      "selected": [
+        87.81587301587301,
+        88.6
+      ],
+      "status": "pending listening"
+    },
+    {
+      "clause": "anywhere",
+      "index": 4,
+      "word": "anywhere",
+      "previousStart": 87.02,
+      "characterStart": 87.876,
+      "probability": 0.982,
+      "correction": "retract early Whisper-only onset",
+      "selectedStart": 87.81587301587301,
+      "sources": [
+        "analysis/transcription-pass-a/english-ctc-comparison.json",
+        "analysis/transcription-pass-a/mms-verse-review-vocals.json",
+        "analysis/transcription-pass-a/mms-vocals.json"
+      ],
+      "status": "independent phonetic evidence supports later onset; pending listening"
+    },
+    {
+      "clause": "with-me",
+      "word": "Just",
+      "stem": [
+        88.72075471698113,
+        88.92201257861635
+      ],
+      "mix": [
+        88.7006289308176,
+        88.92201257861635
+      ],
+      "selected": [
+        88.7006289308176,
+        88.92201257861635
+      ],
+      "status": "pending listening"
+    },
+    {
+      "clause": "with-me",
+      "word": "as",
+      "stem": [
+        88.98238993710692,
+        89.08301886792452
+      ],
+      "mix": [
+        88.9622641509434,
+        89.08301886792452
+      ],
+      "selected": [
+        88.9622641509434,
+        89.08301886792452
+      ],
+      "status": "pending listening"
+    },
+    {
+      "clause": "with-me",
+      "word": "long",
+      "stem": [
+        89.16352201257861,
+        89.70691823899371
+      ],
+      "mix": [
+        89.16352201257861,
+        89.64654088050314
+      ],
+      "selected": [
+        89.16352201257861,
+        89.70691823899371
+      ],
+      "status": "pending listening"
+    },
+    {
+      "clause": "with-me",
+      "word": "as",
+      "stem": [
+        89.7874213836478,
+        90.0691823899371
+      ],
+      "mix": [
+        89.80754716981131,
+        90.0691823899371
+      ],
+      "selected": [
+        89.7874213836478,
+        90.0691823899371
+      ],
+      "status": "pending listening"
+    },
+    {
+      "clause": "with-me",
+      "word": "you're",
+      "stem": [
+        90.10943396226415,
+        90.45157232704402
+      ],
+      "mix": [
+        90.10943396226415,
+        90.45157232704402
+      ],
+      "selected": [
+        90.10943396226415,
+        90.45157232704402
+      ],
+      "status": "pending listening"
+    },
+    {
+      "clause": "with-me",
+      "word": "with",
+      "stem": [
+        90.57232704402516,
+        91.01509433962264
+      ],
+      "mix": [
+        90.59245283018868,
+        91.01509433962264
+      ],
+      "selected": [
+        90.57232704402516,
+        91.01509433962264
+      ],
+      "status": "pending listening"
+    },
+    {
+      "clause": "with-me",
+      "word": "me",
+      "stem": [
+        91.09559748427672,
+        91.21635220125786
+      ],
+      "mix": [
+        91.09559748427672,
+        91.21635220125786
+      ],
+      "selected": [
+        91.09559748427672,
+        91.21635220125786
+      ],
+      "status": "pending listening"
+    },
+    {
+      "clause": "with-me",
+      "index": 6,
+      "word": "me",
+      "end": 91.3,
+      "reason": "Independent English CTC E91.257–91.277 stem p.823 and91.277–91.297 mix p.599 establish a vowel beyond the old91.216 release.",
+      "correction": "independently corroborated phonetic boundary",
+      "previous": [
+        91.09559748427672,
+        91.21635220125786
+      ],
+      "selected": [
+        91.09559748427672,
+        91.3
+      ],
+      "sources": [
+        "analysis/transcription-pass-a/english-ctc-comparison.json",
+        "analysis/transcription-pass-a/mms-vocals.json"
+      ],
+      "status": "model-supported boundary; pending listening"
+    },
+    {
+      "clause": "closing-two",
+      "correction": "separate TRUE release and earlier WITH consonant",
+      "previous": {
+        "true": [
+          126.2695652173913,
+          126.99347826086957
+        ],
+        "with": [
+          127.09402173913044,
+          127.31521739130434
+        ]
+      },
+      "selected": {
+        "true": [
+          126.2695652173913,
+          126.732
+        ],
+        "with": [
+          126.833,
+          127.31521739130434
+        ]
+      },
+      "evidence": {
+        "englishMixW": 126.792,
+        "englishStemW": 126.812,
+        "englishStemSeparator": 126.732,
+        "thirdGreedyW": 130.653,
+        "thirdRepeatShift": -3.82
+      },
+      "sources": [
+        "analysis/transcription-pass-a/english-ctc-comparison.json",
+        "analysis/repetition-evidence.json"
+      ],
+      "status": "cross-reprise phonetic evidence; second W alone is weak; pending listening"
+    }
+  ]
+}

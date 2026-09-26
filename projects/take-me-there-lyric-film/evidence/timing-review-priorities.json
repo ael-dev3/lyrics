@@ -1,0 +1,128 @@
+{
+  "status": "Independent model-evidence audit; not an actual-audio listening attestation",
+  "revision": "source-integrated-preview-v2",
+  "timelineSha256": "b6f347b95e4f0eec872e0f0e1ac9e52b808f4603b0e7a7e3f1fc75aaebf16bc5",
+  "builderSha256": "13f2f4d7b5dcc9a414a193c62d66f90b336dda134798d8996613b70ca6043978",
+  "implementedCorrections": [
+    {
+      "priority": 1,
+      "correction": "Replaced early ASR-only onsets with independently corroborated phonetic boundaries; polished related releases and repeated THERE focus.",
+      "details": "See first-verse-sync-audit.json for every before/after interval, raw evidence hashes, retracted assumptions and declined weak proposals.",
+      "sources": [
+        "analysis/transcription-pass-a/english-ctc-comparison.json",
+        "evidence/first-verse-sync-audit.json"
+      ],
+      "review": "Listening remains pending; no lexical events added or removed."
+    },
+    {
+      "priority": 1,
+      "cue": "middle-extra-lead",
+      "correction": "Restored an omitted intermediate Take me there candidate around 45 seconds.",
+      "interval": [
+        44.28775510204082,
+        45.87
+      ],
+      "reason": "The special anywhere branch skipped the next local vocal event before the usual 46.22-second restart. A bounded unprompted mixed-audio pass detects Take/me, and independent phrase/Take/me/there waveform matches support the inserted lead. The supplied there is retained because the recognizer's final-word alternatives are inconsistent.",
+      "review": "This restores supported vocal coverage; exact syllable transitions and the final lexical reading remain listening candidates. See missing-vocal-audit.json for every gap over 0.2 seconds in the reviewed hook regions."
+    },
+    {
+      "priority": 2,
+      "cue": "intro-3",
+      "correction": "Omitted the unsupported 28.889-millisecond leftover echo produced by clipping a forced candidate against the calibrated lead.",
+      "previousInterval": [
+        9.523741496598639,
+        9.552630385487529
+      ],
+      "reason": "An overlapping candidate's short residue is not independent evidence of a new echo onset. The builder now rejects sub-80ms residues created specifically by overlap clipping; unmodified short words are not removed by that rule."
+    },
+    {
+      "priority": 2,
+      "cue": "late-echoes",
+      "correction": "Changed presentation kind to hook so the renderer can reuse one fixed there letterform for candidate repeat events.",
+      "reason": "This is a readability change only. Six lexical echoes remain an unverified supplied-text hypothesis, and every raw candidate interval and uncertainty note is retained."
+    }
+  ],
+  "remainingPriorities": [
+    {
+      "priority": 1,
+      "cues": [
+        "last-hook",
+        "late-echoes",
+        "last-lead-uncertain"
+      ],
+      "window": [
+        107.05,
+        121.45
+      ],
+      "finding": "Only the lead event near 107.253 seconds has strong short-Take-template support. The six later there words and the final full Take me there phrase are supplied-text hypotheses forced through bounded MMS. Whole-phrase recurrence does not corroborate the 117.871–120.799 phrase; its Take lasts 1.544 seconds. Unprompted recognition in this region is inconsistent, and later me-like nuclei do not establish full words.",
+      "recommendation": "Keep this span explicitly unresolved in review and do not represent its per-word intervals as precise. Preserve the supplied transcript separately; confirm the actual late words before production. A conservative preview may show neutral candidate text or leave unverified word-focus events disabled, provided that limitation is plainly surfaced rather than silently claiming complete sync.",
+      "evidence": [
+        "analysis/chop-evidence.json",
+        "analysis/transcription-pass-a/mms-editorial-vocals.json",
+        "analysis/transcription-pass-a/large-v3-turbo-vocals-chops.json"
+      ]
+    },
+    {
+      "priority": 2,
+      "cues": [
+        "life"
+      ],
+      "window": [
+        78,
+        79.4
+      ],
+      "finding": "The supplied Leave is preserved. Automatic recognition also returns Leave but its targeted confidence is very low; this does not settle Leave versus Live.",
+      "recommendation": "Retain the explicit ambiguity in the review record until actual-audio review establishes the intended word. Do not silently change the supplied text for semantic plausibility."
+    }
+  ],
+  "positiveChecks": [
+    "37 cues and225 word events retained; all225 focus events are exposed with no simultaneous focus during the complete60fps scan.",
+    "The previously omitted45-second intermediate lead is preserved and its local THERE interval is unchanged.",
+    "First verse contains one FAR; second verse contains two, based on separate acoustic evidence rather than copied text shape.",
+    "Five specific article releases now use observed vowel spans; second A/ROOM is corrected together and retains the intervening rest.",
+    "The three closing clauses retain independently corroborated words; second TRUE/WITH transition now uses phonetic and repeated-phrase evidence.",
+    "TypeScript typecheck and the focused timing/coverage regressions pass; per-word acoustic certainty and listening attestation remain separate."
+  ],
+  "supersededCorrections": [
+    {
+      "priority": 1,
+      "cue": "verse-one-a-a",
+      "word": "far",
+      "previousOnset": 19.06716553287982,
+      "correctedOnset": 18.12,
+      "reason": "Full mix, full vocal-stem and bounded vocal-stem unprompted Whisper all independently place this internal word at 18.120 seconds. The previous CTC-only selection left a 1.244-second unlit interval after go and selected the late portion of the sung word.",
+      "release": "Original candidate release retained; actual listening pending.",
+      "status": "Retracted: broader independent phonetic review disproves this early ASR-only onset. See first-verse-sync-audit.json."
+    },
+    {
+      "priority": 1,
+      "cue": "verse-one-b-a",
+      "word": "anywhere",
+      "previousOnset": 26.80825396825397,
+      "correctedOnset": 26.04,
+      "reason": "Three independent unprompted recognitions place this internal word at 26.040, 26.020 and 26.060 seconds. The selected median preserves its earlier sung syllables instead of waiting for the late CTC activation.",
+      "release": "Original candidate release retained; actual listening pending.",
+      "status": "Retracted: broader independent phonetic review disproves this early ASR-only onset. See first-verse-sync-audit.json."
+    },
+    {
+      "priority": 1,
+      "cue": "anywhere",
+      "word": "anywhere",
+      "previousOnset": 87.81587301587301,
+      "correctedOnset": 87.02,
+      "reason": "Independent mix and vocal-stem recognitions both place this internal word at 87.020 seconds. The previous selection left 0.925 seconds unlit after me.",
+      "release": "Original candidate release retained; actual listening pending.",
+      "status": "Retracted: broader independent phonetic review disproves this early ASR-only onset. See first-verse-sync-audit.json."
+    },
+    {
+      "priority": 2,
+      "cue": "verse-one-a-b",
+      "word": "room",
+      "previousOnset": 21.013061224489796,
+      "correctedOnset": 20.65,
+      "reason": "Three unprompted recognitions place the onset at 20.660, 20.640 and 20.660 seconds. The selected 20.650 onset restores the earlier part of the word while preserving a separate preceding article.",
+      "release": "Original candidate release retained; actual listening pending.",
+      "status": "Retracted: broader independent phonetic review disproves this early ASR-only onset. See first-verse-sync-audit.json."
+    }
+  ]
+}

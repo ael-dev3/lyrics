@@ -6,6 +6,8 @@ This is prospective art-direction guidance, informed by documented productions a
 
 ## 1. Choose a visual role before adding detail
 
+When a recording is supplied as the picture to work on, preserve that moving footage. A request to integrate lyrics or a visualizer into its art calls for compositing within those scenes; it does not by itself commission replacement artwork. Original-scene projects such as Rainline demonstrate useful surface and lighting techniques, but their permission to redesign the setting is specific to that project. Establish the picture source in the visual brief before choosing assets, and verify it in the first playable composition.
+
 Inspect representative source passages: an intimate shot, the darkest and brightest imagery, a musical peak, a busy composition, a transition and the ending. Record the subject, usable negative space, dominant light direction/color, contrast, texture and camera movement. Include both delivery compositions; an anchor that works in landscape may disappear in portrait.
 
 Choose a role that the footage can support:
@@ -19,6 +21,14 @@ Choose a role that the footage can support:
 A flat, well-composed graphic can fit better than an elaborate object with incompatible lighting. Use depth only where it helps the scene. The [pixel-art workflow](pixel-art-lyric-film-workflow.md#4-let-the-building-carry-the-visualisers) provides a concrete environmental option: room-owned frequency response, window masks, layered rain and reflections on designated wet surfaces. Architecture and rain are choices for a suitable song, not the default for every video.
 
 During vocals, protect both the picture's focal subject and the active lyric. Supporting graphics should not repeatedly redirect attention away from them. Instrumental peaks can give a visualizer more prominence when the composition has room. Record this hierarchy for the section instead of assigning every layer equal strength.
+
+### Stable anchors across changing shots
+
+A primary spectrum can benefit from one predictable screen-space anchor when the source cuts between incompatible environments. Decide this independently from shot-specific lyric placement. Fix the spectrum's position, width, baseline and maximum reach for each format; reserve that footprint and a reading gap before fitting lyrics. Review any displaced lyric host against the actual subject rather than assuming the new position is safe.
+
+Match a stable graphic to the scene through source-compatible color, edge softness, bounded emission and local light spill. Color may blend at a cut without making the spectrum travel, resize or disappear. Keep measured band response continuous. If secondary windows or reflections need attenuation during a dissolve, give that mask its own envelope rather than fading the whole primary spectrum. Describe the stable graphic as screen-space treatment; claim physical anchoring or reflection only where the picture supports it.
+
+Compare quiet, intimate, busy and peak passages at normal viewing size. Record whether the stable anchor reduces visual searching and whether its reserved area competes with the subject. This is a composition choice to evaluate, not a universal requirement or proof of artistic integration.
 
 ## 2. Match the picture's visual conditions
 

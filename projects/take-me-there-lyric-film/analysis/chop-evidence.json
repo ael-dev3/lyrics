@@ -1,0 +1,2335 @@
+{
+  "sourceStemSha256": "20ebbdc3096d44a4fd1917d3fa83230898533b6e4e48496b747522ae72677593",
+  "region": [
+    103,
+    121.464
+  ],
+  "waveformMethod": "Normalized waveform-template correlation using FFT convolution, actual full vocal stem; 100–1800Hz bandpass and 4000Hz resampling. Local maxima selected by correlation rank and minimum separation. Positive polarity matches only. No beat grid or proportional word spacing.",
+  "spectralMethod": "12 logarithmic bands100–1800Hz; centered256-sample Hann FFT at4kHz (64ms support),100Hz analysis clock. Log band energies are centered by each frame mean. Cosine similarity of complete template time-frequency patches; peaks at least250ms apart. Phase invariant, but neither phonetic classification nor a word-count model.",
+  "probes": [
+    {
+      "template": {
+        "id": "short-take-probe",
+        "start": 0.54,
+        "end": 0.8
+      },
+      "waveformMatches": [
+        {
+          "start": 103.41325,
+          "end": 103.67325,
+          "correlation": 0.684031,
+          "relativeAmplitude": 1.251733
+        },
+        {
+          "start": 104.38225,
+          "end": 104.64225,
+          "correlation": 0.379484,
+          "relativeAmplitude": 1.131222
+        },
+        {
+          "start": 105.32425,
+          "end": 105.58425,
+          "correlation": 0.446249,
+          "relativeAmplitude": 0.789662
+        },
+        {
+          "start": 106.22475,
+          "end": 106.48475,
+          "correlation": 0.426252,
+          "relativeAmplitude": 1.182882
+        },
+        {
+          "start": 106.447,
+          "end": 106.707,
+          "correlation": 0.411305,
+          "relativeAmplitude": 1.329825
+        },
+        {
+          "start": 106.976,
+          "end": 107.236,
+          "correlation": 0.327113,
+          "relativeAmplitude": 1.154599
+        },
+        {
+          "start": 107.253,
+          "end": 107.513,
+          "correlation": 0.753113,
+          "relativeAmplitude": 1.627339
+        },
+        {
+          "start": 111.47275,
+          "end": 111.73275,
+          "correlation": 0.328454,
+          "relativeAmplitude": 1.1374
+        },
+        {
+          "start": 112.63975,
+          "end": 112.89975,
+          "correlation": 0.395909,
+          "relativeAmplitude": 0.598823
+        },
+        {
+          "start": 112.90575,
+          "end": 113.16575,
+          "correlation": 0.3659,
+          "relativeAmplitude": 0.449546
+        },
+        {
+          "start": 113.11975,
+          "end": 113.37975,
+          "correlation": 0.327267,
+          "relativeAmplitude": 0.519603
+        },
+        {
+          "start": 114.02875,
+          "end": 114.28875,
+          "correlation": 0.368521,
+          "relativeAmplitude": 0.356433
+        },
+        {
+          "start": 115.28525,
+          "end": 115.54525,
+          "correlation": 0.339759,
+          "relativeAmplitude": 1.044321
+        },
+        {
+          "start": 116.3465,
+          "end": 116.6065,
+          "correlation": 0.493908,
+          "relativeAmplitude": 0.466602
+        },
+        {
+          "start": 116.83925,
+          "end": 117.09925,
+          "correlation": 0.373306,
+          "relativeAmplitude": 0.356836
+        },
+        {
+          "start": 117.3335,
+          "end": 117.5935,
+          "correlation": 0.389488,
+          "relativeAmplitude": 0.562147
+        },
+        {
+          "start": 117.79025,
+          "end": 118.05025,
+          "correlation": 0.47898,
+          "relativeAmplitude": 0.357129
+        },
+        {
+          "start": 118.5985,
+          "end": 118.8585,
+          "correlation": 0.363963,
+          "relativeAmplitude": 0.522536
+        },
+        {
+          "start": 119.02475,
+          "end": 119.28475,
+          "correlation": 0.30755,
+          "relativeAmplitude": 0.905215
+        },
+        {
+          "start": 120.24025,
+          "end": 120.50025,
+          "correlation": 0.437075,
+          "relativeAmplitude": 0.733453
+        },
+        {
+          "start": 120.6765,
+          "end": 120.9365,
+          "correlation": 0.363112,
+          "relativeAmplitude": 0.43622
+        },
+        {
+          "start": 121.13625,
+          "end": 121.39625,
+          "correlation": 0.430498,
+          "relativeAmplitude": 0.698464
+        }
+      ],
+      "phaseInvariantSpectralMatches": [
+        {
+          "start": 103,
+          "end": 103.26,
+          "cosine": 0.860568
+        },
+        {
+          "start": 103.47,
+          "end": 103.73,
+          "cosine": 0.838513
+        },
+        {
+          "start": 103.72,
+          "end": 103.98,
+          "cosine": 0.755767
+        },
+        {
+          "start": 104.17,
+          "end": 104.43,
+          "cosine": 0.792239
+        },
+        {
+          "start": 104.46,
+          "end": 104.72,
+          "cosine": 0.816293
+        },
+        {
+          "start": 104.71,
+          "end": 104.97,
+          "cosine": 0.780478
+        },
+        {
+          "start": 105.38,
+          "end": 105.64,
+          "cosine": 0.846563
+        },
+        {
+          "start": 105.64,
+          "end": 105.9,
+          "cosine": 0.751699
+        },
+        {
+          "start": 106.3,
+          "end": 106.56,
+          "cosine": 0.860516
+        },
+        {
+          "start": 106.55,
+          "end": 106.81,
+          "cosine": 0.873078
+        },
+        {
+          "start": 106.92,
+          "end": 107.18,
+          "cosine": 0.877448
+        },
+        {
+          "start": 107.26,
+          "end": 107.52,
+          "cosine": 0.956825
+        },
+        {
+          "start": 107.51,
+          "end": 107.77,
+          "cosine": 0.863444
+        },
+        {
+          "start": 107.76,
+          "end": 108.02,
+          "cosine": 0.796341
+        },
+        {
+          "start": 108.01,
+          "end": 108.27,
+          "cosine": 0.744635
+        },
+        {
+          "start": 111.26,
+          "end": 111.52,
+          "cosine": 0.757975
+        },
+        {
+          "start": 111.62,
+          "end": 111.88,
+          "cosine": 0.83467
+        },
+        {
+          "start": 111.89,
+          "end": 112.15,
+          "cosine": 0.837416
+        },
+        {
+          "start": 112.25,
+          "end": 112.51,
+          "cosine": 0.8091
+        },
+        {
+          "start": 112.61,
+          "end": 112.87,
+          "cosine": 0.844283
+        },
+        {
+          "start": 112.9,
+          "end": 113.16,
+          "cosine": 0.709822
+        },
+        {
+          "start": 113.15,
+          "end": 113.41,
+          "cosine": 0.843513
+        },
+        {
+          "start": 113.61,
+          "end": 113.87,
+          "cosine": 0.768813
+        },
+        {
+          "start": 113.86,
+          "end": 114.12,
+          "cosine": 0.796672
+        },
+        {
+          "start": 114.11,
+          "end": 114.37,
+          "cosine": 0.871381
+        },
+        {
+          "start": 114.36,
+          "end": 114.62,
+          "cosine": 0.799948
+        },
+        {
+          "start": 114.67,
+          "end": 114.93,
+          "cosine": 0.778689
+        },
+        {
+          "start": 114.95,
+          "end": 115.21,
+          "cosine": 0.828608
+        },
+        {
+          "start": 115.29,
+          "end": 115.55,
+          "cosine": 0.844216
+        },
+        {
+          "start": 115.56,
+          "end": 115.82,
+          "cosine": 0.809308
+        },
+        {
+          "start": 115.85,
+          "end": 116.11,
+          "cosine": 0.783734
+        },
+        {
+          "start": 116.26,
+          "end": 116.52,
+          "cosine": 0.772612
+        },
+        {
+          "start": 116.51,
+          "end": 116.77,
+          "cosine": 0.825393
+        },
+        {
+          "start": 116.92,
+          "end": 117.18,
+          "cosine": 0.847087
+        },
+        {
+          "start": 117.19,
+          "end": 117.45,
+          "cosine": 0.767181
+        },
+        {
+          "start": 117.44,
+          "end": 117.7,
+          "cosine": 0.848759
+        },
+        {
+          "start": 117.79,
+          "end": 118.05,
+          "cosine": 0.868887
+        },
+        {
+          "start": 118.14,
+          "end": 118.4,
+          "cosine": 0.828495
+        },
+        {
+          "start": 118.43,
+          "end": 118.69,
+          "cosine": 0.739028
+        },
+        {
+          "start": 118.73,
+          "end": 118.99,
+          "cosine": 0.78316
+        },
+        {
+          "start": 118.98,
+          "end": 119.24,
+          "cosine": 0.849671
+        },
+        {
+          "start": 119.39,
+          "end": 119.65,
+          "cosine": 0.837716
+        },
+        {
+          "start": 119.66,
+          "end": 119.92,
+          "cosine": 0.811213
+        },
+        {
+          "start": 119.91,
+          "end": 120.17,
+          "cosine": 0.759382
+        },
+        {
+          "start": 120.22,
+          "end": 120.48,
+          "cosine": 0.805054
+        },
+        {
+          "start": 120.59,
+          "end": 120.85,
+          "cosine": 0.771806
+        },
+        {
+          "start": 120.84,
+          "end": 121.1,
+          "cosine": 0.840547
+        },
+        {
+          "start": 121.19,
+          "end": 121.45,
+          "cosine": 0.844975
+        }
+      ]
+    },
+    {
+      "template": {
+        "id": "short-me-probe",
+        "start": 0.92,
+        "end": 1.2
+      },
+      "waveformMatches": [
+        {
+          "start": 103.79075,
+          "end": 104.07075,
+          "correlation": 0.759995,
+          "relativeAmplitude": 1.889004
+        },
+        {
+          "start": 103.9735,
+          "end": 104.2535,
+          "correlation": 0.466233,
+          "relativeAmplitude": 2.021432
+        },
+        {
+          "start": 104.1845,
+          "end": 104.4645,
+          "correlation": 0.569676,
+          "relativeAmplitude": 1.790202
+        },
+        {
+          "start": 104.41275,
+          "end": 104.69275,
+          "correlation": 0.308677,
+          "relativeAmplitude": 1.609962
+        },
+        {
+          "start": 104.8795,
+          "end": 105.1595,
+          "correlation": 0.583722,
+          "relativeAmplitude": 1.061138
+        },
+        {
+          "start": 105.111,
+          "end": 105.391,
+          "correlation": 0.477169,
+          "relativeAmplitude": 0.794453
+        },
+        {
+          "start": 105.55525,
+          "end": 105.83525,
+          "correlation": 0.369552,
+          "relativeAmplitude": 0.928961
+        },
+        {
+          "start": 105.81425,
+          "end": 106.09425,
+          "correlation": 0.58674,
+          "relativeAmplitude": 1.168708
+        },
+        {
+          "start": 106.03675,
+          "end": 106.31675,
+          "correlation": 0.564543,
+          "relativeAmplitude": 1.36144
+        },
+        {
+          "start": 106.22025,
+          "end": 106.50025,
+          "correlation": 0.304568,
+          "relativeAmplitude": 1.642261
+        },
+        {
+          "start": 106.46925,
+          "end": 106.74925,
+          "correlation": 0.368372,
+          "relativeAmplitude": 1.762159
+        },
+        {
+          "start": 107.71675,
+          "end": 107.99675,
+          "correlation": 0.655373,
+          "relativeAmplitude": 2.135522
+        },
+        {
+          "start": 107.94175,
+          "end": 108.22175,
+          "correlation": 0.479389,
+          "relativeAmplitude": 2.265415
+        },
+        {
+          "start": 108.122,
+          "end": 108.402,
+          "correlation": 0.319618,
+          "relativeAmplitude": 2.399043
+        },
+        {
+          "start": 109.5645,
+          "end": 109.8445,
+          "correlation": 0.347292,
+          "relativeAmplitude": 1.465715
+        },
+        {
+          "start": 110.77825,
+          "end": 111.05825,
+          "correlation": 0.321494,
+          "relativeAmplitude": 1.447793
+        },
+        {
+          "start": 111.12325,
+          "end": 111.40325,
+          "correlation": 0.366553,
+          "relativeAmplitude": 0.850523
+        },
+        {
+          "start": 112.05675,
+          "end": 112.33675,
+          "correlation": 0.415597,
+          "relativeAmplitude": 0.521774
+        },
+        {
+          "start": 113.382,
+          "end": 113.662,
+          "correlation": 0.370417,
+          "relativeAmplitude": 0.764291
+        },
+        {
+          "start": 114.53875,
+          "end": 114.81875,
+          "correlation": 0.601994,
+          "relativeAmplitude": 0.89954
+        },
+        {
+          "start": 115.852,
+          "end": 116.132,
+          "correlation": 0.379839,
+          "relativeAmplitude": 0.570609
+        },
+        {
+          "start": 116.08325,
+          "end": 116.36325,
+          "correlation": 0.551149,
+          "relativeAmplitude": 0.631941
+        },
+        {
+          "start": 117.1835,
+          "end": 117.4635,
+          "correlation": 0.433668,
+          "relativeAmplitude": 0.695261
+        },
+        {
+          "start": 118.3765,
+          "end": 118.6565,
+          "correlation": 0.378831,
+          "relativeAmplitude": 0.645661
+        },
+        {
+          "start": 119.78325,
+          "end": 120.06325,
+          "correlation": 0.607691,
+          "relativeAmplitude": 1.183828
+        },
+        {
+          "start": 121.164,
+          "end": 121.444,
+          "correlation": 0.318611,
+          "relativeAmplitude": 1.035399
+        },
+        {
+          "start": 121.43925,
+          "end": 121.71925,
+          "correlation": 0.413082,
+          "relativeAmplitude": 1.058336
+        }
+      ],
+      "phaseInvariantSpectralMatches": [
+        {
+          "start": 103.13,
+          "end": 103.41,
+          "cosine": 0.873748
+        },
+        {
+          "start": 103.54,
+          "end": 103.82,
+          "cosine": 0.850464
+        },
+        {
+          "start": 103.79,
+          "end": 104.07,
+          "cosine": 0.88435
+        },
+        {
+          "start": 104.13,
+          "end": 104.41,
+          "cosine": 0.878411
+        },
+        {
+          "start": 104.6,
+          "end": 104.88,
+          "cosine": 0.935387
+        },
+        {
+          "start": 104.85,
+          "end": 105.13,
+          "cosine": 0.900074
+        },
+        {
+          "start": 105.1,
+          "end": 105.38,
+          "cosine": 0.84221
+        },
+        {
+          "start": 105.44,
+          "end": 105.72,
+          "cosine": 0.81732
+        },
+        {
+          "start": 105.69,
+          "end": 105.97,
+          "cosine": 0.895441
+        },
+        {
+          "start": 105.99,
+          "end": 106.27,
+          "cosine": 0.86262
+        },
+        {
+          "start": 106.31,
+          "end": 106.59,
+          "cosine": 0.892145
+        },
+        {
+          "start": 106.6,
+          "end": 106.88,
+          "cosine": 0.902828
+        },
+        {
+          "start": 106.85,
+          "end": 107.13,
+          "cosine": 0.86373
+        },
+        {
+          "start": 107.1,
+          "end": 107.38,
+          "cosine": 0.859233
+        },
+        {
+          "start": 107.42,
+          "end": 107.7,
+          "cosine": 0.857628
+        },
+        {
+          "start": 107.67,
+          "end": 107.95,
+          "cosine": 0.935813
+        },
+        {
+          "start": 107.93,
+          "end": 108.21,
+          "cosine": 0.915346
+        },
+        {
+          "start": 108.49,
+          "end": 108.77,
+          "cosine": 0.732878
+        },
+        {
+          "start": 108.94,
+          "end": 109.22,
+          "cosine": 0.737199
+        },
+        {
+          "start": 109.67,
+          "end": 109.95,
+          "cosine": 0.763952
+        },
+        {
+          "start": 111.17,
+          "end": 111.45,
+          "cosine": 0.772848
+        },
+        {
+          "start": 111.64,
+          "end": 111.92,
+          "cosine": 0.831134
+        },
+        {
+          "start": 111.91,
+          "end": 112.19,
+          "cosine": 0.843867
+        },
+        {
+          "start": 112.16,
+          "end": 112.44,
+          "cosine": 0.858978
+        },
+        {
+          "start": 112.57,
+          "end": 112.85,
+          "cosine": 0.869946
+        },
+        {
+          "start": 112.82,
+          "end": 113.1,
+          "cosine": 0.824146
+        },
+        {
+          "start": 113.25,
+          "end": 113.53,
+          "cosine": 0.822778
+        },
+        {
+          "start": 113.5,
+          "end": 113.78,
+          "cosine": 0.747051
+        },
+        {
+          "start": 113.76,
+          "end": 114.04,
+          "cosine": 0.80751
+        },
+        {
+          "start": 114.03,
+          "end": 114.31,
+          "cosine": 0.82961
+        },
+        {
+          "start": 114.29,
+          "end": 114.57,
+          "cosine": 0.850802
+        },
+        {
+          "start": 114.54,
+          "end": 114.82,
+          "cosine": 0.874469
+        },
+        {
+          "start": 114.86,
+          "end": 115.14,
+          "cosine": 0.83255
+        },
+        {
+          "start": 115.11,
+          "end": 115.39,
+          "cosine": 0.812372
+        },
+        {
+          "start": 115.54,
+          "end": 115.82,
+          "cosine": 0.80455
+        },
+        {
+          "start": 115.81,
+          "end": 116.09,
+          "cosine": 0.858806
+        },
+        {
+          "start": 116.07,
+          "end": 116.35,
+          "cosine": 0.854482
+        },
+        {
+          "start": 116.32,
+          "end": 116.6,
+          "cosine": 0.841583
+        },
+        {
+          "start": 116.75,
+          "end": 117.03,
+          "cosine": 0.827438
+        },
+        {
+          "start": 117.2,
+          "end": 117.48,
+          "cosine": 0.85649
+        },
+        {
+          "start": 117.56,
+          "end": 117.84,
+          "cosine": 0.818898
+        },
+        {
+          "start": 117.95,
+          "end": 118.23,
+          "cosine": 0.824347
+        },
+        {
+          "start": 118.3,
+          "end": 118.58,
+          "cosine": 0.817354
+        },
+        {
+          "start": 118.61,
+          "end": 118.89,
+          "cosine": 0.75164
+        },
+        {
+          "start": 118.9,
+          "end": 119.18,
+          "cosine": 0.829566
+        },
+        {
+          "start": 119.29,
+          "end": 119.57,
+          "cosine": 0.811011
+        },
+        {
+          "start": 119.54,
+          "end": 119.82,
+          "cosine": 0.872317
+        },
+        {
+          "start": 119.79,
+          "end": 120.07,
+          "cosine": 0.926414
+        },
+        {
+          "start": 120.08,
+          "end": 120.36,
+          "cosine": 0.893359
+        },
+        {
+          "start": 120.51,
+          "end": 120.79,
+          "cosine": 0.884564
+        },
+        {
+          "start": 120.76,
+          "end": 121.04,
+          "cosine": 0.864784
+        },
+        {
+          "start": 121.15,
+          "end": 121.43,
+          "cosine": 0.859937
+        }
+      ]
+    },
+    {
+      "template": {
+        "id": "strict-me-probe",
+        "start": 1.06,
+        "end": 1.18
+      },
+      "waveformMatches": [
+        {
+          "start": 103.25425,
+          "end": 103.37425,
+          "correlation": 0.4315,
+          "relativeAmplitude": 0.993097
+        },
+        {
+          "start": 103.765,
+          "end": 103.885,
+          "correlation": 0.448839,
+          "relativeAmplitude": 1.469175
+        },
+        {
+          "start": 103.91575,
+          "end": 104.03575,
+          "correlation": 0.812098,
+          "relativeAmplitude": 1.669602
+        },
+        {
+          "start": 104.05675,
+          "end": 104.17675,
+          "correlation": 0.858599,
+          "relativeAmplitude": 1.845837
+        },
+        {
+          "start": 104.3215,
+          "end": 104.4415,
+          "correlation": 0.80488,
+          "relativeAmplitude": 1.349917
+        },
+        {
+          "start": 104.869,
+          "end": 104.989,
+          "correlation": 0.56382,
+          "relativeAmplitude": 0.470891
+        },
+        {
+          "start": 105.0195,
+          "end": 105.1395,
+          "correlation": 0.768048,
+          "relativeAmplitude": 1.179531
+        },
+        {
+          "start": 105.245,
+          "end": 105.365,
+          "correlation": 0.833231,
+          "relativeAmplitude": 0.671395
+        },
+        {
+          "start": 105.81925,
+          "end": 105.93925,
+          "correlation": 0.504741,
+          "relativeAmplitude": 0.772587
+        },
+        {
+          "start": 105.96025,
+          "end": 106.08025,
+          "correlation": 0.841495,
+          "relativeAmplitude": 1.140566
+        },
+        {
+          "start": 106.18875,
+          "end": 106.30875,
+          "correlation": 0.891181,
+          "relativeAmplitude": 1.159288
+        },
+        {
+          "start": 107.815,
+          "end": 107.935,
+          "correlation": 0.735155,
+          "relativeAmplitude": 2.188574
+        },
+        {
+          "start": 107.96475,
+          "end": 108.08475,
+          "correlation": 0.903196,
+          "relativeAmplitude": 1.71885
+        },
+        {
+          "start": 108.1055,
+          "end": 108.2255,
+          "correlation": 0.646751,
+          "relativeAmplitude": 2.204046
+        },
+        {
+          "start": 108.247,
+          "end": 108.367,
+          "correlation": 0.506297,
+          "relativeAmplitude": 1.793031
+        },
+        {
+          "start": 109.7045,
+          "end": 109.8245,
+          "correlation": 0.481843,
+          "relativeAmplitude": 1.37828
+        },
+        {
+          "start": 110.86475,
+          "end": 110.98475,
+          "correlation": 0.534977,
+          "relativeAmplitude": 1.275303
+        },
+        {
+          "start": 111.10275,
+          "end": 111.22275,
+          "correlation": 0.691936,
+          "relativeAmplitude": 0.577768
+        },
+        {
+          "start": 111.332,
+          "end": 111.452,
+          "correlation": 0.603649,
+          "relativeAmplitude": 0.89132
+        },
+        {
+          "start": 112.2235,
+          "end": 112.3435,
+          "correlation": 0.575534,
+          "relativeAmplitude": 0.460043
+        },
+        {
+          "start": 113.483,
+          "end": 113.603,
+          "correlation": 0.48206,
+          "relativeAmplitude": 0.678193
+        },
+        {
+          "start": 114.66675,
+          "end": 114.78675,
+          "correlation": 0.765408,
+          "relativeAmplitude": 0.94085
+        },
+        {
+          "start": 114.81025,
+          "end": 114.93025,
+          "correlation": 0.53311,
+          "relativeAmplitude": 0.633995
+        },
+        {
+          "start": 115.968,
+          "end": 116.088,
+          "correlation": 0.559833,
+          "relativeAmplitude": 0.526755
+        },
+        {
+          "start": 116.22325,
+          "end": 116.34325,
+          "correlation": 0.787806,
+          "relativeAmplitude": 0.619514
+        },
+        {
+          "start": 116.40825,
+          "end": 116.52825,
+          "correlation": 0.441774,
+          "relativeAmplitude": 0.45001
+        },
+        {
+          "start": 117.2965,
+          "end": 117.4165,
+          "correlation": 0.619504,
+          "relativeAmplitude": 0.723026
+        },
+        {
+          "start": 118.47475,
+          "end": 118.59475,
+          "correlation": 0.484575,
+          "relativeAmplitude": 0.59717
+        },
+        {
+          "start": 119.746,
+          "end": 119.866,
+          "correlation": 0.629979,
+          "relativeAmplitude": 0.66457
+        },
+        {
+          "start": 119.89025,
+          "end": 120.01025,
+          "correlation": 0.601596,
+          "relativeAmplitude": 1.035831
+        },
+        {
+          "start": 120.03125,
+          "end": 120.15125,
+          "correlation": 0.811572,
+          "relativeAmplitude": 1.109447
+        },
+        {
+          "start": 120.7585,
+          "end": 120.8785,
+          "correlation": 0.447258,
+          "relativeAmplitude": 0.502859
+        }
+      ],
+      "phaseInvariantSpectralMatches": [
+        {
+          "start": 103.21,
+          "end": 103.33,
+          "cosine": 0.857676
+        },
+        {
+          "start": 103.67,
+          "end": 103.79,
+          "cosine": 0.81782
+        },
+        {
+          "start": 103.92,
+          "end": 104.04,
+          "cosine": 0.895375
+        },
+        {
+          "start": 104.23,
+          "end": 104.35,
+          "cosine": 0.905035
+        },
+        {
+          "start": 104.59,
+          "end": 104.71,
+          "cosine": 0.861978
+        },
+        {
+          "start": 104.84,
+          "end": 104.96,
+          "cosine": 0.946565
+        },
+        {
+          "start": 105.22,
+          "end": 105.34,
+          "cosine": 0.924851
+        },
+        {
+          "start": 105.68,
+          "end": 105.8,
+          "cosine": 0.86485
+        },
+        {
+          "start": 105.93,
+          "end": 106.05,
+          "cosine": 0.8996
+        },
+        {
+          "start": 106.18,
+          "end": 106.3,
+          "cosine": 0.932678
+        },
+        {
+          "start": 106.43,
+          "end": 106.55,
+          "cosine": 0.895592
+        },
+        {
+          "start": 106.8,
+          "end": 106.92,
+          "cosine": 0.883074
+        },
+        {
+          "start": 107.23,
+          "end": 107.35,
+          "cosine": 0.832369
+        },
+        {
+          "start": 107.72,
+          "end": 107.84,
+          "cosine": 0.900581
+        },
+        {
+          "start": 107.97,
+          "end": 108.09,
+          "cosine": 0.960607
+        },
+        {
+          "start": 108.6,
+          "end": 108.72,
+          "cosine": 0.768364
+        },
+        {
+          "start": 108.97,
+          "end": 109.09,
+          "cosine": 0.822323
+        },
+        {
+          "start": 109.34,
+          "end": 109.46,
+          "cosine": 0.753269
+        },
+        {
+          "start": 109.67,
+          "end": 109.79,
+          "cosine": 0.769457
+        },
+        {
+          "start": 109.92,
+          "end": 110.04,
+          "cosine": 0.701841
+        },
+        {
+          "start": 111.31,
+          "end": 111.43,
+          "cosine": 0.783032
+        },
+        {
+          "start": 111.71,
+          "end": 111.83,
+          "cosine": 0.782512
+        },
+        {
+          "start": 111.97,
+          "end": 112.09,
+          "cosine": 0.825927
+        },
+        {
+          "start": 112.31,
+          "end": 112.43,
+          "cosine": 0.840377
+        },
+        {
+          "start": 112.68,
+          "end": 112.8,
+          "cosine": 0.875028
+        },
+        {
+          "start": 112.93,
+          "end": 113.05,
+          "cosine": 0.847372
+        },
+        {
+          "start": 113.41,
+          "end": 113.53,
+          "cosine": 0.767383
+        },
+        {
+          "start": 113.89,
+          "end": 114.01,
+          "cosine": 0.756791
+        },
+        {
+          "start": 114.18,
+          "end": 114.3,
+          "cosine": 0.793334
+        },
+        {
+          "start": 114.67,
+          "end": 114.79,
+          "cosine": 0.888293
+        },
+        {
+          "start": 115.01,
+          "end": 115.13,
+          "cosine": 0.827232
+        },
+        {
+          "start": 115.29,
+          "end": 115.41,
+          "cosine": 0.783015
+        },
+        {
+          "start": 115.54,
+          "end": 115.66,
+          "cosine": 0.758553
+        },
+        {
+          "start": 115.95,
+          "end": 116.07,
+          "cosine": 0.846921
+        },
+        {
+          "start": 116.21,
+          "end": 116.33,
+          "cosine": 0.881321
+        },
+        {
+          "start": 116.46,
+          "end": 116.58,
+          "cosine": 0.848774
+        },
+        {
+          "start": 116.78,
+          "end": 116.9,
+          "cosine": 0.824904
+        },
+        {
+          "start": 117.03,
+          "end": 117.15,
+          "cosine": 0.714318
+        },
+        {
+          "start": 117.3,
+          "end": 117.42,
+          "cosine": 0.850266
+        },
+        {
+          "start": 117.65,
+          "end": 117.77,
+          "cosine": 0.756792
+        },
+        {
+          "start": 117.9,
+          "end": 118.02,
+          "cosine": 0.793069
+        },
+        {
+          "start": 118.15,
+          "end": 118.27,
+          "cosine": 0.75794
+        },
+        {
+          "start": 118.41,
+          "end": 118.53,
+          "cosine": 0.802081
+        },
+        {
+          "start": 118.66,
+          "end": 118.78,
+          "cosine": 0.723714
+        },
+        {
+          "start": 118.98,
+          "end": 119.1,
+          "cosine": 0.816942
+        },
+        {
+          "start": 119.46,
+          "end": 119.58,
+          "cosine": 0.807102
+        },
+        {
+          "start": 119.71,
+          "end": 119.83,
+          "cosine": 0.883547
+        },
+        {
+          "start": 119.96,
+          "end": 120.08,
+          "cosine": 0.950728
+        },
+        {
+          "start": 120.28,
+          "end": 120.4,
+          "cosine": 0.932655
+        },
+        {
+          "start": 120.69,
+          "end": 120.81,
+          "cosine": 0.899587
+        },
+        {
+          "start": 121.01,
+          "end": 121.13,
+          "cosine": 0.829695
+        },
+        {
+          "start": 121.27,
+          "end": 121.39,
+          "cosine": 0.900298
+        }
+      ]
+    },
+    {
+      "template": {
+        "id": "local-chopped-pair",
+        "start": 103.39,
+        "end": 104.23
+      },
+      "waveformMatches": [
+        {
+          "start": 103.39,
+          "end": 104.23,
+          "correlation": 1,
+          "relativeAmplitude": 1
+        },
+        {
+          "start": 104.335,
+          "end": 105.175,
+          "correlation": 0.363255,
+          "relativeAmplitude": 0.701483
+        },
+        {
+          "start": 105.2635,
+          "end": 106.1035,
+          "correlation": 0.477885,
+          "relativeAmplitude": 0.580175
+        },
+        {
+          "start": 106.17475,
+          "end": 107.01475,
+          "correlation": 0.28611,
+          "relativeAmplitude": 0.894516
+        },
+        {
+          "start": 107.313,
+          "end": 108.153,
+          "correlation": 0.48044,
+          "relativeAmplitude": 1.196247
+        },
+        {
+          "start": 112.95425,
+          "end": 113.79425,
+          "correlation": 0.2367,
+          "relativeAmplitude": 0.395249
+        },
+        {
+          "start": 114,
+          "end": 114.84,
+          "correlation": 0.355972,
+          "relativeAmplitude": 0.371683
+        },
+        {
+          "start": 116.3285,
+          "end": 117.1685,
+          "correlation": 0.274968,
+          "relativeAmplitude": 0.362346
+        },
+        {
+          "start": 117.826,
+          "end": 118.666,
+          "correlation": 0.340615,
+          "relativeAmplitude": 0.338458
+        },
+        {
+          "start": 118.63425,
+          "end": 119.47425,
+          "correlation": 0.243265,
+          "relativeAmplitude": 0.579
+        },
+        {
+          "start": 119.3705,
+          "end": 120.2105,
+          "correlation": 0.357161,
+          "relativeAmplitude": 0.650305
+        },
+        {
+          "start": 120.1365,
+          "end": 120.9765,
+          "correlation": 0.337936,
+          "relativeAmplitude": 0.462904
+        },
+        {
+          "start": 121.027,
+          "end": 121.867,
+          "correlation": 0.331112,
+          "relativeAmplitude": 0.56129
+        }
+      ],
+      "phaseInvariantSpectralMatches": [
+        {
+          "start": 103.14,
+          "end": 103.98,
+          "cosine": 0.872591
+        },
+        {
+          "start": 103.39,
+          "end": 104.23,
+          "cosine": 1
+        },
+        {
+          "start": 103.64,
+          "end": 104.48,
+          "cosine": 0.906737
+        },
+        {
+          "start": 103.89,
+          "end": 104.73,
+          "cosine": 0.849573
+        },
+        {
+          "start": 104.37,
+          "end": 105.21,
+          "cosine": 0.89495
+        },
+        {
+          "start": 104.62,
+          "end": 105.46,
+          "cosine": 0.860823
+        },
+        {
+          "start": 105.06,
+          "end": 105.9,
+          "cosine": 0.80264
+        },
+        {
+          "start": 105.31,
+          "end": 106.15,
+          "cosine": 0.889925
+        },
+        {
+          "start": 105.56,
+          "end": 106.4,
+          "cosine": 0.867286
+        },
+        {
+          "start": 105.81,
+          "end": 106.65,
+          "cosine": 0.803946
+        },
+        {
+          "start": 106.2,
+          "end": 107.04,
+          "cosine": 0.82506
+        },
+        {
+          "start": 106.47,
+          "end": 107.31,
+          "cosine": 0.804255
+        },
+        {
+          "start": 106.72,
+          "end": 107.56,
+          "cosine": 0.810073
+        },
+        {
+          "start": 106.97,
+          "end": 107.81,
+          "cosine": 0.803743
+        },
+        {
+          "start": 107.22,
+          "end": 108.06,
+          "cosine": 0.866951
+        },
+        {
+          "start": 107.47,
+          "end": 108.31,
+          "cosine": 0.841285
+        },
+        {
+          "start": 107.78,
+          "end": 108.62,
+          "cosine": 0.849158
+        },
+        {
+          "start": 108.19,
+          "end": 109.03,
+          "cosine": 0.803913
+        },
+        {
+          "start": 108.6,
+          "end": 109.44,
+          "cosine": 0.771924
+        },
+        {
+          "start": 108.85,
+          "end": 109.69,
+          "cosine": 0.781341
+        },
+        {
+          "start": 109.15,
+          "end": 109.99,
+          "cosine": 0.817642
+        },
+        {
+          "start": 109.4,
+          "end": 110.24,
+          "cosine": 0.71534
+        },
+        {
+          "start": 110.65,
+          "end": 111.49,
+          "cosine": 0.786889
+        },
+        {
+          "start": 110.9,
+          "end": 111.74,
+          "cosine": 0.835622
+        },
+        {
+          "start": 111.2,
+          "end": 112.04,
+          "cosine": 0.86091
+        },
+        {
+          "start": 111.52,
+          "end": 112.36,
+          "cosine": 0.852233
+        },
+        {
+          "start": 111.77,
+          "end": 112.61,
+          "cosine": 0.826331
+        },
+        {
+          "start": 112.02,
+          "end": 112.86,
+          "cosine": 0.841467
+        },
+        {
+          "start": 112.27,
+          "end": 113.11,
+          "cosine": 0.821215
+        },
+        {
+          "start": 112.55,
+          "end": 113.39,
+          "cosine": 0.827928
+        },
+        {
+          "start": 112.93,
+          "end": 113.77,
+          "cosine": 0.87245
+        },
+        {
+          "start": 113.28,
+          "end": 114.12,
+          "cosine": 0.834219
+        },
+        {
+          "start": 113.76,
+          "end": 114.6,
+          "cosine": 0.852952
+        },
+        {
+          "start": 114.01,
+          "end": 114.85,
+          "cosine": 0.889253
+        },
+        {
+          "start": 114.26,
+          "end": 115.1,
+          "cosine": 0.855287
+        },
+        {
+          "start": 114.58,
+          "end": 115.42,
+          "cosine": 0.83079
+        },
+        {
+          "start": 114.86,
+          "end": 115.7,
+          "cosine": 0.842838
+        },
+        {
+          "start": 115.2,
+          "end": 116.04,
+          "cosine": 0.840127
+        },
+        {
+          "start": 115.65,
+          "end": 116.49,
+          "cosine": 0.84783
+        },
+        {
+          "start": 115.9,
+          "end": 116.74,
+          "cosine": 0.857082
+        },
+        {
+          "start": 116.24,
+          "end": 117.08,
+          "cosine": 0.852566
+        },
+        {
+          "start": 116.52,
+          "end": 117.36,
+          "cosine": 0.810777
+        },
+        {
+          "start": 116.78,
+          "end": 117.62,
+          "cosine": 0.865577
+        },
+        {
+          "start": 117.13,
+          "end": 117.97,
+          "cosine": 0.820447
+        },
+        {
+          "start": 117.61,
+          "end": 118.45,
+          "cosine": 0.808136
+        },
+        {
+          "start": 117.86,
+          "end": 118.7,
+          "cosine": 0.872402
+        },
+        {
+          "start": 118.11,
+          "end": 118.95,
+          "cosine": 0.844536
+        },
+        {
+          "start": 118.36,
+          "end": 119.2,
+          "cosine": 0.854619
+        },
+        {
+          "start": 118.84,
+          "end": 119.68,
+          "cosine": 0.859564
+        },
+        {
+          "start": 119.21,
+          "end": 120.05,
+          "cosine": 0.847058
+        },
+        {
+          "start": 119.64,
+          "end": 120.48,
+          "cosine": 0.883123
+        },
+        {
+          "start": 120.05,
+          "end": 120.89,
+          "cosine": 0.872537
+        },
+        {
+          "start": 120.32,
+          "end": 121.16,
+          "cosine": 0.846006
+        },
+        {
+          "start": 120.57,
+          "end": 121.41,
+          "cosine": 0.879422
+        }
+      ]
+    },
+    {
+      "template": {
+        "id": "local-transition-pair",
+        "start": 107.23,
+        "end": 108.12
+      },
+      "waveformMatches": [
+        {
+          "start": 103.385,
+          "end": 104.275,
+          "correlation": 0.461183,
+          "relativeAmplitude": 0.85944
+        },
+        {
+          "start": 104.378,
+          "end": 105.268,
+          "correlation": 0.299074,
+          "relativeAmplitude": 0.56789
+        },
+        {
+          "start": 105.20475,
+          "end": 106.09475,
+          "correlation": 0.415551,
+          "relativeAmplitude": 0.489202
+        },
+        {
+          "start": 107.23,
+          "end": 108.12,
+          "correlation": 1,
+          "relativeAmplitude": 1
+        },
+        {
+          "start": 114.06975,
+          "end": 114.95975,
+          "correlation": 0.337393,
+          "relativeAmplitude": 0.325267
+        },
+        {
+          "start": 116.7115,
+          "end": 117.6015,
+          "correlation": 0.232748,
+          "relativeAmplitude": 0.310869
+        },
+        {
+          "start": 117.77275,
+          "end": 118.66275,
+          "correlation": 0.376966,
+          "relativeAmplitude": 0.28232
+        },
+        {
+          "start": 119.2845,
+          "end": 120.1745,
+          "correlation": 0.291841,
+          "relativeAmplitude": 0.557227
+        },
+        {
+          "start": 120.1235,
+          "end": 121.0135,
+          "correlation": 0.258762,
+          "relativeAmplitude": 0.396051
+        },
+        {
+          "start": 121.07025,
+          "end": 121.96025,
+          "correlation": 0.253496,
+          "relativeAmplitude": 0.510583
+        }
+      ],
+      "phaseInvariantSpectralMatches": [
+        {
+          "start": 103,
+          "end": 103.89,
+          "cosine": 0.844909
+        },
+        {
+          "start": 103.4,
+          "end": 104.29,
+          "cosine": 0.870284
+        },
+        {
+          "start": 103.65,
+          "end": 104.54,
+          "cosine": 0.836574
+        },
+        {
+          "start": 104.14,
+          "end": 105.03,
+          "cosine": 0.856623
+        },
+        {
+          "start": 104.39,
+          "end": 105.28,
+          "cosine": 0.880123
+        },
+        {
+          "start": 104.64,
+          "end": 105.53,
+          "cosine": 0.824034
+        },
+        {
+          "start": 105.1,
+          "end": 105.99,
+          "cosine": 0.805055
+        },
+        {
+          "start": 105.35,
+          "end": 106.24,
+          "cosine": 0.871492
+        },
+        {
+          "start": 105.6,
+          "end": 106.49,
+          "cosine": 0.821829
+        },
+        {
+          "start": 106.02,
+          "end": 106.91,
+          "cosine": 0.830113
+        },
+        {
+          "start": 106.27,
+          "end": 107.16,
+          "cosine": 0.884947
+        },
+        {
+          "start": 106.52,
+          "end": 107.41,
+          "cosine": 0.875282
+        },
+        {
+          "start": 106.98,
+          "end": 107.87,
+          "cosine": 0.895126
+        },
+        {
+          "start": 107.23,
+          "end": 108.12,
+          "cosine": 1
+        },
+        {
+          "start": 107.48,
+          "end": 108.37,
+          "cosine": 0.85088
+        },
+        {
+          "start": 107.73,
+          "end": 108.62,
+          "cosine": 0.777509
+        },
+        {
+          "start": 107.98,
+          "end": 108.87,
+          "cosine": 0.71519
+        },
+        {
+          "start": 111.07,
+          "end": 111.96,
+          "cosine": 0.77514
+        },
+        {
+          "start": 111.32,
+          "end": 112.21,
+          "cosine": 0.828597
+        },
+        {
+          "start": 111.57,
+          "end": 112.46,
+          "cosine": 0.866858
+        },
+        {
+          "start": 111.9,
+          "end": 112.79,
+          "cosine": 0.843276
+        },
+        {
+          "start": 112.15,
+          "end": 113.04,
+          "cosine": 0.827321
+        },
+        {
+          "start": 112.62,
+          "end": 113.51,
+          "cosine": 0.813916
+        },
+        {
+          "start": 112.94,
+          "end": 113.83,
+          "cosine": 0.805813
+        },
+        {
+          "start": 113.42,
+          "end": 114.31,
+          "cosine": 0.794962
+        },
+        {
+          "start": 113.75,
+          "end": 114.64,
+          "cosine": 0.842373
+        },
+        {
+          "start": 114,
+          "end": 114.89,
+          "cosine": 0.888394
+        },
+        {
+          "start": 114.25,
+          "end": 115.14,
+          "cosine": 0.838267
+        },
+        {
+          "start": 114.5,
+          "end": 115.39,
+          "cosine": 0.808663
+        },
+        {
+          "start": 114.75,
+          "end": 115.64,
+          "cosine": 0.805803
+        },
+        {
+          "start": 115.08,
+          "end": 115.97,
+          "cosine": 0.819215
+        },
+        {
+          "start": 115.33,
+          "end": 116.22,
+          "cosine": 0.859766
+        },
+        {
+          "start": 115.6,
+          "end": 116.49,
+          "cosine": 0.856138
+        },
+        {
+          "start": 115.85,
+          "end": 116.74,
+          "cosine": 0.827645
+        },
+        {
+          "start": 116.18,
+          "end": 117.07,
+          "cosine": 0.800469
+        },
+        {
+          "start": 116.43,
+          "end": 117.32,
+          "cosine": 0.815427
+        },
+        {
+          "start": 116.78,
+          "end": 117.67,
+          "cosine": 0.833024
+        },
+        {
+          "start": 117.15,
+          "end": 118.04,
+          "cosine": 0.818201
+        },
+        {
+          "start": 117.46,
+          "end": 118.35,
+          "cosine": 0.839734
+        },
+        {
+          "start": 117.77,
+          "end": 118.66,
+          "cosine": 0.864041
+        },
+        {
+          "start": 118.02,
+          "end": 118.91,
+          "cosine": 0.803643
+        },
+        {
+          "start": 118.35,
+          "end": 119.24,
+          "cosine": 0.779819
+        },
+        {
+          "start": 118.62,
+          "end": 119.51,
+          "cosine": 0.782705
+        },
+        {
+          "start": 118.87,
+          "end": 119.76,
+          "cosine": 0.841838
+        },
+        {
+          "start": 119.12,
+          "end": 120.01,
+          "cosine": 0.870707
+        },
+        {
+          "start": 119.37,
+          "end": 120.26,
+          "cosine": 0.88029
+        },
+        {
+          "start": 119.63,
+          "end": 120.52,
+          "cosine": 0.867488
+        },
+        {
+          "start": 120.12,
+          "end": 121.01,
+          "cosine": 0.846672
+        },
+        {
+          "start": 120.56,
+          "end": 121.45,
+          "cosine": 0.85344
+        }
+      ]
+    },
+    {
+      "template": {
+        "id": "there-short-body",
+        "start": 1.5,
+        "end": 1.73
+      },
+      "waveformMatches": [
+        {
+          "start": 103.92075,
+          "end": 104.15075,
+          "correlation": 0.406234,
+          "relativeAmplitude": 1.529814
+        },
+        {
+          "start": 106.77425,
+          "end": 107.00425,
+          "correlation": 0.356777,
+          "relativeAmplitude": 1.114294
+        },
+        {
+          "start": 107.95175,
+          "end": 108.18175,
+          "correlation": 0.333645,
+          "relativeAmplitude": 1.583709
+        },
+        {
+          "start": 111.32125,
+          "end": 111.55125,
+          "correlation": 0.33829,
+          "relativeAmplitude": 0.715319
+        },
+        {
+          "start": 113.443,
+          "end": 113.673,
+          "correlation": 0.337938,
+          "relativeAmplitude": 0.5345
+        },
+        {
+          "start": 114.6625,
+          "end": 114.8925,
+          "correlation": 0.349167,
+          "relativeAmplitude": 0.73665
+        },
+        {
+          "start": 117.265,
+          "end": 117.495,
+          "correlation": 0.335308,
+          "relativeAmplitude": 0.5757
+        },
+        {
+          "start": 118.87625,
+          "end": 119.10625,
+          "correlation": 0.330162,
+          "relativeAmplitude": 0.666172
+        }
+      ],
+      "phaseInvariantSpectralMatches": [
+        {
+          "start": 103.18,
+          "end": 103.41,
+          "cosine": 0.871354
+        },
+        {
+          "start": 103.51,
+          "end": 103.74,
+          "cosine": 0.892429
+        },
+        {
+          "start": 103.97,
+          "end": 104.2,
+          "cosine": 0.909798
+        },
+        {
+          "start": 104.44,
+          "end": 104.67,
+          "cosine": 0.876595
+        },
+        {
+          "start": 104.69,
+          "end": 104.92,
+          "cosine": 0.894623
+        },
+        {
+          "start": 105.12,
+          "end": 105.35,
+          "cosine": 0.856899
+        },
+        {
+          "start": 105.39,
+          "end": 105.62,
+          "cosine": 0.806648
+        },
+        {
+          "start": 105.66,
+          "end": 105.89,
+          "cosine": 0.85174
+        },
+        {
+          "start": 106.02,
+          "end": 106.25,
+          "cosine": 0.833252
+        },
+        {
+          "start": 106.29,
+          "end": 106.52,
+          "cosine": 0.865853
+        },
+        {
+          "start": 106.63,
+          "end": 106.86,
+          "cosine": 0.831769
+        },
+        {
+          "start": 106.89,
+          "end": 107.12,
+          "cosine": 0.839746
+        },
+        {
+          "start": 107.24,
+          "end": 107.47,
+          "cosine": 0.873762
+        },
+        {
+          "start": 107.49,
+          "end": 107.72,
+          "cosine": 0.814302
+        },
+        {
+          "start": 107.74,
+          "end": 107.97,
+          "cosine": 0.855194
+        },
+        {
+          "start": 107.99,
+          "end": 108.22,
+          "cosine": 0.885395
+        },
+        {
+          "start": 108.41,
+          "end": 108.64,
+          "cosine": 0.822929
+        },
+        {
+          "start": 108.66,
+          "end": 108.89,
+          "cosine": 0.741707
+        },
+        {
+          "start": 108.94,
+          "end": 109.17,
+          "cosine": 0.854651
+        },
+        {
+          "start": 109.24,
+          "end": 109.47,
+          "cosine": 0.790013
+        },
+        {
+          "start": 109.73,
+          "end": 109.96,
+          "cosine": 0.838242
+        },
+        {
+          "start": 111.04,
+          "end": 111.27,
+          "cosine": 0.770643
+        },
+        {
+          "start": 111.29,
+          "end": 111.52,
+          "cosine": 0.869103
+        },
+        {
+          "start": 111.58,
+          "end": 111.81,
+          "cosine": 0.86549
+        },
+        {
+          "start": 111.84,
+          "end": 112.07,
+          "cosine": 0.877844
+        },
+        {
+          "start": 112.22,
+          "end": 112.45,
+          "cosine": 0.894852
+        },
+        {
+          "start": 112.63,
+          "end": 112.86,
+          "cosine": 0.928557
+        },
+        {
+          "start": 112.88,
+          "end": 113.11,
+          "cosine": 0.803866
+        },
+        {
+          "start": 113.14,
+          "end": 113.37,
+          "cosine": 0.833468
+        },
+        {
+          "start": 113.44,
+          "end": 113.67,
+          "cosine": 0.827022
+        },
+        {
+          "start": 113.84,
+          "end": 114.07,
+          "cosine": 0.86243
+        },
+        {
+          "start": 114.09,
+          "end": 114.32,
+          "cosine": 0.874329
+        },
+        {
+          "start": 114.41,
+          "end": 114.64,
+          "cosine": 0.875246
+        },
+        {
+          "start": 114.66,
+          "end": 114.89,
+          "cosine": 0.923745
+        },
+        {
+          "start": 114.95,
+          "end": 115.18,
+          "cosine": 0.9156
+        },
+        {
+          "start": 115.3,
+          "end": 115.53,
+          "cosine": 0.898305
+        },
+        {
+          "start": 115.72,
+          "end": 115.95,
+          "cosine": 0.858548
+        },
+        {
+          "start": 115.97,
+          "end": 116.2,
+          "cosine": 0.89596
+        },
+        {
+          "start": 116.27,
+          "end": 116.5,
+          "cosine": 0.881106
+        },
+        {
+          "start": 116.52,
+          "end": 116.75,
+          "cosine": 0.908154
+        },
+        {
+          "start": 116.91,
+          "end": 117.14,
+          "cosine": 0.862382
+        },
+        {
+          "start": 117.4,
+          "end": 117.63,
+          "cosine": 0.897989
+        },
+        {
+          "start": 117.7,
+          "end": 117.93,
+          "cosine": 0.877246
+        },
+        {
+          "start": 118.16,
+          "end": 118.39,
+          "cosine": 0.836188
+        },
+        {
+          "start": 118.41,
+          "end": 118.64,
+          "cosine": 0.891204
+        },
+        {
+          "start": 118.74,
+          "end": 118.97,
+          "cosine": 0.866372
+        },
+        {
+          "start": 118.99,
+          "end": 119.22,
+          "cosine": 0.877533
+        },
+        {
+          "start": 119.41,
+          "end": 119.64,
+          "cosine": 0.857328
+        },
+        {
+          "start": 119.69,
+          "end": 119.92,
+          "cosine": 0.901899
+        },
+        {
+          "start": 120.06,
+          "end": 120.29,
+          "cosine": 0.896738
+        },
+        {
+          "start": 120.32,
+          "end": 120.55,
+          "cosine": 0.915627
+        },
+        {
+          "start": 120.65,
+          "end": 120.88,
+          "cosine": 0.914087
+        },
+        {
+          "start": 121.08,
+          "end": 121.31,
+          "cosine": 0.89245
+        }
+      ]
+    }
+  ],
+  "conclusion": {
+    "stableTransitionTake": 107.253,
+    "stableTransitionTakeScore": 0.753113,
+    "localEarlierPairCandidates": [
+      103.39,
+      104.335,
+      105.2635,
+      106.17475
+    ],
+    "noAdditionalTakeTemplateWaveformMatchAbove0_50After107": true,
+    "finalPerformedWordCount": null,
+    "laterReviewWindows": [
+      [
+        110.75,
+        111.55
+      ],
+      [
+        112.5,
+        113
+      ],
+      [
+        113.95,
+        114.95
+      ],
+      [
+        116,
+        116.8
+      ],
+      [
+        117.65,
+        118.75
+      ],
+      [
+        119.2,
+        121.45
+      ]
+    ],
+    "note": "Short Take-template waveform correlation has no later match above0.50 before121.464. Short me-like nuclei and phase-invariant spectral matches continue, but do not establish complete Take me phrases or a trailing intelligible there. The user transcript count and recognizer expansion remain separate hypotheses.",
+    "spectralCaution": "Spectral cosine stays high for many overlapping candidates from different word templates (selected-peak medians approximately0.83–0.87), reflecting shared vocal spectral color. It is therefore not a discriminative phonetic classifier here; high cosine does not resolve the count."
+  },
+  "limitations": [
+    "Waveform similarity is repetition evidence, not phonetic transcription or proof of a word boundary.",
+    "Demucs separation and changing accompaniment can reduce correlation even for the same performed sample. Pitch/time transformations may evade a fixed template.",
+    "Echo candidates overlap reverberation; threshold is deliberately permissive and matches require editorial review.",
+    "Window start is the shifted template start; the actual syllable onset lies inside it, as in the opening template."
+  ]
+}

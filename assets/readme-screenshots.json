@@ -1,9 +1,12 @@
 {
   "version": 1,
-  "reviewedOn": "2026-09-24",
-  "scope": "The twenty featured song sections in the main README and their project README entry points.",
+  "reviewedOn": "2026-09-26",
+  "scope": "Featured song sections in the main README and their project README entry points; TAKE ME THERE is a preview addition.",
   "newExtraction": {
-    "fps": [30, 60],
+    "fps": [
+      30,
+      60
+    ],
     "frameNumbering": "zero-based",
     "capture": "FFmpeg select=eq(n,FRAME), one full-frame PNG; no crop, recolor, text replacement or generated imagery.",
     "sourceIdentity": "New source files matched the recorded delivery SHA-256 before selecting their frames.",
@@ -11,6 +14,22 @@
   },
   "review": "Every featured song has an associated representative image. The Mitski, Sun and Rainline editions use exact decoded final frames; historical editions retain their recorded status and limitations. Rainline's scoped delivery acceptance does not certify full acoustic synchronization review.",
   "screenshots": [
+    {
+      "song": "TAKE ME THERE",
+      "image": "projects/take-me-there-lyric-film/evidence/preview-landscape.png",
+      "project": "projects/take-me-there-lyric-film/README.md",
+      "timestampSeconds": 97.3,
+      "edition": "source-integrated-preview-v2; fixed spectrum preview",
+      "selection": "Complete original city/car shot, visible individual THERE focus, fixed luminous spectrum and secondary source-light response.",
+      "method": "PNG exported by the complete browser canvas using its decoded original source video frame and current scene code; no production render.",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 3071722,
+      "sha256": "90510d4b02ede0b72b25b6c4aa85027c47ed85ba9fffd6e9bd160beb7d9a7668",
+      "encoding": "PNG",
+      "sourceVideoSha256": "954ce98a308937e81a167ab740381cd46195abbad3279f3bc57319fa48bbd73c",
+      "reviewLimit": "Working transcription and word timing remain provisional. One still does not establish listening review or render approval."
+    },
     {
       "song": "Rainline",
       "image": "assets/rainline-wide-final-177.png",

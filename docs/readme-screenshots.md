@@ -1,9 +1,10 @@
 # README song screenshots
 
-Updated 24 September 2026. All twenty featured songs in the main README have a representative image with its edition and preview/final status, and each song's project README has an associated image. Rendered preview references are identified separately from browser captures and decoded final-film frames. Promotional covers and supplementary frames remain separate from the representative image.
+Updated 26 September 2026. Featured songs in the main README have a representative image with its edition and preview/final status, and each song's project README has an associated image. Rendered preview references are identified separately from browser captures and decoded final-film frames. Promotional covers and supplementary frames remain separate from the representative image.
 
 | Song | Representative image | Time | Edition / provenance |
 | --- | --- | --- | --- |
+| TAKE ME THERE | [Original source city, word focus and fixed spectrum](../projects/take-me-there-lyric-film/evidence/preview-landscape.png) | 01:37.300 | Complete browser preview; provisional timing, no final render |
 | Rainline | [Native cat lyric sign, lit window, train and hover taxi](../assets/rainline-wide-final-177.png) | 02:57.000 | Verified v4 16:9 film; scoped owner-approved-preview delivery; detailed acoustic review pending |
 | I'll Change for You | [Original room scene and individual “mean” focus](../assets/ill-change-for-you-final-45.png) | 00:45.000 | Exact decoded frame 2700 of the verified 4:3 final film |
 | If The Sun Burns Out Tonight | [Native panorama, solar word fire and gold depth spectrum](../assets/sun-burns-out-final-200-7.png) | 03:20.700 | Verified production-v1 final landscape film; exact decoded frame 12042 |
