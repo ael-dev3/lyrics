@@ -148,6 +148,11 @@ async function descriptor(path) {
   return {sha256: await shaFile(path), bytes: stat.size};
 }
 
+function publicDescriptor(value) {
+  if (!value || !shaPattern.test(value.sha256) || !Number.isSafeInteger(value.bytes) || value.bytes < 0) throw Error('Invalid public delivery descriptor.');
+  return {sha256:value.sha256, bytes:value.bytes};
+}
+
 async function assertDescriptor(path, expected, label) {
   if (!expected || !shaPattern.test(expected.sha256) || !Number.isSafeInteger(expected.bytes) || expected.bytes < 0) throw Error(`Invalid expected hash/size for ${label}`);
   const actual = await descriptor(path);
@@ -385,7 +390,8 @@ async function main() {
     const deliveryFiles = {};
     async function add(source, rel, expected = null) {
       safeRelative(rel);
-      const digest = expected || await descriptor(source);
+      const supplied = expected || await descriptor(source);
+      const digest = publicDescriptor(supplied);
       await copyVerified(source, join(desktopStage, rel), digest);
       deliveryFiles[rel] = digest;
     }
@@ -451,7 +457,7 @@ async function main() {
   }
 }
 
-export {assertNoLocalPaths, assertRendererBinding, emptyDesktopSkeleton, gitEntries, makeDeterministicZip, rendererDigestFor, safeRelative, scanTar, scanZip};
+export {assertNoLocalPaths, assertRendererBinding, emptyDesktopSkeleton, gitEntries, makeDeterministicZip, publicDescriptor, rendererDigestFor, safeRelative, scanTar, scanZip};
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   main().catch(error => {console.error(`Delivery package refused: ${error.message}`); process.exitCode = 1;});
 }
