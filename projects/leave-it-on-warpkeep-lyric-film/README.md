@@ -1,16 +1,27 @@
-# Leave It On — Warpkeep lyric preview
+# Leave It On — Warpkeep lyric film
 
-**English · complete recording · 16:9 and 9:16 browser compositions · `preview-v2-pr375`**
+**English · complete recording · 16:9 YouTube and 9:16 TikTok editions · accepted preview `preview-v2-pr375`**
 
 A real-time lyric film set around Warplet's Watch, using the exact castle, rooftop guardian and landscape from [Warpkeep PR #375](https://github.com/ael-dev3/Warpkeep/pull/375). Bright English phrases appear as a magical inscription above the forecourt. The same measured music spectrum drives luminous stone resonators and a circular rune field behind the guardian. Cyan and violet gate light, tower ribbons, warm practical lights and a physical mountain landmark give the fantasy setting its electronic treatment.
 
-The entire supplied recording is playable. **All 343 acoustic word candidates still require complete actual-audio review, and production authorization remains closed.** This is a review preview; no full film capture, final encode or public media release is recorded. Source identity, automated behavior, sampled visual inspection, perceptual synchronization and production approval are separate evidence categories.
+The owner reviewed the complete local preview and explicitly approved both full renders, a Desktop delivery folder and a lyrics-repository release. This is the documented **owner-approved-preview** path for this English-only song. The 343 word times remain acoustic candidates; an independently recorded every-cue listening audit has not been completed. The ordinary granular synchronization gate remains closed, and the candidate uncertainty is preserved rather than presented as phonetic certainty.
 
-[Start and reproduce](WORKFLOW.md) · [Art direction and sequence](STORYBOARD.md) · [Audio/timing method and uncertainty](analysis/README.md) · [Asset provenance](ASSETS.md) · [Reference ledger](REFERENCES.md) · [Production status](review/production-status.json)
+[Production and delivery record](PRODUCTION-NOTES.md) · [Publishing kit](publishing-kit/README.md) · [Start and reproduce](WORKFLOW.md) · [Art direction](STORYBOARD.md) · [Audio/timing uncertainty](analysis/README.md) · [Asset provenance](ASSETS.md) · [Acceptance scope](review/owner-acceptance.json)
 
-![Wide browser preview at 119.600 s](evidence/preview-landscape-119.600.png)
+![Final wide film at 119.600 s with highlighted lyric, Warpkeep castle, guardian and rune field](evidence/final-landscape-119.600.png)
 
-[Portrait browser still](evidence/preview-portrait-105.000.png) · [Current visual/interaction evidence](evidence/README.md)
+[Final portrait film frame](evidence/final-portrait-105.000.png) · [Current visual/interaction and encoded-file evidence](evidence/README.md)
+
+## Editions and delivery
+
+The same frozen scene and original source clock drive the two 60 fps productions. The posting MP4s use H.264 video, BT.709 color and high-bitrate AAC for platform compatibility. Separate Matroska archival masters pair the same picture with packet-preserved original stereo Opus audio. The supplied `.m4a` master is kept unchanged and is part of the editable source archive. Posting AAC is a documented transcode, not a byte-identical copy of the Opus packets.
+
+| Edition | Native picture | Planned local media name |
+| --- | ---: | --- |
+| YouTube | 1920 × 1080 | `Leave-It-On-Warpkeep-YouTube-1920x1080-60fps.mp4` |
+| TikTok | 1080 × 1920 | `Leave-It-On-Warpkeep-TikTok-1080x1920-60fps.mp4` |
+
+The local Desktop handoff is **`Leave It On - Warpkeep`**, with `YouTube`, `TikTok`, and `Source & Verification` folders. Its [publishing kit](publishing-kit/README.md) supplies platform titles, descriptions or captions, tags, a YouTube thumbnail, and both TikTok profile and full-frame covers. The source ZIP is assembled from the exact merged project commit plus frozen, hash-checked local audio and game assets; large media stay out of ordinary Git history. The intended repository release tag is **`leave-it-on-warpkeep-v1.0.0`**. Final media identity and release status are established by the [production record](PRODUCTION-NOTES.md), Desktop manifest and remote asset receipt after verification. No YouTube or TikTok platform post is represented by the prepared copy.
 
 ## Open the complete preview
 
@@ -74,8 +85,8 @@ Space Grotesk supplies the primary lyric and sign lettering; Cormorant Garamond 
 
 Automated checks cover source/asset integrity, all cue and word intervals, measured-data contracts, exclusive releases and neutral gaps, exact semantic selectors, deterministic reconstruction, and stale/missing production bindings. The actual guardian rig also has direct versus nonsequential-seek pose checks. Such checks establish the behavior of the candidate map and code; they do not establish phonetic accuracy or a successful whole-song visual review.
 
-Complete actual-audio review remains necessary for every cue, each independently performed repetition, difficult proper names, the bridge/instrumental boundary, possible late echoes and the final voice/music tail. Both compositions also need normal-speed creative acceptance and visible recovery checks. Limited outputs in `evidence/` are browser preview stills, not frames decoded from a completed film.
+Complete independent listening remains an open quality record for every cue, repeated performance, difficult proper name, possible late echo and final voice/music tail. The owner accepted the complete picture in both formats; that acceptance is recorded separately from granular phonetic review. Browser stills under `evidence/` illustrate the accepted preview, while decoded-frame checks of the final encoded files belong to the production verification receipts.
 
-`npm run render` evaluates the production gate and is expected to fail while review or authorization is incomplete. It does not contain a full capture renderer. Even valid review/approval bindings would still require browser/renderer parity and an approved short encoded proof before full production. A technical input freeze never grants approval.
+The standard `npm run render` synchronization gate stays closed on those open listening fields. The specifically approved production adapter in `scripts/render-production.mjs` instead requires the frozen preview identity, this song's owner acceptance and both-format render parity. A short encoded diagnostic was checked before full capture. `scripts/verify-production.mjs` checks final frame count, full decode, geometry, color tags, posting AAC and archival original-Opus packet identity; `scripts/package-delivery.mjs` verifies the committed source and final assets before copying the Desktop kit. See [PRODUCTION-NOTES.md](PRODUCTION-NOTES.md) for what was actually completed and where remaining uncertainty lives.
 
-The supplied audio, estimated stems and local GLBs are excluded from Git. Public source documentation retains provenance and evidence limits without publishing those media. The Warpkeep asset records are specific use/distribution records, not a blanket open-content license. No game deployment, account assignment, player-data operation or platform posting is part of this project.
+The supplied audio, estimated stems and local GLBs are excluded from ordinary Git commits. The release source archive and final media have separate checksums. Public source documentation retains provenance and evidence limits; the Warpkeep asset records are specific use/distribution records, not a blanket open-content license. No game deployment, account assignment, player-data operation or YouTube/TikTok posting is part of this production.

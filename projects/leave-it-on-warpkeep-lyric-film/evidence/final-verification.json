@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "projectId": "leave-it-on-warpkeep-lyric-film",
+  "previewRevision": "preview-v2-pr375",
+  "inputDigest": "cdb2e50d74be6be9c1144a78473bfdd6f6387430184592f4467d1da3aa768e24",
+  "rendererDigest": "cec79216818c89c7b81f9207287d0033c7c0efed2217efa6c548130f8bd696aa",
+  "sourceAudioSha256": "376926ae77af41789ac620685dd15b5e1515e3777aece65e964463277e5cfe44",
+  "formatChecks": {
+    "landscape": {
+      "postingFile": "Leave-It-On-Warpkeep-YouTube-1920x1080-60fps.mp4",
+      "postingSha256": "e6d61911e59322747a42c51fa0574f1381d912ad87c8fa8172cb373e2ca41d0c",
+      "postingBytes": 288869749,
+      "sourceOpusFile": "Leave-It-On-Warpkeep-YouTube-1920x1080-60fps.source-opus.mkv",
+      "sourceOpusSha256": "fca97461aa685173e973ea398e34a83d1a04a87b55a4704b8c54e24d494ea415",
+      "sourceOpusBytes": 282129554,
+      "dimensions": [1920, 1080],
+      "decodedPictureSamples": ["final-landscape-119.600.png", "final-landscape-268.200.png", "final-landscape-273.550.png"]
+    },
+    "portrait": {
+      "postingFile": "Leave-It-On-Warpkeep-TikTok-1080x1920-60fps.mp4",
+      "postingSha256": "fc41920d20e66ae708ccd2c1b62d4da7b73a3b6c7f347aa9ec0066d75185a56c",
+      "postingBytes": 301626325,
+      "sourceOpusFile": "Leave-It-On-Warpkeep-TikTok-1080x1920-60fps.source-opus.mkv",
+      "sourceOpusSha256": "0b7392edc873ce1d77c03d55f910eb86bbe38eb3426b63f33bc082a3c099d5e2",
+      "sourceOpusBytes": 294870865,
+      "dimensions": [1080, 1920],
+      "decodedPictureSamples": ["final-portrait-105.000.png", "final-portrait-268.200.png", "final-portrait-273.550.png"]
+    }
+  },
+  "commonVideo": {
+    "frames": 16414,
+    "fps": 60,
+    "videoDurationSeconds": 273.566667,
+    "aacDurationSeconds": 273.573,
+    "codec": "H.264",
+    "pixelFormat": "yuv420p",
+    "sampleAspectRatio": "1:1",
+    "colorPrimariesTransferMatrix": "BT.709",
+    "postingAudio": "AAC stereo 48000 Hz, 320 kb/s target",
+    "archivalAudio": "original Opus packet copy, stereo 48000 Hz",
+    "originalOpusPacketCount": 13679,
+    "originalOpusPacketHashListSha256": "0db2e578c80ce3e5026934ff6c7ae533238fd18b2df151a29c5ea0649f42be74",
+    "fullPostingAndArchiveDecodeClean": true
+  },
+  "decodedAacVsOriginalAtBothFormats": [
+    {"timeSeconds": 10, "lagSamples": 0, "correlation": 0.999981516607184},
+    {"timeSeconds": 119.6, "lagSamples": 0, "correlation": 0.9996999180061426},
+    {"timeSeconds": 263, "lagSamples": 0, "correlation": 0.9999168484285476}
+  ],
+  "visualReview": "Ten decoded time samples in each format were inspected, including opening, lyric moments, the final lyric at 268.200 s and the clean last frame at 273.550 s. Six retained stills are exact decoded MP4 frames.",
+  "limits": "Full decode, metadata, packet identity, sampled picture and sampled source-to-AAC correlation do not certify every lyric candidate by independent listening."
+}

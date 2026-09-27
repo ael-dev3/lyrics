@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "projectId": "leave-it-on-warpkeep-lyric-film",
+  "previewRevision": "preview-v2-pr375",
+  "inputDigest": "cdb2e50d74be6be9c1144a78473bfdd6f6387430184592f4467d1da3aa768e24",
+  "rendererDigest": "cec79216818c89c7b81f9207287d0033c7c0efed2217efa6c548130f8bd696aa",
+  "approved": true,
+  "formats": [
+    "landscape",
+    "portrait"
+  ],
+  "method": "Native-resolution PNGs from the production Three.js render page were visually inspected and compared at identical source times with browser preview captures from the accepted revision. Same scene, world lyric, audio feature, spectrum and typography modules.",
+  "samples": [
+    {
+      "format": "landscape",
+      "timeSeconds": 119.6,
+      "frame": 7176,
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "browserPreview": {
+        "path": "evidence/preview-landscape-119.600.png",
+        "sha256": "e17cc6bebefdd83eaef4bf59e670779865e27c2ba6868163b62b75428c2cf68a"
+      },
+      "rendererProof": {
+        "path": "output/proof-landscape-119.600.png",
+        "sha256": "c864f0048c8903f9bcbd816580842442158e5a68290b45ea79d3d5a1b0da44e6"
+      },
+      "rgbMeanAbsoluteError": [
+        1.2373,
+        1.217,
+        1.0919
+      ],
+      "visuallyInspected": true
+    },
+    {
+      "format": "portrait",
+      "timeSeconds": 105.0,
+      "frame": 6300,
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "browserPreview": {
+        "path": "evidence/preview-portrait-105.000.png",
+        "sha256": "ea66aafb2beae4c17911dceec2d29dca6c152785ac3c990300d65178058cf592"
+      },
+      "rendererProof": {
+        "path": "output/proof-portrait-105.000.png",
+        "sha256": "7a6db5db5778fc68b2348caa68671a7ff9bb7b6b1e86750a576629ebf4419fcf"
+      },
+      "rgbMeanAbsoluteError": [
+        1.8616,
+        1.6223,
+        1.3322
+      ],
+      "visuallyInspected": true
+    }
+  ],
+  "encodedProof": {
+    "path": "output/proof-landscape-119.600.mp4",
+    "sha256": "5515659603a4c6cbade57ab6b175c170682327ca4e0f9b9747b8dc9a92f5849d",
+    "frames": 120,
+    "fps": 60,
+    "durationSeconds": 2,
+    "dimensions": [
+      1920,
+      1080
+    ],
+    "h264Yuv420pSquarePixelBT709": true,
+    "aacMuxDecodedCleanly": true,
+    "sourceOpusPacketCopyHashMatched": true
+  },
+  "evidence": "Two inspected native-resolution format comparisons; 120-frame H.264 proof; AAC mux decode; original Opus packet hash identity in a stream-copy archive.",
+  "limits": "This confirms visual parity at sampled times and the encoding path. It is not a complete auditory timing review or a full-film frame-by-frame visual certification."
+}
