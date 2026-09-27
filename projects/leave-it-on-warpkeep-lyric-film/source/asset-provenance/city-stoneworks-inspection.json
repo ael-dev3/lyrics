@@ -1,0 +1,56 @@
+{
+  "file": "city-stoneworks.glb",
+  "boundsFromAccessorMinMax": {
+    "min": [
+      -4.5,
+      0.0,
+      -3.5999999046325684
+    ],
+    "max": [
+      4.5,
+      5.390000343322754,
+      3.5999999046325684
+    ],
+    "size": [
+      9.0,
+      5.390000343322754,
+      7.199999809265137
+    ]
+  },
+  "materials": [
+    {
+      "name": "WK_CityStoneworks_VertexColor_PBR",
+      "pbr": {
+        "metallicFactor": 0,
+        "roughnessFactor": 0.8399999737739563
+      },
+      "emissiveFactor": null,
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.36000001430511475
+        }
+      }
+    }
+  ],
+  "nodes": [
+    {
+      "extras": {
+        "wk_asset": "hegemony-royal-masons-yard",
+        "wk_editable": true,
+        "wk_edit_group": "EDIT_04_Timber_Hoist",
+        "wk_lod_detail": 0,
+        "wk_role": "grounded-a-frame-stone-foot",
+        "wk_origin_contract": "ground-plane-z0",
+        "wk_lod": 0,
+        "wk_front_facing_blender": "-Y",
+        "wk_front_facing_gltf": "+Z",
+        "wk_interaction_pivot": "footprint-center",
+        "wk_animation": "none-static-lod",
+        "wk_collider_recommendation": "engine-side box inside 9.0x7.2 city-grid footprint"
+      },
+      "mesh": 0,
+      "name": "WK_CityStoneworks_LOD0_High"
+    }
+  ],
+  "animations": []
+}

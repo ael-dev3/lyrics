@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Leave It On · Warpkeep</title><link rel="stylesheet" href="/review/style.css">
+<script type="importmap">{"imports":{"three":"/node_modules/three/build/three.module.js","three/addons/":"/node_modules/three/examples/jsm/"}}</script></head>
+<body>
+<header><a class="wordmark" href="#" aria-label="Warpkeep lyric film"><span class="mark">W</span> WARPKEEP <span class="divider"></span><span class="film-label">A LYRIC FILM</span></a><span class="revision"><i></i> FULL SONG PREVIEW</span></header>
+<main>
+  <section class="player-column">
+    <div class="work-heading"><div><p class="eyebrow">A SIGNAL BECOMES A PLACE</p><h1>Leave It On<span>.</span></h1></div><div class="format-switch" aria-label="Composition"><button data-format="portrait" class="selected">TikTok 9:16</button><button data-format="landscape">YouTube 16:9</button></div></div>
+    <div class="stage-wrap"><div id="stage" class="portrait"><canvas id="scene"></canvas><div class="grading"></div><canvas id="type"></canvas><div id="loading"><span class="loading-orbit"></span><b>Finding the light.</b><small id="load-detail">Preparing Warpkeep and the original recording…</small></div></div></div>
+    <div id="error" role="alert" hidden></div>
+    <div class="transport"><div class="seek-row"><span id="current">0:00</span><input id="seek" aria-label="Song position" type="range" min="0" max="273.56" step="0.01" value="0"><span id="duration">4:33</span></div><div class="transport-row"><div class="play-group"><button id="restart" aria-label="Restart">↶</button><button id="play" class="primary">Play film <span>▶</span></button><button id="mute" aria-label="Mute audio">Sound on</button></div><div class="transport-options"><select id="speed" aria-label="Playback speed"><option value="1">1× speed</option><option value="0.75">0.75× speed</option><option value="0.5">0.5× speed</option></select><button id="fullscreen">Cinema view ↗</button></div></div></div>
+    <div class="under-player"><span id="now-playing">Opening · First contact</span><button id="restore">Restore visuals</button></div>
+  </section>
+  <aside>
+    <section class="intro"><p class="eyebrow">THE FILM</p><h2>Someone is<br>still there.</h2><p>A signal rises from the stone. The guardian keeps watch. Every word becomes a light in the world.</p><div class="swatches"><i></i><i></i><i></i><i></i><span>Stone. Water. Signal. Light.</span></div></section>
+    <section class="chapters-section"><div class="section-heading"><h3>Chapters</h3><span>04:33</span></div><div id="chapters"></div></section>
+    <section class="review-options"><div class="section-heading"><h3>Viewing</h3></div><label><input id="reduced" type="checkbox">Reduced motion</label><label><input id="effects" type="checkbox" checked>Environmental response</label><label><input id="lyrics-toggle" type="checkbox" checked>Lyrics</label></section>
+    <details id="notes-panel"><summary>Timing & review notes <span id="note-count">0</span></summary><p class="review-disclosure">Acoustic alignment candidates; final listening review and render approval are pending.</p><div class="cue-nav"><button id="prev-cue">← Previous cue</button><button id="next-cue">Next cue →</button></div><p id="cue-status"></p><textarea id="note" placeholder="A word, a transition, a moment to improve…" aria-label="Review note"></textarea><button id="save-note">Save note at current time</button><div id="notes"></div><button id="export-notes">Export notes</button></details>
+    <p class="footer-note">Original soundtrack · Authentic Warpkeep assets<br>PR 375 · Preview revision 02 · Production gate closed<br><a href="https://farcaster.xyz/~/channel/warpkeep" target="_blank" rel="noopener noreferrer">Visit the Warpkeep channel ↗</a></p>
+  </aside>
+</main><audio id="audio" preload="auto" src="/source/leave-it-on.opus.webm"></audio><script type="module" src="/src/player.js"></script></body></html>

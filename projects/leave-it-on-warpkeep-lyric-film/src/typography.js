@@ -1,0 +1,15 @@
+import {clamp,smooth,cueAt,wordAt} from './core.js';
+export function makeTypography(canvas){
+ const ctx=canvas.getContext('2d');let format='portrait',width=1080,height=1920;const cache=new Map();let lastGeometry=[];
+ function resize(f){format=f;width=f==='portrait'?1080:1920;height=f==='portrait'?1920:1080;canvas.width=width;canvas.height=height;cache.clear()}
+ function layout(cue){const key=format+cue.id;if(cache.has(key))return cache.get(key);const size=format==='portrait'?77:74,maxWidth=width*(format==='portrait'?.8:.76);ctx.font=`500 ${size}px Space`;const words=cue.words?.length?cue.words.map(w=>w.text):cue.text.split(/\s+/);const gap=ctx.measureText(' ').width;const rows=[];let row=[],rw=0;words.forEach((text,i)=>{const w=ctx.measureText(text).width;if(row.length&&rw+gap+w>maxWidth){rows.push({words:row,width:rw});row=[];rw=0}row.push({text,index:i,width:w});rw+=w+(row.length>1?gap:0)});if(row.length)rows.push({words:row,width:rw});const lineHeight=size*1.24,midY=height*(format==='portrait'?.756:.794);let result=[];rows.forEach((r,ri)=>{let x=(width-r.width)/2;const y=midY+(ri-(rows.length-1)/2)*lineHeight;r.words.forEach(w=>{result.push({...w,x,y,size});x+=w.width+gap})});cache.set(key,result);return result}
+ function draw(t,lyrics,s,options={}){
+  ctx.clearRect(0,0,width,height);const vignette=ctx.createLinearGradient(0,height*.48,0,height);vignette.addColorStop(0,'rgba(3,12,15,0)');vignette.addColorStop(.56,'rgba(3,12,15,.05)');vignette.addColorStop(1,'rgba(3,12,15,.16)');ctx.fillStyle=vignette;ctx.fillRect(0,0,width,height);
+  const edge=ctx.createRadialGradient(width*.5,height*.45,width*.1,width*.5,height*.45,height*.73);edge.addColorStop(0,'rgba(1,8,10,0)');edge.addColorStop(1,'rgba(1,8,10,.13)');ctx.fillStyle=edge;ctx.fillRect(0,0,width,height);
+  const cue=cueAt(lyrics.cues,t);lastGeometry=[];
+  if(cue&&options.lyrics!==false){const geometry=layout(cue),active=wordAt(cue.words||[],t);const alpha=Math.min(smooth(cue.displayStart,cue.displayStart+.12,t),1-smooth(cue.displayEnd-.1,cue.displayEnd,t));ctx.textAlign='left';ctx.textBaseline='alphabetic';ctx.globalAlpha=alpha;ctx.font=`500 ${geometry[0]?.size||77}px Space`;for(const word of geometry){ctx.fillStyle=word.index===active?'#ffe6b2':'#d1dcd8';ctx.shadowColor=word.index===active?'rgba(227,172,79,.4)':'rgba(1,10,13,.85)';ctx.shadowBlur=word.index===active?18:12;ctx.shadowOffsetY=3;ctx.fillText(word.text,word.x,word.y);lastGeometry.push({...word,active:word.index===active,cueId:cue.id})}ctx.globalAlpha=1;ctx.shadowBlur=0;ctx.shadowOffsetY=0;}
+  if(!cue&&t<11){const alpha=(1-smooth(8,10.5,t))*.9;ctx.globalAlpha=alpha;ctx.textAlign='center';ctx.fillStyle='#e3dac3';ctx.font=`600 ${format==='portrait'?118:106}px Cormorant`;ctx.fillText('Leave It On',width*.5,height*(format==='portrait'?.78:.78));ctx.fillStyle='#a8bab0';ctx.font=`400 ${format==='portrait'?22:20}px Space`;const title='W A R P K E E P';ctx.fillText(title,width*.5,height*(format==='portrait'?.825:.84));ctx.globalAlpha=1;}
+  return {cue,geometry:lastGeometry};
+ }
+ return {resize,draw,layout,get geometry(){return lastGeometry}};
+}

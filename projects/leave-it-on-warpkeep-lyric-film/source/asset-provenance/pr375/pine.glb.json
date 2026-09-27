@@ -1,0 +1,168 @@
+{
+  "asset": {
+    "generator": "Khronos glTF Blender I/O v5.2.39",
+    "version": "2.0"
+  },
+  "extensionsUsed": [
+    "KHR_materials_specular"
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "extras": {
+        "wk_asset": "tree-species-library",
+        "wk_species_count": 8,
+        "wk_runtime_variant_count": 16,
+        "wk_mobile_triangle_ceiling": "{\"LOD0_High\": 1200, \"LOD1_Balanced\": 600, \"LOD2_Compact\": 220}"
+      },
+      "name": "WK_TreeSpecies_AuthoringScene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "extras": {
+        "wk_asset": "tree-species-library",
+        "wk_species": "pine",
+        "wk_component_kind": "wood",
+        "wk_detail": 0,
+        "wk_role": "open-horizontal-limb",
+        "wk_lod_source": "LOD2_Compact",
+        "wk_origin_contract": "trunk-base-at-origin",
+        "wk_asset_id": "warpkeep.tree.pine.alpine",
+        "wk_variant": "alpine",
+        "wk_lod": "LOD2_Compact",
+        "wk_front_facing_gltf": "+Z",
+        "wk_pivot": "trunk-base"
+      },
+      "mesh": 0,
+      "name": "WK_Tree_Pine_Alpine_LOD2_Compact"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.4000000059604645
+        }
+      },
+      "name": "WK_Tree_Pine_Alpine_VertexColor_PBR",
+      "pbrMetallicRoughness": {
+        "metallicFactor": 0,
+        "roughnessFactor": 0.8199999928474426
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "WK_Tree_Pine_Alpine_LOD2_Compact_Mesh",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TEXCOORD_0": 2,
+            "TANGENT": 3,
+            "COLOR_0": 4
+          },
+          "indices": 5,
+          "material": 0
+        }
+      ]
+    }
+  ],
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 390,
+      "max": [
+        2.805781364440918,
+        7.39493989944458,
+        2.363584041595459
+      ],
+      "min": [
+        -2.2407217025756836,
+        -0.022540230304002762,
+        -1.2565470933914185
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 390,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 390,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 390,
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 4,
+      "componentType": 5126,
+      "count": 390,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 5,
+      "componentType": 5123,
+      "count": 390,
+      "type": "SCALAR"
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 4680,
+      "byteOffset": 0,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 4680,
+      "byteOffset": 4680,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 3120,
+      "byteOffset": 9360,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 6240,
+      "byteOffset": 12480,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 4680,
+      "byteOffset": 18720,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 780,
+      "byteOffset": 23400,
+      "target": 34963
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 24180
+    }
+  ]
+}

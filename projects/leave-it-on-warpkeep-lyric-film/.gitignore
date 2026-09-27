@@ -1,0 +1,17 @@
+node_modules/
+output/
+source/*.m4a
+source/*.webm
+source/*.wav
+public/assets/
+analysis/*.wav
+analysis/.venv/
+analysis/model-cache/
+review/local-*.json
+*.log
+
+
+# Keep intermediate review captures local; retain two current representative frames.
+evidence/preview-*.png
+!evidence/preview-landscape-119.600.png
+!evidence/preview-portrait-105.000.png

@@ -1,0 +1,688 @@
+{
+  "file": "ember-lamplighter.glb",
+  "boundsFromAccessorMinMax": {
+    "min": [
+      -0.4968074858188629,
+      0.004999995231628418,
+      -0.25892511010169983
+    ],
+    "max": [
+      0.7799999713897705,
+      2.4008231163024902,
+      0.35499995946884155
+    ],
+    "size": [
+      1.2768074572086334,
+      2.395823121070862,
+      0.6139250695705414
+    ]
+  },
+  "materials": [
+    {
+      "name": "WK_Infantry_leather",
+      "pbr": {
+        "baseColorFactor": [
+          0.20000000298023224,
+          0.07500000298023224,
+          0.026000000536441803,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.7799999713897705
+      },
+      "emissiveFactor": null,
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.5600000023841858
+        }
+      }
+    },
+    {
+      "name": "WK_CitizenSet2_ember",
+      "pbr": {
+        "baseColorFactor": [
+          0.949999988079071,
+          0.2199999988079071,
+          0.02500000037252903,
+          1
+        ],
+        "metallicFactor": 0.11999999731779099,
+        "roughnessFactor": 0.3199999928474426
+      },
+      "emissiveFactor": null,
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.5600000023841858
+        }
+      }
+    },
+    {
+      "name": "WK_Infantry_charcoal",
+      "pbr": {
+        "baseColorFactor": [
+          0.029999999329447746,
+          0.035999998450279236,
+          0.05000000074505806,
+          1
+        ],
+        "metallicFactor": 0.5400000214576721,
+        "roughnessFactor": 0.41999998688697815
+      },
+      "emissiveFactor": null,
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.5600000023841858
+        }
+      }
+    },
+    {
+      "name": "WK_Infantry_gold",
+      "pbr": {
+        "baseColorFactor": [
+          0.7300000190734863,
+          0.4099999964237213,
+          0.08500000089406967,
+          1
+        ],
+        "metallicFactor": 0.8399999737739563,
+        "roughnessFactor": 0.30000001192092896
+      },
+      "emissiveFactor": null,
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.5600000023841858
+        }
+      }
+    },
+    {
+      "name": "WK_Citizen_skin_tan",
+      "pbr": {
+        "baseColorFactor": [
+          0.6700000166893005,
+          0.3799999952316284,
+          0.20999999344348907,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.7200000286102295
+      },
+      "emissiveFactor": null,
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.5600000023841858
+        }
+      }
+    },
+    {
+      "name": "WK_Infantry_eye",
+      "pbr": {
+        "baseColorFactor": [
+          0.006000000052154064,
+          0.003000000026077032,
+          0.0020000000949949026,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.3799999952316284
+      },
+      "emissiveFactor": null,
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.5600000023841858
+        }
+      }
+    },
+    {
+      "name": "WK_Infantry_wood",
+      "pbr": {
+        "baseColorFactor": [
+          0.25999999046325684,
+          0.10499999672174454,
+          0.03500000014901161,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 0.7400000095367432
+      },
+      "emissiveFactor": null,
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.5600000023841858
+        }
+      }
+    },
+    {
+      "name": "WK_Citizen_iron",
+      "pbr": {
+        "baseColorFactor": [
+          0.1899999976158142,
+          0.2199999988079071,
+          0.25999999046325684,
+          1
+        ],
+        "metallicFactor": 0.7200000286102295,
+        "roughnessFactor": 0.3400000035762787
+      },
+      "emissiveFactor": null,
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.5600000023841858
+        }
+      }
+    },
+    {
+      "name": "WK_CitizenSet2_ember_glow",
+      "pbr": {
+        "baseColorFactor": [
+          1,
+          0.1599999964237213,
+          0.014999999664723873,
+          1
+        ],
+        "metallicFactor": 0.07999999821186066,
+        "roughnessFactor": 0.30000001192092896
+      },
+      "emissiveFactor": [
+        1,
+        0.1599999964237213,
+        0.014999999664723873
+      ],
+      "extensions": {
+        "KHR_materials_emissive_strength": {
+          "emissiveStrength": 3
+        },
+        "KHR_materials_specular": {
+          "specularFactor": 0.5600000023841858
+        }
+      }
+    },
+    {
+      "name": "WK_CitizenSet2_graphite",
+      "pbr": {
+        "baseColorFactor": [
+          0.12999999523162842,
+          0.1599999964237213,
+          0.20000000298023224,
+          1
+        ],
+        "metallicFactor": 0.41999998688697815,
+        "roughnessFactor": 0.41999998688697815
+      },
+      "emissiveFactor": null,
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.5600000023841858
+        }
+      }
+    }
+  ],
+  "nodes": [
+    {
+      "name": "Cape",
+      "rotation": [
+        -0.999870777130127,
+        0,
+        0,
+        0.016078831627964973
+      ],
+      "scale": [
+        1,
+        0.9999999403953552,
+        1.000000238418579
+      ],
+      "translation": [
+        0,
+        -0.003997776657342911,
+        -0.11993338167667389
+      ]
+    },
+    {
+      "name": "Head",
+      "rotation": [
+        -0.008497696369886398,
+        0,
+        0,
+        0.9999638795852661
+      ],
+      "scale": [
+        1,
+        1.0000001192092896,
+        1
+      ],
+      "translation": [
+        0,
+        0.08015605062246323,
+        -5.587935447692871e-09
+      ]
+    },
+    {
+      "children": [
+        1
+      ],
+      "name": "Neck",
+      "rotation": [
+        0.014548431150615215,
+        0,
+        0,
+        0.9998941421508789
+      ],
+      "translation": [
+        0,
+        0.15008346736431122,
+        4.656612873077393e-10
+      ]
+    },
+    {
+      "name": "Shield",
+      "rotation": [
+        -0.7630198001861572,
+        9.603315902495524e-07,
+        1.1393957493055495e-06,
+        0.6463751196861267
+      ],
+      "scale": [
+        1,
+        1,
+        0.9999999403953552
+      ],
+      "translation": [
+        2.5512747470202157e-10,
+        1.5221448990132558e-08,
+        -3.820912297669565e-08
+      ]
+    },
+    {
+      "children": [
+        3
+      ],
+      "name": "Hand.L",
+      "rotation": [
+        -0.36822274327278137,
+        -0.10240399837493896,
+        0.008475592359900475,
+        0.9240419864654541
+      ],
+      "scale": [
+        0.9999999403953552,
+        0.9999998807907104,
+        0.9999999403953552
+      ],
+      "translation": [
+        -9.313225746154785e-09,
+        0.32939326763153076,
+        -3.725290298461914e-08
+      ]
+    },
+    {
+      "children": [
+        4
+      ],
+      "name": "ForeArm.L",
+      "rotation": [
+        -0.2169271856546402,
+        0.5658245086669922,
+        -0.3066222071647644,
+        0.734008252620697
+      ],
+      "scale": [
+        1,
+        1.000000238418579,
+        1
+      ],
+      "translation": [
+        -1.1920928955078125e-07,
+        0.17720040678977966,
+        0
+      ]
+    },
+    {
+      "children": [
+        5
+      ],
+      "name": "UpperArm.L",
+      "rotation": [
+        0.8233422040939331,
+        -0.40564706921577454,
+        -0.3923506736755371,
+        0.06015874817967415
+      ],
+      "scale": [
+        1.0000001192092896,
+        1.000000238418579,
+        1.0000001192092896
+      ],
+      "translation": [
+        -0.31999996304512024,
+        0.02998340129852295,
+        -0.0009994470747187734
+      ]
+    },
+    {
+      "name": "Weapon",
+      "rotation": [
+        -0.7630199790000916,
+        -1.9342407995281974e-06,
+        -2.3063489607011434e-06,
+        0.6463749408721924
+      ],
+      "translation": [
+        4.517301022133324e-08,
+        -2.419682587628813e-08,
+        7.531730261689518e-08
+      ]
+    },
+    {
+      "children": [
+        7
+      ],
+      "name": "Hand.R",
+      "rotation": [
+        -0.34821274876594543,
+        0.22806696593761444,
+        -0.01887620985507965,
+        0.909052848815918
+      ],
+      "scale": [
+        0.9999999403953552,
+        0.9999998211860657,
+        1
+      ],
+      "translation": [
+        -3.725290298461914e-09,
+        0.3106444478034973,
+        -5.960464477539063e-08
+      ]
+    },
+    {
+      "children": [
+        8
+      ],
+      "name": "ForeArm.R",
+      "rotation": [
+        -0.25495588779449463,
+        -0.7558337450027466,
+        0.43011391162872314,
+        0.42274680733680725
+      ],
+      "scale": [
+        1,
+        1.0000001192092896,
+        1
+      ],
+      "translation": [
+        -1.5273690223693848e-07,
+        0.16031226515769958,
+        -5.587935447692871e-08
+      ]
+    },
+    {
+      "children": [
+        9
+      ],
+      "name": "UpperArm.R",
+      "rotation": [
+        -0.6630192995071411,
+        -0.5375185608863831,
+        -0.519899845123291,
+        0.0343998447060585
+      ],
+      "scale": [
+        1,
+        0.9999999403953552,
+        0.9999998807907104
+      ],
+      "translation": [
+        0.31999996304512024,
+        0.02998340129852295,
+        -0.0009994470747187734
+      ]
+    },
+    {
+      "children": [
+        0,
+        2,
+        6,
+        10
+      ],
+      "name": "Chest",
+      "rotation": [
+        0.01665971614420414,
+        0,
+        0,
+        0.9998612403869629
+      ],
+      "scale": [
+        1,
+        0.9999999403953552,
+        1
+      ],
+      "translation": [
+        0,
+        0.26999998092651367,
+        0
+      ]
+    },
+    {
+      "children": [
+        11
+      ],
+      "name": "Spine",
+      "translation": [
+        0,
+        0.3199999928474426,
+        0
+      ]
+    },
+    {
+      "name": "Foot.L",
+      "rotation": [
+        -0.5927607417106628,
+        0.01917765848338604,
+        -0.002652800641953945,
+        0.8051458597183228
+      ],
+      "scale": [
+        0.9999998211860657,
+        0.9999999403953552,
+        1
+      ],
+      "translation": [
+        9.138602763414383e-09,
+        0.3702702224254608,
+        9.313225746154785e-10
+      ]
+    },
+    {
+      "children": [
+        13
+      ],
+      "name": "Shin.L",
+      "rotation": [
+        0.0031804973259568214,
+        0.009481693617999554,
+        -0.00931826513260603,
+        0.999906599521637
+      ],
+      "scale": [
+        1.0000001192092896,
+        1.0000001192092896,
+        1
+      ],
+      "translation": [
+        2.450542524456978e-08,
+        0.44070976972579956,
+        1.862645149230957e-09
+      ]
+    },
+    {
+      "children": [
+        14
+      ],
+      "name": "Thigh.L",
+      "rotation": [
+        0.9993306994438171,
+        -0.023086976259946823,
+        -0.023086383938789368,
+        0.016496015712618828
+      ],
+      "scale": [
+        1.0000015497207642,
+        0.9999999403953552,
+        1.0000008344650269
+      ],
+      "translation": [
+        -0.15000000596046448,
+        0.10000002384185791,
+        0
+      ]
+    },
+    {
+      "name": "Foot.R",
+      "rotation": [
+        -0.5927607417106628,
+        -0.01917765848338604,
+        0.002652800641953945,
+        0.8051458597183228
+      ],
+      "scale": [
+        0.9999998211860657,
+        0.9999999403953552,
+        1
+      ],
+      "translation": [
+        -9.138602763414383e-09,
+        0.3702702224254608,
+        9.313225746154785e-10
+      ]
+    },
+    {
+      "children": [
+        16
+      ],
+      "name": "Shin.R",
+      "rotation": [
+        0.0031804973259568214,
+        -0.009481693617999554,
+        0.00931826513260603,
+        0.999906599521637
+      ],
+      "scale": [
+        1.0000001192092896,
+        1.0000001192092896,
+        1
+      ],
+      "translation": [
+        -2.450542524456978e-08,
+        0.44070976972579956,
+        1.862645149230957e-09
+      ]
+    },
+    {
+      "children": [
+        17
+      ],
+      "name": "Thigh.R",
+      "rotation": [
+        0.9993306994438171,
+        0.023086976259946823,
+        0.023086383938789368,
+        0.016496015712618828
+      ],
+      "scale": [
+        1.0000015497207642,
+        0.9999999403953552,
+        1.0000008344650269
+      ],
+      "translation": [
+        0.15000000596046448,
+        0.10000002384185791,
+        0
+      ]
+    },
+    {
+      "children": [
+        12,
+        15,
+        18
+      ],
+      "name": "Pelvis",
+      "translation": [
+        0,
+        0.8399999737739563,
+        0
+      ]
+    },
+    {
+      "children": [
+        19
+      ],
+      "name": "Root"
+    },
+    {
+      "extras": {
+        "wk_asset": "hegemony-citizens-set2",
+        "wk_unit": "EmberLamplighter",
+        "wk_lod": "LOD1_Balanced",
+        "wk_semantic": "shoe",
+        "wk_editable": false,
+        "wk_bone": "Foot.L",
+        "wk_profession": "ember-lamplighter",
+        "wk_mounted_civilian": false,
+        "wk_runtime": true,
+        "wk_front_blender": "-Y",
+        "wk_ground_z": 0.0,
+        "wk_loadout": "civilian",
+        "wk_category": "Units/CitizensSet2",
+        "wk_mount": "none",
+        "wk_armed_civic": false,
+        "wk_role": "EmberLamplighter"
+      },
+      "mesh": 0,
+      "name": "WK_Hegemony_EmberLamplighter_LOD1_Balanced_Rigged",
+      "skin": 0
+    },
+    {
+      "children": [
+        21,
+        20
+      ],
+      "extras": {
+        "wk_asset": "hegemony-citizens-set2",
+        "wk_unit": "EmberLamplighter",
+        "wk_runtime_rig": true,
+        "wk_joint_count": 21,
+        "wk_tool_bone_alias": "Weapon=Tool",
+        "wk_offhand_bone_alias": "Shield=OffHandProp",
+        "wk_garment_bone_alias": "Cape=OuterGarment",
+        "wk_mount": "none"
+      },
+      "name": "WK_EmberLamplighter_Rig"
+    }
+  ],
+  "animations": [
+    {
+      "name": "Greet",
+      "samplers": 6,
+      "channels": 6,
+      "maxTime": 1.5
+    },
+    {
+      "name": "Idle",
+      "samplers": 9,
+      "channels": 9,
+      "maxTime": 2
+    },
+    {
+      "name": "Walk",
+      "samplers": 12,
+      "channels": 12,
+      "maxTime": 1
+    },
+    {
+      "name": "Work",
+      "samplers": 5,
+      "channels": 5,
+      "maxTime": 2
+    }
+  ]
+}

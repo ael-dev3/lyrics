@@ -1,0 +1,55 @@
+{
+  "model": "HTDemucs 4.1.0 htdemucs",
+  "purpose": "Estimated vocals for alignment only. Source soundtrack is never replaced.",
+  "sourceSampleRate": 16000,
+  "sourceSamples": 4377176,
+  "stemSamples": 4377176,
+  "sourceSha256": "20c49b6932da92129a6f4c53d1457b546f1860c9d86cdb3286f3ad82864e4ada",
+  "stemSha256": "9741302bb359824b4470c42ae9ba90f8cf92864a34b2029144e3e2a247a58df1",
+  "lagSearch": "\u00b1100 ms cross-correlation over specified full waveform regions",
+  "windows": [
+    {
+      "start": 24,
+      "end": 28,
+      "lagSamples": 0,
+      "lagSeconds": 0.0,
+      "normalizedCorrelation": 0.5951751470565796
+    },
+    {
+      "start": 69,
+      "end": 73,
+      "lagSamples": 0,
+      "lagSeconds": 0.0,
+      "normalizedCorrelation": 0.5389721989631653
+    },
+    {
+      "start": 103,
+      "end": 109,
+      "lagSamples": 0,
+      "lagSeconds": 0.0,
+      "normalizedCorrelation": 0.4696161448955536
+    },
+    {
+      "start": 178,
+      "end": 184,
+      "lagSamples": 0,
+      "lagSeconds": 0.0,
+      "normalizedCorrelation": 0.5399121046066284
+    },
+    {
+      "start": 222,
+      "end": 228,
+      "lagSamples": 0,
+      "lagSeconds": 0.0,
+      "normalizedCorrelation": 0.8912785053253174
+    },
+    {
+      "start": 254,
+      "end": 269,
+      "lagSamples": 0,
+      "lagSeconds": 0.0,
+      "normalizedCorrelation": 0.30928972363471985
+    }
+  ],
+  "limitations": "Estimated separation may remove sung harmonics or retain instrumental leakage; model boundaries still require actual-audio review."
+}

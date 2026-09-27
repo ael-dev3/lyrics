@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "fileName": "Leave It On.m4a",
+  "sha256": "376926ae77af41789ac620685dd15b5e1515e3777aece65e964463277e5cfe44",
+  "bytes": 4448680,
+  "declaredDuration": 273.56,
+  "codec": "opus",
+  "sampleRate": 48000,
+  "channels": 2,
+  "decodedSamplesPerChannel": 13131528,
+  "decodedDuration": 273.5735,
+  "decodedPcmS16LeSha256": "be63de4991bf5530d54f35c607e5b75c045779e623909b8681a6f764e08ac920",
+  "firstPackets": [
+    {
+      "pts": -312,
+      "pts_time": "-0.006500",
+      "dts": -312,
+      "dts_time": "-0.006500",
+      "duration": 960,
+      "duration_time": "0.020000",
+      "side_data_list": [
+        {
+          "side_data_type": "Skip Samples",
+          "skip_samples": 312,
+          "discard_padding": 0,
+          "skip_reason": 0,
+          "discard_reason": 0
+        }
+      ]
+    },
+    {
+      "pts": 648,
+      "pts_time": "0.013500",
+      "dts": 648,
+      "dts_time": "0.013500",
+      "duration": 960,
+      "duration_time": "0.020000"
+    }
+  ],
+  "lastPackets": [
+    {
+      "pts": 13129608,
+      "pts_time": "273.533500",
+      "dts": 13129608,
+      "dts_time": "273.533500",
+      "duration": 960,
+      "duration_time": "0.020000"
+    },
+    {
+      "pts": 13130568,
+      "pts_time": "273.553500",
+      "dts": 13130568,
+      "dts_time": "273.553500",
+      "duration": 312,
+      "duration_time": "0.006500"
+    }
+  ],
+  "timeline": "Analysis clock zero is decoded sample zero after FFmpeg applies the 312-sample Opus pre-skip. The preview follows the chosen HTMLMediaElement presentation clock without stretching or manually offsetting audio. MP4 metadata duration is 273.560 s, WebM metadata duration 273.568 s, and native decoded PCM length 273.5735 s. Retain the complete media tail and read browser duration at runtime; the 50 Hz feature grid clamps after 273.560 s. Actual browser playback/tail verification is separate evidence.",
+  "reviewStatus": "file/packet/decode inspection only; no perceptual listening claim",
+  "referenceCount": 78,
+  "lyricReferenceCount": 67,
+  "sectionHintCount": 11,
+  "sourceAudioUrl": "/source/Leave%20It%20On.m4a",
+  "fallbackAudioUrl": "/source/leave-it-on.opus.webm",
+  "fallback": {
+    "path": "source/leave-it-on.opus.webm",
+    "sha256": "934c13d02e0d4b07747193876541b92a43800db0cd10f680e26012140650b6e0",
+    "codec": "Opus stream copy",
+    "declaredDuration": 273.568,
+    "audioPacketPayloadSha256": "d1a6dbe54f991321838f54a25e0fca90964cbc55df8c22d2a687968a22bdfe95",
+    "decodedPcmS16LeSha256": "be63de4991bf5530d54f35c607e5b75c045779e623909b8681a6f764e08ac920",
+    "pcmIdenticalToMasterInFFmpeg": true,
+    "note": "WebM timestamps use millisecond timebase. Browser playback duration differs by 8 ms; no re-encode, stretched audio, or lyric offset is introduced."
+  },
+  "masterAudioPacketPayloadSha256": "d1a6dbe54f991321838f54a25e0fca90964cbc55df8c22d2a687968a22bdfe95",
+  "independentSubtitleExtractionMatchesSuppliedSrt": true
+}

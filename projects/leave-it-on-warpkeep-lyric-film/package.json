@@ -1,0 +1,15 @@
+{
+  "name": "leave-it-on-warpkeep-lyric-film",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "preview": "node scripts/preview-server.mjs",
+    "check": "node scripts/check.mjs && node --test scripts/contracts.test.mjs",
+    "render": "node scripts/render-gate.mjs",
+    "preview:start": "node scripts/start-preview.mjs"
+  },
+  "dependencies": {
+    "three": "0.185.1"
+  }
+}

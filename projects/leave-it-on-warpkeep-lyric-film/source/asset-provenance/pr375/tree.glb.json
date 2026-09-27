@@ -1,0 +1,170 @@
+{
+  "asset": {
+    "generator": "Khronos glTF Blender I/O v5.2.39",
+    "version": "2.0"
+  },
+  "extensionsUsed": [
+    "KHR_materials_specular"
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "extras": {
+        "wk_asset": "regular-tree",
+        "wk_build_intent": "bright stylized low-poly mobile environment tree",
+        "wk_editable_object_count": 23,
+        "wk_triangle_counts": "{\"balanced\": 374, \"compact\": 144, \"high\": 668}",
+        "wk_bounds": "{\"max\": [2.107934, 1.32633, 6.52039], \"min\": [-2.489569, -1.212483, -0.049152], \"size\": [4.597503, 2.538813, 6.569542]}",
+        "wk_contact_audit": "{\"contact_edges\": 111, \"objects_checked\": 23, \"passed\": true, \"tolerance\": 0.08, \"unsupported_objects\": []}",
+        "wk_runtime_destination": "Warpkeep/Runtime/Environment/Trees/RegularTree",
+        "wk_lush_volume_revision": "lush-volume-2026-07-18"
+      },
+      "name": "WK_RegularTree_EditableScene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "extras": {
+        "wk_asset": "regular-tree",
+        "wk_editable": true,
+        "wk_edit_group": "EDIT_02_Branches",
+        "wk_lod_detail": 1,
+        "wk_role": "major-branch",
+        "wk_lod": 1,
+        "wk_origin_contract": "ground-plane-z0",
+        "wk_front_facing_gltf": "+Z",
+        "wk_interaction_pivot": "trunk-base",
+        "wk_runtime_reference": true
+      },
+      "mesh": 0,
+      "name": "WK_RegularTree_LOD1_Balanced"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.46000000834465027
+        }
+      },
+      "name": "WK_RegularTree_VertexColor_PBR",
+      "pbrMetallicRoughness": {
+        "metallicFactor": 0,
+        "roughnessFactor": 0.7799999713897705
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "WK_RegularTree_LOD1_Balanced_Mesh.001",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TEXCOORD_0": 2,
+            "TANGENT": 3,
+            "COLOR_0": 4
+          },
+          "indices": 5,
+          "material": 0
+        }
+      ]
+    }
+  ],
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 1122,
+      "max": [
+        2.10793399810791,
+        6.520390033721924,
+        1.2124831676483154
+      ],
+      "min": [
+        -2.4895689487457275,
+        -0.07175374031066895,
+        -1.3263299465179443
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 1122,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 1122,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 1122,
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 4,
+      "componentType": 5126,
+      "count": 1122,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 5,
+      "componentType": 5123,
+      "count": 1122,
+      "type": "SCALAR"
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 13464,
+      "byteOffset": 0,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 13464,
+      "byteOffset": 13464,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 8976,
+      "byteOffset": 26928,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 17952,
+      "byteOffset": 35904,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 13464,
+      "byteOffset": 53856,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 2244,
+      "byteOffset": 67320,
+      "target": 34963
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 69564
+    }
+  ]
+}
