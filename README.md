@@ -508,6 +508,8 @@ The reusable workflow covers soundtrack locking, lyric alignment, semantic trans
 
 ## Reference studies
 
+[**Five Opus 5.5-associated video examples**](docs/studies/opus-55-video-examples-2026/README.md): five distinct X works compared across cartoon theater, editorial anime, pixel RPG, technical noir and Evangelion-inspired interfaces. Includes 33,165 per-frame records, timecoded visual chapters, source provenance, a reproducible scan script and an [additional verified video download record](docs/studies/opus-55-video-examples-2026/ITER-INTELLECTUS-DOWNLOAD.md). Source videos and frame previews remain in the local study archive.
+
 [**Moyka — Moon**](docs/studies/moyka-moon-2026/README.md): lyric reveals, phrase holds, picture cuts and frame-alternating typography examined on separate timelines. Includes measurements of all 3,831 frames, 852 distinct visually inspected frames, acoustic-model comparisons, reproducible scripts and specific applications to the mandatory pre-render workflow.
 
 [**LÜCY & Moyka — LOOP**](docs/studies/loop-2026/README.md): illustrated analysis of image-dominant composition, anchored lyrics, independent language transitions and recurring visual motifs. Includes an 8,654-frame numerical scan, selected frame-level observations, source credits and a practical brief for future films.
