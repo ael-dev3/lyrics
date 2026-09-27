@@ -1,0 +1,79 @@
+{
+  "schema": "lyric-film/synchronization-review/v1",
+  "song": "AK6duyCPU50",
+  "revision": "source-integrated-preview-v1",
+  "inputHashes": {
+    "public/source.mp4": "8a37587959dcfef6b9a91d84498d819cd782fc2b78f2edb923cbb63c1fdc19a5",
+    "public/ArchivoBlack-Regular.ttf": "dd9a89a019b4849f66ab75455fe7bdf931311042cbb0f0f97acc061539703180",
+    "public/timeline.json": "dc71783634058c2699357daee5ccdd3ac596d27f2f1f6cf48ea53d05aa968cec",
+    "public/audio-features.json": "74c8abe990f57f77700eb742379daef47ef07a09bc2d9e1ee4d771058c32dfbf",
+    "public/bridge-intro.jpg": "1b96498590a1b8feddf67cfff87a393ddca5682aa1e5dc40960a7ec845cffbb0",
+    "public/bridge-mid.jpg": "d5b0a76f9c61da975c9e43419eaffdb75deb72dce2e95aa504ea393f8d491b91",
+    "public/bridge-mid-sprite.jpg": "791b39f3de8cbb1bfb7571f3a83bce9e426b7791090e523fcdd1fdb0cd1c55cd",
+    "public/bridge-title.jpg": "445b24a94e54814e58761420fcb14566a3a980f718821809196351f4c63197c7",
+    "public/bridge-credits.jpg": "cf9c407c6383d947541853a5a8a0dc7de798a7c91633d788bd14a755ebff2994",
+    "public/bridge-stage-light.jpg": "9e79449409555f3502d2ad7e92639d12e820b3f3f8b1aadf1ea3aa615df912a2",
+    "public/bridge-blue-face.jpg": "04eb13418f7f4c8e8245e700273c36c4238fd71680c4f58620f08b98920062f5",
+    "source/user-transcript.txt": "c950e357f36eb514e268962bdd12ed62041f553ad316d7125e3c146706a47751",
+    "src/shots.ts": "1bb1a8fe852309736c1a8997a24c13ffc83dcb6c606254b2ea4219630b5226da",
+    "src/scene.ts": "122461ebe69019b47c2d87719282ee77d0b56c10a8015e3612685d71e0b98660",
+    "src/player.ts": "88e473ca3d7e8577a7ccc10204e1b651b011b9a80df640c2e0600ddf5e2a228b",
+    "review/index.html": "b00a9803d3832b7871086a8e716e050d34c665158efc2f4168fa59b624f7748f",
+    "review/client.js": "2bc14f39c275464448720da378570163ab872dbc7c2923d36d46009241bed5bb"
+  },
+  "status": "complete",
+  "actualAudio": "complete",
+  "fullCoverage": "complete",
+  "wordTiming": "complete",
+  "lyricText": "complete",
+  "sourceMotion": "complete",
+  "unresolved": [],
+  "formats": [
+    "landscape",
+    "portrait"
+  ],
+  "speeds": [
+    "normal",
+    "reduced"
+  ],
+  "cueIds": [
+    "L01",
+    "L02",
+    "L03",
+    "L04",
+    "L05",
+    "L06",
+    "L07",
+    "L08",
+    "L09",
+    "L10",
+    "L11",
+    "L12",
+    "L13",
+    "L14",
+    "L15",
+    "L16",
+    "L17",
+    "L18",
+    "L19",
+    "L20",
+    "L21",
+    "L22",
+    "L23",
+    "L24",
+    "L25",
+    "L26"
+  ],
+  "reviewerRole": "project owner",
+  "basis": "The owner reviewed the current revised full-length preview against the recording at normal speed, checked uncertain word onsets and held endings at reduced speed (including 02:36–02:41), reviewed both 16:9 and 9:16 layouts, and accepted this revision for production. Project visual QA separately checked moving source picture, lyric progression, protected source lettering, dark bridges, recovery, and ending in the complete preview.",
+  "technicalChecks": [
+    "npm run check (7/7 tests)",
+    "node scripts/check.ts --local-media (exact source MP4 identity verified)"
+  ],
+  "limitations": [
+    "This is an owner-attested listening and layout review, not a claim that the agent independently listened to every word.",
+    "ASR and forced-alignment candidates support inspection but do not establish phonetic ground truth.",
+    "Final encoded files still require separate full decode, audio identity, frame/content, and delivery verification."
+  ],
+  "recordedAt": "2026-09-27T10:37:11.902Z"
+}

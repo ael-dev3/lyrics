@@ -1,0 +1,238 @@
+{
+  "schemaVersion": 1,
+  "status": "verified",
+  "verifiedAt": "2026-09-27T11:10:13.547Z",
+  "song": "AK6duyCPU50",
+  "revision": "source-integrated-preview-v1",
+  "checks": [
+    "full audio/video decode",
+    "exact decoded-frame PTS",
+    "BT.709 limited-range stream metadata",
+    "original AAC payload and timing",
+    "entire decoded PCM and final-second identity",
+    "decoded scene samples"
+  ],
+  "approvedInputHashes": {
+    "public/source.mp4": "8a37587959dcfef6b9a91d84498d819cd782fc2b78f2edb923cbb63c1fdc19a5",
+    "public/ArchivoBlack-Regular.ttf": "dd9a89a019b4849f66ab75455fe7bdf931311042cbb0f0f97acc061539703180",
+    "public/timeline.json": "dc71783634058c2699357daee5ccdd3ac596d27f2f1f6cf48ea53d05aa968cec",
+    "public/audio-features.json": "74c8abe990f57f77700eb742379daef47ef07a09bc2d9e1ee4d771058c32dfbf",
+    "public/bridge-intro.jpg": "1b96498590a1b8feddf67cfff87a393ddca5682aa1e5dc40960a7ec845cffbb0",
+    "public/bridge-mid.jpg": "d5b0a76f9c61da975c9e43419eaffdb75deb72dce2e95aa504ea393f8d491b91",
+    "public/bridge-mid-sprite.jpg": "791b39f3de8cbb1bfb7571f3a83bce9e426b7791090e523fcdd1fdb0cd1c55cd",
+    "public/bridge-title.jpg": "445b24a94e54814e58761420fcb14566a3a980f718821809196351f4c63197c7",
+    "public/bridge-credits.jpg": "cf9c407c6383d947541853a5a8a0dc7de798a7c91633d788bd14a755ebff2994",
+    "public/bridge-stage-light.jpg": "9e79449409555f3502d2ad7e92639d12e820b3f3f8b1aadf1ea3aa615df912a2",
+    "public/bridge-blue-face.jpg": "04eb13418f7f4c8e8245e700273c36c4238fd71680c4f58620f08b98920062f5",
+    "source/user-transcript.txt": "c950e357f36eb514e268962bdd12ed62041f553ad316d7125e3c146706a47751",
+    "src/shots.ts": "1bb1a8fe852309736c1a8997a24c13ffc83dcb6c606254b2ea4219630b5226da",
+    "src/scene.ts": "122461ebe69019b47c2d87719282ee77d0b56c10a8015e3612685d71e0b98660",
+    "src/player.ts": "88e473ca3d7e8577a7ccc10204e1b651b011b9a80df640c2e0600ddf5e2a228b",
+    "review/index.html": "b00a9803d3832b7871086a8e716e050d34c665158efc2f4168fa59b624f7748f",
+    "review/client.js": "2bc14f39c275464448720da378570163ab872dbc7c2923d36d46009241bed5bb"
+  },
+  "source": {
+    "file": "public/source.mp4",
+    "bytes": 75473884,
+    "sha256": "8a37587959dcfef6b9a91d84498d819cd782fc2b78f2edb923cbb63c1fdc19a5",
+    "audio": {
+      "count": 11055,
+      "payloadSha256": "0e5243228f19ade3e39160e2f8d01d3f336fb960330179247dd62775d13cf1d2",
+      "timingSha256": "10bb618742c617afa73765896055a280e1d29de968d0aebb0d0ac2aee7edc1ac",
+      "firstPts": 0,
+      "lastEndPts": 11320320,
+      "pcm": {
+        "sampleFrames": 11320320,
+        "sha256": "c152a988fe05918662342527bfc2fa211eb9317ca958539cb1027f915d275328",
+        "tailSha256": "51d5c53d37d1275ec22ed7432db5a09caacef28aa8a9f7de3964625e3aca5c4e",
+        "tailSampleFrames": 44100
+      }
+    }
+  },
+  "masters": [
+    {
+      "format": "landscape",
+      "file": "MUST-HAVE-BEEN-A-DREAM-landscape-1920x1080-24000of1001fps.mp4",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 305441786,
+      "sha256": "ef692615789b8297b6235e147d837346e4fd2565136ee22b3236d69b5e1873b9",
+      "video": {
+        "codec": "h264",
+        "pixelFormat": "yuv420p",
+        "frameRate": "24000/1001",
+        "timeBase": "1/24000",
+        "sampleAspectRatio": "1:1",
+        "colorPrimaries": "bt709",
+        "colorTransfer": "bt709",
+        "colorMatrix": "bt709",
+        "colorRange": "tv",
+        "count": 6155,
+        "firstPts": 0,
+        "lastPts": 6160154,
+        "durationTicks": 6161155
+      },
+      "audio": {
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 2,
+        "durationTicks": 11320320,
+        "count": 11055,
+        "payloadSha256": "0e5243228f19ade3e39160e2f8d01d3f336fb960330179247dd62775d13cf1d2",
+        "timingSha256": "10bb618742c617afa73765896055a280e1d29de968d0aebb0d0ac2aee7edc1ac",
+        "firstPts": 0,
+        "lastEndPts": 11320320,
+        "pcm": {
+          "sampleFrames": 11320320,
+          "sha256": "c152a988fe05918662342527bfc2fa211eb9317ca958539cb1027f915d275328",
+          "tailSha256": "51d5c53d37d1275ec22ed7432db5a09caacef28aa8a9f7de3964625e3aca5c4e",
+          "tailSampleFrames": 44100
+        }
+      },
+      "sceneSamples": [
+        {
+          "requestedSeconds": 20,
+          "frame": 480,
+          "frameTimeSeconds": 20.02,
+          "sampleWidth": 160,
+          "sampleHeight": 90,
+          "meanLuma": 137.836,
+          "nonBlackFraction": 0.99306,
+          "p95Luma": 212.773
+        },
+        {
+          "requestedSeconds": 43.9,
+          "frame": 1053,
+          "frameTimeSeconds": 43.918875,
+          "sampleWidth": 160,
+          "sampleHeight": 90,
+          "meanLuma": 125.605,
+          "nonBlackFraction": 1,
+          "p95Luma": 166.323
+        },
+        {
+          "requestedSeconds": 153.5,
+          "frame": 3680,
+          "frameTimeSeconds": 153.48666666666668,
+          "sampleWidth": 160,
+          "sampleHeight": 90,
+          "meanLuma": 54.713,
+          "nonBlackFraction": 0.73292,
+          "p95Luma": 119.233
+        },
+        {
+          "requestedSeconds": 168,
+          "frame": 4028,
+          "frameTimeSeconds": 168.00116666666668,
+          "sampleWidth": 160,
+          "sampleHeight": 90,
+          "meanLuma": 121.267,
+          "nonBlackFraction": 0.96819,
+          "p95Luma": 233.375
+        },
+        {
+          "requestedSeconds": 239,
+          "frame": 5730,
+          "frameTimeSeconds": 238.98875,
+          "sampleWidth": 160,
+          "sampleHeight": 90,
+          "meanLuma": 24.166,
+          "nonBlackFraction": 0.41736,
+          "p95Luma": 68.748
+        }
+      ]
+    },
+    {
+      "format": "portrait",
+      "file": "MUST-HAVE-BEEN-A-DREAM-portrait-1080x1920-24000of1001fps.mp4",
+      "width": 1080,
+      "height": 1920,
+      "bytes": 245866978,
+      "sha256": "abb4f75d2d7bf99a8d3cccdb6ba9ff6926e26271d332543e9cf871171d0e3a26",
+      "video": {
+        "codec": "h264",
+        "pixelFormat": "yuv420p",
+        "frameRate": "24000/1001",
+        "timeBase": "1/24000",
+        "sampleAspectRatio": "1:1",
+        "colorPrimaries": "bt709",
+        "colorTransfer": "bt709",
+        "colorMatrix": "bt709",
+        "colorRange": "tv",
+        "count": 6155,
+        "firstPts": 0,
+        "lastPts": 6160154,
+        "durationTicks": 6161155
+      },
+      "audio": {
+        "codec": "aac",
+        "sampleRate": 44100,
+        "channels": 2,
+        "durationTicks": 11320320,
+        "count": 11055,
+        "payloadSha256": "0e5243228f19ade3e39160e2f8d01d3f336fb960330179247dd62775d13cf1d2",
+        "timingSha256": "10bb618742c617afa73765896055a280e1d29de968d0aebb0d0ac2aee7edc1ac",
+        "firstPts": 0,
+        "lastEndPts": 11320320,
+        "pcm": {
+          "sampleFrames": 11320320,
+          "sha256": "c152a988fe05918662342527bfc2fa211eb9317ca958539cb1027f915d275328",
+          "tailSha256": "51d5c53d37d1275ec22ed7432db5a09caacef28aa8a9f7de3964625e3aca5c4e",
+          "tailSampleFrames": 44100
+        }
+      },
+      "sceneSamples": [
+        {
+          "requestedSeconds": 20,
+          "frame": 480,
+          "frameTimeSeconds": 20.02,
+          "sampleWidth": 90,
+          "sampleHeight": 160,
+          "meanLuma": 75.469,
+          "nonBlackFraction": 0.74056,
+          "p95Luma": 249.195
+        },
+        {
+          "requestedSeconds": 43.9,
+          "frame": 1053,
+          "frameTimeSeconds": 43.918875,
+          "sampleWidth": 90,
+          "sampleHeight": 160,
+          "meanLuma": 139.923,
+          "nonBlackFraction": 1,
+          "p95Luma": 180.419
+        },
+        {
+          "requestedSeconds": 153.5,
+          "frame": 3680,
+          "frameTimeSeconds": 153.48666666666668,
+          "sampleWidth": 90,
+          "sampleHeight": 160,
+          "meanLuma": 58.079,
+          "nonBlackFraction": 0.66528,
+          "p95Luma": 150.594
+        },
+        {
+          "requestedSeconds": 168,
+          "frame": 4028,
+          "frameTimeSeconds": 168.00116666666668,
+          "sampleWidth": 90,
+          "sampleHeight": 160,
+          "meanLuma": 114.472,
+          "nonBlackFraction": 1,
+          "p95Luma": 192.295
+        },
+        {
+          "requestedSeconds": 239,
+          "frame": 5730,
+          "frameTimeSeconds": 238.98875,
+          "sampleWidth": 90,
+          "sampleHeight": 160,
+          "meanLuma": 23.517,
+          "nonBlackFraction": 0.46097,
+          "p95Luma": 64.936
+        }
+      ]
+    }
+  ]
+}

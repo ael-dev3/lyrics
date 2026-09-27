@@ -1,0 +1,117 @@
+{
+  "schemaVersion": 1,
+  "song": "Computer Kill — Must Have Been A Dream",
+  "sourceVideo": "https://www.youtube.com/watch?v=AK6duyCPU50",
+  "renderRevision": "source-integrated-preview-v1",
+  "status": "upload-kit-prepared",
+  "platformUploadsPerformed": false,
+  "assembledAtUtc": "2026-09-27T11:16:08.628451+00:00",
+  "verification": {
+    "renderReport": "evidence/final-verification.json",
+    "renderReportStatus": "verified",
+    "finalFullDecode": true,
+    "sourceAudioPayloadSha256": "0e5243228f19ade3e39160e2f8d01d3f336fb960330179247dd62775d13cf1d2",
+    "sourceAudioPcmSha256": "c152a988fe05918662342527bfc2fa211eb9317ca958539cb1027f915d275328",
+    "copyHashEquality": true,
+    "kitChecksumCommand": "shasum -a 256 -c CHECKSUMS.sha256"
+  },
+  "videos": [
+    {
+      "kitPath": "YouTube/video.mp4",
+      "format": "landscape",
+      "width": 1920,
+      "height": 1080,
+      "frameRate": "24000/1001",
+      "decodedFrames": 6155,
+      "bytes": 305441786,
+      "sha256": "ef692615789b8297b6235e147d837346e4fd2565136ee22b3236d69b5e1873b9",
+      "videoCodec": "h264",
+      "audioCodec": "aac",
+      "audioSampleRate": 44100,
+      "audioChannels": 2,
+      "originalAudioPayloadVerified": true
+    },
+    {
+      "kitPath": "TikTok/video.mp4",
+      "format": "portrait",
+      "width": 1080,
+      "height": 1920,
+      "frameRate": "24000/1001",
+      "decodedFrames": 6155,
+      "bytes": 245866978,
+      "sha256": "abb4f75d2d7bf99a8d3cccdb6ba9ff6926e26271d332543e9cf871171d0e3a26",
+      "videoCodec": "h264",
+      "audioCodec": "aac",
+      "audioSampleRate": 44100,
+      "audioChannels": 2,
+      "originalAudioPayloadVerified": true
+    }
+  ],
+  "kitFiles": [
+    {
+      "path": "START-HERE.md",
+      "bytes": 1164,
+      "sha256": "66cef1b57b1629e78bdc56523c6a6a2860aea14f3a704e88f8d36bc1e236acda"
+    },
+    {
+      "path": "TikTok/captions.en.srt",
+      "bytes": 1634,
+      "sha256": "ec79be41f06237128afef88b5d72fb901f15db5d26e1a5793f1e96bb20db25c8"
+    },
+    {
+      "path": "TikTok/description.txt",
+      "bytes": 392,
+      "sha256": "6fb302069cda8ce49939b1d468d453349d64cd78134726335935bba49a8f82b5"
+    },
+    {
+      "path": "TikTok/profile-cover.jpg",
+      "bytes": 211001,
+      "sha256": "ed664f949f754cee61d855a15a987e64fe359bf76cf9cc24ac997e9220d06746"
+    },
+    {
+      "path": "TikTok/title.txt",
+      "bytes": 50,
+      "sha256": "52c389d9a49a59ae3a3465fca9c7982082ac5f80c862291cdf4979a4d21931b4"
+    },
+    {
+      "path": "TikTok/video.mp4",
+      "bytes": 245866978,
+      "sha256": "abb4f75d2d7bf99a8d3cccdb6ba9ff6926e26271d332543e9cf871171d0e3a26"
+    },
+    {
+      "path": "YouTube/captions.en.srt",
+      "bytes": 1634,
+      "sha256": "ec79be41f06237128afef88b5d72fb901f15db5d26e1a5793f1e96bb20db25c8"
+    },
+    {
+      "path": "YouTube/description.txt",
+      "bytes": 729,
+      "sha256": "6d868dbb931ae516a9c2a8306086adab2561dc4d1c3b1bd90f0f1e5653fcabac"
+    },
+    {
+      "path": "YouTube/thumbnail.jpg",
+      "bytes": 209508,
+      "sha256": "e663c17e9d982092a04f278529a5c0c9092408bb46a45a1dd136df9f501152fb"
+    },
+    {
+      "path": "YouTube/title.txt",
+      "bytes": 65,
+      "sha256": "98a29fddb3670279095ea69ee668ceedd31b0b3329287808fecef54070bfb38a"
+    },
+    {
+      "path": "YouTube/video.mp4",
+      "bytes": 305441786,
+      "sha256": "ef692615789b8297b6235e147d837346e4fd2565136ee22b3236d69b5e1873b9"
+    },
+    {
+      "path": "MANIFEST.json",
+      "bytes": 3787,
+      "sha256": "c5cc198b32cde42d4b1cd59665376be6b34234520a7f10ec5146810e1564e2ec"
+    },
+    {
+      "path": "CHECKSUMS.sha256",
+      "bytes": 1031,
+      "sha256": "ff1c9befacbca0358ccbb9f156f4a24d2c7435d60da78a35a849e2988490f492"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "name": "must-have-been-a-dream-lyric-film",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "esbuild src/player.ts --bundle --format=esm --outfile=review/client.js",
+    "preview": "npm run build && node scripts/preview-server.ts",
+    "typecheck": "tsc --noEmit",
+    "check": "npm run typecheck && node --test tests/*.test.ts && node scripts/check.ts",
+    "features": "node scripts/analyze-audio.ts",
+    "captions": "node scripts/make-captions.ts",
+    "render:production": "node scripts/render-production.ts --production",
+    "render:still": "node scripts/render-production.ts --still",
+    "verify:production": "node scripts/verify-production.ts",
+    "covers": "node scripts/make-covers.ts"
+  },
+  "devDependencies": {
+    "@types/node": "26.4.0",
+    "esbuild": "0.28.2",
+    "typescript": "7.0.2",
+    "@napi-rs/canvas": "0.1.100"
+  }
+}

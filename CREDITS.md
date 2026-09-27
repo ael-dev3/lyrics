@@ -2,6 +2,12 @@
 
 **We are not the creators of the original music, lyrics, performances, musical remixes, anime footage, characters or source illustrations. We do not take credit for that work.** Our contribution is the additional lyric-film presentation and production workflow. Artist and source-upload links below distinguish those roles; a source uploader is not necessarily the owner of every element in an upload.
 
+## Must Have Been A Dream
+
+**Computer Kill** created and performed the source song in the [official music video](https://www.youtube.com/watch?v=AK6duyCPU50). The video's description identifies **a postmortē production**; **Rob Roy Taylor** directed and edited, **Tommy Melendez** produced and edited, **Joseph Puccio** handled cinematography, and **Isaac Barnes** provided VFX. These are credits for the original recording and moving picture, not the lyric treatment.
+
+**Ael**, assisted by **OpenAI Codex**, adds the individually synchronized English lyric presentation, source-light response, format-specific reframing and production workflow. The film and covers retain material from the original video. Original music, lyrics, performance and footage remain third-party material and are excluded from the repository contribution license. [Project, source identity and review limits](projects/must-have-been-a-dream-lyric-film/README.md).
+
 ## I Really Want to Stay at Your House — Hardstyle
 
 The [selected upload](https://www.youtube.com/watch?v=tXFVl2Qb4zc) is by **Laaemel**; its description links an **Oblivion** remix and credits the **Samuel Kim / Lorien** cover. Original song: **Rosa Walton / Hallie Coggins**. Artwork: **xiaocha81269**, as credited by that upload. Selected animation comes from the [official Netflix Cyberpunk: Edgerunners trailer](https://www.youtube.com/watch?v=JtqIas3bYhg).
