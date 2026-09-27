@@ -10,7 +10,7 @@
 
 ## Inspection method and evidence limits
 
-The review covered the full primary clip through a five-second overview contact sheet and five contact sheets sampled at one image per second (185 samples). Full-resolution frames were opened at 10, 35, 75, 120, 145, 165, 175, 179, and 180 seconds. These manual observations establish the broad sequence, panel designs, and approximate transition seconds, with about ±1 second precision. They do **not** constitute manual inspection of all 11,064 frames. The companion archive indexes every decoded frame separately. The review did not include a complete listen-through or an independent beat-to-visual synchronization audit.
+Codex reviewed the full primary clip through a five-second overview contact sheet and five contact sheets sampled at one image per second (185 samples). Full-resolution frames were opened at 10, 35, 75, 120, 145, 165, 175, 179, and 180 seconds. These sampled observations establish the broad sequence, panel designs, and approximate transition seconds, with about ±1 second precision. They do **not** constitute individual visual review of all 11,064 frames. The companion archive indexes every decoded frame separately. The review did not include a complete listen-through or an independent beat-to-visual synchronization audit.
 
 The approximate time codes below refer to LuisBizarro's primary clip, not the quoted _mexicat video.
 

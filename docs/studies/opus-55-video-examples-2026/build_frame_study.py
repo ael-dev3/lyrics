@@ -10,7 +10,6 @@ from __future__ import annotations
 import csv
 import hashlib
 import json
-import math
 import subprocess
 import sys
 from pathlib import Path
@@ -49,9 +48,9 @@ def frame_path(folder: Path, index: int) -> Path:
 
 def extract(video: Path, frames: Path, expected: int) -> None:
     frames.mkdir(exist_ok=True)
-    have = len(list(frames.glob("frame_*.jpg")))
-    if have == expected and frame_path(frames, expected - 1).exists():
-        return
+    # Re-extract on every run: a new source can have the same frame count as
+    # an older source, so a count-only cache could mix stale images with a new
+    # manifest hash and produce invalid measurements.
     for stale in frames.glob("frame_*.jpg"):
         stale.unlink()
     cmd = [

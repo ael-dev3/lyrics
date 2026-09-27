@@ -10,7 +10,7 @@ Container inspection: H.264, 1920 × 1080, 30 fps; AAC audio; 156.693 s. The pos
 
 ## Inspection scope
 
-The review inspected 40 images sampled every four seconds from the full primary film, arranged in five contact sheets, as well as the encoded stream metadata. Time windows and apparent motion below are approximate observations from those samples. The companion archive records FFmpeg scene-score candidates that flag likely visual discontinuities and also catch flashes. Its all-frame decoding/index pass covers the complete primary clip; this narrative does not claim manual inspection of each of the 4,699 decoded frames.
+Codex reviewed 40 images sampled every four seconds from the full primary film, arranged in five contact sheets, as well as the encoded stream metadata. Time windows and apparent motion below are approximate observations from those samples. The companion archive records FFmpeg scene-score candidates that flag likely visual discontinuities and also catch flashes. Its all-frame decoding/index pass covers the complete primary clip; this narrative does not claim individual visual review of each of the 4,699 decoded frames.
 
 ## Time-coded visual sequence
 

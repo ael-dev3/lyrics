@@ -4,7 +4,7 @@ This records a separate user-requested download from [X status `2095782897080762
 
 ## Saved file
 
-The MP4 was delivered locally on the Desktop as `IterIntellectus-2095782897080762778.mp4`. The media file is not committed to this repository. Its source URL is a post URL; the extractor identified the attached media separately as ID `2095782696358453248` and returned the title `vittorio - it’s happening`. That title is recorded as extractor metadata, not independently verified song or creator attribution. The status account name is likewise not proof of who created the media.
+The MP4 was delivered locally on the Desktop as `IterIntellectus-2095782897080762778.mp4`; a verified backup with the same name is retained in the task's outputs folder. The media file is not committed to this repository. Its source URL is a post URL; the extractor identified the attached media separately as ID `2095782696358453248` and returned the title `vittorio - it’s happening`. That title is recorded as extractor metadata, not independently verified song or creator attribution. The status account name is likewise not proof of who created the media.
 
 | Property | Verified local MP4 |
 | --- | --- |

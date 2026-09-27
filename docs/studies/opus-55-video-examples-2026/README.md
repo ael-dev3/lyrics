@@ -8,7 +8,7 @@ This is a reference study, not a request to reproduce third-party scenes or a re
 
 ## Source works and evidence
 
-| Primary X post | Saved media | Decoded frames | Human visual review | Detailed chapter | Per-frame data |
+| Primary X post | Saved media | Decoded frames | Codex visual sampling | Detailed chapter | Per-frame data |
 | --- | --- | ---: | --- | --- | --- |
 | [NotinReality](https://x.com/other__reality/status/2102514581684052169) | 1280×720, 24 fps, 156.629 s | 3,758 | One-second sequence, overview sheets, neighboring checks | [Theater cartoon](videos/notinreality.md) | [CSV](data/notinreality-frame-index.csv) · [chart](data/notinreality-frame-activity.svg) |
 | [Donald Jewkes](https://x.com/donaldjewkes/status/2102801274173587569) | 1920×1080, 30 fps, 141.568 s | 4,245 | One-second sequence and overview sheets | [Editorial anime](videos/donald-jewkes.md) | [CSV](data/donald-jewkes-frame-index.csv) · [chart](data/donald-jewkes-frame-activity.svg) |
@@ -24,7 +24,7 @@ An additional [IterIntellectus X video download](ITER-INTELLECTUS-DOWNLOAD.md) w
 
 1. The five primary MP4s were downloaded at the highest listed X rendition available to the study and retained unchanged in the local archive. SHA-256 hashes, media IDs, stream properties and post relationships are in [`sources.json`](sources.json) and [`frame-study-manifest.json`](frame-study-manifest.json).
 2. FFprobe enumerated every decoded video frame and its presentation timestamp. FFmpeg produced one compact, 320-pixel-wide JPEG preview for each decoded frame, with no frame-rate conversion. The [processing script](build_frame_study.py) then wrote one CSV row per frame, made chronological 150-frame contact sheets, and calculated frame-to-frame preview measurements. The five CSV files here represent **all 33,165 decoded frames**.
-3. The human narrative reviews inspected ordered temporal samples across each complete runtime, plus selected larger or neighboring frames. Individual chapter introductions state the sampling interval and limitations. **Every frame was decoded and indexed; not every full-resolution frame was manually described.** The local viewer and contact sheets make each frame available for follow-up inspection.
+3. Codex reviewed ordered temporal samples across each complete runtime, plus selected larger or neighboring frames. Individual chapter introductions state the sampling interval and limitations. **Every frame was decoded and indexed; not every full-resolution frame was visually reviewed or described.** The local viewer and contact sheets make each frame available for follow-up inspection.
 4. The original audio tracks were retained with the local MP4s, but this pass did not independently transcribe the songs, align sung words to frames, verify subtitle highlight timing, or establish whether an apparent spectrum or waveform was driven by audio data. Visual relationships in the chapters are approximate.
 
 Two MP4 headers report one extra frame beyond what FFprobe/FFmpeg actually decoded: Donald reports 4,246 versus 4,245 decoded; Pleometric reports 4,700 versus 4,699. The CSV and image counts follow the decoded frames. Both counts remain in the manifest.
@@ -39,7 +39,7 @@ X's extractor returned quoted or embedded videos as extra playlist items. Pleome
 
 The posts and some closing cards claim or discuss **Opus 5.5** use. They provide evidence of what creators said, not independent access to prompt logs, model traces, project repositories, asset histories or elapsed build times. “Opus 5.5-associated” is the appropriate scope label. No claim is made that the model produced every asset or that a particular on-screen number is factual. The videos' source imagery, characters, music, lyrics and screenshots remain third-party works outside this repository's [CC BY scope](../../../LICENSE.md). This update contains original analysis, derived measurements and code, with source links for attribution; it does not offer the videos for redistribution.
 
-## Reproducing the full local archive
+## Reproducing the frame-processing outputs
 
 The checked-in [`build_frame_study.py`](build_frame_study.py) is the processing script used for the local archive. It requires Python 3 with Pillow, FFmpeg and FFprobe. The recorded run used Python 3.9.6, Pillow 11.3.0 and FFmpeg/FFprobe 8.1.2. The download extractor was yt-dlp 2025.10.14. Tool versions are the observed environment, not a guarantee of identical results from future X transcodes.
 
@@ -61,7 +61,7 @@ cd /path/to/study-directory
 python3 build_frame_study.py
 ```
 
-The script verifies that the number of emitted previews matches the number of frames FFprobe decoded and writes a new manifest with source hashes. Compare those hashes with [`sources.json`](sources.json) before treating a regenerated CSV as the same run. Quoted X playlist items should be identified separately rather than silently appended to the primary corpus.
+The script verifies that the number of emitted previews matches the number of frames FFprobe decoded and writes a new manifest with source hashes. Compare those hashes with [`sources.json`](sources.json) before treating a regenerated CSV as the same run. Quoted X playlist items should be identified separately rather than silently appended to the primary corpus. The script does not download MP4s or recreate the curated post metadata, larger selected stills, written analyses, or visual index page.
 
 ## Applying the observations to Lyrics
 
@@ -70,4 +70,4 @@ The script verifies that the number of emitted previews matches the number of fr
 - Track lyric timing, picture cuts, visual state and decorative audio response as separate data. The visual study identifies candidate relationships; the [source-clocked workflow](../../source-clocked-word-effects-workflow.md) and [cross-language review gate](../../cross-language-sync-gate.md) remain the requirements for our own song.
 - Review held text and recurring motifs across scene changes. Use the full preview, source audio, frame viewer and final encoded files to check transitions and continuity; contact sheets and pixel-change charts do not prove sound-picture synchronization.
 
-**AI disclosure:** OpenAI Codex assisted source collection, extraction, frame measurement, visual sampling, comparative reasoning, writing and code. The inspection scopes above distinguish automated processing, human-visible samples, source claims and inferred production lessons.
+**AI disclosure:** OpenAI Codex performed the source collection, extraction, frame measurement, visual sampling, comparative reasoning, writing and code. The inspection scopes above distinguish automated processing, samples visually reviewed by Codex, source claims and inferred production lessons.
