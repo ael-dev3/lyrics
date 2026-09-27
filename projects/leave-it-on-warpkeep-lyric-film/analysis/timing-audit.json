@@ -1,0 +1,29 @@
+{
+  "status": "preview candidate; full actual-audio review pending",
+  "cueCount": 63,
+  "wordCount": 343,
+  "models": [
+    "MMS FA (mix and estimated vocals)",
+    "Wav2Vec2 ASR Base 960h (mix and estimated vocals)",
+    "Stable Whisper large-v3-turbo alignment (estimated vocals)"
+  ],
+  "unforcedTextEvidence": [
+    "Whisper large-v3-turbo, full recording in overlapping windows",
+    "Whisper small, seven high-risk windows on estimated vocals"
+  ],
+  "independence": "MMS and Wav2Vec2 are different pretrained CTC models within the wav2vec family. Whisper is a different architecture. Small/turbo/crop/stem variants of Whisper are not counted as independent model families.",
+  "wordsWithCandidateSpreadOver25ms": 342,
+  "wordsWithCandidateSpreadOver250ms": 169,
+  "wordsWithCandidateSpreadOver500ms": 90,
+  "wordsNeedingPerceptualReview": 343,
+  "modelConfidenceComparableAcrossModels": false,
+  "timingSelection": "Named observed boundaries in select_timing.py. No word is distributed evenly or snapped to beat attacks. Source-sample rounding is representational precision, not proven acoustic accuracy.",
+  "featureSamples": 13679,
+  "featureHz": 50,
+  "sourceSha256": "376926ae77af41789ac620685dd15b5e1515e3777aece65e964463277e5cfe44",
+  "lyricsSha256": "3072715a12467155bb440f5d8874e126b3e5a4d91c9abdcbfd532ae17e5e6173",
+  "featuresSha256": "7c3993f58e52b19e475c72b835d7e966f964b34a2f4cb80fc1a5f21918621caa",
+  "technicalErrors": [],
+  "actualAudioReviewComplete": false,
+  "productionAuthorized": false
+}

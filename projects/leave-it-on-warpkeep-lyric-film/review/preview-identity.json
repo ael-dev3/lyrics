@@ -1,0 +1,428 @@
+{
+  "schemaVersion": 1,
+  "projectId": "leave-it-on-warpkeep-lyric-film",
+  "previewRevision": "preview-v2-pr375",
+  "files": {
+    "data/features.json": {
+      "sha256": "7c3993f58e52b19e475c72b835d7e966f964b34a2f4cb80fc1a5f21918621caa",
+      "bytes": 567412
+    },
+    "data/lyrics.json": {
+      "sha256": "3072715a12467155bb440f5d8874e126b3e5a4d91c9abdcbfd532ae17e5e6173",
+      "bytes": 171357
+    },
+    "data/spectrum.json": {
+      "sha256": "0e6e44307add102b830eff5e45f21f2e86f5ac56b75f00841967062a76ed0809",
+      "bytes": 1260430
+    },
+    "data/story.json": {
+      "sha256": "21555f6d2c8ac89d2dd823e54bcb053da6d01d6569b376fd7bdd9d2b3edfed58",
+      "bytes": 14209
+    },
+    "package-lock.json": {
+      "sha256": "741b2c6acf1013cdc91db7af498f475bec0dcd4a9a54cf38fb36a67b3759cce7",
+      "bytes": 563
+    },
+    "package.json": {
+      "sha256": "f83998b493eaaa8e37ba1dd1f08d87c3d5b60f2000332e8d7d60f1b6b922d8e0",
+      "bytes": 408
+    },
+    "public/assets/pr375/brazier.glb": {
+      "sha256": "6e9b6f425e0812773ae4b7688a871b949ab794612d99a3f5ff74faa86afdc4a2",
+      "bytes": 98792
+    },
+    "public/assets/pr375/castle.glb": {
+      "sha256": "c55f2c6c610e4aacddde58e485156c85629dd0a2eab88fad65652c317ae59088",
+      "bytes": 4977796
+    },
+    "public/assets/pr375/guardian.glb": {
+      "sha256": "e934a81ae2a210e495675aff99293aebc60cebb1a42603c9d99351db43d9e602",
+      "bytes": 1836344
+    },
+    "public/assets/pr375/hegemony-emblem.png": {
+      "sha256": "26e8664b1db0acf3e6db443caf46ef13e45fe9de794749e431b7c2e3d6fb8774",
+      "bytes": 1486312
+    },
+    "public/assets/pr375/honor-guard.glb": {
+      "sha256": "66f157c4dc9bcd4ffaec17081f5019a168f9b69009293518f89eb366864a7c67",
+      "bytes": 320440
+    },
+    "public/assets/pr375/lamplighter.glb": {
+      "sha256": "599200017f3e3a3d992d9b848ee90e789157e6c8770bfc16b93dbe54184c4535",
+      "bytes": 157472
+    },
+    "public/assets/pr375/pine.glb": {
+      "sha256": "a2b5cab2cdd5d66971896d13a42469919ca28dc9f3cc3b1005a6cf7b3755abfb",
+      "bytes": 26396
+    },
+    "public/assets/pr375/rabbit.glb": {
+      "sha256": "daeb493a827ecbd605c6ad25d83b84050e6a0ad29e96619c9d86c57c37be1f6a",
+      "bytes": 86340
+    },
+    "public/assets/pr375/tree.glb": {
+      "sha256": "c77293af2d83c21052d128b2faf05c7c5e7f857405c72921dbc42940e2e674c9",
+      "bytes": 72128
+    },
+    "public/assets/warpkeep/city-mill.glb": {
+      "sha256": "8613faf8ac5a61f50cb6464cc9c2c8391f9f12fc087c2419cc5ac5827e905a8c",
+      "bytes": 478660
+    },
+    "public/assets/warpkeep/city-stoneworks.glb": {
+      "sha256": "01df9557bccaed14b44bcc0efa4971283f08632572aa892c1e6fb6261f22a913",
+      "bytes": 508540
+    },
+    "public/assets/warpkeep/cobble-road-straight-4m.glb": {
+      "sha256": "2066fd90088760b630a14c17412e47b2b28afa846e70ea56dd4ce1db13d2fad2",
+      "bytes": 87600
+    },
+    "public/assets/warpkeep/courtyard-linden-teardrop.glb": {
+      "sha256": "e1f548983c08130897d6a30b0500a1534429d97e7412c92c26a339af9346b660",
+      "bytes": 164384
+    },
+    "public/assets/warpkeep/ember-lamplighter.glb": {
+      "sha256": "599200017f3e3a3d992d9b848ee90e789157e6c8770bfc16b93dbe54184c4535",
+      "bytes": 157472
+    },
+    "public/assets/warpkeep/hegemony-castle.glb": {
+      "sha256": "9fe06a26446387e007ea32acfccbf6657e7a6763d73e2cb3890f103fb590afe8",
+      "bytes": 2215972
+    },
+    "public/assets/warpkeep/hegemony-emblem.png": {
+      "sha256": "26e8664b1db0acf3e6db443caf46ef13e45fe9de794749e431b7c2e3d6fb8774",
+      "bytes": 1486312
+    },
+    "public/assets/warpkeep/lumber-camp.glb": {
+      "sha256": "a4f6831dd6ddcb0956b6338b6d206985928f6d67443122ec7766390778b84191",
+      "bytes": 532928
+    },
+    "public/assets/warpkeep/palisade-gate-frame-6m.glb": {
+      "sha256": "d4f580ae04a3b94ebcd18050d6affaa8d85858502f7308759d27ded3439d718f",
+      "bytes": 46112
+    },
+    "public/assets/warpkeep/palisade-gate-leaf-left.glb": {
+      "sha256": "a3e3e5eb7b13568eb63c4b8e5cfdef6bad516502b87d5729a8125fc1ed373861",
+      "bytes": 22860
+    },
+    "public/assets/warpkeep/palisade-gate-leaf-right.glb": {
+      "sha256": "0b397bb750ba886ecdb02e3ae53d4b4fef8459b07bc579347b599a3483716fee",
+      "bytes": 22936
+    },
+    "public/assets/warpkeep/pruned-ornamental-three-tier.glb": {
+      "sha256": "8bbe6ec99f51822bd9790b021b68d4f372ccf6a4d8aa9498d614d7924a0f06ad",
+      "bytes": 175604
+    },
+    "public/assets/warpkeep/stone-pedestal-brazier.glb": {
+      "sha256": "c6d2485ca58328e1863c8c9179f909bec28fdc7aaaf4601720a3de36ca71daf8",
+      "bytes": 168348
+    },
+    "public/assets/warpkeep/the-core-crest.png": {
+      "sha256": "c1398d4e13218b7c499522a3efe49c333a23208a910888a93c4300014eda0ad0",
+      "bytes": 285047
+    },
+    "public/assets/warpkeep/timber-bench.glb": {
+      "sha256": "e96e0add043678ad3ab14a7f0bbae1b57f1ba714da731f77b20fcddb8685617f",
+      "bytes": 255436
+    },
+    "public/assets/warpkeep/timber-post-lamp.glb": {
+      "sha256": "bf0d7f23315858a81f43f5738b4268324728619580b0b7348cc216cad5b48b7b",
+      "bytes": 267500
+    },
+    "public/fonts/CormorantGaramond-OFL.txt": {
+      "sha256": "6f5a41d57400577a50aae88475b11f292f3d7de78ee7d5113c69577331d8ad31",
+      "bytes": 4386
+    },
+    "public/fonts/CormorantGaramond-Semibold.ttf": {
+      "sha256": "69e7ae35cba23d962227b86f99217c250e642e4c6f6104b4f3ec465039e4e2d8",
+      "bytes": 290392
+    },
+    "public/fonts/SpaceGrotesk-OFL.txt": {
+      "sha256": "18a4de52385f6b988782639d5d0cc1326e5a8c2de9a7f01d7b20d9aedcc60943",
+      "bytes": 4401
+    },
+    "public/fonts/SpaceGrotesk.ttf": {
+      "sha256": "acad6de1fc93436f5c0f1f4137751ef04f1aea3063e7036535970ffcfbd79f72",
+      "bytes": 136676
+    },
+    "review/index.html": {
+      "sha256": "4cc30a91a988880c2c16b77f40a803b9699f16b2f20fb04118b083c4a62157a8",
+      "bytes": 4040
+    },
+    "review/style.css": {
+      "sha256": "b5acae1bb26ef5a50122babbcb3d711f6eadf5d775e42e4d6e7de19f675c8f17",
+      "bytes": 8268
+    },
+    "scripts/render-gate.mjs": {
+      "sha256": "3fc72073ba249b0d6764b7c49a6faa1f85bfb5c8f8daf9b4a0782348da85df7e",
+      "bytes": 7510
+    },
+    "source/Leave It On.m4a": {
+      "sha256": "376926ae77af41789ac620685dd15b5e1515e3777aece65e964463277e5cfe44",
+      "bytes": 4448680
+    },
+    "source/asset-provenance/SHA256SUMS.txt": {
+      "sha256": "ae2010f4b905272a45c1dcaa07cf0b044f12c5cba723b81ccb0c4bfde4cd6f02",
+      "bytes": 1795
+    },
+    "source/asset-provenance/city-mill-inspection.json": {
+      "sha256": "f4db35be38e52644fda5dfbb52c9f4cb6b8ea534ce298eb45a0c204422a0f67c",
+      "bytes": 1326
+    },
+    "source/asset-provenance/city-mill-source-preview.png": {
+      "sha256": "717cf59d3bba14858b49dc7fb692066285d7ab9b27f6dfeae1b2238d542cdb02",
+      "bytes": 160025
+    },
+    "source/asset-provenance/city-stoneworks-inspection.json": {
+      "sha256": "65afe513a776fa4eccc232c8e9d595c039237a175f993fbe487ad7bf10647380",
+      "bytes": 1320
+    },
+    "source/asset-provenance/city-stoneworks-source-preview.png": {
+      "sha256": "e4c562fc94705fc71b1e77f7b3911ce88854464e24a72f45a5bfa07c88260f07",
+      "bytes": 157575
+    },
+    "source/asset-provenance/cobble-road-straight-4m-inspection.json": {
+      "sha256": "01ed9aefb3378fd6efc00229b022b9c010f8a141ba0c680ae44c7279bd902848",
+      "bytes": 1085
+    },
+    "source/asset-provenance/courtyard-linden-teardrop-inspection.json": {
+      "sha256": "931586fe1c45dcd844bf0675e12671a09e74db4b6a708a4fd1c74902c0905cab",
+      "bytes": 1272
+    },
+    "source/asset-provenance/ember-lamplighter-inspection.json": {
+      "sha256": "3298db30c5970e7e03932883e37a09a2420563da567416d981c222a23a3cee01",
+      "bytes": 14244
+    },
+    "source/asset-provenance/hegemony-castle-inspection.json": {
+      "sha256": "5f7d906cc3a8edbddd50aee5013b2a7cf1f6e283efa3065bad6e6e884416509b",
+      "bytes": 1415
+    },
+    "source/asset-provenance/hegemony-citizens-keep-services-2026-08-03.md": {
+      "sha256": "d58aebe9fe8a5e4190689125fff12fe35172be134f72637ffc1da2fa01f930d7",
+      "bytes": 4223
+    },
+    "source/asset-provenance/hegemony-emblem-2026-09-27.md": {
+      "sha256": "f6fe7dcea1a010732d9a278284be11058637c75bb8f931da5c1e160113315365",
+      "bytes": 3069
+    },
+    "source/asset-provenance/inner-keep-3d-asset-library-2026-08-02.md": {
+      "sha256": "433865714504b79e36336ac12332571b0bed087d386043f7fe627e6122b6bfbd",
+      "bytes": 2955
+    },
+    "source/asset-provenance/lantern-terrace-candidate-manifest.json": {
+      "sha256": "b149b075b7cc2901b74a266ea6fd4a46c3a4f016159dbe0fdfb513450693e2ac",
+      "bytes": 5511
+    },
+    "source/asset-provenance/lantern-terrace-candidate-provenance.md": {
+      "sha256": "97e60b2d8eb3ceefcd7c738f23270a61ee3e7cfe6decb330d73f8fb3cbbbda8b",
+      "bytes": 2624
+    },
+    "source/asset-provenance/lumber-camp-inspection.json": {
+      "sha256": "54aa146207478afaab14666760c9e891872157b8739f11b0e2011fe3dcca840b",
+      "bytes": 1056
+    },
+    "source/asset-provenance/lumber-camp-source-preview.png": {
+      "sha256": "d180ce53c9573f7f7e7969dbd46fbacc1c4bca1c5f8aa090a1804f86d98bcfea",
+      "bytes": 159403
+    },
+    "source/asset-provenance/palisade-gate-frame-6m-inspection.json": {
+      "sha256": "8c1f030e002b2226ca3110d0293954356feb4609a5d37c67e232a73ef0cbeba5",
+      "bytes": 998
+    },
+    "source/asset-provenance/palisade-gate-leaf-left-inspection.json": {
+      "sha256": "5333c7bb6fbf9882f40474e94403e80e85cdfe858e5504357d3549603f55701c",
+      "bytes": 1051
+    },
+    "source/asset-provenance/palisade-gate-leaf-right-inspection.json": {
+      "sha256": "eff867ca2c328421dc2467735afd6aa890748d723b99bbccb3fb7013f34a4058",
+      "bytes": 1053
+    },
+    "source/asset-provenance/pr375/README.md": {
+      "sha256": "b27f57c923dbaf5c8d6668c6334601f1793c636e222def054c5cf8c30a8c6855",
+      "bytes": 4591
+    },
+    "source/asset-provenance/pr375/SHA256SUMS.txt": {
+      "sha256": "5e547b5f8d6d07895f90a6b9dfe4deaf19cd7433f77a16374b4915c6e25aea26",
+      "bytes": 891
+    },
+    "source/asset-provenance/pr375/WarpkeepMenuWorld3D.tsx": {
+      "sha256": "d773d6cd0b8e60a46492b8e9a25e14de83d31bd5eb5cc90bb9c0fe417e303cce",
+      "bytes": 22499
+    },
+    "source/asset-provenance/pr375/bounds.json": {
+      "sha256": "7f933f01627bfd85dc12a892f8f17483f9b4440c716f31a3fc623efbd45ad669",
+      "bytes": 3513
+    },
+    "source/asset-provenance/pr375/brazier.glb.json": {
+      "sha256": "80fa80cb4ee1f384f5aeaf0db98425db72db4c7a0fea787d3c57efa2f629d361",
+      "bytes": 12131
+    },
+    "source/asset-provenance/pr375/castle-front-inspection.png": {
+      "sha256": "052a05c9923edfcb61f567e6bcacac7e00c58b4b5cfda4a1d0fd2657e18948ce",
+      "bytes": 1065407
+    },
+    "source/asset-provenance/pr375/castle-three-quarter-inspection.png": {
+      "sha256": "ada8125b19026a0b2ad9e9cbd1c9ddf8174360ec01a383b743e436caa7531336",
+      "bytes": 1102903
+    },
+    "source/asset-provenance/pr375/castle.glb.json": {
+      "sha256": "1987f631e43a90c7ac28692ead21371a06780c9a384f824db935558beb6555f0",
+      "bytes": 16303
+    },
+    "source/asset-provenance/pr375/createMenuLandscape3D.js": {
+      "sha256": "a12fee092177156339944af7b82ae0a376884815efc5d056d0eb63b892784125",
+      "bytes": 15301
+    },
+    "source/asset-provenance/pr375/createMenuLandscape3D.ts": {
+      "sha256": "92b17c09eea3b161e5d143b7549a739f13b0f106a9fa511404e1458e507b143b",
+      "bytes": 16978
+    },
+    "source/asset-provenance/pr375/derive-warplet-castle-base.py": {
+      "sha256": "2d41dbb33357c29c1faf0b2b847068d5cd5c7b83a6e50f8a95694421d614475a",
+      "bytes": 5031
+    },
+    "source/asset-provenance/pr375/facade-surfaces.json": {
+      "sha256": "7d936a7d1f58501161e4591923a8af63ed462ed7c6352b489bae2dae75434825",
+      "bytes": 6001
+    },
+    "source/asset-provenance/pr375/guardian.glb.json": {
+      "sha256": "5dcdce4643bed1564493e839f639feaf87f74141e5950e90b7c3f256989464d6",
+      "bytes": 25444
+    },
+    "source/asset-provenance/pr375/honor-guard.glb.json": {
+      "sha256": "b05fa54f0285c1aec0dfaa25c2b7d6d9e6d5e7849fb5538970f017832c4165c0",
+      "bytes": 43134
+    },
+    "source/asset-provenance/pr375/inspect_scene.py": {
+      "sha256": "f4e2a6df5450bc28527db5819046c4d1d7ec0c9fa47925d61fe9af48c0dbafe1",
+      "bytes": 1663
+    },
+    "source/asset-provenance/pr375/lamplighter.glb.json": {
+      "sha256": "1bfcd1ad261ce97dca955edbaed236e02b562756ec6163d98702a62b65a59746",
+      "bytes": 48233
+    },
+    "source/asset-provenance/pr375/manifest.json": {
+      "sha256": "6024b15255797c2a1e2831333ab15900e1cea7f8eb126bc9c92eaf67016998a7",
+      "bytes": 6863
+    },
+    "source/asset-provenance/pr375/menuWarpletRegistry.ts": {
+      "sha256": "febf14b281c9ad2c6b608f653b1a6de7ac4ccd521bbe010c0cd8bcc923c09214",
+      "bytes": 2383
+    },
+    "source/asset-provenance/pr375/pine.glb.json": {
+      "sha256": "bb840092e632a3b09e733436c9a74afe337984a439e42744e350c8b94833992b",
+      "bytes": 3412
+    },
+    "source/asset-provenance/pr375/rabbit.glb.json": {
+      "sha256": "3e6e0c0626eb9958e9c4e31c523cf1d693ad0d903f126ef8509758bb6b9860a0",
+      "bytes": 26332
+    },
+    "source/asset-provenance/pr375/texture-hegemony-banners.py": {
+      "sha256": "947e7b069ed6b01b19a9765386d319a41efe381da81772267bd36477e73e5e30",
+      "bytes": 11883
+    },
+    "source/asset-provenance/pr375/tree.glb.json": {
+      "sha256": "b98bc0b6c4c9ccb160736f6b8202b2a9b78c9e15b3bae65d3e9e6d3ec16adbaa",
+      "bytes": 3778
+    },
+    "source/asset-provenance/pruned-ornamental-three-tier-inspection.json": {
+      "sha256": "2b13fd09f724a6afb153431af01dc63f57f77e6064ebed8f5f4bcc543ba28b8f",
+      "bytes": 1279
+    },
+    "source/asset-provenance/selected-assets.json": {
+      "sha256": "e6b71fd49294d756a0a131713f0f9703b6f00bdd82057e3a978e068e86b2b18f",
+      "bytes": 32054
+    },
+    "source/asset-provenance/source-refs.json": {
+      "sha256": "7f0bc757c3c120df4e8374fdc251654a941cd77f6d4b7a920e48b9b1fb5ee007",
+      "bytes": 962
+    },
+    "source/asset-provenance/stone-pedestal-brazier-inspection.json": {
+      "sha256": "ed99b0533e2f35a4818a8ccdd33567a5abb2468f52e6ded0f2da2ff611186677",
+      "bytes": 3138
+    },
+    "source/asset-provenance/the-core-faction-crest-2026-08-03.md": {
+      "sha256": "090b1676bf57af8811539a3e2ccf1689c1c4d5ff1ad76e3009cc3100909fc390",
+      "bytes": 2276
+    },
+    "source/asset-provenance/timber-bench-inspection.json": {
+      "sha256": "fb114650f8f57a52ed0e646c26c1fd4140fca18bcfc74d815b5b711c92219f8a",
+      "bytes": 2178
+    },
+    "source/asset-provenance/timber-post-lamp-inspection.json": {
+      "sha256": "b2a76a46401ab3e18bc17db5f8b70d2c26d4a0e0c2e93ca0e1e154bc7b8b543e",
+      "bytes": 3073
+    },
+    "source/asset-provenance/warpkeep-ASSETS-LICENSE.md.txt": {
+      "sha256": "7c3c9ffbf1632cb27d6d709b69ba8807df15ae44151faa51c9dd816cc40e5866",
+      "bytes": 66870
+    },
+    "source/asset-provenance/warpkeep-keep04VisualProfile.ts.txt": {
+      "sha256": "00762e3245b693bd8db57467faad03ed11eec54696ae705c5ac6bab2b5ce40e7",
+      "bytes": 5092
+    },
+    "source/asset-provenance/warpkeep-loadKeep04Assets.ts.txt": {
+      "sha256": "90c1518c92629b82d04c400b278049a55d8425791771a373a2b6c8cec18df525",
+      "bytes": 2385
+    },
+    "source/asset-provenance/warpkeep-runtime-catalog.ts.txt": {
+      "sha256": "f13bb087dbbccef6e5a3a487c63d8b89c154e66920be9a69784e64beb61cfcae",
+      "bytes": 70651
+    },
+    "source/asset-provenance/warpkeep-warpkeep-direction.md.txt": {
+      "sha256": "04d5bd1c06172820781f83a9fe29f93399a79fd64785feab930b22c81b0ca766",
+      "bytes": 6743
+    },
+    "source/embedded_cues_unreviewed.json": {
+      "sha256": "0a57bd969e8cb62cf0e16096baeb33689bb172857aacc2b35055d36f52320584",
+      "bytes": 12330
+    },
+    "source/embedded_lyrics.srt": {
+      "sha256": "5809ef2f0d77dc80d377ce4ae9468e2553cdddefa8620c2edab044f81b752f8b",
+      "bytes": 5133
+    },
+    "source/leave-it-on.opus.webm": {
+      "sha256": "934c13d02e0d4b07747193876541b92a43800db0cd10f680e26012140650b6e0",
+      "bytes": 4466226
+    },
+    "source/lyrics_embedded_reference.txt": {
+      "sha256": "684a397ce2c85a18a90601ace629a3847263648ab3ed26a76041882f4946aeb5",
+      "bytes": 2490
+    },
+    "src/core.js": {
+      "sha256": "760e4d8e255876c69535ecc171988d5a7d5cb4052d9121baa483c5a1d8453f53",
+      "bytes": 2813
+    },
+    "src/guardian-clock.js": {
+      "sha256": "78cb1723e67bbcfca601d6146b4eda5205bd58d03b15fe8a79d4dabc877292c9",
+      "bytes": 727
+    },
+    "src/landscape.js": {
+      "sha256": "2819f43120f604d771e0ee793acced5227680c9317841a4b8ed081008840ca2b",
+      "bytes": 16780
+    },
+    "src/magic-vfx.js": {
+      "sha256": "9a6c4dc36035a466d78e81bbfadd84a51a4cb6d9f4f306d8ea97f8bc22762133",
+      "bytes": 13538
+    },
+    "src/mountain-sign.js": {
+      "sha256": "753d441f247463baced29cf13be0c5ff981fe8a06b21fc1db36f5747ef5dca0b",
+      "bytes": 15138
+    },
+    "src/player.js": {
+      "sha256": "c37d5d54def7a10fa1fb9d95b32ca3ac7a8c1a07dc098d9a524f49cc120dc736",
+      "bytes": 10786
+    },
+    "src/scene.js": {
+      "sha256": "12376b6d135231f04064f823ef39fc70e88d3dd983987e59172f9defc980ca48",
+      "bytes": 16957
+    },
+    "src/typography.js": {
+      "sha256": "ad13cd61fa848a6b7653fa4841ad5a4255a24b26434dedce3a70f08b8c01528b",
+      "bytes": 3108
+    },
+    "src/world-lyrics.js": {
+      "sha256": "4832f0a44c2b31a4ccaa70e525d713137c900021cc6b8bedae9ef3ee3380d84a",
+      "bytes": 4736
+    }
+  },
+  "inputDigest": "cdb2e50d74be6be9c1144a78473bfdd6f6387430184592f4467d1da3aa768e24"
+}

@@ -1,0 +1,56 @@
+{
+  "file": "city-mill.glb",
+  "boundsFromAccessorMinMax": {
+    "min": [
+      -4.650000095367432,
+      0.0,
+      -3.75
+    ],
+    "max": [
+      4.650000095367432,
+      7.122899532318115,
+      3.75
+    ],
+    "size": [
+      9.300000190734863,
+      7.122899532318115,
+      7.5
+    ]
+  },
+  "materials": [
+    {
+      "name": "WK_CityMill_VertexColor_PBR",
+      "pbr": {
+        "metallicFactor": 0,
+        "roughnessFactor": 0.800000011920929
+      },
+      "emissiveFactor": null,
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.4000000059604645
+        }
+      }
+    }
+  ],
+  "nodes": [
+    {
+      "extras": {
+        "wk_asset": "hegemony-crownwheel-city-mill",
+        "wk_editable": true,
+        "wk_edit_group": "EDIT_07_Flour_Output",
+        "wk_lod_detail": 1,
+        "wk_role": "flour-annex-front-planks",
+        "wk_origin_contract": "ground-plane-z0",
+        "wk_lod": 0,
+        "wk_front_facing_blender": "-Y",
+        "wk_front_facing_gltf": "+Z",
+        "wk_interaction_pivot": "footprint-center",
+        "wk_rotor_state": "static-at-frame-1",
+        "wk_collider_recommendation": "engine-side box around mill-house core; exclude rotor and workflow props"
+      },
+      "mesh": 0,
+      "name": "WK_CityMill_LOD0_High"
+    }
+  ],
+  "animations": []
+}

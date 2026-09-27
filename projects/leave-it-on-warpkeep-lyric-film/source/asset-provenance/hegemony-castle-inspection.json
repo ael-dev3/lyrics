@@ -1,0 +1,62 @@
+{
+  "file": "hegemony-castle.glb",
+  "boundsFromAccessorMinMax": {
+    "min": [
+      -6.669654752299584,
+      0.0,
+      -4.983584213879677
+    ],
+    "max": [
+      6.669654752299584,
+      14.062000274658203,
+      4.973583984997841
+    ],
+    "size": [
+      13.339309504599168,
+      14.062000274658203,
+      9.957168198877518
+    ],
+    "method": "Applied normalized signed int16 POSITION decode before node transform; accessor bounds rather than full mesh decode."
+  },
+  "materials": [
+    {
+      "name": "WK_HeroCastle_Atlas_PBR",
+      "pbr": {
+        "roughnessFactor": 0.6800000071525574,
+        "metallicFactor": 0.07999999821186066,
+        "baseColorTexture": {
+          "index": 0
+        }
+      },
+      "emissiveFactor": null,
+      "extensions": null
+    }
+  ],
+  "nodes": [
+    {
+      "name": "WK_Hegemony_Hero_Castle_LOD0_High",
+      "extras": {
+        "wk_lod_detail": 0,
+        "wk_atlas_region": "dark_stone",
+        "wk_asset": "hegemony-hero-castle",
+        "wk_lod": 2,
+        "wk_gate_count": 1,
+        "wk_gate_facing_blender": "-Y",
+        "wk_gate_facing_gltf": "+Z",
+        "wk_triangle_budget": 100000
+      },
+      "translation": [
+        0,
+        7.031000137329102,
+        -0.005000114440917969
+      ],
+      "scale": [
+        7.031000137329102,
+        7.031000137329102,
+        7.031000137329102
+      ],
+      "mesh": 0
+    }
+  ],
+  "animations": []
+}

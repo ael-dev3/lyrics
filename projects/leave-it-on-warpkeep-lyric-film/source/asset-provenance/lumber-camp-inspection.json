@@ -1,0 +1,50 @@
+{
+  "file": "lumber-camp.glb",
+  "boundsFromAccessorMinMax": {
+    "min": [
+      -4.300000190734863,
+      0.0,
+      -3.4000000953674316
+    ],
+    "max": [
+      4.300000190734863,
+      6.050000190734863,
+      3.4000000953674316
+    ],
+    "size": [
+      8.600000381469727,
+      6.050000190734863,
+      6.800000190734863
+    ]
+  },
+  "materials": [
+    {
+      "name": "WK_LumberCamp_VertexColor_PBR",
+      "pbr": {
+        "metallicFactor": 0,
+        "roughnessFactor": 0.7799999713897705
+      },
+      "emissiveFactor": null,
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.4399999976158142
+        }
+      }
+    }
+  ],
+  "nodes": [
+    {
+      "extras": {
+        "wk_asset": "inner-castle-lumber-camp",
+        "wk_lod": 0,
+        "wk_origin_contract": "ground-plane-z0",
+        "wk_front_facing_blender": "-Y",
+        "wk_front_facing_gltf": "+Z",
+        "wk_interaction_pivot": "footprint-center"
+      },
+      "mesh": 0,
+      "name": "WK_LumberCamp_LOD0_High"
+    }
+  ],
+  "animations": []
+}
