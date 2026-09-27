@@ -5,7 +5,7 @@ import {spawnSync} from 'node:child_process';
 import {mkdtempSync, mkdirSync, readFileSync, rmSync, symlinkSync, utimesSync, writeFileSync} from 'node:fs';
 import {tmpdir} from 'node:os';
 import {join} from 'node:path';
-import {assertNoLocalPaths, assertRendererBinding, emptyDesktopSkeleton, makeDeterministicZip, rendererDigestFor, safeRelative, scanTar, scanZip} from './package-delivery.mjs';
+import {assertNoLocalPaths, assertRendererBinding, emptyDesktopSkeleton, makeDeterministicZip, publicDescriptor, rendererDigestFor, safeRelative, scanTar, scanZip} from './package-delivery.mjs';
 import {PREVIEW_REVISION, PROJECT_ID} from './render-gate.mjs';
 
 function fixture(t) {
@@ -24,6 +24,12 @@ test('archive names are relative and cannot traverse the extraction root', () =>
   for (const path of ['/absolute', '../escape', 'a/../b', 'a/./b', 'a\\b', 'C:/drive', 'a//b', 'a\nnext']) {
     assert.throws(() => safeRelative(path), path);
   }
+});
+
+test('public delivery descriptors keep hashes and sizes without local input paths', () => {
+  const value = {path:['', 'Users', 'example', 'private', 'thumbnail.jpg'].join('/'), sha256:'a'.repeat(64), bytes:42};
+  assert.deepEqual(publicDescriptor(value), {sha256:'a'.repeat(64), bytes:42});
+  assert.throws(() => publicDescriptor({path:value.path, sha256:'broken', bytes:42}), /Invalid public/);
 });
 
 test('existing Desktop layout is accepted only when all platform folders are empty', t => {
