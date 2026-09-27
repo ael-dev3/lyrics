@@ -6,7 +6,7 @@ A real-time lyric film set around Warplet's Watch, using the exact castle, rooft
 
 The owner reviewed the complete local preview and explicitly approved both full renders, a Desktop delivery folder and a lyrics-repository release. This is the documented **owner-approved-preview** path for this English-only song. The 343 word times remain acoustic candidates; an independently recorded every-cue listening audit has not been completed. The ordinary granular synchronization gate remains closed, and the candidate uncertainty is preserved rather than presented as phonetic certainty.
 
-[Production and delivery record](PRODUCTION-NOTES.md) · [Publishing kit](publishing-kit/README.md) · [Start and reproduce](WORKFLOW.md) · [Art direction](STORYBOARD.md) · [Audio/timing uncertainty](analysis/README.md) · [Asset provenance](ASSETS.md) · [Acceptance scope](review/owner-acceptance.json)
+[Published release and videos](https://github.com/ael-dev3/lyrics/releases/tag/leave-it-on-warpkeep-v1.0.0) · [Production and delivery record](PRODUCTION-NOTES.md) · [Fresh-download receipt](evidence/release-upload-verification.json) · [Publishing kit](publishing-kit/README.md) · [Start and reproduce](WORKFLOW.md) · [Art direction](STORYBOARD.md) · [Audio/timing uncertainty](analysis/README.md) · [Asset provenance](ASSETS.md) · [Acceptance scope](review/owner-acceptance.json)
 
 ![Final wide film at 119.600 s with highlighted lyric, Warpkeep castle, guardian and rune field](evidence/final-landscape-119.600.png)
 
@@ -16,12 +16,12 @@ The owner reviewed the complete local preview and explicitly approved both full 
 
 The same frozen scene and original source clock drive the two 60 fps productions. The posting MP4s use H.264 video, BT.709 color and high-bitrate AAC for platform compatibility. Separate Matroska archival masters pair the same picture with packet-preserved original stereo Opus audio. The supplied `.m4a` master is kept unchanged and is part of the editable source archive. Posting AAC is a documented transcode, not a byte-identical copy of the Opus packets.
 
-| Edition | Native picture | Planned local media name |
+| Edition | Native picture | Final posting file |
 | --- | ---: | --- |
 | YouTube | 1920 × 1080 | `Leave-It-On-Warpkeep-YouTube-1920x1080-60fps.mp4` |
 | TikTok | 1080 × 1920 | `Leave-It-On-Warpkeep-TikTok-1080x1920-60fps.mp4` |
 
-The local Desktop handoff is **`Leave It On - Warpkeep`**, with `YouTube`, `TikTok`, and `Source & Verification` folders. Its [publishing kit](publishing-kit/README.md) supplies platform titles, descriptions or captions, tags, a YouTube thumbnail, and both TikTok profile and full-frame covers. The source ZIP is assembled from the exact merged project commit plus frozen, hash-checked local audio and game assets; large media stay out of ordinary Git history. The intended repository release tag is **`leave-it-on-warpkeep-v1.0.0`**. Final media identity and release status are established by the [production record](PRODUCTION-NOTES.md), Desktop manifest and remote asset receipt after verification. No YouTube or TikTok platform post is represented by the prepared copy.
+The local Desktop handoff is **`Leave It On - Warpkeep`**, with `YouTube`, `TikTok`, and `Source & Verification` folders. Its [publishing kit](publishing-kit/README.md) supplies platform titles, descriptions or captions, tags, a YouTube thumbnail, and both TikTok profile and full-frame covers. The source ZIP is assembled from exact merged commit `4c94cd871c5765ccfd71a94cbfc32fb9336953ed` plus frozen, hash-checked local audio and game assets; large media stay out of ordinary Git history. [Release `leave-it-on-warpkeep-v1.0.0`](https://github.com/ael-dev3/lyrics/releases/tag/leave-it-on-warpkeep-v1.0.0) contains the same 17 files. Every release asset matched both the Desktop copy and a fresh download; see the [publication receipt](evidence/release-upload-verification.json). No YouTube or TikTok platform post is represented by the prepared copy.
 
 ## Open the complete preview
 

@@ -39,6 +39,8 @@ The following stills are extracted from the final H.264 posting MP4s, after thei
 
 The [production record](../PRODUCTION-NOTES.md) and [sanitized final verification data](final-verification.json) give both files' frame/audio checks and source-to-AAC sample comparisons. Ten encoded-frame samples were inspected in each format; selected frames establish visual condition only at their listed times.
 
+The [publication receipt](release-upload-verification.json) separately verifies every published release asset against its Desktop copy and a fresh download. It does not expand the sampled visual or acoustic review above.
+
 ## Remaining synchronization audit
 
 Complete independent actual-audio review of all 343 candidate words, repeated performances, disputed processed vocals/echoes and every onset/release remains open. A geometric pass, sampled motion check or input freeze does not close those items. The owner separately accepted this exact complete preview and authorized both renders, Desktop delivery and the lyrics-repository release. Both-format renderer parity and a short encoded proof were approved before full capture; the standard granular synchronization gate remains closed.
