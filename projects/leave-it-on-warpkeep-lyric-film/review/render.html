@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Leave It On · Warpkeep production frame source</title>
+  <link rel="stylesheet" href="/review/style.css">
+  <script type="importmap">{"imports":{"three":"/node_modules/three/build/three.module.js","three/addons/":"/node_modules/three/examples/jsm/"}}</script>
+</head>
+<body>
+  <canvas id="scene" hidden></canvas>
+  <canvas id="type" hidden></canvas>
+  <script type="module">
+    import {createWorld} from '/src/scene.js';
+    import {makeTypography} from '/src/typography.js';
+    import {featuresAt, frameState} from '/src/core.js';
+
+    const query = new URLSearchParams(location.search);
+    const format = query.get('format');
+    const token = query.get('token');
+    const first = Number(query.get('first'));
+    const count = Number(query.get('count'));
+    const fps = Number(query.get('fps'));
+    const width = format === 'portrait' ? 1080 : 1920;
+    const height = format === 'portrait' ? 1920 : 1080;
+    const post = (route, body) => fetch(`/__production/${route}?token=${encodeURIComponent(token)}`, {method: 'POST', body});
+
+    async function main() {
+      if (!['portrait', 'landscape'].includes(format) || !/^[a-f0-9]{32}$/.test(token || '') ||
+          !Number.isSafeInteger(first) || first < 0 || !Number.isSafeInteger(count) || count < 1 || fps !== 60) {
+        throw new Error('Invalid local render configuration');
+      }
+      // Canvas drawing does not request CSS fonts on its own. Load the exact
+      // preview faces before the first layout measurement or texture paint.
+      await Promise.all([
+        document.fonts.load('700 225px Space'),
+        document.fonts.load('600 118px Cormorant')
+      ]);
+      await document.fonts.ready;
+      if (!document.fonts.check('700 225px Space') || !document.fonts.check('600 118px Cormorant')) {
+        throw new Error('Approved Space/Cormorant fonts did not load');
+      }
+      const [lyrics, features, spectrum] = await Promise.all(
+        ['/data/lyrics.json', '/data/features.json', '/data/spectrum.json'].map(async url => {
+          const response = await fetch(url);
+          if (!response.ok) throw new Error(`${url}: ${response.status}`);
+          return response.json();
+        })
+      );
+      const world = await createWorld(document.querySelector('#scene'));
+      world.setData(lyrics, spectrum);
+      world.setOptions({lyrics: true, effects: true, reduced: false});
+      world.resize(width, height, format);
+      const type = makeTypography(document.querySelector('#type'));
+      type.resize(format);
+      const output = document.createElement('canvas');
+      output.width = width;
+      output.height = height;
+      const context = output.getContext('2d', {alpha: false});
+      const ready = await post('ready', new Blob());
+      if (!ready.ok) throw new Error(`Render server rejected ready: ${ready.status}`);
+      for (let frame = first; frame < first + count; frame++) {
+        const time = frame / fps;
+        const state = frameState(time, featuresAt(features, time), {
+          lyrics: true, effects: true, reduced: false, cues: lyrics.cues
+        });
+        world.update(state);
+        type.draw(time, lyrics, state, {lyrics: false, effects: true, reduced: false});
+        context.drawImage(document.querySelector('#scene'), 0, 0, width, height);
+        context.drawImage(document.querySelector('#type'), 0, 0, width, height);
+        const png = await new Promise((resolve, reject) => output.toBlob(
+          blob => blob ? resolve(blob) : reject(new Error(`PNG export failed at frame ${frame}`)), 'image/png'
+        ));
+        const response = await post(`frame/${frame}`, png);
+        if (!response.ok) throw new Error(`Render server rejected frame ${frame}: ${response.status} ${await response.text()}`);
+      }
+      const done = await post('done', new Blob());
+      if (!done.ok) throw new Error(`Render server rejected completion: ${done.status}`);
+      document.body.dataset.renderStatus = 'done';
+      world.dispose();
+    }
+    main().catch(async error => {
+      document.body.dataset.renderStatus = 'error';
+      document.body.dataset.renderError = error?.message || String(error);
+      await post('error', new Blob([error?.stack || String(error)], {type: 'text/plain'})).catch(() => {});
+    });
+  </script>
+</body>
+</html>

@@ -1,6 +1,6 @@
 # Leave It On — reproduction and technical ownership
 
-Current source preview: **`preview-v2-pr375`**. The deliverable is the complete local browser preview in portrait and landscape. Complete acoustic review and explicit production authorization remain pending; this file does not open the production gate.
+Accepted source preview: **`preview-v2-pr375`**. The owner approved that complete browser picture and authorized both final renders, Desktop delivery and the lyrics-repository release. The every-cue acoustic listening audit remains open. The ordinary granular-review gate stays closed; the documented, scoped owner-approved-preview path binds production to this exact English-only revision.
 
 ## Local inputs and startup
 
@@ -40,7 +40,10 @@ Useful bounded review links are `/?format=landscape&t=85.5`, `/?format=portrait&
 | `src/player.js` | Audio-owned transport, format changes, settled-frame refresh, restore, notes and review stills |
 | `scripts/start-preview.mjs`, `scripts/preview-server.mjs` | Persistent local launch/readiness check and loopback media/asset serving |
 | `scripts/check.mjs`, `contracts.test.mjs` | Data/identity/behavior checks, negative controls and actual-rig seek checks |
-| `review/production-status.json`, `scripts/render-gate.mjs` | Separate review/authorization state, current-input binding and closed production entry point |
+| `review/production-status.json`, `review/owner-acceptance.json`, `scripts/render-gate.mjs` | Separate granular review state and scoped owner acceptance for the frozen preview |
+| `review/render.html`, `scripts/render-production.mjs`, `review/render-parity.json` | Source-clocked native frame capture, both-format renderer parity and encoded proof |
+| `scripts/verify-production.mjs`, `scripts/verify-audio-alignment.mjs` | Strict full-file decode, frame/audio/Opus identity and sample-window AAC alignment checks |
+| `scripts/package-delivery.mjs`, `scripts/package-delivery.test.mjs` | Commit-bound source ZIP and verified Desktop publishing package |
 
 `data/story.json` is the original provisional story plan. It is retained as a planning record; some proposed beam/door assembly actions were not implemented. Current camera, carrier, effects and lighting behavior are described in [STORYBOARD.md](STORYBOARD.md) and owned by the source modules above.
 
@@ -66,17 +69,17 @@ The [analysis README](analysis/README.md) contains the full commands and pinned 
 
 Re-running `select_timing.py`, `measure_features.py` or `measure_spectrum.py` changes production inputs. Any changed words, source bytes, font, asset, scene code or measured data invalidates earlier frozen identities and requires renewed review of the affected current revision. Preserve the unmodified embedded references and candidate disagreements.
 
-## Verification and production stop
+## Verification and production
 
 Run `npm run check` for input integrity and behavioral contracts. It can pass while the production gate remains closed. Keep technical, visual and acoustic evidence separate. Browser inspection must include real changing pixels after fresh load, play, forward/backward/paused/nonsequential seeks, format switches, background/resume and Restore visuals; note preservation and restored source position matter. Compare effects enabled/disabled and inspect realistic phone/player sizes as well as native-resolution stills.
 
-Use limited review captures only to examine particular frames. A browser still is not an encoded-file verification. Full every-cue listening, repeated-word adjudication, endings and both-format creative acceptance remain required before the production decision.
+Use limited review captures only to examine particular frames. A browser still is not an encoded-file verification. The 63-cue/343-word map remains an acoustic candidate until a separate every-cue listening pass adjudicates repeated words, disputed text and endings. The owner approved the exact current preview for production despite that unresolved audit; the [candidate audit](analysis/candidate-sync-audit.md) retains the uncertainty.
 
 ```sh
 npm run render
 ```
 
-This is a gate check, not an encoder. While required review or current-revision authorization is missing, it exits nonzero and explains the unresolved bindings. No complete renderer is provided in this preview revision. Passing bindings later would still require renderer parity and the approved short encoded proof before full capture. Do not create or modify acceptance evidence to make a command pass.
+This command remains a gate check, not an encoder. It exits nonzero because the granular listening fields are still open. The separate production adapter is guarded by the frozen preview identity, exact owner acceptance and both-format renderer parity record; it cannot turn model candidates into completed listening evidence. The approved short proof and exact production commands are in [PRODUCTION-NOTES.md](PRODUCTION-NOTES.md). Run `node scripts/verify-production.mjs --format landscape` and `--format portrait` on the encoded files, then `node scripts/verify-audio-alignment.mjs` on each posting MP4. The [delivery packager](scripts/package-delivery.mjs) runs only after both verified renders and the exact source commit have been merged. Do not create or modify acceptance evidence to make a command pass.
 
 ## Credits and local-media boundary
 
