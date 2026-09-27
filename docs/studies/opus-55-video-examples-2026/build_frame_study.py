@@ -170,6 +170,8 @@ def process(folder: Path) -> dict:
         writer.writerows(rows)
     sheets = folder / "contact-sheets"
     sheets.mkdir(exist_ok=True)
+    for stale in sheets.glob("sheet_*.jpg"):
+        stale.unlink()
     for first in range(0, expected, SHEET_SIZE):
         paths = [frame_path(frame_dir, i) for i in range(first, min(first + SHEET_SIZE, expected))]
         make_sheet(paths, first, times, sheets / f"sheet_{first // SHEET_SIZE:03d}.jpg")
