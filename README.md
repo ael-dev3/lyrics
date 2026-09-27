@@ -8,7 +8,21 @@ Music films with synchronized lyrics, meaning-linked translations, and audio-rea
 
 **Starting another song:** use the [single-prompt template, agent quickstart and complete quality checklist](docs/source-clocked-word-effects-workflow.md), including [how to make reactive visuals belong to the picture](docs/scene-integrated-visuals.md). The [If The Sun Burns Out Tonight handoff](projects/if-the-sun-burns-out-tonight-lyric-film/AGENT-HANDOFF.md) and [production lessons](projects/if-the-sun-burns-out-tonight-lyric-film/PRODUCTION-LESSONS.md) show how exact word/phrase effects, measured intensity and dependable full-picture playback fit the shared workflow.
 
-[**TAKE ME THERE**](#take-me-there) · [**Rainline**](#rainline) · [**El Tesoro — preview**](#el-tesoro--preview) · [**I'll Change for You**](#ill-change-for-you) · [**If The Sun Burns Out Tonight**](#if-the-sun-burns-out-tonight) · [**Люби меня, люби**](#люби-меня-люби) · [**Stay at Your House — Hardstyle**](#stay-at-your-house--hardstyle) · [**Ведьмы**](#ведьмы) · [**Pero es locura**](#pero-es-locura) · [**La Lune**](#la-lune) · [**каждый, кто делал тебе больно**](#каждый-кто-делал-тебе-больно) · [**Sugar Glass**](#sugar-glass) · [**Твои глаза**](#твои-глаза) · [**Прости за любовь — accepted with known gaps**](#прости-за-любовь) · [**Половинка**](#половинка) · [**Life Letters**](#life-letters) · [**Joyride**](#joyride) · [**midnight love**](#midnight-love) · [**Пожары**](#пожары) · [**Отменяй**](#отменяй) · [**Roi × Adore**](#roi--adore) · [**TikTok edition**](#tiktok-edition) · [**Tanisea**](#tanisea) · [**Build and workflow**](#build-and-workflow)
+[**Must Have Been A Dream**](#must-have-been-a-dream) · [**TAKE ME THERE**](#take-me-there) · [**Rainline**](#rainline) · [**El Tesoro — preview**](#el-tesoro--preview) · [**I'll Change for You**](#ill-change-for-you) · [**If The Sun Burns Out Tonight**](#if-the-sun-burns-out-tonight) · [**Люби меня, люби**](#люби-меня-люби) · [**Stay at Your House — Hardstyle**](#stay-at-your-house--hardstyle) · [**Ведьмы**](#ведьмы) · [**Pero es locura**](#pero-es-locura) · [**La Lune**](#la-lune) · [**каждый, кто делал тебе больно**](#каждый-кто-делал-тебе-больно) · [**Sugar Glass**](#sugar-glass) · [**Твои глаза**](#твои-глаза) · [**Прости за любовь — accepted with known gaps**](#прости-за-любовь) · [**Половинка**](#половинка) · [**Life Letters**](#life-letters) · [**Joyride**](#joyride) · [**midnight love**](#midnight-love) · [**Пожары**](#пожары) · [**Отменяй**](#отменяй) · [**Roi × Adore**](#roi--adore) · [**TikTok edition**](#tiktok-edition) · [**Tanisea**](#tanisea) · [**Build and workflow**](#build-and-workflow)
+
+## Must Have Been A Dream
+
+**Computer Kill · English · verified landscape and portrait lyric films**
+
+![Must Have Been A Dream final landscape frame: Computer Kill singer on the blue-lit stage with Know-It-All individually highlighted](assets/must-have-been-a-dream-final-78-870.png)
+
+*Exact decoded frame 1891 at 01:18.870 from the verified 1920×1080 landscape film. The original stage performance supplies the picture; lyric focus and measured source-light response are added to the moving scene.*
+
+The 26 English lines contain 156 individually timed words. A full onset audit refined 34 word starts locally, with no global audio offset. The owner reviewed the revised complete preview at normal speed, uncertain words and held endings at reduced speed, and both layouts before authorizing the render. Shot-aware crops use the source's active picture in 16:9 and 9:16; source-footage bridges carry its dark passages, while sung lettering and existing lights host the measured visual response.
+
+Both 6,155-frame films passed full decode, exact frame-timestamp and count checks, original AAC packet and decoded-audio identity, and an all-frame near-black scan with no missing-video interval. The media remains local and excluded from Git; the project records its verification hashes and production method.
+
+[Project and review](projects/must-have-been-a-dream-lyric-film/README.md) · [Production lessons](projects/must-have-been-a-dream-lyric-film/PRODUCTION-LESSONS.md) · [Final verification](projects/must-have-been-a-dream-lyric-film/evidence/final-verification.json) · [Credits](CREDITS.md#must-have-been-a-dream) · [Original video](https://www.youtube.com/watch?v=AK6duyCPU50)
 
 ## TAKE ME THERE
 

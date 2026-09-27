@@ -1,9 +1,10 @@
 {
   "version": 1,
-  "reviewedOn": "2026-09-26",
-  "scope": "Featured song sections in the main README and their project README entry points; TAKE ME THERE now uses a decoded final-film frame.",
+  "reviewedOn": "2026-09-27",
+  "scope": "Featured song sections in the main README and their project README entry points; Must Have Been A Dream and TAKE ME THERE use decoded final-film frames.",
   "newExtraction": {
     "fps": [
+      23.976023976,
       30,
       60
     ],
@@ -12,8 +13,27 @@
     "sourceIdentity": "New source files matched the recorded delivery SHA-256 before selecting their frames.",
     "scope": "Completed-film screenshots only; preview entries specify their diagnostic capture method individually."
   },
-  "review": "Every featured song has an associated representative image. TAKE ME THERE, Mitski, Sun and Rainline use exact decoded final frames; historical editions retain their recorded status and limitations. Rainline's scoped delivery acceptance does not certify full acoustic synchronization review.",
+  "review": "Every featured song has an associated representative image. Must Have Been A Dream, TAKE ME THERE, Mitski, Sun and Rainline use exact decoded final frames; historical editions retain their recorded status and limitations. Rainline's scoped delivery acceptance does not certify full acoustic synchronization review.",
   "screenshots": [
+    {
+      "song": "Must Have Been A Dream",
+      "image": "assets/must-have-been-a-dream-final-78-870.png",
+      "project": "projects/must-have-been-a-dream-lyric-film/README.md",
+      "timestampSeconds": 78.870458,
+      "frame": 1891,
+      "edition": "Verified final source-integrated landscape lyric film, 1920x1080 at 24000/1001 fps",
+      "selection": "Complete blue-lit source performance, visible individual Know-It-All lyric focus and source-light response.",
+      "method": "Exact zero-indexed frame 1891 decoded from the checksum-verified final landscape MP4 with FFmpeg select; full encoded composition with no crop, recolor, reconstructed text or generated imagery. Inspected at native and README size.",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 901064,
+      "sha256": "0096f83de9ab7a3b83ba52ce868bb81d19b62eec0a7bdb8b2606a24dc1dfa86c",
+      "encoding": "PNG",
+      "sourceFile": "MUST-HAVE-BEEN-A-DREAM-landscape-1920x1080-24000of1001fps.mp4",
+      "sourceVideoSha256": "ef692615789b8297b6235e147d837346e4fd2565136ee22b3236d69b5e1873b9",
+      "originalMediaSha256": "8a37587959dcfef6b9a91d84498d819cd782fc2b78f2edb923cbb63c1fdc19a5",
+      "reviewLimit": "A decoded still cannot establish vocal onset accuracy or full-song visual continuity; owner listening review and encoded-film verification are recorded separately."
+    },
     {
       "song": "TAKE ME THERE",
       "image": "projects/take-me-there-lyric-film/evidence/final-landscape-97-30.png",

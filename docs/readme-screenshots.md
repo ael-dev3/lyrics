@@ -1,10 +1,11 @@
 # README song screenshots
 
-Updated 26 September 2026. Featured songs in the main README have a representative image with its edition and preview/final status, and each song's project README has an associated image. Rendered preview references are identified separately from browser captures and decoded final-film frames. Promotional covers and supplementary frames remain separate from the representative image.
+Updated 27 September 2026. Featured songs in the main README have a representative image with its edition and preview/final status, and each song's project README has an associated image. Rendered preview references are identified separately from browser captures and decoded final-film frames. Promotional covers and supplementary frames remain separate from the representative image.
 
 | Song | Representative image | Time | Edition / provenance |
 | --- | --- | --- | --- |
-| TAKE ME THERE | [Original source city, word focus and fixed spectrum](../projects/take-me-there-lyric-film/evidence/preview-landscape.png) | 01:37.300 | Complete browser preview; provisional timing, no final render |
+| Must Have Been A Dream | [Original blue-lit stage performance and individual Know-It-All focus](../assets/must-have-been-a-dream-final-78-870.png) | 01:18.870 | Verified final 1920×1080 landscape film; exact decoded frame 1891 |
+| TAKE ME THERE | [Original source city, word focus and fixed spectrum](../projects/take-me-there-lyric-film/evidence/final-landscape-97-30.png) | 01:37.300 | Verified final 1920×1080 landscape film; exact decoded frame 5838 |
 | Rainline | [Native cat lyric sign, lit window, train and hover taxi](../assets/rainline-wide-final-177.png) | 02:57.000 | Verified v4 16:9 film; scoped owner-approved-preview delivery; detailed acoustic review pending |
 | I'll Change for You | [Original room scene and individual “mean” focus](../assets/ill-change-for-you-final-45.png) | 00:45.000 | Exact decoded frame 2700 of the verified 4:3 final film |
 | If The Sun Burns Out Tonight | [Native panorama, solar word fire and gold depth spectrum](../assets/sun-burns-out-final-200-7.png) | 03:20.700 | Verified production-v1 final landscape film; exact decoded frame 12042 |
@@ -27,6 +28,10 @@ Updated 26 September 2026. Featured songs in the main README have a representati
 | Tanisea | [Square composition and English focus](../assets/tanisea-vnext-hero.png) | 00:48.000 | Historical square vNext reference; time visible in frame |
 
 The [structured inventory](../assets/readme-screenshots.json) records image dimensions, hashes, project associations and selection reasons. Original-creator credits remain with the song entries and project documentation.
+
+## Must Have Been A Dream final frame
+
+Frame 1891 at 78.870458 seconds was decoded at native 1920×1080 from the verified `24000/1001` fps landscape MP4. It shows the original blue-lit stage performance with **Know-It-All** in individual lyric focus and a measured source-light response. The full encoded composition is preserved without cropping, recoloring or reconstructed text. The same unmodified PNG appears in the main and project READMEs; the inventory records its bytes, SHA-256 and exact final-video identity. This one image demonstrates the visual treatment, while the separate [timing review](../projects/must-have-been-a-dream-lyric-film/TIMING-REVIEW.md) and [final-file verification](../projects/must-have-been-a-dream-lyric-film/evidence/final-verification.json) cover the moving film and sound.
 
 ## Rainline wide film frame
 

@@ -1,0 +1,297 @@
+{
+  "schemaVersion": 1,
+  "sourceYouTubeId": "AK6duyCPU50",
+  "status": "revised source-clock onsets; current preview reviewed and production authorized",
+  "scope": {
+    "cues": 26,
+    "wordEvents": 156,
+    "changedWordStarts": 34
+  },
+  "method": "Compared each supplied word against exact-source mix and Demucs vocal stems, independent MMS forced alignment, Whisper small/large-v3-turbo conditioned alignment and unforced phrase candidates. Source-clock onset diagnostics and word durations were checked; individual model boundaries were not treated as acoustic truth. Large early line entrances and implausibly short allocations were repaired locally, with no global A/V offset.",
+  "displayRule": "The highlighted word activates at time >= word.start on the decoded source picture clock; the immediately prior word releases at the revised boundary. A dim line can be present for readability before the first bright word.",
+  "limits": [
+    "This evidence is model and signal assisted; it cannot substitute for a listening judgment on every consonant in the actual recording.",
+    "Strongly stylized words and compounds can have an ambiguous earliest audible phoneme. The current complete preview received full-song and both-format owner review; this does not turn model boundaries into acoustic ground truth."
+  ],
+  "changes": [
+    {
+      "cue": "L02",
+      "wordIndex": 1,
+      "word": "I",
+      "oldStart": 46.52,
+      "newStart": 47.02,
+      "shiftSeconds": 0.5
+    },
+    {
+      "cue": "L04",
+      "wordIndex": 1,
+      "word": "But",
+      "oldStart": 52.48,
+      "newStart": 52.64,
+      "shiftSeconds": 0.16
+    },
+    {
+      "cue": "L06",
+      "wordIndex": 1,
+      "word": "Remember",
+      "oldStart": 58.12,
+      "newStart": 58.24,
+      "shiftSeconds": 0.12
+    },
+    {
+      "cue": "L07",
+      "wordIndex": 1,
+      "word": "Once",
+      "oldStart": 62.1,
+      "newStart": 62.88,
+      "shiftSeconds": 0.78
+    },
+    {
+      "cue": "L07",
+      "wordIndex": 4,
+      "word": "coming",
+      "oldStart": 64.98,
+      "newStart": 64.74,
+      "shiftSeconds": -0.24
+    },
+    {
+      "cue": "L08",
+      "wordIndex": 1,
+      "word": "Mr.",
+      "oldStart": 76.38,
+      "newStart": 77.45,
+      "shiftSeconds": 1.07
+    },
+    {
+      "cue": "L08",
+      "wordIndex": 3,
+      "word": "why'd",
+      "oldStart": 80.64,
+      "newStart": 80.2,
+      "shiftSeconds": -0.44
+    },
+    {
+      "cue": "L09",
+      "wordIndex": 1,
+      "word": "It's",
+      "oldStart": 87.48,
+      "newStart": 88.8,
+      "shiftSeconds": 1.32
+    },
+    {
+      "cue": "L09",
+      "wordIndex": 4,
+      "word": "idea",
+      "oldStart": 89.9,
+      "newStart": 90.06,
+      "shiftSeconds": 0.16
+    },
+    {
+      "cue": "L10",
+      "wordIndex": 1,
+      "word": "Running",
+      "oldStart": 99.37,
+      "newStart": 100.8,
+      "shiftSeconds": 1.43
+    },
+    {
+      "cue": "L10",
+      "wordIndex": 4,
+      "word": "voice",
+      "oldStart": 102.08,
+      "newStart": 102.17,
+      "shiftSeconds": 0.09
+    },
+    {
+      "cue": "L11",
+      "wordIndex": 1,
+      "word": "As",
+      "oldStart": 103.48,
+      "newStart": 103.65,
+      "shiftSeconds": 0.17
+    },
+    {
+      "cue": "L11",
+      "wordIndex": 2,
+      "word": "if",
+      "oldStart": 103.68,
+      "newStart": 103.84,
+      "shiftSeconds": 0.16
+    },
+    {
+      "cue": "L11",
+      "wordIndex": 3,
+      "word": "I",
+      "oldStart": 103.86,
+      "newStart": 104.0,
+      "shiftSeconds": 0.14
+    },
+    {
+      "cue": "L11",
+      "wordIndex": 4,
+      "word": "even",
+      "oldStart": 104.12,
+      "newStart": 104.17,
+      "shiftSeconds": 0.05
+    },
+    {
+      "cue": "L13",
+      "wordIndex": 1,
+      "word": "Ran",
+      "oldStart": 108.8,
+      "newStart": 108.93,
+      "shiftSeconds": 0.13
+    },
+    {
+      "cue": "L14",
+      "wordIndex": 2,
+      "word": "for",
+      "oldStart": 112.36,
+      "newStart": 112.06,
+      "shiftSeconds": -0.3
+    },
+    {
+      "cue": "L14",
+      "wordIndex": 5,
+      "word": "like",
+      "oldStart": 112.88,
+      "newStart": 113.02,
+      "shiftSeconds": 0.14
+    },
+    {
+      "cue": "L15",
+      "wordIndex": 1,
+      "word": "Just",
+      "oldStart": 114.58,
+      "newStart": 114.83,
+      "shiftSeconds": 0.25
+    },
+    {
+      "cue": "L15",
+      "wordIndex": 2,
+      "word": "getting",
+      "oldStart": 115.08,
+      "newStart": 115.21,
+      "shiftSeconds": 0.13
+    },
+    {
+      "cue": "L15",
+      "wordIndex": 3,
+      "word": "further",
+      "oldStart": 115.78,
+      "newStart": 115.85,
+      "shiftSeconds": 0.07
+    },
+    {
+      "cue": "L18",
+      "wordIndex": 1,
+      "word": "Just",
+      "oldStart": 125.54,
+      "newStart": 126.06,
+      "shiftSeconds": 0.52
+    },
+    {
+      "cue": "L19",
+      "wordIndex": 1,
+      "word": "Haunting",
+      "oldStart": 128.9,
+      "newStart": 129.02,
+      "shiftSeconds": 0.12
+    },
+    {
+      "cue": "L19",
+      "wordIndex": 2,
+      "word": "me",
+      "oldStart": 129.52,
+      "newStart": 129.62,
+      "shiftSeconds": 0.1
+    },
+    {
+      "cue": "L20",
+      "wordIndex": 1,
+      "word": "But",
+      "oldStart": 131.8,
+      "newStart": 131.64,
+      "shiftSeconds": -0.16
+    },
+    {
+      "cue": "L21",
+      "wordIndex": 1,
+      "word": "Tell",
+      "oldStart": 134.36,
+      "newStart": 134.46,
+      "shiftSeconds": 0.1
+    },
+    {
+      "cue": "L22",
+      "wordIndex": 1,
+      "word": "Anything",
+      "oldStart": 137.16,
+      "newStart": 137.45,
+      "shiftSeconds": 0.29
+    },
+    {
+      "cue": "L23",
+      "wordIndex": 1,
+      "word": "To",
+      "oldStart": 140.02,
+      "newStart": 140.1,
+      "shiftSeconds": 0.08
+    },
+    {
+      "cue": "L25",
+      "wordIndex": 1,
+      "word": "Mr.",
+      "oldStart": 145.06,
+      "newStart": 145.22,
+      "shiftSeconds": 0.16
+    },
+    {
+      "cue": "L25",
+      "wordIndex": 2,
+      "word": "Know-It-All,",
+      "oldStart": 146.04,
+      "newStart": 145.75,
+      "shiftSeconds": -0.29
+    },
+    {
+      "cue": "L26",
+      "wordIndex": 1,
+      "word": "It's",
+      "oldStart": 155.3,
+      "newStart": 156.56,
+      "shiftSeconds": 1.26
+    },
+    {
+      "cue": "L01",
+      "wordIndex": 4,
+      "word": "been",
+      "oldStart": 44.94,
+      "newStart": 45.1,
+      "shiftSeconds": 0.16
+    },
+    {
+      "cue": "L06",
+      "wordIndex": 8,
+      "word": "do",
+      "oldStart": 60.44,
+      "newStart": 60.62,
+      "shiftSeconds": 0.18
+    },
+    {
+      "cue": "L18",
+      "wordIndex": 4,
+      "word": "be",
+      "oldStart": 126.78,
+      "newStart": 126.94,
+      "shiftSeconds": 0.16
+    }
+  ],
+  "quantization": {
+    "fps": "24000/1001",
+    "allWordEvents": 156,
+    "minimumVisiblePictureFrames": 3,
+    "maximumStartQuantizationMilliseconds": 41.0,
+    "note": "Visual focus starts on the first source picture frame at or after the onset timestamp; this is a frame-sampling bound, not proof of phonetic accuracy."
+  }
+}
