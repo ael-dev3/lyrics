@@ -33,7 +33,15 @@ const measure = createCanvas(W, H).getContext('2d');
 
 type RGB = [number, number, number];
 type Mask = {x: number; y: number; w: number; h: number; px: Uint8Array; ring: {xs: number[]; ys: number[]}; far: {xs: number[]; ys: number[]}; ref: RGB; halo: 'pink' | 'cyan' | 'fire'};
-type Check = {word: string; frame: number; expect: 'focus' | 'rest'; negExpect: 'focus' | 'rest'; ink: number; mask: Mask};
+type Check = {word: string; frame: number; expect: 'focus' | 'rest'; negExpect: 'focus' | 'rest'; ink: number; mask: Mask; restBase: RGB; restAlpha: number};
+// Resting and ink colours from the published visual brief (the renderer's
+// src/scene.ts is a gated input and publishes only FOCUS_FILL): unsung
+// lilac-white #f4f0fb at 82 % (backing echoes 78 %), sung white at 97 %;
+// towards white memory frames both blend into dark ink #2c1a3c, and an
+// active word's fill is overlaid with ink focus magenta #d43f86 at the same
+// ink level.
+const REST: RGB = [244, 240, 251], SUNG: RGB = [255, 255, 255], INK: RGB = [44, 26, 60], INK_FOCUS: RGB = [212, 63, 134];
+const mixRgb = (a: readonly number[], b: readonly number[], f: number): RGB => [0, 1, 2].map(i => a[i]! + (b[i]! - a[i]!) * f) as RGB;
 const plan = new Map<number, Check[]>();
 const maskCache = new Map<string, Mask>();
 function maskFor(cue: Cue, wordId: string, t: number): Mask | null {
@@ -105,7 +113,9 @@ cues.forEach((cue, qi) => {
       const mask = maskFor(shown, other.id, t); if (!mask) continue;
       const active = t >= other.start && t < other.end;
       const neg = next ? other.id === next.id || (other.id !== word.id && active) : active;
-      const list = plan.get(n) ?? []; list.push({word: other.id, frame: n, expect: active ? 'focus' : 'rest', negExpect: neg ? 'focus' : 'rest', ink: inkFor(format, t), mask}); plan.set(n, list);
+      const list = plan.get(n) ?? []; const sung = t >= other.end;
+      list.push({word: other.id, frame: n, expect: active ? 'focus' : 'rest', negExpect: neg ? 'focus' : 'rest', ink: inkFor(format, t), mask,
+        restBase: sung ? SUNG : REST, restAlpha: other.voice === 'backing' ? 0.78 : sung ? 0.97 : 0.82}); plan.set(n, list);
     }
   });
 });
@@ -120,33 +130,39 @@ function median(frame: Buffer, xs: number[], ys: number[]): [number, number, num
   const med = (v: number[]): number => v.sort((a, b) => a - b)[v.length >> 1]!;
   return [med(rs), med(gs), med(bs)];
 }
-// preview-v2 focus signature. Normal frames: the interior matches the word's
-// focus gradient within 18 RGB units AND the ring carries its neon halo: it
-// leans to the halo's hue and is either bright (120+ in the halo's channel)
-// or at least as bright as the word's own far field. Anything 34+ units from
-// the gradient rests. A resting word over a look-alike hot-pink picture still
-// fails the ring test, because its shadowed ring is darker than its
-// surroundings. Ink mode (white frames): the active word itself turns
-// magenta while resting words stay dark ink.
-type Verdict = {got: 'focus' | 'rest' | 'ambiguous'; inner?: number[]; distance?: number; ring?: number[]; far?: number[]};
+// Focus signature. The renderer's colours are predictable from the design and
+// the frame's measured ink level, so the lower glyph interior is compared with
+// two predictions:
+// - focus: the published gradient at that depth, overlaid with ink magenta
+//   at the ink level;
+// - rest: the resting colour (blended towards ink at the same level) over the
+//   word's own surroundings, measured in bands above and below it.
+// Focus needs the interior within 18 RGB units of its prediction and closer
+// to it than to the rest prediction. Below half ink, the ring 0.03-0.12 em
+// outside the letters must also carry the halo: its hue, and either bright or
+// at least as bright as the surroundings. A resting word over a look-alike
+// hot-pink picture fails there, because its shadowed ring is darker than its
+// surroundings. Rest is 34+ units from the focus prediction, or beyond 24 and
+// closer to the rest prediction. Anything else is reported as ambiguous.
+type Verdict = {got: 'focus' | 'rest' | 'ambiguous'; inner?: number[]; distance?: number; restDistance?: number; ring?: number[]; far?: number[]};
 function classify(frame: Buffer, c: Check): Verdict {
   const xs: number[] = [], ys: number[] = [];
   for (let y = 0; y < c.mask.h; y++) for (let x = 0; x < c.mask.w; x++) if (c.mask.px[y * c.mask.w + x]) {xs.push(c.mask.x + x); ys.push(c.mask.y + y);}
   const m = median(frame, xs, ys); if (!m) return {got: 'ambiguous'};
-  const [r, g, b] = m;
-  if (c.ink > 0.5) {
-    const mx = Math.max(r, g, b), sat = mx ? (mx - Math.min(r, g, b)) / mx : 0;
-    return {got: r > 150 && sat > 0.45 && r > g + 50 ? 'focus' : mx < 120 ? 'rest' : 'ambiguous', inner: m};
-  }
-  const d = Math.hypot(r - c.mask.ref[0], g - c.mask.ref[1], b - c.mask.ref[2]), distance = Math.round(d);
-  if (d >= 34) return {got: 'rest', inner: m, distance};
-  if (d > 18) return {got: 'ambiguous', inner: m, distance};
-  const ring = median(frame, c.mask.ring.xs, c.mask.ring.ys); if (!ring) return {got: 'ambiguous', inner: m, distance};
-  const [R, G, B] = ring, far = median(frame, c.mask.far.xs, c.mask.far.ys);
-  const luma = (v: number[]): number => 0.2126 * v[0]! + 0.7152 * v[1]! + 0.0722 * v[2]!;
+  const far = median(frame, c.mask.far.xs, c.mask.far.ys);
+  const focusRef = mixRgb(c.mask.ref, INK_FOCUS, c.ink);
+  const restRef = far ? mixRgb(far, mixRgb(c.restBase, INK, c.ink), c.restAlpha) : null;
+  const dist = (p: readonly number[], q: readonly number[]): number => Math.hypot(p[0]! - q[0]!, p[1]! - q[1]!, p[2]! - q[2]!);
+  const dF = dist(m, focusRef), dR = restRef ? dist(m, restRef) : Infinity;
+  const base = {inner: m, distance: Math.round(dF), ...(restRef ? {restDistance: Math.round(dR)} : {}), ...(far ? {far} : {})};
+  if (dF >= 34 || (dF > 24 && dR < dF)) return {got: 'rest', ...base};
+  if (dF > 18 || dF >= dR) return {got: 'ambiguous', ...base};
+  if (c.ink >= 0.5) return {got: 'focus', ...base};
+  const ring = median(frame, c.mask.ring.xs, c.mask.ring.ys); if (!ring) return {got: 'ambiguous', ...base};
+  const [R, G, B] = ring, luma = (v: readonly number[]): number => 0.2126 * v[0]! + 0.7152 * v[1]! + 0.0722 * v[2]!;
   const raised = far !== null && luma(ring) >= luma(far) - 4;
   const lit = c.mask.halo === 'pink' ? R >= G + 40 && (R >= 120 || raised) : c.mask.halo === 'cyan' ? B >= R + 25 && (B >= 120 || raised) : R >= B + 60 && (R >= 150 || raised);
-  return far ? {got: lit ? 'focus' : 'ambiguous', inner: m, distance, ring, far} : {got: lit ? 'focus' : 'ambiguous', inner: m, distance, ring};
+  return {got: lit ? 'focus' : 'ambiguous', ...base, ring};
 }
 const child = spawn('ffmpeg', ['-v', 'error', '-nostdin', '-i', file, '-map', '0:v:0', '-f', 'rawvideo', '-pix_fmt', 'rgb24', 'pipe:1'], {stdio: ['ignore', 'pipe', 'inherit']});
 const size = W * H * 3; let buf = Buffer.alloc(0), n = firstFrame;
@@ -159,9 +175,9 @@ for await (const chunk of child.stdout) {
     if (plan.has(n)) scored++;
     for (const c of plan.get(n) ?? []) {
       const verdict = classify(frame, c), got = verdict.got; checks++;
-      if (got === 'ambiguous') {ambiguous++; ambiguousList.push({word: c.word, frame: n, time: +(n / 60).toFixed(3), expect: c.expect, inner: verdict.inner, distance: verdict.distance, ring: verdict.ring});}
+      if (got === 'ambiguous') {ambiguous++; ambiguousList.push({word: c.word, frame: n, time: +(n / 60).toFixed(3), expect: c.expect, ink: +c.ink.toFixed(2), inner: verdict.inner, distance: verdict.distance, restDistance: verdict.restDistance, ring: verdict.ring});}
       else if (got === c.expect) pass++;
-      else mismatches.push({word: c.word, frame: n, time: +(n / 60).toFixed(3), expect: c.expect, got, inner: verdict.inner, distance: verdict.distance, ring: verdict.ring});
+      else mismatches.push({word: c.word, frame: n, time: +(n / 60).toFixed(3), expect: c.expect, got, ink: +c.ink.toFixed(2), inner: verdict.inner, distance: verdict.distance, restDistance: verdict.restDistance, ring: verdict.ring});
       if (c.negExpect !== c.expect) {negChecks++; if (got !== 'ambiguous' && got !== c.negExpect) negDetected++;}
     }
     buf = buf.subarray(size); n++;
@@ -172,7 +188,7 @@ for await (const chunk of child.stdout) {
 const result = {schema: 'lyric-film/encoded-focus/v1', file: basename(file), format, mode: proof ? 'placeholder-proof' : 'production',
   framesChecked: scored, glyphChecks: checks, pass, mismatches: mismatches.length, ambiguous, notFullyShownWhileActive: faded,
   negativeControl: {expectation: 'next word in the lane active instead', differingChecks: negChecks, detected: negDetected},
-  method: 'preview-v2: median RGB of the eroded lower glyph interior against the published focus gradient (focus: within 18 RGB units plus a halo-hued ring 0.03-0.12 em outside the letters that is bright or at least as bright as the word\'s own far field; rest: 34+ units away); thin glyphs use a 1 px erosion; ink mode: magenta vs dark ink interior.',
+  method: 'preview-v2: median RGB of the eroded lower glyph interior against two predictions at the frame\'s ink level: the published focus gradient overlaid with ink magenta, and the resting colour (towards dark ink) over the word\'s measured surroundings. Focus: within 18 RGB units and nearer the focus prediction, plus (below half ink) a halo-hued ring 0.03-0.12 em outside the letters that is bright or at least as bright as the surroundings. Rest: 34+ units from focus, or beyond 24 and nearer the rest prediction. Thin glyphs use a 1 px erosion.',
   mismatchList: mismatches.slice(0, 200), ambiguousList};
 mkdirSync(`${root}evidence`, {recursive: true});
 if (!proof) writeFileSync(`${root}evidence/encoded-focus-${format}.json`, JSON.stringify(result, null, 2) + '\n');
