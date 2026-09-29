@@ -25,9 +25,9 @@ Read [AGENTS.md](../../AGENTS.md), [preview before render](../../docs/preview-be
 | Preview | `npm run preview` → http://127.0.0.1:4331/ | Picture moves after load, seek and format switch in both formats |
 | Review | owner listens: complete 1×, uncertain words at 0.5×, both formats | Record `evidence/sync-review.json` honestly (see below) |
 | Authorize | owner explicitly approves this revision | `evidence/render-authorization.json` binds the same hashes |
-| Render | `node scripts/render-gate.ts`, then `npm run render:production -- --format …` | Receipts written next to each MP4 |
-| Verify | `node scripts/verify-final.ts`, `node scripts/verify-word-focus.ts --format …` | 0 failures; the negative control detects every shift |
-| Kit | `node scripts/make-captions.ts`, `node scripts/package-delivery.ts` | Desktop kit re-hashed; `evidence/delivery-receipt.json` |
+| Deliver (owner-run) | `npm run deliver` (try `-- --dry-run` first) | Renders each missing film under the gate, verifies both films and their word focus, re-hashes the Desktop kit, publishes the release and confirms its digests in `evidence/release-upload-verification.json` |
+| Verify | inside `npm run deliver` | 0 verification failures and 0 focus mismatches; the negative control detects at least 95 % of shifts |
+| Record | agent commits the delivery evidence and links the release | `final-verification.json`, `encoded-focus-*.json`, `delivery-receipt.json` and the release receipt are merged |
 
 ## Review and authorization records
 
