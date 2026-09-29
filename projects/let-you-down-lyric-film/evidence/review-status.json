@@ -1,0 +1,17 @@
+{
+  "schema": "lyric-film/review-status/v1",
+  "song": "BnnbP7pCIvQ",
+  "stages": {
+    "sourceLocked": {"status": "complete", "evidence": "evidence/source-identity.json"},
+    "sceneAndPlayer": {"status": "complete", "evidence": "tests/*.test.ts, scripts/check.ts, placeholder diagnostic stills and a 6 s placeholder proof"},
+    "lyricTextLocal": {"status": "pending", "note": "source/lyrics.local.txt has not been saved yet; the repository never stores lyric text"},
+    "wordTiming": {"status": "pending", "note": "Alignment chain implemented and smoke-tested on synthetic text only"},
+    "previewAvailable": {"status": "partial", "note": "Picture, neon light, spectrum, both formats, seek and recovery work in the browser; lyrics appear once timing exists"},
+    "synchronizationReview": {"status": "not started"},
+    "productionAuthorized": {"status": "no"},
+    "productionVerified": {"status": "no"}
+  },
+  "diagnostics": {
+    "placeholderProof": {"window": "84.0-90.0 s landscape", "container": "pass (60/1, BT.709 tv, SAR 1:1, exact 1/60 s grid, strict decode)", "encodedFocus": "38/38 glyph checks, negative control 10/10"}
+  }
+}

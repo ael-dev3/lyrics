@@ -1,0 +1,15 @@
+# Python 3.13 analysis environment used for this edition (Windows, CUDA 12.6).
+# torch/torchaudio from https://download.pytorch.org/whl/cu126 (CPU builds also work, slower).
+ctranslate2==4.8.2
+demucs==4.1.0
+faster-whisper==1.2.1
+numba==0.67.0
+numpy==2.5.3
+openai-whisper==20250625
+scipy==1.18.1
+soundfile==0.14.0
+stable-ts==2.19.1
+torch==2.8.0
+torchaudio==2.8.0
+# Models: htdemucs (demucs), MMS_FA and WAV2VEC2_ASR_LARGE_LV60K_960H (torchaudio),
+# Systran/faster-whisper-large-v3 (Hugging Face), all downloaded on first use.
