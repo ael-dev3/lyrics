@@ -463,58 +463,59 @@ function text(c: Ctx, s: string, x: number, y: number, size: number, draw: (c: C
   draw(c); c.restore();
 }
 
-// Fire words: a molten fill plus a continuous flame made of soft additive
-// particles rising from the letters with gentle turbulence. Emission runs only
-// while the word is sung (rate follows measured vocal energy); particles then
-// cool and fade within at most 0.9 s. Every particle is a pure function of its
-// seeded birth time, so any seek reconstructs the same flame.
+// Fire words: a molten fill plus a low, calm flame made of soft additive
+// particles rising from the letters. Emission runs only while the word is
+// sung (density follows measured vocal energy, gently); the flame swells in
+// over 0.2 s and cools over 0.7 s after the word. Flicker and wind are slow,
+// so the fire breathes rather than jitters. Every particle is a pure function
+// of its seeded birth time, so any seek reconstructs the same flame.
 function flameParticles(c: Ctx, p: Placed, t: number, alpha: number, ink: number): void {
-  const w = p.word, spr = fireSprites(), dur = Math.max(0.05, w.end - w.start), rate = 260;
+  const w = p.word, spr = fireSprites(), dur = Math.max(0.05, w.end - w.start), rate = 190;
   const count = Math.ceil(dur * rate), unit = p.size / 92, capTop = p.y - p.size * 0.66;
-  if (t < w.start || t > w.end + 0.8) return;
-  const heat = Math.min(smooth((t - w.start) / 0.08), 1 - smooth((t - w.end) / 0.5)), vocal = scalarAt(S!.vocal, t);
+  if (t < w.start || t > w.end + 1.25) return;
+  const heat = Math.min(smooth((t - w.start) / 0.2), 1 - smooth((t - w.end) / 0.7)), vocal = scalarAt(S!.vocal, t);
   const roots = Math.max(3, Math.round(p.w / (p.size * 0.5)));
   // A shared, slowly turning wind leans the whole flame; each tongue's height
   // flickers on its own, so the fire never reads as a regular row.
-  const wind = (Math.sin(t * 1.3 + seeded(w.id, 7) * 6.28) * 0.6 + Math.sin(t * 2.9) * 0.4) * p.size * 0.12;
+  const wind = (Math.sin(t * 0.9 + seeded(w.id, 7) * 6.28) * 0.65 + Math.sin(t * 1.7) * 0.35) * p.size * 0.07;
   const flick = (root: number, time: number): number => {
     const ph = seeded(w.id, 980 + root) * 6.28;
-    return 0.55 + 0.25 * Math.sin(time * (8 + 5 * seeded(w.id, 990 + root)) + ph) + 0.2 * Math.sin(time * 17.3 + ph * 2.1);
+    return 0.72 + 0.18 * Math.sin(time * (3.2 + 2.2 * seeded(w.id, 990 + root)) + ph) + 0.1 * Math.sin(time * 7.1 + ph * 2.1);
   };
   c.save(); c.globalCompositeOperation = ink > 0.5 ? 'multiply' : 'lighter';
   // Continuous burning edge along the tops of the letters, and the light it casts.
   const glow = c.createRadialGradient(p.x + p.w / 2, capTop, 0, p.x + p.w / 2, capTop, p.w * 0.62);
-  glow.addColorStop(0, rgba(hexRgb('#ff8a3a'), (0.2 + 0.12 * vocal) * heat * alpha)); glow.addColorStop(1, rgba(hexRgb('#ff2e7a'), 0));
+  glow.addColorStop(0, rgba(hexRgb('#ff8a3a'), (0.13 + 0.07 * vocal) * heat * alpha)); glow.addColorStop(1, rgba(hexRgb('#ff2e7a'), 0));
   c.fillStyle = glow; c.fillRect(p.x - p.w * 0.2, capTop - p.w * 0.62, p.w * 1.4, p.w * 0.95);
   c.save(); c.translate(p.x + p.w / 2, capTop - p.size * 0.02); c.scale(1, p.size * 0.16 / (p.w * 0.56));
   const edge = c.createRadialGradient(0, 0, 0, 0, 0, p.w * 0.56);
-  edge.addColorStop(0, rgba(hexRgb('#ffb04a'), 0.5 * heat * alpha)); edge.addColorStop(0.7, rgba(hexRgb('#ff6a2a'), 0.25 * heat * alpha)); edge.addColorStop(1, rgba(hexRgb('#ff3a6a'), 0));
+  edge.addColorStop(0, rgba(hexRgb('#ffb04a'), 0.36 * heat * alpha)); edge.addColorStop(0.7, rgba(hexRgb('#ff6a2a'), 0.18 * heat * alpha)); edge.addColorStop(1, rgba(hexRgb('#ff3a6a'), 0));
   c.fillStyle = edge; c.fillRect(-p.w * 0.6, -p.w * 0.6, p.w * 1.2, p.w * 1.2); c.restore();
   for (let i = 0; i < count; i++) {
     const born = w.start + i / rate, age = t - born;
     if (age < 0) break;
-    if (seeded(w.id, i * 9 + 2) > 0.5 + 0.5 * scalarAt(S!.vocal, born)) continue;
+    if (seeded(w.id, i * 9 + 2) > 0.62 + 0.38 * scalarAt(S!.vocal, born)) continue;
     const root = i % roots, u = seeded(w.id, i * 9 + 3);
     const rootX = p.x + (root + 0.5 + (seeded(w.id, 900 + root) - 0.5) * 0.7) / roots * p.w;
-    const life = (0.3 + 0.26 * seeded(w.id, i * 9 + 1)) * flick(root, born) * (0.8 + 0.4 * scalarAt(S!.vocal, born));
+    const life = (0.28 + 0.2 * seeded(w.id, i * 9 + 1)) * flick(root, born) * (0.85 + 0.3 * scalarAt(S!.vocal, born));
     if (age > life) continue;
-    const f = age / life, rise = (1.45 + 0.7 * seeded(w.id, i * 9 + 4)) * p.size;
+    const f = age / life, rise = (1.15 + 0.45 * seeded(w.id, i * 9 + 4)) * p.size;
     // Spread wide at the base and gather toward the tongue's tip.
-    const spread = (u - 0.5) * p.size * 0.42 * (1 - 0.75 * f);
-    const x = rootX + spread + wind * f * f + Math.sin(born * 11 + root * 2.3 + age * 10) * p.size * 0.04 * f;
+    const spread = (u - 0.5) * p.size * 0.36 * (1 - 0.75 * f);
+    const x = rootX + spread + wind * f * f + Math.sin(born * 5 + root * 2.3 + age * 4.5) * p.size * 0.025 * f;
     const y = capTop + p.size * 0.08 - rise * age;
-    const r = (10 + 10 * seeded(w.id, i * 9 + 7)) * unit * (1 - 0.72 * f);
+    const r = (9 + 8 * seeded(w.id, i * 9 + 7)) * unit * (1 - 0.72 * f);
     const sprite = spr[Math.min(15, Math.floor((0.12 + 0.88 * f) * 16))]!;
-    c.globalAlpha = alpha * (1 - f) * Math.min(1, f / 0.1) * 0.42;
+    c.globalAlpha = alpha * (1 - f) * Math.min(1, f / 0.1) * 0.34 * smooth((born - w.start) / 0.2 + 0.15);
     c.drawImage(sprite, x - r * 0.9, y - r * 2.4, r * 1.8, r * 4.4);
   }
   // Sparks drift above the flame and cool on the way.
-  for (let i = 0; i < 12; i++) {
+  for (let i = 0; i < 7; i++) {
     const born = w.start + seeded(w.id, 2000 + i) * dur, age = t - born, life = 0.7 + 0.5 * seeded(w.id, 2100 + i);
     if (age < 0 || age > life) continue;
-    const f = age / life, x = p.x + seeded(w.id, 2200 + i) * p.w + wind * f + Math.sin(age * 5 + i) * p.size * 0.08;
-    const y = capTop - age * p.size * (1.3 + 0.8 * seeded(w.id, 2300 + i));
-    c.globalAlpha = alpha * (1 - f) * 0.85; c.fillStyle = rgba(hexRgb(i % 2 ? '#ffd27a' : '#ff8a4a'), 1);
+    const f = age / life, x = p.x + seeded(w.id, 2200 + i) * p.w + wind * f + Math.sin(age * 2.6 + i) * p.size * 0.06;
+    const y = capTop - age * p.size * (0.9 + 0.6 * seeded(w.id, 2300 + i));
+    c.globalAlpha = alpha * (1 - f) * 0.6; c.fillStyle = rgba(hexRgb(i % 2 ? '#ffd27a' : '#ff8a4a'), 1);
     c.beginPath(); c.arc(x, y, (1.4 + 1.3 * seeded(w.id, 2400 + i)) * unit, 0, Math.PI * 2); c.fill();
   }
   c.restore();
