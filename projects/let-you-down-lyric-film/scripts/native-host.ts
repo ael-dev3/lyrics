@@ -15,7 +15,7 @@ export const SRC_FPS = 24000 / 1001;
 export const sha = (bytes: Uint8Array): string => createHash('sha256').update(bytes).digest('hex');
 
 export function initNative(opts: {timelinePath: string | null; placeholder: boolean}): {lyricsSha256: string | null} {
-  if (!GlobalFonts.registerFromPath(`${root}public/fonts/Oswald-Bold.ttf`, FONT)) throw Error('Oswald Bold could not be registered');
+  if (!GlobalFonts.registerFromPath(`${root}public/fonts/Rajdhani-Bold.ttf`, FONT)) throw Error('Rajdhani Bold could not be registered');
   setCanvasFactory((w, h) => createCanvas(w, h) as unknown as HTMLCanvasElement);
   const featureBytes = readFileSync(`${root}public/audio-features.bin`);
   const features = JSON.parse(readFileSync(`${root}public/audio-features.json`, 'utf8')) as {dataSha256: string};
@@ -31,6 +31,7 @@ export function initNative(opts: {timelinePath: string | null; placeholder: bool
   loadScene({
     timeline: opts.timelinePath ? JSON.parse(readFileSync(opts.timelinePath, 'utf8')) : null,
     features, featureBytes: ab, tones: JSON.parse(readFileSync(`${root}public/picture-tones.json`, 'utf8')),
+    palette: JSON.parse(readFileSync(`${root}public/picture-palette.json`, 'utf8')),
     lyricsText, lyricsSha256, placeholder: opts.placeholder,
   });
   return {lyricsSha256};

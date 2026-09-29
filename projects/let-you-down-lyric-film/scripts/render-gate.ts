@@ -12,8 +12,8 @@ import {SONG} from '../src/song.ts';
 // normalized SHA-256). Any changed byte, missing record or partial review
 // refuses production. Diagnostics (stills, ≤8 s placeholder proofs) are separate.
 export const INPUTS = [
-  'public/source.mp4', 'public/fonts/Oswald-Bold.ttf', 'public/timeline.json', 'public/audio-features.json', 'public/audio-features.bin',
-  'public/picture-tones.json', 'src/lyrics.ts', 'src/model.ts', 'src/song.ts', 'src/frame.ts', 'src/shots.ts', 'src/scene.ts', 'src/player.ts',
+  'public/source.mp4', 'public/fonts/Rajdhani-Bold.ttf', 'public/timeline.json', 'public/audio-features.json', 'public/audio-features.bin',
+  'public/picture-tones.json', 'public/picture-palette.json', 'src/lyrics.ts', 'src/model.ts', 'src/song.ts', 'src/frame.ts', 'src/shots.ts', 'src/scene.ts', 'src/player.ts',
   'review/index.html', 'review/client.js',
 ] as const;
 const root = fileURLToPath(new URL('../', import.meta.url));

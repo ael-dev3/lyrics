@@ -48,11 +48,12 @@ async function optional(url: string): Promise<Response | null> {const r = await 
 
 async function boot(): Promise<void> {
   await document.fonts.load(`700 80px ${FONT}`);
-  if (!document.fonts.check(`700 80px ${FONT}`)) throw Error('The film font (Oswald Bold) did not load');
-  const [featuresJson, featureBytes, tones, timelineRes] = await Promise.all([
+  if (!document.fonts.check(`700 80px ${FONT}`)) throw Error('The film font (Rajdhani Bold) did not load');
+  const [featuresJson, featureBytes, tones, palette, timelineRes] = await Promise.all([
     need('/public/audio-features.json').then(r => r.json() as Promise<{dataSha256: string}>),
     need('/public/audio-features.bin').then(r => r.arrayBuffer()),
     need('/public/picture-tones.json').then(r => r.json() as Promise<unknown>),
+    need('/public/picture-palette.json').then(r => r.json() as Promise<unknown>),
     optional('/public/timeline.json'),
   ]);
   const digest = Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256', featureBytes)), b => b.toString(16).padStart(2, '0')).join('');
@@ -64,7 +65,7 @@ async function boot(): Promise<void> {
     if (lyricRes) {lyricsText = await lyricRes.text(); lyricsSha256 = await sha256Hex(normalizeLyrics(lyricsText));}
     else {placeholder = true; report('source/lyrics.local.txt was not found, so neutral placeholder words stand in for the lyric. Save the supplied lyric text there and use Restore preview.');}
   }
-  loadScene({timeline, features: featuresJson, featureBytes, tones, lyricsText, lyricsSha256, placeholder});
+  loadScene({timeline, features: featuresJson, featureBytes, tones, palette, lyricsText, lyricsSha256, placeholder});
   if (!timeline) report('No word timing yet (public/timeline.json). The picture, light and spectrum play; lyrics appear once alignment has run.');
   mode.textContent = placeholder ? 'Placeholder text' : 'Review preview'; mode.classList.toggle('placeholder', placeholder);
   lines = getLines();

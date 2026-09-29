@@ -35,7 +35,7 @@ for (const o of overrides) {
   s.review = 'normal';
 }
 const source = JSON.parse(readFileSync(`${root}evidence/source-identity.json`, 'utf8')) as {audio: {duration: string}};
-const revision = process.argv.includes('--revision') ? process.argv[process.argv.indexOf('--revision') + 1]! : 'preview-v1';
+const revision = process.argv.includes('--revision') ? process.argv[process.argv.indexOf('--revision') + 1]! : 'preview-v2';
 const effects: Record<string, number> = {};
 const cues = lyrics.lines.map(line => {
   const section = sectionOfLine(line.index);
