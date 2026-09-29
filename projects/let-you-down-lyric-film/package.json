@@ -19,7 +19,8 @@
     "captions": "node scripts/make-captions.ts",
     "covers": "node scripts/make-covers.ts",
     "tones": "node scripts/measure-tones.ts",
-    "package": "node scripts/package-delivery.ts"
+    "package": "node scripts/package-delivery.ts",
+    "deliver": "node scripts/deliver.ts"
   },
   "devDependencies": {
     "@napi-rs/canvas": "0.1.100",

@@ -59,16 +59,27 @@ Check real picture motion after a fresh load, after seeking and after switching 
 
 ## Production (after review and authorization only)
 
+The films carry the lyric text, so the owner runs production; an agent never renders or uploads them. One resumable command does everything, keeping finished steps if it is interrupted:
+
+```sh
+npm run deliver -- --dry-run      # checks the gate, the merged main commit and the plan; renders and uploads nothing
+npm run deliver                   # render both films, verify, assemble the Desktop kit, publish the GitHub release
+```
+
+It runs these steps in order:
+
 ```sh
 node scripts/render-gate.ts                                   # refuses until review + authorization bind current inputs
-npm run render:production -- --format landscape
+npm run render:production -- --format landscape               # each missing film (roughly 30 min per format)
 npm run render:production -- --format portrait
 node scripts/verify-final.ts                                  # decode, 60 fps grid, AAC packets + PCM identity, black intervals
 node scripts/verify-word-focus.ts --format landscape          # encoded glyph focus + negative control
 node scripts/verify-word-focus.ts --format portrait
-node scripts/make-captions.ts                                 # optional SRT/VTT, local only
-node scripts/package-delivery.ts                              # Desktop posting kit, re-hashed
+node scripts/package-delivery.ts                              # posting kit on the owner's real Desktop, re-hashed
+gh release create let-you-down-v1.0.0 …                       # the kit's files, pinned to the merged main commit
 ```
+
+The release step then compares GitHub's stored SHA-256 digests with the kit and writes `evidence/release-upload-verification.json`. Optional captions (`node scripts/make-captions.ts`) stay local and are not part of the release unless the owner adds them to the kit.
 
 The gate binds 16 presentation inputs, including the font, the measured picture palette and the compiled preview client, plus the local lyric text's normalized hash. By default it requires a complete actual-audio review (every cue, both formats, normal and reduced speed, picture motion, nothing unresolved) and an explicit render authorization for the same revision. It also accepts the repository's documented scoped owner-approved preview, which binds the accepted preview's identity plus only the changes the owner directed; `preview-v3` uses it. `--proof` renders (≤ 8 s) and stills are diagnostics with placeholder words; they are not production.
 
@@ -99,6 +110,6 @@ Full identity, packet and PCM hashes: [evidence/source-identity.json](evidence/s
 | [evidence/sync-review.json](evidence/sync-review.json), [evidence/render-authorization.json](evidence/render-authorization.json) | The scoped owner-approved preview: accepted `preview-v2` identity, the owner-directed flame change, unchanged timing identity, and the production scope; the gate binds both to the current inputs |
 | [evidence/review-status.json](evidence/review-status.json) | Status by stage: preview complete, scoped owner approval recorded, production authorized, production not yet rendered or verified |
 
-Structural tests (17, including the scoped-gate refusals), the text-binding check and the layout audit pass (landscape 108 layouts, smallest type 75 px; portrait 108 layouts, smallest 84 px; none outside its zone or into the spectrum). The browser seeked and painted a nonblack picture with the correct line in both formats at 20 landscape and 14 portrait sample points, including the white frames and all four effects. Six placeholder proofs (7.9 s each, both formats) covering the neon, moon, flame, white-frame, chorus and overlapping-outro passages passed the encoded-focus check: 401 of 402 glyph checks pass, 1 is ambiguous (beside a flame), there are no mismatches, and the negative control detects 109 of 110 one-word shifts. One word (`L30-W07`) overlaps the next line's first word, so its line has already begun to hand off when it starts; the verifier lists it rather than scoring it. None of these establishes acoustic word timing, perceived sync or artistic quality. Those need the listening review of the complete preview in a visible browser.
+Structural tests (17, including the scoped-gate refusals), the text-binding check and the layout audit pass (landscape 108 layouts, smallest type 75 px; portrait 108 layouts, smallest 84 px; none outside its zone or into the spectrum). The browser seeked and painted a nonblack picture with the correct line in both formats at 20 landscape and 14 portrait sample points, including the white frames and all four effects. Six placeholder proofs (7.9 s each, both formats) covering the neon, moon, flame, white-frame, chorus and overlapping-outro passages passed the encoded-focus check: all 402 glyph checks pass, with no mismatches and no ambiguous readings, and the negative control detects all 110 one-word shifts. One word (`L30-W07`) overlaps the next line's first word, so its line has already begun to hand off when it starts; the verifier lists it rather than scoring it. None of these establishes acoustic word timing, perceived sync or artistic quality. Those need the listening review of the complete preview in a visible browser.
 
 [Visual brief](VISUAL-BRIEF.md) · [Timing method](TIMING.md) · [Asset provenance](ASSET-PROVENANCE.md) · [Agent handoff](AGENT-HANDOFF.md) · [Posting assets](publishing/README.md)
