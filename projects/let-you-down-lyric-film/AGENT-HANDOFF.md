@@ -21,7 +21,7 @@ Read [AGENTS.md](../../AGENTS.md), [preview before render](../../docs/preview-be
 | Stems | `python analysis/separate_stems.py` | `analysis/stem-estimate.json` hash matches, or is re-recorded |
 | Candidates | `python analysis/align_candidates.py` | `analysis/word-candidates.json` has 0 failures; read `uncoveredVocalEnergy` |
 | Selection | `python analysis/select_timing.py` | Review the `summary.priority` count and bases |
-| Timeline | `node scripts/build-timeline.ts --revision preview-v2` | `npm run check` passes: binding, effect tags, no lyric words in data |
+| Timeline | `node scripts/build-timeline.ts --revision preview-v3` | `npm run check` passes: binding, effect tags, no lyric words in data |
 | Preview | `npm run preview` → http://127.0.0.1:4331/ | Picture moves after load, seek and format switch in both formats |
 | Review | owner listens: complete 1×, uncertain words at 0.5×, both formats | Record `evidence/sync-review.json` honestly (see below) |
 | Authorize | owner explicitly approves this revision | `evidence/render-authorization.json` binds the same hashes |
@@ -33,18 +33,25 @@ Read [AGENTS.md](../../AGENTS.md), [preview before render](../../docs/preview-be
 
 Both files must carry `song: "BnnbP7pCIvQ"`, the timeline `revision`, the 16 `inputHashes` from `hashes()` in [scripts/render-gate.ts](scripts/render-gate.ts) and `lyricsSha256`. Hash them after the final `npm run build`.
 
+The gate accepts one of two review records:
+
+- **The default full review** (below).
+- **The scoped owner-approved preview** used for `preview-v3`: `status: "owner-approved-preview"`, a stated `method`, the `acceptedRevision` with its 16 `acceptedInputHashes` and `acceptedTimingSha256`, and `ownerDirectedChanges`. Each directed change names its inputs and a description, and the timeline can never be a directed change. The gate refuses any other changed input or any timing difference. The authorization must carry `basis: "owner-approved-preview"` and the same `acceptedRevision`.
+
 - `sync-review.json` needs `status`, `actualAudio`, `fullCoverage`, `wordTiming`, `lyricText` and `sourceMotion` all set to `"complete"`. It also needs `unresolved: []`, both formats, both speeds, and every cue ID.
 - `render-authorization.json` needs `authorized: true`, `previewReviewed: true` and a `scope` string.
 
 Record an owner's overall attestation as an attestation. Do not invent per-cue telemetry. Any change to timing, scene code, shots, fonts or the compiled client invalidates both records.
 
-## Current state (preview-v2)
+## Current state (preview-v3, production authorized)
 
-The text is saved and bound (normalized SHA-256 in [evidence/preview-identity.json](evidence/preview-identity.json)). Alignment has run: 198 of 217 words are cross-model supported, and 71 are flagged for priority listening. `preview-v2` keeps that timing and replaces the visual layer after the owner's `preview-v1` notes (see the [review history](VISUAL-BRIEF.md#review-history)). The next step is the owner's visual and listening review of the complete preview in a visible browser.
+The text is saved and bound (normalized SHA-256 in [evidence/preview-identity.json](evidence/preview-identity.json)). Alignment has run: 198 of 217 words are cross-model supported, and 71 are flagged for priority listening. `preview-v2` kept that timing and replaced the visual layer after the owner's `preview-v1` notes. The owner accepted `preview-v2` and asked for milder, smoother flames; `preview-v3` is that change alone (see the [review history](VISUAL-BRIEF.md#review-history)).
+
+Production is authorized as a **scoped owner-approved preview** (see [preview before render](../../docs/preview-before-render.md#approval-belongs-to-this-song-and-revision)). [evidence/sync-review.json](evidence/sync-review.json) binds the accepted `preview-v2` identity, the owner-directed flame change and the unchanged timing identity. The granular listening fields stay `null`: no every-cue audit is claimed. [evidence/render-authorization.json](evidence/render-authorization.json) binds the same current hashes. `node scripts/render-gate.ts` passes. The next steps are the owner-run renders, then verification, packaging and the owner-run release upload.
 
 Visual decisions from the owner's notes, to keep in later revisions:
 
-- The visualiser is an instrument on the lyric column (wide, compact, crisp bars on a baseline, coloured like the focus), not light rising from the frame edge. Tall edge-to-edge tubes covered the picture; a thin edge strip read as the weakest visualiser in the repository.
+- The visualiser is an instrument on the lyric column (wide, compact, crisp bars on a baseline, coloured like the focus), not light rising from the frame edge. Tall edge-to-edge tubes covered the picture, and a thin edge strip was also rejected.
 - Lyrics use the video's own card style: white type in its pink/cyan neon. Keep other colours to the effects.
 - Effects must vary between repeats and move continuously. Avoid stacked copies of a word and hard stripes that echo the spectrum.
 

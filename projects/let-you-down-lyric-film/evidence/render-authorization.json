@@ -1,7 +1,14 @@
 {
-  "schema": "lyric-film/preview-identity/v1",
+  "schema": "lyric-film/render-authorization/v1",
   "song": "BnnbP7pCIvQ",
   "revision": "preview-v3",
+  "authorized": true,
+  "previewReviewed": true,
+  "basis": "owner-approved-preview",
+  "acceptedRevision": "preview-v2",
+  "authorizationId": "let-you-down-preview-v3-owner-approval-2026-09-29",
+  "evidenceBasis": "The project owner accepted the presented preview-v2 and, in the same instruction, requested milder and smoother flame and burn animation and directed production rendering plus a GitHub release with YouTube and TikTok editions, titles, descriptions and thumbnails.",
+  "scope": "Full-length 60 fps films of preview-v3 (YouTube landscape 1920x1080, TikTok portrait 1080x1920), the covers, titles and descriptions in publishing/, and a GitHub release of those files. Rendering and uploading the lyric-bearing films are owner-run steps.",
   "inputHashes": {
     "public/source.mp4": "c384e814edfaaf22a944101a0d1a73661bb63a83ad304fc79c5953a00c51010c",
     "public/fonts/Rajdhani-Bold.ttf": "691470dd3286a14e9677940d0bf75796179841ba5215cbda1a2c8910a3226afd",
@@ -20,43 +27,5 @@
     "review/index.html": "acb7162002b7be903d763c67bec3caa93e95be3b523704acb7961ae3356a434a",
     "review/client.js": "4cabf4e6151dc2d670a15fb25c7ed2089dec807bcd503cebaf925fdd32c9f9e5"
   },
-  "lyricsSha256": "1360695c0592764dfb16f2a696b1580f6005e11b9ba545286669520d4b1718e9",
-  "inputs": 16,
-  "timing": {
-    "lines": 40,
-    "words": 217,
-    "priorityWords": 71,
-    "priorityLines": [
-      "L01",
-      "L02",
-      "L04",
-      "L07",
-      "L08",
-      "L09",
-      "L10",
-      "L11",
-      "L12",
-      "L13",
-      "L15",
-      "L19",
-      "L21",
-      "L23",
-      "L24",
-      "L25",
-      "L27",
-      "L28",
-      "L30",
-      "L31",
-      "L32",
-      "L33",
-      "L34",
-      "L35",
-      "L36",
-      "L37",
-      "L38",
-      "L39",
-      "L40"
-    ]
-  },
-  "note": "Hashes of the preview handed to review. Any change to these inputs requires a fresh review before production."
+  "lyricsSha256": "1360695c0592764dfb16f2a696b1580f6005e11b9ba545286669520d4b1718e9"
 }

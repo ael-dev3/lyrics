@@ -1,16 +1,16 @@
 {
   "schema": "lyric-film/review-status/v1",
   "song": "BnnbP7pCIvQ",
-  "revision": "preview-v2",
+  "revision": "preview-v3",
   "stages": {
     "sourceLocked": {"status": "complete", "evidence": "evidence/source-identity.json"},
     "lyricTextLocal": {"status": "complete", "note": "Owner saved source/lyrics.local.txt locally (40 lines, 217 words). Only its normalized SHA-256 is recorded."},
     "wordTiming": {"status": "provisional", "evidence": "analysis/word-candidates.json, analysis/timing-selection.json, public/timeline.json", "note": "Unchanged from preview-v1: 198/217 words cross-model supported; 71 priority words in 29 lines"},
-    "visualRevision": {"status": "complete", "evidence": "VISUAL-BRIEF.md#review-history", "note": "preview-v2 answers the owner's preview-v1 notes (visualiser, flames, signal drop, lyric colours); the owner has not yet reviewed preview-v2"},
+    "visualRevision": {"status": "complete", "evidence": "VISUAL-BRIEF.md#review-history", "note": "preview-v2 answered the owner's preview-v1 notes; the owner accepted it and directed milder, smoother flames, applied in preview-v3"},
     "layout": {"status": "audited", "evidence": "evidence/layout-audit.json", "note": "Every cue in every shot and format: inside its reading zone, clear of the spectrum's full travel"},
     "previewAvailable": {"status": "complete", "evidence": "evidence/preview-identity.json", "note": "Seek, both formats, lyric binding and painted picture confirmed in the browser (20 landscape and 14 portrait sample points); owner review in a visible browser still required"},
-    "synchronizationReview": {"status": "not started"},
-    "productionAuthorized": {"status": "no"},
+    "synchronizationReview": {"status": "owner-approved-preview", "evidence": "evidence/sync-review.json", "note": "Scoped acceptance of preview-v2 plus the owner-directed flame change; granular listening fields not recorded"},
+    "productionAuthorized": {"status": "yes", "evidence": "evidence/render-authorization.json", "note": "Both formats, covers, titles, descriptions and a GitHub release; rendering and uploading the lyric-bearing films are owner-run"},
     "productionVerified": {"status": "no"}
   },
   "diagnostics": {
