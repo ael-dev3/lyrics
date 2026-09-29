@@ -6,7 +6,8 @@ import {fileURLToPath} from 'node:url';
 import {assertGate} from './render-gate.ts';
 
 // Independent verification of encoded films: container, cadence, timestamp
-// grid, soundtrack identity, strict decode and unexpected black. Production
+// grid, soundtrack identity, strict decode and black where the source picture
+// is missing (not merely dark by composition). Production
 // files are verified under the gate and recorded in evidence/final-verification.json;
 // `--proof --file PATH` checks a diagnostic proof's container and cadence only.
 const root = fileURLToPath(new URL('../', import.meta.url));
@@ -31,7 +32,22 @@ function black(file: string): [number, number][] {
   return [...String(r.stderr).matchAll(/black_start:([\d.]+) black_end:([\d.]+)/gu)].map(m => [Number(m[1]), Number(m[2])] as [number, number]);
 }
 
+/** Brightest 0.1 % of luma (0-255) in one decoded frame at t, at 480 px width. */
+function highlight(file: string, t: number): number {
+  const r = spawnSync('ffmpeg', ['-v', 'error', '-nostdin', '-ss', Math.max(0, t).toFixed(4), '-i', file, '-frames:v', '1', '-vf', 'scale=480:-2', '-f', 'rawvideo', '-pix_fmt', 'gray', 'pipe:1'], {maxBuffer: 64 << 20});
+  const px = r.stdout as Buffer;
+  if (r.status !== 0 || !px.length) return -1;
+  const sorted = Uint8Array.from(px).sort();
+  return sorted[Math.floor(sorted.length * 0.999)]!;
+}
 const sourceBlack = proof ? [] : black(`${root}public/source.mp4`);
+// Source black intervals within 0.4 s of each other are one dark passage (a
+// single dim fade frame between them should not split it).
+const darkPassages = sourceBlack.reduce<[number, number][]>((acc, [s0, e0]) => {
+  const last = acc.at(-1);
+  if (last && s0 - last[1] <= 0.4) last[1] = Math.max(last[1], e0); else acc.push([s0, e0]);
+  return acc;
+}, []);
 const report: Record<string, unknown>[] = [];
 let failures = 0;
 for (const file of files) {
@@ -65,13 +81,27 @@ for (const file of files) {
   checks.strictDecode = strict.status === 0 && !String(strict.stderr).trim() ? 'pass' : 'fail';
   if (checks.strictDecode !== 'pass') problems.push(`strict decode: ${String(strict.stderr).slice(0, 300)}`);
   const out = black(file);
-  const unexpected = proof ? [] : out.filter(([s, e]) => !sourceBlack.some(([s0, e0]) => s >= s0 - 0.2 && e <= e0 + 0.2));
-  checks.black = {outputIntervals: out, unexpected};
-  if (unexpected.length) problems.push(`${unexpected.length} black intervals not present in the source`);
+  // A black-looking stretch the source does not have is a failure only if the
+  // picture itself went missing. Composition alone can make a frame count as
+  // black: the portrait band shrinks the end logos and credits under the
+  // detector's 1.5 % non-black share, and the readability shade can tip a
+  // single dim fade frame. So every output frame is sampled every 0.25 s
+  // across such a stretch, and must keep the source's highlights (its brightest
+  // 0.1 % at least half as bright) wherever the source has any (above 40).
+  const outside = proof ? [] : out.filter(([s, e]) => !darkPassages.some(([s0, e0]) => s >= s0 - 0.2 && e <= e0 + 0.2));
+  const explained: unknown[] = [], unexpected: unknown[] = [];
+  for (const [s, e] of outside) {
+    const samples: {t: number; source: number; output: number}[] = [];
+    for (let t = s + 0.02; t < e; t += 0.25) samples.push({t: +t.toFixed(3), source: Math.max(highlight(`${root}public/source.mp4`, t), highlight(`${root}public/source.mp4`, t - 1001 / 24000)), output: highlight(file, t)});
+    const lost = samples.filter(x => x.output < 0 || x.source < 0 || (x.source > 40 && x.output < 0.5 * x.source));
+    (lost.length ? unexpected : explained).push({interval: [s, e], samples: samples.length, lost});
+  }
+  checks.black = {outputIntervals: out, sourceDarkPassages: darkPassages, explainedByComposition: explained, unexpected};
+  if (unexpected.length) problems.push(`${unexpected.length} black intervals where the source picture is missing`);
   failures += problems.length;
   report.push(checks);
   console.log(JSON.stringify({file: checks.file, frames, strict: checks.strictDecode, timestampsOffGrid: offGrid, failures: problems}));
 }
 if (!proof) writeFileSync(`${root}evidence/final-verification.json`, JSON.stringify({schema: 'lyric-film/final-verification/v1', sourceSha256: identity.sha256, expectedFrames, sourceBlackIntervals: sourceBlack, files: report,
-  limits: ['These checks establish delivery integrity (container, cadence, soundtrack identity, decode, black intervals), not acoustic word accuracy or visual quality.']}, null, 2) + '\n');
+  limits: ['These checks establish delivery integrity (container, cadence, soundtrack identity, decode, missing-picture black intervals), not acoustic word accuracy or visual quality.']}, null, 2) + '\n');
 if (failures) {console.error(`${failures} verification failure(s)`); process.exit(1);}

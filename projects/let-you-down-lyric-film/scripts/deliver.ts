@@ -102,7 +102,7 @@ ${sums.filter(s => !s.file.endsWith('.mp4')).map(s => `| \`${s.file}\` | ${s.fil
 
 ## Verification
 
-- Both films have ${final.expectedFrames} frames on an exact 1/60 s grid, decode strictly without errors and show no black interval beyond the source's own. Their AAC packets and decoded PCM are identical to the official upload's soundtrack.
+- Both films have ${final.expectedFrames} frames on an exact 1/60 s grid, decode strictly without errors and keep the source picture throughout. Frames count as dark only where the source is dark, or where the portrait band makes the end logos and credits small. Their AAC packets and decoded PCM are identical to the official upload's soundtrack.
 - Word focus was checked in the decoded films at the middle of every timed word, for every visible word. Landscape: ${fl.pass}/${fl.glyphChecks} glyph checks pass, ${fl.mismatches} mismatches. Portrait: ${fp.pass}/${fp.glyphChecks} pass, ${fp.mismatches} mismatches. A negative control that expects the next word instead detects ${fl.negativeControl.detected}/${fl.negativeControl.differingChecks} and ${fp.negativeControl.detected}/${fp.negativeControl.differingChecks} of those one-word shifts.
 - Review scope: the owner accepted the browser preview and authorized production (a scoped owner-approved preview). Word timing is model-assisted, with 198 of 217 words supported by a second model; no every-cue listening audit is claimed.
 
