@@ -49,15 +49,9 @@ export function effectFor(id: string, norm: string, line: number): WordEffect | 
   return null;
 }
 
-// Palette. Verses answer the film's magenta light with cyan; choruses carry
-// the Edgerunners yellow. Bright memory frames switch to dark ink.
+// Fire particle colour ramp, white-hot to magenta as each particle cools.
+// The lettering, spectrum and drop colours live beside their drawing code in
+// src/scene.ts (FOCUS_FILL, the halo colours, NEON_STOPS).
 export const PALETTE = {
-  rest: '#e4e2f3', ink: '#231a36', stroke: 'rgba(10,4,24,0.8)',
-  verse: {core: '#ffffff', mid: '#9ff9ff', edge: '#2ee6ff', glow: '#27dcff'},
-  chorus: {core: '#ffffff', mid: '#fff6a0', edge: '#fcee0a', glow: '#f8e600'},
-  moon: {core: '#ffffff', mid: '#d6e1ff', edge: '#8ea6ff', glow: '#7d97ff'},
-  memoryFocus: '#c8126c',
   flame: ['#fff1c2', '#ffab3d', '#ff5a2a', '#ff2e8a'],
-  glitch: {left: '#1ff2ff', right: '#ff2ea8'},
-  spectrum: ['#ff3fa4', '#b35cff', '#4fe3ff'],
 } as const;

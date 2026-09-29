@@ -41,12 +41,16 @@ const tonesRaw = json('public/picture-tones.json') as {sourceSha256: string};
 const tones = parseTones(tonesRaw);
 if (tones.frames !== identity.video.frames || tonesRaw.sourceSha256 !== identity.sha256) fail('picture tones do not match the source'); else ok(`picture tones: ${tones.frames} frames × ${tones.fields.length} zones`);
 
+const palette = json('public/picture-palette.json') as {sourceSha256: string; frames: number; hueA: number[]; hueB: number[]; strength: number[]};
+if (palette.sourceSha256 !== identity.sha256 || palette.frames !== identity.video.frames || [palette.hueA, palette.hueB, palette.strength].some(a => a.length !== palette.frames)) fail('picture palette does not match the source');
+else ok(`picture palette: ${palette.frames} frames of dominant neon hue pairs`);
+
 // Shot map.
 if (SHOTS[0]!.frames[0] !== 0 || SHOTS.at(-1)!.frames[1] !== identity.video.frames || SHOTS.some((s, i) => i > 0 && s.frames[0] !== SHOTS[i - 1]!.frames[1])) fail('shot map is not contiguous over every source frame');
 else ok(`shot map: ${SHOTS.length} contiguous shots, ${SHOTS.filter(s => s.portrait.mode === 'fit').length} full-frame portrait, ${SHOTS.filter(s => s.protect).length} protected`);
 
 // Fonts and licences.
-for (const [font, licence] of [['Oswald-Bold.ttf', 'Oswald-OFL.txt']] as const) {
+for (const [font, licence] of [['Rajdhani-Bold.ttf', 'Rajdhani-OFL.txt']] as const) {
   if (!existsSync(`${root}public/fonts/${font}`) || !readFileSync(`${root}public/fonts/${licence}`, 'utf8').includes('SIL OPEN FONT LICENSE')) fail(`${font} or its OFL text is missing`);
   else ok(`${font} with OFL licence`);
 }

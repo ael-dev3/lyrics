@@ -12,13 +12,13 @@ Music films with synchronized lyrics, meaning-linked translations, and audio-rea
 
 ## Let You Down — preview
 
-**Dawid Podsiadło · Cyberpunk: Edgerunners ending theme · English · `preview-v1` ready for the listening review**
+**Dawid Podsiadło · Cyberpunk: Edgerunners ending theme · English · `preview-v2` ready for review**
 
-![Let You Down preview frame at 00:27.000: the original neon corridor portrait with the film's measured light and cyberdeck spectrum](projects/let-you-down-lyric-film/evidence/preview-landscape-27.000.jpg)
+![Let You Down preview frame at 00:27.000: the original neon corridor portrait with the film's measured light and neon spectrum](projects/let-you-down-lyric-film/evidence/preview-landscape-27.000.jpg)
 
-*Native-renderer preview frame at 00:27.000, before the first vocal. The picture is the [official music video](https://www.youtube.com/watch?v=BnnbP7pCIvQ) by Ilya Kuvshinov and STUDIO MASSKET. Its own neon tubes glow with the measured music, and a small cyberdeck spectrum sits below. No lyric film frame has been rendered.*
+*Native-renderer preview frame at 00:27.000, before the first vocal. The picture is the [official music video](https://www.youtube.com/watch?v=BnnbP7pCIvQ) by Ilya Kuvshinov and STUDIO MASSKET. Its own neon tubes glow with the measured music, and a neon spectrum sits on the lyric column. No lyric film frame has been rendered.*
 
-The official video stays the picture. Landscape keeps the whole frame. Portrait uses 92 reviewed shots: subject-centred crops, and full-frame fits for the video's title cards, dialogue boxes, Securicine files, upload screens, logos and credits. The film's magenta, violet, amber and cyan neon brightens with the matching band families. A fixed cyberdeck spectrum follows section tiers, strongest in the instrumental drop. Lyrics use forward-leaning Oswald Bold with colour-only neon focus: cyan in the verses, Edgerunners yellow in the choruses. On white flashback frames the type switches to dark ink. Three exact-ID effects mark the neon words, the fire words and the title hook's final word.
+The official video stays the picture. Landscape keeps the whole frame. Portrait uses 92 reviewed shots: subject-centred crops, and full-frame fits for the video's title cards, dialogue boxes, Securicine files, upload screens, logos and credits. The film's magenta, violet, amber and cyan neon brightens with the matching band families. Under the lyrics, a neon spectrum of thin pink-to-cyan tubes with holding peak marks follows section tiers, strongest in the instrumental drop. Lyrics take the video's own card style, upright white Rajdhani inside its pink neon glow, with a second cyan bloom in the choruses; glyphs never move. On white flashback frames the type switches to dark ink. Three exact-ID effects mark the neon words (a tube strike), the fire words (a particle flame) and the title hook's final word (neon droplets that differ at every repeat). `preview-v2` answers the owner's notes on `preview-v1`.
 
 This edition keeps the lyric text out of the repository entirely: timing is stored by word ID, and the supplied text stays in a local, git-ignored file that the preview and renderer bind by hash. All 217 words are timed. 198 are supported by a second, different model, and 71 are flagged for priority listening, mostly entrances and the overlapping outro. The listening review, render authorization and delivery are still ahead.
 

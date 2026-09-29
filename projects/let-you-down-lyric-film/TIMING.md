@@ -1,6 +1,6 @@
 # Let You Down — timing method
 
-**Status: `preview-v1` is aligned and ready for the listening review.**
+**Status: aligned in `preview-v1`; `preview-v2` carries the same timing unchanged and is ready for the listening review.**
 
 - All 217 supplied words across 40 lines have word-level timing. 198 are supported by a second, different model, and 19 rely on a median.
 - 71 words in 29 lines are flagged for priority listening.

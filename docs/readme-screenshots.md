@@ -4,7 +4,7 @@ Updated 27 September 2026. Featured songs in the main README have a representati
 
 | Song | Representative image | Time | Edition / provenance |
 | --- | --- | --- | --- |
-| Let You Down | [Original neon corridor portrait with measured neon light and cyberdeck spectrum](../projects/let-you-down-lyric-film/evidence/preview-landscape-27.000.jpg) | 00:27.000 | Native-renderer preview frame before the first vocal; no final film yet. Lyric frames are withheld because the edition keeps its lyric text local |
+| Let You Down | [Original neon corridor portrait with measured neon light and neon spectrum](../projects/let-you-down-lyric-film/evidence/preview-landscape-27.000.jpg) | 00:27.000 | Native-renderer `preview-v2` frame before the first vocal; no final film yet. Lyric frames are withheld because the edition keeps its lyric text local |
 | Must Have Been A Dream | [Original blue-lit stage performance and individual Know-It-All focus](../assets/must-have-been-a-dream-final-78-870.png) | 01:18.870 | Verified final 1920×1080 landscape film; exact decoded frame 1891 |
 | TAKE ME THERE | [Original source city, word focus and fixed spectrum](../projects/take-me-there-lyric-film/evidence/final-landscape-97-30.png) | 01:37.300 | Verified final 1920×1080 landscape film; exact decoded frame 5838 |
 | Rainline | [Native cat lyric sign, lit window, train and hover taxi](../assets/rainline-wide-final-177.png) | 02:57.000 | Verified v4 16:9 film; scoped owner-approved-preview delivery; detailed acoustic review pending |
