@@ -1,17 +1,18 @@
 {
   "schema": "lyric-film/review-status/v1",
   "song": "BnnbP7pCIvQ",
+  "revision": "preview-v1",
   "stages": {
     "sourceLocked": {"status": "complete", "evidence": "evidence/source-identity.json"},
-    "sceneAndPlayer": {"status": "complete", "evidence": "tests/*.test.ts, scripts/check.ts, placeholder diagnostic stills and a 6 s placeholder proof"},
-    "lyricTextLocal": {"status": "pending", "note": "source/lyrics.local.txt has not been saved yet; the repository never stores lyric text"},
-    "wordTiming": {"status": "pending", "note": "Alignment chain implemented and smoke-tested on synthetic text only"},
-    "previewAvailable": {"status": "partial", "note": "Picture, neon light, spectrum, both formats, seek and recovery work in the browser; lyrics appear once timing exists"},
+    "lyricTextLocal": {"status": "complete", "note": "Owner saved source/lyrics.local.txt locally (40 lines, 217 words). Only its normalized SHA-256 is recorded."},
+    "wordTiming": {"status": "provisional", "evidence": "analysis/word-candidates.json, analysis/timing-selection.json, public/timeline.json", "note": "198/217 words cross-model supported; 71 priority words in 29 lines"},
+    "layout": {"status": "audited", "evidence": "evidence/layout-audit.json", "note": "Every cue in every shot and format: inside its reading zone, clear of the spectrum's full reach"},
+    "previewAvailable": {"status": "complete", "evidence": "evidence/preview-identity.json", "note": "Seek, both formats, lyric binding and painted picture confirmed in the browser at 14 sample points; owner review in a visible browser still required"},
     "synchronizationReview": {"status": "not started"},
     "productionAuthorized": {"status": "no"},
     "productionVerified": {"status": "no"}
   },
   "diagnostics": {
-    "placeholderProof": {"window": "84.0-90.0 s landscape", "container": "pass (60/1, BT.709 tv, SAR 1:1, exact 1/60 s grid, strict decode)", "encodedFocus": "38/38 glyph checks, negative control 10/10"}
+    "placeholderProof": {"window": "84.0-90.0 s landscape (synthetic development timing)", "container": "pass", "encodedFocus": "38/38 glyph checks, negative control 10/10"}
   }
 }

@@ -1,0 +1,8483 @@
+{
+ "schema": "lyric-film/timing-selection/v1",
+ "textSha256": "1360695c0592764dfb16f2a696b1580f6005e11b9ba545286669520d4b1718e9",
+ "candidatesSha256": "f40cbd6780d94f4c9aa485b4faf8609d3ebc96e59a74dd97cb54eb4bdc879022",
+ "rules": [
+  "Rules (documented in TIMING.md; every decision is logged per word):",
+  "  start  1. Among the CTC starts (mms_stem, w2v_stem, mms_mix, w2v_mix), take",
+  "            the one supported by the most OTHER models: the other CTC model",
+  "            within 70 ms, and/or Whisper (forced or unforced) within 120 ms.",
+  "            Ties prefer stem over mix and MMS over wav2vec2. The basis records",
+  "            the supporting models, e.g. 'mms-stem~w2v+whisper'.",
+  "         2. With no cross-model support: the median of the CTC starts.",
+  "         The earliest candidate is never chosen automatically.",
+  "  onset  If the chosen start sits in vocal-stem silence (< -40 dBFS for the",
+  "         following 80 ms) while energy rises within +250 ms, the start moves to",
+  "         that rise (logged as 'energy-onset').",
+  "  end    The same observation family as the start; within a lane the end is",
+  "         clipped to the next word's start and joined to it when the gap is under",
+  "         60 ms (connected singing). A lane-final word is extended while the stem",
+  "         stays within 20 dB of the word's peak (max +1.6 s, never past the next",
+  "         line's first onset - 0.08 s) to hold sustained vowels.",
+  "  review 'priority' when the CTC starts spread > 120 ms, when no cross-model",
+  "         support exists, or when a word is shorter than 70 ms. (Whisper's word",
+  "         starts run early at entrances after gaps here, so its distance alone",
+  "         does not flag a word.)",
+  "Times land on the 44.1 kHz sample grid. Output: analysis/timing-selection.json"
+ ],
+ "summary": {
+  "words": 217,
+  "priority": 71,
+  "bases": {
+   "median-uncorroborated": 7,
+   "median-uncorroborated+sustained": 12,
+   "mms-mix~w2v": 1,
+   "mms-mix~w2v+whisper": 1,
+   "mms-mix~w2v+whisper+sustained": 2,
+   "mms-mix~whisper": 1,
+   "mms-stem~w2v": 63,
+   "mms-stem~w2v+sustained": 103,
+   "mms-stem~w2v+whisper": 3,
+   "mms-stem~w2v+whisper+entrance-rise+sustained": 1,
+   "mms-stem~w2v+whisper+sustained": 7,
+   "mms-stem~whisper": 1,
+   "mms-stem~whisper+late-entrance": 1,
+   "w2v-mix~whisper": 1,
+   "w2v-mix~whisper+order-fix+sustained": 1,
+   "w2v-mix~whisper+sustained": 3,
+   "w2v-stem~mms+sustained": 2,
+   "w2v-stem~mms+whisper": 2,
+   "w2v-stem~mms+whisper+sustained": 2,
+   "w2v-stem~whisper+late-entrance": 2,
+   "w2v-stem~whisper+sustained": 1
+  }
+ },
+ "words": {
+  "L01-W01": {
+   "id": "L01-W01",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     38.84,
+     39.14,
+     0.7373
+    ],
+    "mms_mix": [
+     38.84,
+     39.22,
+     0.1434
+    ],
+    "w2v_stem": [
+     38.82,
+     39.1,
+     0.911
+    ],
+    "w2v_mix": [
+     38.82,
+     39.1,
+     0.2402
+    ],
+    "whisper_stem": [
+     38.39,
+     38.95,
+     0.1187
+    ]
+   },
+   "start": 38.84,
+   "end": 39.22,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "normal",
+   "spreadMs": 20.0,
+   "sustainedMs": 80,
+   "startSample": 1712844,
+   "endSample": 1729602
+  },
+  "L01-W02": {
+   "id": "L01-W02",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     39.22,
+     39.32,
+     0.7772
+    ],
+    "mms_mix": [
+     39.22,
+     39.34,
+     0.0946
+    ],
+    "w2v_stem": [
+     39.22,
+     39.58,
+     0.8612
+    ],
+    "w2v_mix": [
+     39.18,
+     39.5,
+     0.8868
+    ],
+    "whisper_stem": [
+     38.95,
+     39.23,
+     0.9526
+    ]
+   },
+   "start": 39.22,
+   "end": 40.0,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "priority",
+   "spreadMs": 40.0,
+   "sustainedMs": 680,
+   "startSample": 1729602,
+   "endSample": 1764000
+  },
+  "L01-W03": {
+   "id": "L01-W03",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     40.0,
+     41.02,
+     0.5306
+    ],
+    "mms_mix": [
+     39.98,
+     41.0,
+     0.1348
+    ],
+    "w2v_stem": [
+     40.0,
+     41.0,
+     0.5773
+    ],
+    "w2v_mix": [
+     39.56,
+     40.96,
+     0.2069
+    ],
+    "whisper_stem": [
+     39.23,
+     40.11,
+     0.9722
+    ]
+   },
+   "start": 40.0,
+   "end": 41.16,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "priority",
+   "spreadMs": 440.0,
+   "sustainedMs": 140,
+   "startSample": 1764000,
+   "endSample": 1815156
+  },
+  "L01-W04": {
+   "id": "L01-W04",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     41.16,
+     41.26,
+     0.7382
+    ],
+    "mms_mix": [
+     41.14,
+     41.24,
+     0.1619
+    ],
+    "w2v_stem": [
+     41.2,
+     41.26,
+     0.9612
+    ],
+    "w2v_mix": [
+     41.18,
+     41.26,
+     0.4246
+    ],
+    "whisper_stem": [
+     40.11,
+     41.17,
+     0.9805
+    ]
+   },
+   "start": 41.16,
+   "end": 41.36,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "normal",
+   "spreadMs": 60.0,
+   "sustainedMs": 100,
+   "startSample": 1815156,
+   "endSample": 1823976
+  },
+  "L01-W05": {
+   "id": "L01-W05",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     41.36,
+     41.48,
+     0.6646
+    ],
+    "mms_mix": [
+     41.34,
+     41.48,
+     0.2262
+    ],
+    "w2v_stem": [
+     41.36,
+     41.54,
+     0.971
+    ],
+    "w2v_mix": [
+     41.38,
+     41.54,
+     0.9722
+    ],
+    "whisper_stem": [
+     41.17,
+     41.33,
+     0.9834
+    ]
+   },
+   "start": 41.36,
+   "end": 41.72,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "normal",
+   "spreadMs": 40.0,
+   "sustainedMs": 240,
+   "startSample": 1823976,
+   "endSample": 1839852
+  },
+  "L01-W06": {
+   "id": "L01-W06",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     41.72,
+     42.76,
+     0.7289
+    ],
+    "mms_mix": [
+     41.74,
+     42.76,
+     0.5894
+    ],
+    "w2v_stem": [
+     41.76,
+     42.7,
+     0.8825
+    ],
+    "w2v_mix": [
+     41.76,
+     42.7,
+     0.9044
+    ],
+    "whisper_stem": [
+     41.33,
+     41.77,
+     0.1869
+    ]
+   },
+   "start": 41.72,
+   "end": 42.85,
+   "basis": "mms-stem~w2v",
+   "review": "normal",
+   "spreadMs": 40.0,
+   "releaseExtendedMs": 90,
+   "startSample": 1839852,
+   "endSample": 1889685
+  },
+  "L02-W01": {
+   "id": "L02-W01",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     43.3,
+     44.16,
+     0.5079
+    ],
+    "mms_mix": [
+     43.3,
+     44.2,
+     0.4318
+    ],
+    "w2v_stem": [
+     43.32,
+     44.2,
+     0.4954
+    ],
+    "w2v_mix": [
+     43.3,
+     44.1,
+     0.2271
+    ],
+    "whisper_stem": [
+     42.85,
+     43.51,
+     0.0197
+    ]
+   },
+   "start": 43.3,
+   "end": 44.32,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "normal",
+   "spreadMs": 20.0,
+   "sustainedMs": 160,
+   "startSample": 1909530,
+   "endSample": 1954512
+  },
+  "L02-W02": {
+   "id": "L02-W02",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     44.32,
+     45.16,
+     0.6184
+    ],
+    "mms_mix": [
+     44.32,
+     45.14,
+     0.4347
+    ],
+    "w2v_stem": [
+     44.32,
+     45.14,
+     0.9457
+    ],
+    "w2v_mix": [
+     44.34,
+     45.12,
+     0.7266
+    ],
+    "whisper_stem": [
+     43.51,
+     44.51,
+     0.9028
+    ]
+   },
+   "start": 44.32,
+   "end": 45.24,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "normal",
+   "spreadMs": 20.0,
+   "sustainedMs": 80,
+   "startSample": 1954512,
+   "endSample": 1995084
+  },
+  "L02-W03": {
+   "id": "L02-W03",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     45.4,
+     45.46,
+     0.3105
+    ],
+    "mms_mix": [
+     45.24,
+     45.46,
+     0.2818
+    ],
+    "w2v_stem": [
+     45.24,
+     45.34,
+     0.519
+    ],
+    "w2v_mix": [
+     45.26,
+     45.36,
+     0.599
+    ],
+    "whisper_stem": [
+     44.51,
+     45.23,
+     0.7266
+    ]
+   },
+   "start": 45.24,
+   "end": 45.46,
+   "basis": "w2v-stem~mms+sustained",
+   "review": "priority",
+   "spreadMs": 160.0,
+   "sustainedMs": 120,
+   "startSample": 1995084,
+   "endSample": 2004786
+  },
+  "L02-W04": {
+   "id": "L02-W04",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     45.46,
+     46.04,
+     0.2781
+    ],
+    "mms_mix": [
+     45.46,
+     46.04,
+     0.1468
+    ],
+    "w2v_stem": [
+     45.44,
+     45.96,
+     0.3577
+    ],
+    "w2v_mix": [
+     45.44,
+     46.02,
+     0.0403
+    ],
+    "whisper_stem": [
+     45.23,
+     45.59,
+     0.9629
+    ]
+   },
+   "start": 45.46,
+   "end": 46.04,
+   "basis": "mms-stem~w2v",
+   "review": "normal",
+   "spreadMs": 20.0,
+   "startSample": 2004786,
+   "endSample": 2030364
+  },
+  "L02-W05": {
+   "id": "L02-W05",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     46.18,
+     47.1,
+     0.6994
+    ],
+    "mms_mix": [
+     46.18,
+     47.12,
+     0.673
+    ],
+    "w2v_stem": [
+     46.18,
+     47.06,
+     0.9005
+    ],
+    "w2v_mix": [
+     46.18,
+     47.06,
+     0.9602
+    ],
+    "whisper_stem": [
+     45.59,
+     46.29,
+     0.9868
+    ]
+   },
+   "start": 46.18,
+   "end": 47.48,
+   "basis": "mms-stem~w2v",
+   "review": "normal",
+   "spreadMs": 0.0,
+   "releaseExtendedMs": 380,
+   "startSample": 2036538,
+   "endSample": 2093868
+  },
+  "L03-W01": {
+   "id": "L03-W01",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     47.56,
+     48.06,
+     0.2151
+    ],
+    "mms_mix": [
+     47.58,
+     48.04,
+     0.0836
+    ],
+    "w2v_stem": [
+     47.56,
+     48.34,
+     0.9754
+    ],
+    "w2v_mix": [
+     47.56,
+     48.28,
+     0.7733
+    ],
+    "whisper_stem": [
+     47.11,
+     47.87,
+     0.0761
+    ]
+   },
+   "start": 47.56,
+   "end": 48.64,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "normal",
+   "spreadMs": 20.0,
+   "sustainedMs": 580,
+   "startSample": 2097396,
+   "endSample": 2145024
+  },
+  "L03-W02": {
+   "id": "L03-W02",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     48.64,
+     49.46,
+     0.3984
+    ],
+    "mms_mix": [
+     48.64,
+     49.46,
+     0.3437
+    ],
+    "w2v_stem": [
+     48.64,
+     49.34,
+     0.4459
+    ],
+    "w2v_mix": [
+     48.66,
+     49.3,
+     0.2564
+    ],
+    "whisper_stem": [
+     47.87,
+     48.73,
+     0.0004
+    ]
+   },
+   "start": 48.64,
+   "end": 49.46,
+   "basis": "mms-stem~w2v",
+   "review": "normal",
+   "spreadMs": 20.0,
+   "startSample": 2145024,
+   "endSample": 2181186
+  },
+  "L03-W03": {
+   "id": "L03-W03",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     49.48,
+     49.62,
+     0.278
+    ],
+    "mms_mix": [
+     49.48,
+     49.62,
+     0.1704
+    ],
+    "w2v_stem": [
+     49.46,
+     49.62,
+     0.8952
+    ],
+    "w2v_mix": [
+     49.46,
+     49.64,
+     0.2513
+    ],
+    "whisper_stem": [
+     48.73,
+     49.47,
+     0.582
+    ]
+   },
+   "start": 49.46,
+   "end": 49.72,
+   "basis": "w2v-stem~mms+whisper+sustained",
+   "review": "normal",
+   "spreadMs": 20.0,
+   "sustainedMs": 100,
+   "startSample": 2181186,
+   "endSample": 2192652
+  },
+  "L03-W04": {
+   "id": "L03-W04",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     49.72,
+     50.0,
+     0.2701
+    ],
+    "mms_mix": [
+     49.72,
+     49.98,
+     0.3214
+    ],
+    "w2v_stem": [
+     49.74,
+     50.0,
+     0.9857
+    ],
+    "w2v_mix": [
+     49.72,
+     49.98,
+     0.5068
+    ],
+    "whisper_stem": [
+     49.47,
+     49.81,
+     0.9668
+    ]
+   },
+   "start": 49.72,
+   "end": 50.08,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "normal",
+   "spreadMs": 20.0,
+   "sustainedMs": 80,
+   "startSample": 2192652,
+   "endSample": 2208528
+  },
+  "L03-W05": {
+   "id": "L03-W05",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     50.08,
+     50.26,
+     0.5739
+    ],
+    "mms_mix": [
+     50.08,
+     50.24,
+     0.6619
+    ],
+    "w2v_stem": [
+     50.12,
+     50.36,
+     0.9985
+    ],
+    "w2v_mix": [
+     50.1,
+     50.24,
+     0.1875
+    ],
+    "whisper_stem": [
+     49.81,
+     50.15,
+     0.9951
+    ]
+   },
+   "start": 50.08,
+   "end": 50.58,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "normal",
+   "spreadMs": 40.0,
+   "sustainedMs": 320,
+   "startSample": 2208528,
+   "endSample": 2230578
+  },
+  "L03-W06": {
+   "id": "L03-W06",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     50.58,
+     51.28,
+     0.4476
+    ],
+    "mms_mix": [
+     50.58,
+     51.28,
+     0.4376
+    ],
+    "w2v_stem": [
+     50.56,
+     51.24,
+     0.917
+    ],
+    "w2v_mix": [
+     50.58,
+     51.24,
+     0.248
+    ],
+    "whisper_stem": [
+     50.15,
+     50.69,
+     0.9985
+    ]
+   },
+   "start": 50.58,
+   "end": 51.78,
+   "basis": "mms-stem~w2v",
+   "review": "normal",
+   "spreadMs": 20.0,
+   "releaseExtendedMs": 500,
+   "startSample": 2230578,
+   "endSample": 2283498
+  },
+  "L04-W01": {
+   "id": "L04-W01",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     51.92,
+     52.18,
+     0.4636
+    ],
+    "mms_mix": [
+     51.94,
+     52.18,
+     0.4577
+    ],
+    "w2v_stem": [
+     51.92,
+     52.14,
+     0.971
+    ],
+    "w2v_mix": [
+     51.92,
+     52.16,
+     0.8517
+    ],
+    "whisper_stem": [
+     51.47,
+     51.99,
+     0.2012
+    ]
+   },
+   "start": 51.92,
+   "end": 52.26,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "normal",
+   "spreadMs": 20.0,
+   "sustainedMs": 80,
+   "startSample": 2289672,
+   "endSample": 2304666
+  },
+  "L04-W02": {
+   "id": "L04-W02",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     52.26,
+     52.6,
+     0.0682
+    ],
+    "mms_mix": [
+     52.26,
+     52.6,
+     0.0414
+    ],
+    "w2v_stem": [
+     52.26,
+     52.6,
+     0.8468
+    ],
+    "w2v_mix": [
+     52.28,
+     52.58,
+     0.4823
+    ],
+    "whisper_stem": [
+     51.99,
+     52.53,
+     0.8328
+    ]
+   },
+   "start": 52.26,
+   "end": 52.74,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "normal",
+   "spreadMs": 20.0,
+   "sustainedMs": 140,
+   "startSample": 2304666,
+   "endSample": 2325834
+  },
+  "L04-W03": {
+   "id": "L04-W03",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     52.74,
+     52.92,
+     0.7739
+    ],
+    "mms_mix": [
+     52.72,
+     52.92,
+     0.7553
+    ],
+    "w2v_stem": [
+     52.74,
+     53.28,
+     0.9106
+    ],
+    "w2v_mix": [
+     52.72,
+     53.02,
+     0.8841
+    ],
+    "whisper_stem": [
+     52.53,
+     52.81,
+     0.9883
+    ]
+   },
+   "start": 52.74,
+   "end": 53.6,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "priority",
+   "spreadMs": 20.0,
+   "sustainedMs": 680,
+   "startSample": 2325834,
+   "endSample": 2363760
+  },
+  "L04-W04": {
+   "id": "L04-W04",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     53.6,
+     54.06,
+     0.6571
+    ],
+    "mms_mix": [
+     53.6,
+     54.06,
+     0.6665
+    ],
+    "w2v_stem": [
+     53.62,
+     54.0,
+     0.9744
+    ],
+    "w2v_mix": [
+     53.62,
+     54.04,
+     0.6505
+    ],
+    "whisper_stem": [
+     52.81,
+     53.61,
+     0.9883
+    ]
+   },
+   "start": 53.6,
+   "end": 54.06,
+   "basis": "mms-stem~w2v",
+   "review": "normal",
+   "spreadMs": 20.0,
+   "startSample": 2363760,
+   "endSample": 2384046
+  },
+  "L04-W05": {
+   "id": "L04-W05",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     54.16,
+     54.46,
+     0.4699
+    ],
+    "mms_mix": [
+     54.16,
+     54.46,
+     0.457
+    ],
+    "w2v_stem": [
+     54.16,
+     54.44,
+     0.7515
+    ],
+    "w2v_mix": [
+     54.12,
+     54.44,
+     0.3423
+    ],
+    "whisper_stem": [
+     53.61,
+     54.17,
+     0.9795
+    ]
+   },
+   "start": 54.16,
+   "end": 54.48,
+   "basis": "mms-stem~w2v",
+   "review": "normal",
+   "spreadMs": 40.0,
+   "startSample": 2388456,
+   "endSample": 2402568
+  },
+  "L04-W06": {
+   "id": "L04-W06",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     54.48,
+     54.6,
+     0.058
+    ],
+    "mms_mix": [
+     54.48,
+     54.6,
+     0.0558
+    ],
+    "w2v_stem": [
+     54.48,
+     54.72,
+     0.4594
+    ],
+    "w2v_mix": [
+     54.46,
+     54.76,
+     0.2922
+    ],
+    "whisper_stem": [
+     54.17,
+     54.49,
+     0.0374
+    ]
+   },
+   "start": 54.48,
+   "end": 54.98,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "normal",
+   "spreadMs": 20.0,
+   "sustainedMs": 380,
+   "startSample": 2402568,
+   "endSample": 2424618
+  },
+  "L04-W07": {
+   "id": "L04-W07",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     54.98,
+     55.54,
+     0.239
+    ],
+    "mms_mix": [
+     54.98,
+     55.54,
+     0.179
+    ],
+    "w2v_stem": [
+     54.96,
+     55.46,
+     0.5024
+    ],
+    "w2v_mix": [
+     54.94,
+     55.52,
+     0.414
+    ],
+    "whisper_stem": [
+     54.49,
+     55.07,
+     0.8862
+    ]
+   },
+   "start": 54.98,
+   "end": 55.83,
+   "basis": "mms-stem~w2v",
+   "review": "normal",
+   "spreadMs": 40.0,
+   "releaseExtendedMs": 290,
+   "startSample": 2424618,
+   "endSample": 2462103
+  },
+  "L05-W01": {
+   "id": "L05-W01",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     56.3,
+     57.18,
+     0.5295
+    ],
+    "mms_mix": [
+     56.3,
+     57.18,
+     0.5318
+    ],
+    "w2v_stem": [
+     56.3,
+     57.14,
+     0.9414
+    ],
+    "w2v_mix": [
+     56.32,
+     57.12,
+     0.9973
+    ],
+    "whisper_stem": [
+     55.85,
+     56.57,
+     0.5146
+    ]
+   },
+   "start": 56.3,
+   "end": 57.4,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "normal",
+   "spreadMs": 20.0,
+   "sustainedMs": 220,
+   "startSample": 2482830,
+   "endSample": 2531340
+  },
+  "L05-W02": {
+   "id": "L05-W02",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     57.4,
+     58.54,
+     0.4578
+    ],
+    "mms_mix": [
+     57.4,
+     58.54,
+     0.4872
+    ],
+    "w2v_stem": [
+     57.36,
+     58.54,
+     0.5071
+    ],
+    "w2v_mix": [
+     57.36,
+     58.5,
+     0.4197
+    ],
+    "whisper_stem": [
+     56.57,
+     57.59,
+     0.9604
+    ]
+   },
+   "start": 57.4,
+   "end": 58.6,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "normal",
+   "spreadMs": 40.0,
+   "sustainedMs": 60,
+   "startSample": 2531340,
+   "endSample": 2584260
+  },
+  "L05-W03": {
+   "id": "L05-W03",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     58.6,
+     58.74,
+     0.4906
+    ],
+    "mms_mix": [
+     58.6,
+     58.74,
+     0.3501
+    ],
+    "w2v_stem": [
+     58.62,
+     58.68,
+     0.0459
+    ],
+    "w2v_mix": [
+     58.62,
+     58.66,
+     0.0592
+    ],
+    "whisper_stem": [
+     57.59,
+     58.65,
+     0.5625
+    ]
+   },
+   "start": 58.6,
+   "end": 58.74,
+   "basis": "mms-stem~w2v",
+   "review": "normal",
+   "spreadMs": 20.0,
+   "startSample": 2584260,
+   "endSample": 2590434
+  },
+  "L05-W04": {
+   "id": "L05-W04",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     58.84,
+     59.36,
+     0.0258
+    ],
+    "mms_mix": [
+     58.84,
+     59.02,
+     0.0443
+    ],
+    "w2v_stem": [
+     58.74,
+     59.14,
+     0.0156
+    ],
+    "w2v_mix": [
+     58.74,
+     58.86,
+     0.0342
+    ],
+    "whisper_stem": [
+     58.65,
+     58.91,
+     0.9902
+    ]
+   },
+   "start": 58.74,
+   "end": 59.36,
+   "basis": "w2v-stem~whisper+sustained",
+   "review": "normal",
+   "spreadMs": 100.0,
+   "sustainedMs": 220,
+   "startSample": 2590434,
+   "endSample": 2617776
+  },
+  "L05-W05": {
+   "id": "L05-W05",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     59.36,
+     60.02,
+     0.0352
+    ],
+    "mms_mix": [
+     59.36,
+     60.04,
+     0.0286
+    ],
+    "w2v_stem": [
+     59.36,
+     60.18,
+     0.2198
+    ],
+    "w2v_mix": [
+     59.36,
+     60.18,
+     0.0525
+    ],
+    "whisper_stem": [
+     58.91,
+     59.41,
+     0.9385
+    ]
+   },
+   "start": 59.36,
+   "end": 60.52,
+   "basis": "mms-stem~w2v",
+   "review": "normal",
+   "spreadMs": 0.0,
+   "releaseExtendedMs": 500,
+   "startSample": 2617776,
+   "endSample": 2668932
+  },
+  "L06-W01": {
+   "id": "L06-W01",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     60.64,
+     60.9,
+     0.188
+    ],
+    "mms_mix": [
+     60.64,
+     60.92,
+     0.0368
+    ],
+    "w2v_stem": [
+     60.62,
+     60.9,
+     0.9892
+    ],
+    "w2v_mix": [
+     60.62,
+     60.92,
+     0.6752
+    ],
+    "whisper_stem": [
+     60.19,
+     60.69,
+     0.124
+    ]
+   },
+   "start": 60.64,
+   "end": 60.98,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "normal",
+   "spreadMs": 20.0,
+   "sustainedMs": 80,
+   "startSample": 2674224,
+   "endSample": 2689218
+  },
+  "L06-W02": {
+   "id": "L06-W02",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     60.98,
+     61.14,
+     0.5973
+    ],
+    "mms_mix": [
+     60.96,
+     61.16,
+     0.5026
+    ],
+    "w2v_stem": [
+     61.0,
+     61.42,
+     0.8199
+    ],
+    "w2v_mix": [
+     61.0,
+     61.58,
+     0.6166
+    ],
+    "whisper_stem": [
+     60.69,
+     61.05,
+     0.9902
+    ]
+   },
+   "start": 60.98,
+   "end": 61.7,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "normal",
+   "spreadMs": 40.0,
+   "sustainedMs": 560,
+   "startSample": 2689218,
+   "endSample": 2720970
+  },
+  "L06-W03": {
+   "id": "L06-W03",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     61.7,
+     62.56,
+     0.1047
+    ],
+    "mms_mix": [
+     61.7,
+     62.6,
+     0.0887
+    ],
+    "w2v_stem": [
+     61.74,
+     62.54,
+     0.2011
+    ],
+    "w2v_mix": [
+     61.74,
+     62.56,
+     0.1329
+    ],
+    "whisper_stem": [
+     61.05,
+     62.49,
+     0.6423
+    ]
+   },
+   "start": 61.7,
+   "end": 62.58,
+   "basis": "mms-stem~w2v",
+   "review": "normal",
+   "spreadMs": 40.0,
+   "startSample": 2720970,
+   "endSample": 2759778
+  },
+  "L06-W04": {
+   "id": "L06-W04",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     62.58,
+     62.82,
+     0.0413
+    ],
+    "mms_mix": [
+     62.68,
+     62.82,
+     0.0107
+    ],
+    "w2v_stem": [
+     62.6,
+     62.76,
+     0.2458
+    ],
+    "w2v_mix": [
+     62.58,
+     62.82,
+     0.0889
+    ],
+    "whisper_stem": [
+     62.49,
+     62.73,
+     0.5982
+    ]
+   },
+   "start": 62.58,
+   "end": 62.88,
+   "basis": "mms-stem~w2v+whisper+sustained",
+   "review": "normal",
+   "spreadMs": 100.0,
+   "sustainedMs": 60,
+   "startSample": 2759778,
+   "endSample": 2773008
+  },
+  "L06-W05": {
+   "id": "L06-W05",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     62.88,
+     63.52,
+     0.3245
+    ],
+    "mms_mix": [
+     62.88,
+     63.48,
+     0.3391
+    ],
+    "w2v_stem": [
+     62.88,
+     63.48,
+     0.516
+    ],
+    "w2v_mix": [
+     62.88,
+     63.48,
+     0.4377
+    ],
+    "whisper_stem": [
+     62.73,
+     62.99,
+     0.9502
+    ]
+   },
+   "start": 62.88,
+   "end": 63.52,
+   "basis": "mms-stem~w2v",
+   "review": "normal",
+   "spreadMs": 0.0,
+   "startSample": 2773008,
+   "endSample": 2801232
+  },
+  "L06-W06": {
+   "id": "L06-W06",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     63.68,
+     63.82,
+     0.147
+    ],
+    "mms_mix": [
+     63.68,
+     63.82,
+     0.1879
+    ],
+    "w2v_stem": [
+     63.66,
+     64.3,
+     0.4772
+    ],
+    "w2v_mix": [
+     63.68,
+     63.98,
+     0.7677
+    ],
+    "whisper_stem": [
+     62.99,
+     63.63,
+     0.9453
+    ]
+   },
+   "start": 63.68,
+   "end": 64.52,
+   "basis": "mms-stem~w2v",
+   "review": "normal",
+   "spreadMs": 20.0,
+   "releaseExtendedMs": 700,
+   "startSample": 2808288,
+   "endSample": 2845332
+  },
+  "L07-W01": {
+   "id": "L07-W01",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     65.14,
+     65.16,
+     0.0007
+    ],
+    "mms_mix": [
+     65.14,
+     65.16,
+     0.0015
+    ],
+    "w2v_stem": [
+     65.2,
+     65.22,
+     0.9673
+    ],
+    "w2v_mix": [
+     65.2,
+     65.22,
+     0.0458
+    ],
+    "whisper_stem": [
+     64.69,
+     65.17,
+     0.0504
+    ]
+   },
+   "start": 65.14,
+   "end": 65.17,
+   "basis": "mms-stem~w2v",
+   "review": "priority",
+   "spreadMs": 60.0,
+   "startSample": 2872674,
+   "endSample": 2873997,
+   "short": true
+  },
+  "L07-W02": {
+   "id": "L07-W02",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     65.36,
+     66.14,
+     0.3193
+    ],
+    "mms_mix": [
+     65.36,
+     66.14,
+     0.3161
+    ],
+    "w2v_stem": [
+     65.36,
+     65.98,
+     0.944
+    ],
+    "w2v_mix": [
+     65.32,
+     66.12,
+     0.4295
+    ],
+    "whisper_stem": [
+     65.17,
+     65.53,
+     0.5649
+    ]
+   },
+   "start": 65.36,
+   "end": 66.18,
+   "basis": "mms-stem~w2v",
+   "review": "normal",
+   "spreadMs": 40.0,
+   "startSample": 2882376,
+   "endSample": 2918538
+  },
+  "L07-W03": {
+   "id": "L07-W03",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     66.18,
+     67.04,
+     0.3157
+    ],
+    "mms_mix": [
+     66.18,
+     67.04,
+     0.3038
+    ],
+    "w2v_stem": [
+     66.22,
+     67.06,
+     0.9648
+    ],
+    "w2v_mix": [
+     66.18,
+     67.06,
+     0.1868
+    ],
+    "whisper_stem": [
+     65.53,
+     66.61,
+     0.1772
+    ]
+   },
+   "start": 66.18,
+   "end": 67.2,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "normal",
+   "spreadMs": 40.0,
+   "sustainedMs": 160,
+   "startSample": 2918538,
+   "endSample": 2963520
+  },
+  "L07-W04": {
+   "id": "L07-W04",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     67.2,
+     67.54,
+     0.2355
+    ],
+    "mms_mix": [
+     67.18,
+     67.36,
+     0.1707
+    ],
+    "w2v_stem": [
+     67.18,
+     67.44,
+     0.9927
+    ],
+    "w2v_mix": [
+     67.16,
+     67.44,
+     0.7806
+    ],
+    "whisper_stem": [
+     66.61,
+     67.31,
+     0.9766
+    ]
+   },
+   "start": 67.2,
+   "end": 67.54,
+   "basis": "mms-stem~w2v",
+   "review": "normal",
+   "spreadMs": 40.0,
+   "startSample": 2963520,
+   "endSample": 2978514
+  },
+  "L07-W05": {
+   "id": "L07-W05",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     67.54,
+     67.7,
+     0.0113
+    ],
+    "mms_mix": [
+     67.54,
+     67.7,
+     0.0183
+    ],
+    "w2v_stem": [
+     67.56,
+     67.88,
+     0.8268
+    ],
+    "w2v_mix": [
+     67.54,
+     67.8,
+     0.5978
+    ],
+    "whisper_stem": [
+     67.31,
+     67.59,
+     0.4089
+    ]
+   },
+   "start": 67.54,
+   "end": 68.08,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "normal",
+   "spreadMs": 20.0,
+   "sustainedMs": 380,
+   "startSample": 2978514,
+   "endSample": 3002328
+  },
+  "L07-W06": {
+   "id": "L07-W06",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     68.08,
+     68.7,
+     0.3962
+    ],
+    "mms_mix": [
+     68.08,
+     68.56,
+     0.3577
+    ],
+    "w2v_stem": [
+     68.1,
+     68.66,
+     0.9011
+    ],
+    "w2v_mix": [
+     68.12,
+     68.36,
+     0.0811
+    ],
+    "whisper_stem": [
+     67.59,
+     68.17,
+     0.9678
+    ]
+   },
+   "start": 68.08,
+   "end": 68.82,
+   "basis": "mms-stem~w2v",
+   "review": "normal",
+   "spreadMs": 40.0,
+   "releaseExtendedMs": 120,
+   "startSample": 3002328,
+   "endSample": 3034962
+  },
+  "L08-W01": {
+   "id": "L08-W01",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     69.42,
+     69.74,
+     0.1918
+    ],
+    "mms_mix": [
+     69.42,
+     69.68,
+     0.1847
+    ],
+    "w2v_stem": [
+     69.42,
+     69.66,
+     0.9403
+    ],
+    "w2v_mix": [
+     69.22,
+     69.66,
+     0.0728
+    ],
+    "whisper_stem": [
+     68.97,
+     69.57,
+     0.0477
+    ]
+   },
+   "start": 69.42,
+   "end": 69.68,
+   "basis": "mms-stem~w2v",
+   "review": "priority",
+   "spreadMs": 200.0,
+   "startSample": 3061422,
+   "endSample": 3072888
+  },
+  "L08-W02": {
+   "id": "L08-W02",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     69.74,
+     70.02,
+     0.0736
+    ],
+    "mms_mix": [
+     69.68,
+     70.04,
+     0.0728
+    ],
+    "w2v_stem": [
+     69.74,
+     70.1,
+     0.5369
+    ],
+    "w2v_mix": [
+     69.74,
+     70.1,
+     0.0782
+    ],
+    "whisper_stem": [
+     69.57,
+     69.85,
+     0.9062
+    ]
+   },
+   "start": 69.68,
+   "end": 70.04,
+   "basis": "mms-mix~w2v+whisper",
+   "review": "normal",
+   "spreadMs": 60.0,
+   "startSample": 3072888,
+   "endSample": 3088764
+  },
+  "L08-W03": {
+   "id": "L08-W03",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     70.22,
+     71.02,
+     0.3005
+    ],
+    "mms_mix": [
+     70.22,
+     71.0,
+     0.2576
+    ],
+    "w2v_stem": [
+     70.2,
+     70.94,
+     0.381
+    ],
+    "w2v_mix": [
+     70.22,
+     70.4,
+     0.3076
+    ],
+    "whisper_stem": [
+     69.85,
+     70.37,
+     0.9951
+    ]
+   },
+   "start": 70.22,
+   "end": 71.06,
+   "basis": "mms-stem~w2v",
+   "review": "normal",
+   "spreadMs": 20.0,
+   "startSample": 3096702,
+   "endSample": 3133746
+  },
+  "L08-W04": {
+   "id": "L08-W04",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     71.06,
+     71.56,
+     0.1336
+    ],
+    "mms_mix": [
+     71.08,
+     71.56,
+     0.2368
+    ],
+    "w2v_stem": [
+     71.1,
+     71.48,
+     0.4949
+    ],
+    "w2v_mix": [
+     70.52,
+     70.86,
+     0.1524
+    ],
+    "whisper_stem": [
+     70.37,
+     71.23,
+     0.002
+    ]
+   },
+   "start": 71.06,
+   "end": 71.56,
+   "basis": "mms-stem~w2v",
+   "review": "priority",
+   "spreadMs": 580.0,
+   "startSample": 3133746,
+   "endSample": 3155796
+  },
+  "L08-W05": {
+   "id": "L08-W05",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     71.56,
+     72.04,
+     0.4138
+    ],
+    "mms_mix": [
+     71.56,
+     72.02,
+     0.3667
+    ],
+    "w2v_stem": [
+     71.54,
+     72.16,
+     0.9779
+    ],
+    "w2v_mix": [
+     71.1,
+     72.16,
+     0.1693
+    ],
+    "whisper_stem": [
+     71.23,
+     71.71,
+     0.9614
+    ]
+   },
+   "start": 71.56,
+   "end": 72.4,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "priority",
+   "spreadMs": 460.0,
+   "sustainedMs": 360,
+   "startSample": 3155796,
+   "endSample": 3192840
+  },
+  "L08-W06": {
+   "id": "L08-W06",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     72.4,
+     72.92,
+     0.401
+    ],
+    "mms_mix": [
+     72.38,
+     72.84,
+     0.3248
+    ],
+    "w2v_stem": [
+     72.34,
+     73.1,
+     0.3918
+    ],
+    "w2v_mix": [
+     72.34,
+     72.98,
+     0.3443
+    ],
+    "whisper_stem": [
+     71.71,
+     72.39,
+     0.9531
+    ]
+   },
+   "start": 72.4,
+   "end": 73.38,
+   "basis": "mms-stem~w2v",
+   "review": "normal",
+   "spreadMs": 60.0,
+   "releaseExtendedMs": 460,
+   "startSample": 3192840,
+   "endSample": 3236058
+  },
+  "L09-W01": {
+   "id": "L09-W01",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     74.6,
+     75.34,
+     0.5046
+    ],
+    "mms_mix": [
+     74.6,
+     75.34,
+     0.2811
+    ],
+    "w2v_stem": [
+     74.6,
+     75.34,
+     0.7281
+    ],
+    "w2v_mix": [
+     74.58,
+     75.34,
+     0.5662
+    ],
+    "whisper_stem": [
+     74.15,
+     75.07,
+     0.2097
+    ]
+   },
+   "start": 74.6,
+   "end": 75.42,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "normal",
+   "spreadMs": 20.0,
+   "sustainedMs": 80,
+   "startSample": 3289860,
+   "endSample": 3326022
+  },
+  "L09-W02": {
+   "id": "L09-W02",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     75.42,
+     75.56,
+     0.9074
+    ],
+    "mms_mix": [
+     75.4,
+     75.56,
+     0.4741
+    ],
+    "w2v_stem": [
+     75.4,
+     75.84,
+     0.3818
+    ],
+    "w2v_mix": [
+     75.4,
+     75.66,
+     0.5752
+    ],
+    "whisper_stem": [
+     75.07,
+     75.43,
+     0.9902
+    ]
+   },
+   "start": 75.42,
+   "end": 75.96,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "normal",
+   "spreadMs": 20.0,
+   "sustainedMs": 400,
+   "startSample": 3326022,
+   "endSample": 3349836
+  },
+  "L09-W03": {
+   "id": "L09-W03",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     75.96,
+     76.2,
+     0.2582
+    ],
+    "mms_mix": [
+     75.96,
+     76.2,
+     0.2868
+    ],
+    "w2v_stem": [
+     75.98,
+     76.24,
+     0.3324
+    ],
+    "w2v_mix": [
+     75.78,
+     75.98,
+     0.1253
+    ],
+    "whisper_stem": [
+     75.43,
+     76.07,
+     0.9678
+    ]
+   },
+   "start": 75.96,
+   "end": 76.24,
+   "basis": "mms-stem~w2v",
+   "review": "priority",
+   "spreadMs": 200.0,
+   "startSample": 3349836,
+   "endSample": 3362184
+  },
+  "L09-W04": {
+   "id": "L09-W04",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     76.26,
+     76.38,
+     0.6554
+    ],
+    "mms_mix": [
+     76.24,
+     76.4,
+     0.0742
+    ],
+    "w2v_stem": [
+     76.3,
+     76.5,
+     0.27
+    ],
+    "w2v_mix": [
+     76.0,
+     76.12,
+     0.2479
+    ],
+    "whisper_stem": [
+     76.07,
+     76.35,
+     0.9561
+    ]
+   },
+   "start": 76.24,
+   "end": 76.56,
+   "basis": "mms-mix~w2v+whisper+sustained",
+   "review": "priority",
+   "spreadMs": 300.0,
+   "sustainedMs": 160,
+   "startSample": 3362184,
+   "endSample": 3376296
+  },
+  "L09-W05": {
+   "id": "L09-W05",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     76.56,
+     78.7,
+     0.3434
+    ],
+    "mms_mix": [
+     76.6,
+     78.8,
+     0.1104
+    ],
+    "w2v_stem": [
+     76.6,
+     78.64,
+     0.4457
+    ],
+    "w2v_mix": [
+     76.76,
+     78.64,
+     0.2257
+    ],
+    "whisper_stem": [
+     76.35,
+     76.67,
+     0.0232
+    ]
+   },
+   "start": 76.56,
+   "end": 78.7,
+   "basis": "mms-stem~w2v",
+   "review": "priority",
+   "spreadMs": 200.0,
+   "startSample": 3376296,
+   "endSample": 3470670
+  },
+  "L10-W01": {
+   "id": "L10-W01",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     78.66,
+     78.96,
+     0.0708
+    ],
+    "mms_mix": [
+     78.66,
+     78.94,
+     0.039
+    ],
+    "w2v_stem": [
+     78.74,
+     78.88,
+     0.9941
+    ],
+    "w2v_mix": [
+     78.7,
+     78.84,
+     0.4746
+    ],
+    "whisper_stem": [
+     78.65,
+     78.75,
+     0.1053
+    ]
+   },
+   "start": 78.66,
+   "end": 79.08,
+   "basis": "mms-stem~w2v+whisper+sustained",
+   "review": "normal",
+   "spreadMs": 80.0,
+   "sustainedMs": 120,
+   "startSample": 3468906,
+   "endSample": 3487428
+  },
+  "L10-W02": {
+   "id": "L10-W02",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     79.08,
+     79.8,
+     0.0677
+    ],
+    "mms_mix": [
+     79.04,
+     79.8,
+     0.0659
+    ],
+    "w2v_stem": [
+     79.46,
+     79.76,
+     0.8696
+    ],
+    "w2v_mix": [
+     79.14,
+     79.8,
+     0.4115
+    ],
+    "whisper_stem": [
+     78.75,
+     79.19,
+     0.9321
+    ]
+   },
+   "start": 79.08,
+   "end": 79.99,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "priority",
+   "spreadMs": 420.0,
+   "sustainedMs": 190,
+   "startSample": 3487428,
+   "endSample": 3527559
+  },
+  "L10-W03": {
+   "id": "L10-W03",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     79.88,
+     80.22,
+     0.157
+    ],
+    "mms_mix": [
+     79.88,
+     80.22,
+     0.1718
+    ],
+    "w2v_stem": [
+     80.1,
+     80.2,
+     0.9812
+    ],
+    "w2v_mix": [
+     80.1,
+     80.2,
+     0.0873
+    ],
+    "whisper_stem": [
+     79.19,
+     79.87,
+     0.9624
+    ]
+   },
+   "start": 79.99,
+   "end": 80.32,
+   "basis": "median-uncorroborated+sustained",
+   "review": "priority",
+   "spreadMs": 220.0,
+   "sustainedMs": 110,
+   "startSample": 3527559,
+   "endSample": 3542112
+  },
+  "L10-W04": {
+   "id": "L10-W04",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     80.32,
+     80.44,
+     0.6494
+    ],
+    "mms_mix": [
+     80.32,
+     80.44,
+     0.169
+    ],
+    "w2v_stem": [
+     80.32,
+     80.5,
+     0.8557
+    ],
+    "w2v_mix": [
+     80.34,
+     80.52,
+     0.2681
+    ],
+    "whisper_stem": [
+     79.87,
+     80.33,
+     0.937
+    ]
+   },
+   "start": 80.32,
+   "end": 80.62,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "normal",
+   "spreadMs": 20.0,
+   "sustainedMs": 180,
+   "startSample": 3542112,
+   "endSample": 3555342
+  },
+  "L10-W05": {
+   "id": "L10-W05",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     80.62,
+     81.34,
+     0.5319
+    ],
+    "mms_mix": [
+     80.62,
+     81.36,
+     0.4369
+    ],
+    "w2v_stem": [
+     80.64,
+     81.52,
+     0.9635
+    ],
+    "w2v_mix": [
+     80.68,
+     81.62,
+     0.3124
+    ],
+    "whisper_stem": [
+     80.33,
+     80.75,
+     0.6797
+    ]
+   },
+   "start": 80.62,
+   "end": 81.99,
+   "basis": "mms-stem~w2v",
+   "review": "normal",
+   "spreadMs": 60.0,
+   "releaseExtendedMs": 650,
+   "startSample": 3555342,
+   "endSample": 3615759
+  },
+  "L11-W01": {
+   "id": "L11-W01",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     83.32,
+     84.22,
+     0.4048
+    ],
+    "mms_mix": [
+     83.32,
+     84.22,
+     0.6222
+    ],
+    "w2v_stem": [
+     83.32,
+     84.14,
+     0.3148
+    ],
+    "w2v_mix": [
+     83.32,
+     83.68,
+     0.42
+    ],
+    "whisper_stem": [
+     82.87,
+     83.73,
+     0.0406
+    ]
+   },
+   "start": 83.32,
+   "end": 84.3,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "normal",
+   "spreadMs": 0.0,
+   "sustainedMs": 80,
+   "startSample": 3674412,
+   "endSample": 3717630
+  },
+  "L11-W02": {
+   "id": "L11-W02",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     84.3,
+     84.56,
+     0.8195
+    ],
+    "mms_mix": [
+     84.3,
+     84.54,
+     0.6645
+    ],
+    "w2v_stem": [
+     84.38,
+     84.58,
+     0.8699
+    ],
+    "w2v_mix": [
+     84.32,
+     84.58,
+     0.5939
+    ],
+    "whisper_stem": [
+     83.73,
+     84.39,
+     0.9438
+    ]
+   },
+   "start": 84.3,
+   "end": 84.68,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "normal",
+   "spreadMs": 80.0,
+   "sustainedMs": 120,
+   "startSample": 3717630,
+   "endSample": 3734388
+  },
+  "L11-W03": {
+   "id": "L11-W03",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     84.68,
+     84.82,
+     0.5224
+    ],
+    "mms_mix": [
+     84.68,
+     84.8,
+     0.0102
+    ],
+    "w2v_stem": [
+     84.66,
+     84.78,
+     0.4662
+    ],
+    "w2v_mix": [
+     84.68,
+     84.84,
+     0.4498
+    ],
+    "whisper_stem": [
+     84.39,
+     84.71,
+     0.981
+    ]
+   },
+   "start": 84.68,
+   "end": 84.82,
+   "basis": "mms-stem~w2v",
+   "review": "normal",
+   "spreadMs": 20.0,
+   "startSample": 3734388,
+   "endSample": 3740562
+  },
+  "L11-W04": {
+   "id": "L11-W04",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     84.96,
+     85.44,
+     0.0431
+    ],
+    "mms_mix": [
+     84.82,
+     85.5,
+     0.0852
+    ],
+    "w2v_stem": [
+     84.98,
+     85.46,
+     0.1157
+    ],
+    "w2v_mix": [
+     84.88,
+     85.48,
+     0.2218
+    ],
+    "whisper_stem": [
+     84.71,
+     85.05,
+     0.9487
+    ]
+   },
+   "start": 84.82,
+   "end": 85.56,
+   "basis": "mms-mix~w2v+whisper+sustained",
+   "review": "priority",
+   "spreadMs": 160.0,
+   "sustainedMs": 60,
+   "startSample": 3740562,
+   "endSample": 3773196
+  },
+  "L11-W05": {
+   "id": "L11-W05",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     85.56,
+     86.88,
+     0.5636
+    ],
+    "mms_mix": [
+     85.56,
+     86.86,
+     0.5214
+    ],
+    "w2v_stem": [
+     85.58,
+     86.8,
+     0.775
+    ],
+    "w2v_mix": [
+     85.62,
+     86.82,
+     0.3487
+    ],
+    "whisper_stem": [
+     85.05,
+     85.81,
+     0.0872
+    ]
+   },
+   "start": 85.56,
+   "end": 86.88,
+   "basis": "mms-stem~w2v",
+   "review": "normal",
+   "spreadMs": 60.0,
+   "startSample": 3773196,
+   "endSample": 3831408
+  },
+  "L12-W01": {
+   "id": "L12-W01",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     86.96,
+     87.12,
+     0.6378
+    ],
+    "mms_mix": [
+     86.96,
+     87.1,
+     0.3581
+    ],
+    "w2v_stem": [
+     86.98,
+     87.04,
+     0.9711
+    ],
+    "w2v_mix": [
+     86.98,
+     87.02,
+     0.0789
+    ],
+    "whisper_stem": [
+     86.83,
+     86.99,
+     0.2155
+    ]
+   },
+   "start": 86.96,
+   "end": 87.18,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "normal",
+   "spreadMs": 20.0,
+   "sustainedMs": 60,
+   "startSample": 3834936,
+   "endSample": 3844638
+  },
+  "L12-W02": {
+   "id": "L12-W02",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     87.18,
+     87.78,
+     0.2241
+    ],
+    "mms_mix": [
+     87.18,
+     87.76,
+     0.4752
+    ],
+    "w2v_stem": [
+     87.18,
+     87.66,
+     0.9926
+    ],
+    "w2v_mix": [
+     87.1,
+     87.42,
+     0.0938
+    ],
+    "whisper_stem": [
+     86.99,
+     87.33,
+     0.9888
+    ]
+   },
+   "start": 87.18,
+   "end": 87.9,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "normal",
+   "spreadMs": 80.0,
+   "sustainedMs": 120,
+   "startSample": 3844638,
+   "endSample": 3876390
+  },
+  "L12-W03": {
+   "id": "L12-W03",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     87.9,
+     88.5,
+     0.4577
+    ],
+    "mms_mix": [
+     87.9,
+     88.5,
+     0.1931
+    ],
+    "w2v_stem": [
+     87.92,
+     88.48,
+     0.9972
+    ],
+    "w2v_mix": [
+     87.9,
+     88.46,
+     0.3408
+    ],
+    "whisper_stem": [
+     87.33,
+     88.19,
+     0.9724
+    ]
+   },
+   "start": 87.9,
+   "end": 88.56,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "normal",
+   "spreadMs": 20.0,
+   "sustainedMs": 60,
+   "startSample": 3876390,
+   "endSample": 3905496
+  },
+  "L12-W04": {
+   "id": "L12-W04",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     88.56,
+     89.06,
+     0.4726
+    ],
+    "mms_mix": [
+     88.54,
+     89.04,
+     0.2901
+    ],
+    "w2v_stem": [
+     88.56,
+     89.0,
+     0.9871
+    ],
+    "w2v_mix": [
+     88.56,
+     89.02,
+     0.0806
+    ],
+    "whisper_stem": [
+     88.19,
+     88.65,
+     0.9819
+    ]
+   },
+   "start": 88.56,
+   "end": 89.12,
+   "basis": "mms-stem~w2v+whisper+sustained",
+   "review": "normal",
+   "spreadMs": 20.0,
+   "sustainedMs": 60,
+   "startSample": 3905496,
+   "endSample": 3930192
+  },
+  "L12-W05": {
+   "id": "L12-W05",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     89.12,
+     89.24,
+     0.8279
+    ],
+    "mms_mix": [
+     89.08,
+     89.24,
+     0.7635
+    ],
+    "w2v_stem": [
+     89.18,
+     89.24,
+     0.9979
+    ],
+    "w2v_mix": [
+     89.2,
+     89.26,
+     0.3702
+    ],
+    "whisper_stem": [
+     88.65,
+     89.13,
+     0.7466
+    ]
+   },
+   "start": 89.12,
+   "end": 89.34,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "priority",
+   "spreadMs": 120.0,
+   "sustainedMs": 100,
+   "startSample": 3930192,
+   "endSample": 3939894
+  },
+  "L12-W06": {
+   "id": "L12-W06",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     89.34,
+     89.48,
+     0.6261
+    ],
+    "mms_mix": [
+     89.32,
+     89.6,
+     0.2745
+    ],
+    "w2v_stem": [
+     89.32,
+     89.62,
+     0.9907
+    ],
+    "w2v_mix": [
+     89.32,
+     89.56,
+     0.5953
+    ],
+    "whisper_stem": [
+     89.13,
+     89.29,
+     0.978
+    ]
+   },
+   "start": 89.34,
+   "end": 89.9,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "normal",
+   "spreadMs": 20.0,
+   "sustainedMs": 420,
+   "startSample": 3939894,
+   "endSample": 3964590
+  },
+  "L12-W07": {
+   "id": "L12-W07",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     89.9,
+     90.0,
+     0.7278
+    ],
+    "mms_mix": [
+     89.9,
+     90.0,
+     0.5952
+    ],
+    "w2v_stem": [
+     89.9,
+     90.18,
+     0.9811
+    ],
+    "w2v_mix": [
+     89.9,
+     90.3,
+     0.4245
+    ],
+    "whisper_stem": [
+     89.29,
+     89.87,
+     0.9917
+    ]
+   },
+   "start": 89.9,
+   "end": 90.63,
+   "basis": "mms-stem~w2v",
+   "review": "normal",
+   "spreadMs": 0.0,
+   "releaseExtendedMs": 630,
+   "startSample": 3964590,
+   "endSample": 3996783
+  },
+  "L13-W01": {
+   "id": "L13-W01",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     91.1,
+     91.5,
+     0.3402
+    ],
+    "mms_mix": [
+     91.1,
+     91.48,
+     0.0573
+    ],
+    "w2v_stem": [
+     91.08,
+     91.46,
+     0.9662
+    ],
+    "w2v_mix": [
+     91.08,
+     91.5,
+     0.0454
+    ],
+    "whisper_stem": [
+     90.65,
+     91.21,
+     0.0003
+    ]
+   },
+   "start": 91.1,
+   "end": 91.54,
+   "basis": "mms-stem~w2v",
+   "review": "normal",
+   "spreadMs": 20.0,
+   "startSample": 4017510,
+   "endSample": 4036914
+  },
+  "L13-W02": {
+   "id": "L13-W02",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     91.54,
+     91.62,
+     0.4773
+    ],
+    "mms_mix": [
+     91.54,
+     91.62,
+     0.0964
+    ],
+    "w2v_stem": [
+     91.56,
+     91.7,
+     0.9998
+    ],
+    "w2v_mix": [
+     91.54,
+     91.72,
+     0.4803
+    ],
+    "whisper_stem": [
+     91.21,
+     91.57,
+     0.9922
+    ]
+   },
+   "start": 91.54,
+   "end": 91.8,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "normal",
+   "spreadMs": 20.0,
+   "sustainedMs": 180,
+   "startSample": 4036914,
+   "endSample": 4048380
+  },
+  "L13-W03": {
+   "id": "L13-W03",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     91.8,
+     91.92,
+     0.232
+    ],
+    "mms_mix": [
+     91.8,
+     91.92,
+     0.0419
+    ],
+    "w2v_stem": [
+     91.82,
+     91.96,
+     0.9979
+    ],
+    "w2v_mix": [
+     91.8,
+     91.98,
+     0.7108
+    ],
+    "whisper_stem": [
+     91.57,
+     91.81,
+     0.8271
+    ]
+   },
+   "start": 91.8,
+   "end": 92.06,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "normal",
+   "spreadMs": 20.0,
+   "sustainedMs": 140,
+   "startSample": 4048380,
+   "endSample": 4059846
+  },
+  "L13-W04": {
+   "id": "L13-W04",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     92.06,
+     92.66,
+     0.2306
+    ],
+    "mms_mix": [
+     92.08,
+     92.64,
+     0.062
+    ],
+    "w2v_stem": [
+     92.08,
+     92.66,
+     0.6004
+    ],
+    "w2v_mix": [
+     92.08,
+     92.84,
+     0.2045
+    ],
+    "whisper_stem": [
+     91.81,
+     92.45,
+     0.2961
+    ]
+   },
+   "start": 92.06,
+   "end": 92.68,
+   "basis": "mms-stem~w2v",
+   "review": "normal",
+   "spreadMs": 20.0,
+   "startSample": 4059846,
+   "endSample": 4087188
+  },
+  "L13-W05": {
+   "id": "L13-W05",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     92.68,
+     92.78,
+     0.2013
+    ],
+    "mms_mix": [
+     92.64,
+     92.82,
+     0.0078
+    ],
+    "w2v_stem": [
+     92.7,
+     92.82,
+     0.9767
+    ],
+    "w2v_mix": [
+     92.94,
+     93.32,
+     0.3552
+    ],
+    "whisper_stem": [
+     92.45,
+     92.75,
+     0.6479
+    ]
+   },
+   "start": 92.68,
+   "end": 92.94,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "priority",
+   "spreadMs": 300.0,
+   "sustainedMs": 160,
+   "startSample": 4087188,
+   "endSample": 4098654
+  },
+  "L13-W06": {
+   "id": "L13-W06",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     92.94,
+     93.72,
+     0.3512
+    ],
+    "mms_mix": [
+     92.94,
+     93.7,
+     0.0412
+    ],
+    "w2v_stem": [
+     92.96,
+     93.62,
+     0.9986
+    ],
+    "w2v_mix": [
+     93.96,
+     94.16,
+     0.0026
+    ],
+    "whisper_stem": [
+     92.75,
+     92.99,
+     0.9546
+    ]
+   },
+   "start": 92.94,
+   "end": 93.97,
+   "basis": "mms-stem~w2v",
+   "review": "priority",
+   "spreadMs": 1020.0,
+   "releaseExtendedMs": 250,
+   "startSample": 4098654,
+   "endSample": 4144077
+  },
+  "L14-W01": {
+   "id": "L14-W01",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     95.48,
+     95.84,
+     0.223
+    ],
+    "mms_mix": [
+     95.5,
+     95.84,
+     0.068
+    ],
+    "w2v_stem": [
+     95.48,
+     95.82,
+     0.9987
+    ],
+    "w2v_mix": [
+     95.54,
+     95.84,
+     0.0386
+    ],
+    "whisper_stem": [
+     95.03,
+     95.57,
+     0.004
+    ]
+   },
+   "start": 95.48,
+   "end": 95.88,
+   "basis": "mms-stem~w2v",
+   "review": "normal",
+   "spreadMs": 60.0,
+   "startSample": 4210668,
+   "endSample": 4228308
+  },
+  "L14-W02": {
+   "id": "L14-W02",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     95.88,
+     96.06,
+     0.7354
+    ],
+    "mms_mix": [
+     95.88,
+     96.08,
+     0.1193
+    ],
+    "w2v_stem": [
+     95.9,
+     96.04,
+     0.999
+    ],
+    "w2v_mix": [
+     95.88,
+     96.1,
+     0.5375
+    ],
+    "whisper_stem": [
+     95.57,
+     95.89,
+     0.9912
+    ]
+   },
+   "start": 95.88,
+   "end": 96.16,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "normal",
+   "spreadMs": 20.0,
+   "sustainedMs": 100,
+   "startSample": 4228308,
+   "endSample": 4240656
+  },
+  "L14-W03": {
+   "id": "L14-W03",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     96.16,
+     96.28,
+     0.4746
+    ],
+    "mms_mix": [
+     96.16,
+     96.3,
+     0.2765
+    ],
+    "w2v_stem": [
+     96.18,
+     96.3,
+     0.9889
+    ],
+    "w2v_mix": [
+     96.16,
+     96.3,
+     0.2879
+    ],
+    "whisper_stem": [
+     95.89,
+     96.19,
+     0.9546
+    ]
+   },
+   "start": 96.16,
+   "end": 96.42,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "normal",
+   "spreadMs": 20.0,
+   "sustainedMs": 140,
+   "startSample": 4240656,
+   "endSample": 4252122
+  },
+  "L14-W04": {
+   "id": "L14-W04",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     96.42,
+     96.98,
+     0.5139
+    ],
+    "mms_mix": [
+     96.4,
+     97.04,
+     0.2991
+    ],
+    "w2v_stem": [
+     96.44,
+     96.98,
+     0.9082
+    ],
+    "w2v_mix": [
+     96.44,
+     96.94,
+     0.5006
+    ],
+    "whisper_stem": [
+     96.19,
+     96.67,
+     0.1617
+    ]
+   },
+   "start": 96.42,
+   "end": 97.02,
+   "basis": "mms-stem~w2v",
+   "review": "normal",
+   "spreadMs": 40.0,
+   "startSample": 4252122,
+   "endSample": 4278582
+  },
+  "L14-W05": {
+   "id": "L14-W05",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     97.02,
+     97.16,
+     0.5908
+    ],
+    "mms_mix": [
+     97.04,
+     97.12,
+     0.0331
+    ],
+    "w2v_stem": [
+     97.04,
+     97.16,
+     0.9942
+    ],
+    "w2v_mix": [
+     97.02,
+     97.18,
+     0.0267
+    ],
+    "whisper_stem": [
+     96.67,
+     97.07,
+     0.9912
+    ]
+   },
+   "start": 97.02,
+   "end": 97.28,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "normal",
+   "spreadMs": 20.0,
+   "sustainedMs": 120,
+   "startSample": 4278582,
+   "endSample": 4290048
+  },
+  "L14-W06": {
+   "id": "L14-W06",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     97.28,
+     98.34,
+     0.8921
+    ],
+    "mms_mix": [
+     97.28,
+     98.36,
+     0.2929
+    ],
+    "w2v_stem": [
+     97.3,
+     98.26,
+     0.9158
+    ],
+    "w2v_mix": [
+     97.3,
+     98.1,
+     0.4323
+    ],
+    "whisper_stem": [
+     97.07,
+     97.47,
+     0.7358
+    ]
+   },
+   "start": 97.28,
+   "end": 98.44,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "normal",
+   "spreadMs": 20.0,
+   "sustainedMs": 100,
+   "startSample": 4290048,
+   "endSample": 4341204
+  },
+  "L14-W07": {
+   "id": "L14-W07",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     98.44,
+     99.2,
+     0.8606
+    ],
+    "mms_mix": [
+     98.42,
+     99.18,
+     0.3547
+    ],
+    "w2v_stem": [
+     98.48,
+     99.18,
+     0.9735
+    ],
+    "w2v_mix": [
+     98.5,
+     99.18,
+     0.7853
+    ],
+    "whisper_stem": [
+     97.47,
+     98.39,
+     0.8979
+    ]
+   },
+   "start": 98.44,
+   "end": 99.45,
+   "basis": "mms-stem~w2v",
+   "review": "normal",
+   "spreadMs": 80.0,
+   "releaseExtendedMs": 250,
+   "startSample": 4341204,
+   "endSample": 4385745
+  },
+  "L15-W01": {
+   "id": "L15-W01",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     99.88,
+     99.9,
+     0.1438
+    ],
+    "mms_mix": [
+     99.88,
+     99.9,
+     0.0291
+    ],
+    "w2v_stem": [
+     99.9,
+     99.92,
+     0.1207
+    ],
+    "w2v_mix": [
+     99.9,
+     99.92,
+     0.0181
+    ],
+    "whisper_stem": [
+     99.43,
+     99.85,
+     0.0446
+    ]
+   },
+   "start": 99.88,
+   "end": 99.96,
+   "basis": "mms-stem~w2v",
+   "review": "normal",
+   "spreadMs": 20.0,
+   "startSample": 4404708,
+   "endSample": 4408236
+  },
+  "L15-W02": {
+   "id": "L15-W02",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     99.96,
+     100.22,
+     0.3773
+    ],
+    "mms_mix": [
+     99.96,
+     100.22,
+     0.3459
+    ],
+    "w2v_stem": [
+     99.98,
+     100.2,
+     0.4186
+    ],
+    "w2v_mix": [
+     100.0,
+     100.16,
+     0.3654
+    ],
+    "whisper_stem": [
+     99.85,
+     100.05,
+     0.9624
+    ]
+   },
+   "start": 99.96,
+   "end": 100.3,
+   "basis": "mms-stem~w2v+whisper+sustained",
+   "review": "normal",
+   "spreadMs": 40.0,
+   "sustainedMs": 80,
+   "startSample": 4408236,
+   "endSample": 4423230
+  },
+  "L15-W03": {
+   "id": "L15-W03",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     100.3,
+     100.48,
+     0.0255
+    ],
+    "mms_mix": [
+     100.3,
+     100.46,
+     0.005
+    ],
+    "w2v_stem": [
+     100.36,
+     100.46,
+     0.1488
+    ],
+    "w2v_mix": [
+     100.38,
+     100.48,
+     0.243
+    ],
+    "whisper_stem": [
+     100.05,
+     100.43,
+     0.7007
+    ]
+   },
+   "start": 100.3,
+   "end": 100.52,
+   "basis": "mms-stem~w2v",
+   "review": "normal",
+   "spreadMs": 80.0,
+   "startSample": 4423230,
+   "endSample": 4432932
+  },
+  "L15-W04": {
+   "id": "L15-W04",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     100.52,
+     100.62,
+     0.1101
+    ],
+    "mms_mix": [
+     100.5,
+     100.74,
+     0.1759
+    ],
+    "w2v_stem": [
+     100.5,
+     100.64,
+     0.1202
+    ],
+    "w2v_mix": [
+     100.54,
+     100.64,
+     0.0257
+    ],
+    "whisper_stem": [
+     100.43,
+     100.57,
+     0.9736
+    ]
+   },
+   "start": 100.52,
+   "end": 100.7,
+   "basis": "mms-stem~w2v+whisper+sustained",
+   "review": "normal",
+   "spreadMs": 40.0,
+   "sustainedMs": 80,
+   "startSample": 4432932,
+   "endSample": 4440870
+  },
+  "L15-W05": {
+   "id": "L15-W05",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     100.7,
+     101.36,
+     0.9253
+    ],
+    "mms_mix": [
+     100.74,
+     101.34,
+     0.3309
+    ],
+    "w2v_stem": [
+     100.7,
+     101.32,
+     0.8185
+    ],
+    "w2v_mix": [
+     100.7,
+     101.1,
+     0.4313
+    ],
+    "whisper_stem": [
+     100.57,
+     100.81,
+     0.9937
+    ]
+   },
+   "start": 100.7,
+   "end": 101.46,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "normal",
+   "spreadMs": 40.0,
+   "sustainedMs": 100,
+   "startSample": 4440870,
+   "endSample": 4474386
+  },
+  "L15-W06": {
+   "id": "L15-W06",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     101.46,
+     104.6,
+     0.3523
+    ],
+    "mms_mix": [
+     101.48,
+     104.64,
+     0.1778
+    ],
+    "w2v_stem": [
+     101.46,
+     104.64,
+     0.3357
+    ],
+    "w2v_mix": [
+     101.22,
+     102.58,
+     0.3947
+    ],
+    "whisper_stem": [
+     100.81,
+     101.51,
+     0.9868
+    ]
+   },
+   "start": 101.46,
+   "end": 104.6,
+   "basis": "mms-stem~w2v",
+   "review": "priority",
+   "spreadMs": 260.0,
+   "startSample": 4474386,
+   "endSample": 4612860
+  },
+  "L16-W01": {
+   "id": "L16-W01",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     104.62,
+     105.04,
+     0.582
+    ],
+    "mms_mix": [
+     104.62,
+     105.18,
+     0.2034
+    ],
+    "w2v_stem": [
+     104.62,
+     105.02,
+     0.8711
+    ],
+    "w2v_mix": [
+     104.56,
+     105.04,
+     0.1336
+    ],
+    "whisper_stem": [
+     104.55,
+     104.89,
+     0.5181
+    ]
+   },
+   "start": 104.62,
+   "end": 105.18,
+   "basis": "mms-stem~w2v+whisper+sustained",
+   "review": "normal",
+   "spreadMs": 60.0,
+   "sustainedMs": 140,
+   "startSample": 4613742,
+   "endSample": 4638438
+  },
+  "L16-W02": {
+   "id": "L16-W02",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     105.18,
+     106.0,
+     0.6969
+    ],
+    "mms_mix": [
+     105.18,
+     106.2,
+     0.0751
+    ],
+    "w2v_stem": [
+     105.2,
+     106.32,
+     0.3335
+    ],
+    "w2v_mix": [
+     105.2,
+     106.14,
+     0.4048
+    ],
+    "whisper_stem": [
+     104.89,
+     105.27,
+     0.9585
+    ]
+   },
+   "start": 105.18,
+   "end": 106.53,
+   "basis": "mms-stem~w2v",
+   "review": "normal",
+   "spreadMs": 20.0,
+   "releaseExtendedMs": 530,
+   "startSample": 4638438,
+   "endSample": 4697973
+  },
+  "L17-W01": {
+   "id": "L17-W01",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     126.16,
+     126.34,
+     0.8909
+    ],
+    "mms_mix": [
+     126.16,
+     126.32,
+     0.586
+    ],
+    "w2v_stem": [
+     126.16,
+     126.38,
+     0.6555
+    ],
+    "w2v_mix": [
+     126.16,
+     126.38,
+     0.2996
+    ],
+    "whisper_stem": [
+     125.71,
+     126.17,
+     0.1385
+    ]
+   },
+   "start": 126.16,
+   "end": 126.46,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "normal",
+   "spreadMs": 0.0,
+   "sustainedMs": 120,
+   "startSample": 5563656,
+   "endSample": 5576886
+  },
+  "L17-W02": {
+   "id": "L17-W02",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     126.46,
+     126.84,
+     0.8101
+    ],
+    "mms_mix": [
+     126.46,
+     126.9,
+     0.8391
+    ],
+    "w2v_stem": [
+     126.44,
+     126.98,
+     0.7137
+    ],
+    "w2v_mix": [
+     126.48,
+     126.88,
+     0.4875
+    ],
+    "whisper_stem": [
+     126.17,
+     126.55,
+     0.9629
+    ]
+   },
+   "start": 126.46,
+   "end": 127.2,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "normal",
+   "spreadMs": 40.0,
+   "sustainedMs": 360,
+   "startSample": 5576886,
+   "endSample": 5609520
+  },
+  "L17-W03": {
+   "id": "L17-W03",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     127.2,
+     128.2,
+     0.4333
+    ],
+    "mms_mix": [
+     127.2,
+     128.18,
+     0.3269
+    ],
+    "w2v_stem": [
+     127.2,
+     128.22,
+     0.4155
+    ],
+    "w2v_mix": [
+     127.18,
+     128.18,
+     0.3665
+    ],
+    "whisper_stem": [
+     126.55,
+     127.53,
+     0.0877
+    ]
+   },
+   "start": 127.2,
+   "end": 128.3,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "normal",
+   "spreadMs": 20.0,
+   "sustainedMs": 100,
+   "startSample": 5609520,
+   "endSample": 5658030
+  },
+  "L17-W04": {
+   "id": "L17-W04",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     128.3,
+     128.56,
+     0.6229
+    ],
+    "mms_mix": [
+     128.3,
+     128.56,
+     0.4961
+    ],
+    "w2v_stem": [
+     128.3,
+     128.52,
+     0.8501
+    ],
+    "w2v_mix": [
+     128.32,
+     128.58,
+     0.1175
+    ],
+    "whisper_stem": [
+     127.53,
+     128.35,
+     0.2202
+    ]
+   },
+   "start": 128.3,
+   "end": 128.62,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "normal",
+   "spreadMs": 20.0,
+   "sustainedMs": 60,
+   "startSample": 5658030,
+   "endSample": 5672142
+  },
+  "L17-W05": {
+   "id": "L17-W05",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     128.62,
+     128.74,
+     0.1413
+    ],
+    "mms_mix": [
+     128.62,
+     128.74,
+     0.1274
+    ],
+    "w2v_stem": [
+     128.64,
+     128.86,
+     0.7358
+    ],
+    "w2v_mix": [
+     128.62,
+     128.88,
+     0.6286
+    ],
+    "whisper_stem": [
+     128.35,
+     128.63,
+     0.8203
+    ]
+   },
+   "start": 128.62,
+   "end": 129.08,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "normal",
+   "spreadMs": 20.0,
+   "sustainedMs": 340,
+   "startSample": 5672142,
+   "endSample": 5692428
+  },
+  "L17-W06": {
+   "id": "L17-W06",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     129.08,
+     130.08,
+     0.7403
+    ],
+    "mms_mix": [
+     129.08,
+     130.08,
+     0.3063
+    ],
+    "w2v_stem": [
+     129.08,
+     130.02,
+     0.9547
+    ],
+    "w2v_mix": [
+     129.06,
+     130.02,
+     0.6634
+    ],
+    "whisper_stem": [
+     128.63,
+     129.13,
+     0.9697
+    ]
+   },
+   "start": 129.08,
+   "end": 130.13,
+   "basis": "mms-stem~w2v",
+   "review": "normal",
+   "spreadMs": 20.0,
+   "releaseExtendedMs": 50,
+   "startSample": 5692428,
+   "endSample": 5738733
+  },
+  "L18-W01": {
+   "id": "L18-W01",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     130.46,
+     130.8,
+     0.883
+    ],
+    "mms_mix": [
+     130.48,
+     130.8,
+     0.6602
+    ],
+    "w2v_stem": [
+     130.46,
+     130.78,
+     0.9527
+    ],
+    "w2v_mix": [
+     130.48,
+     130.78,
+     0.7402
+    ],
+    "whisper_stem": [
+     130.03,
+     130.59,
+     0.0581
+    ]
+   },
+   "start": 130.46,
+   "end": 130.84,
+   "basis": "mms-stem~w2v",
+   "review": "normal",
+   "spreadMs": 20.0,
+   "startSample": 5753286,
+   "endSample": 5770044
+  },
+  "L18-W02": {
+   "id": "L18-W02",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     130.84,
+     131.5,
+     0.182
+    ],
+    "mms_mix": [
+     130.84,
+     131.48,
+     0.3259
+    ],
+    "w2v_stem": [
+     130.84,
+     131.46,
+     0.6708
+    ],
+    "w2v_mix": [
+     130.84,
+     131.48,
+     0.7165
+    ],
+    "whisper_stem": [
+     130.59,
+     130.93,
+     0.7559
+    ]
+   },
+   "start": 130.84,
+   "end": 131.6,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "normal",
+   "spreadMs": 0.0,
+   "sustainedMs": 100,
+   "startSample": 5770044,
+   "endSample": 5803560
+  },
+  "L18-W03": {
+   "id": "L18-W03",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     131.6,
+     132.24,
+     0.4999
+    ],
+    "mms_mix": [
+     131.62,
+     132.24,
+     0.6718
+    ],
+    "w2v_stem": [
+     131.62,
+     132.22,
+     0.8711
+    ],
+    "w2v_mix": [
+     131.62,
+     132.26,
+     0.8479
+    ],
+    "whisper_stem": [
+     130.93,
+     131.71,
+     0.9883
+    ]
+   },
+   "start": 131.6,
+   "end": 132.42,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "normal",
+   "spreadMs": 20.0,
+   "sustainedMs": 180,
+   "startSample": 5803560,
+   "endSample": 5839722
+  },
+  "L18-W04": {
+   "id": "L18-W04",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     132.42,
+     132.6,
+     0.7428
+    ],
+    "mms_mix": [
+     132.44,
+     132.58,
+     0.3243
+    ],
+    "w2v_stem": [
+     132.42,
+     132.58,
+     0.3661
+    ],
+    "w2v_mix": [
+     132.46,
+     132.6,
+     0.1336
+    ],
+    "whisper_stem": [
+     131.71,
+     132.47,
+     0.7241
+    ]
+   },
+   "start": 132.42,
+   "end": 132.66,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "normal",
+   "spreadMs": 40.0,
+   "sustainedMs": 60,
+   "startSample": 5839722,
+   "endSample": 5850306
+  },
+  "L18-W05": {
+   "id": "L18-W05",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     132.66,
+     132.92,
+     0.8663
+    ],
+    "mms_mix": [
+     132.66,
+     132.92,
+     0.5861
+    ],
+    "w2v_stem": [
+     132.66,
+     132.92,
+     0.816
+    ],
+    "w2v_mix": [
+     132.72,
+     132.88,
+     0.1511
+    ],
+    "whisper_stem": [
+     132.47,
+     132.71,
+     0.9927
+    ]
+   },
+   "start": 132.66,
+   "end": 132.96,
+   "basis": "mms-stem~w2v",
+   "review": "normal",
+   "spreadMs": 60.0,
+   "startSample": 5850306,
+   "endSample": 5863536
+  },
+  "L18-W06": {
+   "id": "L18-W06",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     132.96,
+     133.32,
+     0.511
+    ],
+    "mms_mix": [
+     132.96,
+     133.32,
+     0.831
+    ],
+    "w2v_stem": [
+     132.98,
+     133.28,
+     0.8633
+    ],
+    "w2v_mix": [
+     132.96,
+     133.22,
+     0.4872
+    ],
+    "whisper_stem": [
+     132.71,
+     132.99,
+     0.9985
+    ]
+   },
+   "start": 132.96,
+   "end": 133.54,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "normal",
+   "spreadMs": 20.0,
+   "sustainedMs": 220,
+   "startSample": 5863536,
+   "endSample": 5889114
+  },
+  "L18-W07": {
+   "id": "L18-W07",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     133.54,
+     134.42,
+     0.4615
+    ],
+    "mms_mix": [
+     133.54,
+     134.42,
+     0.4977
+    ],
+    "w2v_stem": [
+     133.52,
+     134.34,
+     0.2592
+    ],
+    "w2v_mix": [
+     133.52,
+     134.34,
+     0.3009
+    ],
+    "whisper_stem": [
+     132.99,
+     133.67,
+     0.999
+    ]
+   },
+   "start": 133.54,
+   "end": 134.49,
+   "basis": "mms-stem~w2v",
+   "review": "normal",
+   "spreadMs": 20.0,
+   "releaseExtendedMs": 80,
+   "startSample": 5889114,
+   "endSample": 5931009
+  },
+  "L19-W01": {
+   "id": "L19-W01",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     134.98,
+     135.0,
+     0.0248
+    ],
+    "mms_mix": [
+     135.0,
+     135.02,
+     0.0079
+    ],
+    "w2v_stem": [
+     135.1,
+     135.12,
+     0.0407
+    ],
+    "w2v_mix": [
+     135.08,
+     135.1,
+     0.0248
+    ],
+    "whisper_stem": [
+     134.53,
+     134.91,
+     0.029
+    ]
+   },
+   "start": 135.04,
+   "end": 135.24,
+   "basis": "median-uncorroborated+sustained",
+   "review": "priority",
+   "spreadMs": 120.0,
+   "sustainedMs": 170,
+   "startSample": 5955264,
+   "endSample": 5964084
+  },
+  "L19-W02": {
+   "id": "L19-W02",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     135.18,
+     135.7,
+     0.6163
+    ],
+    "mms_mix": [
+     135.2,
+     135.7,
+     0.5891
+    ],
+    "w2v_stem": [
+     135.28,
+     135.76,
+     0.5628
+    ],
+    "w2v_mix": [
+     135.28,
+     135.82,
+     0.3526
+    ],
+    "whisper_stem": [
+     134.91,
+     135.31,
+     0.9878
+    ]
+   },
+   "start": 135.24,
+   "end": 136.0,
+   "basis": "median-uncorroborated+sustained",
+   "review": "priority",
+   "spreadMs": 100.0,
+   "sustainedMs": 270,
+   "startSample": 5964084,
+   "endSample": 5997600
+  },
+  "L19-W03": {
+   "id": "L19-W03",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     136.0,
+     136.7,
+     0.9088
+    ],
+    "mms_mix": [
+     135.98,
+     136.68,
+     0.8338
+    ],
+    "w2v_stem": [
+     136.0,
+     136.62,
+     0.9682
+    ],
+    "w2v_mix": [
+     135.98,
+     136.56,
+     0.6428
+    ],
+    "whisper_stem": [
+     135.31,
+     136.09,
+     0.9756
+    ]
+   },
+   "start": 136.0,
+   "end": 136.76,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "normal",
+   "spreadMs": 20.0,
+   "sustainedMs": 60,
+   "startSample": 5997600,
+   "endSample": 6031116
+  },
+  "L19-W04": {
+   "id": "L19-W04",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     136.76,
+     136.88,
+     0.4564
+    ],
+    "mms_mix": [
+     136.74,
+     136.88,
+     0.4493
+    ],
+    "w2v_stem": [
+     136.76,
+     136.88,
+     0.4541
+    ],
+    "w2v_mix": [
+     136.76,
+     136.9,
+     0.4388
+    ],
+    "whisper_stem": [
+     136.09,
+     136.83,
+     0.0207
+    ]
+   },
+   "start": 136.76,
+   "end": 137.0,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "normal",
+   "spreadMs": 20.0,
+   "sustainedMs": 120,
+   "startSample": 6031116,
+   "endSample": 6041700
+  },
+  "L19-W05": {
+   "id": "L19-W05",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     137.0,
+     137.48,
+     0.9754
+    ],
+    "mms_mix": [
+     137.0,
+     137.48,
+     0.9798
+    ],
+    "w2v_stem": [
+     136.96,
+     137.6,
+     0.2619
+    ],
+    "w2v_mix": [
+     136.96,
+     137.68,
+     0.5453
+    ],
+    "whisper_stem": [
+     136.83,
+     137.31,
+     0.5918
+    ]
+   },
+   "start": 137.0,
+   "end": 137.88,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "normal",
+   "spreadMs": 40.0,
+   "sustainedMs": 400,
+   "startSample": 6041700,
+   "endSample": 6080508
+  },
+  "L19-W06": {
+   "id": "L19-W06",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     137.88,
+     138.74,
+     0.3289
+    ],
+    "mms_mix": [
+     137.88,
+     138.7,
+     0.3845
+    ],
+    "w2v_stem": [
+     137.8,
+     138.72,
+     0.2772
+    ],
+    "w2v_mix": [
+     137.88,
+     138.62,
+     0.3093
+    ],
+    "whisper_stem": [
+     137.31,
+     138.01,
+     0.8369
+    ]
+   },
+   "start": 137.88,
+   "end": 139.11,
+   "basis": "mms-stem~w2v",
+   "review": "normal",
+   "spreadMs": 80.0,
+   "releaseExtendedMs": 370,
+   "startSample": 6080508,
+   "endSample": 6134751
+  },
+  "L20-W01": {
+   "id": "L20-W01",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     139.22,
+     139.46,
+     0.353
+    ],
+    "mms_mix": [
+     139.22,
+     139.46,
+     0.379
+    ],
+    "w2v_stem": [
+     139.2,
+     139.5,
+     0.3799
+    ],
+    "w2v_mix": [
+     139.2,
+     139.5,
+     0.2471
+    ],
+    "whisper_stem": [
+     138.77,
+     139.35,
+     0.5608
+    ]
+   },
+   "start": 139.22,
+   "end": 139.52,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "normal",
+   "spreadMs": 20.0,
+   "sustainedMs": 60,
+   "startSample": 6139602,
+   "endSample": 6152832
+  },
+  "L20-W02": {
+   "id": "L20-W02",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     139.52,
+     139.88,
+     0.4342
+    ],
+    "mms_mix": [
+     139.52,
+     139.84,
+     0.4648
+    ],
+    "w2v_stem": [
+     139.58,
+     139.88,
+     0.3217
+    ],
+    "w2v_mix": [
+     139.52,
+     139.9,
+     0.3656
+    ],
+    "whisper_stem": [
+     139.35,
+     139.65,
+     0.9927
+    ]
+   },
+   "start": 139.52,
+   "end": 139.98,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "normal",
+   "spreadMs": 60.0,
+   "sustainedMs": 100,
+   "startSample": 6152832,
+   "endSample": 6173118
+  },
+  "L20-W03": {
+   "id": "L20-W03",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     139.98,
+     141.3,
+     0.6495
+    ],
+    "mms_mix": [
+     139.98,
+     141.3,
+     0.6596
+    ],
+    "w2v_stem": [
+     140.02,
+     141.26,
+     0.9097
+    ],
+    "w2v_mix": [
+     140.04,
+     141.26,
+     0.4137
+    ],
+    "whisper_stem": [
+     139.65,
+     140.23,
+     0.9966
+    ]
+   },
+   "start": 139.98,
+   "end": 141.4,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "normal",
+   "spreadMs": 60.0,
+   "sustainedMs": 100,
+   "startSample": 6173118,
+   "endSample": 6235740
+  },
+  "L20-W04": {
+   "id": "L20-W04",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     141.4,
+     141.56,
+     0.7451
+    ],
+    "mms_mix": [
+     141.4,
+     141.54,
+     0.8024
+    ],
+    "w2v_stem": [
+     141.4,
+     141.62,
+     0.999
+    ],
+    "w2v_mix": [
+     141.36,
+     141.64,
+     0.9439
+    ],
+    "whisper_stem": [
+     140.23,
+     141.43,
+     0.9927
+    ]
+   },
+   "start": 141.4,
+   "end": 141.74,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "normal",
+   "spreadMs": 40.0,
+   "sustainedMs": 180,
+   "startSample": 6235740,
+   "endSample": 6250734
+  },
+  "L20-W05": {
+   "id": "L20-W05",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     141.74,
+     143.14,
+     0.7074
+    ],
+    "mms_mix": [
+     141.74,
+     143.14,
+     0.6235
+    ],
+    "w2v_stem": [
+     141.78,
+     143.06,
+     0.9899
+    ],
+    "w2v_mix": [
+     141.76,
+     142.96,
+     0.6736
+    ],
+    "whisper_stem": [
+     141.43,
+     141.85,
+     0.999
+    ]
+   },
+   "start": 141.74,
+   "end": 143.33,
+   "basis": "mms-stem~w2v",
+   "review": "normal",
+   "spreadMs": 40.0,
+   "releaseExtendedMs": 200,
+   "startSample": 6250734,
+   "endSample": 6320853
+  },
+  "L21-W01": {
+   "id": "L21-W01",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     144.36,
+     145.12,
+     0.5699
+    ],
+    "mms_mix": [
+     144.36,
+     145.1,
+     0.4289
+    ],
+    "w2v_stem": [
+     144.36,
+     145.14,
+     0.6732
+    ],
+    "w2v_mix": [
+     144.36,
+     145.16,
+     0.4834
+    ],
+    "whisper_stem": [
+     143.91,
+     144.83,
+     0.0833
+    ]
+   },
+   "start": 144.36,
+   "end": 145.22,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "normal",
+   "spreadMs": 0.0,
+   "sustainedMs": 100,
+   "startSample": 6366276,
+   "endSample": 6404202
+  },
+  "L21-W02": {
+   "id": "L21-W02",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     145.22,
+     145.38,
+     0.9261
+    ],
+    "mms_mix": [
+     145.2,
+     145.36,
+     0.3947
+    ],
+    "w2v_stem": [
+     145.2,
+     145.54,
+     0.6687
+    ],
+    "w2v_mix": [
+     145.22,
+     145.44,
+     0.3279
+    ],
+    "whisper_stem": [
+     144.83,
+     145.15,
+     0.8301
+    ]
+   },
+   "start": 145.22,
+   "end": 145.84,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "normal",
+   "spreadMs": 20.0,
+   "sustainedMs": 460,
+   "startSample": 6404202,
+   "endSample": 6431544
+  },
+  "L21-W03": {
+   "id": "L21-W03",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     145.84,
+     146.02,
+     0.3593
+    ],
+    "mms_mix": [
+     145.8,
+     146.0,
+     0.2491
+    ],
+    "w2v_stem": [
+     145.84,
+     146.06,
+     0.4417
+    ],
+    "w2v_mix": [
+     145.58,
+     145.8,
+     0.0806
+    ],
+    "whisper_stem": [
+     145.15,
+     145.75,
+     0.9756
+    ]
+   },
+   "start": 145.84,
+   "end": 146.08,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "priority",
+   "spreadMs": 260.0,
+   "sustainedMs": 60,
+   "startSample": 6431544,
+   "endSample": 6442128
+  },
+  "L21-W04": {
+   "id": "L21-W04",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     146.08,
+     146.2,
+     0.9107
+    ],
+    "mms_mix": [
+     146.08,
+     146.2,
+     0.5468
+    ],
+    "w2v_stem": [
+     146.14,
+     146.22,
+     0.1527
+    ],
+    "w2v_mix": [
+     145.82,
+     145.98,
+     0.2721
+    ],
+    "whisper_stem": [
+     145.75,
+     146.11,
+     0.9912
+    ]
+   },
+   "start": 146.08,
+   "end": 146.32,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "priority",
+   "spreadMs": 320.0,
+   "sustainedMs": 120,
+   "startSample": 6442128,
+   "endSample": 6452712
+  },
+  "L21-W05": {
+   "id": "L21-W05",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     146.32,
+     146.42,
+     0.8429
+    ],
+    "mms_mix": [
+     146.32,
+     146.42,
+     0.5961
+    ],
+    "w2v_stem": [
+     146.34,
+     146.46,
+     0.9734
+    ],
+    "w2v_mix": [
+     146.06,
+     146.24,
+     0.162
+    ],
+    "whisper_stem": [
+     146.11,
+     146.35,
+     0.9927
+    ]
+   },
+   "start": 146.32,
+   "end": 146.56,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "priority",
+   "spreadMs": 280.0,
+   "sustainedMs": 140,
+   "startSample": 6452712,
+   "endSample": 6463296
+  },
+  "L21-W06": {
+   "id": "L21-W06",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     146.56,
+     147.1,
+     0.9425
+    ],
+    "mms_mix": [
+     146.56,
+     147.08,
+     0.3315
+    ],
+    "w2v_stem": [
+     146.54,
+     147.52,
+     0.6158
+    ],
+    "w2v_mix": [
+     146.58,
+     147.42,
+     0.3244
+    ],
+    "whisper_stem": [
+     146.35,
+     146.65,
+     0.9956
+    ]
+   },
+   "start": 146.56,
+   "end": 147.94,
+   "basis": "mms-stem~w2v",
+   "review": "normal",
+   "spreadMs": 40.0,
+   "releaseExtendedMs": 840,
+   "startSample": 6463296,
+   "endSample": 6524154
+  },
+  "L22-W01": {
+   "id": "L22-W01",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     148.5,
+     148.6,
+     0.8972
+    ],
+    "mms_mix": [
+     148.48,
+     148.6,
+     0.5253
+    ],
+    "w2v_stem": [
+     148.48,
+     148.6,
+     0.7163
+    ],
+    "w2v_mix": [
+     148.48,
+     148.6,
+     0.8417
+    ],
+    "whisper_stem": [
+     148.05,
+     148.49,
+     0.2129
+    ]
+   },
+   "start": 148.5,
+   "end": 148.76,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "normal",
+   "spreadMs": 20.0,
+   "sustainedMs": 160,
+   "startSample": 6548850,
+   "endSample": 6560316
+  },
+  "L22-W02": {
+   "id": "L22-W02",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     148.76,
+     149.62,
+     0.8126
+    ],
+    "mms_mix": [
+     148.76,
+     149.68,
+     0.2816
+    ],
+    "w2v_stem": [
+     148.78,
+     149.54,
+     0.9137
+    ],
+    "w2v_mix": [
+     148.78,
+     149.36,
+     0.2806
+    ],
+    "whisper_stem": [
+     148.49,
+     148.89,
+     0.9854
+    ]
+   },
+   "start": 148.76,
+   "end": 149.66,
+   "basis": "mms-stem~w2v",
+   "review": "normal",
+   "spreadMs": 20.0,
+   "startSample": 6560316,
+   "endSample": 6600006
+  },
+  "L22-W03": {
+   "id": "L22-W03",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     149.66,
+     149.86,
+     0.8533
+    ],
+    "mms_mix": [
+     149.68,
+     149.76,
+     0.2904
+    ],
+    "w2v_stem": [
+     149.64,
+     149.9,
+     0.09
+    ],
+    "w2v_mix": [
+     149.6,
+     149.86,
+     0.0797
+    ],
+    "whisper_stem": [
+     148.89,
+     149.77,
+     0.9468
+    ]
+   },
+   "start": 149.66,
+   "end": 150.12,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "normal",
+   "spreadMs": 80.0,
+   "sustainedMs": 260,
+   "startSample": 6600006,
+   "endSample": 6620292
+  },
+  "L22-W04": {
+   "id": "L22-W04",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     150.12,
+     150.36,
+     0.9431
+    ],
+    "mms_mix": [
+     150.12,
+     150.36,
+     0.3399
+    ],
+    "w2v_stem": [
+     150.1,
+     150.34,
+     0.2617
+    ],
+    "w2v_mix": [
+     150.1,
+     150.42,
+     0.3529
+    ],
+    "whisper_stem": [
+     149.77,
+     150.11,
+     0.978
+    ]
+   },
+   "start": 150.12,
+   "end": 150.46,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "normal",
+   "spreadMs": 20.0,
+   "sustainedMs": 100,
+   "startSample": 6620292,
+   "endSample": 6635286
+  },
+  "L22-W05": {
+   "id": "L22-W05",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     150.46,
+     150.72,
+     0.733
+    ],
+    "mms_mix": [
+     150.46,
+     150.72,
+     0.4637
+    ],
+    "w2v_stem": [
+     150.46,
+     150.72,
+     0.5449
+    ],
+    "w2v_mix": [
+     150.48,
+     150.74,
+     0.1999
+    ],
+    "whisper_stem": [
+     150.11,
+     150.49,
+     0.9731
+    ]
+   },
+   "start": 150.46,
+   "end": 150.9,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "normal",
+   "spreadMs": 20.0,
+   "sustainedMs": 180,
+   "startSample": 6635286,
+   "endSample": 6654690
+  },
+  "L22-W06": {
+   "id": "L22-W06",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     150.9,
+     150.92,
+     0.9772
+    ],
+    "mms_mix": [
+     150.8,
+     150.82,
+     0.022
+    ],
+    "w2v_stem": [
+     150.86,
+     150.88,
+     0.4726
+    ],
+    "w2v_mix": [
+     150.84,
+     150.86,
+     0.126
+    ],
+    "whisper_stem": [
+     150.49,
+     150.77,
+     0.1045
+    ]
+   },
+   "start": 150.9,
+   "end": 151.06,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "normal",
+   "spreadMs": 100.0,
+   "sustainedMs": 130,
+   "startSample": 6654690,
+   "endSample": 6661746
+  },
+  "L22-W07": {
+   "id": "L22-W07",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     151.06,
+     151.36,
+     0.7023
+    ],
+    "mms_mix": [
+     151.04,
+     151.34,
+     0.3496
+    ],
+    "w2v_stem": [
+     151.0,
+     151.52,
+     0.3377
+    ],
+    "w2v_mix": [
+     151.02,
+     151.24,
+     0.2849
+    ],
+    "whisper_stem": [
+     150.77,
+     151.11,
+     0.0299
+    ]
+   },
+   "start": 151.06,
+   "end": 151.6,
+   "basis": "mms-stem~w2v",
+   "review": "normal",
+   "spreadMs": 60.0,
+   "releaseExtendedMs": 240,
+   "startSample": 6661746,
+   "endSample": 6685560
+  },
+  "L23-W01": {
+   "id": "L23-W01",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     153.16,
+     154.04,
+     0.6739
+    ],
+    "mms_mix": [
+     153.14,
+     154.04,
+     0.175
+    ],
+    "w2v_stem": [
+     153.18,
+     154.0,
+     0.22
+    ],
+    "w2v_mix": [
+     153.1,
+     154.02,
+     0.3454
+    ],
+    "whisper_stem": [
+     152.71,
+     153.55,
+     0.047
+    ]
+   },
+   "start": 153.16,
+   "end": 154.12,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "normal",
+   "spreadMs": 80.0,
+   "sustainedMs": 80,
+   "startSample": 6754356,
+   "endSample": 6796692
+  },
+  "L23-W02": {
+   "id": "L23-W02",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     154.12,
+     154.32,
+     0.6127
+    ],
+    "mms_mix": [
+     154.12,
+     154.32,
+     0.5177
+    ],
+    "w2v_stem": [
+     154.18,
+     154.32,
+     0.8698
+    ],
+    "w2v_mix": [
+     154.18,
+     154.26,
+     0.5261
+    ],
+    "whisper_stem": [
+     153.55,
+     154.21,
+     0.8184
+    ]
+   },
+   "start": 154.12,
+   "end": 154.46,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "normal",
+   "spreadMs": 60.0,
+   "sustainedMs": 140,
+   "startSample": 6796692,
+   "endSample": 6811686
+  },
+  "L23-W03": {
+   "id": "L23-W03",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     154.46,
+     154.6,
+     0.942
+    ],
+    "mms_mix": [
+     154.46,
+     154.62,
+     0.5816
+    ],
+    "w2v_stem": [
+     154.46,
+     154.72,
+     0.3414
+    ],
+    "w2v_mix": [
+     154.32,
+     154.4,
+     0.1255
+    ],
+    "whisper_stem": [
+     154.21,
+     154.47,
+     0.9795
+    ]
+   },
+   "start": 154.46,
+   "end": 154.49,
+   "basis": "mms-stem~w2v",
+   "review": "priority",
+   "spreadMs": 140.0,
+   "startSample": 6811686,
+   "endSample": 6813009,
+   "short": true
+  },
+  "L23-W04": {
+   "id": "L23-W04",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     154.78,
+     155.18,
+     0.4554
+    ],
+    "mms_mix": [
+     154.76,
+     155.1,
+     0.1923
+    ],
+    "w2v_stem": [
+     154.96,
+     155.3,
+     0.1079
+    ],
+    "w2v_mix": [
+     154.48,
+     154.98,
+     0.0246
+    ],
+    "whisper_stem": [
+     154.47,
+     154.81,
+     0.96
+    ]
+   },
+   "start": 154.49,
+   "end": 155.4,
+   "basis": "w2v-mix~whisper+order-fix+sustained",
+   "review": "priority",
+   "spreadMs": 480.0,
+   "sustainedMs": 420,
+   "startSample": 6813009,
+   "endSample": 6853140
+  },
+  "L23-W05": {
+   "id": "L23-W05",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     155.4,
+     156.68,
+     0.5398
+    ],
+    "mms_mix": [
+     155.36,
+     156.7,
+     0.3676
+    ],
+    "w2v_stem": [
+     155.42,
+     156.62,
+     0.5926
+    ],
+    "w2v_mix": [
+     155.16,
+     156.64,
+     0.4351
+    ],
+    "whisper_stem": [
+     154.81,
+     155.87,
+     0.8979
+    ]
+   },
+   "start": 155.4,
+   "end": 156.68,
+   "basis": "mms-stem~w2v",
+   "review": "priority",
+   "spreadMs": 260.0,
+   "startSample": 6853140,
+   "endSample": 6909588
+  },
+  "L24-W01": {
+   "id": "L24-W01",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     156.78,
+     156.94,
+     0.9896
+    ],
+    "mms_mix": [
+     156.78,
+     156.94,
+     0.9217
+    ],
+    "w2v_stem": [
+     156.8,
+     156.88,
+     0.9866
+    ],
+    "w2v_mix": [
+     156.8,
+     156.86,
+     0.3533
+    ],
+    "whisper_stem": [
+     156.63,
+     156.79,
+     0.0881
+    ]
+   },
+   "start": 156.78,
+   "end": 157.02,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "normal",
+   "spreadMs": 20.0,
+   "sustainedMs": 80,
+   "startSample": 6913998,
+   "endSample": 6924582
+  },
+  "L24-W02": {
+   "id": "L24-W02",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     157.02,
+     157.6,
+     0.6368
+    ],
+    "mms_mix": [
+     157.06,
+     157.56,
+     0.3187
+    ],
+    "w2v_stem": [
+     157.04,
+     157.52,
+     0.9779
+    ],
+    "w2v_mix": [
+     156.94,
+     157.2,
+     0.0642
+    ],
+    "whisper_stem": [
+     156.79,
+     157.11,
+     0.9512
+    ]
+   },
+   "start": 157.02,
+   "end": 157.74,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "priority",
+   "spreadMs": 120.0,
+   "sustainedMs": 140,
+   "startSample": 6924582,
+   "endSample": 6956334
+  },
+  "L24-W03": {
+   "id": "L24-W03",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     157.74,
+     158.3,
+     0.6847
+    ],
+    "mms_mix": [
+     157.72,
+     158.32,
+     0.3023
+    ],
+    "w2v_stem": [
+     157.74,
+     158.28,
+     0.9934
+    ],
+    "w2v_mix": [
+     157.74,
+     158.28,
+     0.2816
+    ],
+    "whisper_stem": [
+     157.11,
+     158.19,
+     0.9309
+    ]
+   },
+   "start": 157.74,
+   "end": 158.36,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "normal",
+   "spreadMs": 20.0,
+   "sustainedMs": 60,
+   "startSample": 6956334,
+   "endSample": 6983676
+  },
+  "L24-W04": {
+   "id": "L24-W04",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     158.36,
+     158.84,
+     0.8462
+    ],
+    "mms_mix": [
+     158.36,
+     158.88,
+     0.2739
+    ],
+    "w2v_stem": [
+     158.38,
+     158.84,
+     0.9561
+    ],
+    "w2v_mix": [
+     158.36,
+     158.86,
+     0.2374
+    ],
+    "whisper_stem": [
+     158.19,
+     158.51,
+     0.9131
+    ]
+   },
+   "start": 158.36,
+   "end": 158.96,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "normal",
+   "spreadMs": 20.0,
+   "sustainedMs": 120,
+   "startSample": 6983676,
+   "endSample": 7010136
+  },
+  "L24-W05": {
+   "id": "L24-W05",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     158.96,
+     159.06,
+     0.4493
+    ],
+    "mms_mix": [
+     158.94,
+     159.08,
+     0.5166
+    ],
+    "w2v_stem": [
+     159.0,
+     159.06,
+     0.9951
+    ],
+    "w2v_mix": [
+     159.04,
+     159.08,
+     0.2317
+    ],
+    "whisper_stem": [
+     158.51,
+     158.97,
+     0.8081
+    ]
+   },
+   "start": 158.96,
+   "end": 159.16,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "normal",
+   "spreadMs": 100.0,
+   "sustainedMs": 100,
+   "startSample": 7010136,
+   "endSample": 7018956
+  },
+  "L24-W06": {
+   "id": "L24-W06",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     159.16,
+     159.3,
+     0.9396
+    ],
+    "mms_mix": [
+     159.14,
+     159.3,
+     0.5112
+    ],
+    "w2v_stem": [
+     159.14,
+     159.44,
+     0.9963
+    ],
+    "w2v_mix": [
+     159.14,
+     159.36,
+     0.4873
+    ],
+    "whisper_stem": [
+     158.97,
+     159.13,
+     0.979
+    ]
+   },
+   "start": 159.16,
+   "end": 159.72,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "normal",
+   "spreadMs": 20.0,
+   "sustainedMs": 420,
+   "startSample": 7018956,
+   "endSample": 7043652
+  },
+  "L24-W07": {
+   "id": "L24-W07",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     159.72,
+     159.86,
+     0.9517
+    ],
+    "mms_mix": [
+     159.72,
+     159.84,
+     0.4166
+    ],
+    "w2v_stem": [
+     159.74,
+     160.1,
+     0.9824
+    ],
+    "w2v_mix": [
+     159.74,
+     159.94,
+     0.4323
+    ],
+    "whisper_stem": [
+     159.13,
+     159.69,
+     0.9922
+    ]
+   },
+   "start": 159.72,
+   "end": 160.46,
+   "basis": "mms-stem~w2v",
+   "review": "normal",
+   "spreadMs": 20.0,
+   "releaseExtendedMs": 600,
+   "startSample": 7043652,
+   "endSample": 7076286
+  },
+  "L25-W01": {
+   "id": "L25-W01",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     160.92,
+     161.28,
+     0.5425
+    ],
+    "mms_mix": [
+     160.92,
+     161.26,
+     0.1729
+    ],
+    "w2v_stem": [
+     160.92,
+     161.26,
+     0.9964
+    ],
+    "w2v_mix": [
+     160.92,
+     161.32,
+     0.6215
+    ],
+    "whisper_stem": [
+     160.47,
+     161.01,
+     0.0045
+    ]
+   },
+   "start": 160.92,
+   "end": 161.34,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "normal",
+   "spreadMs": 0.0,
+   "sustainedMs": 60,
+   "startSample": 7096572,
+   "endSample": 7115094
+  },
+  "L25-W02": {
+   "id": "L25-W02",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     161.34,
+     161.42,
+     0.7076
+    ],
+    "mms_mix": [
+     161.32,
+     161.42,
+     0.2476
+    ],
+    "w2v_stem": [
+     161.34,
+     161.48,
+     0.9997
+    ],
+    "w2v_mix": [
+     161.44,
+     161.52,
+     0.2201
+    ],
+    "whisper_stem": [
+     161.01,
+     161.33,
+     0.9658
+    ]
+   },
+   "start": 161.34,
+   "end": 161.6,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "priority",
+   "spreadMs": 120.0,
+   "sustainedMs": 180,
+   "startSample": 7115094,
+   "endSample": 7126560
+  },
+  "L25-W03": {
+   "id": "L25-W03",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     161.6,
+     161.74,
+     0.3374
+    ],
+    "mms_mix": [
+     161.6,
+     161.8,
+     0.0487
+    ],
+    "w2v_stem": [
+     161.6,
+     161.76,
+     0.9978
+    ],
+    "w2v_mix": [
+     161.62,
+     161.76,
+     0.8498
+    ],
+    "whisper_stem": [
+     161.33,
+     161.61,
+     0.7729
+    ]
+   },
+   "start": 161.6,
+   "end": 161.9,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "normal",
+   "spreadMs": 20.0,
+   "sustainedMs": 160,
+   "startSample": 7126560,
+   "endSample": 7139790
+  },
+  "L25-W04": {
+   "id": "L25-W04",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     161.9,
+     162.42,
+     0.2965
+    ],
+    "mms_mix": [
+     161.88,
+     162.42,
+     0.0705
+    ],
+    "w2v_stem": [
+     161.92,
+     162.44,
+     0.9506
+    ],
+    "w2v_mix": [
+     161.9,
+     162.4,
+     0.2119
+    ],
+    "whisper_stem": [
+     161.61,
+     161.95,
+     0.937
+    ]
+   },
+   "start": 161.9,
+   "end": 162.5,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "normal",
+   "spreadMs": 40.0,
+   "sustainedMs": 80,
+   "startSample": 7139790,
+   "endSample": 7166250
+  },
+  "L25-W05": {
+   "id": "L25-W05",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     162.5,
+     162.6,
+     0.6691
+    ],
+    "mms_mix": [
+     162.5,
+     162.58,
+     0.0739
+    ],
+    "w2v_stem": [
+     162.5,
+     162.6,
+     0.9667
+    ],
+    "w2v_mix": [
+     162.46,
+     162.58,
+     0.3907
+    ],
+    "whisper_stem": [
+     161.95,
+     162.53,
+     0.9731
+    ]
+   },
+   "start": 162.5,
+   "end": 162.72,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "normal",
+   "spreadMs": 40.0,
+   "sustainedMs": 120,
+   "startSample": 7166250,
+   "endSample": 7175952
+  },
+  "L25-W06": {
+   "id": "L25-W06",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     162.72,
+     163.74,
+     0.7927
+    ],
+    "mms_mix": [
+     162.72,
+     163.48,
+     0.0142
+    ],
+    "w2v_stem": [
+     162.72,
+     163.54,
+     0.9987
+    ],
+    "w2v_mix": [
+     162.72,
+     163.36,
+     0.9522
+    ],
+    "whisper_stem": [
+     162.53,
+     162.83,
+     0.9961
+    ]
+   },
+   "start": 162.72,
+   "end": 163.83,
+   "basis": "mms-stem~w2v",
+   "review": "normal",
+   "spreadMs": 0.0,
+   "releaseExtendedMs": 90,
+   "startSample": 7175952,
+   "endSample": 7224903
+  },
+  "L26-W01": {
+   "id": "L26-W01",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     165.26,
+     165.6,
+     0.7174
+    ],
+    "mms_mix": [
+     165.26,
+     165.64,
+     0.0015
+    ],
+    "w2v_stem": [
+     165.26,
+     165.58,
+     0.997
+    ],
+    "w2v_mix": [
+     165.26,
+     165.58,
+     0.9104
+    ],
+    "whisper_stem": [
+     164.81,
+     165.35,
+     0.0548
+    ]
+   },
+   "start": 165.26,
+   "end": 165.66,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "normal",
+   "spreadMs": 0.0,
+   "sustainedMs": 60,
+   "startSample": 7287966,
+   "endSample": 7305606
+  },
+  "L26-W02": {
+   "id": "L26-W02",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     165.66,
+     165.76,
+     0.8908
+    ],
+    "mms_mix": [
+     165.64,
+     165.74,
+     0.0023
+    ],
+    "w2v_stem": [
+     165.68,
+     165.8,
+     0.9998
+    ],
+    "w2v_mix": [
+     165.68,
+     165.8,
+     0.9805
+    ],
+    "whisper_stem": [
+     165.35,
+     165.69,
+     0.9971
+    ]
+   },
+   "start": 165.66,
+   "end": 165.9,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "normal",
+   "spreadMs": 40.0,
+   "sustainedMs": 140,
+   "startSample": 7305606,
+   "endSample": 7316190
+  },
+  "L26-W03": {
+   "id": "L26-W03",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     165.9,
+     166.04,
+     0.3818
+    ],
+    "mms_mix": [
+     165.9,
+     166.04,
+     0.0008
+    ],
+    "w2v_stem": [
+     165.92,
+     166.06,
+     0.998
+    ],
+    "w2v_mix": [
+     165.92,
+     166.04,
+     0.9548
+    ],
+    "whisper_stem": [
+     165.69,
+     165.93,
+     0.9585
+    ]
+   },
+   "start": 165.9,
+   "end": 166.18,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "normal",
+   "spreadMs": 20.0,
+   "sustainedMs": 140,
+   "startSample": 7316190,
+   "endSample": 7328538
+  },
+  "L26-W04": {
+   "id": "L26-W04",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     166.18,
+     166.68,
+     0.3744
+    ],
+    "mms_mix": [
+     166.18,
+     166.76,
+     0.0018
+    ],
+    "w2v_stem": [
+     166.2,
+     166.74,
+     0.9377
+    ],
+    "w2v_mix": [
+     166.18,
+     166.76,
+     0.2313
+    ],
+    "whisper_stem": [
+     165.93,
+     166.25,
+     0.9595
+    ]
+   },
+   "start": 166.18,
+   "end": 166.8,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "normal",
+   "spreadMs": 20.0,
+   "sustainedMs": 120,
+   "startSample": 7328538,
+   "endSample": 7355880
+  },
+  "L26-W05": {
+   "id": "L26-W05",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     166.8,
+     166.92,
+     0.6216
+    ],
+    "mms_mix": [
+     166.82,
+     166.9,
+     0.0147
+    ],
+    "w2v_stem": [
+     166.82,
+     166.94,
+     0.9021
+    ],
+    "w2v_mix": [
+     166.78,
+     166.9,
+     0.7347
+    ],
+    "whisper_stem": [
+     166.25,
+     166.83,
+     0.9756
+    ]
+   },
+   "start": 166.8,
+   "end": 167.06,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "normal",
+   "spreadMs": 40.0,
+   "sustainedMs": 140,
+   "startSample": 7355880,
+   "endSample": 7367346
+  },
+  "L26-W06": {
+   "id": "L26-W06",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     167.06,
+     168.16,
+     0.6392
+    ],
+    "mms_mix": [
+     167.06,
+     168.16,
+     0.0203
+    ],
+    "w2v_stem": [
+     167.08,
+     167.96,
+     0.9791
+    ],
+    "w2v_mix": [
+     167.08,
+     167.86,
+     0.7604
+    ],
+    "whisper_stem": [
+     166.83,
+     167.09,
+     0.9883
+    ]
+   },
+   "start": 167.06,
+   "end": 168.26,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "normal",
+   "spreadMs": 20.0,
+   "sustainedMs": 100,
+   "startSample": 7367346,
+   "endSample": 7420266
+  },
+  "L26-W07": {
+   "id": "L26-W07",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     168.26,
+     169.12,
+     0.5795
+    ],
+    "mms_mix": [
+     168.24,
+     169.02,
+     0.042
+    ],
+    "w2v_stem": [
+     168.28,
+     169.04,
+     0.9898
+    ],
+    "w2v_mix": [
+     168.28,
+     169.26,
+     0.7603
+    ],
+    "whisper_stem": [
+     167.09,
+     168.33,
+     0.9121
+    ]
+   },
+   "start": 168.26,
+   "end": 169.26,
+   "basis": "mms-stem~w2v",
+   "review": "normal",
+   "spreadMs": 40.0,
+   "releaseExtendedMs": 140,
+   "startSample": 7420266,
+   "endSample": 7464366
+  },
+  "L27-W01": {
+   "id": "L27-W01",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     169.74,
+     169.76,
+     0.3166
+    ],
+    "mms_mix": [
+     169.7,
+     169.72,
+     0.0022
+    ],
+    "w2v_stem": [
+     169.68,
+     169.72,
+     0.9925
+    ],
+    "w2v_mix": [
+     169.7,
+     169.72,
+     0.4826
+    ],
+    "whisper_stem": [
+     169.29,
+     169.65,
+     0.0567
+    ]
+   },
+   "start": 169.74,
+   "end": 169.78,
+   "basis": "mms-stem~w2v",
+   "review": "priority",
+   "spreadMs": 60.0,
+   "startSample": 7485534,
+   "endSample": 7487298,
+   "short": true
+  },
+  "L27-W02": {
+   "id": "L27-W02",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     169.78,
+     170.04,
+     0.4998
+    ],
+    "mms_mix": [
+     169.78,
+     170.02,
+     0.0485
+    ],
+    "w2v_stem": [
+     169.78,
+     170.0,
+     0.9862
+    ],
+    "w2v_mix": [
+     169.8,
+     169.96,
+     0.2066
+    ],
+    "whisper_stem": [
+     169.65,
+     169.87,
+     0.9746
+    ]
+   },
+   "start": 169.78,
+   "end": 170.16,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "normal",
+   "spreadMs": 20.0,
+   "sustainedMs": 120,
+   "startSample": 7487298,
+   "endSample": 7504056
+  },
+  "L27-W03": {
+   "id": "L27-W03",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     170.12,
+     170.32,
+     0.2673
+    ],
+    "mms_mix": [
+     170.12,
+     170.26,
+     0.0029
+    ],
+    "w2v_stem": [
+     170.2,
+     170.32,
+     0.9298
+    ],
+    "w2v_mix": [
+     170.2,
+     170.3,
+     0.1413
+    ],
+    "whisper_stem": [
+     169.87,
+     170.25,
+     0.9304
+    ]
+   },
+   "start": 170.16,
+   "end": 170.34,
+   "basis": "median-uncorroborated",
+   "review": "priority",
+   "spreadMs": 80.0,
+   "startSample": 7504056,
+   "endSample": 7511994
+  },
+  "L27-W04": {
+   "id": "L27-W04",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     170.34,
+     170.48,
+     0.0052
+    ],
+    "mms_mix": [
+     170.26,
+     170.54,
+     0.0096
+    ],
+    "w2v_stem": [
+     170.36,
+     170.46,
+     0.0134
+    ],
+    "w2v_mix": [
+     170.36,
+     170.48,
+     0.0485
+    ],
+    "whisper_stem": [
+     170.25,
+     170.37,
+     0.2206
+    ]
+   },
+   "start": 170.34,
+   "end": 170.52,
+   "basis": "mms-stem~w2v+whisper",
+   "review": "normal",
+   "spreadMs": 100.0,
+   "startSample": 7511994,
+   "endSample": 7519932
+  },
+  "L27-W05": {
+   "id": "L27-W05",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     170.52,
+     171.16,
+     0.708
+    ],
+    "mms_mix": [
+     170.54,
+     170.92,
+     0.0257
+    ],
+    "w2v_stem": [
+     170.5,
+     171.14,
+     0.9674
+    ],
+    "w2v_mix": [
+     170.56,
+     171.04,
+     0.4566
+    ],
+    "whisper_stem": [
+     170.37,
+     170.61,
+     0.9653
+    ]
+   },
+   "start": 170.52,
+   "end": 171.26,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "normal",
+   "spreadMs": 60.0,
+   "sustainedMs": 100,
+   "startSample": 7519932,
+   "endSample": 7552566
+  },
+  "L27-W06": {
+   "id": "L27-W06",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     171.26,
+     171.58,
+     0.0413
+    ],
+    "mms_mix": [
+     170.98,
+     171.22,
+     0.0058
+    ],
+    "w2v_stem": [
+     171.2,
+     171.48,
+     0.0236
+    ],
+    "w2v_mix": [
+     171.14,
+     171.46,
+     0.1548
+    ],
+    "whisper_stem": [
+     170.61,
+     171.31,
+     0.0112
+    ]
+   },
+   "start": 171.26,
+   "end": 172.78,
+   "basis": "mms-stem~w2v",
+   "review": "priority",
+   "spreadMs": 280.0,
+   "releaseExtendedMs": 1200,
+   "startSample": 7552566,
+   "endSample": 7619598
+  },
+  "L28-W01": {
+   "id": "L28-W01",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     174.4,
+     174.82,
+     0.1296
+    ],
+    "mms_mix": [
+     171.18,
+     174.4,
+     0.007
+    ],
+    "w2v_stem": [
+     174.38,
+     174.78,
+     0.8897
+    ],
+    "w2v_mix": [
+     174.36,
+     174.78,
+     0.3857
+    ],
+    "whisper_stem": [
+     171.19,
+     173.69,
+     0.1964
+    ]
+   },
+   "start": 174.4,
+   "end": 174.92,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "priority",
+   "spreadMs": 3220.0,
+   "sustainedMs": 100,
+   "startSample": 7691040,
+   "endSample": 7713972
+  },
+  "L28-W02": {
+   "id": "L28-W02",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     174.92,
+     175.92,
+     0.1148
+    ],
+    "mms_mix": [
+     174.9,
+     175.92,
+     0.0059
+    ],
+    "w2v_stem": [
+     174.96,
+     176.0,
+     0.2797
+    ],
+    "w2v_mix": [
+     174.94,
+     175.92,
+     0.8055
+    ],
+    "whisper_stem": [
+     173.69,
+     174.99,
+     0.9702
+    ]
+   },
+   "start": 174.92,
+   "end": 176.39,
+   "basis": "mms-stem~w2v",
+   "review": "normal",
+   "spreadMs": 60.0,
+   "releaseExtendedMs": 470,
+   "startSample": 7713972,
+   "endSample": 7778799
+  },
+  "L29-W01": {
+   "id": "L29-W01",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     178.36,
+     178.74,
+     0.6605
+    ],
+    "mms_mix": [
+     178.36,
+     178.68,
+     0.1317
+    ],
+    "w2v_stem": [
+     178.36,
+     178.72,
+     0.9841
+    ],
+    "w2v_mix": [
+     178.36,
+     178.72,
+     0.9791
+    ],
+    "whisper_stem": [
+     177.91,
+     178.49,
+     0.0959
+    ]
+   },
+   "start": 178.36,
+   "end": 178.8,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "normal",
+   "spreadMs": 0.0,
+   "sustainedMs": 60,
+   "startSample": 7865676,
+   "endSample": 7885080
+  },
+  "L29-W02": {
+   "id": "L29-W02",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     178.8,
+     178.88,
+     0.9032
+    ],
+    "mms_mix": [
+     178.78,
+     178.88,
+     0.3477
+    ],
+    "w2v_stem": [
+     178.8,
+     178.94,
+     0.9865
+    ],
+    "w2v_mix": [
+     178.8,
+     178.92,
+     0.9982
+    ],
+    "whisper_stem": [
+     178.49,
+     178.81,
+     0.9868
+    ]
+   },
+   "start": 178.8,
+   "end": 179.06,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "normal",
+   "spreadMs": 20.0,
+   "sustainedMs": 180,
+   "startSample": 7885080,
+   "endSample": 7896546
+  },
+  "L29-W03": {
+   "id": "L29-W03",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     179.06,
+     179.18,
+     0.4485
+    ],
+    "mms_mix": [
+     179.06,
+     179.18,
+     0.0683
+    ],
+    "w2v_stem": [
+     179.06,
+     179.22,
+     0.9596
+    ],
+    "w2v_mix": [
+     179.06,
+     179.22,
+     0.9765
+    ],
+    "whisper_stem": [
+     178.81,
+     179.07,
+     0.1666
+    ]
+   },
+   "start": 179.06,
+   "end": 179.32,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "normal",
+   "spreadMs": 0.0,
+   "sustainedMs": 140,
+   "startSample": 7896546,
+   "endSample": 7908012
+  },
+  "L29-W04": {
+   "id": "L29-W04",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     179.32,
+     179.84,
+     0.3649
+    ],
+    "mms_mix": [
+     179.32,
+     179.9,
+     0.1128
+    ],
+    "w2v_stem": [
+     179.32,
+     179.9,
+     0.9338
+    ],
+    "w2v_mix": [
+     179.32,
+     179.86,
+     0.2531
+    ],
+    "whisper_stem": [
+     179.07,
+     179.61,
+     0.0615
+    ]
+   },
+   "start": 179.32,
+   "end": 179.94,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "normal",
+   "spreadMs": 0.0,
+   "sustainedMs": 100,
+   "startSample": 7908012,
+   "endSample": 7935354
+  },
+  "L29-W05": {
+   "id": "L29-W05",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     179.94,
+     180.04,
+     0.5964
+    ],
+    "mms_mix": [
+     179.96,
+     180.08,
+     0.1957
+    ],
+    "w2v_stem": [
+     179.94,
+     180.06,
+     0.9889
+    ],
+    "w2v_mix": [
+     179.9,
+     180.04,
+     0.1991
+    ],
+    "whisper_stem": [
+     179.61,
+     179.89,
+     0.9282
+    ]
+   },
+   "start": 179.94,
+   "end": 180.16,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "normal",
+   "spreadMs": 60.0,
+   "sustainedMs": 120,
+   "startSample": 7935354,
+   "endSample": 7945056
+  },
+  "L29-W06": {
+   "id": "L29-W06",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     180.16,
+     180.58,
+     0.2503
+    ],
+    "mms_mix": [
+     180.16,
+     180.58,
+     0.1149
+    ],
+    "w2v_stem": [
+     180.18,
+     180.58,
+     0.2499
+    ],
+    "w2v_mix": [
+     180.16,
+     180.58,
+     0.1874
+    ],
+    "whisper_stem": [
+     179.89,
+     180.11,
+     0.5513
+    ]
+   },
+   "start": 180.16,
+   "end": 181.45,
+   "basis": "mms-stem~w2v",
+   "review": "normal",
+   "spreadMs": 20.0,
+   "releaseExtendedMs": 870,
+   "startSample": 7945056,
+   "endSample": 8001945
+  },
+  "L30-W01": {
+   "id": "L30-W01",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     180.16,
+     183.12,
+     0.0343
+    ],
+    "mms_mix": [
+     182.76,
+     183.08,
+     0.038
+    ],
+    "w2v_stem": [
+     182.76,
+     183.1,
+     0.9939
+    ],
+    "w2v_mix": [
+     180.16,
+     183.12,
+     0.1992
+    ],
+    "whisper_stem": [
+     180.17,
+     180.99,
+     0.0376
+    ]
+   },
+   "start": 182.79,
+   "end": 183.18,
+   "basis": "mms-stem~w2v+whisper+entrance-rise+sustained",
+   "review": "priority",
+   "spreadMs": 2600.0,
+   "entranceMovedMs": 2630,
+   "sustainedMs": 60,
+   "startSample": 8061039,
+   "endSample": 8078238
+  },
+  "L30-W02": {
+   "id": "L30-W02",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     183.18,
+     183.24,
+     0.0153
+    ],
+    "mms_mix": [
+     183.16,
+     183.26,
+     0.0589
+    ],
+    "w2v_stem": [
+     183.18,
+     183.32,
+     0.9998
+    ],
+    "w2v_mix": [
+     183.16,
+     183.28,
+     0.2697
+    ],
+    "whisper_stem": [
+     180.99,
+     183.17,
+     0.9985
+    ]
+   },
+   "start": 183.18,
+   "end": 183.42,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "normal",
+   "spreadMs": 20.0,
+   "sustainedMs": 180,
+   "startSample": 8078238,
+   "endSample": 8088822
+  },
+  "L30-W03": {
+   "id": "L30-W03",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     183.42,
+     183.56,
+     0.0102
+    ],
+    "mms_mix": [
+     183.42,
+     183.56,
+     0.0171
+    ],
+    "w2v_stem": [
+     183.44,
+     183.58,
+     0.9891
+    ],
+    "w2v_mix": [
+     183.4,
+     183.64,
+     0.1931
+    ],
+    "whisper_stem": [
+     183.17,
+     183.45,
+     0.9004
+    ]
+   },
+   "start": 183.42,
+   "end": 183.7,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "normal",
+   "spreadMs": 40.0,
+   "sustainedMs": 140,
+   "startSample": 8088822,
+   "endSample": 8101170
+  },
+  "L30-W04": {
+   "id": "L30-W04",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     183.7,
+     184.22,
+     0.0058
+    ],
+    "mms_mix": [
+     183.68,
+     184.28,
+     0.015
+    ],
+    "w2v_stem": [
+     183.7,
+     184.26,
+     0.918
+    ],
+    "w2v_mix": [
+     183.7,
+     184.28,
+     0.1998
+    ],
+    "whisper_stem": [
+     183.45,
+     183.77,
+     0.9429
+    ]
+   },
+   "start": 183.7,
+   "end": 184.32,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "normal",
+   "spreadMs": 20.0,
+   "sustainedMs": 100,
+   "startSample": 8101170,
+   "endSample": 8128512
+  },
+  "L30-W05": {
+   "id": "L30-W05",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     184.32,
+     184.42,
+     0.0174
+    ],
+    "mms_mix": [
+     184.32,
+     184.4,
+     0.0434
+    ],
+    "w2v_stem": [
+     184.32,
+     184.42,
+     0.9914
+    ],
+    "w2v_mix": [
+     184.3,
+     184.42,
+     0.0618
+    ],
+    "whisper_stem": [
+     183.77,
+     184.35,
+     0.9565
+    ]
+   },
+   "start": 184.32,
+   "end": 184.54,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "normal",
+   "spreadMs": 20.0,
+   "sustainedMs": 120,
+   "startSample": 8128512,
+   "endSample": 8138214
+  },
+  "L30-W06": {
+   "id": "L30-W06",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     184.54,
+     185.64,
+     0.0221
+    ],
+    "mms_mix": [
+     184.52,
+     185.64,
+     0.0416
+    ],
+    "w2v_stem": [
+     184.54,
+     185.58,
+     0.9408
+    ],
+    "w2v_mix": [
+     184.54,
+     185.06,
+     0.2227
+    ],
+    "whisper_stem": [
+     184.35,
+     184.99,
+     0.9873
+    ]
+   },
+   "start": 184.54,
+   "end": 185.74,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "normal",
+   "spreadMs": 20.0,
+   "sustainedMs": 100,
+   "startSample": 8138214,
+   "endSample": 8191134
+  },
+  "L30-W07": {
+   "id": "L30-W07",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     185.74,
+     186.04,
+     0.0271
+    ],
+    "mms_mix": [
+     185.7,
+     186.02,
+     0.0272
+    ],
+    "w2v_stem": [
+     185.78,
+     186.18,
+     0.3999
+    ],
+    "w2v_mix": [
+     185.24,
+     186.04,
+     0.1164
+    ],
+    "whisper_stem": [
+     184.99,
+     185.63,
+     0.8511
+    ]
+   },
+   "start": 185.74,
+   "end": 186.04,
+   "basis": "mms-stem~w2v",
+   "review": "priority",
+   "spreadMs": 540.0,
+   "startSample": 8191134,
+   "endSample": 8204364
+  },
+  "L31-W01": {
+   "id": "L31-W01",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     185.68,
+     185.7,
+     0.0045
+    ],
+    "mms_mix": [
+     185.7,
+     185.72,
+     0.0693
+    ],
+    "w2v_stem": [
+     186.46,
+     186.52,
+     0.8959
+    ],
+    "w2v_mix": [
+     186.24,
+     186.26,
+     0.3325
+    ],
+    "whisper_stem": [
+     185.57,
+     186.31,
+     0.0466
+    ]
+   },
+   "start": 185.81,
+   "end": 186.32,
+   "basis": "mms-stem~whisper+late-entrance",
+   "review": "priority",
+   "spreadMs": 780.0,
+   "lateEntranceMovedMs": 130,
+   "startSample": 8194221,
+   "endSample": 8216712
+  },
+  "L31-W02": {
+   "id": "L31-W02",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     185.88,
+     187.5,
+     0.0102
+    ],
+    "mms_mix": [
+     185.88,
+     187.5,
+     0.1478
+    ],
+    "w2v_stem": [
+     187.24,
+     187.46,
+     0.9528
+    ],
+    "w2v_mix": [
+     186.32,
+     187.46,
+     0.1187
+    ],
+    "whisper_stem": [
+     186.31,
+     187.29,
+     0.9609
+    ]
+   },
+   "start": 186.32,
+   "end": 187.72,
+   "basis": "w2v-mix~whisper+sustained",
+   "review": "priority",
+   "spreadMs": 1360.0,
+   "sustainedMs": 260,
+   "startSample": 8216712,
+   "endSample": 8278452
+  },
+  "L31-W03": {
+   "id": "L31-W03",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     187.72,
+     187.78,
+     0.0019
+    ],
+    "mms_mix": [
+     187.58,
+     187.74,
+     0.0093
+    ],
+    "w2v_stem": [
+     187.68,
+     187.78,
+     0.919
+    ],
+    "w2v_mix": [
+     187.68,
+     187.76,
+     0.0615
+    ],
+    "whisper_stem": [
+     187.29,
+     187.71,
+     0.946
+    ]
+   },
+   "start": 187.72,
+   "end": 187.78,
+   "basis": "mms-stem~w2v",
+   "review": "priority",
+   "spreadMs": 140.0,
+   "startSample": 8278452,
+   "endSample": 8281098,
+   "short": true
+  },
+  "L31-W04": {
+   "id": "L31-W04",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     187.78,
+     188.04,
+     0.0006
+    ],
+    "mms_mix": [
+     187.78,
+     188.02,
+     0.0053
+    ],
+    "w2v_stem": [
+     187.86,
+     187.94,
+     0.0134
+    ],
+    "w2v_mix": [
+     187.84,
+     187.94,
+     0.0706
+    ],
+    "whisper_stem": [
+     187.71,
+     187.85,
+     0.8481
+    ]
+   },
+   "start": 187.78,
+   "end": 188.04,
+   "basis": "mms-stem~w2v+whisper",
+   "review": "normal",
+   "spreadMs": 80.0,
+   "startSample": 8281098,
+   "endSample": 8292564
+  },
+  "L31-W05": {
+   "id": "L31-W05",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     188.04,
+     188.6,
+     0.0044
+    ],
+    "mms_mix": [
+     188.02,
+     188.62,
+     0.1291
+    ],
+    "w2v_stem": [
+     187.98,
+     188.56,
+     0.8146
+    ],
+    "w2v_mix": [
+     188.04,
+     188.6,
+     0.2781
+    ],
+    "whisper_stem": [
+     187.85,
+     188.29,
+     0.4419
+    ]
+   },
+   "start": 188.04,
+   "end": 188.72,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "normal",
+   "spreadMs": 60.0,
+   "sustainedMs": 120,
+   "startSample": 8292564,
+   "endSample": 8322552
+  },
+  "L31-W06": {
+   "id": "L31-W06",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     188.72,
+     189.96,
+     0.0025
+    ],
+    "mms_mix": [
+     188.7,
+     189.98,
+     0.0654
+    ],
+    "w2v_stem": [
+     188.76,
+     189.94,
+     0.4
+    ],
+    "w2v_mix": [
+     188.72,
+     189.96,
+     0.1614
+    ],
+    "whisper_stem": [
+     188.29,
+     188.77,
+     0.9727
+    ]
+   },
+   "start": 188.72,
+   "end": 190.02,
+   "basis": "mms-stem~w2v",
+   "review": "normal",
+   "spreadMs": 60.0,
+   "releaseExtendedMs": 60,
+   "startSample": 8322552,
+   "endSample": 8379882
+  },
+  "L32-W01": {
+   "id": "L32-W01",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     191.9,
+     192.44,
+     0.014
+    ],
+    "mms_mix": [
+     191.9,
+     193.28,
+     0.0618
+    ],
+    "w2v_stem": [
+     191.88,
+     192.48,
+     0.3648
+    ],
+    "w2v_mix": [
+     191.76,
+     192.48,
+     0.1031
+    ],
+    "whisper_stem": [
+     190.27,
+     192.07,
+     0.0806
+    ]
+   },
+   "start": 191.9,
+   "end": 193.02,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "priority",
+   "spreadMs": 140.0,
+   "sustainedMs": 580,
+   "startSample": 8462790,
+   "endSample": 8512182
+  },
+  "L32-W02": {
+   "id": "L32-W02",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     192.44,
+     193.34,
+     0.007
+    ],
+    "mms_mix": [
+     193.34,
+     193.56,
+     0.0536
+    ],
+    "w2v_stem": [
+     193.5,
+     193.56,
+     0.0005
+    ],
+    "w2v_mix": [
+     192.7,
+     193.02,
+     0.0533
+    ],
+    "whisper_stem": [
+     192.07,
+     192.63,
+     0.8159
+    ]
+   },
+   "start": 193.02,
+   "end": 193.86,
+   "basis": "median-uncorroborated",
+   "review": "priority",
+   "spreadMs": 1060.0,
+   "releaseExtendedMs": 410,
+   "startSample": 8512182,
+   "endSample": 8549226
+  },
+  "L33-W01": {
+   "id": "L33-W01",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     194.98,
+     195.52,
+     0.2551
+    ],
+    "mms_mix": [
+     195.1,
+     196.02,
+     0.3073
+    ],
+    "w2v_stem": [
+     193.2,
+     193.28,
+     0.0023
+    ],
+    "w2v_mix": [
+     195.56,
+     195.86,
+     0.1039
+    ],
+    "whisper_stem": [
+     193.19,
+     194.83,
+     0.3308
+    ]
+   },
+   "start": 194.87,
+   "end": 196.26,
+   "basis": "w2v-stem~whisper+late-entrance",
+   "review": "priority",
+   "spreadMs": 2360.0,
+   "lateEntranceMovedMs": 1670,
+   "startSample": 8593767,
+   "endSample": 8655066
+  },
+  "L33-W02": {
+   "id": "L33-W02",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     195.66,
+     195.7,
+     0.0075
+    ],
+    "mms_mix": [
+     196.22,
+     196.28,
+     0.1577
+    ],
+    "w2v_stem": [
+     196.26,
+     196.48,
+     0.4805
+    ],
+    "w2v_mix": [
+     196.3,
+     196.42,
+     0.0207
+    ],
+    "whisper_stem": [
+     194.83,
+     196.31,
+     0.228
+    ]
+   },
+   "start": 196.26,
+   "end": 196.78,
+   "basis": "w2v-stem~mms+sustained",
+   "review": "priority",
+   "spreadMs": 640.0,
+   "sustainedMs": 300,
+   "startSample": 8655066,
+   "endSample": 8677998
+  },
+  "L33-W03": {
+   "id": "L33-W03",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     195.82,
+     196.1,
+     0.036
+    ],
+    "mms_mix": [
+     196.78,
+     197.14,
+     0.0887
+    ],
+    "w2v_stem": [
+     196.62,
+     197.5,
+     0.0388
+    ],
+    "w2v_mix": [
+     196.82,
+     197.54,
+     0.0449
+    ],
+    "whisper_stem": [
+     197.67,
+     198.75,
+     0.0002
+    ]
+   },
+   "start": 196.78,
+   "end": 198.73,
+   "basis": "mms-mix~w2v",
+   "review": "priority",
+   "spreadMs": 1000.0,
+   "releaseExtendedMs": 1590,
+   "startSample": 8677998,
+   "endSample": 8763993
+  },
+  "L33-W04": {
+   "id": "L33-W04",
+   "voice": "backing",
+   "observations": {
+    "mms_stem": [
+     196.24,
+     197.64,
+     0.0299
+    ],
+    "mms_mix": [
+     197.28,
+     197.6,
+     0.057
+    ],
+    "w2v_stem": [
+     197.82,
+     198.5,
+     0.0511
+    ],
+    "w2v_mix": [
+     198.0,
+     198.18,
+     0.0559
+    ],
+    "whisper_stem": [
+     198.75,
+     201.51,
+     0.0035
+    ]
+   },
+   "start": 197.55,
+   "end": 198.01,
+   "basis": "median-uncorroborated+sustained",
+   "review": "priority",
+   "spreadMs": 1760.0,
+   "sustainedMs": 100,
+   "startSample": 8711955,
+   "endSample": 8732241
+  },
+  "L33-W05": {
+   "id": "L33-W05",
+   "voice": "backing",
+   "observations": {
+    "mms_stem": [
+     197.64,
+     201.02,
+     0.1214
+    ],
+    "mms_mix": [
+     197.6,
+     201.12,
+     0.013
+    ],
+    "w2v_stem": [
+     199.42,
+     199.96,
+     0.0226
+    ],
+    "w2v_mix": [
+     198.38,
+     199.72,
+     0.0472
+    ],
+    "whisper_stem": [
+     201.51,
+     201.77,
+     0.0176
+    ]
+   },
+   "start": 198.01,
+   "end": 200.95,
+   "basis": "median-uncorroborated+sustained",
+   "review": "priority",
+   "spreadMs": 1820.0,
+   "sustainedMs": 460,
+   "startSample": 8732241,
+   "endSample": 8861895
+  },
+  "L33-W06": {
+   "id": "L33-W06",
+   "voice": "backing",
+   "observations": {
+    "mms_stem": [
+     201.38,
+     202.0,
+     0.0557
+    ],
+    "mms_mix": [
+     201.42,
+     201.96,
+     0.0204
+    ],
+    "w2v_stem": [
+     200.52,
+     201.48,
+     0.072
+    ],
+    "w2v_mix": [
+     200.0,
+     201.6,
+     0.0629
+    ],
+    "whisper_stem": [
+     201.77,
+     202.27,
+     0.0389
+    ]
+   },
+   "start": 200.95,
+   "end": 202.28,
+   "basis": "median-uncorroborated",
+   "review": "priority",
+   "spreadMs": 1420.0,
+   "releaseExtendedMs": 500,
+   "startSample": 8861895,
+   "endSample": 8920548
+  },
+  "L34-W01": {
+   "id": "L34-W01",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     202.26,
+     202.54,
+     0.0046
+    ],
+    "mms_mix": [
+     202.3,
+     202.54,
+     0.0041
+    ],
+    "w2v_stem": [
+     202.36,
+     202.52,
+     0.0513
+    ],
+    "w2v_mix": [
+     202.36,
+     202.52,
+     0.0957
+    ],
+    "whisper_stem": [
+     202.27,
+     202.39,
+     0.0321
+    ]
+   },
+   "start": 202.36,
+   "end": 202.79,
+   "basis": "w2v-stem~mms+whisper+sustained",
+   "review": "normal",
+   "spreadMs": 100.0,
+   "sustainedMs": 270,
+   "startSample": 8924076,
+   "endSample": 8943039
+  },
+  "L34-W02": {
+   "id": "L34-W02",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     202.8,
+     202.84,
+     0.0006
+    ],
+    "mms_mix": [
+     202.78,
+     202.82,
+     0.0019
+    ],
+    "w2v_stem": [
+     203.08,
+     203.12,
+     0.0117
+    ],
+    "w2v_mix": [
+     202.58,
+     202.76,
+     0.0079
+    ],
+    "whisper_stem": [
+     202.39,
+     202.95,
+     0.0712
+    ]
+   },
+   "start": 202.79,
+   "end": 202.84,
+   "basis": "median-uncorroborated",
+   "review": "priority",
+   "spreadMs": 500.0,
+   "startSample": 8943039,
+   "endSample": 8945244,
+   "short": true
+  },
+  "L34-W03": {
+   "id": "L34-W03",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     202.84,
+     203.64,
+     0.0083
+    ],
+    "mms_mix": [
+     202.82,
+     204.38,
+     0.0031
+    ],
+    "w2v_stem": [
+     203.22,
+     203.66,
+     0.0317
+    ],
+    "w2v_mix": [
+     202.92,
+     203.1,
+     0.0344
+    ],
+    "whisper_stem": [
+     202.95,
+     203.39,
+     0.0021
+    ]
+   },
+   "start": 202.84,
+   "end": 205.1,
+   "basis": "mms-stem~whisper",
+   "review": "priority",
+   "spreadMs": 400.0,
+   "releaseExtendedMs": 1460,
+   "startSample": 8945244,
+   "endSample": 9044910
+  },
+  "L34-W04": {
+   "id": "L34-W04",
+   "voice": "backing",
+   "observations": {
+    "mms_stem": [
+     203.64,
+     203.92,
+     0.001
+    ],
+    "mms_mix": [
+     204.38,
+     204.72,
+     0.0014
+    ],
+    "w2v_stem": [
+     203.98,
+     204.12,
+     0.0595
+    ],
+    "w2v_mix": [
+     203.46,
+     203.62,
+     0.087
+    ],
+    "whisper_stem": [
+     203.39,
+     203.39,
+     0.0387
+    ]
+   },
+   "start": 203.46,
+   "end": 204.13,
+   "basis": "w2v-mix~whisper+sustained",
+   "review": "priority",
+   "spreadMs": 920.0,
+   "sustainedMs": 510,
+   "startSample": 8972586,
+   "endSample": 9002133
+  },
+  "L34-W05": {
+   "id": "L34-W05",
+   "voice": "backing",
+   "observations": {
+    "mms_stem": [
+     204.04,
+     204.22,
+     0.0027
+    ],
+    "mms_mix": [
+     204.72,
+     204.96,
+     0.0046
+    ],
+    "w2v_stem": [
+     204.22,
+     204.38,
+     0.0385
+    ],
+    "w2v_mix": [
+     203.94,
+     204.06,
+     0.0756
+    ],
+    "whisper_stem": [
+     203.39,
+     203.39,
+     0.0004
+    ]
+   },
+   "start": 204.13,
+   "end": 204.49,
+   "basis": "median-uncorroborated+sustained",
+   "review": "priority",
+   "spreadMs": 780.0,
+   "sustainedMs": 190,
+   "startSample": 9002133,
+   "endSample": 9018009
+  },
+  "L34-W06": {
+   "id": "L34-W06",
+   "voice": "backing",
+   "observations": {
+    "mms_stem": [
+     204.22,
+     204.32,
+     0.0067
+    ],
+    "mms_mix": [
+     204.96,
+     205.08,
+     0.0042
+    ],
+    "w2v_stem": [
+     204.6,
+     204.84,
+     0.0268
+    ],
+    "w2v_mix": [
+     204.38,
+     204.62,
+     0.0477
+    ],
+    "whisper_stem": [
+     203.39,
+     203.73,
+     0.0022
+    ]
+   },
+   "start": 204.49,
+   "end": 204.94,
+   "basis": "median-uncorroborated+sustained",
+   "review": "priority",
+   "spreadMs": 740.0,
+   "sustainedMs": 210,
+   "startSample": 9018009,
+   "endSample": 9037854
+  },
+  "L34-W07": {
+   "id": "L34-W07",
+   "voice": "backing",
+   "observations": {
+    "mms_stem": [
+     204.98,
+     205.3,
+     0.0085
+    ],
+    "mms_mix": [
+     205.24,
+     205.34,
+     0.0014
+    ],
+    "w2v_stem": [
+     204.9,
+     205.24,
+     0.039
+    ],
+    "w2v_mix": [
+     204.88,
+     205.24,
+     0.0581
+    ],
+    "whisper_stem": [
+     203.73,
+     204.23,
+     0.0173
+    ]
+   },
+   "start": 204.94,
+   "end": 205.27,
+   "basis": "median-uncorroborated",
+   "review": "priority",
+   "spreadMs": 360.0,
+   "startSample": 9037854,
+   "endSample": 9052407
+  },
+  "L35-W01": {
+   "id": "L35-W01",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     205.28,
+     205.64,
+     0.0293
+    ],
+    "mms_mix": [
+     205.24,
+     205.68,
+     0.0083
+    ],
+    "w2v_stem": [
+     205.18,
+     205.28,
+     0.0348
+    ],
+    "w2v_mix": [
+     205.46,
+     206.0,
+     0.0534
+    ],
+    "whisper_stem": [
+     205.17,
+     205.17,
+     0.0002
+    ]
+   },
+   "start": 205.18,
+   "end": 206.78,
+   "basis": "w2v-stem~mms+whisper",
+   "review": "priority",
+   "spreadMs": 280.0,
+   "releaseExtendedMs": 1500,
+   "startSample": 9048438,
+   "endSample": 9118998
+  },
+  "L35-W02": {
+   "id": "L35-W02",
+   "voice": "backing",
+   "observations": {
+    "mms_stem": [
+     205.68,
+     205.78,
+     0.0062
+    ],
+    "mms_mix": [
+     205.76,
+     206.08,
+     0.034
+    ],
+    "w2v_stem": [
+     205.34,
+     205.6,
+     0.0513
+    ],
+    "w2v_mix": [
+     206.1,
+     206.22,
+     0.0471
+    ],
+    "whisper_stem": [
+     205.17,
+     205.51,
+     0.0003
+    ]
+   },
+   "start": 205.72,
+   "end": 206.01,
+   "basis": "median-uncorroborated+sustained",
+   "review": "priority",
+   "spreadMs": 760.0,
+   "sustainedMs": 80,
+   "startSample": 9072252,
+   "endSample": 9085041
+  },
+  "L35-W03": {
+   "id": "L35-W03",
+   "voice": "backing",
+   "observations": {
+    "mms_stem": [
+     205.78,
+     206.16,
+     0.0283
+    ],
+    "mms_mix": [
+     206.08,
+     206.16,
+     0.0056
+    ],
+    "w2v_stem": [
+     205.94,
+     206.36,
+     0.02
+    ],
+    "w2v_mix": [
+     206.42,
+     206.9,
+     0.0596
+    ],
+    "whisper_stem": [
+     205.51,
+     205.85,
+     0.0174
+    ]
+   },
+   "start": 206.01,
+   "end": 206.42,
+   "basis": "median-uncorroborated+sustained",
+   "review": "priority",
+   "spreadMs": 640.0,
+   "sustainedMs": 160,
+   "startSample": 9085041,
+   "endSample": 9103122
+  },
+  "L35-W04": {
+   "id": "L35-W04",
+   "voice": "backing",
+   "observations": {
+    "mms_stem": [
+     206.34,
+     206.8,
+     0.0163
+    ],
+    "mms_mix": [
+     206.3,
+     207.12,
+     0.0177
+    ],
+    "w2v_stem": [
+     206.5,
+     206.92,
+     0.0445
+    ],
+    "w2v_mix": [
+     206.94,
+     207.18,
+     0.0577
+    ],
+    "whisper_stem": [
+     205.85,
+     206.27,
+     0.0061
+    ]
+   },
+   "start": 206.42,
+   "end": 207.02,
+   "basis": "median-uncorroborated",
+   "review": "priority",
+   "spreadMs": 640.0,
+   "startSample": 9103122,
+   "endSample": 9129582
+  },
+  "L36-W01": {
+   "id": "L36-W01",
+   "voice": "backing",
+   "observations": {
+    "mms_stem": [
+     206.86,
+     207.14,
+     0.0007
+    ],
+    "mms_mix": [
+     209.36,
+     209.6,
+     0.0088
+    ],
+    "w2v_stem": [
+     206.88,
+     207.16,
+     0.0751
+    ],
+    "w2v_mix": [
+     207.04,
+     207.42,
+     0.1354
+    ],
+    "whisper_stem": [
+     206.81,
+     206.91,
+     0.0158
+    ]
+   },
+   "start": 206.86,
+   "end": 208.18,
+   "basis": "mms-stem~w2v+whisper+sustained",
+   "review": "priority",
+   "spreadMs": 2500.0,
+   "sustainedMs": 1040,
+   "startSample": 9122526,
+   "endSample": 9180738
+  },
+  "L36-W02": {
+   "id": "L36-W02",
+   "voice": "backing",
+   "observations": {
+    "mms_stem": [
+     208.52,
+     209.7,
+     0.0284
+    ],
+    "mms_mix": [
+     210.16,
+     210.4,
+     0.0314
+    ],
+    "w2v_stem": [
+     207.84,
+     208.08,
+     0.0564
+    ],
+    "w2v_mix": [
+     207.58,
+     207.94,
+     0.0807
+    ],
+    "whisper_stem": [
+     206.91,
+     208.19,
+     0.0005
+    ]
+   },
+   "start": 208.18,
+   "end": 208.24,
+   "basis": "median-uncorroborated",
+   "review": "priority",
+   "spreadMs": 2580.0,
+   "startSample": 9180738,
+   "endSample": 9183384,
+   "short": true
+  },
+  "L36-W03": {
+   "id": "L36-W03",
+   "voice": "backing",
+   "observations": {
+    "mms_stem": [
+     209.7,
+     209.84,
+     0.0005
+    ],
+    "mms_mix": [
+     210.42,
+     210.8,
+     0.0129
+    ],
+    "w2v_stem": [
+     210.16,
+     210.84,
+     0.02
+    ],
+    "w2v_mix": [
+     208.24,
+     208.5,
+     0.0372
+    ],
+    "whisper_stem": [
+     208.19,
+     208.65,
+     0.0019
+    ]
+   },
+   "start": 208.24,
+   "end": 210.9,
+   "basis": "w2v-mix~whisper+sustained",
+   "review": "priority",
+   "spreadMs": 2180.0,
+   "sustainedMs": 2400,
+   "startSample": 9183384,
+   "endSample": 9300690
+  },
+  "L36-W04": {
+   "id": "L36-W04",
+   "voice": "backing",
+   "observations": {
+    "mms_stem": [
+     210.68,
+     211.58,
+     0.0024
+    ],
+    "mms_mix": [
+     210.9,
+     211.64,
+     0.006
+    ],
+    "w2v_stem": [
+     211.28,
+     212.06,
+     0.0491
+    ],
+    "w2v_mix": [
+     208.78,
+     212.46,
+     0.0616
+    ],
+    "whisper_stem": [
+     208.65,
+     209.09,
+     0.0592
+    ]
+   },
+   "start": 210.9,
+   "end": 213.23,
+   "basis": "mms-mix~whisper",
+   "review": "priority",
+   "spreadMs": 2500.0,
+   "releaseExtendedMs": 1590,
+   "startSample": 9300690,
+   "endSample": 9403443
+  },
+  "L37-W01": {
+   "id": "L37-W01",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     213.84,
+     214.04,
+     0.188
+    ],
+    "mms_mix": [
+     213.78,
+     213.98,
+     0.0699
+    ],
+    "w2v_stem": [
+     213.9,
+     214.02,
+     0.3205
+    ],
+    "w2v_mix": [
+     212.8,
+     213.1,
+     0.1001
+    ],
+    "whisper_stem": [
+     212.21,
+     213.01,
+     0.0592
+    ]
+   },
+   "start": 213.84,
+   "end": 214.15,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "priority",
+   "spreadMs": 1100.0,
+   "sustainedMs": 110,
+   "startSample": 9430344,
+   "endSample": 9444015
+  },
+  "L37-W02": {
+   "id": "L37-W02",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     214.24,
+     214.62,
+     0.2969
+    ],
+    "mms_mix": [
+     214.22,
+     215.06,
+     0.2106
+    ],
+    "w2v_stem": [
+     214.08,
+     214.42,
+     0.0525
+    ],
+    "w2v_mix": [
+     213.52,
+     213.74,
+     0.0812
+    ],
+    "whisper_stem": [
+     213.01,
+     214.23,
+     0.0024
+    ]
+   },
+   "start": 214.15,
+   "end": 214.68,
+   "basis": "median-uncorroborated+sustained",
+   "review": "priority",
+   "spreadMs": 720.0,
+   "sustainedMs": 160,
+   "startSample": 9444015,
+   "endSample": 9467388
+  },
+  "L37-W03": {
+   "id": "L37-W03",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     214.8,
+     215.0,
+     0.1355
+    ],
+    "mms_mix": [
+     215.1,
+     215.34,
+     0.013
+    ],
+    "w2v_stem": [
+     214.54,
+     214.9,
+     0.0206
+    ],
+    "w2v_mix": [
+     214.56,
+     214.76,
+     0.0359
+    ],
+    "whisper_stem": [
+     214.23,
+     214.93,
+     0.2546
+    ]
+   },
+   "start": 214.68,
+   "end": 215.04,
+   "basis": "median-uncorroborated+sustained",
+   "review": "priority",
+   "spreadMs": 560.0,
+   "sustainedMs": 90,
+   "startSample": 9467388,
+   "endSample": 9483264
+  },
+  "L37-W04": {
+   "id": "L37-W04",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     215.04,
+     216.04,
+     0.0244
+    ],
+    "mms_mix": [
+     215.58,
+     216.34,
+     0.0158
+    ],
+    "w2v_stem": [
+     215.08,
+     216.18,
+     0.3312
+    ],
+    "w2v_mix": [
+     214.98,
+     216.16,
+     0.0554
+    ],
+    "whisper_stem": [
+     214.93,
+     215.53,
+     0.2908
+    ]
+   },
+   "start": 215.04,
+   "end": 216.2,
+   "basis": "mms-stem~w2v+whisper",
+   "review": "priority",
+   "spreadMs": 600.0,
+   "releaseExtendedMs": 160,
+   "startSample": 9483264,
+   "endSample": 9534420
+  },
+  "L38-W01": {
+   "id": "L38-W01",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     218.18,
+     218.4,
+     0.4953
+    ],
+    "mms_mix": [
+     218.16,
+     218.32,
+     0.317
+    ],
+    "w2v_stem": [
+     216.04,
+     216.18,
+     0.2134
+    ],
+    "w2v_mix": [
+     215.88,
+     216.02,
+     0.102
+    ],
+    "whisper_stem": [
+     215.73,
+     217.69,
+     0.0037
+    ]
+   },
+   "start": 216.28,
+   "end": 218.48,
+   "basis": "w2v-stem~whisper+late-entrance",
+   "review": "priority",
+   "spreadMs": 2300.0,
+   "lateEntranceMovedMs": 240,
+   "startSample": 9537948,
+   "endSample": 9634968
+  },
+  "L38-W02": {
+   "id": "L38-W02",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     218.58,
+     219.14,
+     0.6168
+    ],
+    "mms_mix": [
+     218.58,
+     218.9,
+     0.2809
+    ],
+    "w2v_stem": [
+     218.38,
+     218.64,
+     0.0865
+    ],
+    "w2v_mix": [
+     218.32,
+     218.78,
+     0.1059
+    ],
+    "whisper_stem": [
+     217.69,
+     218.61,
+     0.0005
+    ]
+   },
+   "start": 218.48,
+   "end": 219.14,
+   "basis": "median-uncorroborated+sustained",
+   "review": "priority",
+   "spreadMs": 260.0,
+   "sustainedMs": 300,
+   "startSample": 9634968,
+   "endSample": 9664074
+  },
+  "L38-W03": {
+   "id": "L38-W03",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     219.14,
+     219.26,
+     0.0233
+    ],
+    "mms_mix": [
+     219.12,
+     219.24,
+     0.0481
+    ],
+    "w2v_stem": [
+     218.94,
+     219.32,
+     0.0252
+    ],
+    "w2v_mix": [
+     219.14,
+     219.36,
+     0.0363
+    ],
+    "whisper_stem": [
+     218.61,
+     219.05,
+     0.0091
+    ]
+   },
+   "start": 219.14,
+   "end": 219.42,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "priority",
+   "spreadMs": 200.0,
+   "sustainedMs": 160,
+   "startSample": 9664074,
+   "endSample": 9676422
+  },
+  "L38-W04": {
+   "id": "L38-W04",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     219.42,
+     219.86,
+     0.0181
+    ],
+    "mms_mix": [
+     219.42,
+     219.68,
+     0.0252
+    ],
+    "w2v_stem": [
+     219.42,
+     219.86,
+     0.1133
+    ],
+    "w2v_mix": [
+     219.46,
+     219.78,
+     0.0716
+    ],
+    "whisper_stem": [
+     219.05,
+     219.67,
+     0.0092
+    ]
+   },
+   "start": 219.42,
+   "end": 221.46,
+   "basis": "mms-stem~w2v",
+   "review": "normal",
+   "spreadMs": 40.0,
+   "releaseExtendedMs": 1600,
+   "startSample": 9676422,
+   "endSample": 9766386
+  },
+  "L39-W01": {
+   "id": "L39-W01",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     222.92,
+     223.52,
+     0.6099
+    ],
+    "mms_mix": [
+     222.96,
+     223.48,
+     0.2972
+    ],
+    "w2v_stem": [
+     222.86,
+     223.12,
+     0.1323
+    ],
+    "w2v_mix": [
+     222.94,
+     223.22,
+     0.073
+    ],
+    "whisper_stem": [
+     222.47,
+     224.21,
+     0.0
+    ]
+   },
+   "start": 222.92,
+   "end": 223.52,
+   "basis": "mms-stem~w2v",
+   "review": "normal",
+   "spreadMs": 100.0,
+   "startSample": 9830772,
+   "endSample": 9857232
+  },
+  "L39-W02": {
+   "id": "L39-W02",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     223.52,
+     223.78,
+     0.0357
+    ],
+    "mms_mix": [
+     223.48,
+     223.6,
+     0.071
+    ],
+    "w2v_stem": [
+     223.28,
+     223.66,
+     0.0193
+    ],
+    "w2v_mix": [
+     223.46,
+     223.66,
+     0.0435
+    ],
+    "whisper_stem": [
+     224.21,
+     224.29,
+     0.0001
+    ]
+   },
+   "start": 223.52,
+   "end": 223.78,
+   "basis": "mms-stem~w2v",
+   "review": "priority",
+   "spreadMs": 240.0,
+   "startSample": 9857232,
+   "endSample": 9868698
+  },
+  "L39-W03": {
+   "id": "L39-W03",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     223.78,
+     224.46,
+     0.0206
+    ],
+    "mms_mix": [
+     223.78,
+     224.4,
+     0.0415
+    ],
+    "w2v_stem": [
+     223.78,
+     224.88,
+     0.2945
+    ],
+    "w2v_mix": [
+     223.82,
+     224.88,
+     0.0944
+    ],
+    "whisper_stem": [
+     224.29,
+     224.99,
+     0.0001
+    ]
+   },
+   "start": 223.78,
+   "end": 225.88,
+   "basis": "mms-stem~w2v",
+   "review": "normal",
+   "spreadMs": 40.0,
+   "releaseExtendedMs": 1420,
+   "startSample": 9868698,
+   "endSample": 9961308
+  },
+  "L40-W01": {
+   "id": "L40-W01",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     226.9,
+     227.12,
+     0.4938
+    ],
+    "mms_mix": [
+     226.88,
+     227.06,
+     0.3452
+    ],
+    "w2v_stem": [
+     226.96,
+     227.14,
+     0.0322
+    ],
+    "w2v_mix": [
+     225.26,
+     225.4,
+     0.1179
+    ],
+    "whisper_stem": [
+     225.27,
+     226.93,
+     0.0728
+    ]
+   },
+   "start": 226.9,
+   "end": 226.98,
+   "basis": "mms-stem~w2v",
+   "review": "priority",
+   "spreadMs": 1700.0,
+   "startSample": 10006290,
+   "endSample": 10009818
+  },
+  "L40-W02": {
+   "id": "L40-W02",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     227.38,
+     227.86,
+     0.3074
+    ],
+    "mms_mix": [
+     227.4,
+     227.68,
+     0.2182
+    ],
+    "w2v_stem": [
+     227.24,
+     227.76,
+     0.1279
+    ],
+    "w2v_mix": [
+     226.98,
+     228.16,
+     0.1373
+    ],
+    "whisper_stem": [
+     226.93,
+     227.53,
+     0.0208
+    ]
+   },
+   "start": 226.98,
+   "end": 227.86,
+   "basis": "w2v-mix~whisper",
+   "review": "priority",
+   "spreadMs": 420.0,
+   "startSample": 10009818,
+   "endSample": 10048626
+  },
+  "L40-W03": {
+   "id": "L40-W03",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     227.86,
+     227.96,
+     0.0048
+    ],
+    "mms_mix": [
+     227.84,
+     227.96,
+     0.0723
+    ],
+    "w2v_stem": [
+     227.84,
+     228.02,
+     0.0161
+    ],
+    "w2v_mix": [
+     228.3,
+     232.9,
+     0.1566
+    ],
+    "whisper_stem": [
+     227.53,
+     228.23,
+     0.1128
+    ]
+   },
+   "start": 227.86,
+   "end": 228.12,
+   "basis": "mms-stem~w2v+sustained",
+   "review": "priority",
+   "spreadMs": 460.0,
+   "sustainedMs": 160,
+   "startSample": 10048626,
+   "endSample": 10060092
+  },
+  "L40-W04": {
+   "id": "L40-W04",
+   "voice": "lead",
+   "observations": {
+    "mms_stem": [
+     228.1,
+     228.9,
+     0.1299
+    ],
+    "mms_mix": [
+     228.12,
+     228.94,
+     0.0169
+    ],
+    "w2v_stem": [
+     228.12,
+     228.74,
+     0.2143
+    ],
+    "w2v_mix": [
+     233.06,
+     234.62,
+     0.2004
+    ],
+    "whisper_stem": [
+     228.23,
+     228.31,
+     0.8594
+    ]
+   },
+   "start": 228.12,
+   "end": 230.27,
+   "basis": "w2v-stem~mms+whisper",
+   "review": "priority",
+   "spreadMs": 4960.0,
+   "releaseExtendedMs": 1530,
+   "startSample": 10060092,
+   "endSample": 10154907
+  }
+ }
+}

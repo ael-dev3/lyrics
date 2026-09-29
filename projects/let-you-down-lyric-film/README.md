@@ -1,6 +1,6 @@
 # Dawid Podsiadło — Let You Down
 
-**Status: preview in production. Word timing is waiting on the local lyric text, so there is no listening review and no render authorization.** The complete scene system, measured light, shot map, preview player, render gate, final-file verifiers and posting covers are built and tested. Timing alignment runs once the supplied lyric text is saved locally as `source/lyrics.local.txt` (see [Lyric text stays local](#lyric-text-stays-local)). No production render exists.
+**Status: `preview-v1` is ready for the listening review.** All 217 words have model-assisted, word-level timing. 71 words in 29 lines are flagged for priority listening, mostly line entrances and the overlapping outro. There is no render authorization yet, and no production render exists. The supplied lyric text stays in the owner's local `source/lyrics.local.txt` (see [Lyric text stays local](#lyric-text-stays-local)). The [timing method](TIMING.md) records the evidence, rules and review priorities.
 
 Source: [Cyberpunk: Edgerunners — Ending Theme | Let You Down by Dawid Podsiadło | Netflix](https://www.youtube.com/watch?v=BnnbP7pCIvQ) (official CD PROJEKT RED upload; music video directed by Ilya Kuvshinov, produced by STUDIO MASSKET).
 
@@ -91,9 +91,12 @@ Full identity, packet and PCM hashes: [evidence/source-identity.json](evidence/s
 | [evidence/source-identity.json](evidence/source-identity.json) | Exact source bytes, streams, frame count, packet and decoded-PCM hashes |
 | [evidence/audio-features-audit.json](evidence/audio-features-audit.json) | 60 Hz measured features, including the vocal-activity map used for section tiers before timing exists |
 | [analysis/shot-map.json](analysis/shot-map.json), [src/shots.ts](src/shots.ts) | 150 cut candidates reviewed into 92 shots |
+| [analysis/word-candidates.json](analysis/word-candidates.json), [analysis/timing-selection.json](analysis/timing-selection.json), [public/timeline.json](public/timeline.json) | Every retained model observation and the logged selection for each word ID (no text) |
+| [evidence/layout-audit.json](evidence/layout-audit.json) | Every cue in every shot, both formats, with the real text: inside its reading zone and clear of the spectrum's reach |
+| [evidence/preview-identity.json](evidence/preview-identity.json) | Hashes of the 15 gated inputs and the lyric text for the preview handed to review |
 | [evidence/cover-assets.json](evidence/cover-assets.json) | Cover source frame and file hashes |
-| [evidence/review-status.json](evidence/review-status.json) | Current status by stage; nothing beyond "preview technically working" is claimed |
+| [evidence/review-status.json](evidence/review-status.json) | Status by stage: preview complete, synchronization review not started, production not authorized |
 
-Structural tests, gate tests and a 6 s placeholder proof passed. The proof passed container/cadence verification and an encoded-focus check with 38/38 glyphs correct and a 10/10 negative control. None of these establishes acoustic word timing, perceived sync or artistic quality. Those need the listening review of the complete preview.
+Structural tests, gate tests, the text-binding check and the layout audit pass. The browser loaded, seeked and painted a nonblack picture with the correct line at 14 sample points in both formats. A 6 s placeholder proof passed container/cadence verification and an encoded-focus check (38/38 glyphs, negative control 10/10). None of these establishes acoustic word timing, perceived sync or artistic quality. Those need the listening review of the complete preview in a visible browser.
 
 [Visual brief](VISUAL-BRIEF.md) · [Timing method](TIMING.md) · [Asset provenance](ASSET-PROVENANCE.md) · [Agent handoff](AGENT-HANDOFF.md) · [Posting assets](publishing/README.md)

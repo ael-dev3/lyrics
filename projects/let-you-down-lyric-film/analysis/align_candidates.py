@@ -170,6 +170,55 @@ def main() -> None:
         "failures": [],
     }
 
+    # --- Vocal activity bound (stem energy) ------------------------------------
+    hop = int(0.01 * SR)
+    frames = len(stem) // hop
+    db = 20 * np.log10(np.sqrt(np.mean(stem[:frames * hop].reshape(frames, hop) ** 2, axis=1) + 1e-12))
+    loud = np.nonzero(db > -34.0)[0]
+    vocal_end = float(loud[-1] + 1) * 0.01 if len(loud) else n / SR
+    result["vocalActivity"] = {"thresholdDbFS": -34.0, "lastActiveSeconds": round(vocal_end, 2)}
+
+    # --- Line anchors: unforced Whisper matched to the text IN MEMORY ------------
+    # A whole-song forced pass can collapse when a performance runs long (it did
+    # here after 3:02). Recognized words matched to the supplied sequence give
+    # an independent map of where each line is sung; only IDs and times are kept.
+    import difflib
+    import stable_whisper
+    from lyrics_io import normalize_word
+    wmodel = stable_whisper.load_faster_whisper("large-v3", device=DEVICE, compute_type="float16")
+    segments, _info = wmodel.transcribe_original(stem, language="en", word_timestamps=True, vad_filter=False,
+                                                 condition_on_previous_text=False, beam_size=5)
+    heard = [(normalize_word(w.word), float(w.start), float(w.end), float(w.probability)) for s in segments for w in (s.words or []) if normalize_word(w.word)]
+    result["unforcedWhisperWords"] = {"fields": ["start", "end", "probability", "chars"], "rows": [[round(h[1], 3), round(h[2], 3), round(h[3], 4), len(h[0])] for h in heard]}
+    toks_all = [t for l in lines for t in l.tokens]
+    sm = difflib.SequenceMatcher(a=[t.norm for t in toks_all], b=[h[0] for h in heard], autojunk=False)
+    for a, b, size in sm.get_matching_blocks():
+        for k in range(size):
+            h = heard[b + k]
+            result["words"][toks_all[a + k].id]["whisper_unforced"] = [round(h[1], 3), round(h[2], 3), round(h[3], 4)]
+    anchors = []
+    for l in lines:
+        hit = [result["words"][t.id]["whisper_unforced"] for t in l.tokens if result["words"][t.id].get("whisper_unforced")]
+        # Guard against a stray late match (e.g. a sound effect heard as a word):
+        # a sung line spans at most 1.2 s per word plus 4 s of held notes.
+        cap = lambda a0: a0 + 1.2 * len(l.tokens) + 4.0  # noqa: E731
+        anchors.append([min(x[0] for x in hit), min(max(x[1] for x in hit), vocal_end + 0.5, cap(min(x[0] for x in hit)))] if len(hit) >= 2 else None)
+    for k in range(len(anchors)):  # sparse lines: bounded by their anchored neighbours
+        if anchors[k] is None:
+            prev = next((anchors[j] for j in range(k - 1, -1, -1) if anchors[j]), [0.0, 0.0])
+            nxt = next((anchors[j] for j in range(k + 1, len(anchors)) if anchors[j]), [vocal_end, vocal_end])
+            anchors[k] = [prev[1], nxt[0]]
+    for k in range(len(anchors) - 1):  # a line cannot run into the next line's start
+        anchors[k][1] = max(anchors[k][0] + 0.2, min(anchors[k][1], anchors[k + 1][0] + 0.3))
+    for k, l in enumerate(lines):
+        a, b = anchors[k]
+        prev_end = anchors[k - 1][1] if k else 0.0
+        next_start = anchors[k + 1][0] if k + 1 < len(lines) else b + 0.8
+        wa = max(0.0, a - 0.8, prev_end - 0.4)
+        wb = min(n / SR, b + 0.9, next_start + 0.4)
+        count = sum(1 for t in l.tokens if result["words"][t.id].get("whisper_unforced"))
+        result["lines"][l.id] = {"anchorSpan": [round(a, 3), round(b, 3)], "anchorWords": count, "window": [round(wa, 3), round(wb, 3)]}
+
     # --- CTC families ------------------------------------------------------
     ems = {}
     for name in ("mms", "w2v"):
@@ -184,34 +233,93 @@ def main() -> None:
             mms = model
         else:
             w2v = model
-        # keep models for windowed passes
-    # Global MMS pass on the stem: every token in text order (lead and backing).
+    # Whole-song MMS pass. Sequence context places line entrances well (a first
+    # word is not pulled back into the previous line's tail), but a long pass
+    # can collapse where the performance runs long. Lines whose whole-song span
+    # disagrees with the independent Whisper anchors are re-aligned as a run,
+    # bounded by their reliable neighbours and by the end of vocal activity.
     all_words = [t for l in lines for t in l.tokens]
-    em = ems[("mms", "stem")]
-    glob = mms.align_words(em, [t.norm for t in all_words], 0)
+    glob = mms.align_words(ems[("mms", "stem")], [t.norm for t in all_words], 0)
     for t, g in zip(all_words, glob):
         result["words"][t.id]["global_mms"] = g
-    # Line windows from the global pass, bounded by neighbouring lines.
-    windows = []
+    def span_of(line, key):
+        v = [result["words"][t.id][key] for t in line.tokens if result["words"][t.id].get(key)]
+        return [min(x[0] for x in v), max(x[1] for x in v)] if v else None
+    line_span = [span_of(l, "global_mms") for l in lines]
+    reliable = []
     for k, l in enumerate(lines):
-        starts = [result["words"][t.id]["global_mms"][0] for t in l.tokens if result["words"][t.id]["global_mms"]]
-        ends = [result["words"][t.id]["global_mms"][1] for t in l.tokens if result["words"][t.id]["global_mms"]]
-        windows.append([min(starts), max(ends)])
+        g, a = line_span[k], anchors[k]
+        ok = bool(g and a and abs(g[0] - a[0]) <= 2.5 and g[1] - g[0] <= 1.2 * len(l.tokens) + 4.0 and (k == 0 or g[0] >= line_span[k - 1][0]))
+        reliable.append(ok)
+    # End of the sung region: last active stem frame before the first silent
+    # gap of at least 10 s that follows the last line's anchor.
+    k0 = int(anchors[-1][0] / 0.01)
+    act = np.nonzero(db[k0:] > -34.0)[0] + k0
+    tail_end = n / SR
+    for p, q in zip(act, act[1:]):
+        if q - p >= 1000:
+            tail_end = (p + 1) * 0.01
+            break
+    result["vocalActivity"]["sungRegionEnd"] = round(tail_end, 2)
+    # Inside an unreliable stretch, lines that Whisper recognized well (at
+    # least half of their words and at least 2) are pinned to their anchor
+    # (start − 0.35 s to the next anchor's start + 0.25 s); only the weakly
+    # recognized lines between pins are re-aligned as a run.
+    strong = [sum(1 for t in l.tokens if result["words"][t.id].get("whisper_unforced")) >= max(2, 0.5 * len(l.tokens)) for l in lines]
     for k, l in enumerate(lines):
-        a, b = windows[k]
-        prev_end = windows[k - 1][1] if k else 0.0
-        next_start = windows[k + 1][0] if k + 1 < len(lines) else n / SR
-        wa = max(0.0, a - 0.9, prev_end - 0.25)
-        wb = min(n / SR, b + 0.8, next_start + 0.25)
-        result["lines"][l.id] = {"globalSpan": [round(a, 3), round(b, 3)], "window": [round(wa, 3), round(wb, 3)]}
+        if not reliable[k] and strong[k]:
+            nxt = anchors[k + 1][0] if k + 1 < len(lines) else tail_end
+            line_span[k] = [anchors[k][0], max(anchors[k][1], nxt)]
+            reliable[k] = True
+            result["lines"][l.id]["pinnedToAnchor"] = True
+    k = 0
+    while k < len(lines):
+        if reliable[k]:
+            k += 1
+            continue
+        j = k
+        while j + 1 < len(lines) and not reliable[j + 1]:
+            j += 1
+        lo = line_span[k - 1][1] - 0.05 if k > 0 else max(0.0, anchors[k][0] - 1.0)
+        hi = line_span[j + 1][0] + 0.05 if j + 1 < len(lines) else tail_end
+        run = [t for l in lines[k:j + 1] for t in l.tokens]
+        fa, fb = int(lo / 0.02), int(math.ceil(hi / 0.02))
+        try:
+            seg = mms.align_words(ems[("mms", "stem")][fa:fb], [t.norm for t in run], fa)
+            for t, s in zip(run, seg):
+                result["words"][t.id]["segment_mms"] = s
+            for m in range(k, j + 1):
+                line_span[m] = span_of(lines[m], "segment_mms")
+            result.setdefault("realignedRuns", []).append({"lines": [lines[k].id, lines[j].id], "range": [round(lo, 3), round(hi, 3)]})
+        except Exception as error:  # noqa: BLE001
+            result["failures"].append({"observation": "segment_mms", "lines": [lines[k].id, lines[j].id], "error": str(error)[:200]})
+            for m in range(k, j + 1):
+                line_span[m] = anchors[m]
+        k = j + 1
+    # Final windows: the line's sequence-aligned span with small margins, never
+    # reaching past a neighbour's span by more than 50 ms.
+    for k, l in enumerate(lines):
+        a, b = line_span[k]
+        pinned = result["lines"][l.id].get("pinnedToAnchor", False)
+        prev_end = line_span[k - 1][1] if k else 0.0
+        next_start = line_span[k + 1][0] if k + 1 < len(lines) else tail_end + 0.3
+        if pinned:  # anchor starts run early; the window reaches the next line's anchor
+            wa, wb = max(0.0, a - 0.35), min(n / SR, b + 0.25)
+        else:
+            wa = max(0.0, a - 0.45, prev_end - 0.05)
+            wb = min(n / SR, b + 0.55, next_start + 0.05)
+        source = "whisper-anchor" if pinned else ("whole-song" if k < len(lines) and not any(r["lines"][0] <= l.id <= r["lines"][1] for r in result.get("realignedRuns", [])) else "realigned-run")
+        result["lines"][l.id].update({"sequenceSpan": [round(a, 3), round(b, 3)], "sequenceSource": source, "window": [round(wa, 3), round(wb, 3)]})
 
-    # Windowed forced alignment. Lead and backing tokens are aligned as separate
-    # sequences in the same window because they can overlap in time.
+    # Windowed forced alignment of each line's words in text order. Backing
+    # echoes follow their lead phrase in the supplied text; aligning the lanes
+    # separately let an echo land on the previous line's rhyme, so one ordered
+    # sequence is used (true overlaps are then left to the listening review).
     for l in lines:
         wa, wb = result["lines"][l.id]["window"]
         fa, fb = int(wa / 0.02), int(math.ceil(wb / 0.02))
-        for voice in ("lead", "backing"):
-            toks = [t for t in l.tokens if t.voice == voice]
+        for voice in ("all",):
+            toks = list(l.tokens)
             if not toks:
                 continue
             for name, model in (("mms", mms), ("w2v", w2v)):
@@ -227,14 +335,12 @@ def main() -> None:
 
     # --- Whisper family ------------------------------------------------------
     try:
-        import stable_whisper
-        wmodel = stable_whisper.load_faster_whisper("large-v3", device=DEVICE, compute_type="float16")
-        result["models"]["whisper"] = "faster-whisper large-v3 (float16) via stable-ts 2.19.1 align(), per line window on the vocal stem"
+        result["models"]["whisper"] = "faster-whisper large-v3 (float16) via stable-ts 2.19.1: align() per line window on the vocal stem, plus one unforced pass matched to the text in memory (whisper_unforced)"
         for l in lines:
             wa, wb = result["lines"][l.id]["window"]
             seg = stem[int(wa * SR):int(wb * SR)]
-            for voice in ("lead", "backing"):
-                toks = [t for t in l.tokens if t.voice == voice]
+            for voice in ("all",):
+                toks = list(l.tokens)
                 if not toks:
                     continue
                 try:
@@ -246,26 +352,14 @@ def main() -> None:
                         result["words"][t.id]["whisper_stem"] = [round(wa + w.start, 3), round(wa + w.end, 3), round(float(w.probability or 0), 4)]
                 except Exception as error:  # noqa: BLE001
                     result["failures"].append({"line": l.id, "voice": voice, "observation": "whisper_stem", "error": str(error)[:200]})
-        # Coverage audit: unforced transcription, times and probabilities only.
-        segments, _info = wmodel.transcribe_original(stem, language="en", word_timestamps=True, vad_filter=False,
-                                                     condition_on_previous_text=False, beam_size=5)
-        heard = []
-        for s in segments:
-            for w in (s.words or []):
-                heard.append([round(w.start, 3), round(w.end, 3), round(float(w.probability), 4), len(w.word.strip())])
-        result["unforcedWhisperWords"] = {"fields": ["start", "end", "probability", "chars"], "rows": heard}
     except Exception as error:  # noqa: BLE001
         result["failures"].append({"observation": "whisper", "error": str(error)[:300]})
 
     # --- Vocal-stem energy coverage -----------------------------------------
-    hop = int(0.01 * SR)
-    frames = len(stem) // hop
-    rms = np.sqrt(np.mean(stem[:frames * hop].reshape(frames, hop) ** 2, axis=1) + 1e-12)
-    db = 20 * np.log10(rms)
     active = db > -38.0
     covered = np.zeros(frames, bool)
     for w in result["words"].values():
-        for key in ("mms_stem", "w2v_stem", "whisper_stem", "global_mms"):
+        for key in ("mms_stem", "w2v_stem", "whisper_stem", "whisper_unforced"):
             if w.get(key):
                 a, b = int(w[key][0] / 0.01), int(w[key][1] / 0.01)
                 covered[max(0, a - 30):b + 30] = True

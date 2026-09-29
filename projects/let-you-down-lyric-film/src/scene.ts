@@ -299,7 +299,7 @@ let layoutCache = new WeakMap<Cue, Map<string, Layout>>();
 function zoneBox(format: Format, shot: Shot, p: Placement): Box {
   if (format === 'landscape') {
     if (shot.zone === 'upper') return {x: 200, y: 96, w: 1520, h: 210};
-    if (shot.zone === 'bottom') return {x: 200, y: 900, w: 1520, h: 86};
+    if (shot.zone === 'bottom') return {x: 200, y: 896, w: 1520, h: 80};
     return {x: 200, y: 752, w: 1520, h: 214};
   }
   // Portrait: centred about y≈1370, above the spectrum and clear of the top bar.
@@ -331,7 +331,25 @@ export function layoutCue(c: Ctx, cue: Cue, format: Format, shot: Shot, p: Place
   const box = zoneBox(format, shot, p), lead = cue.words.filter(w => w.voice === 'lead'), back = cue.words.filter(w => w.voice === 'backing');
   const mainWords = lead.length ? lead : back, second = lead.length ? back : [];
   const maxRows = format === 'landscape' ? (shot.zone === 'bottom' ? 1 : 2) : 3;
-  let size = format === 'landscape' ? (shot.zone === 'bottom' ? 80 : 84) : 94;
+  if (maxRows === 1 && second.length) {
+    // One-row zones (under the film's upload panel): the backing echo follows
+    // the lead on the same baseline, smaller, instead of a second row.
+    for (let size = 76; size >= 40; size -= 2) {
+      const bs = Math.round(size * 0.66), gap = size * 0.55;
+      const lw = mainWords.map(w => measure(c, w.text, size)), bw = second.map(w => measure(c, w.text, bs));
+      const total = lw.reduce((a, b) => a + b, 0) + size * 0.24 * (lw.length - 1) + gap + bw.reduce((a, b) => a + b, 0) + bs * 0.24 * (bw.length - 1);
+      if (total > box.w && size > 40) continue;
+      const placed: Placed[] = [], baseline = box.y + (box.h - size * 1.06) / 2 + size * 0.86;
+      let x = box.x + (box.w - total) / 2;
+      mainWords.forEach((w, i) => {placed.push({word: w, x, y: baseline, w: lw[i]!, size, row: 0}); x += lw[i]! + size * 0.24;});
+      x += gap - size * 0.24;
+      second.forEach((w, i) => {placed.push({word: w, x, y: baseline, w: bw[i]!, size: bs, row: 0}); x += bw[i]! + bs * 0.24;});
+      const layout = {placed, size, box};
+      let m = layoutCache.get(cue); if (!m) {m = new Map(); layoutCache.set(cue, m);} m.set(key, layout);
+      return layout;
+    }
+  }
+  let size = format === 'landscape' ? (shot.zone === 'bottom' ? 76 : 84) : 94;
   if (!lead.length) size *= 0.8;
   let rows: Word[][] | null = null, backRows: Word[][] = [], backSize = 0;
   for (; size >= 40; size -= 2) {

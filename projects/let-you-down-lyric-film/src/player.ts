@@ -89,9 +89,14 @@ function renderWords(i: number, t: number): void {
 
 function frame(): void {
   requestAnimationFrame(frame);
+  paintNow(false);
+}
+/** One paint at the current media time. Also exposed for automated checks,
+ * because animation frames pause while a browser tab is hidden. */
+function paintNow(force: boolean): void {
   if (!ready || failed || video.readyState < HTMLMediaElement.HAVE_CURRENT_DATA) return;
   const t = video.currentTime;
-  if (video.paused && !dirty && Math.abs(t - lastPaint) < 1e-6) return;
+  if (!force && video.paused && !dirty && Math.abs(t - lastPaint) < 1e-6) return;
   try {
     const started = performance.now();
     lastDiag = paintScene(ctx, t, format, video);
@@ -176,7 +181,10 @@ video.addEventListener('seeked', () => {dirty = true;});
 video.addEventListener('pause', () => {dirty = true; updateUrl();});
 video.addEventListener('error', () => {failed = true; busy('Original video unavailable'); report('public/source.mp4 could not load or decode. Restore the locked source (README) and use Restore preview.');});
 video.muted = query.get('muted') === '1';
-(window as unknown as {lyd: unknown}).lyd = {state: () => ({ready, failed, placeholder, format, t: video.currentTime, paused: video.paused, presented, lastPresentedMedia, paintMs, diag: lastDiag, sceneReady: sceneReady()})};
+(window as unknown as {lyd: unknown}).lyd = {
+  state: () => ({ready, failed, placeholder, format, t: video.currentTime, paused: video.paused, presented, lastPresentedMedia, paintMs, diag: lastDiag, sceneReady: sceneReady()}),
+  paint: () => {paintNow(true); return lastDiag;},
+};
 
 busy('Loading original video and lyric scene…');
 setFormat(format); watchFrames(); requestAnimationFrame(frame);

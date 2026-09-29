@@ -18,6 +18,22 @@ if (lyrics.lines.length !== EXPECTED_LINES) throw Error(`Expected ${EXPECTED_LIN
 type Sel = {start: number; end: number; startSample: number; endSample: number; basis: string; spreadMs: number; review: string; voice: string};
 const selection = JSON.parse(readFileSync(`${root}analysis/timing-selection.json`, 'utf8')) as {textSha256: string; words: Record<string, Sel>};
 if (selection.textSha256 !== textSha) throw Error('timing-selection.json belongs to a different lyric text');
+// Reviewed local repairs (a ledger, never a global offset): analysis/timing-overrides.json
+// {"overrides": [{"id": "L37-W01", "start": 212.95, "end": 213.9, "reason": "…", "source": "owner listening 2026-…"}]}
+type Override = {id: string; start?: number; end?: number; reason: string; source: string};
+const overridesPath = `${root}analysis/timing-overrides.json`;
+const overrides = existsSync(overridesPath) ? (JSON.parse(readFileSync(overridesPath, 'utf8')) as {overrides: Override[]}).overrides : [];
+for (const o of overrides) {
+  const s = selection.words[o.id];
+  if (!s) throw Error(`Override for unknown word ${o.id}`);
+  if (!o.reason || !o.source) throw Error(`Override ${o.id} needs a reason and a source`);
+  const R = 44100;
+  if (o.start !== undefined) {s.startSample = Math.round(o.start * R); s.start = s.startSample / R;}
+  if (o.end !== undefined) {s.endSample = Math.round(o.end * R); s.end = s.endSample / R;}
+  if (s.end <= s.start) throw Error(`Override ${o.id} leaves an empty interval`);
+  s.basis = `${s.basis}+review-override`;
+  s.review = 'normal';
+}
 const source = JSON.parse(readFileSync(`${root}evidence/source-identity.json`, 'utf8')) as {audio: {duration: string}};
 const revision = process.argv.includes('--revision') ? process.argv[process.argv.indexOf('--revision') + 1]! : 'preview-v1';
 const effects: Record<string, number> = {};

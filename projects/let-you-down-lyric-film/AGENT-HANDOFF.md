@@ -38,8 +38,12 @@ Both files must carry `song: "BnnbP7pCIvQ"`, the timeline `revision`, the 15 `in
 
 Record an owner's overall attestation as an attestation. Do not invent per-cue telemetry. Any change to timing, scene code, shots, fonts or the compiled client invalidates both records.
 
+## Current state (preview-v1)
+
+The text is saved and bound (normalized SHA-256 in [evidence/preview-identity.json](evidence/preview-identity.json)). Alignment has run: 198 of 217 words are cross-model supported, and 71 are flagged for priority listening. The next step is the owner's listening review of the complete preview in a visible browser.
+
 ## Known work before the review
 
-- Alignment has not run on the real text. Expect priority flags at line entrances after gaps and in the overlapping outro. Repair words locally, never with a global offset, and log every override in the selection file.
+- Priority flags cluster at line entrances after gaps and in the overlapping outro (3:14–3:52). Repair words locally, never with a global offset, through `analysis/timing-overrides.json` (one entry per word, with a reason and a source), then rebuild with a new `--revision`.
 - Check the portrait crops on moving shots in motion. The authored pan at 72.8–78.5 s and the glide segments are the likeliest to need a tweak (edit `analysis/build_shots.py`, then rerun it and `scripts/measure-tones.ts`).
 - Browser-to-native renderer parity has only been checked visually on placeholder stills. Compare browser and native frames at the same source times in both formats before production.
