@@ -1,0 +1,548 @@
+{
+  "version": 1,
+  "sourceSha256": "c384e814edfaaf22a944101a0d1a73661bb63a83ad304fc79c5953a00c51010c",
+  "vocalStemSha256": "e4023227f5a0a2863f09014ef2e40c3332568c57cfe4a356411ff05c7c70df16",
+  "dataSha256": "efc516a45c2bc57c951900bd3a82bd81e07d75345f5a287e403dc13bcbd375c0",
+  "dataFile": "audio-features.bin",
+  "analysisSampleRate": 44100,
+  "decodedSamples": 12498944,
+  "durationSeconds": 283.4227664399093,
+  "framesPerSecond": 60,
+  "frameCount": 17006,
+  "fftSize": 4096,
+  "window": "periodic Hann",
+  "supportSeconds": 0.09287981859410431,
+  "bandCount": 48,
+  "bandEdgesHz": [
+    40,
+    45.2569875697443,
+    51.20487309719975,
+    57.93445763175758,
+    65.54847572250827,
+    74.16316377473107,
+    83.91003452714786,
+    94.93788473929867,
+    107.4150667386064,
+    121.5320585048091,
+    137.50437152693956,
+    155.57584082450515,
+    176.02234735867867,
+    199.15602966022334,
+    225.3300489693089,
+    254.94398063234715,
+    288.44991406148165,
+    326.3593543793572,
+    369.2510311104086,
+    417.7797331269756,
+    472.6863047254658,
+    534.8089554337192,
+    605.096056206294,
+    684.6206173557389,
+    774.5966692414834,
+    876.3977957856789,
+    991.578103750594,
+    1121.8959478967815,
+    1269.3407742127788,
+    1436.1634910079329,
+    1624.9108315166652,
+    1838.4642325973152,
+    2080.083823051904,
+    2353.4581930971553,
+    2662.760704772772,
+    3012.7132029276213,
+    3408.658099402498,
+    3856.639930854178,
+    4363.497635291174,
+    4936.968956024534,
+    5585.808566875397,
+    6319.921721951274,
+    7150.515470302646,
+    8090.2697439187805,
+    9153.530930910263,
+    10356.530888986894,
+    11717.63474271382,
+    13257.621247445079,
+    15000
+  ],
+  "borrowedSingleBinBands": [
+    1,
+    4
+  ],
+  "format": "Float32LE interleaved",
+  "scalarsPerFrame": 51,
+  "bytesPerFrame": 204,
+  "fields": [
+    "rmsDbFS",
+    "positiveMagnitudeFlux",
+    "vocalStemRmsDbFS",
+    "band0DbFS",
+    "band1DbFS",
+    "band2DbFS",
+    "band3DbFS",
+    "band4DbFS",
+    "band5DbFS",
+    "band6DbFS",
+    "band7DbFS",
+    "band8DbFS",
+    "band9DbFS",
+    "band10DbFS",
+    "band11DbFS",
+    "band12DbFS",
+    "band13DbFS",
+    "band14DbFS",
+    "band15DbFS",
+    "band16DbFS",
+    "band17DbFS",
+    "band18DbFS",
+    "band19DbFS",
+    "band20DbFS",
+    "band21DbFS",
+    "band22DbFS",
+    "band23DbFS",
+    "band24DbFS",
+    "band25DbFS",
+    "band26DbFS",
+    "band27DbFS",
+    "band28DbFS",
+    "band29DbFS",
+    "band30DbFS",
+    "band31DbFS",
+    "band32DbFS",
+    "band33DbFS",
+    "band34DbFS",
+    "band35DbFS",
+    "band36DbFS",
+    "band37DbFS",
+    "band38DbFS",
+    "band39DbFS",
+    "band40DbFS",
+    "band41DbFS",
+    "band42DbFS",
+    "band43DbFS",
+    "band44DbFS",
+    "band45DbFS",
+    "band46DbFS",
+    "band47DbFS"
+  ],
+  "sourceClock": "Frame i is centred at i/60 s on the original AAC decode (no offset). Interpolate adjacent frames; clamp at the ends.",
+  "limitations": [
+    "Centred 92.9 ms windows include about 46 ms of future and past audio: musical response only, never syllable-onset evidence.",
+    "Equal-weight mono fold-down can cancel antiphase stereo content.",
+    "The vocal field is measured on an estimated HTDemucs stem that leaks accompaniment; it scales artistic intensity only.",
+    "Bands below about 120 Hz contain one or two FFT bins; their motion is coarse by construction."
+  ],
+  "displayMapping": {
+    "formula": "clamp((raw - minimum) / (maximum - minimum), 0, 1)",
+    "rmsDb": {
+      "minimum": -120,
+      "maximum": -6.784738344057851,
+      "percentiles": [
+        0.1,
+        0.995
+      ]
+    },
+    "flux": {
+      "minimum": 0.2871091815119884,
+      "maximum": 2.7292960308017578,
+      "percentiles": [
+        0.5,
+        0.995
+      ]
+    },
+    "vocalRmsDb": {
+      "minimum": -69.64455651635353,
+      "maximum": -13.014523774758095,
+      "percentiles": [
+        0.3,
+        0.995
+      ]
+    },
+    "bandsDb": [
+      {
+        "minimum": -120,
+        "maximum": -13.341247891725882,
+        "percentiles": [
+          0.1,
+          0.995
+        ]
+      },
+      {
+        "minimum": -120,
+        "maximum": -13.341247891725882,
+        "percentiles": [
+          0.1,
+          0.995
+        ]
+      },
+      {
+        "minimum": -120,
+        "maximum": -11.080360727326635,
+        "percentiles": [
+          0.1,
+          0.995
+        ]
+      },
+      {
+        "minimum": -120,
+        "maximum": -10.91462796700916,
+        "percentiles": [
+          0.1,
+          0.995
+        ]
+      },
+      {
+        "minimum": -120,
+        "maximum": -10.91462796700916,
+        "percentiles": [
+          0.1,
+          0.995
+        ]
+      },
+      {
+        "minimum": -120,
+        "maximum": -11.939289293950289,
+        "percentiles": [
+          0.1,
+          0.995
+        ]
+      },
+      {
+        "minimum": -120,
+        "maximum": -15.353323519060005,
+        "percentiles": [
+          0.1,
+          0.995
+        ]
+      },
+      {
+        "minimum": -120,
+        "maximum": -12.695645968383745,
+        "percentiles": [
+          0.1,
+          0.995
+        ]
+      },
+      {
+        "minimum": -120,
+        "maximum": -15.03059419874577,
+        "percentiles": [
+          0.1,
+          0.995
+        ]
+      },
+      {
+        "minimum": -120,
+        "maximum": -18.627123994502828,
+        "percentiles": [
+          0.1,
+          0.995
+        ]
+      },
+      {
+        "minimum": -120,
+        "maximum": -16.08693657729111,
+        "percentiles": [
+          0.1,
+          0.995
+        ]
+      },
+      {
+        "minimum": -120,
+        "maximum": -21.104112398415076,
+        "percentiles": [
+          0.1,
+          0.995
+        ]
+      },
+      {
+        "minimum": -120,
+        "maximum": -18.6164311965235,
+        "percentiles": [
+          0.1,
+          0.995
+        ]
+      },
+      {
+        "minimum": -120,
+        "maximum": -18.117452053931594,
+        "percentiles": [
+          0.1,
+          0.995
+        ]
+      },
+      {
+        "minimum": -120,
+        "maximum": -17.947020859019243,
+        "percentiles": [
+          0.1,
+          0.995
+        ]
+      },
+      {
+        "minimum": -120,
+        "maximum": -18.485568487627486,
+        "percentiles": [
+          0.1,
+          0.995
+        ]
+      },
+      {
+        "minimum": -120,
+        "maximum": -17.545490229668335,
+        "percentiles": [
+          0.1,
+          0.995
+        ]
+      },
+      {
+        "minimum": -120,
+        "maximum": -17.663355360157517,
+        "percentiles": [
+          0.1,
+          0.995
+        ]
+      },
+      {
+        "minimum": -120,
+        "maximum": -15.417026620200083,
+        "percentiles": [
+          0.1,
+          0.995
+        ]
+      },
+      {
+        "minimum": -120,
+        "maximum": -15.931565407360381,
+        "percentiles": [
+          0.1,
+          0.995
+        ]
+      },
+      {
+        "minimum": -120,
+        "maximum": -17.865688649598283,
+        "percentiles": [
+          0.1,
+          0.995
+        ]
+      },
+      {
+        "minimum": -120,
+        "maximum": -17.098013156200107,
+        "percentiles": [
+          0.1,
+          0.995
+        ]
+      },
+      {
+        "minimum": -120,
+        "maximum": -16.103098502269177,
+        "percentiles": [
+          0.1,
+          0.995
+        ]
+      },
+      {
+        "minimum": -120,
+        "maximum": -18.079205974385754,
+        "percentiles": [
+          0.1,
+          0.995
+        ]
+      },
+      {
+        "minimum": -120,
+        "maximum": -14.352712002162678,
+        "percentiles": [
+          0.1,
+          0.995
+        ]
+      },
+      {
+        "minimum": -120,
+        "maximum": -15.63641920486521,
+        "percentiles": [
+          0.1,
+          0.995
+        ]
+      },
+      {
+        "minimum": -120,
+        "maximum": -21.96429345022253,
+        "percentiles": [
+          0.1,
+          0.995
+        ]
+      },
+      {
+        "minimum": -120,
+        "maximum": -22.16834064764376,
+        "percentiles": [
+          0.1,
+          0.995
+        ]
+      },
+      {
+        "minimum": -120,
+        "maximum": -20.902201944125757,
+        "percentiles": [
+          0.1,
+          0.995
+        ]
+      },
+      {
+        "minimum": -120,
+        "maximum": -19.20355008365881,
+        "percentiles": [
+          0.1,
+          0.995
+        ]
+      },
+      {
+        "minimum": -120,
+        "maximum": -21.97232754483018,
+        "percentiles": [
+          0.1,
+          0.995
+        ]
+      },
+      {
+        "minimum": -120,
+        "maximum": -25.562237220950955,
+        "percentiles": [
+          0.1,
+          0.995
+        ]
+      },
+      {
+        "minimum": -120,
+        "maximum": -26.67727838798981,
+        "percentiles": [
+          0.1,
+          0.995
+        ]
+      },
+      {
+        "minimum": -120,
+        "maximum": -27.162877081426586,
+        "percentiles": [
+          0.1,
+          0.995
+        ]
+      },
+      {
+        "minimum": -120,
+        "maximum": -28.031384551154325,
+        "percentiles": [
+          0.1,
+          0.995
+        ]
+      },
+      {
+        "minimum": -120,
+        "maximum": -28.46820256663896,
+        "percentiles": [
+          0.1,
+          0.995
+        ]
+      },
+      {
+        "minimum": -120,
+        "maximum": -28.01129842444932,
+        "percentiles": [
+          0.1,
+          0.995
+        ]
+      },
+      {
+        "minimum": -120,
+        "maximum": -27.445181530553615,
+        "percentiles": [
+          0.1,
+          0.995
+        ]
+      },
+      {
+        "minimum": -120,
+        "maximum": -27.074100070677144,
+        "percentiles": [
+          0.1,
+          0.995
+        ]
+      },
+      {
+        "minimum": -120,
+        "maximum": -25.670397894136464,
+        "percentiles": [
+          0.1,
+          0.995
+        ]
+      },
+      {
+        "minimum": -120,
+        "maximum": -28.22220070397383,
+        "percentiles": [
+          0.1,
+          0.995
+        ]
+      },
+      {
+        "minimum": -120,
+        "maximum": -29.598610859712668,
+        "percentiles": [
+          0.1,
+          0.995
+        ]
+      },
+      {
+        "minimum": -120,
+        "maximum": -29.81765949011485,
+        "percentiles": [
+          0.1,
+          0.995
+        ]
+      },
+      {
+        "minimum": -120,
+        "maximum": -29.617483372856697,
+        "percentiles": [
+          0.1,
+          0.995
+        ]
+      },
+      {
+        "minimum": -120,
+        "maximum": -31.049551933537522,
+        "percentiles": [
+          0.1,
+          0.995
+        ]
+      },
+      {
+        "minimum": -120,
+        "maximum": -32.48066897790735,
+        "percentiles": [
+          0.1,
+          0.995
+        ]
+      },
+      {
+        "minimum": -120,
+        "maximum": -32.20207284675078,
+        "percentiles": [
+          0.1,
+          0.995
+        ]
+      },
+      {
+        "minimum": -120,
+        "maximum": -35.0193987647239,
+        "percentiles": [
+          0.1,
+          0.995
+        ]
+      }
+    ],
+    "note": "Source-specific artistic scaling, not loudness units. Raw dBFS stays in the binary. Any smoothing, section tiers or display curves belong to scene code on the source clock, never to lyric timing."
+  }
+}

@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Let You Down · Review preview</title>
+  <style>
+    @font-face{font-family:OswaldLYD;src:url('/public/fonts/Oswald-Bold.ttf') format('truetype');font-weight:700;font-style:normal;font-display:block}
+    :root{color-scheme:dark;font:14px/1.45 ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;background:#07060d;color:#e4e2f1;--cyan:#2ee6ff;--pink:#ff3fa4;--yellow:#fcee0a}
+    *{box-sizing:border-box}body{margin:0;padding:20px 22px 30px}main{max-width:1460px;margin:auto}
+    header{display:flex;justify-content:space-between;align-items:flex-end;gap:18px;margin-bottom:14px}
+    h1{font:700 22px/1 OswaldLYD,sans-serif;letter-spacing:.06em;margin:0;text-transform:uppercase}h1 span{color:var(--yellow)}
+    header p{color:#9a96b3;font-size:12px;margin:5px 0 0}.badge{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#07060d;background:var(--cyan);padding:4px 8px;border-radius:3px}
+    .badge.placeholder{background:var(--pink);color:#fff}
+    .stage{position:relative;width:100%;max-width:min(1400px,calc((100dvh - 300px)*16/9));margin:0 auto;background:#000;line-height:0;box-shadow:0 0 0 1px #1c1830,0 18px 70px #000c}
+    .stage.portrait{max-width:min(520px,calc((100dvh - 250px)*9/16));min-width:220px}
+    canvas{display:block;width:100%;height:auto}.stage.busy canvas{visibility:hidden}
+    #loading{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:14px;line-height:1.4;color:#c4bfdc;padding:24px;text-align:center}#loading[hidden]{display:none}
+    button,input,select,textarea{font:inherit;color:inherit}button,select,input[type=number]{border:1px solid #302a48;background:#141124;border-radius:6px;padding:8px 12px;min-height:36px}
+    button{cursor:pointer}button:hover{background:#221c3a}button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid var(--cyan);outline-offset:2px}
+    button[aria-pressed=true]{border-color:var(--cyan);background:#0f2a33;color:#dffaff}button:disabled,input:disabled,select:disabled{opacity:.45;cursor:wait}
+    button.primary{background:var(--yellow);color:#0b0a12;border-color:transparent;min-width:84px;font-weight:600}button.primary:hover{background:#fff27a}
+    .controls{margin:16px auto 0;max-width:1200px}.seek-row{display:flex;align-items:center;gap:12px}input[type=range]{width:100%;accent-color:var(--cyan);cursor:pointer}
+    #clock{font-variant-numeric:tabular-nums;white-space:nowrap;font-size:12px;color:#bdb8d6}.toolbar{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:12px}
+    .group{display:flex;gap:5px}.field{display:flex;align-items:center;gap:7px;color:#aaa5c4;font-size:12px}#seconds{width:92px;font-variant-numeric:tabular-nums}.spacer{flex:1}
+    #cue{width:min(520px,100%);margin-top:12px}#error{max-width:1200px;margin:12px auto;padding:12px 14px;border:1px solid #7a3a5c;border-radius:6px;color:#ffd3e8;background:#2a1020}
+    .status{display:flex;gap:18px;justify-content:space-between;margin-top:12px;color:#9a96b3;font-size:12px}.status p{margin:0}#now{color:#d8d4ee}
+    .review{max-width:1200px;margin:16px auto 0;display:grid;grid-template-columns:1.2fr 1fr;gap:16px}
+    .panel{border:1px solid #221d38;border-radius:8px;padding:12px 14px;background:#0c0a17}.panel h2{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#8f89ad;margin:0 0 8px}
+    #words{display:flex;flex-wrap:wrap;gap:6px}#words span{font-size:12px;padding:3px 7px;border-radius:4px;background:#171330;border:1px solid #28224a}#words span.active{border-color:var(--cyan);color:#dffaff}#words span.priority{border-style:dashed;border-color:var(--pink)}
+    textarea{width:100%;min-height:92px;background:#100d1e;border:1px solid #28224a;border-radius:6px;padding:8px;resize:vertical}
+    footer{color:#6f6a8c;font-size:11px;max-width:1200px;margin:16px auto 0;border-top:1px solid #1c1830;padding-top:12px}
+    dialog{color:#e4e2f1;background:#0f0c1c;border:1px solid #352d55;border-radius:10px;padding:16px;width:min(1200px,92vw);max-height:94dvh}dialog::backdrop{background:#000c}
+    dialog video{display:block;width:100%;height:auto;max-height:72dvh;background:#000}dialog p{font-size:12px;color:#a8a3c2;margin:10px 0 0}
+    @media(max-width:700px){body{padding:12px 10px 22px}.review{grid-template-columns:1fr}.spacer{display:none}.status{display:block}}
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <div><h1>Dawid Podsiadło — <span>Let You Down</span></h1><p>Cyberpunk: Edgerunners ending theme · official music video · lyric film review preview</p></div>
+    <span id="mode" class="badge">Review preview</span>
+  </header>
+  <section id="stage" class="stage busy" aria-label="Lyric film preview" aria-busy="true">
+    <canvas id="film" width="1920" height="1080" aria-label="Original music video with synchronized lyrics and measured neon light"></canvas>
+    <output id="loading">Loading original video and lyric scene…</output>
+  </section>
+  <video id="source" src="/public/source.mp4" playsinline preload="auto" hidden></video>
+  <p id="error" role="alert" hidden></p>
+  <section class="controls" aria-label="Preview controls">
+    <div class="seek-row"><label for="seek" hidden>Seek</label><input id="seek" type="range" min="0" max="0" step="0.001" value="0" disabled><output id="clock">0:00 / 0:00</output></div>
+    <div class="toolbar">
+      <button id="play" class="primary" type="button" disabled>Play</button><button id="restart" type="button">Restart</button><button id="mute" type="button" aria-pressed="false">Sound on</button>
+      <label class="field" for="speed">Speed <select id="speed"><option value="1">1×</option><option value="0.75">0.75×</option><option value="0.5">0.5×</option></select></label>
+      <label class="field" for="seconds">Seconds <input id="seconds" type="number" min="0" max="0" step="0.001" value="0" disabled></label>
+      <div class="group" role="group" aria-label="Film format"><button id="landscape" type="button" aria-pressed="true">16:9</button><button id="portrait" type="button" aria-pressed="false">9:16</button></div>
+      <span class="spacer"></span>
+      <button id="prev-cue" type="button" title="Previous line (←)">◀ Line</button><button id="next-cue" type="button" title="Next line (→)">Line ▶</button>
+      <button id="show-reference" type="button">Source reference</button><button id="recover" type="button">Restore preview</button>
+    </div>
+    <label for="cue" hidden>Jump to lyric line</label><select id="cue" disabled><option>Loading lines…</option></select>
+    <div class="status"><p><output id="status">Loading…</output> · <output id="now">—</output></p><p id="picture-health">Picture: waiting for first frame</p></div>
+  </section>
+  <section class="review" aria-label="Review tools">
+    <div class="panel"><h2>Current line · word timing</h2><div id="words">No line at this moment.</div></div>
+    <div class="panel"><h2>Review notes (kept in this browser)</h2><textarea id="notes" placeholder="Timestamp + observation, e.g. 1:24.3 — word starts early"></textarea>
+      <div class="toolbar"><button id="stamp" type="button">Insert time</button><button id="export-notes" type="button">Export notes</button></div></div>
+  </section>
+  <footer id="footer">The original picture and soundtrack are preserved; lyric focus, measured neon light and the spectrum follow the source clock. Timing is model-assisted until the listening review is complete. No production render is authorized by this preview.</footer>
+</main>
+<dialog id="reference-dialog" aria-labelledby="reference-heading">
+  <header><h2 id="reference-heading">Original source · muted reference</h2><button id="close-reference" type="button">Close</button></header>
+  <video id="reference-video" muted playsinline preload="none"></video>
+  <p id="reference-status">The same original picture without lyrics or added light, muted so one soundtrack plays.</p>
+</dialog>
+<script type="module" src="/review/client.js"></script>
+</body>
+</html>

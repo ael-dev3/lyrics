@@ -8,7 +8,21 @@ Music films with synchronized lyrics, meaning-linked translations, and audio-rea
 
 **Starting another song:** use the [single-prompt template, agent quickstart and complete quality checklist](docs/source-clocked-word-effects-workflow.md), including [how to make reactive visuals belong to the picture](docs/scene-integrated-visuals.md). The [If The Sun Burns Out Tonight handoff](projects/if-the-sun-burns-out-tonight-lyric-film/AGENT-HANDOFF.md) and [production lessons](projects/if-the-sun-burns-out-tonight-lyric-film/PRODUCTION-LESSONS.md) show how exact word/phrase effects, measured intensity and dependable full-picture playback fit the shared workflow.
 
-[**Leave It On — Warpkeep**](#leave-it-on--warpkeep) · [**Must Have Been A Dream**](#must-have-been-a-dream) · [**TAKE ME THERE**](#take-me-there) · [**Rainline**](#rainline) · [**El Tesoro — preview**](#el-tesoro--preview) · [**I'll Change for You**](#ill-change-for-you) · [**If The Sun Burns Out Tonight**](#if-the-sun-burns-out-tonight) · [**Люби меня, люби**](#люби-меня-люби) · [**Stay at Your House — Hardstyle**](#stay-at-your-house--hardstyle) · [**Ведьмы**](#ведьмы) · [**Pero es locura**](#pero-es-locura) · [**La Lune**](#la-lune) · [**каждый, кто делал тебе больно**](#каждый-кто-делал-тебе-больно) · [**Sugar Glass**](#sugar-glass) · [**Твои глаза**](#твои-глаза) · [**Прости за любовь — accepted with known gaps**](#прости-за-любовь) · [**Половинка**](#половинка) · [**Life Letters**](#life-letters) · [**Joyride**](#joyride) · [**midnight love**](#midnight-love) · [**Пожары**](#пожары) · [**Отменяй**](#отменяй) · [**Roi × Adore**](#roi--adore) · [**TikTok edition**](#tiktok-edition) · [**Tanisea**](#tanisea) · [**Build and workflow**](#build-and-workflow)
+[**Let You Down — preview**](#let-you-down--preview) · [**Leave It On — Warpkeep**](#leave-it-on--warpkeep) · [**Must Have Been A Dream**](#must-have-been-a-dream) · [**TAKE ME THERE**](#take-me-there) · [**Rainline**](#rainline) · [**El Tesoro — preview**](#el-tesoro--preview) · [**I'll Change for You**](#ill-change-for-you) · [**If The Sun Burns Out Tonight**](#if-the-sun-burns-out-tonight) · [**Люби меня, люби**](#люби-меня-люби) · [**Stay at Your House — Hardstyle**](#stay-at-your-house--hardstyle) · [**Ведьмы**](#ведьмы) · [**Pero es locura**](#pero-es-locura) · [**La Lune**](#la-lune) · [**каждый, кто делал тебе больно**](#каждый-кто-делал-тебе-больно) · [**Sugar Glass**](#sugar-glass) · [**Твои глаза**](#твои-глаза) · [**Прости за любовь — accepted with known gaps**](#прости-за-любовь) · [**Половинка**](#половинка) · [**Life Letters**](#life-letters) · [**Joyride**](#joyride) · [**midnight love**](#midnight-love) · [**Пожары**](#пожары) · [**Отменяй**](#отменяй) · [**Roi × Adore**](#roi--adore) · [**TikTok edition**](#tiktok-edition) · [**Tanisea**](#tanisea) · [**Build and workflow**](#build-and-workflow)
+
+## Let You Down — preview
+
+**Dawid Podsiadło · Cyberpunk: Edgerunners ending theme · English · `preview-v1` ready for the listening review**
+
+![Let You Down preview frame at 00:27.000: the original neon corridor portrait with the film's measured light and cyberdeck spectrum](projects/let-you-down-lyric-film/evidence/preview-landscape-27.000.jpg)
+
+*Native-renderer preview frame at 00:27.000, before the first vocal. The picture is the [official music video](https://www.youtube.com/watch?v=BnnbP7pCIvQ) by Ilya Kuvshinov and STUDIO MASSKET. Its own neon tubes glow with the measured music, and a small cyberdeck spectrum sits below. No lyric film frame has been rendered.*
+
+The official video stays the picture. Landscape keeps the whole frame. Portrait uses 92 reviewed shots: subject-centred crops, and full-frame fits for the video's title cards, dialogue boxes, Securicine files, upload screens, logos and credits. The film's magenta, violet, amber and cyan neon brightens with the matching band families. A fixed cyberdeck spectrum follows section tiers, strongest in the instrumental drop. Lyrics use forward-leaning Oswald Bold with colour-only neon focus: cyan in the verses, Edgerunners yellow in the choruses. On white flashback frames the type switches to dark ink. Three exact-ID effects mark the neon words, the fire words and the title hook's final word.
+
+This edition keeps the lyric text out of the repository entirely: timing is stored by word ID, and the supplied text stays in a local, git-ignored file that the preview and renderer bind by hash. All 217 words are timed. 198 are supported by a second, different model, and 71 are flagged for priority listening, mostly entrances and the overlapping outro. The listening review, render authorization and delivery are still ahead.
+
+[Project, method and status](projects/let-you-down-lyric-film/README.md) · [Visual brief](projects/let-you-down-lyric-film/VISUAL-BRIEF.md) · [Timing method](projects/let-you-down-lyric-film/TIMING.md) · [Agent handoff](projects/let-you-down-lyric-film/AGENT-HANDOFF.md) · [Original video](https://www.youtube.com/watch?v=BnnbP7pCIvQ)
 
 ## Leave It On — Warpkeep
 
@@ -490,6 +504,7 @@ Each project has its own setup instructions. Use the release source archive when
 
 | Project | Starting point |
 | --- | --- |
+| Let You Down | [Preview setup, lyric-text policy and resume path](projects/let-you-down-lyric-film/README.md); source-integrated neon light, ID-only timing and a gated renderer with encoded-focus verification |
 | Rainline | [Project preview and production process](projects/spikeriser-rainline-lyric-film/README.md); original pixel city, provisional source-clocked words, scoped verified MP4 exports and pending full sync review |
 | Люби меня, люби | [Verified Russian / English films](projects/lyubi-menya-lyubi-lyric-film/README.md); rose paper composition, source-linked focus and complete posting kit |
 | Stay at Your House — Hardstyle | [Full preview setup](projects/stay-at-your-house-hardstyle/README.md); English lyrics, official trailer edits, verified films and identity-bound production gate |
@@ -530,6 +545,7 @@ The reusable workflow covers soundtrack locking, lyric alignment, semantic trans
 
 ```text
 assets/                          Film screenshots and artwork
+projects/let-you-down-lyric-film/ Let You Down preview: shot map, neon light, gated renderer, verifiers (no lyric text)
 projects/spikeriser-rainline-lyric-film/ Rainline source study, city, preview, scoped export and evidence
 projects/lyubi-menya-lyubi-lyric-film/ Verified Russian / English rose paper films and posting kit
 projects/stay-at-your-house-hardstyle/ Verified hardstyle films, complete preview and delivery evidence

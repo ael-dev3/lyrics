@@ -1,0 +1,30 @@
+{
+  "name": "let-you-down-lyric-film",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "esbuild src/player.ts --bundle --format=esm --outfile=review/client.js",
+    "preview": "npm run build && node scripts/preview-server.ts",
+    "typecheck": "tsc --noEmit",
+    "check": "npm run typecheck && node --test tests/*.test.ts && node scripts/check.ts",
+    "source": "node scripts/prepare-source.ts",
+    "features": "node scripts/analyze-audio.ts",
+    "timeline": "node scripts/build-timeline.ts",
+    "render:still": "node scripts/render-still.ts",
+    "render:proof": "node scripts/render-production.ts --proof",
+    "render:production": "node scripts/render-production.ts --production",
+    "verify:production": "node scripts/verify-final.ts",
+    "verify:focus": "node scripts/verify-word-focus.ts",
+    "captions": "node scripts/make-captions.ts",
+    "covers": "node scripts/make-covers.ts",
+    "tones": "node scripts/measure-tones.ts",
+    "package": "node scripts/package-delivery.ts"
+  },
+  "devDependencies": {
+    "@napi-rs/canvas": "0.1.100",
+    "@types/node": "26.4.0",
+    "esbuild": "0.28.2",
+    "typescript": "7.0.2"
+  }
+}

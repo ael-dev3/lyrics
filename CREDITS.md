@@ -2,6 +2,12 @@
 
 **We are not the creators of the original music, lyrics, performances, musical remixes, anime footage, characters or source illustrations. We do not take credit for that work.** Our contribution is the additional lyric-film presentation and production workflow. Artist and source-upload links below distinguish those roles; a source uploader is not necessarily the owner of every element in an upload.
 
+## Let You Down
+
+**Dawid Podsiadło** performs *Let You Down*, the ending theme of the Netflix series *Cyberpunk: Edgerunners*. The music video's closing credits list music by **Dawid Podsiadło** and **Magdalena Laskowska**, lyrics by **Dawid Podsiadło** and producer **Akira Yamaoka**. The [official music video](https://www.youtube.com/watch?v=BnnbP7pCIvQ), published on the Cyberpunk 2077 / **CD PROJEKT RED** channel, was directed by **Ilya Kuvshinov** and produced by **STUDIO MASSKET**. These are credits for the original song and moving picture, not the lyric treatment.
+
+**Ael**, assisted by **Claude (Anthropic)**, adds the lyric presentation, source-light response, portrait reframing, measured spectrum and production workflow. The repository holds no lyric text for this edition. Original music, lyrics and animation remain third-party material and are excluded from the repository contribution license. [Project, source identity and status](projects/let-you-down-lyric-film/README.md).
+
 ## Must Have Been A Dream
 
 **Computer Kill** created and performed the source song in the [official music video](https://www.youtube.com/watch?v=AK6duyCPU50). The video's description identifies **a postmortē production**; **Rob Roy Taylor** directed and edited, **Tommy Melendez** produced and edited, **Joseph Puccio** handled cinematography, and **Isaac Barnes** provided VFX. These are credits for the original recording and moving picture, not the lyric treatment.
