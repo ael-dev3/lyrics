@@ -1,0 +1,281 @@
+{
+  "schema": "lyric-film/final-verification/v1",
+  "sourceSha256": "c384e814edfaaf22a944101a0d1a73661bb63a83ad304fc79c5953a00c51010c",
+  "expectedFrames": 17006,
+  "sourceBlackIntervals": [
+    [
+      0,
+      3.628625
+    ],
+    [
+      250.041458,
+      251.00075
+    ],
+    [
+      251.042458,
+      252.418833
+    ],
+    [
+      255.421833,
+      255.50525
+    ],
+    [
+      258.049458,
+      259.384125
+    ],
+    [
+      261.803208,
+      262.095167
+    ],
+    [
+      277.819208,
+      279.821208
+    ],
+    [
+      282.740792,
+      283.324708
+    ]
+  ],
+  "files": [
+    {
+      "file": "Let-You-Down-YouTube-1920x1080-60fps.mp4",
+      "bytes": 255861397,
+      "sha256": "56b3732949c08a8ac15d20b2e6c78092d31ac984c3b58b70dadf655e533fecfa",
+      "failures": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "profile": "High",
+          "codec_type": "video",
+          "width": 1920,
+          "height": 1080,
+          "sample_aspect_ratio": "1:1",
+          "pix_fmt": "yuv420p",
+          "color_range": "tv",
+          "color_space": "bt709",
+          "color_transfer": "bt709",
+          "color_primaries": "bt709",
+          "r_frame_rate": "60/1",
+          "start_time": "0.000000",
+          "duration": "283.433333",
+          "nb_read_packets": "17006"
+        },
+        {
+          "codec_name": "aac",
+          "profile": "LC",
+          "codec_type": "audio",
+          "sample_rate": "44100",
+          "channels": 2,
+          "r_frame_rate": "0/0",
+          "start_time": "0.000000",
+          "duration": "283.422766",
+          "nb_read_packets": "12206"
+        }
+      ],
+      "frames": 17006,
+      "timestampGrid": {
+        "count": 17006,
+        "offGrid": 0
+      },
+      "audio": {
+        "packetFramemd5Sha256": "e20f980a84b7bf526e5df27df30ed696654b3dddabcdd6eb435d38c3e4f7d429",
+        "decodedPcmSha256": "ca1d8d7569ea91379a33c6deb00e569e2c9e7fe8c8f51864ebd3964669f6e310",
+        "packetsMatchSource": true,
+        "pcmMatchesSource": true
+      },
+      "strictDecode": "pass",
+      "black": {
+        "outputIntervals": [
+          [
+            0,
+            3.416667
+          ],
+          [
+            250,
+            252.433333
+          ],
+          [
+            258.05,
+            259.4
+          ],
+          [
+            261.816667,
+            262.1
+          ],
+          [
+            277.833333,
+            279.833333
+          ],
+          [
+            282.75,
+            283.416667
+          ]
+        ],
+        "sourceDarkPassages": [
+          [
+            0,
+            3.628625
+          ],
+          [
+            250.041458,
+            252.418833
+          ],
+          [
+            255.421833,
+            255.50525
+          ],
+          [
+            258.049458,
+            259.384125
+          ],
+          [
+            261.803208,
+            262.095167
+          ],
+          [
+            277.819208,
+            279.821208
+          ],
+          [
+            282.740792,
+            283.324708
+          ]
+        ],
+        "explainedByComposition": [],
+        "unexpected": []
+      }
+    },
+    {
+      "file": "Let-You-Down-TikTok-1080x1920-60fps.mp4",
+      "bytes": 233110425,
+      "sha256": "d10a21b72ab72f62be9af68d755e065bb5a5f7a2029725cbe1e39332141a4ea6",
+      "failures": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "profile": "High",
+          "codec_type": "video",
+          "width": 1080,
+          "height": 1920,
+          "sample_aspect_ratio": "1:1",
+          "pix_fmt": "yuv420p",
+          "color_range": "tv",
+          "color_space": "bt709",
+          "color_transfer": "bt709",
+          "color_primaries": "bt709",
+          "r_frame_rate": "60/1",
+          "start_time": "0.000000",
+          "duration": "283.433333",
+          "nb_read_packets": "17006"
+        },
+        {
+          "codec_name": "aac",
+          "profile": "LC",
+          "codec_type": "audio",
+          "sample_rate": "44100",
+          "channels": 2,
+          "r_frame_rate": "0/0",
+          "start_time": "0.000000",
+          "duration": "283.422766",
+          "nb_read_packets": "12206"
+        }
+      ],
+      "frames": 17006,
+      "timestampGrid": {
+        "count": 17006,
+        "offGrid": 0
+      },
+      "audio": {
+        "packetFramemd5Sha256": "e20f980a84b7bf526e5df27df30ed696654b3dddabcdd6eb435d38c3e4f7d429",
+        "decodedPcmSha256": "ca1d8d7569ea91379a33c6deb00e569e2c9e7fe8c8f51864ebd3964669f6e310",
+        "packetsMatchSource": true,
+        "pcmMatchesSource": true
+      },
+      "strictDecode": "pass",
+      "black": {
+        "outputIntervals": [
+          [
+            0,
+            1.516667
+          ],
+          [
+            250,
+            251.016667
+          ],
+          [
+            251.05,
+            252.433333
+          ],
+          [
+            255.433333,
+            255.516667
+          ],
+          [
+            257.55,
+            259.933333
+          ],
+          [
+            261.816667,
+            262.183333
+          ],
+          [
+            277.833333,
+            283.416667
+          ]
+        ],
+        "sourceDarkPassages": [
+          [
+            0,
+            3.628625
+          ],
+          [
+            250.041458,
+            252.418833
+          ],
+          [
+            255.421833,
+            255.50525
+          ],
+          [
+            258.049458,
+            259.384125
+          ],
+          [
+            261.803208,
+            262.095167
+          ],
+          [
+            277.819208,
+            279.821208
+          ],
+          [
+            282.740792,
+            283.324708
+          ]
+        ],
+        "explainedByComposition": [
+          {
+            "interval": [
+              257.55,
+              259.933333
+            ],
+            "samples": 10,
+            "lost": []
+          },
+          {
+            "interval": [
+              277.833333,
+              283.416667
+            ],
+            "samples": 23,
+            "lost": []
+          }
+        ],
+        "unexpected": []
+      }
+    }
+  ],
+  "limits": [
+    "These checks establish delivery integrity (container, cadence, soundtrack identity, decode, missing-picture black intervals), not acoustic word accuracy or visual quality."
+  ]
+}

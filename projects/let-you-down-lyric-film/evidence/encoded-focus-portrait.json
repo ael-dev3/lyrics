@@ -1,0 +1,42 @@
+{
+  "schema": "lyric-film/encoded-focus/v1",
+  "file": "Let-You-Down-TikTok-1080x1920-60fps.mp4",
+  "format": "portrait",
+  "mode": "production",
+  "framesChecked": 216,
+  "glyphChecks": 1250,
+  "pass": 1249,
+  "mismatches": 0,
+  "ambiguous": 1,
+  "notFullyShownWhileActive": [
+    "L30-W07"
+  ],
+  "negativeControl": {
+    "expectation": "next word in the lane active instead",
+    "differingChecks": 348,
+    "detected": 347
+  },
+  "method": "preview-v2: median RGB of the eroded lower glyph interior against two predictions at the frame's ink level: the published focus gradient overlaid with ink magenta, and the resting colour (towards dark ink) over the word's measured surroundings. Focus: within 18 RGB units and nearer the focus prediction, plus (below half ink) a halo-hued ring 0.03-0.12 em outside the letters that is bright or at least as bright as the surroundings. Rest: 34+ units from focus, or beyond 24 and nearer the rest prediction. Thin glyphs use a 1 px erosion.",
+  "mismatchList": [],
+  "ambiguousList": [
+    {
+      "word": "L26-W04",
+      "frame": 9989,
+      "time": 166.483,
+      "expect": "focus",
+      "ink": 0.47,
+      "inner": [
+        234,
+        139,
+        186
+      ],
+      "distance": 3,
+      "restDistance": 76,
+      "ring": [
+        254,
+        218,
+        249
+      ]
+    }
+  ]
+}
