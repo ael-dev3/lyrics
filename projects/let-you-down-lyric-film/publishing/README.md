@@ -1,6 +1,6 @@
 # Let You Down — posting assets
 
-Titles, descriptions and covers for the YouTube and TikTok kit. The films themselves, and the optional caption tracks, contain the lyric text and are generated locally; they are never committed. No platform upload is represented here.
+Titles, descriptions and covers for the YouTube and TikTok kit, published with both films in [let-you-down-v1.0.0](https://github.com/ael-dev3/lyrics/releases/tag/let-you-down-v1.0.0). The films themselves, and the optional caption tracks, contain the lyric text and are generated locally; they are never committed. No platform upload is represented here.
 
 | Asset | Composition | Size | SHA-256 |
 | --- | --- | --- | --- |

@@ -2,6 +2,12 @@
 
 This is an **AI-assisted lyric-film and workflow project**. It should not be described as entirely hand-coded, manually timed or hand-illustrated.
 
+## Let You Down production
+
+The Dawid Podsiadło landscape and portrait editions were developed with **Claude (Anthropic)** in Claude Code. Assistance covered TypeScript implementation, model-assisted alignment analysis, visual design and inspection, verification tooling, publishing copy and documentation. HTDemucs, MMS, an English wav2vec2 aligner and Whisper/stable-ts provide the stored timing observations; they support the selected word events but do not prove exact vocal boundaries. The official music video and its AAC soundtrack are retained unchanged, with no synthetic singing. The covers combine a source frame with typography; no image generation was used.
+
+The project owner accepted the browser preview, requested one flame adjustment and authorized production as a scoped owner-approved preview. No per-cue, playback-speed or per-format listening telemetry is claimed. The lyric text is kept out of the repository, and the owner rendered and published the lyric-bearing films. Decoded-pixel checks verify the displayed word focus against the accepted timing; packet and PCM checks verify the soundtrack. [Project and release](https://github.com/ael-dev3/lyrics/releases/tag/let-you-down-v1.0.0) · [Review scope](projects/let-you-down-lyric-film/evidence/sync-review.json).
+
 ## Sugar Glass production
 
 The English-only edition uses OpenAI Codex assistance for TypeScript implementation, model-assisted alignment analysis, layout, visual inspection, encoding verification and documentation. Stored recognizer and aligner observations support the selected word events; they do not prove exact vocal boundaries. The original Anya Nami footage and recording are retained, with no synthetic singing or replacement soundtrack.
