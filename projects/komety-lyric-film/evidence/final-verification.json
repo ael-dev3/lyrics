@@ -1,0 +1,371 @@
+{
+  "schema": "komety/final-verification/v1",
+  "status": "passed",
+  "revision": "komety-preview-v10-first-final-eagle",
+  "project": "komety-lyric-film",
+  "verifiedAt": "2026-10-02T13:14:50.348Z",
+  "sourceSha256": "af518bcde332f296dfc7982ebd7d8724c80c722decf5a32dfe3b00ef86107bf6",
+  "rendererSha256": "318eb6661f399e5b7bd7d025012f25c363150ccfc3f00abf5331f3bc31c5ce76",
+  "verifierSha256": "334fa5bbb01740e99d3f5eef6f42502c83cca98e46012873ebd1192459c1a80a",
+  "manifestSha256": "a24f00cbfd57ad8a814eedce805edaa608c25ed7537bff2192268618527f0650",
+  "previewIdentitySha256": "54b9565600162a36f61058c2aca5aaa5ffd7d8d1924e1f6a6aba8057dfce1e42",
+  "syncReviewSha256": "f1069a25b89f1dcb03ad8a6b1fd3f690c4719f977d8006ec30e6585da4688fba",
+  "productionAuthorizationSha256": "3bc3e22085085a35f45156562a70896e6d2f9a0e3b33402d32c74ca18164cff7",
+  "approvedInputHashes": {
+    "public/source.mp4": "af518bcde332f296dfc7982ebd7d8724c80c722decf5a32dfe3b00ef86107bf6",
+    "public/timeline.json": "f8584b8a543fe594d351b52103c4cd5b19d57fe473a7f2d74302c7a74a963d93",
+    "public/audio-features.json": "f2850743fb855832aa3676ecefaf847b803dc2f13f48ed2243bae91985431f4b",
+    "public/portrait-framing.json": "1b60732638523110c2bd5e22cc6b96af0247a92b714ebdd8aa87cc2953a2413f",
+    "public/fonts/CormorantGaramond-Semibold.ttf": "69e7ae35cba23d962227b86f99217c250e642e4c6f6104b4f3ec465039e4e2d8",
+    "source/lyrics-editorial.json": "cdca5026ede787103626912364a82ac311facb7e32aba652c013600fc31d390d",
+    "source/timing-candidate.json": "bd9fe396db5501436ba867d700d4ad14314fa0a4eb05cca2eff87487d882bde9",
+    "source/onset-corrections-v5.json": "1041fffe6891a650994aa6fbb24e4c622dde4a4f789a8fe7852cbba2a4fd9d53",
+    "source/onset-corrections-v6.json": "d70ee8bcb0de5bf62ccc132295bed4a48714739b0a0ffc7e8f26fda72fc9592b",
+    "source/onset-corrections-v7.json": "f3e344c97adaa2577ffa119605e873634e1396530b5dbe30ec06f0781bc96e76",
+    "source/onset-corrections-v8.json": "7369b28c4dc0035c3d64f8ee6fe596aa3d8fe20057e2e780deb9956b5994dfbf",
+    "source/onset-corrections-v9.json": "05f4312394b61ec0c8fd7e04c36b2ac194095c8ce24bc9c6397e2ebdc0618e36",
+    "source/onset-corrections-v10.json": "efe39f0bf32ad8cebdb1834d1bfb16d921ba96355017e21d13409b2fced4ae4e",
+    "source/line-visibility.json": "fe03845ea11cac39e4e0feac59e905eb3cbb77242a23f829ac98027adbe8ee0e",
+    "src/model.ts": "07112b0f7c466f9b368237c6ff16374ac4f59c64511be8a61f714d85d98d9f5d",
+    "src/scene.ts": "37f135221b3ad0ce16f02f7aa1b7c84e823c31feaac7fa49f1edeb3a72cd1a68",
+    "src/player.ts": "c6c7024fe0910064a4ac739ed31ddee5578913f1a7f8f1f1eedd10d65e679c14"
+  },
+  "source": {
+    "file": "source.mp4",
+    "sha256": "af518bcde332f296dfc7982ebd7d8724c80c722decf5a32dfe3b00ef86107bf6",
+    "videoFrames": 6501,
+    "videoFramesPerSecond": 25,
+    "videoDurationSeconds": 260.04,
+    "audio": {
+      "decodedPcmF32leSha256": "2838c0b16dce535615a637be8b1042530f5b5f5ce314bda0eb962915f28a9d0d",
+      "decodedSamples": 11469824,
+      "decodedBytes": 91758592,
+      "sampleRate": 44100,
+      "channels": 2,
+      "method": "Strict original-rate audio decode to interleaved little-endian float32; bytes are hashed and counted as they stream, without resampling."
+    },
+    "aacPacketCount": 11201,
+    "aacPacketInventorySha256": "90e24fd07e6947fa0a157eb45e849f871f54935b4007ad63fe6cac95fedb11cc",
+    "aacPayloadSequenceSha256": "25b2374d065f7e663ede36e92110de8196b77cda3cb293c649ed4f377677dba0",
+    "originalAudioTailSeconds": 0.04671201814056758
+  },
+  "outputContract": {
+    "frames": 15606,
+    "framesPerSecond": 60,
+    "videoDurationSeconds": 260.1,
+    "finalPicturePolicy": "Hold the last authored picture through the original audio tail; finite60fps duration rounds up by less than one frame",
+    "videoRemainderAfterDecodedAudioSeconds": 0.013287981859434694
+  },
+  "formats": {
+    "landscape": {
+      "file": "KOMETY-landscape-1920x796-60fps.mp4",
+      "sha256": "a4801b480e6d2360b50fb399e1d8a938f0491605c599db6bce7821b99bfbf91a",
+      "width": 1920,
+      "height": 796,
+      "frames": 15606,
+      "framesPerSecond": 60,
+      "videoDurationSeconds": 260.1,
+      "audioDurationSeconds": 260.086712,
+      "videoCodec": "h264",
+      "audioCodec": "aac",
+      "pixelFormat": "yuv420p",
+      "colorRange": "tv",
+      "colorSpace": "bt709",
+      "colorPrimaries": "bt709",
+      "colorTransfer": "bt709",
+      "timeBase": "1/60000",
+      "sampleAspectRatio": "1:1",
+      "metadata": {
+        "width": 1920,
+        "height": 796,
+        "frames": 15606,
+        "framesPerSecond": 60,
+        "videoDurationSeconds": 260.1,
+        "audioDurationSeconds": 260.086712,
+        "videoCodec": "h264",
+        "audioCodec": "aac",
+        "pixelFormat": "yuv420p",
+        "colorRange": "tv",
+        "colorSpace": "bt709",
+        "colorPrimaries": "bt709",
+        "colorTransfer": "bt709",
+        "timeBase": "1/60000",
+        "sampleAspectRatio": "1:1"
+      },
+      "timestamps": {
+        "decodedFrames": 15606,
+        "allFrameTimestamps": true,
+        "maximumTimestampErrorSeconds": 3.333333467026023e-7,
+        "method": "Every decoded frame has an integer best-effort PTS exactly equal to n/60 in the stream time base; printed seconds agree within 2 microseconds."
+      },
+      "audio": {
+        "decodedPcmF32leSha256": "2838c0b16dce535615a637be8b1042530f5b5f5ce314bda0eb962915f28a9d0d",
+        "decodedSamples": 11469824,
+        "decodedBytes": 91758592,
+        "sampleRate": 44100,
+        "channels": 2,
+        "method": "Strict original-rate audio decode to interleaved little-endian float32; bytes are hashed and counted as they stream, without resampling."
+      },
+      "productionProvenance": {
+        "receiptFile": "KOMETY-landscape-1920x796-60fps.mp4.json",
+        "receiptSha256": "e7d4a8109cbafcea3eecf5bd2b597b5f54d6d30d6bf1a29f2460398e50ff6b13",
+        "rendererSha256": "318eb6661f399e5b7bd7d025012f25c363150ccfc3f00abf5331f3bc31c5ce76",
+        "approvedRevisionAndInputsMatch": true,
+        "scope": "The production receipt binds provenance only; technical claims are independently checked on this encoded file."
+      },
+      "aacPackets": {
+        "count": 11201,
+        "inventorySha256": "90e24fd07e6947fa0a157eb45e849f871f54935b4007ad63fe6cac95fedb11cc",
+        "payloadSequenceSha256": "25b2374d065f7e663ede36e92110de8196b77cda3cb293c649ed4f377677dba0",
+        "originalPayloadPtsDtsDurationSizeAndSideDataIdentical": true,
+        "method": "Every original AAC packet SHA256, PTS, DTS, duration, size and complete packet side-data inventory equals the corresponding final-file packet."
+      },
+      "strictFullDecode": true,
+      "blackPicture": {
+        "sourceIntervals": [
+          {
+            "start": 0,
+            "end": 0.8
+          },
+          {
+            "start": 234.24,
+            "end": 234.4
+          },
+          {
+            "start": 249.64,
+            "end": 249.92
+          },
+          {
+            "start": 259.8,
+            "end": 260
+          }
+        ],
+        "renderedIntervals": [
+          {
+            "start": 0,
+            "end": 0.65
+          },
+          {
+            "start": 234.25,
+            "end": 234.4
+          },
+          {
+            "start": 249.683333,
+            "end": 249.933333
+          },
+          {
+            "start": 259.8,
+            "end": 260.083333
+          }
+        ],
+        "unexpectedIntervals": [],
+        "sourceEquivalent": true,
+        "boundaryToleranceSeconds": 0.05666666666666667,
+        "permittedSourceIntervals": [
+          {
+            "start": 0,
+            "end": 0.8,
+            "heldThroughOutputEnd": false,
+            "allowedEnd": 0.8
+          },
+          {
+            "start": 234.24,
+            "end": 234.4,
+            "heldThroughOutputEnd": false,
+            "allowedEnd": 234.4
+          },
+          {
+            "start": 249.64,
+            "end": 249.92,
+            "heldThroughOutputEnd": false,
+            "allowedEnd": 249.92
+          },
+          {
+            "start": 259.8,
+            "end": 260,
+            "heldThroughOutputEnd": true,
+            "allowedEnd": 260.1
+          }
+        ],
+        "sourceFinalPictureBlack": true,
+        "outputFinalPictureBlack": true,
+        "sourceBoundaryEvents": 7,
+        "outputBoundaryEvents": 7,
+        "method": "FFmpeg blackdetect at zero minimum duration, 2% luma threshold and 98% picture coverage. Each delivered black interval must lie within an authored source interval, allowing one native25fps plus one output60fps boundary. A source interval may extend through the required final-picture hold only when its per-frame lavfi.black_start/end metadata proves the final source picture itself is black; there is no generic ending exemption."
+      },
+      "fastStart": true,
+      "bytes": 112393582,
+      "atoms": [
+        {
+          "type": "ftyp",
+          "offset": 0,
+          "size": 32
+        },
+        {
+          "type": "moov",
+          "offset": 32,
+          "size": 427058
+        },
+        {
+          "type": "free",
+          "offset": 427090,
+          "size": 8
+        },
+        {
+          "type": "mdat",
+          "offset": 427098,
+          "size": 111966484
+        }
+      ]
+    },
+    "portrait": {
+      "file": "KOMETY-portrait-1080x1920-60fps.mp4",
+      "sha256": "f7bb48cedb727d08e72aa87ecfd2a533beaf987c1527c5a525de3d813354042b",
+      "width": 1080,
+      "height": 1920,
+      "frames": 15606,
+      "framesPerSecond": 60,
+      "videoDurationSeconds": 260.1,
+      "audioDurationSeconds": 260.086712,
+      "videoCodec": "h264",
+      "audioCodec": "aac",
+      "pixelFormat": "yuv420p",
+      "colorRange": "tv",
+      "colorSpace": "bt709",
+      "colorPrimaries": "bt709",
+      "colorTransfer": "bt709",
+      "timeBase": "1/60000",
+      "sampleAspectRatio": "1:1",
+      "metadata": {
+        "width": 1080,
+        "height": 1920,
+        "frames": 15606,
+        "framesPerSecond": 60,
+        "videoDurationSeconds": 260.1,
+        "audioDurationSeconds": 260.086712,
+        "videoCodec": "h264",
+        "audioCodec": "aac",
+        "pixelFormat": "yuv420p",
+        "colorRange": "tv",
+        "colorSpace": "bt709",
+        "colorPrimaries": "bt709",
+        "colorTransfer": "bt709",
+        "timeBase": "1/60000",
+        "sampleAspectRatio": "1:1"
+      },
+      "timestamps": {
+        "decodedFrames": 15606,
+        "allFrameTimestamps": true,
+        "maximumTimestampErrorSeconds": 3.333333467026023e-7,
+        "method": "Every decoded frame has an integer best-effort PTS exactly equal to n/60 in the stream time base; printed seconds agree within 2 microseconds."
+      },
+      "audio": {
+        "decodedPcmF32leSha256": "2838c0b16dce535615a637be8b1042530f5b5f5ce314bda0eb962915f28a9d0d",
+        "decodedSamples": 11469824,
+        "decodedBytes": 91758592,
+        "sampleRate": 44100,
+        "channels": 2,
+        "method": "Strict original-rate audio decode to interleaved little-endian float32; bytes are hashed and counted as they stream, without resampling."
+      },
+      "productionProvenance": {
+        "receiptFile": "KOMETY-portrait-1080x1920-60fps.mp4.json",
+        "receiptSha256": "bfce3d003600c2c8618a1ce2611664ec9d55fcb2e7b1c9a9fc0f12c0a00e76e2",
+        "rendererSha256": "318eb6661f399e5b7bd7d025012f25c363150ccfc3f00abf5331f3bc31c5ce76",
+        "approvedRevisionAndInputsMatch": true,
+        "scope": "The production receipt binds provenance only; technical claims are independently checked on this encoded file."
+      },
+      "aacPackets": {
+        "count": 11201,
+        "inventorySha256": "90e24fd07e6947fa0a157eb45e849f871f54935b4007ad63fe6cac95fedb11cc",
+        "payloadSequenceSha256": "25b2374d065f7e663ede36e92110de8196b77cda3cb293c649ed4f377677dba0",
+        "originalPayloadPtsDtsDurationSizeAndSideDataIdentical": true,
+        "method": "Every original AAC packet SHA256, PTS, DTS, duration, size and complete packet side-data inventory equals the corresponding final-file packet."
+      },
+      "strictFullDecode": true,
+      "blackPicture": {
+        "sourceIntervals": [
+          {
+            "start": 0,
+            "end": 0.8
+          },
+          {
+            "start": 234.24,
+            "end": 234.4
+          },
+          {
+            "start": 249.64,
+            "end": 249.92
+          },
+          {
+            "start": 259.8,
+            "end": 260
+          }
+        ],
+        "renderedIntervals": [],
+        "unexpectedIntervals": [],
+        "sourceEquivalent": true,
+        "boundaryToleranceSeconds": 0.05666666666666667,
+        "permittedSourceIntervals": [
+          {
+            "start": 0,
+            "end": 0.8,
+            "heldThroughOutputEnd": false,
+            "allowedEnd": 0.8
+          },
+          {
+            "start": 234.24,
+            "end": 234.4,
+            "heldThroughOutputEnd": false,
+            "allowedEnd": 234.4
+          },
+          {
+            "start": 249.64,
+            "end": 249.92,
+            "heldThroughOutputEnd": false,
+            "allowedEnd": 249.92
+          },
+          {
+            "start": 259.8,
+            "end": 260,
+            "heldThroughOutputEnd": true,
+            "allowedEnd": 260.1
+          }
+        ],
+        "sourceFinalPictureBlack": true,
+        "outputFinalPictureBlack": false,
+        "sourceBoundaryEvents": 7,
+        "outputBoundaryEvents": 0,
+        "method": "FFmpeg blackdetect at zero minimum duration, 2% luma threshold and 98% picture coverage. Each delivered black interval must lie within an authored source interval, allowing one native25fps plus one output60fps boundary. A source interval may extend through the required final-picture hold only when its per-frame lavfi.black_start/end metadata proves the final source picture itself is black; there is no generic ending exemption."
+      },
+      "fastStart": true,
+      "bytes": 113469564,
+      "atoms": [
+        {
+          "type": "ftyp",
+          "offset": 0,
+          "size": 32
+        },
+        {
+          "type": "moov",
+          "offset": 32,
+          "size": 427342
+        },
+        {
+          "type": "free",
+          "offset": 427374,
+          "size": 8
+        },
+        {
+          "type": "mdat",
+          "offset": 427382,
+          "size": 113042182
+        }
+      ]
+    }
+  },
+  "limits": [
+    "Technical verification does not establish transcription, translation quality or acoustic word ownership.",
+    "Blackdetect checks new near-black intervals, not complete source-picture or glyph parity. Separate decoded scene and bilingual focus audits are required.",
+    "Final films still require inspection with sound in both formats."
+  ]
+}

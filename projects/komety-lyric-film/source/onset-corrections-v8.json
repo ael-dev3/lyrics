@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "revision": "komety-preview-v8-fire-entry",
+  "baselineTimingSha256": "0b4e37fd99c1cf6a7363a4428cf0131a3f7fdca3230e490a9296ee1f7abccab9",
+  "sourceSha256": "af518bcde332f296dfc7982ebd7d8724c80c722decf5a32dfe3b00ef86107bf6",
+  "sampleRate": 44100,
+  "status": "Root-reconciled targeted original/signal correction; full current-revision listening acceptance pending",
+  "humanListeningAttested": false,
+  "reviewDocument": "evidence/fire-entry-review.md",
+  "methodSummary": "V8 targeted second-refrain second fire: quiet descending body149.44–149.50 receives ownership at149.480, before a later vowel core and internal g-like closure. One source start and paired preceding release move170ms earlier; the two revised eagle entrances and all27 final lexical releases/neutral line holds remain unchanged.",
+  "edges": [
+    {
+      "wordId": "KOM-015-s04",
+      "edge": "start",
+      "beforeSample": 6599565,
+      "selectedSample": 6592068,
+      "signalIntervalSeconds": [
+        149.43,
+        149.55
+      ],
+      "confidence": "medium-low",
+      "reason": "Original/stem attenuation149.28–149.34 and renewal near149.35 precede a distinct descending, changed quiet body149.44–149.50. Source-focused perceptual review supports assigning this quiet prefix to огонь before the later vowel core149.696 and internal g-like attenuation149.82–149.87. The149.650 split was already inside the prefix;149.300 would risk stealing the preceding v/n sequence. Select149.480 within149.430–149.550, with explicit continuous-vowel ownership uncertainty. Cached original/stem character paths disagree and provide articulation order rather than certified leading edges; no fixed advance is copied from eagle or other fire entrances."
+    },
+    {
+      "wordId": "KOM-015-s03",
+      "edge": "end",
+      "beforeSample": 6599565,
+      "selectedSample": 6592068,
+      "signalIntervalSeconds": [
+        149.43,
+        149.55
+      ],
+      "confidence": "medium-low",
+      "reason": "Original/stem attenuation149.28–149.34 and renewal near149.35 precede a distinct descending, changed quiet body149.44–149.50. Source-focused perceptual review supports assigning this quiet prefix to огонь before the later vowel core149.696 and internal g-like attenuation149.82–149.87. The149.650 split was already inside the prefix;149.300 would risk stealing the preceding v/n sequence. Select149.480 within149.430–149.550, with explicit continuous-vowel ownership uncertainty. Cached original/stem character paths disagree and provide articulation order rather than certified leading edges; no fixed advance is copied from eagle or other fire entrances. The preceding word ends at the same explicitly selected ownership handoff."
+    }
+  ],
+  "retainedOnsets": [],
+  "scope": "One targeted coupled handoff relative to v7. No change to cue-final word release, line lifetime, source clock, translation, picture framing or visual treatment.",
+  "limits": [
+    "The149.430–149.550 interval expresses plausible ownership of adjacent connected vowels, not a statistical confidence interval or sample-accurate perceptual certificate.",
+    "Original mix is authority; estimated vocals and same-family cached path variations cannot establish independent model votes or replace phonetic entry with a stronger core.",
+    "Targeted perceptual feedback does not establish full normal/reduced-speed listening, both-format acceptance or render authorization."
+  ]
+}

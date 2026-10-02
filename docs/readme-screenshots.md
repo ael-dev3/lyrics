@@ -1,9 +1,10 @@
 # README song screenshots
 
-Updated 27 September 2026. Featured songs in the main README have a representative image with its edition and preview/final status, and each song's project README has an associated image. Rendered preview references are identified separately from browser captures and decoded final-film frames. Promotional covers and supplementary frames remain separate from the representative image.
+Updated 2 October 2026. Featured songs in the main README have a representative image with its edition and preview/final status, and each song's project README has an associated image. Rendered preview references are identified separately from browser captures and decoded final-film frames. Promotional covers and supplementary frames remain separate from the representative image.
 
 | Song | Representative image | Time | Edition / provenance |
 | --- | --- | --- | --- |
+| Кометы | [Original forest, equal bilingual type and individual focus](../projects/komety-lyric-film/evidence/final-landscape-12.400.jpg) | 00:12.400 | Exact decoded frame 744 from the verified native 1920×796, 60 fps film; original frame 310 |
 | Let You Down | [Original neon corridor portrait with measured neon light and neon spectrum](../projects/let-you-down-lyric-film/evidence/preview-landscape-27.000.jpg) | 00:27.000 | Native-renderer frame before the first vocal, matching the released v1.0.0 films at that moment. Lyric frames are withheld because the edition keeps its lyric text local |
 | Must Have Been A Dream | [Original blue-lit stage performance and individual Know-It-All focus](../assets/must-have-been-a-dream-final-78-870.png) | 01:18.870 | Verified final 1920×1080 landscape film; exact decoded frame 1891 |
 | TAKE ME THERE | [Original source city, word focus and fixed spectrum](../projects/take-me-there-lyric-film/evidence/final-landscape-97-30.png) | 01:37.300 | Verified final 1920×1080 landscape film; exact decoded frame 5838 |

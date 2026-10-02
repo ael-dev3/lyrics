@@ -2,6 +2,12 @@
 
 This is an **AI-assisted lyric-film and workflow project**. It should not be described as entirely hand-coded, manually timed or hand-illustrated.
 
+## Кометы production
+
+This POLNALYUBVI bilingual edition uses OpenAI Codex assistance for translation and meaning correspondence, TypeScript composition, acoustic candidate reconciliation, visual inspection, rendering verification, publishing assets and documentation. Bounded Whisper and MMS_FA observations, original waveform/spectral views and a source-clock-verified estimated vocal support the retained timing choices. Their precision and disagreement remain explicit; they do not certify uniquely measurable phonetic boundaries.
+
+The project owner explicitly attested full-recording normal-speed review, reduced-speed review of uncertain words and held endings, and both native-wide/portrait layouts for the exact final v10 preview before authorizing production. This is an owner-attested scope, not invented per-cue browser telemetry or assistant listening. Source footage and original AAC are retained; covers combine an exact original frame with typography, without image generation. [Production method](projects/komety-lyric-film/PRODUCTION-NOTES.md) · [Review identity](projects/komety-lyric-film/evidence/sync-review.json).
+
 ## Let You Down production
 
 The Dawid Podsiadło landscape and portrait editions were developed with **Claude (Anthropic)** in Claude Code. Assistance covered TypeScript implementation, model-assisted alignment analysis, visual design and inspection, verification tooling, publishing copy and documentation. HTDemucs, MMS, an English wav2vec2 aligner and Whisper/stable-ts provide the stored timing observations; they support the selected word events but do not prove exact vocal boundaries. The official music video and its AAC soundtrack are retained unchanged, with no synthetic singing. The covers combine a source frame with typography; no image generation was used.

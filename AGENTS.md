@@ -36,4 +36,34 @@ When a future song calls for custom pixel-art places, rain or visualisers inside
 
 For every future bilingual lyric film, follow `docs/bilingual-lyric-workflow.md`: give English equal emphasis, perceived font size and weight, color/contrast, word or semantic-group highlighting, and synchronization precision alongside the original-language lyrics. Drive both from the same source timing and meaning mappings. Reflow or rebalance long lines instead of shrinking or dimming English alone. Check both languages at native and mobile size in every delivery aspect ratio. This default supersedes subordinate English treatments in historical examples; it does not request changes to published films.
 
+For each new recording, use `docs/connected-phoneme-onset-workflow.md` during the first timing pass. Inspect quiet connected word entrances and complete held endings individually, including every repeated phrase. Keep lexical release, complete-line reading hold and translation meaning focus separate; verify the revision actually loaded by the complete moving-video preview. `projects/komety-lyric-film/PRODUCTION-LESSONS.md` records the late-core and premature-fade failures this preparation must catch.
+
 For every TikTok publishing kit, follow `docs/tiktok-cover-workflow.md` without asking for repeated cover specifications. The established profile-cover target is PORTRAIT 1200×1600 pixels (width×height, 3:4), matching the tall profile preview labelled “4:3” in the supplied upload interface. Never interpret that interface label as a request for a landscape 1600×1200 upload. Keep the full title, artist and focal subject inside the portrait composition, and review it at 150×200 pixels before delivery.
+
+## Conservative GitHub Actions use
+
+- Follow the current user approval policy for GitHub Actions budgets and
+  exceptions. Preserve stricter project pauses and required release evidence.
+- Run proportionate validation locally first, inspect the diff, and batch
+  coherent changes before remote CI. Avoid repeated dispatch or rerun loops.
+- Before any dispatch, rerun, push, pull-request creation or update, merge, or
+  trigger change that can start Actions, inspect repository run history for the
+  current UTC day using read-only tools. Check all workflows, branches and
+  actors. Include queued, in-progress and completed runs and rerun attempts,
+  including attempts of older runs. Account for duplicate push/PR events,
+  downstream workflow_run chains,
+  scheduled services, and GitHub-generated workflows. Estimate the resulting
+  runs and runner minutes; a skipped job or cancelled run is not a daily cap.
+  A read-only check is a snapshot, so coordinate parallel agents before acting.
+- Escalate exception requests, unknown monthly usage, and CI or release
+  conflicts to the coordinating assistant for handling under the current user
+  approval policy before triggering remote work. Report unavailable usage as
+  unknown; do not expand billing permissions to obtain it.
+- Checkpoint and source-publication instructions remain subject to this
+  preflight and the current user approval policy. If publication is blocked,
+  retain durable work locally and report the precise blocker. Preserve required
+  checks and service/deployment behavior; do not bypass checks or alter triggers
+  merely to fit a budget.
+- Include this operational guidance in delegated tasks. Apply the current user
+  approval policy to each proposed action rather than copying permission grants
+  or numeric approval thresholds into repository instructions or memory.

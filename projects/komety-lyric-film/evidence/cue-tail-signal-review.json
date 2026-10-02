@@ -1,0 +1,1224 @@
+{
+  "schemaVersion": 1,
+  "status": "Reconciliation proposal only; word timings and renderer not edited by this review.",
+  "timingSha256": "f9bdac802a56019eda3c21c8c4a78619506ac296db2a06999f55770c0dba4fc2",
+  "v3TimelineSha256": "23481036a84466161e6840f137edec0443633aea86066214c803ea12238f7f37",
+  "sourceSha256": "af518bcde332f296dfc7982ebd7d8724c80c722decf5a32dfe3b00ef86107bf6",
+  "editorialSha256": "cdca5026ede787103626912364a82ac311facb7e32aba652c013600fc31d390d",
+  "sourceSampleRate": 44100,
+  "sourceClockOffset": 0,
+  "humanListeningAttested": false,
+  "reviewedCueCount": 27,
+  "bodyEndpointChangesRecommended": 0,
+  "allCueEndsEqualLastWordBounds": true,
+  "methods": [
+    "Fresh broad original-mix/estimated-vocal/estimated-accompaniment final-word spectra for all 27 cues.",
+    "Separate independent close final-body/decay and actual v3-opacity inspection for 15 verse/chorus cues.",
+    "Original/stem/accompaniment 40ms RMS on a 10ms grid supports amplitude decay; energy alone does not identify speech.",
+    "Original source remains authority; equal-length zero-observed-lag estimated stem supports identity only."
+  ],
+  "limits": [
+    "These are model/signal estimates, not human normal-speed/reduced-speed listening attestation.",
+    "Direct articulation can be quiet or constant-pitch; stationary harmonic decay alone does not establish reverb.",
+    "Close-gap decay overlaps new voice and cannot yield an isolated absolute reverb stop.",
+    "Low-confidence filtered radio tails overlap music/static; farther stationary tones are not more words.",
+    "Selected neutral legibility lifetime is presentation data, not an extension of word focus.",
+    "Sample integers encode review selections; they do not establish millisecond perceptual accuracy."
+  ],
+  "cues": [
+    {
+      "cueId": "KOM-001",
+      "lastWordId": "KOM-001-s08",
+      "lastWordText": "кометы",
+      "v3BodyEndSeconds": 15.21501133786848,
+      "v3BodyEndSample": 670982,
+      "proposedBodyEndSeconds": 15.21501133786848,
+      "bodyEndRangeSeconds": [
+        15.18,
+        15.27
+      ],
+      "bodyDisposition": "retain estimate within fresh transition uncertainty",
+      "voiceRelatedDecayCandidateSpanSeconds": [
+        15.21501133786848,
+        15.46
+      ],
+      "proposedCueTailEndSeconds": 15.46,
+      "cueTailEndRangeSeconds": [
+        15.36,
+        15.51
+      ],
+      "proposedCueTailEndSample": 681786,
+      "confidence": "medium",
+      "reason": "Final vowel harmonics lose their changing strong body near 15.20–15.25. A much weaker voice-shaped remnant persists through roughly 15.4; the new consonant/body at 15.54 is the next phrase. Existing body end remains within the observed transition; do not transfer the tail into full-strength focus.",
+      "tailInterpretation": "Signal-detectable candidate decay/reading lifetime; audibility not human-listening-attested. Passive decay is not full-strength phonetic focus.",
+      "evidence": "Public numerical observations and rationale in evidence/cue-tail-review.md and evidence/cue-tail-signal-review.json; representative original/stem spectra in evidence/cue-tail-comparison.png.",
+      "reviewerScope": "Acoustic verse/radio review",
+      "v3CueGoneSeconds": 15.368185941043084,
+      "nextCueAcousticStartSeconds": 15.541360544217687,
+      "tailLegibilityEndSeconds": 15.541360544217687,
+      "tailLegibilityEndSample": 685374,
+      "tailLegibilitySelection": "Neutral full-opacity reading until actual next vocal; replace atomically.",
+      "recommendedAtomicHandoffSeconds": 15.541360544217687,
+      "proposedBodyEndSample": 670982,
+      "bodyEndpointChangeRecommended": false,
+      "bodyEndRangeSamples": [
+        669438,
+        673407
+      ],
+      "cueTailEndRangeSamples": [
+        677376,
+        683991
+      ]
+    },
+    {
+      "cueId": "KOM-002",
+      "lastWordId": "KOM-002-s03",
+      "lastWordText": "планетой",
+      "v3BodyEndSeconds": 19.316462585034014,
+      "v3BodyEndSample": 851856,
+      "proposedBodyEndSeconds": 19.316462585034014,
+      "bodyEndRangeSeconds": [
+        19.2,
+        19.62
+      ],
+      "bodyDisposition": "retain estimate within fresh transition uncertainty",
+      "voiceRelatedDecayCandidateSpanSeconds": [
+        19.316462585034014,
+        20.6
+      ],
+      "proposedCueTailEndSeconds": 20.6,
+      "cueTailEndRangeSeconds": [
+        20.35,
+        20.8
+      ],
+      "proposedCueTailEndSample": 908460,
+      "confidence": "low",
+      "reason": "The vowel/sonorant region weakens over 19.2–19.6. Original and estimated-vocal bands continue as softer largely stationary decay toward 20.5–20.8, before a separate breath/noise and the next phrase. Some low bands also occur in accompaniment. Constant pitch alone cannot prove reverb; the body split is broad and should receive listening review rather than an automatic new phonetic endpoint.",
+      "tailInterpretation": "Signal-detectable candidate decay/reading lifetime; audibility not human-listening-attested. Passive decay is not full-strength phonetic focus.",
+      "evidence": "Public numerical observations and rationale in evidence/cue-tail-review.md and evidence/cue-tail-signal-review.json; representative original/stem spectra in evidence/cue-tail-comparison.png.",
+      "reviewerScope": "Acoustic verse/radio review",
+      "v3CueGoneSeconds": 20.016462585034013,
+      "nextCueAcousticStartSeconds": 21.32498866213152,
+      "tailLegibilityEndSeconds": 20.8,
+      "tailLegibilityEndSample": 917280,
+      "tailLegibilitySelection": "Upper reviewed decay-support edge for neutral full-opacity reading; later fade depends on room before the next reading lead.",
+      "recommendedAtomicHandoffSeconds": null,
+      "proposedBodyEndSample": 851856,
+      "bodyEndpointChangeRecommended": false,
+      "bodyEndRangeSamples": [
+        846720,
+        865242
+      ],
+      "cueTailEndRangeSamples": [
+        897435,
+        917280
+      ]
+    },
+    {
+      "cueId": "KOM-003",
+      "lastWordId": "KOM-003-s10",
+      "lastWordText": "птица",
+      "v3BodyEndSeconds": 33.24498866213152,
+      "v3BodyEndSample": 1466104,
+      "proposedBodyEndSeconds": 33.24498866213152,
+      "bodyEndRangeSeconds": [
+        33.15,
+        33.45
+      ],
+      "bodyDisposition": "retain selected endpoint; fresh inspection does not establish strong phonation beyond the prior uncertainty interval",
+      "voiceRelatedDecayCandidateSpanSeconds": [
+        33.24498866213152,
+        34.6
+      ],
+      "proposedCueTailEndSeconds": 34.6,
+      "cueTailEndRangeSeconds": [
+        34.1,
+        34.6
+      ],
+      "proposedCueTailEndSample": 1525860,
+      "tailLegibilitySelection": "Upper reviewed decay-support edge for neutral full-opacity reading; later fade depends on room before the next reading lead.",
+      "v3CueGoneSeconds": 33.94498866213152,
+      "nextCueAcousticStartSeconds": 37.82174603174603,
+      "recommendedAtomicHandoffSeconds": null,
+      "confidence": "medium-low",
+      "reason": "The changing strong final-vowel body weakens around 33.1–33.4. Original and estimated vocal still contain coherent, gradually falling voice-shaped bands after the v3 disappearance at 33.945. Meaningful candidate decay persists into roughly 34.1–34.6. Much later largely stationary low bands blend with music and do not prove continuing phonation.",
+      "tailInterpretation": "Signal-supported candidate decay/reading lifetime; audibility is not human-listening-attested. Passive decay is not full-strength word focus. Close-gap tail ranges are partly masked by the next phrase and do not establish an isolated reverb stop.",
+      "evidence": "Public numerical observations and rationale in evidence/cue-tail-review.md and evidence/cue-tail-signal-review.json; representative original/stem spectra in evidence/cue-tail-comparison.png.",
+      "reviewerScope": "Independent held/verse review",
+      "tailLegibilityEndSeconds": 34.6,
+      "tailLegibilityEndSample": 1525860,
+      "proposedBodyEndSample": 1466104,
+      "bodyEndpointChangeRecommended": false,
+      "bodyEndRangeSamples": [
+        1461915,
+        1475145
+      ],
+      "cueTailEndRangeSamples": [
+        1503810,
+        1525860
+      ]
+    },
+    {
+      "cueId": "KOM-004",
+      "lastWordId": "KOM-004-s03",
+      "lastWordText": "землёй",
+      "v3BodyEndSeconds": 43.8,
+      "v3BodyEndSample": 1931580,
+      "proposedBodyEndSeconds": 43.8,
+      "bodyEndRangeSeconds": [
+        43.72,
+        43.9
+      ],
+      "bodyDisposition": "retain selected endpoint; fresh inspection does not establish strong phonation beyond the prior uncertainty interval",
+      "voiceRelatedDecayCandidateSpanSeconds": [
+        43.8,
+        44.35
+      ],
+      "proposedCueTailEndSeconds": 44.35,
+      "cueTailEndRangeSeconds": [
+        44.1,
+        44.35
+      ],
+      "proposedCueTailEndSample": 1955835,
+      "tailLegibilitySelection": "Neutral full-opacity reading until actual next vocal; replace atomically.",
+      "v3CueGoneSeconds": 44.01149659863946,
+      "nextCueAcousticStartSeconds": 44.24299319727891,
+      "recommendedAtomicHandoffSeconds": 44.24299319727891,
+      "confidence": "medium-low",
+      "reason": "The terminal glide/soft body weakens around 43.7–43.9, with related original/stem harmonics continuing toward 44.2. The v3 line is gone at 44.011 before the next initial frication at 44.243. Decay merges with the next phrase; its absolute ending cannot be isolated.",
+      "tailInterpretation": "Signal-supported candidate decay/reading lifetime; audibility is not human-listening-attested. Passive decay is not full-strength word focus. Close-gap tail ranges are partly masked by the next phrase and do not establish an isolated reverb stop.",
+      "evidence": "Public numerical observations and rationale in evidence/cue-tail-review.md and evidence/cue-tail-signal-review.json; representative original/stem spectra in evidence/cue-tail-comparison.png.",
+      "reviewerScope": "Independent held/verse review",
+      "tailLegibilityEndSeconds": 44.24299319727891,
+      "tailLegibilityEndSample": 1951116,
+      "proposedBodyEndSample": 1931580,
+      "bodyEndpointChangeRecommended": false,
+      "bodyEndRangeSamples": [
+        1928052,
+        1935990
+      ],
+      "cueTailEndRangeSamples": [
+        1944810,
+        1955835
+      ]
+    },
+    {
+      "cueId": "KOM-005",
+      "lastWordId": "KOM-005-s04",
+      "lastWordText": "орёл",
+      "v3BodyEndSeconds": 51.2,
+      "v3BodyEndSample": 2257920,
+      "proposedBodyEndSeconds": 51.2,
+      "bodyEndRangeSeconds": [
+        51.03,
+        51.38
+      ],
+      "bodyDisposition": "retain selected endpoint; fresh inspection does not establish strong phonation beyond the prior uncertainty interval",
+      "voiceRelatedDecayCandidateSpanSeconds": [
+        51.2,
+        51.75
+      ],
+      "proposedCueTailEndSeconds": 51.75,
+      "cueTailEndRangeSeconds": [
+        51.5,
+        51.75
+      ],
+      "proposedCueTailEndSample": 2282175,
+      "tailLegibilitySelection": "Neutral full-opacity reading until actual next vocal; replace atomically.",
+      "v3CueGoneSeconds": 51.41750566893425,
+      "nextCueAcousticStartSeconds": 51.65501133786848,
+      "recommendedAtomicHandoffSeconds": 51.65501133786848,
+      "confidence": "low",
+      "reason": "After strong held body has declined, softer sonorant/voice-shaped bands remain in the original and stem through roughly 51.5–51.7. The v3 line vanishes at 51.418 before the next consonant at 51.655. Soft direct sonorant versus reverb remains unresolved; no new phonetic endpoint is inferred.",
+      "tailInterpretation": "Signal-supported candidate decay/reading lifetime; audibility is not human-listening-attested. Passive decay is not full-strength word focus. Close-gap tail ranges are partly masked by the next phrase and do not establish an isolated reverb stop.",
+      "evidence": "Public numerical observations and rationale in evidence/cue-tail-review.md and evidence/cue-tail-signal-review.json; representative original/stem spectra in evidence/cue-tail-comparison.png.",
+      "reviewerScope": "Independent held/verse review",
+      "tailLegibilityEndSeconds": 51.65501133786848,
+      "tailLegibilityEndSample": 2277986,
+      "proposedBodyEndSample": 2257920,
+      "bodyEndpointChangeRecommended": false,
+      "bodyEndRangeSamples": [
+        2250423,
+        2265858
+      ],
+      "cueTailEndRangeSamples": [
+        2271150,
+        2282175
+      ]
+    },
+    {
+      "cueId": "KOM-006",
+      "lastWordId": "KOM-006-s03",
+      "lastWordText": "землёй",
+      "v3BodyEndSeconds": 57.73,
+      "v3BodyEndSample": 2545893,
+      "proposedBodyEndSeconds": 57.73,
+      "bodyEndRangeSeconds": [
+        57.64,
+        57.82
+      ],
+      "bodyDisposition": "retain selected endpoint; fresh inspection does not establish strong phonation beyond the prior uncertainty interval",
+      "voiceRelatedDecayCandidateSpanSeconds": [
+        57.73,
+        58.0
+      ],
+      "proposedCueTailEndSeconds": 58.0,
+      "cueTailEndRangeSeconds": [
+        57.82,
+        58.0
+      ],
+      "proposedCueTailEndSample": 2557800,
+      "tailLegibilitySelection": "Neutral full-opacity reading until actual next vocal; replace atomically.",
+      "v3CueGoneSeconds": 57.79749433106576,
+      "nextCueAcousticStartSeconds": 57.88498866213152,
+      "recommendedAtomicHandoffSeconds": 57.88498866213152,
+      "confidence": "medium-low",
+      "reason": "Original/stem terminal glide and related decay continue through the short handoff region around 57.8–57.9. The v3 line cuts at 57.7975, inside the prior body uncertainty, before new frication at 57.885. The next voiced body obscures the absolute end of the prior decay.",
+      "tailInterpretation": "Signal-supported candidate decay/reading lifetime; audibility is not human-listening-attested. Passive decay is not full-strength word focus. Close-gap tail ranges are partly masked by the next phrase and do not establish an isolated reverb stop.",
+      "evidence": "Public numerical observations and rationale in evidence/cue-tail-review.md and evidence/cue-tail-signal-review.json; representative original/stem spectra in evidence/cue-tail-comparison.png.",
+      "reviewerScope": "Independent held/verse review",
+      "tailLegibilityEndSeconds": 57.88498866213152,
+      "tailLegibilityEndSample": 2552728,
+      "proposedBodyEndSample": 2545893,
+      "bodyEndpointChangeRecommended": false,
+      "bodyEndRangeSamples": [
+        2541924,
+        2549862
+      ],
+      "cueTailEndRangeSamples": [
+        2549862,
+        2557800
+      ]
+    },
+    {
+      "cueId": "KOM-007",
+      "lastWordId": "KOM-007-s04",
+      "lastWordText": "огонь",
+      "v3BodyEndSeconds": 65.45,
+      "v3BodyEndSample": 2886345,
+      "proposedBodyEndSeconds": 65.45,
+      "bodyEndRangeSeconds": [
+        65.25,
+        65.65
+      ],
+      "bodyDisposition": "retain selected endpoint; fresh inspection does not establish strong phonation beyond the prior uncertainty interval",
+      "voiceRelatedDecayCandidateSpanSeconds": [
+        65.45,
+        67.5
+      ],
+      "proposedCueTailEndSeconds": 67.5,
+      "cueTailEndRangeSeconds": [
+        66.8,
+        67.5
+      ],
+      "proposedCueTailEndSample": 2976750,
+      "tailLegibilitySelection": "Upper reviewed decay-support edge for neutral full-opacity reading; later fade depends on room before the next reading lead.",
+      "v3CueGoneSeconds": 66.15,
+      "nextCueAcousticStartSeconds": 96.72070294784581,
+      "recommendedAtomicHandoffSeconds": null,
+      "confidence": "low",
+      "reason": "Soft final consonant/vowel body and reflected voice-shaped harmonics decline gradually, with corresponding original/stem tonal decay still present after v3 disappearance at 66.150. A legibility tail through roughly 66.8–67.5 is supported; later stationary quiet bands are not selected as continued singing.",
+      "tailInterpretation": "Signal-supported candidate decay/reading lifetime; audibility is not human-listening-attested. Passive decay is not full-strength word focus. Close-gap tail ranges are partly masked by the next phrase and do not establish an isolated reverb stop.",
+      "evidence": "Public numerical observations and rationale in evidence/cue-tail-review.md and evidence/cue-tail-signal-review.json; representative original/stem spectra in evidence/cue-tail-comparison.png.",
+      "reviewerScope": "Independent held/verse review",
+      "tailLegibilityEndSeconds": 67.5,
+      "tailLegibilityEndSample": 2976750,
+      "proposedBodyEndSample": 2886345,
+      "bodyEndpointChangeRecommended": false,
+      "bodyEndRangeSamples": [
+        2877525,
+        2895165
+      ],
+      "cueTailEndRangeSamples": [
+        2945880,
+        2976750
+      ]
+    },
+    {
+      "cueId": "KOM-008",
+      "lastWordId": "KOM-008-s06",
+      "lastWordText": "любить",
+      "v3BodyEndSeconds": 102.53501133786848,
+      "v3BodyEndSample": 4521794,
+      "proposedBodyEndSeconds": 102.53501133786848,
+      "bodyEndRangeSeconds": [
+        102.505,
+        102.565
+      ],
+      "bodyDisposition": "retain estimate within fresh transition uncertainty",
+      "voiceRelatedDecayCandidateSpanSeconds": [
+        102.53501133786848,
+        102.655
+      ],
+      "proposedCueTailEndSeconds": 102.655,
+      "cueTailEndRangeSeconds": [
+        102.61,
+        102.685
+      ],
+      "proposedCueTailEndSample": 4527086,
+      "confidence": "medium-low",
+      "reason": "The terminal stop/frication weakens around 102.52–102.56. There is a short fading noisy remnant before the clearly new voiced За near 102.70. Keep the phrase readable through that small decay; the new vowel belongs to the next cue.",
+      "tailInterpretation": "Signal-detectable candidate decay/reading lifetime; audibility not human-listening-attested. Passive decay is not full-strength phonetic focus.",
+      "evidence": "Public numerical observations and rationale in evidence/cue-tail-review.md and evidence/cue-tail-signal-review.json; representative original/stem spectra in evidence/cue-tail-comparison.png.",
+      "reviewerScope": "Acoustic verse/radio review",
+      "v3CueGoneSeconds": 102.60750566893424,
+      "nextCueAcousticStartSeconds": 102.7,
+      "tailLegibilityEndSeconds": 102.7,
+      "tailLegibilityEndSample": 4529070,
+      "tailLegibilitySelection": "Neutral full-opacity reading until actual next vocal; replace atomically.",
+      "recommendedAtomicHandoffSeconds": 102.7,
+      "proposedBodyEndSample": 4521794,
+      "bodyEndpointChangeRecommended": false,
+      "bodyEndRangeSamples": [
+        4520470,
+        4523116
+      ],
+      "cueTailEndRangeSamples": [
+        4525101,
+        4528408
+      ]
+    },
+    {
+      "cueId": "KOM-009",
+      "lastWordId": "KOM-009-s05",
+      "lastWordText": "лето",
+      "v3BodyEndSeconds": 108.45,
+      "v3BodyEndSample": 4782645,
+      "proposedBodyEndSeconds": 108.45,
+      "bodyEndRangeSeconds": [
+        108.35,
+        108.65
+      ],
+      "bodyDisposition": "retain selected endpoint; fresh inspection does not establish strong phonation beyond the prior uncertainty interval",
+      "voiceRelatedDecayCandidateSpanSeconds": [
+        108.45,
+        110.05
+      ],
+      "proposedCueTailEndSeconds": 110.05,
+      "cueTailEndRangeSeconds": [
+        109.6,
+        110.05
+      ],
+      "proposedCueTailEndSample": 4853205,
+      "tailLegibilitySelection": "Upper reviewed decay-support edge for neutral full-opacity reading; later fade depends on room before the next reading lead.",
+      "v3CueGoneSeconds": 109.15,
+      "nextCueAcousticStartSeconds": 110.76108843537415,
+      "recommendedAtomicHandoffSeconds": null,
+      "confidence": "medium-low",
+      "reason": "The terminal vowel has strong amplitude near 108.45 and declines over the following body-to-decay transition. Original/stem voice-shaped bands persist after v3 disappearance at 109.150, declining toward 109.6–110.05 before separate next-phrase noise. This supports a reading tail, not a new full-strength focus interval.",
+      "tailInterpretation": "Signal-supported candidate decay/reading lifetime; audibility is not human-listening-attested. Passive decay is not full-strength word focus. Close-gap tail ranges are partly masked by the next phrase and do not establish an isolated reverb stop.",
+      "evidence": "Public numerical observations and rationale in evidence/cue-tail-review.md and evidence/cue-tail-signal-review.json; representative original/stem spectra in evidence/cue-tail-comparison.png.",
+      "reviewerScope": "Independent held/verse review",
+      "tailLegibilityEndSeconds": 110.05,
+      "tailLegibilityEndSample": 4853205,
+      "proposedBodyEndSample": 4782645,
+      "bodyEndpointChangeRecommended": false,
+      "bodyEndRangeSamples": [
+        4778235,
+        4791465
+      ],
+      "cueTailEndRangeSamples": [
+        4833360,
+        4853205
+      ]
+    },
+    {
+      "cueId": "KOM-010",
+      "lastWordId": "KOM-010-s09",
+      "lastWordText": "птицу",
+      "v3BodyEndSeconds": 118.43,
+      "v3BodyEndSample": 5222763,
+      "proposedBodyEndSeconds": 118.43,
+      "bodyEndRangeSeconds": [
+        118.37,
+        118.49
+      ],
+      "bodyDisposition": "retain estimate within fresh transition uncertainty",
+      "voiceRelatedDecayCandidateSpanSeconds": [
+        118.43,
+        118.95
+      ],
+      "proposedCueTailEndSeconds": 118.95,
+      "cueTailEndRangeSeconds": [
+        118.8,
+        119.04
+      ],
+      "proposedCueTailEndSample": 5245695,
+      "confidence": "medium-low",
+      "reason": "Changing final-u harmonics/body weaken around 118.4–118.5. Softer related bands persist afterward and diminish near 118.8–119.0; the breath-like event near 119.1 and new Не near 119.425 are separate. Full-strength focus need not follow the whole quiet tail.",
+      "tailInterpretation": "Signal-detectable candidate decay/reading lifetime; audibility not human-listening-attested. Passive decay is not full-strength phonetic focus.",
+      "evidence": "Public numerical observations and rationale in evidence/cue-tail-review.md and evidence/cue-tail-signal-review.json; representative original/stem spectra in evidence/cue-tail-comparison.png.",
+      "reviewerScope": "Acoustic verse/radio review",
+      "v3CueGoneSeconds": 118.91749433106575,
+      "nextCueAcousticStartSeconds": 119.42498866213153,
+      "tailLegibilityEndSeconds": 119.04,
+      "tailLegibilityEndSample": 5249664,
+      "tailLegibilitySelection": "Upper reviewed decay-support edge for neutral full-opacity reading; later fade depends on room before the next reading lead.",
+      "recommendedAtomicHandoffSeconds": null,
+      "proposedBodyEndSample": 5222763,
+      "bodyEndpointChangeRecommended": false,
+      "bodyEndRangeSamples": [
+        5220117,
+        5225409
+      ],
+      "cueTailEndRangeSamples": [
+        5239080,
+        5249664
+      ]
+    },
+    {
+      "cueId": "KOM-011",
+      "lastWordId": "KOM-011-s04",
+      "lastWordText": "разбиться",
+      "v3BodyEndSeconds": 122.5,
+      "v3BodyEndSample": 5402250,
+      "proposedBodyEndSeconds": 122.5,
+      "bodyEndRangeSeconds": [
+        122.39,
+        122.65
+      ],
+      "bodyDisposition": "retain selected endpoint; fresh inspection does not establish strong phonation beyond the prior uncertainty interval",
+      "voiceRelatedDecayCandidateSpanSeconds": [
+        122.5,
+        124.3
+      ],
+      "proposedCueTailEndSeconds": 124.3,
+      "cueTailEndRangeSeconds": [
+        123.7,
+        124.3
+      ],
+      "proposedCueTailEndSample": 5481630,
+      "tailLegibilitySelection": "Upper reviewed decay-support edge for neutral full-opacity reading; later fade depends on room before the next reading lead.",
+      "v3CueGoneSeconds": 123.2,
+      "nextCueAcousticStartSeconds": 125.27501133786848,
+      "recommendedAtomicHandoffSeconds": null,
+      "confidence": "medium-low",
+      "reason": "The final vowel/body weakens around 122.4–122.7. Coherent but progressively weaker related original/stem harmonics persist after the line is gone at 123.200, supporting legibility through roughly 123.7–124.3. Constant-pitch persistence alone cannot distinguish reflected energy from soft phonation.",
+      "tailInterpretation": "Signal-supported candidate decay/reading lifetime; audibility is not human-listening-attested. Passive decay is not full-strength word focus. Close-gap tail ranges are partly masked by the next phrase and do not establish an isolated reverb stop.",
+      "evidence": "Public numerical observations and rationale in evidence/cue-tail-review.md and evidence/cue-tail-signal-review.json; representative original/stem spectra in evidence/cue-tail-comparison.png.",
+      "reviewerScope": "Independent held/verse review",
+      "tailLegibilityEndSeconds": 124.3,
+      "tailLegibilityEndSample": 5481630,
+      "proposedBodyEndSample": 5402250,
+      "bodyEndpointChangeRecommended": false,
+      "bodyEndRangeSamples": [
+        5397399,
+        5408865
+      ],
+      "cueTailEndRangeSamples": [
+        5455170,
+        5481630
+      ]
+    },
+    {
+      "cueId": "KOM-012",
+      "lastWordId": "KOM-012-s03",
+      "lastWordText": "землёй",
+      "v3BodyEndSeconds": 131.50498866213152,
+      "v3BodyEndSample": 5799370,
+      "proposedBodyEndSeconds": 131.50498866213152,
+      "bodyEndRangeSeconds": [
+        131.42,
+        131.6
+      ],
+      "bodyDisposition": "retain selected endpoint; fresh inspection does not establish strong phonation beyond the prior uncertainty interval",
+      "voiceRelatedDecayCandidateSpanSeconds": [
+        131.50498866213152,
+        131.85
+      ],
+      "proposedCueTailEndSeconds": 131.85,
+      "cueTailEndRangeSeconds": [
+        131.64,
+        131.85
+      ],
+      "proposedCueTailEndSample": 5814585,
+      "tailLegibilitySelection": "Neutral full-opacity reading until actual next vocal; replace atomically.",
+      "v3CueGoneSeconds": 131.59500000000003,
+      "nextCueAcousticStartSeconds": 131.70501133786848,
+      "recommendedAtomicHandoffSeconds": 131.70501133786848,
+      "confidence": "medium-low",
+      "reason": "Original/stem soft glide and related harmonics persist near 131.6–131.7. The v3 line cuts at 131.595, within the prior body-end interval, before the next consonant at 131.705. Later old-tail energy is mixed with the new phrase and cannot receive an isolated lexical end.",
+      "tailInterpretation": "Signal-supported candidate decay/reading lifetime; audibility is not human-listening-attested. Passive decay is not full-strength word focus. Close-gap tail ranges are partly masked by the next phrase and do not establish an isolated reverb stop.",
+      "evidence": "Public numerical observations and rationale in evidence/cue-tail-review.md and evidence/cue-tail-signal-review.json; representative original/stem spectra in evidence/cue-tail-comparison.png.",
+      "reviewerScope": "Independent held/verse review",
+      "tailLegibilityEndSeconds": 131.70501133786848,
+      "tailLegibilityEndSample": 5808191,
+      "proposedBodyEndSample": 5799370,
+      "bodyEndpointChangeRecommended": false,
+      "bodyEndRangeSamples": [
+        5795622,
+        5803560
+      ],
+      "cueTailEndRangeSamples": [
+        5805324,
+        5814585
+      ]
+    },
+    {
+      "cueId": "KOM-013",
+      "lastWordId": "KOM-013-s04",
+      "lastWordText": "орёл",
+      "v3BodyEndSeconds": 138.65,
+      "v3BodyEndSample": 6114465,
+      "proposedBodyEndSeconds": 138.65,
+      "bodyEndRangeSeconds": [
+        138.42,
+        138.82
+      ],
+      "bodyDisposition": "retain selected endpoint; fresh inspection does not establish strong phonation beyond the prior uncertainty interval",
+      "voiceRelatedDecayCandidateSpanSeconds": [
+        138.65,
+        139.15
+      ],
+      "proposedCueTailEndSeconds": 139.15,
+      "cueTailEndRangeSeconds": [
+        138.95,
+        139.15
+      ],
+      "proposedCueTailEndSample": 6136515,
+      "tailLegibilitySelection": "Neutral full-opacity reading until actual next vocal; replace atomically.",
+      "v3CueGoneSeconds": 138.85000000000002,
+      "nextCueAcousticStartSeconds": 139.07,
+      "recommendedAtomicHandoffSeconds": 139.07,
+      "confidence": "low",
+      "reason": "The terminal sonorant/body gradually weakens across 138.4–138.8, with related original/stem tail extending toward 139.0. The line disappears at 138.850 before the next initial consonant at 139.070. The exact direct-body/reverb split remains broad.",
+      "tailInterpretation": "Signal-supported candidate decay/reading lifetime; audibility is not human-listening-attested. Passive decay is not full-strength word focus. Close-gap tail ranges are partly masked by the next phrase and do not establish an isolated reverb stop.",
+      "evidence": "Public numerical observations and rationale in evidence/cue-tail-review.md and evidence/cue-tail-signal-review.json; representative original/stem spectra in evidence/cue-tail-comparison.png.",
+      "reviewerScope": "Independent held/verse review",
+      "tailLegibilityEndSeconds": 139.07,
+      "tailLegibilityEndSample": 6132987,
+      "proposedBodyEndSample": 6114465,
+      "bodyEndpointChangeRecommended": false,
+      "bodyEndRangeSamples": [
+        6104322,
+        6121962
+      ],
+      "cueTailEndRangeSamples": [
+        6127695,
+        6136515
+      ]
+    },
+    {
+      "cueId": "KOM-014",
+      "lastWordId": "KOM-014-s03",
+      "lastWordText": "землёй",
+      "v3BodyEndSeconds": 145.12498866213153,
+      "v3BodyEndSample": 6400012,
+      "proposedBodyEndSeconds": 145.12498866213153,
+      "bodyEndRangeSeconds": [
+        145.04,
+        145.215
+      ],
+      "bodyDisposition": "retain selected endpoint; fresh inspection does not establish strong phonation beyond the prior uncertainty interval",
+      "voiceRelatedDecayCandidateSpanSeconds": [
+        145.12498866213153,
+        145.45
+      ],
+      "proposedCueTailEndSeconds": 145.45,
+      "cueTailEndRangeSeconds": [
+        145.25,
+        145.45
+      ],
+      "proposedCueTailEndSample": 6414345,
+      "tailLegibilitySelection": "Neutral full-opacity reading until actual next vocal; replace atomically.",
+      "v3CueGoneSeconds": 145.20498866213154,
+      "nextCueAcousticStartSeconds": 145.3049886621315,
+      "recommendedAtomicHandoffSeconds": 145.3049886621315,
+      "confidence": "medium-low",
+      "reason": "Glide/soft body continues toward 145.1–145.2, followed by original-supported related harmonics around 145.3. The v3 line cuts at 145.205 inside the prior release interval, before new frication at 145.305. Tail continues into the next phrase and becomes inseparable there.",
+      "tailInterpretation": "Signal-supported candidate decay/reading lifetime; audibility is not human-listening-attested. Passive decay is not full-strength word focus. Close-gap tail ranges are partly masked by the next phrase and do not establish an isolated reverb stop.",
+      "evidence": "Public numerical observations and rationale in evidence/cue-tail-review.md and evidence/cue-tail-signal-review.json; representative original/stem spectra in evidence/cue-tail-comparison.png.",
+      "reviewerScope": "Independent held/verse review",
+      "tailLegibilityEndSeconds": 145.3049886621315,
+      "tailLegibilityEndSample": 6407950,
+      "proposedBodyEndSample": 6400012,
+      "bodyEndpointChangeRecommended": false,
+      "bodyEndRangeSamples": [
+        6396264,
+        6403982
+      ],
+      "cueTailEndRangeSamples": [
+        6405525,
+        6414345
+      ]
+    },
+    {
+      "cueId": "KOM-015",
+      "lastWordId": "KOM-015-s04",
+      "lastWordText": "огонь",
+      "v3BodyEndSeconds": 152.33,
+      "v3BodyEndSample": 6717753,
+      "proposedBodyEndSeconds": 152.33,
+      "bodyEndRangeSeconds": [
+        152.18,
+        152.5
+      ],
+      "bodyDisposition": "retain selected endpoint; fresh inspection does not establish strong phonation beyond the prior uncertainty interval",
+      "voiceRelatedDecayCandidateSpanSeconds": [
+        152.33,
+        154.15
+      ],
+      "proposedCueTailEndSeconds": 154.15,
+      "cueTailEndRangeSeconds": [
+        153.5,
+        154.15
+      ],
+      "proposedCueTailEndSample": 6798015,
+      "tailLegibilitySelection": "Upper reviewed decay-support edge for neutral full-opacity reading; later fade depends on room before the next reading lead.",
+      "v3CueGoneSeconds": 153.03,
+      "nextCueAcousticStartSeconds": 156.80163265306123,
+      "recommendedAtomicHandoffSeconds": null,
+      "confidence": "low",
+      "reason": "Soft terminal consonant/vowel body declines around 152.2–152.5. Related harmonics remain in the original and stem after the v3 line is gone at 153.030, gradually diminishing into roughly 153.5–154.15. New musical low bands around 153.3 and stem leakage prevent treating all residual energy as phonation.",
+      "tailInterpretation": "Signal-supported candidate decay/reading lifetime; audibility is not human-listening-attested. Passive decay is not full-strength word focus. Close-gap tail ranges are partly masked by the next phrase and do not establish an isolated reverb stop.",
+      "evidence": "Public numerical observations and rationale in evidence/cue-tail-review.md and evidence/cue-tail-signal-review.json; representative original/stem spectra in evidence/cue-tail-comparison.png.",
+      "reviewerScope": "Independent held/verse review",
+      "tailLegibilityEndSeconds": 154.15,
+      "tailLegibilityEndSample": 6798015,
+      "proposedBodyEndSample": 6717753,
+      "bodyEndpointChangeRecommended": false,
+      "bodyEndRangeSamples": [
+        6711138,
+        6725250
+      ],
+      "cueTailEndRangeSamples": [
+        6769350,
+        6798015
+      ]
+    },
+    {
+      "cueId": "KOM-016",
+      "lastWordId": "KOM-016-s09",
+      "lastWordText": "Serenity.",
+      "v3BodyEndSeconds": 160.28,
+      "v3BodyEndSample": 7068348,
+      "proposedBodyEndSeconds": 160.28,
+      "bodyEndRangeSeconds": [
+        160.15,
+        160.31
+      ],
+      "bodyDisposition": "retain estimate within fresh transition uncertainty",
+      "voiceRelatedDecayCandidateSpanSeconds": [
+        160.28,
+        160.68
+      ],
+      "proposedCueTailEndSeconds": 160.68,
+      "cueTailEndRangeSeconds": [
+        160.5,
+        160.85
+      ],
+      "proposedCueTailEndSample": 7085988,
+      "confidence": "low",
+      "reason": "The final filtered vowel/body falls near 160.2–160.3. A broader noisy remnant follows through roughly 160.5–160.8, with musical/static bands continuing farther. Whisper original/stem releases disagree (160.28/160.20) and MMS ends at 159.979; none establishes an audible-tail boundary. Retain the current body selection and keep possible decay/reading lifetime separate.",
+      "tailInterpretation": "Signal-detectable candidate decay/reading lifetime; audibility not human-listening-attested. Passive decay is not full-strength phonetic focus.",
+      "evidence": "Public numerical observations and rationale in evidence/cue-tail-review.md and evidence/cue-tail-signal-review.json; representative original/stem spectra in evidence/cue-tail-comparison.png.",
+      "reviewerScope": "Acoustic verse/radio review",
+      "v3CueGoneSeconds": 160.89149659863946,
+      "nextCueAcousticStartSeconds": 161.5229931972789,
+      "tailLegibilityEndSeconds": 160.85,
+      "tailLegibilityEndSample": 7093485,
+      "tailLegibilitySelection": "Upper reviewed decay-support edge for neutral full-opacity reading; later fade depends on room before the next reading lead.",
+      "recommendedAtomicHandoffSeconds": null,
+      "proposedBodyEndSample": 7068348,
+      "bodyEndpointChangeRecommended": false,
+      "bodyEndRangeSamples": [
+        7062615,
+        7069671
+      ],
+      "cueTailEndRangeSamples": [
+        7078050,
+        7093485
+      ]
+    },
+    {
+      "cueId": "KOM-017",
+      "lastWordId": "KOM-017-s09",
+      "lastWordText": "surface.",
+      "v3BodyEndSeconds": 164.21839002267575,
+      "v3BodyEndSample": 7242031,
+      "proposedBodyEndSeconds": 164.21839002267575,
+      "bodyEndRangeSeconds": [
+        164.1,
+        164.28
+      ],
+      "bodyDisposition": "retain estimate within fresh transition uncertainty",
+      "voiceRelatedDecayCandidateSpanSeconds": [
+        164.21839002267575,
+        164.6
+      ],
+      "proposedCueTailEndSeconds": 164.6,
+      "cueTailEndRangeSeconds": [
+        164.45,
+        164.85
+      ],
+      "proposedCueTailEndSample": 7258860,
+      "confidence": "low",
+      "reason": "Final consonant/noisy body merges into diffuse filtered residue around 164.1–164.3. Weaker noise persists later, but flat bands extending into 165+ also occur in accompaniment and do not prove more surface articulation. A quiet decay/reading window through about 164.6 is plausible, with broad uncertainty.",
+      "tailInterpretation": "Signal-detectable candidate decay/reading lifetime; audibility not human-listening-attested. Passive decay is not full-strength phonetic focus.",
+      "evidence": "Public numerical observations and rationale in evidence/cue-tail-review.md and evidence/cue-tail-signal-review.json; representative original/stem spectra in evidence/cue-tail-comparison.png.",
+      "reviewerScope": "Acoustic verse/radio review",
+      "v3CueGoneSeconds": 164.91839002267574,
+      "nextCueAcousticStartSeconds": 165.7,
+      "tailLegibilityEndSeconds": 164.85,
+      "tailLegibilityEndSample": 7269885,
+      "tailLegibilitySelection": "Upper reviewed decay-support edge for neutral full-opacity reading; later fade depends on room before the next reading lead.",
+      "recommendedAtomicHandoffSeconds": null,
+      "proposedBodyEndSample": 7242031,
+      "bodyEndpointChangeRecommended": false,
+      "bodyEndRangeSamples": [
+        7236810,
+        7244748
+      ],
+      "cueTailEndRangeSamples": [
+        7252245,
+        7269885
+      ]
+    },
+    {
+      "cueId": "KOM-018",
+      "lastWordId": "KOM-018-s04",
+      "lastWordText": "me?",
+      "v3BodyEndSeconds": 166.5,
+      "v3BodyEndSample": 7342650,
+      "proposedBodyEndSeconds": 166.5,
+      "bodyEndRangeSeconds": [
+        166.4,
+        166.64
+      ],
+      "bodyDisposition": "retain estimate within fresh transition uncertainty",
+      "voiceRelatedDecayCandidateSpanSeconds": [
+        166.5,
+        166.8
+      ],
+      "proposedCueTailEndSeconds": 166.8,
+      "cueTailEndRangeSeconds": [
+        166.65,
+        166.95
+      ],
+      "proposedCueTailEndSample": 7355880,
+      "confidence": "low",
+      "reason": "Filtered final me body is obscured around 166.4–166.6; original Whisper ends 166.50 and stem Whisper 166.62. Softer noisy vowel-shaped remnant continues shortly afterward. Flat harmonic persistence beginning about 167.05 coincides with accompaniment and is not evidence of a three-second word. Existing body selection lies within the fresh broad interval.",
+      "tailInterpretation": "Signal-detectable candidate decay/reading lifetime; audibility not human-listening-attested. Passive decay is not full-strength phonetic focus.",
+      "evidence": "Public numerical observations and rationale in evidence/cue-tail-review.md and evidence/cue-tail-signal-review.json; representative original/stem spectra in evidence/cue-tail-comparison.png.",
+      "reviewerScope": "Acoustic verse/radio review",
+      "v3CueGoneSeconds": 167.2,
+      "nextCueAcousticStartSeconds": 170.14,
+      "tailLegibilityEndSeconds": 166.95,
+      "tailLegibilityEndSample": 7362495,
+      "tailLegibilitySelection": "Upper reviewed decay-support edge for neutral full-opacity reading; later fade depends on room before the next reading lead.",
+      "recommendedAtomicHandoffSeconds": null,
+      "proposedBodyEndSample": 7342650,
+      "bodyEndpointChangeRecommended": false,
+      "bodyEndRangeSamples": [
+        7338240,
+        7348824
+      ],
+      "cueTailEndRangeSamples": [
+        7349265,
+        7362495
+      ]
+    },
+    {
+      "cueId": "KOM-019",
+      "lastWordId": "KOM-019-s04",
+      "lastWordText": "me?",
+      "v3BodyEndSeconds": 171.04,
+      "v3BodyEndSample": 7542864,
+      "proposedBodyEndSeconds": 171.04,
+      "bodyEndRangeSeconds": [
+        170.98,
+        171.18
+      ],
+      "bodyDisposition": "retain estimate within fresh transition uncertainty",
+      "voiceRelatedDecayCandidateSpanSeconds": [
+        171.04,
+        171.4
+      ],
+      "proposedCueTailEndSeconds": 171.4,
+      "cueTailEndRangeSeconds": [
+        171.18,
+        171.55
+      ],
+      "proposedCueTailEndSample": 7558740,
+      "confidence": "low",
+      "reason": "Weak final me body lies in a strongly musical/filter-noise mix; original/stem Whisper end 171.04/171.18 and very-low-score CTC is rejected. A residual vocal-shaped region can plausibly continue to 171.2–171.5, but the stable tones lasting to 173 are not independently attributable to speech. Keep current phonetic selection unless listening settles the split.",
+      "tailInterpretation": "Signal-detectable candidate decay/reading lifetime; audibility not human-listening-attested. Passive decay is not full-strength phonetic focus.",
+      "evidence": "Public numerical observations and rationale in evidence/cue-tail-review.md and evidence/cue-tail-signal-review.json; representative original/stem spectra in evidence/cue-tail-comparison.png.",
+      "reviewerScope": "Acoustic verse/radio review",
+      "v3CueGoneSeconds": 171.73999999999998,
+      "nextCueAcousticStartSeconds": 173.36258503401362,
+      "tailLegibilityEndSeconds": 171.55,
+      "tailLegibilityEndSample": 7565355,
+      "tailLegibilitySelection": "Upper reviewed decay-support edge for neutral full-opacity reading; later fade depends on room before the next reading lead.",
+      "recommendedAtomicHandoffSeconds": null,
+      "proposedBodyEndSample": 7542864,
+      "bodyEndpointChangeRecommended": false,
+      "bodyEndRangeSamples": [
+        7540218,
+        7549038
+      ],
+      "cueTailEndRangeSamples": [
+        7549038,
+        7565355
+      ]
+    },
+    {
+      "cueId": "KOM-020",
+      "lastWordId": "KOM-020-s03",
+      "lastWordText": "землёй",
+      "v3BodyEndSeconds": 179.66498866213152,
+      "v3BodyEndSample": 7923226,
+      "proposedBodyEndSeconds": 179.66498866213152,
+      "bodyEndRangeSeconds": [
+        179.6,
+        179.735
+      ],
+      "bodyDisposition": "retain selected endpoint; fresh inspection does not establish strong phonation beyond the prior uncertainty interval",
+      "voiceRelatedDecayCandidateSpanSeconds": [
+        179.66498866213152,
+        179.98
+      ],
+      "proposedCueTailEndSeconds": 179.98,
+      "cueTailEndRangeSeconds": [
+        179.76,
+        179.98
+      ],
+      "proposedCueTailEndSample": 7937118,
+      "tailLegibilitySelection": "Neutral full-opacity reading until actual next vocal; replace atomically.",
+      "v3CueGoneSeconds": 179.675,
+      "nextCueAcousticStartSeconds": 179.70501133786848,
+      "recommendedAtomicHandoffSeconds": 179.70501133786848,
+      "confidence": "medium-low",
+      "reason": "The terminal glide/body declines around 179.6–179.7, and original/stem related harmonics remain near the following onset. V3 removes the line at 179.675, only 10 ms after its selected end and before the upper body interval. New frication at 179.705 overlaps the uncertainty; preserve the atomic handoff rather than invent a silent gap.",
+      "tailInterpretation": "Signal-supported candidate decay/reading lifetime; audibility is not human-listening-attested. Passive decay is not full-strength word focus. Close-gap tail ranges are partly masked by the next phrase and do not establish an isolated reverb stop.",
+      "evidence": "Public numerical observations and rationale in evidence/cue-tail-review.md and evidence/cue-tail-signal-review.json; representative original/stem spectra in evidence/cue-tail-comparison.png.",
+      "reviewerScope": "Independent held/verse review",
+      "tailLegibilityEndSeconds": 179.70501133786848,
+      "tailLegibilityEndSample": 7924991,
+      "proposedBodyEndSample": 7923226,
+      "bodyEndpointChangeRecommended": false,
+      "bodyEndRangeSamples": [
+        7920360,
+        7926314
+      ],
+      "cueTailEndRangeSamples": [
+        7927416,
+        7937118
+      ]
+    },
+    {
+      "cueId": "KOM-021",
+      "lastWordId": "KOM-021-s04",
+      "lastWordText": "орёл",
+      "v3BodyEndSeconds": 186.76498866213151,
+      "v3BodyEndSample": 8236336,
+      "proposedBodyEndSeconds": 186.76498866213151,
+      "bodyEndRangeSeconds": [
+        186.64,
+        186.89
+      ],
+      "bodyDisposition": "retain selected endpoint; fresh inspection does not establish strong phonation beyond the prior uncertainty interval",
+      "voiceRelatedDecayCandidateSpanSeconds": [
+        186.76498866213151,
+        187.2
+      ],
+      "proposedCueTailEndSeconds": 187.2,
+      "cueTailEndRangeSeconds": [
+        186.97,
+        187.2
+      ],
+      "proposedCueTailEndSample": 8255520,
+      "tailLegibilitySelection": "Neutral full-opacity reading until actual next vocal; replace atomically.",
+      "v3CueGoneSeconds": 186.90498866213153,
+      "nextCueAcousticStartSeconds": 187.06498866213153,
+      "recommendedAtomicHandoffSeconds": 187.06498866213153,
+      "confidence": "low",
+      "reason": "The soft terminal sonorant/body declines over roughly 186.6–186.9. Related original/stem voice-shaped remnants continue toward 187.0, while v3 removes the line at 186.905 and the next consonant starts 187.065. The next voiced body limits independent late-tail attribution.",
+      "tailInterpretation": "Signal-supported candidate decay/reading lifetime; audibility is not human-listening-attested. Passive decay is not full-strength word focus. Close-gap tail ranges are partly masked by the next phrase and do not establish an isolated reverb stop.",
+      "evidence": "Public numerical observations and rationale in evidence/cue-tail-review.md and evidence/cue-tail-signal-review.json; representative original/stem spectra in evidence/cue-tail-comparison.png.",
+      "reviewerScope": "Independent held/verse review",
+      "tailLegibilityEndSeconds": 187.06498866213153,
+      "tailLegibilityEndSample": 8249566,
+      "proposedBodyEndSample": 8236336,
+      "bodyEndpointChangeRecommended": false,
+      "bodyEndRangeSamples": [
+        8230824,
+        8241849
+      ],
+      "cueTailEndRangeSamples": [
+        8245377,
+        8255520
+      ]
+    },
+    {
+      "cueId": "KOM-022",
+      "lastWordId": "KOM-022-s03",
+      "lastWordText": "землёй",
+      "v3BodyEndSeconds": 193.26,
+      "v3BodyEndSample": 8522766,
+      "proposedBodyEndSeconds": 193.26,
+      "bodyEndRangeSeconds": [
+        193.16,
+        193.34
+      ],
+      "bodyDisposition": "retain selected endpoint; fresh inspection does not establish strong phonation beyond the prior uncertainty interval",
+      "voiceRelatedDecayCandidateSpanSeconds": [
+        193.26,
+        193.55
+      ],
+      "proposedCueTailEndSeconds": 193.55,
+      "cueTailEndRangeSeconds": [
+        193.34,
+        193.55
+      ],
+      "proposedCueTailEndSample": 8535555,
+      "tailLegibilitySelection": "Neutral full-opacity reading until actual next vocal; replace atomically.",
+      "v3CueGoneSeconds": 193.30750566893425,
+      "nextCueAcousticStartSeconds": 193.37501133786847,
+      "recommendedAtomicHandoffSeconds": 193.37501133786847,
+      "confidence": "medium-low",
+      "reason": "The terminal glide/body continues around 193.2–193.3. V3 removes the line at 193.3075 before the upper prior body interval and before new frication at 193.375. Related original/stem remnants continue into the next phrase; their passive tail must not extend the phonetic focus.",
+      "tailInterpretation": "Signal-supported candidate decay/reading lifetime; audibility is not human-listening-attested. Passive decay is not full-strength word focus. Close-gap tail ranges are partly masked by the next phrase and do not establish an isolated reverb stop.",
+      "evidence": "Public numerical observations and rationale in evidence/cue-tail-review.md and evidence/cue-tail-signal-review.json; representative original/stem spectra in evidence/cue-tail-comparison.png.",
+      "reviewerScope": "Independent held/verse review",
+      "tailLegibilityEndSeconds": 193.37501133786847,
+      "tailLegibilityEndSample": 8527838,
+      "proposedBodyEndSample": 8522766,
+      "bodyEndpointChangeRecommended": false,
+      "bodyEndRangeSamples": [
+        8518356,
+        8526294
+      ],
+      "cueTailEndRangeSamples": [
+        8526294,
+        8535555
+      ]
+    },
+    {
+      "cueId": "KOM-023",
+      "lastWordId": "KOM-023-s04",
+      "lastWordText": "огонь",
+      "v3BodyEndSeconds": 200.35,
+      "v3BodyEndSample": 8835435,
+      "proposedBodyEndSeconds": 200.35,
+      "bodyEndRangeSeconds": [
+        200.18,
+        200.48
+      ],
+      "bodyDisposition": "retain selected endpoint; fresh inspection does not establish strong phonation beyond the prior uncertainty interval",
+      "voiceRelatedDecayCandidateSpanSeconds": [
+        200.35,
+        202.3
+      ],
+      "proposedCueTailEndSeconds": 202.3,
+      "cueTailEndRangeSeconds": [
+        201.7,
+        202.3
+      ],
+      "proposedCueTailEndSample": 8921430,
+      "tailLegibilitySelection": "Upper reviewed decay-support edge for neutral full-opacity reading; later fade depends on room before the next reading lead.",
+      "v3CueGoneSeconds": 201.04999999999998,
+      "nextCueAcousticStartSeconds": 235.92163265306124,
+      "recommendedAtomicHandoffSeconds": null,
+      "confidence": "low",
+      "reason": "The softer terminal consonant/vowel body declines around 200.2–200.5. Original/stem voice-shaped bands remain after v3 disappearance at 201.050 and weaken into roughly 201.7–202.3. Low accompaniment and separation leakage remain, so this is a conservative line-legibility tail rather than a new singing-end claim.",
+      "tailInterpretation": "Signal-supported candidate decay/reading lifetime; audibility is not human-listening-attested. Passive decay is not full-strength word focus. Close-gap tail ranges are partly masked by the next phrase and do not establish an isolated reverb stop.",
+      "evidence": "Public numerical observations and rationale in evidence/cue-tail-review.md and evidence/cue-tail-signal-review.json; representative original/stem spectra in evidence/cue-tail-comparison.png.",
+      "reviewerScope": "Independent held/verse review",
+      "tailLegibilityEndSeconds": 202.3,
+      "tailLegibilityEndSample": 8921430,
+      "proposedBodyEndSample": 8835435,
+      "bodyEndpointChangeRecommended": false,
+      "bodyEndRangeSamples": [
+        8827938,
+        8841168
+      ],
+      "cueTailEndRangeSamples": [
+        8894970,
+        8921430
+      ]
+    },
+    {
+      "cueId": "KOM-024",
+      "lastWordId": "KOM-024-s09",
+      "lastWordText": "Serenity.",
+      "v3BodyEndSeconds": 239.4,
+      "v3BodyEndSample": 10557540,
+      "proposedBodyEndSeconds": 239.4,
+      "bodyEndRangeSeconds": [
+        239.27,
+        239.43
+      ],
+      "bodyDisposition": "retain estimate within fresh transition uncertainty",
+      "voiceRelatedDecayCandidateSpanSeconds": [
+        239.4,
+        239.8
+      ],
+      "proposedCueTailEndSeconds": 239.8,
+      "cueTailEndRangeSeconds": [
+        239.62,
+        239.97
+      ],
+      "proposedCueTailEndSample": 10575180,
+      "confidence": "low",
+      "reason": "Fresh late original/stem/accompaniment panel matches the primary clip at measured +79.120 s, including the terminal body and candidate decay. The final filtered vowel/body falls near 160.2–160.3. A broader noisy remnant follows through roughly 160.5–160.8, with musical/static bands continuing farther. Whisper original/stem releases disagree (160.28/160.20) and MMS ends at 159.979; none establishes an audible-tail boundary. Retain the current body selection and keep possible decay/reading lifetime separate.",
+      "tailInterpretation": "Signal-detectable candidate decay/reading lifetime; audibility not human-listening-attested. Passive decay is not full-strength phonetic focus.",
+      "evidence": "Public numerical observations and rationale in evidence/cue-tail-review.md and evidence/cue-tail-signal-review.json; representative original/stem spectra in evidence/cue-tail-comparison.png.",
+      "repeatOfCueId": "KOM-016",
+      "repeatShiftSamples": 3489192,
+      "reviewerScope": "Acoustic verse/radio review",
+      "v3CueGoneSeconds": 240.01149659863947,
+      "nextCueAcousticStartSeconds": 240.6429931972789,
+      "tailLegibilityEndSeconds": 239.97,
+      "tailLegibilityEndSample": 10582677,
+      "tailLegibilitySelection": "Upper reviewed decay-support edge for neutral full-opacity reading; later fade depends on room before the next reading lead.",
+      "recommendedAtomicHandoffSeconds": null,
+      "proposedBodyEndSample": 10557540,
+      "bodyEndpointChangeRecommended": false,
+      "bodyEndRangeSamples": [
+        10551807,
+        10558863
+      ],
+      "cueTailEndRangeSamples": [
+        10567242,
+        10582677
+      ]
+    },
+    {
+      "cueId": "KOM-025",
+      "lastWordId": "KOM-025-s09",
+      "lastWordText": "surface.",
+      "v3BodyEndSeconds": 243.33839002267572,
+      "v3BodyEndSample": 10731223,
+      "proposedBodyEndSeconds": 243.33839002267572,
+      "bodyEndRangeSeconds": [
+        243.22,
+        243.4
+      ],
+      "bodyDisposition": "retain estimate within fresh transition uncertainty",
+      "voiceRelatedDecayCandidateSpanSeconds": [
+        243.33839,
+        243.72
+      ],
+      "proposedCueTailEndSeconds": 243.72,
+      "cueTailEndRangeSeconds": [
+        243.57,
+        243.97
+      ],
+      "proposedCueTailEndSample": 10748052,
+      "confidence": "low",
+      "reason": "Fresh late original/stem/accompaniment panel matches the primary clip at measured +79.120 s, including the terminal body and candidate decay. Final consonant/noisy body merges into diffuse filtered residue around 164.1–164.3. Weaker noise persists later, but flat bands extending into 165+ also occur in accompaniment and do not prove more surface articulation. A quiet decay/reading window through about 164.6 is plausible, with broad uncertainty.",
+      "tailInterpretation": "Signal-detectable candidate decay/reading lifetime; audibility not human-listening-attested. Passive decay is not full-strength phonetic focus.",
+      "evidence": "Public numerical observations and rationale in evidence/cue-tail-review.md and evidence/cue-tail-signal-review.json; representative original/stem spectra in evidence/cue-tail-comparison.png.",
+      "repeatOfCueId": "KOM-017",
+      "repeatShiftSamples": 3489192,
+      "reviewerScope": "Acoustic verse/radio review",
+      "v3CueGoneSeconds": 244.0383900226757,
+      "nextCueAcousticStartSeconds": 244.82,
+      "tailLegibilityEndSeconds": 243.97,
+      "tailLegibilityEndSample": 10759077,
+      "tailLegibilitySelection": "Upper reviewed decay-support edge for neutral full-opacity reading; later fade depends on room before the next reading lead.",
+      "recommendedAtomicHandoffSeconds": null,
+      "proposedBodyEndSample": 10731223,
+      "bodyEndpointChangeRecommended": false,
+      "bodyEndRangeSamples": [
+        10726002,
+        10733940
+      ],
+      "cueTailEndRangeSamples": [
+        10741437,
+        10759077
+      ]
+    },
+    {
+      "cueId": "KOM-026",
+      "lastWordId": "KOM-026-s04",
+      "lastWordText": "me?",
+      "v3BodyEndSeconds": 245.62,
+      "v3BodyEndSample": 10831842,
+      "proposedBodyEndSeconds": 245.62,
+      "bodyEndRangeSeconds": [
+        245.52,
+        245.76
+      ],
+      "bodyDisposition": "retain estimate within fresh transition uncertainty",
+      "voiceRelatedDecayCandidateSpanSeconds": [
+        245.62,
+        245.92
+      ],
+      "proposedCueTailEndSeconds": 245.92000000000002,
+      "cueTailEndRangeSeconds": [
+        245.77,
+        246.07
+      ],
+      "proposedCueTailEndSample": 10845072,
+      "confidence": "low",
+      "reason": "Fresh late original/stem/accompaniment panel matches the primary clip at measured +79.120 s, including the terminal body and candidate decay. Filtered final me body is obscured around 166.4–166.6; original Whisper ends 166.50 and stem Whisper 166.62. Softer noisy vowel-shaped remnant continues shortly afterward. Flat harmonic persistence beginning about 167.05 coincides with accompaniment and is not evidence of a three-second word. Existing body selection lies within the fresh broad interval.",
+      "tailInterpretation": "Signal-detectable candidate decay/reading lifetime; audibility not human-listening-attested. Passive decay is not full-strength phonetic focus.",
+      "evidence": "Public numerical observations and rationale in evidence/cue-tail-review.md and evidence/cue-tail-signal-review.json; representative original/stem spectra in evidence/cue-tail-comparison.png.",
+      "repeatOfCueId": "KOM-018",
+      "repeatShiftSamples": 3489192,
+      "reviewerScope": "Acoustic verse/radio review",
+      "v3CueGoneSeconds": 246.32,
+      "nextCueAcousticStartSeconds": 249.26,
+      "tailLegibilityEndSeconds": 246.07,
+      "tailLegibilityEndSample": 10851687,
+      "tailLegibilitySelection": "Upper reviewed decay-support edge for neutral full-opacity reading; later fade depends on room before the next reading lead.",
+      "recommendedAtomicHandoffSeconds": null,
+      "proposedBodyEndSample": 10831842,
+      "bodyEndpointChangeRecommended": false,
+      "bodyEndRangeSamples": [
+        10827432,
+        10838016
+      ],
+      "cueTailEndRangeSamples": [
+        10838457,
+        10851687
+      ]
+    },
+    {
+      "cueId": "KOM-027",
+      "lastWordId": "KOM-027-s04",
+      "lastWordText": "me?",
+      "v3BodyEndSeconds": 249.96,
+      "v3BodyEndSample": 11023236,
+      "proposedBodyEndSeconds": 249.96,
+      "bodyEndRangeSeconds": [
+        249.945,
+        249.975
+      ],
+      "bodyDisposition": "retain estimate within fresh transition uncertainty",
+      "voiceRelatedDecayCandidateSpanSeconds": [
+        249.96,
+        249.96
+      ],
+      "proposedCueTailEndSeconds": 249.96,
+      "cueTailEndRangeSeconds": [
+        249.945,
+        249.975
+      ],
+      "proposedCueTailEndSample": 11023236,
+      "confidence": "medium",
+      "reason": "The entire source is faded/cut at this endpoint. Original stereo RMS collapses at 249.95–249.96; residual ±1 PCM quantization ends 250.009 and exact-zero PCM follows. The source obscures the natural word release. There is no supported audible post-250 tail; any longer neutral line lifetime is a reading choice, not a phonetic/audible extension.",
+      "tailInterpretation": "Signal-detectable candidate decay/reading lifetime; audibility not human-listening-attested. Passive decay is not full-strength phonetic focus.",
+      "evidence": "Public numerical observations and rationale in evidence/cue-tail-review.md and evidence/cue-tail-signal-review.json; representative original/stem spectra in evidence/cue-tail-comparison.png.",
+      "reviewerScope": "Acoustic verse/radio review",
+      "v3CueGoneSeconds": 250.66,
+      "nextCueAcousticStartSeconds": null,
+      "tailLegibilityEndSeconds": 249.975,
+      "tailLegibilityEndSample": 11023898,
+      "tailLegibilitySelection": "Upper reviewed decay-support edge for neutral full-opacity reading; later fade depends on room before the next reading lead.",
+      "recommendedAtomicHandoffSeconds": null,
+      "proposedBodyEndSample": 11023236,
+      "bodyEndpointChangeRecommended": false,
+      "bodyEndRangeSamples": [
+        11022574,
+        11023898
+      ],
+      "cueTailEndRangeSamples": [
+        11022574,
+        11023898
+      ]
+    }
+  ]
+}

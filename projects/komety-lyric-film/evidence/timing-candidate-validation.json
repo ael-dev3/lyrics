@@ -1,0 +1,29 @@
+{
+  "status": "pass",
+  "timingSha256": "bd9fe396db5501436ba867d700d4ad14314fa0a4eb05cca2eff87487d882bde9",
+  "cueCount": 27,
+  "wordCount": 139,
+  "sampleRate": 44100,
+  "sourceClockOffset": 0,
+  "changedOnsets": 61,
+  "changedReleases": 67,
+  "unreviewedOnsets": 0,
+  "unreviewedReleases": 0,
+  "auditSamplesAndDeltasConsistent": true,
+  "allZeroBasedTokenMappingsMatchEditorial": true,
+  "selectedEndpointsOrderedWithoutOverlap": true,
+  "lateRepeatTransferSampleShift": 3489192,
+  "sourceFadeExceptionWordId": "KOM-027-s04",
+  "humanListeningAttested": false,
+  "checks": [
+    "source/editorial/hash binding",
+    "complete editorial mapping",
+    "sample/second consistency",
+    "selected/baseline audit consistency",
+    "ordered endpoints",
+    "per-word review decisions",
+    "exact late clip transfer/fade exception",
+    "cue-tail binding",
+    "public ledger binding"
+  ]
+}

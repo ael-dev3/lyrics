@@ -1,0 +1,968 @@
+{
+  "schemaVersion": 1,
+  "status": "targeted proposed lexical ownership correction; source edits belong to coordinating agent",
+  "baselineTimingSha256": "50eb03112990c92454781697785a69826c5d979426153bc7154e7063208b4c06",
+  "sourceSha256": "af518bcde332f296dfc7982ebd7d8724c80c722decf5a32dfe3b00ef86107bf6",
+  "sourceSampleRate": 44100,
+  "sourceClockOffset": 0,
+  "humanListeningAttested": false,
+  "mutatesSourceTiming": false,
+  "scope": "KOM-013-s04 opening reduced vowel and coupled KOM-013-s03 release only; all cue-final releases and neutral visibility holds preserved.",
+  "observations": [
+    {
+      "wordId": "KOM-013-s04",
+      "previousWordId": "KOM-013-s03",
+      "sourceIndex": 3,
+      "beforeOnsetSeconds": 135.85,
+      "beforeOnsetSample": 5990985,
+      "beforePreviousReleaseSeconds": 135.85,
+      "beforePreviousReleaseSample": 5990985,
+      "selectedBoundarySeconds": 135.7,
+      "selectedOnsetSample": 5984370,
+      "selectedPreviousReleaseSeconds": 135.7,
+      "selectedPreviousReleaseSample": 5984370,
+      "deltaSamples": -6615,
+      "deltaSeconds": -0.15,
+      "signalIntervalSeconds": [
+        135.65,
+        135.75
+      ],
+      "confidence": "medium-low",
+      "decision": "changed",
+      "coupledOwnershipChange": true,
+      "reason": "Original mix and estimated vocal show attenuation around135.60–135.66, followed by a changed quiet connected harmonic/body trajectory over135.66–135.75, before the stronger renewed body135.78–135.85. Select135.700 for the shared lexical ownership handoff so the quiet opening vowel is no longer assigned to the preceding word. This remains a plausible connected-vowel split, not an isolated silence or certified phoneme edge. The earlier retained135.850 follows the stronger core and misses the quiet trajectory; model cores cannot veto its earlier ownership."
+    }
+  ],
+  "sourceSignalObservations": {
+    "inputs": [
+      "original decoded stereo mix",
+      "zero-lag estimated HTDemucs vocal stem"
+    ],
+    "attenuationIntervalSeconds": [
+      135.6,
+      135.66
+    ],
+    "changedQuietBodyIntervalSeconds": [
+      135.66,
+      135.75
+    ],
+    "strongerRenewedBodyIntervalSeconds": [
+      135.78,
+      135.85
+    ],
+    "laterAlternativeSeconds": 135.735,
+    "laterAlternativeDisposition": "Later narrow attenuation/body division can omit the earlier quiet changed prefix; not selected as the leading lexical handoff."
+  },
+  "modelObservations": [
+    {
+      "wordId": "KOM-013-s04",
+      "sourceIndex": 3,
+      "context": "four-word context",
+      "input": "original mix",
+      "pathLabel": "orthographic baseline",
+      "cropSeconds": [
+        131.405,
+        138.8
+      ],
+      "emissionStepSeconds": 0.020040650406504063,
+      "previousTerminalCharacters": [
+        {
+          "symbol": "v",
+          "start": 136.43520325203252,
+          "end": 136.45524390243904,
+          "score": 0.029525816440582275
+        },
+        {
+          "symbol": "n",
+          "start": 136.51536585365852,
+          "end": 136.53540650406504,
+          "score": 0.0006529318634420633
+        },
+        {
+          "symbol": "o",
+          "start": 136.53540650406504,
+          "end": 136.55544715447155,
+          "score": 0.3147260844707489
+        }
+      ],
+      "newInitialCharacters": [
+        {
+          "symbol": "o",
+          "start": 136.57548780487804,
+          "end": 136.59552845528455,
+          "score": 0.11212722957134247
+        },
+        {
+          "symbol": "r",
+          "start": 136.8159756097561,
+          "end": 136.8360162601626,
+          "score": 0.0023239455185830593
+        },
+        {
+          "symbol": "e",
+          "start": 137.55747967479675,
+          "end": 137.57752032520324,
+          "score": 0.004596258979290724
+        }
+      ],
+      "initialCoreSeconds": 136.57548780487804,
+      "modelScore": 0.030383653414901346,
+      "status": "rejected-as-leading-phonetic-entry-proof",
+      "interpretation": "Sparse original standard path shifts preceding frication/phone ownership and noun cores well after the observed quiet trajectory; it cannot certify the opening vowel."
+    },
+    {
+      "wordId": "KOM-013-s04",
+      "sourceIndex": 3,
+      "context": "four-word context",
+      "input": "original mix",
+      "pathLabel": "acoustic reduced initial vowel",
+      "cropSeconds": [
+        131.405,
+        138.8
+      ],
+      "emissionStepSeconds": 0.020040650406504063,
+      "previousTerminalCharacters": [
+        {
+          "symbol": "v",
+          "start": 135.59349593495935,
+          "end": 135.61353658536586,
+          "score": 0.0011808262206614017
+        },
+        {
+          "symbol": "n",
+          "start": 135.71373983739838,
+          "end": 135.7337804878049,
+          "score": 0.02704223431646824
+        },
+        {
+          "symbol": "o",
+          "start": 135.7337804878049,
+          "end": 135.75382113821138,
+          "score": 0.0010151544120162725
+        }
+      ],
+      "newInitialCharacters": [
+        {
+          "symbol": "a",
+          "start": 135.8339837398374,
+          "end": 135.8540243902439,
+          "score": 0.69193434715271
+        },
+        {
+          "symbol": "r",
+          "start": 136.09451219512195,
+          "end": 136.11455284552846,
+          "score": 0.17023155093193054
+        },
+        {
+          "symbol": "e",
+          "start": 136.19471544715446,
+          "end": 136.21475609756098,
+          "score": 0.15872108936309814
+        }
+      ],
+      "initialCoreSeconds": 135.8339837398374,
+      "modelScore": 0.2567519713193178,
+      "status": "competing-context-sensitive-model-path",
+      "interpretation": "Competing same-family phone ownership; model core is later than possible phonetic entry and does not choose a physical onset."
+    },
+    {
+      "wordId": "KOM-013-s04",
+      "sourceIndex": 3,
+      "context": "four-word context",
+      "input": "original mix",
+      "pathLabel": "acoustic reduced adjacent vowels",
+      "cropSeconds": [
+        131.405,
+        138.8
+      ],
+      "emissionStepSeconds": 0.020040650406504063,
+      "previousTerminalCharacters": [
+        {
+          "symbol": "v",
+          "start": 135.59349593495935,
+          "end": 135.61353658536586,
+          "score": 0.0011808262206614017
+        },
+        {
+          "symbol": "n",
+          "start": 135.71373983739838,
+          "end": 135.7337804878049,
+          "score": 0.02704223431646824
+        },
+        {
+          "symbol": "a",
+          "start": 135.8339837398374,
+          "end": 135.8540243902439,
+          "score": 0.69193434715271
+        }
+      ],
+      "newInitialCharacters": [
+        {
+          "symbol": "a",
+          "start": 136.01434959349592,
+          "end": 136.03439024390244,
+          "score": 0.01782495528459549
+        },
+        {
+          "symbol": "r",
+          "start": 136.09451219512195,
+          "end": 136.11455284552846,
+          "score": 0.17023155093193054
+        },
+        {
+          "symbol": "e",
+          "start": 136.19471544715446,
+          "end": 136.21475609756098,
+          "score": 0.15872108936309814
+        }
+      ],
+      "initialCoreSeconds": 136.01434959349592,
+      "modelScore": 0.0882246233522892,
+      "status": "competing-context-sensitive-model-path",
+      "interpretation": "Competing same-family phone ownership; model core is later than possible phonetic entry and does not choose a physical onset."
+    },
+    {
+      "wordId": "KOM-013-s04",
+      "sourceIndex": 3,
+      "context": "four-word context",
+      "input": "original mix",
+      "pathLabel": "acoustic reduced prior terminal vowel",
+      "cropSeconds": [
+        131.405,
+        138.8
+      ],
+      "emissionStepSeconds": 0.020040650406504063,
+      "previousTerminalCharacters": [
+        {
+          "symbol": "v",
+          "start": 135.59349593495935,
+          "end": 135.61353658536586,
+          "score": 0.0011808262206614017
+        },
+        {
+          "symbol": "n",
+          "start": 135.71373983739838,
+          "end": 135.7337804878049,
+          "score": 0.02704223431646824
+        },
+        {
+          "symbol": "a",
+          "start": 135.8339837398374,
+          "end": 135.8540243902439,
+          "score": 0.69193434715271
+        }
+      ],
+      "newInitialCharacters": [
+        {
+          "symbol": "o",
+          "start": 136.01434959349592,
+          "end": 136.03439024390244,
+          "score": 0.001422231551259756
+        },
+        {
+          "symbol": "r",
+          "start": 136.09451219512195,
+          "end": 136.11455284552846,
+          "score": 0.17023155093193054
+        },
+        {
+          "symbol": "e",
+          "start": 136.19471544715446,
+          "end": 136.21475609756098,
+          "score": 0.15872108936309814
+        }
+      ],
+      "initialCoreSeconds": 136.01434959349592,
+      "modelScore": 0.08412394241895527,
+      "status": "competing-context-sensitive-model-path",
+      "interpretation": "Competing same-family phone ownership; model core is later than possible phonetic entry and does not choose a physical onset."
+    },
+    {
+      "wordId": "KOM-013-s04",
+      "sourceIndex": 3,
+      "context": "four-word context",
+      "input": "estimated vocal",
+      "pathLabel": "orthographic baseline",
+      "cropSeconds": [
+        131.405,
+        138.8
+      ],
+      "emissionStepSeconds": 0.020040650406504063,
+      "previousTerminalCharacters": [
+        {
+          "symbol": "v",
+          "start": 135.67365853658538,
+          "end": 135.69369918699186,
+          "score": 0.008104631677269936
+        },
+        {
+          "symbol": "n",
+          "start": 135.7738617886179,
+          "end": 135.79390243902438,
+          "score": 0.009266767650842667
+        },
+        {
+          "symbol": "o",
+          "start": 135.8540243902439,
+          "end": 135.8740650406504,
+          "score": 0.07490939646959305
+        }
+      ],
+      "newInitialCharacters": [
+        {
+          "symbol": "o",
+          "start": 136.2748780487805,
+          "end": 136.29491869918698,
+          "score": 0.09288084506988525
+        },
+        {
+          "symbol": "r",
+          "start": 136.43520325203252,
+          "end": 136.45524390243904,
+          "score": 0.062451038509607315
+        },
+        {
+          "symbol": "e",
+          "start": 136.59552845528455,
+          "end": 136.61556910569107,
+          "score": 0.05819103866815567
+        }
+      ],
+      "initialCoreSeconds": 136.2748780487805,
+      "modelScore": 0.05457152600865811,
+      "status": "competing-context-sensitive-model-path",
+      "interpretation": "Competing same-family phone ownership; model core is later than possible phonetic entry and does not choose a physical onset."
+    },
+    {
+      "wordId": "KOM-013-s04",
+      "sourceIndex": 3,
+      "context": "four-word context",
+      "input": "estimated vocal",
+      "pathLabel": "acoustic reduced initial vowel",
+      "cropSeconds": [
+        131.405,
+        138.8
+      ],
+      "emissionStepSeconds": 0.020040650406504063,
+      "previousTerminalCharacters": [
+        {
+          "symbol": "v",
+          "start": 135.67365853658538,
+          "end": 135.69369918699186,
+          "score": 0.008104631677269936
+        },
+        {
+          "symbol": "n",
+          "start": 135.7738617886179,
+          "end": 135.79390243902438,
+          "score": 0.009266767650842667
+        },
+        {
+          "symbol": "o",
+          "start": 135.8540243902439,
+          "end": 135.8740650406504,
+          "score": 0.07490939646959305
+        }
+      ],
+      "newInitialCharacters": [
+        {
+          "symbol": "a",
+          "start": 136.2748780487805,
+          "end": 136.29491869918698,
+          "score": 0.3911362886428833
+        },
+        {
+          "symbol": "r",
+          "start": 136.43520325203252,
+          "end": 136.45524390243904,
+          "score": 0.062451038509607315
+        },
+        {
+          "symbol": "e",
+          "start": 136.59552845528455,
+          "end": 136.61556910569107,
+          "score": 0.05819103866815567
+        }
+      ],
+      "initialCoreSeconds": 136.2748780487805,
+      "modelScore": 0.12913538690190762,
+      "status": "competing-context-sensitive-model-path",
+      "interpretation": "Competing same-family phone ownership; model core is later than possible phonetic entry and does not choose a physical onset."
+    },
+    {
+      "wordId": "KOM-013-s04",
+      "sourceIndex": 3,
+      "context": "four-word context",
+      "input": "estimated vocal",
+      "pathLabel": "acoustic reduced adjacent vowels",
+      "cropSeconds": [
+        131.405,
+        138.8
+      ],
+      "emissionStepSeconds": 0.020040650406504063,
+      "previousTerminalCharacters": [
+        {
+          "symbol": "v",
+          "start": 135.67365853658538,
+          "end": 135.69369918699186,
+          "score": 0.008104631677269936
+        },
+        {
+          "symbol": "n",
+          "start": 135.7738617886179,
+          "end": 135.79390243902438,
+          "score": 0.009266767650842667
+        },
+        {
+          "symbol": "a",
+          "start": 135.8540243902439,
+          "end": 135.8740650406504,
+          "score": 0.47356343269348145
+        }
+      ],
+      "newInitialCharacters": [
+        {
+          "symbol": "a",
+          "start": 136.2748780487805,
+          "end": 136.29491869918698,
+          "score": 0.3911362886428833
+        },
+        {
+          "symbol": "r",
+          "start": 136.43520325203252,
+          "end": 136.45524390243904,
+          "score": 0.062451038509607315
+        },
+        {
+          "symbol": "e",
+          "start": 136.59552845528455,
+          "end": 136.61556910569107,
+          "score": 0.05819103866815567
+        }
+      ],
+      "initialCoreSeconds": 136.2748780487805,
+      "modelScore": 0.12913538690190762,
+      "status": "competing-context-sensitive-model-path",
+      "interpretation": "Competing same-family phone ownership; model core is later than possible phonetic entry and does not choose a physical onset."
+    },
+    {
+      "wordId": "KOM-013-s04",
+      "sourceIndex": 3,
+      "context": "four-word context",
+      "input": "estimated vocal",
+      "pathLabel": "acoustic reduced prior terminal vowel",
+      "cropSeconds": [
+        131.405,
+        138.8
+      ],
+      "emissionStepSeconds": 0.020040650406504063,
+      "previousTerminalCharacters": [
+        {
+          "symbol": "v",
+          "start": 135.67365853658538,
+          "end": 135.69369918699186,
+          "score": 0.008104631677269936
+        },
+        {
+          "symbol": "n",
+          "start": 135.7738617886179,
+          "end": 135.79390243902438,
+          "score": 0.009266767650842667
+        },
+        {
+          "symbol": "a",
+          "start": 135.8540243902439,
+          "end": 135.8740650406504,
+          "score": 0.47356343269348145
+        }
+      ],
+      "newInitialCharacters": [
+        {
+          "symbol": "o",
+          "start": 136.2748780487805,
+          "end": 136.29491869918698,
+          "score": 0.09288084506988525
+        },
+        {
+          "symbol": "r",
+          "start": 136.43520325203252,
+          "end": 136.45524390243904,
+          "score": 0.062451038509607315
+        },
+        {
+          "symbol": "e",
+          "start": 136.59552845528455,
+          "end": 136.61556910569107,
+          "score": 0.05819103866815567
+        }
+      ],
+      "initialCoreSeconds": 136.2748780487805,
+      "modelScore": 0.05457152600865811,
+      "status": "competing-context-sensitive-model-path",
+      "interpretation": "Competing same-family phone ownership; model core is later than possible phonetic entry and does not choose a physical onset."
+    },
+    {
+      "wordId": "KOM-013-s04",
+      "sourceIndex": 3,
+      "context": "restricted two-word context",
+      "input": "original mix",
+      "pathLabel": "orthographic baseline",
+      "cropSeconds": [
+        134.955,
+        138.675
+      ],
+      "emissionStepSeconds": 0.02010810810810811,
+      "previousTerminalCharacters": [
+        {
+          "symbol": "v",
+          "start": 135.6788918918919,
+          "end": 135.699,
+          "score": 0.03735991194844246
+        },
+        {
+          "symbol": "n",
+          "start": 136.1212702702703,
+          "end": 136.1413783783784,
+          "score": 0.0904180184006691
+        },
+        {
+          "symbol": "o",
+          "start": 136.50332432432432,
+          "end": 136.52343243243246,
+          "score": 0.21659469604492188
+        }
+      ],
+      "newInitialCharacters": [
+        {
+          "symbol": "o",
+          "start": 136.60386486486487,
+          "end": 136.62397297297298,
+          "score": 0.1577032506465912
+        },
+        {
+          "symbol": "r",
+          "start": 137.6092702702703,
+          "end": 137.6293783783784,
+          "score": 0.00385684915818274
+        },
+        {
+          "symbol": "e",
+          "start": 137.6293783783784,
+          "end": 137.6494864864865,
+          "score": 0.02628355473279953
+        }
+      ],
+      "initialCoreSeconds": 136.60386486486487,
+      "modelScore": 0.04734730575000867,
+      "status": "rejected-as-leading-phonetic-entry-proof",
+      "interpretation": "Sparse original standard path shifts preceding frication/phone ownership and noun cores well after the observed quiet trajectory; it cannot certify the opening vowel."
+    },
+    {
+      "wordId": "KOM-013-s04",
+      "sourceIndex": 3,
+      "context": "restricted two-word context",
+      "input": "original mix",
+      "pathLabel": "acoustic reduced initial vowel",
+      "cropSeconds": [
+        134.955,
+        138.675
+      ],
+      "emissionStepSeconds": 0.02010810810810811,
+      "previousTerminalCharacters": [
+        {
+          "symbol": "v",
+          "start": 135.47781081081084,
+          "end": 135.49791891891894,
+          "score": 0.0015996801666915417
+        },
+        {
+          "symbol": "n",
+          "start": 135.49791891891894,
+          "end": 135.51802702702705,
+          "score": 0.015530500560998917
+        },
+        {
+          "symbol": "o",
+          "start": 135.51802702702705,
+          "end": 135.53813513513515,
+          "score": 0.025968443602323532
+        }
+      ],
+      "newInitialCharacters": [
+        {
+          "symbol": "a",
+          "start": 135.81964864864867,
+          "end": 135.83975675675677,
+          "score": 0.7439993619918823
+        },
+        {
+          "symbol": "r",
+          "start": 136.1212702702703,
+          "end": 136.1413783783784,
+          "score": 0.2785797119140625
+        },
+        {
+          "symbol": "e",
+          "start": 136.2017027027027,
+          "end": 136.22181081081084,
+          "score": 0.19332464039325714
+        }
+      ],
+      "initialCoreSeconds": 135.81964864864867,
+      "modelScore": 0.30495696188881993,
+      "status": "competing-context-sensitive-model-path",
+      "interpretation": "Competing same-family phone ownership; model core is later than possible phonetic entry and does not choose a physical onset."
+    },
+    {
+      "wordId": "KOM-013-s04",
+      "sourceIndex": 3,
+      "context": "restricted two-word context",
+      "input": "original mix",
+      "pathLabel": "acoustic reduced adjacent vowels",
+      "cropSeconds": [
+        134.955,
+        138.675
+      ],
+      "emissionStepSeconds": 0.02010810810810811,
+      "previousTerminalCharacters": [
+        {
+          "symbol": "v",
+          "start": 135.6788918918919,
+          "end": 135.699,
+          "score": 0.03735991194844246
+        },
+        {
+          "symbol": "n",
+          "start": 135.77943243243246,
+          "end": 135.79954054054056,
+          "score": 0.0028831586241722107
+        },
+        {
+          "symbol": "a",
+          "start": 135.81964864864867,
+          "end": 135.83975675675677,
+          "score": 0.7439993619918823
+        }
+      ],
+      "newInitialCharacters": [
+        {
+          "symbol": "a",
+          "start": 136.00062162162163,
+          "end": 136.02072972972974,
+          "score": 0.007109730504453182
+        },
+        {
+          "symbol": "r",
+          "start": 136.1212702702703,
+          "end": 136.1413783783784,
+          "score": 0.2785797119140625
+        },
+        {
+          "symbol": "e",
+          "start": 136.2017027027027,
+          "end": 136.22181081081084,
+          "score": 0.19332464039325714
+        }
+      ],
+      "initialCoreSeconds": 136.00062162162163,
+      "modelScore": 0.12073455401696265,
+      "status": "competing-context-sensitive-model-path",
+      "interpretation": "Competing same-family phone ownership; model core is later than possible phonetic entry and does not choose a physical onset."
+    },
+    {
+      "wordId": "KOM-013-s04",
+      "sourceIndex": 3,
+      "context": "restricted two-word context",
+      "input": "original mix",
+      "pathLabel": "acoustic reduced prior terminal vowel",
+      "cropSeconds": [
+        134.955,
+        138.675
+      ],
+      "emissionStepSeconds": 0.02010810810810811,
+      "previousTerminalCharacters": [
+        {
+          "symbol": "v",
+          "start": 135.6788918918919,
+          "end": 135.699,
+          "score": 0.03735991194844246
+        },
+        {
+          "symbol": "n",
+          "start": 135.77943243243246,
+          "end": 135.79954054054056,
+          "score": 0.0028831586241722107
+        },
+        {
+          "symbol": "a",
+          "start": 135.81964864864867,
+          "end": 135.83975675675677,
+          "score": 0.7439993619918823
+        }
+      ],
+      "newInitialCharacters": [
+        {
+          "symbol": "o",
+          "start": 136.00062162162163,
+          "end": 136.02072972972974,
+          "score": 0.0015427550533786416
+        },
+        {
+          "symbol": "r",
+          "start": 136.1212702702703,
+          "end": 136.1413783783784,
+          "score": 0.2785797119140625
+        },
+        {
+          "symbol": "e",
+          "start": 136.2017027027027,
+          "end": 136.22181081081084,
+          "score": 0.19332464039325714
+        }
+      ],
+      "initialCoreSeconds": 136.00062162162163,
+      "modelScore": 0.11934281015419401,
+      "status": "competing-context-sensitive-model-path",
+      "interpretation": "Competing same-family phone ownership; model core is later than possible phonetic entry and does not choose a physical onset."
+    },
+    {
+      "wordId": "KOM-013-s04",
+      "sourceIndex": 3,
+      "context": "restricted two-word context",
+      "input": "estimated vocal",
+      "pathLabel": "orthographic baseline",
+      "cropSeconds": [
+        134.955,
+        138.675
+      ],
+      "emissionStepSeconds": 0.02010810810810811,
+      "previousTerminalCharacters": [
+        {
+          "symbol": "v",
+          "start": 135.51802702702705,
+          "end": 135.53813513513515,
+          "score": 0.003489259397611022
+        },
+        {
+          "symbol": "n",
+          "start": 135.6587837837838,
+          "end": 135.6788918918919,
+          "score": 0.0345124788582325
+        },
+        {
+          "symbol": "o",
+          "start": 135.71910810810812,
+          "end": 135.73921621621622,
+          "score": 0.003636902431026101
+        }
+      ],
+      "newInitialCharacters": [
+        {
+          "symbol": "o",
+          "start": 135.79954054054056,
+          "end": 135.81964864864867,
+          "score": 0.08510393649339676
+        },
+        {
+          "symbol": "r",
+          "start": 135.92018918918922,
+          "end": 135.94029729729732,
+          "score": 0.22641733288764954
+        },
+        {
+          "symbol": "e",
+          "start": 136.06094594594595,
+          "end": 136.08105405405408,
+          "score": 0.4076027274131775
+        }
+      ],
+      "initialCoreSeconds": 135.79954054054056,
+      "modelScore": 0.18917336408048868,
+      "status": "competing-context-sensitive-model-path",
+      "interpretation": "Competing same-family phone ownership; model core is later than possible phonetic entry and does not choose a physical onset."
+    },
+    {
+      "wordId": "KOM-013-s04",
+      "sourceIndex": 3,
+      "context": "restricted two-word context",
+      "input": "estimated vocal",
+      "pathLabel": "acoustic reduced initial vowel",
+      "cropSeconds": [
+        134.955,
+        138.675
+      ],
+      "emissionStepSeconds": 0.02010810810810811,
+      "previousTerminalCharacters": [
+        {
+          "symbol": "v",
+          "start": 135.51802702702705,
+          "end": 135.53813513513515,
+          "score": 0.003489259397611022
+        },
+        {
+          "symbol": "n",
+          "start": 135.6587837837838,
+          "end": 135.6788918918919,
+          "score": 0.0345124788582325
+        },
+        {
+          "symbol": "o",
+          "start": 135.71910810810812,
+          "end": 135.73921621621622,
+          "score": 0.003636902431026101
+        }
+      ],
+      "newInitialCharacters": [
+        {
+          "symbol": "a",
+          "start": 135.79954054054056,
+          "end": 135.81964864864867,
+          "score": 0.3855625092983246
+        },
+        {
+          "symbol": "r",
+          "start": 135.92018918918922,
+          "end": 135.94029729729732,
+          "score": 0.22641733288764954
+        },
+        {
+          "symbol": "e",
+          "start": 136.06094594594595,
+          "end": 136.08105405405408,
+          "score": 0.4076027274131775
+        }
+      ],
+      "initialCoreSeconds": 135.79954054054056,
+      "modelScore": 0.26428800728172064,
+      "status": "competing-context-sensitive-model-path",
+      "interpretation": "Competing same-family phone ownership; model core is later than possible phonetic entry and does not choose a physical onset."
+    },
+    {
+      "wordId": "KOM-013-s04",
+      "sourceIndex": 3,
+      "context": "restricted two-word context",
+      "input": "estimated vocal",
+      "pathLabel": "acoustic reduced adjacent vowels",
+      "cropSeconds": [
+        134.955,
+        138.675
+      ],
+      "emissionStepSeconds": 0.02010810810810811,
+      "previousTerminalCharacters": [
+        {
+          "symbol": "v",
+          "start": 135.51802702702705,
+          "end": 135.53813513513515,
+          "score": 0.003489259397611022
+        },
+        {
+          "symbol": "n",
+          "start": 135.6587837837838,
+          "end": 135.6788918918919,
+          "score": 0.0345124788582325
+        },
+        {
+          "symbol": "a",
+          "start": 135.71910810810812,
+          "end": 135.73921621621622,
+          "score": 0.011977321468293667
+        }
+      ],
+      "newInitialCharacters": [
+        {
+          "symbol": "a",
+          "start": 135.79954054054056,
+          "end": 135.81964864864867,
+          "score": 0.3855625092983246
+        },
+        {
+          "symbol": "r",
+          "start": 135.92018918918922,
+          "end": 135.94029729729732,
+          "score": 0.22641733288764954
+        },
+        {
+          "symbol": "e",
+          "start": 136.06094594594595,
+          "end": 136.08105405405408,
+          "score": 0.4076027274131775
+        }
+      ],
+      "initialCoreSeconds": 135.79954054054056,
+      "modelScore": 0.26428800728172064,
+      "status": "competing-context-sensitive-model-path",
+      "interpretation": "Competing same-family phone ownership; model core is later than possible phonetic entry and does not choose a physical onset."
+    },
+    {
+      "wordId": "KOM-013-s04",
+      "sourceIndex": 3,
+      "context": "restricted two-word context",
+      "input": "estimated vocal",
+      "pathLabel": "acoustic reduced prior terminal vowel",
+      "cropSeconds": [
+        134.955,
+        138.675
+      ],
+      "emissionStepSeconds": 0.02010810810810811,
+      "previousTerminalCharacters": [
+        {
+          "symbol": "v",
+          "start": 135.51802702702705,
+          "end": 135.53813513513515,
+          "score": 0.003489259397611022
+        },
+        {
+          "symbol": "n",
+          "start": 135.6587837837838,
+          "end": 135.6788918918919,
+          "score": 0.0345124788582325
+        },
+        {
+          "symbol": "a",
+          "start": 135.71910810810812,
+          "end": 135.73921621621622,
+          "score": 0.011977321468293667
+        }
+      ],
+      "newInitialCharacters": [
+        {
+          "symbol": "o",
+          "start": 135.79954054054056,
+          "end": 135.81964864864867,
+          "score": 0.08510393649339676
+        },
+        {
+          "symbol": "r",
+          "start": 135.92018918918922,
+          "end": 135.94029729729732,
+          "score": 0.22641733288764954
+        },
+        {
+          "symbol": "e",
+          "start": 136.06094594594595,
+          "end": 136.08105405405408,
+          "score": 0.4076027274131775
+        }
+      ],
+      "initialCoreSeconds": 135.79954054054056,
+      "modelScore": 0.18917336408048868,
+      "status": "competing-context-sensitive-model-path",
+      "interpretation": "Competing same-family phone ownership; model core is later than possible phonetic entry and does not choose a physical onset."
+    }
+  ],
+  "modelTimingBaselineSha256": "477764a615837642c1d15b520d7d9f7387a632c6554446f8bf68f071057ad9ed",
+  "modelBaselineApplicability": "The reviewed word and paired prior release were135.850 in both the model baseline477764 and this review baseline50eb. Original media clock and spelling are unchanged.",
+  "modelInterpretation": [
+    "Restricted source reduced-initial path places preceding n135.498/final-o135.518, then initial-vowel core135.820/r136.121. Restricted stem places preceding n135.659/final-o135.719, then initial-vowel core135.800/r135.920.",
+    "The preceding-phone allocations disagree: some paths give the earlier quiet body to the preceding word. Four-word and ordinary original paths follow later cores or wrong phrase ownership. These are correlated same-family paths, not independent votes.",
+    "Initial-character cores are stronger later portions of the continuous body; they do not measure the quiet lexical entry. The original/stem quiet trajectory supports revisiting the previous retained selection."
+  ],
+  "uncertaintyMeaning": "Qualitative plausible connected-vowel ownership interval, not statistical confidence or millisecond boundary certification.",
+  "limits": [
+    "No human listening attestation. Adjacent reduced vowels merge, so exact lexical ownership is uncertain.",
+    "Harmonic/body trajectory changes are source observations, not formal formant estimates or automatic word detections.",
+    "Estimated vocal separation is noncausal and may leak accompaniment or smear edges. Original mix is authoritative.",
+    "Source44100 sample encoding preserves the clock; it does not narrow the100ms ownership range. No model sweep, new download, render or remote operation was performed."
+  ]
+}

@@ -8,7 +8,21 @@ Music films with synchronized lyrics, meaning-linked translations, and audio-rea
 
 **Starting another song:** use the [single-prompt template, agent quickstart and complete quality checklist](docs/source-clocked-word-effects-workflow.md), including [how to make reactive visuals belong to the picture](docs/scene-integrated-visuals.md). The [If The Sun Burns Out Tonight handoff](projects/if-the-sun-burns-out-tonight-lyric-film/AGENT-HANDOFF.md) and [production lessons](projects/if-the-sun-burns-out-tonight-lyric-film/PRODUCTION-LESSONS.md) show how exact word/phrase effects, measured intensity and dependable full-picture playback fit the shared workflow.
 
-[**Let You Down**](#let-you-down) · [**Leave It On — Warpkeep**](#leave-it-on--warpkeep) · [**Must Have Been A Dream**](#must-have-been-a-dream) · [**TAKE ME THERE**](#take-me-there) · [**Rainline**](#rainline) · [**El Tesoro — preview**](#el-tesoro--preview) · [**I'll Change for You**](#ill-change-for-you) · [**If The Sun Burns Out Tonight**](#if-the-sun-burns-out-tonight) · [**Люби меня, люби**](#люби-меня-люби) · [**Stay at Your House — Hardstyle**](#stay-at-your-house--hardstyle) · [**Ведьмы**](#ведьмы) · [**Pero es locura**](#pero-es-locura) · [**La Lune**](#la-lune) · [**каждый, кто делал тебе больно**](#каждый-кто-делал-тебе-больно) · [**Sugar Glass**](#sugar-glass) · [**Твои глаза**](#твои-глаза) · [**Прости за любовь — accepted with known gaps**](#прости-за-любовь) · [**Половинка**](#половинка) · [**Life Letters**](#life-letters) · [**Joyride**](#joyride) · [**midnight love**](#midnight-love) · [**Пожары**](#пожары) · [**Отменяй**](#отменяй) · [**Roi × Adore**](#roi--adore) · [**TikTok edition**](#tiktok-edition) · [**Tanisea**](#tanisea) · [**Build and workflow**](#build-and-workflow)
+[**Кометы**](#кометы) · [**Let You Down**](#let-you-down) · [**Leave It On — Warpkeep**](#leave-it-on--warpkeep) · [**Must Have Been A Dream**](#must-have-been-a-dream) · [**TAKE ME THERE**](#take-me-there) · [**Rainline**](#rainline) · [**El Tesoro — preview**](#el-tesoro--preview) · [**I'll Change for You**](#ill-change-for-you) · [**If The Sun Burns Out Tonight**](#if-the-sun-burns-out-tonight) · [**Люби меня, люби**](#люби-меня-люби) · [**Stay at Your House — Hardstyle**](#stay-at-your-house--hardstyle) · [**Ведьмы**](#ведьмы) · [**Pero es locura**](#pero-es-locura) · [**La Lune**](#la-lune) · [**каждый, кто делал тебе больно**](#каждый-кто-делал-тебе-больно) · [**Sugar Glass**](#sugar-glass) · [**Твои глаза**](#твои-глаза) · [**Прости за любовь — accepted with known gaps**](#прости-за-любовь) · [**Половинка**](#половинка) · [**Life Letters**](#life-letters) · [**Joyride**](#joyride) · [**midnight love**](#midnight-love) · [**Пожары**](#пожары) · [**Отменяй**](#отменяй) · [**Roi × Adore**](#roi--adore) · [**TikTok edition**](#tiktok-edition) · [**Tanisea**](#tanisea) · [**Build and workflow**](#build-and-workflow)
+
+## Кометы
+
+**POLNALYUBVI · Russian / English · verified native-wide and portrait films**
+
+![Кометы original forest video with equal Russian and English word focus](projects/komety-lyric-film/evidence/final-landscape-12.400.jpg)
+
+*Exact frame 744 at 00:12.400 from the verified 1920×796, 60 fps film; original source frame 310. Source: POLNALYUBVI / FILM GODS.*
+
+The complete 4:20.087 recording retains its original forest, mirror, bowstring, night light and endcards. Equal bilingual typography follows 139 individual source events and 157 translation words across 27 cues, including both radio transmissions. A restrained measured bow-light ribbon supports the picture. The native wide film keeps the full source frame; portrait uses 78 reviewed framing spans.
+
+The accepted v10 timing includes independently reviewed quiet vowel entrances and held releases. Whole-line readability stays separate from lexical highlighting, and grammatical completions receive their full translated focus. Both 60 fps films passed full decode, frame/audio identity, source-black comparison and independent decoded scene/glyph checks. The verified local upload kit contains both videos, dedicated covers, publishing copy, optional captions and checksums.
+
+[Delivery and preview](projects/komety-lyric-film/README.md) · [Agent startup](projects/komety-lyric-film/AGENT-HANDOFF.md) · [Mistakes and corrections](projects/komety-lyric-film/PRODUCTION-LESSONS.md) · [Production verification](projects/komety-lyric-film/PRODUCTION-NOTES.md) · [Reusable connected-word workflow](docs/connected-phoneme-onset-workflow.md)
 
 ## Let You Down
 

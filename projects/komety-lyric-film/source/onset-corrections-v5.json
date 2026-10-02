@@ -1,0 +1,661 @@
+{
+  "schemaVersion": 1,
+  "revision": "komety-preview-v5-connected-words",
+  "baselineTimingSha256": "f9bdac802a56019eda3c21c8c4a78619506ac296db2a06999f55770c0dba4fc2",
+  "sourceSha256": "af518bcde332f296dfc7982ebd7d8724c80c722decf5a32dfe3b00ef86107bf6",
+  "sampleRate": 44100,
+  "status": "Root-selected source/signal review; full listening acceptance pending",
+  "humanListeningAttested": false,
+  "edges": [
+    {
+      "wordId": "KOM-005-s02",
+      "edge": "start",
+      "beforeSample": 2018318,
+      "selectedSample": 1992438,
+      "signalIntervalSeconds": [
+        45.125,
+        45.265
+      ],
+      "confidence": "low",
+      "reason": "Prior voiced body narrows and changes over roughly 44.9–45.1; a renewed lower vowel/formant region is established around 45.15–45.23. Fresh estimated-vocal n/o/r ownership places the prior final vowel near 45.026 and new vowel core45.207 before r45.367. Original harmonics support the transition but do not isolate a silence boundary. Current45.767 lies later within stable voice; original CTC/Whisper favor later parts of this continuous vowel."
+    },
+    {
+      "wordId": "KOM-005-s01",
+      "edge": "end",
+      "beforeSample": 2014929,
+      "selectedSample": 1992438,
+      "signalIntervalSeconds": [
+        45.125,
+        45.265
+      ],
+      "confidence": "low",
+      "reason": "Prior voiced body narrows and changes over roughly 44.9–45.1; a renewed lower vowel/formant region is established around 45.15–45.23. Fresh estimated-vocal n/o/r ownership places the prior final vowel near 45.026 and new vowel core45.207 before r45.367. Original harmonics support the transition but do not isolate a silence boundary. Current45.767 lies later within stable voice; original CTC/Whisper favor later parts of this continuous vowel. The prior final vowel ends at this same inferred lexical handoff; later voice belongs to the next word."
+    },
+    {
+      "wordId": "KOM-005-s04",
+      "edge": "start",
+      "beforeSample": 2156293,
+      "selectedSample": 2135322,
+      "signalIntervalSeconds": [
+        48.34,
+        48.59
+      ],
+      "confidence": "low",
+      "reason": "Original and stem show narrowing after the first strong vowel around 48.1–48.3, then a changed lower voiced/formant body from roughly 48.3–48.4. Fresh stem phone ownership separates prior n/o near48.116/48.136 from initial-o core48.376 and later r48.977. Exact final-o versus initial-o ownership is gradual, so the range is broad and the point is a coupled lexical split rather than a detected gap."
+    },
+    {
+      "wordId": "KOM-005-s03",
+      "edge": "end",
+      "beforeSample": 2154506,
+      "selectedSample": 2135322,
+      "signalIntervalSeconds": [
+        48.34,
+        48.59
+      ],
+      "confidence": "low",
+      "reason": "Original and stem show narrowing after the first strong vowel around 48.1–48.3, then a changed lower voiced/formant body from roughly 48.3–48.4. Fresh stem phone ownership separates prior n/o near48.116/48.136 from initial-o core48.376 and later r48.977. Exact final-o versus initial-o ownership is gradual, so the range is broad and the point is a coupled lexical split rather than a detected gap. The prior final vowel ends at this same inferred lexical handoff; later voice belongs to the next word."
+    },
+    {
+      "wordId": "KOM-007-s04",
+      "edge": "start",
+      "beforeSample": 2781521,
+      "selectedSample": 2741256,
+      "signalIntervalSeconds": [
+        62.11,
+        62.24
+      ],
+      "confidence": "medium-low",
+      "reason": "Original/stem preceding voiced/nasal sequence changes through61.84–62.04, followed by a lower renewed vowel/formant region around62.10–62.18. Fresh stem n61.920/final-o62.020/initial-o62.241/g62.401/stressed-o62.502 follows these physical transitions; conditioned stem62.138 supports the quiet initial vowel. The pronounced attenuation62.39–62.43 can be g-like closure, so62.425 is rejected as an onset: it would omit that vowel. Current63.073 is inside sustained stable harmonics. Original CTC follows a later competing phone path and remains disagreement, not a veto or extra vote."
+    },
+    {
+      "wordId": "KOM-007-s03",
+      "edge": "end",
+      "beforeSample": 2779402,
+      "selectedSample": 2741256,
+      "signalIntervalSeconds": [
+        62.11,
+        62.24
+      ],
+      "confidence": "medium-low",
+      "reason": "Original/stem preceding voiced/nasal sequence changes through61.84–62.04, followed by a lower renewed vowel/formant region around62.10–62.18. Fresh stem n61.920/final-o62.020/initial-o62.241/g62.401/stressed-o62.502 follows these physical transitions; conditioned stem62.138 supports the quiet initial vowel. The pronounced attenuation62.39–62.43 can be g-like closure, so62.425 is rejected as an onset: it would omit that vowel. Current63.073 is inside sustained stable harmonics. Original CTC follows a later competing phone path and remains disagreement, not a veto or extra vote. The prior final vowel ends at this same inferred lexical handoff; later voice belongs to the next word."
+    },
+    {
+      "wordId": "KOM-013-s02",
+      "edge": "start",
+      "beforeSample": 5874415,
+      "selectedSample": 5849865,
+      "signalIntervalSeconds": [
+        132.59,
+        132.74
+      ],
+      "confidence": "medium-low",
+      "reason": "Original/stem narrowing and formant change around132.4–132.55 precede the renewed lower vowel body near132.6–132.7 and later articulatory glide near132.78. Fresh stem prior final-o132.508/initial-o132.688/r132.788 and conditioned132.665 fit this order; original conditioned132.825 selects a later part. Current133.207 lies inside stable later voice. The adjacent vowel split is inferred, not acoustically isolated."
+    },
+    {
+      "wordId": "KOM-013-s01",
+      "edge": "end",
+      "beforeSample": 5871694,
+      "selectedSample": 5849865,
+      "signalIntervalSeconds": [
+        132.59,
+        132.74
+      ],
+      "confidence": "medium-low",
+      "reason": "Original/stem narrowing and formant change around132.4–132.55 precede the renewed lower vowel body near132.6–132.7 and later articulatory glide near132.78. Fresh stem prior final-o132.508/initial-o132.688/r132.788 and conditioned132.665 fit this order; original conditioned132.825 selects a later part. Current133.207 lies inside stable later voice. The adjacent vowel split is inferred, not acoustically isolated. The prior final vowel ends at this same inferred lexical handoff; later voice belongs to the next word."
+    },
+    {
+      "wordId": "KOM-013-s04",
+      "edge": "start",
+      "beforeSample": 6021235,
+      "selectedSample": 5990985,
+      "signalIntervalSeconds": [
+        135.79,
+        135.96
+      ],
+      "confidence": "low",
+      "reason": "Original/stem first strong vowel weakens/narrows through135.55–135.75, then a lower quiet voiced region is established near135.8–135.9 before a later formant/articulatory change. Fresh stem final-o135.718/initial-o135.818/r135.918 supports that ordering. Original CTC136.521 and conditioned136.255 disagree substantially. Exact adjacent-vowel ownership remains low confidence."
+    },
+    {
+      "wordId": "KOM-013-s03",
+      "edge": "end",
+      "beforeSample": 6018548,
+      "selectedSample": 5990985,
+      "signalIntervalSeconds": [
+        135.79,
+        135.96
+      ],
+      "confidence": "low",
+      "reason": "Original/stem first strong vowel weakens/narrows through135.55–135.75, then a lower quiet voiced region is established near135.8–135.9 before a later formant/articulatory change. Fresh stem final-o135.718/initial-o135.818/r135.918 supports that ordering. Original CTC136.521 and conditioned136.255 disagree substantially. Exact adjacent-vowel ownership remains low confidence. The prior final vowel ends at this same inferred lexical handoff; later voice belongs to the next word."
+    },
+    {
+      "wordId": "KOM-015-s04",
+      "edge": "start",
+      "beforeSample": 6618243,
+      "selectedSample": 6599565,
+      "signalIntervalSeconds": [
+        149.59,
+        149.735
+      ],
+      "confidence": "medium-low",
+      "reason": "After prior voiced/nasal narrowing near149.3–149.5, the lower continuous vowel body around149.6–149.7 precedes a later attenuation/articulatory change around149.82–149.87. Fresh stem initial-o149.696/g149.836/stressed-o149.957 and conditioned149.630 support an initial vowel before that closure. Current150.074 falls after the later renewed stressed body; original conditioned149.890 may already miss the quiet initial vowel. The vowel-to-vowel split remains inferred."
+    },
+    {
+      "wordId": "KOM-015-s03",
+      "edge": "end",
+      "beforeSample": 6616323,
+      "selectedSample": 6599565,
+      "signalIntervalSeconds": [
+        149.59,
+        149.735
+      ],
+      "confidence": "medium-low",
+      "reason": "After prior voiced/nasal narrowing near149.3–149.5, the lower continuous vowel body around149.6–149.7 precedes a later attenuation/articulatory change around149.82–149.87. Fresh stem initial-o149.696/g149.836/stressed-o149.957 and conditioned149.630 support an initial vowel before that closure. Current150.074 falls after the later renewed stressed body; original conditioned149.890 may already miss the quiet initial vowel. The vowel-to-vowel split remains inferred. The prior final vowel ends at this same inferred lexical handoff; later voice belongs to the next word."
+    },
+    {
+      "wordId": "KOM-021-s02",
+      "edge": "start",
+      "beforeSample": 7983156,
+      "selectedSample": 7962255,
+      "signalIntervalSeconds": [
+        180.485,
+        180.665
+      ],
+      "confidence": "medium-low",
+      "reason": "Original/stem prior strong vowel narrows around180.25–180.4. A changed lower vowel body is established around180.5–180.6 before the later pitch/formant/articulatory glide near180.7–180.8. Fresh stem final-o180.368/initial-o180.569/r180.710 and original conditioned180.485 fit this order. Current181.024 is later in stable voice; original CTC181.735 is even later and does not identify the quiet leading vowel."
+    },
+    {
+      "wordId": "KOM-021-s01",
+      "edge": "end",
+      "beforeSample": 7980998,
+      "selectedSample": 7962255,
+      "signalIntervalSeconds": [
+        180.485,
+        180.665
+      ],
+      "confidence": "medium-low",
+      "reason": "Original/stem prior strong vowel narrows around180.25–180.4. A changed lower vowel body is established around180.5–180.6 before the later pitch/formant/articulatory glide near180.7–180.8. Fresh stem final-o180.368/initial-o180.569/r180.710 and original conditioned180.485 fit this order. Current181.024 is later in stable voice; original CTC181.735 is even later and does not identify the quiet leading vowel. The prior final vowel ends at this same inferred lexical handoff; later voice belongs to the next word."
+    },
+    {
+      "wordId": "KOM-021-s04",
+      "edge": "start",
+      "beforeSample": 8132522,
+      "selectedSample": 8118369,
+      "signalIntervalSeconds": [
+        184.03,
+        184.17
+      ],
+      "confidence": "medium-low",
+      "reason": "The original/stem prior nasal/final-vowel region follows183.6–183.75. Its gradual transition into a quieter leading vowel around184.0–184.15 precedes the clearer formant/glide change184.2–184.3. Fresh stem initial-o184.101/r184.202/e184.322 and conditioned184.060 support that order. Current184.411 occurs after the quiet vowel; original CTC184.402 is a later core path."
+    },
+    {
+      "wordId": "KOM-021-s03",
+      "edge": "end",
+      "beforeSample": 8129835,
+      "selectedSample": 8118369,
+      "signalIntervalSeconds": [
+        184.03,
+        184.17
+      ],
+      "confidence": "medium-low",
+      "reason": "The original/stem prior nasal/final-vowel region follows183.6–183.75. Its gradual transition into a quieter leading vowel around184.0–184.15 precedes the clearer formant/glide change184.2–184.3. Fresh stem initial-o184.101/r184.202/e184.322 and conditioned184.060 support that order. Current184.411 occurs after the quiet vowel; original CTC184.402 is a later core path. The prior final vowel ends at this same inferred lexical handoff; later voice belongs to the next word."
+    },
+    {
+      "wordId": "KOM-002-s02",
+      "edge": "start",
+      "beforeSample": 760645,
+      "selectedSample": 753669,
+      "signalIntervalSeconds": [
+        17.065,
+        17.125
+      ],
+      "confidence": "medium-low",
+      "reason": "Source/stem quiet nasal transition begins near17.09 before the retained core17.248. The preceding Пролетающие release17.084989 is preserved independently; do not fill the small gap. A low-score restricted17.088 MMS path clips the word consonant and is not onset proof."
+    },
+    {
+      "wordId": "KOM-003-s06",
+      "edge": "start",
+      "beforeSample": 1207015,
+      "selectedSample": 1189377,
+      "signalIntervalSeconds": [
+        26.935,
+        27.035
+      ],
+      "confidence": "low",
+      "reason": "Source/stem damped low nasal-looking body is present around26.95–27.03 before bright /e/ core near27.37. Select the quiet first consonant at26.97 with broad ownership uncertainty. The prior красоты release26.924989 stays independent; no generic gap filling."
+    },
+    {
+      "wordId": "KOM-003-s07",
+      "edge": "start",
+      "beforeSample": 1232632,
+      "selectedSample": 1231492,
+      "signalIntervalSeconds": [
+        27.905,
+        27.955
+      ],
+      "confidence": "medium-low",
+      "reason": "A brief trill/attenuation before the new vowel supports initial /r/ around27.925 before the late core27.951. Prior не release27.895011 stays unchanged; the short closure is not filled."
+    }
+  ],
+  "retainedOnsets": [
+    {
+      "wordId": "KOM-007-s02",
+      "selectedSample": 2591438,
+      "signalIntervalSeconds": [
+        58.65,
+        58.88
+      ],
+      "confidence": "medium-low",
+      "reason": "Original/stem transition occurs over roughly58.65–58.85. Current58.763 is within that range and original restricted MMS58.789/conditioned Whisper58.805 support it. Stem restricted MMS59.351 is a later articulation and should not replace the onset. No secure earlier quiet vowel ownership is established."
+    },
+    {
+      "wordId": "KOM-015-s02",
+      "selectedSample": 6450215,
+      "signalIntervalSeconds": [
+        146.18,
+        146.48
+      ],
+      "confidence": "low",
+      "reason": "Current146.263 already precedes several fresh model vowel cores. The original/stem low voiced/formant change spans roughly146.2–146.45; original conditioned146.185 and stem conditioned146.445 bracket it. Fresh restricted MMS146.727/146.907 selects later parts of the vowel sequence. No independent earlier onset merits another speculative advance."
+    },
+    {
+      "wordId": "KOM-023-s02",
+      "selectedSample": 8567064,
+      "signalIntervalSeconds": [
+        194.21,
+        194.43
+      ],
+      "confidence": "medium-low",
+      "reason": "Current194.264 lies within the original/stem renewed lower vowel/body transition. Fresh stem restricted initial-o194.259 agrees; conditioned194.395/194.415 selects later parts. Original MMS195.143 follows a much later path and is rejected as a new onset. The current point need not be advanced just because related entries changed."
+    },
+    {
+      "wordId": "KOM-023-s04",
+      "selectedSample": 8727139,
+      "signalIntervalSeconds": [
+        197.79,
+        197.93
+      ],
+      "confidence": "medium-low",
+      "reason": "Original/stem body attenuates/changes around197.8–197.88 and returns into the next vowel region. Current197.894 is within that gradual range, as are conditioned197.830/197.850. Restricted original198.158 and especially stem198.882 are later competing paths. A small advance cannot be justified more securely than retaining the current point with this interval."
+    },
+    {
+      "wordId": "KOM-004-s02",
+      "selectedSample": 1804731,
+      "signalIntervalSeconds": [
+        40.855,
+        40.955
+      ],
+      "confidence": "medium-low",
+      "reason": "Original/stem held-i/nasal change spans roughly40.86–40.95. Existing40.923605 remains within that transition; no secure earlier nasal onset supports another advance."
+    },
+    {
+      "wordId": "KOM-006-s02",
+      "selectedSample": 2410637,
+      "signalIntervalSeconds": [
+        54.6,
+        54.72
+      ],
+      "confidence": "medium-low",
+      "reason": "Existing54.662971 lies within the independently reviewed original/stem quiet vowel-to-nasal transition54.60–54.72. Broad earlier CTC paths can steal the held prior vowel; retain this point with ownership uncertainty."
+    },
+    {
+      "wordId": "KOM-014-s02",
+      "selectedSample": 6264093,
+      "signalIntervalSeconds": [
+        141.995,
+        142.105
+      ],
+      "confidence": "medium-low",
+      "reason": "Existing142.042925 remains within the original/stem vowel-to-nasal transition141.995–142.105. No source-supported earlier consonant ownership is established."
+    },
+    {
+      "wordId": "KOM-009-s02",
+      "selectedSample": 4556515,
+      "signalIntervalSeconds": [
+        103.295,
+        103.345
+      ],
+      "confidence": "medium-low",
+      "reason": "The quiet /r/ transition is supported near the existing103.322336 within103.295–103.345. Broad earlier hypotheses include the held За vowel; no new secure edge warrants a change."
+    }
+  ],
+  "observations": [
+    {
+      "cueId": "KOM-005",
+      "sourceIndex": 1,
+      "wordId": "KOM-005-s02",
+      "word": "орёл,",
+      "previousWordId": "KOM-005-s01",
+      "beforeOnsetSeconds": 45.76684807256236,
+      "beforeOnsetSample": 2018318,
+      "beforePreviousReleaseSeconds": 45.69,
+      "beforePreviousReleaseSample": 2014929,
+      "proposedOnsetSeconds": 45.18,
+      "proposedOnsetSample": 1992438,
+      "proposedPreviousReleaseSeconds": 45.18,
+      "proposedPreviousReleaseSample": 1992438,
+      "jointBoundaryIntervalSeconds": [
+        45.125,
+        45.265
+      ],
+      "confidence": "low",
+      "status": "proposed-coupled-vowel-ownership-change",
+      "reason": "Prior voiced body narrows and changes over roughly 44.9–45.1; a renewed lower vowel/formant region is established around 45.15–45.23. Fresh estimated-vocal n/o/r ownership places the prior final vowel near 45.026 and new vowel core45.207 before r45.367. Original harmonics support the transition but do not isolate a silence boundary. Current45.767 lies later within stable voice; original CTC/Whisper favor later parts of this continuous vowel.",
+      "evidence": [
+        "analysis/onset-independent/KOM-005-s02-vowel-revisit.png",
+        "analysis/acoustic/vowel-handoff-mms.json",
+        "analysis/acoustic/vowel-handoff-whisper.json"
+      ]
+    },
+    {
+      "cueId": "KOM-005",
+      "sourceIndex": 3,
+      "wordId": "KOM-005-s04",
+      "word": "орёл",
+      "previousWordId": "KOM-005-s03",
+      "beforeOnsetSeconds": 48.895532879818596,
+      "beforeOnsetSample": 2156293,
+      "beforePreviousReleaseSeconds": 48.85501133786848,
+      "beforePreviousReleaseSample": 2154506,
+      "proposedOnsetSeconds": 48.42,
+      "proposedOnsetSample": 2135322,
+      "proposedPreviousReleaseSeconds": 48.42,
+      "proposedPreviousReleaseSample": 2135322,
+      "jointBoundaryIntervalSeconds": [
+        48.34,
+        48.59
+      ],
+      "confidence": "low",
+      "status": "proposed-coupled-vowel-ownership-change",
+      "reason": "Original and stem show narrowing after the first strong vowel around 48.1–48.3, then a changed lower voiced/formant body from roughly 48.3–48.4. Fresh stem phone ownership separates prior n/o near48.116/48.136 from initial-o core48.376 and later r48.977. Exact final-o versus initial-o ownership is gradual, so the range is broad and the point is a coupled lexical split rather than a detected gap.",
+      "evidence": [
+        "analysis/onset-independent/KOM-005-s04-vowel-revisit.png",
+        "analysis/acoustic/vowel-handoff-mms.json",
+        "analysis/acoustic/vowel-handoff-whisper.json"
+      ]
+    },
+    {
+      "cueId": "KOM-007",
+      "sourceIndex": 1,
+      "wordId": "KOM-007-s02",
+      "word": "огонь,",
+      "previousWordId": "KOM-007-s01",
+      "beforeOnsetSeconds": 58.7627664399093,
+      "beforeOnsetSample": 2591438,
+      "beforePreviousReleaseSeconds": 58.7627664399093,
+      "beforePreviousReleaseSample": 2591438,
+      "proposedOnsetSeconds": 58.7627664399093,
+      "proposedOnsetSample": 2591438,
+      "proposedPreviousReleaseSeconds": 58.7627664399093,
+      "proposedPreviousReleaseSample": 2591438,
+      "jointBoundaryIntervalSeconds": [
+        58.65,
+        58.88
+      ],
+      "confidence": "medium-low",
+      "status": "retained-with-vowel-ownership-uncertainty",
+      "reason": "Original/stem transition occurs over roughly58.65–58.85. Current58.763 is within that range and original restricted MMS58.789/conditioned Whisper58.805 support it. Stem restricted MMS59.351 is a later articulation and should not replace the onset. No secure earlier quiet vowel ownership is established.",
+      "evidence": [
+        "analysis/onset-independent/KOM-007-s02-vowel-revisit.png",
+        "analysis/acoustic/vowel-handoff-mms.json",
+        "analysis/acoustic/vowel-handoff-whisper.json"
+      ]
+    },
+    {
+      "cueId": "KOM-007",
+      "sourceIndex": 3,
+      "wordId": "KOM-007-s04",
+      "word": "огонь",
+      "previousWordId": "KOM-007-s03",
+      "beforeOnsetSeconds": 63.073038548752834,
+      "beforeOnsetSample": 2781521,
+      "beforePreviousReleaseSeconds": 63.02498866213152,
+      "beforePreviousReleaseSample": 2779402,
+      "proposedOnsetSeconds": 62.16,
+      "proposedOnsetSample": 2741256,
+      "proposedPreviousReleaseSeconds": 62.16,
+      "proposedPreviousReleaseSample": 2741256,
+      "jointBoundaryIntervalSeconds": [
+        62.11,
+        62.24
+      ],
+      "confidence": "medium-low",
+      "status": "proposed-coupled-vowel-ownership-change",
+      "reason": "Original/stem preceding voiced/nasal sequence changes through61.84–62.04, followed by a lower renewed vowel/formant region around62.10–62.18. Fresh stem n61.920/final-o62.020/initial-o62.241/g62.401/stressed-o62.502 follows these physical transitions; conditioned stem62.138 supports the quiet initial vowel. The pronounced attenuation62.39–62.43 can be g-like closure, so62.425 is rejected as an onset: it would omit that vowel. Current63.073 is inside sustained stable harmonics. Original CTC follows a later competing phone path and remains disagreement, not a veto or extra vote.",
+      "evidence": [
+        "analysis/onset-independent/KOM-007-s04-vowel-revisit.png",
+        "analysis/acoustic/vowel-handoff-mms.json",
+        "analysis/acoustic/vowel-handoff-whisper.json"
+      ]
+    },
+    {
+      "cueId": "KOM-013",
+      "sourceIndex": 1,
+      "wordId": "KOM-013-s02",
+      "word": "орёл,",
+      "previousWordId": "KOM-013-s01",
+      "beforeOnsetSeconds": 133.20668934240362,
+      "beforeOnsetSample": 5874415,
+      "beforePreviousReleaseSeconds": 133.1449886621315,
+      "beforePreviousReleaseSample": 5871694,
+      "proposedOnsetSeconds": 132.65,
+      "proposedOnsetSample": 5849865,
+      "proposedPreviousReleaseSeconds": 132.65,
+      "proposedPreviousReleaseSample": 5849865,
+      "jointBoundaryIntervalSeconds": [
+        132.59,
+        132.74
+      ],
+      "confidence": "medium-low",
+      "status": "proposed-coupled-vowel-ownership-change",
+      "reason": "Original/stem narrowing and formant change around132.4–132.55 precede the renewed lower vowel body near132.6–132.7 and later articulatory glide near132.78. Fresh stem prior final-o132.508/initial-o132.688/r132.788 and conditioned132.665 fit this order; original conditioned132.825 selects a later part. Current133.207 lies inside stable later voice. The adjacent vowel split is inferred, not acoustically isolated.",
+      "evidence": [
+        "analysis/onset-independent/KOM-013-s02-vowel-revisit.png",
+        "analysis/acoustic/vowel-handoff-mms.json",
+        "analysis/acoustic/vowel-handoff-whisper.json"
+      ]
+    },
+    {
+      "cueId": "KOM-013",
+      "sourceIndex": 3,
+      "wordId": "KOM-013-s04",
+      "word": "орёл",
+      "previousWordId": "KOM-013-s03",
+      "beforeOnsetSeconds": 136.5359410430839,
+      "beforeOnsetSample": 6021235,
+      "beforePreviousReleaseSeconds": 136.4750113378685,
+      "beforePreviousReleaseSample": 6018548,
+      "proposedOnsetSeconds": 135.85,
+      "proposedOnsetSample": 5990985,
+      "proposedPreviousReleaseSeconds": 135.85,
+      "proposedPreviousReleaseSample": 5990985,
+      "jointBoundaryIntervalSeconds": [
+        135.79,
+        135.96
+      ],
+      "confidence": "low",
+      "status": "proposed-coupled-vowel-ownership-change",
+      "reason": "Original/stem first strong vowel weakens/narrows through135.55–135.75, then a lower quiet voiced region is established near135.8–135.9 before a later formant/articulatory change. Fresh stem final-o135.718/initial-o135.818/r135.918 supports that ordering. Original CTC136.521 and conditioned136.255 disagree substantially. Exact adjacent-vowel ownership remains low confidence.",
+      "evidence": [
+        "analysis/onset-independent/KOM-013-s04-vowel-revisit.png",
+        "analysis/acoustic/vowel-handoff-mms.json",
+        "analysis/acoustic/vowel-handoff-whisper.json"
+      ]
+    },
+    {
+      "cueId": "KOM-015",
+      "sourceIndex": 1,
+      "wordId": "KOM-015-s02",
+      "word": "огонь,",
+      "previousWordId": "KOM-015-s01",
+      "beforeOnsetSeconds": 146.26337868480726,
+      "beforeOnsetSample": 6450215,
+      "beforePreviousReleaseSeconds": 146.26337868480726,
+      "beforePreviousReleaseSample": 6450215,
+      "proposedOnsetSeconds": 146.26337868480726,
+      "proposedOnsetSample": 6450215,
+      "proposedPreviousReleaseSeconds": 146.26337868480726,
+      "proposedPreviousReleaseSample": 6450215,
+      "jointBoundaryIntervalSeconds": [
+        146.18,
+        146.48
+      ],
+      "confidence": "low",
+      "status": "retained-with-vowel-ownership-uncertainty",
+      "reason": "Current146.263 already precedes several fresh model vowel cores. The original/stem low voiced/formant change spans roughly146.2–146.45; original conditioned146.185 and stem conditioned146.445 bracket it. Fresh restricted MMS146.727/146.907 selects later parts of the vowel sequence. No independent earlier onset merits another speculative advance.",
+      "evidence": [
+        "analysis/onset-independent/KOM-015-s02-vowel-revisit.png",
+        "analysis/acoustic/vowel-handoff-mms.json",
+        "analysis/acoustic/vowel-handoff-whisper.json"
+      ]
+    },
+    {
+      "cueId": "KOM-015",
+      "sourceIndex": 3,
+      "wordId": "KOM-015-s04",
+      "word": "огонь",
+      "previousWordId": "KOM-015-s03",
+      "beforeOnsetSeconds": 150.07353741496598,
+      "beforeOnsetSample": 6618243,
+      "beforePreviousReleaseSeconds": 150.03,
+      "beforePreviousReleaseSample": 6616323,
+      "proposedOnsetSeconds": 149.65,
+      "proposedOnsetSample": 6599565,
+      "proposedPreviousReleaseSeconds": 149.65,
+      "proposedPreviousReleaseSample": 6599565,
+      "jointBoundaryIntervalSeconds": [
+        149.59,
+        149.735
+      ],
+      "confidence": "medium-low",
+      "status": "proposed-coupled-vowel-ownership-change",
+      "reason": "After prior voiced/nasal narrowing near149.3–149.5, the lower continuous vowel body around149.6–149.7 precedes a later attenuation/articulatory change around149.82–149.87. Fresh stem initial-o149.696/g149.836/stressed-o149.957 and conditioned149.630 support an initial vowel before that closure. Current150.074 falls after the later renewed stressed body; original conditioned149.890 may already miss the quiet initial vowel. The vowel-to-vowel split remains inferred.",
+      "evidence": [
+        "analysis/onset-independent/KOM-015-s04-vowel-revisit.png",
+        "analysis/acoustic/vowel-handoff-mms.json",
+        "analysis/acoustic/vowel-handoff-whisper.json"
+      ]
+    },
+    {
+      "cueId": "KOM-021",
+      "sourceIndex": 1,
+      "wordId": "KOM-021-s02",
+      "word": "орёл,",
+      "previousWordId": "KOM-021-s01",
+      "beforeOnsetSeconds": 181.0239455782313,
+      "beforeOnsetSample": 7983156,
+      "beforePreviousReleaseSeconds": 180.9750113378685,
+      "beforePreviousReleaseSample": 7980998,
+      "proposedOnsetSeconds": 180.55,
+      "proposedOnsetSample": 7962255,
+      "proposedPreviousReleaseSeconds": 180.55,
+      "proposedPreviousReleaseSample": 7962255,
+      "jointBoundaryIntervalSeconds": [
+        180.485,
+        180.665
+      ],
+      "confidence": "medium-low",
+      "status": "proposed-coupled-vowel-ownership-change",
+      "reason": "Original/stem prior strong vowel narrows around180.25–180.4. A changed lower vowel body is established around180.5–180.6 before the later pitch/formant/articulatory glide near180.7–180.8. Fresh stem final-o180.368/initial-o180.569/r180.710 and original conditioned180.485 fit this order. Current181.024 is later in stable voice; original CTC181.735 is even later and does not identify the quiet leading vowel.",
+      "evidence": [
+        "analysis/onset-independent/KOM-021-s02-vowel-revisit.png",
+        "analysis/acoustic/vowel-handoff-mms.json",
+        "analysis/acoustic/vowel-handoff-whisper.json"
+      ]
+    },
+    {
+      "cueId": "KOM-021",
+      "sourceIndex": 3,
+      "wordId": "KOM-021-s04",
+      "word": "орёл",
+      "previousWordId": "KOM-021-s03",
+      "beforeOnsetSeconds": 184.4109297052154,
+      "beforeOnsetSample": 8132522,
+      "beforePreviousReleaseSeconds": 184.35,
+      "beforePreviousReleaseSample": 8129835,
+      "proposedOnsetSeconds": 184.09,
+      "proposedOnsetSample": 8118369,
+      "proposedPreviousReleaseSeconds": 184.09,
+      "proposedPreviousReleaseSample": 8118369,
+      "jointBoundaryIntervalSeconds": [
+        184.03,
+        184.17
+      ],
+      "confidence": "medium-low",
+      "status": "proposed-coupled-vowel-ownership-change",
+      "reason": "The original/stem prior nasal/final-vowel region follows183.6–183.75. Its gradual transition into a quieter leading vowel around184.0–184.15 precedes the clearer formant/glide change184.2–184.3. Fresh stem initial-o184.101/r184.202/e184.322 and conditioned184.060 support that order. Current184.411 occurs after the quiet vowel; original CTC184.402 is a later core path.",
+      "evidence": [
+        "analysis/onset-independent/KOM-021-s04-vowel-revisit.png",
+        "analysis/acoustic/vowel-handoff-mms.json",
+        "analysis/acoustic/vowel-handoff-whisper.json"
+      ]
+    },
+    {
+      "cueId": "KOM-023",
+      "sourceIndex": 1,
+      "wordId": "KOM-023-s02",
+      "word": "огонь,",
+      "previousWordId": "KOM-023-s01",
+      "beforeOnsetSeconds": 194.26448979591837,
+      "beforeOnsetSample": 8567064,
+      "beforePreviousReleaseSeconds": 194.26,
+      "beforePreviousReleaseSample": 8566866,
+      "proposedOnsetSeconds": 194.26448979591837,
+      "proposedOnsetSample": 8567064,
+      "proposedPreviousReleaseSeconds": 194.26,
+      "proposedPreviousReleaseSample": 8566866,
+      "jointBoundaryIntervalSeconds": [
+        194.21,
+        194.43
+      ],
+      "confidence": "medium-low",
+      "status": "retained-with-vowel-ownership-uncertainty",
+      "reason": "Current194.264 lies within the original/stem renewed lower vowel/body transition. Fresh stem restricted initial-o194.259 agrees; conditioned194.395/194.415 selects later parts. Original MMS195.143 follows a much later path and is rejected as a new onset. The current point need not be advanced just because related entries changed.",
+      "evidence": [
+        "analysis/onset-independent/KOM-023-s02-vowel-revisit.png",
+        "analysis/acoustic/vowel-handoff-mms.json",
+        "analysis/acoustic/vowel-handoff-whisper.json"
+      ]
+    },
+    {
+      "cueId": "KOM-023",
+      "sourceIndex": 3,
+      "wordId": "KOM-023-s04",
+      "word": "огонь",
+      "previousWordId": "KOM-023-s03",
+      "beforeOnsetSeconds": 197.89430839002267,
+      "beforeOnsetSample": 8727139,
+      "beforePreviousReleaseSeconds": 197.82,
+      "beforePreviousReleaseSample": 8723862,
+      "proposedOnsetSeconds": 197.89430839002267,
+      "proposedOnsetSample": 8727139,
+      "proposedPreviousReleaseSeconds": 197.82,
+      "proposedPreviousReleaseSample": 8723862,
+      "jointBoundaryIntervalSeconds": [
+        197.79,
+        197.93
+      ],
+      "confidence": "medium-low",
+      "status": "retained-with-vowel-ownership-uncertainty",
+      "reason": "Original/stem body attenuates/changes around197.8–197.88 and returns into the next vowel region. Current197.894 is within that gradual range, as are conditioned197.830/197.850. Restricted original198.158 and especially stem198.882 are later competing paths. A small advance cannot be justified more securely than retaining the current point with this interval.",
+      "evidence": [
+        "analysis/onset-independent/KOM-023-s04-vowel-revisit.png",
+        "analysis/acoustic/vowel-handoff-mms.json",
+        "analysis/acoustic/vowel-handoff-whisper.json"
+      ]
+    }
+  ],
+  "criticalRejectedBoundary": {
+    "wordId": "KOM-007-s04",
+    "seconds": 62.425,
+    "reason": "Source/stem attenuation62.39–62.43 plausibly belongs to the internal g-like closure and follows an already voiced initial vowel; choosing this as onset still clips that vowel."
+  },
+  "limits": [
+    "These are continuous-vowel lexical ownership estimates, not isolated silent-gap measurements.",
+    "Previous-word release changes are explicit coupled ownership decisions; they are not renderer clamps or unexplained truncation.",
+    "Original source remains authoritative. Estimated-vocal phone paths aid lexical interpretation but can contain separation leakage and noncausal pre/post-smear.",
+    "Fresh restricted and broad MMS are one family; fresh conditioned and unprompted Whisper are one family. Original/stem applications are not independent model votes. Tiny-crop unprompted hallucinations are retained as rejected evidence.",
+    "512-sample STFT smear is about±5.8ms;2048-sample smear is about±23.2ms. Fine hops or exact sample encoding do not imply equally precise phonetics.",
+    "Low-confidence cases require reconciliation with coordinating acoustic review; no blanket earliest-model or uniform anticipation choice is implied."
+  ],
+  "scope": "Nineteen individually reviewed joined-vowel and sonorant onsets:11 selected onset changes,8 prior-word coupled release changes,8 retained onsets. All27 cue-final lexical endpoints and neutral reading holds remain unchanged."
+}

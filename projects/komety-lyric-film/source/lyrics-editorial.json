@@ -1,0 +1,2510 @@
+{
+  "schemaVersion": 1,
+  "project": "komety-lyric-film",
+  "recordingUrl": "https://www.youtube.com/watch?v=76BmuIf0duw",
+  "languagePolicy": "Original performed language in source lane; meaning-based translation in target lane; equal bilingual emphasis. Russian passages translate to English; original English radio speech translates to Russian. No pronunciation layer.",
+  "status": "editorial-preview-candidate; supplied sequence plus recording-supported late radio reprise; acoustic/listening review pending",
+  "indexConvention": "All token indices are zero-based within a template. Source timing is supplied later for each cue occurrence.",
+  "focusPolicy": "Use the union of each target token's focusSourceIndices source intervals; never the enclosing span. Source words remain independently timed. English word order may focus non-linearly. Necessary grammatical expansions share their source event. No independent translation timestamps.",
+  "suppliedLines": [
+    {
+      "id": "v1-01",
+      "templateId": "v1-opening",
+      "text": "Тот, кто погас, будет ярче светить, чем кометы"
+    },
+    {
+      "id": "v1-02",
+      "templateId": "v1-comets",
+      "text": "Пролетающие над планетой"
+    },
+    {
+      "id": "v1-03",
+      "templateId": "v1-bird",
+      "text": "Из пустоты без твоей красоты не родится"
+    },
+    {
+      "id": "v1-04",
+      "templateId": "v1-bird",
+      "text": "Юности вольная птица"
+    },
+    {
+      "id": "r1-01",
+      "templateId": "refrain-fly",
+      "text": "Лети над землёй"
+    },
+    {
+      "id": "r1-02",
+      "templateId": "refrain-eagle",
+      "text": "Словно орёл, словно орёл"
+    },
+    {
+      "id": "r1-03",
+      "templateId": "refrain-shine",
+      "text": "Свети над землёй"
+    },
+    {
+      "id": "r1-04",
+      "templateId": "refrain-fire",
+      "text": "Словно огонь, словно огонь"
+    },
+    {
+      "id": "v2-01",
+      "templateId": "v2-loss",
+      "text": "Тот, кто терял, будет снова любить"
+    },
+    {
+      "id": "v2-02",
+      "templateId": "v2-summer",
+      "text": "За рассветом близится вечное лето"
+    },
+    {
+      "id": "v2-03",
+      "templateId": "v2-guard",
+      "text": "Ночь до зари, ты в душе береги свою птицу"
+    },
+    {
+      "id": "v2-04",
+      "templateId": "v2-bird",
+      "text": "Не дай ей разбиться"
+    },
+    {
+      "id": "r2-01",
+      "templateId": "refrain-fly",
+      "text": "Лети над землёй"
+    },
+    {
+      "id": "r2-02",
+      "templateId": "refrain-eagle",
+      "text": "Словно орёл, словно орёл"
+    },
+    {
+      "id": "r2-03",
+      "templateId": "refrain-shine",
+      "text": "Свети над землёй"
+    },
+    {
+      "id": "r2-04",
+      "templateId": "refrain-fire",
+      "text": "Словно огонь, словно огонь"
+    },
+    {
+      "id": "bridge-01",
+      "templateId": "radio-captain",
+      "text": "Planet Earth, this is Captain Adams on the Serenity."
+    },
+    {
+      "id": "bridge-02",
+      "templateId": "radio-message",
+      "text": "We're receiving a repeated message from the Martian surface."
+    },
+    {
+      "id": "bridge-03",
+      "templateId": "radio-check",
+      "text": "Do you read me?"
+    },
+    {
+      "id": "bridge-04",
+      "templateId": "radio-check",
+      "text": "Do you read me?"
+    },
+    {
+      "id": "r3-01",
+      "templateId": "refrain-fly",
+      "text": "Лети над землёй"
+    },
+    {
+      "id": "r3-02",
+      "templateId": "refrain-eagle",
+      "text": "Словно орёл, словно орёл"
+    },
+    {
+      "id": "r3-03",
+      "templateId": "refrain-shine",
+      "text": "Свети над землёй"
+    },
+    {
+      "id": "r3-04",
+      "templateId": "refrain-fire",
+      "text": "Словно огонь, словно огонь"
+    }
+  ],
+  "editorialCues": [
+    {
+      "id": "KOM-001",
+      "templateId": "v1-opening",
+      "suppliedLineIds": [
+        "v1-01"
+      ],
+      "timingStatus": "pending-independent-recording-alignment"
+    },
+    {
+      "id": "KOM-002",
+      "templateId": "v1-comets",
+      "suppliedLineIds": [
+        "v1-02"
+      ],
+      "timingStatus": "pending-independent-recording-alignment"
+    },
+    {
+      "id": "KOM-003",
+      "templateId": "v1-bird",
+      "suppliedLineIds": [
+        "v1-03",
+        "v1-04"
+      ],
+      "timingStatus": "pending-independent-recording-alignment"
+    },
+    {
+      "id": "KOM-004",
+      "templateId": "refrain-fly",
+      "suppliedLineIds": [
+        "r1-01"
+      ],
+      "timingStatus": "pending-independent-recording-alignment"
+    },
+    {
+      "id": "KOM-005",
+      "templateId": "refrain-eagle",
+      "suppliedLineIds": [
+        "r1-02"
+      ],
+      "timingStatus": "pending-independent-recording-alignment"
+    },
+    {
+      "id": "KOM-006",
+      "templateId": "refrain-shine",
+      "suppliedLineIds": [
+        "r1-03"
+      ],
+      "timingStatus": "pending-independent-recording-alignment"
+    },
+    {
+      "id": "KOM-007",
+      "templateId": "refrain-fire",
+      "suppliedLineIds": [
+        "r1-04"
+      ],
+      "timingStatus": "pending-independent-recording-alignment"
+    },
+    {
+      "id": "KOM-008",
+      "templateId": "v2-loss",
+      "suppliedLineIds": [
+        "v2-01"
+      ],
+      "timingStatus": "pending-independent-recording-alignment"
+    },
+    {
+      "id": "KOM-009",
+      "templateId": "v2-summer",
+      "suppliedLineIds": [
+        "v2-02"
+      ],
+      "timingStatus": "pending-independent-recording-alignment"
+    },
+    {
+      "id": "KOM-010",
+      "templateId": "v2-guard",
+      "suppliedLineIds": [
+        "v2-03"
+      ],
+      "timingStatus": "pending-independent-recording-alignment"
+    },
+    {
+      "id": "KOM-011",
+      "templateId": "v2-bird",
+      "suppliedLineIds": [
+        "v2-04"
+      ],
+      "timingStatus": "pending-independent-recording-alignment"
+    },
+    {
+      "id": "KOM-012",
+      "templateId": "refrain-fly",
+      "suppliedLineIds": [
+        "r2-01"
+      ],
+      "timingStatus": "pending-independent-recording-alignment"
+    },
+    {
+      "id": "KOM-013",
+      "templateId": "refrain-eagle",
+      "suppliedLineIds": [
+        "r2-02"
+      ],
+      "timingStatus": "pending-independent-recording-alignment"
+    },
+    {
+      "id": "KOM-014",
+      "templateId": "refrain-shine",
+      "suppliedLineIds": [
+        "r2-03"
+      ],
+      "timingStatus": "pending-independent-recording-alignment"
+    },
+    {
+      "id": "KOM-015",
+      "templateId": "refrain-fire",
+      "suppliedLineIds": [
+        "r2-04"
+      ],
+      "timingStatus": "pending-independent-recording-alignment"
+    },
+    {
+      "id": "KOM-016",
+      "templateId": "radio-captain",
+      "suppliedLineIds": [
+        "bridge-01"
+      ],
+      "timingStatus": "pending-independent-recording-alignment"
+    },
+    {
+      "id": "KOM-017",
+      "templateId": "radio-message",
+      "suppliedLineIds": [
+        "bridge-02"
+      ],
+      "timingStatus": "pending-independent-recording-alignment"
+    },
+    {
+      "id": "KOM-018",
+      "templateId": "radio-check",
+      "suppliedLineIds": [
+        "bridge-03"
+      ],
+      "timingStatus": "pending-independent-recording-alignment"
+    },
+    {
+      "id": "KOM-019",
+      "templateId": "radio-check",
+      "suppliedLineIds": [
+        "bridge-04"
+      ],
+      "timingStatus": "pending-independent-recording-alignment"
+    },
+    {
+      "id": "KOM-020",
+      "templateId": "refrain-fly",
+      "suppliedLineIds": [
+        "r3-01"
+      ],
+      "timingStatus": "pending-independent-recording-alignment"
+    },
+    {
+      "id": "KOM-021",
+      "templateId": "refrain-eagle",
+      "suppliedLineIds": [
+        "r3-02"
+      ],
+      "timingStatus": "pending-independent-recording-alignment"
+    },
+    {
+      "id": "KOM-022",
+      "templateId": "refrain-shine",
+      "suppliedLineIds": [
+        "r3-03"
+      ],
+      "timingStatus": "pending-independent-recording-alignment"
+    },
+    {
+      "id": "KOM-023",
+      "templateId": "refrain-fire",
+      "suppliedLineIds": [
+        "r3-04"
+      ],
+      "timingStatus": "pending-independent-recording-alignment"
+    },
+    {
+      "id": "KOM-024",
+      "templateId": "radio-captain",
+      "suppliedLineIds": [],
+      "recordingAdded": true,
+      "coverageBasis": {
+        "kind": "performed-radio-reprise-beyond-supplied-reference",
+        "referenceCueId": "KOM-016",
+        "signalEvidence": "analysis/acoustic/radio-repeat-signal.json",
+        "signalPhrase": "captain",
+        "sourceOffsetSeconds": 79.12,
+        "normalizedCorrelation": 0.9958607822255197,
+        "reason": "Independent unprompted tail recognition supports the late radio sample; each phrase correlates separately at the same exact source offset. The final attenuated check relies more heavily on signal similarity. No subtitle-credit recognition is used as sung text."
+      },
+      "timingStatus": "pending-independent-recording-alignment"
+    },
+    {
+      "id": "KOM-025",
+      "templateId": "radio-message",
+      "suppliedLineIds": [],
+      "recordingAdded": true,
+      "coverageBasis": {
+        "kind": "performed-radio-reprise-beyond-supplied-reference",
+        "referenceCueId": "KOM-017",
+        "signalEvidence": "analysis/acoustic/radio-repeat-signal.json",
+        "signalPhrase": "message",
+        "sourceOffsetSeconds": 79.12,
+        "normalizedCorrelation": 0.9976758103923745,
+        "reason": "Independent unprompted tail recognition supports the late radio sample; each phrase correlates separately at the same exact source offset. The final attenuated check relies more heavily on signal similarity. No subtitle-credit recognition is used as sung text."
+      },
+      "timingStatus": "pending-independent-recording-alignment"
+    },
+    {
+      "id": "KOM-026",
+      "templateId": "radio-check",
+      "suppliedLineIds": [],
+      "recordingAdded": true,
+      "coverageBasis": {
+        "kind": "performed-radio-reprise-beyond-supplied-reference",
+        "referenceCueId": "KOM-018",
+        "signalEvidence": "analysis/acoustic/radio-repeat-signal.json",
+        "signalPhrase": "check1",
+        "sourceOffsetSeconds": 79.12,
+        "normalizedCorrelation": 0.9965182986821391,
+        "reason": "Independent unprompted tail recognition supports the late radio sample; each phrase correlates separately at the same exact source offset. The final attenuated check relies more heavily on signal similarity. No subtitle-credit recognition is used as sung text."
+      },
+      "timingStatus": "pending-independent-recording-alignment"
+    },
+    {
+      "id": "KOM-027",
+      "templateId": "radio-check",
+      "suppliedLineIds": [],
+      "recordingAdded": true,
+      "coverageBasis": {
+        "kind": "performed-radio-reprise-beyond-supplied-reference",
+        "referenceCueId": "KOM-019",
+        "signalEvidence": "analysis/acoustic/radio-repeat-signal.json",
+        "signalPhrase": "check2",
+        "sourceOffsetSeconds": 79.12,
+        "normalizedCorrelation": 0.7203169487282942,
+        "reason": "Independent unprompted tail recognition supports the late radio sample; each phrase correlates separately at the same exact source offset. The final attenuated check relies more heavily on signal similarity. No subtitle-credit recognition is used as sung text."
+      },
+      "timingStatus": "pending-independent-recording-alignment"
+    }
+  ],
+  "templates": [
+    {
+      "id": "v1-opening",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Тот, кто погас, будет ярче светить, чем кометы",
+      "targetText": "The one who went dark will shine brighter than comets",
+      "sourceTokens": [
+        {
+          "index": 0,
+          "id": "v1-opening-s01",
+          "text": "Тот,"
+        },
+        {
+          "index": 1,
+          "id": "v1-opening-s02",
+          "text": "кто"
+        },
+        {
+          "index": 2,
+          "id": "v1-opening-s03",
+          "text": "погас,"
+        },
+        {
+          "index": 3,
+          "id": "v1-opening-s04",
+          "text": "будет"
+        },
+        {
+          "index": 4,
+          "id": "v1-opening-s05",
+          "text": "ярче"
+        },
+        {
+          "index": 5,
+          "id": "v1-opening-s06",
+          "text": "светить,"
+        },
+        {
+          "index": 6,
+          "id": "v1-opening-s07",
+          "text": "чем"
+        },
+        {
+          "index": 7,
+          "id": "v1-opening-s08",
+          "text": "кометы"
+        }
+      ],
+      "targetTokens": [
+        {
+          "index": 0,
+          "id": "v1-opening-t01",
+          "text": "The",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "grammar-completion",
+          "rationale": "The article completes the substantive pronoun Тот, together with one."
+        },
+        {
+          "index": 1,
+          "id": "v1-opening-t02",
+          "text": "one",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "grammar-completion",
+          "rationale": "The one is the complete substantive-pronoun equivalent of Тот."
+        },
+        {
+          "index": 2,
+          "id": "v1-opening-t03",
+          "text": "who",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 3,
+          "id": "v1-opening-t04",
+          "text": "went",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "grammar-completion",
+          "rationale": "Went dark is the complete intransitive verb equivalent of погас; no object is supplied."
+        },
+        {
+          "index": 4,
+          "id": "v1-opening-t05",
+          "text": "dark",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "grammar-completion",
+          "rationale": "Went dark is the complete intransitive verb equivalent of погас; no object is supplied."
+        },
+        {
+          "index": 5,
+          "id": "v1-opening-t06",
+          "text": "will",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 6,
+          "id": "v1-opening-t07",
+          "text": "shine",
+          "sourceIndices": [
+            5
+          ],
+          "focusSourceIndices": [
+            5
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 7,
+          "id": "v1-opening-t08",
+          "text": "brighter",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 8,
+          "id": "v1-opening-t09",
+          "text": "than",
+          "sourceIndices": [
+            6
+          ],
+          "focusSourceIndices": [
+            6
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 9,
+          "id": "v1-opening-t10",
+          "text": "comets",
+          "sourceIndices": [
+            7
+          ],
+          "focusSourceIndices": [
+            7
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        }
+      ],
+      "sourceLineBreaksAfterIndices": [],
+      "targetLineBreaksAfterIndices": [],
+      "editorialNote": "Preserves a person whose radiance went out without adding an unstated noun such as light. English verb/adverb order is natural and its focus is intentionally reordered."
+    },
+    {
+      "id": "v1-comets",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Пролетающие над планетой",
+      "targetText": "Passing over the planet",
+      "sourceTokens": [
+        {
+          "index": 0,
+          "id": "v1-comets-s01",
+          "text": "Пролетающие"
+        },
+        {
+          "index": 1,
+          "id": "v1-comets-s02",
+          "text": "над"
+        },
+        {
+          "index": 2,
+          "id": "v1-comets-s03",
+          "text": "планетой"
+        }
+      ],
+      "targetTokens": [
+        {
+          "index": 0,
+          "id": "v1-comets-t01",
+          "text": "Passing",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 1,
+          "id": "v1-comets-t02",
+          "text": "over",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 2,
+          "id": "v1-comets-t03",
+          "text": "the",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "grammar-completion",
+          "rationale": "The article is necessary English grammar with planet and shares the noun event."
+        },
+        {
+          "index": 3,
+          "id": "v1-comets-t04",
+          "text": "planet",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        }
+      ],
+      "sourceLineBreaksAfterIndices": [],
+      "targetLineBreaksAfterIndices": [],
+      "editorialNote": "The participle refers to the preceding comets."
+    },
+    {
+      "id": "v1-bird",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Из пустоты без твоей красоты не родится Юности вольная птица",
+      "targetText": "From the void, without your beauty, youth's free bird will not be born.",
+      "sourceTokens": [
+        {
+          "index": 0,
+          "id": "v1-bird-s01",
+          "text": "Из"
+        },
+        {
+          "index": 1,
+          "id": "v1-bird-s02",
+          "text": "пустоты"
+        },
+        {
+          "index": 2,
+          "id": "v1-bird-s03",
+          "text": "без"
+        },
+        {
+          "index": 3,
+          "id": "v1-bird-s04",
+          "text": "твоей"
+        },
+        {
+          "index": 4,
+          "id": "v1-bird-s05",
+          "text": "красоты"
+        },
+        {
+          "index": 5,
+          "id": "v1-bird-s06",
+          "text": "не"
+        },
+        {
+          "index": 6,
+          "id": "v1-bird-s07",
+          "text": "родится"
+        },
+        {
+          "index": 7,
+          "id": "v1-bird-s08",
+          "text": "Юности"
+        },
+        {
+          "index": 8,
+          "id": "v1-bird-s09",
+          "text": "вольная"
+        },
+        {
+          "index": 9,
+          "id": "v1-bird-s10",
+          "text": "птица"
+        }
+      ],
+      "targetTokens": [
+        {
+          "index": 0,
+          "id": "v1-bird-t01",
+          "text": "From",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 1,
+          "id": "v1-bird-t02",
+          "text": "the",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "grammar-completion",
+          "rationale": "The article completes the void and shares пустоты."
+        },
+        {
+          "index": 2,
+          "id": "v1-bird-t03",
+          "text": "void,",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 3,
+          "id": "v1-bird-t04",
+          "text": "without",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 4,
+          "id": "v1-bird-t05",
+          "text": "your",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 5,
+          "id": "v1-bird-t06",
+          "text": "beauty,",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 6,
+          "id": "v1-bird-t07",
+          "text": "youth's",
+          "sourceIndices": [
+            7
+          ],
+          "focusSourceIndices": [
+            7
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 7,
+          "id": "v1-bird-t08",
+          "text": "free",
+          "sourceIndices": [
+            8
+          ],
+          "focusSourceIndices": [
+            8
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 8,
+          "id": "v1-bird-t09",
+          "text": "bird",
+          "sourceIndices": [
+            9
+          ],
+          "focusSourceIndices": [
+            9
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 9,
+          "id": "v1-bird-t10",
+          "text": "will",
+          "sourceIndices": [
+            6
+          ],
+          "focusSourceIndices": [
+            6
+          ],
+          "relation": "grammar-completion",
+          "rationale": "Will be born is the complete future/passive English equivalent of родится."
+        },
+        {
+          "index": 10,
+          "id": "v1-bird-t11",
+          "text": "not",
+          "sourceIndices": [
+            5
+          ],
+          "focusSourceIndices": [
+            5
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 11,
+          "id": "v1-bird-t12",
+          "text": "be",
+          "sourceIndices": [
+            6
+          ],
+          "focusSourceIndices": [
+            6
+          ],
+          "relation": "grammar-completion",
+          "rationale": "Will be born is the complete future/passive English equivalent of родится."
+        },
+        {
+          "index": 12,
+          "id": "v1-bird-t13",
+          "text": "born.",
+          "sourceIndices": [
+            6
+          ],
+          "focusSourceIndices": [
+            6
+          ],
+          "relation": "grammar-completion",
+          "rationale": "Will be born is the complete future/passive English equivalent of родится."
+        }
+      ],
+      "sourceLineBreaksAfterIndices": [
+        6
+      ],
+      "targetLineBreaksAfterIndices": [
+        5
+      ],
+      "editorialNote": "Combines two supplied lines solely to complete the inverted Russian sentence in natural English order. No performed word is merged acoustically, and the subject may focus after its preceding English predicate."
+    },
+    {
+      "id": "refrain-fly",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Лети над землёй",
+      "targetText": "Fly above the Earth",
+      "sourceTokens": [
+        {
+          "index": 0,
+          "id": "refrain-fly-s01",
+          "text": "Лети"
+        },
+        {
+          "index": 1,
+          "id": "refrain-fly-s02",
+          "text": "над"
+        },
+        {
+          "index": 2,
+          "id": "refrain-fly-s03",
+          "text": "землёй"
+        }
+      ],
+      "targetTokens": [
+        {
+          "index": 0,
+          "id": "refrain-fly-t01",
+          "text": "Fly",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 1,
+          "id": "refrain-fly-t02",
+          "text": "above",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 2,
+          "id": "refrain-fly-t03",
+          "text": "the",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "grammar-completion",
+          "rationale": "The article completes the Earth and shares the noun event."
+        },
+        {
+          "index": 3,
+          "id": "refrain-fly-t04",
+          "text": "Earth",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        }
+      ],
+      "sourceLineBreaksAfterIndices": [],
+      "targetLineBreaksAfterIndices": [],
+      "editorialNote": "Earth capitalization follows the planetary imagery; no unstated addressee is supplied."
+    },
+    {
+      "id": "refrain-eagle",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Словно орёл, словно орёл",
+      "targetText": "Like an eagle, like an eagle",
+      "sourceTokens": [
+        {
+          "index": 0,
+          "id": "refrain-eagle-s01",
+          "text": "Словно"
+        },
+        {
+          "index": 1,
+          "id": "refrain-eagle-s02",
+          "text": "орёл,"
+        },
+        {
+          "index": 2,
+          "id": "refrain-eagle-s03",
+          "text": "словно"
+        },
+        {
+          "index": 3,
+          "id": "refrain-eagle-s04",
+          "text": "орёл"
+        }
+      ],
+      "targetTokens": [
+        {
+          "index": 0,
+          "id": "refrain-eagle-t01",
+          "text": "Like",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 1,
+          "id": "refrain-eagle-t02",
+          "text": "an",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "grammar-completion",
+          "rationale": "The article completes an eagle and shares орёл."
+        },
+        {
+          "index": 2,
+          "id": "refrain-eagle-t03",
+          "text": "eagle,",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 3,
+          "id": "refrain-eagle-t04",
+          "text": "like",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 4,
+          "id": "refrain-eagle-t05",
+          "text": "an",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "grammar-completion",
+          "rationale": "The repeated article completes an eagle and shares the independently performed second орёл."
+        },
+        {
+          "index": 5,
+          "id": "refrain-eagle-t06",
+          "text": "eagle",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        }
+      ],
+      "sourceLineBreaksAfterIndices": [],
+      "targetLineBreaksAfterIndices": [],
+      "editorialNote": "Preserves both performed likeness constructions."
+    },
+    {
+      "id": "refrain-shine",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Свети над землёй",
+      "targetText": "Shine above the Earth",
+      "sourceTokens": [
+        {
+          "index": 0,
+          "id": "refrain-shine-s01",
+          "text": "Свети"
+        },
+        {
+          "index": 1,
+          "id": "refrain-shine-s02",
+          "text": "над"
+        },
+        {
+          "index": 2,
+          "id": "refrain-shine-s03",
+          "text": "землёй"
+        }
+      ],
+      "targetTokens": [
+        {
+          "index": 0,
+          "id": "refrain-shine-t01",
+          "text": "Shine",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 1,
+          "id": "refrain-shine-t02",
+          "text": "above",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 2,
+          "id": "refrain-shine-t03",
+          "text": "the",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "grammar-completion",
+          "rationale": "The article completes the Earth and shares the noun event."
+        },
+        {
+          "index": 3,
+          "id": "refrain-shine-t04",
+          "text": "Earth",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        }
+      ],
+      "sourceLineBreaksAfterIndices": [],
+      "targetLineBreaksAfterIndices": [],
+      "editorialNote": "Keeps the independent shine imperative; it is not interchangeable with fly."
+    },
+    {
+      "id": "refrain-fire",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Словно огонь, словно огонь",
+      "targetText": "Like fire, like fire",
+      "sourceTokens": [
+        {
+          "index": 0,
+          "id": "refrain-fire-s01",
+          "text": "Словно"
+        },
+        {
+          "index": 1,
+          "id": "refrain-fire-s02",
+          "text": "огонь,"
+        },
+        {
+          "index": 2,
+          "id": "refrain-fire-s03",
+          "text": "словно"
+        },
+        {
+          "index": 3,
+          "id": "refrain-fire-s04",
+          "text": "огонь"
+        }
+      ],
+      "targetTokens": [
+        {
+          "index": 0,
+          "id": "refrain-fire-t01",
+          "text": "Like",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 1,
+          "id": "refrain-fire-t02",
+          "text": "fire,",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 2,
+          "id": "refrain-fire-t03",
+          "text": "like",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 3,
+          "id": "refrain-fire-t04",
+          "text": "fire",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        }
+      ],
+      "sourceLineBreaksAfterIndices": [],
+      "targetLineBreaksAfterIndices": [],
+      "editorialNote": "Fire is a mass noun; no unnecessary article or possessive is added."
+    },
+    {
+      "id": "v2-loss",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Тот, кто терял, будет снова любить",
+      "targetText": "The one who has lost will love again",
+      "sourceTokens": [
+        {
+          "index": 0,
+          "id": "v2-loss-s01",
+          "text": "Тот,"
+        },
+        {
+          "index": 1,
+          "id": "v2-loss-s02",
+          "text": "кто"
+        },
+        {
+          "index": 2,
+          "id": "v2-loss-s03",
+          "text": "терял,"
+        },
+        {
+          "index": 3,
+          "id": "v2-loss-s04",
+          "text": "будет"
+        },
+        {
+          "index": 4,
+          "id": "v2-loss-s05",
+          "text": "снова"
+        },
+        {
+          "index": 5,
+          "id": "v2-loss-s06",
+          "text": "любить"
+        }
+      ],
+      "targetTokens": [
+        {
+          "index": 0,
+          "id": "v2-loss-t01",
+          "text": "The",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "grammar-completion",
+          "rationale": "The article completes the substantive pronoun Тот, together with one."
+        },
+        {
+          "index": 1,
+          "id": "v2-loss-t02",
+          "text": "one",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "grammar-completion",
+          "rationale": "The one is the complete substantive-pronoun equivalent of Тот."
+        },
+        {
+          "index": 2,
+          "id": "v2-loss-t03",
+          "text": "who",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 3,
+          "id": "v2-loss-t04",
+          "text": "has",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "grammar-completion",
+          "rationale": "Has lost is the complete English verb expression for the person who previously experienced loss."
+        },
+        {
+          "index": 4,
+          "id": "v2-loss-t05",
+          "text": "lost",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "grammar-completion",
+          "rationale": "Has lost is the complete English verb expression for the person who previously experienced loss."
+        },
+        {
+          "index": 5,
+          "id": "v2-loss-t06",
+          "text": "will",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 6,
+          "id": "v2-loss-t07",
+          "text": "love",
+          "sourceIndices": [
+            5
+          ],
+          "focusSourceIndices": [
+            5
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 7,
+          "id": "v2-loss-t08",
+          "text": "again",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        }
+      ],
+      "sourceLineBreaksAfterIndices": [],
+      "targetLineBreaksAfterIndices": [],
+      "editorialNote": "Keeps loss and loving intransitive: no guessed beloved or object is introduced. Has lost expresses preceding loss in this present/future contrast."
+    },
+    {
+      "id": "v2-summer",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "За рассветом близится вечное лето",
+      "targetText": "Beyond the dawn, eternal summer draws near",
+      "sourceTokens": [
+        {
+          "index": 0,
+          "id": "v2-summer-s01",
+          "text": "За"
+        },
+        {
+          "index": 1,
+          "id": "v2-summer-s02",
+          "text": "рассветом"
+        },
+        {
+          "index": 2,
+          "id": "v2-summer-s03",
+          "text": "близится"
+        },
+        {
+          "index": 3,
+          "id": "v2-summer-s04",
+          "text": "вечное"
+        },
+        {
+          "index": 4,
+          "id": "v2-summer-s05",
+          "text": "лето"
+        }
+      ],
+      "targetTokens": [
+        {
+          "index": 0,
+          "id": "v2-summer-t01",
+          "text": "Beyond",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 1,
+          "id": "v2-summer-t02",
+          "text": "the",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "grammar-completion",
+          "rationale": "The article completes the dawn and shares рассветом."
+        },
+        {
+          "index": 2,
+          "id": "v2-summer-t03",
+          "text": "dawn,",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 3,
+          "id": "v2-summer-t04",
+          "text": "eternal",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 4,
+          "id": "v2-summer-t05",
+          "text": "summer",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 5,
+          "id": "v2-summer-t06",
+          "text": "draws",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "grammar-completion",
+          "rationale": "Draws near is a phrasal English equivalent of близится."
+        },
+        {
+          "index": 6,
+          "id": "v2-summer-t07",
+          "text": "near",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "grammar-completion",
+          "rationale": "Draws near is a phrasal English equivalent of близится."
+        }
+      ],
+      "sourceLineBreaksAfterIndices": [],
+      "targetLineBreaksAfterIndices": [],
+      "editorialNote": "Beyond preserves the metaphorical placement after/past the dawn; draws near is the complete verb expression for близится."
+    },
+    {
+      "id": "v2-guard",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Ночь до зари, ты в душе береги свою птицу",
+      "targetText": "Through the night till dawn, you keep your bird safe in your soul.",
+      "sourceTokens": [
+        {
+          "index": 0,
+          "id": "v2-guard-s01",
+          "text": "Ночь"
+        },
+        {
+          "index": 1,
+          "id": "v2-guard-s02",
+          "text": "до"
+        },
+        {
+          "index": 2,
+          "id": "v2-guard-s03",
+          "text": "зари,"
+        },
+        {
+          "index": 3,
+          "id": "v2-guard-s04",
+          "text": "ты"
+        },
+        {
+          "index": 4,
+          "id": "v2-guard-s05",
+          "text": "в"
+        },
+        {
+          "index": 5,
+          "id": "v2-guard-s06",
+          "text": "душе"
+        },
+        {
+          "index": 6,
+          "id": "v2-guard-s07",
+          "text": "береги"
+        },
+        {
+          "index": 7,
+          "id": "v2-guard-s08",
+          "text": "свою"
+        },
+        {
+          "index": 8,
+          "id": "v2-guard-s09",
+          "text": "птицу"
+        }
+      ],
+      "targetTokens": [
+        {
+          "index": 0,
+          "id": "v2-guard-t01",
+          "text": "Through",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "grammar-completion",
+          "rationale": "Through the night completes the source elliptical night-time adverbial; through has no independent sung timestamp."
+        },
+        {
+          "index": 1,
+          "id": "v2-guard-t02",
+          "text": "the",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "grammar-completion",
+          "rationale": "Through the night completes the source elliptical night-time adverbial; the article has no independent sung timestamp."
+        },
+        {
+          "index": 2,
+          "id": "v2-guard-t03",
+          "text": "night",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "grammar-completion",
+          "rationale": "Through the night completes the source elliptical night-time adverbial."
+        },
+        {
+          "index": 3,
+          "id": "v2-guard-t04",
+          "text": "till",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 4,
+          "id": "v2-guard-t05",
+          "text": "dawn,",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 5,
+          "id": "v2-guard-t06",
+          "text": "you",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 6,
+          "id": "v2-guard-t07",
+          "text": "keep",
+          "sourceIndices": [
+            6
+          ],
+          "focusSourceIndices": [
+            6
+          ],
+          "relation": "grammar-completion",
+          "rationale": "Keep … safe is the complete imperative meaning of береги; both words share its event despite the intervening noun in English."
+        },
+        {
+          "index": 7,
+          "id": "v2-guard-t08",
+          "text": "your",
+          "sourceIndices": [
+            7
+          ],
+          "focusSourceIndices": [
+            7
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 8,
+          "id": "v2-guard-t09",
+          "text": "bird",
+          "sourceIndices": [
+            8
+          ],
+          "focusSourceIndices": [
+            8
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 9,
+          "id": "v2-guard-t10",
+          "text": "safe",
+          "sourceIndices": [
+            6
+          ],
+          "focusSourceIndices": [
+            6
+          ],
+          "relation": "grammar-completion",
+          "rationale": "Keep … safe is the complete imperative meaning of береги; both words share its event despite the intervening noun in English."
+        },
+        {
+          "index": 10,
+          "id": "v2-guard-t11",
+          "text": "in",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 11,
+          "id": "v2-guard-t12",
+          "text": "your",
+          "sourceIndices": [
+            3,
+            5
+          ],
+          "focusSourceIndices": [
+            5
+          ],
+          "relation": "grammar-completion",
+          "rationale": "Your is a necessary natural-English possessive completion for soul in the explicit ты … в душе instruction. It focuses only with душе; ты retains its independent you event."
+        },
+        {
+          "index": 12,
+          "id": "v2-guard-t13",
+          "text": "soul.",
+          "sourceIndices": [
+            5
+          ],
+          "focusSourceIndices": [
+            5
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        }
+      ],
+      "sourceLineBreaksAfterIndices": [
+        2
+      ],
+      "targetLineBreaksAfterIndices": [
+        4
+      ],
+      "editorialNote": "Night till dawn is an elliptical temporal construction, completed in English by through the. You keep is an explicit-subject imperative, preserving ты. Your soul is a grammatical part-whole completion grounded in the explicit addressee ты, not a new beloved or object. Your bird preserves the reflexive possessive without inventing contrastive own."
+    },
+    {
+      "id": "v2-bird",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Не дай ей разбиться",
+      "targetText": "Don't let it crash",
+      "sourceTokens": [
+        {
+          "index": 0,
+          "id": "v2-bird-s01",
+          "text": "Не"
+        },
+        {
+          "index": 1,
+          "id": "v2-bird-s02",
+          "text": "дай"
+        },
+        {
+          "index": 2,
+          "id": "v2-bird-s03",
+          "text": "ей"
+        },
+        {
+          "index": 3,
+          "id": "v2-bird-s04",
+          "text": "разбиться"
+        }
+      ],
+      "targetTokens": [
+        {
+          "index": 0,
+          "id": "v2-bird-t01",
+          "text": "Don't",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "grammar-completion",
+          "rationale": "Do not contracts to Don't as the English negative-imperative completion of Не; no independent auxiliary timestamp is invented."
+        },
+        {
+          "index": 1,
+          "id": "v2-bird-t02",
+          "text": "let",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 2,
+          "id": "v2-bird-t03",
+          "text": "it",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 3,
+          "id": "v2-bird-t04",
+          "text": "crash",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        }
+      ],
+      "sourceLineBreaksAfterIndices": [],
+      "targetLineBreaksAfterIndices": [],
+      "editorialNote": "It refers to the bird, whose Russian feminine grammatical gender does not imply a human woman. Crash preserves the flight/fall image in разбиться; do not supply a beloved or a new broken-heart object."
+    },
+    {
+      "id": "radio-captain",
+      "sourceLanguage": "en",
+      "targetLanguage": "ru",
+      "sourceText": "Planet Earth, this is Captain Adams on the Serenity.",
+      "targetText": "Планета Земля, это капитан Адамс на «Серенити».",
+      "sourceTokens": [
+        {
+          "index": 0,
+          "id": "radio-captain-s01",
+          "text": "Planet"
+        },
+        {
+          "index": 1,
+          "id": "radio-captain-s02",
+          "text": "Earth,"
+        },
+        {
+          "index": 2,
+          "id": "radio-captain-s03",
+          "text": "this"
+        },
+        {
+          "index": 3,
+          "id": "radio-captain-s04",
+          "text": "is"
+        },
+        {
+          "index": 4,
+          "id": "radio-captain-s05",
+          "text": "Captain"
+        },
+        {
+          "index": 5,
+          "id": "radio-captain-s06",
+          "text": "Adams"
+        },
+        {
+          "index": 6,
+          "id": "radio-captain-s07",
+          "text": "on"
+        },
+        {
+          "index": 7,
+          "id": "radio-captain-s08",
+          "text": "the"
+        },
+        {
+          "index": 8,
+          "id": "radio-captain-s09",
+          "text": "Serenity."
+        }
+      ],
+      "targetTokens": [
+        {
+          "index": 0,
+          "id": "radio-captain-t01",
+          "text": "Планета",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 1,
+          "id": "radio-captain-t02",
+          "text": "Земля,",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 2,
+          "id": "radio-captain-t03",
+          "text": "это",
+          "sourceIndices": [
+            2,
+            3
+          ],
+          "focusSourceIndices": [
+            2,
+            3
+          ],
+          "relation": "grammar-construction",
+          "rationale": "English this is maps to Russian это with a zero copula; activate Это on the union of the separate this/is events, releasing in a real gap."
+        },
+        {
+          "index": 3,
+          "id": "radio-captain-t04",
+          "text": "капитан",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 4,
+          "id": "radio-captain-t05",
+          "text": "Адамс",
+          "sourceIndices": [
+            5
+          ],
+          "focusSourceIndices": [
+            5
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 5,
+          "id": "radio-captain-t06",
+          "text": "на",
+          "sourceIndices": [
+            6
+          ],
+          "focusSourceIndices": [
+            6
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 6,
+          "id": "radio-captain-t07",
+          "text": "«Серенити».",
+          "sourceIndices": [
+            7,
+            8
+          ],
+          "focusSourceIndices": [
+            7,
+            8
+          ],
+          "relation": "grammar-construction",
+          "rationale": "Russian has no definite article. The ship name is the complete target of the Serenity; activate only on the union of these adjacent source events, preserving the separately spoken English article."
+        }
+      ],
+      "sourceLineBreaksAfterIndices": [],
+      "targetLineBreaksAfterIndices": [],
+      "editorialNote": "Original English remains in the source lane; Russian is the translated lane. Captain/title capitalization and quoted ship name are editorial typography, independently corroborated in bounded unprompted recognition; acoustic/listening review remains separate."
+    },
+    {
+      "id": "radio-message",
+      "sourceLanguage": "en",
+      "targetLanguage": "ru",
+      "sourceText": "We're receiving a repeated message from the Martian surface.",
+      "targetText": "Мы принимаем повторяющееся сообщение с марсианской поверхности.",
+      "sourceTokens": [
+        {
+          "index": 0,
+          "id": "radio-message-s01",
+          "text": "We're"
+        },
+        {
+          "index": 1,
+          "id": "radio-message-s02",
+          "text": "receiving"
+        },
+        {
+          "index": 2,
+          "id": "radio-message-s03",
+          "text": "a"
+        },
+        {
+          "index": 3,
+          "id": "radio-message-s04",
+          "text": "repeated"
+        },
+        {
+          "index": 4,
+          "id": "radio-message-s05",
+          "text": "message"
+        },
+        {
+          "index": 5,
+          "id": "radio-message-s06",
+          "text": "from"
+        },
+        {
+          "index": 6,
+          "id": "radio-message-s07",
+          "text": "the"
+        },
+        {
+          "index": 7,
+          "id": "radio-message-s08",
+          "text": "Martian"
+        },
+        {
+          "index": 8,
+          "id": "radio-message-s09",
+          "text": "surface."
+        }
+      ],
+      "targetTokens": [
+        {
+          "index": 0,
+          "id": "radio-message-t01",
+          "text": "Мы",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 1,
+          "id": "radio-message-t02",
+          "text": "принимаем",
+          "sourceIndices": [
+            0,
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "grammar-completion",
+          "rationale": "Russian принимаем inflects the present receiving construction. English We're contributes the progressive auxiliary grammatically; preserve its independent pronoun focus and anchor the Russian verb on receiving."
+        },
+        {
+          "index": 2,
+          "id": "radio-message-t03",
+          "text": "повторяющееся",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 3,
+          "id": "radio-message-t04",
+          "text": "сообщение",
+          "sourceIndices": [
+            2,
+            4
+          ],
+          "focusSourceIndices": [
+            2,
+            4
+          ],
+          "relation": "grammar-construction",
+          "rationale": "Russian has no indefinite article. Сообщение is the target noun of a message; focus on the union of a and message only, releasing during separately performed repeated."
+        },
+        {
+          "index": 4,
+          "id": "radio-message-t05",
+          "text": "с",
+          "sourceIndices": [
+            5
+          ],
+          "focusSourceIndices": [
+            5
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 5,
+          "id": "radio-message-t06",
+          "text": "марсианской",
+          "sourceIndices": [
+            7
+          ],
+          "focusSourceIndices": [
+            7
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 6,
+          "id": "radio-message-t07",
+          "text": "поверхности.",
+          "sourceIndices": [
+            6,
+            8
+          ],
+          "focusSourceIndices": [
+            6,
+            8
+          ],
+          "relation": "grammar-construction",
+          "rationale": "Russian has no definite article. Поверхности is the target noun of the surface; focus on the union of the and surface only, releasing during independently performed Martian."
+        }
+      ],
+      "sourceLineBreaksAfterIndices": [],
+      "targetLineBreaksAfterIndices": [],
+      "editorialNote": "Russian omits English articles without adding numerical one or an artificial demonstrative. Article/noun display uses the documented union rather than a broad span over repeated or Martian."
+    },
+    {
+      "id": "radio-check",
+      "sourceLanguage": "en",
+      "targetLanguage": "ru",
+      "sourceText": "Do you read me?",
+      "targetText": "Слышите ли вы меня?",
+      "sourceTokens": [
+        {
+          "index": 0,
+          "id": "radio-check-s01",
+          "text": "Do"
+        },
+        {
+          "index": 1,
+          "id": "radio-check-s02",
+          "text": "you"
+        },
+        {
+          "index": 2,
+          "id": "radio-check-s03",
+          "text": "read"
+        },
+        {
+          "index": 3,
+          "id": "radio-check-s04",
+          "text": "me?"
+        }
+      ],
+      "targetTokens": [
+        {
+          "index": 0,
+          "id": "radio-check-t01",
+          "text": "Слышите",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 1,
+          "id": "radio-check-t02",
+          "text": "ли",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "grammar-completion",
+          "rationale": "Ли is the Russian polar-question particle corresponding to question-support Do; this is grammar correspondence, not a standalone dictionary gloss."
+        },
+        {
+          "index": 2,
+          "id": "radio-check-t03",
+          "text": "вы",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 3,
+          "id": "radio-check-t04",
+          "text": "меня?",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        }
+      ],
+      "sourceLineBreaksAfterIndices": [],
+      "targetLineBreaksAfterIndices": [],
+      "editorialNote": "Uses the established radio sense of read as hear/receive. Russian polar-question particle ли represents English question-support Do; natural Russian order is intentionally different, with every independent English word retained."
+    }
+  ],
+  "reviewLimits": [
+    "The 24 supplied lines are retained unchanged in their reference sequence. Four late radio cue occurrences are added separately from independent recognition and sample-aligned waveform correlation; source onsets/releases and complete human listening review remain separate.",
+    "No acoustic timestamp, source onset, release, instrumental classification, human listening attestation, rendering approval or author-certified interpretation is established by this editorial record.",
+    "Captain Adams, Serenity and We're receiving follow the supplied transcript and are independently recovered by the bounded unprompted small-model first-bridge recognition. This corroborates wording but does not certify acoustic word boundaries or human listening.",
+    "The figurative use of went dark, beyond the dawn and crash is an editorial interpretation; it preserves unspecified objects."
+  ],
+  "coverage": {
+    "suppliedLineCount": 24,
+    "editorialCueCount": 27,
+    "uniqueTemplateCount": 14,
+    "uniqueSourceTokenCount": 81,
+    "uniqueTargetTokenCount": 95,
+    "sourceTokenEventsAcrossEditorialCues": 139,
+    "targetTokenEventsAcrossEditorialCues": 157,
+    "suppliedCueCount": 23,
+    "recordingAddedCueCount": 4
+  },
+  "semanticRegressionExpectations": [
+    {
+      "templateId": "v1-opening",
+      "sourceTexts": [
+        "Тот,"
+      ],
+      "targetTexts": [
+        "The",
+        "one"
+      ],
+      "expectation": "Both target words activate with only Тот; do not omit its article."
+    },
+    {
+      "templateId": "v1-opening",
+      "sourceTexts": [
+        "кто"
+      ],
+      "targetTexts": [
+        "who"
+      ],
+      "expectation": "Relative pronoun remains an independent event."
+    },
+    {
+      "templateId": "v1-opening",
+      "sourceTexts": [
+        "погас,"
+      ],
+      "targetTexts": [
+        "went",
+        "dark"
+      ],
+      "expectation": "Full intransitive verb expression activates together; no added light object."
+    },
+    {
+      "templateId": "v1-opening",
+      "sourceTexts": [
+        "ярче",
+        "светить,"
+      ],
+      "targetTexts": [
+        "brighter",
+        "shine"
+      ],
+      "expectation": "Each retains its own source event despite reversed target word order."
+    },
+    {
+      "templateId": "v1-bird",
+      "sourceTexts": [
+        "твоей",
+        "красоты"
+      ],
+      "targetTexts": [
+        "your",
+        "beauty,"
+      ],
+      "expectation": "Explicit possessive and noun remain independent; no guessed beloved is added."
+    },
+    {
+      "templateId": "v1-bird",
+      "sourceTexts": [
+        "не",
+        "родится"
+      ],
+      "targetTexts": [
+        "not",
+        "will",
+        "be",
+        "born."
+      ],
+      "expectation": "Negation remains independent; all three future/birth grammatical words activate with родится only."
+    },
+    {
+      "templateId": "v1-bird",
+      "sourceTexts": [
+        "Юности",
+        "вольная",
+        "птица"
+      ],
+      "targetTexts": [
+        "youth's",
+        "free",
+        "bird"
+      ],
+      "expectation": "Three independent subject anchors are preserved even after reordered predicate focus."
+    },
+    {
+      "templateId": "refrain-eagle",
+      "sourceTexts": [
+        "орёл,",
+        "орёл"
+      ],
+      "targetTexts": [
+        "an",
+        "eagle,",
+        "an",
+        "eagle"
+      ],
+      "expectation": "Article/noun pair activates completely with its own occurrence, never both repeated eagles."
+    },
+    {
+      "templateId": "v2-loss",
+      "sourceTexts": [
+        "терял,"
+      ],
+      "targetTexts": [
+        "has",
+        "lost"
+      ],
+      "expectation": "Full verb expression activates together without an added loss object."
+    },
+    {
+      "templateId": "v2-loss",
+      "sourceTexts": [
+        "будет",
+        "снова",
+        "любить"
+      ],
+      "targetTexts": [
+        "will",
+        "again",
+        "love"
+      ],
+      "expectation": "Future, repetition and verb all retain separate timing; loving remains objectless."
+    },
+    {
+      "templateId": "v2-summer",
+      "sourceTexts": [
+        "близится"
+      ],
+      "targetTexts": [
+        "draws",
+        "near"
+      ],
+      "expectation": "Full phrasal verb activates together, with no extra article added to eternal summer."
+    },
+    {
+      "templateId": "v2-guard",
+      "sourceTexts": [
+        "Ночь"
+      ],
+      "targetTexts": [
+        "Through",
+        "the",
+        "night"
+      ],
+      "expectation": "Complete elliptical time phrase activates with Ночь; no separate preposition timestamp."
+    },
+    {
+      "templateId": "v2-guard",
+      "sourceTexts": [
+        "ты",
+        "в",
+        "душе"
+      ],
+      "targetTexts": [
+        "you",
+        "in",
+        "your",
+        "soul."
+      ],
+      "expectation": "Ты anchors you; в anchors in; душе anchors your soul, with the possessive grounded in subject context but not independently timed."
+    },
+    {
+      "templateId": "v2-guard",
+      "sourceTexts": [
+        "береги"
+      ],
+      "targetTexts": [
+        "keep",
+        "safe"
+      ],
+      "expectation": "Both target parts activate on береги despite the intervening displayed your bird; do not broaden to all intervening words."
+    },
+    {
+      "templateId": "v2-guard",
+      "sourceTexts": [
+        "свою",
+        "птицу"
+      ],
+      "targetTexts": [
+        "your",
+        "bird"
+      ],
+      "expectation": "Reflexive possessive and object noun remain independently active; no contrastive own is added."
+    },
+    {
+      "templateId": "v2-bird",
+      "sourceTexts": [
+        "Не",
+        "дай",
+        "ей",
+        "разбиться"
+      ],
+      "targetTexts": [
+        "Don't",
+        "let",
+        "it",
+        "crash"
+      ],
+      "expectation": "Four independent events. It refers to the bird; no feminine human addressee is invented."
+    },
+    {
+      "templateId": "radio-captain",
+      "sourceTexts": [
+        "this",
+        "is"
+      ],
+      "targetTexts": [
+        "это"
+      ],
+      "expectation": "Zero-copula construction uses only the union of source event intervals; a real gap releases focus."
+    },
+    {
+      "templateId": "radio-message",
+      "sourceTexts": [
+        "a",
+        "repeated",
+        "message"
+      ],
+      "targetTexts": [
+        "повторяющееся",
+        "сообщение"
+      ],
+      "expectation": "Сообщение focuses on a and message union only; it must release while repeated independently activates повторяющееся."
+    },
+    {
+      "templateId": "radio-message",
+      "sourceTexts": [
+        "the",
+        "Martian",
+        "surface."
+      ],
+      "targetTexts": [
+        "марсианской",
+        "поверхности."
+      ],
+      "expectation": "Поверхности focuses on the and surface union only; it must release during independently performed Martian."
+    },
+    {
+      "templateId": "radio-check",
+      "sourceTexts": [
+        "Do",
+        "you",
+        "read",
+        "me?"
+      ],
+      "targetTexts": [
+        "ли",
+        "вы",
+        "Слышите",
+        "меня?"
+      ],
+      "expectation": "Four distinct source anchors preserve natural Russian radio-question order in both performed repeats."
+    }
+  ]
+}
