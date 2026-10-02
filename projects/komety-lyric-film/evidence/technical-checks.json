@@ -1,0 +1,794 @@
+{
+  "status": "passed",
+  "scope": "technical validation; listening acceptance is recorded separately in input-bound review evidence",
+  "checks": [
+    {
+      "check": "sample-indexed source and target coverage",
+      "status": "pass",
+      "detail": {
+        "cues": 27,
+        "words": 139,
+        "targets": 157
+      }
+    },
+    {
+      "check": "locked source identity",
+      "status": "pass",
+      "detail": "af518bcde332f296dfc7982ebd7d8724c80c722decf5a32dfe3b00ef86107bf6"
+    },
+    {
+      "check": "full soundtrack feature coverage",
+      "status": "pass",
+      "detail": {
+        "rows": 6503,
+        "cadence": 25
+      }
+    },
+    {
+      "check": "contiguous portrait plan and preserved endcards",
+      "status": "pass",
+      "detail": {
+        "spans": 78
+      }
+    },
+    {
+      "check": "all source onsets, releases and target focus states",
+      "status": "pass",
+      "detail": 139
+    },
+    {
+      "check": "source-bound sustained line holds and uninterrupted vocal handoffs",
+      "status": "pass",
+      "detail": [
+        {
+          "cue": "KOM-001",
+          "wordEnd": 15.21501133786848,
+          "reviewedHold": 15.51,
+          "fullOpacityEnd": 15.541360544217687,
+          "clearAt": 15.541360544217687,
+          "mode": "vocal-handoff",
+          "checkedTailStates": 20
+        },
+        {
+          "cue": "KOM-002",
+          "wordEnd": 19.316462585034014,
+          "reviewedHold": 20.8,
+          "fullOpacityEnd": 21.32498866213152,
+          "clearAt": 21.32498866213152,
+          "mode": "vocal-handoff",
+          "checkedTailStates": 121
+        },
+        {
+          "cue": "KOM-003",
+          "wordEnd": 33.24498866213152,
+          "reviewedHold": 34.6,
+          "fullOpacityEnd": 34.6,
+          "clearAt": 35.1,
+          "mode": "fade",
+          "checkedTailStates": 82
+        },
+        {
+          "cue": "KOM-004",
+          "wordEnd": 43.8,
+          "reviewedHold": 44.35,
+          "fullOpacityEnd": 44.24299319727891,
+          "clearAt": 44.24299319727891,
+          "mode": "vocal-handoff",
+          "checkedTailStates": 27
+        },
+        {
+          "cue": "KOM-005",
+          "wordEnd": 51.2,
+          "reviewedHold": 51.75,
+          "fullOpacityEnd": 51.65501133786848,
+          "clearAt": 51.65501133786848,
+          "mode": "vocal-handoff",
+          "checkedTailStates": 28
+        },
+        {
+          "cue": "KOM-006",
+          "wordEnd": 57.73,
+          "reviewedHold": 58,
+          "fullOpacityEnd": 57.88498866213152,
+          "clearAt": 57.88498866213152,
+          "mode": "vocal-handoff",
+          "checkedTailStates": 10
+        },
+        {
+          "cue": "KOM-007",
+          "wordEnd": 65.45,
+          "reviewedHold": 67.5,
+          "fullOpacityEnd": 67.5,
+          "clearAt": 68,
+          "mode": "fade",
+          "checkedTailStates": 124
+        },
+        {
+          "cue": "KOM-008",
+          "wordEnd": 102.53501133786848,
+          "reviewedHold": 102.68501133786847,
+          "fullOpacityEnd": 102.7,
+          "clearAt": 102.7,
+          "mode": "vocal-handoff",
+          "checkedTailStates": 10
+        },
+        {
+          "cue": "KOM-009",
+          "wordEnd": 108.45,
+          "reviewedHold": 110.05,
+          "fullOpacityEnd": 110.05,
+          "clearAt": 110.54108843537415,
+          "mode": "fade",
+          "checkedTailStates": 97
+        },
+        {
+          "cue": "KOM-010",
+          "wordEnd": 118.43,
+          "reviewedHold": 119.04,
+          "fullOpacityEnd": 119.42498866213153,
+          "clearAt": 119.42498866213153,
+          "mode": "vocal-handoff",
+          "checkedTailStates": 60
+        },
+        {
+          "cue": "KOM-011",
+          "wordEnd": 122.5,
+          "reviewedHold": 124.3,
+          "fullOpacityEnd": 124.3,
+          "clearAt": 124.8,
+          "mode": "fade",
+          "checkedTailStates": 109
+        },
+        {
+          "cue": "KOM-012",
+          "wordEnd": 131.50498866213152,
+          "reviewedHold": 131.85,
+          "fullOpacityEnd": 131.70501133786848,
+          "clearAt": 131.70501133786848,
+          "mode": "vocal-handoff",
+          "checkedTailStates": 13
+        },
+        {
+          "cue": "KOM-013",
+          "wordEnd": 138.65,
+          "reviewedHold": 139.15,
+          "fullOpacityEnd": 139.07,
+          "clearAt": 139.07,
+          "mode": "vocal-handoff",
+          "checkedTailStates": 26
+        },
+        {
+          "cue": "KOM-014",
+          "wordEnd": 145.12498866213153,
+          "reviewedHold": 145.45,
+          "fullOpacityEnd": 145.3049886621315,
+          "clearAt": 145.3049886621315,
+          "mode": "vocal-handoff",
+          "checkedTailStates": 11
+        },
+        {
+          "cue": "KOM-015",
+          "wordEnd": 152.33,
+          "reviewedHold": 154.15,
+          "fullOpacityEnd": 154.15,
+          "clearAt": 154.65,
+          "mode": "fade",
+          "checkedTailStates": 110
+        },
+        {
+          "cue": "KOM-016",
+          "wordEnd": 160.28,
+          "reviewedHold": 160.85,
+          "fullOpacityEnd": 160.85,
+          "clearAt": 161.3029931972789,
+          "mode": "fade",
+          "checkedTailStates": 35
+        },
+        {
+          "cue": "KOM-017",
+          "wordEnd": 164.21839002267575,
+          "reviewedHold": 164.85,
+          "fullOpacityEnd": 164.85,
+          "clearAt": 165.35,
+          "mode": "fade",
+          "checkedTailStates": 38
+        },
+        {
+          "cue": "KOM-018",
+          "wordEnd": 166.5,
+          "reviewedHold": 166.95,
+          "fullOpacityEnd": 166.95,
+          "clearAt": 167.45,
+          "mode": "fade",
+          "checkedTailStates": 27
+        },
+        {
+          "cue": "KOM-019",
+          "wordEnd": 171.04,
+          "reviewedHold": 171.55,
+          "fullOpacityEnd": 171.55,
+          "clearAt": 172.05,
+          "mode": "fade",
+          "checkedTailStates": 31
+        },
+        {
+          "cue": "KOM-020",
+          "wordEnd": 179.66498866213152,
+          "reviewedHold": 179.98,
+          "fullOpacityEnd": 179.70501133786848,
+          "clearAt": 179.70501133786848,
+          "mode": "vocal-handoff",
+          "checkedTailStates": 3
+        },
+        {
+          "cue": "KOM-021",
+          "wordEnd": 186.76498866213151,
+          "reviewedHold": 187.2,
+          "fullOpacityEnd": 187.06498866213153,
+          "clearAt": 187.06498866213153,
+          "mode": "vocal-handoff",
+          "checkedTailStates": 18
+        },
+        {
+          "cue": "KOM-022",
+          "wordEnd": 193.26,
+          "reviewedHold": 193.55,
+          "fullOpacityEnd": 193.37501133786847,
+          "clearAt": 193.37501133786847,
+          "mode": "vocal-handoff",
+          "checkedTailStates": 7
+        },
+        {
+          "cue": "KOM-023",
+          "wordEnd": 200.35,
+          "reviewedHold": 202.3,
+          "fullOpacityEnd": 202.3,
+          "clearAt": 202.8,
+          "mode": "fade",
+          "checkedTailStates": 117
+        },
+        {
+          "cue": "KOM-024",
+          "wordEnd": 239.4,
+          "reviewedHold": 239.97,
+          "fullOpacityEnd": 239.97,
+          "clearAt": 240.4229931972789,
+          "mode": "fade",
+          "checkedTailStates": 35
+        },
+        {
+          "cue": "KOM-025",
+          "wordEnd": 243.33839002267572,
+          "reviewedHold": 243.97,
+          "fullOpacityEnd": 243.97,
+          "clearAt": 244.47,
+          "mode": "fade",
+          "checkedTailStates": 38
+        },
+        {
+          "cue": "KOM-026",
+          "wordEnd": 245.62,
+          "reviewedHold": 246.07,
+          "fullOpacityEnd": 246.07,
+          "clearAt": 246.57,
+          "mode": "fade",
+          "checkedTailStates": 27
+        },
+        {
+          "cue": "KOM-027",
+          "wordEnd": 249.96,
+          "reviewedHold": 249.9750113378685,
+          "fullOpacityEnd": 249.9750113378685,
+          "clearAt": 250.4750113378685,
+          "mode": "fade",
+          "checkedTailStates": 1
+        }
+      ]
+    },
+    {
+      "check": "equal face/size and complete reserved bilingual geometry",
+      "status": "pass",
+      "detail": [
+        {
+          "format": "landscape",
+          "cue": "KOM-001",
+          "size": 53,
+          "top": 519.14,
+          "bottom": 658,
+          "sourceRows": 1,
+          "targetRows": 1
+        },
+        {
+          "format": "landscape",
+          "cue": "KOM-002",
+          "size": 64,
+          "top": 490.32,
+          "bottom": 658,
+          "sourceRows": 1,
+          "targetRows": 1
+        },
+        {
+          "format": "landscape",
+          "cue": "KOM-003",
+          "size": 53,
+          "top": 402.53999999999996,
+          "bottom": 658,
+          "sourceRows": 2,
+          "targetRows": 2
+        },
+        {
+          "format": "landscape",
+          "cue": "KOM-004",
+          "size": 64,
+          "top": 490.32,
+          "bottom": 658,
+          "sourceRows": 1,
+          "targetRows": 1
+        },
+        {
+          "format": "landscape",
+          "cue": "KOM-005",
+          "size": 64,
+          "top": 490.32,
+          "bottom": 658,
+          "sourceRows": 1,
+          "targetRows": 1
+        },
+        {
+          "format": "landscape",
+          "cue": "KOM-006",
+          "size": 64,
+          "top": 490.32,
+          "bottom": 658,
+          "sourceRows": 1,
+          "targetRows": 1
+        },
+        {
+          "format": "landscape",
+          "cue": "KOM-007",
+          "size": 64,
+          "top": 490.32,
+          "bottom": 658,
+          "sourceRows": 1,
+          "targetRows": 1
+        },
+        {
+          "format": "landscape",
+          "cue": "KOM-008",
+          "size": 53,
+          "top": 519.14,
+          "bottom": 658,
+          "sourceRows": 1,
+          "targetRows": 1
+        },
+        {
+          "format": "landscape",
+          "cue": "KOM-009",
+          "size": 53,
+          "top": 519.14,
+          "bottom": 658,
+          "sourceRows": 1,
+          "targetRows": 1
+        },
+        {
+          "format": "landscape",
+          "cue": "KOM-010",
+          "size": 53,
+          "top": 402.53999999999996,
+          "bottom": 658,
+          "sourceRows": 2,
+          "targetRows": 2
+        },
+        {
+          "format": "landscape",
+          "cue": "KOM-011",
+          "size": 64,
+          "top": 490.32,
+          "bottom": 658,
+          "sourceRows": 1,
+          "targetRows": 1
+        },
+        {
+          "format": "landscape",
+          "cue": "KOM-012",
+          "size": 64,
+          "top": 490.32,
+          "bottom": 658,
+          "sourceRows": 1,
+          "targetRows": 1
+        },
+        {
+          "format": "landscape",
+          "cue": "KOM-013",
+          "size": 64,
+          "top": 490.32,
+          "bottom": 658,
+          "sourceRows": 1,
+          "targetRows": 1
+        },
+        {
+          "format": "landscape",
+          "cue": "KOM-014",
+          "size": 64,
+          "top": 490.32,
+          "bottom": 658,
+          "sourceRows": 1,
+          "targetRows": 1
+        },
+        {
+          "format": "landscape",
+          "cue": "KOM-015",
+          "size": 64,
+          "top": 490.32,
+          "bottom": 658,
+          "sourceRows": 1,
+          "targetRows": 1
+        },
+        {
+          "format": "landscape",
+          "cue": "KOM-016",
+          "size": 53,
+          "top": 519.14,
+          "bottom": 658,
+          "sourceRows": 1,
+          "targetRows": 1
+        },
+        {
+          "format": "landscape",
+          "cue": "KOM-017",
+          "size": 53,
+          "top": 519.14,
+          "bottom": 658,
+          "sourceRows": 1,
+          "targetRows": 1
+        },
+        {
+          "format": "landscape",
+          "cue": "KOM-018",
+          "size": 64,
+          "top": 490.32,
+          "bottom": 658,
+          "sourceRows": 1,
+          "targetRows": 1
+        },
+        {
+          "format": "landscape",
+          "cue": "KOM-019",
+          "size": 64,
+          "top": 490.32,
+          "bottom": 658,
+          "sourceRows": 1,
+          "targetRows": 1
+        },
+        {
+          "format": "landscape",
+          "cue": "KOM-020",
+          "size": 64,
+          "top": 490.32,
+          "bottom": 658,
+          "sourceRows": 1,
+          "targetRows": 1
+        },
+        {
+          "format": "landscape",
+          "cue": "KOM-021",
+          "size": 64,
+          "top": 490.32,
+          "bottom": 658,
+          "sourceRows": 1,
+          "targetRows": 1
+        },
+        {
+          "format": "landscape",
+          "cue": "KOM-022",
+          "size": 64,
+          "top": 490.32,
+          "bottom": 658,
+          "sourceRows": 1,
+          "targetRows": 1
+        },
+        {
+          "format": "landscape",
+          "cue": "KOM-023",
+          "size": 64,
+          "top": 490.32,
+          "bottom": 658,
+          "sourceRows": 1,
+          "targetRows": 1
+        },
+        {
+          "format": "landscape",
+          "cue": "KOM-024",
+          "size": 36,
+          "top": 689.68,
+          "bottom": 784,
+          "sourceRows": 1,
+          "targetRows": 1
+        },
+        {
+          "format": "landscape",
+          "cue": "KOM-025",
+          "size": 36,
+          "top": 689.68,
+          "bottom": 784,
+          "sourceRows": 1,
+          "targetRows": 1
+        },
+        {
+          "format": "landscape",
+          "cue": "KOM-026",
+          "size": 36,
+          "top": 689.68,
+          "bottom": 784,
+          "sourceRows": 1,
+          "targetRows": 1
+        },
+        {
+          "format": "landscape",
+          "cue": "KOM-027",
+          "size": 36,
+          "top": 689.68,
+          "bottom": 784,
+          "sourceRows": 1,
+          "targetRows": 1
+        },
+        {
+          "format": "portrait",
+          "cue": "KOM-001",
+          "size": 65,
+          "top": 1301.7,
+          "bottom": 1615,
+          "sourceRows": 2,
+          "targetRows": 2
+        },
+        {
+          "format": "portrait",
+          "cue": "KOM-002",
+          "size": 76,
+          "top": 1415.88,
+          "bottom": 1615,
+          "sourceRows": 1,
+          "targetRows": 1
+        },
+        {
+          "format": "portrait",
+          "cue": "KOM-003",
+          "size": 65,
+          "top": 1158.7,
+          "bottom": 1615,
+          "sourceRows": 3,
+          "targetRows": 3
+        },
+        {
+          "format": "portrait",
+          "cue": "KOM-004",
+          "size": 76,
+          "top": 1415.88,
+          "bottom": 1615,
+          "sourceRows": 1,
+          "targetRows": 1
+        },
+        {
+          "format": "portrait",
+          "cue": "KOM-005",
+          "size": 76,
+          "top": 1415.88,
+          "bottom": 1615,
+          "sourceRows": 1,
+          "targetRows": 1
+        },
+        {
+          "format": "portrait",
+          "cue": "KOM-006",
+          "size": 76,
+          "top": 1415.88,
+          "bottom": 1615,
+          "sourceRows": 1,
+          "targetRows": 1
+        },
+        {
+          "format": "portrait",
+          "cue": "KOM-007",
+          "size": 76,
+          "top": 1415.88,
+          "bottom": 1615,
+          "sourceRows": 1,
+          "targetRows": 1
+        },
+        {
+          "format": "portrait",
+          "cue": "KOM-008",
+          "size": 65,
+          "top": 1301.7,
+          "bottom": 1615,
+          "sourceRows": 2,
+          "targetRows": 2
+        },
+        {
+          "format": "portrait",
+          "cue": "KOM-009",
+          "size": 65,
+          "top": 1301.7,
+          "bottom": 1615,
+          "sourceRows": 2,
+          "targetRows": 2
+        },
+        {
+          "format": "portrait",
+          "cue": "KOM-010",
+          "size": 65,
+          "top": 1230.2,
+          "bottom": 1615,
+          "sourceRows": 2,
+          "targetRows": 3
+        },
+        {
+          "format": "portrait",
+          "cue": "KOM-011",
+          "size": 76,
+          "top": 1415.88,
+          "bottom": 1615,
+          "sourceRows": 1,
+          "targetRows": 1
+        },
+        {
+          "format": "portrait",
+          "cue": "KOM-012",
+          "size": 76,
+          "top": 1415.88,
+          "bottom": 1615,
+          "sourceRows": 1,
+          "targetRows": 1
+        },
+        {
+          "format": "portrait",
+          "cue": "KOM-013",
+          "size": 76,
+          "top": 1415.88,
+          "bottom": 1615,
+          "sourceRows": 1,
+          "targetRows": 1
+        },
+        {
+          "format": "portrait",
+          "cue": "KOM-014",
+          "size": 76,
+          "top": 1415.88,
+          "bottom": 1615,
+          "sourceRows": 1,
+          "targetRows": 1
+        },
+        {
+          "format": "portrait",
+          "cue": "KOM-015",
+          "size": 76,
+          "top": 1415.88,
+          "bottom": 1615,
+          "sourceRows": 1,
+          "targetRows": 1
+        },
+        {
+          "format": "portrait",
+          "cue": "KOM-016",
+          "size": 65,
+          "top": 1301.7,
+          "bottom": 1615,
+          "sourceRows": 2,
+          "targetRows": 2
+        },
+        {
+          "format": "portrait",
+          "cue": "KOM-017",
+          "size": 65,
+          "top": 1230.2,
+          "bottom": 1615,
+          "sourceRows": 2,
+          "targetRows": 3
+        },
+        {
+          "format": "portrait",
+          "cue": "KOM-018",
+          "size": 76,
+          "top": 1415.88,
+          "bottom": 1615,
+          "sourceRows": 1,
+          "targetRows": 1
+        },
+        {
+          "format": "portrait",
+          "cue": "KOM-019",
+          "size": 76,
+          "top": 1415.88,
+          "bottom": 1615,
+          "sourceRows": 1,
+          "targetRows": 1
+        },
+        {
+          "format": "portrait",
+          "cue": "KOM-020",
+          "size": 76,
+          "top": 1415.88,
+          "bottom": 1615,
+          "sourceRows": 1,
+          "targetRows": 1
+        },
+        {
+          "format": "portrait",
+          "cue": "KOM-021",
+          "size": 76,
+          "top": 1415.88,
+          "bottom": 1615,
+          "sourceRows": 1,
+          "targetRows": 1
+        },
+        {
+          "format": "portrait",
+          "cue": "KOM-022",
+          "size": 76,
+          "top": 1415.88,
+          "bottom": 1615,
+          "sourceRows": 1,
+          "targetRows": 1
+        },
+        {
+          "format": "portrait",
+          "cue": "KOM-023",
+          "size": 76,
+          "top": 1415.88,
+          "bottom": 1615,
+          "sourceRows": 1,
+          "targetRows": 1
+        },
+        {
+          "format": "portrait",
+          "cue": "KOM-024",
+          "size": 65,
+          "top": 1301.7,
+          "bottom": 1615,
+          "sourceRows": 2,
+          "targetRows": 2
+        },
+        {
+          "format": "portrait",
+          "cue": "KOM-025",
+          "size": 65,
+          "top": 1230.2,
+          "bottom": 1615,
+          "sourceRows": 2,
+          "targetRows": 3
+        },
+        {
+          "format": "portrait",
+          "cue": "KOM-026",
+          "size": 76,
+          "top": 1415.88,
+          "bottom": 1615,
+          "sourceRows": 1,
+          "targetRows": 1
+        },
+        {
+          "format": "portrait",
+          "cue": "KOM-027",
+          "size": 76,
+          "top": 1415.88,
+          "bottom": 1615,
+          "sourceRows": 1,
+          "targetRows": 1
+        }
+      ]
+    },
+    {
+      "check": "quiet gate and unsaturated musical headroom",
+      "status": "pass",
+      "detail": {
+        "soft": 0.13815474015899346,
+        "loud": 0.984509106460245
+      }
+    },
+    {
+      "check": "read-only production gate check",
+      "status": "pass",
+      "detail": "current input-bound review and authorization accepted; no capture launched"
+    }
+  ]
+}

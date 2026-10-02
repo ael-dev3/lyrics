@@ -1,0 +1,126 @@
+{
+  "status": "passed",
+  "approvedInputHashes": {
+    "public/source.mp4": "af518bcde332f296dfc7982ebd7d8724c80c722decf5a32dfe3b00ef86107bf6",
+    "public/timeline.json": "f8584b8a543fe594d351b52103c4cd5b19d57fe473a7f2d74302c7a74a963d93",
+    "public/audio-features.json": "f2850743fb855832aa3676ecefaf847b803dc2f13f48ed2243bae91985431f4b",
+    "public/portrait-framing.json": "1b60732638523110c2bd5e22cc6b96af0247a92b714ebdd8aa87cc2953a2413f",
+    "public/fonts/CormorantGaramond-Semibold.ttf": "69e7ae35cba23d962227b86f99217c250e642e4c6f6104b4f3ec465039e4e2d8",
+    "source/lyrics-editorial.json": "cdca5026ede787103626912364a82ac311facb7e32aba652c013600fc31d390d",
+    "source/timing-candidate.json": "bd9fe396db5501436ba867d700d4ad14314fa0a4eb05cca2eff87487d882bde9",
+    "source/onset-corrections-v5.json": "1041fffe6891a650994aa6fbb24e4c622dde4a4f789a8fe7852cbba2a4fd9d53",
+    "source/onset-corrections-v6.json": "d70ee8bcb0de5bf62ccc132295bed4a48714739b0a0ffc7e8f26fda72fc9592b",
+    "source/onset-corrections-v7.json": "f3e344c97adaa2577ffa119605e873634e1396530b5dbe30ec06f0781bc96e76",
+    "source/onset-corrections-v8.json": "7369b28c4dc0035c3d64f8ee6fe596aa3d8fe20057e2e780deb9956b5994dfbf",
+    "source/onset-corrections-v9.json": "05f4312394b61ec0c8fd7e04c36b2ac194095c8ce24bc9c6397e2ebdc0618e36",
+    "source/onset-corrections-v10.json": "efe39f0bf32ad8cebdb1834d1bfb16d921ba96355017e21d13409b2fced4ae4e",
+    "source/line-visibility.json": "fe03845ea11cac39e4e0feac59e905eb3cbb77242a23f829ac98027adbe8ee0e",
+    "src/model.ts": "07112b0f7c466f9b368237c6ff16374ac4f59c64511be8a61f714d85d98d9f5d",
+    "src/scene.ts": "37f135221b3ad0ce16f02f7aa1b7c84e823c31feaac7fa49f1edeb3a72cd1a68",
+    "src/player.ts": "c6c7024fe0910064a4ac739ed31ddee5578913f1a7f8f1f1eedd10d65e679c14"
+  },
+  "makerSha256": "2b20e494c7f89d07d03fb3322e0fa584118ba56efc8de5089cc9ae066f856da3",
+  "revision": "komety-preview-v10-first-final-eagle",
+  "sourceSha256": "af518bcde332f296dfc7982ebd7d8724c80c722decf5a32dfe3b00ef86107bf6",
+  "method": "Exact original source frame, crop to platform cover ratio, approved Cormorant typography and ivory/gold. Original picture is retained; no replacement artwork.",
+  "files": [
+    {
+      "kind": "youtube",
+      "path": "publishing/POLNALYUBVI-Komety-YouTube-Thumbnail-1920x1080.jpg",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 296007,
+      "sha256": "54f6faa1ec495d431100e420bda61c7480a077af36b053f8b72a7b1c1c2ff2ca",
+      "sourceFrame": 310,
+      "sourceTimeSeconds": 12.4,
+      "sourceCrop": {
+        "x": 242.44444444444446,
+        "y": 0,
+        "width": 1415.111111111111,
+        "height": 796
+      },
+      "textBoxes": [
+        {
+          "text": "КОМЕТЫ",
+          "left": 512.9750061035156,
+          "right": 1403.6951599121094,
+          "top": 727,
+          "bottom": 868
+        },
+        {
+          "text": "POLNALYUBVI",
+          "left": 686.6050109863281,
+          "right": 1232.6011047363281,
+          "top": 921,
+          "bottom": 977
+        }
+      ]
+    },
+    {
+      "kind": "tiktok",
+      "path": "publishing/POLNALYUBVI-Komety-TikTok-Cover-1200x1600.jpg",
+      "width": 1200,
+      "height": 1600,
+      "bytes": 243436,
+      "sha256": "8d09a7775c20b417637d46893cb67a4302b7a32e15f490ff5efc0c324aa27de4",
+      "sourceFrame": 310,
+      "sourceTimeSeconds": 12.4,
+      "sourceCrop": {
+        "x": 651.5,
+        "y": 0,
+        "width": 597,
+        "height": 796
+      },
+      "textBoxes": [
+        {
+          "text": "КОМЕТЫ",
+          "left": 250.989990234375,
+          "right": 946.8380737304688,
+          "top": 1173,
+          "bottom": 1282
+        },
+        {
+          "text": "POLNALYUBVI",
+          "left": 294.0199890136719,
+          "right": 905.7960510253906,
+          "top": 1337,
+          "bottom": 1397
+        }
+      ]
+    }
+  ],
+  "proofs": [
+    {
+      "path": "evidence/covers/youtube-320x180.png",
+      "sha256": "bff746a4fd410298b002496a1948bb027d5bef84922fe945a6b896bb1f0aabdc",
+      "width": 320,
+      "height": 180
+    },
+    {
+      "path": "evidence/covers/tiktok-150x200.png",
+      "sha256": "6b71e9d23d021eae4da6dec449ef0196920ea98a5b9b7cb0fe58252940858c73",
+      "width": 150,
+      "height": 200
+    },
+    {
+      "path": "evidence/covers/tiktok-300x400.png",
+      "sha256": "7df79e0d68116083034d30970fa6594cad66697aa69f52e095188c34d35126df",
+      "width": 300,
+      "height": 400
+    },
+    {
+      "path": "evidence/covers/tiktok-center-crop-5percent.png",
+      "sha256": "ad9743864f463de4cd47c5dbe95146bd7fdb6e9437016a76f01a1a88225b60cc",
+      "width": 300,
+      "height": 400
+    }
+  ],
+  "limits": "Local small-size and centered-crop simulations; no platform upload preview claimed.",
+  "visualReview": {
+    "fullSize": true,
+    "youtube320Wide": true,
+    "tiktok150x200And300x400": true,
+    "tiktokFivePercentCrop": true,
+    "finding": "Complete title and artist, face retained, clear margins, source colors, no orientation metadata. Metadata-only regeneration retains identical reviewed JPEG/proof hashes."
+  }
+}

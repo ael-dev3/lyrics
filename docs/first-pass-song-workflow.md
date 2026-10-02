@@ -10,6 +10,8 @@ Use the [current cinematic lyric standard](cinematic-lyric-workflow.md): stable 
 
 For future bilingual films, apply the [equal-emphasis workflow](bilingual-lyric-workflow.md) before adopting historical visual defaults. English must match the original language's perceived size, weight, color strength, highlighting and timing precision.
 
+For timing preparation, read the [connected-phoneme onset/release workflow](connected-phoneme-onset-workflow.md) and [Кометы’s mistakes and corrections](../projects/komety-lyric-film/PRODUCTION-LESSONS.md). Quiet vowel ownership, held direct-body release, complete translated expansions, neutral line lifetime and loaded-preview identity require separate first-pass checks. The Tanisea frame/profile values below are historical presentation references; they do not override current source-clocked, color-only contact or authorize a full production render.
+
 ## 1. Freeze the input contract
 
 When the delivery includes TikTok, apply the established [profile-cover specification and review](tiktok-cover-workflow.md): a dedicated 1200×1600 portrait cover, title and concise artist-focused description. Do not repeat the landscape interpretation of the upload interface's “4:3” label.
@@ -18,7 +20,7 @@ Create an immutable input manifest before editing visuals. Record:
 
 - source-audio filename, byte size, SHA-256, codec, sample rate, channels, and decoded sample count;
 - any codec priming or leading-skip samples;
-- authoritative public duration and frame counts at 60 and 120 fps;
+- original decoded extent and native picture cadence/PTS, plus planned public/proof frame counts where applicable;
 - source and translated lyric text with stable line and token identifiers;
 - artwork, font, and licence files with hashes;
 - Node.js, npm, FFmpeg, FFprobe, Remotion, Chromium, and TypeScript versions.
@@ -27,13 +29,13 @@ Do not replace or normalize the soundtrack after timing begins. Decode once for 
 
 ## 2. Build the alignment before animation
 
-Use at least three independent observations for each vocal boundary:
+Use complementary observations for each vocal boundary:
 
 1. waveform onset/offset inspection;
 2. spectrogram inspection;
-3. an external aligner or transcription observation.
+3. a bounded aligner or transcription observation, retaining independent model-family comparison where available.
 
-Store every candidate and the selected boundary. Require manual review when candidate spread exceeds 25 ms. Each source token record must include:
+Waveform and spectrum describe the same signal, and several crops or spelling variants of one recognizer are not independent votes. Store every candidate and selected boundary. Require explicit source/audio review when candidate spread exceeds 25 ms; smaller spreads are not a certificate. Inspect quiet connected prefixes and held endings even when models agree. Each source token record must include:
 
 - stable token ID and line ID;
 - start and exclusive end sample;
@@ -42,6 +44,8 @@ Store every candidate and the selected boundary. Require manual review when cand
 - review note when uncertainty crosses the threshold.
 
 Validate that tokens are ordered, line bounds contain their tokens, intervals are positive, and all samples fit the retained decoded audio.
+
+Do not equate a sparse strong grapheme core with the first phonetic entry. Inspect the preceding final vowel/nasal transition, quiet opening, internal consonant and stressed vowel in original-clock context. Connected singing needs no silence-separated attack. Record an explicit prior-release/new-onset handoff when supported, retain real gaps and per-occurrence uncertainty, and reject universal anticipation or copied chorus timing. Follow [the ownership procedure](connected-phoneme-onset-workflow.md#3-resolve-connected-lexical-ownership).
 
 Separate a recognizer's phonetic core from the audible release of a held vowel. Inspect the tail in the original mix and vocal stem; stem RMS can include reverberation or separation leakage. Keep automatic extension limits, spectral overrides and uncertainty visible, and never treat a fixed extension cap as proof of a release. Recompute refinements from an unchanged core draft so repeated runs cannot extend the same word again. Review each repeated phrase independently, and apply the selected source release to its complete translated meaning.
 
@@ -78,6 +82,8 @@ The timing values below are starting references from Tanisea, not universal sett
 | Contact underline | None unless explicitly requested |
 
 Apply the same profile to repeated sections. Preserve explicit card/outro transitions as named milestones. If a long inter-line gap needs a hold, encode it as an explicit rule and test it; do not allow incidental blank or stacked frames.
+
+Keep word focus’s immediate source contact separate from the complete line’s neutral full-opacity hold and fade. Select the hold from reviewed voice/decay support; if a gentle fade cannot fit, replace the outgoing line atomically at the next actual vocal instead of cutting at a gap midpoint or compressing a fade. Historical focus-attack/residual-release frame counts must not delay onset or extend lexical ownership. See [held-body and line-lifetime review](connected-phoneme-onset-workflow.md#4-audit-held-releases-independently).
 
 Apply typography, active/inactive color roles and focus strength equally to both lyric languages. Reflow long translations or rebalance the layout instead of reducing English alone. Historical font sizes and subtitle styling do not override the current equal-emphasis requirement.
 
@@ -121,13 +127,13 @@ Keep all artistic smoothing, nonlinear scaling and transient extension separate 
 
 Before changing production behavior, add tests that fail for the old implementation. The minimum timing suite must prove:
 
-- literal vocal and cue samples are unchanged;
+- source identity and clock are unchanged, and any explicitly reviewed sample corrections match their selected layer;
 - frame conversion uses nearest-frame rounding;
 - 60 fps boundary error is at most half a frame;
 - 120 fps boundary error is at most half a frame;
 - incoming lines settle before contact;
-- required outgoing/incoming overlap exists at high-risk handoffs;
-- focus attack and residual release states match at contact offsets;
+- reviewed outgoing/incoming handoffs have no unintended blank or ghosted text, including atomic replacement when a gentle fade cannot fit;
+- lexical focus follows selected exclusive source bounds; decorative attack/release does not delay or extend word ownership;
 - repeated sections use the same presentation profile;
 - semantic targets follow the performed source order;
 - exclusive cue ends release correctly;
@@ -160,6 +166,8 @@ For each repeated or high-risk passage, render matched-duration public clips wit
 - README screenshot from a representative revised frame.
 
 Compare presentation behavior, not copied timestamps. Different performances keep their independent sample cues.
+
+Reload and verify the timeline actually loaded in memory, its source hash, selected samples and both languages’ active words. Track native picture PTS separately from the source word clock: a 25 fps picture may be held while word focus repaints at display cadence. Inspect actual moving picture, seek/recovery and both layouts; neither a rebuilt file nor advancing audio proves the complete preview is current. See [runtime identity checks](connected-phoneme-onset-workflow.md#6-prove-the-loaded-preview-and-measure-presentation-separately).
 
 Verify that every diagnostic still actually uses its requested timestamp. With a pre-resolved Remotion composition, update its resolved `props` as well as the renderer's `inputProps`; otherwise a retained default can silently produce the same frame under different filenames. Inspect visibly distinct source moments before trusting a contact sheet. For text collision checks, distinguish a font's em box from visible ink: combine browser horizontal bounds with actual glyph ascent/descent, then inspect the image at native and mobile size.
 

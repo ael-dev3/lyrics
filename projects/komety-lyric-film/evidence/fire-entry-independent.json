@@ -1,0 +1,219 @@
+{
+  "baselineTimingSha256": "0b4e37fd99c1cf6a7363a4428cf0131a3f7fdca3230e490a9296ee1f7abccab9",
+  "sourceSha256": "af518bcde332f296dfc7982ebd7d8724c80c722decf5a32dfe3b00ef86107bf6",
+  "sourceSampleRate": 44100,
+  "wordId": "KOM-015-s04",
+  "text": "огонь",
+  "decision": "change",
+  "beforeSample": 6599565,
+  "beforeSeconds": 149.65,
+  "proposedSample": 6592068,
+  "proposedSeconds": 149.48,
+  "onsetOwnershipUncertaintySeconds": [
+    149.43,
+    149.55
+  ],
+  "confidence": "medium-low",
+  "onsetReason": "The original mix and estimated vocal show attenuation/narrowing around149.28–149.34, then a voiced renewal around149.35. That first renewal can plausibly belong to the preceding vn-to-terminal-vowel sequence in словно, so it is not used as the opening of огонь. A following descending harmonic/body change around149.44–149.50 is the better ownership handoff into the quiet opening vowel. It continues before the later attenuation around149.82–149.87 consistent with internal g closure, followed by the stronger stressed body. The old149.650 point is inside that quieter prefix. Select149.480 within149.430–149.550 from the individual source trajectory and renewed perceptual feedback; the connected adjacent vowels leave phonetic ownership uncertain. This is not a constant advance or a model-core substitution.",
+  "pairedPrecedingRelease": {
+    "wordId": "KOM-015-s03",
+    "beforeSample": 6599565,
+    "beforeSeconds": 149.65,
+    "proposedSample": 6592068,
+    "proposedSeconds": 149.48,
+    "ownershipUncertaintySeconds": [
+      149.43,
+      149.55
+    ]
+  },
+  "wordRelease": {
+    "decision": "retain",
+    "sample": 6717753,
+    "seconds": 152.33,
+    "existingAuditedUncertaintySeconds": [
+      152.18,
+      152.5
+    ],
+    "reason": "Retain the existing152.330 held-word release; this targeted onset review provides no new direct-body endpoint evidence."
+  },
+  "modelContextSensitivity": {
+    "cachedMmsCharacterCores": [
+      {
+        "input": "original mix",
+        "words": [
+          {
+            "text": "словно",
+            "characters": [
+              {
+                "symbol": "s",
+                "start": 148.87116402116402,
+                "end": 148.89126984126986,
+                "score": 0.5233594179153442
+              },
+              {
+                "symbol": "l",
+                "start": 149.0320105820106,
+                "end": 149.0521164021164,
+                "score": 0.04126556217670441
+              },
+              {
+                "symbol": "o",
+                "start": 149.09232804232803,
+                "end": 149.11243386243387,
+                "score": 0.09088806807994843
+              },
+              {
+                "symbol": "v",
+                "start": 149.29338624338624,
+                "end": 149.31349206349208,
+                "score": 0.06901668012142181
+              },
+              {
+                "symbol": "n",
+                "start": 149.51455026455028,
+                "end": 149.5346560846561,
+                "score": 0.10732173919677734
+              },
+              {
+                "symbol": "o",
+                "start": 149.59497354497356,
+                "end": 149.61507936507937,
+                "score": 0.0577404610812664
+              }
+            ]
+          },
+          {
+            "text": "огонь",
+            "characters": [
+              {
+                "symbol": "o",
+                "start": 150.03730158730158,
+                "end": 150.05740740740742,
+                "score": 0.09691119194030762
+              },
+              {
+                "symbol": "g",
+                "start": 150.1579365079365,
+                "end": 150.17804232804232,
+                "score": 0.01933107152581215
+              },
+              {
+                "symbol": "o",
+                "start": 150.25846560846563,
+                "end": 150.27857142857144,
+                "score": 0.1377631276845932
+              },
+              {
+                "symbol": "n",
+                "start": 150.49973544973545,
+                "end": 150.51984126984127,
+                "score": 0.07021733373403549
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "input": "estimated vocal",
+        "words": [
+          {
+            "text": "словно",
+            "characters": [
+              {
+                "symbol": "s",
+                "start": 148.87116402116402,
+                "end": 148.89126984126986,
+                "score": 0.6729707717895508
+              },
+              {
+                "symbol": "l",
+                "start": 148.97169312169314,
+                "end": 148.99179894179895,
+                "score": 0.0018598292954266071
+              },
+              {
+                "symbol": "o",
+                "start": 149.01190476190476,
+                "end": 149.0320105820106,
+                "score": 0.4743538796901703
+              },
+              {
+                "symbol": "v",
+                "start": 149.29338624338624,
+                "end": 149.31349206349208,
+                "score": 0.03178028017282486
+              },
+              {
+                "symbol": "n",
+                "start": 149.41402116402116,
+                "end": 149.43412698412698,
+                "score": 0.0019970485009253025
+              },
+              {
+                "symbol": "o",
+                "start": 149.45423280423282,
+                "end": 149.47433862433863,
+                "score": 0.12397553026676178
+              }
+            ]
+          },
+          {
+            "text": "огонь",
+            "characters": [
+              {
+                "symbol": "o",
+                "start": 149.69550264550264,
+                "end": 149.71560846560848,
+                "score": 0.0022507510147988796
+              },
+              {
+                "symbol": "g",
+                "start": 149.83624338624338,
+                "end": 149.85634920634922,
+                "score": 0.10861754417419434
+              },
+              {
+                "symbol": "o",
+                "start": 149.9568783068783,
+                "end": 149.97698412698412,
+                "score": 0.421928733587265
+              },
+              {
+                "symbol": "n",
+                "start": 151.60555555555555,
+                "end": 151.6256613756614,
+                "score": 0.023109469562768936
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "conditionedWhisperOriginalStart": 149.89,
+    "conditionedWhisperStemStart": 149.63,
+    "explanation": "Stem cores v149.293/n149.414/prior-final-o149.454 precede initial-o149.696/g149.836/stressed-o149.957. The original path assigns preceding nasal/final vowel and next initial/g to later portions of the same body. These sparse and context-sensitive cores support vowel-before-g ordering but do not certify the quiet prefix leading edge. Unprompted tiny-crop misrecognitions are rejected, not independent timing votes."
+  },
+  "rejectedBoundaryInterpretations": [
+    {
+      "seconds": 149.3,
+      "reason": "Too early to distinguish the preceding vn and terminal-vowel transition; no new-word ownership is asserted at the initial attenuation."
+    },
+    {
+      "seconds": 149.65,
+      "reason": "Current point misses the changed quiet vowel body around149.44–149.50."
+    },
+    {
+      "seconds": 149.84,
+      "reason": "Later attenuation is consistent with an internal consonant closure; starting here would omit the initial vowel."
+    }
+  ],
+  "humanListeningAttested": false,
+  "mutatesSourceTiming": false,
+  "uncertaintyMeaning": "Qualitative phonetic-ownership range, not a statistical confidence interval or millisecond accuracy claim. Exact sample encoding records the reviewed point only.",
+  "limits": "Original mix is authority. Estimated vocals can smear edges or retain accompaniment; clock agreement does not certify phone timing. 2048-sample Hann centers use ±23.22 ms of samples; 512-sample centers use ±5.80 ms. High-pitched spectral ridges are harmonics, not automatic F1/F2 measurements.",
+  "evidence": [
+    "fire-original-stem.jpg",
+    "vowel-handoff-proposals.json",
+    "preview-inputs-v7.json"
+  ]
+}

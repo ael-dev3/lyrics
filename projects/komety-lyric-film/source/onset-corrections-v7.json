@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "revision": "komety-preview-v7-second-eagle",
+  "baselineTimingSha256": "50eb03112990c92454781697785a69826c5d979426153bc7154e7063208b4c06",
+  "sourceSha256": "af518bcde332f296dfc7982ebd7d8724c80c722decf5a32dfe3b00ef86107bf6",
+  "sampleRate": 44100,
+  "status": "Root-reconciled targeted source/signal correction following perceptual review; full current-revision listening acceptance pending",
+  "humanListeningAttested": false,
+  "reviewDocument": "evidence/eagle-entry-review.md",
+  "methodSummary": "V7 targeted second-refrain second eagle: earlier quiet connected vowel trajectory135.66–135.75 receives ownership before the stronger vowel core. One source start and the paired preceding release move150ms earlier; other source samples and all27 final lexical releases/neutral holds are preserved.",
+  "edges": [
+    {
+      "wordId": "KOM-013-s04",
+      "edge": "start",
+      "beforeSample": 5990985,
+      "selectedSample": 5984370,
+      "signalIntervalSeconds": [
+        135.65,
+        135.75
+      ],
+      "confidence": "medium-low",
+      "reason": "Original and estimated-vocal attenuation135.60–135.66 is followed by a changed quiet connected harmonic/body trajectory135.66–135.75, before the stronger vowel body135.78–135.85. The135.850 split omitted that quiet prefix. Source-focused perceptual review supports earlier ownership; cached phone paths variably assign this body to the preceding final vowel and place initial-character cores135.800–136.275 or later. These correlated path sensitivities cannot veto the earlier source-supported entrance. Select135.700 within135.650–135.750 as a connected ownership estimate, with no silence prerequisite or blanket advance."
+    },
+    {
+      "wordId": "KOM-013-s03",
+      "edge": "end",
+      "beforeSample": 5990985,
+      "selectedSample": 5984370,
+      "signalIntervalSeconds": [
+        135.65,
+        135.75
+      ],
+      "confidence": "medium-low",
+      "reason": "Original and estimated-vocal attenuation135.60–135.66 is followed by a changed quiet connected harmonic/body trajectory135.66–135.75, before the stronger vowel body135.78–135.85. The135.850 split omitted that quiet prefix. Source-focused perceptual review supports earlier ownership; cached phone paths variably assign this body to the preceding final vowel and place initial-character cores135.800–136.275 or later. These correlated path sensitivities cannot veto the earlier source-supported entrance. Select135.700 within135.650–135.750 as a connected ownership estimate, with no silence prerequisite or blanket advance. Prior-word ownership ends at this same explicitly authored handoff."
+    }
+  ],
+  "retainedOnsets": [],
+  "scope": "One targeted coupled handoff relative to v6. The previous132.305 correction remains intact; no change to cue-final release, line lifetime, source clock or visual treatment.",
+  "limits": [
+    "The135.650–135.750 range is plausible connected-vowel ownership, not an isolated audible gap or statistical error bound.",
+    "Original mix remains authority. Estimated vocals and cached model paths provide contextual support; context/spelling/source-stem variations do not count as independent model votes.",
+    "Current targeted perceptual feedback does not attest full normal/reduced-speed listening, both-format review or render authorization."
+  ]
+}

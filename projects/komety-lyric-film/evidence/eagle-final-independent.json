@@ -1,0 +1,1301 @@
+{
+  "baselineTimingSha256": "d7b9fd3e5d2bb7d8e25c6575e565194578e3aacbc7bc8061064930cfe7c666fb",
+  "sourceSha256": "af518bcde332f296dfc7982ebd7d8724c80c722decf5a32dfe3b00ef86107bf6",
+  "sourceSampleRate": 44100,
+  "wordId": "KOM-021-s04",
+  "text": "орёл",
+  "decision": "change",
+  "beforeSample": 8118369,
+  "beforeSeconds": 184.09,
+  "proposedSample": 8102714,
+  "proposedSeconds": 183.73501133786849,
+  "onsetOwnershipUncertaintySeconds": [
+    183.685,
+    183.805
+  ],
+  "confidence": "medium-low",
+  "onsetReason": "In the original mix and estimated vocal, the prior attenuated/narrowed region around 183.53–183.61 is followed by a lower connected vowel body. A further quiet changed harmonic/body trajectory develops around 183.69–183.80 before the stronger later sequence. Assign that latter quiet prefix to the reduced opening vowel of орёл, rather than leaving it entirely with the terminal unstressed vowel of словно. The current 184.090 point falls near later attenuation and the stronger r/e core sequence, after this opening has begun. Renewed perceptual feedback resolves the earlier plausible ownership in that direction, while the direct source trajectory supplies the bounded timing support. Select 183.735 within 183.685–183.805, explicitly pairing the preceding release to the same connected handoff. Adjacent reduced vowels do not provide a clean silence boundary; this remains an inference rather than listening certification or a sample-accurate phonetic measurement.",
+  "pairedPrecedingRelease": {
+    "wordId": "KOM-021-s03",
+    "beforeSample": 8118369,
+    "beforeSeconds": 184.09,
+    "proposedSample": 8102714,
+    "proposedSeconds": 183.73501133786849,
+    "ownershipUncertaintySeconds": [
+      183.685,
+      183.805
+    ]
+  },
+  "wordRelease": {
+    "decision": "retain",
+    "sample": 8236336,
+    "seconds": 186.76498866213151,
+    "existingAuditedUncertaintySeconds": [
+      186.64,
+      186.89
+    ],
+    "reason": "Retain the existing terminal-sonorant/held-body endpoint. This targeted onset review supplies no new release evidence."
+  },
+  "lineHoldDecision": "retain current per-cue legibility/hold plan; no passive-reverb extension of gold word focus",
+  "modelContextSensitivity": {
+    "records": [
+      {
+        "record": "eagle-revisit-path-sensitivity.json",
+        "input": "original mix",
+        "pathLabel": "orthographic baseline",
+        "words": [
+          {
+            "wordId": "KOM-021-s03",
+            "characters": [
+              {
+                "symbol": "s",
+                "start": 181.64798666666667,
+                "end": 181.66801333333333,
+                "score": 0.1404450386762619
+              },
+              {
+                "symbol": "l",
+                "start": 182.16868,
+                "end": 182.18870666666666,
+                "score": 0.02992893010377884
+              },
+              {
+                "symbol": "o",
+                "start": 183.3102,
+                "end": 183.33022666666668,
+                "score": 0.47522521018981934
+              },
+              {
+                "symbol": "v",
+                "start": 183.45038666666667,
+                "end": 183.47041333333334,
+                "score": 0.0024097792338579893
+              },
+              {
+                "symbol": "n",
+                "start": 183.59057333333334,
+                "end": 183.6106,
+                "score": 0.24575728178024292
+              },
+              {
+                "symbol": "o",
+                "start": 183.69070666666667,
+                "end": 183.71073333333334,
+                "score": 0.05100300908088684
+              }
+            ]
+          },
+          {
+            "wordId": "KOM-021-s04",
+            "characters": [
+              {
+                "symbol": "o",
+                "start": 184.27148,
+                "end": 184.29150666666666,
+                "score": 0.06399251520633698
+              },
+              {
+                "symbol": "r",
+                "start": 184.53182666666666,
+                "end": 184.55185333333333,
+                "score": 0.25534895062446594
+              },
+              {
+                "symbol": "e",
+                "start": 184.61193333333333,
+                "end": 184.63196,
+                "score": 0.029851408675312996
+              },
+              {
+                "symbol": "l",
+                "start": 185.97374666666667,
+                "end": 185.99377333333334,
+                "score": 0.09942770004272461
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "record": "eagle-revisit-path-sensitivity.json",
+        "input": "original mix",
+        "pathLabel": "acoustic reduced initial vowel",
+        "words": [
+          {
+            "wordId": "KOM-021-s03",
+            "characters": [
+              {
+                "symbol": "s",
+                "start": 183.08990666666668,
+                "end": 183.10993333333334,
+                "score": 0.39524853229522705
+              },
+              {
+                "symbol": "l",
+                "start": 183.59057333333334,
+                "end": 183.6106,
+                "score": 0.10970250517129898
+              },
+              {
+                "symbol": "o",
+                "start": 183.69070666666667,
+                "end": 183.71073333333334,
+                "score": 0.05100300908088684
+              },
+              {
+                "symbol": "v",
+                "start": 183.97108,
+                "end": 183.99110666666667,
+                "score": 0.016461830586194992
+              },
+              {
+                "symbol": "n",
+                "start": 184.53182666666666,
+                "end": 184.55185333333333,
+                "score": 0.07129859179258347
+              },
+              {
+                "symbol": "o",
+                "start": 184.61193333333333,
+                "end": 184.63196,
+                "score": 0.04873812943696976
+              }
+            ]
+          },
+          {
+            "wordId": "KOM-021-s04",
+            "characters": [
+              {
+                "symbol": "a",
+                "start": 185.13262666666668,
+                "end": 185.15265333333335,
+                "score": 0.44770416617393494
+              },
+              {
+                "symbol": "r",
+                "start": 185.97374666666667,
+                "end": 185.99377333333334,
+                "score": 0.07105416059494019
+              },
+              {
+                "symbol": "e",
+                "start": 186.05385333333334,
+                "end": 186.07388,
+                "score": 0.06084619089961052
+              },
+              {
+                "symbol": "l",
+                "start": 186.17401333333333,
+                "end": 186.19404,
+                "score": 0.05241714045405388
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "record": "eagle-revisit-path-sensitivity.json",
+        "input": "original mix",
+        "pathLabel": "acoustic reduced adjacent vowels",
+        "words": [
+          {
+            "wordId": "KOM-021-s03",
+            "characters": [
+              {
+                "symbol": "s",
+                "start": 183.08990666666668,
+                "end": 183.10993333333334,
+                "score": 0.39524853229522705
+              },
+              {
+                "symbol": "l",
+                "start": 183.59057333333334,
+                "end": 183.6106,
+                "score": 0.10970250517129898
+              },
+              {
+                "symbol": "o",
+                "start": 183.69070666666667,
+                "end": 183.71073333333334,
+                "score": 0.05100300908088684
+              },
+              {
+                "symbol": "v",
+                "start": 183.97108,
+                "end": 183.99110666666667,
+                "score": 0.016461830586194992
+              },
+              {
+                "symbol": "n",
+                "start": 184.53182666666666,
+                "end": 184.55185333333333,
+                "score": 0.07129859179258347
+              },
+              {
+                "symbol": "a",
+                "start": 184.61193333333333,
+                "end": 184.63196,
+                "score": 0.548478901386261
+              }
+            ]
+          },
+          {
+            "wordId": "KOM-021-s04",
+            "characters": [
+              {
+                "symbol": "a",
+                "start": 185.13262666666668,
+                "end": 185.15265333333335,
+                "score": 0.44770416617393494
+              },
+              {
+                "symbol": "r",
+                "start": 185.97374666666667,
+                "end": 185.99377333333334,
+                "score": 0.07105416059494019
+              },
+              {
+                "symbol": "e",
+                "start": 186.05385333333334,
+                "end": 186.07388,
+                "score": 0.06084619089961052
+              },
+              {
+                "symbol": "l",
+                "start": 186.17401333333333,
+                "end": 186.19404,
+                "score": 0.05241714045405388
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "record": "eagle-revisit-path-sensitivity.json",
+        "input": "original mix",
+        "pathLabel": "acoustic reduced prior terminal vowel",
+        "words": [
+          {
+            "wordId": "KOM-021-s03",
+            "characters": [
+              {
+                "symbol": "s",
+                "start": 181.64798666666667,
+                "end": 181.66801333333333,
+                "score": 0.1404450386762619
+              },
+              {
+                "symbol": "l",
+                "start": 182.16868,
+                "end": 182.18870666666666,
+                "score": 0.02992893010377884
+              },
+              {
+                "symbol": "o",
+                "start": 183.3102,
+                "end": 183.33022666666668,
+                "score": 0.47522521018981934
+              },
+              {
+                "symbol": "v",
+                "start": 183.45038666666667,
+                "end": 183.47041333333334,
+                "score": 0.0024097792338579893
+              },
+              {
+                "symbol": "n",
+                "start": 183.59057333333334,
+                "end": 183.6106,
+                "score": 0.24575728178024292
+              },
+              {
+                "symbol": "a",
+                "start": 183.69070666666667,
+                "end": 183.71073333333334,
+                "score": 0.7262486815452576
+              }
+            ]
+          },
+          {
+            "wordId": "KOM-021-s04",
+            "characters": [
+              {
+                "symbol": "o",
+                "start": 184.27148,
+                "end": 184.29150666666666,
+                "score": 0.06399251520633698
+              },
+              {
+                "symbol": "r",
+                "start": 184.53182666666666,
+                "end": 184.55185333333333,
+                "score": 0.25534895062446594
+              },
+              {
+                "symbol": "e",
+                "start": 184.61193333333333,
+                "end": 184.63196,
+                "score": 0.029851408675312996
+              },
+              {
+                "symbol": "l",
+                "start": 185.97374666666667,
+                "end": 185.99377333333334,
+                "score": 0.09942770004272461
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "record": "eagle-revisit-path-sensitivity.json",
+        "input": "estimated vocal",
+        "pathLabel": "orthographic baseline",
+        "words": [
+          {
+            "wordId": "KOM-021-s03",
+            "characters": [
+              {
+                "symbol": "s",
+                "start": 183.10993333333334,
+                "end": 183.12996,
+                "score": 0.7223686575889587
+              },
+              {
+                "symbol": "l",
+                "start": 183.21006666666668,
+                "end": 183.23009333333334,
+                "score": 0.0002901991247199476
+              },
+              {
+                "symbol": "o",
+                "start": 183.27014666666668,
+                "end": 183.29017333333334,
+                "score": 0.8273504376411438
+              },
+              {
+                "symbol": "v",
+                "start": 183.43036,
+                "end": 183.45038666666667,
+                "score": 0.0005584555910900235
+              },
+              {
+                "symbol": "n",
+                "start": 183.57054666666667,
+                "end": 183.59057333333334,
+                "score": 0.13642987608909607
+              },
+              {
+                "symbol": "o",
+                "start": 183.73076,
+                "end": 183.75078666666667,
+                "score": 0.07282096147537231
+              }
+            ]
+          },
+          {
+            "wordId": "KOM-021-s04",
+            "characters": [
+              {
+                "symbol": "o",
+                "start": 183.95105333333333,
+                "end": 183.97108,
+                "score": 0.002151546999812126
+              },
+              {
+                "symbol": "r",
+                "start": 184.11126666666667,
+                "end": 184.13129333333333,
+                "score": 0.01036171242594719
+              },
+              {
+                "symbol": "e",
+                "start": 184.19137333333333,
+                "end": 184.2114,
+                "score": 0.06061388924717903
+              },
+              {
+                "symbol": "l",
+                "start": 185.91366666666667,
+                "end": 185.93369333333334,
+                "score": 0.001503279316239059
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "record": "eagle-revisit-path-sensitivity.json",
+        "input": "estimated vocal",
+        "pathLabel": "acoustic reduced initial vowel",
+        "words": [
+          {
+            "wordId": "KOM-021-s03",
+            "characters": [
+              {
+                "symbol": "s",
+                "start": 183.10993333333334,
+                "end": 183.12996,
+                "score": 0.7223686575889587
+              },
+              {
+                "symbol": "l",
+                "start": 183.21006666666668,
+                "end": 183.23009333333334,
+                "score": 0.0002901991247199476
+              },
+              {
+                "symbol": "o",
+                "start": 183.27014666666668,
+                "end": 183.29017333333334,
+                "score": 0.8273504376411438
+              },
+              {
+                "symbol": "v",
+                "start": 183.43036,
+                "end": 183.45038666666667,
+                "score": 0.0005584555910900235
+              },
+              {
+                "symbol": "n",
+                "start": 183.57054666666667,
+                "end": 183.59057333333334,
+                "score": 0.13642987608909607
+              },
+              {
+                "symbol": "o",
+                "start": 183.6106,
+                "end": 183.63062666666667,
+                "score": 0.001344677060842514
+              }
+            ]
+          },
+          {
+            "wordId": "KOM-021-s04",
+            "characters": [
+              {
+                "symbol": "a",
+                "start": 183.73076,
+                "end": 183.75078666666667,
+                "score": 0.8023723363876343
+              },
+              {
+                "symbol": "r",
+                "start": 184.11126666666667,
+                "end": 184.13129333333333,
+                "score": 0.01036171242594719
+              },
+              {
+                "symbol": "e",
+                "start": 184.19137333333333,
+                "end": 184.2114,
+                "score": 0.06061388924717903
+              },
+              {
+                "symbol": "l",
+                "start": 185.91366666666667,
+                "end": 185.93369333333334,
+                "score": 0.001503279316239059
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "record": "eagle-revisit-path-sensitivity.json",
+        "input": "estimated vocal",
+        "pathLabel": "acoustic reduced adjacent vowels",
+        "words": [
+          {
+            "wordId": "KOM-021-s03",
+            "characters": [
+              {
+                "symbol": "s",
+                "start": 183.10993333333334,
+                "end": 183.12996,
+                "score": 0.7223686575889587
+              },
+              {
+                "symbol": "l",
+                "start": 183.21006666666668,
+                "end": 183.23009333333334,
+                "score": 0.0002901991247199476
+              },
+              {
+                "symbol": "o",
+                "start": 183.27014666666668,
+                "end": 183.29017333333334,
+                "score": 0.8273504376411438
+              },
+              {
+                "symbol": "v",
+                "start": 183.43036,
+                "end": 183.45038666666667,
+                "score": 0.0005584555910900235
+              },
+              {
+                "symbol": "n",
+                "start": 183.57054666666667,
+                "end": 183.59057333333334,
+                "score": 0.13642987608909607
+              },
+              {
+                "symbol": "a",
+                "start": 183.73076,
+                "end": 183.75078666666667,
+                "score": 0.8023723363876343
+              }
+            ]
+          },
+          {
+            "wordId": "KOM-021-s04",
+            "characters": [
+              {
+                "symbol": "a",
+                "start": 183.95105333333333,
+                "end": 183.97108,
+                "score": 0.012178566306829453
+              },
+              {
+                "symbol": "r",
+                "start": 184.11126666666667,
+                "end": 184.13129333333333,
+                "score": 0.01036171242594719
+              },
+              {
+                "symbol": "e",
+                "start": 184.19137333333333,
+                "end": 184.2114,
+                "score": 0.06061388924717903
+              },
+              {
+                "symbol": "l",
+                "start": 185.91366666666667,
+                "end": 185.93369333333334,
+                "score": 0.001503279316239059
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "record": "eagle-revisit-path-sensitivity.json",
+        "input": "estimated vocal",
+        "pathLabel": "acoustic reduced prior terminal vowel",
+        "words": [
+          {
+            "wordId": "KOM-021-s03",
+            "characters": [
+              {
+                "symbol": "s",
+                "start": 183.10993333333334,
+                "end": 183.12996,
+                "score": 0.7223686575889587
+              },
+              {
+                "symbol": "l",
+                "start": 183.21006666666668,
+                "end": 183.23009333333334,
+                "score": 0.0002901991247199476
+              },
+              {
+                "symbol": "o",
+                "start": 183.27014666666668,
+                "end": 183.29017333333334,
+                "score": 0.8273504376411438
+              },
+              {
+                "symbol": "v",
+                "start": 183.43036,
+                "end": 183.45038666666667,
+                "score": 0.0005584555910900235
+              },
+              {
+                "symbol": "n",
+                "start": 183.57054666666667,
+                "end": 183.59057333333334,
+                "score": 0.13642987608909607
+              },
+              {
+                "symbol": "a",
+                "start": 183.73076,
+                "end": 183.75078666666667,
+                "score": 0.8023723363876343
+              }
+            ]
+          },
+          {
+            "wordId": "KOM-021-s04",
+            "characters": [
+              {
+                "symbol": "o",
+                "start": 183.95105333333333,
+                "end": 183.97108,
+                "score": 0.002151546999812126
+              },
+              {
+                "symbol": "r",
+                "start": 184.11126666666667,
+                "end": 184.13129333333333,
+                "score": 0.01036171242594719
+              },
+              {
+                "symbol": "e",
+                "start": 184.19137333333333,
+                "end": 184.2114,
+                "score": 0.06061388924717903
+              },
+              {
+                "symbol": "l",
+                "start": 185.91366666666667,
+                "end": 185.93369333333334,
+                "score": 0.001503279316239059
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "record": "eagle-revisit-restricted-path-sensitivity.json",
+        "input": "original mix",
+        "pathLabel": "orthographic baseline",
+        "words": [
+          {
+            "wordId": "KOM-021-s03",
+            "characters": [
+              {
+                "symbol": "s",
+                "start": 183.12075757575758,
+                "end": 183.14080808080809,
+                "score": 0.3981349468231201
+              },
+              {
+                "symbol": "l",
+                "start": 183.24106060606059,
+                "end": 183.2611111111111,
+                "score": 0.002225171774625778
+              },
+              {
+                "symbol": "o",
+                "start": 183.3212626262626,
+                "end": 183.34131313131311,
+                "score": 0.37536004185676575
+              },
+              {
+                "symbol": "v",
+                "start": 183.44156565656564,
+                "end": 183.46161616161615,
+                "score": 0.0027497783303260803
+              },
+              {
+                "symbol": "n",
+                "start": 183.6019696969697,
+                "end": 183.6220202020202,
+                "score": 0.20175743103027344
+              },
+              {
+                "symbol": "o",
+                "start": 183.70222222222222,
+                "end": 183.72227272727272,
+                "score": 0.05123012885451317
+              }
+            ]
+          },
+          {
+            "wordId": "KOM-021-s04",
+            "characters": [
+              {
+                "symbol": "o",
+                "start": 184.4039898989899,
+                "end": 184.4240404040404,
+                "score": 0.11527642607688904
+              },
+              {
+                "symbol": "r",
+                "start": 184.52429292929293,
+                "end": 184.54434343434343,
+                "score": 0.3703089952468872
+              },
+              {
+                "symbol": "e",
+                "start": 184.60449494949495,
+                "end": 184.62454545454545,
+                "score": 0.024291832000017166
+              },
+              {
+                "symbol": "l",
+                "start": 185.94787878787878,
+                "end": 185.96792929292928,
+                "score": 0.05134793743491173
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "record": "eagle-revisit-restricted-path-sensitivity.json",
+        "input": "original mix",
+        "pathLabel": "acoustic reduced initial vowel",
+        "words": [
+          {
+            "wordId": "KOM-021-s03",
+            "characters": [
+              {
+                "symbol": "s",
+                "start": 183.12075757575758,
+                "end": 183.14080808080809,
+                "score": 0.3981349468231201
+              },
+              {
+                "symbol": "l",
+                "start": 183.6019696969697,
+                "end": 183.6220202020202,
+                "score": 0.07456570863723755
+              },
+              {
+                "symbol": "o",
+                "start": 183.70222222222222,
+                "end": 183.72227272727272,
+                "score": 0.05123012885451317
+              },
+              {
+                "symbol": "v",
+                "start": 184.24358585858585,
+                "end": 184.26363636363635,
+                "score": 0.01216677762567997
+              },
+              {
+                "symbol": "n",
+                "start": 184.52429292929293,
+                "end": 184.54434343434343,
+                "score": 0.07714991271495819
+              },
+              {
+                "symbol": "o",
+                "start": 184.60449494949495,
+                "end": 184.62454545454545,
+                "score": 0.08190307766199112
+              }
+            ]
+          },
+          {
+            "wordId": "KOM-021-s04",
+            "characters": [
+              {
+                "symbol": "a",
+                "start": 185.14585858585858,
+                "end": 185.16590909090908,
+                "score": 0.49700838327407837
+              },
+              {
+                "symbol": "r",
+                "start": 185.94787878787878,
+                "end": 185.96792929292928,
+                "score": 0.0971246212720871
+              },
+              {
+                "symbol": "e",
+                "start": 186.0681818181818,
+                "end": 186.08823232323232,
+                "score": 0.04072123020887375
+              },
+              {
+                "symbol": "l",
+                "start": 186.18848484848485,
+                "end": 186.20853535353535,
+                "score": 0.01018301397562027
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "record": "eagle-revisit-restricted-path-sensitivity.json",
+        "input": "original mix",
+        "pathLabel": "acoustic reduced adjacent vowels",
+        "words": [
+          {
+            "wordId": "KOM-021-s03",
+            "characters": [
+              {
+                "symbol": "s",
+                "start": 183.12075757575758,
+                "end": 183.14080808080809,
+                "score": 0.3981349468231201
+              },
+              {
+                "symbol": "l",
+                "start": 183.24106060606059,
+                "end": 183.2611111111111,
+                "score": 0.002225171774625778
+              },
+              {
+                "symbol": "o",
+                "start": 183.3212626262626,
+                "end": 183.34131313131311,
+                "score": 0.37536004185676575
+              },
+              {
+                "symbol": "v",
+                "start": 183.44156565656564,
+                "end": 183.46161616161615,
+                "score": 0.0027497783303260803
+              },
+              {
+                "symbol": "n",
+                "start": 183.6019696969697,
+                "end": 183.6220202020202,
+                "score": 0.20175743103027344
+              },
+              {
+                "symbol": "a",
+                "start": 183.70222222222222,
+                "end": 183.72227272727272,
+                "score": 0.7377175092697144
+              }
+            ]
+          },
+          {
+            "wordId": "KOM-021-s04",
+            "characters": [
+              {
+                "symbol": "a",
+                "start": 184.4039898989899,
+                "end": 184.4240404040404,
+                "score": 0.40676823258399963
+              },
+              {
+                "symbol": "r",
+                "start": 184.52429292929293,
+                "end": 184.54434343434343,
+                "score": 0.3703089952468872
+              },
+              {
+                "symbol": "e",
+                "start": 184.60449494949495,
+                "end": 184.62454545454545,
+                "score": 0.024291832000017166
+              },
+              {
+                "symbol": "l",
+                "start": 185.94787878787878,
+                "end": 185.96792929292928,
+                "score": 0.05134793743491173
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "record": "eagle-revisit-restricted-path-sensitivity.json",
+        "input": "original mix",
+        "pathLabel": "acoustic reduced prior terminal vowel",
+        "words": [
+          {
+            "wordId": "KOM-021-s03",
+            "characters": [
+              {
+                "symbol": "s",
+                "start": 183.12075757575758,
+                "end": 183.14080808080809,
+                "score": 0.3981349468231201
+              },
+              {
+                "symbol": "l",
+                "start": 183.24106060606059,
+                "end": 183.2611111111111,
+                "score": 0.002225171774625778
+              },
+              {
+                "symbol": "o",
+                "start": 183.3212626262626,
+                "end": 183.34131313131311,
+                "score": 0.37536004185676575
+              },
+              {
+                "symbol": "v",
+                "start": 183.44156565656564,
+                "end": 183.46161616161615,
+                "score": 0.0027497783303260803
+              },
+              {
+                "symbol": "n",
+                "start": 183.6019696969697,
+                "end": 183.6220202020202,
+                "score": 0.20175743103027344
+              },
+              {
+                "symbol": "a",
+                "start": 183.70222222222222,
+                "end": 183.72227272727272,
+                "score": 0.7377175092697144
+              }
+            ]
+          },
+          {
+            "wordId": "KOM-021-s04",
+            "characters": [
+              {
+                "symbol": "o",
+                "start": 184.4039898989899,
+                "end": 184.4240404040404,
+                "score": 0.11527642607688904
+              },
+              {
+                "symbol": "r",
+                "start": 184.52429292929293,
+                "end": 184.54434343434343,
+                "score": 0.3703089952468872
+              },
+              {
+                "symbol": "e",
+                "start": 184.60449494949495,
+                "end": 184.62454545454545,
+                "score": 0.024291832000017166
+              },
+              {
+                "symbol": "l",
+                "start": 185.94787878787878,
+                "end": 185.96792929292928,
+                "score": 0.05134793743491173
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "record": "eagle-revisit-restricted-path-sensitivity.json",
+        "input": "estimated vocal",
+        "pathLabel": "orthographic baseline",
+        "words": [
+          {
+            "wordId": "KOM-021-s03",
+            "characters": [
+              {
+                "symbol": "s",
+                "start": 183.12075757575758,
+                "end": 183.14080808080809,
+                "score": 0.7433981895446777
+              },
+              {
+                "symbol": "l",
+                "start": 183.24106060606059,
+                "end": 183.2611111111111,
+                "score": 0.0015841585118323565
+              },
+              {
+                "symbol": "o",
+                "start": 183.2811616161616,
+                "end": 183.3012121212121,
+                "score": 0.5975134968757629
+              },
+              {
+                "symbol": "v",
+                "start": 183.44156565656564,
+                "end": 183.46161616161615,
+                "score": 0.0015554935671389103
+              },
+              {
+                "symbol": "n",
+                "start": 183.58191919191918,
+                "end": 183.6019696969697,
+                "score": 0.0652824193239212
+              },
+              {
+                "symbol": "o",
+                "start": 183.72227272727272,
+                "end": 183.74232323232323,
+                "score": 0.0863867700099945
+              }
+            ]
+          },
+          {
+            "wordId": "KOM-021-s04",
+            "characters": [
+              {
+                "symbol": "o",
+                "start": 184.1032323232323,
+                "end": 184.1232828282828,
+                "score": 0.00926255714148283
+              },
+              {
+                "symbol": "r",
+                "start": 184.20348484848483,
+                "end": 184.22353535353534,
+                "score": 0.5456336736679077
+              },
+              {
+                "symbol": "e",
+                "start": 184.32378787878787,
+                "end": 184.34383838383837,
+                "score": 0.05782066658139229
+              },
+              {
+                "symbol": "l",
+                "start": 185.90777777777777,
+                "end": 185.92782828282827,
+                "score": 0.005074029788374901
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "record": "eagle-revisit-restricted-path-sensitivity.json",
+        "input": "estimated vocal",
+        "pathLabel": "acoustic reduced initial vowel",
+        "words": [
+          {
+            "wordId": "KOM-021-s03",
+            "characters": [
+              {
+                "symbol": "s",
+                "start": 183.12075757575758,
+                "end": 183.14080808080809,
+                "score": 0.7433981895446777
+              },
+              {
+                "symbol": "l",
+                "start": 183.24106060606059,
+                "end": 183.2611111111111,
+                "score": 0.0015841585118323565
+              },
+              {
+                "symbol": "o",
+                "start": 183.2811616161616,
+                "end": 183.3012121212121,
+                "score": 0.5975134968757629
+              },
+              {
+                "symbol": "v",
+                "start": 183.44156565656564,
+                "end": 183.46161616161615,
+                "score": 0.0015554935671389103
+              },
+              {
+                "symbol": "n",
+                "start": 183.58191919191918,
+                "end": 183.6019696969697,
+                "score": 0.0652824193239212
+              },
+              {
+                "symbol": "o",
+                "start": 183.72227272727272,
+                "end": 183.74232323232323,
+                "score": 0.0863867700099945
+              }
+            ]
+          },
+          {
+            "wordId": "KOM-021-s04",
+            "characters": [
+              {
+                "symbol": "a",
+                "start": 184.1032323232323,
+                "end": 184.1232828282828,
+                "score": 0.023904219269752502
+              },
+              {
+                "symbol": "r",
+                "start": 184.20348484848483,
+                "end": 184.22353535353534,
+                "score": 0.5456336736679077
+              },
+              {
+                "symbol": "e",
+                "start": 184.32378787878787,
+                "end": 184.34383838383837,
+                "score": 0.05782066658139229
+              },
+              {
+                "symbol": "l",
+                "start": 185.90777777777777,
+                "end": 185.92782828282827,
+                "score": 0.005074029788374901
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "record": "eagle-revisit-restricted-path-sensitivity.json",
+        "input": "estimated vocal",
+        "pathLabel": "acoustic reduced adjacent vowels",
+        "words": [
+          {
+            "wordId": "KOM-021-s03",
+            "characters": [
+              {
+                "symbol": "s",
+                "start": 183.12075757575758,
+                "end": 183.14080808080809,
+                "score": 0.7433981895446777
+              },
+              {
+                "symbol": "l",
+                "start": 183.24106060606059,
+                "end": 183.2611111111111,
+                "score": 0.0015841585118323565
+              },
+              {
+                "symbol": "o",
+                "start": 183.2811616161616,
+                "end": 183.3012121212121,
+                "score": 0.5975134968757629
+              },
+              {
+                "symbol": "v",
+                "start": 183.44156565656564,
+                "end": 183.46161616161615,
+                "score": 0.0015554935671389103
+              },
+              {
+                "symbol": "n",
+                "start": 183.58191919191918,
+                "end": 183.6019696969697,
+                "score": 0.0652824193239212
+              },
+              {
+                "symbol": "a",
+                "start": 183.72227272727272,
+                "end": 183.74232323232323,
+                "score": 0.749000072479248
+              }
+            ]
+          },
+          {
+            "wordId": "KOM-021-s04",
+            "characters": [
+              {
+                "symbol": "a",
+                "start": 184.1032323232323,
+                "end": 184.1232828282828,
+                "score": 0.023904219269752502
+              },
+              {
+                "symbol": "r",
+                "start": 184.20348484848483,
+                "end": 184.22353535353534,
+                "score": 0.5456336736679077
+              },
+              {
+                "symbol": "e",
+                "start": 184.32378787878787,
+                "end": 184.34383838383837,
+                "score": 0.05782066658139229
+              },
+              {
+                "symbol": "l",
+                "start": 185.90777777777777,
+                "end": 185.92782828282827,
+                "score": 0.005074029788374901
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "record": "eagle-revisit-restricted-path-sensitivity.json",
+        "input": "estimated vocal",
+        "pathLabel": "acoustic reduced prior terminal vowel",
+        "words": [
+          {
+            "wordId": "KOM-021-s03",
+            "characters": [
+              {
+                "symbol": "s",
+                "start": 183.12075757575758,
+                "end": 183.14080808080809,
+                "score": 0.7433981895446777
+              },
+              {
+                "symbol": "l",
+                "start": 183.24106060606059,
+                "end": 183.2611111111111,
+                "score": 0.0015841585118323565
+              },
+              {
+                "symbol": "o",
+                "start": 183.2811616161616,
+                "end": 183.3012121212121,
+                "score": 0.5975134968757629
+              },
+              {
+                "symbol": "v",
+                "start": 183.44156565656564,
+                "end": 183.46161616161615,
+                "score": 0.0015554935671389103
+              },
+              {
+                "symbol": "n",
+                "start": 183.58191919191918,
+                "end": 183.6019696969697,
+                "score": 0.0652824193239212
+              },
+              {
+                "symbol": "a",
+                "start": 183.72227272727272,
+                "end": 183.74232323232323,
+                "score": 0.749000072479248
+              }
+            ]
+          },
+          {
+            "wordId": "KOM-021-s04",
+            "characters": [
+              {
+                "symbol": "o",
+                "start": 184.1032323232323,
+                "end": 184.1232828282828,
+                "score": 0.00926255714148283
+              },
+              {
+                "symbol": "r",
+                "start": 184.20348484848483,
+                "end": 184.22353535353534,
+                "score": 0.5456336736679077
+              },
+              {
+                "symbol": "e",
+                "start": 184.32378787878787,
+                "end": 184.34383838383837,
+                "score": 0.05782066658139229
+              },
+              {
+                "symbol": "l",
+                "start": 185.90777777777777,
+                "end": 185.92782828282827,
+                "score": 0.005074029788374901
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "explanation": "Whole-stem reduced-initial path assigns prior n 183.571/final-o 183.611, then a 183.731/r 184.111/e 184.191. Ordinary whole-stem paths assign the quiet body to prior final-o 183.731 and begin the next vowel core at 183.951; restricted paths similarly retain prior final-o 183.722 and begin the next core at 184.103. Those changing allocations do not exclude an earlier quiet initial vowel. Original paths that steal or delay the preceding syllables and land the next initial core at 184.404/185.146 are rejected as lexical timing authority. These are context/spelling variants of one MMS family, not independent votes."
+  },
+  "rejectedBoundaryInterpretations": [
+    {
+      "seconds": 183.6,
+      "reason": "This region can still contain the preceding nasal and terminal-vowel renewal; it is too early to assert new-word ownership from the first lower-body change alone."
+    },
+    {
+      "seconds": 184.09,
+      "reason": "The current point is near the later attenuation/core sequence and omits the quieter changed prefix around 183.69–183.80."
+    },
+    {
+      "seconds": 184.404,
+      "reason": "Original restricted sparse vowel core is delayed into the stronger body; competing paths redistribute prior syllables and cannot certify a leading edge."
+    }
+  ],
+  "humanListeningAttested": false,
+  "mutatesSourceTiming": false,
+  "uncertaintyMeaning": "Qualitative plausible phonetic-ownership interval, not a statistical confidence interval or a millisecond-accuracy claim. Exact sample encoding records the reviewed point only.",
+  "limits": "Original mix is authority. Estimated vocals may smear edges or retain accompaniment; zero clock shift does not certify phone timing. 2048-sample Hann centers use ±23.22 ms of samples; 512-sample centers use ±5.80 ms. High-pitched ridges are harmonics, not automatic F1/F2 estimates.",
+  "evidence": [
+    "eagle-final-independent-original-stem.jpg",
+    "eagle-entry-panels/KOM-021-s04-eagle-v5-original.png",
+    "eagle-phone-path-review.json",
+    "preview-inputs-v8.json"
+  ]
+}

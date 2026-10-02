@@ -1,0 +1,3868 @@
+{
+  "schemaVersion": 1,
+  "revision": "komety-preview-v10-first-final-eagle",
+  "sampleRate": 44100,
+  "sourceSha256": "af518bcde332f296dfc7982ebd7d8724c80c722decf5a32dfe3b00ef86107bf6",
+  "sourceDuration": 260.0867120181406,
+  "cues": [
+    {
+      "id": "KOM-001",
+      "templateId": "v1-opening",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Тот, кто погас, будет ярче светить, чем кометы",
+      "targetText": "The one who went dark will shine brighter than comets",
+      "start": 6.900907029478458,
+      "end": 15.21501133786848,
+      "visibleStart": 6.680907029478458,
+      "fullOpacityEnd": 15.541360544217687,
+      "visibleEnd": 15.541360544217687,
+      "exitMode": "vocal-handoff",
+      "words": [
+        {
+          "id": "KOM-001:v1-opening-s01",
+          "text": "Тот,",
+          "sourceIndex": 0,
+          "startSample": 304330,
+          "endSample": 335271,
+          "confidence": "medium",
+          "method": "MMS_FA consonant/core onset; bounded Whisper/MMS lexical release comparison"
+        },
+        {
+          "id": "KOM-001:v1-opening-s02",
+          "text": "кто",
+          "sourceIndex": 1,
+          "startSample": 335271,
+          "endSample": 363164,
+          "confidence": "medium",
+          "method": "MMS_FA consonant/core onset; bounded Whisper/MMS lexical release comparison"
+        },
+        {
+          "id": "KOM-001:v1-opening-s03",
+          "text": "погас,",
+          "sourceIndex": 2,
+          "startSample": 365327,
+          "endSample": 420934,
+          "confidence": "medium",
+          "method": "MMS_FA consonant/core onset; bounded Whisper/MMS lexical release comparison"
+        },
+        {
+          "id": "KOM-001:v1-opening-s04",
+          "text": "будет",
+          "sourceIndex": 3,
+          "startSample": 423801,
+          "endSample": 459032,
+          "confidence": "medium",
+          "method": "Individually reviewed original waveform/spectral first-phonetic edge; zero-lag stem support"
+        },
+        {
+          "id": "KOM-001:v1-opening-s05",
+          "text": "ярче",
+          "sourceIndex": 4,
+          "startSample": 461286,
+          "endSample": 529641,
+          "confidence": "medium",
+          "method": "Individually reviewed original waveform/spectral first-phonetic edge; zero-lag stem support"
+        },
+        {
+          "id": "KOM-001:v1-opening-s06",
+          "text": "светить,",
+          "sourceIndex": 5,
+          "startSample": 532066,
+          "endSample": 595350,
+          "confidence": "medium",
+          "method": "Individually reviewed original waveform/spectral first-phonetic edge; zero-lag stem support"
+        },
+        {
+          "id": "KOM-001:v1-opening-s07",
+          "text": "чем",
+          "sourceIndex": 6,
+          "startSample": 598216,
+          "endSample": 622251,
+          "confidence": "medium",
+          "method": "Individually reviewed original waveform/spectral first-phonetic edge; zero-lag stem support"
+        },
+        {
+          "id": "KOM-001:v1-opening-s08",
+          "text": "кометы",
+          "sourceIndex": 7,
+          "startSample": 626000,
+          "endSample": 670982,
+          "confidence": "medium",
+          "method": "Individually reviewed original waveform/spectral first-phonetic edge; zero-lag stem support"
+        }
+      ],
+      "targets": [
+        {
+          "index": 0,
+          "id": "KOM-001:v1-opening-t01",
+          "text": "The",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "grammar-completion",
+          "rationale": "The article completes the substantive pronoun Тот, together with one."
+        },
+        {
+          "index": 1,
+          "id": "KOM-001:v1-opening-t02",
+          "text": "one",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "grammar-completion",
+          "rationale": "The one is the complete substantive-pronoun equivalent of Тот."
+        },
+        {
+          "index": 2,
+          "id": "KOM-001:v1-opening-t03",
+          "text": "who",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 3,
+          "id": "KOM-001:v1-opening-t04",
+          "text": "went",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "grammar-completion",
+          "rationale": "Went dark is the complete intransitive verb equivalent of погас; no object is supplied."
+        },
+        {
+          "index": 4,
+          "id": "KOM-001:v1-opening-t05",
+          "text": "dark",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "grammar-completion",
+          "rationale": "Went dark is the complete intransitive verb equivalent of погас; no object is supplied."
+        },
+        {
+          "index": 5,
+          "id": "KOM-001:v1-opening-t06",
+          "text": "will",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 6,
+          "id": "KOM-001:v1-opening-t07",
+          "text": "shine",
+          "sourceIndices": [
+            5
+          ],
+          "focusSourceIndices": [
+            5
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 7,
+          "id": "KOM-001:v1-opening-t08",
+          "text": "brighter",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 8,
+          "id": "KOM-001:v1-opening-t09",
+          "text": "than",
+          "sourceIndices": [
+            6
+          ],
+          "focusSourceIndices": [
+            6
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 9,
+          "id": "KOM-001:v1-opening-t10",
+          "text": "comets",
+          "sourceIndices": [
+            7
+          ],
+          "focusSourceIndices": [
+            7
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "KOM-002",
+      "templateId": "v1-comets",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Пролетающие над планетой",
+      "targetText": "Passing over the planet",
+      "start": 15.541360544217687,
+      "end": 19.316462585034014,
+      "visibleStart": 15.541360544217687,
+      "fullOpacityEnd": 21.32498866213152,
+      "visibleEnd": 21.32498866213152,
+      "exitMode": "vocal-handoff",
+      "words": [
+        {
+          "id": "KOM-002:v1-comets-s01",
+          "text": "Пролетающие",
+          "sourceIndex": 0,
+          "startSample": 685374,
+          "endSample": 753448,
+          "confidence": "medium",
+          "method": "MMS_FA consonant/core onset; bounded Whisper/MMS lexical release comparison"
+        },
+        {
+          "id": "KOM-002:v1-comets-s02",
+          "text": "над",
+          "sourceIndex": 1,
+          "startSample": 753669,
+          "endSample": 770868,
+          "confidence": "medium",
+          "method": "Original-mix connected phonetic ownership; estimated-vocal and independent-family model comparison"
+        },
+        {
+          "id": "KOM-002:v1-comets-s03",
+          "text": "планетой",
+          "sourceIndex": 2,
+          "startSample": 773043,
+          "endSample": 851856,
+          "confidence": "medium",
+          "method": "MMS_FA consonant/core onset; bounded Whisper/MMS lexical release comparison"
+        }
+      ],
+      "targets": [
+        {
+          "index": 0,
+          "id": "KOM-002:v1-comets-t01",
+          "text": "Passing",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 1,
+          "id": "KOM-002:v1-comets-t02",
+          "text": "over",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 2,
+          "id": "KOM-002:v1-comets-t03",
+          "text": "the",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "grammar-completion",
+          "rationale": "The article is necessary English grammar with planet and shares the noun event."
+        },
+        {
+          "index": 3,
+          "id": "KOM-002:v1-comets-t04",
+          "text": "planet",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "KOM-003",
+      "templateId": "v1-bird",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Из пустоты без твоей красоты не родится Юности вольная птица",
+      "targetText": "From the void, without your beauty, youth's free bird will not be born.",
+      "start": 21.32498866213152,
+      "end": 33.24498866213152,
+      "visibleStart": 21.32498866213152,
+      "fullOpacityEnd": 34.6,
+      "visibleEnd": 35.1,
+      "exitMode": "fade",
+      "words": [
+        {
+          "id": "KOM-003:v1-bird-s01",
+          "text": "Из",
+          "sourceIndex": 0,
+          "startSample": 940432,
+          "endSample": 974610,
+          "confidence": "low",
+          "method": "Individually reviewed original waveform/spectral first-phonetic edge; zero-lag stem support"
+        },
+        {
+          "id": "KOM-003:v1-bird-s02",
+          "text": "пустоты",
+          "sourceIndex": 1,
+          "startSample": 977347,
+          "endSample": 1032822,
+          "confidence": "medium",
+          "method": "MMS_FA consonant/core onset; bounded Whisper/MMS lexical release comparison"
+        },
+        {
+          "id": "KOM-003:v1-bird-s03",
+          "text": "без",
+          "sourceIndex": 2,
+          "startSample": 1055081,
+          "endSample": 1075378,
+          "confidence": "low",
+          "method": "MMS_FA consonant/core onset; bounded Whisper/MMS lexical release comparison"
+        },
+        {
+          "id": "KOM-003:v1-bird-s04",
+          "text": "твоей",
+          "sourceIndex": 3,
+          "startSample": 1076281,
+          "endSample": 1120140,
+          "confidence": "medium",
+          "method": "MMS_FA consonant/core onset; bounded Whisper/MMS lexical release comparison"
+        },
+        {
+          "id": "KOM-003:v1-bird-s05",
+          "text": "красоты",
+          "sourceIndex": 4,
+          "startSample": 1126631,
+          "endSample": 1187392,
+          "confidence": "medium",
+          "method": "MMS_FA consonant/core onset; bounded Whisper/MMS lexical release comparison"
+        },
+        {
+          "id": "KOM-003:v1-bird-s06",
+          "text": "не",
+          "sourceIndex": 5,
+          "startSample": 1189377,
+          "endSample": 1230170,
+          "confidence": "low",
+          "method": "Original-mix connected phonetic ownership; estimated-vocal and independent-family model comparison"
+        },
+        {
+          "id": "KOM-003:v1-bird-s07",
+          "text": "родится",
+          "sourceIndex": 6,
+          "startSample": 1231492,
+          "endSample": 1285294,
+          "confidence": "medium",
+          "method": "Original-mix connected phonetic ownership; estimated-vocal and independent-family model comparison"
+        },
+        {
+          "id": "KOM-003:v1-bird-s08",
+          "text": "Юности",
+          "sourceIndex": 7,
+          "startSample": 1310432,
+          "endSample": 1352768,
+          "confidence": "low",
+          "method": "Individually reviewed original waveform/spectral first-phonetic edge; zero-lag stem support"
+        },
+        {
+          "id": "KOM-003:v1-bird-s09",
+          "text": "вольная",
+          "sourceIndex": 8,
+          "startSample": 1353649,
+          "endSample": 1386333,
+          "confidence": "medium",
+          "method": "MMS_FA consonant/core onset; bounded Whisper/MMS lexical release comparison"
+        },
+        {
+          "id": "KOM-003:v1-bird-s10",
+          "text": "птица",
+          "sourceIndex": 9,
+          "startSample": 1388983,
+          "endSample": 1466104,
+          "confidence": "medium",
+          "method": "MMS_FA consonant/core onset; bounded Whisper/MMS lexical release comparison"
+        }
+      ],
+      "targets": [
+        {
+          "index": 0,
+          "id": "KOM-003:v1-bird-t01",
+          "text": "From",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 1,
+          "id": "KOM-003:v1-bird-t02",
+          "text": "the",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "grammar-completion",
+          "rationale": "The article completes the void and shares пустоты."
+        },
+        {
+          "index": 2,
+          "id": "KOM-003:v1-bird-t03",
+          "text": "void,",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 3,
+          "id": "KOM-003:v1-bird-t04",
+          "text": "without",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 4,
+          "id": "KOM-003:v1-bird-t05",
+          "text": "your",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 5,
+          "id": "KOM-003:v1-bird-t06",
+          "text": "beauty,",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 6,
+          "id": "KOM-003:v1-bird-t07",
+          "text": "youth's",
+          "sourceIndices": [
+            7
+          ],
+          "focusSourceIndices": [
+            7
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 7,
+          "id": "KOM-003:v1-bird-t08",
+          "text": "free",
+          "sourceIndices": [
+            8
+          ],
+          "focusSourceIndices": [
+            8
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 8,
+          "id": "KOM-003:v1-bird-t09",
+          "text": "bird",
+          "sourceIndices": [
+            9
+          ],
+          "focusSourceIndices": [
+            9
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 9,
+          "id": "KOM-003:v1-bird-t10",
+          "text": "will",
+          "sourceIndices": [
+            6
+          ],
+          "focusSourceIndices": [
+            6
+          ],
+          "relation": "grammar-completion",
+          "rationale": "Will be born is the complete future/passive English equivalent of родится."
+        },
+        {
+          "index": 10,
+          "id": "KOM-003:v1-bird-t11",
+          "text": "not",
+          "sourceIndices": [
+            5
+          ],
+          "focusSourceIndices": [
+            5
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 11,
+          "id": "KOM-003:v1-bird-t12",
+          "text": "be",
+          "sourceIndices": [
+            6
+          ],
+          "focusSourceIndices": [
+            6
+          ],
+          "relation": "grammar-completion",
+          "rationale": "Will be born is the complete future/passive English equivalent of родится."
+        },
+        {
+          "index": 12,
+          "id": "KOM-003:v1-bird-t13",
+          "text": "born.",
+          "sourceIndices": [
+            6
+          ],
+          "focusSourceIndices": [
+            6
+          ],
+          "relation": "grammar-completion",
+          "rationale": "Will be born is the complete future/passive English equivalent of родится."
+        }
+      ],
+      "sourceBreaks": [
+        6
+      ],
+      "targetBreaks": [
+        5
+      ]
+    },
+    {
+      "id": "KOM-004",
+      "templateId": "refrain-fly",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Лети над землёй",
+      "targetText": "Fly above the Earth",
+      "start": 37.82174603174603,
+      "end": 43.8,
+      "visibleStart": 37.60174603174603,
+      "fullOpacityEnd": 44.24299319727891,
+      "visibleEnd": 44.24299319727891,
+      "exitMode": "vocal-handoff",
+      "words": [
+        {
+          "id": "KOM-004:refrain-fly-s01",
+          "text": "Лети",
+          "sourceIndex": 0,
+          "startSample": 1667939,
+          "endSample": 1804731,
+          "confidence": "low",
+          "method": "MMS_FA onset and next-word anchor; spectrogram-supported held-vowel preview span"
+        },
+        {
+          "id": "KOM-004:refrain-fly-s02",
+          "text": "над",
+          "sourceIndex": 1,
+          "startSample": 1804731,
+          "endSample": 1832576,
+          "confidence": "low",
+          "method": "MMS_FA consonant/core onset; bounded Whisper/MMS lexical release comparison"
+        },
+        {
+          "id": "KOM-004:refrain-fly-s03",
+          "text": "землёй",
+          "sourceIndex": 2,
+          "startSample": 1832576,
+          "endSample": 1931580,
+          "confidence": "low",
+          "method": "Individually reviewed original waveform/spectral first-phonetic edge; zero-lag stem support"
+        }
+      ],
+      "targets": [
+        {
+          "index": 0,
+          "id": "KOM-004:refrain-fly-t01",
+          "text": "Fly",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 1,
+          "id": "KOM-004:refrain-fly-t02",
+          "text": "above",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 2,
+          "id": "KOM-004:refrain-fly-t03",
+          "text": "the",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "grammar-completion",
+          "rationale": "The article completes the Earth and shares the noun event."
+        },
+        {
+          "index": 3,
+          "id": "KOM-004:refrain-fly-t04",
+          "text": "Earth",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "KOM-005",
+      "templateId": "refrain-eagle",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Словно орёл, словно орёл",
+      "targetText": "Like an eagle, like an eagle",
+      "start": 44.24299319727891,
+      "end": 51.2,
+      "visibleStart": 44.24299319727891,
+      "fullOpacityEnd": 51.65501133786848,
+      "visibleEnd": 51.65501133786848,
+      "exitMode": "vocal-handoff",
+      "words": [
+        {
+          "id": "KOM-005:refrain-eagle-s01",
+          "text": "Словно",
+          "sourceIndex": 0,
+          "startSample": 1951116,
+          "endSample": 1992438,
+          "confidence": "low",
+          "method": "Original-mix connected phonetic ownership; estimated-vocal and independent-family model comparison"
+        },
+        {
+          "id": "KOM-005:refrain-eagle-s02",
+          "text": "орёл,",
+          "sourceIndex": 1,
+          "startSample": 1992438,
+          "endSample": 2102908,
+          "confidence": "low",
+          "method": "Original-mix connected phonetic ownership; estimated-vocal and independent-family model comparison"
+        },
+        {
+          "id": "KOM-005:refrain-eagle-s03",
+          "text": "словно",
+          "sourceIndex": 2,
+          "startSample": 2105114,
+          "endSample": 2135322,
+          "confidence": "low",
+          "method": "Original-mix connected phonetic ownership; estimated-vocal and independent-family model comparison"
+        },
+        {
+          "id": "KOM-005:refrain-eagle-s04",
+          "text": "орёл",
+          "sourceIndex": 3,
+          "startSample": 2135322,
+          "endSample": 2257920,
+          "confidence": "low",
+          "method": "Original-mix connected phonetic ownership; estimated-vocal and independent-family model comparison"
+        }
+      ],
+      "targets": [
+        {
+          "index": 0,
+          "id": "KOM-005:refrain-eagle-t01",
+          "text": "Like",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 1,
+          "id": "KOM-005:refrain-eagle-t02",
+          "text": "an",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "grammar-completion",
+          "rationale": "The article completes an eagle and shares орёл."
+        },
+        {
+          "index": 2,
+          "id": "KOM-005:refrain-eagle-t03",
+          "text": "eagle,",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 3,
+          "id": "KOM-005:refrain-eagle-t04",
+          "text": "like",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 4,
+          "id": "KOM-005:refrain-eagle-t05",
+          "text": "an",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "grammar-completion",
+          "rationale": "The repeated article completes an eagle and shares the independently performed second орёл."
+        },
+        {
+          "index": 5,
+          "id": "KOM-005:refrain-eagle-t06",
+          "text": "eagle",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "KOM-006",
+      "templateId": "refrain-shine",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Свети над землёй",
+      "targetText": "Shine above the Earth",
+      "start": 51.65501133786848,
+      "end": 57.73,
+      "visibleStart": 51.65501133786848,
+      "fullOpacityEnd": 57.88498866213152,
+      "visibleEnd": 57.88498866213152,
+      "exitMode": "vocal-handoff",
+      "words": [
+        {
+          "id": "KOM-006:refrain-shine-s01",
+          "text": "Свети",
+          "sourceIndex": 0,
+          "startSample": 2277986,
+          "endSample": 2410637,
+          "confidence": "low",
+          "method": "Individually reviewed original waveform/spectral first-phonetic edge; zero-lag stem support"
+        },
+        {
+          "id": "KOM-006:refrain-shine-s02",
+          "text": "над",
+          "sourceIndex": 1,
+          "startSample": 2410637,
+          "endSample": 2436084,
+          "confidence": "low",
+          "method": "MMS_FA consonant/core onset; bounded Whisper/MMS lexical release comparison"
+        },
+        {
+          "id": "KOM-006:refrain-shine-s03",
+          "text": "землёй",
+          "sourceIndex": 2,
+          "startSample": 2436525,
+          "endSample": 2545893,
+          "confidence": "low",
+          "method": "Individually reviewed original waveform/spectral first-phonetic edge; zero-lag stem support"
+        }
+      ],
+      "targets": [
+        {
+          "index": 0,
+          "id": "KOM-006:refrain-shine-t01",
+          "text": "Shine",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 1,
+          "id": "KOM-006:refrain-shine-t02",
+          "text": "above",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 2,
+          "id": "KOM-006:refrain-shine-t03",
+          "text": "the",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "grammar-completion",
+          "rationale": "The article completes the Earth and shares the noun event."
+        },
+        {
+          "index": 3,
+          "id": "KOM-006:refrain-shine-t04",
+          "text": "Earth",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "KOM-007",
+      "templateId": "refrain-fire",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Словно огонь, словно огонь",
+      "targetText": "Like fire, like fire",
+      "start": 57.88498866213152,
+      "end": 65.45,
+      "visibleStart": 57.88498866213152,
+      "fullOpacityEnd": 67.5,
+      "visibleEnd": 68,
+      "exitMode": "fade",
+      "words": [
+        {
+          "id": "KOM-007:refrain-fire-s01",
+          "text": "Словно",
+          "sourceIndex": 0,
+          "startSample": 2552728,
+          "endSample": 2591438,
+          "confidence": "low",
+          "method": "Individually reviewed original waveform/spectral first-phonetic edge; zero-lag stem support"
+        },
+        {
+          "id": "KOM-007:refrain-fire-s02",
+          "text": "огонь,",
+          "sourceIndex": 1,
+          "startSample": 2591438,
+          "endSample": 2702007,
+          "confidence": "low",
+          "method": "MMS_FA consonant/core onset; bounded Whisper/MMS lexical release comparison"
+        },
+        {
+          "id": "KOM-007:refrain-fire-s03",
+          "text": "словно",
+          "sourceIndex": 2,
+          "startSample": 2705006,
+          "endSample": 2741256,
+          "confidence": "low",
+          "method": "Original-mix connected phonetic ownership; estimated-vocal and independent-family model comparison"
+        },
+        {
+          "id": "KOM-007:refrain-fire-s04",
+          "text": "огонь",
+          "sourceIndex": 3,
+          "startSample": 2741256,
+          "endSample": 2886345,
+          "confidence": "low",
+          "method": "Original-mix connected phonetic ownership; estimated-vocal and independent-family model comparison"
+        }
+      ],
+      "targets": [
+        {
+          "index": 0,
+          "id": "KOM-007:refrain-fire-t01",
+          "text": "Like",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 1,
+          "id": "KOM-007:refrain-fire-t02",
+          "text": "fire,",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 2,
+          "id": "KOM-007:refrain-fire-t03",
+          "text": "like",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 3,
+          "id": "KOM-007:refrain-fire-t04",
+          "text": "fire",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "KOM-008",
+      "templateId": "v2-loss",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Тот, кто терял, будет снова любить",
+      "targetText": "The one who has lost will love again",
+      "start": 96.72070294784581,
+      "end": 102.53501133786848,
+      "visibleStart": 96.50070294784581,
+      "fullOpacityEnd": 102.7,
+      "visibleEnd": 102.7,
+      "exitMode": "vocal-handoff",
+      "words": [
+        {
+          "id": "KOM-008:v2-loss-s01",
+          "text": "Тот,",
+          "sourceIndex": 0,
+          "startSample": 4265383,
+          "endSample": 4299893,
+          "confidence": "medium",
+          "method": "MMS_FA consonant/core onset; bounded Whisper/MMS lexical release comparison"
+        },
+        {
+          "id": "KOM-008:v2-loss-s02",
+          "text": "кто",
+          "sourceIndex": 1,
+          "startSample": 4299893,
+          "endSample": 4327312,
+          "confidence": "medium",
+          "method": "MMS_FA consonant/core onset; bounded Whisper/MMS lexical release comparison"
+        },
+        {
+          "id": "KOM-008:v2-loss-s03",
+          "text": "терял,",
+          "sourceIndex": 2,
+          "startSample": 4329978,
+          "endSample": 4381299,
+          "confidence": "low",
+          "method": "MMS_FA consonant/core onset; bounded Whisper/MMS lexical release comparison"
+        },
+        {
+          "id": "KOM-008:v2-loss-s04",
+          "text": "будет",
+          "sourceIndex": 3,
+          "startSample": 4381299,
+          "endSample": 4411384,
+          "confidence": "medium",
+          "method": "MMS_FA consonant/core onset; bounded Whisper/MMS lexical release comparison"
+        },
+        {
+          "id": "KOM-008:v2-loss-s05",
+          "text": "снова",
+          "sourceIndex": 4,
+          "startSample": 4413154,
+          "endSample": 4477694,
+          "confidence": "medium",
+          "method": "MMS_FA consonant/core onset; bounded Whisper/MMS lexical release comparison"
+        },
+        {
+          "id": "KOM-008:v2-loss-s06",
+          "text": "любить",
+          "sourceIndex": 5,
+          "startSample": 4481222,
+          "endSample": 4521794,
+          "confidence": "low",
+          "method": "Individually reviewed original waveform/spectral first-phonetic edge; zero-lag stem support"
+        }
+      ],
+      "targets": [
+        {
+          "index": 0,
+          "id": "KOM-008:v2-loss-t01",
+          "text": "The",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "grammar-completion",
+          "rationale": "The article completes the substantive pronoun Тот, together with one."
+        },
+        {
+          "index": 1,
+          "id": "KOM-008:v2-loss-t02",
+          "text": "one",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "grammar-completion",
+          "rationale": "The one is the complete substantive-pronoun equivalent of Тот."
+        },
+        {
+          "index": 2,
+          "id": "KOM-008:v2-loss-t03",
+          "text": "who",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 3,
+          "id": "KOM-008:v2-loss-t04",
+          "text": "has",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "grammar-completion",
+          "rationale": "Has lost is the complete English verb expression for the person who previously experienced loss."
+        },
+        {
+          "index": 4,
+          "id": "KOM-008:v2-loss-t05",
+          "text": "lost",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "grammar-completion",
+          "rationale": "Has lost is the complete English verb expression for the person who previously experienced loss."
+        },
+        {
+          "index": 5,
+          "id": "KOM-008:v2-loss-t06",
+          "text": "will",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 6,
+          "id": "KOM-008:v2-loss-t07",
+          "text": "love",
+          "sourceIndices": [
+            5
+          ],
+          "focusSourceIndices": [
+            5
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 7,
+          "id": "KOM-008:v2-loss-t08",
+          "text": "again",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "KOM-009",
+      "templateId": "v2-summer",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "За рассветом близится вечное лето",
+      "targetText": "Beyond the dawn, eternal summer draws near",
+      "start": 102.7,
+      "end": 108.45,
+      "visibleStart": 102.7,
+      "fullOpacityEnd": 110.05,
+      "visibleEnd": 110.54108843537415,
+      "exitMode": "fade",
+      "words": [
+        {
+          "id": "KOM-009:v2-summer-s01",
+          "text": "За",
+          "sourceIndex": 0,
+          "startSample": 4529070,
+          "endSample": 4554868,
+          "confidence": "medium",
+          "method": "Individually reviewed original waveform/spectral first-phonetic edge; zero-lag stem support"
+        },
+        {
+          "id": "KOM-009:v2-summer-s02",
+          "text": "рассветом",
+          "sourceIndex": 1,
+          "startSample": 4556515,
+          "endSample": 4611978,
+          "confidence": "medium",
+          "method": "MMS_FA consonant/core onset; bounded Whisper/MMS lexical release comparison"
+        },
+        {
+          "id": "KOM-009:v2-summer-s03",
+          "text": "близится",
+          "sourceIndex": 2,
+          "startSample": 4633366,
+          "endSample": 4673316,
+          "confidence": "low",
+          "method": "Individually reviewed original waveform/spectral first-phonetic edge; zero-lag stem support"
+        },
+        {
+          "id": "KOM-009:v2-summer-s04",
+          "text": "вечное",
+          "sourceIndex": 3,
+          "startSample": 4679510,
+          "endSample": 4718443,
+          "confidence": "medium",
+          "method": "MMS_FA consonant/core onset; bounded Whisper/MMS lexical release comparison"
+        },
+        {
+          "id": "KOM-009:v2-summer-s05",
+          "text": "лето",
+          "sourceIndex": 4,
+          "startSample": 4720244,
+          "endSample": 4782645,
+          "confidence": "medium",
+          "method": "Individually reviewed original waveform/spectral first-phonetic edge; zero-lag stem support"
+        }
+      ],
+      "targets": [
+        {
+          "index": 0,
+          "id": "KOM-009:v2-summer-t01",
+          "text": "Beyond",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 1,
+          "id": "KOM-009:v2-summer-t02",
+          "text": "the",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "grammar-completion",
+          "rationale": "The article completes the dawn and shares рассветом."
+        },
+        {
+          "index": 2,
+          "id": "KOM-009:v2-summer-t03",
+          "text": "dawn,",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 3,
+          "id": "KOM-009:v2-summer-t04",
+          "text": "eternal",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 4,
+          "id": "KOM-009:v2-summer-t05",
+          "text": "summer",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 5,
+          "id": "KOM-009:v2-summer-t06",
+          "text": "draws",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "grammar-completion",
+          "rationale": "Draws near is a phrasal English equivalent of близится."
+        },
+        {
+          "index": 6,
+          "id": "KOM-009:v2-summer-t07",
+          "text": "near",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "grammar-completion",
+          "rationale": "Draws near is a phrasal English equivalent of близится."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "KOM-010",
+      "templateId": "v2-guard",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Ночь до зари, ты в душе береги свою птицу",
+      "targetText": "Through the night till dawn, you keep your bird safe in your soul.",
+      "start": 110.76108843537415,
+      "end": 118.43,
+      "visibleStart": 110.54108843537415,
+      "fullOpacityEnd": 119.42498866213153,
+      "visibleEnd": 119.42498866213153,
+      "exitMode": "vocal-handoff",
+      "words": [
+        {
+          "id": "KOM-010:v2-guard-s01",
+          "text": "Ночь",
+          "sourceIndex": 0,
+          "startSample": 4884564,
+          "endSample": 4908330,
+          "confidence": "medium",
+          "method": "MMS_FA consonant/core onset; bounded Whisper/MMS lexical release comparison"
+        },
+        {
+          "id": "KOM-010:v2-guard-s02",
+          "text": "до",
+          "sourceIndex": 1,
+          "startSample": 4910202,
+          "endSample": 4932806,
+          "confidence": "medium",
+          "method": "MMS_FA consonant/core onset; bounded Whisper/MMS lexical release comparison"
+        },
+        {
+          "id": "KOM-010:v2-guard-s03",
+          "text": "зари,",
+          "sourceIndex": 2,
+          "startSample": 4934570,
+          "endSample": 4972716,
+          "confidence": "medium",
+          "method": "Individually reviewed original waveform/spectral first-phonetic edge; zero-lag stem support"
+        },
+        {
+          "id": "KOM-010:v2-guard-s04",
+          "text": "ты",
+          "sourceIndex": 3,
+          "startSample": 4983300,
+          "endSample": 4997412,
+          "confidence": "medium",
+          "method": "Individually reviewed original waveform/spectral first-phonetic edge; zero-lag stem support"
+        },
+        {
+          "id": "KOM-010:v2-guard-s05",
+          "text": "в",
+          "sourceIndex": 4,
+          "startSample": 4997412,
+          "endSample": 5007451,
+          "confidence": "low",
+          "method": "MMS_FA consonant/core onset; bounded Whisper/MMS lexical release comparison"
+        },
+        {
+          "id": "KOM-010:v2-guard-s06",
+          "text": "душе",
+          "sourceIndex": 5,
+          "startSample": 5007451,
+          "endSample": 5047024,
+          "confidence": "medium",
+          "method": "MMS_FA consonant/core onset; bounded Whisper/MMS lexical release comparison"
+        },
+        {
+          "id": "KOM-010:v2-guard-s07",
+          "text": "береги",
+          "sourceIndex": 6,
+          "startSample": 5056959,
+          "endSample": 5129050,
+          "confidence": "low",
+          "method": "MMS_FA consonant/core onset; bounded Whisper/MMS lexical release comparison"
+        },
+        {
+          "id": "KOM-010:v2-guard-s08",
+          "text": "свою",
+          "sourceIndex": 7,
+          "startSample": 5130814,
+          "endSample": 5165212,
+          "confidence": "low",
+          "method": "Individually reviewed original waveform/spectral first-phonetic edge; zero-lag stem support"
+        },
+        {
+          "id": "KOM-010:v2-guard-s09",
+          "text": "птицу",
+          "sourceIndex": 8,
+          "startSample": 5167197,
+          "endSample": 5222763,
+          "confidence": "medium",
+          "method": "Individually reviewed original waveform/spectral first-phonetic edge; zero-lag stem support"
+        }
+      ],
+      "targets": [
+        {
+          "index": 0,
+          "id": "KOM-010:v2-guard-t01",
+          "text": "Through",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "grammar-completion",
+          "rationale": "Through the night completes the source elliptical night-time adverbial; through has no independent sung timestamp."
+        },
+        {
+          "index": 1,
+          "id": "KOM-010:v2-guard-t02",
+          "text": "the",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "grammar-completion",
+          "rationale": "Through the night completes the source elliptical night-time adverbial; the article has no independent sung timestamp."
+        },
+        {
+          "index": 2,
+          "id": "KOM-010:v2-guard-t03",
+          "text": "night",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "grammar-completion",
+          "rationale": "Through the night completes the source elliptical night-time adverbial."
+        },
+        {
+          "index": 3,
+          "id": "KOM-010:v2-guard-t04",
+          "text": "till",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 4,
+          "id": "KOM-010:v2-guard-t05",
+          "text": "dawn,",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 5,
+          "id": "KOM-010:v2-guard-t06",
+          "text": "you",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 6,
+          "id": "KOM-010:v2-guard-t07",
+          "text": "keep",
+          "sourceIndices": [
+            6
+          ],
+          "focusSourceIndices": [
+            6
+          ],
+          "relation": "grammar-completion",
+          "rationale": "Keep … safe is the complete imperative meaning of береги; both words share its event despite the intervening noun in English."
+        },
+        {
+          "index": 7,
+          "id": "KOM-010:v2-guard-t08",
+          "text": "your",
+          "sourceIndices": [
+            7
+          ],
+          "focusSourceIndices": [
+            7
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 8,
+          "id": "KOM-010:v2-guard-t09",
+          "text": "bird",
+          "sourceIndices": [
+            8
+          ],
+          "focusSourceIndices": [
+            8
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 9,
+          "id": "KOM-010:v2-guard-t10",
+          "text": "safe",
+          "sourceIndices": [
+            6
+          ],
+          "focusSourceIndices": [
+            6
+          ],
+          "relation": "grammar-completion",
+          "rationale": "Keep … safe is the complete imperative meaning of береги; both words share its event despite the intervening noun in English."
+        },
+        {
+          "index": 10,
+          "id": "KOM-010:v2-guard-t11",
+          "text": "in",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 11,
+          "id": "KOM-010:v2-guard-t12",
+          "text": "your",
+          "sourceIndices": [
+            3,
+            5
+          ],
+          "focusSourceIndices": [
+            5
+          ],
+          "relation": "grammar-completion",
+          "rationale": "Your is a necessary natural-English possessive completion for soul in the explicit ты … в душе instruction. It focuses only with душе; ты retains its independent you event."
+        },
+        {
+          "index": 12,
+          "id": "KOM-010:v2-guard-t13",
+          "text": "soul.",
+          "sourceIndices": [
+            5
+          ],
+          "focusSourceIndices": [
+            5
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        }
+      ],
+      "sourceBreaks": [
+        2
+      ],
+      "targetBreaks": [
+        4
+      ]
+    },
+    {
+      "id": "KOM-011",
+      "templateId": "v2-bird",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Не дай ей разбиться",
+      "targetText": "Don't let it crash",
+      "start": 119.42498866213153,
+      "end": 122.5,
+      "visibleStart": 119.42498866213153,
+      "fullOpacityEnd": 124.3,
+      "visibleEnd": 124.8,
+      "exitMode": "fade",
+      "words": [
+        {
+          "id": "KOM-011:v2-bird-s01",
+          "text": "Не",
+          "sourceIndex": 0,
+          "startSample": 5266642,
+          "endSample": 5282298,
+          "confidence": "low",
+          "method": "Individually reviewed original waveform/spectral first-phonetic edge; zero-lag stem support"
+        },
+        {
+          "id": "KOM-011:v2-bird-s02",
+          "text": "дай",
+          "sourceIndex": 1,
+          "startSample": 5284306,
+          "endSample": 5304128,
+          "confidence": "medium",
+          "method": "MMS_FA consonant/core onset; bounded Whisper/MMS lexical release comparison"
+        },
+        {
+          "id": "KOM-011:v2-bird-s03",
+          "text": "ей",
+          "sourceIndex": 2,
+          "startSample": 5304128,
+          "endSample": 5313168,
+          "confidence": "low",
+          "method": "Individually reviewed original waveform/spectral first-phonetic edge; zero-lag stem support"
+        },
+        {
+          "id": "KOM-011:v2-bird-s04",
+          "text": "разбиться",
+          "sourceIndex": 3,
+          "startSample": 5313571,
+          "endSample": 5402250,
+          "confidence": "medium",
+          "method": "MMS_FA consonant/core onset; bounded Whisper/MMS lexical release comparison"
+        }
+      ],
+      "targets": [
+        {
+          "index": 0,
+          "id": "KOM-011:v2-bird-t01",
+          "text": "Don't",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "grammar-completion",
+          "rationale": "Do not contracts to Don't as the English negative-imperative completion of Не; no independent auxiliary timestamp is invented."
+        },
+        {
+          "index": 1,
+          "id": "KOM-011:v2-bird-t02",
+          "text": "let",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 2,
+          "id": "KOM-011:v2-bird-t03",
+          "text": "it",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 3,
+          "id": "KOM-011:v2-bird-t04",
+          "text": "crash",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "KOM-012",
+      "templateId": "refrain-fly",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Лети над землёй",
+      "targetText": "Fly above the Earth",
+      "start": 125.27501133786848,
+      "end": 131.50498866213152,
+      "visibleStart": 125.05501133786848,
+      "fullOpacityEnd": 131.70501133786848,
+      "visibleEnd": 131.70501133786848,
+      "exitMode": "vocal-handoff",
+      "words": [
+        {
+          "id": "KOM-012:refrain-fly-s01",
+          "text": "Лети",
+          "sourceIndex": 0,
+          "startSample": 5524628,
+          "endSample": 5659132,
+          "confidence": "low",
+          "method": "Individually reviewed original waveform/spectral first-phonetic edge; zero-lag stem support"
+        },
+        {
+          "id": "KOM-012:refrain-fly-s02",
+          "text": "над",
+          "sourceIndex": 1,
+          "startSample": 5659132,
+          "endSample": 5689120,
+          "confidence": "low",
+          "method": "Individually reviewed original waveform/spectral first-phonetic edge; zero-lag stem support"
+        },
+        {
+          "id": "KOM-012:refrain-fly-s03",
+          "text": "землёй",
+          "sourceIndex": 2,
+          "startSample": 5689561,
+          "endSample": 5799370,
+          "confidence": "low",
+          "method": "Individually reviewed original waveform/spectral first-phonetic edge; zero-lag stem support"
+        }
+      ],
+      "targets": [
+        {
+          "index": 0,
+          "id": "KOM-012:refrain-fly-t01",
+          "text": "Fly",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 1,
+          "id": "KOM-012:refrain-fly-t02",
+          "text": "above",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 2,
+          "id": "KOM-012:refrain-fly-t03",
+          "text": "the",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "grammar-completion",
+          "rationale": "The article completes the Earth and shares the noun event."
+        },
+        {
+          "index": 3,
+          "id": "KOM-012:refrain-fly-t04",
+          "text": "Earth",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "KOM-013",
+      "templateId": "refrain-eagle",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Словно орёл, словно орёл",
+      "targetText": "Like an eagle, like an eagle",
+      "start": 131.70501133786848,
+      "end": 138.65,
+      "visibleStart": 131.70501133786848,
+      "fullOpacityEnd": 139.07,
+      "visibleEnd": 139.07,
+      "exitMode": "vocal-handoff",
+      "words": [
+        {
+          "id": "KOM-013:refrain-eagle-s01",
+          "text": "Словно",
+          "sourceIndex": 0,
+          "startSample": 5808191,
+          "endSample": 5834650,
+          "confidence": "low",
+          "method": "Original-mix connected phonetic ownership; estimated-vocal and independent-family model comparison"
+        },
+        {
+          "id": "KOM-013:refrain-eagle-s02",
+          "text": "орёл,",
+          "sourceIndex": 1,
+          "startSample": 5834650,
+          "endSample": 5957028,
+          "confidence": "low",
+          "method": "Original-mix connected phonetic ownership; estimated-vocal and independent-family model comparison"
+        },
+        {
+          "id": "KOM-013:refrain-eagle-s03",
+          "text": "словно",
+          "sourceIndex": 2,
+          "startSample": 5960336,
+          "endSample": 5984370,
+          "confidence": "low",
+          "method": "Original-mix connected phonetic ownership; estimated-vocal and independent-family model comparison"
+        },
+        {
+          "id": "KOM-013:refrain-eagle-s04",
+          "text": "орёл",
+          "sourceIndex": 3,
+          "startSample": 5984370,
+          "endSample": 6114465,
+          "confidence": "low",
+          "method": "Original-mix connected phonetic ownership; estimated-vocal and independent-family model comparison"
+        }
+      ],
+      "targets": [
+        {
+          "index": 0,
+          "id": "KOM-013:refrain-eagle-t01",
+          "text": "Like",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 1,
+          "id": "KOM-013:refrain-eagle-t02",
+          "text": "an",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "grammar-completion",
+          "rationale": "The article completes an eagle and shares орёл."
+        },
+        {
+          "index": 2,
+          "id": "KOM-013:refrain-eagle-t03",
+          "text": "eagle,",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 3,
+          "id": "KOM-013:refrain-eagle-t04",
+          "text": "like",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 4,
+          "id": "KOM-013:refrain-eagle-t05",
+          "text": "an",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "grammar-completion",
+          "rationale": "The repeated article completes an eagle and shares the independently performed second орёл."
+        },
+        {
+          "index": 5,
+          "id": "KOM-013:refrain-eagle-t06",
+          "text": "eagle",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "KOM-014",
+      "templateId": "refrain-shine",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Свети над землёй",
+      "targetText": "Shine above the Earth",
+      "start": 139.07,
+      "end": 145.12498866213153,
+      "visibleStart": 139.07,
+      "fullOpacityEnd": 145.3049886621315,
+      "visibleEnd": 145.3049886621315,
+      "exitMode": "vocal-handoff",
+      "words": [
+        {
+          "id": "KOM-014:refrain-shine-s01",
+          "text": "Свети",
+          "sourceIndex": 0,
+          "startSample": 6132987,
+          "endSample": 6264093,
+          "confidence": "low",
+          "method": "Individually reviewed original waveform/spectral first-phonetic edge; zero-lag stem support"
+        },
+        {
+          "id": "KOM-014:refrain-shine-s02",
+          "text": "над",
+          "sourceIndex": 1,
+          "startSample": 6264093,
+          "endSample": 6290644,
+          "confidence": "low",
+          "method": "MMS_FA consonant/core onset; bounded Whisper/MMS lexical release comparison"
+        },
+        {
+          "id": "KOM-014:refrain-shine-s03",
+          "text": "землёй",
+          "sourceIndex": 2,
+          "startSample": 6291086,
+          "endSample": 6400012,
+          "confidence": "low",
+          "method": "Individually reviewed original waveform/spectral first-phonetic edge; zero-lag stem support"
+        }
+      ],
+      "targets": [
+        {
+          "index": 0,
+          "id": "KOM-014:refrain-shine-t01",
+          "text": "Shine",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 1,
+          "id": "KOM-014:refrain-shine-t02",
+          "text": "above",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 2,
+          "id": "KOM-014:refrain-shine-t03",
+          "text": "the",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "grammar-completion",
+          "rationale": "The article completes the Earth and shares the noun event."
+        },
+        {
+          "index": 3,
+          "id": "KOM-014:refrain-shine-t04",
+          "text": "Earth",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "KOM-015",
+      "templateId": "refrain-fire",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Словно огонь, словно огонь",
+      "targetText": "Like fire, like fire",
+      "start": 145.3049886621315,
+      "end": 152.33,
+      "visibleStart": 145.3049886621315,
+      "fullOpacityEnd": 154.15,
+      "visibleEnd": 154.65,
+      "exitMode": "fade",
+      "words": [
+        {
+          "id": "KOM-015:refrain-fire-s01",
+          "text": "Словно",
+          "sourceIndex": 0,
+          "startSample": 6407950,
+          "endSample": 6450215,
+          "confidence": "low",
+          "method": "Individually reviewed original waveform/spectral first-phonetic edge; zero-lag stem support"
+        },
+        {
+          "id": "KOM-015:refrain-fire-s02",
+          "text": "огонь,",
+          "sourceIndex": 1,
+          "startSample": 6450215,
+          "endSample": 6559875,
+          "confidence": "low",
+          "method": "MMS_FA consonant/core onset; bounded Whisper/MMS lexical release comparison"
+        },
+        {
+          "id": "KOM-015:refrain-fire-s03",
+          "text": "словно",
+          "sourceIndex": 2,
+          "startSample": 6559875,
+          "endSample": 6592068,
+          "confidence": "low",
+          "method": "Original-mix connected phonetic ownership; estimated-vocal and independent-family model comparison"
+        },
+        {
+          "id": "KOM-015:refrain-fire-s04",
+          "text": "огонь",
+          "sourceIndex": 3,
+          "startSample": 6592068,
+          "endSample": 6717753,
+          "confidence": "low",
+          "method": "Original-mix connected phonetic ownership; estimated-vocal and independent-family model comparison"
+        }
+      ],
+      "targets": [
+        {
+          "index": 0,
+          "id": "KOM-015:refrain-fire-t01",
+          "text": "Like",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 1,
+          "id": "KOM-015:refrain-fire-t02",
+          "text": "fire,",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 2,
+          "id": "KOM-015:refrain-fire-t03",
+          "text": "like",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 3,
+          "id": "KOM-015:refrain-fire-t04",
+          "text": "fire",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "KOM-016",
+      "templateId": "radio-captain",
+      "sourceLanguage": "en",
+      "targetLanguage": "ru",
+      "sourceText": "Planet Earth, this is Captain Adams on the Serenity.",
+      "targetText": "Планета Земля, это капитан Адамс на «Серенити».",
+      "start": 156.80163265306123,
+      "end": 160.28,
+      "visibleStart": 156.58163265306123,
+      "fullOpacityEnd": 160.85,
+      "visibleEnd": 161.3029931972789,
+      "exitMode": "fade",
+      "words": [
+        {
+          "id": "KOM-016:radio-captain-s01",
+          "text": "Planet",
+          "sourceIndex": 0,
+          "startSample": 6914952,
+          "endSample": 6943401,
+          "confidence": "low",
+          "method": "MMS_FA consonant/core onset; bounded Whisper/MMS lexical release comparison"
+        },
+        {
+          "id": "KOM-016:radio-captain-s02",
+          "text": "Earth,",
+          "sourceIndex": 1,
+          "startSample": 6945173,
+          "endSample": 6965154,
+          "confidence": "low",
+          "method": "MMS_FA consonant/core onset; bounded Whisper/MMS lexical release comparison"
+        },
+        {
+          "id": "KOM-016:radio-captain-s03",
+          "text": "this",
+          "sourceIndex": 2,
+          "startSample": 6977073,
+          "endSample": 6984558,
+          "confidence": "medium",
+          "method": "MMS_FA consonant/core onset; bounded Whisper/MMS lexical release comparison"
+        },
+        {
+          "id": "KOM-016:radio-captain-s04",
+          "text": "is",
+          "sourceIndex": 3,
+          "startSample": 6985935,
+          "endSample": 6990732,
+          "confidence": "medium",
+          "method": "MMS_FA consonant/core onset; bounded Whisper/MMS lexical release comparison"
+        },
+        {
+          "id": "KOM-016:radio-captain-s05",
+          "text": "Captain",
+          "sourceIndex": 4,
+          "startSample": 6991251,
+          "endSample": 7005429,
+          "confidence": "medium",
+          "method": "MMS_FA consonant/core onset; bounded Whisper/MMS lexical release comparison"
+        },
+        {
+          "id": "KOM-016:radio-captain-s06",
+          "text": "Adams",
+          "sourceIndex": 5,
+          "startSample": 7009254,
+          "endSample": 7024038,
+          "confidence": "medium",
+          "method": "Individually reviewed original waveform/spectral first-phonetic edge; zero-lag stem support"
+        },
+        {
+          "id": "KOM-016:radio-captain-s07",
+          "text": "on",
+          "sourceIndex": 6,
+          "startSample": 7024909,
+          "endSample": 7030241,
+          "confidence": "medium",
+          "method": "Individually reviewed original waveform/spectral first-phonetic edge; zero-lag stem support"
+        },
+        {
+          "id": "KOM-016:radio-captain-s08",
+          "text": "the",
+          "sourceIndex": 7,
+          "startSample": 7030241,
+          "endSample": 7035557,
+          "confidence": "low",
+          "method": "MMS_FA consonant/core onset; bounded Whisper/MMS lexical release comparison"
+        },
+        {
+          "id": "KOM-016:radio-captain-s09",
+          "text": "Serenity.",
+          "sourceIndex": 8,
+          "startSample": 7035557,
+          "endSample": 7068348,
+          "confidence": "medium",
+          "method": "MMS_FA consonant/core onset; bounded Whisper/MMS lexical release comparison"
+        }
+      ],
+      "targets": [
+        {
+          "index": 0,
+          "id": "KOM-016:radio-captain-t01",
+          "text": "Планета",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 1,
+          "id": "KOM-016:radio-captain-t02",
+          "text": "Земля,",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 2,
+          "id": "KOM-016:radio-captain-t03",
+          "text": "это",
+          "sourceIndices": [
+            2,
+            3
+          ],
+          "focusSourceIndices": [
+            2,
+            3
+          ],
+          "relation": "grammar-construction",
+          "rationale": "English this is maps to Russian это with a zero copula; activate Это on the union of the separate this/is events, releasing in a real gap."
+        },
+        {
+          "index": 3,
+          "id": "KOM-016:radio-captain-t04",
+          "text": "капитан",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 4,
+          "id": "KOM-016:radio-captain-t05",
+          "text": "Адамс",
+          "sourceIndices": [
+            5
+          ],
+          "focusSourceIndices": [
+            5
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 5,
+          "id": "KOM-016:radio-captain-t06",
+          "text": "на",
+          "sourceIndices": [
+            6
+          ],
+          "focusSourceIndices": [
+            6
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 6,
+          "id": "KOM-016:radio-captain-t07",
+          "text": "«Серенити».",
+          "sourceIndices": [
+            7,
+            8
+          ],
+          "focusSourceIndices": [
+            7,
+            8
+          ],
+          "relation": "grammar-construction",
+          "rationale": "Russian has no definite article. The ship name is the complete target of the Serenity; activate only on the union of these adjacent source events, preserving the separately spoken English article."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "KOM-017",
+      "templateId": "radio-message",
+      "sourceLanguage": "en",
+      "targetLanguage": "ru",
+      "sourceText": "We're receiving a repeated message from the Martian surface.",
+      "targetText": "Мы принимаем повторяющееся сообщение с марсианской поверхности.",
+      "start": 161.5229931972789,
+      "end": 164.21839002267575,
+      "visibleStart": 161.3029931972789,
+      "fullOpacityEnd": 164.85,
+      "visibleEnd": 165.35,
+      "exitMode": "fade",
+      "words": [
+        {
+          "id": "KOM-017:radio-message-s01",
+          "text": "We're",
+          "sourceIndex": 0,
+          "startSample": 7123164,
+          "endSample": 7130260,
+          "confidence": "low",
+          "method": "MMS_FA consonant/core onset; bounded Whisper/MMS lexical release comparison"
+        },
+        {
+          "id": "KOM-017:radio-message-s02",
+          "text": "receiving",
+          "sourceIndex": 1,
+          "startSample": 7130260,
+          "endSample": 7148002,
+          "confidence": "medium",
+          "method": "MMS_FA consonant/core onset; bounded Whisper/MMS lexical release comparison"
+        },
+        {
+          "id": "KOM-017:radio-message-s03",
+          "text": "a",
+          "sourceIndex": 2,
+          "startSample": 7149776,
+          "endSample": 7152138,
+          "confidence": "medium",
+          "method": "MMS_FA consonant/core onset; bounded Whisper/MMS lexical release comparison"
+        },
+        {
+          "id": "KOM-017:radio-message-s04",
+          "text": "repeated",
+          "sourceIndex": 3,
+          "startSample": 7152437,
+          "endSample": 7171066,
+          "confidence": "medium",
+          "method": "MMS_FA consonant/core onset; bounded Whisper/MMS lexical release comparison"
+        },
+        {
+          "id": "KOM-017:radio-message-s05",
+          "text": "message",
+          "sourceIndex": 4,
+          "startSample": 7172840,
+          "endSample": 7188807,
+          "confidence": "medium",
+          "method": "MMS_FA consonant/core onset; bounded Whisper/MMS lexical release comparison"
+        },
+        {
+          "id": "KOM-017:radio-message-s06",
+          "text": "from",
+          "sourceIndex": 5,
+          "startSample": 7190581,
+          "endSample": 7195903,
+          "confidence": "medium",
+          "method": "MMS_FA consonant/core onset; bounded Whisper/MMS lexical release comparison"
+        },
+        {
+          "id": "KOM-017:radio-message-s07",
+          "text": "the",
+          "sourceIndex": 6,
+          "startSample": 7196679,
+          "endSample": 7202113,
+          "confidence": "medium",
+          "method": "Individually reviewed original waveform/spectral first-phonetic edge; zero-lag stem support"
+        },
+        {
+          "id": "KOM-017:radio-message-s08",
+          "text": "Martian",
+          "sourceIndex": 7,
+          "startSample": 7202113,
+          "endSample": 7218080,
+          "confidence": "medium",
+          "method": "MMS_FA consonant/core onset; bounded Whisper/MMS lexical release comparison"
+        },
+        {
+          "id": "KOM-017:radio-message-s09",
+          "text": "surface.",
+          "sourceIndex": 8,
+          "startSample": 7220741,
+          "endSample": 7242031,
+          "confidence": "medium",
+          "method": "MMS_FA consonant/core onset; bounded Whisper/MMS lexical release comparison"
+        }
+      ],
+      "targets": [
+        {
+          "index": 0,
+          "id": "KOM-017:radio-message-t01",
+          "text": "Мы",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 1,
+          "id": "KOM-017:radio-message-t02",
+          "text": "принимаем",
+          "sourceIndices": [
+            0,
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "grammar-completion",
+          "rationale": "Russian принимаем inflects the present receiving construction. English We're contributes the progressive auxiliary grammatically; preserve its independent pronoun focus and anchor the Russian verb on receiving."
+        },
+        {
+          "index": 2,
+          "id": "KOM-017:radio-message-t03",
+          "text": "повторяющееся",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 3,
+          "id": "KOM-017:radio-message-t04",
+          "text": "сообщение",
+          "sourceIndices": [
+            2,
+            4
+          ],
+          "focusSourceIndices": [
+            2,
+            4
+          ],
+          "relation": "grammar-construction",
+          "rationale": "Russian has no indefinite article. Сообщение is the target noun of a message; focus on the union of a and message only, releasing during separately performed repeated."
+        },
+        {
+          "index": 4,
+          "id": "KOM-017:radio-message-t05",
+          "text": "с",
+          "sourceIndices": [
+            5
+          ],
+          "focusSourceIndices": [
+            5
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 5,
+          "id": "KOM-017:radio-message-t06",
+          "text": "марсианской",
+          "sourceIndices": [
+            7
+          ],
+          "focusSourceIndices": [
+            7
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 6,
+          "id": "KOM-017:radio-message-t07",
+          "text": "поверхности.",
+          "sourceIndices": [
+            6,
+            8
+          ],
+          "focusSourceIndices": [
+            6,
+            8
+          ],
+          "relation": "grammar-construction",
+          "rationale": "Russian has no definite article. Поверхности is the target noun of the surface; focus on the union of the and surface only, releasing during independently performed Martian."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "KOM-018",
+      "templateId": "radio-check",
+      "sourceLanguage": "en",
+      "targetLanguage": "ru",
+      "sourceText": "Do you read me?",
+      "targetText": "Слышите ли вы меня?",
+      "start": 165.7,
+      "end": 166.5,
+      "visibleStart": 165.48,
+      "fullOpacityEnd": 166.95,
+      "visibleEnd": 167.45,
+      "exitMode": "fade",
+      "words": [
+        {
+          "id": "KOM-018:radio-check-s01",
+          "text": "Do",
+          "sourceIndex": 0,
+          "startSample": 7307370,
+          "endSample": 7312000,
+          "confidence": "low",
+          "method": "MMS_FA consonant/core onset; bounded Whisper/MMS lexical release comparison"
+        },
+        {
+          "id": "KOM-018:radio-check-s02",
+          "text": "you",
+          "sourceIndex": 1,
+          "startSample": 7312882,
+          "endSample": 7320996,
+          "confidence": "low",
+          "method": "Individually reviewed original waveform/spectral first-phonetic edge; zero-lag stem support"
+        },
+        {
+          "id": "KOM-018:radio-check-s03",
+          "text": "read",
+          "sourceIndex": 2,
+          "startSample": 7320996,
+          "endSample": 7328132,
+          "confidence": "low",
+          "method": "MMS_FA consonant/core onset; bounded Whisper/MMS lexical release comparison"
+        },
+        {
+          "id": "KOM-018:radio-check-s04",
+          "text": "me?",
+          "sourceIndex": 3,
+          "startSample": 7329024,
+          "endSample": 7342650,
+          "confidence": "medium",
+          "method": "MMS_FA consonant/core onset; bounded Whisper/MMS lexical release comparison"
+        }
+      ],
+      "targets": [
+        {
+          "index": 0,
+          "id": "KOM-018:radio-check-t01",
+          "text": "Слышите",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 1,
+          "id": "KOM-018:radio-check-t02",
+          "text": "ли",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "grammar-completion",
+          "rationale": "Ли is the Russian polar-question particle corresponding to question-support Do; this is grammar correspondence, not a standalone dictionary gloss."
+        },
+        {
+          "index": 2,
+          "id": "KOM-018:radio-check-t03",
+          "text": "вы",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 3,
+          "id": "KOM-018:radio-check-t04",
+          "text": "меня?",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "KOM-019",
+      "templateId": "radio-check",
+      "sourceLanguage": "en",
+      "targetLanguage": "ru",
+      "sourceText": "Do you read me?",
+      "targetText": "Слышите ли вы меня?",
+      "start": 170.14,
+      "end": 171.04,
+      "visibleStart": 169.92,
+      "fullOpacityEnd": 171.55,
+      "visibleEnd": 172.05,
+      "exitMode": "fade",
+      "words": [
+        {
+          "id": "KOM-019:radio-check-s01",
+          "text": "Do",
+          "sourceIndex": 0,
+          "startSample": 7503174,
+          "endSample": 7514640,
+          "confidence": "low",
+          "method": "MMS_FA consonant/core onset; bounded Whisper/MMS lexical release comparison"
+        },
+        {
+          "id": "KOM-019:radio-check-s02",
+          "text": "you",
+          "sourceIndex": 1,
+          "startSample": 7514640,
+          "endSample": 7518168,
+          "confidence": "low",
+          "method": "MMS_FA consonant/core onset; bounded Whisper/MMS lexical release comparison"
+        },
+        {
+          "id": "KOM-019:radio-check-s03",
+          "text": "read",
+          "sourceIndex": 2,
+          "startSample": 7518168,
+          "endSample": 7527870,
+          "confidence": "low",
+          "method": "MMS_FA consonant/core onset; bounded Whisper/MMS lexical release comparison"
+        },
+        {
+          "id": "KOM-019:radio-check-s04",
+          "text": "me?",
+          "sourceIndex": 3,
+          "startSample": 7527870,
+          "endSample": 7542864,
+          "confidence": "low",
+          "method": "MMS_FA consonant/core onset; bounded Whisper/MMS lexical release comparison"
+        }
+      ],
+      "targets": [
+        {
+          "index": 0,
+          "id": "KOM-019:radio-check-t01",
+          "text": "Слышите",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 1,
+          "id": "KOM-019:radio-check-t02",
+          "text": "ли",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "grammar-completion",
+          "rationale": "Ли is the Russian polar-question particle corresponding to question-support Do; this is grammar correspondence, not a standalone dictionary gloss."
+        },
+        {
+          "index": 2,
+          "id": "KOM-019:radio-check-t03",
+          "text": "вы",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 3,
+          "id": "KOM-019:radio-check-t04",
+          "text": "меня?",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "KOM-020",
+      "templateId": "refrain-fly",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Лети над землёй",
+      "targetText": "Fly above the Earth",
+      "start": 173.36258503401362,
+      "end": 179.66498866213152,
+      "visibleStart": 173.14258503401362,
+      "fullOpacityEnd": 179.70501133786848,
+      "visibleEnd": 179.70501133786848,
+      "exitMode": "vocal-handoff",
+      "words": [
+        {
+          "id": "KOM-020:refrain-fly-s01",
+          "text": "Лети",
+          "sourceIndex": 0,
+          "startSample": 7645290,
+          "endSample": 7776594,
+          "confidence": "low",
+          "method": "MMS_FA onset and next-word anchor; spectrogram-supported held-vowel preview span"
+        },
+        {
+          "id": "KOM-020:refrain-fly-s02",
+          "text": "над",
+          "sourceIndex": 1,
+          "startSample": 7776594,
+          "endSample": 7808346,
+          "confidence": "low",
+          "method": "Individually reviewed original waveform/spectral first-phonetic edge; zero-lag stem support"
+        },
+        {
+          "id": "KOM-020:refrain-fly-s03",
+          "text": "землёй",
+          "sourceIndex": 2,
+          "startSample": 7809669,
+          "endSample": 7923226,
+          "confidence": "low",
+          "method": "Individually reviewed original waveform/spectral first-phonetic edge; zero-lag stem support"
+        }
+      ],
+      "targets": [
+        {
+          "index": 0,
+          "id": "KOM-020:refrain-fly-t01",
+          "text": "Fly",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 1,
+          "id": "KOM-020:refrain-fly-t02",
+          "text": "above",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 2,
+          "id": "KOM-020:refrain-fly-t03",
+          "text": "the",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "grammar-completion",
+          "rationale": "The article completes the Earth and shares the noun event."
+        },
+        {
+          "index": 3,
+          "id": "KOM-020:refrain-fly-t04",
+          "text": "Earth",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "KOM-021",
+      "templateId": "refrain-eagle",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Словно орёл, словно орёл",
+      "targetText": "Like an eagle, like an eagle",
+      "start": 179.70501133786848,
+      "end": 186.76498866213151,
+      "visibleStart": 179.70501133786848,
+      "fullOpacityEnd": 187.06498866213153,
+      "visibleEnd": 187.06498866213153,
+      "exitMode": "vocal-handoff",
+      "words": [
+        {
+          "id": "KOM-021:refrain-eagle-s01",
+          "text": "Словно",
+          "sourceIndex": 0,
+          "startSample": 7924991,
+          "endSample": 7953435,
+          "confidence": "low",
+          "method": "Original-mix connected phonetic ownership; estimated-vocal and independent-family model comparison"
+        },
+        {
+          "id": "KOM-021:refrain-eagle-s02",
+          "text": "орёл,",
+          "sourceIndex": 1,
+          "startSample": 7953435,
+          "endSample": 8068977,
+          "confidence": "low",
+          "method": "Original-mix connected phonetic ownership; estimated-vocal and independent-family model comparison"
+        },
+        {
+          "id": "KOM-021:refrain-eagle-s03",
+          "text": "словно",
+          "sourceIndex": 2,
+          "startSample": 8071182,
+          "endSample": 8101170,
+          "confidence": "low",
+          "method": "Original-mix connected phonetic ownership; estimated-vocal and independent-family model comparison"
+        },
+        {
+          "id": "KOM-021:refrain-eagle-s04",
+          "text": "орёл",
+          "sourceIndex": 3,
+          "startSample": 8101170,
+          "endSample": 8236336,
+          "confidence": "low",
+          "method": "Original-mix connected phonetic ownership; estimated-vocal and independent-family model comparison"
+        }
+      ],
+      "targets": [
+        {
+          "index": 0,
+          "id": "KOM-021:refrain-eagle-t01",
+          "text": "Like",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 1,
+          "id": "KOM-021:refrain-eagle-t02",
+          "text": "an",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "grammar-completion",
+          "rationale": "The article completes an eagle and shares орёл."
+        },
+        {
+          "index": 2,
+          "id": "KOM-021:refrain-eagle-t03",
+          "text": "eagle,",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 3,
+          "id": "KOM-021:refrain-eagle-t04",
+          "text": "like",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 4,
+          "id": "KOM-021:refrain-eagle-t05",
+          "text": "an",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "grammar-completion",
+          "rationale": "The repeated article completes an eagle and shares the independently performed second орёл."
+        },
+        {
+          "index": 5,
+          "id": "KOM-021:refrain-eagle-t06",
+          "text": "eagle",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "KOM-022",
+      "templateId": "refrain-shine",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Свети над землёй",
+      "targetText": "Shine above the Earth",
+      "start": 187.06498866213153,
+      "end": 193.26,
+      "visibleStart": 187.06498866213153,
+      "fullOpacityEnd": 193.37501133786847,
+      "visibleEnd": 193.37501133786847,
+      "exitMode": "vocal-handoff",
+      "words": [
+        {
+          "id": "KOM-022:refrain-shine-s01",
+          "text": "Свети",
+          "sourceIndex": 0,
+          "startSample": 8249566,
+          "endSample": 8378339,
+          "confidence": "low",
+          "method": "Individually reviewed original waveform/spectral first-phonetic edge; zero-lag stem support"
+        },
+        {
+          "id": "KOM-022:refrain-shine-s02",
+          "text": "над",
+          "sourceIndex": 1,
+          "startSample": 8378339,
+          "endSample": 8409650,
+          "confidence": "low",
+          "method": "Individually reviewed original waveform/spectral first-phonetic edge; zero-lag stem support"
+        },
+        {
+          "id": "KOM-022:refrain-shine-s03",
+          "text": "землёй",
+          "sourceIndex": 2,
+          "startSample": 8410311,
+          "endSample": 8522766,
+          "confidence": "low",
+          "method": "Individually reviewed original waveform/spectral first-phonetic edge; zero-lag stem support"
+        }
+      ],
+      "targets": [
+        {
+          "index": 0,
+          "id": "KOM-022:refrain-shine-t01",
+          "text": "Shine",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 1,
+          "id": "KOM-022:refrain-shine-t02",
+          "text": "above",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 2,
+          "id": "KOM-022:refrain-shine-t03",
+          "text": "the",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "grammar-completion",
+          "rationale": "The article completes the Earth and shares the noun event."
+        },
+        {
+          "index": 3,
+          "id": "KOM-022:refrain-shine-t04",
+          "text": "Earth",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "KOM-023",
+      "templateId": "refrain-fire",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Словно огонь, словно огонь",
+      "targetText": "Like fire, like fire",
+      "start": 193.37501133786847,
+      "end": 200.35,
+      "visibleStart": 193.37501133786847,
+      "fullOpacityEnd": 202.3,
+      "visibleEnd": 202.8,
+      "exitMode": "fade",
+      "words": [
+        {
+          "id": "KOM-023:refrain-fire-s01",
+          "text": "Словно",
+          "sourceIndex": 0,
+          "startSample": 8527838,
+          "endSample": 8566866,
+          "confidence": "low",
+          "method": "Individually reviewed original waveform/spectral first-phonetic edge; zero-lag stem support"
+        },
+        {
+          "id": "KOM-023:refrain-fire-s02",
+          "text": "огонь,",
+          "sourceIndex": 1,
+          "startSample": 8567064,
+          "endSample": 8675793,
+          "confidence": "low",
+          "method": "MMS_FA consonant/core onset; bounded Whisper/MMS lexical release comparison"
+        },
+        {
+          "id": "KOM-023:refrain-fire-s03",
+          "text": "словно",
+          "sourceIndex": 2,
+          "startSample": 8675793,
+          "endSample": 8723862,
+          "confidence": "low",
+          "method": "Individually reviewed original waveform/spectral first-phonetic edge; zero-lag stem support"
+        },
+        {
+          "id": "KOM-023:refrain-fire-s04",
+          "text": "огонь",
+          "sourceIndex": 3,
+          "startSample": 8727139,
+          "endSample": 8835435,
+          "confidence": "low",
+          "method": "MMS_FA consonant/core onset; bounded Whisper/MMS lexical release comparison"
+        }
+      ],
+      "targets": [
+        {
+          "index": 0,
+          "id": "KOM-023:refrain-fire-t01",
+          "text": "Like",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 1,
+          "id": "KOM-023:refrain-fire-t02",
+          "text": "fire,",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 2,
+          "id": "KOM-023:refrain-fire-t03",
+          "text": "like",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 3,
+          "id": "KOM-023:refrain-fire-t04",
+          "text": "fire",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "KOM-024",
+      "templateId": "radio-captain",
+      "sourceLanguage": "en",
+      "targetLanguage": "ru",
+      "sourceText": "Planet Earth, this is Captain Adams on the Serenity.",
+      "targetText": "Планета Земля, это капитан Адамс на «Серенити».",
+      "start": 235.92163265306124,
+      "end": 239.4,
+      "visibleStart": 235.70163265306124,
+      "fullOpacityEnd": 239.97,
+      "visibleEnd": 240.4229931972789,
+      "exitMode": "fade",
+      "words": [
+        {
+          "id": "KOM-024:radio-captain-s01",
+          "text": "Planet",
+          "sourceIndex": 0,
+          "startSample": 10404144,
+          "endSample": 10432593,
+          "confidence": "medium",
+          "method": "Source waveform repeat correlation at exact +79.120 s; independently compared with late bounded Whisper/MMS candidates"
+        },
+        {
+          "id": "KOM-024:radio-captain-s02",
+          "text": "Earth,",
+          "sourceIndex": 1,
+          "startSample": 10434365,
+          "endSample": 10454346,
+          "confidence": "low",
+          "method": "Source waveform repeat correlation at exact +79.120 s; independently compared with late bounded Whisper/MMS candidates"
+        },
+        {
+          "id": "KOM-024:radio-captain-s03",
+          "text": "this",
+          "sourceIndex": 2,
+          "startSample": 10466265,
+          "endSample": 10473750,
+          "confidence": "medium",
+          "method": "Source waveform repeat correlation at exact +79.120 s; independently compared with late bounded Whisper/MMS candidates"
+        },
+        {
+          "id": "KOM-024:radio-captain-s04",
+          "text": "is",
+          "sourceIndex": 3,
+          "startSample": 10475127,
+          "endSample": 10479924,
+          "confidence": "medium",
+          "method": "Source waveform repeat correlation at exact +79.120 s; independently compared with late bounded Whisper/MMS candidates"
+        },
+        {
+          "id": "KOM-024:radio-captain-s05",
+          "text": "Captain",
+          "sourceIndex": 4,
+          "startSample": 10480443,
+          "endSample": 10494621,
+          "confidence": "medium",
+          "method": "Source waveform repeat correlation at exact +79.120 s; independently compared with late bounded Whisper/MMS candidates"
+        },
+        {
+          "id": "KOM-024:radio-captain-s06",
+          "text": "Adams",
+          "sourceIndex": 5,
+          "startSample": 10498446,
+          "endSample": 10513230,
+          "confidence": "medium",
+          "method": "Source waveform repeat correlation at exact +79.120 s; independently compared with late bounded Whisper/MMS candidates"
+        },
+        {
+          "id": "KOM-024:radio-captain-s07",
+          "text": "on",
+          "sourceIndex": 6,
+          "startSample": 10514101,
+          "endSample": 10519433,
+          "confidence": "medium",
+          "method": "Source waveform repeat correlation at exact +79.120 s; independently compared with late bounded Whisper/MMS candidates"
+        },
+        {
+          "id": "KOM-024:radio-captain-s08",
+          "text": "the",
+          "sourceIndex": 7,
+          "startSample": 10519433,
+          "endSample": 10524749,
+          "confidence": "low",
+          "method": "Source waveform repeat correlation at exact +79.120 s; independently compared with late bounded Whisper/MMS candidates"
+        },
+        {
+          "id": "KOM-024:radio-captain-s09",
+          "text": "Serenity.",
+          "sourceIndex": 8,
+          "startSample": 10524749,
+          "endSample": 10557540,
+          "confidence": "medium",
+          "method": "Source waveform repeat correlation at exact +79.120 s; independently compared with late bounded Whisper/MMS candidates"
+        }
+      ],
+      "targets": [
+        {
+          "index": 0,
+          "id": "KOM-024:radio-captain-t01",
+          "text": "Планета",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 1,
+          "id": "KOM-024:radio-captain-t02",
+          "text": "Земля,",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 2,
+          "id": "KOM-024:radio-captain-t03",
+          "text": "это",
+          "sourceIndices": [
+            2,
+            3
+          ],
+          "focusSourceIndices": [
+            2,
+            3
+          ],
+          "relation": "grammar-construction",
+          "rationale": "English this is maps to Russian это with a zero copula; activate Это on the union of the separate this/is events, releasing in a real gap."
+        },
+        {
+          "index": 3,
+          "id": "KOM-024:radio-captain-t04",
+          "text": "капитан",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 4,
+          "id": "KOM-024:radio-captain-t05",
+          "text": "Адамс",
+          "sourceIndices": [
+            5
+          ],
+          "focusSourceIndices": [
+            5
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 5,
+          "id": "KOM-024:radio-captain-t06",
+          "text": "на",
+          "sourceIndices": [
+            6
+          ],
+          "focusSourceIndices": [
+            6
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 6,
+          "id": "KOM-024:radio-captain-t07",
+          "text": "«Серенити».",
+          "sourceIndices": [
+            7,
+            8
+          ],
+          "focusSourceIndices": [
+            7,
+            8
+          ],
+          "relation": "grammar-construction",
+          "rationale": "Russian has no definite article. The ship name is the complete target of the Serenity; activate only on the union of these adjacent source events, preserving the separately spoken English article."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "KOM-025",
+      "templateId": "radio-message",
+      "sourceLanguage": "en",
+      "targetLanguage": "ru",
+      "sourceText": "We're receiving a repeated message from the Martian surface.",
+      "targetText": "Мы принимаем повторяющееся сообщение с марсианской поверхности.",
+      "start": 240.6429931972789,
+      "end": 243.33839002267572,
+      "visibleStart": 240.4229931972789,
+      "fullOpacityEnd": 243.97,
+      "visibleEnd": 244.47,
+      "exitMode": "fade",
+      "words": [
+        {
+          "id": "KOM-025:radio-message-s01",
+          "text": "We're",
+          "sourceIndex": 0,
+          "startSample": 10612356,
+          "endSample": 10619452,
+          "confidence": "low",
+          "method": "Source waveform repeat correlation at exact +79.120 s; independently compared with late bounded Whisper/MMS candidates"
+        },
+        {
+          "id": "KOM-025:radio-message-s02",
+          "text": "receiving",
+          "sourceIndex": 1,
+          "startSample": 10619452,
+          "endSample": 10637194,
+          "confidence": "medium",
+          "method": "Source waveform repeat correlation at exact +79.120 s; independently compared with late bounded Whisper/MMS candidates"
+        },
+        {
+          "id": "KOM-025:radio-message-s03",
+          "text": "a",
+          "sourceIndex": 2,
+          "startSample": 10638968,
+          "endSample": 10641330,
+          "confidence": "medium",
+          "method": "Source waveform repeat correlation at exact +79.120 s; independently compared with late bounded Whisper/MMS candidates"
+        },
+        {
+          "id": "KOM-025:radio-message-s04",
+          "text": "repeated",
+          "sourceIndex": 3,
+          "startSample": 10641629,
+          "endSample": 10660258,
+          "confidence": "medium",
+          "method": "Source waveform repeat correlation at exact +79.120 s; independently compared with late bounded Whisper/MMS candidates"
+        },
+        {
+          "id": "KOM-025:radio-message-s05",
+          "text": "message",
+          "sourceIndex": 4,
+          "startSample": 10662032,
+          "endSample": 10677999,
+          "confidence": "medium",
+          "method": "Source waveform repeat correlation at exact +79.120 s; independently compared with late bounded Whisper/MMS candidates"
+        },
+        {
+          "id": "KOM-025:radio-message-s06",
+          "text": "from",
+          "sourceIndex": 5,
+          "startSample": 10679773,
+          "endSample": 10685095,
+          "confidence": "medium",
+          "method": "Source waveform repeat correlation at exact +79.120 s; independently compared with late bounded Whisper/MMS candidates"
+        },
+        {
+          "id": "KOM-025:radio-message-s07",
+          "text": "the",
+          "sourceIndex": 6,
+          "startSample": 10685871,
+          "endSample": 10691305,
+          "confidence": "medium",
+          "method": "Source waveform repeat correlation at exact +79.120 s; independently compared with late bounded Whisper/MMS candidates"
+        },
+        {
+          "id": "KOM-025:radio-message-s08",
+          "text": "Martian",
+          "sourceIndex": 7,
+          "startSample": 10691305,
+          "endSample": 10707272,
+          "confidence": "medium",
+          "method": "Source waveform repeat correlation at exact +79.120 s; independently compared with late bounded Whisper/MMS candidates"
+        },
+        {
+          "id": "KOM-025:radio-message-s09",
+          "text": "surface.",
+          "sourceIndex": 8,
+          "startSample": 10709933,
+          "endSample": 10731223,
+          "confidence": "medium",
+          "method": "Source waveform repeat correlation at exact +79.120 s; independently compared with late bounded Whisper/MMS candidates"
+        }
+      ],
+      "targets": [
+        {
+          "index": 0,
+          "id": "KOM-025:radio-message-t01",
+          "text": "Мы",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 1,
+          "id": "KOM-025:radio-message-t02",
+          "text": "принимаем",
+          "sourceIndices": [
+            0,
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "grammar-completion",
+          "rationale": "Russian принимаем inflects the present receiving construction. English We're contributes the progressive auxiliary grammatically; preserve its independent pronoun focus and anchor the Russian verb on receiving."
+        },
+        {
+          "index": 2,
+          "id": "KOM-025:radio-message-t03",
+          "text": "повторяющееся",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 3,
+          "id": "KOM-025:radio-message-t04",
+          "text": "сообщение",
+          "sourceIndices": [
+            2,
+            4
+          ],
+          "focusSourceIndices": [
+            2,
+            4
+          ],
+          "relation": "grammar-construction",
+          "rationale": "Russian has no indefinite article. Сообщение is the target noun of a message; focus on the union of a and message only, releasing during separately performed repeated."
+        },
+        {
+          "index": 4,
+          "id": "KOM-025:radio-message-t05",
+          "text": "с",
+          "sourceIndices": [
+            5
+          ],
+          "focusSourceIndices": [
+            5
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 5,
+          "id": "KOM-025:radio-message-t06",
+          "text": "марсианской",
+          "sourceIndices": [
+            7
+          ],
+          "focusSourceIndices": [
+            7
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 6,
+          "id": "KOM-025:radio-message-t07",
+          "text": "поверхности.",
+          "sourceIndices": [
+            6,
+            8
+          ],
+          "focusSourceIndices": [
+            6,
+            8
+          ],
+          "relation": "grammar-construction",
+          "rationale": "Russian has no definite article. Поверхности is the target noun of the surface; focus on the union of the and surface only, releasing during independently performed Martian."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "KOM-026",
+      "templateId": "radio-check",
+      "sourceLanguage": "en",
+      "targetLanguage": "ru",
+      "sourceText": "Do you read me?",
+      "targetText": "Слышите ли вы меня?",
+      "start": 244.82,
+      "end": 245.62,
+      "visibleStart": 244.6,
+      "fullOpacityEnd": 246.07,
+      "visibleEnd": 246.57,
+      "exitMode": "fade",
+      "words": [
+        {
+          "id": "KOM-026:radio-check-s01",
+          "text": "Do",
+          "sourceIndex": 0,
+          "startSample": 10796562,
+          "endSample": 10801192,
+          "confidence": "low",
+          "method": "Source waveform repeat correlation at exact +79.120 s; independently compared with late bounded Whisper/MMS candidates"
+        },
+        {
+          "id": "KOM-026:radio-check-s02",
+          "text": "you",
+          "sourceIndex": 1,
+          "startSample": 10802074,
+          "endSample": 10810188,
+          "confidence": "low",
+          "method": "Source waveform repeat correlation at exact +79.120 s; independently compared with late bounded Whisper/MMS candidates"
+        },
+        {
+          "id": "KOM-026:radio-check-s03",
+          "text": "read",
+          "sourceIndex": 2,
+          "startSample": 10810188,
+          "endSample": 10817324,
+          "confidence": "low",
+          "method": "Source waveform repeat correlation at exact +79.120 s; independently compared with late bounded Whisper/MMS candidates"
+        },
+        {
+          "id": "KOM-026:radio-check-s04",
+          "text": "me?",
+          "sourceIndex": 3,
+          "startSample": 10818216,
+          "endSample": 10831842,
+          "confidence": "medium",
+          "method": "Source waveform repeat correlation at exact +79.120 s; independently compared with late bounded Whisper/MMS candidates"
+        }
+      ],
+      "targets": [
+        {
+          "index": 0,
+          "id": "KOM-026:radio-check-t01",
+          "text": "Слышите",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 1,
+          "id": "KOM-026:radio-check-t02",
+          "text": "ли",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "grammar-completion",
+          "rationale": "Ли is the Russian polar-question particle corresponding to question-support Do; this is grammar correspondence, not a standalone dictionary gloss."
+        },
+        {
+          "index": 2,
+          "id": "KOM-026:radio-check-t03",
+          "text": "вы",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 3,
+          "id": "KOM-026:radio-check-t04",
+          "text": "меня?",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "KOM-027",
+      "templateId": "radio-check",
+      "sourceLanguage": "en",
+      "targetLanguage": "ru",
+      "sourceText": "Do you read me?",
+      "targetText": "Слышите ли вы меня?",
+      "start": 249.26,
+      "end": 249.96,
+      "visibleStart": 249.04,
+      "fullOpacityEnd": 249.9750113378685,
+      "visibleEnd": 250.4750113378685,
+      "exitMode": "fade",
+      "words": [
+        {
+          "id": "KOM-027:radio-check-s01",
+          "text": "Do",
+          "sourceIndex": 0,
+          "startSample": 10992366,
+          "endSample": 11003832,
+          "confidence": "low",
+          "method": "Source waveform repeat correlation at exact +79.120 s; independently compared with late bounded Whisper/MMS candidates"
+        },
+        {
+          "id": "KOM-027:radio-check-s02",
+          "text": "you",
+          "sourceIndex": 1,
+          "startSample": 11003832,
+          "endSample": 11007360,
+          "confidence": "low",
+          "method": "Source waveform repeat correlation at exact +79.120 s; independently compared with late bounded Whisper/MMS candidates"
+        },
+        {
+          "id": "KOM-027:radio-check-s03",
+          "text": "read",
+          "sourceIndex": 2,
+          "startSample": 11007360,
+          "endSample": 11017062,
+          "confidence": "low",
+          "method": "Source waveform repeat correlation at exact +79.120 s; independently compared with late bounded Whisper/MMS candidates"
+        },
+        {
+          "id": "KOM-027:radio-check-s04",
+          "text": "me?",
+          "sourceIndex": 3,
+          "startSample": 11017062,
+          "endSample": 11023236,
+          "confidence": "low",
+          "method": "Source waveform repeat correlation at exact +79.120 s; independently compared with late bounded Whisper/MMS candidates"
+        }
+      ],
+      "targets": [
+        {
+          "index": 0,
+          "id": "KOM-027:radio-check-t01",
+          "text": "Слышите",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 1,
+          "id": "KOM-027:radio-check-t02",
+          "text": "ли",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "grammar-completion",
+          "rationale": "Ли is the Russian polar-question particle corresponding to question-support Do; this is grammar correspondence, not a standalone dictionary gloss."
+        },
+        {
+          "index": 2,
+          "id": "KOM-027:radio-check-t03",
+          "text": "вы",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        },
+        {
+          "index": 3,
+          "id": "KOM-027:radio-check-t04",
+          "text": "меня?",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Shared meaning follows the referenced performed source token; no independent translation timestamp."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    }
+  ]
+}

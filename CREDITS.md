@@ -2,6 +2,12 @@
 
 **We are not the creators of the original music, lyrics, performances, musical remixes, anime footage, characters or source illustrations. We do not take credit for that work.** Our contribution is the additional lyric-film presentation and production workflow. Artist and source-upload links below distinguish those roles; a source uploader is not necessarily the owner of every element in an upload.
 
+## Кометы
+
+Original song and official music video: POLNALYUBVI — Кометы, [official recording](https://www.youtube.com/watch?v=76BmuIf0duw). Lyrics and music: Marina Demeshchenko. Video production: FILM GODS; director: Maria Makovskaya; cinematography: Vladymyr Korovko and Sergey Archakov; edit and color: Vladymyr Korovko. [Locked source provenance](projects/komety-lyric-film/source/manifest.json).
+
+The bilingual lyric edition retains that original moving picture and soundtrack. English singing translations, Russian radio translations, timing decisions, the measured bow-light ribbon, platform covers and implementation are AI-assisted additions. Cover imagery is the original source frame, not generated artwork. Cormorant Garamond Semibold is bundled under its [SIL Open Font License](projects/komety-lyric-film/public/fonts/CormorantGaramond-OFL.txt). Repository licensing does not grant rights to the original song, footage, source-derived stills or book/media material.
+
 ## Let You Down
 
 **Dawid Podsiadło** performs *Let You Down*, the ending theme of the Netflix series *Cyberpunk: Edgerunners*. The music video's closing credits list music by **Dawid Podsiadło** and **Magdalena Laskowska**, lyrics by **Dawid Podsiadło** and producer **Akira Yamaoka**. The [official music video](https://www.youtube.com/watch?v=BnnbP7pCIvQ), published on the Cyberpunk 2077 / **CD PROJEKT RED** channel, was directed by **Ilya Kuvshinov** and produced by **STUDIO MASSKET**. These are credits for the original song and moving picture, not the lyric treatment.

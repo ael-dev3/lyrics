@@ -1,0 +1,152 @@
+{
+  "schemaVersion": 1,
+  "revision": "komety-preview-v6-eagle-entry",
+  "baselineTimingSha256": "477764a615837642c1d15b520d7d9f7387a632c6554446f8bf68f071057ad9ed",
+  "sourceSha256": "af518bcde332f296dfc7982ebd7d8724c80c722decf5a32dfe3b00ef86107bf6",
+  "sampleRate": 44100,
+  "status": "Root-reconciled original/signal review; full listening acceptance pending",
+  "humanListeningAttested": false,
+  "reviewDocument": "evidence/eagle-entry-review.md",
+  "methodSummary": "V6 re-examines all six eagle entrances using original harmonic trajectories, estimated vocals and fresh four-word/two-word cached alignment sensitivity. One earlier reduced-vowel handoff is selected with its coupled prior release; five independently uncertain entries are retained. No global shift or model-core substitution.",
+  "edges": [
+    {
+      "wordId": "KOM-013-s02",
+      "edge": "start",
+      "beforeSample": 5849865,
+      "selectedSample": 5834650,
+      "signalIntervalSeconds": [
+        132.27,
+        132.36
+      ],
+      "confidence": "medium-low",
+      "reason": "Original harmonics and the estimated-vocal low voiced trajectory change after the prior nasal/final-vowel region around132.28–132.33, with a quieter descending vowel before the stronger body132.50–132.65. The four-word reduced-vowel alignment places an initial vowel core132.507 followed by r132.77–132.81; the old132.650 selection already lies inside this word. Earlier two-word paths assigned the connected vowel differently and are not stable ownership evidence. Select132.305 within132.270–132.360 from the original transition, not the sparse core, a silence prerequisite, or a shared chorus offset."
+    },
+    {
+      "wordId": "KOM-013-s01",
+      "edge": "end",
+      "beforeSample": 5849865,
+      "selectedSample": 5834650,
+      "signalIntervalSeconds": [
+        132.27,
+        132.36
+      ],
+      "confidence": "medium-low",
+      "reason": "Original harmonics and the estimated-vocal low voiced trajectory change after the prior nasal/final-vowel region around132.28–132.33, with a quieter descending vowel before the stronger body132.50–132.65. The four-word reduced-vowel alignment places an initial vowel core132.507 followed by r132.77–132.81; the old132.650 selection already lies inside this word. Earlier two-word paths assigned the connected vowel differently and are not stable ownership evidence. Select132.305 within132.270–132.360 from the original transition, not the sparse core, a silence prerequisite, or a shared chorus offset. Previous-word lexical ownership ends at the same continuous handoff."
+    }
+  ],
+  "retainedOnsets": [
+    {
+      "wordId": "KOM-005-s02",
+      "selectedSample": 1992438,
+      "signalIntervalSeconds": [
+        45.03,
+        45.265
+      ],
+      "confidence": "low",
+      "reason": "The original and stem show a connected lower harmonic trajectory near 45.03–45.10. Its quiet leading part can still belong to the unstressed final vowel of словно. Restricted stem paths retain the prior final vowel near 45.025 and initial vowel core at 45.185, while a whole-source reduced-initial path puts the core at 45.064 and changes later character ownership. The earlier ridge alone does not establish a secure lexical split; retain the current point with wider ownership uncertainty."
+    },
+    {
+      "wordId": "KOM-005-s04",
+      "selectedSample": 2135322,
+      "signalIntervalSeconds": [
+        48.235,
+        48.59
+      ],
+      "confidence": "low",
+      "reason": "The original/stem develop a low connected vowel trajectory around 48.24–48.30 after attenuation near 48.18–48.23. Prior-final-vowel versus next-initial-vowel ownership remains ambiguous. Restricted original reduced-initial paths put the initial core at 48.417, whereas restricted stem paths put it at 48.798 and attach its early quiet body to the preceding final vowel. Entire four-word KOM-005 stem paths skip the first repetition and are rejected. Retain the existing point rather than selecting the earliest changed note."
+    },
+    {
+      "wordId": "KOM-013-s04",
+      "selectedSample": 5990985,
+      "signalIntervalSeconds": [
+        135.705,
+        135.96
+      ],
+      "confidence": "low",
+      "reason": "The original/stem show an earlier low connected trajectory and several short attenuation regions around 135.64–135.75. Source and stem restricted reduced-initial cores at 135.820/135.800 and the preceding stem final-vowel core near 135.719 place the vowel sequence near the current selection. Whole-phrase paths redistribute the earlier quiet body and later r/e to different portions. The possible 135.74 entry is not sufficiently separable from the preceding final vowel to change the point."
+    },
+    {
+      "wordId": "KOM-021-s02",
+      "selectedSample": 7962255,
+      "signalIntervalSeconds": [
+        180.325,
+        180.665
+      ],
+      "confidence": "low",
+      "reason": "The original/stem contain a falling connected voiced trajectory around 180.33–180.43 after attenuation near 180.22. Whole-stem reduced-initial paths place an initial core at 180.406, while orthographic whole and all restricted stem paths place it near 180.567/180.568 and shift prior final-vowel ownership near 180.367–180.386. The source paths misattach the sequence much later. The early trajectory is plausible initial-vowel support but does not securely distinguish adjacent reduced vowels; retain the current split with expanded uncertainty."
+    },
+    {
+      "wordId": "KOM-021-s04",
+      "selectedSample": 8118369,
+      "signalIntervalSeconds": [
+        183.685,
+        184.17
+      ],
+      "confidence": "low",
+      "reason": "The original/stem contain a connected low voiced region from approximately 183.69–183.80, before the stronger later sequence. Whole-stem reduced-initial paths place the initial core at 183.731, but ordinary and restricted paths can assign that body to the preceding final vowel and place the initial core at 183.951/184.103. The observed descending ridge is shared with the preceding unstressed-vowel transition, so it does not by itself prove the lexical handoff. Retain 184.090 for this revision; flag the earlier 183.70–183.80 ownership alternative as unresolved rather than treating the old narrow range as certified."
+    }
+  ],
+  "limits": [
+    "Continuous adjacent vowels do not supply a uniquely isolated word boundary. The132.270–132.360 interval expresses lexical-ownership uncertainty.",
+    "Original recording is authoritative; an estimated vocal can smear edges or retain accompaniment. Different crops, spellings and source/stem model paths are correlated observations, not independent votes.",
+    "Exact sample storage and finite paint cadence do not certify millisecond perceptual accuracy. No new full listening attestation is claimed."
+  ],
+  "scope": "Six eagle entries rechecked; one source onset and one coupled preceding release change from v5. All27 cue-final releases and neutral reading holds remain unchanged.",
+  "retainedReleases": [
+    {
+      "wordId": "KOM-005-s01",
+      "selectedSample": 1992438,
+      "signalIntervalSeconds": [
+        45.03,
+        45.265
+      ],
+      "confidence": "low",
+      "reason": "The original and stem show a connected lower harmonic trajectory near 45.03–45.10. Its quiet leading part can still belong to the unstressed final vowel of словно. Restricted stem paths retain the prior final vowel near 45.025 and initial vowel core at 45.185, while a whole-source reduced-initial path puts the core at 45.064 and changes later character ownership. The earlier ridge alone does not establish a secure lexical split; retain the current point with wider ownership uncertainty. Prior-word ownership ends at the retained shared split; the widened uncertainty applies to both sides of that connected handoff."
+    },
+    {
+      "wordId": "KOM-005-s03",
+      "selectedSample": 2135322,
+      "signalIntervalSeconds": [
+        48.235,
+        48.59
+      ],
+      "confidence": "low",
+      "reason": "The original/stem develop a low connected vowel trajectory around 48.24–48.30 after attenuation near 48.18–48.23. Prior-final-vowel versus next-initial-vowel ownership remains ambiguous. Restricted original reduced-initial paths put the initial core at 48.417, whereas restricted stem paths put it at 48.798 and attach its early quiet body to the preceding final vowel. Entire four-word KOM-005 stem paths skip the first repetition and are rejected. Retain the existing point rather than selecting the earliest changed note. Prior-word ownership ends at the retained shared split; the widened uncertainty applies to both sides of that connected handoff."
+    },
+    {
+      "wordId": "KOM-013-s03",
+      "selectedSample": 5990985,
+      "signalIntervalSeconds": [
+        135.705,
+        135.96
+      ],
+      "confidence": "low",
+      "reason": "The original/stem show an earlier low connected trajectory and several short attenuation regions around 135.64–135.75. Source and stem restricted reduced-initial cores at 135.820/135.800 and the preceding stem final-vowel core near 135.719 place the vowel sequence near the current selection. Whole-phrase paths redistribute the earlier quiet body and later r/e to different portions. The possible 135.74 entry is not sufficiently separable from the preceding final vowel to change the point. Prior-word ownership ends at the retained shared split; the widened uncertainty applies to both sides of that connected handoff."
+    },
+    {
+      "wordId": "KOM-021-s01",
+      "selectedSample": 7962255,
+      "signalIntervalSeconds": [
+        180.325,
+        180.665
+      ],
+      "confidence": "low",
+      "reason": "The original/stem contain a falling connected voiced trajectory around 180.33–180.43 after attenuation near 180.22. Whole-stem reduced-initial paths place an initial core at 180.406, while orthographic whole and all restricted stem paths place it near 180.567/180.568 and shift prior final-vowel ownership near 180.367–180.386. The source paths misattach the sequence much later. The early trajectory is plausible initial-vowel support but does not securely distinguish adjacent reduced vowels; retain the current split with expanded uncertainty. Prior-word ownership ends at the retained shared split; the widened uncertainty applies to both sides of that connected handoff."
+    },
+    {
+      "wordId": "KOM-021-s03",
+      "selectedSample": 8118369,
+      "signalIntervalSeconds": [
+        183.685,
+        184.17
+      ],
+      "confidence": "low",
+      "reason": "The original/stem contain a connected low voiced region from approximately 183.69–183.80, before the stronger later sequence. Whole-stem reduced-initial paths place the initial core at 183.731, but ordinary and restricted paths can assign that body to the preceding final vowel and place the initial core at 183.951/184.103. The observed descending ridge is shared with the preceding unstressed-vowel transition, so it does not by itself prove the lexical handoff. Retain 184.090 for this revision; flag the earlier 183.70–183.80 ownership alternative as unresolved rather than treating the old narrow range as certified. Prior-word ownership ends at the retained shared split; the widened uncertainty applies to both sides of that connected handoff."
+    }
+  ],
+  "evidence": [
+    "evidence/eagle-entry-decisions.json",
+    "evidence/eagle-phone-path-review.json",
+    "evidence/eagle-opening-revisit.png"
+  ]
+}

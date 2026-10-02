@@ -1,0 +1,570 @@
+{
+  "source": "public/source.mp4",
+  "sampleRate": 44100,
+  "baselineSha256": "a7d8bbbdb0fef24fcfca6a1f96e30e311354767aa4a1852620b4f5468f8a62fb",
+  "reviewType": "Independent visual original waveform/spectrogram plus estimated vocal support; no human listening attestation",
+  "heldWordReleaseProposals": [
+    {
+      "wordId": "KOM-004-s01",
+      "sourceIndex": 0,
+      "word": "Лети",
+      "beforeEndSeconds": 40.92360544217687,
+      "beforeEndSample": 1804731,
+      "proposedEndSeconds": 40.92360544217687,
+      "proposedEndSample": 1804731,
+      "signalIntervalSeconds": [
+        40.835,
+        40.925
+      ],
+      "confidence": "medium",
+      "reason": "Held /i/ changes toward the nasal body around40.87–40.92. Retain the baseline inside that unresolved transition; do not subtract a uniform lead.",
+      "evidence": [
+        "analysis/onset-independent/KOM-004-held.png"
+      ]
+    },
+    {
+      "wordId": "KOM-004-s03",
+      "sourceIndex": 2,
+      "word": "землёй",
+      "beforeEndSeconds": 42.4,
+      "beforeEndSample": 1869840,
+      "proposedEndSeconds": 43.8,
+      "proposedEndSample": 1931580,
+      "signalIntervalSeconds": [
+        43.72,
+        43.9
+      ],
+      "confidence": "medium",
+      "reason": "Baseline42.400 clips ongoing coherent harmonics. Held vowel remains through about43.5, then a softer glide/body declines around43.8; diffuse tail later is uncertain reverb.",
+      "evidence": [
+        "analysis/onset-independent/KOM-004-held.png"
+      ]
+    },
+    {
+      "wordId": "KOM-005-s02",
+      "sourceIndex": 1,
+      "word": "орёл,",
+      "beforeEndSeconds": 47.6,
+      "beforeEndSample": 2099160,
+      "proposedEndSeconds": 47.684988662131516,
+      "proposedEndSample": 2102908,
+      "signalIntervalSeconds": [
+        47.63,
+        47.735
+      ],
+      "confidence": "medium",
+      "reason": "Terminal sonorant/body attenuates around47.65–47.70 before the next initial frication near47.735; preserve the /l/ tail beyond47.600.",
+      "evidence": [
+        "analysis/onset-independent/KOM-005-held.png"
+      ]
+    },
+    {
+      "wordId": "KOM-005-s04",
+      "sourceIndex": 3,
+      "word": "орёл",
+      "beforeEndSeconds": 49.39693877551021,
+      "beforeEndSample": 2178405,
+      "proposedEndSeconds": 51.2,
+      "proposedEndSample": 2257920,
+      "signalIntervalSeconds": [
+        51.03,
+        51.38
+      ],
+      "confidence": "medium-low",
+      "reason": "Baseline49.397 falls inside the held vowel. Strong coherent body continues to about50.7; low terminal sonorant/body weakens through51.1–51.4. Later persistence is not independently separable from reverb.",
+      "evidence": [
+        "analysis/onset-independent/KOM-005-held.png"
+      ]
+    },
+    {
+      "wordId": "KOM-006-s01",
+      "sourceIndex": 0,
+      "word": "Свети",
+      "beforeEndSeconds": 54.66297052154195,
+      "beforeEndSample": 2410637,
+      "proposedEndSeconds": 54.66297052154195,
+      "proposedEndSample": 2410637,
+      "signalIntervalSeconds": [
+        54.6,
+        54.7
+      ],
+      "confidence": "medium",
+      "reason": "Baseline falls within the oral-to-nasal transition near54.65. Retain it rather than shrink the held vowel on uncertain nasal attribution.",
+      "evidence": [
+        "analysis/onset-independent/KOM-006-held.png"
+      ]
+    },
+    {
+      "wordId": "KOM-006-s03",
+      "sourceIndex": 2,
+      "word": "землёй",
+      "beforeEndSeconds": 57.08,
+      "beforeEndSample": 2517228,
+      "proposedEndSeconds": 57.73,
+      "proposedEndSample": 2545893,
+      "signalIntervalSeconds": [
+        57.64,
+        57.82
+      ],
+      "confidence": "medium",
+      "reason": "Baseline57.080 clips sustained body continuing to about57.5 and softer glide/body through57.65–57.73. Next frication near57.885 is a separate boundary.",
+      "evidence": [
+        "analysis/onset-independent/KOM-006-held.png"
+      ]
+    },
+    {
+      "wordId": "KOM-007-s02",
+      "sourceIndex": 1,
+      "word": "огонь,",
+      "beforeEndSeconds": 61.2,
+      "beforeEndSample": 2698920,
+      "proposedEndSeconds": 61.27,
+      "proposedEndSample": 2702007,
+      "signalIntervalSeconds": [
+        61.19,
+        61.33
+      ],
+      "confidence": "medium-low",
+      "reason": "First held body declines through61.0–61.2, with a softer low terminal /n/ region before new initial frication61.338. Exact direct-tail/reverb split is gradual.",
+      "evidence": [
+        "analysis/onset-independent/KOM-007-held.png"
+      ]
+    },
+    {
+      "wordId": "KOM-007-s04",
+      "sourceIndex": 3,
+      "word": "огонь",
+      "beforeEndSeconds": 64.74,
+      "beforeEndSample": 2855034,
+      "proposedEndSeconds": 65.45,
+      "proposedEndSample": 2886345,
+      "signalIntervalSeconds": [
+        65.25,
+        65.65
+      ],
+      "confidence": "medium-low",
+      "reason": "Baseline64.740 clips continuing low harmonic body. Softer terminal /n/ candidate persists toward65.4; later diffuse tail extends beyond65.9 and is not selected as direct singing.",
+      "evidence": [
+        "analysis/onset-independent/KOM-007-held.png"
+      ]
+    },
+    {
+      "wordId": "KOM-012-s01",
+      "sourceIndex": 0,
+      "word": "Лети",
+      "beforeEndSeconds": 128.64630385487527,
+      "beforeEndSample": 5673302,
+      "proposedEndSeconds": 128.32498866213152,
+      "proposedEndSample": 5659132,
+      "signalIntervalSeconds": [
+        128.3,
+        128.355
+      ],
+      "confidence": "medium",
+      "reason": "Independent source/stem low-formant and nasal transition around128.32, growing into /a/ near128.43–128.49, replaces a core-only onset near128.646. Coupled with nad onset128.325.",
+      "evidence": [
+        "analysis/onset-independent/KOM-012-held.png"
+      ]
+    },
+    {
+      "wordId": "KOM-012-s03",
+      "sourceIndex": 2,
+      "word": "землёй",
+      "beforeEndSeconds": 130.2,
+      "beforeEndSample": 5741820,
+      "proposedEndSeconds": 131.50498866213152,
+      "proposedEndSample": 5799370,
+      "signalIntervalSeconds": [
+        131.42,
+        131.6
+      ],
+      "confidence": "medium",
+      "reason": "Baseline130.200 clips sustained vowel. Coherent body and softer glide continue through131.3–131.55 before the following initial frication near131.705.",
+      "evidence": [
+        "analysis/onset-independent/KOM-012-held.png"
+      ]
+    },
+    {
+      "wordId": "KOM-013-s02",
+      "sourceIndex": 1,
+      "word": "орёл,",
+      "beforeEndSeconds": 135.02,
+      "beforeEndSample": 5954382,
+      "proposedEndSeconds": 135.08,
+      "proposedEndSample": 5957028,
+      "signalIntervalSeconds": [
+        135.025,
+        135.145
+      ],
+      "confidence": "medium",
+      "reason": "Vowel plus terminal sonorant/body weakens around135.06–135.10, before the following initial frication near135.155.",
+      "evidence": [
+        "analysis/onset-independent/KOM-013-held.png"
+      ]
+    },
+    {
+      "wordId": "KOM-013-s04",
+      "sourceIndex": 3,
+      "word": "орёл",
+      "beforeEndSeconds": 137.15766439909297,
+      "beforeEndSample": 6048653,
+      "proposedEndSeconds": 138.65,
+      "proposedEndSample": 6114465,
+      "signalIntervalSeconds": [
+        138.42,
+        138.82
+      ],
+      "confidence": "medium-low",
+      "reason": "Baseline137.158 clips ongoing held body. Strong body continues toward138.0; softer terminal sonorant/body persists through138.3–138.7, blending with reverb.",
+      "evidence": [
+        "analysis/onset-independent/KOM-013-held.png"
+      ]
+    },
+    {
+      "wordId": "KOM-014-s01",
+      "sourceIndex": 0,
+      "word": "Свети",
+      "beforeEndSeconds": 142.04292517006803,
+      "beforeEndSample": 6264093,
+      "proposedEndSeconds": 142.04292517006803,
+      "proposedEndSample": 6264093,
+      "signalIntervalSeconds": [
+        141.99,
+        142.085
+      ],
+      "confidence": "medium",
+      "reason": "Baseline remains within the ambiguous held-/i/ to /n/ transition around142.0. No earlier inferred release imposed.",
+      "evidence": [
+        "analysis/onset-independent/KOM-014-held.png"
+      ]
+    },
+    {
+      "wordId": "KOM-014-s03",
+      "sourceIndex": 2,
+      "word": "землёй",
+      "beforeEndSeconds": 143.58,
+      "beforeEndSample": 6331878,
+      "proposedEndSeconds": 145.12498866213153,
+      "proposedEndSample": 6400012,
+      "signalIntervalSeconds": [
+        145.04,
+        145.215
+      ],
+      "confidence": "medium",
+      "reason": "Baseline143.580 clips the held vowel. Coherent body continues toward145.0, with softer glide/tail around145.1–145.15 before new initial frication145.305.",
+      "evidence": [
+        "analysis/onset-independent/KOM-014-held.png"
+      ]
+    },
+    {
+      "wordId": "KOM-015-s02",
+      "sourceIndex": 1,
+      "word": "огонь,",
+      "beforeEndSeconds": 148.75,
+      "beforeEndSample": 6559875,
+      "proposedEndSeconds": 148.75,
+      "proposedEndSample": 6559875,
+      "signalIntervalSeconds": [
+        148.55,
+        148.78
+      ],
+      "confidence": "medium-low",
+      "reason": "Oral body becomes weak around148.3–148.4; softer low terminal consonant/body persists into148.5–148.7. Retain baseline inside the uncertainty instead of shortening an ambiguous /n/ tail.",
+      "evidence": [
+        "analysis/onset-independent/KOM-015-held.png"
+      ]
+    },
+    {
+      "wordId": "KOM-015-s04",
+      "sourceIndex": 3,
+      "word": "огонь",
+      "beforeEndSeconds": 151.617641723356,
+      "beforeEndSample": 6686338,
+      "proposedEndSeconds": 152.33,
+      "proposedEndSample": 6717753,
+      "signalIntervalSeconds": [
+        152.18,
+        152.5
+      ],
+      "confidence": "medium-low",
+      "reason": "Baseline151.618 lies before sustained body ends. Direct-body candidate continues toward151.9 and softer low terminal /n/ region toward152.3. Much later diffuse stem persistence is not selected.",
+      "evidence": [
+        "analysis/onset-independent/KOM-015-held.png"
+      ]
+    },
+    {
+      "wordId": "KOM-020-s01",
+      "sourceIndex": 0,
+      "word": "Лети",
+      "beforeEndSeconds": 176.0033560090703,
+      "beforeEndSample": 7761748,
+      "proposedEndSeconds": 176.34,
+      "proposedEndSample": 7776594,
+      "signalIntervalSeconds": [
+        176.31,
+        176.38
+      ],
+      "confidence": "medium",
+      "reason": "Original/stem held /i/ persists to about176.31, then a substantial new low-formant/nasal transition appears176.32–176.36. Coupled with nad onset176.340.",
+      "evidence": [
+        "analysis/onset-independent/KOM-020-held.png"
+      ]
+    },
+    {
+      "wordId": "KOM-020-s03",
+      "sourceIndex": 2,
+      "word": "землёй",
+      "beforeEndSeconds": 177.68,
+      "beforeEndSample": 7835688,
+      "proposedEndSeconds": 179.66498866213152,
+      "proposedEndSample": 7923226,
+      "signalIntervalSeconds": [
+        179.6,
+        179.735
+      ],
+      "confidence": "medium",
+      "reason": "Baseline177.680 clips nearly two seconds of continuing held vowel/glide. Body/glide persists through179.5–179.7. Uncertainty overlaps the next fricative onset179.705; no automatic clamp.",
+      "evidence": [
+        "analysis/onset-independent/KOM-020-held.png"
+      ]
+    },
+    {
+      "wordId": "KOM-021-s02",
+      "sourceIndex": 1,
+      "word": "орёл,",
+      "beforeEndSeconds": 182.82,
+      "beforeEndSample": 8062362,
+      "proposedEndSeconds": 182.97,
+      "proposedEndSample": 8068977,
+      "signalIntervalSeconds": [
+        182.91,
+        183.025
+      ],
+      "confidence": "medium",
+      "reason": "Baseline182.820 is before the terminal sonorant/body has declined; source/stem coherent body/tail extends to about182.98, near subsequent frication183.020.",
+      "evidence": [
+        "analysis/onset-independent/KOM-021-held.png"
+      ]
+    },
+    {
+      "wordId": "KOM-021-s04",
+      "sourceIndex": 3,
+      "word": "орёл",
+      "beforeEndSeconds": 185.26,
+      "beforeEndSample": 8169966,
+      "proposedEndSeconds": 186.76498866213151,
+      "proposedEndSample": 8236336,
+      "signalIntervalSeconds": [
+        186.64,
+        186.89
+      ],
+      "confidence": "medium-low",
+      "reason": "Baseline185.260 lies inside sustained singing. Coherent body remains strong185.9–186.4, with a softer terminal sonorant/body through186.6–186.8 before next frication187.065.",
+      "evidence": [
+        "analysis/onset-independent/KOM-021-held.png"
+      ]
+    },
+    {
+      "wordId": "KOM-022-s01",
+      "sourceIndex": 0,
+      "word": "Свети",
+      "beforeEndSeconds": 189.06297052154196,
+      "beforeEndSample": 8337677,
+      "proposedEndSeconds": 189.98501133786849,
+      "proposedEndSample": 8378339,
+      "signalIntervalSeconds": [
+        189.945,
+        190.025
+      ],
+      "confidence": "medium",
+      "reason": "Previous held /i/ continues to about189.94; a new low-formant/nasal transition occurs189.96–190.02. Coupled with nad onset189.985 instead of sparse core189.063.",
+      "evidence": [
+        "analysis/onset-independent/KOM-022-held.png"
+      ]
+    },
+    {
+      "wordId": "KOM-022-s03",
+      "sourceIndex": 2,
+      "word": "землёй",
+      "beforeEndSeconds": 191.8,
+      "beforeEndSample": 8458380,
+      "proposedEndSeconds": 193.26,
+      "proposedEndSample": 8522766,
+      "signalIntervalSeconds": [
+        193.16,
+        193.34
+      ],
+      "confidence": "medium",
+      "reason": "Baseline191.800 truncates held vowel. Strong coherent body continues toward193.13, then a softer glide/tail around193.2–193.3 before next frication193.375.",
+      "evidence": [
+        "analysis/onset-independent/KOM-022-held.png"
+      ]
+    },
+    {
+      "wordId": "KOM-023-s02",
+      "sourceIndex": 1,
+      "word": "огонь,",
+      "beforeEndSeconds": 196.73,
+      "beforeEndSample": 8675793,
+      "proposedEndSeconds": 196.73,
+      "proposedEndSample": 8675793,
+      "signalIntervalSeconds": [
+        196.655,
+        196.76
+      ],
+      "confidence": "medium-low",
+      "reason": "Oral and terminal low consonant/body continue through196.6–196.7. Baseline lies within the joined tail/new-frication uncertainty, so retain it.",
+      "evidence": [
+        "analysis/onset-independent/KOM-023-held.png"
+      ]
+    },
+    {
+      "wordId": "KOM-023-s04",
+      "sourceIndex": 3,
+      "word": "огонь",
+      "beforeEndSeconds": 199.1978231292517,
+      "beforeEndSample": 8784624,
+      "proposedEndSeconds": 200.35,
+      "proposedEndSample": 8835435,
+      "signalIntervalSeconds": [
+        200.18,
+        200.48
+      ],
+      "confidence": "medium-low",
+      "reason": "Baseline199.198 clips continued vowel modulation. Strong body continues toward199.8; softer terminal /n/ candidate persists through200.2–200.4. Flat diffuse/leaky persistence toward201.8 is not selected.",
+      "evidence": [
+        "analysis/onset-independent/KOM-023-held.png"
+      ]
+    }
+  ],
+  "nadReleaseProposals": [
+    {
+      "wordId": "KOM-004-s02",
+      "word": "над",
+      "beforeEndSeconds": 41.225691609977325,
+      "beforeEndSample": 1818053,
+      "proposedEndSeconds": 41.55501133786848,
+      "proposedEndSample": 1832576,
+      "signalIntervalSeconds": [
+        41.535,
+        41.58
+      ],
+      "confidence": "medium-low",
+      "reason": "Coherent original/stem vowel persists far past41.226. Attenuation/closure and joined final-stop/new-frication activity lie around41.54–41.57; /d/ vs /z/ split remains uncertain.",
+      "evidence": [
+        "analysis/onset-independent/nad-first-fly-release.png"
+      ]
+    },
+    {
+      "wordId": "KOM-006-s02",
+      "word": "над",
+      "beforeEndSeconds": 54.964557823129255,
+      "beforeEndSample": 2423937,
+      "proposedEndSeconds": 55.24,
+      "proposedEndSample": 2436084,
+      "signalIntervalSeconds": [
+        55.225,
+        55.255
+      ],
+      "confidence": "medium-low",
+      "reason": "Coherent vowel/body continues well beyond54.965, then declines near55.23 with new high-frequency activity55.24–55.25. Joined stop/fricative split remains uncertain.",
+      "evidence": [
+        "analysis/onset-independent/nad-first-shine-release.png"
+      ]
+    },
+    {
+      "wordId": "KOM-012-s02",
+      "word": "над",
+      "beforeEndSeconds": 128.9885941043084,
+      "beforeEndSample": 5688397,
+      "proposedEndSeconds": 129.00498866213152,
+      "proposedEndSample": 5689120,
+      "signalIntervalSeconds": [
+        128.985,
+        129.02
+      ],
+      "confidence": "medium-low",
+      "reason": "Body declines around128.95–128.98, followed by joined final-stop/new-fricative noise near129.00. End128.989 is near that transition, not proof of a breath gap.",
+      "evidence": [
+        "analysis/onset-independent/nad-second-fly-release.png"
+      ]
+    },
+    {
+      "wordId": "KOM-014-s02",
+      "word": "над",
+      "beforeEndSeconds": 142.40489795918367,
+      "beforeEndSample": 6280056,
+      "proposedEndSeconds": 142.6449886621315,
+      "proposedEndSample": 6290644,
+      "signalIntervalSeconds": [
+        142.625,
+        142.67
+      ],
+      "confidence": "medium-low",
+      "reason": "Vowel/body continues past142.405 toward142.63, with joined stop/frication near142.66. No independent long breath gap is visible.",
+      "evidence": [
+        "analysis/onset-independent/nad-second-shine-release.png"
+      ]
+    },
+    {
+      "wordId": "KOM-020-s02",
+      "word": "над",
+      "beforeEndSeconds": 176.58725623582765,
+      "beforeEndSample": 7787498,
+      "proposedEndSeconds": 177.06,
+      "proposedEndSample": 7808346,
+      "signalIntervalSeconds": [
+        177.035,
+        177.085
+      ],
+      "confidence": "medium-low",
+      "reason": "Coherent body continues through about177.02, after model end176.873. It attenuates around177.035 with joined stop/fricative activity177.065–177.09. Old176.587 is inside the held body.",
+      "evidence": [
+        "analysis/onset-independent/nad-third-fly-release.png"
+      ]
+    },
+    {
+      "wordId": "KOM-022-s02",
+      "word": "над",
+      "beforeEndSeconds": 190.0079365079365,
+      "beforeEndSample": 8379350,
+      "proposedEndSeconds": 190.6950113378685,
+      "proposedEndSample": 8409650,
+      "signalIntervalSeconds": [
+        190.675,
+        190.715
+      ],
+      "confidence": "medium-low",
+      "reason": "Body continues through190.665, attenuates near190.675, and joined stop/fricative activity grows190.68–190.71. Old190.008 is inside the new word, not a release.",
+      "evidence": [
+        "analysis/onset-independent/nad-third-shine-release.png"
+      ]
+    }
+  ],
+  "shortWordTransition": {
+    "transitionWordIds": [
+      "KOM-011-s02",
+      "KOM-011-s03"
+    ],
+    "transitionWords": [
+      "дай",
+      "ей"
+    ],
+    "proposedTransitionSeconds": 120.275,
+    "signalIntervalSeconds": [
+      120.235,
+      120.29
+    ],
+    "proposedEyReleaseSeconds": 120.48,
+    "eyReleaseIntervalSeconds": [
+      120.465,
+      120.495
+    ],
+    "confidence": "medium-low",
+    "reason": "Original/stem attenuation120.225–120.240 precedes new low voiced/glide body from120.24 growing120.27–120.33. The exact /aj ej/ attribution is unresolved. A distinct brief attenuation120.478–120.489 precedes the stronger next /r a/ body from120.49. No minimum-duration heuristic used.",
+    "evidence": [
+      "analysis/onset-independent/ey-short-boundary.png"
+    ]
+  },
+  "nonOverlapPolicy": "Do not clip measured releases to following onsets. Shared stop/fricative and continuous vowel/nasal transitions remain uncertain; report meaningful overlap if later listening confirms it."
+}

@@ -1,0 +1,58 @@
+{
+  "baselineTimingSha256": "50eb03112990c92454781697785a69826c5d979426153bc7154e7063208b4c06",
+  "sourceSha256": "af518bcde332f296dfc7982ebd7d8724c80c722decf5a32dfe3b00ef86107bf6",
+  "sourceSampleRate": 44100,
+  "wordId": "KOM-013-s04",
+  "text": "орёл",
+  "precedingWordId": "KOM-013-s03",
+  "decision": "change",
+  "beforeSample": 5990985,
+  "beforeSeconds": 135.85,
+  "proposedSample": 5984370,
+  "proposedSeconds": 135.7,
+  "onsetOwnershipUncertaintySeconds": [
+    135.65,
+    135.75
+  ],
+  "confidence": "medium-low",
+  "onsetReason": "The original mix and estimated vocal show an attenuated connected region around 135.60–135.66, then a changed low harmonic and upper-vowel trajectory develops around 135.66–135.75. That quiet prefix precedes the stronger body near 135.78–135.85 and the later r/stressed-vowel sequence. Previously the quiet region was left with the final unstressed vowel of словно because adjacent reduced vowels are not separated by silence. Renewed perceptual feedback favors assigning its changed leading body to the next word; this is compatible with the source trajectory and is not a new independent model vote. Select 135.700 with a broad 135.650–135.750 ownership range. It is a reviewed connected handoff, not the sparse initial-vowel core at 135.800/135.820, a generic anticipation, or a chorus-wide offset.",
+  "pairedPrecedingRelease": {
+    "wordId": "KOM-013-s03",
+    "beforeSample": 5990985,
+    "beforeSeconds": 135.85,
+    "proposedSample": 5984370,
+    "proposedSeconds": 135.7,
+    "ownershipUncertaintySeconds": [
+      135.65,
+      135.75
+    ]
+  },
+  "wordRelease": {
+    "decision": "retain",
+    "sample": 6114465,
+    "seconds": 138.65,
+    "existingAuditedUncertaintySeconds": [
+      138.42,
+      138.82
+    ],
+    "reason": "Retain the existing 138.650 release. This targeted onset review provides no new direct-body release observation; it does not reopen the previously reviewed terminal sonorant/body tail."
+  },
+  "modelContextSensitivity": {
+    "restrictedOriginalReducedInitialCore": 135.82,
+    "restrictedStemInitialCore": 135.8,
+    "restrictedStemPriorFinalVowelCore": 135.719,
+    "wholeOriginalReducedInitialCore": 135.834,
+    "wholeOriginalReducedPriorFinalVowelCore": 135.734,
+    "wholeStemInitialCore": 136.275,
+    "explanation": "The cached paths redistribute the same connected quiet body between the previous final vowel and next initial vowel. No path supplies a certified leading edge; later whole-stem ownership is not accepted as timing authority."
+  },
+  "humanListeningAttested": false,
+  "mutatesSourceTiming": false,
+  "uncertaintyMeaning": "Qualitative phonetic-ownership range, not a statistical confidence interval or 1 ms precision claim. Exact sample encoding represents the reviewed point only.",
+  "limits": "Original mix is authority. HTDemucs is noncausal and can smear or retain accompaniment; zero source/stem clock lag does not certify phone edges. 2048 Hann centers have ±23.22 ms sample support; 512 Hann centers have ±5.80 ms. Low voiced ridges are harmonics, not automatic F1/F2 measurements.",
+  "evidence": [
+    "eagle-second-original-stem.jpg",
+    "eagle-phone-path-review.json",
+    "preview-inputs-v6.json"
+  ]
+}

@@ -1,0 +1,3337 @@
+{
+  "schemaVersion": 1,
+  "status": "source-supported proposals only; root reconciles and applies source edits",
+  "baselineTimingSha256": "f9bdac802a56019eda3c21c8c4a78619506ac296db2a06999f55770c0dba4fc2",
+  "sourceSha256": "af518bcde332f296dfc7982ebd7d8724c80c722decf5a32dfe3b00ef86107bf6",
+  "editorialSha256": "cdca5026ede787103626912364a82ac311facb7e32aba652c013600fc31d390d",
+  "sourceSampleRate": 44100,
+  "sourceClockOffset": 0,
+  "humanListeningAttested": false,
+  "scope": "All12 refrain огонь/орёл opening vowels plus seven specified related sonorants.",
+  "method": "Original stereo waveform/spectrogram authority, zero-lag estimated stem identity support, competing MMS character ownership and Whisper timing; no constant shift.",
+  "signalResolution": "512 or1024 samples Hann support,88-sample hop (2.0ms); displayed sample points encode chosen boundaries, not that physical precision.",
+  "limits": [
+    "Continuous adjacent vowels and quiet nasal ownership remain uncertain; signal intervals describe plausible splits, not calibrated statistical confidence.",
+    "Estimated stem leaks/reverb and noncausal separation are possible; stem paths alone are insufficient.",
+    "Restricted and whole-phrase MMS share a model family. Conditioned Whisper is not lexical confirmation. Unprompted short-crop failures are retained and rejected.",
+    "No changes to neutral line visibility, direct-body final releases, lyric inventory, or source media are proposed here."
+  ],
+  "summary": {
+    "reviewed": 19,
+    "changedOnsets": 11,
+    "retainedOnsets": 8,
+    "coupledPreviousReleaseChanges": 8
+  },
+  "observations": [
+    {
+      "cueId": "KOM-002",
+      "sourceIndex": 1,
+      "wordId": "KOM-002-s02",
+      "word": "над",
+      "previousWordId": "KOM-002-s01",
+      "beforeOnsetSeconds": 17.248185941043083,
+      "beforeOnsetSample": 760645,
+      "beforePreviousReleaseSeconds": 17.08498866213152,
+      "beforePreviousReleaseSample": 753448,
+      "selectedBoundarySeconds": 17.09,
+      "selectedOnsetSample": 753669,
+      "selectedPreviousReleaseSeconds": 17.08498866213152,
+      "selectedPreviousReleaseSample": 753448,
+      "coupledOwnershipChange": false,
+      "decision": "changed",
+      "signalIntervalSeconds": [
+        17.065,
+        17.125
+      ],
+      "confidence": "medium-low",
+      "reason": "Prior final-vowel formants bend and attenuate around17.055–17.09; the quieter lower nasal-looking body follows before the stronger oral body around17.25–17.30. Original and estimated stem share this change. The new nasal ownership point is uncertain, but current17.248 begins within that body. Retain independently selected previous release17.085; do not fill the small gap. The low-score restricted MMS17.088 path has truncated terminal-consonant context and is rejected as corroboration.",
+      "reviewStatus": "original/stem signal inspected; sonorant ownership reviewed",
+      "modelObservations": [
+        {
+          "family": "MMS_FA whole phrase / original mix",
+          "onsetSeconds": 17.248192771084337,
+          "score": 0.3046380877494812,
+          "newInitialCharacters": [
+            {
+              "modelSymbol": "n",
+              "start": 17.248192771084337,
+              "end": 17.268273092369476,
+              "score": 0.3175007104873657
+            },
+            {
+              "modelSymbol": "a",
+              "start": 17.34859437751004,
+              "end": 17.36867469879518,
+              "score": 0.25669533014297485
+            },
+            {
+              "modelSymbol": "d",
+              "start": 17.428915662650603,
+              "end": 17.448995983935742,
+              "score": 0.339718222618103
+            }
+          ]
+        },
+        {
+          "family": "Whisper large-v3-turbo whole phrase / original mix",
+          "onsetSeconds": 17.0,
+          "releaseSeconds": 17.46,
+          "probability": 0.9201046824455261,
+          "interpretation": "Conditioned whole-phrase timing, not listening attestation."
+        },
+        {
+          "input": "original mix",
+          "cropSeconds": [
+            15.441360544217687,
+            17.409319727891155
+          ],
+          "onsetSeconds": 17.088016581632655,
+          "score": 0.02737945256133874,
+          "previousTerminalCharacters": [
+            {
+              "symbol": "h",
+              "start": 16.646234693877553,
+              "end": 16.666315688775512,
+              "score": 0.21257340908050537
+            },
+            {
+              "symbol": "i",
+              "start": 16.766720663265307,
+              "end": 16.786801658163267,
+              "score": 0.40613892674446106
+            },
+            {
+              "symbol": "e",
+              "start": 17.007692602040816,
+              "end": 17.027773596938776,
+              "score": 0.23874115943908691
+            }
+          ],
+          "newInitialCharacters": [
+            {
+              "symbol": "n",
+              "start": 17.088016581632655,
+              "end": 17.108097576530614,
+              "score": 0.029508763924241066
+            },
+            {
+              "symbol": "a",
+              "start": 17.14825956632653,
+              "end": 17.16834056122449,
+              "score": 0.044809356331825256
+            },
+            {
+              "symbol": "d",
+              "start": 17.268745535714288,
+              "end": 17.288826530612244,
+              "score": 0.007820237427949905
+            }
+          ],
+          "interpretation": "Rejected as onset corroboration: crop ends17.409 before independently observed terminal /d/; very low-score path is sensitive to truncated context.",
+          "family": "MMS_FA restricted two-word crop"
+        },
+        {
+          "input": "estimated vocal",
+          "cropSeconds": [
+            15.441360544217687,
+            17.409319727891155
+          ],
+          "onsetSeconds": 17.088016581632655,
+          "score": 0.030371440884967644,
+          "previousTerminalCharacters": [
+            {
+              "symbol": "h",
+              "start": 16.666315688775512,
+              "end": 16.686396683673472,
+              "score": 0.019762707874178886
+            },
+            {
+              "symbol": "i",
+              "start": 16.766720663265307,
+              "end": 16.786801658163267,
+              "score": 0.3629792332649231
+            },
+            {
+              "symbol": "e",
+              "start": 17.007692602040816,
+              "end": 17.027773596938776,
+              "score": 0.1446707844734192
+            }
+          ],
+          "newInitialCharacters": [
+            {
+              "symbol": "n",
+              "start": 17.088016581632655,
+              "end": 17.108097576530614,
+              "score": 0.061156149953603745
+            },
+            {
+              "symbol": "a",
+              "start": 17.18842155612245,
+              "end": 17.20850255102041,
+              "score": 0.023447778075933456
+            },
+            {
+              "symbol": "d",
+              "start": 17.22858354591837,
+              "end": 17.24866454081633,
+              "score": 0.006510394625365734
+            }
+          ],
+          "interpretation": "Rejected as onset corroboration: crop ends17.409 before independently observed terminal /d/; very low-score path is sensitive to truncated context.",
+          "family": "MMS_FA restricted two-word crop"
+        }
+      ]
+    },
+    {
+      "cueId": "KOM-003",
+      "sourceIndex": 5,
+      "wordId": "KOM-003-s06",
+      "word": "не",
+      "previousWordId": "KOM-003-s05",
+      "beforeOnsetSeconds": 27.369954648526075,
+      "beforeOnsetSample": 1207015,
+      "beforePreviousReleaseSeconds": 26.92498866213152,
+      "beforePreviousReleaseSample": 1187392,
+      "selectedBoundarySeconds": 26.97,
+      "selectedOnsetSample": 1189377,
+      "selectedPreviousReleaseSeconds": 26.92498866213152,
+      "selectedPreviousReleaseSample": 1187392,
+      "coupledOwnershipChange": false,
+      "decision": "changed",
+      "signalIntervalSeconds": [
+        26.935,
+        27.035
+      ],
+      "confidence": "low",
+      "reason": "After the prior vowel body around26.925, original/stem show damping and a lowered, narrow voiced body around26.95–27.05, persisting before the bright vowel region around27.37. Quiet nasal ownership is assigned near26.970 rather than the sparse CTC n/e core27.37. This is a gradual connected transition with low phonetic-ownership confidence; no silence or independent strong nasal burst isolates it. Retain the preceding release26.925 and reject Whisper26.800, which enters the preceding vowel.",
+      "reviewStatus": "original/stem signal inspected; sonorant ownership reviewed",
+      "modelObservations": [
+        {
+          "family": "MMS_FA whole phrase / original mix",
+          "onsetSeconds": 27.369954476479514,
+          "score": 0.4055813401937485,
+          "newInitialCharacters": [
+            {
+              "modelSymbol": "n",
+              "start": 27.369954476479514,
+              "end": 27.389984825493173,
+              "score": 0.5575682520866394
+            },
+            {
+              "modelSymbol": "e",
+              "start": 27.490136570561457,
+              "end": 27.510166919575113,
+              "score": 0.25359442830085754
+            }
+          ]
+        },
+        {
+          "family": "Whisper large-v3-turbo whole phrase / original mix",
+          "onsetSeconds": 26.8,
+          "releaseSeconds": 27.62,
+          "probability": 0.16727696359157562,
+          "interpretation": "Conditioned whole-phrase timing, not listening attestation."
+        },
+        {
+          "input": "original mix",
+          "cropSeconds": [
+            25.44718820861678,
+            27.830839002267574
+          ],
+          "onsetSeconds": 27.406608050847456,
+          "score": 0.04688637517392635,
+          "previousTerminalCharacters": [
+            {
+              "symbol": "o",
+              "start": 26.23499576271186,
+              "end": 26.25519597457627,
+              "score": 0.09057493507862091
+            },
+            {
+              "symbol": "t",
+              "start": 26.457198093220338,
+              "end": 26.477398305084744,
+              "score": 0.5124989151954651
+            },
+            {
+              "symbol": "y",
+              "start": 26.639,
+              "end": 26.659200211864405,
+              "score": 0.003553566988557577
+            }
+          ],
+          "newInitialCharacters": [
+            {
+              "symbol": "n",
+              "start": 27.406608050847456,
+              "end": 27.426808262711862,
+              "score": 0.04258659854531288
+            },
+            {
+              "symbol": "e",
+              "start": 27.487408898305084,
+              "end": 27.50760911016949,
+              "score": 0.051186151802539825
+            }
+          ],
+          "interpretation": "Competing conditioned model path; same family as earlier MMS, not independent confirmation.",
+          "family": "MMS_FA restricted two-word crop"
+        },
+        {
+          "input": "estimated vocal",
+          "cropSeconds": [
+            25.44718820861678,
+            27.830839002267574
+          ],
+          "onsetSeconds": 27.38640783898305,
+          "score": 0.4066174030303955,
+          "previousTerminalCharacters": [
+            {
+              "symbol": "o",
+              "start": 26.23499576271186,
+              "end": 26.25519597457627,
+              "score": 0.13479849696159363
+            },
+            {
+              "symbol": "t",
+              "start": 26.457198093220338,
+              "end": 26.477398305084744,
+              "score": 0.7018485069274902
+            },
+            {
+              "symbol": "y",
+              "start": 26.55819915254237,
+              "end": 26.578399364406778,
+              "score": 0.461548388004303
+            }
+          ],
+          "newInitialCharacters": [
+            {
+              "symbol": "n",
+              "start": 27.38640783898305,
+              "end": 27.406608050847456,
+              "score": 0.5457984209060669
+            },
+            {
+              "symbol": "e",
+              "start": 27.50760911016949,
+              "end": 27.527809322033896,
+              "score": 0.2674363851547241
+            }
+          ],
+          "interpretation": "Competing conditioned model path; same family as earlier MMS, not independent confirmation.",
+          "family": "MMS_FA restricted two-word crop"
+        }
+      ]
+    },
+    {
+      "cueId": "KOM-003",
+      "sourceIndex": 6,
+      "wordId": "KOM-003-s07",
+      "word": "родится",
+      "previousWordId": "KOM-003-s06",
+      "beforeOnsetSeconds": 27.950839002267575,
+      "beforeOnsetSample": 1232632,
+      "beforePreviousReleaseSeconds": 27.895011337868482,
+      "beforePreviousReleaseSample": 1230170,
+      "selectedBoundarySeconds": 27.925,
+      "selectedOnsetSample": 1231492,
+      "selectedPreviousReleaseSeconds": 27.895011337868482,
+      "selectedPreviousReleaseSample": 1230170,
+      "coupledOwnershipChange": false,
+      "decision": "changed",
+      "signalIntervalSeconds": [
+        27.905,
+        27.955
+      ],
+      "confidence": "medium-low",
+      "reason": "The preceding vowel body persists toward27.91; a brief attenuation/roughness near27.925–27.949 precedes the renewed vowel near27.96. Assign the quiet trill/sonorant entry27.925, slightly before the stronger MMS r core27.931–27.951. Preserve prior release27.895. Whisper27.620 would steal the preceding held vowel and is rejected.",
+      "reviewStatus": "original/stem signal inspected; sonorant ownership reviewed",
+      "modelObservations": [
+        {
+          "family": "MMS_FA whole phrase / original mix",
+          "onsetSeconds": 27.95083459787557,
+          "score": 0.6098454472505384,
+          "newInitialCharacters": [
+            {
+              "modelSymbol": "r",
+              "start": 27.95083459787557,
+              "end": 27.99089529590288,
+              "score": 0.7232897877693176
+            },
+            {
+              "modelSymbol": "o",
+              "start": 28.07101669195751,
+              "end": 28.09104704097117,
+              "score": 0.006394008174538612
+            },
+            {
+              "modelSymbol": "d",
+              "start": 28.191198786039454,
+              "end": 28.21122913505311,
+              "score": 0.0907185971736908
+            }
+          ]
+        },
+        {
+          "family": "Whisper large-v3-turbo whole phrase / original mix",
+          "onsetSeconds": 27.62,
+          "releaseSeconds": 28.88,
+          "probability": 0.9416936039924622,
+          "interpretation": "Conditioned whole-phrase timing, not listening attestation."
+        },
+        {
+          "input": "original mix",
+          "cropSeconds": [
+            27.269954648526074,
+            29.59501133786848
+          ],
+          "onsetSeconds": 27.93137769396552,
+          "score": 0.264211576548405,
+          "previousTerminalCharacters": [
+            {
+              "symbol": "n",
+              "start": 27.57059213362069,
+              "end": 27.59063577586207,
+              "score": 0.21909338235855103
+            },
+            {
+              "symbol": "e",
+              "start": 27.650766702586207,
+              "end": 27.670810344827586,
+              "score": 0.21737581491470337
+            }
+          ],
+          "newInitialCharacters": [
+            {
+              "symbol": "r",
+              "start": 27.93137769396552,
+              "end": 27.9514213362069,
+              "score": 0.3322707414627075
+            },
+            {
+              "symbol": "o",
+              "start": 28.051639547413792,
+              "end": 28.07168318965517,
+              "score": 0.01067588571459055
+            },
+            {
+              "symbol": "d",
+              "start": 28.19194504310345,
+              "end": 28.211988685344828,
+              "score": 0.01861518621444702
+            }
+          ],
+          "interpretation": "Competing conditioned model path; same family as earlier MMS, not independent confirmation.",
+          "family": "MMS_FA restricted two-word crop"
+        },
+        {
+          "input": "estimated vocal",
+          "cropSeconds": [
+            27.269954648526074,
+            29.59501133786848
+          ],
+          "onsetSeconds": 27.93137769396552,
+          "score": 0.4140209085890092,
+          "previousTerminalCharacters": [
+            {
+              "symbol": "n",
+              "start": 27.390199353448278,
+              "end": 27.410242995689657,
+              "score": 0.9492636919021606
+            },
+            {
+              "symbol": "e",
+              "start": 27.510461206896554,
+              "end": 27.530504849137934,
+              "score": 0.7318479418754578
+            }
+          ],
+          "newInitialCharacters": [
+            {
+              "symbol": "r",
+              "start": 27.93137769396552,
+              "end": 27.9514213362069,
+              "score": 0.980334997177124
+            },
+            {
+              "symbol": "o",
+              "start": 28.031595905172416,
+              "end": 28.051639547413792,
+              "score": 0.04299305006861687
+            },
+            {
+              "symbol": "d",
+              "start": 28.19194504310345,
+              "end": 28.211988685344828,
+              "score": 0.4734230041503906
+            }
+          ],
+          "interpretation": "Competing conditioned model path; same family as earlier MMS, not independent confirmation.",
+          "family": "MMS_FA restricted two-word crop"
+        }
+      ]
+    },
+    {
+      "cueId": "KOM-004",
+      "sourceIndex": 1,
+      "wordId": "KOM-004-s02",
+      "word": "над",
+      "previousWordId": "KOM-004-s01",
+      "beforeOnsetSeconds": 40.92360544217687,
+      "beforeOnsetSample": 1804731,
+      "beforePreviousReleaseSeconds": 40.92360544217687,
+      "beforePreviousReleaseSample": 1804731,
+      "selectedBoundarySeconds": 40.92360544217687,
+      "selectedOnsetSample": 1804731,
+      "selectedPreviousReleaseSeconds": 40.92360544217687,
+      "selectedPreviousReleaseSample": 1804731,
+      "coupledOwnershipChange": false,
+      "decision": "retained",
+      "signalIntervalSeconds": [
+        40.855,
+        40.955
+      ],
+      "confidence": "medium-low",
+      "reason": "Prior held /i/ harmonics persist through roughly40.9, then change into the new lower articulation. Restricted original/stem MMS n40.893 lies inside the broad transition; no securely separate earlier nasal ownership is established. Retain the coupled40.924 split. The old Whisper38.52 and broad-frame musical/nasal paths would steal held Лети.",
+      "reviewStatus": "original/stem signal inspected; sonorant ownership reviewed",
+      "modelObservations": [
+        {
+          "family": "MMS_FA whole phrase / original mix",
+          "onsetSeconds": 40.912040133779264,
+          "score": 0.15738782364254197,
+          "newInitialCharacters": [
+            {
+              "modelSymbol": "n",
+              "start": 40.912040133779264,
+              "end": 40.93210702341137,
+              "score": 0.059337593615055084
+            },
+            {
+              "modelSymbol": "a",
+              "start": 41.07257525083612,
+              "end": 41.09264214046822,
+              "score": 0.4085719585418701
+            },
+            {
+              "modelSymbol": "d",
+              "start": 41.19297658862876,
+              "end": 41.213043478260865,
+              "score": 0.004253918770700693
+            }
+          ]
+        },
+        {
+          "family": "Whisper large-v3-turbo whole phrase / original mix",
+          "onsetSeconds": 38.52,
+          "releaseSeconds": 41.22,
+          "probability": 0.01434106845408678,
+          "interpretation": "Conditioned whole-phrase timing, not listening attestation."
+        },
+        {
+          "input": "original mix",
+          "cropSeconds": [
+            37.72174603174603,
+            41.43501133786848
+          ],
+          "onsetSeconds": 40.89306621621622,
+          "score": 0.114805123458306,
+          "previousTerminalCharacters": [
+            {
+              "symbol": "e",
+              "start": 37.94253783783784,
+              "end": 37.96260945945946,
+              "score": 0.17714755237102509
+            },
+            {
+              "symbol": "t",
+              "start": 38.303827027027026,
+              "end": 38.32389864864865,
+              "score": 0.0923360288143158
+            },
+            {
+              "symbol": "i",
+              "start": 39.96977162162162,
+              "end": 39.98984324324324,
+              "score": 0.03689379245042801
+            }
+          ],
+          "newInitialCharacters": [
+            {
+              "symbol": "n",
+              "start": 40.89306621621622,
+              "end": 40.91313783783784,
+              "score": 0.07584211230278015
+            },
+            {
+              "symbol": "a",
+              "start": 41.07371081081081,
+              "end": 41.093782432432434,
+              "score": 0.2549510896205902
+            },
+            {
+              "symbol": "d",
+              "start": 41.374785135135134,
+              "end": 41.39485675675676,
+              "score": 0.013622168451547623
+            }
+          ],
+          "interpretation": "Competing conditioned model path; same family as earlier MMS, not independent confirmation.",
+          "family": "MMS_FA restricted two-word crop"
+        },
+        {
+          "input": "estimated vocal",
+          "cropSeconds": [
+            37.72174603174603,
+            41.43501133786848
+          ],
+          "onsetSeconds": 40.89306621621622,
+          "score": 0.21537777657310167,
+          "previousTerminalCharacters": [
+            {
+              "symbol": "e",
+              "start": 37.94253783783784,
+              "end": 37.96260945945946,
+              "score": 0.32276657223701477
+            },
+            {
+              "symbol": "t",
+              "start": 38.303827027027026,
+              "end": 38.32389864864865,
+              "score": 0.31059858202934265
+            },
+            {
+              "symbol": "i",
+              "start": 39.44790945945946,
+              "end": 39.46798108108108,
+              "score": 0.212895005941391
+            }
+          ],
+          "newInitialCharacters": [
+            {
+              "symbol": "n",
+              "start": 40.89306621621622,
+              "end": 40.91313783783784,
+              "score": 0.23258757591247559
+            },
+            {
+              "symbol": "a",
+              "start": 41.07371081081081,
+              "end": 41.093782432432434,
+              "score": 0.39081770181655884
+            },
+            {
+              "symbol": "d",
+              "start": 41.374785135135134,
+              "end": 41.39485675675676,
+              "score": 0.022728051990270615
+            }
+          ],
+          "interpretation": "Competing conditioned model path; same family as earlier MMS, not independent confirmation.",
+          "family": "MMS_FA restricted two-word crop"
+        }
+      ]
+    },
+    {
+      "cueId": "KOM-005",
+      "sourceIndex": 1,
+      "wordId": "KOM-005-s02",
+      "word": "орёл,",
+      "previousWordId": "KOM-005-s01",
+      "beforeOnsetSeconds": 45.76684807256236,
+      "beforeOnsetSample": 2018318,
+      "beforePreviousReleaseSeconds": 45.69,
+      "beforePreviousReleaseSample": 2014929,
+      "selectedBoundarySeconds": 45.18,
+      "selectedOnsetSample": 1992438,
+      "selectedPreviousReleaseSeconds": 45.18,
+      "selectedPreviousReleaseSample": 1992438,
+      "coupledOwnershipChange": true,
+      "decision": "changed",
+      "signalIntervalSeconds": [
+        45.125,
+        45.265
+      ],
+      "confidence": "low",
+      "reason": "Prior voiced body narrows and changes over roughly 44.9–45.1; a renewed lower vowel/formant region is established around 45.15–45.23. Fresh estimated-vocal n/o/r ownership places the prior final vowel near 45.026 and new vowel core45.207 before r45.367. Original harmonics support the transition but do not isolate a silence boundary. Current45.767 lies later within stable voice; original CTC/Whisper favor later parts of this continuous vowel.",
+      "reviewStatus": "original/stem signal inspected; independently reconciled vowel ownership",
+      "modelObservations": [
+        {
+          "family": "MMS_FA whole phrase / original mix",
+          "onsetSeconds": 45.76685236768802,
+          "score": 0.05902506923303008,
+          "newInitialCharacters": [
+            {
+              "modelSymbol": "o",
+              "start": 45.76685236768802,
+              "end": 45.786908077994426,
+              "score": 0.08182089030742645
+            },
+            {
+              "modelSymbol": "r",
+              "start": 45.92729805013927,
+              "end": 45.94735376044568,
+              "score": 0.02288905344903469
+            },
+            {
+              "modelSymbol": "e",
+              "start": 46.0075208913649,
+              "end": 46.027576601671306,
+              "score": 0.05863833427429199
+            }
+          ]
+        },
+        {
+          "family": "Whisper large-v3-turbo whole phrase / original mix",
+          "onsetSeconds": 45.4,
+          "releaseSeconds": 47.6,
+          "probability": 0.09359620239896078,
+          "interpretation": "Conditioned whole-phrase timing, not listening attestation."
+        },
+        {
+          "input": "original mix",
+          "cropSeconds": [
+            44.14299319727891,
+            47.61501133786848
+          ],
+          "onsetSeconds": 45.467578034682084,
+          "score": 0.06602306291460991,
+          "previousTerminalCharacters": [
+            {
+              "symbol": "v",
+              "start": 44.88556647398844,
+              "end": 44.90563583815029,
+              "score": 0.06417396664619446
+            },
+            {
+              "symbol": "n",
+              "start": 44.98591329479769,
+              "end": 45.00598265895954,
+              "score": 0.008541750721633434
+            },
+            {
+              "symbol": "o",
+              "start": 45.066190751445085,
+              "end": 45.08626011560694,
+              "score": 0.048832595348358154
+            }
+          ],
+          "newInitialCharacters": [
+            {
+              "symbol": "o",
+              "start": 45.467578034682084,
+              "end": 45.48764739884393,
+              "score": 0.1231156438589096
+            },
+            {
+              "symbol": "r",
+              "start": 45.66827167630058,
+              "end": 45.688341040462426,
+              "score": 0.0539361909031868
+            },
+            {
+              "symbol": "e",
+              "start": 45.76861849710983,
+              "end": 45.788687861271676,
+              "score": 0.04608307033777237
+            }
+          ],
+          "interpretation": "Competing conditioned model path; same family as earlier MMS, not independent confirmation.",
+          "family": "MMS_FA restricted two-word crop"
+        },
+        {
+          "input": "estimated vocal",
+          "cropSeconds": [
+            44.14299319727891,
+            47.61501133786848
+          ],
+          "onsetSeconds": 45.20667630057804,
+          "score": 0.19389102910645306,
+          "previousTerminalCharacters": [
+            {
+              "symbol": "v",
+              "start": 44.80528901734104,
+              "end": 44.82535838150289,
+              "score": 0.027081256732344627
+            },
+            {
+              "symbol": "n",
+              "start": 44.88556647398844,
+              "end": 44.90563583815029,
+              "score": 0.03399718552827835
+            },
+            {
+              "symbol": "o",
+              "start": 45.02605202312139,
+              "end": 45.046121387283236,
+              "score": 0.01643821969628334
+            }
+          ],
+          "newInitialCharacters": [
+            {
+              "symbol": "o",
+              "start": 45.20667630057804,
+              "end": 45.22674566473989,
+              "score": 0.008367779664695263
+            },
+            {
+              "symbol": "r",
+              "start": 45.367231213872834,
+              "end": 45.38730057803468,
+              "score": 0.6264729499816895
+            },
+            {
+              "symbol": "e",
+              "start": 45.467578034682084,
+              "end": 45.48764739884393,
+              "score": 0.11979252099990845
+            }
+          ],
+          "interpretation": "Competing conditioned model path; same family as earlier MMS, not independent confirmation.",
+          "family": "MMS_FA restricted two-word crop"
+        },
+        {
+          "family": "Whisper large-v3-turbo restricted two-word crop",
+          "input": "original mix",
+          "cropSeconds": [
+            44.14299319727891,
+            47.61501133786848
+          ],
+          "conditionedOnsetSeconds": 45.403,
+          "conditionedProbability": 0.0040261058214431005,
+          "unpromptedTextExcerpt": "Слово рааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааа",
+          "unpromptedUse": "Rejected as lexical confirmation: short sung crops yield wrong or degenerate words. Retained to expose the failure.",
+          "interpretation": "Conditioned timing is a competing model observation, not an independent ASR confirmation."
+        },
+        {
+          "family": "Whisper large-v3-turbo restricted two-word crop",
+          "input": "estimated vocal",
+          "cropSeconds": [
+            44.14299319727891,
+            47.61501133786848
+          ],
+          "conditionedOnsetSeconds": 45.163,
+          "conditionedProbability": 0.00810152682242915,
+          "unpromptedTextExcerpt": "Словно.",
+          "unpromptedUse": "Rejected as lexical confirmation: short sung crops yield wrong or degenerate words. Retained to expose the failure.",
+          "interpretation": "Conditioned timing is a competing model observation, not an independent ASR confirmation."
+        }
+      ]
+    },
+    {
+      "cueId": "KOM-005",
+      "sourceIndex": 3,
+      "wordId": "KOM-005-s04",
+      "word": "орёл",
+      "previousWordId": "KOM-005-s03",
+      "beforeOnsetSeconds": 48.895532879818596,
+      "beforeOnsetSample": 2156293,
+      "beforePreviousReleaseSeconds": 48.85501133786848,
+      "beforePreviousReleaseSample": 2154506,
+      "selectedBoundarySeconds": 48.42,
+      "selectedOnsetSample": 2135322,
+      "selectedPreviousReleaseSeconds": 48.42,
+      "selectedPreviousReleaseSample": 2135322,
+      "coupledOwnershipChange": true,
+      "decision": "changed",
+      "signalIntervalSeconds": [
+        48.34,
+        48.59
+      ],
+      "confidence": "low",
+      "reason": "Original and stem show narrowing after the first strong vowel around 48.1–48.3, then a changed lower voiced/formant body from roughly 48.3–48.4. Fresh stem phone ownership separates prior n/o near48.116/48.136 from initial-o core48.376 and later r48.977. Exact final-o versus initial-o ownership is gradual, so the range is broad and the point is a coupled lexical split rather than a detected gap.",
+      "reviewStatus": "original/stem signal inspected; independently reconciled vowel ownership",
+      "modelObservations": [
+        {
+          "family": "MMS_FA whole phrase / original mix",
+          "onsetSeconds": 48.89554317548746,
+          "score": 0.04494113044347614,
+          "newInitialCharacters": [
+            {
+              "modelSymbol": "o",
+              "start": 48.89554317548746,
+              "end": 48.91559888579387,
+              "score": 0.045131146907806396
+            },
+            {
+              "modelSymbol": "r",
+              "start": 49.11615598885793,
+              "end": 49.13621169916434,
+              "score": 0.06481192260980606
+            },
+            {
+              "modelSymbol": "e",
+              "start": 49.19637883008356,
+              "end": 49.21643454038997,
+              "score": 0.06416870653629303
+            }
+          ]
+        },
+        {
+          "family": "Whisper large-v3-turbo whole phrase / original mix",
+          "onsetSeconds": 48.78,
+          "releaseSeconds": 49.22,
+          "probability": 0.9785977900028229,
+          "interpretation": "Conditioned whole-phrase timing, not listening attestation."
+        },
+        {
+          "input": "original mix",
+          "cropSeconds": [
+            47.63501133786848,
+            51.32
+          ],
+          "onsetSeconds": 49.03690217391304,
+          "score": 0.026549954898655415,
+          "previousTerminalCharacters": [
+            {
+              "symbol": "v",
+              "start": 48.215788043478256,
+              "end": 48.235815217391306,
+              "score": 0.06336117535829544
+            },
+            {
+              "symbol": "n",
+              "start": 48.696440217391306,
+              "end": 48.71646739130435,
+              "score": 0.06575397402048111
+            },
+            {
+              "symbol": "o",
+              "start": 48.77654891304348,
+              "end": 48.79657608695652,
+              "score": 0.015161219984292984
+            }
+          ],
+          "newInitialCharacters": [
+            {
+              "symbol": "o",
+              "start": 49.03690217391304,
+              "end": 49.056929347826085,
+              "score": 0.02896914631128311
+            },
+            {
+              "symbol": "r",
+              "start": 49.09698369565217,
+              "end": 49.11701086956521,
+              "score": 0.024790188297629356
+            },
+            {
+              "symbol": "e",
+              "start": 49.19711956521739,
+              "end": 49.217146739130435,
+              "score": 0.03928600251674652
+            }
+          ],
+          "interpretation": "Competing conditioned model path; same family as earlier MMS, not independent confirmation.",
+          "family": "MMS_FA restricted two-word crop"
+        },
+        {
+          "input": "estimated vocal",
+          "cropSeconds": [
+            47.63501133786848,
+            51.32
+          ],
+          "onsetSeconds": 48.376005434782606,
+          "score": 0.057313802652060986,
+          "previousTerminalCharacters": [
+            {
+              "symbol": "v",
+              "start": 48.095625,
+              "end": 48.11565217391304,
+              "score": 0.002913207747042179
+            },
+            {
+              "symbol": "n",
+              "start": 48.11565217391304,
+              "end": 48.135679347826084,
+              "score": 0.10275639593601227
+            },
+            {
+              "symbol": "o",
+              "start": 48.135679347826084,
+              "end": 48.15570652173913,
+              "score": 0.00978099461644888
+            }
+          ],
+          "newInitialCharacters": [
+            {
+              "symbol": "o",
+              "start": 48.376005434782606,
+              "end": 48.39603260869565,
+              "score": 0.09412253648042679
+            },
+            {
+              "symbol": "r",
+              "start": 48.97682065217391,
+              "end": 48.996847826086956,
+              "score": 0.03131093829870224
+            },
+            {
+              "symbol": "e",
+              "start": 49.17709239130435,
+              "end": 49.19711956521739,
+              "score": 0.09155143797397614
+            }
+          ],
+          "interpretation": "Competing conditioned model path; same family as earlier MMS, not independent confirmation.",
+          "family": "MMS_FA restricted two-word crop"
+        },
+        {
+          "family": "Whisper large-v3-turbo restricted two-word crop",
+          "input": "original mix",
+          "cropSeconds": [
+            47.63501133786848,
+            51.32
+          ],
+          "conditionedOnsetSeconds": 48.835,
+          "conditionedProbability": 0.004850187979172915,
+          "unpromptedTextExcerpt": "Слышь.",
+          "unpromptedUse": "Rejected as lexical confirmation: short sung crops yield wrong or degenerate words. Retained to expose the failure.",
+          "interpretation": "Conditioned timing is a competing model observation, not an independent ASR confirmation."
+        },
+        {
+          "family": "Whisper large-v3-turbo restricted two-word crop",
+          "input": "estimated vocal",
+          "cropSeconds": [
+            47.63501133786848,
+            51.32
+          ],
+          "conditionedOnsetSeconds": 48.555,
+          "conditionedProbability": 0.002004896115977317,
+          "unpromptedTextExcerpt": "Слова я",
+          "unpromptedUse": "Rejected as lexical confirmation: short sung crops yield wrong or degenerate words. Retained to expose the failure.",
+          "interpretation": "Conditioned timing is a competing model observation, not an independent ASR confirmation."
+        }
+      ]
+    },
+    {
+      "cueId": "KOM-006",
+      "sourceIndex": 1,
+      "wordId": "KOM-006-s02",
+      "word": "над",
+      "previousWordId": "KOM-006-s01",
+      "beforeOnsetSeconds": 54.66297052154195,
+      "beforeOnsetSample": 2410637,
+      "beforePreviousReleaseSeconds": 54.66297052154195,
+      "beforePreviousReleaseSample": 2410637,
+      "selectedBoundarySeconds": 54.66297052154195,
+      "selectedOnsetSample": 2410637,
+      "selectedPreviousReleaseSeconds": 54.66297052154195,
+      "selectedPreviousReleaseSample": 2410637,
+      "coupledOwnershipChange": false,
+      "decision": "retained",
+      "signalIntervalSeconds": [
+        54.6,
+        54.72
+      ],
+      "confidence": "medium-low",
+      "reason": "The prior held /i/ body continues through54.58–54.65 before lower oral/formant change around54.66–54.75. Restricted stem n54.648 supports the existing54.663 transition. Original restricted n52.459 follows a wrong sustained-vowel path; reject it. Retain the current coupled split instead of copying an advance from a different refrain.",
+      "reviewStatus": "original/stem signal inspected; sonorant ownership reviewed",
+      "modelObservations": [
+        {
+          "family": "MMS_FA whole phrase / original mix",
+          "onsetSeconds": 52.46352583586626,
+          "score": 0.16677688558896384,
+          "newInitialCharacters": [
+            {
+              "modelSymbol": "n",
+              "start": 52.46352583586626,
+              "end": 52.48358662613981,
+              "score": 0.03395587205886841
+            },
+            {
+              "modelSymbol": "a",
+              "start": 54.83069908814589,
+              "end": 54.85075987841945,
+              "score": 0.45878055691719055
+            },
+            {
+              "modelSymbol": "d",
+              "start": 55.23191489361702,
+              "end": 55.25197568389058,
+              "score": 0.0075942277908325195
+            }
+          ]
+        },
+        {
+          "family": "Whisper large-v3-turbo whole phrase / original mix",
+          "onsetSeconds": 53.9,
+          "releaseSeconds": 55.32,
+          "probability": 0.09157678484916687,
+          "interpretation": "Conditioned whole-phrase timing, not listening attestation."
+        },
+        {
+          "input": "original mix",
+          "cropSeconds": [
+            51.55501133786848,
+            55.13
+          ],
+          "onsetSeconds": 52.45879213483146,
+          "score": 0.07172995091726382,
+          "previousTerminalCharacters": [
+            {
+              "symbol": "e",
+              "start": 51.876348314606744,
+              "end": 51.89643258426966,
+              "score": 0.1881309300661087
+            },
+            {
+              "symbol": "t",
+              "start": 52.13744382022472,
+              "end": 52.15752808988764,
+              "score": 0.02779099904000759
+            },
+            {
+              "symbol": "i",
+              "start": 52.35837078651685,
+              "end": 52.378455056179774,
+              "score": 0.022597532719373703
+            }
+          ],
+          "newInitialCharacters": [
+            {
+              "symbol": "n",
+              "start": 52.45879213483146,
+              "end": 52.47887640449438,
+              "score": 0.03650502488017082
+            },
+            {
+              "symbol": "a",
+              "start": 52.57929775280899,
+              "end": 52.59938202247191,
+              "score": 0.1686587780714035
+            },
+            {
+              "symbol": "d",
+              "start": 54.4672191011236,
+              "end": 54.48730337078651,
+              "score": 0.010026049800217152
+            }
+          ],
+          "interpretation": "Competing conditioned model path; same family as earlier MMS, not independent confirmation.",
+          "family": "MMS_FA restricted two-word crop"
+        },
+        {
+          "input": "estimated vocal",
+          "cropSeconds": [
+            51.55501133786848,
+            55.13
+          ],
+          "onsetSeconds": 54.64797752808989,
+          "score": 0.10096938659747441,
+          "previousTerminalCharacters": [
+            {
+              "symbol": "e",
+              "start": 51.85626404494382,
+              "end": 51.876348314606744,
+              "score": 0.3091282844543457
+            },
+            {
+              "symbol": "t",
+              "start": 52.17761235955056,
+              "end": 52.19769662921348,
+              "score": 0.12339077889919281
+            },
+            {
+              "symbol": "i",
+              "start": 53.12157303370787,
+              "end": 53.141657303370785,
+              "score": 0.06355004757642746
+            }
+          ],
+          "newInitialCharacters": [
+            {
+              "symbol": "n",
+              "start": 54.64797752808989,
+              "end": 54.668061797752806,
+              "score": 0.05047288164496422
+            },
+            {
+              "symbol": "a",
+              "start": 54.76848314606742,
+              "end": 54.788567415730334,
+              "score": 0.23032830655574799
+            },
+            {
+              "symbol": "d",
+              "start": 55.009494382022474,
+              "end": 55.02957865168539,
+              "score": 0.022106971591711044
+            }
+          ],
+          "interpretation": "Competing conditioned model path; same family as earlier MMS, not independent confirmation.",
+          "family": "MMS_FA restricted two-word crop"
+        }
+      ]
+    },
+    {
+      "cueId": "KOM-007",
+      "sourceIndex": 1,
+      "wordId": "KOM-007-s02",
+      "word": "огонь,",
+      "previousWordId": "KOM-007-s01",
+      "beforeOnsetSeconds": 58.7627664399093,
+      "beforeOnsetSample": 2591438,
+      "beforePreviousReleaseSeconds": 58.7627664399093,
+      "beforePreviousReleaseSample": 2591438,
+      "selectedBoundarySeconds": 58.7627664399093,
+      "selectedOnsetSample": 2591438,
+      "selectedPreviousReleaseSeconds": 58.7627664399093,
+      "selectedPreviousReleaseSample": 2591438,
+      "coupledOwnershipChange": false,
+      "decision": "retained",
+      "signalIntervalSeconds": [
+        58.65,
+        58.88
+      ],
+      "confidence": "medium-low",
+      "reason": "Original/stem transition occurs over roughly58.65–58.85. Current58.763 is within that range and original restricted MMS58.789/conditioned Whisper58.805 support it. Stem restricted MMS59.351 is a later articulation and should not replace the onset. No secure earlier quiet vowel ownership is established.",
+      "reviewStatus": "original/stem signal inspected; independently reconciled vowel ownership",
+      "modelObservations": [
+        {
+          "family": "MMS_FA whole phrase / original mix",
+          "onsetSeconds": 58.76276849642005,
+          "score": 0.08931165654212236,
+          "newInitialCharacters": [
+            {
+              "modelSymbol": "o",
+              "start": 58.76276849642005,
+              "end": 58.782816229116946,
+              "score": 0.0064376648515462875
+            },
+            {
+              "modelSymbol": "g",
+              "start": 59.023389021479716,
+              "end": 59.04343675417661,
+              "score": 0.18519708514213562
+            },
+            {
+              "modelSymbol": "o",
+              "start": 59.1035799522673,
+              "end": 59.123627684964205,
+              "score": 0.1376056671142578
+            }
+          ]
+        },
+        {
+          "family": "Whisper large-v3-turbo whole phrase / original mix",
+          "onsetSeconds": 59.0,
+          "releaseSeconds": 61.2,
+          "probability": 0.1614040911566311,
+          "interpretation": "Conditioned whole-phrase timing, not listening attestation."
+        },
+        {
+          "input": "original mix",
+          "cropSeconds": [
+            57.78498866213152,
+            61.218004535147394
+          ],
+          "onsetSeconds": 58.78880116959064,
+          "score": 0.13842122815549374,
+          "previousTerminalCharacters": [
+            {
+              "symbol": "v",
+              "start": 58.30697660818713,
+              "end": 58.327052631578944,
+              "score": 0.01536371186375618
+            },
+            {
+              "symbol": "n",
+              "start": 58.527812865497076,
+              "end": 58.547888888888885,
+              "score": 0.2253945767879486
+            },
+            {
+              "symbol": "o",
+              "start": 58.608116959064326,
+              "end": 58.628192982456135,
+              "score": 0.05910409986972809
+            }
+          ],
+          "newInitialCharacters": [
+            {
+              "symbol": "o",
+              "start": 58.78880116959064,
+              "end": 58.80887719298245,
+              "score": 0.03125233203172684
+            },
+            {
+              "symbol": "g",
+              "start": 59.00963742690058,
+              "end": 59.02971345029239,
+              "score": 0.23496079444885254
+            },
+            {
+              "symbol": "o",
+              "start": 59.11001754385965,
+              "end": 59.13009356725146,
+              "score": 0.23983170092105865
+            }
+          ],
+          "interpretation": "Competing conditioned model path; same family as earlier MMS, not independent confirmation.",
+          "family": "MMS_FA restricted two-word crop"
+        },
+        {
+          "input": "estimated vocal",
+          "cropSeconds": [
+            57.78498866213152,
+            61.218004535147394
+          ],
+          "onsetSeconds": 59.3509298245614,
+          "score": 0.0798112393822521,
+          "previousTerminalCharacters": [
+            {
+              "symbol": "v",
+              "start": 58.527812865497076,
+              "end": 58.547888888888885,
+              "score": 0.023297756910324097
+            },
+            {
+              "symbol": "n",
+              "start": 58.96948538011696,
+              "end": 58.989561403508766,
+              "score": 0.26776018738746643
+            },
+            {
+              "symbol": "o",
+              "start": 59.11001754385965,
+              "end": 59.13009356725146,
+              "score": 0.19086626172065735
+            }
+          ],
+          "newInitialCharacters": [
+            {
+              "symbol": "o",
+              "start": 59.3509298245614,
+              "end": 59.371005847953214,
+              "score": 0.20604579150676727
+            },
+            {
+              "symbol": "g",
+              "start": 59.953210526315786,
+              "end": 59.9732865497076,
+              "score": 0.012289556674659252
+            },
+            {
+              "symbol": "o",
+              "start": 60.05359064327485,
+              "end": 60.07366666666666,
+              "score": 0.08325876295566559
+            }
+          ],
+          "interpretation": "Competing conditioned model path; same family as earlier MMS, not independent confirmation.",
+          "family": "MMS_FA restricted two-word crop"
+        },
+        {
+          "family": "Whisper large-v3-turbo restricted two-word crop",
+          "input": "original mix",
+          "cropSeconds": [
+            57.78498866213152,
+            61.218004535147394
+          ],
+          "conditionedOnsetSeconds": 58.805,
+          "conditionedProbability": 0.25430574831746827,
+          "unpromptedTextExcerpt": "Суверен",
+          "unpromptedUse": "Rejected as lexical confirmation: short sung crops yield wrong or degenerate words. Retained to expose the failure.",
+          "interpretation": "Conditioned timing is a competing model observation, not an independent ASR confirmation."
+        },
+        {
+          "family": "Whisper large-v3-turbo restricted two-word crop",
+          "input": "estimated vocal",
+          "cropSeconds": [
+            57.78498866213152,
+            61.218004535147394
+          ],
+          "conditionedOnsetSeconds": 58.865,
+          "conditionedProbability": 0.2269098827188524,
+          "unpromptedTextExcerpt": "Сумерно",
+          "unpromptedUse": "Rejected as lexical confirmation: short sung crops yield wrong or degenerate words. Retained to expose the failure.",
+          "interpretation": "Conditioned timing is a competing model observation, not an independent ASR confirmation."
+        }
+      ]
+    },
+    {
+      "cueId": "KOM-007",
+      "sourceIndex": 3,
+      "wordId": "KOM-007-s04",
+      "word": "огонь",
+      "previousWordId": "KOM-007-s03",
+      "beforeOnsetSeconds": 63.073038548752834,
+      "beforeOnsetSample": 2781521,
+      "beforePreviousReleaseSeconds": 63.02498866213152,
+      "beforePreviousReleaseSample": 2779402,
+      "selectedBoundarySeconds": 62.16,
+      "selectedOnsetSample": 2741256,
+      "selectedPreviousReleaseSeconds": 62.16,
+      "selectedPreviousReleaseSample": 2741256,
+      "coupledOwnershipChange": true,
+      "decision": "changed",
+      "signalIntervalSeconds": [
+        62.11,
+        62.24
+      ],
+      "confidence": "medium-low",
+      "reason": "Original/stem preceding voiced/nasal sequence changes through61.84–62.04, followed by a lower renewed vowel/formant region around62.10–62.18. Fresh stem n61.920/final-o62.020/initial-o62.241/g62.401/stressed-o62.502 follows these physical transitions; conditioned stem62.138 supports the quiet initial vowel. The pronounced attenuation62.39–62.43 can be g-like closure, so62.425 is rejected as an onset: it would omit that vowel. Current63.073 is inside sustained stable harmonics. Original CTC follows a later competing phone path and remains disagreement, not a veto or extra vote.",
+      "reviewStatus": "original/stem signal inspected; independently reconciled vowel ownership",
+      "modelObservations": [
+        {
+          "family": "MMS_FA whole phrase / original mix",
+          "onsetSeconds": 63.073031026252984,
+          "score": 0.06006805598735809,
+          "newInitialCharacters": [
+            {
+              "modelSymbol": "o",
+              "start": 63.073031026252984,
+              "end": 63.09307875894988,
+              "score": 0.14218634366989136
+            },
+            {
+              "modelSymbol": "g",
+              "start": 63.373747016706446,
+              "end": 63.39379474940334,
+              "score": 0.018878068774938583
+            },
+            {
+              "modelSymbol": "o",
+              "start": 63.49403341288783,
+              "end": 63.514081145584726,
+              "score": 0.058858517557382584
+            }
+          ]
+        },
+        {
+          "family": "Whisper large-v3-turbo whole phrase / original mix",
+          "onsetSeconds": 62.4,
+          "releaseSeconds": 65.88,
+          "probability": 0.9948571622371674,
+          "interpretation": "Conditioned whole-phrase timing, not listening attestation."
+        },
+        {
+          "input": "original mix",
+          "cropSeconds": [
+            61.23800453514739,
+            65.57000000000001
+          ],
+          "onsetSeconds": 63.02294444444444,
+          "score": 0.09600730962119997,
+          "previousTerminalCharacters": [
+            {
+              "symbol": "v",
+              "start": 62.40122222222222,
+              "end": 62.421277777777775,
+              "score": 0.020204070955514908
+            },
+            {
+              "symbol": "n",
+              "start": 62.76222222222222,
+              "end": 62.78227777777778,
+              "score": 0.05793745070695877
+            },
+            {
+              "symbol": "o",
+              "start": 62.842444444444446,
+              "end": 62.8625,
+              "score": 0.1624135673046112
+            }
+          ],
+          "newInitialCharacters": [
+            {
+              "symbol": "o",
+              "start": 63.02294444444444,
+              "end": 63.043,
+              "score": 0.18595093488693237
+            },
+            {
+              "symbol": "g",
+              "start": 63.36388888888889,
+              "end": 63.383944444444445,
+              "score": 0.018094755709171295
+            },
+            {
+              "symbol": "o",
+              "start": 63.50427777777778,
+              "end": 63.52433333333333,
+              "score": 0.17001304030418396
+            }
+          ],
+          "interpretation": "Competing conditioned model path; same family as earlier MMS, not independent confirmation.",
+          "family": "MMS_FA restricted two-word crop"
+        },
+        {
+          "input": "estimated vocal",
+          "cropSeconds": [
+            61.23800453514739,
+            65.57000000000001
+          ],
+          "onsetSeconds": 62.24077777777778,
+          "score": 0.13965815876144916,
+          "previousTerminalCharacters": [
+            {
+              "symbol": "v",
+              "start": 61.839666666666666,
+              "end": 61.859722222222224,
+              "score": 0.06454738229513168
+            },
+            {
+              "symbol": "n",
+              "start": 61.91988888888889,
+              "end": 61.93994444444444,
+              "score": 0.008225186727941036
+            },
+            {
+              "symbol": "o",
+              "start": 62.02016666666667,
+              "end": 62.04022222222222,
+              "score": 0.06343837082386017
+            }
+          ],
+          "newInitialCharacters": [
+            {
+              "symbol": "o",
+              "start": 62.24077777777778,
+              "end": 62.26083333333333,
+              "score": 0.0019507338292896748
+            },
+            {
+              "symbol": "g",
+              "start": 62.40122222222222,
+              "end": 62.421277777777775,
+              "score": 0.20152758061885834
+            },
+            {
+              "symbol": "o",
+              "start": 62.5015,
+              "end": 62.52155555555556,
+              "score": 0.26743999123573303
+            }
+          ],
+          "interpretation": "Competing conditioned model path; same family as earlier MMS, not independent confirmation.",
+          "family": "MMS_FA restricted two-word crop"
+        },
+        {
+          "family": "Whisper large-v3-turbo restricted two-word crop",
+          "input": "original mix",
+          "cropSeconds": [
+            61.23800453514739,
+            65.57000000000001
+          ],
+          "conditionedOnsetSeconds": 62.458,
+          "conditionedProbability": 0.4793954415945336,
+          "unpromptedTextExcerpt": "Солна",
+          "unpromptedUse": "Rejected as lexical confirmation: short sung crops yield wrong or degenerate words. Retained to expose the failure.",
+          "interpretation": "Conditioned timing is a competing model observation, not an independent ASR confirmation."
+        },
+        {
+          "family": "Whisper large-v3-turbo restricted two-word crop",
+          "input": "estimated vocal",
+          "cropSeconds": [
+            61.23800453514739,
+            65.57000000000001
+          ],
+          "conditionedOnsetSeconds": 62.138,
+          "conditionedProbability": 0.4895310460124165,
+          "unpromptedTextExcerpt": "Славная дочь.",
+          "unpromptedUse": "Rejected as lexical confirmation: short sung crops yield wrong or degenerate words. Retained to expose the failure.",
+          "interpretation": "Conditioned timing is a competing model observation, not an independent ASR confirmation."
+        }
+      ]
+    },
+    {
+      "cueId": "KOM-009",
+      "sourceIndex": 1,
+      "wordId": "KOM-009-s02",
+      "word": "рассветом",
+      "previousWordId": "KOM-009-s01",
+      "beforeOnsetSeconds": 103.32233560090702,
+      "beforeOnsetSample": 4556515,
+      "beforePreviousReleaseSeconds": 103.28498866213152,
+      "beforePreviousReleaseSample": 4554868,
+      "selectedBoundarySeconds": 103.32233560090702,
+      "selectedOnsetSample": 4556515,
+      "selectedPreviousReleaseSeconds": 103.28498866213152,
+      "selectedPreviousReleaseSample": 4554868,
+      "coupledOwnershipChange": false,
+      "decision": "retained",
+      "signalIntervalSeconds": [
+        103.295,
+        103.345
+      ],
+      "confidence": "medium",
+      "reason": "Prior За vowel continues toward103.30. Attenuation/roughness around103.305–103.34 precedes the next vowel, consistent with the existing103.322 r boundary and restricted MMS103.301/103.322. No source-supported earlier r ownership appears at Whisper103.04–103.06. Retain onset and independent preceding release103.285 rather than filling its brief gap.",
+      "reviewStatus": "original/stem signal inspected; sonorant ownership reviewed",
+      "modelObservations": [
+        {
+          "family": "MMS_FA whole phrase / original mix",
+          "onsetSeconds": 103.32233009708737,
+          "score": 0.5243407381543269,
+          "newInitialCharacters": [
+            {
+              "modelSymbol": "r",
+              "start": 103.32233009708737,
+              "end": 103.34239482200647,
+              "score": 0.9594807624816895
+            },
+            {
+              "modelSymbol": "a",
+              "start": 103.38252427184466,
+              "end": 103.40258899676375,
+              "score": 0.45082977414131165
+            },
+            {
+              "modelSymbol": "s",
+              "start": 103.44271844660193,
+              "end": 103.46278317152102,
+              "score": 0.0025436070282012224
+            }
+          ]
+        },
+        {
+          "family": "Whisper large-v3-turbo whole phrase / original mix",
+          "onsetSeconds": 103.06,
+          "releaseSeconds": 104.58,
+          "probability": 0.9993724425633749,
+          "interpretation": "Conditioned whole-phrase timing, not listening attestation."
+        },
+        {
+          "input": "original mix",
+          "cropSeconds": [
+            102.60000000000001,
+            104.94498866213152
+          ],
+          "onsetSeconds": 103.30149572649572,
+          "score": 0.28397781175832887,
+          "previousTerminalCharacters": [
+            {
+              "symbol": "z",
+              "start": 102.7803846153846,
+              "end": 102.80042735042734,
+              "score": 0.029460063204169273
+            },
+            {
+              "symbol": "a",
+              "start": 102.98081196581197,
+              "end": 103.00085470085469,
+              "score": 0.11146263778209686
+            }
+          ],
+          "newInitialCharacters": [
+            {
+              "symbol": "r",
+              "start": 103.30149572649572,
+              "end": 103.32153846153845,
+              "score": 0.42161595821380615
+            },
+            {
+              "symbol": "a",
+              "start": 103.38166666666666,
+              "end": 103.4017094017094,
+              "score": 0.6514732241630554
+            },
+            {
+              "symbol": "s",
+              "start": 103.42175213675213,
+              "end": 103.44179487179487,
+              "score": 0.0010523886885493994
+            }
+          ],
+          "interpretation": "Competing conditioned model path; same family as earlier MMS, not independent confirmation.",
+          "family": "MMS_FA restricted two-word crop"
+        },
+        {
+          "input": "estimated vocal",
+          "cropSeconds": [
+            102.60000000000001,
+            104.94498866213152
+          ],
+          "onsetSeconds": 103.32153846153845,
+          "score": 0.37679003386033905,
+          "previousTerminalCharacters": [
+            {
+              "symbol": "z",
+              "start": 102.80042735042734,
+              "end": 102.82047008547008,
+              "score": 0.8717452883720398
+            },
+            {
+              "symbol": "a",
+              "start": 102.96076923076923,
+              "end": 102.98081196581197,
+              "score": 0.35185688734054565
+            }
+          ],
+          "newInitialCharacters": [
+            {
+              "symbol": "r",
+              "start": 103.32153846153845,
+              "end": 103.34158119658119,
+              "score": 0.6867443323135376
+            },
+            {
+              "symbol": "a",
+              "start": 103.38166666666666,
+              "end": 103.4017094017094,
+              "score": 0.3267890512943268
+            },
+            {
+              "symbol": "s",
+              "start": 103.5219658119658,
+              "end": 103.54200854700854,
+              "score": 0.933727502822876
+            }
+          ],
+          "interpretation": "Competing conditioned model path; same family as earlier MMS, not independent confirmation.",
+          "family": "MMS_FA restricted two-word crop"
+        }
+      ]
+    },
+    {
+      "cueId": "KOM-013",
+      "sourceIndex": 1,
+      "wordId": "KOM-013-s02",
+      "word": "орёл,",
+      "previousWordId": "KOM-013-s01",
+      "beforeOnsetSeconds": 133.20668934240362,
+      "beforeOnsetSample": 5874415,
+      "beforePreviousReleaseSeconds": 133.1449886621315,
+      "beforePreviousReleaseSample": 5871694,
+      "selectedBoundarySeconds": 132.65,
+      "selectedOnsetSample": 5849865,
+      "selectedPreviousReleaseSeconds": 132.65,
+      "selectedPreviousReleaseSample": 5849865,
+      "coupledOwnershipChange": true,
+      "decision": "changed",
+      "signalIntervalSeconds": [
+        132.59,
+        132.74
+      ],
+      "confidence": "medium-low",
+      "reason": "Original/stem narrowing and formant change around132.4–132.55 precede the renewed lower vowel body near132.6–132.7 and later articulatory glide near132.78. Fresh stem prior final-o132.508/initial-o132.688/r132.788 and conditioned132.665 fit this order; original conditioned132.825 selects a later part. Current133.207 lies inside stable later voice. The adjacent vowel split is inferred, not acoustically isolated.",
+      "reviewStatus": "original/stem signal inspected; independently reconciled vowel ownership",
+      "modelObservations": [
+        {
+          "family": "MMS_FA whole phrase / original mix",
+          "onsetSeconds": 133.2066852367688,
+          "score": 0.05851800576783717,
+          "newInitialCharacters": [
+            {
+              "modelSymbol": "o",
+              "start": 133.2066852367688,
+              "end": 133.22674094707523,
+              "score": 0.21148449182510376
+            },
+            {
+              "modelSymbol": "r",
+              "start": 133.32701949860726,
+              "end": 133.34707520891365,
+              "score": 0.006665988825261593
+            },
+            {
+              "modelSymbol": "e",
+              "start": 133.66796657381616,
+              "end": 133.68802228412258,
+              "score": 0.0041172318160533905
+            }
+          ]
+        },
+        {
+          "family": "Whisper large-v3-turbo whole phrase / original mix",
+          "onsetSeconds": 132.84,
+          "releaseSeconds": 135.02,
+          "probability": 0.1123325453979002,
+          "interpretation": "Conditioned whole-phrase timing, not listening attestation."
+        },
+        {
+          "input": "original mix",
+          "cropSeconds": [
+            131.6050113378685,
+            135.03501133786847
+          ],
+          "onsetSeconds": 133.9919590643275,
+          "score": 0.04427824355661869,
+          "previousTerminalCharacters": [
+            {
+              "symbol": "v",
+              "start": 133.10938596491226,
+              "end": 133.12944444444443,
+              "score": 0.06320898234844208
+            },
+            {
+              "symbol": "n",
+              "start": 133.3099707602339,
+              "end": 133.33002923976608,
+              "score": 0.04259754717350006
+            },
+            {
+              "symbol": "o",
+              "start": 133.39020467836255,
+              "end": 133.41026315789472,
+              "score": 0.06421772390604019
+            }
+          ],
+          "newInitialCharacters": [
+            {
+              "symbol": "o",
+              "start": 133.9919590643275,
+              "end": 134.01201754385963,
+              "score": 0.062186434864997864
+            },
+            {
+              "symbol": "r",
+              "start": 134.33295321637425,
+              "end": 134.35301169590642,
+              "score": 0.025346754118800163
+            },
+            {
+              "symbol": "e",
+              "start": 134.41318713450292,
+              "end": 134.4332456140351,
+              "score": 0.06017041206359863
+            }
+          ],
+          "interpretation": "Competing conditioned model path; same family as earlier MMS, not independent confirmation.",
+          "family": "MMS_FA restricted two-word crop"
+        },
+        {
+          "input": "estimated vocal",
+          "cropSeconds": [
+            131.6050113378685,
+            135.03501133786847
+          ],
+          "onsetSeconds": 132.68815789473683,
+          "score": 0.1339413647656329,
+          "previousTerminalCharacters": [
+            {
+              "symbol": "v",
+              "start": 132.1465789473684,
+              "end": 132.16663742690056,
+              "score": 0.005710821598768234
+            },
+            {
+              "symbol": "n",
+              "start": 132.32710526315788,
+              "end": 132.34716374269004,
+              "score": 0.05426536127924919
+            },
+            {
+              "symbol": "o",
+              "start": 132.50763157894735,
+              "end": 132.52769005847952,
+              "score": 0.06619323045015335
+            }
+          ],
+          "newInitialCharacters": [
+            {
+              "symbol": "o",
+              "start": 132.68815789473683,
+              "end": 132.708216374269,
+              "score": 0.0032392304856330156
+            },
+            {
+              "symbol": "r",
+              "start": 132.78845029239764,
+              "end": 132.8085087719298,
+              "score": 0.2858143150806427
+            },
+            {
+              "symbol": "e",
+              "start": 132.90880116959065,
+              "end": 132.92885964912278,
+              "score": 0.2257261723279953
+            }
+          ],
+          "interpretation": "Competing conditioned model path; same family as earlier MMS, not independent confirmation.",
+          "family": "MMS_FA restricted two-word crop"
+        },
+        {
+          "family": "Whisper large-v3-turbo restricted two-word crop",
+          "input": "original mix",
+          "cropSeconds": [
+            131.6050113378685,
+            135.03501133786847
+          ],
+          "conditionedOnsetSeconds": 132.825,
+          "conditionedProbability": 0.011896569194504991,
+          "unpromptedTextExcerpt": "Слово я",
+          "unpromptedUse": "Rejected as lexical confirmation: short sung crops yield wrong or degenerate words. Retained to expose the failure.",
+          "interpretation": "Conditioned timing is a competing model observation, not an independent ASR confirmation."
+        },
+        {
+          "family": "Whisper large-v3-turbo restricted two-word crop",
+          "input": "estimated vocal",
+          "cropSeconds": [
+            131.6050113378685,
+            135.03501133786847
+          ],
+          "conditionedOnsetSeconds": 132.665,
+          "conditionedProbability": 0.024128250646754168,
+          "unpromptedTextExcerpt": "Словно я",
+          "unpromptedUse": "Rejected as lexical confirmation: short sung crops yield wrong or degenerate words. Retained to expose the failure.",
+          "interpretation": "Conditioned timing is a competing model observation, not an independent ASR confirmation."
+        }
+      ]
+    },
+    {
+      "cueId": "KOM-013",
+      "sourceIndex": 3,
+      "wordId": "KOM-013-s04",
+      "word": "орёл",
+      "previousWordId": "KOM-013-s03",
+      "beforeOnsetSeconds": 136.5359410430839,
+      "beforeOnsetSample": 6021235,
+      "beforePreviousReleaseSeconds": 136.4750113378685,
+      "beforePreviousReleaseSample": 6018548,
+      "selectedBoundarySeconds": 135.85,
+      "selectedOnsetSample": 5990985,
+      "selectedPreviousReleaseSeconds": 135.85,
+      "selectedPreviousReleaseSample": 5990985,
+      "coupledOwnershipChange": true,
+      "decision": "changed",
+      "signalIntervalSeconds": [
+        135.79,
+        135.96
+      ],
+      "confidence": "low",
+      "reason": "Original/stem first strong vowel weakens/narrows through135.55–135.75, then a lower quiet voiced region is established near135.8–135.9 before a later formant/articulatory change. Fresh stem final-o135.718/initial-o135.818/r135.918 supports that ordering. Original CTC136.521 and conditioned136.255 disagree substantially. Exact adjacent-vowel ownership remains low confidence.",
+      "reviewStatus": "original/stem signal inspected; independently reconciled vowel ownership",
+      "modelObservations": [
+        {
+          "family": "MMS_FA whole phrase / original mix",
+          "onsetSeconds": 136.53593314763233,
+          "score": 0.07300053839571774,
+          "newInitialCharacters": [
+            {
+              "modelSymbol": "o",
+              "start": 136.53593314763233,
+              "end": 136.55598885793873,
+              "score": 0.2757332921028137
+            },
+            {
+              "modelSymbol": "r",
+              "start": 137.0573816155989,
+              "end": 137.0774373259053,
+              "score": 0.004264430608600378
+            },
+            {
+              "modelSymbol": "e",
+              "start": 137.09749303621172,
+              "end": 137.1175487465181,
+              "score": 0.009527290239930153
+            }
+          ]
+        },
+        {
+          "family": "Whisper large-v3-turbo whole phrase / original mix",
+          "onsetSeconds": 136.24,
+          "releaseSeconds": 136.78,
+          "probability": 0.9815762042999268,
+          "interpretation": "Conditioned whole-phrase timing, not listening attestation."
+        },
+        {
+          "input": "original mix",
+          "cropSeconds": [
+            135.05501133786848,
+            138.77
+          ],
+          "onsetSeconds": 136.52091891891894,
+          "score": 0.11898602807195857,
+          "previousTerminalCharacters": [
+            {
+              "symbol": "v",
+              "start": 135.67751351351353,
+              "end": 135.6975945945946,
+              "score": 0.036955028772354126
+            },
+            {
+              "symbol": "n",
+              "start": 136.1192972972973,
+              "end": 136.13937837837838,
+              "score": 0.0887475311756134
+            },
+            {
+              "symbol": "o",
+              "start": 136.19962162162162,
+              "end": 136.2197027027027,
+              "score": 0.025422416627407074
+            }
+          ],
+          "newInitialCharacters": [
+            {
+              "symbol": "o",
+              "start": 136.52091891891894,
+              "end": 136.541,
+              "score": 0.43822115659713745
+            },
+            {
+              "symbol": "r",
+              "start": 137.46472972972973,
+              "end": 137.4848108108108,
+              "score": 0.004136033356189728
+            },
+            {
+              "symbol": "e",
+              "start": 137.62537837837837,
+              "end": 137.64545945945946,
+              "score": 0.031396813690662384
+            }
+          ],
+          "interpretation": "Competing conditioned model path; same family as earlier MMS, not independent confirmation.",
+          "family": "MMS_FA restricted two-word crop"
+        },
+        {
+          "input": "estimated vocal",
+          "cropSeconds": [
+            135.05501133786848,
+            138.77
+          ],
+          "onsetSeconds": 135.8180810810811,
+          "score": 0.13069011643528938,
+          "previousTerminalCharacters": [
+            {
+              "symbol": "v",
+              "start": 135.51686486486489,
+              "end": 135.53694594594594,
+              "score": 0.0037118804175406694
+            },
+            {
+              "symbol": "n",
+              "start": 135.67751351351353,
+              "end": 135.6975945945946,
+              "score": 0.03023817576467991
+            },
+            {
+              "symbol": "o",
+              "start": 135.71767567567568,
+              "end": 135.73775675675677,
+              "score": 0.0029736985452473164
+            }
+          ],
+          "newInitialCharacters": [
+            {
+              "symbol": "o",
+              "start": 135.8180810810811,
+              "end": 135.83816216216218,
+              "score": 0.06458903849124908
+            },
+            {
+              "symbol": "r",
+              "start": 135.9184864864865,
+              "end": 135.9385675675676,
+              "score": 0.13384024798870087
+            },
+            {
+              "symbol": "e",
+              "start": 136.05905405405406,
+              "end": 136.07913513513515,
+              "score": 0.31568920612335205
+            }
+          ],
+          "interpretation": "Competing conditioned model path; same family as earlier MMS, not independent confirmation.",
+          "family": "MMS_FA restricted two-word crop"
+        },
+        {
+          "family": "Whisper large-v3-turbo restricted two-word crop",
+          "input": "original mix",
+          "cropSeconds": [
+            135.05501133786848,
+            138.77
+          ],
+          "conditionedOnsetSeconds": 136.255,
+          "conditionedProbability": 0.0032630286877974868,
+          "unpromptedTextExcerpt": "Субтитры создавал DimaTorzok",
+          "unpromptedUse": "Rejected as lexical confirmation: short sung crops yield wrong or degenerate words. Retained to expose the failure.",
+          "interpretation": "Conditioned timing is a competing model observation, not an independent ASR confirmation."
+        },
+        {
+          "family": "Whisper large-v3-turbo restricted two-word crop",
+          "input": "estimated vocal",
+          "cropSeconds": [
+            135.05501133786848,
+            138.77
+          ],
+          "conditionedOnsetSeconds": 135.975,
+          "conditionedProbability": 0.00223015365190804,
+          "unpromptedTextExcerpt": "Субтитры создавал DimaTorzok",
+          "unpromptedUse": "Rejected as lexical confirmation: short sung crops yield wrong or degenerate words. Retained to expose the failure.",
+          "interpretation": "Conditioned timing is a competing model observation, not an independent ASR confirmation."
+        }
+      ]
+    },
+    {
+      "cueId": "KOM-014",
+      "sourceIndex": 1,
+      "wordId": "KOM-014-s02",
+      "word": "над",
+      "previousWordId": "KOM-014-s01",
+      "beforeOnsetSeconds": 142.04292517006803,
+      "beforeOnsetSample": 6264093,
+      "beforePreviousReleaseSeconds": 142.04292517006803,
+      "beforePreviousReleaseSample": 6264093,
+      "selectedBoundarySeconds": 142.04292517006803,
+      "selectedOnsetSample": 6264093,
+      "selectedPreviousReleaseSeconds": 142.04292517006803,
+      "selectedPreviousReleaseSample": 6264093,
+      "coupledOwnershipChange": false,
+      "decision": "retained",
+      "signalIntervalSeconds": [
+        141.995,
+        142.105
+      ],
+      "confidence": "medium-low",
+      "reason": "Original/stem prior /i/ remains stable to roughly142.02, followed by a changed body142.04–142.14. Original restricted n142.034 is close to the existing142.043 split; stem142.215 is a later vowel/core path. Retain current onset and preceding release; older Whisper141.02/140.48 steals the prior held vowel.",
+      "reviewStatus": "original/stem signal inspected; sonorant ownership reviewed",
+      "modelObservations": [
+        {
+          "family": "MMS_FA whole phrase / original mix",
+          "onsetSeconds": 142.0510028653295,
+          "score": 0.20649798462788263,
+          "newInitialCharacters": [
+            {
+              "modelSymbol": "n",
+              "start": 142.0510028653295,
+              "end": 142.07106017191975,
+              "score": 0.04759794473648071
+            },
+            {
+              "modelSymbol": "a",
+              "start": 142.23151862464184,
+              "end": 142.25157593123208,
+              "score": 0.49803483486175537
+            },
+            {
+              "modelSymbol": "d",
+              "start": 142.69283667621775,
+              "end": 142.712893982808,
+              "score": 0.07386117428541183
+            }
+          ]
+        },
+        {
+          "family": "Whisper large-v3-turbo whole phrase / original mix",
+          "onsetSeconds": 141.02,
+          "releaseSeconds": 142.46,
+          "probability": 0.01708241179585457,
+          "interpretation": "Conditioned whole-phrase timing, not listening attestation."
+        },
+        {
+          "input": "original mix",
+          "cropSeconds": [
+            138.97,
+            142.53501133786847
+          ],
+          "onsetSeconds": 142.03429775280898,
+          "score": 0.08862027308593194,
+          "previousTerminalCharacters": [
+            {
+              "symbol": "e",
+              "start": 139.29044943820224,
+              "end": 139.31047752808988,
+              "score": 0.18036970496177673
+            },
+            {
+              "symbol": "t",
+              "start": 139.89129213483145,
+              "end": 139.9113202247191,
+              "score": 0.061588089913129807
+            },
+            {
+              "symbol": "i",
+              "start": 140.0114606741573,
+              "end": 140.03148876404495,
+              "score": 0.027423355728387833
+            }
+          ],
+          "newInitialCharacters": [
+            {
+              "symbol": "n",
+              "start": 142.03429775280898,
+              "end": 142.05432584269664,
+              "score": 0.03314029797911644
+            },
+            {
+              "symbol": "a",
+              "start": 142.1344382022472,
+              "end": 142.15446629213483,
+              "score": 0.22602953016757965
+            },
+            {
+              "symbol": "d",
+              "start": 142.41483146067415,
+              "end": 142.43485955056178,
+              "score": 0.00669099111109972
+            }
+          ],
+          "interpretation": "Competing conditioned model path; same family as earlier MMS, not independent confirmation.",
+          "family": "MMS_FA restricted two-word crop"
+        },
+        {
+          "input": "estimated vocal",
+          "cropSeconds": [
+            138.97,
+            142.53501133786847
+          ],
+          "onsetSeconds": 142.21455056179775,
+          "score": 0.10674465013047059,
+          "previousTerminalCharacters": [
+            {
+              "symbol": "e",
+              "start": 140.03148876404495,
+              "end": 140.05151685393258,
+              "score": 0.08670494705438614
+            },
+            {
+              "symbol": "t",
+              "start": 142.07435393258427,
+              "end": 142.0943820224719,
+              "score": 0.1035209447145462
+            },
+            {
+              "symbol": "i",
+              "start": 142.17449438202246,
+              "end": 142.19452247191012,
+              "score": 0.04178449138998985
+            }
+          ],
+          "newInitialCharacters": [
+            {
+              "symbol": "n",
+              "start": 142.21455056179775,
+              "end": 142.23457865168538,
+              "score": 0.04286735877394676
+            },
+            {
+              "symbol": "a",
+              "start": 142.23457865168538,
+              "end": 142.25460674157304,
+              "score": 0.24993646144866943
+            },
+            {
+              "symbol": "d",
+              "start": 142.39480337078652,
+              "end": 142.41483146067415,
+              "score": 0.027430130168795586
+            }
+          ],
+          "interpretation": "Competing conditioned model path; same family as earlier MMS, not independent confirmation.",
+          "family": "MMS_FA restricted two-word crop"
+        }
+      ]
+    },
+    {
+      "cueId": "KOM-015",
+      "sourceIndex": 1,
+      "wordId": "KOM-015-s02",
+      "word": "огонь,",
+      "previousWordId": "KOM-015-s01",
+      "beforeOnsetSeconds": 146.26337868480726,
+      "beforeOnsetSample": 6450215,
+      "beforePreviousReleaseSeconds": 146.26337868480726,
+      "beforePreviousReleaseSample": 6450215,
+      "selectedBoundarySeconds": 146.26337868480726,
+      "selectedOnsetSample": 6450215,
+      "selectedPreviousReleaseSeconds": 146.26337868480726,
+      "selectedPreviousReleaseSample": 6450215,
+      "coupledOwnershipChange": false,
+      "decision": "retained",
+      "signalIntervalSeconds": [
+        146.18,
+        146.48
+      ],
+      "confidence": "low",
+      "reason": "Current146.263 already precedes several fresh model vowel cores. The original/stem low voiced/formant change spans roughly146.2–146.45; original conditioned146.185 and stem conditioned146.445 bracket it. Fresh restricted MMS146.727/146.907 selects later parts of the vowel sequence. No independent earlier onset merits another speculative advance.",
+      "reviewStatus": "original/stem signal inspected; independently reconciled vowel ownership",
+      "modelObservations": [
+        {
+          "family": "MMS_FA whole phrase / original mix",
+          "onsetSeconds": 146.2633689839572,
+          "score": 0.0907299640821293,
+          "newInitialCharacters": [
+            {
+              "modelSymbol": "o",
+              "start": 146.2633689839572,
+              "end": 146.28342245989305,
+              "score": 0.0022498969919979572
+            },
+            {
+              "modelSymbol": "g",
+              "start": 146.4639037433155,
+              "end": 146.48395721925132,
+              "score": 0.27331262826919556
+            },
+            {
+              "modelSymbol": "o",
+              "start": 146.5441176470588,
+              "end": 146.56417112299465,
+              "score": 0.04502077400684357
+            }
+          ]
+        },
+        {
+          "family": "Whisper large-v3-turbo whole phrase / original mix",
+          "onsetSeconds": 146.44,
+          "releaseSeconds": 148.82,
+          "probability": 0.1971712067218808,
+          "interpretation": "Conditioned whole-phrase timing, not listening attestation."
+        },
+        {
+          "input": "original mix",
+          "cropSeconds": [
+            145.2049886621315,
+            148.63
+          ],
+          "onsetSeconds": 146.90748538011698,
+          "score": 0.0513203926384449,
+          "previousTerminalCharacters": [
+            {
+              "symbol": "v",
+              "start": 145.96611111111113,
+              "end": 145.9861403508772,
+              "score": 0.02262105606496334
+            },
+            {
+              "symbol": "n",
+              "start": 146.38672514619884,
+              "end": 146.40675438596492,
+              "score": 0.1938139647245407
+            },
+            {
+              "symbol": "o",
+              "start": 146.5469590643275,
+              "end": 146.56698830409357,
+              "score": 0.04919126629829407
+            }
+          ],
+          "newInitialCharacters": [
+            {
+              "symbol": "o",
+              "start": 146.90748538011698,
+              "end": 146.92751461988306,
+              "score": 0.09104195982217789
+            },
+            {
+              "symbol": "g",
+              "start": 147.36815789473687,
+              "end": 147.38818713450294,
+              "score": 0.02962471731007099
+            },
+            {
+              "symbol": "o",
+              "start": 147.46830409356727,
+              "end": 147.48833333333334,
+              "score": 0.056566961109638214
+            }
+          ],
+          "interpretation": "Competing conditioned model path; same family as earlier MMS, not independent confirmation.",
+          "family": "MMS_FA restricted two-word crop"
+        },
+        {
+          "input": "estimated vocal",
+          "cropSeconds": [
+            145.2049886621315,
+            148.63
+          ],
+          "onsetSeconds": 146.72722222222222,
+          "score": 0.05247005308046937,
+          "previousTerminalCharacters": [
+            {
+              "symbol": "v",
+              "start": 145.96611111111113,
+              "end": 145.9861403508772,
+              "score": 0.020709091797471046
+            },
+            {
+              "symbol": "n",
+              "start": 146.4468128654971,
+              "end": 146.46684210526317,
+              "score": 0.2604878544807434
+            },
+            {
+              "symbol": "o",
+              "start": 146.5469590643275,
+              "end": 146.56698830409357,
+              "score": 0.11856129765510559
+            }
+          ],
+          "newInitialCharacters": [
+            {
+              "symbol": "o",
+              "start": 146.72722222222222,
+              "end": 146.74725146198833,
+              "score": 0.02580430544912815
+            },
+            {
+              "symbol": "g",
+              "start": 147.36815789473687,
+              "end": 147.38818713450294,
+              "score": 0.04805021733045578
+            },
+            {
+              "symbol": "o",
+              "start": 147.48833333333334,
+              "end": 147.50836257309942,
+              "score": 0.1173400953412056
+            }
+          ],
+          "interpretation": "Competing conditioned model path; same family as earlier MMS, not independent confirmation.",
+          "family": "MMS_FA restricted two-word crop"
+        },
+        {
+          "family": "Whisper large-v3-turbo restricted two-word crop",
+          "input": "original mix",
+          "cropSeconds": [
+            145.2049886621315,
+            148.63
+          ],
+          "conditionedOnsetSeconds": 146.185,
+          "conditionedProbability": 0.30416801075140637,
+          "unpromptedTextExcerpt": "Слово на ногах",
+          "unpromptedUse": "Rejected as lexical confirmation: short sung crops yield wrong or degenerate words. Retained to expose the failure.",
+          "interpretation": "Conditioned timing is a competing model observation, not an independent ASR confirmation."
+        },
+        {
+          "family": "Whisper large-v3-turbo restricted two-word crop",
+          "input": "estimated vocal",
+          "cropSeconds": [
+            145.2049886621315,
+            148.63
+          ],
+          "conditionedOnsetSeconds": 146.445,
+          "conditionedProbability": 0.24312586006999481,
+          "unpromptedTextExcerpt": "Сумерно",
+          "unpromptedUse": "Rejected as lexical confirmation: short sung crops yield wrong or degenerate words. Retained to expose the failure.",
+          "interpretation": "Conditioned timing is a competing model observation, not an independent ASR confirmation."
+        }
+      ]
+    },
+    {
+      "cueId": "KOM-015",
+      "sourceIndex": 3,
+      "wordId": "KOM-015-s04",
+      "word": "огонь",
+      "previousWordId": "KOM-015-s03",
+      "beforeOnsetSeconds": 150.07353741496598,
+      "beforeOnsetSample": 6618243,
+      "beforePreviousReleaseSeconds": 150.03,
+      "beforePreviousReleaseSample": 6616323,
+      "selectedBoundarySeconds": 149.65,
+      "selectedOnsetSample": 6599565,
+      "selectedPreviousReleaseSeconds": 149.65,
+      "selectedPreviousReleaseSample": 6599565,
+      "coupledOwnershipChange": true,
+      "decision": "changed",
+      "signalIntervalSeconds": [
+        149.59,
+        149.735
+      ],
+      "confidence": "medium-low",
+      "reason": "After prior voiced/nasal narrowing near149.3–149.5, the lower continuous vowel body around149.6–149.7 precedes a later attenuation/articulatory change around149.82–149.87. Fresh stem initial-o149.696/g149.836/stressed-o149.957 and conditioned149.630 support an initial vowel before that closure. Current150.074 falls after the later renewed stressed body; original conditioned149.890 may already miss the quiet initial vowel. The vowel-to-vowel split remains inferred.",
+      "reviewStatus": "original/stem signal inspected; independently reconciled vowel ownership",
+      "modelObservations": [
+        {
+          "family": "MMS_FA whole phrase / original mix",
+          "onsetSeconds": 150.0735294117647,
+          "score": 0.02256430999841541,
+          "newInitialCharacters": [
+            {
+              "modelSymbol": "o",
+              "start": 150.0735294117647,
+              "end": 150.09358288770053,
+              "score": 0.006939167622476816
+            },
+            {
+              "modelSymbol": "g",
+              "start": 150.19385026737967,
+              "end": 150.2139037433155,
+              "score": 0.008080382831394672
+            },
+            {
+              "modelSymbol": "o",
+              "start": 150.274064171123,
+              "end": 150.2941176470588,
+              "score": 0.06454373151063919
+            }
+          ]
+        },
+        {
+          "family": "Whisper large-v3-turbo whole phrase / original mix",
+          "onsetSeconds": 149.84,
+          "releaseSeconds": 150.84,
+          "probability": 0.994219958782196,
+          "interpretation": "Conditioned whole-phrase timing, not listening attestation."
+        },
+        {
+          "input": "original mix",
+          "cropSeconds": [
+            148.65,
+            152.45000000000002
+          ],
+          "onsetSeconds": 150.03730158730158,
+          "score": 0.08105568122118711,
+          "previousTerminalCharacters": [
+            {
+              "symbol": "v",
+              "start": 149.29338624338624,
+              "end": 149.31349206349208,
+              "score": 0.06901668012142181
+            },
+            {
+              "symbol": "n",
+              "start": 149.51455026455028,
+              "end": 149.5346560846561,
+              "score": 0.10732173919677734
+            },
+            {
+              "symbol": "o",
+              "start": 149.59497354497356,
+              "end": 149.61507936507937,
+              "score": 0.0577404610812664
+            }
+          ],
+          "newInitialCharacters": [
+            {
+              "symbol": "o",
+              "start": 150.03730158730158,
+              "end": 150.05740740740742,
+              "score": 0.09691119194030762
+            },
+            {
+              "symbol": "g",
+              "start": 150.1579365079365,
+              "end": 150.17804232804232,
+              "score": 0.01933107152581215
+            },
+            {
+              "symbol": "o",
+              "start": 150.25846560846563,
+              "end": 150.27857142857144,
+              "score": 0.1377631276845932
+            }
+          ],
+          "interpretation": "Competing conditioned model path; same family as earlier MMS, not independent confirmation.",
+          "family": "MMS_FA restricted two-word crop"
+        },
+        {
+          "input": "estimated vocal",
+          "cropSeconds": [
+            148.65,
+            152.45000000000002
+          ],
+          "onsetSeconds": 149.69550264550264,
+          "score": 0.1389766245847568,
+          "previousTerminalCharacters": [
+            {
+              "symbol": "v",
+              "start": 149.29338624338624,
+              "end": 149.31349206349208,
+              "score": 0.03178028017282486
+            },
+            {
+              "symbol": "n",
+              "start": 149.41402116402116,
+              "end": 149.43412698412698,
+              "score": 0.0019970485009253025
+            },
+            {
+              "symbol": "o",
+              "start": 149.45423280423282,
+              "end": 149.47433862433863,
+              "score": 0.12397553026676178
+            }
+          ],
+          "newInitialCharacters": [
+            {
+              "symbol": "o",
+              "start": 149.69550264550264,
+              "end": 149.71560846560848,
+              "score": 0.0022507510147988796
+            },
+            {
+              "symbol": "g",
+              "start": 149.83624338624338,
+              "end": 149.85634920634922,
+              "score": 0.10861754417419434
+            },
+            {
+              "symbol": "o",
+              "start": 149.9568783068783,
+              "end": 149.97698412698412,
+              "score": 0.421928733587265
+            }
+          ],
+          "interpretation": "Competing conditioned model path; same family as earlier MMS, not independent confirmation.",
+          "family": "MMS_FA restricted two-word crop"
+        },
+        {
+          "family": "Whisper large-v3-turbo restricted two-word crop",
+          "input": "original mix",
+          "cropSeconds": [
+            148.65,
+            152.45000000000002
+          ],
+          "conditionedOnsetSeconds": 149.89,
+          "conditionedProbability": 0.2926246276620077,
+          "unpromptedTextExcerpt": "Своя любовь",
+          "unpromptedUse": "Rejected as lexical confirmation: short sung crops yield wrong or degenerate words. Retained to expose the failure.",
+          "interpretation": "Conditioned timing is a competing model observation, not an independent ASR confirmation."
+        },
+        {
+          "family": "Whisper large-v3-turbo restricted two-word crop",
+          "input": "estimated vocal",
+          "cropSeconds": [
+            148.65,
+            152.45000000000002
+          ],
+          "conditionedOnsetSeconds": 149.63,
+          "conditionedProbability": 0.24909679288975894,
+          "unpromptedTextExcerpt": "Слава Богу!",
+          "unpromptedUse": "Rejected as lexical confirmation: short sung crops yield wrong or degenerate words. Retained to expose the failure.",
+          "interpretation": "Conditioned timing is a competing model observation, not an independent ASR confirmation."
+        }
+      ]
+    },
+    {
+      "cueId": "KOM-021",
+      "sourceIndex": 1,
+      "wordId": "KOM-021-s02",
+      "word": "орёл,",
+      "previousWordId": "KOM-021-s01",
+      "beforeOnsetSeconds": 181.0239455782313,
+      "beforeOnsetSample": 7983156,
+      "beforePreviousReleaseSeconds": 180.9750113378685,
+      "beforePreviousReleaseSample": 7980998,
+      "selectedBoundarySeconds": 180.55,
+      "selectedOnsetSample": 7962255,
+      "selectedPreviousReleaseSeconds": 180.55,
+      "selectedPreviousReleaseSample": 7962255,
+      "coupledOwnershipChange": true,
+      "decision": "changed",
+      "signalIntervalSeconds": [
+        180.485,
+        180.665
+      ],
+      "confidence": "medium-low",
+      "reason": "Original/stem prior strong vowel narrows around180.25–180.4. A changed lower vowel body is established around180.5–180.6 before the later pitch/formant/articulatory glide near180.7–180.8. Fresh stem final-o180.368/initial-o180.569/r180.710 and original conditioned180.485 fit this order. Current181.024 is later in stable voice; original CTC181.735 is even later and does not identify the quiet leading vowel.",
+      "reviewStatus": "original/stem signal inspected; independently reconciled vowel ownership",
+      "modelObservations": [
+        {
+          "family": "MMS_FA whole phrase / original mix",
+          "onsetSeconds": 181.02394822006474,
+          "score": 0.03668084926903248,
+          "newInitialCharacters": [
+            {
+              "modelSymbol": "o",
+              "start": 181.02394822006474,
+              "end": 181.04401294498382,
+              "score": 0.060198377817869186
+            },
+            {
+              "modelSymbol": "r",
+              "start": 181.1443365695793,
+              "end": 181.1644012944984,
+              "score": 0.03276127576828003
+            },
+            {
+              "modelSymbol": "e",
+              "start": 181.1844660194175,
+              "end": 181.20453074433658,
+              "score": 0.018797114491462708
+            }
+          ]
+        },
+        {
+          "family": "Whisper large-v3-turbo whole phrase / original mix",
+          "onsetSeconds": 180.56,
+          "releaseSeconds": 182.82,
+          "probability": 0.06939633661386324,
+          "interpretation": "Conditioned whole-phrase timing, not listening attestation."
+        },
+        {
+          "input": "original mix",
+          "cropSeconds": [
+            179.6050113378685,
+            182.9
+          ],
+          "onsetSeconds": 181.7346951219512,
+          "score": 0.09113296028226614,
+          "previousTerminalCharacters": [
+            {
+              "symbol": "v",
+              "start": 180.93103658536583,
+              "end": 180.95112804878048,
+              "score": 0.03807789832353592
+            },
+            {
+              "symbol": "n",
+              "start": 181.15204268292683,
+              "end": 181.17213414634145,
+              "score": 0.12044209241867065
+            },
+            {
+              "symbol": "o",
+              "start": 181.2123170731707,
+              "end": 181.23240853658535,
+              "score": 0.13385581970214844
+            }
+          ],
+          "newInitialCharacters": [
+            {
+              "symbol": "o",
+              "start": 181.7346951219512,
+              "end": 181.75478658536585,
+              "score": 0.09456443786621094
+            },
+            {
+              "symbol": "r",
+              "start": 181.97579268292682,
+              "end": 181.99588414634147,
+              "score": 0.14526496827602386
+            },
+            {
+              "symbol": "e",
+              "start": 182.05615853658534,
+              "end": 182.07625,
+              "score": 0.02343423292040825
+            }
+          ],
+          "interpretation": "Competing conditioned model path; same family as earlier MMS, not independent confirmation.",
+          "family": "MMS_FA restricted two-word crop"
+        },
+        {
+          "input": "estimated vocal",
+          "cropSeconds": [
+            179.6050113378685,
+            182.9
+          ],
+          "onsetSeconds": 180.56939024390243,
+          "score": 0.19733254611492157,
+          "previousTerminalCharacters": [
+            {
+              "symbol": "v",
+              "start": 180.2479268292683,
+              "end": 180.2680182926829,
+              "score": 0.08324576169252396
+            },
+            {
+              "symbol": "n",
+              "start": 180.3082012195122,
+              "end": 180.32829268292681,
+              "score": 0.008865948766469955
+            },
+            {
+              "symbol": "o",
+              "start": 180.36847560975608,
+              "end": 180.38856707317072,
+              "score": 0.15722796320915222
+            }
+          ],
+          "newInitialCharacters": [
+            {
+              "symbol": "o",
+              "start": 180.56939024390243,
+              "end": 180.58948170731708,
+              "score": 0.05362463742494583
+            },
+            {
+              "symbol": "r",
+              "start": 180.71003048780486,
+              "end": 180.7301219512195,
+              "score": 0.4470844864845276
+            },
+            {
+              "symbol": "e",
+              "start": 180.81048780487805,
+              "end": 180.83057926829267,
+              "score": 0.24053004384040833
+            }
+          ],
+          "interpretation": "Competing conditioned model path; same family as earlier MMS, not independent confirmation.",
+          "family": "MMS_FA restricted two-word crop"
+        },
+        {
+          "family": "Whisper large-v3-turbo restricted two-word crop",
+          "input": "original mix",
+          "cropSeconds": [
+            179.6050113378685,
+            182.9
+          ],
+          "conditionedOnsetSeconds": 180.485,
+          "conditionedProbability": 0.007770850206725299,
+          "unpromptedTextExcerpt": "Слово говоря",
+          "unpromptedUse": "Rejected as lexical confirmation: short sung crops yield wrong or degenerate words. Retained to expose the failure.",
+          "interpretation": "Conditioned timing is a competing model observation, not an independent ASR confirmation."
+        },
+        {
+          "family": "Whisper large-v3-turbo restricted two-word crop",
+          "input": "estimated vocal",
+          "cropSeconds": [
+            179.6050113378685,
+            182.9
+          ],
+          "conditionedOnsetSeconds": 180.705,
+          "conditionedProbability": 0.008690693609726926,
+          "unpromptedTextExcerpt": "Сунаря!",
+          "unpromptedUse": "Rejected as lexical confirmation: short sung crops yield wrong or degenerate words. Retained to expose the failure.",
+          "interpretation": "Conditioned timing is a competing model observation, not an independent ASR confirmation."
+        }
+      ]
+    },
+    {
+      "cueId": "KOM-021",
+      "sourceIndex": 3,
+      "wordId": "KOM-021-s04",
+      "word": "орёл",
+      "previousWordId": "KOM-021-s03",
+      "beforeOnsetSeconds": 184.4109297052154,
+      "beforeOnsetSample": 8132522,
+      "beforePreviousReleaseSeconds": 184.35,
+      "beforePreviousReleaseSample": 8129835,
+      "selectedBoundarySeconds": 184.09,
+      "selectedOnsetSample": 8118369,
+      "selectedPreviousReleaseSeconds": 184.09,
+      "selectedPreviousReleaseSample": 8118369,
+      "coupledOwnershipChange": true,
+      "decision": "changed",
+      "signalIntervalSeconds": [
+        184.03,
+        184.17
+      ],
+      "confidence": "medium-low",
+      "reason": "The original/stem prior nasal/final-vowel region follows183.6–183.75. Its gradual transition into a quieter leading vowel around184.0–184.15 precedes the clearer formant/glide change184.2–184.3. Fresh stem initial-o184.101/r184.202/e184.322 and conditioned184.060 support that order. Current184.411 occurs after the quiet vowel; original CTC184.402 is a later core path.",
+      "reviewStatus": "original/stem signal inspected; independently reconciled vowel ownership",
+      "modelObservations": [
+        {
+          "family": "MMS_FA whole phrase / original mix",
+          "onsetSeconds": 184.4148867313916,
+          "score": 0.08134082471951842,
+          "newInitialCharacters": [
+            {
+              "modelSymbol": "o",
+              "start": 184.4148867313916,
+              "end": 184.4349514563107,
+              "score": 0.07401459664106369
+            },
+            {
+              "modelSymbol": "r",
+              "start": 184.53527508090616,
+              "end": 184.55533980582524,
+              "score": 0.18029063940048218
+            },
+            {
+              "modelSymbol": "e",
+              "start": 184.61553398058254,
+              "end": 184.63559870550162,
+              "score": 0.04529550299048424
+            }
+          ]
+        },
+        {
+          "family": "Whisper large-v3-turbo whole phrase / original mix",
+          "onsetSeconds": 184.0,
+          "releaseSeconds": 184.76,
+          "probability": 0.98622727394104,
+          "interpretation": "Conditioned whole-phrase timing, not listening attestation."
+        },
+        {
+          "input": "original mix",
+          "cropSeconds": [
+            182.92000000000002,
+            186.88498866213152
+          ],
+          "onsetSeconds": 184.40186868686868,
+          "score": 0.13573072385042906,
+          "previousTerminalCharacters": [
+            {
+              "symbol": "v",
+              "start": 183.44065656565655,
+              "end": 183.4606818181818,
+              "score": 0.0033163107000291348
+            },
+            {
+              "symbol": "n",
+              "start": 183.60085858585856,
+              "end": 183.62088383838383,
+              "score": 0.17189356684684753
+            },
+            {
+              "symbol": "o",
+              "start": 183.70098484848484,
+              "end": 183.72101010101008,
+              "score": 0.046772003173828125
+            }
+          ],
+          "newInitialCharacters": [
+            {
+              "symbol": "o",
+              "start": 184.40186868686868,
+              "end": 184.42189393939393,
+              "score": 0.1083981916308403
+            },
+            {
+              "symbol": "r",
+              "start": 184.5220202020202,
+              "end": 184.54204545454544,
+              "score": 0.37131476402282715
+            },
+            {
+              "symbol": "e",
+              "start": 184.6021212121212,
+              "end": 184.62214646464645,
+              "score": 0.021462034434080124
+            }
+          ],
+          "interpretation": "Competing conditioned model path; same family as earlier MMS, not independent confirmation.",
+          "family": "MMS_FA restricted two-word crop"
+        },
+        {
+          "input": "estimated vocal",
+          "cropSeconds": [
+            182.92000000000002,
+            186.88498866213152
+          ],
+          "onsetSeconds": 184.10148989898988,
+          "score": 0.15797222894616425,
+          "previousTerminalCharacters": [
+            {
+              "symbol": "v",
+              "start": 183.40060606060604,
+              "end": 183.4206313131313,
+              "score": 0.0009696755441837013
+            },
+            {
+              "symbol": "n",
+              "start": 183.56080808080807,
+              "end": 183.58083333333332,
+              "score": 0.10983286052942276
+            },
+            {
+              "symbol": "o",
+              "start": 183.72101010101008,
+              "end": 183.74103535353535,
+              "score": 0.09022799134254456
+            }
+          ],
+          "newInitialCharacters": [
+            {
+              "symbol": "o",
+              "start": 184.10148989898988,
+              "end": 184.12151515151513,
+              "score": 0.010661890730261803
+            },
+            {
+              "symbol": "r",
+              "start": 184.20161616161616,
+              "end": 184.2216414141414,
+              "score": 0.5584383606910706
+            },
+            {
+              "symbol": "e",
+              "start": 184.32176767676768,
+              "end": 184.34179292929292,
+              "score": 0.05767356976866722
+            }
+          ],
+          "interpretation": "Competing conditioned model path; same family as earlier MMS, not independent confirmation.",
+          "family": "MMS_FA restricted two-word crop"
+        },
+        {
+          "family": "Whisper large-v3-turbo restricted two-word crop",
+          "input": "original mix",
+          "cropSeconds": [
+            182.92000000000002,
+            186.88498866213152
+          ],
+          "conditionedOnsetSeconds": 184.22,
+          "conditionedProbability": 0.0014138035476207733,
+          "unpromptedTextExcerpt": "Слова я",
+          "unpromptedUse": "Rejected as lexical confirmation: short sung crops yield wrong or degenerate words. Retained to expose the failure.",
+          "interpretation": "Conditioned timing is a competing model observation, not an independent ASR confirmation."
+        },
+        {
+          "family": "Whisper large-v3-turbo restricted two-word crop",
+          "input": "estimated vocal",
+          "cropSeconds": [
+            182.92000000000002,
+            186.88498866213152
+          ],
+          "conditionedOnsetSeconds": 184.06,
+          "conditionedProbability": 0.0009177993633784354,
+          "unpromptedTextExcerpt": "Словно я!",
+          "unpromptedUse": "Rejected as lexical confirmation: short sung crops yield wrong or degenerate words. Retained to expose the failure.",
+          "interpretation": "Conditioned timing is a competing model observation, not an independent ASR confirmation."
+        }
+      ]
+    },
+    {
+      "cueId": "KOM-023",
+      "sourceIndex": 1,
+      "wordId": "KOM-023-s02",
+      "word": "огонь,",
+      "previousWordId": "KOM-023-s01",
+      "beforeOnsetSeconds": 194.26448979591837,
+      "beforeOnsetSample": 8567064,
+      "beforePreviousReleaseSeconds": 194.26,
+      "beforePreviousReleaseSample": 8566866,
+      "selectedBoundarySeconds": 194.26448979591837,
+      "selectedOnsetSample": 8567064,
+      "selectedPreviousReleaseSeconds": 194.26,
+      "selectedPreviousReleaseSample": 8566866,
+      "coupledOwnershipChange": false,
+      "decision": "retained",
+      "signalIntervalSeconds": [
+        194.21,
+        194.43
+      ],
+      "confidence": "medium-low",
+      "reason": "Current194.264 lies within the original/stem renewed lower vowel/body transition. Fresh stem restricted initial-o194.259 agrees; conditioned194.395/194.415 selects later parts. Original MMS195.143 follows a much later path and is rejected as a new onset. The current point need not be advanced just because related entries changed.",
+      "reviewStatus": "original/stem signal inspected; independently reconciled vowel ownership",
+      "modelObservations": [
+        {
+          "family": "MMS_FA whole phrase / original mix",
+          "onsetSeconds": 194.26449864498645,
+          "score": 0.08553231554105878,
+          "newInitialCharacters": [
+            {
+              "modelSymbol": "o",
+              "start": 194.26449864498645,
+              "end": 194.28455284552845,
+              "score": 0.030413007363677025
+            },
+            {
+              "modelSymbol": "g",
+              "start": 194.4048780487805,
+              "end": 194.4249322493225,
+              "score": 0.05381367728114128
+            },
+            {
+              "modelSymbol": "o",
+              "start": 194.4850948509485,
+              "end": 194.50514905149052,
+              "score": 0.18181055784225464
+            }
+          ]
+        },
+        {
+          "family": "Whisper large-v3-turbo whole phrase / original mix",
+          "onsetSeconds": 194.26,
+          "releaseSeconds": 196.82,
+          "probability": 0.4165002625862447,
+          "interpretation": "Conditioned whole-phrase timing, not listening attestation."
+        },
+        {
+          "input": "original mix",
+          "cropSeconds": [
+            193.27501133786848,
+            196.60999999999999
+          ],
+          "onsetSeconds": 195.14340361445784,
+          "score": 0.05882390355691314,
+          "previousTerminalCharacters": [
+            {
+              "symbol": "v",
+              "start": 194.19915662650604,
+              "end": 194.2192469879518,
+              "score": 0.01619996875524521
+            },
+            {
+              "symbol": "n",
+              "start": 194.40006024096385,
+              "end": 194.42015060240965,
+              "score": 0.04263710230588913
+            },
+            {
+              "symbol": "o",
+              "start": 194.480421686747,
+              "end": 194.50051204819277,
+              "score": 0.22228871285915375
+            }
+          ],
+          "newInitialCharacters": [
+            {
+              "symbol": "o",
+              "start": 195.14340361445784,
+              "end": 195.16349397590363,
+              "score": 0.11972016841173172
+            },
+            {
+              "symbol": "g",
+              "start": 195.34430722891568,
+              "end": 195.36439759036145,
+              "score": 0.030368374660611153
+            },
+            {
+              "symbol": "o",
+              "start": 195.44475903614457,
+              "end": 195.46484939759037,
+              "score": 0.05900241807103157
+            }
+          ],
+          "interpretation": "Competing conditioned model path; same family as earlier MMS, not independent confirmation.",
+          "family": "MMS_FA restricted two-word crop"
+        },
+        {
+          "input": "estimated vocal",
+          "cropSeconds": [
+            193.27501133786848,
+            196.60999999999999
+          ],
+          "onsetSeconds": 194.25942771084337,
+          "score": 0.029904795810580254,
+          "previousTerminalCharacters": [
+            {
+              "symbol": "v",
+              "start": 193.69689759036146,
+              "end": 193.71698795180723,
+              "score": 0.006994616240262985
+            },
+            {
+              "symbol": "n",
+              "start": 193.93798192771084,
+              "end": 193.95807228915663,
+              "score": 0.08847017586231232
+            },
+            {
+              "symbol": "o",
+              "start": 194.018343373494,
+              "end": 194.03843373493976,
+              "score": 0.08256251364946365
+            }
+          ],
+          "newInitialCharacters": [
+            {
+              "symbol": "o",
+              "start": 194.25942771084337,
+              "end": 194.27951807228916,
+              "score": 0.018921339884400368
+            },
+            {
+              "symbol": "g",
+              "start": 194.42015060240965,
+              "end": 194.44024096385542,
+              "score": 0.022642390802502632
+            },
+            {
+              "symbol": "o",
+              "start": 194.50051204819277,
+              "end": 194.52060240963857,
+              "score": 0.058484889566898346
+            }
+          ],
+          "interpretation": "Competing conditioned model path; same family as earlier MMS, not independent confirmation.",
+          "family": "MMS_FA restricted two-word crop"
+        },
+        {
+          "family": "Whisper large-v3-turbo restricted two-word crop",
+          "input": "original mix",
+          "cropSeconds": [
+            193.27501133786848,
+            196.60999999999999
+          ],
+          "conditionedOnsetSeconds": 194.415,
+          "conditionedProbability": 0.3016202053404413,
+          "unpromptedTextExcerpt": "Субтитры создавал DimaTorzok",
+          "unpromptedUse": "Rejected as lexical confirmation: short sung crops yield wrong or degenerate words. Retained to expose the failure.",
+          "interpretation": "Conditioned timing is a competing model observation, not an independent ASR confirmation."
+        },
+        {
+          "family": "Whisper large-v3-turbo restricted two-word crop",
+          "input": "estimated vocal",
+          "cropSeconds": [
+            193.27501133786848,
+            196.60999999999999
+          ],
+          "conditionedOnsetSeconds": 194.395,
+          "conditionedProbability": 0.2500860074457402,
+          "unpromptedTextExcerpt": "Сонова",
+          "unpromptedUse": "Rejected as lexical confirmation: short sung crops yield wrong or degenerate words. Retained to expose the failure.",
+          "interpretation": "Conditioned timing is a competing model observation, not an independent ASR confirmation."
+        }
+      ]
+    },
+    {
+      "cueId": "KOM-023",
+      "sourceIndex": 3,
+      "wordId": "KOM-023-s04",
+      "word": "огонь",
+      "previousWordId": "KOM-023-s03",
+      "beforeOnsetSeconds": 197.89430839002267,
+      "beforeOnsetSample": 8727139,
+      "beforePreviousReleaseSeconds": 197.82,
+      "beforePreviousReleaseSample": 8723862,
+      "selectedBoundarySeconds": 197.89430839002267,
+      "selectedOnsetSample": 8727139,
+      "selectedPreviousReleaseSeconds": 197.82,
+      "selectedPreviousReleaseSample": 8723862,
+      "coupledOwnershipChange": false,
+      "decision": "retained",
+      "signalIntervalSeconds": [
+        197.79,
+        197.93
+      ],
+      "confidence": "medium-low",
+      "reason": "Original/stem body attenuates/changes around197.8–197.88 and returns into the next vowel region. Current197.894 is within that gradual range, as are conditioned197.830/197.850. Restricted original198.158 and especially stem198.882 are later competing paths. A small advance cannot be justified more securely than retaining the current point with this interval.",
+      "reviewStatus": "original/stem signal inspected; independently reconciled vowel ownership",
+      "modelObservations": [
+        {
+          "family": "MMS_FA whole phrase / original mix",
+          "onsetSeconds": 197.8943089430894,
+          "score": 0.06873590731993318,
+          "newInitialCharacters": [
+            {
+              "modelSymbol": "o",
+              "start": 197.8943089430894,
+              "end": 197.91436314363142,
+              "score": 0.043018653988838196
+            },
+            {
+              "modelSymbol": "g",
+              "start": 198.4959349593496,
+              "end": 198.5159891598916,
+              "score": 0.028090501204133034
+            },
+            {
+              "modelSymbol": "o",
+              "start": 198.59620596205963,
+              "end": 198.61626016260163,
+              "score": 0.08284229040145874
+            }
+          ]
+        },
+        {
+          "family": "Whisper large-v3-turbo whole phrase / original mix",
+          "onsetSeconds": 197.82,
+          "releaseSeconds": 198.74,
+          "probability": 0.99366295337677,
+          "interpretation": "Conditioned whole-phrase timing, not listening attestation."
+        },
+        {
+          "input": "original mix",
+          "cropSeconds": [
+            196.63,
+            200.47
+          ],
+          "onsetSeconds": 198.15795811518325,
+          "score": 0.09533496527001262,
+          "previousTerminalCharacters": [
+            {
+              "symbol": "v",
+              "start": 197.49450261780103,
+              "end": 197.51460732984293,
+              "score": 0.025973143056035042
+            },
+            {
+              "symbol": "n",
+              "start": 197.79607329842932,
+              "end": 197.8161780104712,
+              "score": 0.022443417459726334
+            },
+            {
+              "symbol": "o",
+              "start": 197.85638743455496,
+              "end": 197.87649214659686,
+              "score": 0.05565490201115608
+            }
+          ],
+          "newInitialCharacters": [
+            {
+              "symbol": "o",
+              "start": 198.15795811518325,
+              "end": 198.17806282722512,
+              "score": 0.20273110270500183
+            },
+            {
+              "symbol": "g",
+              "start": 198.49973821989528,
+              "end": 198.51984293193718,
+              "score": 0.02821805141866207
+            },
+            {
+              "symbol": "o",
+              "start": 198.60026178010472,
+              "end": 198.6203664921466,
+              "score": 0.05567113310098648
+            }
+          ],
+          "interpretation": "Competing conditioned model path; same family as earlier MMS, not independent confirmation.",
+          "family": "MMS_FA restricted two-word crop"
+        },
+        {
+          "input": "estimated vocal",
+          "cropSeconds": [
+            196.63,
+            200.47
+          ],
+          "onsetSeconds": 198.8817277486911,
+          "score": 0.04517829604446888,
+          "previousTerminalCharacters": [
+            {
+              "symbol": "v",
+              "start": 197.79607329842932,
+              "end": 197.8161780104712,
+              "score": 0.02427966706454754
+            },
+            {
+              "symbol": "n",
+              "start": 197.87649214659686,
+              "end": 197.89659685863873,
+              "score": 0.0030086738988757133
+            },
+            {
+              "symbol": "o",
+              "start": 197.91670157068063,
+              "end": 197.9368062827225,
+              "score": 0.11236655712127686
+            }
+          ],
+          "newInitialCharacters": [
+            {
+              "symbol": "o",
+              "start": 198.8817277486911,
+              "end": 198.90183246073298,
+              "score": 0.07131974399089813
+            },
+            {
+              "symbol": "g",
+              "start": 199.6457068062827,
+              "end": 199.6658115183246,
+              "score": 0.034043118357658386
+            },
+            {
+              "symbol": "o",
+              "start": 199.74623036649214,
+              "end": 199.766335078534,
+              "score": 0.04488536715507507
+            }
+          ],
+          "interpretation": "Competing conditioned model path; same family as earlier MMS, not independent confirmation.",
+          "family": "MMS_FA restricted two-word crop"
+        },
+        {
+          "family": "Whisper large-v3-turbo restricted two-word crop",
+          "input": "original mix",
+          "cropSeconds": [
+            196.63,
+            200.47
+          ],
+          "conditionedOnsetSeconds": 197.83,
+          "conditionedProbability": 0.36104309477377683,
+          "unpromptedTextExcerpt": "С моего",
+          "unpromptedUse": "Rejected as lexical confirmation: short sung crops yield wrong or degenerate words. Retained to expose the failure.",
+          "interpretation": "Conditioned timing is a competing model observation, not an independent ASR confirmation."
+        },
+        {
+          "family": "Whisper large-v3-turbo restricted two-word crop",
+          "input": "estimated vocal",
+          "cropSeconds": [
+            196.63,
+            200.47
+          ],
+          "conditionedOnsetSeconds": 197.85,
+          "conditionedProbability": 0.3460159540991299,
+          "unpromptedTextExcerpt": "Слова!",
+          "unpromptedUse": "Rejected as lexical confirmation: short sung crops yield wrong or degenerate words. Retained to expose the failure.",
+          "interpretation": "Conditioned timing is a competing model observation, not an independent ASR confirmation."
+        }
+      ]
+    }
+  ]
+}
