@@ -1,0 +1,183 @@
+{
+  "phraseId": "RU-016",
+  "language": "ru",
+  "cropStartSeconds": 164.25,
+  "cropEndSeconds": 167.85,
+  "emissionFrameSupportSeconds": 0.02011173184357542,
+  "conditionedUnits": [
+    "Что",
+    "я",
+    "исчез"
+  ],
+  "words": [
+    {
+      "unitIndex": 0,
+      "text": "Что",
+      "startSeconds": 165.05446927374302,
+      "endSeconds": 165.25558659217876,
+      "ctcPathScore": 0.5604828102514148,
+      "characterObservations": [
+        {
+          "internalSymbol": "c",
+          "startSeconds": 165.05446927374302,
+          "endSeconds": 165.0745810055866,
+          "score": 0.043262045830488205
+        },
+        {
+          "internalSymbol": "h",
+          "startSeconds": 165.0745810055866,
+          "endSeconds": 165.09469273743017,
+          "score": 0.8301246166229248
+        },
+        {
+          "internalSymbol": "t",
+          "startSeconds": 165.1349162011173,
+          "endSeconds": 165.1550279329609,
+          "score": 0.9246136546134949
+        },
+        {
+          "internalSymbol": "o",
+          "startSeconds": 165.2354748603352,
+          "endSeconds": 165.25558659217876,
+          "score": 0.4439309239387512
+        }
+      ]
+    },
+    {
+      "unitIndex": 1,
+      "text": "я",
+      "startSeconds": 165.49692737430166,
+      "endSeconds": 165.59748603351954,
+      "ctcPathScore": 0.6978653967380524,
+      "characterObservations": [
+        {
+          "internalSymbol": "y",
+          "startSeconds": 165.49692737430166,
+          "endSeconds": 165.51703910614526,
+          "score": 0.5621291995048523
+        },
+        {
+          "internalSymbol": "a",
+          "startSeconds": 165.57737430167597,
+          "endSeconds": 165.59748603351954,
+          "score": 0.8336015939712524
+        }
+      ]
+    },
+    {
+      "unitIndex": 2,
+      "text": "исчез",
+      "startSeconds": 165.7986033519553,
+      "endSeconds": 166.34162011173186,
+      "ctcPathScore": 0.4304024825493495,
+      "characterObservations": [
+        {
+          "internalSymbol": "i",
+          "startSeconds": 165.7986033519553,
+          "endSeconds": 165.81871508379888,
+          "score": 0.8923896551132202
+        },
+        {
+          "internalSymbol": "s",
+          "startSeconds": 165.8991620111732,
+          "endSeconds": 165.91927374301676,
+          "score": 0.27609819173812866
+        },
+        {
+          "internalSymbol": "c",
+          "startSeconds": 165.99972067039107,
+          "endSeconds": 166.01983240223464,
+          "score": 0.3589191436767578
+        },
+        {
+          "internalSymbol": "h",
+          "startSeconds": 166.01983240223464,
+          "endSeconds": 166.0399441340782,
+          "score": 0.768607497215271
+        },
+        {
+          "internalSymbol": "e",
+          "startSeconds": 166.12039106145252,
+          "endSeconds": 166.1405027932961,
+          "score": 0.06251755356788635
+        },
+        {
+          "internalSymbol": "z",
+          "startSeconds": 166.32150837988826,
+          "endSeconds": 166.34162011173186,
+          "score": 0.22388285398483276
+        }
+      ]
+    }
+  ],
+  "unforcedInternalSymbols": [
+    {
+      "timeSeconds": 165.05446927374302,
+      "internalSymbol": "s",
+      "score": 0.8511022925376892
+    },
+    {
+      "timeSeconds": 165.0745810055866,
+      "internalSymbol": "h",
+      "score": 0.8301246166229248
+    },
+    {
+      "timeSeconds": 165.1349162011173,
+      "internalSymbol": "t",
+      "score": 0.9246136546134949
+    },
+    {
+      "timeSeconds": 165.2354748603352,
+      "internalSymbol": "a",
+      "score": 0.504115879535675
+    },
+    {
+      "timeSeconds": 165.41648044692738,
+      "internalSymbol": "z",
+      "score": 0.43165770173072815
+    },
+    {
+      "timeSeconds": 165.49692737430166,
+      "internalSymbol": "y",
+      "score": 0.5621291995048523
+    },
+    {
+      "timeSeconds": 165.57737430167597,
+      "internalSymbol": "a",
+      "score": 0.8336015939712524
+    },
+    {
+      "timeSeconds": 165.7986033519553,
+      "internalSymbol": "i",
+      "score": 0.8923896551132202
+    },
+    {
+      "timeSeconds": 165.99972067039107,
+      "internalSymbol": "s",
+      "score": 0.4824327230453491
+    },
+    {
+      "timeSeconds": 166.01983240223464,
+      "internalSymbol": "h",
+      "score": 0.768607497215271
+    },
+    {
+      "timeSeconds": 166.12039106145252,
+      "internalSymbol": "a",
+      "score": 0.6012768149375916
+    },
+    {
+      "timeSeconds": 166.32150837988826,
+      "internalSymbol": "s",
+      "score": 0.7185846567153931
+    }
+  ],
+  "humanListening": false,
+  "inputKind": "clock-verified HTDemucs estimate",
+  "limits": [
+    "Forced CTC placement cannot determine lexical presence.",
+    "CTC character cores may omit quiet connected prefixes or held endings.",
+    "Japanese internal romanization is model preprocessing and can differ from performed particle pronunciation; no displayed pronunciation layer is created.",
+    "Scores are uncalibrated path evidence, not timing accuracy probabilities."
+  ]
+}

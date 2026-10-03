@@ -1,0 +1,156 @@
+{
+  "schemaVersion": 1,
+  "status": "unprompted ASR lexical/timing observation; not listening attestation or selected timing",
+  "sourceSha256": "8563f6b817c9b1cc39649363a52486214c691c0d98ae7bb82263021ac7363523",
+  "method": {
+    "model": "large-v3-turbo",
+    "modelFamily": "OpenAI Whisper",
+    "checkpointSha256": "aff26ae408abcba5fbf8813c21e62b0941638c5f6eebfb145be0c9839262a19a",
+    "implementation": "stable-ts 2.19.1",
+    "language": "ja",
+    "conditioningText": null,
+    "initialPrompt": null,
+    "conditionOnPreviousText": false,
+    "suppressSilence": false,
+    "inputKind": "vocals",
+    "inputFile": "analysis/independent-audio/vocals-16000.wav",
+    "originalSourceZeroPreserved": true,
+    "sourceCropStartSample16000": 3536000,
+    "sourceCropEndSample16000": 4081510,
+    "cropStartSeconds": 221.0,
+    "cropEndSeconds": 255.094375,
+    "humanListening": false,
+    "elapsedSeconds": 10.48195429192856,
+    "torch": "2.14.0"
+  },
+  "result": {
+    "text": "ご視聴ありがとうございました",
+    "segments": [
+      {
+        "start": 251.24,
+        "end": 254.88,
+        "text": "ご視聴ありがとうございました",
+        "seek": 251.0,
+        "tokens": [
+          9991,
+          27333,
+          8171,
+          112,
+          38538
+        ],
+        "temperature": 0,
+        "avg_logprob": -0.24374406039714813,
+        "compression_ratio": 0.8571428571428571,
+        "no_speech_prob": 4.699178546285765e-11,
+        "words": [
+          {
+            "word": "ご",
+            "start": 251.24,
+            "end": 254.12,
+            "probability": 0.0004316336417105049,
+            "tokens": [
+              9991
+            ]
+          },
+          {
+            "word": "視",
+            "start": 254.12,
+            "end": 254.32,
+            "probability": 0.9654073715209961,
+            "tokens": [
+              27333
+            ]
+          },
+          {
+            "word": "聴",
+            "start": 254.32,
+            "end": 254.88,
+            "probability": 0.9999076724052429,
+            "tokens": [
+              8171,
+              112
+            ]
+          },
+          {
+            "word": "ありがとうございました",
+            "start": 254.88,
+            "end": 254.88,
+            "probability": 0.9972301125526428,
+            "tokens": [
+              38538
+            ]
+          }
+        ]
+      }
+    ],
+    "language": "ja",
+    "ori_dict": {
+      "text": "ご視聴ありがとうございました",
+      "segments": [
+        {
+          "id": 0,
+          "seek": 30.0,
+          "start": 30.24,
+          "end": 33.88,
+          "text": "ご視聴ありがとうございました",
+          "tokens": [
+            50365,
+            9991,
+            27333,
+            8171,
+            112,
+            38538,
+            50568
+          ],
+          "temperature": 0,
+          "avg_logprob": -0.24374406039714813,
+          "compression_ratio": 0.8571428571428571,
+          "no_speech_prob": 4.699178546285765e-11,
+          "words": [
+            {
+              "word": "ご",
+              "start": 30.24,
+              "end": 33.12,
+              "probability": 0.0004316336417105049,
+              "tokens": [
+                9991
+              ]
+            },
+            {
+              "word": "視",
+              "start": 33.12,
+              "end": 33.32,
+              "probability": 0.9654073715209961,
+              "tokens": [
+                27333
+              ]
+            },
+            {
+              "word": "聴",
+              "start": 33.32,
+              "end": 33.88,
+              "probability": 0.9999076724052429,
+              "tokens": [
+                8171,
+                112
+              ]
+            },
+            {
+              "word": "ありがとうございました",
+              "start": 33.88,
+              "end": 33.88,
+              "probability": 0.9972301125526428,
+              "tokens": [
+                38538
+              ]
+            }
+          ]
+        }
+      ],
+      "language": "ja",
+      "time_scale": null
+    },
+    "regroup_history": "",
+    "nonspeech_sections": []
+  }
+}

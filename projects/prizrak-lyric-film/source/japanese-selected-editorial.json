@@ -1,0 +1,648 @@
+{
+  "status": "Selected preview editorial mappings; all Japanese inflections preserve complete translated meanings.",
+  "notes": [
+    "寝なまし is one counterfactual verb, including perfective な; ものを preserves the regretful but continuation.",
+    "The moon pair is one stable sentence with a gender-neutral Russian perceptual paraphrase; past seeing is preserved without inventing speaker gender.",
+    "The performed poem-30 order reverses its two source fragments; comparison belongs to ばかり. The unsung upper stanza is not displayed.",
+    "Internal kana preprocessing is acoustic-model input only. No phonetic or pronunciation lane is part of the scene."
+  ],
+  "templates": [
+    {
+      "templateId": "JP59-sleep",
+      "sourceText": "やすらはで寝なましものを",
+      "units": [
+        "やすらはで",
+        "寝なまし",
+        "ものを"
+      ],
+      "lanes": [
+        {
+          "language": "ja",
+          "tokens": [
+            {
+              "id": "ja-0",
+              "text": "やすらはで",
+              "sourceIndices": [
+                0
+              ],
+              "rationale": "Original editorial translation: complete indicated lexical/grammatical meaning, focused on the union of its source events; no invented target-language timestamps."
+            },
+            {
+              "id": "ja-1",
+              "text": "寝なまし",
+              "sourceIndices": [
+                1
+              ],
+              "rationale": "Original editorial translation: complete indicated lexical/grammatical meaning, focused on the union of its source events; no invented target-language timestamps."
+            },
+            {
+              "id": "ja-2",
+              "text": "ものを",
+              "sourceIndices": [
+                2
+              ],
+              "rationale": "Original editorial translation: complete indicated lexical/grammatical meaning, focused on the union of its source events; no invented target-language timestamps."
+            }
+          ]
+        },
+        {
+          "language": "ru",
+          "tokens": [
+            {
+              "id": "ru-0",
+              "text": "Без",
+              "sourceIndices": [
+                0
+              ],
+              "rationale": "Original editorial translation: complete indicated lexical/grammatical meaning, focused on the union of its source events; no invented target-language timestamps."
+            },
+            {
+              "id": "ru-1",
+              "text": "промедления",
+              "sourceIndices": [
+                0
+              ],
+              "rationale": "Original editorial translation: complete indicated lexical/grammatical meaning, focused on the union of its source events; no invented target-language timestamps."
+            },
+            {
+              "id": "ru-2",
+              "text": "стоило",
+              "sourceIndices": [
+                1
+              ],
+              "rationale": "Original editorial translation: complete indicated lexical/grammatical meaning, focused on the union of its source events; no invented target-language timestamps."
+            },
+            {
+              "id": "ru-3",
+              "text": "бы",
+              "sourceIndices": [
+                1
+              ],
+              "rationale": "Original editorial translation: complete indicated lexical/grammatical meaning, focused on the union of its source events; no invented target-language timestamps."
+            },
+            {
+              "id": "ru-4",
+              "text": "уснуть,",
+              "sourceIndices": [
+                1
+              ],
+              "rationale": "Original editorial translation: complete indicated lexical/grammatical meaning, focused on the union of its source events; no invented target-language timestamps."
+            },
+            {
+              "id": "ru-5",
+              "text": "но…",
+              "sourceIndices": [
+                2
+              ],
+              "rationale": "Original editorial translation: complete indicated lexical/grammatical meaning, focused on the union of its source events; no invented target-language timestamps."
+            }
+          ]
+        },
+        {
+          "language": "en",
+          "tokens": [
+            {
+              "id": "en-0",
+              "text": "I",
+              "sourceIndices": [
+                1
+              ],
+              "rationale": "Original editorial translation: complete indicated lexical/grammatical meaning, focused on the union of its source events; no invented target-language timestamps."
+            },
+            {
+              "id": "en-1",
+              "text": "should",
+              "sourceIndices": [
+                1
+              ],
+              "rationale": "Original editorial translation: complete indicated lexical/grammatical meaning, focused on the union of its source events; no invented target-language timestamps."
+            },
+            {
+              "id": "en-2",
+              "text": "have",
+              "sourceIndices": [
+                1
+              ],
+              "rationale": "Original editorial translation: complete indicated lexical/grammatical meaning, focused on the union of its source events; no invented target-language timestamps."
+            },
+            {
+              "id": "en-3",
+              "text": "slept",
+              "sourceIndices": [
+                1
+              ],
+              "rationale": "Original editorial translation: complete indicated lexical/grammatical meaning, focused on the union of its source events; no invented target-language timestamps."
+            },
+            {
+              "id": "en-4",
+              "text": "without",
+              "sourceIndices": [
+                0
+              ],
+              "rationale": "Original editorial translation: complete indicated lexical/grammatical meaning, focused on the union of its source events; no invented target-language timestamps."
+            },
+            {
+              "id": "en-5",
+              "text": "delay,",
+              "sourceIndices": [
+                0
+              ],
+              "rationale": "Original editorial translation: complete indicated lexical/grammatical meaning, focused on the union of its source events; no invented target-language timestamps."
+            },
+            {
+              "id": "en-6",
+              "text": "but…",
+              "sourceIndices": [
+                2
+              ],
+              "rationale": "Original editorial translation: complete indicated lexical/grammatical meaning, focused on the union of its source events; no invented target-language timestamps."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "templateId": "JP59-night",
+      "sourceText": "小夜更けて",
+      "units": [
+        "小夜",
+        "更けて"
+      ],
+      "lanes": [
+        {
+          "language": "ja",
+          "tokens": [
+            {
+              "id": "ja-0",
+              "text": "小夜",
+              "sourceIndices": [
+                0
+              ],
+              "rationale": "Original editorial translation: complete indicated lexical/grammatical meaning, focused on the union of its source events; no invented target-language timestamps."
+            },
+            {
+              "id": "ja-1",
+              "text": "更けて",
+              "sourceIndices": [
+                1
+              ],
+              "rationale": "Original editorial translation: complete indicated lexical/grammatical meaning, focused on the union of its source events; no invented target-language timestamps."
+            }
+          ]
+        },
+        {
+          "language": "ru",
+          "tokens": [
+            {
+              "id": "ru-0",
+              "text": "Ночь",
+              "sourceIndices": [
+                0
+              ],
+              "rationale": "Original editorial translation: complete indicated lexical/grammatical meaning, focused on the union of its source events; no invented target-language timestamps."
+            },
+            {
+              "id": "ru-1",
+              "text": "стала",
+              "sourceIndices": [
+                1
+              ],
+              "rationale": "Original editorial translation: complete indicated lexical/grammatical meaning, focused on the union of its source events; no invented target-language timestamps."
+            },
+            {
+              "id": "ru-2",
+              "text": "глубокой;",
+              "sourceIndices": [
+                1
+              ],
+              "rationale": "Original editorial translation: complete indicated lexical/grammatical meaning, focused on the union of its source events; no invented target-language timestamps."
+            }
+          ]
+        },
+        {
+          "language": "en",
+          "tokens": [
+            {
+              "id": "en-0",
+              "text": "The",
+              "sourceIndices": [
+                0
+              ],
+              "rationale": "Original editorial translation: complete indicated lexical/grammatical meaning, focused on the union of its source events; no invented target-language timestamps."
+            },
+            {
+              "id": "en-1",
+              "text": "night",
+              "sourceIndices": [
+                0
+              ],
+              "rationale": "Original editorial translation: complete indicated lexical/grammatical meaning, focused on the union of its source events; no invented target-language timestamps."
+            },
+            {
+              "id": "en-2",
+              "text": "grew",
+              "sourceIndices": [
+                1
+              ],
+              "rationale": "Original editorial translation: complete indicated lexical/grammatical meaning, focused on the union of its source events; no invented target-language timestamps."
+            },
+            {
+              "id": "en-3",
+              "text": "late;",
+              "sourceIndices": [
+                1
+              ],
+              "rationale": "Original editorial translation: complete indicated lexical/grammatical meaning, focused on the union of its source events; no invented target-language timestamps."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "templateId": "JP59-moon",
+      "sourceText": "傾くまでの月を見しかな",
+      "units": [
+        "傾く",
+        "までの",
+        "月を",
+        "見し",
+        "かな"
+      ],
+      "lanes": [
+        {
+          "language": "ja",
+          "tokens": [
+            {
+              "id": "ja-0",
+              "text": "傾く",
+              "sourceIndices": [
+                0
+              ],
+              "rationale": "Original editorial translation: complete indicated lexical/grammatical meaning, focused on the union of its source events; no invented target-language timestamps."
+            },
+            {
+              "id": "ja-1",
+              "text": "までの",
+              "sourceIndices": [
+                1
+              ],
+              "rationale": "Original editorial translation: complete indicated lexical/grammatical meaning, focused on the union of its source events; no invented target-language timestamps."
+            },
+            {
+              "id": "ja-2",
+              "text": "月を",
+              "sourceIndices": [
+                2
+              ],
+              "rationale": "Original editorial translation: complete indicated lexical/grammatical meaning, focused on the union of its source events; no invented target-language timestamps."
+            },
+            {
+              "id": "ja-3",
+              "text": "見し",
+              "sourceIndices": [
+                3
+              ],
+              "rationale": "Original editorial translation: complete indicated lexical/grammatical meaning, focused on the union of its source events; no invented target-language timestamps."
+            },
+            {
+              "id": "ja-4",
+              "text": "かな",
+              "sourceIndices": [
+                4
+              ],
+              "rationale": "Original editorial translation: complete indicated lexical/grammatical meaning, focused on the union of its source events; no invented target-language timestamps."
+            }
+          ]
+        },
+        {
+          "language": "ru",
+          "tokens": [
+            {
+              "id": "ru-0",
+              "text": "Ах,",
+              "sourceIndices": [
+                4
+              ],
+              "rationale": "Original editorial translation: complete indicated lexical/grammatical meaning, focused on the union of its source events; no invented target-language timestamps."
+            },
+            {
+              "id": "ru-1",
+              "text": "перед",
+              "sourceIndices": [
+                3
+              ],
+              "rationale": "Original editorial translation: complete indicated lexical/grammatical meaning, focused on the union of its source events; no invented target-language timestamps."
+            },
+            {
+              "id": "ru-2",
+              "text": "глазами",
+              "sourceIndices": [
+                3
+              ],
+              "rationale": "Original editorial translation: complete indicated lexical/grammatical meaning, focused on the union of its source events; no invented target-language timestamps."
+            },
+            {
+              "id": "ru-3",
+              "text": "была",
+              "sourceIndices": [
+                3
+              ],
+              "rationale": "Original editorial translation: complete indicated lexical/grammatical meaning, focused on the union of its source events; no invented target-language timestamps."
+            },
+            {
+              "id": "ru-4",
+              "text": "луна,",
+              "sourceIndices": [
+                2
+              ],
+              "rationale": "Original editorial translation: complete indicated lexical/grammatical meaning, focused on the union of its source events; no invented target-language timestamps."
+            },
+            {
+              "id": "ru-5",
+              "text": "пока",
+              "sourceIndices": [
+                1
+              ],
+              "rationale": "Original editorial translation: complete indicated lexical/grammatical meaning, focused on the union of its source events; no invented target-language timestamps."
+            },
+            {
+              "id": "ru-6",
+              "text": "она",
+              "sourceIndices": [
+                0,
+                2
+              ],
+              "rationale": "Original editorial translation: complete indicated lexical/grammatical meaning, focused on the union of its source events; no invented target-language timestamps."
+            },
+            {
+              "id": "ru-7",
+              "text": "не",
+              "sourceIndices": [
+                1
+              ],
+              "rationale": "Original editorial translation: complete indicated lexical/grammatical meaning, focused on the union of its source events; no invented target-language timestamps."
+            },
+            {
+              "id": "ru-8",
+              "text": "склонилась",
+              "sourceIndices": [
+                0
+              ],
+              "rationale": "Original editorial translation: complete indicated lexical/grammatical meaning, focused on the union of its source events; no invented target-language timestamps."
+            },
+            {
+              "id": "ru-9",
+              "text": "низко.",
+              "sourceIndices": [
+                0
+              ],
+              "rationale": "Original editorial translation: complete indicated lexical/grammatical meaning, focused on the union of its source events; no invented target-language timestamps."
+            }
+          ]
+        },
+        {
+          "language": "en",
+          "tokens": [
+            {
+              "id": "en-0",
+              "text": "Ah,",
+              "sourceIndices": [
+                4
+              ],
+              "rationale": "Original editorial translation: complete indicated lexical/grammatical meaning, focused on the union of its source events; no invented target-language timestamps."
+            },
+            {
+              "id": "en-1",
+              "text": "I",
+              "sourceIndices": [
+                3
+              ],
+              "rationale": "Original editorial translation: complete indicated lexical/grammatical meaning, focused on the union of its source events; no invented target-language timestamps."
+            },
+            {
+              "id": "en-2",
+              "text": "watched",
+              "sourceIndices": [
+                3
+              ],
+              "rationale": "Original editorial translation: complete indicated lexical/grammatical meaning, focused on the union of its source events; no invented target-language timestamps."
+            },
+            {
+              "id": "en-3",
+              "text": "the",
+              "sourceIndices": [
+                2
+              ],
+              "rationale": "Original editorial translation: complete indicated lexical/grammatical meaning, focused on the union of its source events; no invented target-language timestamps."
+            },
+            {
+              "id": "en-4",
+              "text": "moon",
+              "sourceIndices": [
+                2
+              ],
+              "rationale": "Original editorial translation: complete indicated lexical/grammatical meaning, focused on the union of its source events; no invented target-language timestamps."
+            },
+            {
+              "id": "en-5",
+              "text": "until",
+              "sourceIndices": [
+                1
+              ],
+              "rationale": "Original editorial translation: complete indicated lexical/grammatical meaning, focused on the union of its source events; no invented target-language timestamps."
+            },
+            {
+              "id": "en-6",
+              "text": "it",
+              "sourceIndices": [
+                0,
+                2
+              ],
+              "rationale": "Original editorial translation: complete indicated lexical/grammatical meaning, focused on the union of its source events; no invented target-language timestamps."
+            },
+            {
+              "id": "en-7",
+              "text": "sank",
+              "sourceIndices": [
+                0
+              ],
+              "rationale": "Original editorial translation: complete indicated lexical/grammatical meaning, focused on the union of its source events; no invented target-language timestamps."
+            },
+            {
+              "id": "en-8",
+              "text": "low.",
+              "sourceIndices": [
+                0
+              ],
+              "rationale": "Original editorial translation: complete indicated lexical/grammatical meaning, focused on the union of its source events; no invented target-language timestamps."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "templateId": "JP30-loop",
+      "sourceText": "憂きものはなし暁ばかり",
+      "units": [
+        "憂き",
+        "もの",
+        "は",
+        "なし",
+        "暁",
+        "ばかり"
+      ],
+      "lanes": [
+        {
+          "language": "ja",
+          "tokens": [
+            {
+              "id": "ja-0",
+              "text": "憂き",
+              "sourceIndices": [
+                0
+              ],
+              "rationale": "Original editorial translation: complete indicated lexical/grammatical meaning, focused on the union of its source events; no invented target-language timestamps."
+            },
+            {
+              "id": "ja-1",
+              "text": "もの",
+              "sourceIndices": [
+                1
+              ],
+              "rationale": "Original editorial translation: complete indicated lexical/grammatical meaning, focused on the union of its source events; no invented target-language timestamps."
+            },
+            {
+              "id": "ja-2",
+              "text": "は",
+              "sourceIndices": [
+                2
+              ],
+              "rationale": "Original editorial translation: complete indicated lexical/grammatical meaning, focused on the union of its source events; no invented target-language timestamps."
+            },
+            {
+              "id": "ja-3",
+              "text": "なし",
+              "sourceIndices": [
+                3
+              ],
+              "rationale": "Original editorial translation: complete indicated lexical/grammatical meaning, focused on the union of its source events; no invented target-language timestamps."
+            },
+            {
+              "id": "ja-4",
+              "text": "暁",
+              "sourceIndices": [
+                4
+              ],
+              "rationale": "Original editorial translation: complete indicated lexical/grammatical meaning, focused on the union of its source events; no invented target-language timestamps."
+            },
+            {
+              "id": "ja-5",
+              "text": "ばかり",
+              "sourceIndices": [
+                5
+              ],
+              "rationale": "Original editorial translation: complete indicated lexical/grammatical meaning, focused on the union of its source events; no invented target-language timestamps."
+            }
+          ]
+        },
+        {
+          "language": "ru",
+          "tokens": [
+            {
+              "id": "ru-0",
+              "text": "Нет",
+              "sourceIndices": [
+                3
+              ],
+              "rationale": "Original editorial translation: complete indicated lexical/grammatical meaning, focused on the union of its source events; no invented target-language timestamps."
+            },
+            {
+              "id": "ru-1",
+              "text": "ничего",
+              "sourceIndices": [
+                1,
+                2,
+                3
+              ],
+              "rationale": "Original editorial translation: complete indicated lexical/grammatical meaning, focused on the union of its source events; no invented target-language timestamps."
+            },
+            {
+              "id": "ru-2",
+              "text": "горестнее",
+              "sourceIndices": [
+                0,
+                5
+              ],
+              "rationale": "Original editorial translation: complete indicated lexical/grammatical meaning, focused on the union of its source events; no invented target-language timestamps."
+            },
+            {
+              "id": "ru-3",
+              "text": "рассвета.",
+              "sourceIndices": [
+                4,
+                5
+              ],
+              "rationale": "Original editorial translation: complete indicated lexical/grammatical meaning, focused on the union of its source events; no invented target-language timestamps."
+            }
+          ]
+        },
+        {
+          "language": "en",
+          "tokens": [
+            {
+              "id": "en-0",
+              "text": "Nothing",
+              "sourceIndices": [
+                1,
+                2,
+                3
+              ],
+              "rationale": "Original editorial translation: complete indicated lexical/grammatical meaning, focused on the union of its source events; no invented target-language timestamps."
+            },
+            {
+              "id": "en-1",
+              "text": "is",
+              "sourceIndices": [
+                0,
+                2
+              ],
+              "rationale": "Original editorial translation: complete indicated lexical/grammatical meaning, focused on the union of its source events; no invented target-language timestamps."
+            },
+            {
+              "id": "en-2",
+              "text": "more",
+              "sourceIndices": [
+                5
+              ],
+              "rationale": "Original editorial translation: complete indicated lexical/grammatical meaning, focused on the union of its source events; no invented target-language timestamps."
+            },
+            {
+              "id": "en-3",
+              "text": "sorrowful",
+              "sourceIndices": [
+                0
+              ],
+              "rationale": "Original editorial translation: complete indicated lexical/grammatical meaning, focused on the union of its source events; no invented target-language timestamps."
+            },
+            {
+              "id": "en-4",
+              "text": "than",
+              "sourceIndices": [
+                5
+              ],
+              "rationale": "Original editorial translation: complete indicated lexical/grammatical meaning, focused on the union of its source events; no invented target-language timestamps."
+            },
+            {
+              "id": "en-5",
+              "text": "dawn.",
+              "sourceIndices": [
+                4
+              ],
+              "rationale": "Original editorial translation: complete indicated lexical/grammatical meaning, focused on the union of its source events; no invented target-language timestamps."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

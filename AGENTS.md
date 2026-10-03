@@ -42,6 +42,8 @@ For each new recording, use `docs/connected-phoneme-onset-workflow.md` during th
 
 For every TikTok publishing kit, follow `docs/tiktok-cover-workflow.md` without asking for repeated cover specifications. The established profile-cover target is PORTRAIT 1200×1600 pixels (width×height, 3:4), matching the tall profile preview labelled “4:3” in the supplied upload interface. Never interpret that interface label as a request for a landscape 1600×1200 upload. Keep the full title, artist and focal subject inside the portrait composition, and review it at 150×200 pixels before delivery.
 
+For language-switching films with three simultaneous reader lanes, use [the three-language workflow](docs/three-language-lyric-workflow.md). Audit unsupplied opening/closing samples, preserve complete inflected meaning focus and simultaneous vocal ownership, and verify optical balance across scripts at phone scale. The [призрак preview](projects/prizrak-lyric-film/AGENT-HANDOFF.md) records corrected Japanese acoustic preprocessing and an unchanged Russian tail carried beneath a Japanese entrance; its times and palette are song-specific.
+
 ## Conservative GitHub Actions use
 
 - Follow the current user approval policy for GitHub Actions budgets and

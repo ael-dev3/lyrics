@@ -1,0 +1,167 @@
+{
+  "phraseId": "JP59-006",
+  "language": "ja",
+  "cropStartSeconds": 72.4,
+  "cropEndSeconds": 76.1,
+  "emissionFrameSupportSeconds": 0.020108695652173915,
+  "conditionedUnits": [
+    "小夜",
+    "更け",
+    "て"
+  ],
+  "words": [
+    {
+      "unitIndex": 0,
+      "text": "小夜",
+      "startSeconds": 73.40543478260871,
+      "endSeconds": 73.82771739130435,
+      "ctcPathScore": 0.42065710946917534,
+      "characterObservations": [
+        {
+          "internalSymbol": "s",
+          "startSeconds": 73.40543478260871,
+          "endSeconds": 73.42554347826088,
+          "score": 0.8755936026573181
+        },
+        {
+          "internalSymbol": "a",
+          "startSeconds": 73.50597826086957,
+          "endSeconds": 73.52608695652175,
+          "score": 0.24414964020252228
+        },
+        {
+          "internalSymbol": "y",
+          "startSeconds": 73.72717391304349,
+          "endSeconds": 73.74728260869566,
+          "score": 0.2586227357387543
+        },
+        {
+          "internalSymbol": "o",
+          "startSeconds": 73.80760869565218,
+          "endSeconds": 73.82771739130435,
+          "score": 0.3042624592781067
+        }
+      ]
+    },
+    {
+      "unitIndex": 1,
+      "text": "更け",
+      "startSeconds": 73.98858695652174,
+      "endSeconds": 74.37065217391304,
+      "ctcPathScore": 0.22268051374703646,
+      "characterObservations": [
+        {
+          "internalSymbol": "f",
+          "startSeconds": 73.98858695652174,
+          "endSeconds": 74.00869565217391,
+          "score": 0.05911131575703621
+        },
+        {
+          "internalSymbol": "u",
+          "startSeconds": 74.08913043478262,
+          "endSeconds": 74.10923913043479,
+          "score": 0.2953352928161621
+        },
+        {
+          "internalSymbol": "k",
+          "startSeconds": 74.27010869565218,
+          "endSeconds": 74.29021739130435,
+          "score": 0.4562532305717468
+        },
+        {
+          "internalSymbol": "e",
+          "startSeconds": 74.35054347826087,
+          "endSeconds": 74.37065217391304,
+          "score": 0.08002221584320068
+        }
+      ]
+    },
+    {
+      "unitIndex": 2,
+      "text": "て",
+      "startSeconds": 74.55163043478261,
+      "endSeconds": 74.65217391304348,
+      "ctcPathScore": 0.45385211892426014,
+      "characterObservations": [
+        {
+          "internalSymbol": "t",
+          "startSeconds": 74.55163043478261,
+          "endSeconds": 74.57173913043479,
+          "score": 0.8874024152755737
+        },
+        {
+          "internalSymbol": "e",
+          "startSeconds": 74.63206521739131,
+          "endSeconds": 74.65217391304348,
+          "score": 0.02030182257294655
+        }
+      ]
+    }
+  ],
+  "unforcedInternalSymbols": [
+    {
+      "timeSeconds": 73.40543478260871,
+      "internalSymbol": "s",
+      "score": 0.8755936026573181
+    },
+    {
+      "timeSeconds": 73.50597826086957,
+      "internalSymbol": "o",
+      "score": 0.558221161365509
+    },
+    {
+      "timeSeconds": 73.72717391304349,
+      "internalSymbol": "y",
+      "score": 0.2586227357387543
+    },
+    {
+      "timeSeconds": 73.80760869565218,
+      "internalSymbol": "a",
+      "score": 0.5816954970359802
+    },
+    {
+      "timeSeconds": 73.98858695652174,
+      "internalSymbol": "k",
+      "score": 0.20755535364151
+    },
+    {
+      "timeSeconds": 74.08913043478262,
+      "internalSymbol": "o",
+      "score": 0.477037638425827
+    },
+    {
+      "timeSeconds": 74.27010869565218,
+      "internalSymbol": "k",
+      "score": 0.4562532305717468
+    },
+    {
+      "timeSeconds": 74.35054347826087,
+      "internalSymbol": "i",
+      "score": 0.8873882293701172
+    },
+    {
+      "timeSeconds": 74.55163043478261,
+      "internalSymbol": "t",
+      "score": 0.8874024152755737
+    },
+    {
+      "timeSeconds": 74.63206521739131,
+      "internalSymbol": "a",
+      "score": 0.865073025226593
+    },
+    {
+      "timeSeconds": 74.89347826086957,
+      "internalSymbol": "a",
+      "score": 0.5080316066741943
+    }
+  ],
+  "humanListening": false,
+  "inputKind": "original mix",
+  "normalization": "Japanese kanji contextual readings mapped to native kana solely inside acoustic model preprocessing; displayed lyrics remain original orthography. Chinese-default uroman paths are rejected.",
+  "limits": [
+    "Forced CTC placement cannot determine lexical presence.",
+    "CTC character cores may omit quiet connected prefixes or held endings.",
+    "Japanese internal romanization is model preprocessing and can differ from performed particle pronunciation; no displayed pronunciation layer is created.",
+    "Scores are uncalibrated path evidence, not timing accuracy probabilities."
+  ]
+}

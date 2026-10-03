@@ -1,0 +1,454 @@
+{
+  "schemaVersion": 1,
+  "status": "unprompted ASR lexical/timing observation; not listening attestation or selected timing",
+  "sourceSha256": "8563f6b817c9b1cc39649363a52486214c691c0d98ae7bb82263021ac7363523",
+  "method": {
+    "model": "large-v3-turbo",
+    "modelFamily": "OpenAI Whisper",
+    "checkpointSha256": "aff26ae408abcba5fbf8813c21e62b0941638c5f6eebfb145be0c9839262a19a",
+    "implementation": "stable-ts 2.19.1",
+    "language": "ja",
+    "conditioningText": null,
+    "initialPrompt": null,
+    "conditionOnPreviousText": false,
+    "suppressSilence": false,
+    "inputKind": "vocals",
+    "inputFile": "analysis/independent-audio/vocals-16000.wav",
+    "originalSourceZeroPreserved": true,
+    "sourceCropStartSample16000": 0,
+    "sourceCropEndSample16000": 616000,
+    "cropStartSeconds": 0.0,
+    "cropEndSeconds": 38.5,
+    "humanListening": false,
+    "elapsedSeconds": 5.419875374995172,
+    "torch": "2.14.0"
+  },
+  "result": {
+    "text": "チュチュチュきもの話あがつきばかり",
+    "segments": [
+      {
+        "start": 1.22,
+        "end": 9.42,
+        "text": "チュチュチュ",
+        "seek": 0.0,
+        "tokens": [
+          17794,
+          26167,
+          17794,
+          26167,
+          17794,
+          26167
+        ],
+        "temperature": 0,
+        "avg_logprob": -1.0356383853488498,
+        "compression_ratio": 1.0588235294117647,
+        "no_speech_prob": 1.5943396602935422e-10,
+        "words": [
+          {
+            "word": "チ",
+            "start": 1.22,
+            "end": 8.66,
+            "probability": 0.07126979529857635,
+            "tokens": [
+              17794
+            ]
+          },
+          {
+            "word": "ュ",
+            "start": 8.66,
+            "end": 8.9,
+            "probability": 0.8057027459144592,
+            "tokens": [
+              26167
+            ]
+          },
+          {
+            "word": "チ",
+            "start": 8.9,
+            "end": 9.12,
+            "probability": 0.6748182773590088,
+            "tokens": [
+              17794
+            ]
+          },
+          {
+            "word": "ュ",
+            "start": 9.12,
+            "end": 9.2,
+            "probability": 0.9910033941268921,
+            "tokens": [
+              26167
+            ]
+          },
+          {
+            "word": "チ",
+            "start": 9.2,
+            "end": 9.2,
+            "probability": 0.44485774636268616,
+            "tokens": [
+              17794
+            ]
+          },
+          {
+            "word": "ュ",
+            "start": 9.2,
+            "end": 9.42,
+            "probability": 0.9710797071456909,
+            "tokens": [
+              26167
+            ]
+          }
+        ]
+      },
+      {
+        "start": 30.0,
+        "end": 33.04,
+        "text": "きもの話",
+        "seek": 30.0,
+        "tokens": [
+          7016,
+          44726,
+          11103
+        ],
+        "temperature": 0,
+        "avg_logprob": -0.37141653696695964,
+        "compression_ratio": 0.825,
+        "no_speech_prob": 2.0508189590984216e-10,
+        "words": [
+          {
+            "word": "き",
+            "start": 30.0,
+            "end": 30.44,
+            "probability": 0.08928751945495605,
+            "tokens": [
+              7016
+            ]
+          },
+          {
+            "word": "もの",
+            "start": 30.44,
+            "end": 31.48,
+            "probability": 0.9052464962005615,
+            "tokens": [
+              44726
+            ]
+          },
+          {
+            "word": "話",
+            "start": 31.48,
+            "end": 33.04,
+            "probability": 0.7441006898880005,
+            "tokens": [
+              11103
+            ]
+          }
+        ]
+      },
+      {
+        "start": 33.88,
+        "end": 37.84,
+        "text": "あがつきばかり",
+        "seek": 30.0,
+        "tokens": [
+          3590,
+          5142,
+          9335,
+          7016,
+          13349,
+          3703,
+          5095
+        ],
+        "temperature": 0,
+        "avg_logprob": -0.37141653696695964,
+        "compression_ratio": 0.825,
+        "no_speech_prob": 2.0508189590984216e-10,
+        "words": [
+          {
+            "word": "あ",
+            "start": 33.88,
+            "end": 34.5,
+            "probability": 0.42400553822517395,
+            "tokens": [
+              3590
+            ]
+          },
+          {
+            "word": "が",
+            "start": 34.5,
+            "end": 35.02,
+            "probability": 0.4234657883644104,
+            "tokens": [
+              5142
+            ]
+          },
+          {
+            "word": "つ",
+            "start": 35.02,
+            "end": 35.58,
+            "probability": 0.7984405755996704,
+            "tokens": [
+              9335
+            ]
+          },
+          {
+            "word": "き",
+            "start": 35.58,
+            "end": 36.22,
+            "probability": 0.964691698551178,
+            "tokens": [
+              7016
+            ]
+          },
+          {
+            "word": "ば",
+            "start": 36.22,
+            "end": 36.8,
+            "probability": 0.9938981533050537,
+            "tokens": [
+              13349
+            ]
+          },
+          {
+            "word": "か",
+            "start": 36.8,
+            "end": 37.32,
+            "probability": 0.9817031025886536,
+            "tokens": [
+              3703
+            ]
+          },
+          {
+            "word": "り",
+            "start": 37.32,
+            "end": 37.84,
+            "probability": 0.9970434308052063,
+            "tokens": [
+              5095
+            ]
+          }
+        ]
+      }
+    ],
+    "language": "ja",
+    "ori_dict": {
+      "text": "チュチュチュきもの話あがつきばかり",
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0.0,
+          "start": 1.22,
+          "end": 9.42,
+          "text": "チュチュチュ",
+          "tokens": [
+            50365,
+            17794,
+            26167,
+            17794,
+            26167,
+            17794,
+            26167,
+            50865
+          ],
+          "temperature": 0,
+          "avg_logprob": -1.0356383853488498,
+          "compression_ratio": 1.0588235294117647,
+          "no_speech_prob": 1.5943396602935422e-10,
+          "words": [
+            {
+              "word": "チ",
+              "start": 1.22,
+              "end": 8.66,
+              "probability": 0.07126979529857635,
+              "tokens": [
+                17794
+              ]
+            },
+            {
+              "word": "ュ",
+              "start": 8.66,
+              "end": 8.9,
+              "probability": 0.8057027459144592,
+              "tokens": [
+                26167
+              ]
+            },
+            {
+              "word": "チ",
+              "start": 8.9,
+              "end": 9.12,
+              "probability": 0.6748182773590088,
+              "tokens": [
+                17794
+              ]
+            },
+            {
+              "word": "ュ",
+              "start": 9.12,
+              "end": 9.2,
+              "probability": 0.9910033941268921,
+              "tokens": [
+                26167
+              ]
+            },
+            {
+              "word": "チ",
+              "start": 9.2,
+              "end": 9.2,
+              "probability": 0.44485774636268616,
+              "tokens": [
+                17794
+              ]
+            },
+            {
+              "word": "ュ",
+              "start": 9.2,
+              "end": 9.42,
+              "probability": 0.9710797071456909,
+              "tokens": [
+                26167
+              ]
+            }
+          ]
+        },
+        {
+          "id": 1,
+          "seek": 30.0,
+          "start": 30.0,
+          "end": 33.04,
+          "text": "きもの話",
+          "tokens": [
+            50365,
+            7016,
+            44726,
+            11103,
+            50528
+          ],
+          "temperature": 0,
+          "avg_logprob": -0.37141653696695964,
+          "compression_ratio": 0.825,
+          "no_speech_prob": 2.0508189590984216e-10,
+          "words": [
+            {
+              "word": "き",
+              "start": 30.0,
+              "end": 30.44,
+              "probability": 0.08928751945495605,
+              "tokens": [
+                7016
+              ]
+            },
+            {
+              "word": "もの",
+              "start": 30.44,
+              "end": 31.48,
+              "probability": 0.9052464962005615,
+              "tokens": [
+                44726
+              ]
+            },
+            {
+              "word": "話",
+              "start": 31.48,
+              "end": 33.04,
+              "probability": 0.7441006898880005,
+              "tokens": [
+                11103
+              ]
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "seek": 30.0,
+          "start": 33.88,
+          "end": 37.84,
+          "text": "あがつきばかり",
+          "tokens": [
+            50528,
+            3590,
+            5142,
+            9335,
+            7016,
+            13349,
+            3703,
+            5095,
+            50790
+          ],
+          "temperature": 0,
+          "avg_logprob": -0.37141653696695964,
+          "compression_ratio": 0.825,
+          "no_speech_prob": 2.0508189590984216e-10,
+          "words": [
+            {
+              "word": "あ",
+              "start": 33.88,
+              "end": 34.5,
+              "probability": 0.42400553822517395,
+              "tokens": [
+                3590
+              ]
+            },
+            {
+              "word": "が",
+              "start": 34.5,
+              "end": 35.02,
+              "probability": 0.4234657883644104,
+              "tokens": [
+                5142
+              ]
+            },
+            {
+              "word": "つ",
+              "start": 35.02,
+              "end": 35.58,
+              "probability": 0.7984405755996704,
+              "tokens": [
+                9335
+              ]
+            },
+            {
+              "word": "き",
+              "start": 35.58,
+              "end": 36.22,
+              "probability": 0.964691698551178,
+              "tokens": [
+                7016
+              ]
+            },
+            {
+              "word": "ば",
+              "start": 36.22,
+              "end": 36.8,
+              "probability": 0.9938981533050537,
+              "tokens": [
+                13349
+              ]
+            },
+            {
+              "word": "か",
+              "start": 36.8,
+              "end": 37.32,
+              "probability": 0.9817031025886536,
+              "tokens": [
+                3703
+              ]
+            },
+            {
+              "word": "り",
+              "start": 37.32,
+              "end": 37.84,
+              "probability": 0.9970434308052063,
+              "tokens": [
+                5095
+              ]
+            }
+          ]
+        }
+      ],
+      "language": "ja",
+      "time_scale": null
+    },
+    "regroup_history": "",
+    "nonspeech_sections": []
+  }
+}

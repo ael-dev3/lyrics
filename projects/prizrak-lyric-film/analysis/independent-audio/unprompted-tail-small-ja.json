@@ -1,0 +1,773 @@
+{
+  "schemaVersion": 1,
+  "status": "unprompted ASR lexical/timing observation; not listening attestation or selected timing",
+  "sourceSha256": "8563f6b817c9b1cc39649363a52486214c691c0d98ae7bb82263021ac7363523",
+  "method": {
+    "model": "small",
+    "modelFamily": "OpenAI Whisper",
+    "checkpointSha256": "9ecf779972d90ba49c06d968637d720dd632c55bbf19d441fb42bf17a411e794",
+    "implementation": "stable-ts 2.19.1",
+    "language": "ja",
+    "conditioningText": null,
+    "initialPrompt": null,
+    "conditionOnPreviousText": false,
+    "suppressSilence": false,
+    "originalSourceZeroPreserved": true,
+    "sourceCropStartSample16000": 3536000,
+    "sourceCropEndSample16000": 4081510,
+    "cropStartSeconds": 221.0,
+    "cropEndSeconds": 255.094375,
+    "humanListening": false,
+    "elapsedSeconds": 2.1331842079525813,
+    "torch": "2.14.0"
+  },
+  "result": {
+    "text": "Not much, not much昨日の話朝がつたり朝が降りてた今日の話赤月ばかり",
+    "segments": [
+      {
+        "start": 221.0,
+        "end": 222.38,
+        "text": "Not much, not much",
+        "seek": 221.0,
+        "tokens": [
+          15208,
+          709,
+          11,
+          406,
+          709
+        ],
+        "temperature": 0,
+        "avg_logprob": -0.6915441694713774,
+        "compression_ratio": 1.0975609756097562,
+        "no_speech_prob": 0.4535963833332062,
+        "words": [
+          {
+            "word": "Not",
+            "start": 221.0,
+            "end": 221.24,
+            "probability": 0.004149290267378092,
+            "tokens": [
+              15208
+            ]
+          },
+          {
+            "word": " much,",
+            "start": 221.24,
+            "end": 221.44,
+            "probability": 0.16014045476913452,
+            "tokens": [
+              709,
+              11
+            ]
+          },
+          {
+            "word": " not",
+            "start": 221.44,
+            "end": 221.74,
+            "probability": 0.791016697883606,
+            "tokens": [
+              406
+            ]
+          },
+          {
+            "word": " much",
+            "start": 221.74,
+            "end": 222.38,
+            "probability": 0.9937029480934143,
+            "tokens": [
+              709
+            ]
+          }
+        ]
+      },
+      {
+        "start": 222.48,
+        "end": 225.14,
+        "text": "昨日の話",
+        "seek": 221.0,
+        "tokens": [
+          47404,
+          6890,
+          2972,
+          11103
+        ],
+        "temperature": 0,
+        "avg_logprob": -0.6915441694713774,
+        "compression_ratio": 1.0975609756097562,
+        "no_speech_prob": 0.4535963833332062,
+        "words": [
+          {
+            "word": "昨",
+            "start": 222.48,
+            "end": 222.82,
+            "probability": 0.1830722689628601,
+            "tokens": [
+              47404
+            ]
+          },
+          {
+            "word": "日",
+            "start": 222.82,
+            "end": 223.28,
+            "probability": 0.984489917755127,
+            "tokens": [
+              6890
+            ]
+          },
+          {
+            "word": "の",
+            "start": 223.28,
+            "end": 223.78,
+            "probability": 0.9734309315681458,
+            "tokens": [
+              2972
+            ]
+          },
+          {
+            "word": "話",
+            "start": 223.78,
+            "end": 225.14,
+            "probability": 0.9834089279174805,
+            "tokens": [
+              11103
+            ]
+          }
+        ]
+      },
+      {
+        "start": 226.22,
+        "end": 228.22,
+        "text": "朝がつたり",
+        "seek": 221.0,
+        "tokens": [
+          46610,
+          5142,
+          9335,
+          3368,
+          5095
+        ],
+        "temperature": 0,
+        "avg_logprob": -0.6915441694713774,
+        "compression_ratio": 1.0975609756097562,
+        "no_speech_prob": 0.4535963833332062,
+        "words": [
+          {
+            "word": "朝",
+            "start": 226.22,
+            "end": 226.58,
+            "probability": 0.2623492479324341,
+            "tokens": [
+              46610
+            ]
+          },
+          {
+            "word": "が",
+            "start": 226.58,
+            "end": 227.08,
+            "probability": 0.9420557618141174,
+            "tokens": [
+              5142
+            ]
+          },
+          {
+            "word": "つ",
+            "start": 227.08,
+            "end": 227.54,
+            "probability": 0.24774307012557983,
+            "tokens": [
+              9335
+            ]
+          },
+          {
+            "word": "た",
+            "start": 227.54,
+            "end": 227.9,
+            "probability": 0.25294870138168335,
+            "tokens": [
+              3368
+            ]
+          },
+          {
+            "word": "り",
+            "start": 227.9,
+            "end": 228.22,
+            "probability": 0.5815728306770325,
+            "tokens": [
+              5095
+            ]
+          }
+        ]
+      },
+      {
+        "start": 228.62,
+        "end": 230.7,
+        "text": "朝が降りてた",
+        "seek": 221.0,
+        "tokens": [
+          46610,
+          5142,
+          47421,
+          5095,
+          2996,
+          3368
+        ],
+        "temperature": 0,
+        "avg_logprob": -0.6915441694713774,
+        "compression_ratio": 1.0975609756097562,
+        "no_speech_prob": 0.4535963833332062,
+        "words": [
+          {
+            "word": "朝",
+            "start": 228.62,
+            "end": 228.9,
+            "probability": 0.6165744662284851,
+            "tokens": [
+              46610
+            ]
+          },
+          {
+            "word": "が",
+            "start": 228.9,
+            "end": 229.28,
+            "probability": 0.9928216338157654,
+            "tokens": [
+              5142
+            ]
+          },
+          {
+            "word": "降",
+            "start": 229.28,
+            "end": 229.6,
+            "probability": 0.7726312279701233,
+            "tokens": [
+              47421
+            ]
+          },
+          {
+            "word": "り",
+            "start": 229.6,
+            "end": 229.86,
+            "probability": 0.9945026636123657,
+            "tokens": [
+              5095
+            ]
+          },
+          {
+            "word": "て",
+            "start": 229.86,
+            "end": 230.2,
+            "probability": 0.5792307257652283,
+            "tokens": [
+              2996
+            ]
+          },
+          {
+            "word": "た",
+            "start": 230.2,
+            "end": 230.7,
+            "probability": 0.559505045413971,
+            "tokens": [
+              3368
+            ]
+          }
+        ]
+      },
+      {
+        "start": 230.88,
+        "end": 234.04,
+        "text": "今日の話",
+        "seek": 221.0,
+        "tokens": [
+          26259,
+          2972,
+          11103
+        ],
+        "temperature": 0,
+        "avg_logprob": -0.6915441694713774,
+        "compression_ratio": 1.0975609756097562,
+        "no_speech_prob": 0.4535963833332062,
+        "words": [
+          {
+            "word": "今日",
+            "start": 230.88,
+            "end": 231.58,
+            "probability": 0.05829574912786484,
+            "tokens": [
+              26259
+            ]
+          },
+          {
+            "word": "の",
+            "start": 231.58,
+            "end": 232.74,
+            "probability": 0.9460954070091248,
+            "tokens": [
+              2972
+            ]
+          },
+          {
+            "word": "話",
+            "start": 232.74,
+            "end": 234.04,
+            "probability": 0.9962908029556274,
+            "tokens": [
+              11103
+            ]
+          }
+        ]
+      },
+      {
+        "start": 235.42,
+        "end": 238.9,
+        "text": "赤月ばかり",
+        "seek": 221.0,
+        "tokens": [
+          5266,
+          97,
+          6939,
+          13349,
+          3703,
+          5095
+        ],
+        "temperature": 0,
+        "avg_logprob": -0.6915441694713774,
+        "compression_ratio": 1.0975609756097562,
+        "no_speech_prob": 0.4535963833332062,
+        "words": [
+          {
+            "word": "赤",
+            "start": 235.42,
+            "end": 236.22,
+            "probability": 0.6492195874452591,
+            "tokens": [
+              5266,
+              97
+            ]
+          },
+          {
+            "word": "月",
+            "start": 236.22,
+            "end": 237.08,
+            "probability": 0.9127863645553589,
+            "tokens": [
+              6939
+            ]
+          },
+          {
+            "word": "ば",
+            "start": 237.08,
+            "end": 237.84,
+            "probability": 0.9941520094871521,
+            "tokens": [
+              13349
+            ]
+          },
+          {
+            "word": "か",
+            "start": 237.84,
+            "end": 238.5,
+            "probability": 0.9956574440002441,
+            "tokens": [
+              3703
+            ]
+          },
+          {
+            "word": "り",
+            "start": 238.5,
+            "end": 238.9,
+            "probability": 0.999864935874939,
+            "tokens": [
+              5095
+            ]
+          }
+        ]
+      }
+    ],
+    "language": "ja",
+    "ori_dict": {
+      "text": "Not much, not much昨日の話朝がつたり朝が降りてた今日の話赤月ばかり",
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0.0,
+          "start": 0.0,
+          "end": 1.38,
+          "text": "Not much, not much",
+          "tokens": [
+            50364,
+            15208,
+            709,
+            11,
+            406,
+            709,
+            50437
+          ],
+          "temperature": 0,
+          "avg_logprob": -0.6915441694713774,
+          "compression_ratio": 1.0975609756097562,
+          "no_speech_prob": 0.4535963833332062,
+          "words": [
+            {
+              "word": "Not",
+              "start": 0.0,
+              "end": 0.24,
+              "probability": 0.004149290267378092,
+              "tokens": [
+                15208
+              ]
+            },
+            {
+              "word": " much,",
+              "start": 0.24,
+              "end": 0.44,
+              "probability": 0.16014045476913452,
+              "tokens": [
+                709,
+                11
+              ]
+            },
+            {
+              "word": " not",
+              "start": 0.44,
+              "end": 0.74,
+              "probability": 0.791016697883606,
+              "tokens": [
+                406
+              ]
+            },
+            {
+              "word": " much",
+              "start": 0.74,
+              "end": 1.38,
+              "probability": 0.9937029480934143,
+              "tokens": [
+                709
+              ]
+            }
+          ]
+        },
+        {
+          "id": 1,
+          "seek": 0.0,
+          "start": 1.48,
+          "end": 4.14,
+          "text": "昨日の話",
+          "tokens": [
+            50437,
+            47404,
+            6890,
+            2972,
+            11103,
+            50614
+          ],
+          "temperature": 0,
+          "avg_logprob": -0.6915441694713774,
+          "compression_ratio": 1.0975609756097562,
+          "no_speech_prob": 0.4535963833332062,
+          "words": [
+            {
+              "word": "昨",
+              "start": 1.48,
+              "end": 1.82,
+              "probability": 0.1830722689628601,
+              "tokens": [
+                47404
+              ]
+            },
+            {
+              "word": "日",
+              "start": 1.82,
+              "end": 2.28,
+              "probability": 0.984489917755127,
+              "tokens": [
+                6890
+              ]
+            },
+            {
+              "word": "の",
+              "start": 2.28,
+              "end": 2.78,
+              "probability": 0.9734309315681458,
+              "tokens": [
+                2972
+              ]
+            },
+            {
+              "word": "話",
+              "start": 2.78,
+              "end": 4.14,
+              "probability": 0.9834089279174805,
+              "tokens": [
+                11103
+              ]
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "seek": 0.0,
+          "start": 5.22,
+          "end": 7.22,
+          "text": "朝がつたり",
+          "tokens": [
+            50614,
+            46610,
+            5142,
+            9335,
+            3368,
+            5095,
+            50739
+          ],
+          "temperature": 0,
+          "avg_logprob": -0.6915441694713774,
+          "compression_ratio": 1.0975609756097562,
+          "no_speech_prob": 0.4535963833332062,
+          "words": [
+            {
+              "word": "朝",
+              "start": 5.22,
+              "end": 5.58,
+              "probability": 0.2623492479324341,
+              "tokens": [
+                46610
+              ]
+            },
+            {
+              "word": "が",
+              "start": 5.58,
+              "end": 6.08,
+              "probability": 0.9420557618141174,
+              "tokens": [
+                5142
+              ]
+            },
+            {
+              "word": "つ",
+              "start": 6.08,
+              "end": 6.54,
+              "probability": 0.24774307012557983,
+              "tokens": [
+                9335
+              ]
+            },
+            {
+              "word": "た",
+              "start": 6.54,
+              "end": 6.9,
+              "probability": 0.25294870138168335,
+              "tokens": [
+                3368
+              ]
+            },
+            {
+              "word": "り",
+              "start": 6.9,
+              "end": 7.22,
+              "probability": 0.5815728306770325,
+              "tokens": [
+                5095
+              ]
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "seek": 0.0,
+          "start": 7.62,
+          "end": 9.7,
+          "text": "朝が降りてた",
+          "tokens": [
+            50739,
+            46610,
+            5142,
+            47421,
+            5095,
+            2996,
+            3368,
+            50854
+          ],
+          "temperature": 0,
+          "avg_logprob": -0.6915441694713774,
+          "compression_ratio": 1.0975609756097562,
+          "no_speech_prob": 0.4535963833332062,
+          "words": [
+            {
+              "word": "朝",
+              "start": 7.62,
+              "end": 7.9,
+              "probability": 0.6165744662284851,
+              "tokens": [
+                46610
+              ]
+            },
+            {
+              "word": "が",
+              "start": 7.9,
+              "end": 8.28,
+              "probability": 0.9928216338157654,
+              "tokens": [
+                5142
+              ]
+            },
+            {
+              "word": "降",
+              "start": 8.28,
+              "end": 8.6,
+              "probability": 0.7726312279701233,
+              "tokens": [
+                47421
+              ]
+            },
+            {
+              "word": "り",
+              "start": 8.6,
+              "end": 8.86,
+              "probability": 0.9945026636123657,
+              "tokens": [
+                5095
+              ]
+            },
+            {
+              "word": "て",
+              "start": 8.86,
+              "end": 9.2,
+              "probability": 0.5792307257652283,
+              "tokens": [
+                2996
+              ]
+            },
+            {
+              "word": "た",
+              "start": 9.2,
+              "end": 9.7,
+              "probability": 0.559505045413971,
+              "tokens": [
+                3368
+              ]
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "seek": 0.0,
+          "start": 9.88,
+          "end": 13.04,
+          "text": "今日の話",
+          "tokens": [
+            50854,
+            26259,
+            2972,
+            11103,
+            51074
+          ],
+          "temperature": 0,
+          "avg_logprob": -0.6915441694713774,
+          "compression_ratio": 1.0975609756097562,
+          "no_speech_prob": 0.4535963833332062,
+          "words": [
+            {
+              "word": "今日",
+              "start": 9.88,
+              "end": 10.58,
+              "probability": 0.05829574912786484,
+              "tokens": [
+                26259
+              ]
+            },
+            {
+              "word": "の",
+              "start": 10.58,
+              "end": 11.74,
+              "probability": 0.9460954070091248,
+              "tokens": [
+                2972
+              ]
+            },
+            {
+              "word": "話",
+              "start": 11.74,
+              "end": 13.04,
+              "probability": 0.9962908029556274,
+              "tokens": [
+                11103
+              ]
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "seek": 0.0,
+          "start": 14.42,
+          "end": 17.9,
+          "text": "赤月ばかり",
+          "tokens": [
+            51074,
+            5266,
+            97,
+            6939,
+            13349,
+            3703,
+            5095,
+            51264
+          ],
+          "temperature": 0,
+          "avg_logprob": -0.6915441694713774,
+          "compression_ratio": 1.0975609756097562,
+          "no_speech_prob": 0.4535963833332062,
+          "words": [
+            {
+              "word": "赤",
+              "start": 14.42,
+              "end": 15.22,
+              "probability": 0.6492195874452591,
+              "tokens": [
+                5266,
+                97
+              ]
+            },
+            {
+              "word": "月",
+              "start": 15.22,
+              "end": 16.08,
+              "probability": 0.9127863645553589,
+              "tokens": [
+                6939
+              ]
+            },
+            {
+              "word": "ば",
+              "start": 16.08,
+              "end": 16.84,
+              "probability": 0.9941520094871521,
+              "tokens": [
+                13349
+              ]
+            },
+            {
+              "word": "か",
+              "start": 16.84,
+              "end": 17.5,
+              "probability": 0.9956574440002441,
+              "tokens": [
+                3703
+              ]
+            },
+            {
+              "word": "り",
+              "start": 17.5,
+              "end": 17.9,
+              "probability": 0.999864935874939,
+              "tokens": [
+                5095
+              ]
+            }
+          ]
+        }
+      ],
+      "language": "ja",
+      "time_scale": null
+    },
+    "regroup_history": "",
+    "nonspeech_sections": []
+  }
+}

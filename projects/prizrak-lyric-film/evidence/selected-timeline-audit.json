@@ -1,0 +1,459 @@
+{
+  "schemaVersion": 1,
+  "status": "passed",
+  "auditScope": "Read-only selected-event identity, performed inventory, contributor-union ownership and scene-opacity function checks; no human hearing, decoded pixels, browser playback or audio-video perception claim.",
+  "timelineRevision": "prizrak-preview-v1",
+  "sourceSha256": "8563f6b817c9b1cc39649363a52486214c691c0d98ae7bb82263021ac7363523",
+  "timelineFile": "public/timeline.json",
+  "timelineSha256": "2b562e6dfc1c704170ed8f20c1c55f2fe3476578d7904c6c7a42a980f87962f0",
+  "artifacts": [
+    {
+      "file": "scripts/build-timeline.ts",
+      "sha256": "9b5ddb5a3d2b2c1cc93e7a3f0d1437acab5c656549a5753e62733f4a746f6b71"
+    },
+    {
+      "file": "src/model.ts",
+      "sha256": "18f62087ad1294e7ec0107c6e64ccde69e60d8fcafc061e1ffc04a78e31c4451"
+    },
+    {
+      "file": "src/scene.ts",
+      "sha256": "1659e7f5bbc5bbe61e3515532efa6e05bea3265c153265092934cdf5968e995f"
+    },
+    {
+      "file": "evidence/independent-acoustic-review.json",
+      "sha256": "e756dffacea7fdd7939a4fb6fbd350be76aecc49af953e212572fdeca97046ee"
+    },
+    {
+      "file": "public/audio-features.json",
+      "sha256": "dbef98d33ccd973ff3b8640e3bf9702a24666898ee1cfd1c68bc45dc49301665"
+    },
+    {
+      "file": "evidence/timing-decisions.json",
+      "sha256": "fdeef9c61f0cb5d141d9c204af7181bcb8e6e7294f7690bcd04e39050fd2f7a9"
+    }
+  ],
+  "sampleRate": 44100,
+  "uniqueSourceEventCount": 150,
+  "cueCount": 37,
+  "russianCueCount": 27,
+  "russianSourceWordCount": 106,
+  "russianComparisons": [
+    {
+      "cueId": "RU-001",
+      "words": 4,
+      "exactSampleAndTextAgreement": true
+    },
+    {
+      "cueId": "RU-002",
+      "words": 5,
+      "exactSampleAndTextAgreement": true
+    },
+    {
+      "cueId": "RU-003",
+      "words": 4,
+      "exactSampleAndTextAgreement": true
+    },
+    {
+      "cueId": "RU-004",
+      "words": 2,
+      "exactSampleAndTextAgreement": true
+    },
+    {
+      "cueId": "RU-005",
+      "words": 4,
+      "exactSampleAndTextAgreement": true
+    },
+    {
+      "cueId": "RU-006",
+      "words": 5,
+      "exactSampleAndTextAgreement": true
+    },
+    {
+      "cueId": "RU-007",
+      "words": 3,
+      "exactSampleAndTextAgreement": true
+    },
+    {
+      "cueId": "RU-008",
+      "words": 4,
+      "exactSampleAndTextAgreement": true
+    },
+    {
+      "cueId": "RU-009",
+      "words": 3,
+      "exactSampleAndTextAgreement": true
+    },
+    {
+      "cueId": "RU-010",
+      "words": 4,
+      "exactSampleAndTextAgreement": true
+    },
+    {
+      "cueId": "RU-011",
+      "words": 5,
+      "exactSampleAndTextAgreement": true
+    },
+    {
+      "cueId": "RU-012",
+      "words": 3,
+      "exactSampleAndTextAgreement": true
+    },
+    {
+      "cueId": "RU-013",
+      "words": 6,
+      "exactSampleAndTextAgreement": true
+    },
+    {
+      "cueId": "RU-014",
+      "words": 2,
+      "exactSampleAndTextAgreement": true
+    },
+    {
+      "cueId": "RU-015",
+      "words": 5,
+      "exactSampleAndTextAgreement": true
+    },
+    {
+      "cueId": "RU-016",
+      "words": 3,
+      "exactSampleAndTextAgreement": true
+    },
+    {
+      "cueId": "RU-017",
+      "words": 6,
+      "exactSampleAndTextAgreement": true
+    },
+    {
+      "cueId": "RU-018",
+      "words": 4,
+      "exactSampleAndTextAgreement": true
+    },
+    {
+      "cueId": "RU-019",
+      "words": 5,
+      "exactSampleAndTextAgreement": true
+    },
+    {
+      "cueId": "RU-020",
+      "words": 4,
+      "exactSampleAndTextAgreement": true
+    },
+    {
+      "cueId": "RU-021",
+      "words": 2,
+      "exactSampleAndTextAgreement": true
+    },
+    {
+      "cueId": "RU-022",
+      "words": 4,
+      "exactSampleAndTextAgreement": true
+    },
+    {
+      "cueId": "RU-023",
+      "words": 5,
+      "exactSampleAndTextAgreement": true
+    },
+    {
+      "cueId": "RU-024",
+      "words": 3,
+      "exactSampleAndTextAgreement": true
+    },
+    {
+      "cueId": "RU-025",
+      "words": 4,
+      "exactSampleAndTextAgreement": true
+    },
+    {
+      "cueId": "RU-026",
+      "words": 3,
+      "exactSampleAndTextAgreement": true
+    },
+    {
+      "cueId": "RU-027",
+      "words": 4,
+      "exactSampleAndTextAgreement": true
+    }
+  ],
+  "japaneseDisplayedCueCount": 10,
+  "japaneseSourceEventCount": 44,
+  "japanesePerformedInventory": {
+    "openingPoem30Pairs": 2,
+    "mainPoem59Performances": 2,
+    "closingPoem30Pairs": 2,
+    "noInventedPreludeOrStockEndTitle": true,
+    "reviewedAgainst": "Repaired native-kana CTC original/estimate panels and independent unprompted inventory; two joined moon sentences and intact inflected word groups preserve source units."
+  },
+  "finalJapaneseRefinements": [
+    {
+      "cueId": "JP30-004",
+      "sourceIndex": 0,
+      "boundary": "startSample",
+      "selectedSeconds": 230.55,
+      "reviewRangeSeconds": [
+        230.5,
+        230.8
+      ],
+      "reason": "The original/stem renewed initial vowel body precedes the sparse230.91 CTC core.",
+      "selectedSample": 10167255,
+      "actualSample": 10167255,
+      "exactAgreement": true
+    },
+    {
+      "cueId": "JP59-002",
+      "sourceIndex": 1,
+      "boundary": "endSample",
+      "selectedSeconds": 58.28,
+      "reviewRangeSeconds": [
+        57.9,
+        58.42
+      ],
+      "reason": "Preserve the individually reviewed low sustained e body beyond57.03; release remains before new58.495 articulation.",
+      "selectedSample": 2570148,
+      "actualSample": 2570148,
+      "exactAgreement": true
+    },
+    {
+      "cueId": "JP59-006",
+      "sourceIndex": 1,
+      "boundary": "endSample",
+      "selectedSeconds": 76.5,
+      "reviewRangeSeconds": [
+        76.25,
+        76.7
+      ],
+      "reason": "Preserve independently reviewed low harmonic/wave pulses beyond75.38 towards76.4, before next76.75 articulation.",
+      "selectedSample": 3373650,
+      "actualSample": 3373650,
+      "exactAgreement": true
+    }
+  ],
+  "closingOverlap": {
+    "russianWordId": "RU-027-4",
+    "russianWordText": "ночь",
+    "russianOnsetSample": 9763299,
+    "russianReleaseSample": 9800784,
+    "russianOnsetSeconds": 221.39,
+    "russianReleaseSeconds": 222.24,
+    "japaneseCueOnsetSeconds": 221.8,
+    "representedOverlapSeconds": 0.4399999999999977,
+    "carryVisibleEndSeconds": 222.24,
+    "exactOriginalAcousticIdentityPreserved": true,
+    "carriedLanguages": [
+      "ru",
+      "en"
+    ],
+    "carriedWordCheckpoints": 28
+  },
+  "checks": {
+    "sampling": "Every source-word exact onset, last active44.1k sample and all60fps grid instants within the selected half-open body; exact release inactive checked separately.",
+    "activeBodyFrameAndExactBoundaryCheckpoints": 10204,
+    "exactEndReleaseChecks": 150,
+    "languageFocusCheckpoints": 24031,
+    "primaryOpacityFunctionExactlyOneThroughoutSelectedVoice": true,
+    "unrelatedContributorGapsNotFilled": true,
+    "activeWordHasPrimaryOrCarriedOwnership": true,
+    "perCueChecks": [
+      {
+        "cueId": "JP30-001",
+        "uniqueSourceEvents": 6,
+        "activeBodyFrameAndExactBoundaryCheckpoints": 473
+      },
+      {
+        "cueId": "JP30-002",
+        "uniqueSourceEvents": 6,
+        "activeBodyFrameAndExactBoundaryCheckpoints": 464
+      },
+      {
+        "cueId": "JP59-001",
+        "uniqueSourceEvents": 3,
+        "activeBodyFrameAndExactBoundaryCheckpoints": 269
+      },
+      {
+        "cueId": "JP59-002",
+        "uniqueSourceEvents": 2,
+        "activeBodyFrameAndExactBoundaryCheckpoints": 202
+      },
+      {
+        "cueId": "JP59-003-004",
+        "uniqueSourceEvents": 5,
+        "activeBodyFrameAndExactBoundaryCheckpoints": 342
+      },
+      {
+        "cueId": "JP59-005",
+        "uniqueSourceEvents": 3,
+        "activeBodyFrameAndExactBoundaryCheckpoints": 275
+      },
+      {
+        "cueId": "JP59-006",
+        "uniqueSourceEvents": 2,
+        "activeBodyFrameAndExactBoundaryCheckpoints": 197
+      },
+      {
+        "cueId": "JP59-007-008",
+        "uniqueSourceEvents": 5,
+        "activeBodyFrameAndExactBoundaryCheckpoints": 492
+      },
+      {
+        "cueId": "RU-001",
+        "uniqueSourceEvents": 4,
+        "activeBodyFrameAndExactBoundaryCheckpoints": 242
+      },
+      {
+        "cueId": "RU-002",
+        "uniqueSourceEvents": 5,
+        "activeBodyFrameAndExactBoundaryCheckpoints": 267
+      },
+      {
+        "cueId": "RU-003",
+        "uniqueSourceEvents": 4,
+        "activeBodyFrameAndExactBoundaryCheckpoints": 269
+      },
+      {
+        "cueId": "RU-004",
+        "uniqueSourceEvents": 2,
+        "activeBodyFrameAndExactBoundaryCheckpoints": 254
+      },
+      {
+        "cueId": "RU-005",
+        "uniqueSourceEvents": 4,
+        "activeBodyFrameAndExactBoundaryCheckpoints": 278
+      },
+      {
+        "cueId": "RU-006",
+        "uniqueSourceEvents": 5,
+        "activeBodyFrameAndExactBoundaryCheckpoints": 276
+      },
+      {
+        "cueId": "RU-007",
+        "uniqueSourceEvents": 3,
+        "activeBodyFrameAndExactBoundaryCheckpoints": 240
+      },
+      {
+        "cueId": "RU-008",
+        "uniqueSourceEvents": 4,
+        "activeBodyFrameAndExactBoundaryCheckpoints": 383
+      },
+      {
+        "cueId": "RU-009",
+        "uniqueSourceEvents": 3,
+        "activeBodyFrameAndExactBoundaryCheckpoints": 87
+      },
+      {
+        "cueId": "RU-010",
+        "uniqueSourceEvents": 4,
+        "activeBodyFrameAndExactBoundaryCheckpoints": 126
+      },
+      {
+        "cueId": "RU-011",
+        "uniqueSourceEvents": 5,
+        "activeBodyFrameAndExactBoundaryCheckpoints": 204
+      },
+      {
+        "cueId": "RU-012",
+        "uniqueSourceEvents": 3,
+        "activeBodyFrameAndExactBoundaryCheckpoints": 92
+      },
+      {
+        "cueId": "RU-013",
+        "uniqueSourceEvents": 6,
+        "activeBodyFrameAndExactBoundaryCheckpoints": 312
+      },
+      {
+        "cueId": "RU-014",
+        "uniqueSourceEvents": 2,
+        "activeBodyFrameAndExactBoundaryCheckpoints": 55
+      },
+      {
+        "cueId": "RU-015",
+        "uniqueSourceEvents": 5,
+        "activeBodyFrameAndExactBoundaryCheckpoints": 210
+      },
+      {
+        "cueId": "RU-016",
+        "uniqueSourceEvents": 3,
+        "activeBodyFrameAndExactBoundaryCheckpoints": 90
+      },
+      {
+        "cueId": "RU-017",
+        "uniqueSourceEvents": 6,
+        "activeBodyFrameAndExactBoundaryCheckpoints": 568
+      },
+      {
+        "cueId": "RU-018",
+        "uniqueSourceEvents": 4,
+        "activeBodyFrameAndExactBoundaryCheckpoints": 260
+      },
+      {
+        "cueId": "RU-019",
+        "uniqueSourceEvents": 5,
+        "activeBodyFrameAndExactBoundaryCheckpoints": 280
+      },
+      {
+        "cueId": "RU-020",
+        "uniqueSourceEvents": 4,
+        "activeBodyFrameAndExactBoundaryCheckpoints": 283
+      },
+      {
+        "cueId": "RU-021",
+        "uniqueSourceEvents": 2,
+        "activeBodyFrameAndExactBoundaryCheckpoints": 264
+      },
+      {
+        "cueId": "RU-022",
+        "uniqueSourceEvents": 4,
+        "activeBodyFrameAndExactBoundaryCheckpoints": 267
+      },
+      {
+        "cueId": "RU-023",
+        "uniqueSourceEvents": 5,
+        "activeBodyFrameAndExactBoundaryCheckpoints": 277
+      },
+      {
+        "cueId": "RU-024",
+        "uniqueSourceEvents": 3,
+        "activeBodyFrameAndExactBoundaryCheckpoints": 260
+      },
+      {
+        "cueId": "RU-025",
+        "uniqueSourceEvents": 4,
+        "activeBodyFrameAndExactBoundaryCheckpoints": 488
+      },
+      {
+        "cueId": "RU-026",
+        "uniqueSourceEvents": 3,
+        "activeBodyFrameAndExactBoundaryCheckpoints": 98
+      },
+      {
+        "cueId": "RU-027",
+        "uniqueSourceEvents": 4,
+        "activeBodyFrameAndExactBoundaryCheckpoints": 151
+      },
+      {
+        "cueId": "JP30-003",
+        "uniqueSourceEvents": 6,
+        "activeBodyFrameAndExactBoundaryCheckpoints": 443
+      },
+      {
+        "cueId": "JP30-004",
+        "uniqueSourceEvents": 6,
+        "activeBodyFrameAndExactBoundaryCheckpoints": 466
+      }
+    ]
+  },
+  "remainingListeningJudgments": [
+    "Quiet Russian prepositions/night prefixes and connected menya→mne nasal handoffs retain broad onset uncertainty.",
+    "Direct Japanese e-vowel versus room/reverberation boundaries at58.28 and76.50 remain perceptual review points.",
+    "Initial Japanese vowel under closing Russian night remains provisional221.65–222.12; explicit overlapping ownership is retained."
+  ],
+  "limits": {
+    "humanListening": false,
+    "humanApproval": false,
+    "canonicalTimingModified": false,
+    "newAsrRun": false,
+    "sourceAudioOrPictureChanged": false,
+    "scenePixelsOrRealBrowserClockAudited": false,
+    "sampleIntegersDoNotClaimMillisecondPerceptualCertainty": true,
+    "remoteActionsPerformed": false
+  },
+  "errors": []
+}

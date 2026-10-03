@@ -1,0 +1,2570 @@
+{
+  "sourceSha256": "8563f6b817c9b1cc39649363a52486214c691c0d98ae7bb82263021ac7363523",
+  "humanListening": false,
+  "records": [
+    {
+      "phraseId": "JP59-001",
+      "language": "ja",
+      "cropStartSample16000": 760000,
+      "cropEndSample16000": 864800,
+      "conditionedText": [
+        "やすらは",
+        "で",
+        "寝",
+        "な",
+        "まし",
+        "ものを"
+      ],
+      "method": "Whisper large-v3-turbo stable-ts conditioned attention alignment, not lexical proof or listening",
+      "result": {
+        "text": " やすらは で 寝 な まし ものを",
+        "segments": [
+          {
+            "start": 47.5,
+            "end": 53.5,
+            "text": " やすらは で 寝 な まし ものを",
+            "seek": null,
+            "tokens": [
+              43938,
+              2659,
+              5154,
+              3065,
+              21376,
+              220,
+              4510,
+              251,
+              16647,
+              20979,
+              2849,
+              32505,
+              2972,
+              5998
+            ],
+            "temperature": null,
+            "avg_logprob": null,
+            "compression_ratio": null,
+            "no_speech_prob": null,
+            "words": [
+              {
+                "word": " や",
+                "start": 47.5,
+                "end": 49.64,
+                "probability": 0.00014855439076200128,
+                "tokens": [
+                  43938
+                ]
+              },
+              {
+                "word": "す",
+                "start": 49.64,
+                "end": 49.88,
+                "probability": 0.48226121068000793,
+                "tokens": [
+                  2659
+                ]
+              },
+              {
+                "word": "ら",
+                "start": 49.88,
+                "end": 50.28,
+                "probability": 0.7172945141792297,
+                "tokens": [
+                  5154
+                ]
+              },
+              {
+                "word": "は",
+                "start": 50.28,
+                "end": 50.62,
+                "probability": 0.009622269310057163,
+                "tokens": [
+                  3065
+                ]
+              },
+              {
+                "word": " で",
+                "start": 50.62,
+                "end": 51.38,
+                "probability": 0.0006179753690958023,
+                "tokens": [
+                  21376
+                ]
+              },
+              {
+                "word": " 寝",
+                "start": 51.38,
+                "end": 51.94,
+                "probability": 0.35350669755522784,
+                "tokens": [
+                  220,
+                  4510,
+                  251
+                ]
+              },
+              {
+                "word": " な",
+                "start": 51.94,
+                "end": 52.2,
+                "probability": 0.0010525594698265195,
+                "tokens": [
+                  16647
+                ]
+              },
+              {
+                "word": " ま",
+                "start": 52.2,
+                "end": 52.48,
+                "probability": 0.0020150498021394014,
+                "tokens": [
+                  20979
+                ]
+              },
+              {
+                "word": "し",
+                "start": 52.48,
+                "end": 52.82,
+                "probability": 0.5455181002616882,
+                "tokens": [
+                  2849
+                ]
+              },
+              {
+                "word": " も",
+                "start": 52.82,
+                "end": 53.04,
+                "probability": 0.07710311561822891,
+                "tokens": [
+                  32505
+                ]
+              },
+              {
+                "word": "の",
+                "start": 53.04,
+                "end": 53.36,
+                "probability": 0.6415443420410156,
+                "tokens": [
+                  2972
+                ]
+              },
+              {
+                "word": "を",
+                "start": 53.36,
+                "end": 53.5,
+                "probability": 0.020245008170604706,
+                "tokens": [
+                  5998
+                ]
+              }
+            ]
+          }
+        ],
+        "language": "ja",
+        "ori_dict": {
+          "segments": [
+            {
+              "start": 0.0,
+              "end": 6.0,
+              "text": " やすらは で 寝 な まし ものを",
+              "words": [
+                {
+                  "word": " や",
+                  "start": 0.0,
+                  "end": 2.14,
+                  "tokens": [
+                    43938
+                  ],
+                  "probability": 0.00014855439076200128
+                },
+                {
+                  "word": "す",
+                  "start": 2.14,
+                  "end": 2.38,
+                  "tokens": [
+                    2659
+                  ],
+                  "probability": 0.48226121068000793
+                },
+                {
+                  "word": "ら",
+                  "start": 2.38,
+                  "end": 2.78,
+                  "tokens": [
+                    5154
+                  ],
+                  "probability": 0.7172945141792297
+                },
+                {
+                  "word": "は",
+                  "start": 2.78,
+                  "end": 3.12,
+                  "tokens": [
+                    3065
+                  ],
+                  "probability": 0.009622269310057163
+                },
+                {
+                  "word": " で",
+                  "start": 3.12,
+                  "end": 3.88,
+                  "tokens": [
+                    21376
+                  ],
+                  "probability": 0.0006179753690958023
+                },
+                {
+                  "word": " 寝",
+                  "start": 3.88,
+                  "end": 4.44,
+                  "tokens": [
+                    220,
+                    4510,
+                    251
+                  ],
+                  "probability": 0.35350669755522784
+                },
+                {
+                  "word": " な",
+                  "start": 4.44,
+                  "end": 4.7,
+                  "tokens": [
+                    16647
+                  ],
+                  "probability": 0.0010525594698265195
+                },
+                {
+                  "word": " ま",
+                  "start": 4.7,
+                  "end": 4.98,
+                  "tokens": [
+                    20979
+                  ],
+                  "probability": 0.0020150498021394014
+                },
+                {
+                  "word": "し",
+                  "start": 4.98,
+                  "end": 5.32,
+                  "tokens": [
+                    2849
+                  ],
+                  "probability": 0.5455181002616882
+                },
+                {
+                  "word": " も",
+                  "start": 5.32,
+                  "end": 5.54,
+                  "tokens": [
+                    32505
+                  ],
+                  "probability": 0.07710311561822891
+                },
+                {
+                  "word": "の",
+                  "start": 5.54,
+                  "end": 5.86,
+                  "tokens": [
+                    2972
+                  ],
+                  "probability": 0.6415443420410156
+                },
+                {
+                  "word": "を",
+                  "start": 5.86,
+                  "end": 6.0,
+                  "tokens": [
+                    5998
+                  ],
+                  "probability": 0.020245008170604706
+                }
+              ]
+            }
+          ]
+        },
+        "regroup_history": "",
+        "nonspeech_sections": []
+      }
+    },
+    {
+      "phraseId": "JP59-002",
+      "language": "ja",
+      "cropStartSample16000": 864800,
+      "cropEndSample16000": 916000,
+      "conditionedText": [
+        "小夜",
+        "更け",
+        "て"
+      ],
+      "method": "Whisper large-v3-turbo stable-ts conditioned attention alignment, not lexical proof or listening",
+      "result": {
+        "text": " 小夜 更け て",
+        "segments": [
+          {
+            "start": 54.05,
+            "end": 56.45,
+            "text": " 小夜 更け て",
+            "seek": null,
+            "tokens": [
+              43454,
+              30124,
+              220,
+              19002,
+              7625,
+              23822
+            ],
+            "temperature": null,
+            "avg_logprob": null,
+            "compression_ratio": null,
+            "no_speech_prob": null,
+            "words": [
+              {
+                "word": " 小",
+                "start": 54.05,
+                "end": 55.41,
+                "probability": 1.0843952225059184e-07,
+                "tokens": [
+                  43454
+                ]
+              },
+              {
+                "word": "夜",
+                "start": 55.41,
+                "end": 55.75,
+                "probability": 0.005839971359819174,
+                "tokens": [
+                  30124
+                ]
+              },
+              {
+                "word": " 更",
+                "start": 55.75,
+                "end": 55.89,
+                "probability": 0.007784106623148546,
+                "tokens": [
+                  220,
+                  19002
+                ]
+              },
+              {
+                "word": "け",
+                "start": 55.89,
+                "end": 56.11,
+                "probability": 0.01877208612859249,
+                "tokens": [
+                  7625
+                ]
+              },
+              {
+                "word": " て",
+                "start": 56.11,
+                "end": 56.45,
+                "probability": 0.015689339488744736,
+                "tokens": [
+                  23822
+                ]
+              }
+            ]
+          }
+        ],
+        "language": "ja",
+        "ori_dict": {
+          "segments": [
+            {
+              "start": 0.0,
+              "end": 2.4,
+              "text": " 小夜 更け て",
+              "words": [
+                {
+                  "word": " 小",
+                  "start": 0.0,
+                  "end": 1.36,
+                  "tokens": [
+                    43454
+                  ],
+                  "probability": 1.0843952225059184e-07
+                },
+                {
+                  "word": "夜",
+                  "start": 1.36,
+                  "end": 1.7,
+                  "tokens": [
+                    30124
+                  ],
+                  "probability": 0.005839971359819174
+                },
+                {
+                  "word": " 更",
+                  "start": 1.7,
+                  "end": 1.84,
+                  "tokens": [
+                    220,
+                    19002
+                  ],
+                  "probability": 0.007784106623148546
+                },
+                {
+                  "word": "け",
+                  "start": 1.84,
+                  "end": 2.06,
+                  "tokens": [
+                    7625
+                  ],
+                  "probability": 0.01877208612859249
+                },
+                {
+                  "word": " て",
+                  "start": 2.06,
+                  "end": 2.4,
+                  "tokens": [
+                    23822
+                  ],
+                  "probability": 0.015689339488744736
+                }
+              ]
+            }
+          ]
+        },
+        "regroup_history": "",
+        "nonspeech_sections": []
+      }
+    },
+    {
+      "phraseId": "JP59-003",
+      "language": "ja",
+      "cropStartSample16000": 916000,
+      "cropEndSample16000": 980000,
+      "conditionedText": [
+        "傾く",
+        "まで",
+        "の"
+      ],
+      "method": "Whisper large-v3-turbo stable-ts conditioned attention alignment, not lexical proof or listening",
+      "result": {
+        "text": " 傾く まで の",
+        "segments": [
+          {
+            "start": 57.25,
+            "end": 61.03,
+            "text": " 傾く まで の",
+            "seek": null,
+            "tokens": [
+              220,
+              11518,
+              122,
+              6134,
+              20979,
+              2474,
+              21171
+            ],
+            "temperature": null,
+            "avg_logprob": null,
+            "compression_ratio": null,
+            "no_speech_prob": null,
+            "words": [
+              {
+                "word": " 傾",
+                "start": 57.25,
+                "end": 59.05,
+                "probability": 0.6354865703954905,
+                "tokens": [
+                  220,
+                  11518,
+                  122
+                ]
+              },
+              {
+                "word": "く",
+                "start": 59.05,
+                "end": 59.61,
+                "probability": 0.983809232711792,
+                "tokens": [
+                  6134
+                ]
+              },
+              {
+                "word": " ま",
+                "start": 59.61,
+                "end": 60.05,
+                "probability": 0.0034914291463792324,
+                "tokens": [
+                  20979
+                ]
+              },
+              {
+                "word": "で",
+                "start": 60.05,
+                "end": 60.49,
+                "probability": 0.4585579037666321,
+                "tokens": [
+                  2474
+                ]
+              },
+              {
+                "word": " の",
+                "start": 60.49,
+                "end": 61.03,
+                "probability": 0.03673437237739563,
+                "tokens": [
+                  21171
+                ]
+              }
+            ]
+          }
+        ],
+        "language": "ja",
+        "ori_dict": {
+          "segments": [
+            {
+              "start": 0.0,
+              "end": 3.78,
+              "text": " 傾く まで の",
+              "words": [
+                {
+                  "word": " 傾",
+                  "start": 0.0,
+                  "end": 1.8,
+                  "tokens": [
+                    220,
+                    11518,
+                    122
+                  ],
+                  "probability": 0.6354865703954905
+                },
+                {
+                  "word": "く",
+                  "start": 1.8,
+                  "end": 2.36,
+                  "tokens": [
+                    6134
+                  ],
+                  "probability": 0.983809232711792
+                },
+                {
+                  "word": " ま",
+                  "start": 2.36,
+                  "end": 2.8,
+                  "tokens": [
+                    20979
+                  ],
+                  "probability": 0.0034914291463792324
+                },
+                {
+                  "word": "で",
+                  "start": 2.8,
+                  "end": 3.24,
+                  "tokens": [
+                    2474
+                  ],
+                  "probability": 0.4585579037666321
+                },
+                {
+                  "word": " の",
+                  "start": 3.24,
+                  "end": 3.78,
+                  "tokens": [
+                    21171
+                  ],
+                  "probability": 0.03673437237739563
+                }
+              ]
+            }
+          ]
+        },
+        "regroup_history": "",
+        "nonspeech_sections": []
+      }
+    },
+    {
+      "phraseId": "JP59-004",
+      "language": "ja",
+      "cropStartSample16000": 980000,
+      "cropEndSample16000": 1056000,
+      "conditionedText": [
+        "月",
+        "を",
+        "見",
+        "し",
+        "かな"
+      ],
+      "method": "Whisper large-v3-turbo stable-ts conditioned attention alignment, not lexical proof or listening",
+      "result": {
+        "text": " 月 を 見 し かな",
+        "segments": [
+          {
+            "start": 61.25,
+            "end": 65.53,
+            "text": " 月 を 見 し かな",
+            "seek": null,
+            "tokens": [
+              220,
+              6939,
+              30181,
+              220,
+              10470,
+              26974,
+              25295,
+              3203
+            ],
+            "temperature": null,
+            "avg_logprob": null,
+            "compression_ratio": null,
+            "no_speech_prob": null,
+            "words": [
+              {
+                "word": " 月",
+                "start": 61.25,
+                "end": 61.63,
+                "probability": 0.25049706782010617,
+                "tokens": [
+                  220,
+                  6939
+                ]
+              },
+              {
+                "word": " を",
+                "start": 61.63,
+                "end": 62.51,
+                "probability": 0.0038785566575825214,
+                "tokens": [
+                  30181
+                ]
+              },
+              {
+                "word": " 見",
+                "start": 62.51,
+                "end": 64.37,
+                "probability": 0.6554948836565018,
+                "tokens": [
+                  220,
+                  10470
+                ]
+              },
+              {
+                "word": " し",
+                "start": 64.37,
+                "end": 64.67,
+                "probability": 0.005895164329558611,
+                "tokens": [
+                  26974
+                ]
+              },
+              {
+                "word": " か",
+                "start": 64.67,
+                "end": 65.25,
+                "probability": 0.3994047939777374,
+                "tokens": [
+                  25295
+                ]
+              },
+              {
+                "word": "な",
+                "start": 65.25,
+                "end": 65.53,
+                "probability": 0.555856466293335,
+                "tokens": [
+                  3203
+                ]
+              }
+            ]
+          }
+        ],
+        "language": "ja",
+        "ori_dict": {
+          "segments": [
+            {
+              "start": 0.0,
+              "end": 4.28,
+              "text": " 月 を 見 し かな",
+              "words": [
+                {
+                  "word": " 月",
+                  "start": 0.0,
+                  "end": 0.38,
+                  "tokens": [
+                    220,
+                    6939
+                  ],
+                  "probability": 0.25049706782010617
+                },
+                {
+                  "word": " を",
+                  "start": 0.38,
+                  "end": 1.26,
+                  "tokens": [
+                    30181
+                  ],
+                  "probability": 0.0038785566575825214
+                },
+                {
+                  "word": " 見",
+                  "start": 1.26,
+                  "end": 3.12,
+                  "tokens": [
+                    220,
+                    10470
+                  ],
+                  "probability": 0.6554948836565018
+                },
+                {
+                  "word": " し",
+                  "start": 3.12,
+                  "end": 3.42,
+                  "tokens": [
+                    26974
+                  ],
+                  "probability": 0.005895164329558611
+                },
+                {
+                  "word": " か",
+                  "start": 3.42,
+                  "end": 4.0,
+                  "tokens": [
+                    25295
+                  ],
+                  "probability": 0.3994047939777374
+                },
+                {
+                  "word": "な",
+                  "start": 4.0,
+                  "end": 4.28,
+                  "tokens": [
+                    3203
+                  ],
+                  "probability": 0.555856466293335
+                }
+              ]
+            }
+          ]
+        },
+        "regroup_history": "",
+        "nonspeech_sections": []
+      }
+    },
+    {
+      "phraseId": "JP59-005",
+      "language": "ja",
+      "cropStartSample16000": 1056000,
+      "cropEndSample16000": 1158400,
+      "conditionedText": [
+        "やすらは",
+        "で",
+        "寝",
+        "な",
+        "まし",
+        "ものを"
+      ],
+      "method": "Whisper large-v3-turbo stable-ts conditioned attention alignment, not lexical proof or listening",
+      "result": {
+        "text": " やすらは で 寝 な まし ものを",
+        "segments": [
+          {
+            "start": 66.0,
+            "end": 72.06,
+            "text": " やすらは で 寝 な まし ものを",
+            "seek": null,
+            "tokens": [
+              43938,
+              2659,
+              5154,
+              3065,
+              21376,
+              220,
+              4510,
+              251,
+              16647,
+              20979,
+              2849,
+              32505,
+              2972,
+              5998
+            ],
+            "temperature": null,
+            "avg_logprob": null,
+            "compression_ratio": null,
+            "no_speech_prob": null,
+            "words": [
+              {
+                "word": " や",
+                "start": 66.0,
+                "end": 67.86,
+                "probability": 0.00024447307805530727,
+                "tokens": [
+                  43938
+                ]
+              },
+              {
+                "word": "す",
+                "start": 67.86,
+                "end": 68.16,
+                "probability": 0.6750335097312927,
+                "tokens": [
+                  2659
+                ]
+              },
+              {
+                "word": "ら",
+                "start": 68.16,
+                "end": 68.6,
+                "probability": 0.9388076663017273,
+                "tokens": [
+                  5154
+                ]
+              },
+              {
+                "word": "は",
+                "start": 68.6,
+                "end": 69.1,
+                "probability": 0.06110725551843643,
+                "tokens": [
+                  3065
+                ]
+              },
+              {
+                "word": " で",
+                "start": 69.1,
+                "end": 69.68,
+                "probability": 0.00012671423610299826,
+                "tokens": [
+                  21376
+                ]
+              },
+              {
+                "word": " 寝",
+                "start": 69.68,
+                "end": 70.36,
+                "probability": 0.37816545138290775,
+                "tokens": [
+                  220,
+                  4510,
+                  251
+                ]
+              },
+              {
+                "word": " な",
+                "start": 70.36,
+                "end": 70.48,
+                "probability": 0.0010756166884675622,
+                "tokens": [
+                  16647
+                ]
+              },
+              {
+                "word": " ま",
+                "start": 70.48,
+                "end": 70.76,
+                "probability": 0.005435712169855833,
+                "tokens": [
+                  20979
+                ]
+              },
+              {
+                "word": "し",
+                "start": 70.76,
+                "end": 71.12,
+                "probability": 0.2221115082502365,
+                "tokens": [
+                  2849
+                ]
+              },
+              {
+                "word": " も",
+                "start": 71.12,
+                "end": 71.5,
+                "probability": 0.06175491213798523,
+                "tokens": [
+                  32505
+                ]
+              },
+              {
+                "word": "の",
+                "start": 71.5,
+                "end": 71.86,
+                "probability": 0.04531734064221382,
+                "tokens": [
+                  2972
+                ]
+              },
+              {
+                "word": "を",
+                "start": 71.86,
+                "end": 72.06,
+                "probability": 0.29618895053863525,
+                "tokens": [
+                  5998
+                ]
+              }
+            ]
+          }
+        ],
+        "language": "ja",
+        "ori_dict": {
+          "segments": [
+            {
+              "start": 0.0,
+              "end": 6.06,
+              "text": " やすらは で 寝 な まし ものを",
+              "words": [
+                {
+                  "word": " や",
+                  "start": 0.0,
+                  "end": 1.86,
+                  "tokens": [
+                    43938
+                  ],
+                  "probability": 0.00024447307805530727
+                },
+                {
+                  "word": "す",
+                  "start": 1.86,
+                  "end": 2.16,
+                  "tokens": [
+                    2659
+                  ],
+                  "probability": 0.6750335097312927
+                },
+                {
+                  "word": "ら",
+                  "start": 2.16,
+                  "end": 2.6,
+                  "tokens": [
+                    5154
+                  ],
+                  "probability": 0.9388076663017273
+                },
+                {
+                  "word": "は",
+                  "start": 2.6,
+                  "end": 3.1,
+                  "tokens": [
+                    3065
+                  ],
+                  "probability": 0.06110725551843643
+                },
+                {
+                  "word": " で",
+                  "start": 3.1,
+                  "end": 3.68,
+                  "tokens": [
+                    21376
+                  ],
+                  "probability": 0.00012671423610299826
+                },
+                {
+                  "word": " 寝",
+                  "start": 3.68,
+                  "end": 4.36,
+                  "tokens": [
+                    220,
+                    4510,
+                    251
+                  ],
+                  "probability": 0.37816545138290775
+                },
+                {
+                  "word": " な",
+                  "start": 4.36,
+                  "end": 4.48,
+                  "tokens": [
+                    16647
+                  ],
+                  "probability": 0.0010756166884675622
+                },
+                {
+                  "word": " ま",
+                  "start": 4.48,
+                  "end": 4.76,
+                  "tokens": [
+                    20979
+                  ],
+                  "probability": 0.005435712169855833
+                },
+                {
+                  "word": "し",
+                  "start": 4.76,
+                  "end": 5.12,
+                  "tokens": [
+                    2849
+                  ],
+                  "probability": 0.2221115082502365
+                },
+                {
+                  "word": " も",
+                  "start": 5.12,
+                  "end": 5.5,
+                  "tokens": [
+                    32505
+                  ],
+                  "probability": 0.06175491213798523
+                },
+                {
+                  "word": "の",
+                  "start": 5.5,
+                  "end": 5.86,
+                  "tokens": [
+                    2972
+                  ],
+                  "probability": 0.04531734064221382
+                },
+                {
+                  "word": "を",
+                  "start": 5.86,
+                  "end": 6.06,
+                  "tokens": [
+                    5998
+                  ],
+                  "probability": 0.29618895053863525
+                }
+              ]
+            }
+          ]
+        },
+        "regroup_history": "",
+        "nonspeech_sections": []
+      }
+    },
+    {
+      "phraseId": "JP59-006",
+      "language": "ja",
+      "cropStartSample16000": 1158400,
+      "cropEndSample16000": 1217600,
+      "conditionedText": [
+        "小夜",
+        "更け",
+        "て"
+      ],
+      "method": "Whisper large-v3-turbo stable-ts conditioned attention alignment, not lexical proof or listening",
+      "result": {
+        "text": " 小夜 更け て",
+        "segments": [
+          {
+            "start": 72.4,
+            "end": 74.76,
+            "text": " 小夜 更け て",
+            "seek": null,
+            "tokens": [
+              43454,
+              30124,
+              220,
+              19002,
+              7625,
+              23822
+            ],
+            "temperature": null,
+            "avg_logprob": null,
+            "compression_ratio": null,
+            "no_speech_prob": null,
+            "words": [
+              {
+                "word": " 小",
+                "start": 72.4,
+                "end": 73.58,
+                "probability": 3.0412451224037795e-07,
+                "tokens": [
+                  43454
+                ]
+              },
+              {
+                "word": "夜",
+                "start": 73.58,
+                "end": 74.06,
+                "probability": 0.015982341021299362,
+                "tokens": [
+                  30124
+                ]
+              },
+              {
+                "word": " 更",
+                "start": 74.06,
+                "end": 74.28,
+                "probability": 0.008309005672344938,
+                "tokens": [
+                  220,
+                  19002
+                ]
+              },
+              {
+                "word": "け",
+                "start": 74.28,
+                "end": 74.42,
+                "probability": 0.05222079157829285,
+                "tokens": [
+                  7625
+                ]
+              },
+              {
+                "word": " て",
+                "start": 74.42,
+                "end": 74.76,
+                "probability": 0.005163187626749277,
+                "tokens": [
+                  23822
+                ]
+              }
+            ]
+          }
+        ],
+        "language": "ja",
+        "ori_dict": {
+          "segments": [
+            {
+              "start": 0.0,
+              "end": 2.36,
+              "text": " 小夜 更け て",
+              "words": [
+                {
+                  "word": " 小",
+                  "start": 0.0,
+                  "end": 1.18,
+                  "tokens": [
+                    43454
+                  ],
+                  "probability": 3.0412451224037795e-07
+                },
+                {
+                  "word": "夜",
+                  "start": 1.18,
+                  "end": 1.66,
+                  "tokens": [
+                    30124
+                  ],
+                  "probability": 0.015982341021299362
+                },
+                {
+                  "word": " 更",
+                  "start": 1.66,
+                  "end": 1.88,
+                  "tokens": [
+                    220,
+                    19002
+                  ],
+                  "probability": 0.008309005672344938
+                },
+                {
+                  "word": "け",
+                  "start": 1.88,
+                  "end": 2.02,
+                  "tokens": [
+                    7625
+                  ],
+                  "probability": 0.05222079157829285
+                },
+                {
+                  "word": " て",
+                  "start": 2.02,
+                  "end": 2.36,
+                  "tokens": [
+                    23822
+                  ],
+                  "probability": 0.005163187626749277
+                }
+              ]
+            }
+          ]
+        },
+        "regroup_history": "",
+        "nonspeech_sections": []
+      }
+    },
+    {
+      "phraseId": "JP59-007",
+      "language": "ja",
+      "cropStartSample16000": 1217600,
+      "cropEndSample16000": 1283200,
+      "conditionedText": [
+        "傾く",
+        "まで",
+        "の"
+      ],
+      "method": "Whisper large-v3-turbo stable-ts conditioned attention alignment, not lexical proof or listening",
+      "result": {
+        "text": " 傾く まで の",
+        "segments": [
+          {
+            "start": 76.1,
+            "end": 79.32,
+            "text": " 傾く まで の",
+            "seek": null,
+            "tokens": [
+              220,
+              11518,
+              122,
+              6134,
+              20979,
+              2474,
+              21171
+            ],
+            "temperature": null,
+            "avg_logprob": null,
+            "compression_ratio": null,
+            "no_speech_prob": null,
+            "words": [
+              {
+                "word": " 傾",
+                "start": 76.1,
+                "end": 77.3,
+                "probability": 0.6604298569100138,
+                "tokens": [
+                  220,
+                  11518,
+                  122
+                ]
+              },
+              {
+                "word": "く",
+                "start": 77.3,
+                "end": 77.84,
+                "probability": 0.9984161853790283,
+                "tokens": [
+                  6134
+                ]
+              },
+              {
+                "word": " ま",
+                "start": 77.84,
+                "end": 78.32,
+                "probability": 0.0009433351224288344,
+                "tokens": [
+                  20979
+                ]
+              },
+              {
+                "word": "で",
+                "start": 78.32,
+                "end": 78.76,
+                "probability": 0.8415046334266663,
+                "tokens": [
+                  2474
+                ]
+              },
+              {
+                "word": " の",
+                "start": 78.76,
+                "end": 79.32,
+                "probability": 0.02937612682580948,
+                "tokens": [
+                  21171
+                ]
+              }
+            ]
+          }
+        ],
+        "language": "ja",
+        "ori_dict": {
+          "segments": [
+            {
+              "start": 0.0,
+              "end": 3.22,
+              "text": " 傾く まで の",
+              "words": [
+                {
+                  "word": " 傾",
+                  "start": 0.0,
+                  "end": 1.2,
+                  "tokens": [
+                    220,
+                    11518,
+                    122
+                  ],
+                  "probability": 0.6604298569100138
+                },
+                {
+                  "word": "く",
+                  "start": 1.2,
+                  "end": 1.74,
+                  "tokens": [
+                    6134
+                  ],
+                  "probability": 0.9984161853790283
+                },
+                {
+                  "word": " ま",
+                  "start": 1.74,
+                  "end": 2.22,
+                  "tokens": [
+                    20979
+                  ],
+                  "probability": 0.0009433351224288344
+                },
+                {
+                  "word": "で",
+                  "start": 2.22,
+                  "end": 2.66,
+                  "tokens": [
+                    2474
+                  ],
+                  "probability": 0.8415046334266663
+                },
+                {
+                  "word": " の",
+                  "start": 2.66,
+                  "end": 3.22,
+                  "tokens": [
+                    21171
+                  ],
+                  "probability": 0.02937612682580948
+                }
+              ]
+            }
+          ]
+        },
+        "regroup_history": "",
+        "nonspeech_sections": []
+      }
+    },
+    {
+      "phraseId": "JP59-008",
+      "language": "ja",
+      "cropStartSample16000": 1283200,
+      "cropEndSample16000": 1370400,
+      "conditionedText": [
+        "月",
+        "を",
+        "見",
+        "し",
+        "かな"
+      ],
+      "method": "Whisper large-v3-turbo stable-ts conditioned attention alignment, not lexical proof or listening",
+      "result": {
+        "text": " 月 を 見 し かな",
+        "segments": [
+          {
+            "start": 80.2,
+            "end": 84.36,
+            "text": " 月 を 見 し かな",
+            "seek": null,
+            "tokens": [
+              220,
+              6939,
+              30181,
+              220,
+              10470,
+              26974,
+              25295,
+              3203
+            ],
+            "temperature": null,
+            "avg_logprob": null,
+            "compression_ratio": null,
+            "no_speech_prob": null,
+            "words": [
+              {
+                "word": " 月",
+                "start": 80.2,
+                "end": 80.28,
+                "probability": 0.0007760488733765669,
+                "tokens": [
+                  220,
+                  6939
+                ]
+              },
+              {
+                "word": " を",
+                "start": 80.28,
+                "end": 80.54,
+                "probability": 9.512475662631914e-05,
+                "tokens": [
+                  30181
+                ]
+              },
+              {
+                "word": " 見",
+                "start": 80.54,
+                "end": 82.82,
+                "probability": 0.24782809987664223,
+                "tokens": [
+                  220,
+                  10470
+                ]
+              },
+              {
+                "word": " し",
+                "start": 82.82,
+                "end": 83.32,
+                "probability": 0.0016963196685537696,
+                "tokens": [
+                  26974
+                ]
+              },
+              {
+                "word": " か",
+                "start": 83.32,
+                "end": 83.92,
+                "probability": 0.003425041912123561,
+                "tokens": [
+                  25295
+                ]
+              },
+              {
+                "word": "な",
+                "start": 83.92,
+                "end": 84.36,
+                "probability": 0.051106102764606476,
+                "tokens": [
+                  3203
+                ]
+              }
+            ]
+          }
+        ],
+        "language": "ja",
+        "ori_dict": {
+          "segments": [
+            {
+              "start": 0.0,
+              "end": 4.16,
+              "text": " 月 を 見 し かな",
+              "words": [
+                {
+                  "word": " 月",
+                  "start": 0.0,
+                  "end": 0.08,
+                  "tokens": [
+                    220,
+                    6939
+                  ],
+                  "probability": 0.0007760488733765669
+                },
+                {
+                  "word": " を",
+                  "start": 0.08,
+                  "end": 0.34,
+                  "tokens": [
+                    30181
+                  ],
+                  "probability": 9.512475662631914e-05
+                },
+                {
+                  "word": " 見",
+                  "start": 0.34,
+                  "end": 2.62,
+                  "tokens": [
+                    220,
+                    10470
+                  ],
+                  "probability": 0.24782809987664223
+                },
+                {
+                  "word": " し",
+                  "start": 2.62,
+                  "end": 3.12,
+                  "tokens": [
+                    26974
+                  ],
+                  "probability": 0.0016963196685537696
+                },
+                {
+                  "word": " か",
+                  "start": 3.12,
+                  "end": 3.72,
+                  "tokens": [
+                    25295
+                  ],
+                  "probability": 0.003425041912123561
+                },
+                {
+                  "word": "な",
+                  "start": 3.72,
+                  "end": 4.16,
+                  "tokens": [
+                    3203
+                  ],
+                  "probability": 0.051106102764606476
+                }
+              ]
+            }
+          ]
+        },
+        "regroup_history": "",
+        "nonspeech_sections": []
+      }
+    },
+    {
+      "phraseId": "JP30-001",
+      "language": "ja",
+      "cropStartSample16000": 315200,
+      "cropEndSample16000": 466400,
+      "conditionedText": [
+        "憂き",
+        "もの",
+        "は",
+        "なし",
+        "暁",
+        "ばかり"
+      ],
+      "method": "Whisper large-v3-turbo stable-ts conditioned attention alignment, not lexical proof or listening",
+      "result": {
+        "text": " 憂き もの は なし 暁 ばかり",
+        "segments": [
+          {
+            "start": 19.7,
+            "end": 28.7,
+            "text": " 憂き もの は なし 暁 ばかり",
+            "seek": null,
+            "tokens": [
+              220,
+              29713,
+              224,
+              7016,
+              32505,
+              2972,
+              20785,
+              16647,
+              2849,
+              220,
+              23826,
+              223,
+              2605,
+              108,
+              3703,
+              5095
+            ],
+            "temperature": null,
+            "avg_logprob": null,
+            "compression_ratio": null,
+            "no_speech_prob": null,
+            "words": [
+              {
+                "word": " 憂",
+                "start": 19.7,
+                "end": 21.1,
+                "probability": 0.09732833870414954,
+                "tokens": [
+                  220,
+                  29713,
+                  224
+                ]
+              },
+              {
+                "word": "き",
+                "start": 21.1,
+                "end": 21.28,
+                "probability": 0.07273302227258682,
+                "tokens": [
+                  7016
+                ]
+              },
+              {
+                "word": " も",
+                "start": 21.28,
+                "end": 21.86,
+                "probability": 0.00041932472959160805,
+                "tokens": [
+                  32505
+                ]
+              },
+              {
+                "word": "の",
+                "start": 21.86,
+                "end": 22.48,
+                "probability": 0.3583291172981262,
+                "tokens": [
+                  2972
+                ]
+              },
+              {
+                "word": " は",
+                "start": 22.48,
+                "end": 23.04,
+                "probability": 0.02770117111504078,
+                "tokens": [
+                  20785
+                ]
+              },
+              {
+                "word": " な",
+                "start": 23.04,
+                "end": 23.62,
+                "probability": 0.20557452738285065,
+                "tokens": [
+                  16647
+                ]
+              },
+              {
+                "word": "し",
+                "start": 23.62,
+                "end": 24.28,
+                "probability": 0.4605940878391266,
+                "tokens": [
+                  2849
+                ]
+              },
+              {
+                "word": " 暁",
+                "start": 24.28,
+                "end": 25.98,
+                "probability": 0.3291987478733063,
+                "tokens": [
+                  220,
+                  23826,
+                  223
+                ]
+              },
+              {
+                "word": " ば",
+                "start": 25.98,
+                "end": 27.64,
+                "probability": 0.5871939063072205,
+                "tokens": [
+                  2605,
+                  108
+                ]
+              },
+              {
+                "word": "か",
+                "start": 27.64,
+                "end": 28.16,
+                "probability": 0.8835669159889221,
+                "tokens": [
+                  3703
+                ]
+              },
+              {
+                "word": "り",
+                "start": 28.16,
+                "end": 28.7,
+                "probability": 0.1010524332523346,
+                "tokens": [
+                  5095
+                ]
+              }
+            ]
+          }
+        ],
+        "language": "ja",
+        "ori_dict": {
+          "segments": [
+            {
+              "start": 0.0,
+              "end": 9.0,
+              "text": " 憂き もの は なし 暁 ばかり",
+              "words": [
+                {
+                  "word": " 憂",
+                  "start": 0.0,
+                  "end": 1.4,
+                  "tokens": [
+                    220,
+                    29713,
+                    224
+                  ],
+                  "probability": 0.09732833870414954
+                },
+                {
+                  "word": "き",
+                  "start": 1.4,
+                  "end": 1.58,
+                  "tokens": [
+                    7016
+                  ],
+                  "probability": 0.07273302227258682
+                },
+                {
+                  "word": " も",
+                  "start": 1.58,
+                  "end": 2.16,
+                  "tokens": [
+                    32505
+                  ],
+                  "probability": 0.00041932472959160805
+                },
+                {
+                  "word": "の",
+                  "start": 2.16,
+                  "end": 2.78,
+                  "tokens": [
+                    2972
+                  ],
+                  "probability": 0.3583291172981262
+                },
+                {
+                  "word": " は",
+                  "start": 2.78,
+                  "end": 3.34,
+                  "tokens": [
+                    20785
+                  ],
+                  "probability": 0.02770117111504078
+                },
+                {
+                  "word": " な",
+                  "start": 3.34,
+                  "end": 3.92,
+                  "tokens": [
+                    16647
+                  ],
+                  "probability": 0.20557452738285065
+                },
+                {
+                  "word": "し",
+                  "start": 3.92,
+                  "end": 4.58,
+                  "tokens": [
+                    2849
+                  ],
+                  "probability": 0.4605940878391266
+                },
+                {
+                  "word": " 暁",
+                  "start": 4.58,
+                  "end": 6.28,
+                  "tokens": [
+                    220,
+                    23826,
+                    223
+                  ],
+                  "probability": 0.3291987478733063
+                },
+                {
+                  "word": " ば",
+                  "start": 6.28,
+                  "end": 7.94,
+                  "tokens": [
+                    2605,
+                    108
+                  ],
+                  "probability": 0.5871939063072205
+                },
+                {
+                  "word": "か",
+                  "start": 7.94,
+                  "end": 8.46,
+                  "tokens": [
+                    3703
+                  ],
+                  "probability": 0.8835669159889221
+                },
+                {
+                  "word": "り",
+                  "start": 8.46,
+                  "end": 9.0,
+                  "tokens": [
+                    5095
+                  ],
+                  "probability": 0.1010524332523346
+                }
+              ]
+            }
+          ]
+        },
+        "regroup_history": "",
+        "nonspeech_sections": []
+      }
+    },
+    {
+      "phraseId": "JP30-002",
+      "language": "ja",
+      "cropStartSample16000": 466400,
+      "cropEndSample16000": 611200,
+      "conditionedText": [
+        "憂き",
+        "もの",
+        "は",
+        "なし",
+        "暁",
+        "ばかり"
+      ],
+      "method": "Whisper large-v3-turbo stable-ts conditioned attention alignment, not lexical proof or listening",
+      "result": {
+        "text": " 憂き もの は なし 暁 ばかり",
+        "segments": [
+          {
+            "start": 29.15,
+            "end": 37.83,
+            "text": " 憂き もの は なし 暁 ばかり",
+            "seek": null,
+            "tokens": [
+              220,
+              29713,
+              224,
+              7016,
+              32505,
+              2972,
+              20785,
+              16647,
+              2849,
+              220,
+              23826,
+              223,
+              2605,
+              108,
+              3703,
+              5095
+            ],
+            "temperature": null,
+            "avg_logprob": null,
+            "compression_ratio": null,
+            "no_speech_prob": null,
+            "words": [
+              {
+                "word": " 憂",
+                "start": 29.15,
+                "end": 30.25,
+                "probability": 0.20038699791863715,
+                "tokens": [
+                  220,
+                  29713,
+                  224
+                ]
+              },
+              {
+                "word": "き",
+                "start": 30.25,
+                "end": 30.39,
+                "probability": 0.5628446340560913,
+                "tokens": [
+                  7016
+                ]
+              },
+              {
+                "word": " も",
+                "start": 30.39,
+                "end": 30.97,
+                "probability": 0.001329408143647015,
+                "tokens": [
+                  32505
+                ]
+              },
+              {
+                "word": "の",
+                "start": 30.97,
+                "end": 31.63,
+                "probability": 0.8429401516914368,
+                "tokens": [
+                  2972
+                ]
+              },
+              {
+                "word": " は",
+                "start": 31.63,
+                "end": 32.19,
+                "probability": 0.17762291431427002,
+                "tokens": [
+                  20785
+                ]
+              },
+              {
+                "word": " な",
+                "start": 32.19,
+                "end": 32.79,
+                "probability": 0.14730417728424072,
+                "tokens": [
+                  16647
+                ]
+              },
+              {
+                "word": "し",
+                "start": 32.79,
+                "end": 33.49,
+                "probability": 0.5524746775627136,
+                "tokens": [
+                  2849
+                ]
+              },
+              {
+                "word": " 暁",
+                "start": 33.49,
+                "end": 35.45,
+                "probability": 0.5589463611443838,
+                "tokens": [
+                  220,
+                  23826,
+                  223
+                ]
+              },
+              {
+                "word": " ば",
+                "start": 35.45,
+                "end": 36.79,
+                "probability": 0.9611462950706482,
+                "tokens": [
+                  2605,
+                  108
+                ]
+              },
+              {
+                "word": "か",
+                "start": 36.79,
+                "end": 37.31,
+                "probability": 0.8449231386184692,
+                "tokens": [
+                  3703
+                ]
+              },
+              {
+                "word": "り",
+                "start": 37.31,
+                "end": 37.83,
+                "probability": 0.9960088729858398,
+                "tokens": [
+                  5095
+                ]
+              }
+            ]
+          }
+        ],
+        "language": "ja",
+        "ori_dict": {
+          "segments": [
+            {
+              "start": 0.0,
+              "end": 8.68,
+              "text": " 憂き もの は なし 暁 ばかり",
+              "words": [
+                {
+                  "word": " 憂",
+                  "start": 0.0,
+                  "end": 1.1,
+                  "tokens": [
+                    220,
+                    29713,
+                    224
+                  ],
+                  "probability": 0.20038699791863715
+                },
+                {
+                  "word": "き",
+                  "start": 1.1,
+                  "end": 1.24,
+                  "tokens": [
+                    7016
+                  ],
+                  "probability": 0.5628446340560913
+                },
+                {
+                  "word": " も",
+                  "start": 1.24,
+                  "end": 1.82,
+                  "tokens": [
+                    32505
+                  ],
+                  "probability": 0.001329408143647015
+                },
+                {
+                  "word": "の",
+                  "start": 1.82,
+                  "end": 2.48,
+                  "tokens": [
+                    2972
+                  ],
+                  "probability": 0.8429401516914368
+                },
+                {
+                  "word": " は",
+                  "start": 2.48,
+                  "end": 3.04,
+                  "tokens": [
+                    20785
+                  ],
+                  "probability": 0.17762291431427002
+                },
+                {
+                  "word": " な",
+                  "start": 3.04,
+                  "end": 3.64,
+                  "tokens": [
+                    16647
+                  ],
+                  "probability": 0.14730417728424072
+                },
+                {
+                  "word": "し",
+                  "start": 3.64,
+                  "end": 4.34,
+                  "tokens": [
+                    2849
+                  ],
+                  "probability": 0.5524746775627136
+                },
+                {
+                  "word": " 暁",
+                  "start": 4.34,
+                  "end": 6.3,
+                  "tokens": [
+                    220,
+                    23826,
+                    223
+                  ],
+                  "probability": 0.5589463611443838
+                },
+                {
+                  "word": " ば",
+                  "start": 6.3,
+                  "end": 7.64,
+                  "tokens": [
+                    2605,
+                    108
+                  ],
+                  "probability": 0.9611462950706482
+                },
+                {
+                  "word": "か",
+                  "start": 7.64,
+                  "end": 8.16,
+                  "tokens": [
+                    3703
+                  ],
+                  "probability": 0.8449231386184692
+                },
+                {
+                  "word": "り",
+                  "start": 8.16,
+                  "end": 8.68,
+                  "tokens": [
+                    5095
+                  ],
+                  "probability": 0.9960088729858398
+                }
+              ]
+            }
+          ]
+        },
+        "regroup_history": "",
+        "nonspeech_sections": []
+      }
+    },
+    {
+      "phraseId": "JP30-003",
+      "language": "ja",
+      "cropStartSample16000": 3557600,
+      "cropEndSample16000": 3693600,
+      "conditionedText": [
+        "憂き",
+        "もの",
+        "は",
+        "なし",
+        "暁",
+        "ばかり"
+      ],
+      "method": "Whisper large-v3-turbo stable-ts conditioned attention alignment, not lexical proof or listening",
+      "result": {
+        "text": " 憂き もの は なし 暁 ばかり",
+        "segments": [
+          {
+            "start": 222.35,
+            "end": 229.53,
+            "text": " 憂き もの は なし 暁 ばかり",
+            "seek": null,
+            "tokens": [
+              220,
+              29713,
+              224,
+              7016,
+              32505,
+              2972,
+              20785,
+              16647,
+              2849,
+              220,
+              23826,
+              223,
+              2605,
+              108,
+              3703,
+              5095
+            ],
+            "temperature": null,
+            "avg_logprob": null,
+            "compression_ratio": null,
+            "no_speech_prob": null,
+            "words": [
+              {
+                "word": " 憂",
+                "start": 222.35,
+                "end": 222.67,
+                "probability": 0.047635753364981305,
+                "tokens": [
+                  220,
+                  29713,
+                  224
+                ]
+              },
+              {
+                "word": "き",
+                "start": 222.67,
+                "end": 222.67,
+                "probability": 0.012972031719982624,
+                "tokens": [
+                  7016
+                ]
+              },
+              {
+                "word": " も",
+                "start": 222.67,
+                "end": 223.09,
+                "probability": 7.390374958049506e-05,
+                "tokens": [
+                  32505
+                ]
+              },
+              {
+                "word": "の",
+                "start": 223.09,
+                "end": 223.67,
+                "probability": 0.7742235064506531,
+                "tokens": [
+                  2972
+                ]
+              },
+              {
+                "word": " は",
+                "start": 223.67,
+                "end": 224.21,
+                "probability": 0.02263532765209675,
+                "tokens": [
+                  20785
+                ]
+              },
+              {
+                "word": " な",
+                "start": 224.21,
+                "end": 224.73,
+                "probability": 0.05804143100976944,
+                "tokens": [
+                  16647
+                ]
+              },
+              {
+                "word": "し",
+                "start": 224.73,
+                "end": 225.31,
+                "probability": 0.5259106755256653,
+                "tokens": [
+                  2849
+                ]
+              },
+              {
+                "word": " 暁",
+                "start": 225.31,
+                "end": 226.63,
+                "probability": 0.12727181098307483,
+                "tokens": [
+                  220,
+                  23826,
+                  223
+                ]
+              },
+              {
+                "word": " ば",
+                "start": 226.63,
+                "end": 229.31,
+                "probability": 0.03974679484963417,
+                "tokens": [
+                  2605,
+                  108
+                ]
+              },
+              {
+                "word": "か",
+                "start": 229.31,
+                "end": 229.31,
+                "probability": 0.00010715803364291787,
+                "tokens": [
+                  3703
+                ]
+              },
+              {
+                "word": "り",
+                "start": 229.31,
+                "end": 229.53,
+                "probability": 0.0007253611693158746,
+                "tokens": [
+                  5095
+                ]
+              }
+            ]
+          }
+        ],
+        "language": "ja",
+        "ori_dict": {
+          "segments": [
+            {
+              "start": 0.0,
+              "end": 7.18,
+              "text": " 憂き もの は なし 暁 ばかり",
+              "words": [
+                {
+                  "word": " 憂",
+                  "start": 0.0,
+                  "end": 0.32,
+                  "tokens": [
+                    220,
+                    29713,
+                    224
+                  ],
+                  "probability": 0.047635753364981305
+                },
+                {
+                  "word": "き",
+                  "start": 0.32,
+                  "end": 0.32,
+                  "tokens": [
+                    7016
+                  ],
+                  "probability": 0.012972031719982624
+                },
+                {
+                  "word": " も",
+                  "start": 0.32,
+                  "end": 0.74,
+                  "tokens": [
+                    32505
+                  ],
+                  "probability": 7.390374958049506e-05
+                },
+                {
+                  "word": "の",
+                  "start": 0.74,
+                  "end": 1.32,
+                  "tokens": [
+                    2972
+                  ],
+                  "probability": 0.7742235064506531
+                },
+                {
+                  "word": " は",
+                  "start": 1.32,
+                  "end": 1.86,
+                  "tokens": [
+                    20785
+                  ],
+                  "probability": 0.02263532765209675
+                },
+                {
+                  "word": " な",
+                  "start": 1.86,
+                  "end": 2.38,
+                  "tokens": [
+                    16647
+                  ],
+                  "probability": 0.05804143100976944
+                },
+                {
+                  "word": "し",
+                  "start": 2.38,
+                  "end": 2.96,
+                  "tokens": [
+                    2849
+                  ],
+                  "probability": 0.5259106755256653
+                },
+                {
+                  "word": " 暁",
+                  "start": 2.96,
+                  "end": 4.28,
+                  "tokens": [
+                    220,
+                    23826,
+                    223
+                  ],
+                  "probability": 0.12727181098307483
+                },
+                {
+                  "word": " ば",
+                  "start": 4.28,
+                  "end": 6.96,
+                  "tokens": [
+                    2605,
+                    108
+                  ],
+                  "probability": 0.03974679484963417
+                },
+                {
+                  "word": "か",
+                  "start": 6.96,
+                  "end": 6.96,
+                  "tokens": [
+                    3703
+                  ],
+                  "probability": 0.00010715803364291787
+                },
+                {
+                  "word": "り",
+                  "start": 6.96,
+                  "end": 7.18,
+                  "tokens": [
+                    5095
+                  ],
+                  "probability": 0.0007253611693158746
+                }
+              ]
+            }
+          ]
+        },
+        "regroup_history": "",
+        "nonspeech_sections": []
+      }
+    },
+    {
+      "phraseId": "JP30-004",
+      "language": "ja",
+      "cropStartSample16000": 3693600,
+      "cropEndSample16000": 3833600,
+      "conditionedText": [
+        "憂き",
+        "もの",
+        "は",
+        "なし",
+        "暁",
+        "ばかり"
+      ],
+      "method": "Whisper large-v3-turbo stable-ts conditioned attention alignment, not lexical proof or listening",
+      "result": {
+        "text": " 憂き もの は なし 暁 ばかり",
+        "segments": [
+          {
+            "start": 230.85,
+            "end": 238.85,
+            "text": " 憂き もの は なし 暁 ばかり",
+            "seek": null,
+            "tokens": [
+              220,
+              29713,
+              224,
+              7016,
+              32505,
+              2972,
+              20785,
+              16647,
+              2849,
+              220,
+              23826,
+              223,
+              2605,
+              108,
+              3703,
+              5095
+            ],
+            "temperature": null,
+            "avg_logprob": null,
+            "compression_ratio": null,
+            "no_speech_prob": null,
+            "words": [
+              {
+                "word": " 憂",
+                "start": 230.85,
+                "end": 231.45,
+                "probability": 0.0335311942374877,
+                "tokens": [
+                  220,
+                  29713,
+                  224
+                ]
+              },
+              {
+                "word": "き",
+                "start": 231.45,
+                "end": 231.71,
+                "probability": 0.4311250150203705,
+                "tokens": [
+                  7016
+                ]
+              },
+              {
+                "word": " も",
+                "start": 231.71,
+                "end": 232.17,
+                "probability": 0.001749660586938262,
+                "tokens": [
+                  32505
+                ]
+              },
+              {
+                "word": "の",
+                "start": 232.17,
+                "end": 232.73,
+                "probability": 0.8902662992477417,
+                "tokens": [
+                  2972
+                ]
+              },
+              {
+                "word": " は",
+                "start": 232.73,
+                "end": 233.29,
+                "probability": 0.06918467581272125,
+                "tokens": [
+                  20785
+                ]
+              },
+              {
+                "word": " な",
+                "start": 233.29,
+                "end": 233.83,
+                "probability": 0.36518794298171997,
+                "tokens": [
+                  16647
+                ]
+              },
+              {
+                "word": "し",
+                "start": 233.83,
+                "end": 234.47,
+                "probability": 0.39963075518608093,
+                "tokens": [
+                  2849
+                ]
+              },
+              {
+                "word": " 暁",
+                "start": 234.47,
+                "end": 236.53,
+                "probability": 0.5623345971107483,
+                "tokens": [
+                  220,
+                  23826,
+                  223
+                ]
+              },
+              {
+                "word": " ば",
+                "start": 236.53,
+                "end": 237.85,
+                "probability": 0.959068089723587,
+                "tokens": [
+                  2605,
+                  108
+                ]
+              },
+              {
+                "word": "か",
+                "start": 237.85,
+                "end": 238.31,
+                "probability": 0.7127218246459961,
+                "tokens": [
+                  3703
+                ]
+              },
+              {
+                "word": "り",
+                "start": 238.31,
+                "end": 238.85,
+                "probability": 0.9555054903030396,
+                "tokens": [
+                  5095
+                ]
+              }
+            ]
+          }
+        ],
+        "language": "ja",
+        "ori_dict": {
+          "segments": [
+            {
+              "start": 0.0,
+              "end": 8.0,
+              "text": " 憂き もの は なし 暁 ばかり",
+              "words": [
+                {
+                  "word": " 憂",
+                  "start": 0.0,
+                  "end": 0.6,
+                  "tokens": [
+                    220,
+                    29713,
+                    224
+                  ],
+                  "probability": 0.0335311942374877
+                },
+                {
+                  "word": "き",
+                  "start": 0.6,
+                  "end": 0.86,
+                  "tokens": [
+                    7016
+                  ],
+                  "probability": 0.4311250150203705
+                },
+                {
+                  "word": " も",
+                  "start": 0.86,
+                  "end": 1.32,
+                  "tokens": [
+                    32505
+                  ],
+                  "probability": 0.001749660586938262
+                },
+                {
+                  "word": "の",
+                  "start": 1.32,
+                  "end": 1.88,
+                  "tokens": [
+                    2972
+                  ],
+                  "probability": 0.8902662992477417
+                },
+                {
+                  "word": " は",
+                  "start": 1.88,
+                  "end": 2.44,
+                  "tokens": [
+                    20785
+                  ],
+                  "probability": 0.06918467581272125
+                },
+                {
+                  "word": " な",
+                  "start": 2.44,
+                  "end": 2.98,
+                  "tokens": [
+                    16647
+                  ],
+                  "probability": 0.36518794298171997
+                },
+                {
+                  "word": "し",
+                  "start": 2.98,
+                  "end": 3.62,
+                  "tokens": [
+                    2849
+                  ],
+                  "probability": 0.39963075518608093
+                },
+                {
+                  "word": " 暁",
+                  "start": 3.62,
+                  "end": 5.68,
+                  "tokens": [
+                    220,
+                    23826,
+                    223
+                  ],
+                  "probability": 0.5623345971107483
+                },
+                {
+                  "word": " ば",
+                  "start": 5.68,
+                  "end": 7.0,
+                  "tokens": [
+                    2605,
+                    108
+                  ],
+                  "probability": 0.959068089723587
+                },
+                {
+                  "word": "か",
+                  "start": 7.0,
+                  "end": 7.46,
+                  "tokens": [
+                    3703
+                  ],
+                  "probability": 0.7127218246459961
+                },
+                {
+                  "word": "り",
+                  "start": 7.46,
+                  "end": 8.0,
+                  "tokens": [
+                    5095
+                  ],
+                  "probability": 0.9555054903030396
+                }
+              ]
+            }
+          ]
+        },
+        "regroup_history": "",
+        "nonspeech_sections": []
+      }
+    }
+  ]
+}
