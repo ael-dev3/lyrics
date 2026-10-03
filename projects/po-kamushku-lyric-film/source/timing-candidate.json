@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
   "project": "po-kamushku-lyric-film",
-  "revision": "po-kamushku-preview-v2-source-phonetic-review",
-  "status": "Complete performed-inventory preview candidate; all164 source-signal edges individually selected, owner normal/slow listening gate open",
+  "revision": "po-kamushku-preview-v3-intro-listening-correction",
+  "status": "Complete preview candidate; all163 retained source-signal edges individually selected, targeted intro lexical correction applied; full normal/slow listening gate open",
   "sourceClockOffset": 0,
   "sampleRate": 44100,
   "sourceSampleRate": 44100,
   "decodedAnalysisSamples": 9209280,
   "durationSeconds": 208.82721088435375,
   "sourceSha256": "f6572759f48f725497ad42b7c84cf12825824041897c47fdd36832a40ad30dd6",
-  "editorialSha256": "f8e7eddd5b1b39fdf8b4f988e491ec3f9500b888f78214353d9e30d28667af44",
+  "editorialSha256": "bbcf3f94a89dee54df7fc2f1cd7d8341d6b35d0c204770c04f81293da3fee0d1",
   "humanListeningAttested": false,
   "methods": [
     "Complete unprompted original-mix Whisper large-v3-turbo, separate bounded inventory and small-model spoken checks; unsupported allocations retained and rejected.",
@@ -18,31 +18,32 @@
     "Original/zero-lag estimated-vocal source spectra:512/1024sample support, analysishop88/128 not millisecond physical certainty; original mix authority."
   ],
   "onsetReview": {
-    "revision": "po-kamushku-preview-v2-source-phonetic-review",
-    "reviewedWords": 164,
+    "revision": "po-kamushku-preview-v3-intro-listening-correction",
+    "reviewedWords": 163,
     "unreviewedWords": 0,
     "baselineTimingSha256": "a56bae8e7603816ea8fc80977df369051dc9309146ea14b72f425ddd109e8a32",
-    "changedWordOnsets": 164,
-    "humanListeningAttested": false
+    "changedWordOnsets": 163,
+    "humanListeningAttested": false,
+    "countScope": "Retained active events; original164-event signal review is preserved in prior revision history."
   },
   "releaseReview": {
-    "revision": "po-kamushku-preview-v2-source-phonetic-review",
-    "reviewedWords": 164,
+    "revision": "po-kamushku-preview-v3-intro-listening-correction",
+    "reviewedWords": 163,
     "unreviewedWords": 0,
-    "changedWordReleases": 164,
-    "humanListeningAttested": false
+    "changedWordReleases": 163,
+    "humanListeningAttested": false,
+    "countScope": "Retained active events; original164-event signal review is preserved in prior revision history."
   },
   "coverage": {
     "suppliedLineCount": 31,
     "cueCount": 30,
-    "performedWordCandidates": 164,
+    "performedWordCandidates": 163,
     "refrainOccurrences": 4,
-    "extraLexicalRepeatsSelected": 1,
-    "note": "All supplied sections preserved; an additional initial Яна is provisionally represented against two physical originalbursts and conflicting unprompted paths, with listening lexicalreview pending. Full first recognition omitted firstverse and misplacedintro; bounded originalchecks recover actualsequence. No supported added outroИ selected."
+    "extraLexicalRepeatsSelected": 0,
+    "note": "All supplied sections preserved. The provisional early name at 6.127 seconds is excluded following targeted listening review; the later7.328 name and all other acoustic sample selections are retained. The initial full recognition omitted the first verse and misplaced the intro; no supported added outro И selected."
   },
   "uncertainties": [
     "Machine/model/signal observations do not constitute a complete normal/reduced-speed listening attestation.",
-    "The earliest spoken name addition is provisional: two physicalbursts and smallwide recognition favor two calls, while tight ASRconflicts and turbowide emitsone; owner lexicalreviewrequired.",
     "Model character paths can omit quietprefixes and long heldvowels. Every repeatedperformance has itsown events, not copiedoffsets.",
     "Original mix and estimated vocals expose correlated observations. Separation can leak instruments and retain reverb; source clock checked at zero lag."
   ],
@@ -54,66 +55,15 @@
         "intro-01"
       ],
       "sourceLanguage": "ru",
-      "text": "Яна, Яна, песенку спой, Яночка",
-      "startSample": 270201,
+      "text": "Яна, песенку спой, Яночка",
+      "startSample": 323165,
       "endSample": 550588,
-      "start": 6.127006802721088,
+      "start": 7.328004535147392,
       "end": 12.484988662131519,
       "words": [
         {
-          "id": "PK-001-s01",
-          "sourceIndex": 0,
-          "templateTokenId": "intro-s01",
-          "text": "Яна,",
-          "startSample": 270201,
-          "endSample": 283916,
-          "start": 6.127006802721088,
-          "end": 6.4380045351473925,
-          "confidence": "medium",
-          "method": "Original-source signal selection with bounded Whisper/MMS competing observations",
-          "onsetUncertaintySeconds": 0.08000000000000007,
-          "releaseUncertaintySeconds": 0.1200000000000001,
-          "onsetSignalInterval": [
-            6.047006802721088,
-            6.2070068027210885
-          ],
-          "releaseSignalInterval": [
-            6.318004535147392,
-            6.558004535147393
-          ],
-          "onsetReviewStatus": "original-and-estimated-vocal-signal-inspected",
-          "releaseReviewStatus": "original-and-estimated-vocal-signal-inspected",
-          "modelScores": {
-            "mmsCtc": 0.43007600802957313,
-            "whisper": 0.319169541200002
-          },
-          "selectionRationale": "First isolated noisy/voiced burst around 6.13–6.44 is represented separately rather than stretching one name across several seconds. The waveform alone cannot certify that it is Яна; this is a provisional lexical allocation requiring actual listening.",
-          "candidateEvidence": [
-            "analysis/acoustic/mms-wide-PK-001.json",
-            "analysis/acoustic/refine-wide-PK-001.json",
-            "analysis/acoustic/panels/PK-001.png",
-            "source/independent-timing-review.json"
-          ],
-          "releaseStatus": "Direct-body lexical estimate separate from neutral line reading lifetime; no listening attestation",
-          "reverbFocusExtensionSeconds": 0,
-          "onsetAudit": {
-            "beforeSample": 270554,
-            "selectedSample": 270201,
-            "deltaSamples": -353,
-            "status": "original-and-estimated-vocal-signal-inspected",
-            "scope": "Original/zero-lag estimated-vocal signal/model comparison; no auditory attestation"
-          },
-          "releaseAudit": {
-            "beforeSample": 284666,
-            "selectedSample": 283916,
-            "deltaSamples": -750,
-            "status": "original-and-estimated-vocal-signal-inspected",
-            "scope": "Direct-body lexical release separate from residual decay and neutralreadinghold"
-          }
-        },
-        {
           "id": "PK-001-s02",
-          "sourceIndex": 1,
+          "sourceIndex": 0,
           "templateTokenId": "intro-s01b",
           "text": "Яна,",
           "startSample": 323165,
@@ -138,7 +88,7 @@
             "mmsCtc": 0.5456321960082278,
             "whisper": 0.41067577242696035
           },
-          "selectionRationale": "Second noisy/voiced burst begins before the 7.405 model core, with renewed body near 7.33 and final energy through 7.96. It is independently represented as a provisional second call; model disagreement is retained.",
+          "selectionRationale": "Retained audible name call at 7.328 seconds. Its original onset/release samples are unchanged; the earlier provisional allocation at 6.127 seconds was rejected in targeted listening review.",
           "candidateEvidence": [
             "analysis/acoustic/mms-wide-PK-001.json",
             "analysis/acoustic/refine-wide-PK-001.json",
@@ -164,7 +114,7 @@
         },
         {
           "id": "PK-001-s03",
-          "sourceIndex": 2,
+          "sourceIndex": 1,
           "templateTokenId": "intro-s02",
           "text": "песенку",
           "startSample": 508694,
@@ -215,7 +165,7 @@
         },
         {
           "id": "PK-001-s04",
-          "sourceIndex": 3,
+          "sourceIndex": 2,
           "templateTokenId": "intro-s03",
           "text": "спой,",
           "startSample": 524173,
@@ -266,7 +216,7 @@
         },
         {
           "id": "PK-001-s05",
-          "sourceIndex": 4,
+          "sourceIndex": 3,
           "templateTokenId": "intro-s04",
           "text": "Яночка",
           "startSample": 537006,
@@ -8892,5 +8842,64 @@
       ],
       "timingStatus": "Preview source-signal candidate; owner normal/slow listening not attested"
     }
-  ]
+  ],
+  "introLexicalCorrection": {
+    "scope": "targeted intro only; not full recording listening attestation",
+    "removedEvent": {
+      "id": "PK-001-s01",
+      "sourceIndex": 0,
+      "templateTokenId": "intro-s01",
+      "text": "Яна,",
+      "startSample": 270201,
+      "endSample": 283916,
+      "start": 6.127006802721088,
+      "end": 6.4380045351473925,
+      "confidence": "medium",
+      "method": "Original-source signal selection with bounded Whisper/MMS competing observations",
+      "onsetUncertaintySeconds": 0.08000000000000007,
+      "releaseUncertaintySeconds": 0.1200000000000001,
+      "onsetSignalInterval": [
+        6.047006802721088,
+        6.2070068027210885
+      ],
+      "releaseSignalInterval": [
+        6.318004535147392,
+        6.558004535147393
+      ],
+      "onsetReviewStatus": "original-and-estimated-vocal-signal-inspected",
+      "releaseReviewStatus": "original-and-estimated-vocal-signal-inspected",
+      "modelScores": {
+        "mmsCtc": 0.43007600802957313,
+        "whisper": 0.319169541200002
+      },
+      "selectionRationale": "First isolated noisy/voiced burst around 6.13–6.44 is represented separately rather than stretching one name across several seconds. The waveform alone cannot certify that it is Яна; this is a provisional lexical allocation requiring actual listening.",
+      "candidateEvidence": [
+        "analysis/acoustic/mms-wide-PK-001.json",
+        "analysis/acoustic/refine-wide-PK-001.json",
+        "analysis/acoustic/panels/PK-001.png",
+        "source/independent-timing-review.json"
+      ],
+      "releaseStatus": "Direct-body lexical estimate separate from neutral line reading lifetime; no listening attestation",
+      "reverbFocusExtensionSeconds": 0,
+      "onsetAudit": {
+        "beforeSample": 270554,
+        "selectedSample": 270201,
+        "deltaSamples": -353,
+        "status": "original-and-estimated-vocal-signal-inspected",
+        "scope": "Original/zero-lag estimated-vocal signal/model comparison; no auditory attestation"
+      },
+      "releaseAudit": {
+        "beforeSample": 284666,
+        "selectedSample": 283916,
+        "deltaSamples": -750,
+        "status": "original-and-estimated-vocal-signal-inspected",
+        "scope": "Direct-body lexical release separate from residual decay and neutralreadinghold"
+      }
+    },
+    "removedEventStatus": "rejected-not-audible",
+    "retainedEventId": "PK-001-s02",
+    "retainedOnsetSample": 323165,
+    "remainingSourceSamplesUnchanged": true,
+    "priorTimingSha256": "3c5e71ffad94acb504dc409be3ac8bfd5c240ed3bbba9d19d7a8b6f415908a3b"
+  }
 }

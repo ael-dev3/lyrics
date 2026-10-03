@@ -3,7 +3,7 @@
   "project": "po-kamushku-lyric-film",
   "recordingUrl": "https://www.youtube.com/watch?v=oysjDP9Vqdg",
   "languagePolicy": "Russian original and meaning-based English translation with equal emphasis. No pronunciation layer.",
-  "status": "editorial-preview-candidate; complete performed sequence includes explicitly uncertain intro repeat; listening review pending",
+  "status": "editorial-preview-candidate; targeted intro lexical correction applied; complete listening review pending",
   "indexConvention": "All token indices are zero-based within a template. Stable cue occurrence IDs receive source timing only after recording inventory.",
   "focusPolicy": "Use the union of each target token's focusSourceIndices source intervals, never their enclosing span. Individually performed source words remain distinct. English ordering may focus non-linearly; grammatical expansions share source events without invented target timestamps.",
   "suppliedLines": [
@@ -411,31 +411,26 @@
       "id": "intro",
       "sourceLanguage": "ru",
       "targetLanguage": "en",
-      "sourceText": "Яна, Яна, песенку спой, Яночка",
-      "targetText": "Yana, Yana, sing a song, Yanochka.",
+      "sourceText": "Яна, песенку спой, Яночка",
+      "targetText": "Yana, sing a song, Yanochka.",
       "sourceTokens": [
         {
           "index": 0,
-          "id": "intro-s01",
-          "text": "Яна,"
-        },
-        {
-          "index": 1,
           "id": "intro-s01b",
           "text": "Яна,"
         },
         {
-          "index": 2,
+          "index": 1,
           "id": "intro-s02",
           "text": "песенку"
         },
         {
-          "index": 3,
+          "index": 2,
           "id": "intro-s03",
           "text": "спой,"
         },
         {
-          "index": 4,
+          "index": 3,
           "id": "intro-s04",
           "text": "Яночка"
         }
@@ -443,78 +438,65 @@
       "targetTokens": [
         {
           "index": 0,
-          "id": "intro-t01",
-          "text": "Yana,",
-          "sourceIndices": [
-            0
-          ],
-          "focusSourceIndices": [
-            0
-          ],
-          "relation": "word-equivalent",
-          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
-        },
-        {
-          "index": 1,
           "id": "intro-t01b",
           "text": "Yana,",
           "sourceIndices": [
-            1
+            0
           ],
           "focusSourceIndices": [
-            1
+            0
           ],
           "relation": "word-equivalent",
-          "rationale": "Provisional second spoken call; independently timed and explicitly pending lexical listening review."
+          "rationale": "The audible name call follows its retained source event. The earlier provisional name allocation was rejected in targeted listening review."
         },
         {
-          "index": 2,
+          "index": 1,
           "id": "intro-t02",
           "text": "sing",
           "sourceIndices": [
-            3
+            2
           ],
           "focusSourceIndices": [
-            3
+            2
           ],
           "relation": "word-equivalent",
           "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
         },
         {
-          "index": 3,
+          "index": 2,
           "id": "intro-t03",
           "text": "a",
           "sourceIndices": [
-            2
+            1
           ],
           "focusSourceIndices": [
-            2
+            1
           ],
           "relation": "grammar-completion",
           "rationale": "The indefinite article belongs to the complete noun meaning песенку, together with song."
         },
         {
-          "index": 4,
+          "index": 3,
           "id": "intro-t04",
           "text": "song,",
           "sourceIndices": [
-            2
+            1
           ],
           "focusSourceIndices": [
-            2
+            1
           ],
           "relation": "grammar-completion",
           "rationale": "A song is the complete English noun phrase for песенку. Its affectionate diminutive does not establish a literal size."
         },
         {
-          "index": 5,
+          "index": 4,
           "id": "intro-t05",
           "text": "Yanochka.",
           "sourceIndices": [
-            4
+            3
           ],
           "focusSourceIndices": [
-            4
+            3
           ],
           "relation": "word-equivalent",
           "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
@@ -522,7 +504,7 @@
       ],
       "sourceLineBreaksAfterIndices": [],
       "targetLineBreaksAfterIndices": [],
-      "editorialNote": "Spoken introduction is retained. Yana and the affectionate Yanochka are proper names, not a pronunciation layer. The requesting speaker does not specify an us/me object. The complete preview provisionally includes a second call of Яна, supported by two physical spoken bursts and one wide unprompted recognition pass. Tight recognizers disagree; this addition requires listening review. The supplied reference remains unchanged."
+      "editorialNote": "Spoken introduction is retained with one audible Yana call followed by the affectionate Yanochka. The earlier provisional name at 6.127 seconds was removed following targeted listening review; a physical burst or recognition suggestion does not establish a spoken word. No unstated us/me object is added. The supplied reference remains unchanged."
     },
     {
       "id": "v1-window",
@@ -2823,10 +2805,10 @@
     "suppliedLineCount": 31,
     "editorialCueCount": 30,
     "uniqueTemplateCount": 19,
-    "uniqueSourceTokenCount": 100,
-    "uniqueTargetTokenCount": 125,
-    "sourceTokenEventsAcrossEditorialCues": 164,
-    "targetTokenEventsAcrossEditorialCues": 207
+    "uniqueSourceTokenCount": 99,
+    "uniqueTargetTokenCount": 124,
+    "sourceTokenEventsAcrossEditorialCues": 163,
+    "targetTokenEventsAcrossEditorialCues": 206
   },
   "semanticRegressionExpectations": [
     {
@@ -3072,12 +3054,15 @@
       "expectation": "The natural transitive English object uses only the union of these source intervals, not an encompassing span."
     }
   ],
-  "performedDeviations": [
-    {
-      "cueId": "PK-001",
-      "change": "Provisional second independently timed Яна call before песенку спой, Яночка",
-      "evidence": "Original-mix speech bursts near6.2 and7.3seconds; wide unprompted small recognizer suggests two calls, tight recognition disagrees. Not author-certified.",
-      "status": "pending-current-preview-listening-review"
-    }
-  ]
+  "performedDeviations": [],
+  "introLexicalReview": {
+    "status": "targeted-listening-correction-applied",
+    "removedSourceTokenId": "intro-s01",
+    "removedIntervalSeconds": [
+      6.127006802721088,
+      6.4380045351473925
+    ],
+    "reason": "The earliest provisional name is not audible and is excluded from displayed lyrics and translated focus. The later name call is retained.",
+    "fullRecordingListeningAttested": false
+  }
 }

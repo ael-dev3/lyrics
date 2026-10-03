@@ -20,7 +20,7 @@ Music films with synchronized lyrics, meaning-linked translations, and audio-rea
 
 The full 3:28.809 recording keeps its original square artwork and soundtrack. Thirty actual stone surfaces respond to 24 measured music bands through feathered source-texture masks; the singer and stone outlines remain fixed. Warm Alegreya typography and equal Russian/English color focus sit on the dark earth. Portrait preserves the complete ring and figure, with a separately composed reading area.
 
-Thirty cues carry 164 source-word candidates and 207 translated tokens. Original-mix and independent vocal-estimate signal checks refine quiet openings and held endings, including the long final earth vowel; normal/reduced-speed listening review remains open. The spoken opening contains a provisional repeated name with conflicting recognizer evidence, retained as a visible review question. Source publication does not authorize production.
+Thirty cues carry 163 retained source-word events and 206 translated tokens. Original-mix and independent vocal-estimate signal checks refine quiet openings and held endings, including the long final earth vowel; normal/reduced-speed listening review remains open. Targeted intro listening rejected an inaudible provisional name; the later audible call remains, with all other acoustic samples unchanged. Source publication does not authorize production.
 
 [Project and complete preview](projects/po-kamushku-lyric-film/README.md) · [Agent handoff](projects/po-kamushku-lyric-film/AGENT-HANDOFF.md) · [Source/material study](projects/po-kamushku-lyric-film/evidence/source-motion-study.md) · [Timing review](projects/po-kamushku-lyric-film/evidence/acoustic-review.md)
 
