@@ -20,11 +20,12 @@ Complete bilingual preview. Production render and full listening approval remain
 1. Spoken introduction: v3 removes the inaudible provisional name at 6.127 s and retains the audible 7.328 s call. See `evidence/intro-lexical-correction.json`. The historical 55-event independent proposals include the rejected event; their scope has not been rewritten. Do not treat a physical burst or conditioned alignment as proof of a spoken word.
 2. First sung warm word: a broad recognizer falsely allocated it several seconds before the direct voice. A strong CTC core is also not universally the phonetic beginning. Preserve the independently selected boundary and its original-mix context.
 3. Repeated run/carry verbs and all pebble/earth refrains: inspect each quiet opening and held vowel independently. Do not transfer the first performance's offset to later ones.
-4. Neutral line lifetime: keep readable through the reviewed held body/tail; when a gentle fade cannot fit, make a source-vocal handoff rather than a premature blank.
-5. Complete target meanings: include articles/auxiliaries and reordered case constructions without whole-line grouping or invented English acoustic times.
-6. Native lower arc: preserve enough photographed stone detail behind the text. Portrait must retain the complete ring/person and equal text; check actual platform-safe size.
-7. Realistic viewing: compare quieter and stronger passages with the source reference. Keep source grain and material detail; brightness should not wash the photograph into flat warm polygons.
-8. Verify actual loaded revision/hash, not just a query parameter or badge. Static source imagery still needs advancing decoded PTS and dynamic source-clocked stone response.
+4. Held myself: v4 extends only PK-026 себя / myself to149.700, with the prior149.405 direct-body estimate retained. It includes bounded soft/reverberant carry and stops before из149.840; do not copy the extension to other repeats.
+5. Neutral line lifetime: keep readable through the reviewed held body/tail; when a gentle fade cannot fit, make a source-vocal handoff rather than a premature blank.
+6. Complete target meanings: include articles/auxiliaries and reordered case constructions without whole-line grouping or invented English acoustic times.
+7. Native lower arc: preserve enough photographed stone detail behind the text. Portrait must retain the complete ring/person and equal text; check actual platform-safe size.
+8. Realistic viewing: compare quieter and stronger passages with the source reference. Keep source grain and material detail; brightness should not wash the photograph into flat warm polygons.
+9. Verify actual loaded revision/hash, not just a query parameter or badge. Static source imagery still needs advancing decoded PTS and dynamic source-clocked stone response.
 
 ## Reproduce and continue
 
