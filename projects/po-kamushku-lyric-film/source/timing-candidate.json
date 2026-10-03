@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "project": "po-kamushku-lyric-film",
-  "revision": "po-kamushku-preview-v4-held-myself-tail",
-  "status": "Complete preview candidate; all163 retained events have source-signal selections, intro correction retained and one requested soft-carry focus refinement applied; full normal/slow listening gate open",
+  "revision": "po-kamushku-preview-v5-held-myself-occurrences",
+  "status": "Complete preview candidate; intro correction retained and all three myself focus tails independently refined; full normal/slow listening gate open",
   "sourceClockOffset": 0,
   "sampleRate": 44100,
   "sourceSampleRate": 44100,
@@ -18,7 +18,7 @@
     "Original/zero-lag estimated-vocal source spectra:512/1024sample support, analysishop88/128 not millisecond physical certainty; original mix authority."
   ],
   "onsetReview": {
-    "revision": "po-kamushku-preview-v4-held-myself-tail",
+    "revision": "po-kamushku-preview-v5-held-myself-occurrences",
     "reviewedWords": 163,
     "unreviewedWords": 0,
     "baselineTimingSha256": "a56bae8e7603816ea8fc80977df369051dc9309146ea14b72f425ddd109e8a32",
@@ -27,7 +27,7 @@
     "countScope": "Retained active events; original164-event signal review is preserved in prior revision history."
   },
   "releaseReview": {
-    "revision": "po-kamushku-preview-v4-held-myself-tail",
+    "revision": "po-kamushku-preview-v5-held-myself-occurrences",
     "reviewedWords": 163,
     "unreviewedWords": 0,
     "changedWordReleases": 163,
@@ -2777,11 +2777,11 @@
           "templateTokenId": "chorus-concrete-s03",
           "text": "себя",
           "startSample": 2477979,
-          "endSample": 2563754,
+          "endSample": 2574778,
           "start": 56.19,
-          "end": 58.135011337868484,
+          "end": 58.38498866213152,
           "confidence": "medium",
-          "method": "Original-source signal selection with bounded Whisper/MMS competing observations",
+          "method": "Original-source signal review with targeted listening-guided soft vowel/carry release",
           "onsetUncertaintySeconds": 0.045000000000001705,
           "releaseUncertaintySeconds": 0.07000000000000028,
           "onsetSignalInterval": [
@@ -2798,15 +2798,15 @@
             "mmsCtc": 0.39091224553994836,
             "whisper": 0.038270529359579086
           },
-          "selectionRationale": "Leading s and two syllables are followed by a long direct ya hold to58.135; later58.2–58.45 weaker mostly static residue remains outside focus.",
+          "selectionRationale": "Extend mapped себя / myself through 58.384989 seconds for the requested soft ending. Quiet harmonic carry persists through58.35–58.40 before the renewed из at58.460. Preserve the earlier direct-body estimate separately; signal alone cannot distinguish all carry from reverberation. No copied chorus offset or changed following onset.",
           "candidateEvidence": [
             "analysis/acoustic/mms-PK-011.json",
             "analysis/acoustic/refine-PK-011.json",
             "analysis/acoustic/panels/PK-011.png",
             "analysis/acoustic/selected-signal-review.json"
           ],
-          "releaseStatus": "Direct-body lexical estimate separate from neutral line reading lifetime; no listening attestation",
-          "reverbFocusExtensionSeconds": 0,
+          "releaseStatus": "Targeted requested focus release including bounded soft vowel/reverberant carry; not full-recording listening attestation",
+          "reverbFocusExtensionSeconds": 0.24997732426303854,
           "onsetAudit": {
             "beforeSample": 2479859,
             "selectedSample": 2477979,
@@ -2816,11 +2816,16 @@
           },
           "releaseAudit": {
             "beforeSample": 2497524,
-            "selectedSample": 2563754,
-            "deltaSamples": 66230,
+            "selectedSample": 2574778,
+            "deltaSamples": 77254,
             "status": "original-and-estimated-vocal-signal-inspected",
-            "scope": "Direct-body lexical release separate from residual decay and neutralreadinghold"
-          }
+            "scope": "Per-occurrence bounded focus tail; prior direct-body estimate retained separately. Following word unchanged."
+          },
+          "priorDirectBodyEndSample": 2563754,
+          "focusReleaseSignalInterval": [
+            58.32,
+            58.43
+          ]
         },
         {
           "id": "PK-011-s04",
@@ -7849,11 +7854,11 @@
           "templateTokenId": "chorus-concrete-s03",
           "text": "себя",
           "startSample": 7185654,
-          "endSample": 7251363,
+          "endSample": 7268562,
           "start": 162.94,
-          "end": 164.43,
+          "end": 164.82,
           "confidence": "medium",
-          "method": "Original-source signal selection with bounded Whisper/MMS competing observations",
+          "method": "Original-source signal review with targeted listening-guided soft vowel/carry release",
           "onsetUncertaintySeconds": 0.044999999999987494,
           "releaseUncertaintySeconds": 0.12000000000000455,
           "onsetSignalInterval": [
@@ -7870,15 +7875,15 @@
             "mmsCtc": 0.3683085680939257,
             "whisper": 0.9925141930580139
           },
-          "selectionRationale": "Initial s before162.983 core; direct final ya remains changing through164.43, with quieter mostly static residual beyond that outside focus.",
+          "selectionRationale": "Extend mapped себя / myself through 164.820000 seconds for the requested soft ending. Soft carry persists to164.80; estimated-vocal RMS falls sharply after164.85, ahead of the next из at165.090. Preserve the earlier direct-body estimate separately; signal alone cannot distinguish all carry from reverberation. No copied chorus offset or changed following onset.",
           "candidateEvidence": [
             "analysis/acoustic/mms-PK-028.json",
             "analysis/acoustic/refine-PK-028.json",
             "analysis/acoustic/panels/PK-028.png",
             "analysis/acoustic/selected-signal-review.json"
           ],
-          "releaseStatus": "Direct-body lexical estimate separate from neutral line reading lifetime; no listening attestation",
-          "reverbFocusExtensionSeconds": 0,
+          "releaseStatus": "Targeted requested focus release including bounded soft vowel/reverberant carry; not full-recording listening attestation",
+          "reverbFocusExtensionSeconds": 0.39,
           "onsetAudit": {
             "beforeSample": 7187565,
             "selectedSample": 7185654,
@@ -7888,11 +7893,16 @@
           },
           "releaseAudit": {
             "beforeSample": 7206113,
-            "selectedSample": 7251363,
-            "deltaSamples": 45250,
+            "selectedSample": 7268562,
+            "deltaSamples": 62449,
             "status": "original-and-estimated-vocal-signal-inspected",
-            "scope": "Direct-body lexical release separate from residual decay and neutralreadinghold"
-          }
+            "scope": "Per-occurrence bounded focus tail; prior direct-body estimate retained separately. Following word unchanged."
+          },
+          "priorDirectBodyEndSample": 7251363,
+          "focusReleaseSignalInterval": [
+            164.76,
+            164.87
+          ]
         },
         {
           "id": "PK-028-s04",
@@ -8910,12 +8920,46 @@
   },
   "heldWordFocusRefinements": [
     {
+      "cueId": "PK-011",
+      "sourceWord": "себя",
+      "targetWord": "myself",
+      "priorDirectBodyEndSample": 2563754,
+      "priorDirectBodyEndSeconds": 58.135011337868484,
+      "selectedFocusEndSample": 2574778,
+      "selectedFocusEndSeconds": 58.38498866213152,
+      "extensionSeconds": 0.24997732426303854,
+      "nextWordOnsetSample": 2578086,
+      "nextWordOnsetSeconds": 58.46,
+      "remainingGapSeconds": 0.07501133786848073,
+      "scope": "Independently selected bounded soft-carry display focus; not a claim of fresh vocal production throughout the tail."
+    },
+    {
       "cueId": "PK-026",
       "sourceWord": "себя",
       "targetWord": "myself",
       "priorDirectBodyEndSample": 6588760,
+      "priorDirectBodyEndSeconds": 149.40498866213153,
       "selectedFocusEndSample": 6601770,
-      "scope": "Targeted requested held-word display refinement, supported by original/estimated-vocal harmonic carry. Not a complete listening review or claim of millisecond phonetic certainty."
+      "selectedFocusEndSeconds": 149.7,
+      "extensionSeconds": 0.2950113378684807,
+      "nextWordOnsetSample": 6607944,
+      "nextWordOnsetSeconds": 149.84,
+      "remainingGapSeconds": 0.14,
+      "scope": "Independently selected bounded soft-carry display focus; not a claim of fresh vocal production throughout the tail."
+    },
+    {
+      "cueId": "PK-028",
+      "sourceWord": "себя",
+      "targetWord": "myself",
+      "priorDirectBodyEndSample": 7251363,
+      "priorDirectBodyEndSeconds": 164.43,
+      "selectedFocusEndSample": 7268562,
+      "selectedFocusEndSeconds": 164.82,
+      "extensionSeconds": 0.39,
+      "nextWordOnsetSample": 7280469,
+      "nextWordOnsetSeconds": 165.09,
+      "remainingGapSeconds": 0.27,
+      "scope": "Independently selected bounded soft-carry display focus; not a claim of fresh vocal production throughout the tail."
     }
   ]
 }
