@@ -2,11 +2,15 @@
 
 ## Current state
 
-Both authorized v6 films and the Desktop upload kit are complete. The original-square 1080×1080 and composed 1080×1920 films each have 12,530 frames at 60 fps. [Final technical checks](evidence/final-verification.json) and [decoded-scene checks](evidence/decoded-scene-verification.json) pass both formats. [The Desktop receipt](evidence/desktop-delivery-receipt.json) records 25 copied files with independently matched hashes. GitHub source/archive publication and release `po-kamushku-v1.0.0` are planned, with remote verification still pending; do not present that release as downloadable yet.
+Both authorized v6 films and the Desktop upload kit are complete. The original-square 1080×1080 and composed 1080×1920 films each have 12,530 frames at 60 fps. [Final technical checks](evidence/final-verification.json) and [decoded-scene checks](evidence/decoded-scene-verification.json) pass both formats. [The Desktop receipt](evidence/desktop-delivery-receipt.json) records 25 copied files with independently matched hashes. The [v1.0.0 release](https://github.com/ael-dev3/lyrics/releases/tag/po-kamushku-v1.0.0) is public with all 16 attachments freshly downloaded/hash-verified and their unauthenticated public URLs checked. [Archive coverage](evidence/archive-receipt.json) and [remote publication](evidence/release-upload-verification.json) are separate durable receipts. The exact archived source commit `e35a8440cae9e102e301309ff8f1546b33e981a1` remains in default-branch ancestry.
 
 Start with the project README, [production lessons](PRODUCTION-LESSONS.md), [exact reproduction notes](PRODUCTION-NOTES.md), source manifest and current `evidence/preview-inputs.json`. The frozen revision is `po-kamushku-preview-v6-full-onset-visibility`. [The synchronization audit](evidence/final-sync-audit.md) preserves source samples while fixing exact-onset line visibility, paused-clock refresh and isolated glyph emphasis. The owner declared full current-preview listening review complete at normal speed, reduced speed for uncertain words/holds, and both formats; [review](evidence/sync-review.json) and [authorization](evidence/production-authorization.json) are separate hash-bound records. Earlier signal reviews retain their honest historical status rather than being rewritten as listening attestations.
 
 [Browser checks](evidence/browser-preview-checks.md) record their sampled playback/recovery scope. [The final README image](evidence/final-stills.json) is an actual decoded production frame; historical preview stills remain in `evidence/preview-stills.json`. Use the connected-phoneme workflow and preserve exact source identity, original zero and bounded uncertainty.
+
+## Later portrait presentation finding
+
+The released TikTok focus is too subdued for comfortable active-word recognition. Preserve the current films and frozen inputs. For the next production, increase portrait focus visibility and compare actual small-player playback at ordinary brightness in both languages. [The known-issue record](KNOWN-ISSUES.md) separates this salience limitation from correct timing/decoded glyph states.
 
 ## Ownership
 

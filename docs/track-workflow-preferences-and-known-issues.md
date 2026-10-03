@@ -36,6 +36,8 @@ For a future pass, create a short preview and compare `00:47` directly with `01:
 
 ### По камушку production follow-through
 
+**Portrait focus follow-up:** the delivered TikTok edition uses emphasis that is too subdued for easy active-word recognition. Its current films are preserved. Future portrait films should increase active/neutral distinction in both languages and evaluate complete playback at small viewing size and ordinary brightness; exact pixel/timing agreement alone does not establish salience. [Track-specific observation](../projects/po-kamushku-lyric-film/KNOWN-ISSUES.md).
+
 The [production lessons](../projects/po-kamushku-lyric-film/PRODUCTION-LESSONS.md) and [parameter and command record](../projects/po-kamushku-lyric-film/PRODUCTION-NOTES.md) join source inspection, conservative translation, independently selected word boundaries, complete line readability, source-material response, complete preview, production verification and archival delivery. Its final fixes distinguish four causes of apparent late highlighting: the selected acoustic onset, fractional clock arithmetic, an incoming line's opacity, and stale paused drawing. Neighbouring glyph shadows also require explicit reset before outline and fill. Future agents should inspect these independently before changing an accepted word time.
 
 The held self-reference endings demonstrate a separate bounded focus carry, paired across languages and measured independently for each occurrence. Preserve the direct-body estimates and next-word boundaries. A material reference fixes mask identity; it never replaces actual source-picture decoding in preview or export. The reusable brief covers these decisions without making this song's palette, geometry or exact durations a universal preset.

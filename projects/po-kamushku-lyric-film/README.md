@@ -20,7 +20,7 @@ npm run preview
 
 Open the complete review address printed by the preview server. It has play/pause, seeking, exact seconds, cue navigation, 1×/0.75×/0.5× speeds, original-square and 9:16 layouts, muted source comparison, still download and full recovery. The original video element supplies both the soundtrack and picture. Word focus repaints at display cadence against its actual `currentTime`; decoded picture PTS remains separately visible in diagnostics. No lyric timer extrapolates across seeking or buffering.
 
-The authorized local `public/source.mp4` is required and excluded from Git. [The input manifest](source/manifest.json) identifies the exact 1080-square, 25 fps recording, AAC priming, decoded sample extent, source hash and font. Analysis uses the original mix without gain or a shifted zero. Download formats 137+140 from the linked upload and verify the recorded hash before reusing the timing; do not silently swap recordings.
+The authorized local `public/source.mp4` is required and excluded from Git. [The input manifest](source/manifest.json) identifies the exact 1080-square, 25 fps recording, AAC priming, decoded sample extent, source hash and font. Analysis uses the original mix without gain or a shifted zero. Restore the exact MP4 from the verified source-project ZIP in the release. Re-downloading formats 137+140 can produce different container bytes; verify the recorded hash before reusing the timing and do not silently swap recordings.
 
 ## Picture and material response
 
@@ -57,7 +57,7 @@ Both H.264/BT.709 films contain 12,530 frames on an exact 60 fps grid. Productio
 
 [The separate decoded-scene audit](evidence/decoded-scene-verification.json) passed 829 selected frames in each format, checking all 163 Russian events and 206 English tokens in focused and neutral states, complete cue visibility, source-frame ownership and encoded scene parity. This is finite encoded-pixel evidence; it does not convert perceptual word-boundary uncertainty into acoustic certainty. Final composition proofs were inspected in both formats.
 
-The verified Desktop kit contains 25 files: both posting films, a 1280×720 YouTube thumbnail, a 1200×1600 portrait TikTok cover, titles/descriptions, Russian and English SRT/VTT captions, an upload guide, checksums and verification records. [Staging receipt](evidence/delivery-receipt.json) and [Desktop copy receipt](evidence/desktop-delivery-receipt.json) record independently matched hashes. The source archive and GitHub media release `po-kamushku-v1.0.0` are planned; publication is not yet verified. No YouTube or TikTok posting is included.
+The verified Desktop kit contains 25 files: both posting films, a 1280×720 YouTube thumbnail, a 1200×1600 portrait TikTok cover, titles/descriptions, Russian and English SRT/VTT captions, an upload guide, checksums and verification records. [Staging receipt](evidence/delivery-receipt.json) and [Desktop copy receipt](evidence/desktop-delivery-receipt.json) record independently matched hashes. The [v1.0.0 release](https://github.com/ael-dev3/lyrics/releases/tag/po-kamushku-v1.0.0) contains both films, platform assets, the complete upload ZIP and exact-source project ZIP. All 16 attachments were freshly downloaded and matched their SHA-256 values; after publication, their public download URLs were also checked. [The publication receipt](evidence/release-upload-verification.json) records coverage and identities. The source ZIP preserves committed revision `e35a8440cae9e102e301309ff8f1546b33e981a1`, retained in the default branch through production PR69; later receipt integration does not replace that immutable snapshot. No YouTube or TikTok posting is included.
 
 For the exact reproduction commands and output contract, read [production notes](PRODUCTION-NOTES.md). For the reusable brief, failure prevention and evidence limits, read [production lessons](PRODUCTION-LESSONS.md). `node scripts/render-production.ts --check-gate` fails closed when review, approval or frozen inputs are missing or stale; `--plan` inspects the output contract without encoding. Large upload kits and archives remain outside ordinary Git history.
 
@@ -66,6 +66,10 @@ For the exact reproduction commands and output contract, read [production notes]
 Song, original picture and soundtrack: **Settlers**, from the linked source upload. Its public metadata credits Шелпакова Яна Петровна and Судосьев Олег Павлович, states ℗ Snegiri-music and distribution by ONErpm, and lists release date 26 September 2025. The upload does not identify a separate artwork photographer here; none is inferred.
 
 English translation, typography, synchronized focus, surface relighting and film implementation: Ael, assisted with Codex. Alegreya is distributed under the [SIL Open Font License](public/fonts/Alegreya-OFL.txt), with the font from [Google Fonts' Alegreya source](https://github.com/google/fonts/tree/main/ofl/alegreya). Original media are not represented as open-licensed software assets.
+
+## Portrait visibility follow-up
+
+The delivered TikTok active-word emphasis is documented as too subdued for easy recognition. Both films remain unchanged. Future portrait previews should increase active/neutral distinction and validate focus at realistic viewing size and ordinary brightness, with equal emphasis in both languages. [Known presentation limitation and next-production checks](KNOWN-ISSUES.md). Timing/pixel verification remains valid within its recorded technical scope.
 
 ## Final synchronization polish
 

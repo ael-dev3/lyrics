@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "status": "passed",
+  "project": "po-kamushku-lyric-film",
+  "revision": "po-kamushku-preview-v6-full-onset-visibility",
+  "sourceCommit": "e35a8440cae9e102e301309ff8f1546b33e981a1",
+  "sourceSha256": "f6572759f48f725497ad42b7c84cf12825824041897c47fdd36832a40ad30dd6",
+  "archiverSha256": "bf105ba7b79e31569bf3d7cf8bade02ee904f14dc2685c1bbb2a720c497e3381",
+  "archives": [
+    {
+      "kind": "upload-kit",
+      "file": "Po-Kamushku-Settlers-Upload-Kit.zip",
+      "bytes": 50481321,
+      "sha256": "c4d943def0b3e097487d054d270d019489ef4821b3f404fdee1ebcbbfa9ed0f6",
+      "payloadEntryCount": 27,
+      "independentlyReadAndHashed": true
+    },
+    {
+      "kind": "source-project",
+      "file": "Po-Kamushku-Settlers-Source-Project.zip",
+      "bytes": 9856852,
+      "sha256": "0639da7366b21fb44fd09e74664bc36b925876a980e37887759d99642410d79b",
+      "payloadEntryCount": 100,
+      "independentlyReadAndHashed": true
+    }
+  ],
+  "sourceCoverage": {
+    "frozenInputCount": 12,
+    "committedEntries": 91,
+    "addedExactSource": true,
+    "addedCoverProofs": 4,
+    "addedRenderReceipts": 2,
+    "allCommittedScriptAndEvidenceHashesVerified": true
+  },
+  "kitCoverage": {
+    "manifestEntries": 23,
+    "originalManifestAndChecksumFileVerified": true,
+    "allEntryHashesVerified": true
+  },
+  "checksumPolicy": "Each archive checksum file excludes itself; ZIP SHA-256 is external. Every archive entry was separately decompressed and hashed after ZIP creation.",
+  "scope": "Verified local source and upload ZIPs; public upload, Desktop copying and remote availability verification are separate coordinator steps."
+}
