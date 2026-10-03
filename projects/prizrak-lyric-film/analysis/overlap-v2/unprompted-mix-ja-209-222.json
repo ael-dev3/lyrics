@@ -1,0 +1,173 @@
+{
+  "schemaVersion": 1,
+  "status": "Unprompted lexical observations of overlapping vocals; not selected timing or human hearing.",
+  "sourceSha256": "8563f6b817c9b1cc39649363a52486214c691c0d98ae7bb82263021ac7363523",
+  "method": {
+    "model": "large-v3-turbo",
+    "checkpointSha256": "aff26ae408abcba5fbf8813c21e62b0941638c5f6eebfb145be0c9839262a19a",
+    "implementation": "stable-ts 2.19.1",
+    "language": "ja",
+    "inputKind": "original",
+    "inputFile": "analysis/independent-audio/original-mix-16000.wav",
+    "inputSha256": "4ebcd945bfb29105e1d087ef9dc006441d9674b07546904e7ff50126f4d910bc",
+    "conditioningText": null,
+    "initialPrompt": null,
+    "conditionOnPreviousText": false,
+    "suppressSilence": false,
+    "cropStartSample16000": 3344000,
+    "cropEndSample16000": 3552000,
+    "originalSourceZeroPreserved": true,
+    "humanListening": false,
+    "elapsedSeconds": 3.362842582981102
+  },
+  "result": {
+    "text": "貝物の中に",
+    "segments": [
+      {
+        "start": 209.6,
+        "end": 212.86,
+        "text": "貝物の中に",
+        "seek": 209.0,
+        "tokens": [
+          11561,
+          251,
+          23516,
+          2972,
+          5975,
+          4108
+        ],
+        "temperature": 0,
+        "avg_logprob": -1.6084381739298503,
+        "compression_ratio": 0.625,
+        "no_speech_prob": 1.6961057558440018e-10,
+        "words": [
+          {
+            "word": "貝",
+            "start": 209.6,
+            "end": 209.82,
+            "probability": 0.047687241807579994,
+            "tokens": [
+              11561,
+              251
+            ]
+          },
+          {
+            "word": "物",
+            "start": 209.82,
+            "end": 210.34,
+            "probability": 0.2748258411884308,
+            "tokens": [
+              23516
+            ]
+          },
+          {
+            "word": "の",
+            "start": 210.34,
+            "end": 210.8,
+            "probability": 0.12092617154121399,
+            "tokens": [
+              2972
+            ]
+          },
+          {
+            "word": "中",
+            "start": 210.8,
+            "end": 211.26,
+            "probability": 0.11864644289016724,
+            "tokens": [
+              5975
+            ]
+          },
+          {
+            "word": "に",
+            "start": 211.26,
+            "end": 212.86,
+            "probability": 0.2055625468492508,
+            "tokens": [
+              4108
+            ]
+          }
+        ]
+      }
+    ],
+    "language": "ja",
+    "ori_dict": {
+      "text": "貝物の中に",
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0.0,
+          "start": 0.6,
+          "end": 3.86,
+          "text": "貝物の中に",
+          "tokens": [
+            50365,
+            11561,
+            251,
+            23516,
+            2972,
+            5975,
+            4108,
+            51015
+          ],
+          "temperature": 0,
+          "avg_logprob": -1.6084381739298503,
+          "compression_ratio": 0.625,
+          "no_speech_prob": 1.6961057558440018e-10,
+          "words": [
+            {
+              "word": "貝",
+              "start": 0.6,
+              "end": 0.82,
+              "probability": 0.047687241807579994,
+              "tokens": [
+                11561,
+                251
+              ]
+            },
+            {
+              "word": "物",
+              "start": 0.82,
+              "end": 1.34,
+              "probability": 0.2748258411884308,
+              "tokens": [
+                23516
+              ]
+            },
+            {
+              "word": "の",
+              "start": 1.34,
+              "end": 1.8,
+              "probability": 0.12092617154121399,
+              "tokens": [
+                2972
+              ]
+            },
+            {
+              "word": "中",
+              "start": 1.8,
+              "end": 2.26,
+              "probability": 0.11864644289016724,
+              "tokens": [
+                5975
+              ]
+            },
+            {
+              "word": "に",
+              "start": 2.26,
+              "end": 3.86,
+              "probability": 0.2055625468492508,
+              "tokens": [
+                4108
+              ]
+            }
+          ]
+        }
+      ],
+      "language": "ja",
+      "time_scale": null
+    },
+    "regroup_history": "",
+    "nonspeech_sections": []
+  }
+}

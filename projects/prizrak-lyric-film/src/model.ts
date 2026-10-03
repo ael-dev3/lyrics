@@ -1,9 +1,10 @@
 export type Format = 'landscape' | 'portrait';
+export type VocalTrack = 'lead' | 'japanese-upper';
 export interface Word {id:string;text:string;sourceIndex:number;startSample:number;endSample:number;confidence:number|string;method:string;}
 export interface Token {id:string;text:string;sourceIndices:number[];rationale:string;}
 export interface Lane {language:'ja'|'ru'|'en';tokens:Token[];}
 export interface CarryVoice {fromCueId:string;words:Word[];lanes:Lane[];visibleEnd:number;}
-export interface Cue {id:string;label:string;sourceLanguage:'ja'|'ru';start:number;end:number;visibleStart:number;fullOpacityEnd:number;visibleEnd:number;words:Word[];lanes:Lane[];carry?:CarryVoice;readingPlacement?:'closing';}
+export interface Cue {id:string;label:string;sourceLanguage:'ja'|'ru';start:number;end:number;visibleStart:number;fullOpacityEnd:number;visibleEnd:number;words:Word[];lanes:Lane[];carry?:CarryVoice;readingPlacement?:'closing';vocalTrack?:VocalTrack;}
 export interface Timeline {schemaVersion:2;revision:string;sampleRate:44100;sourceSha256:string;sourceDuration:number;cues:Cue[];}
 export interface FeatureData {sourceSha256:string;analysis:{frameRate:{numerator:number;denominator:number};frameCount:number};rows:number[][];}
 
@@ -15,19 +16,26 @@ export function sourceActive(word:Word,time:number,sampleRate=44100):boolean {
 export function tokenActive(token:Token,words:Word[],time:number,sampleRate=44100):boolean {
  return token.sourceIndices.some(i=>words[i]!==undefined && sourceActive(words[i]!,time,sampleRate));
 }
-export function visibleCue(timeline:Timeline,time:number):Cue|undefined {
- return timeline.cues.find(c=>time>=c.visibleStart && time<c.visibleEnd);
+export function vocalTrack(cue:Cue):VocalTrack {return cue.vocalTrack??'lead';}
+export function visibleCues(timeline:Timeline,time:number):Cue[] {
+ return timeline.cues.filter(c=>time>=c.visibleStart && time<c.visibleEnd);
+}
+export function visibleCue(timeline:Timeline,time:number,track?:VocalTrack):Cue|undefined {
+ const visible=visibleCues(timeline,time);
+ return track?visible.find(c=>vocalTrack(c)===track):visible.find(c=>vocalTrack(c)==='lead')??visible[0];
 }
 export function validateTimeline(t:Timeline):void {
  if(t.schemaVersion!==2 || t.sampleRate!==44100 || !t.cues.length)throw Error('Invalid source-clock timeline');
- const ids=new Set<string>();let priorVisibleEnd=0;
- for(const [cueIndex,c] of t.cues.entries()) {
+ const ids=new Set<string>();
+ for(const c of t.cues) {
   if(ids.has(c.id))throw Error(`Duplicate cue ${c.id}`);ids.add(c.id);
-  const prior=t.cues[cueIndex-1],next=t.cues[cueIndex+1];
+  if(c.vocalTrack && !['lead','japanese-upper'].includes(c.vocalTrack))throw Error(`Invalid vocal track ${c.id}`);
+  if(vocalTrack(c)==='japanese-upper' && c.sourceLanguage!=='ja')throw Error(`Upper voice must retain original Japanese ownership ${c.id}`);
+  const trackCues=t.cues.filter(cue=>vocalTrack(cue)===vocalTrack(c)),cueIndex=trackCues.indexOf(c);
+  const prior=trackCues[cueIndex-1],next=trackCues[cueIndex+1],priorVisibleEnd=prior?.visibleEnd??0;
   if(!(c.end>c.start && c.visibleStart>=priorVisibleEnd && c.visibleStart<=c.start && c.fullOpacityEnd>=Math.min(c.end,c.visibleEnd) && c.fullOpacityEnd<=c.visibleEnd && c.visibleEnd<=t.sourceDuration))throw Error(`Invalid reading interval ${c.id}`);
   if(prior && c.start<prior.end && (!c.carry || c.carry.fromCueId!==prior.id))throw Error(`Unrepresented overlapping voice ${c.id}`);
   if(c.visibleEnd<c.end && (!next?.carry || next.carry.fromCueId!==c.id || next.visibleStart!==c.visibleEnd))throw Error(`Truncated performed voice ${c.id}`);
-  priorVisibleEnd=c.visibleEnd;
   let wordEnd=0;
   c.words.forEach((w,i)=>{
    if(w.sourceIndex!==i || !Number.isSafeInteger(w.startSample) || !Number.isSafeInteger(w.endSample) || w.startSample<wordEnd || w.endSample<=w.startSample)throw Error(`Invalid word ${w.id}`);

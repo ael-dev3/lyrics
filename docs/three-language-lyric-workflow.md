@@ -20,6 +20,10 @@ Check acoustic preprocessing in the actual language. In this project, default ka
 
 A language switch can overlap a held previous word. Preserve both original event intervals and explicitly assign simultaneous voices. A short unchanged source/translation tail can accompany the new three-language block. Its release must not move the primary block. Validate its source word identity, inclusive start and exclusive end; never shorten the previous voice merely to satisfy a single-active-cue assumption.
 
+For complete simultaneous phrases, use independent vocal tracks with separate stable reading regions and full translations. Put the Japanese-led block above the Russian-led pair when that distinguishes the arrangement clearly. Validate each voice's order separately and retain every prior vocal body. Keep the upper block fixed after the other voice ends. The [призрак overlap revision](../projects/prizrak-lyric-film/OVERLAP-REVISION.md) demonstrates this correction.
+
+Masked backing voices need an explicit discovery pass. Mono/mid recognition may follow the louder foreground and omit a different language. Inspect original stereo channels and mid/side analysis alongside clock-verified vocal estimates; require unprompted lexical support and original-signal context before using forced timing. Do not invent an earlier repeat because a conditioned aligner can fit it.
+
 ## Fit one coherent reading block
 
 Use the same intended prominence across scripts: shared fitted size, optically balanced font weight, equal focus luminance and isolated per-glyph glow. Japanese joins naturally without inserted Western spaces. Reflow complete translations; do not shrink only English, remove a language or fabricate acoustic gaps to fit a layout.

@@ -85,3 +85,7 @@ Before presenting the completed preview:
 6. Record actual visual, technical, semantic and listening scopes separately. Source inspection and synthetic layout proofs do not complete listening or production authorization.
 
 The current handoff stops at the full-recording preview. Full rendering, Desktop kits and media publication require the current song’s completed applicable review and explicit authorization. Remote source work remains with the coordinator, who must freshly inspect all-workflow/all-branch/all-actor current-UTC-day runs and rerun attempts before any Actions-triggering operation, estimate resulting runs/minutes and apply the current policy. Unknown monthly usage remains unknown; do not bypass checks or reuse another song’s permission.
+
+## Current v2 overlap presentation
+
+The earlier short-tail closing treatment above is historical v1. [Preview v2](OVERLAP-REVISION.md) uses a full independent Japanese-led block above the Russian-led foreground from the newly recovered backing pair. Native upper placement is right-biased at y105; portrait reserves two reading regions below the unchanged full source window. Both voices use equal 64px type in concurrent passages, and the Japanese region remains fixed after Russian ends. The spectrum anchor is unchanged.

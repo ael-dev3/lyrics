@@ -1,0 +1,1146 @@
+{
+  "schemaVersion": 1,
+  "status": "Unprompted lexical observations of overlapping vocals; not selected timing or human hearing.",
+  "sourceSha256": "8563f6b817c9b1cc39649363a52486214c691c0d98ae7bb82263021ac7363523",
+  "method": {
+    "model": "large-v3-turbo",
+    "checkpointSha256": "aff26ae408abcba5fbf8813c21e62b0941638c5f6eebfb145be0c9839262a19a",
+    "implementation": "stable-ts 2.19.1",
+    "language": "ja",
+    "inputKind": "vocals",
+    "inputFile": "analysis/independent-audio/vocals-16000.wav",
+    "inputSha256": "74274bd9112166d72518dd9182adb90db1134674cb7e9f55e5610d9eea836df3",
+    "conditioningText": null,
+    "initialPrompt": null,
+    "conditionOnPreviousText": false,
+    "suppressSilence": false,
+    "cropStartSample16000": 3200000,
+    "cropEndSample16000": 3560000,
+    "originalSourceZeroPreserved": true,
+    "humanListening": false,
+    "elapsedSeconds": 3.864521292038262
+  },
+  "result": {
+    "text": "別の終わりに見るさせるのよおさらしにおさらしのおさらしのおさらしのおさらしのおさらしの",
+    "segments": [
+      {
+        "start": 200.0,
+        "end": 202.26,
+        "text": "別の終わりに見る",
+        "seek": 200.0,
+        "tokens": [
+          16158,
+          2972,
+          29371,
+          9206,
+          5095,
+          4108,
+          10470,
+          4895
+        ],
+        "temperature": 0,
+        "avg_logprob": -1.0891725910243704,
+        "compression_ratio": 2.2857142857142856,
+        "no_speech_prob": 2.901698846480283e-11,
+        "words": [
+          {
+            "word": "別",
+            "start": 200.0,
+            "end": 200.48,
+            "probability": 0.0001880012423498556,
+            "tokens": [
+              16158
+            ]
+          },
+          {
+            "word": "の",
+            "start": 200.48,
+            "end": 200.78,
+            "probability": 0.21732887625694275,
+            "tokens": [
+              2972
+            ]
+          },
+          {
+            "word": "終",
+            "start": 200.78,
+            "end": 200.78,
+            "probability": 0.0687011331319809,
+            "tokens": [
+              29371
+            ]
+          },
+          {
+            "word": "わ",
+            "start": 200.78,
+            "end": 201.04,
+            "probability": 0.7985324859619141,
+            "tokens": [
+              9206
+            ]
+          },
+          {
+            "word": "り",
+            "start": 201.04,
+            "end": 201.9,
+            "probability": 0.9311004281044006,
+            "tokens": [
+              5095
+            ]
+          },
+          {
+            "word": "に",
+            "start": 201.9,
+            "end": 201.94,
+            "probability": 0.18843244016170502,
+            "tokens": [
+              4108
+            ]
+          },
+          {
+            "word": "見",
+            "start": 201.94,
+            "end": 201.94,
+            "probability": 0.14687100052833557,
+            "tokens": [
+              10470
+            ]
+          },
+          {
+            "word": "る",
+            "start": 201.94,
+            "end": 202.26,
+            "probability": 0.18006616830825806,
+            "tokens": [
+              4895
+            ]
+          }
+        ]
+      },
+      {
+        "start": 202.26,
+        "end": 203.84,
+        "text": "させるのよ",
+        "seek": 200.0,
+        "tokens": [
+          6722,
+          13702,
+          4895,
+          2972,
+          5591
+        ],
+        "temperature": 0,
+        "avg_logprob": -1.0891725910243704,
+        "compression_ratio": 2.2857142857142856,
+        "no_speech_prob": 2.901698846480283e-11,
+        "words": [
+          {
+            "word": "さ",
+            "start": 202.26,
+            "end": 202.6,
+            "probability": 0.011010169982910156,
+            "tokens": [
+              6722
+            ]
+          },
+          {
+            "word": "せ",
+            "start": 202.6,
+            "end": 203.08,
+            "probability": 0.0795266181230545,
+            "tokens": [
+              13702
+            ]
+          },
+          {
+            "word": "る",
+            "start": 203.08,
+            "end": 203.08,
+            "probability": 0.2778985798358917,
+            "tokens": [
+              4895
+            ]
+          },
+          {
+            "word": "の",
+            "start": 203.08,
+            "end": 203.08,
+            "probability": 0.09683802723884583,
+            "tokens": [
+              2972
+            ]
+          },
+          {
+            "word": "よ",
+            "start": 203.08,
+            "end": 203.84,
+            "probability": 0.07317192107439041,
+            "tokens": [
+              5591
+            ]
+          }
+        ]
+      },
+      {
+        "start": 205.08,
+        "end": 207.42,
+        "text": "おさらしに",
+        "seek": 200.0,
+        "tokens": [
+          6117,
+          6722,
+          5154,
+          2849,
+          4108
+        ],
+        "temperature": 0,
+        "avg_logprob": -1.0891725910243704,
+        "compression_ratio": 2.2857142857142856,
+        "no_speech_prob": 2.901698846480283e-11,
+        "words": [
+          {
+            "word": "お",
+            "start": 205.08,
+            "end": 205.26,
+            "probability": 0.03473677858710289,
+            "tokens": [
+              6117
+            ]
+          },
+          {
+            "word": "さ",
+            "start": 205.26,
+            "end": 205.56,
+            "probability": 0.007511983625590801,
+            "tokens": [
+              6722
+            ]
+          },
+          {
+            "word": "ら",
+            "start": 205.56,
+            "end": 206.4,
+            "probability": 0.13232950866222382,
+            "tokens": [
+              5154
+            ]
+          },
+          {
+            "word": "し",
+            "start": 206.4,
+            "end": 206.5,
+            "probability": 0.011248649097979069,
+            "tokens": [
+              2849
+            ]
+          },
+          {
+            "word": "に",
+            "start": 206.5,
+            "end": 207.42,
+            "probability": 0.02927236072719097,
+            "tokens": [
+              4108
+            ]
+          }
+        ]
+      },
+      {
+        "start": 208.64,
+        "end": 211.72,
+        "text": "おさらしの",
+        "seek": 200.0,
+        "tokens": [
+          6117,
+          6722,
+          5154,
+          2849,
+          2972
+        ],
+        "temperature": 0,
+        "avg_logprob": -1.0891725910243704,
+        "compression_ratio": 2.2857142857142856,
+        "no_speech_prob": 2.901698846480283e-11,
+        "words": [
+          {
+            "word": "お",
+            "start": 208.64,
+            "end": 209.6,
+            "probability": 0.08915282785892487,
+            "tokens": [
+              6117
+            ]
+          },
+          {
+            "word": "さ",
+            "start": 209.6,
+            "end": 210.72,
+            "probability": 0.11536624282598495,
+            "tokens": [
+              6722
+            ]
+          },
+          {
+            "word": "ら",
+            "start": 210.72,
+            "end": 210.98,
+            "probability": 0.9117804169654846,
+            "tokens": [
+              5154
+            ]
+          },
+          {
+            "word": "し",
+            "start": 210.98,
+            "end": 211.2,
+            "probability": 0.12746746838092804,
+            "tokens": [
+              2849
+            ]
+          },
+          {
+            "word": "の",
+            "start": 211.2,
+            "end": 211.72,
+            "probability": 0.27878308296203613,
+            "tokens": [
+              2972
+            ]
+          }
+        ]
+      },
+      {
+        "start": 212.3,
+        "end": 213.86,
+        "text": "おさらしの",
+        "seek": 200.0,
+        "tokens": [
+          6117,
+          6722,
+          5154,
+          2849,
+          2972
+        ],
+        "temperature": 0,
+        "avg_logprob": -1.0891725910243704,
+        "compression_ratio": 2.2857142857142856,
+        "no_speech_prob": 2.901698846480283e-11,
+        "words": [
+          {
+            "word": "お",
+            "start": 212.3,
+            "end": 212.86,
+            "probability": 0.4687340557575226,
+            "tokens": [
+              6117
+            ]
+          },
+          {
+            "word": "さ",
+            "start": 212.86,
+            "end": 212.86,
+            "probability": 0.4981116056442261,
+            "tokens": [
+              6722
+            ]
+          },
+          {
+            "word": "ら",
+            "start": 212.86,
+            "end": 212.86,
+            "probability": 0.9541523456573486,
+            "tokens": [
+              5154
+            ]
+          },
+          {
+            "word": "し",
+            "start": 212.86,
+            "end": 212.9,
+            "probability": 0.7886086106300354,
+            "tokens": [
+              2849
+            ]
+          },
+          {
+            "word": "の",
+            "start": 212.9,
+            "end": 213.86,
+            "probability": 0.7802911996841431,
+            "tokens": [
+              2972
+            ]
+          }
+        ]
+      },
+      {
+        "start": 213.86,
+        "end": 216.78,
+        "text": "おさらしの",
+        "seek": 200.0,
+        "tokens": [
+          6117,
+          6722,
+          5154,
+          2849,
+          2972
+        ],
+        "temperature": 0,
+        "avg_logprob": -1.0891725910243704,
+        "compression_ratio": 2.2857142857142856,
+        "no_speech_prob": 2.901698846480283e-11,
+        "words": [
+          {
+            "word": "お",
+            "start": 213.86,
+            "end": 213.86,
+            "probability": 0.5149182677268982,
+            "tokens": [
+              6117
+            ]
+          },
+          {
+            "word": "さ",
+            "start": 213.86,
+            "end": 215.72,
+            "probability": 0.578108549118042,
+            "tokens": [
+              6722
+            ]
+          },
+          {
+            "word": "ら",
+            "start": 215.72,
+            "end": 215.9,
+            "probability": 0.963498055934906,
+            "tokens": [
+              5154
+            ]
+          },
+          {
+            "word": "し",
+            "start": 215.9,
+            "end": 216.02,
+            "probability": 0.9276400208473206,
+            "tokens": [
+              2849
+            ]
+          },
+          {
+            "word": "の",
+            "start": 216.02,
+            "end": 216.78,
+            "probability": 0.8146626353263855,
+            "tokens": [
+              2972
+            ]
+          }
+        ]
+      },
+      {
+        "start": 216.78,
+        "end": 219.54,
+        "text": "おさらしの",
+        "seek": 200.0,
+        "tokens": [
+          6117,
+          6722,
+          5154,
+          2849,
+          2972
+        ],
+        "temperature": 0,
+        "avg_logprob": -1.0891725910243704,
+        "compression_ratio": 2.2857142857142856,
+        "no_speech_prob": 2.901698846480283e-11,
+        "words": [
+          {
+            "word": "お",
+            "start": 216.78,
+            "end": 217.68,
+            "probability": 0.5817015171051025,
+            "tokens": [
+              6117
+            ]
+          },
+          {
+            "word": "さ",
+            "start": 217.68,
+            "end": 217.84,
+            "probability": 0.6799060702323914,
+            "tokens": [
+              6722
+            ]
+          },
+          {
+            "word": "ら",
+            "start": 217.84,
+            "end": 218.18,
+            "probability": 0.9713631868362427,
+            "tokens": [
+              5154
+            ]
+          },
+          {
+            "word": "し",
+            "start": 218.18,
+            "end": 218.84,
+            "probability": 0.9576247334480286,
+            "tokens": [
+              2849
+            ]
+          },
+          {
+            "word": "の",
+            "start": 218.84,
+            "end": 219.54,
+            "probability": 0.8614294528961182,
+            "tokens": [
+              2972
+            ]
+          }
+        ]
+      },
+      {
+        "start": 219.54,
+        "end": 220.82,
+        "text": "おさらしの",
+        "seek": 200.0,
+        "tokens": [
+          6117,
+          6722,
+          5154,
+          2849,
+          2972
+        ],
+        "temperature": 0,
+        "avg_logprob": -1.0891725910243704,
+        "compression_ratio": 2.2857142857142856,
+        "no_speech_prob": 2.901698846480283e-11,
+        "words": [
+          {
+            "word": "お",
+            "start": 219.54,
+            "end": 219.92,
+            "probability": 0.6631165742874146,
+            "tokens": [
+              6117
+            ]
+          },
+          {
+            "word": "さ",
+            "start": 219.92,
+            "end": 220.22,
+            "probability": 0.7586984634399414,
+            "tokens": [
+              6722
+            ]
+          },
+          {
+            "word": "ら",
+            "start": 220.22,
+            "end": 220.4,
+            "probability": 0.9781702160835266,
+            "tokens": [
+              5154
+            ]
+          },
+          {
+            "word": "し",
+            "start": 220.4,
+            "end": 220.82,
+            "probability": 0.9711119532585144,
+            "tokens": [
+              2849
+            ]
+          },
+          {
+            "word": "の",
+            "start": 220.82,
+            "end": 220.82,
+            "probability": 0.8943874835968018,
+            "tokens": [
+              2972
+            ]
+          }
+        ]
+      }
+    ],
+    "language": "ja",
+    "ori_dict": {
+      "text": "別の終わりに見るさせるのよおさらしにおさらしのおさらしのおさらしのおさらしのおさらしの",
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0.0,
+          "start": 0.0,
+          "end": 2.26,
+          "text": "別の終わりに見る",
+          "tokens": [
+            50365,
+            16158,
+            2972,
+            29371,
+            9206,
+            5095,
+            4108,
+            10470,
+            4895,
+            50477
+          ],
+          "temperature": 0,
+          "avg_logprob": -1.0891725910243704,
+          "compression_ratio": 2.2857142857142856,
+          "no_speech_prob": 2.901698846480283e-11,
+          "words": [
+            {
+              "word": "別",
+              "start": 0.0,
+              "end": 0.48,
+              "probability": 0.0001880012423498556,
+              "tokens": [
+                16158
+              ]
+            },
+            {
+              "word": "の",
+              "start": 0.48,
+              "end": 0.78,
+              "probability": 0.21732887625694275,
+              "tokens": [
+                2972
+              ]
+            },
+            {
+              "word": "終",
+              "start": 0.78,
+              "end": 0.78,
+              "probability": 0.0687011331319809,
+              "tokens": [
+                29371
+              ]
+            },
+            {
+              "word": "わ",
+              "start": 0.78,
+              "end": 1.04,
+              "probability": 0.7985324859619141,
+              "tokens": [
+                9206
+              ]
+            },
+            {
+              "word": "り",
+              "start": 1.04,
+              "end": 1.9,
+              "probability": 0.9311004281044006,
+              "tokens": [
+                5095
+              ]
+            },
+            {
+              "word": "に",
+              "start": 1.9,
+              "end": 1.94,
+              "probability": 0.18843244016170502,
+              "tokens": [
+                4108
+              ]
+            },
+            {
+              "word": "見",
+              "start": 1.94,
+              "end": 1.94,
+              "probability": 0.14687100052833557,
+              "tokens": [
+                10470
+              ]
+            },
+            {
+              "word": "る",
+              "start": 1.94,
+              "end": 2.26,
+              "probability": 0.18006616830825806,
+              "tokens": [
+                4895
+              ]
+            }
+          ]
+        },
+        {
+          "id": 1,
+          "seek": 0.0,
+          "start": 2.26,
+          "end": 3.84,
+          "text": "させるのよ",
+          "tokens": [
+            50477,
+            6722,
+            13702,
+            4895,
+            2972,
+            5591,
+            50568
+          ],
+          "temperature": 0,
+          "avg_logprob": -1.0891725910243704,
+          "compression_ratio": 2.2857142857142856,
+          "no_speech_prob": 2.901698846480283e-11,
+          "words": [
+            {
+              "word": "さ",
+              "start": 2.26,
+              "end": 2.6,
+              "probability": 0.011010169982910156,
+              "tokens": [
+                6722
+              ]
+            },
+            {
+              "word": "せ",
+              "start": 2.6,
+              "end": 3.08,
+              "probability": 0.0795266181230545,
+              "tokens": [
+                13702
+              ]
+            },
+            {
+              "word": "る",
+              "start": 3.08,
+              "end": 3.08,
+              "probability": 0.2778985798358917,
+              "tokens": [
+                4895
+              ]
+            },
+            {
+              "word": "の",
+              "start": 3.08,
+              "end": 3.08,
+              "probability": 0.09683802723884583,
+              "tokens": [
+                2972
+              ]
+            },
+            {
+              "word": "よ",
+              "start": 3.08,
+              "end": 3.84,
+              "probability": 0.07317192107439041,
+              "tokens": [
+                5591
+              ]
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "seek": 0.0,
+          "start": 5.08,
+          "end": 7.42,
+          "text": "おさらしに",
+          "tokens": [
+            50568,
+            6117,
+            6722,
+            5154,
+            2849,
+            4108,
+            50723
+          ],
+          "temperature": 0,
+          "avg_logprob": -1.0891725910243704,
+          "compression_ratio": 2.2857142857142856,
+          "no_speech_prob": 2.901698846480283e-11,
+          "words": [
+            {
+              "word": "お",
+              "start": 5.08,
+              "end": 5.26,
+              "probability": 0.03473677858710289,
+              "tokens": [
+                6117
+              ]
+            },
+            {
+              "word": "さ",
+              "start": 5.26,
+              "end": 5.56,
+              "probability": 0.007511983625590801,
+              "tokens": [
+                6722
+              ]
+            },
+            {
+              "word": "ら",
+              "start": 5.56,
+              "end": 6.4,
+              "probability": 0.13232950866222382,
+              "tokens": [
+                5154
+              ]
+            },
+            {
+              "word": "し",
+              "start": 6.4,
+              "end": 6.5,
+              "probability": 0.011248649097979069,
+              "tokens": [
+                2849
+              ]
+            },
+            {
+              "word": "に",
+              "start": 6.5,
+              "end": 7.42,
+              "probability": 0.02927236072719097,
+              "tokens": [
+                4108
+              ]
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "seek": 0.0,
+          "start": 8.64,
+          "end": 11.72,
+          "text": "おさらしの",
+          "tokens": [
+            50723,
+            6117,
+            6722,
+            5154,
+            2849,
+            2972,
+            50851
+          ],
+          "temperature": 0,
+          "avg_logprob": -1.0891725910243704,
+          "compression_ratio": 2.2857142857142856,
+          "no_speech_prob": 2.901698846480283e-11,
+          "words": [
+            {
+              "word": "お",
+              "start": 8.64,
+              "end": 9.6,
+              "probability": 0.08915282785892487,
+              "tokens": [
+                6117
+              ]
+            },
+            {
+              "word": "さ",
+              "start": 9.6,
+              "end": 10.72,
+              "probability": 0.11536624282598495,
+              "tokens": [
+                6722
+              ]
+            },
+            {
+              "word": "ら",
+              "start": 10.72,
+              "end": 10.98,
+              "probability": 0.9117804169654846,
+              "tokens": [
+                5154
+              ]
+            },
+            {
+              "word": "し",
+              "start": 10.98,
+              "end": 11.2,
+              "probability": 0.12746746838092804,
+              "tokens": [
+                2849
+              ]
+            },
+            {
+              "word": "の",
+              "start": 11.2,
+              "end": 11.72,
+              "probability": 0.27878308296203613,
+              "tokens": [
+                2972
+              ]
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "seek": 0.0,
+          "start": 12.3,
+          "end": 13.86,
+          "text": "おさらしの",
+          "tokens": [
+            50951,
+            6117,
+            6722,
+            5154,
+            2849,
+            2972,
+            51049
+          ],
+          "temperature": 0,
+          "avg_logprob": -1.0891725910243704,
+          "compression_ratio": 2.2857142857142856,
+          "no_speech_prob": 2.901698846480283e-11,
+          "words": [
+            {
+              "word": "お",
+              "start": 12.3,
+              "end": 12.86,
+              "probability": 0.4687340557575226,
+              "tokens": [
+                6117
+              ]
+            },
+            {
+              "word": "さ",
+              "start": 12.86,
+              "end": 12.86,
+              "probability": 0.4981116056442261,
+              "tokens": [
+                6722
+              ]
+            },
+            {
+              "word": "ら",
+              "start": 12.86,
+              "end": 12.86,
+              "probability": 0.9541523456573486,
+              "tokens": [
+                5154
+              ]
+            },
+            {
+              "word": "し",
+              "start": 12.86,
+              "end": 12.9,
+              "probability": 0.7886086106300354,
+              "tokens": [
+                2849
+              ]
+            },
+            {
+              "word": "の",
+              "start": 12.9,
+              "end": 13.86,
+              "probability": 0.7802911996841431,
+              "tokens": [
+                2972
+              ]
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "seek": 0.0,
+          "start": 13.86,
+          "end": 16.78,
+          "text": "おさらしの",
+          "tokens": [
+            51049,
+            6117,
+            6722,
+            5154,
+            2849,
+            2972,
+            51246
+          ],
+          "temperature": 0,
+          "avg_logprob": -1.0891725910243704,
+          "compression_ratio": 2.2857142857142856,
+          "no_speech_prob": 2.901698846480283e-11,
+          "words": [
+            {
+              "word": "お",
+              "start": 13.86,
+              "end": 13.86,
+              "probability": 0.5149182677268982,
+              "tokens": [
+                6117
+              ]
+            },
+            {
+              "word": "さ",
+              "start": 13.86,
+              "end": 15.72,
+              "probability": 0.578108549118042,
+              "tokens": [
+                6722
+              ]
+            },
+            {
+              "word": "ら",
+              "start": 15.72,
+              "end": 15.9,
+              "probability": 0.963498055934906,
+              "tokens": [
+                5154
+              ]
+            },
+            {
+              "word": "し",
+              "start": 15.9,
+              "end": 16.02,
+              "probability": 0.9276400208473206,
+              "tokens": [
+                2849
+              ]
+            },
+            {
+              "word": "の",
+              "start": 16.02,
+              "end": 16.78,
+              "probability": 0.8146626353263855,
+              "tokens": [
+                2972
+              ]
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "seek": 0.0,
+          "start": 16.78,
+          "end": 19.54,
+          "text": "おさらしの",
+          "tokens": [
+            51246,
+            6117,
+            6722,
+            5154,
+            2849,
+            2972,
+            51338
+          ],
+          "temperature": 0,
+          "avg_logprob": -1.0891725910243704,
+          "compression_ratio": 2.2857142857142856,
+          "no_speech_prob": 2.901698846480283e-11,
+          "words": [
+            {
+              "word": "お",
+              "start": 16.78,
+              "end": 17.68,
+              "probability": 0.5817015171051025,
+              "tokens": [
+                6117
+              ]
+            },
+            {
+              "word": "さ",
+              "start": 17.68,
+              "end": 17.84,
+              "probability": 0.6799060702323914,
+              "tokens": [
+                6722
+              ]
+            },
+            {
+              "word": "ら",
+              "start": 17.84,
+              "end": 18.18,
+              "probability": 0.9713631868362427,
+              "tokens": [
+                5154
+              ]
+            },
+            {
+              "word": "し",
+              "start": 18.18,
+              "end": 18.84,
+              "probability": 0.9576247334480286,
+              "tokens": [
+                2849
+              ]
+            },
+            {
+              "word": "の",
+              "start": 18.84,
+              "end": 19.54,
+              "probability": 0.8614294528961182,
+              "tokens": [
+                2972
+              ]
+            }
+          ]
+        },
+        {
+          "id": 7,
+          "seek": 0.0,
+          "start": 19.54,
+          "end": 20.82,
+          "text": "おさらしの",
+          "tokens": [
+            51338,
+            6117,
+            6722,
+            5154,
+            2849,
+            2972,
+            51490
+          ],
+          "temperature": 0,
+          "avg_logprob": -1.0891725910243704,
+          "compression_ratio": 2.2857142857142856,
+          "no_speech_prob": 2.901698846480283e-11,
+          "words": [
+            {
+              "word": "お",
+              "start": 19.54,
+              "end": 19.92,
+              "probability": 0.6631165742874146,
+              "tokens": [
+                6117
+              ]
+            },
+            {
+              "word": "さ",
+              "start": 19.92,
+              "end": 20.22,
+              "probability": 0.7586984634399414,
+              "tokens": [
+                6722
+              ]
+            },
+            {
+              "word": "ら",
+              "start": 20.22,
+              "end": 20.4,
+              "probability": 0.9781702160835266,
+              "tokens": [
+                5154
+              ]
+            },
+            {
+              "word": "し",
+              "start": 20.4,
+              "end": 20.82,
+              "probability": 0.9711119532585144,
+              "tokens": [
+                2849
+              ]
+            },
+            {
+              "word": "の",
+              "start": 20.82,
+              "end": 20.82,
+              "probability": 0.8943874835968018,
+              "tokens": [
+                2972
+              ]
+            }
+          ]
+        }
+      ],
+      "language": "ja",
+      "time_scale": null
+    },
+    "regroup_history": "",
+    "nonspeech_sections": []
+  }
+}

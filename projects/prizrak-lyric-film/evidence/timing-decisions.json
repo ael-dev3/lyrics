@@ -1,11 +1,11 @@
 {
-  "revision": "prizrak-preview-v1",
+  "revision": "prizrak-preview-v2",
   "sourceSha256": "8563f6b817c9b1cc39649363a52486214c691c0d98ae7bb82263021ac7363523",
   "status": "Selected preview events; human full-speed/reduced-speed review remains pending.",
   "sampleClock": "Original unchanged AAC decoded at44100Hz; half-open sample intervals; no global anticipation/lag compensation.",
   "evidenceLimits": "CTC emissions ~20ms, spectral support23.22ms. Integer sample storage is precise scheduling, not guaranteed perceptual boundary accuracy. Stems are clock verified, not source authority.",
-  "wordCount": 150,
-  "cueCount": 37,
+  "wordCount": 156,
+  "cueCount": 38,
   "events": [
     {
       "wordId": "RU-001-1",
@@ -4046,6 +4046,108 @@
         86.27000000000001
       ],
       "rationale": "Original moon crop began too late; widened native-kana CTC verifies 79.66 core and earlier frication. Long final かな body stays lit into the Russian entrance; no cue fade truncates it.",
+      "rangeMeaning": "Explicit review bounds; not a calibrated confidence interval or a millisecond accuracy claim.",
+      "humanListening": false
+    },
+    {
+      "wordId": "JP30-OVERLAP-001-1",
+      "language": "ja",
+      "selectedStartSample": 9364194,
+      "selectedEndSample": 9424170,
+      "onsetRangeSeconds": [
+        212.2,
+        212.6
+      ],
+      "releaseRangeSeconds": [
+        213.32,
+        213.92
+      ],
+      "rationale": "Unprompted estimated-vocal stereo-side transcription supports the known poem-30 fragment pair. Corrected native-kana side CTC places matching cores; original/estimate-side panels support the quiet onset and held releases. Mono/mid candidates that follow the Russian foreground are rejected. No forced-only earlier Japanese repeat is selected. Narrower standalone もの observations and unforced side symbols reject the broad-pass m at213.084 as borrowed preceding articulation; the selected handoff is213.70 with an explicit213.32–213.92 review range.",
+      "rangeMeaning": "Explicit review bounds; not a calibrated confidence interval or a millisecond accuracy claim.",
+      "humanListening": false
+    },
+    {
+      "wordId": "JP30-OVERLAP-001-2",
+      "language": "ja",
+      "selectedStartSample": 9424170,
+      "selectedEndSample": 9477090,
+      "onsetRangeSeconds": [
+        213.32,
+        213.92
+      ],
+      "releaseRangeSeconds": [
+        214.75,
+        215.05
+      ],
+      "rationale": "Unprompted estimated-vocal stereo-side transcription supports the known poem-30 fragment pair. Corrected native-kana side CTC places matching cores; original/estimate-side panels support the quiet onset and held releases. Mono/mid candidates that follow the Russian foreground are rejected. No forced-only earlier Japanese repeat is selected. Narrower standalone もの observations and unforced side symbols reject the broad-pass m at213.084 as borrowed preceding articulation; the selected handoff is213.70 with an explicit213.32–213.92 review range.",
+      "rangeMeaning": "Explicit review bounds; not a calibrated confidence interval or a millisecond accuracy claim.",
+      "humanListening": false
+    },
+    {
+      "wordId": "JP30-OVERLAP-001-3",
+      "language": "ja",
+      "selectedStartSample": 9477090,
+      "selectedEndSample": 9500904,
+      "onsetRangeSeconds": [
+        214.75,
+        215.05
+      ],
+      "releaseRangeSeconds": [
+        215.3,
+        215.6
+      ],
+      "rationale": "Unprompted estimated-vocal stereo-side transcription supports the known poem-30 fragment pair. Corrected native-kana side CTC places matching cores; original/estimate-side panels support the quiet onset and held releases. Mono/mid candidates that follow the Russian foreground are rejected. No forced-only earlier Japanese repeat is selected. Narrower standalone もの observations and unforced side symbols reject the broad-pass m at213.084 as borrowed preceding articulation; the selected handoff is213.70 with an explicit213.32–213.92 review range.",
+      "rangeMeaning": "Explicit review bounds; not a calibrated confidence interval or a millisecond accuracy claim.",
+      "humanListening": false
+    },
+    {
+      "wordId": "JP30-OVERLAP-001-4",
+      "language": "ja",
+      "selectedStartSample": 9500904,
+      "selectedEndSample": 9538830,
+      "onsetRangeSeconds": [
+        215.3,
+        215.6
+      ],
+      "releaseRangeSeconds": [
+        216.1,
+        216.5
+      ],
+      "rationale": "Unprompted estimated-vocal stereo-side transcription supports the known poem-30 fragment pair. Corrected native-kana side CTC places matching cores; original/estimate-side panels support the quiet onset and held releases. Mono/mid candidates that follow the Russian foreground are rejected. No forced-only earlier Japanese repeat is selected. Narrower standalone もの observations and unforced side symbols reject the broad-pass m at213.084 as borrowed preceding articulation; the selected handoff is213.70 with an explicit213.32–213.92 review range.",
+      "rangeMeaning": "Explicit review bounds; not a calibrated confidence interval or a millisecond accuracy claim.",
+      "humanListening": false
+    },
+    {
+      "wordId": "JP30-OVERLAP-001-5",
+      "language": "ja",
+      "selectedStartSample": 9567495,
+      "selectedEndSample": 9673776,
+      "onsetRangeSeconds": [
+        216.8,
+        217.1
+      ],
+      "releaseRangeSeconds": [
+        219.2,
+        219.5
+      ],
+      "rationale": "Unprompted estimated-vocal stereo-side transcription supports the known poem-30 fragment pair. Corrected native-kana side CTC places matching cores; original/estimate-side panels support the quiet onset and held releases. Mono/mid candidates that follow the Russian foreground are rejected. No forced-only earlier Japanese repeat is selected. Narrower standalone もの observations and unforced side symbols reject the broad-pass m at213.084 as borrowed preceding articulation; the selected handoff is213.70 with an explicit213.32–213.92 review range.",
+      "rangeMeaning": "Explicit review bounds; not a calibrated confidence interval or a millisecond accuracy claim.",
+      "humanListening": false
+    },
+    {
+      "wordId": "JP30-OVERLAP-001-6",
+      "language": "ja",
+      "selectedStartSample": 9673776,
+      "selectedEndSample": 9748746,
+      "onsetRangeSeconds": [
+        219.2,
+        219.5
+      ],
+      "releaseRangeSeconds": [
+        220.85,
+        221.25
+      ],
+      "rationale": "Unprompted estimated-vocal stereo-side transcription supports the known poem-30 fragment pair. Corrected native-kana side CTC places matching cores; original/estimate-side panels support the quiet onset and held releases. Mono/mid candidates that follow the Russian foreground are rejected. No forced-only earlier Japanese repeat is selected. Narrower standalone もの observations and unforced side symbols reject the broad-pass m at213.084 as borrowed preceding articulation; the selected handoff is213.70 with an explicit213.32–213.92 review range.",
       "rangeMeaning": "Explicit review bounds; not a calibrated confidence interval or a millisecond accuracy claim.",
       "humanListening": false
     },

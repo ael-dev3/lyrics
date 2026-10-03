@@ -1,0 +1,997 @@
+{
+  "schemaVersion": 1,
+  "status": "Unprompted lexical observations of overlapping vocals; not selected timing or human hearing.",
+  "sourceSha256": "8563f6b817c9b1cc39649363a52486214c691c0d98ae7bb82263021ac7363523",
+  "method": {
+    "model": "large-v3-turbo",
+    "checkpointSha256": "aff26ae408abcba5fbf8813c21e62b0941638c5f6eebfb145be0c9839262a19a",
+    "implementation": "stable-ts 2.19.1",
+    "language": "ja",
+    "inputKind": "vocals-side",
+    "inputFile": "analysis/overlap-v2/vocals-side-16000.wav",
+    "inputSha256": "8b6305d82804dda36fd266e5fc74efee5576c26eeccb06daeebe6294747788bc",
+    "conditioningText": null,
+    "initialPrompt": null,
+    "conditionOnPreviousText": false,
+    "suppressSilence": false,
+    "cropStartSample16000": 3280000,
+    "cropEndSample16000": 3856000,
+    "originalSourceZeroPreserved": true,
+    "humanListening": false,
+    "elapsedSeconds": 5.928266417002305
+  },
+  "result": {
+    "text": "まだまだいれば ゆってなの不気者の話 赤塚ばかり不気者話 赤月ばかりふうきもの話わかつきばかり",
+    "segments": [
+      {
+        "start": 205.0,
+        "end": 212.34,
+        "text": "まだまだいれば ゆってなの",
+        "seek": 205.0,
+        "tokens": [
+          47185,
+          47185,
+          1764,
+          4132,
+          13349,
+          220,
+          34072,
+          6102,
+          3203,
+          2972
+        ],
+        "temperature": 0,
+        "avg_logprob": -0.8572655632382348,
+        "compression_ratio": 1.1851851851851851,
+        "no_speech_prob": 1.4851375684798995e-10,
+        "words": [
+          {
+            "word": "まだ",
+            "start": 205.0,
+            "end": 205.66,
+            "probability": 0.00047821609769016504,
+            "tokens": [
+              47185
+            ]
+          },
+          {
+            "word": "まだ",
+            "start": 205.66,
+            "end": 206.7,
+            "probability": 0.20596876740455627,
+            "tokens": [
+              47185
+            ]
+          },
+          {
+            "word": "い",
+            "start": 206.7,
+            "end": 207.0,
+            "probability": 0.06298936903476715,
+            "tokens": [
+              1764
+            ]
+          },
+          {
+            "word": "れ",
+            "start": 207.0,
+            "end": 207.46,
+            "probability": 0.13301707804203033,
+            "tokens": [
+              4132
+            ]
+          },
+          {
+            "word": "ば",
+            "start": 207.46,
+            "end": 208.12,
+            "probability": 0.9578962922096252,
+            "tokens": [
+              13349
+            ]
+          },
+          {
+            "word": " ゆ",
+            "start": 209.28,
+            "end": 210.08,
+            "probability": 0.07846584171056747,
+            "tokens": [
+              220,
+              34072
+            ]
+          },
+          {
+            "word": "って",
+            "start": 210.08,
+            "end": 211.0,
+            "probability": 0.25155919790267944,
+            "tokens": [
+              6102
+            ]
+          },
+          {
+            "word": "な",
+            "start": 211.0,
+            "end": 211.4,
+            "probability": 0.13077488541603088,
+            "tokens": [
+              3203
+            ]
+          },
+          {
+            "word": "の",
+            "start": 211.4,
+            "end": 212.34,
+            "probability": 0.3298274278640747,
+            "tokens": [
+              2972
+            ]
+          }
+        ]
+      },
+      {
+        "start": 212.34,
+        "end": 220.8,
+        "text": "不気者の話 赤塚ばかり",
+        "seek": 205.0,
+        "tokens": [
+          1960,
+          25870,
+          12444,
+          2972,
+          11103,
+          220,
+          5266,
+          97,
+          13331,
+          248,
+          13349,
+          3703,
+          5095
+        ],
+        "temperature": 0,
+        "avg_logprob": -0.8572655632382348,
+        "compression_ratio": 1.1851851851851851,
+        "no_speech_prob": 1.4851375684798995e-10,
+        "words": [
+          {
+            "word": "不",
+            "start": 212.34,
+            "end": 213.1,
+            "probability": 0.04544026777148247,
+            "tokens": [
+              1960
+            ]
+          },
+          {
+            "word": "気",
+            "start": 213.1,
+            "end": 213.28,
+            "probability": 0.168742373585701,
+            "tokens": [
+              25870
+            ]
+          },
+          {
+            "word": "者",
+            "start": 213.28,
+            "end": 214.18,
+            "probability": 0.4292493164539337,
+            "tokens": [
+              12444
+            ]
+          },
+          {
+            "word": "の",
+            "start": 214.18,
+            "end": 214.6,
+            "probability": 0.5801679491996765,
+            "tokens": [
+              2972
+            ]
+          },
+          {
+            "word": "話",
+            "start": 214.6,
+            "end": 215.88,
+            "probability": 0.9527516961097717,
+            "tokens": [
+              11103
+            ]
+          },
+          {
+            "word": " 赤",
+            "start": 217.18,
+            "end": 217.76,
+            "probability": 0.965606302022934,
+            "tokens": [
+              220,
+              5266,
+              97
+            ]
+          },
+          {
+            "word": "塚",
+            "start": 217.76,
+            "end": 218.96,
+            "probability": 0.33805684745311737,
+            "tokens": [
+              13331,
+              248
+            ]
+          },
+          {
+            "word": "ば",
+            "start": 218.96,
+            "end": 219.66,
+            "probability": 0.8567895293235779,
+            "tokens": [
+              13349
+            ]
+          },
+          {
+            "word": "か",
+            "start": 219.66,
+            "end": 220.26,
+            "probability": 0.8789242506027222,
+            "tokens": [
+              3703
+            ]
+          },
+          {
+            "word": "り",
+            "start": 220.26,
+            "end": 220.8,
+            "probability": 0.9920714497566223,
+            "tokens": [
+              5095
+            ]
+          }
+        ]
+      },
+      {
+        "start": 221.2,
+        "end": 229.86,
+        "text": "不気者話 赤月ばかり",
+        "seek": 205.0,
+        "tokens": [
+          1960,
+          25870,
+          12444,
+          11103,
+          220,
+          5266,
+          97,
+          6939,
+          13349,
+          3703,
+          5095
+        ],
+        "temperature": 0,
+        "avg_logprob": -0.8572655632382348,
+        "compression_ratio": 1.1851851851851851,
+        "no_speech_prob": 1.4851375684798995e-10,
+        "words": [
+          {
+            "word": "不",
+            "start": 221.2,
+            "end": 221.98,
+            "probability": 0.5308394432067871,
+            "tokens": [
+              1960
+            ]
+          },
+          {
+            "word": "気",
+            "start": 221.98,
+            "end": 222.54,
+            "probability": 0.9881536364555359,
+            "tokens": [
+              25870
+            ]
+          },
+          {
+            "word": "者",
+            "start": 222.54,
+            "end": 223.48,
+            "probability": 0.98305743932724,
+            "tokens": [
+              12444
+            ]
+          },
+          {
+            "word": "話",
+            "start": 223.48,
+            "end": 224.74,
+            "probability": 0.7710660696029663,
+            "tokens": [
+              11103
+            ]
+          },
+          {
+            "word": " 赤",
+            "start": 226.14,
+            "end": 226.9,
+            "probability": 0.7913136780261993,
+            "tokens": [
+              220,
+              5266,
+              97
+            ]
+          },
+          {
+            "word": "月",
+            "start": 226.9,
+            "end": 228.0,
+            "probability": 0.3508893549442291,
+            "tokens": [
+              6939
+            ]
+          },
+          {
+            "word": "ば",
+            "start": 228.0,
+            "end": 228.78,
+            "probability": 0.9844744205474854,
+            "tokens": [
+              13349
+            ]
+          },
+          {
+            "word": "か",
+            "start": 228.78,
+            "end": 229.3,
+            "probability": 0.9752521514892578,
+            "tokens": [
+              3703
+            ]
+          },
+          {
+            "word": "り",
+            "start": 229.3,
+            "end": 229.86,
+            "probability": 0.9963393211364746,
+            "tokens": [
+              5095
+            ]
+          }
+        ]
+      },
+      {
+        "start": 230.5,
+        "end": 233.92,
+        "text": "ふうきもの話",
+        "seek": 230.5,
+        "tokens": [
+          18100,
+          2646,
+          7016,
+          44726,
+          11103
+        ],
+        "temperature": 0,
+        "avg_logprob": -0.6960760951042175,
+        "compression_ratio": 0.8863636363636364,
+        "no_speech_prob": 8.542164198210855e-11,
+        "words": [
+          {
+            "word": "ふ",
+            "start": 230.5,
+            "end": 230.82,
+            "probability": 0.005852632690221071,
+            "tokens": [
+              18100
+            ]
+          },
+          {
+            "word": "う",
+            "start": 230.82,
+            "end": 231.44,
+            "probability": 0.3673831522464752,
+            "tokens": [
+              2646
+            ]
+          },
+          {
+            "word": "き",
+            "start": 231.44,
+            "end": 231.66,
+            "probability": 0.32999473810195923,
+            "tokens": [
+              7016
+            ]
+          },
+          {
+            "word": "もの",
+            "start": 231.66,
+            "end": 232.6,
+            "probability": 0.8491672277450562,
+            "tokens": [
+              44726
+            ]
+          },
+          {
+            "word": "話",
+            "start": 232.6,
+            "end": 233.92,
+            "probability": 0.8499204516410828,
+            "tokens": [
+              11103
+            ]
+          }
+        ]
+      },
+      {
+        "start": 234.88,
+        "end": 238.94,
+        "text": "わかつきばかり",
+        "seek": 230.5,
+        "tokens": [
+          44054,
+          9335,
+          7016,
+          13349,
+          3703,
+          5095
+        ],
+        "temperature": 0,
+        "avg_logprob": -0.6960760951042175,
+        "compression_ratio": 0.8863636363636364,
+        "no_speech_prob": 8.542164198210855e-11,
+        "words": [
+          {
+            "word": "わか",
+            "start": 234.88,
+            "end": 235.98,
+            "probability": 0.13751250505447388,
+            "tokens": [
+              44054
+            ]
+          },
+          {
+            "word": "つ",
+            "start": 235.98,
+            "end": 236.7,
+            "probability": 0.46783775091171265,
+            "tokens": [
+              9335
+            ]
+          },
+          {
+            "word": "き",
+            "start": 236.7,
+            "end": 237.32,
+            "probability": 0.9199340343475342,
+            "tokens": [
+              7016
+            ]
+          },
+          {
+            "word": "ば",
+            "start": 237.32,
+            "end": 237.88,
+            "probability": 0.857153058052063,
+            "tokens": [
+              13349
+            ]
+          },
+          {
+            "word": "か",
+            "start": 237.88,
+            "end": 238.34,
+            "probability": 0.9341559410095215,
+            "tokens": [
+              3703
+            ]
+          },
+          {
+            "word": "り",
+            "start": 238.34,
+            "end": 238.94,
+            "probability": 0.9991961121559143,
+            "tokens": [
+              5095
+            ]
+          }
+        ]
+      }
+    ],
+    "language": "ja",
+    "ori_dict": {
+      "text": "まだまだいれば ゆってなの不気者の話 赤塚ばかり不気者話 赤月ばかりふうきもの話わかつきばかり",
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0.0,
+          "start": 0.0,
+          "end": 7.34,
+          "text": "まだまだいれば ゆってなの",
+          "tokens": [
+            50365,
+            47185,
+            47185,
+            1764,
+            4132,
+            13349,
+            220,
+            34072,
+            6102,
+            3203,
+            2972,
+            50740
+          ],
+          "temperature": 0,
+          "avg_logprob": -0.8572655632382348,
+          "compression_ratio": 1.1851851851851851,
+          "no_speech_prob": 1.4851375684798995e-10,
+          "words": [
+            {
+              "word": "まだ",
+              "start": 0.0,
+              "end": 0.66,
+              "probability": 0.00047821609769016504,
+              "tokens": [
+                47185
+              ]
+            },
+            {
+              "word": "まだ",
+              "start": 0.66,
+              "end": 1.7,
+              "probability": 0.20596876740455627,
+              "tokens": [
+                47185
+              ]
+            },
+            {
+              "word": "い",
+              "start": 1.7,
+              "end": 2.0,
+              "probability": 0.06298936903476715,
+              "tokens": [
+                1764
+              ]
+            },
+            {
+              "word": "れ",
+              "start": 2.0,
+              "end": 2.46,
+              "probability": 0.13301707804203033,
+              "tokens": [
+                4132
+              ]
+            },
+            {
+              "word": "ば",
+              "start": 2.46,
+              "end": 3.12,
+              "probability": 0.9578962922096252,
+              "tokens": [
+                13349
+              ]
+            },
+            {
+              "word": " ゆ",
+              "start": 4.28,
+              "end": 5.08,
+              "probability": 0.07846584171056747,
+              "tokens": [
+                220,
+                34072
+              ]
+            },
+            {
+              "word": "って",
+              "start": 5.08,
+              "end": 6.0,
+              "probability": 0.25155919790267944,
+              "tokens": [
+                6102
+              ]
+            },
+            {
+              "word": "な",
+              "start": 6.0,
+              "end": 6.4,
+              "probability": 0.13077488541603088,
+              "tokens": [
+                3203
+              ]
+            },
+            {
+              "word": "の",
+              "start": 6.4,
+              "end": 7.34,
+              "probability": 0.3298274278640747,
+              "tokens": [
+                2972
+              ]
+            }
+          ]
+        },
+        {
+          "id": 1,
+          "seek": 0.0,
+          "start": 7.34,
+          "end": 15.8,
+          "text": "不気者の話 赤塚ばかり",
+          "tokens": [
+            50740,
+            1960,
+            25870,
+            12444,
+            2972,
+            11103,
+            220,
+            5266,
+            97,
+            13331,
+            248,
+            13349,
+            3703,
+            5095,
+            51190
+          ],
+          "temperature": 0,
+          "avg_logprob": -0.8572655632382348,
+          "compression_ratio": 1.1851851851851851,
+          "no_speech_prob": 1.4851375684798995e-10,
+          "words": [
+            {
+              "word": "不",
+              "start": 7.34,
+              "end": 8.1,
+              "probability": 0.04544026777148247,
+              "tokens": [
+                1960
+              ]
+            },
+            {
+              "word": "気",
+              "start": 8.1,
+              "end": 8.28,
+              "probability": 0.168742373585701,
+              "tokens": [
+                25870
+              ]
+            },
+            {
+              "word": "者",
+              "start": 8.28,
+              "end": 9.18,
+              "probability": 0.4292493164539337,
+              "tokens": [
+                12444
+              ]
+            },
+            {
+              "word": "の",
+              "start": 9.18,
+              "end": 9.6,
+              "probability": 0.5801679491996765,
+              "tokens": [
+                2972
+              ]
+            },
+            {
+              "word": "話",
+              "start": 9.6,
+              "end": 10.88,
+              "probability": 0.9527516961097717,
+              "tokens": [
+                11103
+              ]
+            },
+            {
+              "word": " 赤",
+              "start": 12.18,
+              "end": 12.76,
+              "probability": 0.965606302022934,
+              "tokens": [
+                220,
+                5266,
+                97
+              ]
+            },
+            {
+              "word": "塚",
+              "start": 12.76,
+              "end": 13.96,
+              "probability": 0.33805684745311737,
+              "tokens": [
+                13331,
+                248
+              ]
+            },
+            {
+              "word": "ば",
+              "start": 13.96,
+              "end": 14.66,
+              "probability": 0.8567895293235779,
+              "tokens": [
+                13349
+              ]
+            },
+            {
+              "word": "か",
+              "start": 14.66,
+              "end": 15.26,
+              "probability": 0.8789242506027222,
+              "tokens": [
+                3703
+              ]
+            },
+            {
+              "word": "り",
+              "start": 15.26,
+              "end": 15.8,
+              "probability": 0.9920714497566223,
+              "tokens": [
+                5095
+              ]
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "seek": 0.0,
+          "start": 16.2,
+          "end": 24.86,
+          "text": "不気者話 赤月ばかり",
+          "tokens": [
+            51190,
+            1960,
+            25870,
+            12444,
+            11103,
+            220,
+            5266,
+            97,
+            6939,
+            13349,
+            3703,
+            5095,
+            51640
+          ],
+          "temperature": 0,
+          "avg_logprob": -0.8572655632382348,
+          "compression_ratio": 1.1851851851851851,
+          "no_speech_prob": 1.4851375684798995e-10,
+          "words": [
+            {
+              "word": "不",
+              "start": 16.2,
+              "end": 16.98,
+              "probability": 0.5308394432067871,
+              "tokens": [
+                1960
+              ]
+            },
+            {
+              "word": "気",
+              "start": 16.98,
+              "end": 17.54,
+              "probability": 0.9881536364555359,
+              "tokens": [
+                25870
+              ]
+            },
+            {
+              "word": "者",
+              "start": 17.54,
+              "end": 18.48,
+              "probability": 0.98305743932724,
+              "tokens": [
+                12444
+              ]
+            },
+            {
+              "word": "話",
+              "start": 18.48,
+              "end": 19.74,
+              "probability": 0.7710660696029663,
+              "tokens": [
+                11103
+              ]
+            },
+            {
+              "word": " 赤",
+              "start": 21.14,
+              "end": 21.9,
+              "probability": 0.7913136780261993,
+              "tokens": [
+                220,
+                5266,
+                97
+              ]
+            },
+            {
+              "word": "月",
+              "start": 21.9,
+              "end": 23.0,
+              "probability": 0.3508893549442291,
+              "tokens": [
+                6939
+              ]
+            },
+            {
+              "word": "ば",
+              "start": 23.0,
+              "end": 23.78,
+              "probability": 0.9844744205474854,
+              "tokens": [
+                13349
+              ]
+            },
+            {
+              "word": "か",
+              "start": 23.78,
+              "end": 24.3,
+              "probability": 0.9752521514892578,
+              "tokens": [
+                3703
+              ]
+            },
+            {
+              "word": "り",
+              "start": 24.3,
+              "end": 24.86,
+              "probability": 0.9963393211364746,
+              "tokens": [
+                5095
+              ]
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "seek": 25.5,
+          "start": 25.5,
+          "end": 28.92,
+          "text": "ふうきもの話",
+          "tokens": [
+            50365,
+            18100,
+            2646,
+            7016,
+            44726,
+            11103,
+            50557
+          ],
+          "temperature": 0,
+          "avg_logprob": -0.6960760951042175,
+          "compression_ratio": 0.8863636363636364,
+          "no_speech_prob": 8.542164198210855e-11,
+          "words": [
+            {
+              "word": "ふ",
+              "start": 25.5,
+              "end": 25.82,
+              "probability": 0.005852632690221071,
+              "tokens": [
+                18100
+              ]
+            },
+            {
+              "word": "う",
+              "start": 25.82,
+              "end": 26.44,
+              "probability": 0.3673831522464752,
+              "tokens": [
+                2646
+              ]
+            },
+            {
+              "word": "き",
+              "start": 26.44,
+              "end": 26.66,
+              "probability": 0.32999473810195923,
+              "tokens": [
+                7016
+              ]
+            },
+            {
+              "word": "もの",
+              "start": 26.66,
+              "end": 27.6,
+              "probability": 0.8491672277450562,
+              "tokens": [
+                44726
+              ]
+            },
+            {
+              "word": "話",
+              "start": 27.6,
+              "end": 28.92,
+              "probability": 0.8499204516410828,
+              "tokens": [
+                11103
+              ]
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "seek": 25.5,
+          "start": 29.88,
+          "end": 33.94,
+          "text": "わかつきばかり",
+          "tokens": [
+            50557,
+            44054,
+            9335,
+            7016,
+            13349,
+            3703,
+            5095,
+            50792
+          ],
+          "temperature": 0,
+          "avg_logprob": -0.6960760951042175,
+          "compression_ratio": 0.8863636363636364,
+          "no_speech_prob": 8.542164198210855e-11,
+          "words": [
+            {
+              "word": "わか",
+              "start": 29.88,
+              "end": 30.98,
+              "probability": 0.13751250505447388,
+              "tokens": [
+                44054
+              ]
+            },
+            {
+              "word": "つ",
+              "start": 30.98,
+              "end": 31.7,
+              "probability": 0.46783775091171265,
+              "tokens": [
+                9335
+              ]
+            },
+            {
+              "word": "き",
+              "start": 31.7,
+              "end": 32.32,
+              "probability": 0.9199340343475342,
+              "tokens": [
+                7016
+              ]
+            },
+            {
+              "word": "ば",
+              "start": 32.32,
+              "end": 32.88,
+              "probability": 0.857153058052063,
+              "tokens": [
+                13349
+              ]
+            },
+            {
+              "word": "か",
+              "start": 32.88,
+              "end": 33.34,
+              "probability": 0.9341559410095215,
+              "tokens": [
+                3703
+              ]
+            },
+            {
+              "word": "り",
+              "start": 33.34,
+              "end": 33.94,
+              "probability": 0.9991961121559143,
+              "tokens": [
+                5095
+              ]
+            }
+          ]
+        }
+      ],
+      "language": "ja",
+      "time_scale": null
+    },
+    "regroup_history": "",
+    "nonspeech_sections": []
+  }
+}

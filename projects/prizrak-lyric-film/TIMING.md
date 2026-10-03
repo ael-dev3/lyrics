@@ -14,7 +14,7 @@ The supplied lyric sheet is a reference, not an acoustic schedule. The unchanged
 | 130.40–141.13 | Instrumental interval; forced earlyТакое placement rejected | No fabricated lyric |
 | 141.13–177.60 | Russian disappearance verse, independently reviewed repeats and long finalчеловек | Russian, English |
 | 177.60–222.24 | Second Russian chorus and complete finalночь | Russian, English |
-| 221.80–239.04 | Two closing Japanese fragment pairs; first overlaps the Russian tail | Japanese, Russian, English; unchanged Russian/English tail additionally present until 222.24 |
+| 212.34–239.04 | Three late Japanese fragment pairs on an independent track; the first pair was recovered from the masked backing voice | Japanese/Russian/English upper block; full Russian/English foreground remains below through its own final cue |
 | After 239.04 | Neutral final reading hold, then original ending/credits to 255.094422 | No invented closing lyric |
 
 These are selected preview intervals. Unprompted transcription establishes candidate presence; primary poem sources and cross-model/signal evidence reconcile lexical shapes. A forced aligner cannot prove a word exists. Stock end-of-video ASR text, the unperformed upper stanza of poem 30 and page recommendations are absent from the scene.
@@ -46,6 +46,6 @@ Each displayed token stores actual source contributors and an editorial rational
 
 **Word focus:** reviewed source articulation/body interval. **Complete-line reading:** prelead and neutral hold, with full opacity on every owned active sample. **Decoration/picture:** measured spectrum, source 25 fps PTS and credit-clearance envelope. None sets the others’ onset or release.
 
-The closing overlap keeps the original final Russian word unchanged at 221.39–222.24. The Japanese block enters at 221.8, and carries `ночь / night` until its original exclusive end. Both closing blocks use the same source-aware position; removing the carry does not move their glyphs. No voice is clipped to satisfy a nonoverlapping-cue validator.
+The late overlap now uses independent full-cue tracks. The newly recovered Japanese pair enters at 212.34; subsequent Japanese pairs start at 221.8 and 230.55. The Russian foreground retains all prior source intervals, including the final night through 222.24. Upper Japanese-led and lower Russian-led blocks keep separate full translations and focus. See [v2 evidence and the masked first-word uncertainty](OVERLAP-REVISION.md).
 
 All timing/semantic tests and technical previews remain separate from actual listening review. Freeze current input hashes only after preview verification; production needs complete current-input review and explicit current-song approval.

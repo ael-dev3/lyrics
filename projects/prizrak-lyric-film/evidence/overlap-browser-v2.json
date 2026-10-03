@@ -1,0 +1,22 @@
+{
+  "project": "prizrak-lyric-film",
+  "revision": "prizrak-preview-v2",
+  "sourceSha256": "8563f6b817c9b1cc39649363a52486214c691c0d98ae7bb82263021ac7363523",
+  "timelineSha256": "9ba5386855ca1cef9a4c381d43260110be59496b971fdea0263bcb60849bd1d4",
+  "method": "Actual complete in-app browser preview with visible control interactions, screenshots and read-only rendered diagnostics",
+  "checkpoints": "overlap-browser-v2-checkpoints.json",
+  "screenshots": "preview-stills.json",
+  "checks": [
+    "Both independent voices visible in native and portrait compositions at 214.300 seconds",
+    "Equal concurrent 64px type; Japanese-led translations above Russian-led translations without block collision",
+    "Original full sharp source window and fixed visualizer anchor retained",
+    "Japanese remains at identical coordinates before and after Russian clears",
+    "Source-native picture PTS remains separate from fine word clock",
+    "Actual paused source glyph focus switches at 212.340 onset, 213.700 handoff, 221.060 release and 222.240 Russian release",
+    "Reduced-speed playback controls, repeated paused Enter seeks, layout switching and recovery remain functional",
+    "Current preview badge and vocal-track diagnostics identify v2"
+  ],
+  "limitations": "This is technical and visual preview evidence. It does not establish human full-song listening, perceptual certainty for masked Japanese boundaries, encoded-film verification or render authorization.",
+  "humanListening": false,
+  "productionAuthorized": false
+}
