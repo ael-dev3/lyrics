@@ -18,7 +18,11 @@ const smooth=(a:number,b:number,x:number)=>{const u=clamp((x-a)/(b-a));return u*
 
 export function cueOpacity(c:Cue,t:number):number {
   if(t<c.visibleStart||t>=c.visibleEnd)return 0;
-  return smooth(c.visibleStart,Math.max(c.visibleStart+.001,c.start-.012),t)*(c.exitMode==='vocal-handoff'?1:1-smooth(c.fullOpacityEnd,c.visibleEnd,t));
+  // If the previous line lasts up to this vocal, replace it at full opacity.
+  // A synthetic fade would hide the first active word at its exact entrance.
+  const revealEnd=c.start-.012;
+  const entrance=revealEnd<=c.visibleStart?1:smooth(c.visibleStart,revealEnd,t);
+  return entrance*(c.exitMode==='vocal-handoff'?1:1-smooth(c.fullOpacityEnd,c.visibleEnd,t));
 }
 export async function loadScene():Promise<void>{
   const read=async<T>(p:string):Promise<T>=>{const r=await fetch(p);if(!r.ok)throw Error(`Missing complete preview asset: ${p}`);return r.json() as Promise<T>;};
@@ -142,8 +146,8 @@ function paintWords(ctx:Context,c:Cue,layout:Layout,t:number):void{
   ctx.globalAlpha=cueOpacity(c,t);ctx.lineJoin='round';
   for(const [slots,original] of [[layout.source,true],[layout.target,false]] as const){for(const slot of slots){
     const active=original?sourceActive(c.words[slot.index]!,t,timeline.sampleRate):targetActive(c.targets[slot.index]!,c.words,t,timeline.sampleRate);
-    ctx.strokeStyle='rgba(8,8,7,.75)';ctx.lineWidth=2.4;ctx.strokeText(slot.text,slot.x,slot.y);
     ctx.shadowColor=active?'rgba(218,163,118,.25)':'rgba(0,0,0,.6)';ctx.shadowBlur=active?8:5;ctx.shadowOffsetY=1;
+    ctx.strokeStyle='rgba(8,8,7,.75)';ctx.lineWidth=2.4;ctx.strokeText(slot.text,slot.x,slot.y);
     ctx.fillStyle=active?PALETTE.focus:PALETTE.rest;ctx.fillText(slot.text,slot.x,slot.y);
   }}ctx.restore();
 }

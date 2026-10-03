@@ -42,7 +42,7 @@ The original 44.1 kHz sample clock is canonical. Unprompted recognition checks t
 
 The spoken opening now has one audible call of the name Yana. Targeted listening rejected the provisional name at 6.127 seconds; it is removed in both languages, while the later call at 7.328 seconds and all other acoustic samples remain unchanged. The original supplied reference and historical recognizer disagreement are preserved. The compressed chorus wording is translated conservatively; the preview does not normalize its intentional-seeming reconstruction paradox into a different metaphor.
 
-Automated contracts, waveform/spectrum inspection, source-motion checks and sampled layout/browser checks establish different facts. They do not establish a complete human listening review or phonetic perfection. Current-review evidence and remaining questions are listed in [the handoff](AGENT-HANDOFF.md). The editorial file's `timingStatus` fields preserve the earlier text-preparation stage; the separately bound v5 candidate and validation record describe the completed signal-based timing pass.
+Automated contracts, waveform/spectrum inspection, source-motion checks and sampled layout/browser checks establish different facts. They do not establish a complete human listening review or phonetic perfection. Current-review evidence and remaining questions are listed in [the handoff](AGENT-HANDOFF.md). The editorial file's `timingStatus` fields preserve the earlier text-preparation stage; the separately bound v6 candidate and validation record describe the completed signal-based timing pass.
 
 ## Production boundary
 
@@ -53,3 +53,7 @@ This edition is preview-only. `npm run render:production` fails closed. Before a
 Song, original picture and soundtrack: **Settlers**, from the linked source upload. Its public metadata credits Шелпакова Яна Петровна and Судосьев Олег Павлович, states ℗ Snegiri-music and distribution by ONErpm, and lists release date 26 September 2025. The upload does not identify a separate artwork photographer here; none is inferred.
 
 English translation, typography, synchronized focus, surface relighting and preview implementation: Ael, assisted with Codex. Alegreya is distributed under the [SIL Open Font License](public/fonts/Alegreya-OFL.txt), with the font from [Google Fonts' Alegreya source](https://github.com/google/fonts/tree/main/ofl/alegreya). Original media are not represented as open-licensed software assets.
+
+## Final synchronization polish
+
+The [v6 audit](evidence/final-sync-audit.md) reviews every retained onset/release and complete translated meaning. It preserves acoustic selections and the three bounded myself tails, fixes first-word visibility at immediate line handoffs, commits the exact paused word position and prevents neighbouring glyphs from borrowing highlight glow. All active-voice frames now require a fully visible line. Signal review and technical playback evidence remain separate from full listening and render authorization.

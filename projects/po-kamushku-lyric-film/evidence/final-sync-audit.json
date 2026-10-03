@@ -1,0 +1,493 @@
+{
+  "schemaVersion": 1,
+  "revision": "po-kamushku-preview-v6-full-onset-visibility",
+  "reviewedUtc": "2026-10-03T11:14:13.208680+00:00",
+  "scope": "Complete source-signal, bilingual semantic and display-contract recheck; sampled browser playback and end-tail transport verification. Not a complete auditory attestation or production render.",
+  "sourceSha256": "f6572759f48f725497ad42b7c84cf12825824041897c47fdd36832a40ad30dd6",
+  "previewInputsSha256": "d674a1f2b17a8775ca240c06e901b9013a5777c150017d925930e56ca44c924f",
+  "inputs": {
+    "public/source.mp4": "f6572759f48f725497ad42b7c84cf12825824041897c47fdd36832a40ad30dd6",
+    "public/timeline.json": "eb543a9ab8ba7c0b7495d96aef66e52cd7e218c8924995caf34499126dd1005f",
+    "public/audio-features.json": "4ca1135db51abcc66fe914460b179423061b322d6c8e8df8dbd13c75721116a6",
+    "public/stone-anchors.json": "6ba0c34ae7c168c2a42d4483d0b97e61cbf8ec6fbdca6f515e13ff99c44e73ea",
+    "public/material-reference.png": "8689a35c56e29600b9cf8637d5bd432bb4765d199892d7270ef07e7d55f6185c",
+    "public/fonts/Alegreya.ttf": "ba5564634b93a8f8ba57b48cd4f1ae7417d2b4656fbac779028679b00de3cf12",
+    "source/lyrics-editorial.json": "bbcf3f94a89dee54df7fc2f1cd7d8341d6b35d0c204770c04f81293da3fee0d1",
+    "source/timing-candidate.json": "2c4d6ec0f94d60dee952a6c411aad437665655ea0cee4f3abe79a2dd718bf6cf",
+    "source/line-visibility.json": "835761ed653a222f949524635dac79f184e14ee5632a81060422103a662e3b70",
+    "src/model.ts": "6457435696d8e26ff6d8cc673f319c1b38b1f96e8a1e6e1c4e6d613f9e5e0d6e",
+    "src/scene.ts": "5d1ccf197719aaa4dc8ab3d6912127c5f0cf7e35726920c11aff1ea84e407429",
+    "src/player.ts": "edd69c44132b3a90bbde752900dbff447dc430b9805b58d4a14dd162efc701a2"
+  },
+  "acousticEvents": {
+    "cueCount": 30,
+    "sourceWordCount": 163,
+    "targetWordCount": 206,
+    "onsetEdgesReinspected": 163,
+    "releaseEdgesReinspected": 163,
+    "supportedSampleChanges": 0,
+    "sampleRate": 44100,
+    "eventSignatureSha256": "8bbb2c63268523e4b1a36ca913fbae3e82624b0ae73dcce3fa611a3572fdb209",
+    "baselineTimingSha256": "43e741499b02b001a75e9f12bd8728789ed4a87142a00b942f25b7d0bc08f09e",
+    "neutralHoldSamplesChanged": 0,
+    "sourceToTargetMappingChanged": false,
+    "withinCueSelectedBlankIntervals": 49
+  },
+  "signalReview": {
+    "firstHalf": {
+      "cues": "PK-001–PK-015",
+      "words": 80,
+      "edges": 160,
+      "method": "Compare current canonical events against all15 saved original mix/estimated-vocal cue spectra and competing MMS/Whisper allocations, plus new fixed40 ms adjacent RMS observations. Original source remains authority. Spectra use1024 sample Hann support/128 sample hops; neither dense sampling nor exact integer selection establishes physical phoneme-edge precision. Existing model marker panels are not relabelled as current selection overlays.",
+      "result": "No clearly supported sample adjustment in this scope. Retain current reviewed style and uncertainty."
+    },
+    "secondHalf": {
+      "cues": "PK-016–PK-030",
+      "words": 83,
+      "edges": 166,
+      "neutralHolds": 15,
+      "method": {
+        "cueWideFftSupportSamples": 1024,
+        "detailFftSupportSamples": 512,
+        "spectralHopSamples": 88,
+        "sampleRate": 44100,
+        "window": "Hann",
+        "timeAxis": "FFT window centers on original sample clock",
+        "mixAuthority": true,
+        "estimateScope": "Zero-lag HTDemucs estimate only; not independent source evidence"
+      },
+      "detailPanels": 9,
+      "result": "No supported acoustic adjustment; existing sample events and requested bounded carries retained."
+    },
+    "cueCoverage": [
+      {
+        "cueId": "PK-001",
+        "words": 4,
+        "firstOnsetSample": 323165,
+        "lastFocusEndSample": 550588,
+        "neutralHoldThroughSample": 574623,
+        "note": "Retain current sole name and subsequent rapid word sequence. Model-only extra 6.127 s allocation stays rejected. Signal cannot certify lexical identity."
+      },
+      {
+        "cueId": "PK-002",
+        "words": 6,
+        "firstOnsetSample": 722579,
+        "lastFocusEndSample": 883985,
+        "neutralHoldThroughSample": 891702,
+        "note": "Initial direct voice supported near16.385; crop-bound14.06/13.30 alternatives remain rejected. Leading light frication and separately represented iz/na transitions plausible; no common advance."
+      },
+      {
+        "cueId": "PK-003",
+        "words": 5,
+        "firstOnsetSample": 896994,
+        "lastFocusEndSample": 1049580,
+        "neutralHoldThroughSample": 1054872,
+        "note": "Quiet initial Ot, leading pechali and s/b noise are included. pechali-to-uzhe continuous vowel ownership remains ambiguous but current boundary lies in stated interval."
+      },
+      {
+        "cueId": "PK-004",
+        "words": 5,
+        "firstOnsetSample": 1059944,
+        "lastFocusEndSample": 1210545,
+        "neutralHoldThroughSample": 1219365,
+        "note": "Leading v/sl/st/k contributions retained, including60 ms independent v. No justified removal or change from spectra."
+      },
+      {
+        "cueId": "PK-005",
+        "words": 5,
+        "firstOnsetSample": 1229288,
+        "lastFocusEndSample": 1387166,
+        "neutralHoldThroughSample": 1395765,
+        "note": "Initial p noises and distinct nasal na retained;40 ms quiet gap before polkakh remains purposeful, not filled."
+      },
+      {
+        "cueId": "PK-006",
+        "words": 4,
+        "firstOnsetSample": 1399954,
+        "lastFocusEndSample": 1502928,
+        "neutralHoldThroughSample": 1523655,
+        "note": "All three begu entries independently present. Direct final u extends past CTC last character; subsequent weak decay stays neutral."
+      },
+      {
+        "cueId": "PK-007",
+        "words": 4,
+        "firstOnsetSample": 1564227,
+        "lastFocusEndSample": 1669626,
+        "neutralHoldThroughSample": 1677564,
+        "note": "Separate preceding breath is excluded; leading s of soboy is included before the strong core. Connected o handoff is uncertain."
+      },
+      {
+        "cueId": "PK-008",
+        "words": 4,
+        "firstOnsetSample": 1735423,
+        "lastFocusEndSample": 1898505,
+        "neutralHoldThroughSample": 1902254,
+        "note": "Three nesu bodies retained independently, especially third held u through43.05. New nasal Na follows after85 ms; no release extension into it."
+      },
+      {
+        "cueId": "PK-009",
+        "words": 5,
+        "firstOnsetSample": 1902254,
+        "lastFocusEndSample": 2028380,
+        "neutralHoldThroughSample": 2036097,
+        "note": "Short Na, own sebe/svoy and ch/kr contributions represented. Connected svoy ownership remains broad; no whole-phrase focus."
+      },
+      {
+        "cueId": "PK-010",
+        "words": 6,
+        "firstOnsetSample": 2065864,
+        "lastFocusEndSample": 2400363,
+        "neutralHoldThroughSample": 2405655,
+        "note": "Gde onset excludes crop boundary. domov quiet release-to-next-r interval preserved. peski direct changing i is held well past CTC/Whisper cores."
+      },
+      {
+        "cueId": "PK-011",
+        "words": 7,
+        "firstOnsetSample": 2406978,
+        "lastFocusEndSample": 2717883,
+        "neutralHoldThroughSample": 2721852,
+        "note": "Current independently approved-style myself carry remains through58.384989 before unchanged iz58.46. Prior direct-body estimate remains distinct; cannot certify all soft carry as direct voice."
+      },
+      {
+        "cueId": "PK-012",
+        "words": 7,
+        "firstOnsetSample": 2722734,
+        "lastFocusEndSample": 3370563,
+        "neutralHoldThroughSample": 3393142,
+        "note": "All seven held-word occurrences inspected independently; early Po/na sparse cores must not shorten held vowels. Pauses between words remain unfilled."
+      },
+      {
+        "cueId": "PK-013",
+        "words": 7,
+        "firstOnsetSample": 3393142,
+        "lastFocusEndSample": 3994798,
+        "neutralHoldThroughSample": 4036473,
+        "note": "Repeat timings remain independent. Final zemli near90.585 sits at weakening harmonic body; additional low decay stays neutral, supported by existing hold through91.53."
+      },
+      {
+        "cueId": "PK-014",
+        "words": 5,
+        "firstOnsetSample": 4083660,
+        "lastFocusEndSample": 4244846,
+        "neutralHoldThroughSample": 4249917,
+        "note": "Initial Ya begins near92.6 after instrumental gap; full idu and final doshchechke held e persist beyond sparse cores. No clear clipped direct ending."
+      },
+      {
+        "cueId": "PK-015",
+        "words": 6,
+        "firstOnsetSample": 4253886,
+        "lastFocusEndSample": 4570965,
+        "neutralHoldThroughSample": 4580667,
+        "note": "All six words retained. Quiet chelovechka onset has broad101.85–102.22 ownership uncertainty. Wider conditioned alignment and source/stem view support current102.095 selection but do not establish exact phoneme edge; later103.65+ carry is not enough alone to justify extending focus."
+      },
+      {
+        "cueId": "PK-016",
+        "words": 5,
+        "firstOnsetSample": 4590810,
+        "lastFocusEndSample": 4748688,
+        "neutralHoldThroughSample": 4754421
+      },
+      {
+        "cueId": "PK-017",
+        "words": 4,
+        "firstOnsetSample": 4759713,
+        "lastFocusEndSample": 4915386,
+        "neutralHoldThroughSample": 4923324
+      },
+      {
+        "cueId": "PK-018",
+        "words": 5,
+        "firstOnsetSample": 4928175,
+        "lastFocusEndSample": 5073926,
+        "neutralHoldThroughSample": 5080761
+      },
+      {
+        "cueId": "PK-019",
+        "words": 6,
+        "firstOnsetSample": 5095976,
+        "lastFocusEndSample": 5253854,
+        "neutralHoldThroughSample": 5261130
+      },
+      {
+        "cueId": "PK-020",
+        "words": 6,
+        "firstOnsetSample": 5262012,
+        "lastFocusEndSample": 5400266,
+        "neutralHoldThroughSample": 5408424
+      },
+      {
+        "cueId": "PK-021",
+        "words": 4,
+        "firstOnsetSample": 5431047,
+        "lastFocusEndSample": 5532124,
+        "neutralHoldThroughSample": 5575122
+      },
+      {
+        "cueId": "PK-022",
+        "words": 4,
+        "firstOnsetSample": 5597392,
+        "lastFocusEndSample": 5712934,
+        "neutralHoldThroughSample": 5720652
+      },
+      {
+        "cueId": "PK-023",
+        "words": 4,
+        "firstOnsetSample": 5765943,
+        "lastFocusEndSample": 5927481,
+        "neutralHoldThroughSample": 5933655
+      },
+      {
+        "cueId": "PK-024",
+        "words": 5,
+        "firstOnsetSample": 5933655,
+        "lastFocusEndSample": 6058678,
+        "neutralHoldThroughSample": 6072129
+      },
+      {
+        "cueId": "PK-025",
+        "words": 6,
+        "firstOnsetSample": 6098809,
+        "lastFocusEndSample": 6429339,
+        "neutralHoldThroughSample": 6435072
+      },
+      {
+        "cueId": "PK-026",
+        "words": 7,
+        "firstOnsetSample": 6436174,
+        "lastFocusEndSample": 6755018,
+        "neutralHoldThroughSample": 6764499
+      },
+      {
+        "cueId": "PK-027",
+        "words": 6,
+        "firstOnsetSample": 6771776,
+        "lastFocusEndSample": 7102084,
+        "neutralHoldThroughSample": 7108479
+      },
+      {
+        "cueId": "PK-028",
+        "words": 7,
+        "firstOnsetSample": 7108920,
+        "lastFocusEndSample": 7418502,
+        "neutralHoldThroughSample": 7423794
+      },
+      {
+        "cueId": "PK-029",
+        "words": 7,
+        "firstOnsetSample": 7426043,
+        "lastFocusEndSample": 8070520,
+        "neutralHoldThroughSample": 8095966
+      },
+      {
+        "cueId": "PK-030",
+        "words": 7,
+        "firstOnsetSample": 8095966,
+        "lastFocusEndSample": 8819559,
+        "neutralHoldThroughSample": 8881740
+      }
+    ],
+    "uncertainties": [
+      {
+        "event": "PK-015-s06",
+        "selectedOnsetSeconds": 102.09501133786848,
+        "plausibleOwnershipSeconds": [
+          101.85,
+          102.22
+        ],
+        "reason": "Quiet connected человечка ownership remains broad; no signal-supported replacement."
+      },
+      {
+        "event": "PK-020-s05",
+        "text": "с",
+        "selectedIntervalSamples": [
+          5354181,
+          5358591
+        ],
+        "reason": "Final встречусь s and preposition s form connected noise; spectrum cannot determine unique phonetic ownership."
+      },
+      {
+        "event": "PK-024-s03",
+        "text": "свой",
+        "selectedIntervalSamples": [
+          5970478,
+          5993190
+        ],
+        "reason": "Quiet connected s/v and glide remain masked; low CTC path does not justify a later strong-vowel onset."
+      },
+      {
+        "event": "PK-026-s04",
+        "text": "из",
+        "selectedStartSample": 6607944,
+        "plausibleOnsetSeconds": [
+          149.795,
+          149.885
+        ],
+        "reason": "Estimated-vocal rise roughly149.78–149.81 is masked in original mix; CTC core149.856. Earlier low-level energy does not uniquely establish a different lexical onset."
+      },
+      {
+        "event": "PK-029-s07",
+        "text": "земли",
+        "selectedStartSample": 7948143,
+        "reason": "Broadband noise emerges before180.230; breath versus initial z ownership cannot be established uniquely. Existing low-confidence selection retained."
+      },
+      {
+        "event": "PK-030-s07",
+        "text": "земли",
+        "selectedStartSample": 8628959,
+        "reason": "Noisier opening precedes strong harmonic body; source instrumentation and estimated noise do not uniquely justify an earlier sample."
+      }
+    ],
+    "limitations": [
+      "No direct auditory listening attestation; signal inspection cannot independently certify lexical identity.",
+      "Source/stem/waveform measurements are correlated observations of one recording.",
+      "Adjacent RMS includes accompaniment or stem artefacts; it is not an onset detector.",
+      "Continuous handoffs and direct-body versus soft carry remain uncertain."
+    ]
+  },
+  "displayCorrections": [
+    {
+      "id": "atomic-entrance",
+      "affectedCues": 23,
+      "before": "A synthetic 1 ms fade could suppress the first active word at the exact cue onset.",
+      "after": "When no pre-vocal reveal interval remains, the incoming line is fully opaque at its selected onset. Separated phrases retain their pre-vocal reveal."
+    },
+    {
+      "id": "pause-refresh",
+      "before": "Sampled stopped media93.624947 s versus canvas93.619605 s:5.342 ms stale; the same word remained active in this observed sample.",
+      "after": "Pause redraws at stopped video.currentTime. Sampled media and canvas both106.055042 s."
+    },
+    {
+      "id": "glyph-state",
+      "before": "Outline could borrow a previous glyph’s active shadow because shadow assignment followed strokeText.",
+      "after": "Set the current glyph shadow before outline and fill; both layouts test every cue."
+    }
+  ],
+  "technicalValidation": {
+    "typecheck": "pass",
+    "testsPassed": 17,
+    "rational60fpsFrames": 12530,
+    "semanticFrameChecks": 2581180,
+    "fullyOpaqueActiveVoiceFrames": 9592,
+    "exactCueEntrances": 30,
+    "exclusiveWordBoundaryChecks": 163,
+    "independentTargetOwnershipStates": 1187,
+    "strictFullSourceDecode": "pass",
+    "sourceVideoFrames": 5220,
+    "sourceAudioRate": 44100,
+    "sourceOffsetSeconds": 0,
+    "aacPrimingSamples": 1600,
+    "primingHandling": "Original media/decoder skip metadata honored; never add a second36.281 ms compensation.",
+    "rebuiltFeatureRows": 5221,
+    "rebuiltFeaturesByteIdentical": true,
+    "featuresSha256": "4ca1135db51abcc66fe914460b179423061b322d6c8e8df8dbd13c75721116a6",
+    "featureWindowLimit": "Centered4096-sample spectral support at22.05 kHz (~186 ms); finite feature windows are not phonetic or millisecond beat markers."
+  },
+  "browserObservations": {
+    "kind": "DOM-backed diagnostics and inspected complete browser pictures; screenshots displayed during review, not saved encoded frames.",
+    "revisionObserved": "po-kamushku-preview-v6-full-onset-visibility",
+    "sourceSha256Observed": "f6572759f48f725497ad42b7c84cf12825824041897c47fdd36832a40ad30dd6",
+    "baselineFullNormalTransport": {
+      "revision": "po-kamushku-preview-v5-held-myself-occurrences",
+      "startSeconds": 0,
+      "endSeconds": 208.809002,
+      "finalPictureFrame": 5219
+    },
+    "v6NormalTransport": {
+      "description": "Normal playback from0 through97.6 s, complete Restore preview at97.712 s, then to recording end; final glyph-state code loaded by restore. A reload segment, not an uninterrupted auditory review.",
+      "endSeconds": 208.809002,
+      "finalPicturePtsSeconds": 208.76,
+      "finalPictureFrame": 5219,
+      "finalLyricsClear": true,
+      "errorText": "",
+      "busy": false
+    },
+    "samples": [
+      {
+        "format": "landscape",
+        "time": 61.74,
+        "rate": 1,
+        "cue": "PK-012",
+        "source": [
+          "По"
+        ],
+        "target": [
+          "by"
+        ],
+        "opacity": 1,
+        "picturePts": 61.72
+      },
+      {
+        "format": "portrait",
+        "time": 61.74,
+        "rate": 0.5,
+        "cue": "PK-012",
+        "source": [
+          "По"
+        ],
+        "target": [
+          "by"
+        ],
+        "opacity": 1,
+        "picturePts": 61.72
+      },
+      {
+        "format": "portrait",
+        "time": 161.2,
+        "rate": 0.5,
+        "cue": "PK-028",
+        "source": [
+          "Собираю"
+        ],
+        "target": [
+          "gather"
+        ],
+        "opacity": 1,
+        "picturePts": 161.2
+      },
+      {
+        "format": "portrait",
+        "time": 164.65,
+        "rate": 0.5,
+        "cue": "PK-028",
+        "source": [
+          "себя"
+        ],
+        "target": [
+          "myself"
+        ],
+        "opacity": 1,
+        "picturePts": 164.64
+      },
+      {
+        "format": "portrait",
+        "time": 198,
+        "rate": 0.5,
+        "cue": "PK-030",
+        "source": [
+          "земли"
+        ],
+        "target": [
+          "of",
+          "the",
+          "earth."
+        ],
+        "opacity": 1,
+        "picturePts": 198
+      },
+      {
+        "format": "portrait",
+        "time": 201.2,
+        "rate": 0.5,
+        "cue": "PK-030",
+        "source": [],
+        "target": [],
+        "opacity": 1,
+        "picturePts": 201.2
+      }
+    ],
+    "limitation": "Observed samples do not continuously measure display stalls, audio-device output latency or every rendered pixel. Picture is intentionally static artwork; advancing decoded PTS and source-clocked response distinguish it from a frozen decoder."
+  },
+  "humanFullListeningAttested": false,
+  "productionAuthorized": false,
+  "fullMovieRendered": false
+}

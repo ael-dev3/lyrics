@@ -2,7 +2,7 @@
 
 **Preview evidence only. All 163 retained source events have separate onset and lexical release selections. This is model/signal inspection, not a normal-speed or reduced-speed listening attestation. Production remains closed.**
 
-Revision: `po-kamushku-preview-v5-held-myself-occurrences`. Original source SHA-256: `f6572759f48f725497ad42b7c84cf12825824041897c47fdd36832a40ad30dd6`. Editorial SHA-256: `bbcf3f94a89dee54df7fc2f1cd7d8341d6b35d0c204770c04f81293da3fee0d1`. Timing candidate SHA-256: `43e741499b02b001a75e9f12bd8728789ed4a87142a00b942f25b7d0bc08f09e`.
+Revision: `po-kamushku-preview-v6-full-onset-visibility`. Original source SHA-256: `f6572759f48f725497ad42b7c84cf12825824041897c47fdd36832a40ad30dd6`. Editorial SHA-256: `bbcf3f94a89dee54df7fc2f1cd7d8341d6b35d0c204770c04f81293da3fee0d1`. Timing candidate SHA-256: `2c4d6ec0f94d60dee952a6c411aad437665655ea0cee4f3abe79a2dd718bf6cf`.
 
 ## Recording and inventory
 
@@ -75,3 +75,7 @@ All 30 full-opacity reading holds are separate from word focus. The body end is 
 ## Listening still needed
 
 The owner’s complete normal-speed review, reduced-speed review of uncertain onsets/held endings, and review in both native square and 9:16 layouts are separate from these signal records. Continuous reduced-vowel handoffs, source-versus-passive-tail splits and the quiet человечка opening deserve particular attention. No listening checkboxes or production permission are inferred from model evidence.
+
+## Final display and signal audit
+
+The v6 [final audit](final-sync-audit.md) rechecks all 30 cues and 163 retained events. Source sample selections and all neutral hold samples remain identical to v5. It corrects incoming-line opacity, exact pause refresh and per-word drawing state; these are presentation corrections, not newly certified phonetic edges.

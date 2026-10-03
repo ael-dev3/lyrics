@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "project": "po-kamushku-lyric-film",
-  "revision": "po-kamushku-preview-v5-held-myself-occurrences",
-  "status": "Complete preview candidate; intro correction retained and all three myself focus tails independently refined; full normal/slow listening gate open",
+  "revision": "po-kamushku-preview-v6-full-onset-visibility",
+  "status": "Complete preview candidate; all acoustic samples and approved held focus tails retained; exact-onset line visibility corrected; full normal/slow listening gate open",
   "sourceClockOffset": 0,
   "sampleRate": 44100,
   "sourceSampleRate": 44100,
@@ -18,7 +18,7 @@
     "Original/zero-lag estimated-vocal source spectra:512/1024sample support, analysishop88/128 not millisecond physical certainty; original mix authority."
   ],
   "onsetReview": {
-    "revision": "po-kamushku-preview-v5-held-myself-occurrences",
+    "revision": "po-kamushku-preview-v6-full-onset-visibility",
     "reviewedWords": 163,
     "unreviewedWords": 0,
     "baselineTimingSha256": "a56bae8e7603816ea8fc80977df369051dc9309146ea14b72f425ddd109e8a32",
@@ -27,7 +27,7 @@
     "countScope": "Retained active events; original164-event signal review is preserved in prior revision history."
   },
   "releaseReview": {
-    "revision": "po-kamushku-preview-v5-held-myself-occurrences",
+    "revision": "po-kamushku-preview-v6-full-onset-visibility",
     "reviewedWords": 163,
     "unreviewedWords": 0,
     "changedWordReleases": 163,
@@ -8961,5 +8961,14 @@
       "remainingGapSeconds": 0.27,
       "scope": "Independently selected bounded soft-carry display focus; not a claim of fresh vocal production throughout the tail."
     }
-  ]
+  ],
+  "displayOnsetReview": {
+    "revision": "po-kamushku-preview-v6-full-onset-visibility",
+    "baselineTimingSha256": "43e741499b02b001a75e9f12bd8728789ed4a87142a00b942f25b7d0bc08f09e",
+    "acousticEventsChanged": 0,
+    "neutralHoldSamplesChanged": 0,
+    "correction": "Incoming line has full opacity at its first acoustic sample when the preceding line requires an atomic vocal handoff. Separated phrases keep the pre-vocal reveal.",
+    "evidence": "evidence/final-sync-audit.json",
+    "humanListeningAttested": false
+  }
 }
