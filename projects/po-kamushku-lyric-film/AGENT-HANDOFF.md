@@ -2,7 +2,11 @@
 
 ## Current state
 
-Complete bilingual v6 preview. Read [the final synchronization audit](evidence/final-sync-audit.md) for preserved source events, exact-onset visibility, paused-clock refresh and isolated glyph emphasis. Production render and full listening approval remain pending. Start at the project README, source manifest, current `evidence/preview-inputs.json`, timing candidate and independent timing review. [The sampled browser checks](evidence/browser-preview-checks.md) record the observed playback/recovery scope; [the composition still record](evidence/preview-stills.json) identifies the saved renderer diagnostics separately. Use the connected-phoneme workflow; preserve original source zero and the exact source identity.
+Both authorized v6 films and the Desktop upload kit are complete. The original-square 1080×1080 and composed 1080×1920 films each have 12,530 frames at 60 fps. [Final technical checks](evidence/final-verification.json) and [decoded-scene checks](evidence/decoded-scene-verification.json) pass both formats. [The Desktop receipt](evidence/desktop-delivery-receipt.json) records 25 copied files with independently matched hashes. GitHub source/archive publication and release `po-kamushku-v1.0.0` are planned, with remote verification still pending; do not present that release as downloadable yet.
+
+Start with the project README, [production lessons](PRODUCTION-LESSONS.md), [exact reproduction notes](PRODUCTION-NOTES.md), source manifest and current `evidence/preview-inputs.json`. The frozen revision is `po-kamushku-preview-v6-full-onset-visibility`. [The synchronization audit](evidence/final-sync-audit.md) preserves source samples while fixing exact-onset line visibility, paused-clock refresh and isolated glyph emphasis. The owner declared full current-preview listening review complete at normal speed, reduced speed for uncertain words/holds, and both formats; [review](evidence/sync-review.json) and [authorization](evidence/production-authorization.json) are separate hash-bound records. Earlier signal reviews retain their honest historical status rather than being rewritten as listening attestations.
+
+[Browser checks](evidence/browser-preview-checks.md) record their sampled playback/recovery scope. [The final README image](evidence/final-stills.json) is an actual decoded production frame; historical preview stills remain in `evidence/preview-stills.json`. Use the connected-phoneme workflow and preserve exact source identity, original zero and bounded uncertainty.
 
 ## Ownership
 
@@ -14,22 +18,29 @@ Complete bilingual v6 preview. Read [the final synchronization audit](evidence/f
 - `src/model.ts`: exclusive acoustic focus, semantic unions and reading-window contracts.
 - `src/scene.ts`: fixed complete layouts, source-material masks, source-compatible illumination and separate display mapping.
 - `src/player.ts`: original video clock, genuine decoded picture, display-cadence word focus, seek/recovery and loaded-identity diagnostics.
+- `scripts/render-production.ts`: exact source-picture decode, rational 60 fps clock, shared scene painting, unchanged original AAC and frozen-input production gate.
+- `scripts/verify-final.ts` / `scripts/verify-decoded-scene.ts`: independent encoded-file and finite scene/glyph evidence; neither establishes phonetic correctness.
+- `scripts/make-covers.ts`, `scripts/make-captions.ts`, `scripts/package-delivery.ts`: separate platform covers, line-level captions and checksum-bound delivery assembly.
 
 ## Review priorities
 
 1. Spoken introduction: v3 removes the inaudible provisional name at 6.127 s and retains the audible 7.328 s call. See `evidence/intro-lexical-correction.json`. The historical 55-event independent proposals include the rejected event; their scope has not been rewritten. Do not treat a physical burst or conditioned alignment as proof of a spoken word.
 2. First sung warm word: a broad recognizer falsely allocated it several seconds before the direct voice. A strong CTC core is also not universally the phonetic beginning. Preserve the independently selected boundary and its original-mix context.
 3. Repeated run/carry verbs and all pebble/earth refrains: inspect each quiet opening and held vowel independently. Do not transfer the first performance's offset to later ones.
-4. Held myself: v5 treats all three себя / myself endings consistently, with independently selected releases at58.385,149.700 and164.820. Prior direct-body estimates remain separate; the next из onsets are unchanged. See `evidence/held-myself-repeat-review.json`. A shared treatment does not mean copying one duration to every performance.
+4. Held myself: v5 treats all three себя / myself endings consistently, with independently selected releases at 58.385, 149.700 and 164.820. Prior direct-body estimates remain separate; the next из onsets are unchanged. See `evidence/held-myself-repeat-review.json`. A shared treatment does not mean copying one duration to every performance.
 5. Neutral line lifetime: keep readable through the reviewed held body/tail; when a gentle fade cannot fit, make a source-vocal handoff rather than a premature blank.
 6. Complete target meanings: include articles/auxiliaries and reordered case constructions without whole-line grouping or invented English acoustic times.
 7. Native lower arc: preserve enough photographed stone detail behind the text. Portrait must retain the complete ring/person and equal text; check actual platform-safe size.
 8. Realistic viewing: compare quieter and stronger passages with the source reference. Keep source grain and material detail; brightness should not wash the photograph into flat warm polygons.
 9. Verify actual loaded revision/hash, not just a query parameter or badge. Static source imagery still needs advancing decoded PTS and dynamic source-clocked stone response.
+10. A correct event timestamp can still look late: preserve full opacity on the first sung frame, commit paused-clock state immediately, and set each glyph's shadow before drawing it. Inspect actual encoded glyphs, not only focus booleans.
+11. Retain uncertainty at connected boundaries and soft decays. The three approved myself carries are display-focus choices separate from earlier direct-body estimates; do not silently collapse them back into those estimates.
 
 ## Reproduce and continue
 
-With the exact local source present: `npm ci`, `npm run features`, `npm run prepare`, `npm run check`, `npm run preview`. `node scripts/proof-stills.ts` is a sampled composition diagnostic; no listening or full production authority is implied. Proof stills use the original static artwork sample and the same scene renderer. Main browser preview always has the complete source picture and soundtrack.
+With the exact local source present: `npm ci`, `npm run features`, `npm run prepare`, `npm run check`, `npm run preview`. `node scripts/proof-stills.ts` is a sampled composition diagnostic; no listening or full production authority is implied. Proof stills use the original static artwork sample and the same scene renderer. Main browser preview always has the complete source picture and soundtrack. Production decodes all 5,220 original frames; only the material-mask reference stays fixed.
+
+Use `node scripts/render-production.ts --check-gate` and `--plan` before production. The exact approved commands, encoder and verifier contracts, cover/caption generation, and archive inputs are documented in the production notes. Every selected source/target token has focused and neutral decoded checks, but scene verification samples 829 frames per format; keep that limit explicit. Any modified source, timing, features, font or scene input requires a new applicable review before another render.
 
 Keep raw media, stems, local models, raw recognizer output and scratch proofs outside ordinary Git history. Publish neutral reusable decisions and bounded evidence; omit private review quotations, local host paths and account details. Preserve uncertainty rather than recording a fabricated audit.
 

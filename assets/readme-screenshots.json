@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "reviewedOn": "2026-09-27",
-  "scope": "Featured song sections in the main README and their project README entry points; Must Have Been A Dream and TAKE ME THERE use decoded final-film frames.",
+  "reviewedOn": "2026-10-03",
+  "scope": "Featured song sections in the main README and their project README entry points; По камушку and completed films use decoded final-film frames, with historical statuses retained.",
   "newExtraction": {
     "fps": [
       23.976023976,
@@ -9,12 +9,34 @@
       60
     ],
     "frameNumbering": "zero-based",
-    "capture": "FFmpeg select=eq(n,FRAME), one full-frame PNG; no crop, recolor, text replacement or generated imagery.",
+    "capture": "FFmpeg select=eq(n,FRAME), one full-frame PNG or JPEG with its actual encoding recorded; no crop, recolor, text replacement or generated imagery.",
     "sourceIdentity": "New source files matched the recorded delivery SHA-256 before selecting their frames.",
     "scope": "Completed-film screenshots only; preview entries specify their diagnostic capture method individually."
   },
-  "review": "Every featured song has an associated representative image. Must Have Been A Dream, TAKE ME THERE, Mitski, Sun and Rainline use exact decoded final frames; historical editions retain their recorded status and limitations. Rainline's scoped delivery acceptance does not certify full acoustic synchronization review.",
+  "review": "Every featured song has an associated representative image. По камушку uses the exact decoded native final frame, with listening, full-file technical and finite scene evidence recorded separately. Other editions retain their recorded provenance, statuses and limitations; Rainline scoped acceptance does not certify full acoustic review.",
   "screenshots": [
+    {
+      "song": "По камушку",
+      "image": "projects/po-kamushku-lyric-film/evidence/final-square-58.250.jpg",
+      "project": "projects/po-kamushku-lyric-film/README.md",
+      "timestampSeconds": 58.25,
+      "frame": 3495,
+      "sourceFrame": 1456,
+      "edition": "Verified v6 production native 1080x1080 film at 60 fps; po-kamushku-v1.0.0 release publication pending",
+      "selection": "Complete original stone circle and white-clothed figure, equal held себя / myself focus, and measured response inside photographed stone surfaces.",
+      "method": "FFmpeg select=eq(n,3495) decoded from the actual technically verified native encoded film. Complete composition, no crop, recolor, rebuilt text or generated imagery. Native JPEG q2. Paired held себя/myself focus and complete source artwork inspected.",
+      "width": 1080,
+      "height": 1080,
+      "bytes": 130462,
+      "sha256": "1419c898fbc2558792f2540fb19702d92d7396c04fa71ac9eb846015caf29151",
+      "encoding": "JPEG",
+      "sourceFile": "Po-Kamushku-Settlers-YouTube-1080x1080-60fps.mp4",
+      "sourceVideoSha256": "d2d1ccd78f5ea065d00ff409595fd335dec9aa0fd5f645996f65479f10c3e22e",
+      "originalMediaSha256": "f6572759f48f725497ad42b7c84cf12825824041897c47fdd36832a40ad30dd6",
+      "previewIdentitySha256": "d674a1f2b17a8775ca240c06e901b9013a5777c150017d925930e56ca44c924f",
+      "projectEvidence": "projects/po-kamushku-lyric-film/evidence/final-stills.json",
+      "reviewLimit": "A still establishes visible composition only; owner listening attestation and full encoded-file checks are separate records."
+    },
     {
       "song": "Must Have Been A Dream",
       "image": "assets/must-have-been-a-dream-final-78-870.png",

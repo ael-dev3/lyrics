@@ -1,9 +1,10 @@
 # README song screenshots
 
-Updated 2 October 2026. Featured songs in the main README have a representative image with its edition and preview/final status, and each song's project README has an associated image. Rendered preview references are identified separately from browser captures and decoded final-film frames. Promotional covers and supplementary frames remain separate from the representative image.
+Updated 3 October 2026. Featured songs in the main README have a representative image with its edition and preview/final status, and each song's project README has an associated image. Rendered preview references are identified separately from browser captures and decoded final-film frames. Promotional covers and supplementary frames remain separate from the representative image.
 
 | Song | Representative image | Time | Edition / provenance |
 | --- | --- | --- | --- |
+| По камушку | [Complete stone ring, equal себя / myself focus and material response](../projects/po-kamushku-lyric-film/evidence/final-square-58.250.jpg) | 00:58.250 | Exact decoded frame 3495 from the verified native 1080×1080, 60 fps film; original frame 1456 |
 | Кометы | [Original forest, equal bilingual type and individual focus](../projects/komety-lyric-film/evidence/final-landscape-12.400.jpg) | 00:12.400 | Exact decoded frame 744 from the verified native 1920×796, 60 fps film; original frame 310 |
 | Let You Down | [Original neon corridor portrait with measured neon light and neon spectrum](../projects/let-you-down-lyric-film/evidence/preview-landscape-27.000.jpg) | 00:27.000 | Native-renderer frame before the first vocal, matching the released v1.0.0 films at that moment. Lyric frames are withheld because the edition keeps its lyric text local |
 | Must Have Been A Dream | [Original blue-lit stage performance and individual Know-It-All focus](../assets/must-have-been-a-dream-final-78-870.png) | 01:18.870 | Verified final 1920×1080 landscape film; exact decoded frame 1891 |
@@ -30,6 +31,12 @@ Updated 2 October 2026. Featured songs in the main README have a representative 
 | Tanisea | [Square composition and English focus](../assets/tanisea-vnext-hero.png) | 00:48.000 | Historical square vNext reference; time visible in frame |
 
 The [structured inventory](../assets/readme-screenshots.json) records image dimensions, hashes, project associations and selection reasons. Original-creator credits remain with the song entries and project documentation.
+
+## По камушку final stone-surface frame
+
+Frame 3495 at 58.250 seconds was decoded from the verified native 1080×1080, 60 fps film, using original source frame 1456. It preserves the entire stone circle and white-clothed figure, paired held **себя / myself** emphasis, original photograph texture and response inside existing stone surfaces. The main and project READMEs share this exact JPEG, with no crop, recolor, rebuilt text or generated imagery. Original picture and soundtrack: Settlers’ source upload; no unidentified artwork photographer is inferred.
+
+[The final-still manifest](../projects/po-kamushku-lyric-film/evidence/final-stills.json) records the frame indices, image bytes/SHA-256 and final-film identity. Full original-aspect composition was inspected. A single image establishes visual presentation only. [The owner’s bound listening review](../projects/po-kamushku-lyric-film/evidence/sync-review.json), [full encoded-file checks](../projects/po-kamushku-lyric-film/evidence/final-verification.json) and [finite decoded-scene audit](../projects/po-kamushku-lyric-film/evidence/decoded-scene-verification.json) remain separate records. Earlier preview stills retain their historical status.
 
 ## Must Have Been A Dream final frame
 

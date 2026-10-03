@@ -134,3 +134,9 @@ Credits reflect source metadata and the available production record. If a specif
 ## Design-study references
 
 - **LÜCY & Moyka — LOOP**, visualizer by **Yoren佑任**, © 2026 Don’t Lie To Me LTD. [Original upload and credits](https://www.youtube.com/watch?v=fdcrpG9uKn0) · [Study and screenshot attribution](docs/studies/loop-2026/README.md). The screenshot excerpts remain third-party material; we claim no authorship or CC BY licensing rights over them.
+
+## По камушку — Settlers
+
+Original picture and soundtrack: [Settlers source recording](https://www.youtube.com/watch?v=oysjDP9Vqdg). The upload credits Шелпакова Яна Петровна and Судосьев Олег Павлович, ℗ Snegiri-music, distribution by ONErpm, release date 26 September 2025. A separate artwork photographer is not identified in this source; none is inferred. Original media are not represented as open-licensed software assets.
+
+English translation, equal bilingual typography and word focus, measured relighting within the original photographed stones, preview and production implementation: Ael, assisted with Codex. [Alegreya](https://github.com/google/fonts/tree/main/ofl/alegreya) uses the SIL Open Font License; exact license and font bytes are retained in the project and source archive. See the [production method and evidence](projects/po-kamushku-lyric-film/PRODUCTION-NOTES.md).
