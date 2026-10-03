@@ -9,8 +9,14 @@
     "typecheck": "tsc --noEmit",
     "check": "npm run typecheck && node --test tests/*.test.ts && node scripts/proof-stills.ts",
     "features": "node scripts/analyze-audio.ts",
-    "render:production": "node scripts/render-gate.ts",
-    "timeline": "node scripts/build-timeline.ts"
+    "render:production": "node scripts/render-production.ts --production",
+    "timeline": "node scripts/build-timeline.ts",
+    "render:plan": "node scripts/render-production.ts --plan",
+    "check:production": "npm run typecheck && node --test tests/*.test.ts && node scripts/verify-render-clock.ts",
+    "verify:final": "node scripts/verify-final.ts",
+    "verify:scene": "node scripts/verify-decoded-scene.ts",
+    "covers": "node scripts/make-covers.ts",
+    "captions": "node scripts/make-captions.ts"
   },
   "devDependencies": {
     "@types/node": "26.4.0",

@@ -24,7 +24,7 @@ The centered presentation supersedes the initial v2 right-offset composition. Ve
 
 The regression comparison retains every one of the 150 previously selected vocal bodies. Per-track validation allows genuine simultaneous voices while rejecting reading collisions within a voice. Actual-source geometry proofs check equal concurrent sizes and block separation; browser diagnostics expose both vocal tracks independently.
 
-The current frozen preview and production gate identify v2. Reports and screenshots explicitly labelled v1 remain historical evidence of the earlier inventory and tail treatment; they do not verify this revision. Full listening review and explicit current-input production authorization remain pending. No full song render is performed for this correction.
+The current frozen preview and production gate identify v2. Reports and screenshots explicitly labelled v1 remain historical evidence of the earlier inventory and tail treatment; they do not verify this revision. Current-input production authorization is now recorded for the centered presentation; separate full-song, reduced-speed and both-format review has been explicitly attested for those unchanged inputs. Both complete production exports passed independent encoded-file and decoded-scene verification. Staging and Desktop copying were checksum-verified; the approved source/scene remain unchanged.
 
 ## Reusable lesson
 

@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "status": "passed",
+  "project": "prizrak-lyric-film",
+  "revision": "prizrak-preview-v2",
+  "sourceCommit": "273b66d5f436d10d3cd29821f17a34b40e164f6c",
+  "sourceSha256": "8563f6b817c9b1cc39649363a52486214c691c0d98ae7bb82263021ac7363523",
+  "archiverSha256": "acf54c8cfb0953cf98038a2cd35b5b90ca30eaf8022184be8443ef03c78ed1d8",
+  "archives": [
+    {
+      "kind": "upload-kit",
+      "file": "Prizrak-Sotode-Upload-Kit.zip",
+      "bytes": 421634478,
+      "sha256": "baa5e18e16d959b096fafb812ecb2b20f52a5d45c983b675e3d1017f068810dc",
+      "payloadEntryCount": 27,
+      "independentlyReadAndHashed": true
+    },
+    {
+      "kind": "source-project",
+      "file": "Prizrak-Sotode-Source-Project.zip",
+      "bytes": 122785164,
+      "sha256": "9e48de5dacb3a620f20a46167e9c95c2ac68c514eb0d03d7a834eea98d31aaac",
+      "payloadEntryCount": 319,
+      "independentlyReadAndHashed": true
+    }
+  ],
+  "sourceCoverage": {
+    "frozenInputCount": 18,
+    "committedEntries": 313,
+    "addedExactSource": true,
+    "addedExactPreviewClient": true,
+    "addedCoverProofs": 4,
+    "addedRenderReceipts": 2,
+    "allCommittedScriptAndEvidenceHashesVerified": true
+  },
+  "kitCoverage": {
+    "manifestEntries": 23,
+    "originalManifestAndChecksumFileVerified": true,
+    "allEntryHashesVerified": true
+  },
+  "checksumPolicy": "Each archive checksum file excludes itself; ZIP SHA-256 is external. Every archive entry was separately decompressed and hashed after ZIP creation.",
+  "scope": "Verified local source and upload ZIPs; authenticated draft storage, Desktop copying and remote availability verification are separate coordinator steps."
+}

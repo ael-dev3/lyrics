@@ -1,0 +1,63 @@
+{
+  "schema": "prizrak/render-clock-verification/v1",
+  "status": "passed",
+  "revision": "prizrak-preview-v2",
+  "sourceSha256": "8563f6b817c9b1cc39649363a52486214c691c0d98ae7bb82263021ac7363523",
+  "rendererSha256": "ec7a6971ab24793dcec64ca89170c1a10613f4a3163d26a94946dbc59c605e85",
+  "frames": 15306,
+  "sourceEvents": 156,
+  "normalizedFrames": 996,
+  "maxTimeNormalizationSeconds": 2.842170943040401e-14,
+  "correctedFocusComparisons": 6,
+  "correctedEdges": [
+    {
+      "frame": 5691,
+      "time": 94.85,
+      "wordId": "RU-002-5",
+      "sample": 4182885,
+      "unadjustedSample": 4182884.9999999995,
+      "expectedFocused": false
+    },
+    {
+      "frame": 9627,
+      "time": 160.45,
+      "wordId": "RU-015-1",
+      "sample": 7075845,
+      "unadjustedSample": 7075844.999999999,
+      "expectedFocused": false
+    },
+    {
+      "frame": 10662,
+      "time": 177.7,
+      "wordId": "RU-018-1",
+      "sample": 7836570,
+      "unadjustedSample": 7836569.999999999,
+      "expectedFocused": false
+    },
+    {
+      "frame": 10662,
+      "time": 177.7,
+      "wordId": "RU-018-2",
+      "sample": 7836570,
+      "unadjustedSample": 7836569.999999999,
+      "expectedFocused": true
+    },
+    {
+      "frame": 10782,
+      "time": 179.7,
+      "wordId": "RU-018-3",
+      "sample": 7924770,
+      "unadjustedSample": 7924769.999999999,
+      "expectedFocused": false
+    },
+    {
+      "frame": 10782,
+      "time": 179.7,
+      "wordId": "RU-018-4",
+      "sample": 7924770,
+      "unadjustedSample": 7924769.999999999,
+      "expectedFocused": true
+    }
+  ],
+  "checks": "Exact 25→60 cadence, all canonical sample focus states, final audio-tail hold, invalid frames and fragmented/truncated streams"
+}

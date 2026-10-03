@@ -1,0 +1,71 @@
+{
+  "schema": "prizrak/final-stills/v1",
+  "status": "passed",
+  "project": "prizrak-lyric-film",
+  "revision": "prizrak-preview-v2",
+  "extractedAt": "2026-10-03T16:00:41.706Z",
+  "sourceSha256": "8563f6b817c9b1cc39649363a52486214c691c0d98ae7bb82263021ac7363523",
+  "approvedInputHashes": {
+    "public/source.mp4": "8563f6b817c9b1cc39649363a52486214c691c0d98ae7bb82263021ac7363523",
+    "public/timeline.json": "9ba5386855ca1cef9a4c381d43260110be59496b971fdea0263bcb60849bd1d4",
+    "public/audio-features.json": "dbef98d33ccd973ff3b8640e3bf9702a24666898ee1cfd1c68bc45dc49301665",
+    "source/recording.json": "94f8154d7e9854f9dfcc14bfbcd1306fed153cd682954bf75befbfaa807ab344",
+    "source/russian-editorial.json": "14f98c400dc3db1993a9b5662e30cf6f506517e9d47a06b7cad234b57b46e59a",
+    "source/japanese-selected-editorial.json": "ecf965914d684f10980fc6de9f2a1f43189f0e3f42b4df8d43dbbc9492307319",
+    "source/japanese-overlap-selected.json": "b15acdff912e44f90a5ce8d673c0282e0313c99e3256ba1a63476cd29451af24",
+    "src/model.ts": "f3a3f03ce5d72a77d2e2ec9deaadef2aac7e80a3a53c547d867c3cfa503d5281",
+    "src/scene.ts": "5f75ca586f40a56d1fde8eb831b86a7b22bafd2a3cc7058584b99be6507fabcc",
+    "src/player.ts": "a7e1b3ca3e9f102ef1146bef7c0340b25738205b3c13935fd5883e3ce50ba0eb",
+    "review/index.html": "00db10eb154d9a9815e42a27c8c6708a4ee2c408103f9e7668d1034582216cfe",
+    "review/client.js": "7303db6dca3efe3f57245af4f33d673da3136bb896fbab3a0e7d2ac9d4c48953",
+    "public/fonts/NotoSerif.ttf": "4d8e6761424656867019081a1a01336f3cb086982682698714054fc33f782713",
+    "public/fonts/NotoSerifJP.ttf": "2fd527ba12b6a44ec30d796d633360da0aeba6c5d4af1304ce12bb4dc15a7dfc",
+    "package-lock.json": "af4ca8f921168487ac658d72819f29b4fa232fa86a325f7153724e99fb67b59e",
+    "scripts/build-timeline.ts": "f1fc476a011e49e2867a50177f2cbde9d59430eafd7dc97aa28f47207443cc7b",
+    "scripts/preview-server.ts": "74114ee63b4e7e2eb56b9b4e2b6b8a98d5f3b9a0dcc2cff1161c6ac4a9cc9634",
+    "scripts/render-gate.ts": "f75a8b63244564e3d937b7e835890031ce7e8dd5eac0111d0b46bf2277682ee1"
+  },
+  "previewIdentitySha256": "5a4f1236af43ccd329a627e3d5ce18dbe14c34fe4d81eecf6afe3bdbc0a441d0",
+  "rendererSha256": "ec7a6971ab24793dcec64ca89170c1a10613f4a3163d26a94946dbc59c605e85",
+  "makerSha256": "571170d3386fbd05a0583a8292e893f3d1a40e8638b84bb2cf7a0218dbd8817a",
+  "verificationReportHashes": {
+    "technical": "59bc99cbc059a860fab6ff46ad0aaa4ecd49bb4dce290b29eaef4591f00589c2",
+    "decodedScene": "4dd9c5affcb71d209d523e9b3af5937d9606574f6017553d1ed36b9fb8fed74a"
+  },
+  "outputFrame": 12858,
+  "outputPtsSeconds": 214.3,
+  "sourceFrame": 5357,
+  "sourcePtsSeconds": 214.28,
+  "images": [
+    {
+      "format": "landscape",
+      "path": "evidence/final-landscape-overlap-214.300.jpg",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 206216,
+      "sha256": "45fee9ac3eaf73b1b4d6684f539d776e19c149f48bfbf8f9bfea1f6ded496be1",
+      "filmPath": "renders/Prizrak-Sotode-YouTube-1920x1080-60fps.mp4",
+      "outputFrame": 12858,
+      "outputPtsSeconds": 214.3,
+      "sourceFrame": 5357,
+      "sourcePtsSeconds": 214.28,
+      "filmSha256": "88e1423409a6e6ccb8ac68cb1760d26a04c3bba116f7b848f35703b994dc62f5"
+    },
+    {
+      "format": "portrait",
+      "path": "evidence/final-portrait-overlap-214.300.jpg",
+      "width": 1080,
+      "height": 1920,
+      "bytes": 188571,
+      "sha256": "7fd1d268c5248156a26b34bc3525dace45dba51d3a931f86c5832d430d75633b",
+      "filmPath": "renders/Prizrak-Sotode-TikTok-1080x1920-60fps.mp4",
+      "outputFrame": 12858,
+      "outputPtsSeconds": 214.3,
+      "sourceFrame": 5357,
+      "sourcePtsSeconds": 214.28,
+      "filmSha256": "bd210b140642ef9ef7b2b4b170cfef577a74b617c12e39d60b08c6014f82a8f4"
+    }
+  ],
+  "method": "Actual completed MP4 frames selected by zero-based decoded frame index 12858, verified PTS 214.300, full-frame JPEG quality 2; no crop, scaling, scene reconstruction or text repaint.",
+  "limits": "Still provenance and gate identity only; both combined passed reports are prerequisites. This extraction does not add listening attestation, establish acoustic accuracy, or prove every unsampled picture."
+}
