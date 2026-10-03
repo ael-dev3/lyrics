@@ -113,3 +113,9 @@ Before full rendering, confirm:
 - [ ] Creative conclusions are recorded separately from technical and listening evidence, with the existing current-revision render approval intact.
 
 Write public lessons as reusable production decisions. Exclude private quotations, ratings, identities and review transcripts. Preserve accepted deliveries and their original evidence; label future A/B ideas as proposals until they have actually been reviewed.
+
+## Static artwork can own the musical motion
+
+The [По камушку preview](../projects/po-kamushku-lyric-film/README.md) applies measured frequency response to conservative masks inside photographed stones. Preserve the source texture, fixed silhouettes and subject; use a source-compatible light direction and inward feather rather than drawing a new ring or hard polygon outlines. Bind the material mask to one canonical source frame so fresh starts at different timestamps do not inherit codec-noise differences. Read back that reference once and precompute every mask before revealing the first frame; lazy readback during a later musical entrance can stall playback.
+
+Confirm whether the source itself is still artwork before interpreting a static subject as a decoding failure. Keep advancing source-picture PTS and word-clock diagnostics, with visible authored response tied to measured audio. Separately review realistic viewing size, texture retention, low/high musical intensity and the reading region's effect on existing material. A static source and successful technical checks cannot establish a complete listening review. This example is preview-only; its exact masks, typeface, palette and lyrical themes belong to this recording.

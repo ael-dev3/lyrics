@@ -1,0 +1,4801 @@
+{
+  "schemaVersion": 1,
+  "revision": "po-kamushku-preview-v2-source-phonetic-review",
+  "sampleRate": 44100,
+  "sourceSha256": "f6572759f48f725497ad42b7c84cf12825824041897c47fdd36832a40ad30dd6",
+  "sourceDuration": 208.82721088435375,
+  "cues": [
+    {
+      "id": "PK-001",
+      "templateId": "intro",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Яна, Яна, песенку спой, Яночка",
+      "targetText": "Yana, Yana, sing a song, Yanochka.",
+      "start": 6.127006802721088,
+      "end": 12.484988662131519,
+      "visibleStart": 5.907006802721089,
+      "fullOpacityEnd": 13.03,
+      "visibleEnd": 13.53,
+      "exitMode": "fade",
+      "words": [
+        {
+          "id": "PK-001:intro-s01",
+          "text": "Яна,",
+          "sourceIndex": 0,
+          "startSample": 270201,
+          "endSample": 283916,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-001:intro-s01b",
+          "text": "Яна,",
+          "sourceIndex": 1,
+          "startSample": 323165,
+          "endSample": 351036,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-001:intro-s02",
+          "text": "песенку",
+          "sourceIndex": 2,
+          "startSample": 508694,
+          "endSample": 524173,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-001:intro-s03",
+          "text": "спой,",
+          "sourceIndex": 3,
+          "startSample": 524173,
+          "endSample": 536918,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-001:intro-s04",
+          "text": "Яночка",
+          "sourceIndex": 4,
+          "startSample": 537006,
+          "endSample": 550588,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        }
+      ],
+      "targets": [
+        {
+          "index": 0,
+          "id": "PK-001:intro-t01",
+          "text": "Yana,",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 1,
+          "id": "PK-001:intro-t01b",
+          "text": "Yana,",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Provisional second spoken call; independently timed and explicitly pending lexical listening review."
+        },
+        {
+          "index": 2,
+          "id": "PK-001:intro-t02",
+          "text": "sing",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 3,
+          "id": "PK-001:intro-t03",
+          "text": "a",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "grammar-completion",
+          "rationale": "The indefinite article belongs to the complete noun meaning песенку, together with song."
+        },
+        {
+          "index": 4,
+          "id": "PK-001:intro-t04",
+          "text": "song,",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "grammar-completion",
+          "rationale": "A song is the complete English noun phrase for песенку. Its affectionate diminutive does not establish a literal size."
+        },
+        {
+          "index": 5,
+          "id": "PK-001:intro-t05",
+          "text": "Yanochka.",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "PK-002",
+      "templateId": "v1-window",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Тёплый свет из окна на обоях",
+      "targetText": "Warm light from the window on the wallpaper.",
+      "start": 16.38501133786848,
+      "end": 20.04501133786848,
+      "visibleStart": 16.16501133786848,
+      "fullOpacityEnd": 20.34,
+      "visibleEnd": 20.34,
+      "exitMode": "vocal-handoff",
+      "words": [
+        {
+          "id": "PK-002:v1-window-s01",
+          "text": "Тёплый",
+          "sourceIndex": 0,
+          "startSample": 722579,
+          "endSample": 744188,
+          "confidence": "low",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-002:v1-window-s02",
+          "text": "свет",
+          "sourceIndex": 1,
+          "startSample": 744188,
+          "endSample": 772191,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-002:v1-window-s03",
+          "text": "из",
+          "sourceIndex": 2,
+          "startSample": 772412,
+          "endSample": 779423,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-002:v1-window-s04",
+          "text": "окна",
+          "sourceIndex": 3,
+          "startSample": 779468,
+          "endSample": 809808,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-002:v1-window-s05",
+          "text": "на",
+          "sourceIndex": 4,
+          "startSample": 809808,
+          "endSample": 815630,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-002:v1-window-s06",
+          "text": "обоях",
+          "sourceIndex": 5,
+          "startSample": 815630,
+          "endSample": 883985,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        }
+      ],
+      "targets": [
+        {
+          "index": 0,
+          "id": "PK-002:v1-window-t01",
+          "text": "Warm",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 1,
+          "id": "PK-002:v1-window-t02",
+          "text": "light",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 2,
+          "id": "PK-002:v1-window-t03",
+          "text": "from",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 3,
+          "id": "PK-002:v1-window-t04",
+          "text": "the",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "grammar-completion",
+          "rationale": "The window supplies the English article required with this contextual singular noun."
+        },
+        {
+          "index": 4,
+          "id": "PK-002:v1-window-t05",
+          "text": "window",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 5,
+          "id": "PK-002:v1-window-t06",
+          "text": "on",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 6,
+          "id": "PK-002:v1-window-t07",
+          "text": "the",
+          "sourceIndices": [
+            5
+          ],
+          "focusSourceIndices": [
+            5
+          ],
+          "relation": "grammar-completion",
+          "rationale": "The wallpaper supplies the contextual English article."
+        },
+        {
+          "index": 7,
+          "id": "PK-002:v1-window-t08",
+          "text": "wallpaper.",
+          "sourceIndices": [
+            5
+          ],
+          "focusSourceIndices": [
+            5
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "PK-003",
+      "templateId": "v1-sorrow",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "От печали уже не сбежать",
+      "targetText": "No escape from sorrow now.",
+      "start": 20.34,
+      "end": 23.8,
+      "visibleStart": 20.34,
+      "fullOpacityEnd": 24.035011337868482,
+      "visibleEnd": 24.035011337868482,
+      "exitMode": "vocal-handoff",
+      "words": [
+        {
+          "id": "PK-003:v1-sorrow-s01",
+          "text": "От",
+          "sourceIndex": 0,
+          "startSample": 896994,
+          "endSample": 908019,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-003:v1-sorrow-s02",
+          "text": "печали",
+          "sourceIndex": 1,
+          "startSample": 908240,
+          "endSample": 948150,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-003:v1-sorrow-s03",
+          "text": "уже",
+          "sourceIndex": 2,
+          "startSample": 948150,
+          "endSample": 976594,
+          "confidence": "low",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-003:v1-sorrow-s04",
+          "text": "не",
+          "sourceIndex": 3,
+          "startSample": 976594,
+          "endSample": 985414,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-003:v1-sorrow-s05",
+          "text": "сбежать",
+          "sourceIndex": 4,
+          "startSample": 985414,
+          "endSample": 1049580,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        }
+      ],
+      "targets": [
+        {
+          "index": 0,
+          "id": "PK-003:v1-sorrow-t01",
+          "text": "No",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 1,
+          "id": "PK-003:v1-sorrow-t02",
+          "text": "escape",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 2,
+          "id": "PK-003:v1-sorrow-t03",
+          "text": "from",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 3,
+          "id": "PK-003:v1-sorrow-t04",
+          "text": "sorrow",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 4,
+          "id": "PK-003:v1-sorrow-t05",
+          "text": "now.",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "PK-004",
+      "templateId": "v1-time",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Время сложено в старом комоде",
+      "targetText": "Time is folded in an old dresser.",
+      "start": 24.035011337868482,
+      "end": 27.45,
+      "visibleStart": 24.035011337868482,
+      "fullOpacityEnd": 27.875011337868482,
+      "visibleEnd": 27.875011337868482,
+      "exitMode": "vocal-handoff",
+      "words": [
+        {
+          "id": "PK-004:v1-time-s01",
+          "text": "Время",
+          "sourceIndex": 0,
+          "startSample": 1059944,
+          "endSample": 1081112,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-004:v1-time-s02",
+          "text": "сложено",
+          "sourceIndex": 1,
+          "startSample": 1081112,
+          "endSample": 1119920,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-004:v1-time-s03",
+          "text": "в",
+          "sourceIndex": 2,
+          "startSample": 1119920,
+          "endSample": 1122566,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-004:v1-time-s04",
+          "text": "старом",
+          "sourceIndex": 3,
+          "startSample": 1122566,
+          "endSample": 1156522,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-004:v1-time-s05",
+          "text": "комоде",
+          "sourceIndex": 4,
+          "startSample": 1156522,
+          "endSample": 1210545,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        }
+      ],
+      "targets": [
+        {
+          "index": 0,
+          "id": "PK-004:v1-time-t01",
+          "text": "Time",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 1,
+          "id": "PK-004:v1-time-t02",
+          "text": "is",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "grammar-completion",
+          "rationale": "Is folded is the complete passive meaning of сложено. The auxiliary and participle share that source event."
+        },
+        {
+          "index": 2,
+          "id": "PK-004:v1-time-t03",
+          "text": "folded",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "grammar-completion",
+          "rationale": "Is folded is the complete passive meaning of сложено. The auxiliary and participle share that source event."
+        },
+        {
+          "index": 3,
+          "id": "PK-004:v1-time-t04",
+          "text": "in",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 4,
+          "id": "PK-004:v1-time-t05",
+          "text": "an",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "relation": "grammar-completion",
+          "rationale": "An belongs to the complete noun phrase an old dresser and is acoustically anchored on the noun, not independently timed."
+        },
+        {
+          "index": 5,
+          "id": "PK-004:v1-time-t06",
+          "text": "old",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 6,
+          "id": "PK-004:v1-time-t07",
+          "text": "dresser.",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "PK-005",
+      "templateId": "v1-bed",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Пыль на полках, пустая кровать",
+      "targetText": "Dust on the shelves, an empty bed.",
+      "start": 27.875011337868482,
+      "end": 31.45501133786848,
+      "visibleStart": 27.875011337868482,
+      "fullOpacityEnd": 31.74498866213152,
+      "visibleEnd": 31.74498866213152,
+      "exitMode": "vocal-handoff",
+      "words": [
+        {
+          "id": "PK-005:v1-bed-s01",
+          "text": "Пыль",
+          "sourceIndex": 0,
+          "startSample": 1229288,
+          "endSample": 1242297,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-005:v1-bed-s02",
+          "text": "на",
+          "sourceIndex": 1,
+          "startSample": 1242297,
+          "endSample": 1250676,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-005:v1-bed-s03",
+          "text": "полках,",
+          "sourceIndex": 2,
+          "startSample": 1252440,
+          "endSample": 1285294,
+          "confidence": "low",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-005:v1-bed-s04",
+          "text": "пустая",
+          "sourceIndex": 3,
+          "startSample": 1285294,
+          "endSample": 1323220,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-005:v1-bed-s05",
+          "text": "кровать",
+          "sourceIndex": 4,
+          "startSample": 1323220,
+          "endSample": 1387166,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        }
+      ],
+      "targets": [
+        {
+          "index": 0,
+          "id": "PK-005:v1-bed-t01",
+          "text": "Dust",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 1,
+          "id": "PK-005:v1-bed-t02",
+          "text": "on",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 2,
+          "id": "PK-005:v1-bed-t03",
+          "text": "the",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "grammar-completion",
+          "rationale": "The shelves is the contextual plural noun phrase for полках."
+        },
+        {
+          "index": 3,
+          "id": "PK-005:v1-bed-t04",
+          "text": "shelves,",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 4,
+          "id": "PK-005:v1-bed-t05",
+          "text": "an",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "relation": "grammar-completion",
+          "rationale": "An belongs to the complete noun phrase an empty bed, with the noun event; empty remains separately anchored."
+        },
+        {
+          "index": 5,
+          "id": "PK-005:v1-bed-t06",
+          "text": "empty",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 6,
+          "id": "PK-005:v1-bed-t07",
+          "text": "bed.",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "PK-006",
+      "templateId": "pre-run",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Я бегу, бегу, бегу",
+      "targetText": "I run, run, run.",
+      "start": 31.74498866213152,
+      "end": 34.08,
+      "visibleStart": 31.74498866213152,
+      "fullOpacityEnd": 34.55,
+      "visibleEnd": 35.05,
+      "exitMode": "fade",
+      "words": [
+        {
+          "id": "PK-006:pre-run-s01",
+          "text": "Я",
+          "sourceIndex": 0,
+          "startSample": 1399954,
+          "endSample": 1407010,
+          "confidence": "low",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-006:pre-run-s02",
+          "text": "бегу,",
+          "sourceIndex": 1,
+          "startSample": 1410891,
+          "endSample": 1450273,
+          "confidence": "low",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-006:pre-run-s03",
+          "text": "бегу,",
+          "sourceIndex": 2,
+          "startSample": 1451684,
+          "endSample": 1470206,
+          "confidence": "low",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-006:pre-run-s04",
+          "text": "бегу",
+          "sourceIndex": 3,
+          "startSample": 1472984,
+          "endSample": 1502928,
+          "confidence": "low",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        }
+      ],
+      "targets": [
+        {
+          "index": 0,
+          "id": "PK-006:pre-run-t01",
+          "text": "I",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 1,
+          "id": "PK-006:pre-run-t02",
+          "text": "run,",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 2,
+          "id": "PK-006:pre-run-t03",
+          "text": "run,",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 3,
+          "id": "PK-006:pre-run-t04",
+          "text": "run.",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "PK-007",
+      "templateId": "pre-trace",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "За собой оставив след",
+      "targetText": "Leaving a trace behind me.",
+      "start": 35.47,
+      "end": 37.86,
+      "visibleStart": 35.25,
+      "fullOpacityEnd": 38.04,
+      "visibleEnd": 38.54,
+      "exitMode": "fade",
+      "words": [
+        {
+          "id": "PK-007:pre-trace-s01",
+          "text": "За",
+          "sourceIndex": 0,
+          "startSample": 1564227,
+          "endSample": 1572386,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-007:pre-trace-s02",
+          "text": "собой",
+          "sourceIndex": 1,
+          "startSample": 1572386,
+          "endSample": 1622660,
+          "confidence": "low",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-007:pre-trace-s03",
+          "text": "оставив",
+          "sourceIndex": 2,
+          "startSample": 1622660,
+          "endSample": 1648899,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-007:pre-trace-s04",
+          "text": "след",
+          "sourceIndex": 3,
+          "startSample": 1648899,
+          "endSample": 1669626,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        }
+      ],
+      "targets": [
+        {
+          "index": 0,
+          "id": "PK-007:pre-trace-t01",
+          "text": "Leaving",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 1,
+          "id": "PK-007:pre-trace-t02",
+          "text": "a",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "grammar-completion",
+          "rationale": "A trace is the complete English noun meaning of след."
+        },
+        {
+          "index": 2,
+          "id": "PK-007:pre-trace-t03",
+          "text": "trace",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 3,
+          "id": "PK-007:pre-trace-t04",
+          "text": "behind",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 4,
+          "id": "PK-007:pre-trace-t05",
+          "text": "me.",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "PK-008",
+      "templateId": "pre-carry",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Я несу, несу, несу",
+      "targetText": "I carry, carry, carry.",
+      "start": 39.35199546485261,
+      "end": 43.05,
+      "visibleStart": 39.13199546485261,
+      "fullOpacityEnd": 43.135011337868484,
+      "visibleEnd": 43.135011337868484,
+      "exitMode": "vocal-handoff",
+      "words": [
+        {
+          "id": "PK-008:pre-carry-s01",
+          "text": "Я",
+          "sourceIndex": 0,
+          "startSample": 1735423,
+          "endSample": 1745919,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-008:pre-carry-s02",
+          "text": "несу,",
+          "sourceIndex": 1,
+          "startSample": 1746492,
+          "endSample": 1787064,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-008:pre-carry-s03",
+          "text": "несу,",
+          "sourceIndex": 2,
+          "startSample": 1788034,
+          "endSample": 1808232,
+          "confidence": "low",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-008:pre-carry-s04",
+          "text": "несу",
+          "sourceIndex": 3,
+          "startSample": 1809247,
+          "endSample": 1898505,
+          "confidence": "low",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        }
+      ],
+      "targets": [
+        {
+          "index": 0,
+          "id": "PK-008:pre-carry-t01",
+          "text": "I",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 1,
+          "id": "PK-008:pre-carry-t02",
+          "text": "carry,",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 2,
+          "id": "PK-008:pre-carry-t03",
+          "text": "carry,",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 3,
+          "id": "PK-008:pre-carry-t04",
+          "text": "carry.",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "PK-009",
+      "templateId": "pre-cross",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "На себе свой чёрный крест",
+      "targetText": "My black cross upon myself.",
+      "start": 43.135011337868484,
+      "end": 45.99501133786848,
+      "visibleStart": 43.135011337868484,
+      "fullOpacityEnd": 46.17,
+      "visibleEnd": 46.62498866213152,
+      "exitMode": "fade",
+      "words": [
+        {
+          "id": "PK-009:pre-cross-s01",
+          "text": "На",
+          "sourceIndex": 0,
+          "startSample": 1902254,
+          "endSample": 1909750,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-009:pre-cross-s02",
+          "text": "себе",
+          "sourceIndex": 1,
+          "startSample": 1909750,
+          "endSample": 1952528,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-009:pre-cross-s03",
+          "text": "свой",
+          "sourceIndex": 2,
+          "startSample": 1952528,
+          "endSample": 1964434,
+          "confidence": "low",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-009:pre-cross-s04",
+          "text": "чёрный",
+          "sourceIndex": 3,
+          "startSample": 1964434,
+          "endSample": 1985602,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-009:pre-cross-s05",
+          "text": "крест",
+          "sourceIndex": 4,
+          "startSample": 1985602,
+          "endSample": 2028380,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        }
+      ],
+      "targets": [
+        {
+          "index": 0,
+          "id": "PK-009:pre-cross-t01",
+          "text": "My",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 1,
+          "id": "PK-009:pre-cross-t02",
+          "text": "black",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 2,
+          "id": "PK-009:pre-cross-t03",
+          "text": "cross",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 3,
+          "id": "PK-009:pre-cross-t04",
+          "text": "upon",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 4,
+          "id": "PK-009:pre-cross-t05",
+          "text": "myself.",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "PK-010",
+      "templateId": "chorus-remains",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Где остались от домов разворочены пески",
+      "targetText": "Where churned-up sands are left of homes.",
+      "start": 46.84498866213152,
+      "end": 54.43,
+      "visibleStart": 46.62498866213152,
+      "fullOpacityEnd": 54.58,
+      "visibleEnd": 54.58,
+      "exitMode": "vocal-handoff",
+      "words": [
+        {
+          "id": "PK-010:chorus-remains-s01",
+          "text": "Где",
+          "sourceIndex": 0,
+          "startSample": 2065864,
+          "endSample": 2084386,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-010:chorus-remains-s02",
+          "text": "остались",
+          "sourceIndex": 1,
+          "startSample": 2084386,
+          "endSample": 2138188,
+          "confidence": "low",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-010:chorus-remains-s03",
+          "text": "от",
+          "sourceIndex": 2,
+          "startSample": 2138188,
+          "endSample": 2145024,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-010:chorus-remains-s04",
+          "text": "домов",
+          "sourceIndex": 3,
+          "startSample": 2145024,
+          "endSample": 2226609,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-010:chorus-remains-s05",
+          "text": "разворочены",
+          "sourceIndex": 4,
+          "startSample": 2235870,
+          "endSample": 2313045,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-010:chorus-remains-s06",
+          "text": "пески",
+          "sourceIndex": 5,
+          "startSample": 2313045,
+          "endSample": 2400363,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        }
+      ],
+      "targets": [
+        {
+          "index": 0,
+          "id": "PK-010:chorus-remains-t01",
+          "text": "Where",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 1,
+          "id": "PK-010:chorus-remains-t02",
+          "text": "churned-up",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 2,
+          "id": "PK-010:chorus-remains-t03",
+          "text": "sands",
+          "sourceIndices": [
+            5
+          ],
+          "focusSourceIndices": [
+            5
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 3,
+          "id": "PK-010:chorus-remains-t04",
+          "text": "are",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "grammar-completion",
+          "rationale": "Are left is the complete passive-result equivalent of остались. Both target words share only that source event."
+        },
+        {
+          "index": 4,
+          "id": "PK-010:chorus-remains-t05",
+          "text": "left",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "grammar-completion",
+          "rationale": "Are left is the complete passive-result equivalent of остались. Both target words share only that source event."
+        },
+        {
+          "index": 5,
+          "id": "PK-010:chorus-remains-t06",
+          "text": "of",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 6,
+          "id": "PK-010:chorus-remains-t07",
+          "text": "homes.",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "PK-011",
+      "templateId": "chorus-concrete",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Собираю я себя из бетона на куски",
+      "targetText": "I gather myself from concrete into pieces.",
+      "start": 54.58,
+      "end": 61.63,
+      "visibleStart": 54.58,
+      "fullOpacityEnd": 61.74,
+      "visibleEnd": 61.74,
+      "exitMode": "vocal-handoff",
+      "words": [
+        {
+          "id": "PK-011:chorus-concrete-s01",
+          "text": "Собираю",
+          "sourceIndex": 0,
+          "startSample": 2406978,
+          "endSample": 2466072,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-011:chorus-concrete-s02",
+          "text": "я",
+          "sourceIndex": 1,
+          "startSample": 2466072,
+          "endSample": 2477979,
+          "confidence": "low",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-011:chorus-concrete-s03",
+          "text": "себя",
+          "sourceIndex": 2,
+          "startSample": 2477979,
+          "endSample": 2563754,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-011:chorus-concrete-s04",
+          "text": "из",
+          "sourceIndex": 3,
+          "startSample": 2578086,
+          "endSample": 2586465,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-011:chorus-concrete-s05",
+          "text": "бетона",
+          "sourceIndex": 4,
+          "startSample": 2586465,
+          "endSample": 2635857,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-011:chorus-concrete-s06",
+          "text": "на",
+          "sourceIndex": 5,
+          "startSample": 2635857,
+          "endSample": 2643795,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-011:chorus-concrete-s07",
+          "text": "куски",
+          "sourceIndex": 6,
+          "startSample": 2643795,
+          "endSample": 2717883,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        }
+      ],
+      "targets": [
+        {
+          "index": 0,
+          "id": "PK-011:chorus-concrete-t01",
+          "text": "I",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 1,
+          "id": "PK-011:chorus-concrete-t02",
+          "text": "gather",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 2,
+          "id": "PK-011:chorus-concrete-t03",
+          "text": "myself",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 3,
+          "id": "PK-011:chorus-concrete-t04",
+          "text": "from",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 4,
+          "id": "PK-011:chorus-concrete-t05",
+          "text": "concrete",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 5,
+          "id": "PK-011:chorus-concrete-t06",
+          "text": "into",
+          "sourceIndices": [
+            5
+          ],
+          "focusSourceIndices": [
+            5
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 6,
+          "id": "PK-011:chorus-concrete-t07",
+          "text": "pieces.",
+          "sourceIndices": [
+            6
+          ],
+          "focusSourceIndices": [
+            6
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "PK-012",
+      "templateId": "refrain-pebbles",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "По камушку, по камушку, на краешке земли",
+      "targetText": "Pebble by pebble, pebble by pebble, at the edge of the earth.",
+      "start": 61.74,
+      "end": 76.43,
+      "visibleStart": 61.74,
+      "fullOpacityEnd": 76.94199546485261,
+      "visibleEnd": 76.94199546485261,
+      "exitMode": "vocal-handoff",
+      "words": [
+        {
+          "id": "PK-012:refrain-pebbles-s01",
+          "text": "По",
+          "sourceIndex": 0,
+          "startSample": 2722734,
+          "endSample": 2749635,
+          "confidence": "low",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-012:refrain-pebbles-s02",
+          "text": "камушку,",
+          "sourceIndex": 1,
+          "startSample": 2763394,
+          "endSample": 2867162,
+          "confidence": "low",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-012:refrain-pebbles-s03",
+          "text": "по",
+          "sourceIndex": 2,
+          "startSample": 2889697,
+          "endSample": 2928902,
+          "confidence": "low",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-012:refrain-pebbles-s04",
+          "text": "камушку,",
+          "sourceIndex": 3,
+          "startSample": 2933841,
+          "endSample": 3056130,
+          "confidence": "low",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-012:refrain-pebbles-s05",
+          "text": "на",
+          "sourceIndex": 4,
+          "startSample": 3060143,
+          "endSample": 3096040,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-012:refrain-pebbles-s06",
+          "text": "краешке",
+          "sourceIndex": 5,
+          "startSample": 3099039,
+          "endSample": 3214670,
+          "confidence": "low",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-012:refrain-pebbles-s07",
+          "text": "земли",
+          "sourceIndex": 6,
+          "startSample": 3245054,
+          "endSample": 3370563,
+          "confidence": "low",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        }
+      ],
+      "targets": [
+        {
+          "index": 0,
+          "id": "PK-012:refrain-pebbles-t01",
+          "text": "Pebble",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "grammar-completion",
+          "rationale": "Pebble by pebble is the English distributive equivalent of по камушку. Both displayed pebbles belong to the one source noun; by corresponds independently to по. Neither pebble receives an invented second onset."
+        },
+        {
+          "index": 1,
+          "id": "PK-012:refrain-pebbles-t02",
+          "text": "by",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 2,
+          "id": "PK-012:refrain-pebbles-t03",
+          "text": "pebble,",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "grammar-completion",
+          "rationale": "Pebble by pebble is the English distributive equivalent of по камушку. Both displayed pebbles belong to the one source noun; by corresponds independently to по. Neither pebble receives an invented second onset."
+        },
+        {
+          "index": 3,
+          "id": "PK-012:refrain-pebbles-t04",
+          "text": "pebble",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "grammar-completion",
+          "rationale": "Pebble by pebble is the English distributive equivalent of по камушку. Both displayed pebbles belong to the one source noun; by corresponds independently to по. Neither pebble receives an invented second onset."
+        },
+        {
+          "index": 4,
+          "id": "PK-012:refrain-pebbles-t05",
+          "text": "by",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 5,
+          "id": "PK-012:refrain-pebbles-t06",
+          "text": "pebble,",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "grammar-completion",
+          "rationale": "Pebble by pebble is the English distributive equivalent of по камушку. Both displayed pebbles belong to the one source noun; by corresponds independently to по. Neither pebble receives an invented second onset."
+        },
+        {
+          "index": 6,
+          "id": "PK-012:refrain-pebbles-t07",
+          "text": "at",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 7,
+          "id": "PK-012:refrain-pebbles-t08",
+          "text": "the",
+          "sourceIndices": [
+            5
+          ],
+          "focusSourceIndices": [
+            5
+          ],
+          "relation": "grammar-completion",
+          "rationale": "The edge is the complete contextual noun meaning of краешке; its article shares the noun event."
+        },
+        {
+          "index": 8,
+          "id": "PK-012:refrain-pebbles-t09",
+          "text": "edge",
+          "sourceIndices": [
+            5
+          ],
+          "focusSourceIndices": [
+            5
+          ],
+          "relation": "grammar-completion",
+          "rationale": "The edge is the complete contextual noun meaning of краешке; its article shares the noun event."
+        },
+        {
+          "index": 9,
+          "id": "PK-012:refrain-pebbles-t10",
+          "text": "of",
+          "sourceIndices": [
+            6
+          ],
+          "focusSourceIndices": [
+            6
+          ],
+          "relation": "grammar-completion",
+          "rationale": "Of the earth is the complete genitive noun phrase expressed by земли. Of and the are necessary grammar anchored on this noun, not separately timed words."
+        },
+        {
+          "index": 10,
+          "id": "PK-012:refrain-pebbles-t11",
+          "text": "the",
+          "sourceIndices": [
+            6
+          ],
+          "focusSourceIndices": [
+            6
+          ],
+          "relation": "grammar-completion",
+          "rationale": "Of the earth is the complete genitive noun phrase expressed by земли. Of and the are necessary grammar anchored on this noun, not separately timed words."
+        },
+        {
+          "index": 11,
+          "id": "PK-012:refrain-pebbles-t12",
+          "text": "earth.",
+          "sourceIndices": [
+            6
+          ],
+          "focusSourceIndices": [
+            6
+          ],
+          "relation": "grammar-completion",
+          "rationale": "Of the earth is the complete genitive noun phrase expressed by земли. Of and the are necessary grammar anchored on this noun, not separately timed words."
+        }
+      ],
+      "sourceBreaks": [
+        3
+      ],
+      "targetBreaks": [
+        5
+      ]
+    },
+    {
+      "id": "PK-013",
+      "templateId": "refrain-pebbles",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "По камушку, по камушку, на краешке земли",
+      "targetText": "Pebble by pebble, pebble by pebble, at the edge of the earth.",
+      "start": 76.94199546485261,
+      "end": 90.58498866213152,
+      "visibleStart": 76.94199546485261,
+      "fullOpacityEnd": 91.53,
+      "visibleEnd": 92.03,
+      "exitMode": "fade",
+      "words": [
+        {
+          "id": "PK-013:refrain-pebbles-s01",
+          "text": "По",
+          "sourceIndex": 0,
+          "startSample": 3393142,
+          "endSample": 3434949,
+          "confidence": "low",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-013:refrain-pebbles-s02",
+          "text": "камушку,",
+          "sourceIndex": 1,
+          "startSample": 3437286,
+          "endSample": 3560634,
+          "confidence": "low",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-013:refrain-pebbles-s03",
+          "text": "по",
+          "sourceIndex": 2,
+          "startSample": 3564471,
+          "endSample": 3598648,
+          "confidence": "low",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-013:refrain-pebbles-s04",
+          "text": "камушку,",
+          "sourceIndex": 3,
+          "startSample": 3603323,
+          "endSample": 3717851,
+          "confidence": "low",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-013:refrain-pebbles-s05",
+          "text": "на",
+          "sourceIndex": 4,
+          "startSample": 3732271,
+          "endSample": 3764641,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-013:refrain-pebbles-s06",
+          "text": "краешке",
+          "sourceIndex": 5,
+          "startSample": 3769359,
+          "endSample": 3877713,
+          "confidence": "low",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-013:refrain-pebbles-s07",
+          "text": "земли",
+          "sourceIndex": 6,
+          "startSample": 3915198,
+          "endSample": 3994798,
+          "confidence": "low",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        }
+      ],
+      "targets": [
+        {
+          "index": 0,
+          "id": "PK-013:refrain-pebbles-t01",
+          "text": "Pebble",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "grammar-completion",
+          "rationale": "Pebble by pebble is the English distributive equivalent of по камушку. Both displayed pebbles belong to the one source noun; by corresponds independently to по. Neither pebble receives an invented second onset."
+        },
+        {
+          "index": 1,
+          "id": "PK-013:refrain-pebbles-t02",
+          "text": "by",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 2,
+          "id": "PK-013:refrain-pebbles-t03",
+          "text": "pebble,",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "grammar-completion",
+          "rationale": "Pebble by pebble is the English distributive equivalent of по камушку. Both displayed pebbles belong to the one source noun; by corresponds independently to по. Neither pebble receives an invented second onset."
+        },
+        {
+          "index": 3,
+          "id": "PK-013:refrain-pebbles-t04",
+          "text": "pebble",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "grammar-completion",
+          "rationale": "Pebble by pebble is the English distributive equivalent of по камушку. Both displayed pebbles belong to the one source noun; by corresponds independently to по. Neither pebble receives an invented second onset."
+        },
+        {
+          "index": 4,
+          "id": "PK-013:refrain-pebbles-t05",
+          "text": "by",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 5,
+          "id": "PK-013:refrain-pebbles-t06",
+          "text": "pebble,",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "grammar-completion",
+          "rationale": "Pebble by pebble is the English distributive equivalent of по камушку. Both displayed pebbles belong to the one source noun; by corresponds independently to по. Neither pebble receives an invented second onset."
+        },
+        {
+          "index": 6,
+          "id": "PK-013:refrain-pebbles-t07",
+          "text": "at",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 7,
+          "id": "PK-013:refrain-pebbles-t08",
+          "text": "the",
+          "sourceIndices": [
+            5
+          ],
+          "focusSourceIndices": [
+            5
+          ],
+          "relation": "grammar-completion",
+          "rationale": "The edge is the complete contextual noun meaning of краешке; its article shares the noun event."
+        },
+        {
+          "index": 8,
+          "id": "PK-013:refrain-pebbles-t09",
+          "text": "edge",
+          "sourceIndices": [
+            5
+          ],
+          "focusSourceIndices": [
+            5
+          ],
+          "relation": "grammar-completion",
+          "rationale": "The edge is the complete contextual noun meaning of краешке; its article shares the noun event."
+        },
+        {
+          "index": 9,
+          "id": "PK-013:refrain-pebbles-t10",
+          "text": "of",
+          "sourceIndices": [
+            6
+          ],
+          "focusSourceIndices": [
+            6
+          ],
+          "relation": "grammar-completion",
+          "rationale": "Of the earth is the complete genitive noun phrase expressed by земли. Of and the are necessary grammar anchored on this noun, not separately timed words."
+        },
+        {
+          "index": 10,
+          "id": "PK-013:refrain-pebbles-t11",
+          "text": "the",
+          "sourceIndices": [
+            6
+          ],
+          "focusSourceIndices": [
+            6
+          ],
+          "relation": "grammar-completion",
+          "rationale": "Of the earth is the complete genitive noun phrase expressed by земли. Of and the are necessary grammar anchored on this noun, not separately timed words."
+        },
+        {
+          "index": 11,
+          "id": "PK-013:refrain-pebbles-t12",
+          "text": "earth.",
+          "sourceIndices": [
+            6
+          ],
+          "focusSourceIndices": [
+            6
+          ],
+          "relation": "grammar-completion",
+          "rationale": "Of the earth is the complete genitive noun phrase expressed by земли. Of and the are necessary grammar anchored on this noun, not separately timed words."
+        }
+      ],
+      "sourceBreaks": [
+        3
+      ],
+      "targetBreaks": [
+        5
+      ]
+    },
+    {
+      "id": "PK-014",
+      "templateId": "v2-plank",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Я иду по скрипучей дощечке",
+      "targetText": "I walk along a creaking plank.",
+      "start": 92.6,
+      "end": 96.25501133786848,
+      "visibleStart": 92.38,
+      "fullOpacityEnd": 96.46,
+      "visibleEnd": 96.46,
+      "exitMode": "vocal-handoff",
+      "words": [
+        {
+          "id": "PK-014:v2-plank-s01",
+          "text": "Я",
+          "sourceIndex": 0,
+          "startSample": 4083660,
+          "endSample": 4100197,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-014:v2-plank-s02",
+          "text": "иду",
+          "sourceIndex": 1,
+          "startSample": 4100197,
+          "endSample": 4129304,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-014:v2-plank-s03",
+          "text": "по",
+          "sourceIndex": 2,
+          "startSample": 4129304,
+          "endSample": 4135918,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-014:v2-plank-s04",
+          "text": "скрипучей",
+          "sourceIndex": 3,
+          "startSample": 4135918,
+          "endSample": 4180460,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-014:v2-plank-s05",
+          "text": "дощечке",
+          "sourceIndex": 4,
+          "startSample": 4180460,
+          "endSample": 4244846,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        }
+      ],
+      "targets": [
+        {
+          "index": 0,
+          "id": "PK-014:v2-plank-t01",
+          "text": "I",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 1,
+          "id": "PK-014:v2-plank-t02",
+          "text": "walk",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 2,
+          "id": "PK-014:v2-plank-t03",
+          "text": "along",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 3,
+          "id": "PK-014:v2-plank-t04",
+          "text": "a",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "relation": "grammar-completion",
+          "rationale": "A plank is the complete indefinite noun phrase for дощечке; creaking remains a separate adjective event."
+        },
+        {
+          "index": 4,
+          "id": "PK-014:v2-plank-t05",
+          "text": "creaking",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 5,
+          "id": "PK-014:v2-plank-t06",
+          "text": "plank.",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "PK-015",
+      "templateId": "v2-fate",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Заколочена в окнах судьба Маленького человечка",
+      "targetText": "A little person's fate is boarded up in the windows.",
+      "start": 96.46,
+      "end": 103.65,
+      "visibleStart": 96.46,
+      "fullOpacityEnd": 104.1,
+      "visibleEnd": 104.1,
+      "exitMode": "vocal-handoff",
+      "words": [
+        {
+          "id": "PK-015:v2-fate-s01",
+          "text": "Заколочена",
+          "sourceIndex": 0,
+          "startSample": 4253886,
+          "endSample": 4318272,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-015:v2-fate-s02",
+          "text": "в",
+          "sourceIndex": 1,
+          "startSample": 4318272,
+          "endSample": 4324666,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-015:v2-fate-s03",
+          "text": "окнах",
+          "sourceIndex": 2,
+          "startSample": 4324666,
+          "endSample": 4348040,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-015:v2-fate-s04",
+          "text": "судьба",
+          "sourceIndex": 3,
+          "startSample": 4348040,
+          "endSample": 4404267,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-015:v2-fate-s05",
+          "text": "Маленького",
+          "sourceIndex": 4,
+          "startSample": 4421907,
+          "endSample": 4486734,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-015:v2-fate-s06",
+          "text": "человечка",
+          "sourceIndex": 5,
+          "startSample": 4502390,
+          "endSample": 4570965,
+          "confidence": "low",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        }
+      ],
+      "targets": [
+        {
+          "index": 0,
+          "id": "PK-015:v2-fate-t01",
+          "text": "A",
+          "sourceIndices": [
+            5
+          ],
+          "focusSourceIndices": [
+            5
+          ],
+          "relation": "grammar-completion",
+          "rationale": "A belongs to the indefinite possessive noun phrase a little person, encoded by человечка."
+        },
+        {
+          "index": 1,
+          "id": "PK-015:v2-fate-t02",
+          "text": "little",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 2,
+          "id": "PK-015:v2-fate-t03",
+          "text": "person's",
+          "sourceIndices": [
+            5
+          ],
+          "focusSourceIndices": [
+            5
+          ],
+          "relation": "grammar-completion",
+          "rationale": "Person's preserves the genitive possessor человечка. Little retains its separate adjective source event."
+        },
+        {
+          "index": 3,
+          "id": "PK-015:v2-fate-t04",
+          "text": "fate",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 4,
+          "id": "PK-015:v2-fate-t05",
+          "text": "is",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "grammar-completion",
+          "rationale": "Is boarded up is the complete passive meaning of заколочена; all its English components share that source word."
+        },
+        {
+          "index": 5,
+          "id": "PK-015:v2-fate-t06",
+          "text": "boarded",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "grammar-completion",
+          "rationale": "Is boarded up is the complete passive meaning of заколочена; all its English components share that source word."
+        },
+        {
+          "index": 6,
+          "id": "PK-015:v2-fate-t07",
+          "text": "up",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "grammar-completion",
+          "rationale": "Is boarded up is the complete passive meaning of заколочена; all its English components share that source word."
+        },
+        {
+          "index": 7,
+          "id": "PK-015:v2-fate-t08",
+          "text": "in",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 8,
+          "id": "PK-015:v2-fate-t09",
+          "text": "the",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "grammar-completion",
+          "rationale": "The windows is the complete contextual noun phrase for окнах."
+        },
+        {
+          "index": 9,
+          "id": "PK-015:v2-fate-t10",
+          "text": "windows.",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        }
+      ],
+      "sourceBreaks": [
+        3
+      ],
+      "targetBreaks": [
+        3
+      ]
+    },
+    {
+      "id": "PK-016",
+      "templateId": "v2-echo",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Там и эхо забудет слова",
+      "targetText": "There, even the echo will forget the words.",
+      "start": 104.1,
+      "end": 107.68,
+      "visibleStart": 104.1,
+      "fullOpacityEnd": 107.93,
+      "visibleEnd": 107.93,
+      "exitMode": "vocal-handoff",
+      "words": [
+        {
+          "id": "PK-016:v2-echo-s01",
+          "text": "Там",
+          "sourceIndex": 0,
+          "startSample": 4590810,
+          "endSample": 4602717,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-016:v2-echo-s02",
+          "text": "и",
+          "sourceIndex": 1,
+          "startSample": 4602717,
+          "endSample": 4612640,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-016:v2-echo-s03",
+          "text": "эхо",
+          "sourceIndex": 2,
+          "startSample": 4612640,
+          "endSample": 4639100,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-016:v2-echo-s04",
+          "text": "забудет",
+          "sourceIndex": 3,
+          "startSample": 4639100,
+          "endSample": 4679451,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-016:v2-echo-s05",
+          "text": "слова",
+          "sourceIndex": 4,
+          "startSample": 4679451,
+          "endSample": 4748688,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        }
+      ],
+      "targets": [
+        {
+          "index": 0,
+          "id": "PK-016:v2-echo-t01",
+          "text": "There,",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 1,
+          "id": "PK-016:v2-echo-t02",
+          "text": "even",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 2,
+          "id": "PK-016:v2-echo-t03",
+          "text": "the",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "grammar-completion",
+          "rationale": "The echo is the complete contextual noun phrase for эхо."
+        },
+        {
+          "index": 3,
+          "id": "PK-016:v2-echo-t04",
+          "text": "echo",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 4,
+          "id": "PK-016:v2-echo-t05",
+          "text": "will",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "grammar-completion",
+          "rationale": "Will forget is the complete future-tense meaning of забудет; the auxiliary and verb share that event."
+        },
+        {
+          "index": 5,
+          "id": "PK-016:v2-echo-t06",
+          "text": "forget",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "grammar-completion",
+          "rationale": "Will forget is the complete future-tense meaning of забудет; the auxiliary and verb share that event."
+        },
+        {
+          "index": 6,
+          "id": "PK-016:v2-echo-t07",
+          "text": "the",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "relation": "grammar-completion",
+          "rationale": "The words is the complete contextual noun phrase for слова."
+        },
+        {
+          "index": 7,
+          "id": "PK-016:v2-echo-t08",
+          "text": "words.",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "PK-017",
+      "templateId": "v2-blizzard",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Поцелуй меня, серая вьюга",
+      "targetText": "Kiss me, gray blizzard.",
+      "start": 107.93,
+      "end": 111.46,
+      "visibleStart": 107.93,
+      "fullOpacityEnd": 111.75,
+      "visibleEnd": 111.75,
+      "exitMode": "vocal-handoff",
+      "words": [
+        {
+          "id": "PK-017:v2-blizzard-s01",
+          "text": "Поцелуй",
+          "sourceIndex": 0,
+          "startSample": 4759713,
+          "endSample": 4801608,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-017:v2-blizzard-s02",
+          "text": "меня,",
+          "sourceIndex": 1,
+          "startSample": 4801608,
+          "endSample": 4819468,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-017:v2-blizzard-s03",
+          "text": "серая",
+          "sourceIndex": 2,
+          "startSample": 4819468,
+          "endSample": 4858276,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-017:v2-blizzard-s04",
+          "text": "вьюга",
+          "sourceIndex": 3,
+          "startSample": 4858276,
+          "endSample": 4915386,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        }
+      ],
+      "targets": [
+        {
+          "index": 0,
+          "id": "PK-017:v2-blizzard-t01",
+          "text": "Kiss",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 1,
+          "id": "PK-017:v2-blizzard-t02",
+          "text": "me,",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 2,
+          "id": "PK-017:v2-blizzard-t03",
+          "text": "gray",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 3,
+          "id": "PK-017:v2-blizzard-t04",
+          "text": "blizzard.",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "PK-018",
+      "templateId": "v2-homeland",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Обними меня, край мой родной",
+      "targetText": "Embrace me, my native land.",
+      "start": 111.75,
+      "end": 115.05501133786848,
+      "visibleStart": 111.75,
+      "fullOpacityEnd": 115.55501133786848,
+      "visibleEnd": 115.55501133786848,
+      "exitMode": "vocal-handoff",
+      "words": [
+        {
+          "id": "PK-018:v2-homeland-s01",
+          "text": "Обними",
+          "sourceIndex": 0,
+          "startSample": 4928175,
+          "endSample": 4969408,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-018:v2-homeland-s02",
+          "text": "меня,",
+          "sourceIndex": 1,
+          "startSample": 4969408,
+          "endSample": 4985726,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-018:v2-homeland-s03",
+          "text": "край",
+          "sourceIndex": 2,
+          "startSample": 4985726,
+          "endSample": 5011744,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-018:v2-homeland-s04",
+          "text": "мой",
+          "sourceIndex": 3,
+          "startSample": 5011744,
+          "endSample": 5021226,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-018:v2-homeland-s05",
+          "text": "родной",
+          "sourceIndex": 4,
+          "startSample": 5021226,
+          "endSample": 5073926,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        }
+      ],
+      "targets": [
+        {
+          "index": 0,
+          "id": "PK-018:v2-homeland-t01",
+          "text": "Embrace",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 1,
+          "id": "PK-018:v2-homeland-t02",
+          "text": "me,",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 2,
+          "id": "PK-018:v2-homeland-t03",
+          "text": "my",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 3,
+          "id": "PK-018:v2-homeland-t04",
+          "text": "native",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 4,
+          "id": "PK-018:v2-homeland-t05",
+          "text": "land.",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "PK-019",
+      "templateId": "v2-broken",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Я разбита, и жизнь моя — мука",
+      "targetText": "I am broken, and my life is torment.",
+      "start": 115.55501133786848,
+      "end": 119.13501133786848,
+      "visibleStart": 115.55501133786848,
+      "fullOpacityEnd": 119.32,
+      "visibleEnd": 119.32,
+      "exitMode": "vocal-handoff",
+      "words": [
+        {
+          "id": "PK-019:v2-broken-s01",
+          "text": "Я",
+          "sourceIndex": 0,
+          "startSample": 5095976,
+          "endSample": 5103914,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-019:v2-broken-s02",
+          "text": "разбита,",
+          "sourceIndex": 1,
+          "startSample": 5103914,
+          "endSample": 5143604,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-019:v2-broken-s03",
+          "text": "и",
+          "sourceIndex": 2,
+          "startSample": 5143604,
+          "endSample": 5153746,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-019:v2-broken-s04",
+          "text": "жизнь",
+          "sourceIndex": 3,
+          "startSample": 5153746,
+          "endSample": 5180648,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-019:v2-broken-s05",
+          "text": "моя",
+          "punctuationAfter": "—",
+          "sourceIndex": 4,
+          "startSample": 5180648,
+          "endSample": 5198067,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-019:v2-broken-s06",
+          "text": "мука",
+          "sourceIndex": 5,
+          "startSample": 5198067,
+          "endSample": 5253854,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        }
+      ],
+      "targets": [
+        {
+          "index": 0,
+          "id": "PK-019:v2-broken-t01",
+          "text": "I",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 1,
+          "id": "PK-019:v2-broken-t02",
+          "text": "am",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "grammar-completion",
+          "rationale": "Am broken is the complete predicate разбита; its present copula is grammatical completion, not a separately sung word."
+        },
+        {
+          "index": 2,
+          "id": "PK-019:v2-broken-t03",
+          "text": "broken,",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "grammar-completion",
+          "rationale": "Am broken is the complete predicate разбита; its present copula is grammatical completion, not a separately sung word."
+        },
+        {
+          "index": 3,
+          "id": "PK-019:v2-broken-t04",
+          "text": "and",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 4,
+          "id": "PK-019:v2-broken-t05",
+          "text": "my",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 5,
+          "id": "PK-019:v2-broken-t06",
+          "text": "life",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 6,
+          "id": "PK-019:v2-broken-t07",
+          "text": "is",
+          "sourceIndices": [
+            5
+          ],
+          "focusSourceIndices": [
+            5
+          ],
+          "relation": "grammar-completion",
+          "rationale": "Is torment is the complete nominal predicate мука with the English copula. It shares the noun event; no independent copula time is invented."
+        },
+        {
+          "index": 7,
+          "id": "PK-019:v2-broken-t08",
+          "text": "torment.",
+          "sourceIndices": [
+            5
+          ],
+          "focusSourceIndices": [
+            5
+          ],
+          "relation": "grammar-completion",
+          "rationale": "Is torment is the complete nominal predicate мука with the English copula. It shares the noun event; no independent copula time is invented."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "PK-020",
+      "templateId": "v2-heart",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Пока сердцем не встречусь с тобой",
+      "targetText": "Until I meet you with my heart.",
+      "start": 119.32,
+      "end": 122.45501133786848,
+      "visibleStart": 119.32,
+      "fullOpacityEnd": 123.15299319727892,
+      "visibleEnd": 123.15299319727892,
+      "exitMode": "vocal-handoff",
+      "words": [
+        {
+          "id": "PK-020:v2-heart-s01",
+          "text": "Пока",
+          "sourceIndex": 0,
+          "startSample": 5262012,
+          "endSample": 5278770,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-020:v2-heart-s02",
+          "text": "сердцем",
+          "sourceIndex": 1,
+          "startSample": 5278770,
+          "endSample": 5316476,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-020:v2-heart-s03",
+          "text": "не",
+          "sourceIndex": 2,
+          "startSample": 5316476,
+          "endSample": 5321106,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-020:v2-heart-s04",
+          "text": "встречусь",
+          "sourceIndex": 3,
+          "startSample": 5321106,
+          "endSample": 5354181,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-020:v2-heart-s05",
+          "text": "с",
+          "sourceIndex": 4,
+          "startSample": 5354181,
+          "endSample": 5358591,
+          "confidence": "low",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-020:v2-heart-s06",
+          "text": "тобой",
+          "sourceIndex": 5,
+          "startSample": 5358591,
+          "endSample": 5400266,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        }
+      ],
+      "targets": [
+        {
+          "index": 0,
+          "id": "PK-020:v2-heart-t01",
+          "text": "Until",
+          "sourceIndices": [
+            0,
+            2
+          ],
+          "focusSourceIndices": [
+            0,
+            2
+          ],
+          "relation": "irreducible-construction",
+          "rationale": "Пока ... не is the standard until construction. English until expresses both particles without an independent not. Its focus follows only the union of пока and не, releasing during the separately sung сердцем."
+        },
+        {
+          "index": 1,
+          "id": "PK-020:v2-heart-t02",
+          "text": "I",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "grammar-completion",
+          "rationale": "I meet uses the first-person inflection of встречусь; I and meet activate together on the verb because there is no separately sung source pronoun here."
+        },
+        {
+          "index": 2,
+          "id": "PK-020:v2-heart-t03",
+          "text": "meet",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "grammar-completion",
+          "rationale": "I meet uses the first-person inflection of встречусь; I and meet activate together on the verb because there is no separately sung source pronoun here."
+        },
+        {
+          "index": 3,
+          "id": "PK-020:v2-heart-t04",
+          "text": "you",
+          "sourceIndices": [
+            4,
+            5
+          ],
+          "focusSourceIndices": [
+            4,
+            5
+          ],
+          "relation": "irreducible-construction",
+          "rationale": "English meet you absorbs the Russian prepositional construction с тобой. The target object follows the union of с and тобой; the two source words remain independently timed, with no enclosing-span hold."
+        },
+        {
+          "index": 4,
+          "id": "PK-020:v2-heart-t05",
+          "text": "with",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "grammar-completion",
+          "rationale": "With my heart is the instrumental meaning of сердцем. My is grounded in the first-person subject encoded by встречусь; it does not add another person or possessive acoustic event."
+        },
+        {
+          "index": 5,
+          "id": "PK-020:v2-heart-t06",
+          "text": "my",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "grammar-completion",
+          "rationale": "With my heart is the instrumental meaning of сердцем. My is grounded in the first-person subject encoded by встречусь; it does not add another person or possessive acoustic event."
+        },
+        {
+          "index": 6,
+          "id": "PK-020:v2-heart-t07",
+          "text": "heart.",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "grammar-completion",
+          "rationale": "With my heart is the instrumental meaning of сердцем. My is grounded in the first-person subject encoded by встречусь; it does not add another person or possessive acoustic event."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "PK-021",
+      "templateId": "pre-run",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Я бегу, бегу, бегу",
+      "targetText": "I run, run, run.",
+      "start": 123.15299319727892,
+      "end": 125.44498866213152,
+      "visibleStart": 123.15299319727892,
+      "fullOpacityEnd": 126.92498866213153,
+      "visibleEnd": 126.92498866213153,
+      "exitMode": "vocal-handoff",
+      "words": [
+        {
+          "id": "PK-021:pre-run-s01",
+          "text": "Я",
+          "sourceIndex": 0,
+          "startSample": 5431047,
+          "endSample": 5438853,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-021:pre-run-s02",
+          "text": "бегу,",
+          "sourceIndex": 1,
+          "startSample": 5442602,
+          "endSample": 5483614,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-021:pre-run-s03",
+          "text": "бегу,",
+          "sourceIndex": 2,
+          "startSample": 5484276,
+          "endSample": 5503239,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-021:pre-run-s04",
+          "text": "бегу",
+          "sourceIndex": 3,
+          "startSample": 5505576,
+          "endSample": 5532124,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        }
+      ],
+      "targets": [
+        {
+          "index": 0,
+          "id": "PK-021:pre-run-t01",
+          "text": "I",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 1,
+          "id": "PK-021:pre-run-t02",
+          "text": "run,",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 2,
+          "id": "PK-021:pre-run-t03",
+          "text": "run,",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 3,
+          "id": "PK-021:pre-run-t04",
+          "text": "run.",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "PK-022",
+      "templateId": "pre-trace",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "За собой оставив след",
+      "targetText": "Leaving a trace behind me.",
+      "start": 126.92498866213153,
+      "end": 129.54498866213152,
+      "visibleStart": 126.92498866213153,
+      "fullOpacityEnd": 129.72,
+      "visibleEnd": 130.22,
+      "exitMode": "fade",
+      "words": [
+        {
+          "id": "PK-022:pre-trace-s01",
+          "text": "За",
+          "sourceIndex": 0,
+          "startSample": 5597392,
+          "endSample": 5603787,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-022:pre-trace-s02",
+          "text": "собой",
+          "sourceIndex": 1,
+          "startSample": 5603787,
+          "endSample": 5654282,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-022:pre-trace-s03",
+          "text": "оставив",
+          "sourceIndex": 2,
+          "startSample": 5654282,
+          "endSample": 5679859,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-022:pre-trace-s04",
+          "text": "след",
+          "sourceIndex": 3,
+          "startSample": 5679859,
+          "endSample": 5712934,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        }
+      ],
+      "targets": [
+        {
+          "index": 0,
+          "id": "PK-022:pre-trace-t01",
+          "text": "Leaving",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 1,
+          "id": "PK-022:pre-trace-t02",
+          "text": "a",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "grammar-completion",
+          "rationale": "A trace is the complete English noun meaning of след."
+        },
+        {
+          "index": 2,
+          "id": "PK-022:pre-trace-t03",
+          "text": "trace",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 3,
+          "id": "PK-022:pre-trace-t04",
+          "text": "behind",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 4,
+          "id": "PK-022:pre-trace-t05",
+          "text": "me.",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "PK-023",
+      "templateId": "pre-carry",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Я несу, несу, несу",
+      "targetText": "I carry, carry, carry.",
+      "start": 130.74700680272107,
+      "end": 134.41,
+      "visibleStart": 130.52700680272108,
+      "fullOpacityEnd": 134.55,
+      "visibleEnd": 134.55,
+      "exitMode": "vocal-handoff",
+      "words": [
+        {
+          "id": "PK-023:pre-carry-s01",
+          "text": "Я",
+          "sourceIndex": 0,
+          "startSample": 5765943,
+          "endSample": 5777320,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-023:pre-carry-s02",
+          "text": "несу,",
+          "sourceIndex": 1,
+          "startSample": 5777320,
+          "endSample": 5819656,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-023:pre-carry-s03",
+          "text": "несу,",
+          "sourceIndex": 2,
+          "startSample": 5820539,
+          "endSample": 5842809,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-023:pre-carry-s04",
+          "text": "несу",
+          "sourceIndex": 3,
+          "startSample": 5843559,
+          "endSample": 5927481,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        }
+      ],
+      "targets": [
+        {
+          "index": 0,
+          "id": "PK-023:pre-carry-t01",
+          "text": "I",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 1,
+          "id": "PK-023:pre-carry-t02",
+          "text": "carry,",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 2,
+          "id": "PK-023:pre-carry-t03",
+          "text": "carry,",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 3,
+          "id": "PK-023:pre-carry-t04",
+          "text": "carry.",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "PK-024",
+      "templateId": "pre-cross",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "На себе свой чёрный крест",
+      "targetText": "My black cross upon myself.",
+      "start": 134.55,
+      "end": 137.38498866213152,
+      "visibleStart": 134.55,
+      "fullOpacityEnd": 138.29498866213152,
+      "visibleEnd": 138.29498866213152,
+      "exitMode": "vocal-handoff",
+      "words": [
+        {
+          "id": "PK-024:pre-cross-s01",
+          "text": "На",
+          "sourceIndex": 0,
+          "startSample": 5933655,
+          "endSample": 5942696,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-024:pre-cross-s02",
+          "text": "себе",
+          "sourceIndex": 1,
+          "startSample": 5942696,
+          "endSample": 5970478,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-024:pre-cross-s03",
+          "text": "свой",
+          "sourceIndex": 2,
+          "startSample": 5970478,
+          "endSample": 5993190,
+          "confidence": "low",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-024:pre-cross-s04",
+          "text": "чёрный",
+          "sourceIndex": 3,
+          "startSample": 5993190,
+          "endSample": 6017886,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-024:pre-cross-s05",
+          "text": "крест",
+          "sourceIndex": 4,
+          "startSample": 6018327,
+          "endSample": 6058678,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        }
+      ],
+      "targets": [
+        {
+          "index": 0,
+          "id": "PK-024:pre-cross-t01",
+          "text": "My",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 1,
+          "id": "PK-024:pre-cross-t02",
+          "text": "black",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 2,
+          "id": "PK-024:pre-cross-t03",
+          "text": "cross",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 3,
+          "id": "PK-024:pre-cross-t04",
+          "text": "upon",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 4,
+          "id": "PK-024:pre-cross-t05",
+          "text": "myself.",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "PK-025",
+      "templateId": "chorus-remains",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Где остались от домов разворочены пески",
+      "targetText": "Where churned-up sands are left of homes.",
+      "start": 138.29498866213152,
+      "end": 145.79,
+      "visibleStart": 138.29498866213152,
+      "fullOpacityEnd": 145.94498866213152,
+      "visibleEnd": 145.94498866213152,
+      "exitMode": "vocal-handoff",
+      "words": [
+        {
+          "id": "PK-025:chorus-remains-s01",
+          "text": "Где",
+          "sourceIndex": 0,
+          "startSample": 6098809,
+          "endSample": 6116229,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-025:chorus-remains-s02",
+          "text": "остались",
+          "sourceIndex": 1,
+          "startSample": 6116229,
+          "endSample": 6169810,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-025:chorus-remains-s03",
+          "text": "от",
+          "sourceIndex": 2,
+          "startSample": 6169810,
+          "endSample": 6177528,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-025:chorus-remains-s04",
+          "text": "домов",
+          "sourceIndex": 3,
+          "startSample": 6177528,
+          "endSample": 6266610,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-025:chorus-remains-s05",
+          "text": "разворочены",
+          "sourceIndex": 4,
+          "startSample": 6266610,
+          "endSample": 6343564,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-025:chorus-remains-s06",
+          "text": "пески",
+          "sourceIndex": 5,
+          "startSample": 6343564,
+          "endSample": 6429339,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        }
+      ],
+      "targets": [
+        {
+          "index": 0,
+          "id": "PK-025:chorus-remains-t01",
+          "text": "Where",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 1,
+          "id": "PK-025:chorus-remains-t02",
+          "text": "churned-up",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 2,
+          "id": "PK-025:chorus-remains-t03",
+          "text": "sands",
+          "sourceIndices": [
+            5
+          ],
+          "focusSourceIndices": [
+            5
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 3,
+          "id": "PK-025:chorus-remains-t04",
+          "text": "are",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "grammar-completion",
+          "rationale": "Are left is the complete passive-result equivalent of остались. Both target words share only that source event."
+        },
+        {
+          "index": 4,
+          "id": "PK-025:chorus-remains-t05",
+          "text": "left",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "grammar-completion",
+          "rationale": "Are left is the complete passive-result equivalent of остались. Both target words share only that source event."
+        },
+        {
+          "index": 5,
+          "id": "PK-025:chorus-remains-t06",
+          "text": "of",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 6,
+          "id": "PK-025:chorus-remains-t07",
+          "text": "homes.",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "PK-026",
+      "templateId": "chorus-concrete",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Собираю я себя из бетона на куски",
+      "targetText": "I gather myself from concrete into pieces.",
+      "start": 145.94498866213152,
+      "end": 153.17501133786848,
+      "visibleStart": 145.94498866213152,
+      "fullOpacityEnd": 153.55501133786848,
+      "visibleEnd": 153.55501133786848,
+      "exitMode": "vocal-handoff",
+      "words": [
+        {
+          "id": "PK-026:chorus-concrete-s01",
+          "text": "Собираю",
+          "sourceIndex": 0,
+          "startSample": 6436174,
+          "endSample": 6501443,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-026:chorus-concrete-s02",
+          "text": "я",
+          "sourceIndex": 1,
+          "startSample": 6501443,
+          "endSample": 6513570,
+          "confidence": "low",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-026:chorus-concrete-s03",
+          "text": "себя",
+          "sourceIndex": 2,
+          "startSample": 6513570,
+          "endSample": 6588760,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-026:chorus-concrete-s04",
+          "text": "из",
+          "sourceIndex": 3,
+          "startSample": 6607944,
+          "endSample": 6619410,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-026:chorus-concrete-s05",
+          "text": "бетона",
+          "sourceIndex": 4,
+          "startSample": 6619410,
+          "endSample": 6667038,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-026:chorus-concrete-s06",
+          "text": "на",
+          "sourceIndex": 5,
+          "startSample": 6667038,
+          "endSample": 6676520,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-026:chorus-concrete-s07",
+          "text": "куски",
+          "sourceIndex": 6,
+          "startSample": 6676520,
+          "endSample": 6755018,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        }
+      ],
+      "targets": [
+        {
+          "index": 0,
+          "id": "PK-026:chorus-concrete-t01",
+          "text": "I",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 1,
+          "id": "PK-026:chorus-concrete-t02",
+          "text": "gather",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 2,
+          "id": "PK-026:chorus-concrete-t03",
+          "text": "myself",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 3,
+          "id": "PK-026:chorus-concrete-t04",
+          "text": "from",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 4,
+          "id": "PK-026:chorus-concrete-t05",
+          "text": "concrete",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 5,
+          "id": "PK-026:chorus-concrete-t06",
+          "text": "into",
+          "sourceIndices": [
+            5
+          ],
+          "focusSourceIndices": [
+            5
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 6,
+          "id": "PK-026:chorus-concrete-t07",
+          "text": "pieces.",
+          "sourceIndices": [
+            6
+          ],
+          "focusSourceIndices": [
+            6
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "PK-027",
+      "templateId": "chorus-remains",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Где остались от домов разворочены пески",
+      "targetText": "Where churned-up sands are left of homes.",
+      "start": 153.55501133786848,
+      "end": 161.04498866213152,
+      "visibleStart": 153.55501133786848,
+      "fullOpacityEnd": 161.2,
+      "visibleEnd": 161.2,
+      "exitMode": "vocal-handoff",
+      "words": [
+        {
+          "id": "PK-027:chorus-remains-s01",
+          "text": "Где",
+          "sourceIndex": 0,
+          "startSample": 6771776,
+          "endSample": 6787872,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-027:chorus-remains-s02",
+          "text": "остались",
+          "sourceIndex": 1,
+          "startSample": 6787872,
+          "endSample": 6840792,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-027:chorus-remains-s03",
+          "text": "от",
+          "sourceIndex": 2,
+          "startSample": 6840792,
+          "endSample": 6848289,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-027:chorus-remains-s04",
+          "text": "домов",
+          "sourceIndex": 3,
+          "startSample": 6848289,
+          "endSample": 6939135,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-027:chorus-remains-s05",
+          "text": "разворочены",
+          "sourceIndex": 4,
+          "startSample": 6940017,
+          "endSample": 7017854,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-027:chorus-remains-s06",
+          "text": "пески",
+          "sourceIndex": 5,
+          "startSample": 7017854,
+          "endSample": 7102084,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        }
+      ],
+      "targets": [
+        {
+          "index": 0,
+          "id": "PK-027:chorus-remains-t01",
+          "text": "Where",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 1,
+          "id": "PK-027:chorus-remains-t02",
+          "text": "churned-up",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 2,
+          "id": "PK-027:chorus-remains-t03",
+          "text": "sands",
+          "sourceIndices": [
+            5
+          ],
+          "focusSourceIndices": [
+            5
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 3,
+          "id": "PK-027:chorus-remains-t04",
+          "text": "are",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "grammar-completion",
+          "rationale": "Are left is the complete passive-result equivalent of остались. Both target words share only that source event."
+        },
+        {
+          "index": 4,
+          "id": "PK-027:chorus-remains-t05",
+          "text": "left",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "grammar-completion",
+          "rationale": "Are left is the complete passive-result equivalent of остались. Both target words share only that source event."
+        },
+        {
+          "index": 5,
+          "id": "PK-027:chorus-remains-t06",
+          "text": "of",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 6,
+          "id": "PK-027:chorus-remains-t07",
+          "text": "homes.",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "PK-028",
+      "templateId": "chorus-concrete",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Собираю я себя из бетона на куски",
+      "targetText": "I gather myself from concrete into pieces.",
+      "start": 161.2,
+      "end": 168.22,
+      "visibleStart": 161.2,
+      "fullOpacityEnd": 168.3909977324263,
+      "visibleEnd": 168.3909977324263,
+      "exitMode": "vocal-handoff",
+      "words": [
+        {
+          "id": "PK-028:chorus-concrete-s01",
+          "text": "Собираю",
+          "sourceIndex": 0,
+          "startSample": 7108920,
+          "endSample": 7172865,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-028:chorus-concrete-s02",
+          "text": "я",
+          "sourceIndex": 1,
+          "startSample": 7172865,
+          "endSample": 7185654,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-028:chorus-concrete-s03",
+          "text": "себя",
+          "sourceIndex": 2,
+          "startSample": 7185654,
+          "endSample": 7251363,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-028:chorus-concrete-s04",
+          "text": "из",
+          "sourceIndex": 3,
+          "startSample": 7280469,
+          "endSample": 7291714,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-028:chorus-concrete-s05",
+          "text": "бетона",
+          "sourceIndex": 4,
+          "startSample": 7291714,
+          "endSample": 7340445,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-028:chorus-concrete-s06",
+          "text": "на",
+          "sourceIndex": 5,
+          "startSample": 7340445,
+          "endSample": 7349265,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-028:chorus-concrete-s07",
+          "text": "куски",
+          "sourceIndex": 6,
+          "startSample": 7349265,
+          "endSample": 7418502,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        }
+      ],
+      "targets": [
+        {
+          "index": 0,
+          "id": "PK-028:chorus-concrete-t01",
+          "text": "I",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 1,
+          "id": "PK-028:chorus-concrete-t02",
+          "text": "gather",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 2,
+          "id": "PK-028:chorus-concrete-t03",
+          "text": "myself",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 3,
+          "id": "PK-028:chorus-concrete-t04",
+          "text": "from",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 4,
+          "id": "PK-028:chorus-concrete-t05",
+          "text": "concrete",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 5,
+          "id": "PK-028:chorus-concrete-t06",
+          "text": "into",
+          "sourceIndices": [
+            5
+          ],
+          "focusSourceIndices": [
+            5
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 6,
+          "id": "PK-028:chorus-concrete-t07",
+          "text": "pieces.",
+          "sourceIndices": [
+            6
+          ],
+          "focusSourceIndices": [
+            6
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "PK-029",
+      "templateId": "refrain-pebbles",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "По камушку, по камушку, на краешке земли",
+      "targetText": "Pebble by pebble, pebble by pebble, at the edge of the earth.",
+      "start": 168.3909977324263,
+      "end": 183.00498866213152,
+      "visibleStart": 168.3909977324263,
+      "fullOpacityEnd": 183.5819954648526,
+      "visibleEnd": 183.5819954648526,
+      "exitMode": "vocal-handoff",
+      "words": [
+        {
+          "id": "PK-029:refrain-pebbles-s01",
+          "text": "По",
+          "sourceIndex": 0,
+          "startSample": 7426043,
+          "endSample": 7452459,
+          "confidence": "low",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-029:refrain-pebbles-s02",
+          "text": "камушку,",
+          "sourceIndex": 1,
+          "startSample": 7466615,
+          "endSample": 7556976,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-029:refrain-pebbles-s03",
+          "text": "по",
+          "sourceIndex": 2,
+          "startSample": 7593711,
+          "endSample": 7624890,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-029:refrain-pebbles-s04",
+          "text": "камушку,",
+          "sourceIndex": 3,
+          "startSample": 7635209,
+          "endSample": 7761600,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-029:refrain-pebbles-s05",
+          "text": "на",
+          "sourceIndex": 4,
+          "startSample": 7764070,
+          "endSample": 7793793,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-029:refrain-pebbles-s06",
+          "text": "краешке",
+          "sourceIndex": 5,
+          "startSample": 7800232,
+          "endSample": 7903602,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-029:refrain-pebbles-s07",
+          "text": "земли",
+          "sourceIndex": 6,
+          "startSample": 7948143,
+          "endSample": 8070520,
+          "confidence": "low",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        }
+      ],
+      "targets": [
+        {
+          "index": 0,
+          "id": "PK-029:refrain-pebbles-t01",
+          "text": "Pebble",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "grammar-completion",
+          "rationale": "Pebble by pebble is the English distributive equivalent of по камушку. Both displayed pebbles belong to the one source noun; by corresponds independently to по. Neither pebble receives an invented second onset."
+        },
+        {
+          "index": 1,
+          "id": "PK-029:refrain-pebbles-t02",
+          "text": "by",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 2,
+          "id": "PK-029:refrain-pebbles-t03",
+          "text": "pebble,",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "grammar-completion",
+          "rationale": "Pebble by pebble is the English distributive equivalent of по камушку. Both displayed pebbles belong to the one source noun; by corresponds independently to по. Neither pebble receives an invented second onset."
+        },
+        {
+          "index": 3,
+          "id": "PK-029:refrain-pebbles-t04",
+          "text": "pebble",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "grammar-completion",
+          "rationale": "Pebble by pebble is the English distributive equivalent of по камушку. Both displayed pebbles belong to the one source noun; by corresponds independently to по. Neither pebble receives an invented second onset."
+        },
+        {
+          "index": 4,
+          "id": "PK-029:refrain-pebbles-t05",
+          "text": "by",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 5,
+          "id": "PK-029:refrain-pebbles-t06",
+          "text": "pebble,",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "grammar-completion",
+          "rationale": "Pebble by pebble is the English distributive equivalent of по камушку. Both displayed pebbles belong to the one source noun; by corresponds independently to по. Neither pebble receives an invented second onset."
+        },
+        {
+          "index": 6,
+          "id": "PK-029:refrain-pebbles-t07",
+          "text": "at",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 7,
+          "id": "PK-029:refrain-pebbles-t08",
+          "text": "the",
+          "sourceIndices": [
+            5
+          ],
+          "focusSourceIndices": [
+            5
+          ],
+          "relation": "grammar-completion",
+          "rationale": "The edge is the complete contextual noun meaning of краешке; its article shares the noun event."
+        },
+        {
+          "index": 8,
+          "id": "PK-029:refrain-pebbles-t09",
+          "text": "edge",
+          "sourceIndices": [
+            5
+          ],
+          "focusSourceIndices": [
+            5
+          ],
+          "relation": "grammar-completion",
+          "rationale": "The edge is the complete contextual noun meaning of краешке; its article shares the noun event."
+        },
+        {
+          "index": 9,
+          "id": "PK-029:refrain-pebbles-t10",
+          "text": "of",
+          "sourceIndices": [
+            6
+          ],
+          "focusSourceIndices": [
+            6
+          ],
+          "relation": "grammar-completion",
+          "rationale": "Of the earth is the complete genitive noun phrase expressed by земли. Of and the are necessary grammar anchored on this noun, not separately timed words."
+        },
+        {
+          "index": 10,
+          "id": "PK-029:refrain-pebbles-t11",
+          "text": "the",
+          "sourceIndices": [
+            6
+          ],
+          "focusSourceIndices": [
+            6
+          ],
+          "relation": "grammar-completion",
+          "rationale": "Of the earth is the complete genitive noun phrase expressed by земли. Of and the are necessary grammar anchored on this noun, not separately timed words."
+        },
+        {
+          "index": 11,
+          "id": "PK-029:refrain-pebbles-t12",
+          "text": "earth.",
+          "sourceIndices": [
+            6
+          ],
+          "focusSourceIndices": [
+            6
+          ],
+          "relation": "grammar-completion",
+          "rationale": "Of the earth is the complete genitive noun phrase expressed by земли. Of and the are necessary grammar anchored on this noun, not separately timed words."
+        }
+      ],
+      "sourceBreaks": [
+        3
+      ],
+      "targetBreaks": [
+        5
+      ]
+    },
+    {
+      "id": "PK-030",
+      "templateId": "refrain-pebbles",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "По камушку, по камушку, на краешке земли",
+      "targetText": "Pebble by pebble, pebble by pebble, at the edge of the earth.",
+      "start": 183.5819954648526,
+      "end": 199.99,
+      "visibleStart": 183.5819954648526,
+      "fullOpacityEnd": 201.4,
+      "visibleEnd": 201.9,
+      "exitMode": "fade",
+      "words": [
+        {
+          "id": "PK-030:refrain-pebbles-s01",
+          "text": "По",
+          "sourceIndex": 0,
+          "startSample": 8095966,
+          "endSample": 8136582,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-030:refrain-pebbles-s02",
+          "text": "камушку,",
+          "sourceIndex": 1,
+          "startSample": 8140992,
+          "endSample": 8263149,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-030:refrain-pebbles-s03",
+          "text": "по",
+          "sourceIndex": 2,
+          "startSample": 8267295,
+          "endSample": 8302707,
+          "confidence": "low",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-030:refrain-pebbles-s04",
+          "text": "камушку,",
+          "sourceIndex": 3,
+          "startSample": 8307911,
+          "endSample": 8419925,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-030:refrain-pebbles-s05",
+          "text": "на",
+          "sourceIndex": 4,
+          "startSample": 8435051,
+          "endSample": 8469714,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-030:refrain-pebbles-s06",
+          "text": "краешке",
+          "sourceIndex": 5,
+          "startSample": 8473021,
+          "endSample": 8581198,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        },
+        {
+          "id": "PK-030:refrain-pebbles-s07",
+          "text": "земли",
+          "sourceIndex": 6,
+          "startSample": 8628959,
+          "endSample": 8819559,
+          "confidence": "medium",
+          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
+        }
+      ],
+      "targets": [
+        {
+          "index": 0,
+          "id": "PK-030:refrain-pebbles-t01",
+          "text": "Pebble",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "grammar-completion",
+          "rationale": "Pebble by pebble is the English distributive equivalent of по камушку. Both displayed pebbles belong to the one source noun; by corresponds independently to по. Neither pebble receives an invented second onset."
+        },
+        {
+          "index": 1,
+          "id": "PK-030:refrain-pebbles-t02",
+          "text": "by",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 2,
+          "id": "PK-030:refrain-pebbles-t03",
+          "text": "pebble,",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "grammar-completion",
+          "rationale": "Pebble by pebble is the English distributive equivalent of по камушку. Both displayed pebbles belong to the one source noun; by corresponds independently to по. Neither pebble receives an invented second onset."
+        },
+        {
+          "index": 3,
+          "id": "PK-030:refrain-pebbles-t04",
+          "text": "pebble",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "grammar-completion",
+          "rationale": "Pebble by pebble is the English distributive equivalent of по камушку. Both displayed pebbles belong to the one source noun; by corresponds independently to по. Neither pebble receives an invented second onset."
+        },
+        {
+          "index": 4,
+          "id": "PK-030:refrain-pebbles-t05",
+          "text": "by",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 5,
+          "id": "PK-030:refrain-pebbles-t06",
+          "text": "pebble,",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "grammar-completion",
+          "rationale": "Pebble by pebble is the English distributive equivalent of по камушку. Both displayed pebbles belong to the one source noun; by corresponds independently to по. Neither pebble receives an invented second onset."
+        },
+        {
+          "index": 6,
+          "id": "PK-030:refrain-pebbles-t07",
+          "text": "at",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "relation": "word-equivalent",
+          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
+        },
+        {
+          "index": 7,
+          "id": "PK-030:refrain-pebbles-t08",
+          "text": "the",
+          "sourceIndices": [
+            5
+          ],
+          "focusSourceIndices": [
+            5
+          ],
+          "relation": "grammar-completion",
+          "rationale": "The edge is the complete contextual noun meaning of краешке; its article shares the noun event."
+        },
+        {
+          "index": 8,
+          "id": "PK-030:refrain-pebbles-t09",
+          "text": "edge",
+          "sourceIndices": [
+            5
+          ],
+          "focusSourceIndices": [
+            5
+          ],
+          "relation": "grammar-completion",
+          "rationale": "The edge is the complete contextual noun meaning of краешке; its article shares the noun event."
+        },
+        {
+          "index": 9,
+          "id": "PK-030:refrain-pebbles-t10",
+          "text": "of",
+          "sourceIndices": [
+            6
+          ],
+          "focusSourceIndices": [
+            6
+          ],
+          "relation": "grammar-completion",
+          "rationale": "Of the earth is the complete genitive noun phrase expressed by земли. Of and the are necessary grammar anchored on this noun, not separately timed words."
+        },
+        {
+          "index": 10,
+          "id": "PK-030:refrain-pebbles-t11",
+          "text": "the",
+          "sourceIndices": [
+            6
+          ],
+          "focusSourceIndices": [
+            6
+          ],
+          "relation": "grammar-completion",
+          "rationale": "Of the earth is the complete genitive noun phrase expressed by земли. Of and the are necessary grammar anchored on this noun, not separately timed words."
+        },
+        {
+          "index": 11,
+          "id": "PK-030:refrain-pebbles-t12",
+          "text": "earth.",
+          "sourceIndices": [
+            6
+          ],
+          "focusSourceIndices": [
+            6
+          ],
+          "relation": "grammar-completion",
+          "rationale": "Of the earth is the complete genitive noun phrase expressed by земли. Of and the are necessary grammar anchored on this noun, not separately timed words."
+        }
+      ],
+      "sourceBreaks": [
+        3
+      ],
+      "targetBreaks": [
+        5
+      ]
+    }
+  ]
+}
