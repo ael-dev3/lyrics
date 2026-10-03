@@ -2,7 +2,7 @@
 
 ## Current state
 
-Complete bilingual preview. Production render and full listening approval remain pending. Start at the project README, source manifest, current `evidence/preview-inputs.json`, timing candidate and independent timing review. [The sampled browser checks](evidence/browser-preview-checks.md) record the observed playback/recovery scope; [the composition still record](evidence/preview-stills.json) identifies the saved renderer diagnostics separately. Use the connected-phoneme workflow; preserve original source zero and the exact source identity.
+Complete bilingual v6 preview. Read [the final synchronization audit](evidence/final-sync-audit.md) for preserved source events, exact-onset visibility, paused-clock refresh and isolated glyph emphasis. Production render and full listening approval remain pending. Start at the project README, source manifest, current `evidence/preview-inputs.json`, timing candidate and independent timing review. [The sampled browser checks](evidence/browser-preview-checks.md) record the observed playback/recovery scope; [the composition still record](evidence/preview-stills.json) identifies the saved renderer diagnostics separately. Use the connected-phoneme workflow; preserve original source zero and the exact source identity.
 
 ## Ownership
 

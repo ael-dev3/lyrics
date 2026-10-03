@@ -2,7 +2,7 @@ import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {createCanvas,GlobalFonts} from '@napi-rs/canvas';
-import {cueLayout,setSceneForProof,stoneResponse} from '../src/scene.ts';
+import {cueLayout,cueOpacity,paintScene,setSceneForProof,stoneResponse} from '../src/scene.ts';
 import {sourceActive,targetActive,visibleCue,validateTimeline,type Timeline,type Target,type Word} from '../src/model.ts';
 const read=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
 const t=read('public/timeline.json') as Timeline;
@@ -38,6 +38,24 @@ test('sample-boundary float multiplication cannot delay focus by a display frame
 test('word focus ends independently of neutral lyric readability',()=>{
   for(const c of t.cues){const w=c.words.at(-1)!;assert(!sourceActive(w,(w.endSample+.5)/44100));assert(c.fullOpacityEnd>=w.endSample/44100);}
 });
+test('every first sung word is visible at full opacity, including atomic line handoffs',()=>{
+  for(const c of t.cues){
+    const first=c.words[0]!,onset=first.startSample/t.sampleRate;
+    assert.equal(visibleCue(t,onset)?.id,c.id,c.id);
+    assert(sourceActive(first,onset),first.id);
+    assert(c.targets.some(token=>targetActive(token,c.words,onset)),c.id);
+    assert.equal(cueOpacity(c,onset),1,c.id);
+    assert.equal(cueOpacity(c,c.visibleStart-1/t.sampleRate),0,c.id);
+    for(const w of c.words)assert.equal(cueOpacity(c,(w.endSample-.25)/t.sampleRate),1,w.id);
+    if(c.visibleStart===c.start){
+      assert.equal(cueOpacity(c,c.start+.0005),1,c.id);
+    }else{
+      assert.equal(cueOpacity(c,c.visibleStart),0,c.id);
+      assert(cueOpacity(c,(c.visibleStart+c.start-.012)/2)>0,c.id);
+      assert(cueOpacity(c,(c.visibleStart+c.start-.012)/2)<1,c.id);
+    }
+  }
+});
 test('printed punctuation survives without becoming an invented sung token',()=>{
   const c=t.cues.find(c=>c.templateId==='v2-broken')!;
   assert(c);assert.equal(c.words.find(w=>w.text==='моя')!.punctuationAfter,'—');assert(!c.words.some(w=>w.text==='—'));
@@ -47,6 +65,33 @@ test('both languages fit at equal typography without covering the central figure
   const canvas=createCanvas(1080,1920);const ctx=canvas.getContext('2d') as unknown as CanvasRenderingContext2D;
   setSceneForProof(t,read('public/audio-features.json'),read('public/stone-anchors.json').stones);
   for(const c of t.cues)for(const f of ['landscape','portrait'] as const){const l=cueLayout(ctx,c,f);assert(l.top>(f==='portrait'?1270:730));for(const s of [...l.source,...l.target]){assert(s.x>=42);assert(s.x+s.width<=1038);assert(s.y<= (f==='portrait'?1660:1030));}}
+});
+test('word outlines never inherit emphasis from an adjacent word in either language',()=>{
+  GlobalFonts.registerFromPath('public/fonts/Alegreya.ttf','Kamushku');
+  const canvas=createCanvas(1080,1920),source=createCanvas(1080,1080);
+  const context=canvas.getContext('2d');
+  let outlines:{text:string;shadowColor:string;shadowBlur:number}[]=[];
+  const observed=new Proxy(context,{
+    get(target,key){
+      if(key==='strokeText')return (text:string,x:number,y:number)=>{
+        outlines.push({text,shadowColor:target.shadowColor,shadowBlur:target.shadowBlur});
+        target.strokeText(text,x,y);
+      };
+      const value=Reflect.get(target,key,target);
+      return typeof value==='function'?value.bind(target):value;
+    },
+    set(target,key,value){return Reflect.set(target,key,value,target);}
+  }) as unknown as CanvasRenderingContext2D;
+  setSceneForProof(t,read('public/audio-features.json'),read('public/stone-anchors.json').stones);
+  for(const c of t.cues)for(const format of ['landscape','portrait'] as const){
+    outlines=[];paintScene(observed,c.start,format,source as unknown as CanvasImageSource);
+    const expected=[...c.words.map(w=>sourceActive(w,c.start)),...c.targets.map(token=>targetActive(token,c.words,c.start))];
+    assert.equal(outlines.length,expected.length,c.id);
+    outlines.forEach((outline,index)=>{
+      assert.equal(outline.shadowBlur,expected[index]?8:5,`${c.id}/${format}/${outline.text}`);
+      assert.equal(outline.shadowColor,expected[index]?'rgba(218,163,118,.25)':'rgba(0,0,0,.6)',`${c.id}/${format}/${outline.text}`);
+    });
+  }
 });
 test('stone response reconstructs from measured music and stays bounded',()=>{
   const plan=read('public/stone-anchors.json');assert(plan.stones.length>=24);

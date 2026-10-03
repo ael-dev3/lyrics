@@ -293,7 +293,9 @@ video.addEventListener('seeking', () => {
 });
 video.addEventListener('seeked', () => {fallbackDecodedFrame(); drawDecodedFrame(); scheduleVideoFrame(); updatePlaybackState();});
 video.addEventListener('play', updatePlaybackState);
-video.addEventListener('pause', () => {updatePlaybackState(); synchronizeReference(); updateUrl();});
+// Commit the actual stopped word time, even if pause lands between display
+// paints and no further native picture callback arrives.
+video.addEventListener('pause', () => {drawDecodedFrame(); updatePlaybackState(); synchronizeReference(); updateUrl();});
 video.addEventListener('ended', () => {updatePlaybackState(); drawDecodedFrame(); updateControls(duration());});
 video.addEventListener('canplay', () => {clearReport(); fallbackDecodedFrame(); scheduleVideoFrame();});
 video.addEventListener('playing', () => {clearReport(); updatePlaybackState(); scheduleVideoFrame();});
