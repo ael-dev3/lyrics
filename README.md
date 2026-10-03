@@ -24,6 +24,8 @@ Thirty cues carry 163 source-word events and 206 translated tokens. Independent 
 
 Both 12,530-frame, 60 fps films passed strict full decode, exact frame timestamps, original AAC packet and decoded-audio identity, protected-picture checks on every frame and no near-black intervals. Separate scene checks cover 829 selected frames per format and every Russian/English token in focused and neutral states. A 25-file Desktop upload kit includes both videos, platform covers, copy, bilingual captions and verified checksums. The [v1.0.0 release](https://github.com/ael-dev3/lyrics/releases/tag/po-kamushku-v1.0.0) includes both films, all posting assets and complete upload/source ZIPs; all 16 attachments were freshly downloaded and verified. The source archive includes the exact original recording and all approved project inputs.
 
+The released TikTok word focus has a [documented visibility limitation](projects/po-kamushku-lyric-film/KNOWN-ISSUES.md). Current films are preserved; future portrait previews should use clearer active-word emphasis.
+
 [Project and delivery evidence](projects/po-kamushku-lyric-film/README.md) · [Production lessons and reusable brief](projects/po-kamushku-lyric-film/PRODUCTION-LESSONS.md) · [Exact production process](projects/po-kamushku-lyric-film/PRODUCTION-NOTES.md) · [Agent handoff](projects/po-kamushku-lyric-film/AGENT-HANDOFF.md) · [Final verification](projects/po-kamushku-lyric-film/evidence/final-verification.json)
 
 ## Кометы

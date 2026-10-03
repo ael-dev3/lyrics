@@ -67,6 +67,10 @@ Song, original picture and soundtrack: **Settlers**, from the linked source uplo
 
 English translation, typography, synchronized focus, surface relighting and film implementation: Ael, assisted with Codex. Alegreya is distributed under the [SIL Open Font License](public/fonts/Alegreya-OFL.txt), with the font from [Google Fonts' Alegreya source](https://github.com/google/fonts/tree/main/ofl/alegreya). Original media are not represented as open-licensed software assets.
 
+## Portrait visibility follow-up
+
+The delivered TikTok active-word emphasis is documented as too subdued for easy recognition. Both films remain unchanged. Future portrait previews should increase active/neutral distinction and validate focus at realistic viewing size and ordinary brightness, with equal emphasis in both languages. [Known presentation limitation and next-production checks](KNOWN-ISSUES.md). Timing/pixel verification remains valid within its recorded technical scope.
+
 ## Final synchronization polish
 
 The [v6 audit](evidence/final-sync-audit.md) reviews every retained onset/release and complete translated meaning. It preserves acoustic selections and the three bounded myself tails, fixes first-word visibility at immediate line handoffs, commits the exact paused word position and prevents neighbouring glyphs from borrowing highlight glow. All active-voice frames now require a fully visible line. The current owner review and render authorization are recorded separately from this signal and software audit; the completed films have their own final-file evidence.

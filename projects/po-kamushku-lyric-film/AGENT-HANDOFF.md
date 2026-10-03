@@ -8,6 +8,10 @@ Start with the project README, [production lessons](PRODUCTION-LESSONS.md), [exa
 
 [Browser checks](evidence/browser-preview-checks.md) record their sampled playback/recovery scope. [The final README image](evidence/final-stills.json) is an actual decoded production frame; historical preview stills remain in `evidence/preview-stills.json`. Use the connected-phoneme workflow and preserve exact source identity, original zero and bounded uncertainty.
 
+## Later portrait presentation finding
+
+The released TikTok focus is too subdued for comfortable active-word recognition. Preserve the current films and frozen inputs. For the next production, increase portrait focus visibility and compare actual small-player playback at ordinary brightness in both languages. [The known-issue record](KNOWN-ISSUES.md) separates this salience limitation from correct timing/decoded glyph states.
+
 ## Ownership
 
 - `source/lyrics-editorial.json`: unchanged supplied reference, performed inventory, natural English and smallest defensible source-to-target mappings.
