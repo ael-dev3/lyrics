@@ -2,7 +2,7 @@
 
 **Preview evidence only. All 163 retained source events have separate onset and lexical release selections. This is model/signal inspection, not a normal-speed or reduced-speed listening attestation. Production remains closed.**
 
-Revision: `po-kamushku-preview-v4-held-myself-tail`. Original source SHA-256: `f6572759f48f725497ad42b7c84cf12825824041897c47fdd36832a40ad30dd6`. Editorial SHA-256: `bbcf3f94a89dee54df7fc2f1cd7d8341d6b35d0c204770c04f81293da3fee0d1`. Timing candidate SHA-256: `feee5442e5ad1d7c225b431a967195a9c996ce0bc459e07b6204def4046760d1`.
+Revision: `po-kamushku-preview-v5-held-myself-occurrences`. Original source SHA-256: `f6572759f48f725497ad42b7c84cf12825824041897c47fdd36832a40ad30dd6`. Editorial SHA-256: `bbcf3f94a89dee54df7fc2f1cd7d8341d6b35d0c204770c04f81293da3fee0d1`. Timing candidate SHA-256: `43e741499b02b001a75e9f12bd8728789ed4a87142a00b942f25b7d0bc08f09e`.
 
 ## Recording and inventory
 
@@ -37,7 +37,7 @@ Every word has a selected source sample, plausible onset/release interval, chang
 
 ## Neutral reading lifetime
 
-All 30 full-opacity reading holds are separate from word focus. The body end is acoustic; a neutral line may remain readable through weaker residual decay. Close adjacent vocal phrases replace atomically when a gentle fade cannot fit. A hold never extends beyond the next actual phrase entry. Other reviewed word events receive no reverb extension. One targeted v4 exception extends PK-026 себя / myself from the prior149.405 direct-body estimate to149.700 for a requested longer focus on the soft vowel/carry. The295.011ms extension stops140ms before the next из at149.840. The prior body estimate remains separate in the candidate; signal alone cannot distinguish all of the soft carry from reverberation. This is a bounded listening-guided focus refinement, not a new claim of exact phonetic duration. See `held-myself-tail-review.json`.
+All 30 full-opacity reading holds are separate from word focus. The body end is acoustic; a neutral line may remain readable through weaker residual decay. Close adjacent vocal phrases replace atomically when a gentle fade cannot fit. A hold never extends beyond the next actual phrase entry. Other reviewed word events receive no reverb extension. Three targeted себя / myself focus tails now end at58.385,149.700 and164.820 seconds, extending their prior direct-body estimates by250,295 and390 ms respectively. Each release was inspected independently and stops before its unchanged next из onset, leaving75,140 and270 ms. Prior body estimates remain separate; signal alone cannot distinguish all soft carry from reverberation. These are bounded requested focus refinements, not new claims of exact phonetic duration. See `held-myself-repeat-review.json`; the earlier single-occurrence v4 record remains historical evidence.
 
 | Cue | First onset (s) | Last direct release (s) | Neutral hold through (s) |
 | --- | ---: | ---: | ---: |

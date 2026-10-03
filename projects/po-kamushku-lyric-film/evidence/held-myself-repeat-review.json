@@ -1,0 +1,71 @@
+{
+  "revision": "po-kamushku-preview-v5-held-myself-occurrences",
+  "sourceSha256": "f6572759f48f725497ad42b7c84cf12825824041897c47fdd36832a40ad30dd6",
+  "priorTimingSha256": "feee5442e5ad1d7c225b431a967195a9c996ce0bc459e07b6204def4046760d1",
+  "sampleRate": 44100,
+  "newReleaseEventsChanged": 2,
+  "onsetsChanged": 0,
+  "scope": "Apply the same bounded soft-ending treatment to every myself occurrence, using independently inspected per-occurrence tails rather than a universal extra duration.",
+  "occurrences": [
+    {
+      "cueId": "PK-011",
+      "sourceWord": "себя",
+      "targetWord": "myself",
+      "priorDirectBodyEndSample": 2563754,
+      "priorDirectBodyEndSeconds": 58.135011337868484,
+      "selectedFocusEndSample": 2574778,
+      "selectedFocusEndSeconds": 58.38498866213152,
+      "extensionSeconds": 0.24997732426303854,
+      "nextWordOnsetSample": 2578086,
+      "nextWordOnsetSeconds": 58.46,
+      "remainingGapSeconds": 0.07501133786848073,
+      "scope": "Independently selected bounded soft-carry display focus; not a claim of fresh vocal production throughout the tail."
+    },
+    {
+      "cueId": "PK-026",
+      "sourceWord": "себя",
+      "targetWord": "myself",
+      "priorDirectBodyEndSample": 6588760,
+      "priorDirectBodyEndSeconds": 149.40498866213153,
+      "selectedFocusEndSample": 6601770,
+      "selectedFocusEndSeconds": 149.7,
+      "extensionSeconds": 0.2950113378684807,
+      "nextWordOnsetSample": 6607944,
+      "nextWordOnsetSeconds": 149.84,
+      "remainingGapSeconds": 0.14,
+      "scope": "Independently selected bounded soft-carry display focus; not a claim of fresh vocal production throughout the tail."
+    },
+    {
+      "cueId": "PK-028",
+      "sourceWord": "себя",
+      "targetWord": "myself",
+      "priorDirectBodyEndSample": 7251363,
+      "priorDirectBodyEndSeconds": 164.43,
+      "selectedFocusEndSample": 7268562,
+      "selectedFocusEndSeconds": 164.82,
+      "extensionSeconds": 0.39,
+      "nextWordOnsetSample": 7280469,
+      "nextWordOnsetSeconds": 165.09,
+      "remainingGapSeconds": 0.27,
+      "scope": "Independently selected bounded soft-carry display focus; not a claim of fresh vocal production throughout the tail."
+    }
+  ],
+  "independentSignalReview": {
+    "method": "Original-mix and estimated-vocal waveform/spectrum inspection; no new recognition or alignment runs.",
+    "PK-011": "Quiet harmonic carry remains into58.35–58.40; stop before renewed iz58.460.",
+    "PK-028": "Soft carry remains through164.80, then estimated-vocal RMS drops to−38.8 dBFS at164.85 and−47.1 dBFS at164.90.",
+    "limitations": "Estimated stem can retain reverb and bleed. This supports an authored focus tail, not complete auditory attestation or exact phonetic certainty."
+  },
+  "productionAuthorized": false,
+  "humanFullListeningAttested": false,
+  "previewInputsSha256": "a2debc7d00f57696cccfccdb306de179ff352bb9d24113758f9a61bb35987e30",
+  "proof": {
+    "path": "evidence/myself-repeat-preview.jpg",
+    "sceneTimeSeconds": 58.25,
+    "format": "landscape",
+    "sha256": "582e06d5321f2be7c5d7c8b70f84c4e51b6bb2f2d0a9e19a4fcd84cd03d3ea79",
+    "kind": "Shared-renderer complete-composition diagnostic, not browser screenshot or encoded production frame",
+    "sourceFrameUsed": 0
+  },
+  "priorRefinedTailUnchanged": "PK-026 at149.700 s"
+}
