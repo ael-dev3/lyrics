@@ -14,7 +14,7 @@ Music films with synchronized lyrics, meaning-linked translations, and audio-rea
 
 **sotode 外で · Russian / English, with Japanese during Japanese vocals · complete working preview**
 
-![Призрак actual browser preview with independent Japanese-led and Russian-led vocal blocks](projects/prizrak-lyric-film/evidence/browser-landscape-overlap-v2-214.300.jpg)
+![Призрак actual browser preview with centered independent Japanese-led and Russian-led vocal blocks](projects/prizrak-lyric-film/evidence/browser-landscape-centered-v2-214.300.jpg)
 
 *Full-page screenshot of the actual browser preview paused at 03:34.300. Original picture and unchanged soundtrack: [sotode 外で’s upload](https://www.youtube.com/watch?v=Psp5vt8BwoY). [Screenshot provenance](projects/prizrak-lyric-film/evidence/preview-stills.json). Preview evidence, not a final encoded film.*
 

@@ -66,7 +66,6 @@ export function layoutCue(ctx:Context,cue:Cue,format:Format):CueLayout {
  const bottom=portrait?(upper?COMPOSITION.portrait.sourceY+COMPOSITION.portrait.sourceHeight+42+total:dual?1605:(closing?1355:COMPOSITION.portrait.readingCenter)+total/2):(upper?105+total:closing?610:COMPOSITION.landscape.readingBottom);
  const top=bottom-total;const canvasWidth=portrait?1080:1920;
  const lanes=positionLanes(ctx,cue.lanes,wrapped,size,top,canvasWidth);
- if(upper && !portrait)for(const lane of lanes)for(const slot of lane.slots)slot.x+=240;
  const result={size,top,bottom,lanes};layouts.set(key,result);return result;
 }
 export function layoutCarry(ctx:Context,cue:Cue,format:Format):CueLayout|undefined {
@@ -122,7 +121,7 @@ export function paintScene(ctx:Context,time:number,format:Format,source:CanvasIm
  const cues=visibleCues(t,time),upper=cues.find(c=>vocalTrack(c)==='japanese-upper');
  // Readability is a continuous composition shade, independent of cue opacity.
  if(!portrait){ctx.save();ctx.globalAlpha=1-smooth(241.9,242.65,time);
-  const shadeRegion=(top:number,bottom:number,upperRegion:boolean)=>{const shade=ctx.createLinearGradient(0,top,0,bottom);shade.addColorStop(0,'rgba(6,12,15,0)');shade.addColorStop(.42,'rgba(6,12,15,.14)');shade.addColorStop(.8,upperRegion?'rgba(6,12,15,.48)':'rgba(6,12,15,.58)');shade.addColorStop(1,upperRegion?'rgba(6,12,15,0)':'rgba(6,12,15,.48)');ctx.fillStyle=shade;ctx.fillRect(upperRegion?480:0,top,upperRegion?1440:1920,bottom-top);};
+  const shadeRegion=(top:number,bottom:number,upperRegion:boolean)=>{const shade=ctx.createLinearGradient(0,top,0,bottom);shade.addColorStop(0,'rgba(6,12,15,0)');shade.addColorStop(.42,'rgba(6,12,15,.14)');shade.addColorStop(.8,upperRegion?'rgba(6,12,15,.48)':'rgba(6,12,15,.58)');shade.addColorStop(1,upperRegion?'rgba(6,12,15,0)':'rgba(6,12,15,.48)');ctx.fillStyle=shade;ctx.fillRect(0,top,1920,bottom-top);};
   if(cues.some(c=>vocalTrack(c)==='lead'))shadeRegion(520,1020,false);
   if(upper)shadeRegion(80,430,true);
   if(!cues.length)shadeRegion(520,1020,false);

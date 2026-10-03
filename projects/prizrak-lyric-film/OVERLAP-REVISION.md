@@ -14,9 +14,11 @@ See [selected source events](source/japanese-overlap-selected.json), [independen
 
 Three late Japanese pairs own an independent `japanese-upper` track. The complete Russian cue continues on the lead track. Both use the same original clock, separate lexical event intervals and complete Russian/English meaning mappings. The old short-tail reassignment is unnecessary: the original Russian last night remains in its complete cue through 222.24 seconds.
 
-- Native 16:9: Japanese-led Japanese/Russian/English block at the top, biased right to protect the left-side face; Russian-led Russian/English pair below. Both use 64-pixel fitted type during the overlap. Upper native region starts at y105, with a 1280-pixel reading width centered at x1200.
+- Native 16:9: Japanese-led Japanese/Russian/English block at the top; Russian-led Russian/English pair below. Each row in both blocks is centered on the picture's x960 axis. Both use 64-pixel fitted type during the overlap. Upper native region starts at y105, with a 1280-pixel reading width. Its continuous readability shade spans the picture symmetrically without a vertical edge.
 - Portrait: the complete sharp source window stays fixed at y214–821.5. The Japanese-led block sits above the Russian-led block in the reading area, at y863.5–1296.14. The Russian pair ends at y1605; the densest simultaneous cue leaves 54.14 pixels between blocks. All five language lanes use 64-pixel type with script-specific optical weights.
 - The Japanese block keeps its coordinates and size after the Russian voice ends. No mid-word relocation, clipped body, borrowed highlight or moving visualizer separates the tracks. Source picture, soundtrack and spectrum anchor remain unchanged.
+
+The centered presentation supersedes the initial v2 right-offset composition. Vertical spacing alone distinguishes the voices while giving the complete five-lane arrangement a balanced reading axis. All 156 source events, translations, vertical coordinates, fitted type sizes and visualizer parameters are unchanged. Refreshed preview hashes identify this presentation; earlier v2 screenshots document the preceding alignment.
 
 ## Verification and status
 

@@ -20,7 +20,7 @@
 - Preserve both voices from the new Japanese entrance around 212.34. `japanese-upper` and `lead` have independent full-cue ownership; per-track order validation rejects clipped bodies or colliding reading intervals. All 150 prior event samples remain unchanged.
 - All lanes share a fitted type size; Japanese optical weight 600 balances RU/EN 500. Stable glyph positions, pale active color and a local halo must stay obvious on a small phone player.
 - Landscape preserves the full source including its authored mattes and flashes. Portrait keeps all source edges in a sharp full-width picture; atmosphere is a dim defocused duplicate of that same frame.
-- Japanese upper blocks remain fixed after the Russian voice ends. Full native/portrait picture is preserved. Credits stay untouched after added decorations clear at 242.65.
+- Japanese upper blocks remain fixed after the Russian voice ends. Both vocal blocks share a centered reading axis; vertical separation distinguishes the voices. Full native/portrait picture is preserved. Credits stay untouched after added decorations clear at 242.65.
 - Actual video motion and browser recovery must pass in both formats. A healthy clock alone does not prove visible picture. Enter on Seconds must leave paused playback paused; keep the seek field focused through key release.
 
 ## Changing this revision

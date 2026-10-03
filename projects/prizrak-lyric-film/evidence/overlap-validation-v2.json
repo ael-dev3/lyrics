@@ -5,13 +5,19 @@
   "frozenInputs": 18,
   "frozenInputMismatches": [],
   "typecheck": "passed",
-  "tests": { "passed": 6, "failed": 0 },
+  "tests": {
+    "passed": 6,
+    "failed": 0,
+    "scope": "Six model/gate tests passed for the preceding v2 input; no timing, model, player or gate logic changed in this cosmetic correction. Current typecheck, affected geometry and bound selected-event audit passed."
+  },
   "historicalVocalBodiesUnchanged": 150,
   "sourceEvents": 156,
   "completeLayoutProofs": 76,
-  "layoutScope": "Both formats, every source cue, concurrent optical sizes and geometry separation. The final first-word timing refinement leaves all sampled still moments and glyph geometry unchanged; current sample-boundary tests and independent selected audit verify that refinement.",
+  "layoutScope": "The 76 stills document the initial v2 composition. Current centered geometry verifies all 12 affected cue/layout cases, exact row centers, safe margins, equal concurrent type and block separation. Unaffected geometry and all selected source intervals are unchanged; current browser screenshots and selected-event audit bind the new scene hash.",
   "independentSelectedAudit": "overlap-selected-audit-v2.json",
   "browserVerification": "overlap-browser-v2.json",
   "productionGate": "closed; current listening and explicit render authorization pending",
-  "fullSongRenderStarted": false
+  "fullSongRenderStarted": false,
+  "presentation": "centered-upper-vocal-block",
+  "centeredLayoutProof": "centered-layout-v2.json"
 }

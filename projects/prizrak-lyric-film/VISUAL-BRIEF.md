@@ -88,4 +88,4 @@ The current handoff stops at the full-recording preview. Full rendering, Desktop
 
 ## Current v2 overlap presentation
 
-The earlier short-tail closing treatment above is historical v1. [Preview v2](OVERLAP-REVISION.md) uses a full independent Japanese-led block above the Russian-led foreground from the newly recovered backing pair. Native upper placement is right-biased at y105; portrait reserves two reading regions below the unchanged full source window. Both voices use equal 64px type in concurrent passages, and the Japanese region remains fixed after Russian ends. The spectrum anchor is unchanged.
+The earlier short-tail closing treatment above is historical v1. [Preview v2](OVERLAP-REVISION.md) uses a full independent Japanese-led block above the Russian-led foreground from the newly recovered backing pair. Both native blocks share the picture's center axis, with upper placement at y105; portrait reserves two centered reading regions below the unchanged full source window. Both voices use equal 64px type in concurrent passages, and the Japanese region remains fixed after Russian ends. The spectrum anchor is unchanged.
