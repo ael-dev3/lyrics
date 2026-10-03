@@ -1,0 +1,299 @@
+{
+  "schema": "po-kamushku/final-verification/v1",
+  "status": "passed",
+  "revision": "po-kamushku-preview-v6-full-onset-visibility",
+  "project": "po-kamushku-lyric-film",
+  "verifiedAt": "2026-10-03T11:43:01.374Z",
+  "sourceSha256": "f6572759f48f725497ad42b7c84cf12825824041897c47fdd36832a40ad30dd6",
+  "rendererSha256": "89a2853a5e2ca7ba4cae2100ecc32f7140922ecae104df265c19ca27fa1188ee",
+  "verifierSha256": "8435a3689fdcd2e0b872c5b7d25e91ffee97965e413939a5a1d61218ba6e09bc",
+  "manifestSha256": "88c8516b3b36f1e950f15a34a066e66016f99b36fb8f6b2bc702a650673531e9",
+  "previewIdentitySha256": "d674a1f2b17a8775ca240c06e901b9013a5777c150017d925930e56ca44c924f",
+  "syncReviewSha256": "2586b6ae96b2a8936914ae863d640cdca36a58d1606f2165bf1ee689a04fe155",
+  "productionAuthorizationSha256": "516e021e032838a19c1df0baf8aed1528831aaf889c98399b4d42e030095a898",
+  "approvedInputHashes": {
+    "public/source.mp4": "f6572759f48f725497ad42b7c84cf12825824041897c47fdd36832a40ad30dd6",
+    "public/timeline.json": "eb543a9ab8ba7c0b7495d96aef66e52cd7e218c8924995caf34499126dd1005f",
+    "public/audio-features.json": "4ca1135db51abcc66fe914460b179423061b322d6c8e8df8dbd13c75721116a6",
+    "public/stone-anchors.json": "6ba0c34ae7c168c2a42d4483d0b97e61cbf8ec6fbdca6f515e13ff99c44e73ea",
+    "public/material-reference.png": "8689a35c56e29600b9cf8637d5bd432bb4765d199892d7270ef07e7d55f6185c",
+    "public/fonts/Alegreya.ttf": "ba5564634b93a8f8ba57b48cd4f1ae7417d2b4656fbac779028679b00de3cf12",
+    "source/lyrics-editorial.json": "bbcf3f94a89dee54df7fc2f1cd7d8341d6b35d0c204770c04f81293da3fee0d1",
+    "source/timing-candidate.json": "2c4d6ec0f94d60dee952a6c411aad437665655ea0cee4f3abe79a2dd718bf6cf",
+    "source/line-visibility.json": "835761ed653a222f949524635dac79f184e14ee5632a81060422103a662e3b70",
+    "src/model.ts": "6457435696d8e26ff6d8cc673f319c1b38b1f96e8a1e6e1c4e6d613f9e5e0d6e",
+    "src/scene.ts": "5d1ccf197719aaa4dc8ab3d6912127c5f0cf7e35726920c11aff1ea84e407429",
+    "src/player.ts": "edd69c44132b3a90bbde752900dbff447dc430b9805b58d4a14dd162efc701a2"
+  },
+  "source": {
+    "file": "source.mp4",
+    "sha256": "f6572759f48f725497ad42b7c84cf12825824041897c47fdd36832a40ad30dd6",
+    "videoFrames": 5220,
+    "videoFramesPerSecond": 25,
+    "videoDurationSeconds": 208.8,
+    "audioPresentationDurationSeconds": 208.809002,
+    "audioDecodedDurationSeconds": 208.82721088435375,
+    "audio": {
+      "decodedPcmF32leSha256": "3c3abca92464b15b274b2c7cb78af1d820977fa220a9de3374f9ffc2aa0ae6cd",
+      "decodedSamples": 9209280,
+      "decodedBytes": 73674240,
+      "sampleRate": 44100,
+      "channels": 2,
+      "method": "Strict original-rate audio decode to interleaved little-endian float32; bytes are hashed and counted as they stream, without resampling."
+    },
+    "aacPacketCount": 8995,
+    "aacPacketInventorySha256": "3c8a39cb622753604b9231de94614283632de5ac024bfdba34e2e9b1f0e7cbec",
+    "aacPayloadSequenceSha256": "a30351cb95a1fb1c6622ebd15cbc4d198e24498d5445c91ff2b729a2169c07de",
+    "originalAudioTailSeconds": 0.02721088435373531
+  },
+  "outputContract": {
+    "frames": 12530,
+    "framesPerSecond": 60,
+    "videoDurationSeconds": 208.83333333333334,
+    "finalPicturePolicy": "Hold the last authored picture through the original audio tail; finite60fps duration rounds up by less than one frame",
+    "videoRemainderAfterDecodedAudioSeconds": 0.006122448979596129,
+    "videoRemainderAfterAacPresentationSeconds": 0.024331333333350358,
+    "finalSourceFrame": 5219,
+    "firstOutputFrameHoldingFinalSource": 12526,
+    "audioExtentExplanation": "AAC presentation includes its original MP4 edit/priming contract; decoded PCM has the independently counted padded tail. CFR picture rounds up the decoded extent. The extents differ and no lyric onset shift is applied."
+  },
+  "formats": {
+    "landscape": {
+      "file": "Po-Kamushku-Settlers-YouTube-1080x1080-60fps.mp4",
+      "sha256": "d2d1ccd78f5ea065d00ff409595fd335dec9aa0fd5f645996f65479f10c3e22e",
+      "width": 1080,
+      "height": 1080,
+      "frames": 12530,
+      "framesPerSecond": 60,
+      "videoDurationSeconds": 208.833333,
+      "audioDurationSeconds": 208.809002,
+      "videoCodec": "h264",
+      "audioCodec": "aac",
+      "pixelFormat": "yuv420p",
+      "colorRange": "tv",
+      "colorSpace": "bt709",
+      "colorPrimaries": "bt709",
+      "colorTransfer": "bt709",
+      "timeBase": "1/60000",
+      "sampleAspectRatio": "1:1",
+      "metadata": {
+        "width": 1080,
+        "height": 1080,
+        "frames": 12530,
+        "framesPerSecond": 60,
+        "videoDurationSeconds": 208.833333,
+        "audioDurationSeconds": 208.809002,
+        "videoCodec": "h264",
+        "audioCodec": "aac",
+        "pixelFormat": "yuv420p",
+        "colorRange": "tv",
+        "colorSpace": "bt709",
+        "colorPrimaries": "bt709",
+        "colorTransfer": "bt709",
+        "timeBase": "1/60000",
+        "sampleAspectRatio": "1:1"
+      },
+      "timestamps": {
+        "decodedFrames": 12530,
+        "allFrameTimestamps": true,
+        "maximumTimestampErrorSeconds": 3.333333467026023e-7,
+        "method": "Every decoded frame has an integer best-effort PTS exactly equal to n/60 in the stream time base; printed seconds agree within 2 microseconds."
+      },
+      "audio": {
+        "decodedPcmF32leSha256": "3c3abca92464b15b274b2c7cb78af1d820977fa220a9de3374f9ffc2aa0ae6cd",
+        "decodedSamples": 9209280,
+        "decodedBytes": 73674240,
+        "sampleRate": 44100,
+        "channels": 2,
+        "method": "Strict original-rate audio decode to interleaved little-endian float32; bytes are hashed and counted as they stream, without resampling."
+      },
+      "productionProvenance": {
+        "receiptFile": "Po-Kamushku-Settlers-YouTube-1080x1080-60fps.mp4.json",
+        "receiptSha256": "8b4479899b52ec426ec534f1f95d4adbf20fa23c74e97f9eca4ab9c9e7f8f6cd",
+        "rendererSha256": "89a2853a5e2ca7ba4cae2100ecc32f7140922ecae104df265c19ca27fa1188ee",
+        "approvedRevisionAndInputsMatch": true,
+        "scope": "The production receipt binds provenance only; technical claims are independently checked on this encoded file."
+      },
+      "aacPackets": {
+        "count": 8995,
+        "inventorySha256": "3c8a39cb622753604b9231de94614283632de5ac024bfdba34e2e9b1f0e7cbec",
+        "payloadSequenceSha256": "a30351cb95a1fb1c6622ebd15cbc4d198e24498d5445c91ff2b729a2169c07de",
+        "originalPayloadPtsDtsDurationSizeAndSideDataIdentical": true,
+        "method": "Every original AAC packet SHA256, PTS, DTS, duration, size and complete packet side-data inventory equals the corresponding final-file packet."
+      },
+      "strictFullDecode": true,
+      "blackPicture": {
+        "sourceIntervals": [],
+        "renderedIntervals": [],
+        "unexpectedIntervals": [],
+        "sourceEquivalent": true,
+        "boundaryToleranceSeconds": 0.05666666666666667,
+        "permittedSourceIntervals": [],
+        "sourceFinalPictureBlack": false,
+        "outputFinalPictureBlack": false,
+        "sourceBoundaryEvents": 0,
+        "outputBoundaryEvents": 0,
+        "method": "FFmpeg blackdetect at zero minimum duration, 2% luma threshold and 98% picture coverage. Each delivered black interval must lie within an authored source interval, allowing one native25fps plus one output60fps boundary. A source interval may extend through the required final-picture hold only when its per-frame lavfi.black_start/end metadata proves the final source picture itself is black; there is no generic ending exemption."
+      },
+      "protectedPicture": {
+        "allFramesChecked": true,
+        "frames": 12530,
+        "maximumMeanLumaError": 1.4309999999999832,
+        "sourceRoi": {
+          "x": 400,
+          "y": 510,
+          "width": 120,
+          "height": 80
+        },
+        "portraitSourceOffsetY": 212,
+        "maximumPermittedMeanLumaError": 8,
+        "method": "Every decoded output frame retains the original unmoving white-clothing ROI, independently matched to min(5219,floor(n×25/60)). This protected ROI is outside approved lyric and stone masks. A fixed 8-code limited-luma tolerance permits lossy RGB/YUV conversion; blank or displaced pictures fail even when white lyrics defeat whole-picture blackdetect. Full-scene pixel parity is checked separately."
+      },
+      "fastStart": true,
+      "bytes": 23183109,
+      "atoms": [
+        {
+          "type": "ftyp",
+          "offset": 0,
+          "size": 32
+        },
+        {
+          "type": "moov",
+          "offset": 32,
+          "size": 341149
+        },
+        {
+          "type": "free",
+          "offset": 341181,
+          "size": 8
+        },
+        {
+          "type": "mdat",
+          "offset": 341189,
+          "size": 22841920
+        }
+      ]
+    },
+    "portrait": {
+      "file": "Po-Kamushku-Settlers-TikTok-1080x1920-60fps.mp4",
+      "sha256": "515aa2b0a2437f5185e9dbbaa644e23c8733d605856d4cc0d173a9813544f891",
+      "width": 1080,
+      "height": 1920,
+      "frames": 12530,
+      "framesPerSecond": 60,
+      "videoDurationSeconds": 208.833333,
+      "audioDurationSeconds": 208.809002,
+      "videoCodec": "h264",
+      "audioCodec": "aac",
+      "pixelFormat": "yuv420p",
+      "colorRange": "tv",
+      "colorSpace": "bt709",
+      "colorPrimaries": "bt709",
+      "colorTransfer": "bt709",
+      "timeBase": "1/60000",
+      "sampleAspectRatio": "1:1",
+      "metadata": {
+        "width": 1080,
+        "height": 1920,
+        "frames": 12530,
+        "framesPerSecond": 60,
+        "videoDurationSeconds": 208.833333,
+        "audioDurationSeconds": 208.809002,
+        "videoCodec": "h264",
+        "audioCodec": "aac",
+        "pixelFormat": "yuv420p",
+        "colorRange": "tv",
+        "colorSpace": "bt709",
+        "colorPrimaries": "bt709",
+        "colorTransfer": "bt709",
+        "timeBase": "1/60000",
+        "sampleAspectRatio": "1:1"
+      },
+      "timestamps": {
+        "decodedFrames": 12530,
+        "allFrameTimestamps": true,
+        "maximumTimestampErrorSeconds": 3.333333467026023e-7,
+        "method": "Every decoded frame has an integer best-effort PTS exactly equal to n/60 in the stream time base; printed seconds agree within 2 microseconds."
+      },
+      "audio": {
+        "decodedPcmF32leSha256": "3c3abca92464b15b274b2c7cb78af1d820977fa220a9de3374f9ffc2aa0ae6cd",
+        "decodedSamples": 9209280,
+        "decodedBytes": 73674240,
+        "sampleRate": 44100,
+        "channels": 2,
+        "method": "Strict original-rate audio decode to interleaved little-endian float32; bytes are hashed and counted as they stream, without resampling."
+      },
+      "productionProvenance": {
+        "receiptFile": "Po-Kamushku-Settlers-TikTok-1080x1920-60fps.mp4.json",
+        "receiptSha256": "1616aa18bf75af6b65719341549dc81a144b5456583d08dfb4df3771b183bc4d",
+        "rendererSha256": "89a2853a5e2ca7ba4cae2100ecc32f7140922ecae104df265c19ca27fa1188ee",
+        "approvedRevisionAndInputsMatch": true,
+        "scope": "The production receipt binds provenance only; technical claims are independently checked on this encoded file."
+      },
+      "aacPackets": {
+        "count": 8995,
+        "inventorySha256": "3c8a39cb622753604b9231de94614283632de5ac024bfdba34e2e9b1f0e7cbec",
+        "payloadSequenceSha256": "a30351cb95a1fb1c6622ebd15cbc4d198e24498d5445c91ff2b729a2169c07de",
+        "originalPayloadPtsDtsDurationSizeAndSideDataIdentical": true,
+        "method": "Every original AAC packet SHA256, PTS, DTS, duration, size and complete packet side-data inventory equals the corresponding final-file packet."
+      },
+      "strictFullDecode": true,
+      "blackPicture": {
+        "sourceIntervals": [],
+        "renderedIntervals": [],
+        "unexpectedIntervals": [],
+        "sourceEquivalent": true,
+        "boundaryToleranceSeconds": 0.05666666666666667,
+        "permittedSourceIntervals": [],
+        "sourceFinalPictureBlack": false,
+        "outputFinalPictureBlack": false,
+        "sourceBoundaryEvents": 0,
+        "outputBoundaryEvents": 0,
+        "method": "FFmpeg blackdetect at zero minimum duration, 2% luma threshold and 98% picture coverage. Each delivered black interval must lie within an authored source interval, allowing one native25fps plus one output60fps boundary. A source interval may extend through the required final-picture hold only when its per-frame lavfi.black_start/end metadata proves the final source picture itself is black; there is no generic ending exemption."
+      },
+      "protectedPicture": {
+        "allFramesChecked": true,
+        "frames": 12530,
+        "maximumMeanLumaError": 1.4400000000000261,
+        "sourceRoi": {
+          "x": 400,
+          "y": 510,
+          "width": 120,
+          "height": 80
+        },
+        "portraitSourceOffsetY": 212,
+        "maximumPermittedMeanLumaError": 8,
+        "method": "Every decoded output frame retains the original unmoving white-clothing ROI, independently matched to min(5219,floor(n×25/60)). This protected ROI is outside approved lyric and stone masks. A fixed 8-code limited-luma tolerance permits lossy RGB/YUV conversion; blank or displaced pictures fail even when white lyrics defeat whole-picture blackdetect. Full-scene pixel parity is checked separately."
+      },
+      "fastStart": true,
+      "bytes": 26677122,
+      "atoms": [
+        {
+          "type": "ftyp",
+          "offset": 0,
+          "size": 32
+        },
+        {
+          "type": "moov",
+          "offset": 32,
+          "size": 343196
+        },
+        {
+          "type": "free",
+          "offset": 343228,
+          "size": 8
+        },
+        {
+          "type": "mdat",
+          "offset": 343236,
+          "size": 26333886
+        }
+      ]
+    }
+  },
+  "limits": [
+    "Technical verification does not establish transcription, translation quality or acoustic word ownership.",
+    "Blackdetect checks new near-black intervals, not complete source-picture or glyph parity. Separate decoded scene and bilingual focus audits are required.",
+    "Final films still require inspection with sound in both formats."
+  ]
+}

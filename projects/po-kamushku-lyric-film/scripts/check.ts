@@ -2,6 +2,7 @@ import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {validateTimeline,sourceActive,targetActive,visibleCue,type Timeline} from '../src/model.ts';
 import {cueOpacity} from '../src/scene.ts';
+import {checkCurrentProductionGate} from './render-gate.ts';
 const read=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
 const hash=(p:string)=>createHash('sha256').update(readFileSync(p)).digest('hex');
 const timeline=read('public/timeline.json') as Timeline;validateTimeline(timeline);
@@ -27,4 +28,7 @@ const input=read('source/manifest.json');if(input.sha256!==timeline.sourceSha256
 for(const c of timeline.cues)for(const w of c.words){
   if(sourceActive(w,(w.startSample-.5)/44100)||!sourceActive(w,(w.startSample+.5)/44100)||sourceActive(w,(w.endSample+.5)/44100))throw Error(`Invalid exclusive boundary ${w.id}`);
 }
-console.log(JSON.stringify({cueCount:timeline.cues.length,frames,semanticFrameChecks:checks,visibleFocusFrames,revision:timeline.revision,productionAuthorized:false}));
+let productionAuthorized=false,productionGateStatus='closed';
+try{checkCurrentProductionGate();productionAuthorized=true;productionGateStatus='passed';}
+catch(error){productionGateStatus=error instanceof Error?error.message:'closed';}
+console.log(JSON.stringify({cueCount:timeline.cues.length,frames,semanticFrameChecks:checks,visibleFocusFrames,revision:timeline.revision,productionAuthorized,productionGateStatus}));

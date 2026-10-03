@@ -34,6 +34,12 @@ For a future pass, create a short preview and compare `00:47` directly with `01:
 
 ## Production preferences
 
+### По камушку production follow-through
+
+The [production lessons](../projects/po-kamushku-lyric-film/PRODUCTION-LESSONS.md) and [parameter and command record](../projects/po-kamushku-lyric-film/PRODUCTION-NOTES.md) join source inspection, conservative translation, independently selected word boundaries, complete line readability, source-material response, complete preview, production verification and archival delivery. Its final fixes distinguish four causes of apparent late highlighting: the selected acoustic onset, fractional clock arithmetic, an incoming line's opacity, and stale paused drawing. Neighbouring glyph shadows also require explicit reset before outline and fill. Future agents should inspect these independently before changing an accepted word time.
+
+The held self-reference endings demonstrate a separate bounded focus carry, paired across languages and measured independently for each occurrence. Preserve the direct-body estimates and next-word boundaries. A material reference fixes mask identity; it never replaces actual source-picture decoding in preview or export. The reusable brief covers these decisions without making this song's palette, geometry or exact durations a universal preset.
+
 ### Lyric timing and readability
 
 The explicitly commissioned [Life Letters Russian / Argentinian Spanish edition](../projects/life-letters-lyric-film/README.md) is a scoped exception to the pronunciation exclusion below: its synchronized pronunciation layer, Spanish guide and pronunciation subtitles are part of that edition's film, source and release. Other project defaults remain unchanged.
