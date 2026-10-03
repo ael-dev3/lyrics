@@ -1,0 +1,1304 @@
+{
+  "schemaVersion": 1,
+  "project": "po-kamushku-lyric-film",
+  "sourceSha256": "f6572759f48f725497ad42b7c84cf12825824041897c47fdd36832a40ad30dd6",
+  "sourceSampleRate": 44100,
+  "sourceDecodedSamples": 9209280,
+  "status": "independent-signal-review-proposals; coordinator must reconcile; not human listening or render approval",
+  "reviewer": "independent acoustic signal reviewer",
+  "scope": {
+    "reviewedCueCount": 10,
+    "reviewedSourceEvents": 55,
+    "scopeDescription": "Spoken prelude, first verse entrance and complete first line, both run/carry pre-chorus repetitions, and all four pebble refrains. Other cues are outside this independent review scope."
+  },
+  "methods": {
+    "originalClock": "Original audio decoded at unchanged 44100 Hz, no offset correction. Source original mix remains authority.",
+    "stemReference": "analysis/acoustic/stem-clock.json: HTDemucs 955717e8, matching 9209280 samples; measured lag 0 in three independent crops. Estimate is not independent source evidence.",
+    "spectralView": {
+      "fftSamples": 1024,
+      "window": "Hann",
+      "windowSeconds": 0.023219954648526078,
+      "hopSamples": 88,
+      "hopSeconds": 0.00199546485260771,
+      "viewFrequencyMaxHz": 6000,
+      "note": "A 1.995 ms hop through a 23.220 ms window provides dense observation, not 2 ms physical onset accuracy. Original waveform and spectrum are correlated observations of one recording."
+    },
+    "modelReference": "analysis/acoustic/mms-PK-*.json raw MMS_FA text-conditioned character cores; bounded Whisper comparison for intro and initial verse. These are competing observations, not a consensus proof.",
+    "actualAudioListening": "Unavailable in this review environment. The attempted local audio input was explicitly unsupported. No human or machine auditory listening attestation is made."
+  },
+  "baselineEvidence": {
+    "analysis/acoustic/mms-PK-001.json": "26d705fd6a7a4805afb730a21a15fedb543ca06a334710468687b27585592717",
+    "analysis/acoustic/mms-PK-002.json": "0e5fb1a99ca9f5629f58e05babc254b8f8500b87bf4afe3a251bd49f37f4e4d1",
+    "analysis/acoustic/mms-PK-006.json": "230161dec16671bffef8060beb084b2ceefe5287d107f3d5dac91539d24e170b",
+    "analysis/acoustic/mms-PK-008.json": "131659c43b11498d417c2c04dc555efc8828285c009b46e0e62ab7c5e469910a",
+    "analysis/acoustic/mms-PK-021.json": "77b7a4071f526583f55f9c039e0d1c3c2a9bee2f487b2b0385a88abc34be9c47",
+    "analysis/acoustic/mms-PK-023.json": "198050caea30c2499fc00ce803772bca70261e044b6492f0251a7276370690ce",
+    "analysis/acoustic/mms-PK-012.json": "af2de3ee5c19762009a4ee1ed2064a6f1a5c1cc6e92ed99899fcd8e338dd9c10",
+    "analysis/acoustic/mms-PK-013.json": "3577378a19d70977fc72c46d3eb20281d50b6fbb64f65d729db748da1b488402",
+    "analysis/acoustic/mms-PK-029.json": "510723217925412b6561f155f6aa2892f50f0a3667da0dce691c9ea5ac1e0dac",
+    "analysis/acoustic/mms-PK-030.json": "8c8e516027ecf71c9a6f3b83807530dd80fea1ba5c50cf6579865e89da9017b2",
+    "analysis/acoustic/mms-wide-PK-015.json": "e8c5032b590dc1d6680638adc29b490ec9c3bbd3c38e3a20a21a76e36ce0c905"
+  },
+  "cues": [
+    {
+      "cueId": "PK-001",
+      "words": [
+        {
+          "sourceIndex": 0,
+          "text": "Яна,",
+          "beforeStartSeconds": null,
+          "beforeEndSeconds": null,
+          "selectedStartSample": 270201,
+          "selectedEndSample": 283916,
+          "selectedStartSeconds": 6.127006802721088,
+          "selectedEndSeconds": 6.4380045351473925,
+          "startPlausibleRangeSamples": [
+            266673,
+            273729
+          ],
+          "endPlausibleRangeSamples": [
+            278624,
+            289208
+          ],
+          "uncertainty": "elevated lexical/body ambiguity",
+          "decision": "provisional additional occurrence",
+          "reason": "First isolated noisy/voiced burst around 6.13–6.44 is represented separately rather than stretching one name across several seconds. The waveform alone cannot certify that it is Яна; this is a provisional lexical allocation requiring actual listening."
+        },
+        {
+          "sourceIndex": 1,
+          "text": "Яна,",
+          "beforeStartSeconds": 7.4046875,
+          "beforeEndSeconds": 7.905989583333334,
+          "selectedStartSample": 323165,
+          "selectedEndSample": 351036,
+          "selectedStartSeconds": 7.328004535147392,
+          "selectedEndSeconds": 7.96,
+          "startPlausibleRangeSamples": [
+            319637,
+            326693
+          ],
+          "endPlausibleRangeSamples": [
+            345744,
+            356328
+          ],
+          "uncertainty": "elevated lexical/body ambiguity",
+          "decision": "independently reviewed boundary proposal",
+          "reason": "Second noisy/voiced burst begins before the 7.405 model core, with renewed body near 7.33 and final energy through 7.96. It is independently represented as a provisional second call; model disagreement is retained."
+        },
+        {
+          "sourceIndex": 2,
+          "text": "песенку",
+          "beforeStartSeconds": 11.535416666666666,
+          "beforeEndSeconds": 11.896354166666667,
+          "selectedStartSample": 508694,
+          "selectedEndSample": 524173,
+          "selectedStartSeconds": 11.53501133786848,
+          "selectedEndSeconds": 11.886009070294785,
+          "startPlausibleRangeSamples": [
+            505166,
+            512222
+          ],
+          "endPlausibleRangeSamples": [
+            518881,
+            529465
+          ],
+          "uncertainty": "elevated lexical/body ambiguity",
+          "decision": "independently reviewed boundary proposal",
+          "reason": "Rapid three-part original voiced/noisy sequence at 11.54–11.89 supports the supplied песенку allocation. No voice body justifies beginning it at Whisper crop-dependent 8.42."
+        },
+        {
+          "sourceIndex": 3,
+          "text": "спой,",
+          "beforeStartSeconds": 11.936458333333334,
+          "beforeEndSeconds": 12.177083333333334,
+          "selectedStartSample": 524173,
+          "selectedEndSample": 536918,
+          "selectedStartSeconds": 11.886009070294785,
+          "selectedEndSeconds": 12.175011337868481,
+          "startPlausibleRangeSamples": [
+            520645,
+            527701
+          ],
+          "endPlausibleRangeSamples": [
+            531626,
+            542210
+          ],
+          "uncertainty": "elevated lexical/body ambiguity",
+          "decision": "independently reviewed boundary proposal",
+          "reason": "Sibilant/body transition at the previous rapid word release through the renewed vowel ending near 12.17 supports a connected спой allocation; 11.936 is inside the frication rather than its beginning. Lexical allocation remains a listening question."
+        },
+        {
+          "sourceIndex": 4,
+          "text": "Яночка",
+          "beforeStartSeconds": 12.177083333333334,
+          "beforeEndSeconds": 12.558072916666667,
+          "selectedStartSample": 537006,
+          "selectedEndSample": 550588,
+          "selectedStartSeconds": 12.177006802721088,
+          "selectedEndSeconds": 12.484988662131519,
+          "startPlausibleRangeSamples": [
+            533478,
+            540534
+          ],
+          "endPlausibleRangeSamples": [
+            545296,
+            555880
+          ],
+          "uncertainty": "elevated lexical/body ambiguity",
+          "decision": "independently reviewed boundary proposal",
+          "reason": "Renewed body after 12.17 has a decreasing direct/noisy envelope through about 12.49, with weaker tail afterward; do not equate the last low residual at 12.6 with a fully held word."
+        }
+      ],
+      "neutralTailHoldSample": 574623,
+      "neutralTailHoldSeconds": 13.03,
+      "neutralTailRationale": "Keep the complete line readable after lexical focus releases. This is an authored reading hold, not extra vocal duration. Reconcile with the next actual vocal and use atomic handoff for the sustained carry/refrain pairs."
+    },
+    {
+      "cueId": "PK-002",
+      "words": [
+        {
+          "sourceIndex": 0,
+          "text": "Тёплый",
+          "beforeStartSeconds": 16.388953488372096,
+          "beforeEndSeconds": 16.830232558139535,
+          "selectedStartSample": 722579,
+          "selectedEndSample": 744188,
+          "selectedStartSeconds": 16.38501133786848,
+          "selectedEndSeconds": 16.875011337868482,
+          "startPlausibleRangeSamples": [
+            721035,
+            724122
+          ],
+          "endPlausibleRangeSamples": [
+            740660,
+            747715
+          ],
+          "uncertainty": "moderate; signal-supported selection, actual listening still required",
+          "decision": "independently reviewed boundary proposal",
+          "reason": "Original mix is instrumental through the competing 13.3/14.06 Whisper allocations. A quiet transient near 16.385 followed by the first sung harmonic rise supports this attack; retain the late Whisper contradiction as rejected crop/recognition allocation, not a global shift."
+        },
+        {
+          "sourceIndex": 1,
+          "text": "свет",
+          "beforeStartSeconds": 16.930523255813956,
+          "beforeEndSeconds": 17.472093023255816,
+          "selectedStartSample": 744188,
+          "selectedEndSample": 772191,
+          "selectedStartSeconds": 16.875011337868482,
+          "selectedEndSeconds": 17.51,
+          "startPlausibleRangeSamples": [
+            742644,
+            745731
+          ],
+          "endPlausibleRangeSamples": [
+            768663,
+            775719
+          ],
+          "uncertainty": "moderate; signal-supported selection, actual listening still required",
+          "decision": "independently reviewed boundary proposal",
+          "reason": "Broadband onset near 16.875 precedes the stronger 16.931 MMS s core. The following harmonic body continues to the short final closure around 17.47–17.51."
+        },
+        {
+          "sourceIndex": 2,
+          "text": "из",
+          "beforeStartSeconds": 17.532267441860466,
+          "beforeEndSeconds": 17.632558139534886,
+          "selectedStartSample": 772412,
+          "selectedEndSample": 779423,
+          "selectedStartSeconds": 17.51501133786848,
+          "selectedEndSeconds": 17.673990929705216,
+          "startPlausibleRangeSamples": [
+            769986,
+            774837
+          ],
+          "endPlausibleRangeSamples": [
+            774572,
+            784274
+          ],
+          "uncertainty": "elevated lexical/body ambiguity",
+          "decision": "independently reviewed boundary proposal",
+          "reason": "Short renewed vowel/noisy sequence starts after the preceding closure near 17.51, and ends at the next connected onset; ownership around this short function word is less certain than its stronger core."
+        },
+        {
+          "sourceIndex": 3,
+          "text": "окна",
+          "beforeStartSeconds": 17.71279069767442,
+          "beforeEndSeconds": 18.09389534883721,
+          "selectedStartSample": 779468,
+          "selectedEndSample": 809808,
+          "selectedStartSeconds": 17.67501133786848,
+          "selectedEndSeconds": 18.36299319727891,
+          "startPlausibleRangeSamples": [
+            777042,
+            781893
+          ],
+          "endPlausibleRangeSamples": [
+            804957,
+            814659
+          ],
+          "uncertainty": "elevated lexical/body ambiguity",
+          "decision": "independently reviewed boundary proposal",
+          "reason": "Quiet changed body before the 17.713 core and k-like attack belongs to the whole окна sequence; renewed final syllable begins near 18.02 and continues well beyond the 18.094 sparse model end."
+        },
+        {
+          "sourceIndex": 4,
+          "text": "на",
+          "beforeStartSeconds": 18.41482558139535,
+          "beforeEndSeconds": 18.45494186046512,
+          "selectedStartSample": 809808,
+          "selectedEndSample": 815630,
+          "selectedStartSeconds": 18.36299319727891,
+          "selectedEndSeconds": 18.49501133786848,
+          "startPlausibleRangeSamples": [
+            807383,
+            812234
+          ],
+          "endPlausibleRangeSamples": [
+            810779,
+            820480
+          ],
+          "uncertainty": "elevated lexical/body ambiguity",
+          "decision": "independently reviewed boundary proposal",
+          "reason": "Connected nasal/vowel ownership around 18.36–18.49 is short and uncertain. This proposal separates the two independently sung на-related syllables instead of filling every gap with the preceding noun."
+        },
+        {
+          "sourceIndex": 5,
+          "text": "обоях",
+          "beforeStartSeconds": 18.51511627906977,
+          "beforeEndSeconds": 20.039534883720933,
+          "selectedStartSample": 815630,
+          "selectedEndSample": 883985,
+          "selectedStartSeconds": 18.49501133786848,
+          "selectedEndSeconds": 20.04501133786848,
+          "startPlausibleRangeSamples": [
+            814086,
+            817173
+          ],
+          "endPlausibleRangeSamples": [
+            880457,
+            887512
+          ],
+          "uncertainty": "moderate; signal-supported selection, actual listening still required",
+          "decision": "independently reviewed boundary proposal",
+          "reason": "Quiet initial body can precede the stronger 18.515 core; descending modulated final vowel and frication extend through about 20.045, with passive tail thereafter."
+        }
+      ],
+      "neutralTailHoldSample": 891702,
+      "neutralTailHoldSeconds": 20.22,
+      "neutralTailRationale": "Keep the complete line readable after lexical focus releases. This is an authored reading hold, not extra vocal duration. Reconcile with the next actual vocal and use atomic handoff for the sustained carry/refrain pairs."
+    },
+    {
+      "cueId": "PK-006",
+      "words": [
+        {
+          "sourceIndex": 0,
+          "text": "Я",
+          "beforeStartSeconds": 31.7319587628866,
+          "beforeEndSeconds": 31.85257731958763,
+          "selectedStartSample": 1399954,
+          "selectedEndSample": 1407010,
+          "selectedStartSeconds": 31.74498866213152,
+          "selectedEndSeconds": 31.90498866213152,
+          "startPlausibleRangeSamples": [
+            1398411,
+            1401498
+          ],
+          "endPlausibleRangeSamples": [
+            1403483,
+            1410538
+          ],
+          "uncertainty": "moderate; signal-supported selection, actual listening still required",
+          "decision": "independently reviewed boundary proposal",
+          "reason": "Quiet initial vowel before the larger 31.78 body; the full pronoun lasts past the sparse 31.853 model end to approximately 31.905."
+        },
+        {
+          "sourceIndex": 1,
+          "text": "бегу,",
+          "beforeStartSeconds": 31.993298969072168,
+          "beforeEndSeconds": 32.5360824742268,
+          "selectedStartSample": 1410891,
+          "selectedEndSample": 1450273,
+          "selectedStartSeconds": 31.99299319727891,
+          "selectedEndSeconds": 32.88600907029478,
+          "startPlausibleRangeSamples": [
+            1409348,
+            1412435
+          ],
+          "endPlausibleRangeSamples": [
+            1446745,
+            1453801
+          ],
+          "uncertainty": "moderate; signal-supported selection, actual listening still required",
+          "decision": "independently reviewed boundary proposal",
+          "reason": "The retained b-like onset leads a rising harmonic sequence. The gu vowel beginning around 32.47 continues to 32.88, well past the 32.536 final emitted core."
+        },
+        {
+          "sourceIndex": 2,
+          "text": "бегу,",
+          "beforeStartSeconds": 32.9180412371134,
+          "beforeEndSeconds": 33.23969072164949,
+          "selectedStartSample": 1451684,
+          "selectedEndSample": 1470206,
+          "selectedStartSeconds": 32.91800453514739,
+          "selectedEndSeconds": 33.33800453514739,
+          "startPlausibleRangeSamples": [
+            1450140,
+            1453227
+          ],
+          "endPlausibleRangeSamples": [
+            1466678,
+            1473734
+          ],
+          "uncertainty": "moderate; signal-supported selection, actual listening still required",
+          "decision": "independently reviewed boundary proposal",
+          "reason": "A new quiet consonant followed by renewed harmonic body near 32.96 supports the separately performed second verb; final gu body near 33.17–33.33 is included."
+        },
+        {
+          "sourceIndex": 3,
+          "text": "бегу",
+          "beforeStartSeconds": 33.40051546391753,
+          "beforeEndSeconds": 33.74226804123712,
+          "selectedStartSample": 1472984,
+          "selectedEndSample": 1502928,
+          "selectedStartSeconds": 33.400997732426305,
+          "selectedEndSeconds": 34.08,
+          "startPlausibleRangeSamples": [
+            1471441,
+            1474528
+          ],
+          "endPlausibleRangeSamples": [
+            1499400,
+            1506456
+          ],
+          "uncertainty": "moderate; signal-supported selection, actual listening still required",
+          "decision": "independently reviewed boundary proposal",
+          "reason": "The third onset is individually retained. A strong final u body appears after the 33.742 last character and continues into 34.0; low passive decay to about 34.25 is not included in lexical focus."
+        }
+      ],
+      "neutralTailHoldSample": 1523655,
+      "neutralTailHoldSeconds": 34.55,
+      "neutralTailRationale": "Keep the complete line readable after lexical focus releases. This is an authored reading hold, not extra vocal duration. Reconcile with the next actual vocal and use atomic handoff for the sustained carry/refrain pairs."
+    },
+    {
+      "cueId": "PK-008",
+      "words": [
+        {
+          "sourceIndex": 0,
+          "text": "Я",
+          "beforeStartSeconds": 39.3426724137931,
+          "beforeEndSeconds": 39.46293103448276,
+          "selectedStartSample": 1735423,
+          "selectedEndSample": 1745919,
+          "selectedStartSeconds": 39.35199546485261,
+          "selectedEndSeconds": 39.59,
+          "startPlausibleRangeSamples": [
+            1733880,
+            1736967
+          ],
+          "endPlausibleRangeSamples": [
+            1742391,
+            1749447
+          ],
+          "uncertainty": "moderate; signal-supported selection, actual listening still required",
+          "decision": "independently reviewed boundary proposal",
+          "reason": "Isolated pronoun body near 39.35–39.59 continues beyond the 39.463 model core, with a separate quiet interval before the next word."
+        },
+        {
+          "sourceIndex": 1,
+          "text": "несу,",
+          "beforeStartSeconds": 39.60323275862069,
+          "beforeEndSeconds": 40.244612068965516,
+          "selectedStartSample": 1746492,
+          "selectedEndSample": 1787064,
+          "selectedStartSeconds": 39.60299319727891,
+          "selectedEndSeconds": 40.522993197278915,
+          "startPlausibleRangeSamples": [
+            1744949,
+            1748036
+          ],
+          "endPlausibleRangeSamples": [
+            1783536,
+            1790592
+          ],
+          "uncertainty": "moderate; signal-supported selection, actual listening still required",
+          "decision": "independently reviewed boundary proposal",
+          "reason": "The first verb has renewed melodic body through roughly 40.52 after its 40.245 last-character core, then hands to the independently performed second verb."
+        },
+        {
+          "sourceIndex": 2,
+          "text": "несу,",
+          "beforeStartSeconds": 40.54525862068966,
+          "beforeEndSeconds": 40.9260775862069,
+          "selectedStartSample": 1788034,
+          "selectedEndSample": 1808232,
+          "selectedStartSeconds": 40.544988662131516,
+          "selectedEndSeconds": 41.00299319727891,
+          "startPlausibleRangeSamples": [
+            1786491,
+            1789578
+          ],
+          "endPlausibleRangeSamples": [
+            1804704,
+            1811760
+          ],
+          "uncertainty": "moderate; signal-supported selection, actual listening still required",
+          "decision": "independently reviewed boundary proposal",
+          "reason": "Separate nasal/sibilant onset and second vowel body are visible; the word releases before the next nasal onset instead of at the early 40.926 core."
+        },
+        {
+          "sourceIndex": 3,
+          "text": "несу",
+          "beforeStartSeconds": 41.026293103448275,
+          "beforeEndSeconds": 41.387068965517244,
+          "selectedStartSample": 1809247,
+          "selectedEndSample": 1898505,
+          "selectedStartSeconds": 41.02600907029478,
+          "selectedEndSeconds": 43.05,
+          "startPlausibleRangeSamples": [
+            1807703,
+            1810790
+          ],
+          "endPlausibleRangeSamples": [
+            1894977,
+            1902033
+          ],
+          "uncertainty": "moderate; signal-supported selection, actual listening still required",
+          "decision": "independently reviewed boundary proposal",
+          "reason": "Original and estimated vocal both show a continuously modulated low held u from about 41.37 through 43.0. The 41.387 final model core would omit most of this direct note. The subsequent weakened/breath-like region is excluded."
+        }
+      ],
+      "neutralTailHoldSample": 1903444,
+      "neutralTailHoldSeconds": 43.162,
+      "neutralTailRationale": "Keep the complete line readable after lexical focus releases. This is an authored reading hold, not extra vocal duration. Reconcile with the next actual vocal and use atomic handoff for the sustained carry/refrain pairs."
+    },
+    {
+      "cueId": "PK-021",
+      "words": [
+        {
+          "sourceIndex": 0,
+          "text": "Я",
+          "beforeStartSeconds": 123.15304878048781,
+          "beforeEndSeconds": 123.27378048780488,
+          "selectedStartSample": 5431047,
+          "selectedEndSample": 5438853,
+          "selectedStartSeconds": 123.15299319727892,
+          "selectedEndSeconds": 123.33,
+          "startPlausibleRangeSamples": [
+            5429504,
+            5432591
+          ],
+          "endPlausibleRangeSamples": [
+            5435325,
+            5442381
+          ],
+          "uncertainty": "moderate; signal-supported selection, actual listening still required",
+          "decision": "independently reviewed boundary proposal",
+          "reason": "Independently measured second-section pronoun body lasts until about 123.33; the next verb has a separate onset, so no chorus offset was transferred."
+        },
+        {
+          "sourceIndex": 1,
+          "text": "бегу,",
+          "beforeStartSeconds": 123.41463414634147,
+          "beforeEndSeconds": 123.9579268292683,
+          "selectedStartSample": 5442602,
+          "selectedEndSample": 5483614,
+          "selectedStartSeconds": 123.41501133786848,
+          "selectedEndSeconds": 124.34498866213151,
+          "startPlausibleRangeSamples": [
+            5441058,
+            5444145
+          ],
+          "endPlausibleRangeSamples": [
+            5480086,
+            5487142
+          ],
+          "uncertainty": "moderate; signal-supported selection, actual listening still required",
+          "decision": "independently reviewed boundary proposal",
+          "reason": "The first verb includes its held u body around 123.90–124.32, past the 123.958 model end."
+        },
+        {
+          "sourceIndex": 2,
+          "text": "бегу,",
+          "beforeStartSeconds": 124.36036585365854,
+          "beforeEndSeconds": 124.72256097560977,
+          "selectedStartSample": 5484276,
+          "selectedEndSample": 5503239,
+          "selectedStartSeconds": 124.36,
+          "selectedEndSeconds": 124.79,
+          "startPlausibleRangeSamples": [
+            5482732,
+            5485820
+          ],
+          "endPlausibleRangeSamples": [
+            5499711,
+            5506767
+          ],
+          "uncertainty": "moderate; signal-supported selection, actual listening still required",
+          "decision": "independently reviewed boundary proposal",
+          "reason": "An independently renewed consonant/vowel sequence begins at the retained 124.360 candidate; the second u body around 124.65–124.78 precedes a real short gap."
+        },
+        {
+          "sourceIndex": 3,
+          "text": "бегу",
+          "beforeStartSeconds": 124.84329268292683,
+          "beforeEndSeconds": 125.24573170731708,
+          "selectedStartSample": 5505576,
+          "selectedEndSample": 5532124,
+          "selectedStartSeconds": 124.84299319727891,
+          "selectedEndSeconds": 125.44498866213152,
+          "startPlausibleRangeSamples": [
+            5504033,
+            5507120
+          ],
+          "endPlausibleRangeSamples": [
+            5528596,
+            5535652
+          ],
+          "uncertainty": "moderate; signal-supported selection, actual listening still required",
+          "decision": "independently reviewed boundary proposal",
+          "reason": "Final u body continues around 125.10–125.44 after the 125.246 model character core. Quiet decaying residual afterward remains outside lexical focus."
+        }
+      ],
+      "neutralTailHoldSample": 5575122,
+      "neutralTailHoldSeconds": 126.42,
+      "neutralTailRationale": "Keep the complete line readable after lexical focus releases. This is an authored reading hold, not extra vocal duration. Reconcile with the next actual vocal and use atomic handoff for the sustained carry/refrain pairs."
+    },
+    {
+      "cueId": "PK-023",
+      "words": [
+        {
+          "sourceIndex": 0,
+          "text": "Я",
+          "beforeStartSeconds": 130.7626126126126,
+          "beforeEndSeconds": 130.88288288288288,
+          "selectedStartSample": 5765943,
+          "selectedEndSample": 5777320,
+          "selectedStartSeconds": 130.74700680272107,
+          "selectedEndSeconds": 131.00498866213152,
+          "startPlausibleRangeSamples": [
+            5764399,
+            5767486
+          ],
+          "endPlausibleRangeSamples": [
+            5773792,
+            5780848
+          ],
+          "uncertainty": "moderate; signal-supported selection, actual listening still required",
+          "decision": "independently reviewed boundary proposal",
+          "reason": "Gradually rising quiet initial vocal near 130.747 precedes the 130.763 strong core; the pronoun releases at the next connected nasal transition."
+        },
+        {
+          "sourceIndex": 1,
+          "text": "несу,",
+          "beforeStartSeconds": 131.0231981981982,
+          "beforeEndSeconds": 131.6445945945946,
+          "selectedStartSample": 5777320,
+          "selectedEndSample": 5819656,
+          "selectedStartSeconds": 131.00498866213152,
+          "selectedEndSeconds": 131.96498866213153,
+          "startPlausibleRangeSamples": [
+            5775777,
+            5778864
+          ],
+          "endPlausibleRangeSamples": [
+            5816128,
+            5823185
+          ],
+          "uncertainty": "moderate; signal-supported selection, actual listening still required",
+          "decision": "independently reviewed boundary proposal",
+          "reason": "Connected nasal ownership begins near 131.005, before the stronger 131.023 model core. The first u continues to about 131.96 instead of ending at 131.645."
+        },
+        {
+          "sourceIndex": 2,
+          "text": "несу,",
+          "beforeStartSeconds": 131.98536036036035,
+          "beforeEndSeconds": 132.38626126126127,
+          "selectedStartSample": 5820539,
+          "selectedEndSample": 5842809,
+          "selectedStartSeconds": 131.98501133786849,
+          "selectedEndSeconds": 132.49,
+          "startPlausibleRangeSamples": [
+            5818995,
+            5822082
+          ],
+          "endPlausibleRangeSamples": [
+            5839281,
+            5846337
+          ],
+          "uncertainty": "moderate; signal-supported selection, actual listening still required",
+          "decision": "independently reviewed boundary proposal",
+          "reason": "Independently renewed second verb onset is retained. Its vowel carries through roughly 132.49 before the next nasal onset."
+        },
+        {
+          "sourceIndex": 3,
+          "text": "несу",
+          "beforeStartSeconds": 132.50653153153152,
+          "beforeEndSeconds": 132.92747747747748,
+          "selectedStartSample": 5843559,
+          "selectedEndSample": 5927481,
+          "selectedStartSeconds": 132.5070068027211,
+          "selectedEndSeconds": 134.41,
+          "startPlausibleRangeSamples": [
+            5842015,
+            5845102
+          ],
+          "endPlausibleRangeSamples": [
+            5923953,
+            5931009
+          ],
+          "uncertainty": "moderate; signal-supported selection, actual listening still required",
+          "decision": "independently reviewed boundary proposal",
+          "reason": "The final direct u melody continues from about 132.84 through 134.41, with changed harmonics and modulation in both original/stem. The 132.927 final character core is inside this sustained note; the following attenuation/breath is excluded."
+        }
+      ],
+      "neutralTailHoldSample": 5934272,
+      "neutralTailHoldSeconds": 134.564,
+      "neutralTailRationale": "Keep the complete line readable after lexical focus releases. This is an authored reading hold, not extra vocal duration. Reconcile with the next actual vocal and use atomic handoff for the sustained carry/refrain pairs."
+    },
+    {
+      "cueId": "PK-012",
+      "words": [
+        {
+          "sourceIndex": 0,
+          "text": "По",
+          "beforeStartSeconds": 61.74034334763949,
+          "beforeEndSeconds": 61.86051502145923,
+          "selectedStartSample": 2722734,
+          "selectedEndSample": 2749635,
+          "selectedStartSeconds": 61.74,
+          "selectedEndSeconds": 62.35,
+          "startPlausibleRangeSamples": [
+            2721191,
+            2724278
+          ],
+          "endPlausibleRangeSamples": [
+            2746107,
+            2753163
+          ],
+          "uncertainty": "moderate; signal-supported selection, actual listening still required",
+          "decision": "independently reviewed boundary proposal",
+          "reason": "The quiet p event is retained as word start. Strong o body continues beyond 61.861 until roughly 62.35; weaker decay before the k attack is left neutral."
+        },
+        {
+          "sourceIndex": 1,
+          "text": "камушку,",
+          "beforeStartSeconds": 62.66165951359084,
+          "beforeEndSeconds": 64.76466380543634,
+          "selectedStartSample": 2763394,
+          "selectedEndSample": 2867162,
+          "selectedStartSeconds": 62.66199546485261,
+          "selectedEndSeconds": 65.01501133786849,
+          "startPlausibleRangeSamples": [
+            2761851,
+            2764938
+          ],
+          "endPlausibleRangeSamples": [
+            2863634,
+            2870690
+          ],
+          "uncertainty": "moderate; signal-supported selection, actual listening still required",
+          "decision": "independently reviewed boundary proposal",
+          "reason": "Quiet k onset is independently retained; the last u body renews around 64.70 and continues through about 65.015, followed by increasingly weak passive decay rather than an automatic hold until next по."
+        },
+        {
+          "sourceIndex": 2,
+          "text": "по",
+          "beforeStartSeconds": 65.52575107296137,
+          "beforeEndSeconds": 65.6859799713877,
+          "selectedStartSample": 2889697,
+          "selectedEndSample": 2928902,
+          "selectedStartSeconds": 65.52600907029479,
+          "selectedEndSeconds": 66.41501133786848,
+          "startPlausibleRangeSamples": [
+            2888153,
+            2891240
+          ],
+          "endPlausibleRangeSamples": [
+            2925374,
+            2932430
+          ],
+          "uncertainty": "moderate; signal-supported selection, actual listening still required",
+          "decision": "independently reviewed boundary proposal",
+          "reason": "Quiet p onset before the stronger vowel is retained. The o body continues to about 66.415, rather than ending at the sparse 65.686 core."
+        },
+        {
+          "sourceIndex": 3,
+          "text": "камушку,",
+          "beforeStartSeconds": 66.52718168812589,
+          "beforeEndSeconds": 68.53004291845494,
+          "selectedStartSample": 2933841,
+          "selectedEndSample": 3056130,
+          "selectedStartSeconds": 66.52700680272109,
+          "selectedEndSeconds": 69.3,
+          "startPlausibleRangeSamples": [
+            2932297,
+            2935384
+          ],
+          "endPlausibleRangeSamples": [
+            3052602,
+            3059658
+          ],
+          "uncertainty": "moderate; signal-supported selection, actual listening still required",
+          "decision": "independently reviewed boundary proposal",
+          "reason": "The second камушку has an independent onset. Its last u body continues beyond the 68.530 character core through approximately 69.30."
+        },
+        {
+          "sourceIndex": 4,
+          "text": "на",
+          "beforeStartSeconds": 69.39127324749643,
+          "beforeEndSeconds": 69.55150214592274,
+          "selectedStartSample": 3060143,
+          "selectedEndSample": 3096040,
+          "selectedStartSeconds": 69.3909977324263,
+          "selectedEndSeconds": 70.20498866213151,
+          "startPlausibleRangeSamples": [
+            3058600,
+            3061687
+          ],
+          "endPlausibleRangeSamples": [
+            3092512,
+            3099568
+          ],
+          "uncertainty": "moderate; signal-supported selection, actual listening still required",
+          "decision": "independently reviewed boundary proposal",
+          "reason": "Onset is individually retained. The sung a body continues to about 70.205, well beyond the 69.552 character core."
+        },
+        {
+          "sourceIndex": 5,
+          "text": "краешке",
+          "beforeStartSeconds": 70.2725321888412,
+          "beforeEndSeconds": 72.39556509298998,
+          "selectedStartSample": 3099039,
+          "selectedEndSample": 3214670,
+          "selectedStartSeconds": 70.27299319727891,
+          "selectedEndSeconds": 72.89501133786848,
+          "startPlausibleRangeSamples": [
+            3097496,
+            3100583
+          ],
+          "endPlausibleRangeSamples": [
+            3211142,
+            3218197
+          ],
+          "uncertainty": "moderate; signal-supported selection, actual listening still required",
+          "decision": "independently reviewed boundary proposal",
+          "reason": "The full three-syllable body includes the final renewed ke/vowel activity near 72.3–72.9 beyond the 72.396 last character."
+        },
+        {
+          "sourceIndex": 6,
+          "text": "земли",
+          "beforeStartSeconds": 73.63733905579399,
+          "beforeEndSeconds": 74.31831187410586,
+          "selectedStartSample": 3245054,
+          "selectedEndSample": 3370563,
+          "selectedStartSeconds": 73.58399092970521,
+          "selectedEndSeconds": 76.43,
+          "startPlausibleRangeSamples": [
+            3243511,
+            3246598
+          ],
+          "endPlausibleRangeSamples": [
+            3367035,
+            3374091
+          ],
+          "uncertainty": "moderate; signal-supported selection, actual listening still required",
+          "decision": "independently reviewed boundary proposal",
+          "reason": "Quiet z-like/noisy onset near 73.584 precedes the stronger 73.637 core. A changing direct final vowel continues to about 76.43; weaker fading residual/breath before the next по is separate."
+        }
+      ],
+      "neutralTailHoldSample": 3393142,
+      "neutralTailHoldSeconds": 76.942,
+      "neutralTailRationale": "Keep the complete line readable after lexical focus releases. This is an authored reading hold, not extra vocal duration. Reconcile with the next actual vocal and use atomic handoff for the sustained carry/refrain pairs."
+    },
+    {
+      "cueId": "PK-013",
+      "words": [
+        {
+          "sourceIndex": 0,
+          "text": "По",
+          "beforeStartSeconds": 76.9419395465995,
+          "beforeEndSeconds": 77.08211586901764,
+          "selectedStartSample": 3393142,
+          "selectedEndSample": 3434949,
+          "selectedStartSeconds": 76.94199546485261,
+          "selectedEndSeconds": 77.89,
+          "startPlausibleRangeSamples": [
+            3391599,
+            3394686
+          ],
+          "endPlausibleRangeSamples": [
+            3431421,
+            3438477
+          ],
+          "uncertainty": "moderate; signal-supported selection, actual listening still required",
+          "decision": "independently reviewed boundary proposal",
+          "reason": "Individually retained quiet onset; the direct o body lasts through roughly 77.89 before the separate k onset."
+        },
+        {
+          "sourceIndex": 1,
+          "text": "камушку,",
+          "beforeStartSeconds": 77.94319899244333,
+          "beforeEndSeconds": 79.98576826196474,
+          "selectedStartSample": 3437286,
+          "selectedEndSample": 3560634,
+          "selectedStartSeconds": 77.94299319727891,
+          "selectedEndSeconds": 80.74,
+          "startPlausibleRangeSamples": [
+            3435743,
+            3438830
+          ],
+          "endPlausibleRangeSamples": [
+            3557106,
+            3564162
+          ],
+          "uncertainty": "moderate; signal-supported selection, actual listening still required",
+          "decision": "independently reviewed boundary proposal",
+          "reason": "Individually retained k onset; the last u renews near 79.93 and remains strongly voiced to about 80.74 instead of releasing at 79.986."
+        },
+        {
+          "sourceIndex": 2,
+          "text": "по",
+          "beforeStartSeconds": 80.82682619647356,
+          "beforeEndSeconds": 81.34748110831235,
+          "selectedStartSample": 3564471,
+          "selectedEndSample": 3598648,
+          "selectedStartSeconds": 80.82700680272109,
+          "selectedEndSeconds": 81.6019954648526,
+          "startPlausibleRangeSamples": [
+            3562927,
+            3566014
+          ],
+          "endPlausibleRangeSamples": [
+            3595120,
+            3602176
+          ],
+          "uncertainty": "moderate; signal-supported selection, actual listening still required",
+          "decision": "independently reviewed boundary proposal",
+          "reason": "Quiet p onset is retained; direct o body continues past the 81.347 model core to approximately 81.60, before the next word."
+        },
+        {
+          "sourceIndex": 3,
+          "text": "камушку,",
+          "beforeStartSeconds": 81.70793450881612,
+          "beforeEndSeconds": 83.8706549118388,
+          "selectedStartSample": 3603323,
+          "selectedEndSample": 3717851,
+          "selectedStartSeconds": 81.7080045351474,
+          "selectedEndSeconds": 84.30501133786848,
+          "startPlausibleRangeSamples": [
+            3601779,
+            3604866
+          ],
+          "endPlausibleRangeSamples": [
+            3714323,
+            3721378
+          ],
+          "uncertainty": "moderate; signal-supported selection, actual listening still required",
+          "decision": "independently reviewed boundary proposal",
+          "reason": "The second noun includes the last u body through roughly 84.30, with a breath-like gap before на rather than mechanically filling it."
+        },
+        {
+          "sourceIndex": 4,
+          "text": "на",
+          "beforeStartSeconds": 84.63161209068011,
+          "beforeEndSeconds": 84.75176322418136,
+          "selectedStartSample": 3732271,
+          "selectedEndSample": 3764641,
+          "selectedStartSeconds": 84.63199546485261,
+          "selectedEndSeconds": 85.36600907029478,
+          "startPlausibleRangeSamples": [
+            3730728,
+            3733815
+          ],
+          "endPlausibleRangeSamples": [
+            3761113,
+            3768169
+          ],
+          "uncertainty": "moderate; signal-supported selection, actual listening still required",
+          "decision": "independently reviewed boundary proposal",
+          "reason": "Independently retained na onset; full a body continues past the 84.752 core to roughly 85.37."
+        },
+        {
+          "sourceIndex": 5,
+          "text": "краешке",
+          "beforeStartSeconds": 85.47267002518892,
+          "beforeEndSeconds": 87.61536523929472,
+          "selectedStartSample": 3769359,
+          "selectedEndSample": 3877713,
+          "selectedStartSeconds": 85.47299319727891,
+          "selectedEndSeconds": 87.93,
+          "startPlausibleRangeSamples": [
+            3767816,
+            3770903
+          ],
+          "endPlausibleRangeSamples": [
+            3874185,
+            3881241
+          ],
+          "uncertainty": "moderate; signal-supported selection, actual listening still required",
+          "decision": "independently reviewed boundary proposal",
+          "reason": "The final syllable carries through around 87.93, with weaker residue thereafter and a real gap before земли."
+        },
+        {
+          "sourceIndex": 6,
+          "text": "земли",
+          "beforeStartSeconds": 88.79685138539044,
+          "beforeEndSeconds": 89.517758186398,
+          "selectedStartSample": 3915198,
+          "selectedEndSample": 3994798,
+          "selectedStartSeconds": 88.78,
+          "selectedEndSeconds": 90.58498866213152,
+          "startPlausibleRangeSamples": [
+            3912772,
+            3917624
+          ],
+          "endPlausibleRangeSamples": [
+            3989947,
+            3999649
+          ],
+          "uncertainty": "elevated lexical/body ambiguity",
+          "decision": "independently reviewed boundary proposal",
+          "reason": "Quiet z-like initial body near 88.78 precedes the 88.797 strong core. Direct lowered/modulated final vowel can continue to about 90.59. This release has elevated uncertainty because low residual harmonics also persist to around 91.0."
+        }
+      ],
+      "neutralTailHoldSample": 4036473,
+      "neutralTailHoldSeconds": 91.53,
+      "neutralTailRationale": "Keep the complete line readable after lexical focus releases. This is an authored reading hold, not extra vocal duration. Reconcile with the next actual vocal and use atomic handoff for the sustained carry/refrain pairs."
+    },
+    {
+      "cueId": "PK-029",
+      "words": [
+        {
+          "sourceIndex": 0,
+          "text": "По",
+          "beforeStartSeconds": 168.39051246537397,
+          "beforeEndSeconds": 168.55062326869808,
+          "selectedStartSample": 7426043,
+          "selectedEndSample": 7452459,
+          "selectedStartSeconds": 168.3909977324263,
+          "selectedEndSeconds": 168.99,
+          "startPlausibleRangeSamples": [
+            7424500,
+            7427587
+          ],
+          "endPlausibleRangeSamples": [
+            7448931,
+            7455987
+          ],
+          "uncertainty": "moderate; signal-supported selection, actual listening still required",
+          "decision": "independently reviewed boundary proposal",
+          "reason": "Individually retained p onset; direct o body tapers near 168.99. The weaker later residual preceding the noun is not used merely to fill the gap."
+        },
+        {
+          "sourceIndex": 1,
+          "text": "камушку,",
+          "beforeStartSeconds": 169.31114958448754,
+          "beforeEndSeconds": 171.35256232686982,
+          "selectedStartSample": 7466615,
+          "selectedEndSample": 7556976,
+          "selectedStartSeconds": 169.3109977324263,
+          "selectedEndSeconds": 171.36,
+          "startPlausibleRangeSamples": [
+            7465072,
+            7468159
+          ],
+          "endPlausibleRangeSamples": [
+            7553448,
+            7560504
+          ],
+          "uncertainty": "moderate; signal-supported selection, actual listening still required",
+          "decision": "independently reviewed boundary proposal",
+          "reason": "Individually retained k onset; this occurrence has a shorter final u/noisy release near 171.36. The raw MMS end is broadly retained here instead of applying the long extensions of other repetitions."
+        },
+        {
+          "sourceIndex": 2,
+          "text": "по",
+          "beforeStartSeconds": 172.19314404432134,
+          "beforeEndSeconds": 172.6134349030471,
+          "selectedStartSample": 7593711,
+          "selectedEndSample": 7624890,
+          "selectedStartSeconds": 172.19299319727892,
+          "selectedEndSeconds": 172.9,
+          "startPlausibleRangeSamples": [
+            7592168,
+            7595255
+          ],
+          "endPlausibleRangeSamples": [
+            7621362,
+            7628418
+          ],
+          "uncertainty": "moderate; signal-supported selection, actual listening still required",
+          "decision": "independently reviewed boundary proposal",
+          "reason": "A small but visible original/stem p burst near 172.193 is retained, despite the stronger vowel waiting until roughly 172.53. Moving this onset to the strong vowel would repeat the known late-core error. The direct o release is near 172.90."
+        },
+        {
+          "sourceIndex": 3,
+          "text": "камушку,",
+          "beforeStartSeconds": 173.13379501385043,
+          "beforeEndSeconds": 175.27527700831024,
+          "selectedStartSample": 7635209,
+          "selectedEndSample": 7761600,
+          "selectedStartSeconds": 173.13399092970522,
+          "selectedEndSeconds": 176.0,
+          "startPlausibleRangeSamples": [
+            7633666,
+            7636753
+          ],
+          "endPlausibleRangeSamples": [
+            7758072,
+            7765128
+          ],
+          "uncertainty": "moderate; signal-supported selection, actual listening still required",
+          "decision": "independently reviewed boundary proposal",
+          "reason": "Individually retained k onset; strong final u body extends from the 175.275 model core through roughly 176.0 before the separate на onset."
+        },
+        {
+          "sourceIndex": 4,
+          "text": "на",
+          "beforeStartSeconds": 176.05581717451525,
+          "beforeEndSeconds": 176.21592797783933,
+          "selectedStartSample": 7764070,
+          "selectedEndSample": 7793793,
+          "selectedStartSeconds": 176.05600907029478,
+          "selectedEndSeconds": 176.73,
+          "startPlausibleRangeSamples": [
+            7762526,
+            7765613
+          ],
+          "endPlausibleRangeSamples": [
+            7790265,
+            7797321
+          ],
+          "uncertainty": "moderate; signal-supported selection, actual listening still required",
+          "decision": "independently reviewed boundary proposal",
+          "reason": "Individually retained onset; final a body continues to about 176.73, beyond the 176.216 sparse core."
+        },
+        {
+          "sourceIndex": 5,
+          "text": "краешке",
+          "beforeStartSeconds": 176.87638504155126,
+          "beforeEndSeconds": 179.09792243767313,
+          "selectedStartSample": 7800232,
+          "selectedEndSample": 7903602,
+          "selectedStartSeconds": 176.87600907029477,
+          "selectedEndSeconds": 179.22,
+          "startPlausibleRangeSamples": [
+            7798688,
+            7801775
+          ],
+          "endPlausibleRangeSamples": [
+            7900074,
+            7907130
+          ],
+          "uncertainty": "moderate; signal-supported selection, actual listening still required",
+          "decision": "independently reviewed boundary proposal",
+          "reason": "The final short ke body continues to roughly 179.22, with a real broad quiet gap before земли."
+        },
+        {
+          "sourceIndex": 6,
+          "text": "земли",
+          "beforeStartSeconds": 180.25872576177287,
+          "beforeEndSeconds": 180.9792243767313,
+          "selectedStartSample": 7948143,
+          "selectedEndSample": 8070520,
+          "selectedStartSeconds": 180.23,
+          "selectedEndSeconds": 183.00498866213152,
+          "startPlausibleRangeSamples": [
+            7946600,
+            7949686
+          ],
+          "endPlausibleRangeSamples": [
+            8066992,
+            8074048
+          ],
+          "uncertainty": "moderate; signal-supported selection, actual listening still required",
+          "decision": "independently reviewed boundary proposal",
+          "reason": "Quiet initial z-like/noisy body near 180.23 precedes the stronger 180.259 core. Continuously modulated final vowel persists past 180.979 through about 183.005, then gives way to weaker tail/breath before the next refrain."
+        }
+      ],
+      "neutralTailHoldSample": 8095966,
+      "neutralTailHoldSeconds": 183.582,
+      "neutralTailRationale": "Keep the complete line readable after lexical focus releases. This is an authored reading hold, not extra vocal duration. Reconcile with the next actual vocal and use atomic handoff for the sustained carry/refrain pairs."
+    },
+    {
+      "cueId": "PK-030",
+      "words": [
+        {
+          "sourceIndex": 0,
+          "text": "По",
+          "beforeStartSeconds": 183.58194103194103,
+          "beforeEndSeconds": 183.7421375921376,
+          "selectedStartSample": 8095966,
+          "selectedEndSample": 8136582,
+          "selectedStartSeconds": 183.5819954648526,
+          "selectedEndSeconds": 184.50299319727893,
+          "startPlausibleRangeSamples": [
+            8094423,
+            8097510
+          ],
+          "endPlausibleRangeSamples": [
+            8133054,
+            8140110
+          ],
+          "uncertainty": "moderate; signal-supported selection, actual listening still required",
+          "decision": "independently reviewed boundary proposal",
+          "reason": "Individually retained p onset; the final o body carries through about 184.50 before the separate noun."
+        },
+        {
+          "sourceIndex": 1,
+          "text": "камушку,",
+          "beforeStartSeconds": 184.6031941031941,
+          "beforeEndSeconds": 186.64570024570025,
+          "selectedStartSample": 8140992,
+          "selectedEndSample": 8263149,
+          "selectedStartSeconds": 184.60299319727892,
+          "selectedEndSeconds": 187.3729931972789,
+          "startPlausibleRangeSamples": [
+            8139449,
+            8142536
+          ],
+          "endPlausibleRangeSamples": [
+            8259621,
+            8266677
+          ],
+          "uncertainty": "moderate; signal-supported selection, actual listening still required",
+          "decision": "independently reviewed boundary proposal",
+          "reason": "Individually retained k onset; renewed final u activity around 186.65–187.35 belongs to this occurrence and is excluded by the 186.646 sparse character end."
+        },
+        {
+          "sourceIndex": 2,
+          "text": "по",
+          "beforeStartSeconds": 187.46670761670762,
+          "beforeEndSeconds": 187.6269041769042,
+          "selectedStartSample": 8267295,
+          "selectedEndSample": 8302707,
+          "selectedStartSeconds": 187.4670068027211,
+          "selectedEndSeconds": 188.27,
+          "startPlausibleRangeSamples": [
+            8265751,
+            8268838
+          ],
+          "endPlausibleRangeSamples": [
+            8299179,
+            8306235
+          ],
+          "uncertainty": "moderate; signal-supported selection, actual listening still required",
+          "decision": "independently reviewed boundary proposal",
+          "reason": "Individually retained p onset; final o body continues to about 188.27 rather than ending at 187.627."
+        },
+        {
+          "sourceIndex": 3,
+          "text": "камушку,",
+          "beforeStartSeconds": 188.38783783783785,
+          "beforeEndSeconds": 190.59054054054053,
+          "selectedStartSample": 8307911,
+          "selectedEndSample": 8419925,
+          "selectedStartSeconds": 188.3880045351474,
+          "selectedEndSeconds": 190.92800453514738,
+          "startPlausibleRangeSamples": [
+            8306367,
+            8309454
+          ],
+          "endPlausibleRangeSamples": [
+            8416397,
+            8423453
+          ],
+          "uncertainty": "moderate; signal-supported selection, actual listening still required",
+          "decision": "independently reviewed boundary proposal",
+          "reason": "Individually retained k onset; last u body includes the renewed activity through around 190.93, followed by a weak/breath-like region before на."
+        },
+        {
+          "sourceIndex": 4,
+          "text": "на",
+          "beforeStartSeconds": 191.27137592137592,
+          "beforeEndSeconds": 191.4115479115479,
+          "selectedStartSample": 8435051,
+          "selectedEndSample": 8469714,
+          "selectedStartSeconds": 191.2709977324263,
+          "selectedEndSeconds": 192.05700680272108,
+          "startPlausibleRangeSamples": [
+            8433508,
+            8436595
+          ],
+          "endPlausibleRangeSamples": [
+            8466186,
+            8473242
+          ],
+          "uncertainty": "moderate; signal-supported selection, actual listening still required",
+          "decision": "independently reviewed boundary proposal",
+          "reason": "Individually retained onset; a body carries to around 192.06 before the new noun onset."
+        },
+        {
+          "sourceIndex": 5,
+          "text": "краешке",
+          "beforeStartSeconds": 192.13243243243244,
+          "beforeEndSeconds": 194.31511056511056,
+          "selectedStartSample": 8473021,
+          "selectedEndSample": 8581198,
+          "selectedStartSeconds": 192.1319954648526,
+          "selectedEndSeconds": 194.5849886621315,
+          "startPlausibleRangeSamples": [
+            8471478,
+            8474565
+          ],
+          "endPlausibleRangeSamples": [
+            8577670,
+            8584726
+          ],
+          "uncertainty": "moderate; signal-supported selection, actual listening still required",
+          "decision": "independently reviewed boundary proposal",
+          "reason": "The last ke body renews near 194.18 and carries to about 194.59, past the 194.315 sparse character end. Weaker residual through roughly 194.9 remains separate."
+        },
+        {
+          "sourceIndex": 6,
+          "text": "земли",
+          "beforeStartSeconds": 195.6968058968059,
+          "beforeEndSeconds": 196.13734643734642,
+          "selectedStartSample": 8628959,
+          "selectedEndSample": 8819559,
+          "selectedStartSeconds": 195.6680045351474,
+          "selectedEndSeconds": 199.99,
+          "startPlausibleRangeSamples": [
+            8627415,
+            8630502
+          ],
+          "endPlausibleRangeSamples": [
+            8816031,
+            8823087
+          ],
+          "uncertainty": "moderate; signal-supported selection, actual listening still required",
+          "decision": "independently reviewed boundary proposal",
+          "reason": "Quiet z-like/noisy onset near 195.67 precedes the stronger 195.697 core. The long modulated final vowel persists to about 199.99; tiny later decay is separate, while the instrumental tail continues to the recording end."
+        }
+      ],
+      "neutralTailHoldSample": 8881740,
+      "neutralTailHoldSeconds": 201.4,
+      "neutralTailRationale": "Keep the complete line readable after lexical focus releases. This is an authored reading hold, not extra vocal duration. Reconcile with the next actual vocal and use atomic handoff for the sustained carry/refrain pairs."
+    }
+  ],
+  "limits": [
+    "All sample choices are integer representations of plausible boundary proposals, not millisecond perceptual certification.",
+    "The intro contains two separate physical bursts, provisionally labeled repeated Яна after coordinator editorial update. Their lexical identity must be reviewed against actual sound; signal evidence alone cannot establish the additional word.",
+    "Direct held-vowel ownership versus low passive decay is especially ambiguous in the lowered second refrain земли. Preserve the range and alternative rather than claiming unanimity.",
+    "No global anticipation, shared chorus offset, or mechanical gap filling was applied. Neutral holds below are reading/composition proposals separate from acoustic focus, and close cues should hand off atomically when a fade will not fit.",
+    "No timing/editorial baseline was modified by this reviewer."
+  ],
+  "additionalObservations": [
+    {
+      "cueId": "PK-015",
+      "sourceIndex": 5,
+      "text": "человечка",
+      "selectedStartSample": 4502390,
+      "selectedStartSeconds": 102.09501133786848,
+      "startPlausibleRangeSamples": [
+        4491585,
+        4507902
+      ],
+      "selectedEndSample": 4559023,
+      "selectedEndSeconds": 103.37920634920636,
+      "releaseScope": "Widened model release retained for coordinator review, not independently selected from a full original tail panel.",
+      "reason": "The original/stem wide panel shows the preceding Маленького harmonic body continuing around101.35–101.74, then quiet high-frequency activity around101.80–101.97 and renewal toward102.20. The quiet event may be breath or leading ч articulation. A102.095 start within101.85–102.22 is plausible but not uniquely established. Whisper101.37 is rejected because it falls in the preceding word vowel. Keep this broad uncertainty and the widened crop release separately.",
+      "uncertainty": "elevated, breath versus lexical frication unresolved; actual audio listening required"
+    }
+  ]
+}
