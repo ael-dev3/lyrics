@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "status": "unprompted ASR lexical/timing observation; not listening attestation or selected timing",
+  "sourceSha256": "8563f6b817c9b1cc39649363a52486214c691c0d98ae7bb82263021ac7363523",
+  "method": {
+    "model": "large-v3-turbo",
+    "modelFamily": "OpenAI Whisper",
+    "checkpointSha256": "aff26ae408abcba5fbf8813c21e62b0941638c5f6eebfb145be0c9839262a19a",
+    "implementation": "stable-ts 2.19.1",
+    "language": "ru",
+    "conditioningText": null,
+    "initialPrompt": null,
+    "conditionOnPreviousText": false,
+    "suppressSilence": false,
+    "inputKind": "original",
+    "inputFile": "analysis/independent-audio/original-mix-16000.wav",
+    "originalSourceZeroPreserved": true,
+    "sourceCropStartSample16000": 1952000,
+    "sourceCropEndSample16000": 2096000,
+    "cropStartSeconds": 122.0,
+    "cropEndSeconds": 131.0,
+    "humanListening": false,
+    "elapsedSeconds": 4.95488158299122,
+    "torch": "2.14.0"
+  },
+  "result": {
+    "text": " Музыка",
+    "segments": [
+      {
+        "start": 122.1,
+        "end": 130.7,
+        "text": " Музыка",
+        "seek": 122.0,
+        "tokens": [
+          3493,
+          15687,
+          698,
+          2833
+        ],
+        "temperature": 0,
+        "avg_logprob": -0.6862367902483258,
+        "compression_ratio": 0.5714285714285714,
+        "no_speech_prob": 3.956660832304948e-10,
+        "words": [
+          {
+            "word": " Музыка",
+            "start": 122.1,
+            "end": 130.7,
+            "probability": 0.5057218213041779,
+            "tokens": [
+              3493,
+              15687,
+              698,
+              2833
+            ]
+          }
+        ]
+      }
+    ],
+    "language": "ru",
+    "ori_dict": {
+      "text": " Музыка",
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0.0,
+          "start": 0.1,
+          "end": 8.7,
+          "text": " Музыка",
+          "tokens": [
+            50365,
+            3493,
+            15687,
+            698,
+            2833,
+            50815
+          ],
+          "temperature": 0,
+          "avg_logprob": -0.6862367902483258,
+          "compression_ratio": 0.5714285714285714,
+          "no_speech_prob": 3.956660832304948e-10,
+          "words": [
+            {
+              "word": " Музыка",
+              "start": 0.1,
+              "end": 8.7,
+              "probability": 0.5057218213041779,
+              "tokens": [
+                3493,
+                15687,
+                698,
+                2833
+              ]
+            }
+          ]
+        }
+      ],
+      "language": "ru",
+      "time_scale": null
+    },
+    "regroup_history": "",
+    "nonspeech_sections": []
+  }
+}

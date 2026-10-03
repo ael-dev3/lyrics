@@ -1,0 +1,12 @@
+import {readFileSync,writeFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+import type {Timeline} from '../src/model.ts';
+const timeline=JSON.parse(readFileSync('public/timeline.json','utf8')) as Timeline;
+const files=['public/source.mp4','public/timeline.json','public/audio-features.json','source/recording.json','source/russian-editorial.json','source/japanese-selected-editorial.json','src/model.ts','src/scene.ts','src/player.ts','review/index.html','review/client.js','public/fonts/NotoSerif.ttf','public/fonts/NotoSerifJP.ttf','package-lock.json','scripts/build-timeline.ts','scripts/preview-server.ts','scripts/render-gate.ts'];
+const hash=(p:string)=>createHash('sha256').update(readFileSync(p)).digest('hex');
+const inputHashes=Object.fromEntries(files.map(p=>[p,hash(p)]));
+if(inputHashes['public/source.mp4']!==timeline.sourceSha256)throw Error('Source changed; cannot freeze current review identity.');
+const identity={project:'prizrak-lyric-film',revision:timeline.revision,inputHashes,cueIds:timeline.cues.map(c=>c.id)};
+writeFileSync('evidence/preview-inputs.json',JSON.stringify(identity,null,2)+'\n');
+writeFileSync('evidence/production-gate.json',JSON.stringify({...identity,synchronizationReviewComplete:false,productionAuthorized:false,productionVerified:false,humanListening:false,status:'Complete technically checked working preview. Current-input normal/reduced-speed and both-format listening/perceptual review plus explicit production authorization remain pending.'},null,2)+'\n');
+console.log(`Frozen ${files.length} current preview inputs; production remains closed.`);

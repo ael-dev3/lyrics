@@ -1,0 +1,146 @@
+{
+  "schemaVersion": 1,
+  "sourceSha256": "8563f6b817c9b1cc39649363a52486214c691c0d98ae7bb82263021ac7363523",
+  "model": "HTDemucs htdemucs (preexisting local checkpoint)",
+  "sampleRate": 44100,
+  "channels": 2,
+  "originalDecodedSamples": 11249664,
+  "estimatedVocalSamples": 11249664,
+  "estimatedAccompanimentSamples": 11249664,
+  "maximumMixtureReconstructionError": 0.25952232629060745,
+  "originalVersusVocal": [
+    {
+      "crop": [
+        20,
+        38
+      ],
+      "searchLagSamples": [
+        -2205,
+        2205
+      ],
+      "peakLagSamples": 0,
+      "peakLagSeconds": 0.0,
+      "zeroLagNormalizedCorrelation": 0.26261863165276833
+    },
+    {
+      "crop": [
+        87,
+        104
+      ],
+      "searchLagSamples": [
+        -2205,
+        2205
+      ],
+      "peakLagSamples": 0,
+      "peakLagSeconds": 0.0,
+      "zeroLagNormalizedCorrelation": 0.4655229044971277
+    },
+    {
+      "crop": [
+        150,
+        172
+      ],
+      "searchLagSamples": [
+        -2205,
+        2205
+      ],
+      "peakLagSamples": 0,
+      "peakLagSeconds": 0.0,
+      "zeroLagNormalizedCorrelation": 0.36908798778970825
+    },
+    {
+      "crop": [
+        223,
+        239
+      ],
+      "searchLagSamples": [
+        -2205,
+        2205
+      ],
+      "peakLagSamples": 0,
+      "peakLagSeconds": 0.0,
+      "zeroLagNormalizedCorrelation": 0.4622884498379159
+    }
+  ],
+  "originalVersusSummedStems": [
+    {
+      "crop": [
+        0,
+        20
+      ],
+      "searchLagSamples": [
+        -2205,
+        2205
+      ],
+      "peakLagSamples": 0,
+      "peakLagSeconds": 0.0,
+      "zeroLagNormalizedCorrelation": 0.9999082456509146
+    },
+    {
+      "crop": [
+        20,
+        38
+      ],
+      "searchLagSamples": [
+        -2205,
+        2205
+      ],
+      "peakLagSamples": 0,
+      "peakLagSeconds": 0.0,
+      "zeroLagNormalizedCorrelation": 0.9985548388217007
+    },
+    {
+      "crop": [
+        87,
+        104
+      ],
+      "searchLagSamples": [
+        -2205,
+        2205
+      ],
+      "peakLagSamples": 0,
+      "peakLagSeconds": 0.0,
+      "zeroLagNormalizedCorrelation": 0.9973374235523449
+    },
+    {
+      "crop": [
+        150,
+        172
+      ],
+      "searchLagSamples": [
+        -2205,
+        2205
+      ],
+      "peakLagSamples": 0,
+      "peakLagSeconds": 0.0,
+      "zeroLagNormalizedCorrelation": 0.9973102447529725
+    },
+    {
+      "crop": [
+        223,
+        239
+      ],
+      "searchLagSamples": [
+        -2205,
+        2205
+      ],
+      "peakLagSamples": 0,
+      "peakLagSeconds": 0.0,
+      "zeroLagNormalizedCorrelation": 0.9964571393302709
+    },
+    {
+      "crop": [
+        240,
+        255
+      ],
+      "searchLagSamples": [
+        -2205,
+        2205
+      ],
+      "peakLagSamples": 0,
+      "peakLagSeconds": 0.0,
+      "zeroLagNormalizedCorrelation": 0.9999471142212615
+    }
+  ],
+  "scope": "Numerical source-clock validation of estimated components, not lexical presence or human listening. Lag against estimated vocals can be ambiguous in mixed music; mixture reconstruction is the stronger source-zero check."
+}

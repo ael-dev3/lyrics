@@ -1,0 +1,123 @@
+{
+  "phraseId": "RU-014",
+  "language": "ru",
+  "cropStartSeconds": 155.1,
+  "cropEndSeconds": 159.45,
+  "emissionFrameSupportSeconds": 0.020046082949308753,
+  "conditionedUnits": [
+    "Я",
+    "исчез"
+  ],
+  "words": [
+    {
+      "unitIndex": 0,
+      "text": "Я",
+      "startSeconds": 155.98202764976958,
+      "endSeconds": 156.10230414746542,
+      "ctcPathScore": 0.3384200029540807,
+      "characterObservations": [
+        {
+          "internalSymbol": "y",
+          "startSeconds": 155.98202764976958,
+          "endSeconds": 156.00207373271888,
+          "score": 0.002080677542835474
+        },
+        {
+          "internalSymbol": "a",
+          "startSeconds": 156.0822580645161,
+          "endSeconds": 156.10230414746542,
+          "score": 0.6747593283653259
+        }
+      ]
+    },
+    {
+      "unitIndex": 1,
+      "text": "исчез",
+      "startSeconds": 156.64354838709676,
+      "endSeconds": 157.1847926267281,
+      "ctcPathScore": 0.06926011402780811,
+      "characterObservations": [
+        {
+          "internalSymbol": "i",
+          "startSeconds": 156.64354838709676,
+          "endSeconds": 156.66359447004606,
+          "score": 0.24561218917369843
+        },
+        {
+          "internalSymbol": "s",
+          "startSeconds": 156.74377880184332,
+          "endSeconds": 156.76382488479263,
+          "score": 0.025942686945199966
+        },
+        {
+          "internalSymbol": "c",
+          "startSeconds": 156.84400921658985,
+          "endSeconds": 156.86405529953916,
+          "score": 0.02212509512901306
+        },
+        {
+          "internalSymbol": "h",
+          "startSeconds": 156.88410138248847,
+          "endSeconds": 156.90414746543777,
+          "score": 0.014253749512135983
+        },
+        {
+          "internalSymbol": "e",
+          "startSeconds": 156.9442396313364,
+          "endSeconds": 156.96428571428572,
+          "score": 0.03631128743290901
+        },
+        {
+          "internalSymbol": "z",
+          "startSeconds": 157.1647465437788,
+          "endSeconds": 157.1847926267281,
+          "score": 0.07131567597389221
+        }
+      ]
+    }
+  ],
+  "unforcedInternalSymbols": [
+    {
+      "timeSeconds": 155.98202764976958,
+      "internalSymbol": "s",
+      "score": 0.5863831043243408
+    },
+    {
+      "timeSeconds": 156.0822580645161,
+      "internalSymbol": "a",
+      "score": 0.6747593283653259
+    },
+    {
+      "timeSeconds": 156.2827188940092,
+      "internalSymbol": "n",
+      "score": 0.417910099029541
+    },
+    {
+      "timeSeconds": 156.64354838709676,
+      "internalSymbol": "e",
+      "score": 0.35717639327049255
+    },
+    {
+      "timeSeconds": 156.84400921658985,
+      "internalSymbol": "s",
+      "score": 0.3623395562171936
+    },
+    {
+      "timeSeconds": 156.9442396313364,
+      "internalSymbol": "a",
+      "score": 0.6866112947463989
+    },
+    {
+      "timeSeconds": 157.1647465437788,
+      "internalSymbol": "s",
+      "score": 0.6983898878097534
+    }
+  ],
+  "humanListening": false,
+  "limits": [
+    "Forced CTC placement cannot determine lexical presence.",
+    "CTC character cores may omit quiet connected prefixes or held endings.",
+    "Japanese internal romanization is model preprocessing and can differ from performed particle pronunciation; no displayed pronunciation layer is created.",
+    "Scores are uncalibrated path evidence, not timing accuracy probabilities."
+  ]
+}

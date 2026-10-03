@@ -1,0 +1,4257 @@
+{
+  "revision": "prizrak-preview-v1",
+  "sourceSha256": "8563f6b817c9b1cc39649363a52486214c691c0d98ae7bb82263021ac7363523",
+  "status": "Selected preview events; human full-speed/reduced-speed review remains pending.",
+  "sampleClock": "Original unchanged AAC decoded at44100Hz; half-open sample intervals; no global anticipation/lag compensation.",
+  "evidenceLimits": "CTC emissions ~20ms, spectral support23.22ms. Integer sample storage is precise scheduling, not guaranteed perceptual boundary accuracy. Stems are clock verified, not source authority.",
+  "wordCount": 150,
+  "cueCount": 37,
+  "events": [
+    {
+      "wordId": "RU-001-1",
+      "language": "ru",
+      "selectedStartSample": 3801420,
+      "selectedEndSample": 3804507,
+      "onsetRangeSeconds": [
+        86.12,
+        86.29
+      ],
+      "releaseRangeSeconds": [
+        86.195,
+        86.345
+      ],
+      "rationale": "Very low-score preposition at the end of Japanese kana. Do not simply select the earlier stem event; bound quiet consonant before the clear p entrance.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 86.2472440944882,
+          "endSeconds": 86.26732283464567,
+          "ctcPathScore": 0.0048878188244998455
+        },
+        "vocalsCtc": {
+          "startSeconds": 86.12677165354332,
+          "endSeconds": 86.14685039370079,
+          "ctcPathScore": 0.0005165778566151857
+        },
+        "conditionedWhisper": {
+          "start": 86.26,
+          "end": 86.38,
+          "probability": 0.00022465709480457008
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-001-2",
+      "language": "ru",
+      "selectedStartSample": 3804507,
+      "selectedEndSample": 3867129,
+      "onsetRangeSeconds": [
+        86.215,
+        86.325
+      ],
+      "releaseRangeSeconds": [
+        87.615,
+        87.765
+      ],
+      "rationale": "Original-mix and clock-verified estimate panel inspected at this occurrence; follow the quiet articulation/body transition rather than conditioned Whisper enclosing spans. Internal release is a connected handoff proposal; uncertainty bounds retain closure/reverb ambiguity.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 86.26732283464567,
+          "endSeconds": 87.55236220472442,
+          "ctcPathScore": 0.2051394706359133
+        },
+        "vocalsCtc": {
+          "startSeconds": 86.28740157480316,
+          "endSeconds": 87.59251968503938,
+          "ctcPathScore": 0.4389900623355061
+        },
+        "conditionedWhisper": {
+          "start": 86.38,
+          "end": 87.52,
+          "probability": 0.9101924896240234
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-001-3",
+      "language": "ru",
+      "selectedStartSample": 3867129,
+      "selectedEndSample": 3891825,
+      "onsetRangeSeconds": [
+        87.635,
+        87.745
+      ],
+      "releaseRangeSeconds": [
+        88.175,
+        88.325
+      ],
+      "rationale": "Original-mix and clock-verified estimate panel inspected at this occurrence; follow the quiet articulation/body transition rather than conditioned Whisper enclosing spans. Internal release is a connected handoff proposal; uncertainty bounds retain closure/reverb ambiguity.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 87.71299212598426,
+          "endSeconds": 88.1748031496063,
+          "ctcPathScore": 0.4359652561446031
+        },
+        "vocalsCtc": {
+          "startSeconds": 87.71299212598426,
+          "endSeconds": 88.1748031496063,
+          "ctcPathScore": 0.5033510234206915
+        },
+        "conditionedWhisper": {
+          "start": 87.52,
+          "end": 88.36,
+          "probability": 0.5314690917730331
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-001-4",
+      "language": "ru",
+      "selectedStartSample": 3891825,
+      "selectedEndSample": 3974292,
+      "onsetRangeSeconds": [
+        88.195,
+        88.305
+      ],
+      "releaseRangeSeconds": [
+        89.95,
+        90.32
+      ],
+      "rationale": "Original-mix and clock-verified estimate panel inspected at this occurrence; follow the quiet articulation/body transition rather than conditioned Whisper enclosing spans. Internal release is a connected handoff proposal; uncertainty bounds retain closure/reverb ambiguity.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 88.25511811023622,
+          "endSeconds": 88.97795275590552,
+          "ctcPathScore": 0.28970435447990894
+        },
+        "vocalsCtc": {
+          "startSeconds": 88.27519685039371,
+          "endSeconds": 88.97795275590552,
+          "ctcPathScore": 0.2529592694714665
+        },
+        "conditionedWhisper": {
+          "start": 88.42,
+          "end": 89.04,
+          "probability": 0.6817600727081299
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-002-1",
+      "language": "ru",
+      "selectedStartSample": 3993255,
+      "selectedEndSample": 4016848,
+      "onsetRangeSeconds": [
+        90.495,
+        90.605
+      ],
+      "releaseRangeSeconds": [
+        91.01,
+        91.16
+      ],
+      "rationale": "Reject conditioned Whisper crop-bound89.50: new vocal attack/body occurs near90.55 after prior kada tail.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 90.56425702811245,
+          "endSeconds": 91.00602409638554,
+          "ctcPathScore": 0.1515153298775355
+        },
+        "vocalsCtc": {
+          "startSeconds": 90.58433734939759,
+          "endSeconds": 91.00602409638554,
+          "ctcPathScore": 0.1844408338268598
+        },
+        "conditionedWhisper": {
+          "start": 89.5,
+          "end": 91.06,
+          "probability": 0.4462502943351865
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-002-2",
+      "language": "ru",
+      "selectedStartSample": 4016848,
+      "selectedEndSample": 4042647,
+      "onsetRangeSeconds": [
+        91.03,
+        91.14
+      ],
+      "releaseRangeSeconds": [
+        91.595,
+        91.745
+      ],
+      "rationale": "Original-mix and clock-verified estimate panel inspected at this occurrence; follow the quiet articulation/body transition rather than conditioned Whisper enclosing spans. Internal release is a connected handoff proposal; uncertainty bounds retain closure/reverb ambiguity.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 91.10642570281125,
+          "endSeconds": 91.48795180722891,
+          "ctcPathScore": 0.19358157801131406
+        },
+        "vocalsCtc": {
+          "startSeconds": 91.10642570281125,
+          "endSeconds": 91.44779116465864,
+          "ctcPathScore": 0.32719490956515074
+        },
+        "conditionedWhisper": {
+          "start": 91.06,
+          "end": 91.5,
+          "probability": 0.12073792517185211
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-002-3",
+      "language": "ru",
+      "selectedStartSample": 4042647,
+      "selectedEndSample": 4054554,
+      "onsetRangeSeconds": [
+        91.615,
+        91.725
+      ],
+      "releaseRangeSeconds": [
+        91.865,
+        92.015
+      ],
+      "rationale": "Original-mix and clock-verified estimate panel inspected at this occurrence; follow the quiet articulation/body transition rather than conditioned Whisper enclosing spans. Internal release is a connected handoff proposal; uncertainty bounds retain closure/reverb ambiguity.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 91.68875502008032,
+          "endSeconds": 91.86947791164658,
+          "ctcPathScore": 0.0861913301050663
+        },
+        "vocalsCtc": {
+          "startSeconds": 91.68875502008032,
+          "endSeconds": 91.80923694779116,
+          "ctcPathScore": 0.7500079572200775
+        },
+        "conditionedWhisper": {
+          "start": 91.5,
+          "end": 91.86,
+          "probability": 0.45858508348464966
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-002-4",
+      "language": "ru",
+      "selectedStartSample": 4054554,
+      "selectedEndSample": 4117176,
+      "onsetRangeSeconds": [
+        91.885,
+        91.995
+      ],
+      "releaseRangeSeconds": [
+        93.285,
+        93.435
+      ],
+      "rationale": "Original-mix and clock-verified estimate panel inspected at this occurrence; follow the quiet articulation/body transition rather than conditioned Whisper enclosing spans. Internal release is a connected handoff proposal; uncertainty bounds retain closure/reverb ambiguity.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 91.94979919678715,
+          "endSeconds": 93.19477911646587,
+          "ctcPathScore": 0.10086763817816972
+        },
+        "vocalsCtc": {
+          "startSeconds": 91.96987951807229,
+          "endSeconds": 93.23493975903614,
+          "ctcPathScore": 0.2862538680899888
+        },
+        "conditionedWhisper": {
+          "start": 91.86,
+          "end": 93.14,
+          "probability": 0.5287264818325639
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-002-5",
+      "language": "ru",
+      "selectedStartSample": 4117176,
+      "selectedEndSample": 4182885,
+      "onsetRangeSeconds": [
+        93.305,
+        93.415
+      ],
+      "releaseRangeSeconds": [
+        94.7,
+        95.045
+      ],
+      "rationale": "Original-mix and clock-verified estimate panel inspected at this occurrence; follow the quiet articulation/body transition rather than conditioned Whisper enclosing spans. Internal release is a connected handoff proposal; uncertainty bounds retain closure/reverb ambiguity.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 93.37550200803213,
+          "endSeconds": 94.09839357429719,
+          "ctcPathScore": 0.226271303743124
+        },
+        "vocalsCtc": {
+          "startSeconds": 93.37550200803213,
+          "endSeconds": 94.09839357429719,
+          "ctcPathScore": 0.6563615627586842
+        },
+        "conditionedWhisper": {
+          "start": 93.14,
+          "end": 94.1,
+          "probability": 0.9642059206962585
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-003-1",
+      "language": "ru",
+      "selectedStartSample": 4191484,
+      "selectedEndSample": 4219929,
+      "onsetRangeSeconds": [
+        94.99,
+        95.1
+      ],
+      "releaseRangeSeconds": [
+        95.615,
+        95.765
+      ],
+      "rationale": "Reject crop-bound Whisper94.50; connected tv prefix immediately precedes voiced entrance near95.06.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 95.08333333333333,
+          "endSeconds": 95.52586206896552,
+          "ctcPathScore": 0.05336040863767266
+        },
+        "vocalsCtc": {
+          "startSeconds": 95.0632183908046,
+          "endSeconds": 95.52586206896552,
+          "ctcPathScore": 0.12183943577110767
+        },
+        "conditionedWhisper": {
+          "start": 94.5,
+          "end": 95.7,
+          "probability": 0.46435123557845753
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-003-2",
+      "language": "ru",
+      "selectedStartSample": 4219929,
+      "selectedEndSample": 4256973,
+      "onsetRangeSeconds": [
+        95.635,
+        95.745
+      ],
+      "releaseRangeSeconds": [
+        96.455,
+        96.605
+      ],
+      "rationale": "Original-mix and clock-verified estimate panel inspected at this occurrence; follow the quiet articulation/body transition rather than conditioned Whisper enclosing spans. Internal release is a connected handoff proposal; uncertainty bounds retain closure/reverb ambiguity.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 95.70689655172414,
+          "endSeconds": 96.37068965517241,
+          "ctcPathScore": 0.1784391663968563
+        },
+        "vocalsCtc": {
+          "startSeconds": 95.70689655172414,
+          "endSeconds": 96.39080459770115,
+          "ctcPathScore": 0.33185775950551033
+        },
+        "conditionedWhisper": {
+          "start": 95.7,
+          "end": 96.32,
+          "probability": 0.7421576380729675
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-003-3",
+      "language": "ru",
+      "selectedStartSample": 4256973,
+      "selectedEndSample": 4270644,
+      "onsetRangeSeconds": [
+        96.475,
+        96.585
+      ],
+      "releaseRangeSeconds": [
+        96.765,
+        96.915
+      ],
+      "rationale": "Original-mix and clock-verified estimate panel inspected at this occurrence; follow the quiet articulation/body transition rather than conditioned Whisper enclosing spans. Internal release is a connected handoff proposal; uncertainty bounds retain closure/reverb ambiguity.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 96.55172413793103,
+          "endSeconds": 96.63218390804597,
+          "ctcPathScore": 0.04656907171010971
+        },
+        "vocalsCtc": {
+          "startSeconds": 96.5316091954023,
+          "endSeconds": 96.65229885057471,
+          "ctcPathScore": 0.3566106343641877
+        },
+        "conditionedWhisper": {
+          "start": 96.32,
+          "end": 96.82,
+          "probability": 0.08289391547441483
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-003-4",
+      "language": "ru",
+      "selectedStartSample": 4270644,
+      "selectedEndSample": 4383099,
+      "onsetRangeSeconds": [
+        96.785,
+        96.895
+      ],
+      "releaseRangeSeconds": [
+        99.25,
+        99.6
+      ],
+      "rationale": "Original CTC final m is weak/early97.44, stem97.94 is also before a clearly sustained vocal body. Keep lexical focus/readability through the later main vowel into99.3, apart from decorative reverberation.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 96.85344827586206,
+          "endSeconds": 97.4367816091954,
+          "ctcPathScore": 0.046068161725997925
+        },
+        "vocalsCtc": {
+          "startSeconds": 96.85344827586206,
+          "endSeconds": 97.9396551724138,
+          "ctcPathScore": 0.23209164324881776
+        },
+        "conditionedWhisper": {
+          "start": 96.82,
+          "end": 97.96,
+          "probability": 0.26271598041057587
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-004-1",
+      "language": "ru",
+      "selectedStartSample": 4398314,
+      "selectedEndSample": 4460054,
+      "onsetRangeSeconds": [
+        99.68,
+        99.79
+      ],
+      "releaseRangeSeconds": [
+        101.06,
+        101.21
+      ],
+      "rationale": "Reject crop-bound Whisper98.00: preceding hair note continues, then new u articulation near99.75.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 99.74874371859296,
+          "endSeconds": 100.9748743718593,
+          "ctcPathScore": 0.26930877414997667
+        },
+        "vocalsCtc": {
+          "startSeconds": 99.78894472361809,
+          "endSeconds": 100.9748743718593,
+          "ctcPathScore": 0.3947883954582115
+        },
+        "conditionedWhisper": {
+          "start": 98,
+          "end": 100.98,
+          "probability": 0.5177192408591509
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-004-2",
+      "language": "ru",
+      "selectedStartSample": 4460054,
+      "selectedEndSample": 4582431,
+      "onsetRangeSeconds": [
+        101.08,
+        101.19
+      ],
+      "releaseRangeSeconds": [
+        103.82,
+        104.25
+      ],
+      "rationale": "CTC/Whisper ends101.46–101.64 omit a long sustained vowel. Shared original/stem voiced formants continue until the quiet nasal transition into the next phrase near103.9–104.25.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 101.15577889447236,
+          "endSeconds": 101.63819095477388,
+          "ctcPathScore": 0.3275227501988411
+        },
+        "vocalsCtc": {
+          "startSeconds": 101.15577889447236,
+          "endSeconds": 101.57788944723617,
+          "ctcPathScore": 0.13779713856056333
+        },
+        "conditionedWhisper": {
+          "start": 100.98,
+          "end": 101.46,
+          "probability": 0.9979550838470459
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-005-1",
+      "language": "ru",
+      "selectedStartSample": 4582431,
+      "selectedEndSample": 4610655,
+      "onsetRangeSeconds": [
+        103.85,
+        104.28
+      ],
+      "releaseRangeSeconds": [
+        104.475,
+        104.625
+      ],
+      "rationale": "Reject Whisper102.00. Original CTC104.267 follows the clear vowel; stem103.886 may recover the m/n consonant but may also borrow preceding menya. Provisional connected-prefix onset103.91; wide explicit uncertainty retained.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 104.26708463949844,
+          "endSeconds": 104.42758620689655,
+          "ctcPathScore": 0.1288368155558904
+        },
+        "vocalsCtc": {
+          "startSeconds": 103.8858934169279,
+          "endSeconds": 104.42758620689655,
+          "ctcPathScore": 0.47591710463166237
+        },
+        "conditionedWhisper": {
+          "start": 102,
+          "end": 104.48,
+          "probability": 0.0061239018104970455
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-005-2",
+      "language": "ru",
+      "selectedStartSample": 4610655,
+      "selectedEndSample": 4671954,
+      "onsetRangeSeconds": [
+        104.495,
+        104.605
+      ],
+      "releaseRangeSeconds": [
+        105.865,
+        106.015
+      ],
+      "rationale": "Original-mix and clock-verified estimate panel inspected at this occurrence; follow the quiet articulation/body transition rather than conditioned Whisper enclosing spans. Internal release is a connected handoff proposal; uncertainty bounds retain closure/reverb ambiguity.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 104.5680250783699,
+          "endSeconds": 105.75172413793103,
+          "ctcPathScore": 0.34807694809777395
+        },
+        "vocalsCtc": {
+          "startSeconds": 104.58808777429468,
+          "endSeconds": 105.73166144200627,
+          "ctcPathScore": 0.5292054393461773
+        },
+        "conditionedWhisper": {
+          "start": 104.48,
+          "end": 105.74,
+          "probability": 0.9657471776008606
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-005-3",
+      "language": "ru",
+      "selectedStartSample": 4671954,
+      "selectedEndSample": 4697091,
+      "onsetRangeSeconds": [
+        105.885,
+        105.995
+      ],
+      "releaseRangeSeconds": [
+        106.435,
+        106.585
+      ],
+      "rationale": "Original-mix and clock-verified estimate panel inspected at this occurrence; follow the quiet articulation/body transition rather than conditioned Whisper enclosing spans. Internal release is a connected handoff proposal; uncertainty bounds retain closure/reverb ambiguity.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 105.95235109717868,
+          "endSeconds": 106.5141065830721,
+          "ctcPathScore": 0.06405432493193075
+        },
+        "vocalsCtc": {
+          "startSeconds": 105.97241379310344,
+          "endSeconds": 106.49404388714734,
+          "ctcPathScore": 0.38016437739133835
+        },
+        "conditionedWhisper": {
+          "start": 105.74,
+          "end": 106.48,
+          "probability": 0.9251817464828491
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-005-4",
+      "language": "ru",
+      "selectedStartSample": 4697091,
+      "selectedEndSample": 4781763,
+      "onsetRangeSeconds": [
+        106.455,
+        106.565
+      ],
+      "releaseRangeSeconds": [
+        108.3,
+        108.55
+      ],
+      "rationale": "Original-mix and clock-verified estimate panel inspected at this occurrence; follow the quiet articulation/body transition rather than conditioned Whisper enclosing spans. Internal release is a connected handoff proposal; uncertainty bounds retain closure/reverb ambiguity.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 106.5141065830721,
+          "endSeconds": 108.058934169279,
+          "ctcPathScore": 0.29667183235287664
+        },
+        "vocalsCtc": {
+          "startSeconds": 106.53416927899687,
+          "endSeconds": 108.31974921630093,
+          "ctcPathScore": 0.31690309001132844
+        },
+        "conditionedWhisper": {
+          "start": 106.48,
+          "end": 107.56,
+          "probability": 0.14741016241411367
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-006-1",
+      "language": "ru",
+      "selectedStartSample": 4798080,
+      "selectedEndSample": 4811751,
+      "onsetRangeSeconds": [
+        108.745,
+        108.855
+      ],
+      "releaseRangeSeconds": [
+        109.035,
+        109.185
+      ],
+      "rationale": "Original-mix and clock-verified estimate panel inspected at this occurrence; follow the quiet articulation/body transition rather than conditioned Whisper enclosing spans. Internal release is a connected handoff proposal; uncertainty bounds retain closure/reverb ambiguity.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 108.82085020242916,
+          "endSeconds": 109.06133603238867,
+          "ctcPathScore": 0.1328244156514605
+        },
+        "vocalsCtc": {
+          "startSeconds": 108.82085020242916,
+          "endSeconds": 109.06133603238867,
+          "ctcPathScore": 0.13598386694987616
+        },
+        "conditionedWhisper": {
+          "start": 108.4,
+          "end": 109.12,
+          "probability": 0.6794533133506775
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-006-2",
+      "language": "ru",
+      "selectedStartSample": 4811751,
+      "selectedEndSample": 4836447,
+      "onsetRangeSeconds": [
+        109.055,
+        109.165
+      ],
+      "releaseRangeSeconds": [
+        109.595,
+        109.745
+      ],
+      "rationale": "Original-mix and clock-verified estimate panel inspected at this occurrence; follow the quiet articulation/body transition rather than conditioned Whisper enclosing spans. Internal release is a connected handoff proposal; uncertainty bounds retain closure/reverb ambiguity.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 109.12145748987855,
+          "endSeconds": 109.52226720647774,
+          "ctcPathScore": 0.4455741262063384
+        },
+        "vocalsCtc": {
+          "startSeconds": 109.12145748987855,
+          "endSeconds": 109.52226720647774,
+          "ctcPathScore": 0.45220401138067245
+        },
+        "conditionedWhisper": {
+          "start": 109.12,
+          "end": 109.62,
+          "probability": 0.46113891585264355
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-006-3",
+      "language": "ru",
+      "selectedStartSample": 4836447,
+      "selectedEndSample": 4895100,
+      "onsetRangeSeconds": [
+        109.615,
+        109.725
+      ],
+      "releaseRangeSeconds": [
+        110.925,
+        111.075
+      ],
+      "rationale": "Original CTC109.703 includes initial na; stem109.963 is a later core. Physical voiced change near109.7 supports the earlier word entrance.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 109.70263157894738,
+          "endSeconds": 110.78481781376519,
+          "ctcPathScore": 0.285622085367019
+        },
+        "vocalsCtc": {
+          "startSeconds": 109.96315789473685,
+          "endSeconds": 110.76477732793524,
+          "ctcPathScore": 0.51302247799726
+        },
+        "conditionedWhisper": {
+          "start": 109.62,
+          "end": 110.82,
+          "probability": 0.3482612319930922
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-006-4",
+      "language": "ru",
+      "selectedStartSample": 4895100,
+      "selectedEndSample": 4909653,
+      "onsetRangeSeconds": [
+        110.945,
+        111.055
+      ],
+      "releaseRangeSeconds": [
+        111.255,
+        111.405
+      ],
+      "rationale": "Original-mix and clock-verified estimate panel inspected at this occurrence; follow the quiet articulation/body transition rather than conditioned Whisper enclosing spans. Internal release is a connected handoff proposal; uncertainty bounds retain closure/reverb ambiguity.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 111.0253036437247,
+          "endSeconds": 111.16558704453442,
+          "ctcPathScore": 0.5544264242053032
+        },
+        "vocalsCtc": {
+          "startSeconds": 111.04534412955466,
+          "endSeconds": 111.18562753036437,
+          "ctcPathScore": 0.5698295831680298
+        },
+        "conditionedWhisper": {
+          "start": 110.82,
+          "end": 111.28,
+          "probability": 0.9214619398117065
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-006-5",
+      "language": "ru",
+      "selectedStartSample": 4909653,
+      "selectedEndSample": 4994986,
+      "onsetRangeSeconds": [
+        111.275,
+        111.385
+      ],
+      "releaseRangeSeconds": [
+        113.14,
+        113.45
+      ],
+      "rationale": "Path end112.368 is not the end of the held yu vowel. Sustained original/stem formants continue to about113.26 before the new ostalos entrance113.73.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 111.34595141700406,
+          "endSeconds": 112.36801619433199,
+          "ctcPathScore": 0.38449839502573013
+        },
+        "vocalsCtc": {
+          "startSeconds": 111.38603238866398,
+          "endSeconds": 112.36801619433199,
+          "ctcPathScore": 0.4996556068460147
+        },
+        "conditionedWhisper": {
+          "start": 111.28,
+          "end": 112.52,
+          "probability": 0.969024732708931
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-007-1",
+      "language": "ru",
+      "selectedStartSample": 5015493,
+      "selectedEndSample": 5075028,
+      "onsetRangeSeconds": [
+        113.675,
+        113.785
+      ],
+      "releaseRangeSeconds": [
+        115.005,
+        115.155
+      ],
+      "rationale": "Original-mix and clock-verified estimate panel inspected at this occurrence; follow the quiet articulation/body transition rather than conditioned Whisper enclosing spans. Internal release is a connected handoff proposal; uncertainty bounds retain closure/reverb ambiguity.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 113.77095454545454,
+          "endSeconds": 114.91354545454544,
+          "ctcPathScore": 0.3632929894540991
+        },
+        "vocalsCtc": {
+          "startSeconds": 113.77095454545454,
+          "endSeconds": 114.91354545454544,
+          "ctcPathScore": 0.6360285303422383
+        },
+        "conditionedWhisper": {
+          "start": 113.35,
+          "end": 114.93,
+          "probability": 0.9420469403266907
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-007-2",
+      "language": "ru",
+      "selectedStartSample": 5075028,
+      "selectedEndSample": 5099724,
+      "onsetRangeSeconds": [
+        115.025,
+        115.135
+      ],
+      "releaseRangeSeconds": [
+        115.565,
+        115.715
+      ],
+      "rationale": "Original-mix and clock-verified estimate panel inspected at this occurrence; follow the quiet articulation/body transition rather than conditioned Whisper enclosing spans. Internal release is a connected handoff proposal; uncertainty bounds retain closure/reverb ambiguity.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 115.11399999999999,
+          "endSeconds": 115.71536363636363,
+          "ctcPathScore": 0.2906062062829733
+        },
+        "vocalsCtc": {
+          "startSeconds": 115.1540909090909,
+          "endSeconds": 115.6351818181818,
+          "ctcPathScore": 0.4441391631262377
+        },
+        "conditionedWhisper": {
+          "start": 114.93,
+          "end": 115.67,
+          "probability": 0.9159277081489563
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-007-3",
+      "language": "ru",
+      "selectedStartSample": 5099724,
+      "selectedEndSample": 5187483,
+      "onsetRangeSeconds": [
+        115.585,
+        115.695
+      ],
+      "releaseRangeSeconds": [
+        117.52,
+        117.82
+      ],
+      "rationale": "Reject original start116.237 as the middle of a held word. Stem115.655 and the physical changed vowel near115.65 support earlier zh/l entrance.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 116.23654545454545,
+          "endSeconds": 117.61968181818182,
+          "ctcPathScore": 0.1664777547121048
+        },
+        "vocalsCtc": {
+          "startSeconds": 115.65522727272727,
+          "endSeconds": 117.65977272727272,
+          "ctcPathScore": 0.40058949050338316
+        },
+        "conditionedWhisper": {
+          "start": 115.67,
+          "end": 116.85,
+          "probability": 0.8426946103572845
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-008-1",
+      "language": "ru",
+      "selectedStartSample": 5202477,
+      "selectedEndSample": 5239962,
+      "onsetRangeSeconds": [
+        117.915,
+        118.025
+      ],
+      "releaseRangeSeconds": [
+        118.745,
+        118.895
+      ],
+      "rationale": "Original-mix and clock-verified estimate panel inspected at this occurrence; follow the quiet articulation/body transition rather than conditioned Whisper enclosing spans. Internal release is a connected handoff proposal; uncertainty bounds retain closure/reverb ambiguity.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 117.98095238095239,
+          "endSeconds": 118.68398268398269,
+          "ctcPathScore": 0.13503826331968108
+        },
+        "vocalsCtc": {
+          "startSeconds": 117.98095238095239,
+          "endSeconds": 118.68398268398269,
+          "ctcPathScore": 0.31972198545311886
+        },
+        "conditionedWhisper": {
+          "start": 117.76,
+          "end": 118.86,
+          "probability": 0.5186222592989603
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-008-2",
+      "language": "ru",
+      "selectedStartSample": 5239962,
+      "selectedEndSample": 5277226,
+      "onsetRangeSeconds": [
+        118.72,
+        118.95
+      ],
+      "releaseRangeSeconds": [
+        119.59,
+        119.74
+      ],
+      "rationale": "No clear v onset in either low-score path; broader quiet-prefix interval retained before the strong zor body.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 118.72415584415585,
+          "endSeconds": 119.52761904761905,
+          "ctcPathScore": 0.14348392232786863
+        },
+        "vocalsCtc": {
+          "startSeconds": 118.84467532467534,
+          "endSeconds": 119.54770562770564,
+          "ctcPathScore": 0.19184713256545366
+        },
+        "conditionedWhisper": {
+          "start": 118.86,
+          "end": 119.68,
+          "probability": 0.004575204628054053
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-008-3",
+      "language": "ru",
+      "selectedStartSample": 5277226,
+      "selectedEndSample": 5301702,
+      "onsetRangeSeconds": [
+        119.61,
+        119.72
+      ],
+      "releaseRangeSeconds": [
+        120.145,
+        120.295
+      ],
+      "rationale": "Original-mix and clock-verified estimate panel inspected at this occurrence; follow the quiet articulation/body transition rather than conditioned Whisper enclosing spans. Internal release is a connected handoff proposal; uncertainty bounds retain closure/reverb ambiguity.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 119.6883116883117,
+          "endSeconds": 119.78874458874459,
+          "ctcPathScore": 0.2799402289092541
+        },
+        "vocalsCtc": {
+          "startSeconds": 119.70839826839827,
+          "endSeconds": 119.82891774891776,
+          "ctcPathScore": 0.5270675979554653
+        },
+        "conditionedWhisper": {
+          "start": 119.68,
+          "end": 120.2,
+          "probability": 0.9261599779129028
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-008-4",
+      "language": "ru",
+      "selectedStartSample": 5301702,
+      "selectedEndSample": 5478543,
+      "onsetRangeSeconds": [
+        120.12,
+        120.32
+      ],
+      "releaseRangeSeconds": [
+        123.48,
+        124.42
+      ],
+      "rationale": "Original120.793 starts on a later n/core. Stem120.251 supports the earlier l prefix. Harmonic vowel continues past crop end122.4; short voiced bursts123.65/123.95 cannot be assigned confidently between moon tail and next preposition without listening.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 120.7930735930736,
+          "endSeconds": 121.65679653679655,
+          "ctcPathScore": 0.15502798681457838
+        },
+        "vocalsCtc": {
+          "startSeconds": 120.25073593073594,
+          "endSeconds": 121.51619047619049,
+          "ctcPathScore": 0.3678359352052212
+        },
+        "conditionedWhisper": {
+          "start": 120.2,
+          "end": 121.56,
+          "probability": 0.7021556859835982
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-009-1",
+      "language": "ru",
+      "selectedStartSample": 5567184,
+      "selectedEndSample": 5568948,
+      "onsetRangeSeconds": [
+        123.6,
+        126.3
+      ],
+      "releaseRangeSeconds": [
+        126.205,
+        126.355
+      ],
+      "rationale": "Neither constrained v path is trustworthy (near-zero scores and earlier moon tail). Provisional onset placed by the quiet cluster immediately before clear tem body126.28; earlier123.6–124.2 fragments remain unresolved, so onset range is broad and human review essential.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 123.6623161764706,
+          "endSeconds": 123.68235294117648,
+          "ctcPathScore": 0.03455294296145439
+        },
+        "vocalsCtc": {
+          "startSeconds": 123.96286764705883,
+          "endSeconds": 123.98290441176471,
+          "ctcPathScore": 0.002131024142727256
+        },
+        "conditionedWhisper": {
+          "start": 122.4,
+          "end": 122.74,
+          "probability": 0.013171577826142311
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-009-2",
+      "language": "ru",
+      "selectedStartSample": 5568948,
+      "selectedEndSample": 5605551,
+      "onsetRangeSeconds": [
+        123.94,
+        126.33
+      ],
+      "releaseRangeSeconds": [
+        127.035,
+        127.185
+      ],
+      "rationale": "Original forces t/e/m across early123.96–124.26 and n/y across a near-absent stem gap. Stem finds clear tem articulation126.287. Earlier fragments may be preceding lunoyu or split/night prefix. Do not assert the whole gap is sung; provisional onset126.28 is a strong-core candidate with broad unresolved prefix range.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 123.96286764705883,
+          "endSeconds": 126.40735294117647,
+          "ctcPathScore": 0.029048234091273377
+        },
+        "vocalsCtc": {
+          "startSeconds": 126.28713235294119,
+          "endSeconds": 126.96838235294118,
+          "ctcPathScore": 0.2487138395164428
+        },
+        "conditionedWhisper": {
+          "start": 122.74,
+          "end": 126.9,
+          "probability": 0.1403709181273977
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-009-3",
+      "language": "ru",
+      "selectedStartSample": 5605551,
+      "selectedEndSample": 5626719,
+      "onsetRangeSeconds": [
+        127.055,
+        127.165
+      ],
+      "releaseRangeSeconds": [
+        127.53,
+        127.73
+      ],
+      "rationale": "Original starts n126.528 inside preceding tem syllables. Clear renewed n/body near127.13 and following frication127.5 support the later word boundary.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 126.52757352941177,
+          "endSeconds": 127.54944852941178,
+          "ctcPathScore": 0.15285648335702717
+        },
+        "vocalsCtc": {
+          "startSeconds": 127.12867647058825,
+          "endSeconds": 127.56948529411765,
+          "ctcPathScore": 0.49411344081163405
+        },
+        "conditionedWhisper": {
+          "start": 126.9,
+          "end": 127.6,
+          "probability": 0.6430548578500748
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-010-1",
+      "language": "ru",
+      "selectedStartSample": 5663763,
+      "selectedEndSample": 5666189,
+      "onsetRangeSeconds": [
+        128.375,
+        128.485
+      ],
+      "releaseRangeSeconds": [
+        128.41,
+        128.56
+      ],
+      "rationale": "Near-zero constrained preposition. Original128.291 sits in a quiet region; stem begins128.431 before clear tem articulation128.49. Use a bounded short connected prefix, not a full half-second preposition.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 128.2908906882591,
+          "endSeconds": 128.31093117408906,
+          "ctcPathScore": 0.010850855149328709
+        },
+        "vocalsCtc": {
+          "startSeconds": 128.43117408906883,
+          "endSeconds": 128.45121457489878,
+          "ctcPathScore": 0.0004659156547859311
+        },
+        "conditionedWhisper": {
+          "start": 128.13,
+          "end": 128.63,
+          "probability": 0.00022725676535628736
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-010-2",
+      "language": "ru",
+      "selectedStartSample": 5666189,
+      "selectedEndSample": 5703894,
+      "onsetRangeSeconds": [
+        128.43,
+        128.54
+      ],
+      "releaseRangeSeconds": [
+        129.265,
+        129.415
+      ],
+      "rationale": "Original-mix and clock-verified estimate panel inspected at this occurrence; follow the quiet articulation/body transition rather than conditioned Whisper enclosing spans. Internal release is a connected handoff proposal; uncertainty bounds retain closure/reverb ambiguity.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 128.51133603238867,
+          "endSeconds": 129.2327935222672,
+          "ctcPathScore": 0.06615029993866171
+        },
+        "vocalsCtc": {
+          "startSeconds": 128.4912955465587,
+          "endSeconds": 129.19271255060727,
+          "ctcPathScore": 0.5029081938555464
+        },
+        "conditionedWhisper": {
+          "start": 128.63,
+          "end": 129.11,
+          "probability": 0.23899424308910966
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-010-3",
+      "language": "ru",
+      "selectedStartSample": 5703894,
+      "selectedEndSample": 5730354,
+      "onsetRangeSeconds": [
+        129.285,
+        129.395
+      ],
+      "releaseRangeSeconds": [
+        129.865,
+        130.015
+      ],
+      "rationale": "Original-mix and clock-verified estimate panel inspected at this occurrence; follow the quiet articulation/body transition rather than conditioned Whisper enclosing spans. Internal release is a connected handoff proposal; uncertainty bounds retain closure/reverb ambiguity.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 129.31295546558704,
+          "endSeconds": 129.71376518218622,
+          "ctcPathScore": 0.26829379005357623
+        },
+        "vocalsCtc": {
+          "startSeconds": 129.35303643724697,
+          "endSeconds": 129.8740890688259,
+          "ctcPathScore": 0.542189909517765
+        },
+        "conditionedWhisper": {
+          "start": 129.11,
+          "end": 130.01,
+          "probability": 0.46141261359055835
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-010-4",
+      "language": "ru",
+      "selectedStartSample": 5730354,
+      "selectedEndSample": 5750640,
+      "onsetRangeSeconds": [
+        129.885,
+        129.995
+      ],
+      "releaseRangeSeconds": [
+        130.3,
+        130.53
+      ],
+      "rationale": "Original-mix and clock-verified estimate panel inspected at this occurrence; follow the quiet articulation/body transition rather than conditioned Whisper enclosing spans. Internal release is a connected handoff proposal; uncertainty bounds retain closure/reverb ambiguity.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 129.93421052631578,
+          "endSeconds": 130.314979757085,
+          "ctcPathScore": 0.061997268348932266
+        },
+        "vocalsCtc": {
+          "startSeconds": 129.95425101214573,
+          "endSeconds": 130.3751012145749,
+          "ctcPathScore": 0.25805899227270856
+        },
+        "conditionedWhisper": {
+          "start": 130.09,
+          "end": 130.39,
+          "probability": 0.5060210600495338
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-011-1",
+      "language": "ru",
+      "selectedStartSample": 6223833,
+      "selectedEndSample": 6275430,
+      "onsetRangeSeconds": [
+        140.65,
+        141.18
+      ],
+      "releaseRangeSeconds": [
+        142.225,
+        142.375
+      ],
+      "rationale": "Reject Whisper134.66 and original sparse t138.509/a139.15 before any matching articulation. Stem t141.153/a141.253/k141.453 matches actual ta-ko shape. The isolated high burst140.67–140.89 may be breath/leakage, so141.13 is provisional and onset range remains140.65–141.18.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 138.5087155963303,
+          "endSeconds": 142.17431192660553,
+          "ctcPathScore": 0.20950380475260316
+        },
+        "vocalsCtc": {
+          "startSeconds": 141.152752293578,
+          "endSeconds": 142.19434250764527,
+          "ctcPathScore": 0.5792007137089967
+        },
+        "conditionedWhisper": {
+          "start": 134.66,
+          "end": 142.22,
+          "probability": 0.5984681248664856
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-011-2",
+      "language": "ru",
+      "selectedStartSample": 6287557,
+      "selectedEndSample": 6323499,
+      "onsetRangeSeconds": [
+        142.52,
+        142.63
+      ],
+      "releaseRangeSeconds": [
+        143.315,
+        143.465
+      ],
+      "rationale": "Original-mix and clock-verified estimate panel inspected at this occurrence; follow the quiet articulation/body transition rather than conditioned Whisper enclosing spans. Internal release is a connected handoff proposal; uncertainty bounds retain closure/reverb ambiguity.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 142.59495412844038,
+          "endSeconds": 143.27599388379207,
+          "ctcPathScore": 0.5519888022245141
+        },
+        "vocalsCtc": {
+          "startSeconds": 142.59495412844038,
+          "endSeconds": 143.31605504587156,
+          "ctcPathScore": 0.5688081202097237
+        },
+        "conditionedWhisper": {
+          "start": 142.22,
+          "end": 143.6,
+          "probability": 0.9512515266736349
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-011-3",
+      "language": "ru",
+      "selectedStartSample": 6334965,
+      "selectedEndSample": 6347313,
+      "onsetRangeSeconds": [
+        143.595,
+        143.705
+      ],
+      "releaseRangeSeconds": [
+        143.855,
+        144.005
+      ],
+      "rationale": "Original-mix and clock-verified estimate panel inspected at this occurrence; follow the quiet articulation/body transition rather than conditioned Whisper enclosing spans. Internal release is a connected handoff proposal; uncertainty bounds retain closure/reverb ambiguity.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 143.65657492354742,
+          "endSeconds": 143.85688073394496,
+          "ctcPathScore": 0.6945315599441528
+        },
+        "vocalsCtc": {
+          "startSeconds": 143.67660550458717,
+          "endSeconds": 143.85688073394496,
+          "ctcPathScore": 0.5764959193766117
+        },
+        "conditionedWhisper": {
+          "start": 143.82,
+          "end": 143.92,
+          "probability": 0.413052499294281
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-011-4",
+      "language": "ru",
+      "selectedStartSample": 6361866,
+      "selectedEndSample": 6389649,
+      "onsetRangeSeconds": [
+        144.205,
+        144.315
+      ],
+      "releaseRangeSeconds": [
+        144.815,
+        144.965
+      ],
+      "rationale": "Original-mix and clock-verified estimate panel inspected at this occurrence; follow the quiet articulation/body transition rather than conditioned Whisper enclosing spans. Internal release is a connected handoff proposal; uncertainty bounds retain closure/reverb ambiguity.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 144.2975535168196,
+          "endSeconds": 144.7382262996942,
+          "ctcPathScore": 0.8721089164415995
+        },
+        "vocalsCtc": {
+          "startSeconds": 144.2775229357798,
+          "endSeconds": 144.7382262996942,
+          "ctcPathScore": 0.7145914912223816
+        },
+        "conditionedWhisper": {
+          "start": 143.92,
+          "end": 144.66,
+          "probability": 0.9672107100486755
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-011-5",
+      "language": "ru",
+      "selectedStartSample": 6389649,
+      "selectedEndSample": 6405525,
+      "onsetRangeSeconds": [
+        144.835,
+        144.945
+      ],
+      "releaseRangeSeconds": [
+        145.17,
+        145.36
+      ],
+      "rationale": "Original-mix and clock-verified estimate panel inspected at this occurrence; follow the quiet articulation/body transition rather than conditioned Whisper enclosing spans. Internal release is a connected handoff proposal; uncertainty bounds retain closure/reverb ambiguity.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 144.89847094801223,
+          "endSeconds": 145.29908256880736,
+          "ctcPathScore": 0.5678253046547374
+        },
+        "vocalsCtc": {
+          "startSeconds": 144.89847094801223,
+          "endSeconds": 145.17889908256882,
+          "ctcPathScore": 0.38594472222030163
+        },
+        "conditionedWhisper": {
+          "start": 144.66,
+          "end": 145.28,
+          "probability": 0.9924446940422058
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-012-1",
+      "language": "ru",
+      "selectedStartSample": 6469029,
+      "selectedEndSample": 6488654,
+      "onsetRangeSeconds": [
+        146.635,
+        146.745
+      ],
+      "releaseRangeSeconds": [
+        147.06,
+        147.21
+      ],
+      "rationale": "Whisper145.90 is crop-bound. The first matching frication/sharp vocal entrance is near146.69–146.73.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 146.74276315789473,
+          "endSeconds": 146.96348684210528,
+          "ctcPathScore": 0.3130378839559853
+        },
+        "vocalsCtc": {
+          "startSeconds": 146.72269736842105,
+          "endSeconds": 146.94342105263158,
+          "ctcPathScore": 0.5348809845745564
+        },
+        "conditionedWhisper": {
+          "start": 145.9,
+          "end": 146.98,
+          "probability": 0.6650420427322388
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-012-2",
+      "language": "ru",
+      "selectedStartSample": 6488654,
+      "selectedEndSample": 6503427,
+      "onsetRangeSeconds": [
+        147.08,
+        147.19
+      ],
+      "releaseRangeSeconds": [
+        147.395,
+        147.545
+      ],
+      "rationale": "Original-mix and clock-verified estimate panel inspected at this occurrence; follow the quiet articulation/body transition rather than conditioned Whisper enclosing spans. Internal release is a connected handoff proposal; uncertainty bounds retain closure/reverb ambiguity.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 147.1842105263158,
+          "endSeconds": 147.28453947368422,
+          "ctcPathScore": 0.7408068478107452
+        },
+        "vocalsCtc": {
+          "startSeconds": 147.14407894736843,
+          "endSeconds": 147.26447368421054,
+          "ctcPathScore": 0.7983016669750214
+        },
+        "conditionedWhisper": {
+          "start": 146.98,
+          "end": 147.42,
+          "probability": 0.8995999693870544
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-012-3",
+      "language": "ru",
+      "selectedStartSample": 6503427,
+      "selectedEndSample": 6532092,
+      "onsetRangeSeconds": [
+        147.415,
+        147.525
+      ],
+      "releaseRangeSeconds": [
+        148.02,
+        148.23
+      ],
+      "rationale": "Original-mix and clock-verified estimate panel inspected at this occurrence; follow the quiet articulation/body transition rather than conditioned Whisper enclosing spans. Internal release is a connected handoff proposal; uncertainty bounds retain closure/reverb ambiguity.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 147.50526315789475,
+          "endSeconds": 148.02697368421053,
+          "ctcPathScore": 0.2590539497905411
+        },
+        "vocalsCtc": {
+          "startSeconds": 147.48519736842107,
+          "endSeconds": 148.02697368421053,
+          "ctcPathScore": 0.22669922343144813
+        },
+        "conditionedWhisper": {
+          "start": 147.42,
+          "end": 148.02,
+          "probability": 0.8929164012273153
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-013-1",
+      "language": "ru",
+      "selectedStartSample": 6612574,
+      "selectedEndSample": 6624702,
+      "onsetRangeSeconds": [
+        149.89,
+        150
+      ],
+      "releaseRangeSeconds": [
+        150.145,
+        150.295
+      ],
+      "rationale": "Whisper148.95 borrows prior decay. Initial articulated ya is near149.95; preceding high burst149.75 may be inhalation.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 149.971661237785,
+          "endSeconds": 150.0718241042345,
+          "ctcPathScore": 0.19506867974996567
+        },
+        "vocalsCtc": {
+          "startSeconds": 149.971661237785,
+          "endSeconds": 150.0718241042345,
+          "ctcPathScore": 0.2568033771822229
+        },
+        "conditionedWhisper": {
+          "start": 148.95,
+          "end": 150.23,
+          "probability": 0.378886342048645
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-013-2",
+      "language": "ru",
+      "selectedStartSample": 6624702,
+      "selectedEndSample": 6660864,
+      "onsetRangeSeconds": [
+        150.165,
+        150.275
+      ],
+      "releaseRangeSeconds": [
+        150.965,
+        151.115
+      ],
+      "rationale": "Original-mix and clock-verified estimate panel inspected at this occurrence; follow the quiet articulation/body transition rather than conditioned Whisper enclosing spans. Internal release is a connected handoff proposal; uncertainty bounds retain closure/reverb ambiguity.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 150.23208469055373,
+          "endSeconds": 150.8330618892508,
+          "ctcPathScore": 0.66033975481987
+        },
+        "vocalsCtc": {
+          "startSeconds": 150.23208469055373,
+          "endSeconds": 151.01335504885992,
+          "ctcPathScore": 0.6998015522956849
+        },
+        "conditionedWhisper": {
+          "start": 150.23,
+          "end": 150.73,
+          "probability": 0.9851827025413513
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-013-3",
+      "language": "ru",
+      "selectedStartSample": 6660864,
+      "selectedEndSample": 6676299,
+      "onsetRangeSeconds": [
+        150.985,
+        151.095
+      ],
+      "releaseRangeSeconds": [
+        151.315,
+        151.465
+      ],
+      "rationale": "Original-mix and clock-verified estimate panel inspected at this occurrence; follow the quiet articulation/body transition rather than conditioned Whisper enclosing spans. Internal release is a connected handoff proposal; uncertainty bounds retain closure/reverb ambiguity.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 151.07345276872962,
+          "endSeconds": 151.29381107491855,
+          "ctcPathScore": 0.42490399070084095
+        },
+        "vocalsCtc": {
+          "startSeconds": 151.09348534201953,
+          "endSeconds": 151.27377850162864,
+          "ctcPathScore": 0.7536570653319359
+        },
+        "conditionedWhisper": {
+          "start": 150.73,
+          "end": 151.31,
+          "probability": 0.9816680550575256
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-013-4",
+      "language": "ru",
+      "selectedStartSample": 6676299,
+      "selectedEndSample": 6700554,
+      "onsetRangeSeconds": [
+        151.335,
+        151.445
+      ],
+      "releaseRangeSeconds": [
+        151.865,
+        152.015
+      ],
+      "rationale": "Original151.514 misses quiet v prefix; stem151.394 agrees with preceding low body before the s-like high-energy core.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 151.51416938110748,
+          "endSeconds": 151.93485342019542,
+          "ctcPathScore": 0.3970594134181738
+        },
+        "vocalsCtc": {
+          "startSeconds": 151.39397394136807,
+          "endSeconds": 151.93485342019542,
+          "ctcPathScore": 0.6201368056237697
+        },
+        "conditionedWhisper": {
+          "start": 151.31,
+          "end": 151.93,
+          "probability": 0.9987216591835022
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-013-5",
+      "language": "ru",
+      "selectedStartSample": 6700554,
+      "selectedEndSample": 6776626,
+      "onsetRangeSeconds": [
+        151.885,
+        151.995
+      ],
+      "releaseRangeSeconds": [
+        153.59,
+        153.74
+      ],
+      "rationale": "Original-mix and clock-verified estimate panel inspected at this occurrence; follow the quiet articulation/body transition rather than conditioned Whisper enclosing spans. Internal release is a connected handoff proposal; uncertainty bounds retain closure/reverb ambiguity.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 151.93485342019542,
+          "endSeconds": 153.53745928338762,
+          "ctcPathScore": 0.4082261481407014
+        },
+        "vocalsCtc": {
+          "startSeconds": 151.93485342019542,
+          "endSeconds": 153.53745928338762,
+          "ctcPathScore": 0.45234234696254133
+        },
+        "conditionedWhisper": {
+          "start": 151.93,
+          "end": 153.59,
+          "probability": 0.6563565212612351
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-013-6",
+      "language": "ru",
+      "selectedStartSample": 6776626,
+      "selectedEndSample": 6832854,
+      "onsetRangeSeconds": [
+        153.61,
+        153.72
+      ],
+      "releaseRangeSeconds": [
+        154.86,
+        155.06
+      ],
+      "rationale": "Original-mix and clock-verified estimate panel inspected at this occurrence; follow the quiet articulation/body transition rather than conditioned Whisper enclosing spans. Internal release is a connected handoff proposal; uncertainty bounds retain closure/reverb ambiguity.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 153.67768729641693,
+          "endSeconds": 154.85960912052116,
+          "ctcPathScore": 0.5950787814540995
+        },
+        "vocalsCtc": {
+          "startSeconds": 153.69771986970682,
+          "endSeconds": 154.85960912052116,
+          "ctcPathScore": 0.5421490336043967
+        },
+        "conditionedWhisper": {
+          "start": 153.59,
+          "end": 154.61,
+          "probability": 0.9959880709648132
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-014-1",
+      "language": "ru",
+      "selectedStartSample": 6878718,
+      "selectedEndSample": 6887538,
+      "onsetRangeSeconds": [
+        155.925,
+        156.035
+      ],
+      "releaseRangeSeconds": [
+        156.105,
+        156.255
+      ],
+      "rationale": "Reject Whisper155.10. New ya harmonic onset155.98 is independently visible after an intervening quiet body gap.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 155.98202764976958,
+          "endSeconds": 156.10230414746542,
+          "ctcPathScore": 0.3384200029540807
+        },
+        "vocalsCtc": {
+          "startSeconds": 156.00207373271888,
+          "endSeconds": 156.10230414746542,
+          "ctcPathScore": 0.2147531877271831
+        },
+        "conditionedWhisper": {
+          "start": 155.1,
+          "end": 156.28,
+          "probability": 0.018151147291064262
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-014-2",
+      "language": "ru",
+      "selectedStartSample": 6906942,
+      "selectedEndSample": 6936048,
+      "onsetRangeSeconds": [
+        156.5,
+        156.68
+      ],
+      "releaseRangeSeconds": [
+        157.18,
+        157.39
+      ],
+      "rationale": "Original-mix and clock-verified estimate panel inspected at this occurrence; follow the quiet articulation/body transition rather than conditioned Whisper enclosing spans. Internal release is a connected handoff proposal; uncertainty bounds retain closure/reverb ambiguity.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 156.64354838709676,
+          "endSeconds": 157.1847926267281,
+          "ctcPathScore": 0.06926011402780811
+        },
+        "vocalsCtc": {
+          "startSeconds": 156.66359447004606,
+          "endSeconds": 157.2048387096774,
+          "ctcPathScore": 0.2272514117260774
+        },
+        "conditionedWhisper": {
+          "start": 156.28,
+          "end": 157.22,
+          "probability": 0.630615452605222
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-015-1",
+      "language": "ru",
+      "selectedStartSample": 7031304,
+      "selectedEndSample": 7075845,
+      "onsetRangeSeconds": [
+        159.385,
+        159.495
+      ],
+      "releaseRangeSeconds": [
+        160.375,
+        160.525
+      ],
+      "rationale": "Original-mix and clock-verified estimate panel inspected at this occurrence; follow the quiet articulation/body transition rather than conditioned Whisper enclosing spans. Internal release is a connected handoff proposal; uncertainty bounds retain closure/reverb ambiguity.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 159.47008368200835,
+          "endSeconds": 160.41401673640166,
+          "ctcPathScore": 0.6452602058649063
+        },
+        "vocalsCtc": {
+          "startSeconds": 159.45,
+          "endSeconds": 160.41401673640166,
+          "ctcPathScore": 0.8511368453502655
+        },
+        "conditionedWhisper": {
+          "start": 159.71,
+          "end": 160.51,
+          "probability": 0.5195235889405012
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-015-2",
+      "language": "ru",
+      "selectedStartSample": 7092382,
+      "selectedEndSample": 7128544,
+      "onsetRangeSeconds": [
+        160.77,
+        160.88
+      ],
+      "releaseRangeSeconds": [
+        161.57,
+        161.72
+      ],
+      "rationale": "Original-mix and clock-verified estimate panel inspected at this occurrence; follow the quiet articulation/body transition rather than conditioned Whisper enclosing spans. Internal release is a connected handoff proposal; uncertainty bounds retain closure/reverb ambiguity.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 160.85585774058578,
+          "endSeconds": 161.55878661087866,
+          "ctcPathScore": 0.5195646818829118
+        },
+        "vocalsCtc": {
+          "startSeconds": 160.83577405857739,
+          "endSeconds": 161.57887029288702,
+          "ctcPathScore": 0.8270095884799957
+        },
+        "conditionedWhisper": {
+          "start": 160.51,
+          "end": 161.85,
+          "probability": 0.9548998475074768
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-015-3",
+      "language": "ru",
+      "selectedStartSample": 7138908,
+      "selectedEndSample": 7152358,
+      "onsetRangeSeconds": [
+        161.825,
+        161.935
+      ],
+      "releaseRangeSeconds": [
+        162.11,
+        162.26
+      ],
+      "rationale": "Original-mix and clock-verified estimate panel inspected at this occurrence; follow the quiet articulation/body transition rather than conditioned Whisper enclosing spans. Internal release is a connected handoff proposal; uncertainty bounds retain closure/reverb ambiguity.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 161.9002092050209,
+          "endSeconds": 162.14121338912133,
+          "ctcPathScore": 0.43051670771092176
+        },
+        "vocalsCtc": {
+          "startSeconds": 161.9002092050209,
+          "endSeconds": 162.14121338912133,
+          "ctcPathScore": 0.6714235872030259
+        },
+        "conditionedWhisper": {
+          "start": 161.85,
+          "end": 162.29,
+          "probability": 0.339457243680954
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-015-4",
+      "language": "ru",
+      "selectedStartSample": 7168676,
+      "selectedEndSample": 7193151,
+      "onsetRangeSeconds": [
+        162.5,
+        162.61
+      ],
+      "releaseRangeSeconds": [
+        163.035,
+        163.185
+      ],
+      "rationale": "Original-mix and clock-verified estimate panel inspected at this occurrence; follow the quiet articulation/body transition rather than conditioned Whisper enclosing spans. Internal release is a connected handoff proposal; uncertainty bounds retain closure/reverb ambiguity.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 162.58305439330542,
+          "endSeconds": 163.02489539748953,
+          "ctcPathScore": 0.8277951240539551
+        },
+        "vocalsCtc": {
+          "startSeconds": 162.58305439330542,
+          "endSeconds": 163.02489539748953,
+          "ctcPathScore": 0.903532862663269
+        },
+        "conditionedWhisper": {
+          "start": 162.29,
+          "end": 162.91,
+          "probability": 0.9587195515632629
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-015-5",
+      "language": "ru",
+      "selectedStartSample": 7194694,
+      "selectedEndSample": 7223139,
+      "onsetRangeSeconds": [
+        163.09,
+        163.2
+      ],
+      "releaseRangeSeconds": [
+        163.64,
+        163.94
+      ],
+      "rationale": "Original-mix and clock-verified estimate panel inspected at this occurrence; follow the quiet articulation/body transition rather than conditioned Whisper enclosing spans. Internal release is a connected handoff proposal; uncertainty bounds retain closure/reverb ambiguity.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 163.1654811715481,
+          "endSeconds": 163.66757322175732,
+          "ctcPathScore": 0.5097764680782954
+        },
+        "vocalsCtc": {
+          "startSeconds": 163.1654811715481,
+          "endSeconds": 163.62740585774057,
+          "ctcPathScore": 0.99193408091863
+        },
+        "conditionedWhisper": {
+          "start": 162.91,
+          "end": 163.59,
+          "probability": 0.9964386224746704
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-016-1",
+      "language": "ru",
+      "selectedStartSample": 7277382,
+      "selectedEndSample": 7296786,
+      "onsetRangeSeconds": [
+        164.965,
+        165.075
+      ],
+      "releaseRangeSeconds": [
+        165.385,
+        165.535
+      ],
+      "rationale": "Original-mix and clock-verified estimate panel inspected at this occurrence; follow the quiet articulation/body transition rather than conditioned Whisper enclosing spans. Internal release is a connected handoff proposal; uncertainty bounds retain closure/reverb ambiguity.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 165.05446927374302,
+          "endSeconds": 165.25558659217876,
+          "ctcPathScore": 0.2464293073862791
+        },
+        "vocalsCtc": {
+          "startSeconds": 165.05446927374302,
+          "endSeconds": 165.25558659217876,
+          "ctcPathScore": 0.5604828102514148
+        },
+        "conditionedWhisper": {
+          "start": 164.25,
+          "end": 165.29,
+          "probability": 0.7378097176551819
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-016-2",
+      "language": "ru",
+      "selectedStartSample": 7296786,
+      "selectedEndSample": 7311118,
+      "onsetRangeSeconds": [
+        165.405,
+        165.515
+      ],
+      "releaseRangeSeconds": [
+        165.71,
+        165.86
+      ],
+      "rationale": "Original-mix and clock-verified estimate panel inspected at this occurrence; follow the quiet articulation/body transition rather than conditioned Whisper enclosing spans. Internal release is a connected handoff proposal; uncertainty bounds retain closure/reverb ambiguity.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 165.43659217877095,
+          "endSeconds": 165.5572625698324,
+          "ctcPathScore": 0.42761627631261945
+        },
+        "vocalsCtc": {
+          "startSeconds": 165.49692737430166,
+          "endSeconds": 165.59748603351954,
+          "ctcPathScore": 0.6978653967380524
+        },
+        "conditionedWhisper": {
+          "start": 165.29,
+          "end": 165.65,
+          "probability": 0.9921896457672119
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-016-3",
+      "language": "ru",
+      "selectedStartSample": 7311118,
+      "selectedEndSample": 7339563,
+      "onsetRangeSeconds": [
+        165.73,
+        165.84
+      ],
+      "releaseRangeSeconds": [
+        166.32,
+        166.55
+      ],
+      "rationale": "Original end166.865 is after the main voiced body, on residual music. Stem166.342 plus original closure/decay supports a bounded body release about166.43; final effect residue is separate.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 165.7986033519553,
+          "endSeconds": 166.8645251396648,
+          "ctcPathScore": 0.14406148064881563
+        },
+        "vocalsCtc": {
+          "startSeconds": 165.7986033519553,
+          "endSeconds": 166.34162011173186,
+          "ctcPathScore": 0.4304024825493495
+        },
+        "conditionedWhisper": {
+          "start": 165.65,
+          "end": 166.35,
+          "probability": 0.7235183815161387
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-017-1",
+      "language": "ru",
+      "selectedStartSample": 7420046,
+      "selectedEndSample": 7431291,
+      "onsetRangeSeconds": [
+        168.2,
+        168.31
+      ],
+      "releaseRangeSeconds": [
+        168.435,
+        168.585
+      ],
+      "rationale": "Original-mix and clock-verified estimate panel inspected at this occurrence; follow the quiet articulation/body transition rather than conditioned Whisper enclosing spans. Internal release is a connected handoff proposal; uncertainty bounds retain closure/reverb ambiguity.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 168.25059347181008,
+          "endSeconds": 168.3707715133531,
+          "ctcPathScore": 0.09730949020013213
+        },
+        "vocalsCtc": {
+          "startSeconds": 168.27062314540058,
+          "endSeconds": 168.3908011869436,
+          "ctcPathScore": 0.9461802244186401
+        },
+        "conditionedWhisper": {
+          "start": 167.85,
+          "end": 168.49,
+          "probability": 0.8477463722229004
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-017-2",
+      "language": "ru",
+      "selectedStartSample": 7431291,
+      "selectedEndSample": 7470540,
+      "onsetRangeSeconds": [
+        168.455,
+        168.565
+      ],
+      "releaseRangeSeconds": [
+        169.325,
+        169.475
+      ],
+      "rationale": "Original-mix and clock-verified estimate panel inspected at this occurrence; follow the quiet articulation/body transition rather than conditioned Whisper enclosing spans. Internal release is a connected handoff proposal; uncertainty bounds retain closure/reverb ambiguity.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 168.55103857566766,
+          "endSeconds": 169.33219584569733,
+          "ctcPathScore": 0.3755911499261856
+        },
+        "vocalsCtc": {
+          "startSeconds": 168.53100890207713,
+          "endSeconds": 169.33219584569733,
+          "ctcPathScore": 0.5456917541256795
+        },
+        "conditionedWhisper": {
+          "start": 168.49,
+          "end": 169.03,
+          "probability": 0.9914719462394714
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-017-3",
+      "language": "ru",
+      "selectedStartSample": 7470540,
+      "selectedEndSample": 7487078,
+      "onsetRangeSeconds": [
+        169.345,
+        169.455
+      ],
+      "releaseRangeSeconds": [
+        169.7,
+        169.85
+      ],
+      "rationale": "Original-mix and clock-verified estimate panel inspected at this occurrence; follow the quiet articulation/body transition rather than conditioned Whisper enclosing spans. Internal release is a connected handoff proposal; uncertainty bounds retain closure/reverb ambiguity.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 169.41231454005936,
+          "endSeconds": 169.7127596439169,
+          "ctcPathScore": 0.20136705855838954
+        },
+        "vocalsCtc": {
+          "startSeconds": 169.41231454005936,
+          "endSeconds": 169.59258160237388,
+          "ctcPathScore": 0.8771346296582904
+        },
+        "conditionedWhisper": {
+          "start": 169.03,
+          "end": 169.63,
+          "probability": 0.9499647617340088
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-017-4",
+      "language": "ru",
+      "selectedStartSample": 7487078,
+      "selectedEndSample": 7517727,
+      "onsetRangeSeconds": [
+        169.72,
+        169.83
+      ],
+      "releaseRangeSeconds": [
+        170.395,
+        170.545
+      ],
+      "rationale": "Original-mix and clock-verified estimate panel inspected at this occurrence; follow the quiet articulation/body transition rather than conditioned Whisper enclosing spans. Internal release is a connected handoff proposal; uncertainty bounds retain closure/reverb ambiguity.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 169.83293768545994,
+          "endSeconds": 170.29362017804155,
+          "ctcPathScore": 0.35685986895114186
+        },
+        "vocalsCtc": {
+          "startSeconds": 169.83293768545994,
+          "endSeconds": 170.31364985163205,
+          "ctcPathScore": 0.8037376925349236
+        },
+        "conditionedWhisper": {
+          "start": 169.63,
+          "end": 170.29,
+          "probability": 0.9997068047523499
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-017-5",
+      "language": "ru",
+      "selectedStartSample": 7520373,
+      "selectedEndSample": 7583436,
+      "onsetRangeSeconds": [
+        170.475,
+        170.585
+      ],
+      "releaseRangeSeconds": [
+        171.885,
+        172.035
+      ],
+      "rationale": "Original-mix and clock-verified estimate panel inspected at this occurrence; follow the quiet articulation/body transition rather than conditioned Whisper enclosing spans. Internal release is a connected handoff proposal; uncertainty bounds retain closure/reverb ambiguity.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 170.5540059347181,
+          "endSeconds": 171.83590504451038,
+          "ctcPathScore": 0.18829987521490288
+        },
+        "vocalsCtc": {
+          "startSeconds": 170.5540059347181,
+          "endSeconds": 171.83590504451038,
+          "ctcPathScore": 0.6619478172876618
+        },
+        "conditionedWhisper": {
+          "start": 170.29,
+          "end": 171.89,
+          "probability": 0.9822635054588318
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-017-6",
+      "language": "ru",
+      "selectedStartSample": 7583436,
+      "selectedEndSample": 7832160,
+      "onsetRangeSeconds": [
+        171.905,
+        172.015
+      ],
+      "releaseRangeSeconds": [
+        177.35,
+        177.72
+      ],
+      "rationale": "Both CTC ends174.52/174.56 are crop-censored and Whisper172.95 releases a held note far too early. Original/stem matching formants continue into177.3–177.6 before the next articulation.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 171.9761127596439,
+          "endSeconds": 174.51988130563797,
+          "ctcPathScore": 0.25313313538208604
+        },
+        "vocalsCtc": {
+          "startSeconds": 171.9761127596439,
+          "endSeconds": 174.559940652819,
+          "ctcPathScore": 0.6708529378156527
+        },
+        "conditionedWhisper": {
+          "start": 171.89,
+          "end": 172.95,
+          "probability": 0.99748295545578
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-018-1",
+      "language": "ru",
+      "selectedStartSample": 7832160,
+      "selectedEndSample": 7836570,
+      "onsetRangeSeconds": [
+        176.6,
+        177.73
+      ],
+      "releaseRangeSeconds": [
+        177.625,
+        177.775
+      ],
+      "rationale": "Original176.747 and Whisper176.58 can borrow the preceding person vowel. Stem177.449 is also near-zero. Quiet preposition boundary before the clear p onset177.71 is unresolved; use a provisional177.60 with broad range, not a claimed exact entrance.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 176.7466049382716,
+          "endSeconds": 176.76666666666665,
+          "ctcPathScore": 0.00016752038209233433
+        },
+        "vocalsCtc": {
+          "startSeconds": 177.44876543209875,
+          "endSeconds": 177.46882716049382,
+          "ctcPathScore": 0.002194432308897376
+        },
+        "conditionedWhisper": {
+          "start": 176.58,
+          "end": 177.76,
+          "probability": 0.0020829644054174423
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-018-2",
+      "language": "ru",
+      "selectedStartSample": 7836570,
+      "selectedEndSample": 7900074,
+      "onsetRangeSeconds": [
+        177.645,
+        177.755
+      ],
+      "releaseRangeSeconds": [
+        179.065,
+        179.215
+      ],
+      "rationale": "Original-mix and clock-verified estimate panel inspected at this occurrence; follow the quiet articulation/body transition rather than conditioned Whisper enclosing spans. Internal release is a connected handoff proposal; uncertainty bounds retain closure/reverb ambiguity.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 177.70956790123455,
+          "endSeconds": 178.97345679012346,
+          "ctcPathScore": 0.16269017969898414
+        },
+        "vocalsCtc": {
+          "startSeconds": 177.70956790123455,
+          "endSeconds": 179.03364197530863,
+          "ctcPathScore": 0.2457438948113122
+        },
+        "conditionedWhisper": {
+          "start": 177.76,
+          "end": 178.92,
+          "probability": 0.9905432462692261
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-018-3",
+      "language": "ru",
+      "selectedStartSample": 7900074,
+      "selectedEndSample": 7924770,
+      "onsetRangeSeconds": [
+        179.085,
+        179.195
+      ],
+      "releaseRangeSeconds": [
+        179.625,
+        179.775
+      ],
+      "rationale": "Original-mix and clock-verified estimate panel inspected at this occurrence; follow the quiet articulation/body transition rather than conditioned Whisper enclosing spans. Internal release is a connected handoff proposal; uncertainty bounds retain closure/reverb ambiguity.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 179.17407407407407,
+          "endSeconds": 179.63549382716047,
+          "ctcPathScore": 0.4637766530116399
+        },
+        "vocalsCtc": {
+          "startSeconds": 179.19413580246913,
+          "endSeconds": 179.63549382716047,
+          "ctcPathScore": 0.6341904706011215
+        },
+        "conditionedWhisper": {
+          "start": 178.92,
+          "end": 179.8,
+          "probability": 0.6357636749744415
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-018-4",
+      "language": "ru",
+      "selectedStartSample": 7924770,
+      "selectedEndSample": 8019144,
+      "onsetRangeSeconds": [
+        179.645,
+        179.755
+      ],
+      "releaseRangeSeconds": [
+        181.69,
+        182.03
+      ],
+      "rationale": "Original-mix and clock-verified estimate panel inspected at this occurrence; follow the quiet articulation/body transition rather than conditioned Whisper enclosing spans. Internal release is a connected handoff proposal; uncertainty bounds retain closure/reverb ambiguity.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 179.71574074074073,
+          "endSeconds": 180.39783950617283,
+          "ctcPathScore": 0.255263551697135
+        },
+        "vocalsCtc": {
+          "startSeconds": 179.7358024691358,
+          "endSeconds": 180.39783950617283,
+          "ctcPathScore": 0.3492368657258339
+        },
+        "conditionedWhisper": {
+          "start": 179.86,
+          "end": 180.36,
+          "probability": 0.4109538197517395
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-019-1",
+      "language": "ru",
+      "selectedStartSample": 8025318,
+      "selectedEndSample": 8048470,
+      "onsetRangeSeconds": [
+        181.925,
+        182.035
+      ],
+      "releaseRangeSeconds": [
+        182.43,
+        182.58
+      ],
+      "rationale": "Reject crop-bound Whisper181.10. The moi entrance near181.98 has a distinct renewed waveform and vowel trajectory.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 181.9816479400749,
+          "endSeconds": 182.38239700374533,
+          "ctcPathScore": 0.1963927298784256
+        },
+        "vocalsCtc": {
+          "startSeconds": 182.0016853932584,
+          "endSeconds": 182.42247191011236,
+          "ctcPathScore": 0.5530539552370707
+        },
+        "conditionedWhisper": {
+          "start": 181.1,
+          "end": 182.52,
+          "probability": 0.45884208381175995
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-019-2",
+      "language": "ru",
+      "selectedStartSample": 8048470,
+      "selectedEndSample": 8074710,
+      "onsetRangeSeconds": [
+        182.45,
+        182.56
+      ],
+      "releaseRangeSeconds": [
+        183.025,
+        183.175
+      ],
+      "rationale": "Original-mix and clock-verified estimate panel inspected at this occurrence; follow the quiet articulation/body transition rather than conditioned Whisper enclosing spans. Internal release is a connected handoff proposal; uncertainty bounds retain closure/reverb ambiguity.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 182.54269662921348,
+          "endSeconds": 182.82322097378275,
+          "ctcPathScore": 0.37960079684853554
+        },
+        "vocalsCtc": {
+          "startSeconds": 182.54269662921348,
+          "endSeconds": 182.86329588014982,
+          "ctcPathScore": 0.7071680426597595
+        },
+        "conditionedWhisper": {
+          "start": 182.52,
+          "end": 182.92,
+          "probability": 0.2634517662227154
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-019-3",
+      "language": "ru",
+      "selectedStartSample": 8074710,
+      "selectedEndSample": 8085735,
+      "onsetRangeSeconds": [
+        183.045,
+        183.155
+      ],
+      "releaseRangeSeconds": [
+        183.275,
+        183.425
+      ],
+      "rationale": "Original-mix and clock-verified estimate panel inspected at this occurrence; follow the quiet articulation/body transition rather than conditioned Whisper enclosing spans. Internal release is a connected handoff proposal; uncertainty bounds retain closure/reverb ambiguity.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 183.1438202247191,
+          "endSeconds": 183.2640449438202,
+          "ctcPathScore": 0.3382054567337036
+        },
+        "vocalsCtc": {
+          "startSeconds": 183.1237827715356,
+          "endSeconds": 183.2640449438202,
+          "ctcPathScore": 0.45464776176959276
+        },
+        "conditionedWhisper": {
+          "start": 182.92,
+          "end": 183.34,
+          "probability": 0.14830195903778076
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-019-4",
+      "language": "ru",
+      "selectedStartSample": 8085735,
+      "selectedEndSample": 8149239,
+      "onsetRangeSeconds": [
+        183.295,
+        183.405
+      ],
+      "releaseRangeSeconds": [
+        184.715,
+        184.865
+      ],
+      "rationale": "Original-mix and clock-verified estimate panel inspected at this occurrence; follow the quiet articulation/body transition rather than conditioned Whisper enclosing spans. Internal release is a connected handoff proposal; uncertainty bounds retain closure/reverb ambiguity.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 183.40430711610486,
+          "endSeconds": 184.62659176029962,
+          "ctcPathScore": 0.16081153520790395
+        },
+        "vocalsCtc": {
+          "startSeconds": 183.36423220973782,
+          "endSeconds": 184.64662921348315,
+          "ctcPathScore": 0.25104684149846435
+        },
+        "conditionedWhisper": {
+          "start": 183.34,
+          "end": 184.58,
+          "probability": 0.5348268655361608
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-019-5",
+      "language": "ru",
+      "selectedStartSample": 8149239,
+      "selectedEndSample": 8225091,
+      "onsetRangeSeconds": [
+        184.735,
+        184.845
+      ],
+      "releaseRangeSeconds": [
+        186.36,
+        186.62
+      ],
+      "rationale": "Original-mix and clock-verified estimate panel inspected at this occurrence; follow the quiet articulation/body transition rather than conditioned Whisper enclosing spans. Internal release is a connected handoff proposal; uncertainty bounds retain closure/reverb ambiguity.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 184.8069288389513,
+          "endSeconds": 185.488202247191,
+          "ctcPathScore": 0.1810118459397927
+        },
+        "vocalsCtc": {
+          "startSeconds": 184.8069288389513,
+          "endSeconds": 185.50823970037453,
+          "ctcPathScore": 0.36013559537022954
+        },
+        "conditionedWhisper": {
+          "start": 184.58,
+          "end": 185.58,
+          "probability": 0.7885535955429077
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-020-1",
+      "language": "ru",
+      "selectedStartSample": 8227296,
+      "selectedEndSample": 8254418,
+      "onsetRangeSeconds": [
+        186.505,
+        186.615
+      ],
+      "releaseRangeSeconds": [
+        187.1,
+        187.25
+      ],
+      "rationale": "Original-mix and clock-verified estimate panel inspected at this occurrence; follow the quiet articulation/body transition rather than conditioned Whisper enclosing spans. Internal release is a connected handoff proposal; uncertainty bounds retain closure/reverb ambiguity.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 186.5702643171806,
+          "endSeconds": 187.03127753303963,
+          "ctcPathScore": 0.08041310077533126
+        },
+        "vocalsCtc": {
+          "startSeconds": 186.5702643171806,
+          "endSeconds": 186.99118942731278,
+          "ctcPathScore": 0.32686975225806236
+        },
+        "conditionedWhisper": {
+          "start": 186.45,
+          "end": 187.15,
+          "probability": 0.1341211914938564
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-020-2",
+      "language": "ru",
+      "selectedStartSample": 8254418,
+      "selectedEndSample": 8288374,
+      "onsetRangeSeconds": [
+        187.12,
+        187.23
+      ],
+      "releaseRangeSeconds": [
+        187.87,
+        188.02
+      ],
+      "rationale": "Original-mix and clock-verified estimate panel inspected at this occurrence; follow the quiet articulation/body transition rather than conditioned Whisper enclosing spans. Internal release is a connected handoff proposal; uncertainty bounds retain closure/reverb ambiguity.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 187.19162995594712,
+          "endSeconds": 187.81299559471364,
+          "ctcPathScore": 0.22588463500142097
+        },
+        "vocalsCtc": {
+          "startSeconds": 187.19162995594712,
+          "endSeconds": 187.83303964757707,
+          "ctcPathScore": 0.6061135430354625
+        },
+        "conditionedWhisper": {
+          "start": 187.15,
+          "end": 187.81,
+          "probability": 0.48936107754707336
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-020-3",
+      "language": "ru",
+      "selectedStartSample": 8288374,
+      "selectedEndSample": 8302707,
+      "onsetRangeSeconds": [
+        187.89,
+        188
+      ],
+      "releaseRangeSeconds": [
+        188.195,
+        188.345
+      ],
+      "rationale": "Original-mix and clock-verified estimate panel inspected at this occurrence; follow the quiet articulation/body transition rather than conditioned Whisper enclosing spans. Internal release is a connected handoff proposal; uncertainty bounds retain closure/reverb ambiguity.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 187.9533039647577,
+          "endSeconds": 188.03348017621144,
+          "ctcPathScore": 0.046714041382074356
+        },
+        "vocalsCtc": {
+          "startSeconds": 187.97334801762113,
+          "endSeconds": 188.09361233480175,
+          "ctcPathScore": 0.284371099434793
+        },
+        "conditionedWhisper": {
+          "start": 187.81,
+          "end": 188.31,
+          "probability": 0.10033856332302094
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-020-4",
+      "language": "ru",
+      "selectedStartSample": 8302707,
+      "selectedEndSample": 8429274,
+      "onsetRangeSeconds": [
+        188.215,
+        188.325
+      ],
+      "releaseRangeSeconds": [
+        190.9,
+        191.23
+      ],
+      "rationale": "Stem extends end190.619 beyond original190.018, but the sustained body still continues towards191.1. Retain acoustic vowel/readability into that transition; do not define release solely from the final m score.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 188.27400881057267,
+          "endSeconds": 190.0178414096916,
+          "ctcPathScore": 0.19055734388530254
+        },
+        "vocalsCtc": {
+          "startSeconds": 188.29405286343612,
+          "endSeconds": 190.6191629955947,
+          "ctcPathScore": 0.4067171404936484
+        },
+        "conditionedWhisper": {
+          "start": 188.31,
+          "end": 189.81,
+          "probability": 0.5961088050777713
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-021-1",
+      "language": "ru",
+      "selectedStartSample": 8431258,
+      "selectedEndSample": 8491234,
+      "onsetRangeSeconds": [
+        191.13,
+        191.24
+      ],
+      "releaseRangeSeconds": [
+        192.47,
+        192.62
+      ],
+      "rationale": "Original-mix and clock-verified estimate panel inspected at this occurrence; follow the quiet articulation/body transition rather than conditioned Whisper enclosing spans. Internal release is a connected handoff proposal; uncertainty bounds retain closure/reverb ambiguity.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 191.22105263157894,
+          "endSeconds": 192.3866028708134,
+          "ctcPathScore": 0.33038959302939475
+        },
+        "vocalsCtc": {
+          "startSeconds": 191.22105263157894,
+          "endSeconds": 192.4066985645933,
+          "ctcPathScore": 0.33654195349663496
+        },
+        "conditionedWhisper": {
+          "start": 191,
+          "end": 192.32,
+          "probability": 0.05538178374990821
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-021-2",
+      "language": "ru",
+      "selectedStartSample": 8491234,
+      "selectedEndSample": 8622873,
+      "onsetRangeSeconds": [
+        192.49,
+        192.6
+      ],
+      "releaseRangeSeconds": [
+        195.24,
+        195.75
+      ],
+      "rationale": "Original192.929/stem192.949 are sparse character ends, not the end of the sustained ya. Full harmonic body remains towards195.3–195.7 and feeds a quiet m/n transition; exact handoff remains broad.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 192.56746411483255,
+          "endSeconds": 192.9291866028708,
+          "ctcPathScore": 0.4311247244477272
+        },
+        "vocalsCtc": {
+          "startSeconds": 192.56746411483255,
+          "endSeconds": 192.94928229665072,
+          "ctcPathScore": 0.4661013424396515
+        },
+        "conditionedWhisper": {
+          "start": 192.32,
+          "end": 193.02,
+          "probability": 0.9978158473968506
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-022-1",
+      "language": "ru",
+      "selectedStartSample": 8622873,
+      "selectedEndSample": 8639631,
+      "onsetRangeSeconds": [
+        195.25,
+        195.79
+      ],
+      "releaseRangeSeconds": [
+        195.835,
+        195.985
+      ],
+      "rationale": "Both near-crop stem195.280 and late original195.742 may choose different parts of the connected menya-mne transition. Reject blind crop195.20; retain broader195.25–195.79 range around a provisional195.53.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 195.74225941422594,
+          "endSeconds": 195.94309623430962,
+          "ctcPathScore": 0.13171192817389965
+        },
+        "vocalsCtc": {
+          "startSeconds": 195.28033472803347,
+          "endSeconds": 195.8828451882845,
+          "ctcPathScore": 0.3270889734849334
+        },
+        "conditionedWhisper": {
+          "start": 195.2,
+          "end": 196,
+          "probability": 0.018461966887116432
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-022-2",
+      "language": "ru",
+      "selectedStartSample": 8639631,
+      "selectedEndSample": 8706884,
+      "onsetRangeSeconds": [
+        195.855,
+        195.965
+      ],
+      "releaseRangeSeconds": [
+        197.36,
+        197.51
+      ],
+      "rationale": "Original196.084 omits the initial o portion; stem195.883 recovers it. Connected ostalos onset belongs near195.91 rather than late strong s/t.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 196.08368200836819,
+          "endSeconds": 197.20836820083682,
+          "ctcPathScore": 0.2172934181456055
+        },
+        "vocalsCtc": {
+          "startSeconds": 195.8828451882845,
+          "endSeconds": 197.20836820083682,
+          "ctcPathScore": 0.5051914402283728
+        },
+        "conditionedWhisper": {
+          "start": 196,
+          "end": 197.2,
+          "probability": 0.7686702311038971
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-022-3",
+      "language": "ru",
+      "selectedStartSample": 8706884,
+      "selectedEndSample": 8730918,
+      "onsetRangeSeconds": [
+        197.38,
+        197.49
+      ],
+      "releaseRangeSeconds": [
+        197.905,
+        198.055
+      ],
+      "rationale": "Original-mix and clock-verified estimate panel inspected at this occurrence; follow the quiet articulation/body transition rather than conditioned Whisper enclosing spans. Internal release is a connected handoff proposal; uncertainty bounds retain closure/reverb ambiguity.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 197.44937238493722,
+          "endSeconds": 197.95146443514642,
+          "ctcPathScore": 0.08004533796338364
+        },
+        "vocalsCtc": {
+          "startSeconds": 197.44937238493722,
+          "endSeconds": 197.9715481171548,
+          "ctcPathScore": 0.24456893873866647
+        },
+        "conditionedWhisper": {
+          "start": 197.2,
+          "end": 197.94,
+          "probability": 0.1620609611272812
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-022-4",
+      "language": "ru",
+      "selectedStartSample": 8730918,
+      "selectedEndSample": 8812944,
+      "onsetRangeSeconds": [
+        197.925,
+        198.035
+      ],
+      "releaseRangeSeconds": [
+        199.7,
+        200.06
+      ],
+      "rationale": "Original198.875/Whisper199.20 end in the sustained vowel. Stem199.920 and physical closed main body about199.8 support a longer release.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 197.9715481171548,
+          "endSeconds": 198.87531380753137,
+          "ctcPathScore": 0.2515893019735813
+        },
+        "vocalsCtc": {
+          "startSeconds": 198.01171548117154,
+          "endSeconds": 199.91966527196652,
+          "ctcPathScore": 0.45087055178980034
+        },
+        "conditionedWhisper": {
+          "start": 197.94,
+          "end": 199.2,
+          "probability": 0.3902531003113836
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-023-1",
+      "language": "ru",
+      "selectedStartSample": 8831907,
+      "selectedEndSample": 8845358,
+      "onsetRangeSeconds": [
+        200.215,
+        200.325
+      ],
+      "releaseRangeSeconds": [
+        200.5,
+        200.65
+      ],
+      "rationale": "Original-mix and clock-verified estimate panel inspected at this occurrence; follow the quiet articulation/body transition rather than conditioned Whisper enclosing spans. Internal release is a connected handoff proposal; uncertainty bounds retain closure/reverb ambiguity.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 200.28060344827585,
+          "endSeconds": 200.52112068965516,
+          "ctcPathScore": 0.3435600722829501
+        },
+        "vocalsCtc": {
+          "startSeconds": 200.28060344827585,
+          "endSeconds": 200.52112068965516,
+          "ctcPathScore": 0.5647183855374655
+        },
+        "conditionedWhisper": {
+          "start": 200,
+          "end": 200.56,
+          "probability": 0.8965587019920349
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-023-2",
+      "language": "ru",
+      "selectedStartSample": 8845358,
+      "selectedEndSample": 8881299,
+      "onsetRangeSeconds": [
+        200.52,
+        200.63
+      ],
+      "releaseRangeSeconds": [
+        201.315,
+        201.465
+      ],
+      "rationale": "Original-mix and clock-verified estimate panel inspected at this occurrence; follow the quiet articulation/body transition rather than conditioned Whisper enclosing spans. Internal release is a connected handoff proposal; uncertainty bounds retain closure/reverb ambiguity.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 200.58125,
+          "endSeconds": 200.96206896551723,
+          "ctcPathScore": 0.40997342819658417
+        },
+        "vocalsCtc": {
+          "startSeconds": 200.58125,
+          "endSeconds": 200.9821120689655,
+          "ctcPathScore": 0.445082095451653
+        },
+        "conditionedWhisper": {
+          "start": 200.56,
+          "end": 201.06,
+          "probability": 0.9028813242912292
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-023-3",
+      "language": "ru",
+      "selectedStartSample": 8881299,
+      "selectedEndSample": 8928266,
+      "onsetRangeSeconds": [
+        201.335,
+        201.445
+      ],
+      "releaseRangeSeconds": [
+        202.38,
+        202.53
+      ],
+      "rationale": "Original-mix and clock-verified estimate panel inspected at this occurrence; follow the quiet articulation/body transition rather than conditioned Whisper enclosing spans. Internal release is a connected handoff proposal; uncertainty bounds retain closure/reverb ambiguity.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 201.4030172413793,
+          "endSeconds": 202.2448275862069,
+          "ctcPathScore": 0.2797914317084683
+        },
+        "vocalsCtc": {
+          "startSeconds": 201.4030172413793,
+          "endSeconds": 202.20474137931035,
+          "ctcPathScore": 0.6025650411740773
+        },
+        "conditionedWhisper": {
+          "start": 201.06,
+          "end": 202.28,
+          "probability": 0.6555388867855072
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-023-4",
+      "language": "ru",
+      "selectedStartSample": 8928266,
+      "selectedEndSample": 8942598,
+      "onsetRangeSeconds": [
+        202.4,
+        202.51
+      ],
+      "releaseRangeSeconds": [
+        202.705,
+        202.855
+      ],
+      "rationale": "Original-mix and clock-verified estimate panel inspected at this occurrence; follow the quiet articulation/body transition rather than conditioned Whisper enclosing spans. Internal release is a connected handoff proposal; uncertainty bounds retain closure/reverb ambiguity.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 202.4853448275862,
+          "endSeconds": 202.60560344827587,
+          "ctcPathScore": 0.5318603515625
+        },
+        "vocalsCtc": {
+          "startSeconds": 202.4853448275862,
+          "endSeconds": 202.62564655172415,
+          "ctcPathScore": 0.6401918530464172
+        },
+        "conditionedWhisper": {
+          "start": 202.28,
+          "end": 202.74,
+          "probability": 0.05192025378346443
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-023-5",
+      "language": "ru",
+      "selectedStartSample": 8942598,
+      "selectedEndSample": 9028593,
+      "onsetRangeSeconds": [
+        202.725,
+        202.835
+      ],
+      "releaseRangeSeconds": [
+        204.59,
+        204.89
+      ],
+      "rationale": "CTC203.828 ends well inside sustained yu; harmonic body extends towards204.73 before ostalos205.16.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 202.78599137931033,
+          "endSeconds": 203.8282327586207,
+          "ctcPathScore": 0.32571659826984006
+        },
+        "vocalsCtc": {
+          "startSeconds": 202.80603448275863,
+          "endSeconds": 203.8282327586207,
+          "ctcPathScore": 0.712956299384435
+        },
+        "conditionedWhisper": {
+          "start": 202.74,
+          "end": 203.84,
+          "probability": 0.9562366604804993
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-024-1",
+      "language": "ru",
+      "selectedStartSample": 9047336,
+      "selectedEndSample": 9108194,
+      "onsetRangeSeconds": [
+        205.1,
+        205.21
+      ],
+      "releaseRangeSeconds": [
+        206.46,
+        206.61
+      ],
+      "rationale": "Original-mix and clock-verified estimate panel inspected at this occurrence; follow the quiet articulation/body transition rather than conditioned Whisper enclosing spans. Internal release is a connected handoff proposal; uncertainty bounds retain closure/reverb ambiguity.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 205.19241071428573,
+          "endSeconds": 206.43794642857142,
+          "ctcPathScore": 0.27152310258575846
+        },
+        "vocalsCtc": {
+          "startSeconds": 205.19241071428573,
+          "endSeconds": 206.478125,
+          "ctcPathScore": 0.6651800636734281
+        },
+        "conditionedWhisper": {
+          "start": 204.65,
+          "end": 206.45,
+          "probability": 0.8693419098854065
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-024-2",
+      "language": "ru",
+      "selectedStartSample": 9108194,
+      "selectedEndSample": 9134433,
+      "onsetRangeSeconds": [
+        206.48,
+        206.59
+      ],
+      "releaseRangeSeconds": [
+        207.055,
+        207.205
+      ],
+      "rationale": "Original-mix and clock-verified estimate panel inspected at this occurrence; follow the quiet articulation/body transition rather than conditioned Whisper enclosing spans. Internal release is a connected handoff proposal; uncertainty bounds retain closure/reverb ambiguity.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 206.55848214285714,
+          "endSeconds": 207.18125,
+          "ctcPathScore": 0.18927894812077284
+        },
+        "vocalsCtc": {
+          "startSeconds": 206.55848214285714,
+          "endSeconds": 207.16116071428573,
+          "ctcPathScore": 0.3540305718779564
+        },
+        "conditionedWhisper": {
+          "start": 206.45,
+          "end": 206.95,
+          "probability": 0.04779273644089699
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-024-3",
+      "language": "ru",
+      "selectedStartSample": 9134433,
+      "selectedEndSample": 9234099,
+      "onsetRangeSeconds": [
+        207.075,
+        207.185
+      ],
+      "releaseRangeSeconds": [
+        209.22,
+        209.48
+      ],
+      "rationale": "Original207.704 is late in held word; stem207.161 and physical changed vowel near207.13 support an earlier zh entrance. Final held vowel feeds into next phrase209.4.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 207.70357142857142,
+          "endSeconds": 209.0495535714286,
+          "ctcPathScore": 0.10408290506651004
+        },
+        "vocalsCtc": {
+          "startSeconds": 207.16116071428573,
+          "endSeconds": 209.0495535714286,
+          "ctcPathScore": 0.2579214333867033
+        },
+        "conditionedWhisper": {
+          "start": 206.95,
+          "end": 208.07,
+          "probability": 0.640758752822876
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-025-1",
+      "language": "ru",
+      "selectedStartSample": 9234540,
+      "selectedEndSample": 9273348,
+      "onsetRangeSeconds": [
+        209.345,
+        209.455
+      ],
+      "releaseRangeSeconds": [
+        210.205,
+        210.355
+      ],
+      "rationale": "Original-mix and clock-verified estimate panel inspected at this occurrence; follow the quiet articulation/body transition rather than conditioned Whisper enclosing spans. Internal release is a connected handoff proposal; uncertainty bounds retain closure/reverb ambiguity.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 209.4304964539007,
+          "endSeconds": 210.19184397163122,
+          "ctcPathScore": 0.09692440756286184
+        },
+        "vocalsCtc": {
+          "startSeconds": 209.41046099290782,
+          "endSeconds": 210.11170212765958,
+          "ctcPathScore": 0.10434448936333258
+        },
+        "conditionedWhisper": {
+          "start": 209.15,
+          "end": 210.29,
+          "probability": 0.06375236436724663
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-025-2",
+      "language": "ru",
+      "selectedStartSample": 9273348,
+      "selectedEndSample": 9309510,
+      "onsetRangeSeconds": [
+        210.225,
+        210.335
+      ],
+      "releaseRangeSeconds": [
+        211.025,
+        211.175
+      ],
+      "rationale": "Original-mix and clock-verified estimate panel inspected at this occurrence; follow the quiet articulation/body transition rather than conditioned Whisper enclosing spans. Internal release is a connected handoff proposal; uncertainty bounds retain closure/reverb ambiguity.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 210.31205673758865,
+          "endSeconds": 210.99326241134753,
+          "ctcPathScore": 0.1644177298992872
+        },
+        "vocalsCtc": {
+          "startSeconds": 210.31205673758865,
+          "endSeconds": 210.97322695035461,
+          "ctcPathScore": 0.4391578490030952
+        },
+        "conditionedWhisper": {
+          "start": 210.29,
+          "end": 211.03,
+          "probability": 0.014451253809966147
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-025-3",
+      "language": "ru",
+      "selectedStartSample": 9309510,
+      "selectedEndSample": 9334426,
+      "onsetRangeSeconds": [
+        211.045,
+        211.155
+      ],
+      "releaseRangeSeconds": [
+        211.59,
+        211.74
+      ],
+      "rationale": "Original-mix and clock-verified estimate panel inspected at this occurrence; follow the quiet articulation/body transition rather than conditioned Whisper enclosing spans. Internal release is a connected handoff proposal; uncertainty bounds retain closure/reverb ambiguity.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 211.11347517730496,
+          "endSeconds": 211.75460992907801,
+          "ctcPathScore": 0.1639769095927477
+        },
+        "vocalsCtc": {
+          "startSeconds": 211.11347517730496,
+          "endSeconds": 211.2537234042553,
+          "ctcPathScore": 0.7249655723571777
+        },
+        "conditionedWhisper": {
+          "start": 211.03,
+          "end": 211.35,
+          "probability": 0.10086430609226227
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-025-4",
+      "language": "ru",
+      "selectedStartSample": 9334426,
+      "selectedEndSample": 9588663,
+      "onsetRangeSeconds": [
+        211.61,
+        211.72
+      ],
+      "releaseRangeSeconds": [
+        215.3,
+        217.64
+      ],
+      "rationale": "Original212.195 is a later n/core, while stem211.674 supports initial l. Full original/stem body extends beyond the crop214.8. Overlap versus next quiet night prefix215.4–217.6 remains unresolved and is not treated as millisecond certainty.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 212.195390070922,
+          "endSeconds": 212.91666666666669,
+          "ctcPathScore": 0.11128232441842556
+        },
+        "vocalsCtc": {
+          "startSeconds": 211.67446808510638,
+          "endSeconds": 212.89663120567377,
+          "ctcPathScore": 0.18072565148274103
+        },
+        "conditionedWhisper": {
+          "start": 211.35,
+          "end": 212.95,
+          "probability": 0.2881895061582327
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-026-1",
+      "language": "ru",
+      "selectedStartSample": 9596160,
+      "selectedEndSample": 9598144,
+      "onsetRangeSeconds": [
+        215.4,
+        217.68
+      ],
+      "releaseRangeSeconds": [
+        217.57,
+        217.72
+      ],
+      "rationale": "Near-zero original216.003/stem215.441 do not identify a reliable v. Provisional217.60 is adjacent to clear tem core, but earlier vocal fragments/overlap215.4–217.6 remain unresolved; human listening required.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 216.00258620689655,
+          "endSeconds": 216.02262931034483,
+          "ctcPathScore": 0.0022718645632267
+        },
+        "vocalsCtc": {
+          "startSeconds": 215.44137931034484,
+          "endSeconds": 215.46142241379312,
+          "ctcPathScore": 0.01571565307676792
+        },
+        "conditionedWhisper": {
+          "start": 214.8,
+          "end": 217.76,
+          "probability": 0.004375969525426626
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-026-2",
+      "language": "ru",
+      "selectedStartSample": 9598144,
+      "selectedEndSample": 9637173,
+      "onsetRangeSeconds": [
+        215.7,
+        217.7
+      ],
+      "releaseRangeSeconds": [
+        218.455,
+        218.605
+      ],
+      "rationale": "Strong repeated tem core near217.646 agrees across both paths, but a quiet earlier initial portion215.7 may be mixed with prior lunoyu. Broad onset interval retained instead of stretching focus automatically through the whole region.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 217.6461206896552,
+          "endSeconds": 218.36767241379312,
+          "ctcPathScore": 0.3743989489240838
+        },
+        "vocalsCtc": {
+          "startSeconds": 217.6461206896552,
+          "endSeconds": 218.36767241379312,
+          "ctcPathScore": 0.18956671335867473
+        },
+        "conditionedWhisper": {
+          "start": 217.76,
+          "end": 218.4,
+          "probability": 0.12661962886340916
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-026-3",
+      "language": "ru",
+      "selectedStartSample": 9637173,
+      "selectedEndSample": 9664515,
+      "onsetRangeSeconds": [
+        218.475,
+        218.585
+      ],
+      "releaseRangeSeconds": [
+        219.08,
+        219.31
+      ],
+      "rationale": "Original-mix and clock-verified estimate panel inspected at this occurrence; follow the quiet articulation/body transition rather than conditioned Whisper enclosing spans. Internal release is a connected handoff proposal; uncertainty bounds retain closure/reverb ambiguity.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 218.5480603448276,
+          "endSeconds": 219.1293103448276,
+          "ctcPathScore": 0.36446730233728886
+        },
+        "vocalsCtc": {
+          "startSeconds": 218.5480603448276,
+          "endSeconds": 219.1293103448276,
+          "ctcPathScore": 0.2535830410197377
+        },
+        "conditionedWhisper": {
+          "start": 218.4,
+          "end": 219.18,
+          "probability": 0.7441016733646393
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-027-1",
+      "language": "ru",
+      "selectedStartSample": 9694724,
+      "selectedEndSample": 9699795,
+      "onsetRangeSeconds": [
+        219.78,
+        219.89
+      ],
+      "releaseRangeSeconds": [
+        219.875,
+        220.025
+      ],
+      "rationale": "Original-mix and clock-verified estimate panel inspected at this occurrence; follow the quiet articulation/body transition rather than conditioned Whisper enclosing spans. Internal release is a connected handoff proposal; uncertainty bounds retain closure/reverb ambiguity.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 219.85084388185652,
+          "endSeconds": 219.87088607594936,
+          "ctcPathScore": 0.0356285460293293
+        },
+        "vocalsCtc": {
+          "startSeconds": 219.85084388185652,
+          "endSeconds": 219.87088607594936,
+          "ctcPathScore": 0.018062712624669075
+        },
+        "conditionedWhisper": {
+          "start": 219.93,
+          "end": 219.93,
+          "probability": 0.013951403088867664
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-027-2",
+      "language": "ru",
+      "selectedStartSample": 9699795,
+      "selectedEndSample": 9736839,
+      "onsetRangeSeconds": [
+        219.895,
+        220.005
+      ],
+      "releaseRangeSeconds": [
+        220.715,
+        220.865
+      ],
+      "rationale": "Original-mix and clock-verified estimate panel inspected at this occurrence; follow the quiet articulation/body transition rather than conditioned Whisper enclosing spans. Internal release is a connected handoff proposal; uncertainty bounds retain closure/reverb ambiguity.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 219.95105485232065,
+          "endSeconds": 220.6525316455696,
+          "ctcPathScore": 0.25119554304650854
+        },
+        "vocalsCtc": {
+          "startSeconds": 219.95105485232065,
+          "endSeconds": 220.6525316455696,
+          "ctcPathScore": 0.2856448638652052
+        },
+        "conditionedWhisper": {
+          "start": 219.93,
+          "end": 220.69,
+          "probability": 0.41418855885664624
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-027-3",
+      "language": "ru",
+      "selectedStartSample": 9736839,
+      "selectedEndSample": 9763299,
+      "onsetRangeSeconds": [
+        220.735,
+        220.845
+      ],
+      "releaseRangeSeconds": [
+        221.315,
+        221.465
+      ],
+      "rationale": "Original-mix and clock-verified estimate panel inspected at this occurrence; follow the quiet articulation/body transition rather than conditioned Whisper enclosing spans. Internal release is a connected handoff proposal; uncertainty bounds retain closure/reverb ambiguity.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 220.81286919831223,
+          "endSeconds": 221.27383966244724,
+          "ctcPathScore": 0.354348873719573
+        },
+        "vocalsCtc": {
+          "startSeconds": 220.81286919831223,
+          "endSeconds": 221.27383966244724,
+          "ctcPathScore": 0.3398786121979356
+        },
+        "conditionedWhisper": {
+          "start": 220.69,
+          "end": 221.41,
+          "probability": 0.7524587213993073
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "RU-027-4",
+      "language": "ru",
+      "selectedStartSample": 9763299,
+      "selectedEndSample": 9800784,
+      "onsetRangeSeconds": [
+        221.335,
+        221.445
+      ],
+      "releaseRangeSeconds": [
+        222.14,
+        222.35
+      ],
+      "rationale": "Reject stem224.060: it borrows the Japanese response that begins around222.4. Original222.176 and actual Russian closing body/frication around222.2 support release222.24, prior to the new Japanese vocal phrase.",
+      "rawObservations": {
+        "originalCtc": {
+          "startSeconds": 221.41413502109702,
+          "endSeconds": 222.17573839662447,
+          "ctcPathScore": 0.2578666200861335
+        },
+        "vocalsCtc": {
+          "startSeconds": 221.41413502109702,
+          "endSeconds": 224.0597046413502,
+          "ctcPathScore": 0.3237432539463043
+        },
+        "conditionedWhisper": {
+          "start": 221.63,
+          "end": 222.27,
+          "probability": 0.5177704896777868
+        }
+      },
+      "humanListening": false
+    },
+    {
+      "wordId": "JP30-001-1",
+      "language": "ja",
+      "selectedStartSample": 905373,
+      "selectedEndSample": 955206,
+      "onsetRangeSeconds": [
+        20.41,
+        20.650000000000002
+      ],
+      "releaseRangeSeconds": [
+        21.51,
+        21.81
+      ],
+      "rationale": "Opening fragment independently visible in bounded multilingual transcription and native-kana CTC; quiet initial vowel/body from original/stem panel; direct tails beyond CTC character cores.",
+      "rangeMeaning": "Explicit review bounds; not a calibrated confidence interval or a millisecond accuracy claim.",
+      "humanListening": false
+    },
+    {
+      "wordId": "JP30-001-2",
+      "language": "ja",
+      "selectedStartSample": 955206,
+      "selectedEndSample": 1006362,
+      "onsetRangeSeconds": [
+        21.54,
+        21.78
+      ],
+      "releaseRangeSeconds": [
+        22.67,
+        22.97
+      ],
+      "rationale": "Opening fragment independently visible in bounded multilingual transcription and native-kana CTC; quiet initial vowel/body from original/stem panel; direct tails beyond CTC character cores.",
+      "rangeMeaning": "Explicit review bounds; not a calibrated confidence interval or a millisecond accuracy claim.",
+      "humanListening": false
+    },
+    {
+      "wordId": "JP30-001-3",
+      "language": "ja",
+      "selectedStartSample": 1006362,
+      "selectedEndSample": 1031058,
+      "onsetRangeSeconds": [
+        22.7,
+        22.94
+      ],
+      "releaseRangeSeconds": [
+        23.23,
+        23.529999999999998
+      ],
+      "rationale": "Opening fragment independently visible in bounded multilingual transcription and native-kana CTC; quiet initial vowel/body from original/stem panel; direct tails beyond CTC character cores.",
+      "rangeMeaning": "Explicit review bounds; not a calibrated confidence interval or a millisecond accuracy claim.",
+      "humanListening": false
+    },
+    {
+      "wordId": "JP30-001-4",
+      "language": "ja",
+      "selectedStartSample": 1031058,
+      "selectedEndSample": 1070748,
+      "onsetRangeSeconds": [
+        23.259999999999998,
+        23.5
+      ],
+      "releaseRangeSeconds": [
+        24.130000000000003,
+        24.43
+      ],
+      "rationale": "Opening fragment independently visible in bounded multilingual transcription and native-kana CTC; quiet initial vowel/body from original/stem panel; direct tails beyond CTC character cores.",
+      "rangeMeaning": "Explicit review bounds; not a calibrated confidence interval or a millisecond accuracy claim.",
+      "humanListening": false
+    },
+    {
+      "wordId": "JP30-001-5",
+      "language": "ja",
+      "selectedStartSample": 1105587,
+      "selectedEndSample": 1210545,
+      "onsetRangeSeconds": [
+        24.95,
+        25.19
+      ],
+      "releaseRangeSeconds": [
+        27.3,
+        27.599999999999998
+      ],
+      "rationale": "Opening fragment independently visible in bounded multilingual transcription and native-kana CTC; quiet initial vowel/body from original/stem panel; direct tails beyond CTC character cores.",
+      "rangeMeaning": "Explicit review bounds; not a calibrated confidence interval or a millisecond accuracy claim.",
+      "humanListening": false
+    },
+    {
+      "wordId": "JP30-001-6",
+      "language": "ja",
+      "selectedStartSample": 1210545,
+      "selectedEndSample": 1279782,
+      "onsetRangeSeconds": [
+        27.33,
+        27.57
+      ],
+      "releaseRangeSeconds": [
+        28.87,
+        29.169999999999998
+      ],
+      "rationale": "Opening fragment independently visible in bounded multilingual transcription and native-kana CTC; quiet initial vowel/body from original/stem panel; direct tails beyond CTC character cores.",
+      "rangeMeaning": "Explicit review bounds; not a calibrated confidence interval or a millisecond accuracy claim.",
+      "humanListening": false
+    },
+    {
+      "wordId": "JP30-002-1",
+      "language": "ja",
+      "selectedStartSample": 1309329,
+      "selectedEndSample": 1357398,
+      "onsetRangeSeconds": [
+        29.57,
+        29.810000000000002
+      ],
+      "releaseRangeSeconds": [
+        30.630000000000003,
+        30.93
+      ],
+      "rationale": "Second opening repeat reviewed independently: 暁 has a new direct onset after a real gap, not the earlier mixed-model allocation in the prior なし body.",
+      "rangeMeaning": "Explicit review bounds; not a calibrated confidence interval or a millisecond accuracy claim.",
+      "humanListening": false
+    },
+    {
+      "wordId": "JP30-002-2",
+      "language": "ja",
+      "selectedStartSample": 1357398,
+      "selectedEndSample": 1411200,
+      "onsetRangeSeconds": [
+        30.66,
+        30.900000000000002
+      ],
+      "releaseRangeSeconds": [
+        31.85,
+        32.15
+      ],
+      "rationale": "Second opening repeat reviewed independently: 暁 has a new direct onset after a real gap, not the earlier mixed-model allocation in the prior なし body.",
+      "rangeMeaning": "Explicit review bounds; not a calibrated confidence interval or a millisecond accuracy claim.",
+      "humanListening": false
+    },
+    {
+      "wordId": "JP30-002-3",
+      "language": "ja",
+      "selectedStartSample": 1411200,
+      "selectedEndSample": 1435896,
+      "onsetRangeSeconds": [
+        31.88,
+        32.12
+      ],
+      "releaseRangeSeconds": [
+        32.410000000000004,
+        32.71
+      ],
+      "rationale": "Second opening repeat reviewed independently: 暁 has a new direct onset after a real gap, not the earlier mixed-model allocation in the prior なし body.",
+      "rangeMeaning": "Explicit review bounds; not a calibrated confidence interval or a millisecond accuracy claim.",
+      "humanListening": false
+    },
+    {
+      "wordId": "JP30-002-4",
+      "language": "ja",
+      "selectedStartSample": 1435896,
+      "selectedEndSample": 1474263,
+      "onsetRangeSeconds": [
+        32.440000000000005,
+        32.68
+      ],
+      "releaseRangeSeconds": [
+        33.28,
+        33.58
+      ],
+      "rationale": "Second opening repeat reviewed independently: 暁 has a new direct onset after a real gap, not the earlier mixed-model allocation in the prior なし body.",
+      "rangeMeaning": "Explicit review bounds; not a calibrated confidence interval or a millisecond accuracy claim.",
+      "humanListening": false
+    },
+    {
+      "wordId": "JP30-002-5",
+      "language": "ja",
+      "selectedStartSample": 1510425,
+      "selectedEndSample": 1613619,
+      "onsetRangeSeconds": [
+        34.13,
+        34.37
+      ],
+      "releaseRangeSeconds": [
+        36.440000000000005,
+        36.74
+      ],
+      "rationale": "Second opening repeat reviewed independently: 暁 has a new direct onset after a real gap, not the earlier mixed-model allocation in the prior なし body.",
+      "rangeMeaning": "Explicit review bounds; not a calibrated confidence interval or a millisecond accuracy claim.",
+      "humanListening": false
+    },
+    {
+      "wordId": "JP30-002-6",
+      "language": "ja",
+      "selectedStartSample": 1613619,
+      "selectedEndSample": 1678887,
+      "onsetRangeSeconds": [
+        36.470000000000006,
+        36.71
+      ],
+      "releaseRangeSeconds": [
+        37.92,
+        38.22
+      ],
+      "rationale": "Second opening repeat reviewed independently: 暁 has a new direct onset after a real gap, not the earlier mixed-model allocation in the prior なし body.",
+      "rangeMeaning": "Explicit review bounds; not a calibrated confidence interval or a millisecond accuracy claim.",
+      "humanListening": false
+    },
+    {
+      "wordId": "JP59-001-1",
+      "language": "ja",
+      "selectedStartSample": 2178099,
+      "selectedEndSample": 2274237,
+      "onsetRangeSeconds": [
+        49.27,
+        49.51
+      ],
+      "releaseRangeSeconds": [
+        51.42,
+        51.72
+      ],
+      "rationale": "Quiet source entry precedes clear vowel core. Continuous native inflections grouped for complete counterfactual focus; adversative ものを remains separate.",
+      "rangeMeaning": "Explicit review bounds; not a calibrated confidence interval or a millisecond accuracy claim.",
+      "humanListening": false
+    },
+    {
+      "wordId": "JP59-001-2",
+      "language": "ja",
+      "selectedStartSample": 2274237,
+      "selectedEndSample": 2329803,
+      "onsetRangeSeconds": [
+        51.45,
+        51.69
+      ],
+      "releaseRangeSeconds": [
+        52.68,
+        52.98
+      ],
+      "rationale": "Quiet source entry precedes clear vowel core. Continuous native inflections grouped for complete counterfactual focus; adversative ものを remains separate.",
+      "rangeMeaning": "Explicit review bounds; not a calibrated confidence interval or a millisecond accuracy claim.",
+      "humanListening": false
+    },
+    {
+      "wordId": "JP59-001-3",
+      "language": "ja",
+      "selectedStartSample": 2329803,
+      "selectedEndSample": 2371257,
+      "onsetRangeSeconds": [
+        52.71,
+        52.949999999999996
+      ],
+      "releaseRangeSeconds": [
+        53.620000000000005,
+        53.92
+      ],
+      "rationale": "Quiet source entry precedes clear vowel core. Continuous native inflections grouped for complete counterfactual focus; adversative ものを remains separate.",
+      "rangeMeaning": "Explicit review bounds; not a calibrated confidence interval or a millisecond accuracy claim.",
+      "humanListening": false
+    },
+    {
+      "wordId": "JP59-002-1",
+      "language": "ja",
+      "selectedStartSample": 2423295,
+      "selectedEndSample": 2456370,
+      "onsetRangeSeconds": [
+        54.830000000000005,
+        55.07
+      ],
+      "releaseRangeSeconds": [
+        55.550000000000004,
+        55.85
+      ],
+      "rationale": "Quiet 小夜 prefix and complete late-night predicate; independent continuation panel supports the low same-note body into58.28. Direct-vowel versus room-decay distinction remains a listening question, not solved by the te core.",
+      "rangeMeaning": "Explicit review bounds; not a calibrated confidence interval or a millisecond accuracy claim.",
+      "humanListening": false
+    },
+    {
+      "wordId": "JP59-002-2",
+      "language": "ja",
+      "selectedStartSample": 2456370,
+      "selectedEndSample": 2570148,
+      "onsetRangeSeconds": [
+        55.580000000000005,
+        55.82
+      ],
+      "releaseRangeSeconds": [
+        57.9,
+        58.42
+      ],
+      "rationale": "Quiet 小夜 prefix and complete late-night predicate; independent continuation panel supports the low same-note body into58.28. Direct-vowel versus room-decay distinction remains a listening question, not solved by the te core.",
+      "rangeMeaning": "Explicit review bounds; not a calibrated confidence interval or a millisecond accuracy claim.",
+      "humanListening": false
+    },
+    {
+      "wordId": "JP59-003-004-1",
+      "language": "ja",
+      "selectedStartSample": 2579630,
+      "selectedEndSample": 2626596,
+      "onsetRangeSeconds": [
+        58.375011337868486,
+        58.61501133786848
+      ],
+      "releaseRangeSeconds": [
+        59.410000000000004,
+        59.71
+      ],
+      "rationale": "Joined natural moon sentence retains individual source inflections and the real pre-watch pause. Quiet tsu frication precedes moon vowel. Exclamation is not a question.",
+      "rangeMeaning": "Explicit review bounds; not a calibrated confidence interval or a millisecond accuracy claim.",
+      "humanListening": false
+    },
+    {
+      "wordId": "JP59-003-004-2",
+      "language": "ja",
+      "selectedStartSample": 2626596,
+      "selectedEndSample": 2703330,
+      "onsetRangeSeconds": [
+        59.440000000000005,
+        59.68
+      ],
+      "releaseRangeSeconds": [
+        61.15,
+        61.449999999999996
+      ],
+      "rationale": "Joined natural moon sentence retains individual source inflections and the real pre-watch pause. Quiet tsu frication precedes moon vowel. Exclamation is not a question.",
+      "rangeMeaning": "Explicit review bounds; not a calibrated confidence interval or a millisecond accuracy claim.",
+      "humanListening": false
+    },
+    {
+      "wordId": "JP59-003-004-3",
+      "language": "ja",
+      "selectedStartSample": 2704212,
+      "selectedEndSample": 2762865,
+      "onsetRangeSeconds": [
+        61.2,
+        61.44
+      ],
+      "releaseRangeSeconds": [
+        62.5,
+        62.8
+      ],
+      "rationale": "Joined natural moon sentence retains individual source inflections and the real pre-watch pause. Quiet tsu frication precedes moon vowel. Exclamation is not a question.",
+      "rangeMeaning": "Explicit review bounds; not a calibrated confidence interval or a millisecond accuracy claim.",
+      "humanListening": false
+    },
+    {
+      "wordId": "JP59-003-004-4",
+      "language": "ja",
+      "selectedStartSample": 2831220,
+      "selectedEndSample": 2866500,
+      "onsetRangeSeconds": [
+        64.08,
+        64.32000000000001
+      ],
+      "releaseRangeSeconds": [
+        64.85,
+        65.15
+      ],
+      "rationale": "Joined natural moon sentence retains individual source inflections and the real pre-watch pause. Quiet tsu frication precedes moon vowel. Exclamation is not a question.",
+      "rangeMeaning": "Explicit review bounds; not a calibrated confidence interval or a millisecond accuracy claim.",
+      "humanListening": false
+    },
+    {
+      "wordId": "JP59-003-004-5",
+      "language": "ja",
+      "selectedStartSample": 2867382,
+      "selectedEndSample": 2895606,
+      "onsetRangeSeconds": [
+        64.89999999999999,
+        65.14
+      ],
+      "releaseRangeSeconds": [
+        65.50999999999999,
+        65.81
+      ],
+      "rationale": "Joined natural moon sentence retains individual source inflections and the real pre-watch pause. Quiet tsu frication precedes moon vowel. Exclamation is not a question.",
+      "rangeMeaning": "Explicit review bounds; not a calibrated confidence interval or a millisecond accuracy claim.",
+      "humanListening": false
+    },
+    {
+      "wordId": "JP59-005-1",
+      "language": "ja",
+      "selectedStartSample": 2985129,
+      "selectedEndSample": 3084354,
+      "onsetRangeSeconds": [
+        67.57,
+        67.81
+      ],
+      "releaseRangeSeconds": [
+        69.78999999999999,
+        70.09
+      ],
+      "rationale": "Second complete poem performance inspected independently; continuous counterfactual and separate regret event.",
+      "rangeMeaning": "Explicit review bounds; not a calibrated confidence interval or a millisecond accuracy claim.",
+      "humanListening": false
+    },
+    {
+      "wordId": "JP59-005-2",
+      "language": "ja",
+      "selectedStartSample": 3084354,
+      "selectedEndSample": 3139038,
+      "onsetRangeSeconds": [
+        69.82,
+        70.06
+      ],
+      "releaseRangeSeconds": [
+        71.03,
+        71.33000000000001
+      ],
+      "rationale": "Second complete poem performance inspected independently; continuous counterfactual and separate regret event.",
+      "rangeMeaning": "Explicit review bounds; not a calibrated confidence interval or a millisecond accuracy claim.",
+      "humanListening": false
+    },
+    {
+      "wordId": "JP59-005-3",
+      "language": "ja",
+      "selectedStartSample": 3139038,
+      "selectedEndSample": 3182697,
+      "onsetRangeSeconds": [
+        71.06,
+        71.30000000000001
+      ],
+      "releaseRangeSeconds": [
+        72.02,
+        72.32000000000001
+      ],
+      "rationale": "Second complete poem performance inspected independently; continuous counterfactual and separate regret event.",
+      "rangeMeaning": "Explicit review bounds; not a calibrated confidence interval or a millisecond accuracy claim.",
+      "humanListening": false
+    },
+    {
+      "wordId": "JP59-006-1",
+      "language": "ja",
+      "selectedStartSample": 3231207,
+      "selectedEndSample": 3260754,
+      "onsetRangeSeconds": [
+        73.14999999999999,
+        73.39
+      ],
+      "releaseRangeSeconds": [
+        73.78999999999999,
+        74.09
+      ],
+      "rationale": "Quiet independent second-night prefix; same-note low harmonic/wave pulses continue towards76.4. Provisional76.50 release protects the possible held e-vowel; direct-body versus room-decay needs listening.",
+      "rangeMeaning": "Explicit review bounds; not a calibrated confidence interval or a millisecond accuracy claim.",
+      "humanListening": false
+    },
+    {
+      "wordId": "JP59-006-2",
+      "language": "ja",
+      "selectedStartSample": 3260754,
+      "selectedEndSample": 3373650,
+      "onsetRangeSeconds": [
+        73.82,
+        74.06
+      ],
+      "releaseRangeSeconds": [
+        76.25,
+        76.7
+      ],
+      "rationale": "Quiet independent second-night prefix; same-note low harmonic/wave pulses continue towards76.4. Provisional76.50 release protects the possible held e-vowel; direct-body versus room-decay needs listening.",
+      "rangeMeaning": "Explicit review bounds; not a calibrated confidence interval or a millisecond accuracy claim.",
+      "humanListening": false
+    },
+    {
+      "wordId": "JP59-007-008-1",
+      "language": "ja",
+      "selectedStartSample": 3384675,
+      "selectedEndSample": 3433626,
+      "onsetRangeSeconds": [
+        76.63,
+        76.87
+      ],
+      "releaseRangeSeconds": [
+        77.71,
+        78.01
+      ],
+      "rationale": "Original moon crop began too late; widened native-kana CTC verifies 79.66 core and earlier frication. Long final かな body stays lit into the Russian entrance; no cue fade truncates it.",
+      "rangeMeaning": "Explicit review bounds; not a calibrated confidence interval or a millisecond accuracy claim.",
+      "humanListening": false
+    },
+    {
+      "wordId": "JP59-007-008-2",
+      "language": "ja",
+      "selectedStartSample": 3433626,
+      "selectedEndSample": 3511242,
+      "onsetRangeSeconds": [
+        77.74,
+        77.98
+      ],
+      "releaseRangeSeconds": [
+        79.47,
+        79.77000000000001
+      ],
+      "rationale": "Original moon crop began too late; widened native-kana CTC verifies 79.66 core and earlier frication. Long final かな body stays lit into the Russian entrance; no cue fade truncates it.",
+      "rangeMeaning": "Explicit review bounds; not a calibrated confidence interval or a millisecond accuracy claim.",
+      "humanListening": false
+    },
+    {
+      "wordId": "JP59-007-008-3",
+      "language": "ja",
+      "selectedStartSample": 3511683,
+      "selectedEndSample": 3579156,
+      "onsetRangeSeconds": [
+        79.50999999999999,
+        79.75
+      ],
+      "releaseRangeSeconds": [
+        81.00999999999999,
+        81.31
+      ],
+      "rationale": "Original moon crop began too late; widened native-kana CTC verifies 79.66 core and earlier frication. Long final かな body stays lit into the Russian entrance; no cue fade truncates it.",
+      "rangeMeaning": "Explicit review bounds; not a calibrated confidence interval or a millisecond accuracy claim.",
+      "humanListening": false
+    },
+    {
+      "wordId": "JP59-007-008-4",
+      "language": "ja",
+      "selectedStartSample": 3636927,
+      "selectedEndSample": 3687642,
+      "onsetRangeSeconds": [
+        82.35,
+        82.59
+      ],
+      "releaseRangeSeconds": [
+        83.47,
+        83.77000000000001
+      ],
+      "rationale": "Original moon crop began too late; widened native-kana CTC verifies 79.66 core and earlier frication. Long final かな body stays lit into the Russian entrance; no cue fade truncates it.",
+      "rangeMeaning": "Explicit review bounds; not a calibrated confidence interval or a millisecond accuracy claim.",
+      "humanListening": false
+    },
+    {
+      "wordId": "JP59-007-008-5",
+      "language": "ja",
+      "selectedStartSample": 3688524,
+      "selectedEndSample": 3797892,
+      "onsetRangeSeconds": [
+        83.52,
+        83.76
+      ],
+      "releaseRangeSeconds": [
+        85.97,
+        86.27000000000001
+      ],
+      "rationale": "Original moon crop began too late; widened native-kana CTC verifies 79.66 core and earlier frication. Long final かな body stays lit into the Russian entrance; no cue fade truncates it.",
+      "rangeMeaning": "Explicit review bounds; not a calibrated confidence interval or a millisecond accuracy claim.",
+      "humanListening": false
+    },
+    {
+      "wordId": "JP30-003-1",
+      "language": "ja",
+      "selectedStartSample": 9781380,
+      "selectedEndSample": 9827244,
+      "onsetRangeSeconds": [
+        221.65,
+        222.12
+      ],
+      "releaseRangeSeconds": [
+        222.69,
+        222.99
+      ],
+      "rationale": "Provisional overlapping initial Japanese vowel: physical changed vocal body and consonant sequence support ~221.8 with broad 221.65–222.12 range. Widened forced u at220.78 is rejected as borrowed Russian night. Russian body remains until222.24.",
+      "rangeMeaning": "Explicit review bounds; not a calibrated confidence interval or a millisecond accuracy claim.",
+      "humanListening": false
+    },
+    {
+      "wordId": "JP30-003-2",
+      "language": "ja",
+      "selectedStartSample": 9827244,
+      "selectedEndSample": 9879723,
+      "onsetRangeSeconds": [
+        222.72,
+        222.96
+      ],
+      "releaseRangeSeconds": [
+        223.88,
+        224.18
+      ],
+      "rationale": "Provisional overlapping initial Japanese vowel: physical changed vocal body and consonant sequence support ~221.8 with broad 221.65–222.12 range. Widened forced u at220.78 is rejected as borrowed Russian night. Russian body remains until222.24.",
+      "rangeMeaning": "Explicit review bounds; not a calibrated confidence interval or a millisecond accuracy claim.",
+      "humanListening": false
+    },
+    {
+      "wordId": "JP30-003-3",
+      "language": "ja",
+      "selectedStartSample": 9879723,
+      "selectedEndSample": 9901773,
+      "onsetRangeSeconds": [
+        223.91,
+        224.15
+      ],
+      "releaseRangeSeconds": [
+        224.38,
+        224.68
+      ],
+      "rationale": "Provisional overlapping initial Japanese vowel: physical changed vocal body and consonant sequence support ~221.8 with broad 221.65–222.12 range. Widened forced u at220.78 is rejected as borrowed Russian night. Russian body remains until222.24.",
+      "rangeMeaning": "Explicit review bounds; not a calibrated confidence interval or a millisecond accuracy claim.",
+      "humanListening": false
+    },
+    {
+      "wordId": "JP30-003-4",
+      "language": "ja",
+      "selectedStartSample": 9901773,
+      "selectedEndSample": 9938376,
+      "onsetRangeSeconds": [
+        224.41,
+        224.65
+      ],
+      "releaseRangeSeconds": [
+        225.21,
+        225.51000000000002
+      ],
+      "rationale": "Provisional overlapping initial Japanese vowel: physical changed vocal body and consonant sequence support ~221.8 with broad 221.65–222.12 range. Widened forced u at220.78 is rejected as borrowed Russian night. Russian body remains until222.24.",
+      "rangeMeaning": "Explicit review bounds; not a calibrated confidence interval or a millisecond accuracy claim.",
+      "humanListening": false
+    },
+    {
+      "wordId": "JP30-003-5",
+      "language": "ja",
+      "selectedStartSample": 9979830,
+      "selectedEndSample": 10076850,
+      "onsetRangeSeconds": [
+        226.18,
+        226.42000000000002
+      ],
+      "releaseRangeSeconds": [
+        228.35,
+        228.65
+      ],
+      "rationale": "Provisional overlapping initial Japanese vowel: physical changed vocal body and consonant sequence support ~221.8 with broad 221.65–222.12 range. Widened forced u at220.78 is rejected as borrowed Russian night. Russian body remains until222.24.",
+      "rangeMeaning": "Explicit review bounds; not a calibrated confidence interval or a millisecond accuracy claim.",
+      "humanListening": false
+    },
+    {
+      "wordId": "JP30-003-6",
+      "language": "ja",
+      "selectedStartSample": 10076850,
+      "selectedEndSample": 10141236,
+      "onsetRangeSeconds": [
+        228.38,
+        228.62
+      ],
+      "releaseRangeSeconds": [
+        229.81,
+        230.11
+      ],
+      "rationale": "Provisional overlapping initial Japanese vowel: physical changed vocal body and consonant sequence support ~221.8 with broad 221.65–222.12 range. Widened forced u at220.78 is rejected as borrowed Russian night. Russian body remains until222.24.",
+      "rangeMeaning": "Explicit review bounds; not a calibrated confidence interval or a millisecond accuracy claim.",
+      "humanListening": false
+    },
+    {
+      "wordId": "JP30-004-1",
+      "language": "ja",
+      "selectedStartSample": 10167255,
+      "selectedEndSample": 10229877,
+      "onsetRangeSeconds": [
+        230.5,
+        230.8
+      ],
+      "releaseRangeSeconds": [
+        231.82,
+        232.12
+      ],
+      "rationale": "Independently measured final loop, not offset-copy. Renewed original/stem vowel body at230.55 corrects the materially late230.79 proposal; CTC u230.91 is a core, not the entrance. Final direct body/room decay split retained as uncertainty.",
+      "rangeMeaning": "Explicit review bounds; not a calibrated confidence interval or a millisecond accuracy claim.",
+      "humanListening": false
+    },
+    {
+      "wordId": "JP30-004-2",
+      "language": "ja",
+      "selectedStartSample": 10229877,
+      "selectedEndSample": 10279710,
+      "onsetRangeSeconds": [
+        231.85,
+        232.09
+      ],
+      "releaseRangeSeconds": [
+        232.95,
+        233.25
+      ],
+      "rationale": "Independently measured final loop, not offset-copy. Renewed original/stem vowel body at230.55 corrects the materially late230.79 proposal; CTC u230.91 is a core, not the entrance. Final direct body/room decay split retained as uncertainty.",
+      "rangeMeaning": "Explicit review bounds; not a calibrated confidence interval or a millisecond accuracy claim.",
+      "humanListening": false
+    },
+    {
+      "wordId": "JP30-004-3",
+      "language": "ja",
+      "selectedStartSample": 10279710,
+      "selectedEndSample": 10301760,
+      "onsetRangeSeconds": [
+        232.98,
+        233.22
+      ],
+      "releaseRangeSeconds": [
+        233.45,
+        233.75
+      ],
+      "rationale": "Independently measured final loop, not offset-copy. Renewed original/stem vowel body at230.55 corrects the materially late230.79 proposal; CTC u230.91 is a core, not the entrance. Final direct body/room decay split retained as uncertainty.",
+      "rangeMeaning": "Explicit review bounds; not a calibrated confidence interval or a millisecond accuracy claim.",
+      "humanListening": false
+    },
+    {
+      "wordId": "JP30-004-4",
+      "language": "ja",
+      "selectedStartSample": 10301760,
+      "selectedEndSample": 10340127,
+      "onsetRangeSeconds": [
+        233.48,
+        233.72
+      ],
+      "releaseRangeSeconds": [
+        234.32,
+        234.62
+      ],
+      "rationale": "Independently measured final loop, not offset-copy. Renewed original/stem vowel body at230.55 corrects the materially late230.79 proposal; CTC u230.91 is a core, not the entrance. Final direct body/room decay split retained as uncertainty.",
+      "rangeMeaning": "Explicit review bounds; not a calibrated confidence interval or a millisecond accuracy claim.",
+      "humanListening": false
+    },
+    {
+      "wordId": "JP30-004-5",
+      "language": "ja",
+      "selectedStartSample": 10378935,
+      "selectedEndSample": 10477278,
+      "onsetRangeSeconds": [
+        235.23,
+        235.47
+      ],
+      "releaseRangeSeconds": [
+        237.43,
+        237.73000000000002
+      ],
+      "rationale": "Independently measured final loop, not offset-copy. Renewed original/stem vowel body at230.55 corrects the materially late230.79 proposal; CTC u230.91 is a core, not the entrance. Final direct body/room decay split retained as uncertainty.",
+      "rangeMeaning": "Explicit review bounds; not a calibrated confidence interval or a millisecond accuracy claim.",
+      "humanListening": false
+    },
+    {
+      "wordId": "JP30-004-6",
+      "language": "ja",
+      "selectedStartSample": 10477278,
+      "selectedEndSample": 10541664,
+      "onsetRangeSeconds": [
+        237.46,
+        237.70000000000002
+      ],
+      "releaseRangeSeconds": [
+        238.89,
+        239.19
+      ],
+      "rationale": "Independently measured final loop, not offset-copy. Renewed original/stem vowel body at230.55 corrects the materially late230.79 proposal; CTC u230.91 is a core, not the entrance. Final direct body/room decay split retained as uncertainty.",
+      "rangeMeaning": "Explicit review bounds; not a calibrated confidence interval or a millisecond accuracy claim.",
+      "humanListening": false
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "status": "unprompted ASR lexical/timing observation; not listening attestation or selected timing",
+  "sourceSha256": "8563f6b817c9b1cc39649363a52486214c691c0d98ae7bb82263021ac7363523",
+  "method": {
+    "model": "small",
+    "modelFamily": "OpenAI Whisper",
+    "checkpointSha256": "9ecf779972d90ba49c06d968637d720dd632c55bbf19d441fb42bf17a411e794",
+    "implementation": "stable-ts 2.19.1",
+    "language": "ja",
+    "conditioningText": null,
+    "initialPrompt": null,
+    "conditionOnPreviousText": false,
+    "suppressSilence": false,
+    "inputKind": "original",
+    "inputFile": "analysis/independent-audio/original-mix-16000.wav",
+    "originalSourceZeroPreserved": true,
+    "sourceCropStartSample16000": 0,
+    "sourceCropEndSample16000": 328000,
+    "cropStartSeconds": 0.0,
+    "cropEndSeconds": 20.5,
+    "humanListening": false,
+    "elapsedSeconds": 1.1892541660927236,
+    "torch": "2.14.0"
+  },
+  "result": {
+    "text": "",
+    "segments": [],
+    "language": "ja",
+    "ori_dict": {
+      "text": "",
+      "segments": [],
+      "language": "ja",
+      "time_scale": null
+    },
+    "regroup_history": "",
+    "nonspeech_sections": []
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "project": "prizrak-lyric-film",
+  "revision": "prizrak-preview-v1",
+  "sourceSha256": "8563f6b817c9b1cc39649363a52486214c691c0d98ae7bb82263021ac7363523",
+  "timelineSha256": "2b562e6dfc1c704170ed8f20c1c55f2fe3476578d7904c6c7a42a980f87962f0",
+  "method": "Observed the actual complete localhost preview in the Codex in-app browser using visible controls, screenshots and read-only media/canvas diagnostics.",
+  "checks": [
+    "Moving original picture and unchanged-source playback in native and portrait compositions",
+    "Paused timestamp seeks, including repeated Enter entry after the input fix",
+    "Normal and reduced-speed controls; format switching retains review position",
+    "Full-size Russian/English carry alongside the Japanese entrance at 222.000 seconds",
+    "Original-source comparison opens and closes without substituting the full preview",
+    "Restore preview preserves position, format, speed, sound and playing/paused state",
+    "Source credits appear with added decoration cleared",
+    "Playback reaches 255.094422 seconds with the last picture at native PTS 255.000 retained through the AAC tail",
+    "Paused recovery at 255.094 seconds resolves to the final picture with readyState 4 and no active lyric"
+  ],
+  "checkpoints": "browser-checkpoints.json",
+  "screenshots": "preview-stills.json",
+  "limitations": "Browser clocks, decoded picture and visible glyph checks establish technical preview behavior. They do not attest full-song human listening, every perceived vocal boundary, final encoding or render authorization.",
+  "humanListening": false,
+  "productionAuthorized": false
+}

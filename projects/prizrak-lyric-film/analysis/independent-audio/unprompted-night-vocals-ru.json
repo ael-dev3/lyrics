@@ -1,0 +1,176 @@
+{
+  "schemaVersion": 1,
+  "status": "unprompted ASR lexical/timing observation; not listening attestation or selected timing",
+  "sourceSha256": "8563f6b817c9b1cc39649363a52486214c691c0d98ae7bb82263021ac7363523",
+  "method": {
+    "model": "large-v3-turbo",
+    "modelFamily": "OpenAI Whisper",
+    "checkpointSha256": "aff26ae408abcba5fbf8813c21e62b0941638c5f6eebfb145be0c9839262a19a",
+    "implementation": "stable-ts 2.19.1",
+    "language": "ru",
+    "conditioningText": null,
+    "initialPrompt": null,
+    "conditionOnPreviousText": false,
+    "suppressSilence": false,
+    "inputKind": "vocals",
+    "inputFile": "analysis/independent-audio/vocals-16000.wav",
+    "originalSourceZeroPreserved": true,
+    "sourceCropStartSample16000": 1936000,
+    "sourceCropEndSample16000": 2112000,
+    "cropStartSeconds": 121.0,
+    "cropEndSeconds": 132.0,
+    "humanListening": false,
+    "elapsedSeconds": 3.3289095829240978,
+    "torch": "2.14.0"
+  },
+  "result": {
+    "text": " Субтитры создавал DimaTorzok",
+    "segments": [
+      {
+        "start": 123.06,
+        "end": 127.72,
+        "text": " Субтитры создавал DimaTorzok",
+        "seek": 121.0,
+        "tokens": [
+          2933,
+          8893,
+          403,
+          1635,
+          10461,
+          20247,
+          1828,
+          1218,
+          413,
+          4775,
+          51,
+          284,
+          89,
+          453
+        ],
+        "temperature": 0,
+        "avg_logprob": -0.2231740390553194,
+        "compression_ratio": 0.8301886792452831,
+        "no_speech_prob": 8.260354622535715e-10,
+        "words": [
+          {
+            "word": " Субтитры",
+            "start": 123.06,
+            "end": 127.5,
+            "probability": 0.6745280134025962,
+            "tokens": [
+              2933,
+              8893,
+              403,
+              1635,
+              10461
+            ]
+          },
+          {
+            "word": " создавал",
+            "start": 127.5,
+            "end": 127.5,
+            "probability": 0.7477305233478546,
+            "tokens": [
+              20247,
+              1828,
+              1218
+            ]
+          },
+          {
+            "word": " DimaTorzok",
+            "start": 127.5,
+            "end": 127.72,
+            "probability": 0.9990528424580892,
+            "tokens": [
+              413,
+              4775,
+              51,
+              284,
+              89,
+              453
+            ]
+          }
+        ]
+      }
+    ],
+    "language": "ru",
+    "ori_dict": {
+      "text": " Субтитры создавал DimaTorzok",
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0.0,
+          "start": 2.06,
+          "end": 6.72,
+          "text": " Субтитры создавал DimaTorzok",
+          "tokens": [
+            50365,
+            2933,
+            8893,
+            403,
+            1635,
+            10461,
+            20247,
+            1828,
+            1218,
+            413,
+            4775,
+            51,
+            284,
+            89,
+            453,
+            50915
+          ],
+          "temperature": 0,
+          "avg_logprob": -0.2231740390553194,
+          "compression_ratio": 0.8301886792452831,
+          "no_speech_prob": 8.260354622535715e-10,
+          "words": [
+            {
+              "word": " Субтитры",
+              "start": 2.06,
+              "end": 6.5,
+              "probability": 0.6745280134025962,
+              "tokens": [
+                2933,
+                8893,
+                403,
+                1635,
+                10461
+              ]
+            },
+            {
+              "word": " создавал",
+              "start": 6.5,
+              "end": 6.5,
+              "probability": 0.7477305233478546,
+              "tokens": [
+                20247,
+                1828,
+                1218
+              ]
+            },
+            {
+              "word": " DimaTorzok",
+              "start": 6.5,
+              "end": 6.72,
+              "probability": 0.9990528424580892,
+              "tokens": [
+                413,
+                4775,
+                51,
+                284,
+                89,
+                453
+              ]
+            }
+          ]
+        }
+      ],
+      "language": "ru",
+      "time_scale": null
+    },
+    "regroup_history": "",
+    "nonspeech_sections": []
+  }
+}

@@ -1,0 +1,2665 @@
+{
+  "schemaVersion": 1,
+  "status": "Editorial proposals; selected acoustic samples and performed occurrence inventory remain unset",
+  "sourceVideo": "https://www.youtube.com/watch?v=Psp5vt8BwoY",
+  "sourceSha256": "8563f6b817c9b1cc39649363a52486214c691c0d98ae7bb82263021ac7363523",
+  "translationCredit": "Original Russian and English editorial translations prepared for this project; not copied from modern published translations.",
+  "canonicalSources": [
+    {
+      "work": "Ogura Hyakunin Isshu 59",
+      "poet": "赤染衛門",
+      "collection": "後拾遺集 恋二 680",
+      "text": "やすらはで 寝なましものを 小夜更けて 傾くまでの 月を見しかな",
+      "links": [
+        "https://www.karuta.or.jp/karuta-everyday/2911/",
+        "https://www.samac.jp/search/poems_detail.php?id=59",
+        "https://dictionary.sanseido-publ.co.jp/column/waka27",
+        "https://www.meihaku.jp/hyakunin-isshu-kajin/kajin-akazomeemon/"
+      ]
+    },
+    {
+      "work": "Ogura Hyakunin Isshu 30",
+      "poet": "壬生忠岑",
+      "collection": "古今集 恋三 625",
+      "text": "有明の つれなく見えし 別れより 暁ばかり 憂きものはなし",
+      "links": [
+        "https://www.karuta.or.jp/karuta-everyday/2795/",
+        "https://www.samac.jp/search/poems_detail.php?id=30"
+      ]
+    }
+  ],
+  "japaneseTemplates": [
+    {
+      "id": "JP59-01",
+      "sourceLanguage": "ja",
+      "sourceText": "やすらはで 寝なましものを",
+      "sourceUnits": [
+        {
+          "index": 0,
+          "text": "やすらは",
+          "meaning": "linger / hesitate",
+          "selectedSamples": null
+        },
+        {
+          "index": 1,
+          "text": "で",
+          "meaning": "negative connective: without",
+          "selectedSamples": null
+        },
+        {
+          "index": 2,
+          "text": "寝",
+          "meaning": "sleep",
+          "selectedSamples": null
+        },
+        {
+          "index": 3,
+          "text": "な",
+          "meaning": "perfective auxiliary, not negative",
+          "selectedSamples": null
+        },
+        {
+          "index": 4,
+          "text": "まし",
+          "meaning": "counterfactual",
+          "selectedSamples": null
+        },
+        {
+          "index": 5,
+          "text": "ものを",
+          "meaning": "adversative regret",
+          "selectedSamples": null
+        }
+      ],
+      "selectedSamples": null,
+      "lanes": [
+        {
+          "language": "ja",
+          "tokens": [
+            {
+              "text": "やすらは",
+              "sourceIndices": [
+                0
+              ],
+              "rationale": "Original source text; join without spaces inside words."
+            },
+            {
+              "text": "で",
+              "sourceIndices": [
+                1
+              ],
+              "rationale": "Original source text; join without spaces inside words."
+            },
+            {
+              "text": "寝",
+              "sourceIndices": [
+                2
+              ],
+              "rationale": "Original source text; join without spaces inside words."
+            },
+            {
+              "text": "な",
+              "sourceIndices": [
+                3
+              ],
+              "rationale": "Original source text; join without spaces inside words."
+            },
+            {
+              "text": "まし",
+              "sourceIndices": [
+                4
+              ],
+              "rationale": "Original source text; join without spaces inside words."
+            },
+            {
+              "text": "ものを",
+              "sourceIndices": [
+                5
+              ],
+              "rationale": "Original source text; join without spaces inside words."
+            }
+          ]
+        },
+        {
+          "language": "ru",
+          "tokens": [
+            {
+              "text": "Без",
+              "sourceIndices": [
+                1
+              ],
+              "rationale": "Negative connective."
+            },
+            {
+              "text": "промедления",
+              "sourceIndices": [
+                0
+              ],
+              "rationale": "Linger/hesitate as delay."
+            },
+            {
+              "text": "стоило",
+              "sourceIndices": [
+                4,
+                5
+              ],
+              "rationale": "Unrealized retrospective regret."
+            },
+            {
+              "text": "бы",
+              "sourceIndices": [
+                4
+              ],
+              "rationale": "Counterfactual."
+            },
+            {
+              "text": "уснуть",
+              "sourceIndices": [
+                2,
+                3
+              ],
+              "rationale": "Sleep plus completion."
+            },
+            {
+              "text": "— но…",
+              "sourceIndices": [
+                5
+              ],
+              "rationale": "Concessive continuation."
+            }
+          ]
+        },
+        {
+          "language": "en",
+          "tokens": [
+            {
+              "text": "I",
+              "sourceIndices": [
+                2
+              ],
+              "rationale": "Implicit first-person subject of sleeping."
+            },
+            {
+              "text": "should",
+              "sourceIndices": [
+                4,
+                5
+              ],
+              "rationale": "Unrealized retrospective regret."
+            },
+            {
+              "text": "have",
+              "sourceIndices": [
+                3,
+                4
+              ],
+              "rationale": "Perfective counterfactual."
+            },
+            {
+              "text": "gone",
+              "sourceIndices": [
+                2,
+                3
+              ],
+              "rationale": "Gone to sleep is one English rendering of sleeping, not travel."
+            },
+            {
+              "text": "to",
+              "sourceIndices": [
+                2,
+                3
+              ],
+              "rationale": "Required grammar."
+            },
+            {
+              "text": "sleep",
+              "sourceIndices": [
+                2,
+                3
+              ],
+              "rationale": "Sleep plus completion."
+            },
+            {
+              "text": "without",
+              "sourceIndices": [
+                1
+              ],
+              "rationale": "Negative connective."
+            },
+            {
+              "text": "delay",
+              "sourceIndices": [
+                0
+              ],
+              "rationale": "Linger/hesitate."
+            },
+            {
+              "text": "— but…",
+              "sourceIndices": [
+                5
+              ],
+              "rationale": "Adversative continuation."
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Morphological proposal only; merge adjacent suffix units if audio cannot support independent boundaries, remapping all lanes together. Keep counterfactual regret readable into the continuation. な is perfective ぬ, not negation."
+      ]
+    },
+    {
+      "id": "JP59-02",
+      "sourceLanguage": "ja",
+      "sourceText": "小夜更けて",
+      "sourceUnits": [
+        {
+          "index": 0,
+          "text": "小夜",
+          "meaning": "night",
+          "selectedSamples": null
+        },
+        {
+          "index": 1,
+          "text": "更け",
+          "meaning": "grow late/deep",
+          "selectedSamples": null
+        },
+        {
+          "index": 2,
+          "text": "て",
+          "meaning": "continuative",
+          "selectedSamples": null
+        }
+      ],
+      "selectedSamples": null,
+      "lanes": [
+        {
+          "language": "ja",
+          "tokens": [
+            {
+              "text": "小夜",
+              "sourceIndices": [
+                0
+              ],
+              "rationale": "Original source text; join without spaces inside words."
+            },
+            {
+              "text": "更け",
+              "sourceIndices": [
+                1
+              ],
+              "rationale": "Original source text; join without spaces inside words."
+            },
+            {
+              "text": "て",
+              "sourceIndices": [
+                2
+              ],
+              "rationale": "Original source text; join without spaces inside words."
+            }
+          ]
+        },
+        {
+          "language": "ru",
+          "tokens": [
+            {
+              "text": "Ночь",
+              "sourceIndices": [
+                0
+              ],
+              "rationale": "Night; no diminutive."
+            },
+            {
+              "text": "стала",
+              "sourceIndices": [
+                1,
+                2
+              ],
+              "rationale": "Change of state and continuation."
+            },
+            {
+              "text": "глубокой;",
+              "sourceIndices": [
+                1,
+                2
+              ],
+              "rationale": "Night grows late/deep."
+            }
+          ]
+        },
+        {
+          "language": "en",
+          "tokens": [
+            {
+              "text": "The",
+              "sourceIndices": [
+                0
+              ],
+              "rationale": "Article follows night."
+            },
+            {
+              "text": "night",
+              "sourceIndices": [
+                0
+              ],
+              "rationale": "Night."
+            },
+            {
+              "text": "grew",
+              "sourceIndices": [
+                1,
+                2
+              ],
+              "rationale": "Change of state."
+            },
+            {
+              "text": "late;",
+              "sourceIndices": [
+                1,
+                2
+              ],
+              "rationale": "Night grows late."
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "小夜 / さ夜 and 更けて / ふけて are orthographic variants. 小夜 is not little night."
+      ]
+    },
+    {
+      "id": "JP59-03",
+      "sourceLanguage": "ja",
+      "sourceText": "傾くまでの",
+      "sourceUnits": [
+        {
+          "index": 0,
+          "text": "傾く",
+          "meaning": "lower / incline, of moon",
+          "selectedSamples": null
+        },
+        {
+          "index": 1,
+          "text": "まで",
+          "meaning": "until boundary/degree",
+          "selectedSamples": null
+        },
+        {
+          "index": 2,
+          "text": "の",
+          "meaning": "adnominal connection",
+          "selectedSamples": null
+        }
+      ],
+      "selectedSamples": null,
+      "lanes": [
+        {
+          "language": "ja",
+          "tokens": [
+            {
+              "text": "傾く",
+              "sourceIndices": [
+                0
+              ],
+              "rationale": "Original source text; join without spaces inside words."
+            },
+            {
+              "text": "まで",
+              "sourceIndices": [
+                1
+              ],
+              "rationale": "Original source text; join without spaces inside words."
+            },
+            {
+              "text": "の",
+              "sourceIndices": [
+                2
+              ],
+              "rationale": "Original source text; join without spaces inside words."
+            }
+          ]
+        },
+        {
+          "language": "ru",
+          "tokens": [
+            {
+              "text": "пока",
+              "sourceIndices": [
+                1,
+                2
+              ],
+              "rationale": "Until construction."
+            },
+            {
+              "text": "не",
+              "sourceIndices": [
+                1,
+                2
+              ],
+              "rationale": "Russian пока не is until, not a Japanese lexical negative."
+            },
+            {
+              "text": "склонилась",
+              "sourceIndices": [
+                0
+              ],
+              "rationale": "Moon lowering."
+            },
+            {
+              "text": "низко…",
+              "sourceIndices": [
+                0
+              ],
+              "rationale": "Low/setting inclination, without claiming disappearance."
+            }
+          ]
+        },
+        {
+          "language": "en",
+          "tokens": [
+            {
+              "text": "until",
+              "sourceIndices": [
+                1,
+                2
+              ],
+              "rationale": "Boundary and grammatical connection."
+            },
+            {
+              "text": "it",
+              "sourceIndices": [
+                0
+              ],
+              "rationale": "Implicit subject of lowering; the next phrase explicitly supplies the moon."
+            },
+            {
+              "text": "sank",
+              "sourceIndices": [
+                0
+              ],
+              "rationale": "Lower / incline."
+            },
+            {
+              "text": "low…",
+              "sourceIndices": [
+                0
+              ],
+              "rationale": "Not dimming or completed disappearance."
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "This phrase is syntactically incomplete. Preserve reading continuity with 月を見しかな; do not invent sky/west/visitor. Source 傾く / かたぶく are canonical orthographic variants. The classical verb must not be silently replaced by a modern variant."
+      ]
+    },
+    {
+      "id": "JP59-04",
+      "sourceLanguage": "ja",
+      "sourceText": "月を見しかな",
+      "sourceUnits": [
+        {
+          "index": 0,
+          "text": "月",
+          "meaning": "moon",
+          "selectedSamples": null
+        },
+        {
+          "index": 1,
+          "text": "を",
+          "meaning": "object marker",
+          "selectedSamples": null
+        },
+        {
+          "index": 2,
+          "text": "見",
+          "meaning": "see/watch",
+          "selectedSamples": null
+        },
+        {
+          "index": 3,
+          "text": "し",
+          "meaning": "past auxiliary",
+          "selectedSamples": null
+        },
+        {
+          "index": 4,
+          "text": "かな",
+          "meaning": "exclamation",
+          "selectedSamples": null
+        }
+      ],
+      "selectedSamples": null,
+      "lanes": [
+        {
+          "language": "ja",
+          "tokens": [
+            {
+              "text": "月",
+              "sourceIndices": [
+                0
+              ],
+              "rationale": "Original source text; join without spaces inside words."
+            },
+            {
+              "text": "を",
+              "sourceIndices": [
+                1
+              ],
+              "rationale": "Original source text; join without spaces inside words."
+            },
+            {
+              "text": "見",
+              "sourceIndices": [
+                2
+              ],
+              "rationale": "Original source text; join without spaces inside words."
+            },
+            {
+              "text": "し",
+              "sourceIndices": [
+                3
+              ],
+              "rationale": "Original source text; join without spaces inside words."
+            },
+            {
+              "text": "かな",
+              "sourceIndices": [
+                4
+              ],
+              "rationale": "Original source text; join without spaces inside words."
+            }
+          ]
+        },
+        {
+          "language": "ru",
+          "tokens": [
+            {
+              "text": "Ах,",
+              "sourceIndices": [
+                4
+              ],
+              "rationale": "Classical exclamation, not a question."
+            },
+            {
+              "text": "я",
+              "sourceIndices": [
+                2,
+                3
+              ],
+              "rationale": "Implicit first-person subject."
+            },
+            {
+              "text": "смотрел",
+              "sourceIndices": [
+                2,
+                3
+              ],
+              "rationale": "Past watching."
+            },
+            {
+              "text": "на",
+              "sourceIndices": [
+                1
+              ],
+              "rationale": "Required Russian смотреть на grammar."
+            },
+            {
+              "text": "луну.",
+              "sourceIndices": [
+                0,
+                1
+              ],
+              "rationale": "Moon plus its object case."
+            }
+          ]
+        },
+        {
+          "language": "en",
+          "tokens": [
+            {
+              "text": "Ah,",
+              "sourceIndices": [
+                4
+              ],
+              "rationale": "Classical exclamation."
+            },
+            {
+              "text": "I",
+              "sourceIndices": [
+                2,
+                3
+              ],
+              "rationale": "Implicit first-person subject."
+            },
+            {
+              "text": "watched",
+              "sourceIndices": [
+                2,
+                3
+              ],
+              "rationale": "Past watching."
+            },
+            {
+              "text": "the",
+              "sourceIndices": [
+                0
+              ],
+              "rationale": "Article follows moon."
+            },
+            {
+              "text": "moon.",
+              "sourceIndices": [
+                0,
+                1
+              ],
+              "rationale": "Moon plus object ownership."
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Russian past masculine follows the modern song voice convention indicated by исчез/пропавший, not the historical poet; Japanese has no speaker gender here. かな is emphatic rather than I wonder."
+      ]
+    },
+    {
+      "id": "JP30-LOOP-PAIR",
+      "sourceLanguage": "ja",
+      "sourceText": "憂きものはなし 暁ばかり",
+      "sourceUnits": [
+        {
+          "index": 0,
+          "text": "憂き",
+          "meaning": "sorrowful/bitter/painful",
+          "selectedSamples": null
+        },
+        {
+          "index": 1,
+          "text": "もの",
+          "meaning": "thing",
+          "selectedSamples": null
+        },
+        {
+          "index": 2,
+          "text": "は",
+          "meaning": "topic",
+          "selectedSamples": null
+        },
+        {
+          "index": 3,
+          "text": "なし",
+          "meaning": "nonexistence / negative",
+          "selectedSamples": null
+        },
+        {
+          "index": 4,
+          "text": "暁",
+          "meaning": "dawn",
+          "selectedSamples": null
+        },
+        {
+          "index": 5,
+          "text": "ばかり",
+          "meaning": "comparative degree here",
+          "selectedSamples": null
+        }
+      ],
+      "selectedSamples": null,
+      "lanes": [
+        {
+          "language": "ja",
+          "tokens": [
+            {
+              "text": "憂き",
+              "sourceIndices": [
+                0
+              ],
+              "rationale": "Original source text; join without spaces inside words."
+            },
+            {
+              "text": "もの",
+              "sourceIndices": [
+                1
+              ],
+              "rationale": "Original source text; join without spaces inside words."
+            },
+            {
+              "text": "は",
+              "sourceIndices": [
+                2
+              ],
+              "rationale": "Original source text; join without spaces inside words."
+            },
+            {
+              "text": "なし",
+              "sourceIndices": [
+                3
+              ],
+              "rationale": "Original source text; join without spaces inside words."
+            },
+            {
+              "text": "暁",
+              "sourceIndices": [
+                4
+              ],
+              "rationale": "Original source text; join without spaces inside words."
+            },
+            {
+              "text": "ばかり",
+              "sourceIndices": [
+                5
+              ],
+              "rationale": "Original source text; join without spaces inside words."
+            }
+          ]
+        },
+        {
+          "language": "ru",
+          "tokens": [
+            {
+              "text": "Нет",
+              "sourceIndices": [
+                3
+              ],
+              "rationale": "Negative."
+            },
+            {
+              "text": "ничего",
+              "sourceIndices": [
+                1,
+                2,
+                3
+              ],
+              "rationale": "Nothing: thing/topic/negative."
+            },
+            {
+              "text": "горестнее",
+              "sourceIndices": [
+                0,
+                5
+              ],
+              "rationale": "Sorrowful plus comparison; contributor union only."
+            },
+            {
+              "text": "рассвета.",
+              "sourceIndices": [
+                4,
+                5
+              ],
+              "rationale": "Dawn in comparative case."
+            }
+          ]
+        },
+        {
+          "language": "en",
+          "tokens": [
+            {
+              "text": "Nothing",
+              "sourceIndices": [
+                1,
+                2,
+                3
+              ],
+              "rationale": "Thing/topic/negative as nothing."
+            },
+            {
+              "text": "is",
+              "sourceIndices": [
+                0,
+                2
+              ],
+              "rationale": "Required predicate grammar."
+            },
+            {
+              "text": "more",
+              "sourceIndices": [
+                5
+              ],
+              "rationale": "Comparative degree, not only."
+            },
+            {
+              "text": "sorrowful",
+              "sourceIndices": [
+                0
+              ],
+              "rationale": "Sorrowful, not floating."
+            },
+            {
+              "text": "than",
+              "sourceIndices": [
+                5
+              ],
+              "rationale": "Required comparison."
+            },
+            {
+              "text": "dawn.",
+              "sourceIndices": [
+                4
+              ],
+              "rationale": "Dawn, not red moon."
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Candidate reversed excerpt of Hyakunin Isshu 30. Prefer one cue covering the two independently timed subphrases, wrapping after source unit 3 if needed. Canonical order is 暁ばかり憂きものはなし; do not add the unperformed upper stanza. If only one fragment is supported, keep its complement unresolved."
+      ],
+      "sourcePhraseRanges": [
+        {
+          "sourceIndices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "text": "憂きものはなし"
+        },
+        {
+          "sourceIndices": [
+            4,
+            5
+          ],
+          "text": "暁ばかり"
+        }
+      ]
+    }
+  ],
+  "russianReferenceTemplates": [
+    {
+      "id": "RU-REF-01",
+      "sourceLanguage": "ru",
+      "sourceText": "В последний раз, когда",
+      "performanceStatus": "supplied reference only; reconcile actual words and each repeat against audio",
+      "selectedSamples": null,
+      "sourceUnits": [
+        {
+          "index": 0,
+          "text": "В",
+          "selectedSamples": null
+        },
+        {
+          "index": 1,
+          "text": "последний",
+          "selectedSamples": null
+        },
+        {
+          "index": 2,
+          "text": "раз,",
+          "selectedSamples": null
+        },
+        {
+          "index": 3,
+          "text": "когда",
+          "selectedSamples": null
+        }
+      ],
+      "lanes": [
+        {
+          "language": "ru",
+          "tokens": [
+            {
+              "text": "В",
+              "sourceIndices": [
+                0
+              ],
+              "rationale": "Exact supplied source word; attached punctuation has no separate acoustic event."
+            },
+            {
+              "text": "последний",
+              "sourceIndices": [
+                1
+              ],
+              "rationale": "Exact supplied source word; attached punctuation has no separate acoustic event."
+            },
+            {
+              "text": "раз,",
+              "sourceIndices": [
+                2
+              ],
+              "rationale": "Exact supplied source word; attached punctuation has no separate acoustic event."
+            },
+            {
+              "text": "когда",
+              "sourceIndices": [
+                3
+              ],
+              "rationale": "Exact supplied source word; attached punctuation has no separate acoustic event."
+            }
+          ]
+        },
+        {
+          "language": "en",
+          "tokens": [
+            {
+              "text": "The",
+              "sourceIndices": [
+                0,
+                2
+              ],
+              "rationale": "Occasion construction."
+            },
+            {
+              "text": "last",
+              "sourceIndices": [
+                1
+              ],
+              "rationale": "Last."
+            },
+            {
+              "text": "time,",
+              "sourceIndices": [
+                2
+              ],
+              "rationale": "Occasion/time."
+            },
+            {
+              "text": "when",
+              "sourceIndices": [
+                3
+              ],
+              "rationale": "Explicit relative time connective."
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Incomplete opening clause; preserve reading continuity with the next clause."
+      ]
+    },
+    {
+      "id": "RU-REF-02",
+      "sourceLanguage": "ru",
+      "sourceText": "Мой сон не тревожили мысли",
+      "performanceStatus": "supplied reference only; reconcile actual words and each repeat against audio",
+      "selectedSamples": null,
+      "sourceUnits": [
+        {
+          "index": 0,
+          "text": "Мой",
+          "selectedSamples": null
+        },
+        {
+          "index": 1,
+          "text": "сон",
+          "selectedSamples": null
+        },
+        {
+          "index": 2,
+          "text": "не",
+          "selectedSamples": null
+        },
+        {
+          "index": 3,
+          "text": "тревожили",
+          "selectedSamples": null
+        },
+        {
+          "index": 4,
+          "text": "мысли",
+          "selectedSamples": null
+        }
+      ],
+      "lanes": [
+        {
+          "language": "ru",
+          "tokens": [
+            {
+              "text": "Мой",
+              "sourceIndices": [
+                0
+              ],
+              "rationale": "Exact supplied source word; attached punctuation has no separate acoustic event."
+            },
+            {
+              "text": "сон",
+              "sourceIndices": [
+                1
+              ],
+              "rationale": "Exact supplied source word; attached punctuation has no separate acoustic event."
+            },
+            {
+              "text": "не",
+              "sourceIndices": [
+                2
+              ],
+              "rationale": "Exact supplied source word; attached punctuation has no separate acoustic event."
+            },
+            {
+              "text": "тревожили",
+              "sourceIndices": [
+                3
+              ],
+              "rationale": "Exact supplied source word; attached punctuation has no separate acoustic event."
+            },
+            {
+              "text": "мысли",
+              "sourceIndices": [
+                4
+              ],
+              "rationale": "Exact supplied source word; attached punctuation has no separate acoustic event."
+            }
+          ]
+        },
+        {
+          "language": "en",
+          "tokens": [
+            {
+              "text": "thoughts",
+              "sourceIndices": [
+                4
+              ],
+              "rationale": "Explicit subject."
+            },
+            {
+              "text": "did",
+              "sourceIndices": [
+                3
+              ],
+              "rationale": "Past auxiliary completes disturb."
+            },
+            {
+              "text": "not",
+              "sourceIndices": [
+                2
+              ],
+              "rationale": "Explicit negative."
+            },
+            {
+              "text": "disturb",
+              "sourceIndices": [
+                3
+              ],
+              "rationale": "Trouble/disturb."
+            },
+            {
+              "text": "my",
+              "sourceIndices": [
+                0
+              ],
+              "rationale": "Explicit possession."
+            },
+            {
+              "text": "sleep,",
+              "sourceIndices": [
+                1
+              ],
+              "rationale": "Sleep."
+            }
+          ]
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "RU-REF-03",
+      "sourceLanguage": "ru",
+      "sourceText": "Твои руки по волосам",
+      "performanceStatus": "supplied reference only; reconcile actual words and each repeat against audio",
+      "selectedSamples": null,
+      "sourceUnits": [
+        {
+          "index": 0,
+          "text": "Твои",
+          "selectedSamples": null
+        },
+        {
+          "index": 1,
+          "text": "руки",
+          "selectedSamples": null
+        },
+        {
+          "index": 2,
+          "text": "по",
+          "selectedSamples": null
+        },
+        {
+          "index": 3,
+          "text": "волосам",
+          "selectedSamples": null
+        }
+      ],
+      "lanes": [
+        {
+          "language": "ru",
+          "tokens": [
+            {
+              "text": "Твои",
+              "sourceIndices": [
+                0
+              ],
+              "rationale": "Exact supplied source word; attached punctuation has no separate acoustic event."
+            },
+            {
+              "text": "руки",
+              "sourceIndices": [
+                1
+              ],
+              "rationale": "Exact supplied source word; attached punctuation has no separate acoustic event."
+            },
+            {
+              "text": "по",
+              "sourceIndices": [
+                2
+              ],
+              "rationale": "Exact supplied source word; attached punctuation has no separate acoustic event."
+            },
+            {
+              "text": "волосам",
+              "sourceIndices": [
+                3
+              ],
+              "rationale": "Exact supplied source word; attached punctuation has no separate acoustic event."
+            }
+          ]
+        },
+        {
+          "language": "en",
+          "tokens": [
+            {
+              "text": "Your",
+              "sourceIndices": [
+                0
+              ],
+              "rationale": "Explicit second-person possession."
+            },
+            {
+              "text": "hands",
+              "sourceIndices": [
+                1
+              ],
+              "rationale": "Hands."
+            },
+            {
+              "text": "over",
+              "sourceIndices": [
+                2
+              ],
+              "rationale": "Spatial relation, without inserting an action."
+            },
+            {
+              "text": "hair",
+              "sourceIndices": [
+                3
+              ],
+              "rationale": "Hair; possession is unstated."
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "No invented my/her/his, stroking or running. Poetic fragment completes with the next predicate."
+      ]
+    },
+    {
+      "id": "RU-REF-04",
+      "sourceLanguage": "ru",
+      "sourceText": "Утешали меня",
+      "performanceStatus": "supplied reference only; reconcile actual words and each repeat against audio",
+      "selectedSamples": null,
+      "sourceUnits": [
+        {
+          "index": 0,
+          "text": "Утешали",
+          "selectedSamples": null
+        },
+        {
+          "index": 1,
+          "text": "меня",
+          "selectedSamples": null
+        }
+      ],
+      "lanes": [
+        {
+          "language": "ru",
+          "tokens": [
+            {
+              "text": "Утешали",
+              "sourceIndices": [
+                0
+              ],
+              "rationale": "Exact supplied source word; attached punctuation has no separate acoustic event."
+            },
+            {
+              "text": "меня",
+              "sourceIndices": [
+                1
+              ],
+              "rationale": "Exact supplied source word; attached punctuation has no separate acoustic event."
+            }
+          ]
+        },
+        {
+          "language": "en",
+          "tokens": [
+            {
+              "text": "comforted",
+              "sourceIndices": [
+                0
+              ],
+              "rationale": "Past comforting."
+            },
+            {
+              "text": "me.",
+              "sourceIndices": [
+                1
+              ],
+              "rationale": "Explicit object."
+            }
+          ]
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "RU-REF-05",
+      "sourceLanguage": "ru",
+      "sourceText": "Мне осталось лишь гадать",
+      "performanceStatus": "supplied reference only; reconcile actual words and each repeat against audio",
+      "selectedSamples": null,
+      "sourceUnits": [
+        {
+          "index": 0,
+          "text": "Мне",
+          "selectedSamples": null
+        },
+        {
+          "index": 1,
+          "text": "осталось",
+          "selectedSamples": null
+        },
+        {
+          "index": 2,
+          "text": "лишь",
+          "selectedSamples": null
+        },
+        {
+          "index": 3,
+          "text": "гадать",
+          "selectedSamples": null
+        }
+      ],
+      "lanes": [
+        {
+          "language": "ru",
+          "tokens": [
+            {
+              "text": "Мне",
+              "sourceIndices": [
+                0
+              ],
+              "rationale": "Exact supplied source word; attached punctuation has no separate acoustic event."
+            },
+            {
+              "text": "осталось",
+              "sourceIndices": [
+                1
+              ],
+              "rationale": "Exact supplied source word; attached punctuation has no separate acoustic event."
+            },
+            {
+              "text": "лишь",
+              "sourceIndices": [
+                2
+              ],
+              "rationale": "Exact supplied source word; attached punctuation has no separate acoustic event."
+            },
+            {
+              "text": "гадать",
+              "sourceIndices": [
+                3
+              ],
+              "rationale": "Exact supplied source word; attached punctuation has no separate acoustic event."
+            }
+          ]
+        },
+        {
+          "language": "en",
+          "tokens": [
+            {
+              "text": "I’m",
+              "sourceIndices": [
+                0,
+                1
+              ],
+              "rationale": "Experiencer plus remaining-state grammar."
+            },
+            {
+              "text": "left",
+              "sourceIndices": [
+                1
+              ],
+              "rationale": "What remains."
+            },
+            {
+              "text": "only",
+              "sourceIndices": [
+                2
+              ],
+              "rationale": "Restrictive particle."
+            },
+            {
+              "text": "to",
+              "sourceIndices": [
+                3
+              ],
+              "rationale": "Required infinitive."
+            },
+            {
+              "text": "guess.",
+              "sourceIndices": [
+                3
+              ],
+              "rationale": "Guess/speculate; object stays unset."
+            }
+          ]
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "RU-REF-06",
+      "sourceLanguage": "ru",
+      "sourceText": "Без конца наблюдать за луною",
+      "performanceStatus": "supplied reference only; reconcile actual words and each repeat against audio",
+      "selectedSamples": null,
+      "sourceUnits": [
+        {
+          "index": 0,
+          "text": "Без",
+          "selectedSamples": null
+        },
+        {
+          "index": 1,
+          "text": "конца",
+          "selectedSamples": null
+        },
+        {
+          "index": 2,
+          "text": "наблюдать",
+          "selectedSamples": null
+        },
+        {
+          "index": 3,
+          "text": "за",
+          "selectedSamples": null
+        },
+        {
+          "index": 4,
+          "text": "луною",
+          "selectedSamples": null
+        }
+      ],
+      "lanes": [
+        {
+          "language": "ru",
+          "tokens": [
+            {
+              "text": "Без",
+              "sourceIndices": [
+                0
+              ],
+              "rationale": "Exact supplied source word; attached punctuation has no separate acoustic event."
+            },
+            {
+              "text": "конца",
+              "sourceIndices": [
+                1
+              ],
+              "rationale": "Exact supplied source word; attached punctuation has no separate acoustic event."
+            },
+            {
+              "text": "наблюдать",
+              "sourceIndices": [
+                2
+              ],
+              "rationale": "Exact supplied source word; attached punctuation has no separate acoustic event."
+            },
+            {
+              "text": "за",
+              "sourceIndices": [
+                3
+              ],
+              "rationale": "Exact supplied source word; attached punctuation has no separate acoustic event."
+            },
+            {
+              "text": "луною",
+              "sourceIndices": [
+                4
+              ],
+              "rationale": "Exact supplied source word; attached punctuation has no separate acoustic event."
+            }
+          ]
+        },
+        {
+          "language": "en",
+          "tokens": [
+            {
+              "text": "To",
+              "sourceIndices": [
+                2
+              ],
+              "rationale": "Infinitive grammar."
+            },
+            {
+              "text": "watch",
+              "sourceIndices": [
+                2
+              ],
+              "rationale": "Observe/watch."
+            },
+            {
+              "text": "the",
+              "sourceIndices": [
+                4
+              ],
+              "rationale": "Article follows moon."
+            },
+            {
+              "text": "moon",
+              "sourceIndices": [
+                3,
+                4
+              ],
+              "rationale": "за selects the observing object."
+            },
+            {
+              "text": "without",
+              "sourceIndices": [
+                0
+              ],
+              "rationale": "Without."
+            },
+            {
+              "text": "end.",
+              "sourceIndices": [
+                1
+              ],
+              "rationale": "End."
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "за луною is the object of наблюдать here, not beyond the moon."
+      ]
+    },
+    {
+      "id": "RU-REF-07",
+      "sourceLanguage": "ru",
+      "sourceText": "Осталось лишь желать",
+      "performanceStatus": "supplied reference only; reconcile actual words and each repeat against audio",
+      "selectedSamples": null,
+      "sourceUnits": [
+        {
+          "index": 0,
+          "text": "Осталось",
+          "selectedSamples": null
+        },
+        {
+          "index": 1,
+          "text": "лишь",
+          "selectedSamples": null
+        },
+        {
+          "index": 2,
+          "text": "желать",
+          "selectedSamples": null
+        }
+      ],
+      "lanes": [
+        {
+          "language": "ru",
+          "tokens": [
+            {
+              "text": "Осталось",
+              "sourceIndices": [
+                0
+              ],
+              "rationale": "Exact supplied source word; attached punctuation has no separate acoustic event."
+            },
+            {
+              "text": "лишь",
+              "sourceIndices": [
+                1
+              ],
+              "rationale": "Exact supplied source word; attached punctuation has no separate acoustic event."
+            },
+            {
+              "text": "желать",
+              "sourceIndices": [
+                2
+              ],
+              "rationale": "Exact supplied source word; attached punctuation has no separate acoustic event."
+            }
+          ]
+        },
+        {
+          "language": "en",
+          "tokens": [
+            {
+              "text": "All",
+              "sourceIndices": [
+                0,
+                1
+              ],
+              "rationale": "Only what remains; no invented object."
+            },
+            {
+              "text": "that",
+              "sourceIndices": [
+                0
+              ],
+              "rationale": "Relative grammar."
+            },
+            {
+              "text": "remains",
+              "sourceIndices": [
+                0
+              ],
+              "rationale": "Remains."
+            },
+            {
+              "text": "is",
+              "sourceIndices": [
+                0
+              ],
+              "rationale": "Required English construction."
+            },
+            {
+              "text": "to",
+              "sourceIndices": [
+                2
+              ],
+              "rationale": "Infinitive grammar."
+            },
+            {
+              "text": "wish",
+              "sourceIndices": [
+                2
+              ],
+              "rationale": "Desire, with object deferred."
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Keep paired reading continuity into the following explicit gaze phrase."
+      ]
+    },
+    {
+      "id": "RU-REF-08",
+      "sourceLanguage": "ru",
+      "sourceText": "Твоего взора за луною",
+      "performanceStatus": "supplied reference only; reconcile actual words and each repeat against audio",
+      "selectedSamples": null,
+      "sourceUnits": [
+        {
+          "index": 0,
+          "text": "Твоего",
+          "selectedSamples": null
+        },
+        {
+          "index": 1,
+          "text": "взора",
+          "selectedSamples": null
+        },
+        {
+          "index": 2,
+          "text": "за",
+          "selectedSamples": null
+        },
+        {
+          "index": 3,
+          "text": "луною",
+          "selectedSamples": null
+        }
+      ],
+      "lanes": [
+        {
+          "language": "ru",
+          "tokens": [
+            {
+              "text": "Твоего",
+              "sourceIndices": [
+                0
+              ],
+              "rationale": "Exact supplied source word; attached punctuation has no separate acoustic event."
+            },
+            {
+              "text": "взора",
+              "sourceIndices": [
+                1
+              ],
+              "rationale": "Exact supplied source word; attached punctuation has no separate acoustic event."
+            },
+            {
+              "text": "за",
+              "sourceIndices": [
+                2
+              ],
+              "rationale": "Exact supplied source word; attached punctuation has no separate acoustic event."
+            },
+            {
+              "text": "луною",
+              "sourceIndices": [
+                3
+              ],
+              "rationale": "Exact supplied source word; attached punctuation has no separate acoustic event."
+            }
+          ]
+        },
+        {
+          "language": "en",
+          "tokens": [
+            {
+              "text": "for",
+              "sourceIndices": [
+                1
+              ],
+              "rationale": "Required complement of wish; belongs to explicit gaze."
+            },
+            {
+              "text": "your",
+              "sourceIndices": [
+                0
+              ],
+              "rationale": "Explicit possession."
+            },
+            {
+              "text": "gaze",
+              "sourceIndices": [
+                1
+              ],
+              "rationale": "Gaze; not invented eye contact."
+            },
+            {
+              "text": "beyond",
+              "sourceIndices": [
+                2
+              ],
+              "rationale": "Conservative spatial reading of this noun phrase."
+            },
+            {
+              "text": "the",
+              "sourceIndices": [
+                3
+              ],
+              "rationale": "Article follows moon."
+            },
+            {
+              "text": "moon.",
+              "sourceIndices": [
+                3
+              ],
+              "rationale": "Moon."
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "The phrase is ambiguous between a spatial gaze beyond the moon and a gaze following the moon. Beyond is the conservative default proposal; do not add looking at me or watching over me."
+      ]
+    },
+    {
+      "id": "RU-REF-09",
+      "sourceLanguage": "ru",
+      "sourceText": "В темную ночь",
+      "performanceStatus": "supplied reference only; reconcile actual words and each repeat against audio",
+      "selectedSamples": null,
+      "sourceUnits": [
+        {
+          "index": 0,
+          "text": "В",
+          "selectedSamples": null
+        },
+        {
+          "index": 1,
+          "text": "темную",
+          "selectedSamples": null
+        },
+        {
+          "index": 2,
+          "text": "ночь",
+          "selectedSamples": null
+        }
+      ],
+      "lanes": [
+        {
+          "language": "ru",
+          "tokens": [
+            {
+              "text": "В",
+              "sourceIndices": [
+                0
+              ],
+              "rationale": "Exact supplied source word; attached punctuation has no separate acoustic event."
+            },
+            {
+              "text": "темную",
+              "sourceIndices": [
+                1
+              ],
+              "rationale": "Exact supplied source word; attached punctuation has no separate acoustic event."
+            },
+            {
+              "text": "ночь",
+              "sourceIndices": [
+                2
+              ],
+              "rationale": "Exact supplied source word; attached punctuation has no separate acoustic event."
+            }
+          ]
+        },
+        {
+          "language": "en",
+          "tokens": [
+            {
+              "text": "In",
+              "sourceIndices": [
+                0
+              ],
+              "rationale": "Temporal preposition."
+            },
+            {
+              "text": "the",
+              "sourceIndices": [
+                2
+              ],
+              "rationale": "Article follows night."
+            },
+            {
+              "text": "dark",
+              "sourceIndices": [
+                1
+              ],
+              "rationale": "Dark."
+            },
+            {
+              "text": "night.",
+              "sourceIndices": [
+                2
+              ],
+              "rationale": "Night."
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Temporal in is the neutral default; do not add movement into the night. Orthographic ё normalization may be handled separately."
+      ]
+    },
+    {
+      "id": "RU-REF-10",
+      "sourceLanguage": "ru",
+      "sourceText": "В темную ночь, ночь",
+      "performanceStatus": "supplied reference only; reconcile actual words and each repeat against audio",
+      "selectedSamples": null,
+      "sourceUnits": [
+        {
+          "index": 0,
+          "text": "В",
+          "selectedSamples": null
+        },
+        {
+          "index": 1,
+          "text": "темную",
+          "selectedSamples": null
+        },
+        {
+          "index": 2,
+          "text": "ночь,",
+          "selectedSamples": null
+        },
+        {
+          "index": 3,
+          "text": "ночь",
+          "selectedSamples": null
+        }
+      ],
+      "lanes": [
+        {
+          "language": "ru",
+          "tokens": [
+            {
+              "text": "В",
+              "sourceIndices": [
+                0
+              ],
+              "rationale": "Exact supplied source word; attached punctuation has no separate acoustic event."
+            },
+            {
+              "text": "темную",
+              "sourceIndices": [
+                1
+              ],
+              "rationale": "Exact supplied source word; attached punctuation has no separate acoustic event."
+            },
+            {
+              "text": "ночь,",
+              "sourceIndices": [
+                2
+              ],
+              "rationale": "Exact supplied source word; attached punctuation has no separate acoustic event."
+            },
+            {
+              "text": "ночь",
+              "sourceIndices": [
+                3
+              ],
+              "rationale": "Exact supplied source word; attached punctuation has no separate acoustic event."
+            }
+          ]
+        },
+        {
+          "language": "en",
+          "tokens": [
+            {
+              "text": "In",
+              "sourceIndices": [
+                0
+              ],
+              "rationale": "Temporal preposition."
+            },
+            {
+              "text": "the",
+              "sourceIndices": [
+                2
+              ],
+              "rationale": "Article belongs to first night."
+            },
+            {
+              "text": "dark",
+              "sourceIndices": [
+                1
+              ],
+              "rationale": "Dark."
+            },
+            {
+              "text": "night,",
+              "sourceIndices": [
+                2
+              ],
+              "rationale": "First source night."
+            },
+            {
+              "text": "night.",
+              "sourceIndices": [
+                3
+              ],
+              "rationale": "Independently repeated source night."
+            }
+          ]
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "RU-REF-11",
+      "sourceLanguage": "ru",
+      "sourceText": "Такое чувство, что меня нет",
+      "performanceStatus": "supplied reference only; reconcile actual words and each repeat against audio",
+      "selectedSamples": null,
+      "sourceUnits": [
+        {
+          "index": 0,
+          "text": "Такое",
+          "selectedSamples": null
+        },
+        {
+          "index": 1,
+          "text": "чувство,",
+          "selectedSamples": null
+        },
+        {
+          "index": 2,
+          "text": "что",
+          "selectedSamples": null
+        },
+        {
+          "index": 3,
+          "text": "меня",
+          "selectedSamples": null
+        },
+        {
+          "index": 4,
+          "text": "нет",
+          "selectedSamples": null
+        }
+      ],
+      "lanes": [
+        {
+          "language": "ru",
+          "tokens": [
+            {
+              "text": "Такое",
+              "sourceIndices": [
+                0
+              ],
+              "rationale": "Exact supplied source word; attached punctuation has no separate acoustic event."
+            },
+            {
+              "text": "чувство,",
+              "sourceIndices": [
+                1
+              ],
+              "rationale": "Exact supplied source word; attached punctuation has no separate acoustic event."
+            },
+            {
+              "text": "что",
+              "sourceIndices": [
+                2
+              ],
+              "rationale": "Exact supplied source word; attached punctuation has no separate acoustic event."
+            },
+            {
+              "text": "меня",
+              "sourceIndices": [
+                3
+              ],
+              "rationale": "Exact supplied source word; attached punctuation has no separate acoustic event."
+            },
+            {
+              "text": "нет",
+              "sourceIndices": [
+                4
+              ],
+              "rationale": "Exact supplied source word; attached punctuation has no separate acoustic event."
+            }
+          ]
+        },
+        {
+          "language": "en",
+          "tokens": [
+            {
+              "text": "It",
+              "sourceIndices": [
+                0,
+                1
+              ],
+              "rationale": "Required impersonal construction."
+            },
+            {
+              "text": "feels",
+              "sourceIndices": [
+                1
+              ],
+              "rationale": "Feeling."
+            },
+            {
+              "text": "as",
+              "sourceIndices": [
+                0,
+                2
+              ],
+              "rationale": "Такое чувство, что as feels as though."
+            },
+            {
+              "text": "though",
+              "sourceIndices": [
+                0,
+                2
+              ],
+              "rationale": "Complement construction."
+            },
+            {
+              "text": "I",
+              "sourceIndices": [
+                3
+              ],
+              "rationale": "First-person experiencer."
+            },
+            {
+              "text": "don’t",
+              "sourceIndices": [
+                4
+              ],
+              "rationale": "Negative nonexistence."
+            },
+            {
+              "text": "exist.",
+              "sourceIndices": [
+                4
+              ],
+              "rationale": "Nonexistence; no invented location such as here."
+            }
+          ]
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "RU-REF-12",
+      "sourceLanguage": "ru",
+      "sourceText": "Что я исчез",
+      "performanceStatus": "supplied reference only; reconcile actual words and each repeat against audio",
+      "selectedSamples": null,
+      "sourceUnits": [
+        {
+          "index": 0,
+          "text": "Что",
+          "selectedSamples": null
+        },
+        {
+          "index": 1,
+          "text": "я",
+          "selectedSamples": null
+        },
+        {
+          "index": 2,
+          "text": "исчез",
+          "selectedSamples": null
+        }
+      ],
+      "lanes": [
+        {
+          "language": "ru",
+          "tokens": [
+            {
+              "text": "Что",
+              "sourceIndices": [
+                0
+              ],
+              "rationale": "Exact supplied source word; attached punctuation has no separate acoustic event."
+            },
+            {
+              "text": "я",
+              "sourceIndices": [
+                1
+              ],
+              "rationale": "Exact supplied source word; attached punctuation has no separate acoustic event."
+            },
+            {
+              "text": "исчез",
+              "sourceIndices": [
+                2
+              ],
+              "rationale": "Exact supplied source word; attached punctuation has no separate acoustic event."
+            }
+          ]
+        },
+        {
+          "language": "en",
+          "tokens": [
+            {
+              "text": "As",
+              "sourceIndices": [
+                0
+              ],
+              "rationale": "Continuation of preceding feeling/complement."
+            },
+            {
+              "text": "though",
+              "sourceIndices": [
+                0
+              ],
+              "rationale": "Complement connective."
+            },
+            {
+              "text": "I",
+              "sourceIndices": [
+                1
+              ],
+              "rationale": "Explicit speaker."
+            },
+            {
+              "text": "vanished.",
+              "sourceIndices": [
+                2
+              ],
+              "rationale": "Past disappearance."
+            }
+          ]
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "RU-REF-13",
+      "sourceLanguage": "ru",
+      "sourceText": "Я теперь для всех пропавший человек",
+      "performanceStatus": "supplied reference only; reconcile actual words and each repeat against audio",
+      "selectedSamples": null,
+      "sourceUnits": [
+        {
+          "index": 0,
+          "text": "Я",
+          "selectedSamples": null
+        },
+        {
+          "index": 1,
+          "text": "теперь",
+          "selectedSamples": null
+        },
+        {
+          "index": 2,
+          "text": "для",
+          "selectedSamples": null
+        },
+        {
+          "index": 3,
+          "text": "всех",
+          "selectedSamples": null
+        },
+        {
+          "index": 4,
+          "text": "пропавший",
+          "selectedSamples": null
+        },
+        {
+          "index": 5,
+          "text": "человек",
+          "selectedSamples": null
+        }
+      ],
+      "lanes": [
+        {
+          "language": "ru",
+          "tokens": [
+            {
+              "text": "Я",
+              "sourceIndices": [
+                0
+              ],
+              "rationale": "Exact supplied source word; attached punctuation has no separate acoustic event."
+            },
+            {
+              "text": "теперь",
+              "sourceIndices": [
+                1
+              ],
+              "rationale": "Exact supplied source word; attached punctuation has no separate acoustic event."
+            },
+            {
+              "text": "для",
+              "sourceIndices": [
+                2
+              ],
+              "rationale": "Exact supplied source word; attached punctuation has no separate acoustic event."
+            },
+            {
+              "text": "всех",
+              "sourceIndices": [
+                3
+              ],
+              "rationale": "Exact supplied source word; attached punctuation has no separate acoustic event."
+            },
+            {
+              "text": "пропавший",
+              "sourceIndices": [
+                4
+              ],
+              "rationale": "Exact supplied source word; attached punctuation has no separate acoustic event."
+            },
+            {
+              "text": "человек",
+              "sourceIndices": [
+                5
+              ],
+              "rationale": "Exact supplied source word; attached punctuation has no separate acoustic event."
+            }
+          ]
+        },
+        {
+          "language": "en",
+          "tokens": [
+            {
+              "text": "Now",
+              "sourceIndices": [
+                1
+              ],
+              "rationale": "Now."
+            },
+            {
+              "text": "I’m",
+              "sourceIndices": [
+                0,
+                5
+              ],
+              "rationale": "Speaker plus necessary nominal predicate grammar."
+            },
+            {
+              "text": "a",
+              "sourceIndices": [
+                5
+              ],
+              "rationale": "Article follows person."
+            },
+            {
+              "text": "missing",
+              "sourceIndices": [
+                4
+              ],
+              "rationale": "Missing."
+            },
+            {
+              "text": "person",
+              "sourceIndices": [
+                5
+              ],
+              "rationale": "Person."
+            },
+            {
+              "text": "to",
+              "sourceIndices": [
+                2
+              ],
+              "rationale": "Relation to others."
+            },
+            {
+              "text": "everyone.",
+              "sourceIndices": [
+                3
+              ],
+              "rationale": "Everyone."
+            }
+          ]
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "RU-REF-14",
+      "sourceLanguage": "ru",
+      "sourceText": "Я исчез",
+      "performanceStatus": "supplied reference only; reconcile actual words and each repeat against audio",
+      "selectedSamples": null,
+      "sourceUnits": [
+        {
+          "index": 0,
+          "text": "Я",
+          "selectedSamples": null
+        },
+        {
+          "index": 1,
+          "text": "исчез",
+          "selectedSamples": null
+        }
+      ],
+      "lanes": [
+        {
+          "language": "ru",
+          "tokens": [
+            {
+              "text": "Я",
+              "sourceIndices": [
+                0
+              ],
+              "rationale": "Exact supplied source word; attached punctuation has no separate acoustic event."
+            },
+            {
+              "text": "исчез",
+              "sourceIndices": [
+                1
+              ],
+              "rationale": "Exact supplied source word; attached punctuation has no separate acoustic event."
+            }
+          ]
+        },
+        {
+          "language": "en",
+          "tokens": [
+            {
+              "text": "I",
+              "sourceIndices": [
+                0
+              ],
+              "rationale": "Explicit speaker."
+            },
+            {
+              "text": "vanished.",
+              "sourceIndices": [
+                1
+              ],
+              "rationale": "Past disappearance."
+            }
+          ]
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "japaneseCompositeTemplates": [
+    {
+      "id": "JP59-03-04",
+      "sourceLanguage": "ja",
+      "sourceText": "傾くまでの 月を見しかな",
+      "constituentTemplates": [
+        "JP59-03",
+        "JP59-04"
+      ],
+      "constituentSourceOffsets": [
+        0,
+        3
+      ],
+      "sourceUnits": [
+        {
+          "index": 0,
+          "text": "傾く",
+          "meaning": "lower / incline, of moon",
+          "selectedSamples": null
+        },
+        {
+          "index": 1,
+          "text": "まで",
+          "meaning": "until boundary/degree",
+          "selectedSamples": null
+        },
+        {
+          "index": 2,
+          "text": "の",
+          "meaning": "adnominal connection",
+          "selectedSamples": null
+        },
+        {
+          "index": 3,
+          "text": "月",
+          "meaning": "moon",
+          "selectedSamples": null
+        },
+        {
+          "index": 4,
+          "text": "を",
+          "meaning": "object marker",
+          "selectedSamples": null
+        },
+        {
+          "index": 5,
+          "text": "見",
+          "meaning": "see/watch",
+          "selectedSamples": null
+        },
+        {
+          "index": 6,
+          "text": "し",
+          "meaning": "past auxiliary",
+          "selectedSamples": null
+        },
+        {
+          "index": 7,
+          "text": "かな",
+          "meaning": "exclamation",
+          "selectedSamples": null
+        }
+      ],
+      "selectedSamples": null,
+      "lanes": [
+        {
+          "language": "ja",
+          "tokens": [
+            {
+              "text": "傾く",
+              "sourceIndices": [
+                0
+              ],
+              "rationale": "Original source unit; independent timing from its constituent phrase."
+            },
+            {
+              "text": "まで",
+              "sourceIndices": [
+                1
+              ],
+              "rationale": "Original source unit; independent timing from its constituent phrase."
+            },
+            {
+              "text": "の",
+              "sourceIndices": [
+                2
+              ],
+              "rationale": "Original source unit; independent timing from its constituent phrase."
+            },
+            {
+              "text": "月",
+              "sourceIndices": [
+                3
+              ],
+              "rationale": "Original source unit; independent timing from its constituent phrase."
+            },
+            {
+              "text": "を",
+              "sourceIndices": [
+                4
+              ],
+              "rationale": "Original source unit; independent timing from its constituent phrase."
+            },
+            {
+              "text": "見",
+              "sourceIndices": [
+                5
+              ],
+              "rationale": "Original source unit; independent timing from its constituent phrase."
+            },
+            {
+              "text": "し",
+              "sourceIndices": [
+                6
+              ],
+              "rationale": "Original source unit; independent timing from its constituent phrase."
+            },
+            {
+              "text": "かな",
+              "sourceIndices": [
+                7
+              ],
+              "rationale": "Original source unit; independent timing from its constituent phrase."
+            }
+          ]
+        },
+        {
+          "language": "ru",
+          "tokens": [
+            {
+              "text": "Ах,",
+              "sourceIndices": [
+                7
+              ],
+              "rationale": "Classical exclamation."
+            },
+            {
+              "text": "я",
+              "sourceIndices": [
+                5,
+                6
+              ],
+              "rationale": "Implicit first-person subject of past watching."
+            },
+            {
+              "text": "смотрел",
+              "sourceIndices": [
+                5,
+                6
+              ],
+              "rationale": "Past watching."
+            },
+            {
+              "text": "на",
+              "sourceIndices": [
+                4
+              ],
+              "rationale": "Russian object grammar."
+            },
+            {
+              "text": "луну,",
+              "sourceIndices": [
+                3,
+                4
+              ],
+              "rationale": "Explicit moon and object case."
+            },
+            {
+              "text": "пока",
+              "sourceIndices": [
+                1,
+                2
+              ],
+              "rationale": "Until construction."
+            },
+            {
+              "text": "она",
+              "sourceIndices": [
+                0,
+                3
+              ],
+              "rationale": "Lowering subject supplied by the explicit moon; contributor union."
+            },
+            {
+              "text": "не",
+              "sourceIndices": [
+                1,
+                2
+              ],
+              "rationale": "Russian пока не construction, not source negative."
+            },
+            {
+              "text": "склонилась",
+              "sourceIndices": [
+                0
+              ],
+              "rationale": "Moon lowering."
+            },
+            {
+              "text": "низко.",
+              "sourceIndices": [
+                0
+              ],
+              "rationale": "Low/setting inclination."
+            }
+          ]
+        },
+        {
+          "language": "en",
+          "tokens": [
+            {
+              "text": "Ah,",
+              "sourceIndices": [
+                7
+              ],
+              "rationale": "Classical exclamation."
+            },
+            {
+              "text": "I",
+              "sourceIndices": [
+                5,
+                6
+              ],
+              "rationale": "Implicit first-person subject."
+            },
+            {
+              "text": "watched",
+              "sourceIndices": [
+                5,
+                6
+              ],
+              "rationale": "Past watching."
+            },
+            {
+              "text": "the",
+              "sourceIndices": [
+                3
+              ],
+              "rationale": "Article belongs to explicit moon."
+            },
+            {
+              "text": "moon",
+              "sourceIndices": [
+                3,
+                4
+              ],
+              "rationale": "Moon and object relation."
+            },
+            {
+              "text": "until",
+              "sourceIndices": [
+                1,
+                2
+              ],
+              "rationale": "Boundary and linking grammar."
+            },
+            {
+              "text": "it",
+              "sourceIndices": [
+                0,
+                3
+              ],
+              "rationale": "Explicit moon is the lowering subject; contributor union."
+            },
+            {
+              "text": "sank",
+              "sourceIndices": [
+                0
+              ],
+              "rationale": "Lowering."
+            },
+            {
+              "text": "low.",
+              "sourceIndices": [
+                0
+              ],
+              "rationale": "Setting direction, not disappearance."
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "Optional display group joining two independently timed phrases. This does not change selected source timing or copy boundaries between occurrences.",
+        "Keep natural translated order stable; activate contributor unions, including pronouns and case grammar, without highlighting intervening unrelated source units."
+      ]
+    }
+  ],
+  "performedOccurrences": [],
+  "unresolvedInventory": [
+    {
+      "rangeSeconds": [
+        0,
+        20.5
+      ],
+      "status": "Unprompted ASR produces 音楽 or empty; neither is established performed wording."
+    },
+    {
+      "rangeSeconds": [
+        20.3,
+        38
+      ],
+      "status": "ASR phonetic shapes are compatible with poem 30 fragments but orthography and word divisions are wrong. Candidate wording is available; audio coordinator must independently reconcile words, repeat counts and boundaries."
+    },
+    {
+      "rangeSeconds": [
+        38,
+        85
+      ],
+      "status": "Unprompted main-section large/small checkpoints contain recognizable poem 59 shapes around 49.1–65.5 and 65.8–84.4 s, with classical-word substitutions. The 38–48 s entrance remains lexically uncertain. These observations are not selected timing, listening evidence or a final performed count."
+    },
+    {
+      "rangeSeconds": [
+        221,
+        239
+      ],
+      "status": "Mixed Russian night and candidate poem 30 response. Original-mix models disagree substantially; vocal-stem output is a stock hallucination. This is not listening evidence."
+    }
+  ],
+  "mappingContract": {
+    "sourceIndices": "Zero-based and local to each template. Remap when splitting/merging templates or acoustically merging adjacent units.",
+    "intervalRule": "Activate union of contributor events, never enclosing min/max hold across unrelated words or true gaps.",
+    "unitGranularity": "Lexical/morphological editorial candidates are not selected acoustic boundaries. Group adjacent suffixes only when the recording supports one indivisible inflected word and document that rationale.",
+    "punctuation": "Attached display punctuation has no independent source event. Japanese tokens concatenate without spaces within words.",
+    "repeatRule": "Review every performed repeat independently.",
+    "readingLifetime": "Separate source-word body, bounded soft carry, neutral reading hold and decorative tail. First active word frame is fully opaque.",
+    "referencePolicy": "Keep user-reference.txt unchanged; classical sources establish text/meaning, not what is performed."
+  },
+  "layoutContract": {
+    "japaneseSections": [
+      "ja",
+      "ru",
+      "en"
+    ],
+    "russianSections": [
+      "ru",
+      "en"
+    ],
+    "pronunciationAid": "none",
+    "emphasis": "Equal perceived size, weight, rest/active contrast and synchronization precision in all visible lanes. Stable color-only focus.",
+    "longLines": "Reflow the whole lane group instead of shrinking or dimming one translation.",
+    "fontReview": "Real Japanese coverage and visually compatible Cyrillic/Latin face; inspect baseline, glyph completeness and realistic mobile size.",
+    "pictureReview": "Complete original picture and every intended layer visible after startup, seek and format change; audio advance alone is insufficient.",
+    "renderGate": "Preview-only authorization; current synchronization review and render approval remain separate and unset."
+  }
+}

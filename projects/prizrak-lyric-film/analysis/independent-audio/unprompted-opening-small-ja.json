@@ -1,0 +1,389 @@
+{
+  "schemaVersion": 1,
+  "status": "unprompted ASR lexical/timing observation; not listening attestation or selected timing",
+  "sourceSha256": "8563f6b817c9b1cc39649363a52486214c691c0d98ae7bb82263021ac7363523",
+  "method": {
+    "model": "small",
+    "modelFamily": "OpenAI Whisper",
+    "checkpointSha256": "9ecf779972d90ba49c06d968637d720dd632c55bbf19d441fb42bf17a411e794",
+    "implementation": "stable-ts 2.19.1",
+    "language": "ja",
+    "conditioningText": null,
+    "initialPrompt": null,
+    "conditionOnPreviousText": false,
+    "suppressSilence": false,
+    "originalSourceZeroPreserved": true,
+    "sourceCropStartSample16000": 0,
+    "sourceCropEndSample16000": 616000,
+    "cropStartSeconds": 0.0,
+    "cropEndSeconds": 38.5,
+    "humanListening": false,
+    "elapsedSeconds": 1.8439520420506597,
+    "torch": "2.14.0"
+  },
+  "result": {
+    "text": "BGMウキモの話 暗くつきばかり",
+    "segments": [
+      {
+        "start": 3.68,
+        "end": 10.7,
+        "text": "BGM",
+        "seek": 0.0,
+        "tokens": [
+          33,
+          25152
+        ],
+        "temperature": 0,
+        "avg_logprob": -1.8948198954264324,
+        "compression_ratio": 0.2727272727272727,
+        "no_speech_prob": 0.3494965136051178,
+        "words": [
+          {
+            "word": "B",
+            "start": 3.68,
+            "end": 10.64,
+            "probability": 0.0020184949971735477,
+            "tokens": [
+              33
+            ]
+          },
+          {
+            "word": "GM",
+            "start": 10.64,
+            "end": 10.7,
+            "probability": 0.07891084253787994,
+            "tokens": [
+              25152
+            ]
+          }
+        ]
+      },
+      {
+        "start": 20.36,
+        "end": 28.84,
+        "text": "ウキモの話 暗くつきばかり",
+        "seek": 20.0,
+        "tokens": [
+          20745,
+          15535,
+          29183,
+          2972,
+          11103,
+          220,
+          23826,
+          245,
+          6134,
+          9335,
+          7016,
+          13349,
+          3703,
+          5095
+        ],
+        "temperature": 0,
+        "avg_logprob": -0.6741331324857824,
+        "compression_ratio": 0.7708333333333334,
+        "no_speech_prob": 0.0018975724233314395,
+        "words": [
+          {
+            "word": "ウ",
+            "start": 20.36,
+            "end": 20.7,
+            "probability": 0.20800341665744781,
+            "tokens": [
+              20745
+            ]
+          },
+          {
+            "word": "キ",
+            "start": 20.7,
+            "end": 21.22,
+            "probability": 0.43671900033950806,
+            "tokens": [
+              15535
+            ]
+          },
+          {
+            "word": "モ",
+            "start": 21.22,
+            "end": 21.84,
+            "probability": 0.900073230266571,
+            "tokens": [
+              29183
+            ]
+          },
+          {
+            "word": "の",
+            "start": 21.84,
+            "end": 22.5,
+            "probability": 0.4925663471221924,
+            "tokens": [
+              2972
+            ]
+          },
+          {
+            "word": "話",
+            "start": 22.5,
+            "end": 23.96,
+            "probability": 0.8807320594787598,
+            "tokens": [
+              11103
+            ]
+          },
+          {
+            "word": " 暗",
+            "start": 25.18,
+            "end": 25.42,
+            "probability": 0.3182261884212494,
+            "tokens": [
+              220,
+              23826,
+              245
+            ]
+          },
+          {
+            "word": "く",
+            "start": 25.42,
+            "end": 26.36,
+            "probability": 0.2977827191352844,
+            "tokens": [
+              6134
+            ]
+          },
+          {
+            "word": "つ",
+            "start": 26.36,
+            "end": 26.54,
+            "probability": 0.3819025456905365,
+            "tokens": [
+              9335
+            ]
+          },
+          {
+            "word": "き",
+            "start": 26.54,
+            "end": 27.16,
+            "probability": 0.8903817534446716,
+            "tokens": [
+              7016
+            ]
+          },
+          {
+            "word": "ば",
+            "start": 27.16,
+            "end": 27.7,
+            "probability": 0.9959855675697327,
+            "tokens": [
+              13349
+            ]
+          },
+          {
+            "word": "か",
+            "start": 27.7,
+            "end": 28.26,
+            "probability": 0.9399555325508118,
+            "tokens": [
+              3703
+            ]
+          },
+          {
+            "word": "り",
+            "start": 28.26,
+            "end": 28.84,
+            "probability": 0.9997699856758118,
+            "tokens": [
+              5095
+            ]
+          }
+        ]
+      }
+    ],
+    "language": "ja",
+    "ori_dict": {
+      "text": "BGMウキモの話 暗くつきばかり",
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0.0,
+          "start": 3.68,
+          "end": 10.7,
+          "text": "BGM",
+          "tokens": [
+            50364,
+            33,
+            25152,
+            51364
+          ],
+          "temperature": 0,
+          "avg_logprob": -1.8948198954264324,
+          "compression_ratio": 0.2727272727272727,
+          "no_speech_prob": 0.3494965136051178,
+          "words": [
+            {
+              "word": "B",
+              "start": 3.68,
+              "end": 10.64,
+              "probability": 0.0020184949971735477,
+              "tokens": [
+                33
+              ]
+            },
+            {
+              "word": "GM",
+              "start": 10.64,
+              "end": 10.7,
+              "probability": 0.07891084253787994,
+              "tokens": [
+                25152
+              ]
+            }
+          ]
+        },
+        {
+          "id": 1,
+          "seek": 20.0,
+          "start": 20.36,
+          "end": 28.84,
+          "text": "ウキモの話 暗くつきばかり",
+          "tokens": [
+            50364,
+            20745,
+            15535,
+            29183,
+            2972,
+            11103,
+            220,
+            23826,
+            245,
+            6134,
+            9335,
+            7016,
+            13349,
+            3703,
+            5095,
+            51264
+          ],
+          "temperature": 0,
+          "avg_logprob": -0.6741331324857824,
+          "compression_ratio": 0.7708333333333334,
+          "no_speech_prob": 0.0018975724233314395,
+          "words": [
+            {
+              "word": "ウ",
+              "start": 20.36,
+              "end": 20.7,
+              "probability": 0.20800341665744781,
+              "tokens": [
+                20745
+              ]
+            },
+            {
+              "word": "キ",
+              "start": 20.7,
+              "end": 21.22,
+              "probability": 0.43671900033950806,
+              "tokens": [
+                15535
+              ]
+            },
+            {
+              "word": "モ",
+              "start": 21.22,
+              "end": 21.84,
+              "probability": 0.900073230266571,
+              "tokens": [
+                29183
+              ]
+            },
+            {
+              "word": "の",
+              "start": 21.84,
+              "end": 22.5,
+              "probability": 0.4925663471221924,
+              "tokens": [
+                2972
+              ]
+            },
+            {
+              "word": "話",
+              "start": 22.5,
+              "end": 23.96,
+              "probability": 0.8807320594787598,
+              "tokens": [
+                11103
+              ]
+            },
+            {
+              "word": " 暗",
+              "start": 25.18,
+              "end": 25.42,
+              "probability": 0.3182261884212494,
+              "tokens": [
+                220,
+                23826,
+                245
+              ]
+            },
+            {
+              "word": "く",
+              "start": 25.42,
+              "end": 26.36,
+              "probability": 0.2977827191352844,
+              "tokens": [
+                6134
+              ]
+            },
+            {
+              "word": "つ",
+              "start": 26.36,
+              "end": 26.54,
+              "probability": 0.3819025456905365,
+              "tokens": [
+                9335
+              ]
+            },
+            {
+              "word": "き",
+              "start": 26.54,
+              "end": 27.16,
+              "probability": 0.8903817534446716,
+              "tokens": [
+                7016
+              ]
+            },
+            {
+              "word": "ば",
+              "start": 27.16,
+              "end": 27.7,
+              "probability": 0.9959855675697327,
+              "tokens": [
+                13349
+              ]
+            },
+            {
+              "word": "か",
+              "start": 27.7,
+              "end": 28.26,
+              "probability": 0.9399555325508118,
+              "tokens": [
+                3703
+              ]
+            },
+            {
+              "word": "り",
+              "start": 28.26,
+              "end": 28.84,
+              "probability": 0.9997699856758118,
+              "tokens": [
+                5095
+              ]
+            }
+          ]
+        }
+      ],
+      "language": "ja",
+      "time_scale": null
+    },
+    "regroup_history": "",
+    "nonspeech_sections": []
+  }
+}
