@@ -1,0 +1,592 @@
+{
+  "schemaVersion": 1,
+  "status": "Unprompted lexical observations of overlapping vocals; not selected timing or human hearing.",
+  "sourceSha256": "8563f6b817c9b1cc39649363a52486214c691c0d98ae7bb82263021ac7363523",
+  "method": {
+    "model": "small",
+    "checkpointSha256": "9ecf779972d90ba49c06d968637d720dd632c55bbf19d441fb42bf17a411e794",
+    "implementation": "stable-ts 2.19.1",
+    "language": "ja",
+    "inputKind": "vocals-side",
+    "inputFile": "analysis/overlap-v2/vocals-side-16000.wav",
+    "inputSha256": "8b6305d82804dda36fd266e5fc74efee5576c26eeccb06daeebe6294747788bc",
+    "conditioningText": null,
+    "initialPrompt": null,
+    "conditionOnPreviousText": false,
+    "suppressSilence": false,
+    "cropStartSample16000": 3328000,
+    "cropEndSample16000": 3552000,
+    "originalSourceZeroPreserved": true,
+    "humanListening": false,
+    "elapsedSeconds": 3.2998460829257965
+  },
+  "result": {
+    "text": "あなたはあなたのことを 見つけたことを何度あなたに 叶えたことを",
+    "segments": [
+      {
+        "start": 208.0,
+        "end": 214.52,
+        "text": "あなたはあなたのことを 見つけたことを",
+        "seek": 208.0,
+        "tokens": [
+          3590,
+          42847,
+          3065,
+          3590,
+          42847,
+          2972,
+          13235,
+          5998,
+          220,
+          10470,
+          9335,
+          7625,
+          3368,
+          13235,
+          5998
+        ],
+        "temperature": 0,
+        "avg_logprob": -1.4027551412582397,
+        "compression_ratio": 1.3529411764705883,
+        "no_speech_prob": 0.3460436463356018,
+        "words": [
+          {
+            "word": "あ",
+            "start": 208.0,
+            "end": 208.74,
+            "probability": 0.020218148827552795,
+            "tokens": [
+              3590
+            ]
+          },
+          {
+            "word": "なた",
+            "start": 208.74,
+            "end": 209.52,
+            "probability": 0.31274542212486267,
+            "tokens": [
+              42847
+            ]
+          },
+          {
+            "word": "は",
+            "start": 209.52,
+            "end": 209.52,
+            "probability": 0.3237430453300476,
+            "tokens": [
+              3065
+            ]
+          },
+          {
+            "word": "あ",
+            "start": 209.52,
+            "end": 210.9,
+            "probability": 0.06388075649738312,
+            "tokens": [
+              3590
+            ]
+          },
+          {
+            "word": "なた",
+            "start": 210.9,
+            "end": 210.9,
+            "probability": 0.90020751953125,
+            "tokens": [
+              42847
+            ]
+          },
+          {
+            "word": "の",
+            "start": 210.9,
+            "end": 210.9,
+            "probability": 0.23095981776714325,
+            "tokens": [
+              2972
+            ]
+          },
+          {
+            "word": "こと",
+            "start": 210.9,
+            "end": 212.38,
+            "probability": 0.04232865199446678,
+            "tokens": [
+              13235
+            ]
+          },
+          {
+            "word": "を",
+            "start": 212.38,
+            "end": 212.38,
+            "probability": 0.6553830504417419,
+            "tokens": [
+              5998
+            ]
+          },
+          {
+            "word": " 見",
+            "start": 212.42,
+            "end": 212.8,
+            "probability": 0.05140557885169983,
+            "tokens": [
+              220,
+              10470
+            ]
+          },
+          {
+            "word": "つ",
+            "start": 212.8,
+            "end": 214.4,
+            "probability": 0.24037161469459534,
+            "tokens": [
+              9335
+            ]
+          },
+          {
+            "word": "け",
+            "start": 214.4,
+            "end": 214.4,
+            "probability": 0.463106632232666,
+            "tokens": [
+              7625
+            ]
+          },
+          {
+            "word": "た",
+            "start": 214.4,
+            "end": 214.52,
+            "probability": 0.5050754547119141,
+            "tokens": [
+              3368
+            ]
+          },
+          {
+            "word": "こと",
+            "start": 214.52,
+            "end": 214.52,
+            "probability": 0.10931707173585892,
+            "tokens": [
+              13235
+            ]
+          },
+          {
+            "word": "を",
+            "start": 214.52,
+            "end": 214.52,
+            "probability": 0.6553874015808105,
+            "tokens": [
+              5998
+            ]
+          }
+        ]
+      },
+      {
+        "start": 215.14,
+        "end": 220.98,
+        "text": "何度あなたに 叶えたことを",
+        "seek": 208.0,
+        "tokens": [
+          11906,
+          13127,
+          3590,
+          42847,
+          4108,
+          220,
+          2129,
+          114,
+          6474,
+          3368,
+          13235,
+          5998
+        ],
+        "temperature": 0,
+        "avg_logprob": -1.4027551412582397,
+        "compression_ratio": 1.3529411764705883,
+        "no_speech_prob": 0.3460436463356018,
+        "words": [
+          {
+            "word": "何",
+            "start": 215.14,
+            "end": 215.58,
+            "probability": 0.004752270877361298,
+            "tokens": [
+              11906
+            ]
+          },
+          {
+            "word": "度",
+            "start": 215.58,
+            "end": 216.24,
+            "probability": 0.05969227850437164,
+            "tokens": [
+              13127
+            ]
+          },
+          {
+            "word": "あ",
+            "start": 216.24,
+            "end": 217.26,
+            "probability": 0.04137950390577316,
+            "tokens": [
+              3590
+            ]
+          },
+          {
+            "word": "なた",
+            "start": 217.26,
+            "end": 217.9,
+            "probability": 0.9018888473510742,
+            "tokens": [
+              42847
+            ]
+          },
+          {
+            "word": "に",
+            "start": 217.9,
+            "end": 218.72,
+            "probability": 0.14936049282550812,
+            "tokens": [
+              4108
+            ]
+          },
+          {
+            "word": " 叶",
+            "start": 219.16,
+            "end": 219.64,
+            "probability": 0.2808705447241664,
+            "tokens": [
+              220,
+              2129,
+              114
+            ]
+          },
+          {
+            "word": "え",
+            "start": 219.64,
+            "end": 219.84,
+            "probability": 0.3543694317340851,
+            "tokens": [
+              6474
+            ]
+          },
+          {
+            "word": "た",
+            "start": 219.84,
+            "end": 219.88,
+            "probability": 0.1966778188943863,
+            "tokens": [
+              3368
+            ]
+          },
+          {
+            "word": "こと",
+            "start": 219.88,
+            "end": 220.04,
+            "probability": 0.6921166777610779,
+            "tokens": [
+              13235
+            ]
+          },
+          {
+            "word": "を",
+            "start": 220.04,
+            "end": 220.98,
+            "probability": 0.9464961290359497,
+            "tokens": [
+              5998
+            ]
+          }
+        ]
+      }
+    ],
+    "language": "ja",
+    "ori_dict": {
+      "text": "あなたはあなたのことを 見つけたことを何度あなたに 叶えたことを",
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0.0,
+          "start": 0.0,
+          "end": 6.52,
+          "text": "あなたはあなたのことを 見つけたことを",
+          "tokens": [
+            50364,
+            3590,
+            42847,
+            3065,
+            3590,
+            42847,
+            2972,
+            13235,
+            5998,
+            220,
+            10470,
+            9335,
+            7625,
+            3368,
+            13235,
+            5998,
+            50714
+          ],
+          "temperature": 0,
+          "avg_logprob": -1.4027551412582397,
+          "compression_ratio": 1.3529411764705883,
+          "no_speech_prob": 0.3460436463356018,
+          "words": [
+            {
+              "word": "あ",
+              "start": 0.0,
+              "end": 0.74,
+              "probability": 0.020218148827552795,
+              "tokens": [
+                3590
+              ]
+            },
+            {
+              "word": "なた",
+              "start": 0.74,
+              "end": 1.52,
+              "probability": 0.31274542212486267,
+              "tokens": [
+                42847
+              ]
+            },
+            {
+              "word": "は",
+              "start": 1.52,
+              "end": 1.52,
+              "probability": 0.3237430453300476,
+              "tokens": [
+                3065
+              ]
+            },
+            {
+              "word": "あ",
+              "start": 1.52,
+              "end": 2.9,
+              "probability": 0.06388075649738312,
+              "tokens": [
+                3590
+              ]
+            },
+            {
+              "word": "なた",
+              "start": 2.9,
+              "end": 2.9,
+              "probability": 0.90020751953125,
+              "tokens": [
+                42847
+              ]
+            },
+            {
+              "word": "の",
+              "start": 2.9,
+              "end": 2.9,
+              "probability": 0.23095981776714325,
+              "tokens": [
+                2972
+              ]
+            },
+            {
+              "word": "こと",
+              "start": 2.9,
+              "end": 4.38,
+              "probability": 0.04232865199446678,
+              "tokens": [
+                13235
+              ]
+            },
+            {
+              "word": "を",
+              "start": 4.38,
+              "end": 4.38,
+              "probability": 0.6553830504417419,
+              "tokens": [
+                5998
+              ]
+            },
+            {
+              "word": " 見",
+              "start": 4.42,
+              "end": 4.8,
+              "probability": 0.05140557885169983,
+              "tokens": [
+                220,
+                10470
+              ]
+            },
+            {
+              "word": "つ",
+              "start": 4.8,
+              "end": 6.4,
+              "probability": 0.24037161469459534,
+              "tokens": [
+                9335
+              ]
+            },
+            {
+              "word": "け",
+              "start": 6.4,
+              "end": 6.4,
+              "probability": 0.463106632232666,
+              "tokens": [
+                7625
+              ]
+            },
+            {
+              "word": "た",
+              "start": 6.4,
+              "end": 6.52,
+              "probability": 0.5050754547119141,
+              "tokens": [
+                3368
+              ]
+            },
+            {
+              "word": "こと",
+              "start": 6.52,
+              "end": 6.52,
+              "probability": 0.10931707173585892,
+              "tokens": [
+                13235
+              ]
+            },
+            {
+              "word": "を",
+              "start": 6.52,
+              "end": 6.52,
+              "probability": 0.6553874015808105,
+              "tokens": [
+                5998
+              ]
+            }
+          ]
+        },
+        {
+          "id": 1,
+          "seek": 0.0,
+          "start": 7.14,
+          "end": 12.98,
+          "text": "何度あなたに 叶えたことを",
+          "tokens": [
+            50714,
+            11906,
+            13127,
+            3590,
+            42847,
+            4108,
+            220,
+            2129,
+            114,
+            6474,
+            3368,
+            13235,
+            5998,
+            51064
+          ],
+          "temperature": 0,
+          "avg_logprob": -1.4027551412582397,
+          "compression_ratio": 1.3529411764705883,
+          "no_speech_prob": 0.3460436463356018,
+          "words": [
+            {
+              "word": "何",
+              "start": 7.14,
+              "end": 7.58,
+              "probability": 0.004752270877361298,
+              "tokens": [
+                11906
+              ]
+            },
+            {
+              "word": "度",
+              "start": 7.58,
+              "end": 8.24,
+              "probability": 0.05969227850437164,
+              "tokens": [
+                13127
+              ]
+            },
+            {
+              "word": "あ",
+              "start": 8.24,
+              "end": 9.26,
+              "probability": 0.04137950390577316,
+              "tokens": [
+                3590
+              ]
+            },
+            {
+              "word": "なた",
+              "start": 9.26,
+              "end": 9.9,
+              "probability": 0.9018888473510742,
+              "tokens": [
+                42847
+              ]
+            },
+            {
+              "word": "に",
+              "start": 9.9,
+              "end": 10.72,
+              "probability": 0.14936049282550812,
+              "tokens": [
+                4108
+              ]
+            },
+            {
+              "word": " 叶",
+              "start": 11.16,
+              "end": 11.64,
+              "probability": 0.2808705447241664,
+              "tokens": [
+                220,
+                2129,
+                114
+              ]
+            },
+            {
+              "word": "え",
+              "start": 11.64,
+              "end": 11.84,
+              "probability": 0.3543694317340851,
+              "tokens": [
+                6474
+              ]
+            },
+            {
+              "word": "た",
+              "start": 11.84,
+              "end": 11.88,
+              "probability": 0.1966778188943863,
+              "tokens": [
+                3368
+              ]
+            },
+            {
+              "word": "こと",
+              "start": 11.88,
+              "end": 12.04,
+              "probability": 0.6921166777610779,
+              "tokens": [
+                13235
+              ]
+            },
+            {
+              "word": "を",
+              "start": 12.04,
+              "end": 12.98,
+              "probability": 0.9464961290359497,
+              "tokens": [
+                5998
+              ]
+            }
+          ]
+        }
+      ],
+      "language": "ja",
+      "time_scale": null
+    },
+    "regroup_history": "",
+    "nonspeech_sections": []
+  }
+}

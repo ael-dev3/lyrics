@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
-import {sourceActive,tokenActive,validateTimeline,visibleCue,type Timeline} from '../src/model.ts';
+import {sourceActive,tokenActive,validateTimeline,visibleCues,vocalTrack,type Timeline} from '../src/model.ts';
 const timeline=JSON.parse(readFileSync('public/timeline.json','utf8')) as Timeline;
 test('complete three-language performance inventory and canonical event order',()=>{
  validateTimeline(timeline);
@@ -15,22 +15,26 @@ test('complete three-language performance inventory and canonical event order',(
   assert.equal(sourceActive(w,w.endSample/44100),false,`${w.id}: exclusive end`);
  }
 });
-test('closing language handoff preserves both voices with unchanged original intervals',()=>{
- const prior=timeline.cues.find(c=>c.id==='RU-027')!;
- const next=timeline.cues.find(c=>c.id==='JP30-003')!;
- const original=prior.words.at(-1)!;
- assert.ok(next.start<prior.end);
- assert.equal(prior.visibleEnd,next.visibleStart);
- assert.equal(next.carry!.words[0]!.startSample,original.startSample);
- assert.equal(next.carry!.words[0]!.endSample,original.endSample);
- const time=(original.endSample-1)/44100;
- assert.equal(visibleCue(timeline,time)!.id,next.id);
- assert.equal(sourceActive(next.words[0]!,time),true);
- assert.equal(sourceActive(next.carry!.words[0]!,time),true);
- for(const l of next.carry!.lanes)assert.equal(tokenActive(l.tokens[0]!,next.carry!.words,time),true);
- assert.equal(sourceActive(next.carry!.words[0]!,original.endSample/44100),false);
- const damaged=structuredClone(timeline);damaged.cues.find(c=>c.id===next.id)!.carry!.words[0]!.endSample--;
- assert.throws(()=>validateTimeline(damaged),/Changed carried voice/);
+test('simultaneous full cues preserve Russian events and independent Japanese ownership',()=>{
+ const old=JSON.parse(readFileSync('evidence/v1-event-identity.json','utf8'));
+ const current=timeline.cues.filter(c=>c.id!=='JP30-OVERLAP-001').flatMap(c=>c.words.map(w=>({cueId:c.id,wordId:w.id,text:w.text,startSample:w.startSample,endSample:w.endSample})));
+ assert.deepEqual(current,old.events,'Adding a new voice must not move or shorten any previously selected vocal body');
+ const newCue=timeline.cues.find(c=>c.id==='JP30-OVERLAP-001')!;
+ assert.equal(vocalTrack(newCue),'japanese-upper');
+ assert.deepEqual(newCue.words.map(w=>w.text),['憂き','もの','は','なし','暁','ばかり']);
+ for(const time of [212.5,213.5,215.5,217.5,220,222]){
+  const visible=visibleCues(timeline,time);
+  assert.ok(visible.some(c=>vocalTrack(c)==='lead' && c.sourceLanguage==='ru'));
+  assert.ok(visible.some(c=>vocalTrack(c)==='japanese-upper' && c.sourceLanguage==='ja'));
+  for(const cue of visible)for(const lane of cue.lanes){
+   if(cue.words.some(w=>sourceActive(w,time)))assert.ok(lane.tokens.some(t=>tokenActive(t,cue.words,time)),`${cue.id}/${lane.language}: active voice lost`);
+  }
+ }
+ const russian=timeline.cues.find(c=>c.id==='RU-027')!,end=russian.words.at(-1)!.endSample/44100;
+ assert.ok(russian.visibleEnd>=end,'Japanese entrance must not truncate Russian cue');
+ assert.ok(visibleCues(timeline,end-1/44100).some(c=>c.id===russian.id));
+ const damaged=structuredClone(timeline);damaged.cues.find(c=>c.id==='RU-027')!.visibleEnd=end-.1;
+ assert.throws(()=>validateTimeline(damaged),/Invalid reading interval|Truncated performed voice/);
 });
 test('Japanese counterfactual keeps the entire translated verb meaning focused',()=>{
  for(const c of timeline.cues.filter(c=>c.label.includes('寝なまし'))){

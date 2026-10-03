@@ -1,0 +1,668 @@
+{
+  "schemaVersion": 1,
+  "status": "Independent acoustic overlap proposals complete; selected timing and perceptual listening remain separate.",
+  "sourceSha256": "8563f6b817c9b1cc39649363a52486214c691c0d98ae7bb82263021ac7363523",
+  "sampleRate": 44100,
+  "reviewCropSeconds": [
+    200,
+    241
+  ],
+  "scope": "Re-audit the quieter Japanese vocal layer under Russian, particularly202–222, using fresh unprompted language-specific observations, contextual native-kana forced CTC, source/stem mid and side spectra, and recurrence diagnostics. Evidence-only.",
+  "newSupportedInventory": {
+    "candidateCueId": "JP30-OVERLAP-001",
+    "proposedVocalTrack": "japanese-upper",
+    "originalJapaneseText": [
+      "憂きものはなし",
+      "暁ばかり"
+    ],
+    "proposedStartSeconds": 212.34,
+    "proposedEndSeconds": 221.06,
+    "meaning": "The same poem-30 comparison, Nothing is more sorrowful than dawn; existing verified editorial mapping applies. No unsung upper stanza is inserted.",
+    "inventorySupport": "The unprompted large-model estimated-vocal stereo-side205–241 observation produces a coherent poem-30-shaped pair212.34–220.80, followed by the already supported221–230 and230–239 repetitions. Corrected native-kana side CTC and a distinct lower harmonic body support the extra pair. The foreground-dominated mono results are not absence evidence.",
+    "earlierInventoryWasIncomplete": true
+  },
+  "perWordProposals": [
+    {
+      "sourceIndex": 0,
+      "text": "憂き",
+      "start": 212.34,
+      "end": 213.7,
+      "onsetRange": [
+        212.2,
+        212.6
+      ],
+      "releaseRange": [
+        213.32,
+        213.92
+      ],
+      "reason": "The newly distinct lower body enters before the sparse u core around212.52–212.54. Broad-pair CTC releases i too early; bounded phonetic symbols continue into213.20. Preserve the selected body through the independently checked nasal transition.",
+      "startSample": 9364194,
+      "endSample": 9424170,
+      "timingStatus": "Independent provisional proposal with explicit range; not human listening."
+    },
+    {
+      "sourceIndex": 1,
+      "text": "もの",
+      "start": 213.7,
+      "end": 214.9,
+      "onsetRange": [
+        213.32,
+        213.92
+      ],
+      "releaseRange": [
+        214.75,
+        215.05
+      ],
+      "reason": "Standalone cropped CTC finds m around213.735; bounded first-half m around213.868 supports the strong following o. Broad-pair m213.084 has score.008 and borrows the preceding articulation. The initial213.12 candidate is superseded, not silently retained.",
+      "startSample": 9424170,
+      "endSample": 9477090,
+      "timingStatus": "Independent provisional proposal with explicit range; not human listening."
+    },
+    {
+      "sourceIndex": 2,
+      "text": "は",
+      "start": 214.9,
+      "end": 215.44,
+      "onsetRange": [
+        214.75,
+        215.05
+      ],
+      "releaseRange": [
+        215.3,
+        215.6
+      ],
+      "reason": "Broad side path has wa cores214.908–215.028 and a following n onset215.449. Bounded first-half paths can shift wa onto that n/a pair; retain explicit uncertainty under foreground Russian.",
+      "startSample": 9477090,
+      "endSample": 9500904,
+      "timingStatus": "Independent provisional proposal with explicit range; not human listening."
+    },
+    {
+      "sourceIndex": 3,
+      "text": "なし",
+      "start": 215.44,
+      "end": 216.3,
+      "onsetRange": [
+        215.3,
+        215.6
+      ],
+      "releaseRange": [
+        216.1,
+        216.5
+      ],
+      "reason": "Broad and bounded side CTC retain s/i cores around215.97–216.13. Extend beyond the sparse final core into the observed lower body, while excluding sustained Russian lead and room decay from certain lexical claims.",
+      "startSample": 9500904,
+      "endSample": 9538830,
+      "timingStatus": "Independent provisional proposal with explicit range; not human listening."
+    },
+    {
+      "sourceIndex": 4,
+      "text": "暁",
+      "start": 216.95,
+      "end": 219.36,
+      "onsetRange": [
+        216.8,
+        217.1
+      ],
+      "releaseRange": [
+        219.2,
+        219.5
+      ],
+      "reason": "Quiet initial vowel/body precedes the strong k/a material. Whole-pair side CTC begins216.951; tighter two-unit CTC starts on later217.221 core. Both retain late k/i218.84–218.95 before the next unit.",
+      "startSample": 9567495,
+      "endSample": 9673776,
+      "timingStatus": "Independent provisional proposal with explicit range; not human listening."
+    },
+    {
+      "sourceIndex": 5,
+      "text": "ばかり",
+      "start": 219.36,
+      "end": 221.06,
+      "onsetRange": [
+        219.2,
+        219.5
+      ],
+      "releaseRange": [
+        220.85,
+        221.25
+      ],
+      "reason": "Whole-pair and tighter paths agree on the onset core219.375/219.386 and final i220.898/220.889. The selected release retains the low direct body after the core; exact direct-vowel/room-decay separation remains perceptual.",
+      "startSample": 9673776,
+      "endSample": 9748746,
+      "timingStatus": "Independent provisional proposal with explicit range; not human listening."
+    }
+  ],
+  "otherReviewedIntervals": [
+    {
+      "crop": [
+        200,
+        212.34
+      ],
+      "conclusion": "No additional Japanese pair is selected. Mid/mono ASR follows Russian; short side ASR outputs stock good-night phrases without corroborated phonetic sequence. A forced prior-pair hypothesis fits fragments of Russian and is rejected as lexical proof. This is not categorical absence of every buried voice."
+    },
+    {
+      "crop": [
+        221,
+        230.3
+      ],
+      "conclusion": "Existing Japanese pair is preserved. New side CTC finds corresponding clean cores, including u221.862, mono222.884, wa224.047, nashi224.568, dawn226.352 and bakari228.596; sparse cores do not replace earlier selected onset/held release. Russian ночь body221.39–222.24 must stay independently owned under Japanese."
+    },
+    {
+      "crop": [
+        230,
+        239.45
+      ],
+      "conclusion": "Existing final pair is preserved. Side CTC corroborates wa233.103 and nashi233.704–234.385; its initial u230.981 is a late core, not a reason to undo the earlier physically supported230.55 entrance."
+    },
+    {
+      "crop": [
+        239.45,
+        241
+      ],
+      "conclusion": "No further lexical pair selected; retain actual source decay and picture. No stock end-title text is introduced."
+    }
+  ],
+  "rejectedObservations": [
+    "Original mix, mono estimated vocals and small-model outputs often transcribe the Russian lead as Japanese-shaped text; no model majority vote is used.",
+    "Original-side short crops produce stock おやすみなさい and the tight vocal-side crop produces おめでとうございます; these are not selected lyrics.",
+    "Generic kanji-to-Chinese uroman paths remain rejected. Correct native-kana readings are internal model preprocessing only, never a displayed pronunciation aid.",
+    "Plain mono forced CTC for the new pair places its units on unrelated Russian articulation; original-side forced paths also lack reliable lexical sequence. Neither is copied into selected timing.",
+    "Narrow crops can shift constrained CTC units onto a later foreground articulation. Low-score wide m213.084 and bounded wa215.455 do not establish those exact semantic boundaries.",
+    "Waveform recurrence candidates are contaminated by accompaniment, pitch and take differences. They are diagnostics, not a source for offset-copying entire repeated phrases."
+  ],
+  "methods": {
+    "sourceAudioAuthority": "Original unchanged stereo mix. Vocal estimate and side projection are diagnostic access aids, not replacements.",
+    "sideProjection": "(left-right)/2 at original44100Hz, independently resampled to16000Hz for model input, preserving source sample zero; both original-side and estimated-vocal-side available.",
+    "stemClockReference": "analysis/independent-audio/stem-clock.json; original/estimated stems share11249664 samples at44100Hz. Previous near-tail mixture reconstruction peak lag0 samples.",
+    "asr": "Whisper large-v3-turbo and small, cached checkpoints, Japanese language forced but no lexical prompt, previous-text conditioning disabled, temperature0, no silence suppression. These checkpoints are one model family, not independent human reviewers.",
+    "ctc": "Meta MMS_FA, contextual native-kana units only; forced placement cannot prove lexical presence. Character cores and unforced symbols retained; unit path scores uncalibrated.",
+    "spectra": "Original and estimated mid/side min-max waveform plus100–10000Hz spectra. FFT1024 at44100Hz =23.22ms window support; hop88≈1.995ms is numerical spacing, not2ms perceptual accuracy."
+  },
+  "unpromptedObservations": [
+    {
+      "file": "analysis/overlap-v2/unprompted-mix-ja-200-241.json",
+      "sha256": "1fda9e887400dd6579ec296f297ffa05973b6cd27c9562c9e560f61aa4f331e1",
+      "model": "large-v3-turbo",
+      "inputKind": "original",
+      "cropSamples16000": [
+        3200000,
+        3856000
+      ],
+      "conditioningText": null,
+      "humanListening": false,
+      "segments": [
+        {
+          "start": 200.0,
+          "end": 203.92,
+          "text": "ベスコンセルのブルーナー ゼロノユ"
+        },
+        {
+          "start": 204.82,
+          "end": 209.28,
+          "text": "オスタロスリージュアイス"
+        },
+        {
+          "start": 209.3,
+          "end": 212.94,
+          "text": "トレイモンゼロノユ"
+        },
+        {
+          "start": 217.0,
+          "end": 222.2,
+          "text": "あ 天のような 天のような 夏"
+        },
+        {
+          "start": 222.38,
+          "end": 225.22,
+          "text": "あ 天のような 夏"
+        },
+        {
+          "start": 225.22,
+          "end": 230.14,
+          "text": "汗が 風で 汗が 風で 汗が 風で"
+        },
+        {
+          "start": 230.86,
+          "end": 234.06,
+          "text": "あ 天のような 夏"
+        },
+        {
+          "start": 235.4,
+          "end": 238.86,
+          "text": "あ か つき ばかり"
+        }
+      ]
+    },
+    {
+      "file": "analysis/overlap-v2/unprompted-mix-ja-209-222.json",
+      "sha256": "75cb8e380c58a4724769137d758e6bfc8ea6cbc78f0ee564b7d38b8eea7eba39",
+      "model": "large-v3-turbo",
+      "inputKind": "original",
+      "cropSamples16000": [
+        3344000,
+        3552000
+      ],
+      "conditioningText": null,
+      "humanListening": false,
+      "segments": [
+        {
+          "start": 209.6,
+          "end": 212.86,
+          "text": "貝物の中に"
+        }
+      ]
+    },
+    {
+      "file": "analysis/overlap-v2/unprompted-mix-side-ja-200-222.json",
+      "sha256": "ba4681d5e883b0fd2eb95930a85b67a4978b73de9d47d66678676e29cbe04158",
+      "model": "large-v3-turbo",
+      "inputKind": "original-side",
+      "cropSamples16000": [
+        3200000,
+        3560000
+      ],
+      "conditioningText": null,
+      "humanListening": false,
+      "segments": [
+        {
+          "start": 200.0,
+          "end": 205.3,
+          "text": "おやすみなさい"
+        },
+        {
+          "start": 211.78,
+          "end": 216.12,
+          "text": "おやすみなさい"
+        }
+      ]
+    },
+    {
+      "file": "analysis/overlap-v2/unprompted-small-mix-ja-200-241.json",
+      "sha256": "67c5a13c9a99fcd15834b5352a22110a2ae0fb1cc83b0bb3d9667785dabc4932",
+      "model": "small",
+      "inputKind": "original",
+      "cropSamples16000": [
+        3200000,
+        3856000
+      ],
+      "conditioningText": null,
+      "humanListening": false,
+      "segments": [
+        {
+          "start": 200.0,
+          "end": 202.48,
+          "text": "ベスカンザーカーのヴルダー"
+        },
+        {
+          "start": 202.48,
+          "end": 204.82,
+          "text": "テロノユー"
+        },
+        {
+          "start": 205.14,
+          "end": 208.04,
+          "text": "アスタマスリズム"
+        },
+        {
+          "start": 209.2,
+          "end": 214.92,
+          "text": "タイムザラテロノユー"
+        },
+        {
+          "start": 217.0,
+          "end": 219.1,
+          "text": "I don't know you much"
+        },
+        {
+          "start": 220.12,
+          "end": 225.0,
+          "text": "もうもう話"
+        },
+        {
+          "start": 226.24,
+          "end": 228.26,
+          "text": "朝がついたり"
+        },
+        {
+          "start": 228.64,
+          "end": 230.74,
+          "text": "朝が降りてた"
+        },
+        {
+          "start": 231.4,
+          "end": 234.2,
+          "text": "君の話"
+        },
+        {
+          "start": 235.42,
+          "end": 238.86,
+          "text": "赤月ばかり"
+        }
+      ]
+    },
+    {
+      "file": "analysis/overlap-v2/unprompted-small-vocals-side-ja-208-222.json",
+      "sha256": "104d89cc6b8622fd97d550e328aca6665188fde3549c9b5886210625121fe477",
+      "model": "small",
+      "inputKind": "vocals-side",
+      "cropSamples16000": [
+        3328000,
+        3552000
+      ],
+      "conditioningText": null,
+      "humanListening": false,
+      "segments": [
+        {
+          "start": 208.0,
+          "end": 214.52,
+          "text": "あなたはあなたのことを 見つけたことを"
+        },
+        {
+          "start": 215.14,
+          "end": 220.98,
+          "text": "何度あなたに 叶えたことを"
+        }
+      ]
+    },
+    {
+      "file": "analysis/overlap-v2/unprompted-vocals-ja-200-222.json",
+      "sha256": "83f7828fea12377521d0372d4190a10e9483dc523a730a0770de498f1bed4815",
+      "model": "large-v3-turbo",
+      "inputKind": "vocals",
+      "cropSamples16000": [
+        3200000,
+        3560000
+      ],
+      "conditioningText": null,
+      "humanListening": false,
+      "segments": [
+        {
+          "start": 200.0,
+          "end": 202.26,
+          "text": "別の終わりに見る"
+        },
+        {
+          "start": 202.26,
+          "end": 203.84,
+          "text": "させるのよ"
+        },
+        {
+          "start": 205.08,
+          "end": 207.42,
+          "text": "おさらしに"
+        },
+        {
+          "start": 208.64,
+          "end": 211.72,
+          "text": "おさらしの"
+        },
+        {
+          "start": 212.3,
+          "end": 213.86,
+          "text": "おさらしの"
+        },
+        {
+          "start": 213.86,
+          "end": 216.78,
+          "text": "おさらしの"
+        },
+        {
+          "start": 216.78,
+          "end": 219.54,
+          "text": "おさらしの"
+        },
+        {
+          "start": 219.54,
+          "end": 220.82,
+          "text": "おさらしの"
+        }
+      ]
+    },
+    {
+      "file": "analysis/overlap-v2/unprompted-vocals-side-ja-200-214.json",
+      "sha256": "f76b6726ff64a54199b269ed592cbb4be2c19c9fb7f5bad45e358cd2993f6ce5",
+      "model": "large-v3-turbo",
+      "inputKind": "vocals-side",
+      "cropSamples16000": [
+        3200000,
+        3432000
+      ],
+      "conditioningText": null,
+      "humanListening": false,
+      "segments": [
+        {
+          "start": 201.56,
+          "end": 208.26,
+          "text": "おやすみなさい"
+        }
+      ]
+    },
+    {
+      "file": "analysis/overlap-v2/unprompted-vocals-side-ja-205-241.json",
+      "sha256": "2ed544639042744f14518db74d93b4aac4c518d386be00bb392cc9d29b2cf87b",
+      "model": "large-v3-turbo",
+      "inputKind": "vocals-side",
+      "cropSamples16000": [
+        3280000,
+        3856000
+      ],
+      "conditioningText": null,
+      "humanListening": false,
+      "segments": [
+        {
+          "start": 205.0,
+          "end": 212.34,
+          "text": "まだまだいれば ゆってなの"
+        },
+        {
+          "start": 212.34,
+          "end": 220.8,
+          "text": "不気者の話 赤塚ばかり"
+        },
+        {
+          "start": 221.2,
+          "end": 229.86,
+          "text": "不気者話 赤月ばかり"
+        },
+        {
+          "start": 230.5,
+          "end": 233.92,
+          "text": "ふうきもの話"
+        },
+        {
+          "start": 234.88,
+          "end": 238.94,
+          "text": "わかつきばかり"
+        }
+      ]
+    },
+    {
+      "file": "analysis/overlap-v2/unprompted-vocals-side-ja-211-221.json",
+      "sha256": "d48887152aec2c9533743b90a7f531f65073b5a5a6bd0bf9409b6d0785258adf",
+      "model": "large-v3-turbo",
+      "inputKind": "vocals-side",
+      "cropSamples16000": [
+        3380800,
+        3540800
+      ],
+      "conditioningText": null,
+      "humanListening": false,
+      "segments": [
+        {
+          "start": 211.3,
+          "end": 215.12,
+          "text": "おめでとうございます"
+        }
+      ]
+    }
+  ],
+  "ctcAndMethodArtifactIdentity": [
+    {
+      "file": "analysis/overlap-v2/mix-JP30-OVERLAP.json",
+      "sha256": "95c5da10a2c9068d7445cdb76298b6116577878a174df592d3a262dfbec1c2f1"
+    },
+    {
+      "file": "analysis/overlap-v2/mix-PRIOR-HYPOTHESIS-NOT-LEXICAL-PROOF.json",
+      "sha256": "872d3fa5e830791ee36ebbc4f00c66682bba97aa2336224d70de3e8f8f4737a5"
+    },
+    {
+      "file": "analysis/overlap-v2/mix-overlap-detail-a.json",
+      "sha256": "745c9d3badcb349e58e9d8c9681665d778cc8e44896b914c2649be083025f53c"
+    },
+    {
+      "file": "analysis/overlap-v2/mix-overlap-detail-b.json",
+      "sha256": "745c9d3badcb349e58e9d8c9681665d778cc8e44896b914c2649be083025f53c"
+    },
+    {
+      "file": "analysis/overlap-v2/mix-overlap-entrance.json",
+      "sha256": "745c9d3badcb349e58e9d8c9681665d778cc8e44896b914c2649be083025f53c"
+    },
+    {
+      "file": "analysis/overlap-v2/mix-overlap-second.json",
+      "sha256": "745c9d3badcb349e58e9d8c9681665d778cc8e44896b914c2649be083025f53c"
+    },
+    {
+      "file": "analysis/overlap-v2/mix-side-JP30-OVERLAP.json",
+      "sha256": "7d2e1311574112802bc1097ad3c05f68eb7b8400ee0c6f3fffeca4a9425826f0"
+    },
+    {
+      "file": "analysis/overlap-v2/mix-side-PRIOR-HYPOTHESIS-NOT-LEXICAL-PROOF.json",
+      "sha256": "401a97a441aaf56fe35a27ce2a0e034a552261f23339c150e615273226023662"
+    },
+    {
+      "file": "analysis/overlap-v2/vocal-JP30-OVERLAP.json",
+      "sha256": "e8e418668caef36dc5a019bdc626795bf3af7be1cb16e9684d193e5fdbaba541"
+    },
+    {
+      "file": "analysis/overlap-v2/vocal-PRIOR-HYPOTHESIS-NOT-LEXICAL-PROOF.json",
+      "sha256": "e3150704c41b932d94fbbc0b499be23709845573449c57c4faa9fc8d35c00c01"
+    },
+    {
+      "file": "analysis/overlap-v2/vocal-side-CLOSING-CLEAN-COMPARE-1.json",
+      "sha256": "32b81adcbcb53395a3a34ecf4051005524afbc7d33680408ea02e5c7e7e43189"
+    },
+    {
+      "file": "analysis/overlap-v2/vocal-side-CLOSING-CLEAN-COMPARE-2.json",
+      "sha256": "4d6276b6b156dd01e3e62df3b3312432342615716859e469e19e2ddd257eafef"
+    },
+    {
+      "file": "analysis/overlap-v2/vocal-side-JP30-OVERLAP-FIRST.json",
+      "sha256": "adbff624674dd07db9559ab94544c946380d27051701206efd1271b5e674e997"
+    },
+    {
+      "file": "analysis/overlap-v2/vocal-side-JP30-OVERLAP-SECOND.json",
+      "sha256": "f294871197273826ad81f8b56cfbd5b9239c8dda456887e68b800a269b87dd81"
+    },
+    {
+      "file": "analysis/overlap-v2/vocal-side-JP30-OVERLAP.json",
+      "sha256": "745c9d3badcb349e58e9d8c9681665d778cc8e44896b914c2649be083025f53c"
+    },
+    {
+      "file": "analysis/overlap-v2/vocal-side-OVERLAP-MONO-DETAIL.json",
+      "sha256": "6bafd6b48a90b0c5c219aa665cfc3ab0e4c9e76f671fd83e99264fe66127291d"
+    },
+    {
+      "file": "analysis/overlap-v2/vocal-side-OVERLAP-UKI-DETAIL.json",
+      "sha256": "270139f8c2033a0c9ce563555aa85068587a79afbb0d4fddee9b456a71b91133"
+    },
+    {
+      "file": "analysis/overlap-v2/vocal-side-PRIOR-HYPOTHESIS-NOT-LEXICAL-PROOF.json",
+      "sha256": "c3a2aa228708e469e7a40cd08ce9708308916560be981d6c34eb5ad2bbed91d5"
+    },
+    {
+      "file": "analysis/overlap-v2/inventory.py",
+      "sha256": "ae4a787145a5e34cc3b4c2e6e62df6fe5b64ecd4dc92fdd8d97fba4f0edd5f8d"
+    },
+    {
+      "file": "analysis/overlap-v2/ctc.py",
+      "sha256": "ed43dfd90e919a080f26c87e39c311d842ece2d66379fd9b064b5dd23c406b7e"
+    },
+    {
+      "file": "analysis/overlap-v2/make_panels.py",
+      "sha256": "90ee1e4b42b18bf4022f7d78d2ea1f12e7862e8c1f9c53e2226afeaf1d22f463"
+    },
+    {
+      "file": "analysis/overlap-v2/make_side_panels.py",
+      "sha256": "884a13e86d0d2802f78fa90de473f116e11ba58b43a47a0941302da9d34f17b8"
+    },
+    {
+      "file": "analysis/overlap-v2/template_correlation.py",
+      "sha256": "46ee3dbae5014ad38afd0bea1cc9964d034a449ea092643b08e68ad18b74ac5f"
+    },
+    {
+      "file": "analysis/overlap-v2/tail_template_correlation.py",
+      "sha256": "a9f548664a994a9abee1761ac73efd4a92dce27eb9fe68162f8b35fdd374cf84"
+    },
+    {
+      "file": "analysis/overlap-v2/template-correlation.json",
+      "sha256": "39326a7218b1f4a5ead77627feb1eddd1526c9f833d9aa143b7bc9701ec38616"
+    },
+    {
+      "file": "analysis/overlap-v2/tail-template-correlation.json",
+      "sha256": "650e1136fc265cc4fdca7acebddc245a093ab248b4a7c956bc6634f80e0d08b9"
+    },
+    {
+      "file": "analysis/overlap-v2/build_report.py",
+      "sha256": "5f5857541d1240a65059b102ccfc04c32fc8e62d1ef1beb85f1c286103384d79"
+    },
+    {
+      "file": "analysis/independent-audio/stem-clock.json",
+      "sha256": "da5b7940dc8c0f19e763de6f6c7b2135d0198c787cf6efe41639bbf6975515af"
+    },
+    {
+      "file": "analysis/independent-audio/original-mix-16000.wav",
+      "sha256": "4ebcd945bfb29105e1d087ef9dc006441d9674b07546904e7ff50126f4d910bc"
+    },
+    {
+      "file": "analysis/independent-audio/vocals-16000.wav",
+      "sha256": "74274bd9112166d72518dd9182adb90db1134674cb7e9f55e5610d9eea836df3"
+    },
+    {
+      "file": "analysis/overlap-v2/original-side-16000.wav",
+      "sha256": "327e7ed24a0cc6c9433973032247d605f4b159d4570538c15aeeadd53066a3cd"
+    },
+    {
+      "file": "analysis/overlap-v2/vocals-side-16000.wav",
+      "sha256": "8b6305d82804dda36fd266e5fc74efee5576c26eeccb06daeebe6294747788bc"
+    }
+  ],
+  "panelIdentity": [
+    {
+      "file": "analysis/overlap-v2/panels/overlap-full.png",
+      "sha256": "198444e011c1eeb2524b88f2a712c721d79ec905e09f3710cc38f9b58a32d4da"
+    },
+    {
+      "file": "analysis/overlap-v2/panels/overlap.png",
+      "sha256": "89ec4f7b54bcf315f1c4c8a3aa97c94ac58efdefe91212b5394a62790d65b678"
+    },
+    {
+      "file": "analysis/overlap-v2/panels/pre-overlap.png",
+      "sha256": "4e4a6f038cde86f0314b5e2433eac4bae781e3f1090f8e0d462d3c54ca8ae320"
+    },
+    {
+      "file": "analysis/overlap-v2/panels-side/overlap-detail-a.png",
+      "sha256": "927529f29116a93fdabf91558993d64f3c97133df24863f9cbf14121728e540f"
+    },
+    {
+      "file": "analysis/overlap-v2/panels-side/overlap-detail-b.png",
+      "sha256": "d487b537bf50efea9f2d113c8d386230268d437d3affc920a01566169d038da5"
+    },
+    {
+      "file": "analysis/overlap-v2/panels-side/overlap-entrance.png",
+      "sha256": "28c2311dbbd3493184b967d0a3a8a23ae129b973bf771681e3e3db73dc6a8046"
+    },
+    {
+      "file": "analysis/overlap-v2/panels-side/overlap-second.png",
+      "sha256": "d9cedac3404f4738780af6377d45a6f0218d846cc2f11dc38905194d9525865b"
+    }
+  ],
+  "limits": {
+    "humanListening": false,
+    "humanApproval": false,
+    "canonicalTimingModified": false,
+    "productionAudioOrVideoChanged": false,
+    "remoteActions": false,
+    "newProductionRender": false,
+    "exactSampleSchedulingDoesNotProveMillisecondPerceptualAccuracy": true,
+    "remainingPriority": "Review the masked entrance212.2–212.6 and nasal handoff213.32–213.92, then the low-energy direct-vowel/room-decay releases. Multiple voices must remain independently highlighted."
+  }
+}

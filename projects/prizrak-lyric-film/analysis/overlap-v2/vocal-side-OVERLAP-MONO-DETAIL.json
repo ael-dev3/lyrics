@@ -1,0 +1,55 @@
+{
+  "phraseId": "OVERLAP-MONO-DETAIL",
+  "language": "ja",
+  "cropStartSeconds": 213.35,
+  "cropEndSeconds": 214.85,
+  "emissionFrameSupportSeconds": 0.02027027027027027,
+  "conditionedUnits": [
+    "もの"
+  ],
+  "words": [
+    {
+      "unitIndex": 0,
+      "text": "もの",
+      "startSeconds": 213.73513513513512,
+      "endSeconds": 214.1,
+      "ctcPathScore": 0.056692540645599365,
+      "characterObservations": [
+        {
+          "internalSymbol": "m",
+          "startSeconds": 213.73513513513512,
+          "endSeconds": 213.7554054054054,
+          "score": 0.026590250432491302
+        },
+        {
+          "internalSymbol": "o",
+          "startSeconds": 213.79594594594593,
+          "endSeconds": 213.81621621621622,
+          "score": 0.05551109462976456
+        },
+        {
+          "internalSymbol": "n",
+          "startSeconds": 213.85675675675674,
+          "endSeconds": 213.87702702702703,
+          "score": 0.09170150756835938
+        },
+        {
+          "internalSymbol": "o",
+          "startSeconds": 214.07972972972973,
+          "endSeconds": 214.1,
+          "score": 0.05296730995178223
+        }
+      ]
+    }
+  ],
+  "unforcedInternalSymbols": [],
+  "humanListening": false,
+  "inputKind": "vocal-side",
+  "normalization": "Japanese kanji contextual readings mapped to native kana solely inside acoustic model preprocessing; displayed lyrics remain original orthography. Chinese-default uroman paths are rejected.",
+  "limits": [
+    "Forced CTC placement cannot determine lexical presence.",
+    "CTC character cores may omit quiet connected prefixes or held endings.",
+    "Japanese internal romanization is model preprocessing and can differ from performed particle pronunciation; no displayed pronunciation layer is created.",
+    "Scores are uncalibrated path evidence, not timing accuracy probabilities."
+  ]
+}

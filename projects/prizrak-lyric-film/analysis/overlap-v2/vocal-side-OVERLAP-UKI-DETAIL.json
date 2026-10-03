@@ -1,0 +1,49 @@
+{
+  "phraseId": "OVERLAP-UKI-DETAIL",
+  "language": "ja",
+  "cropStartSeconds": 212.15,
+  "cropEndSeconds": 213.5,
+  "emissionFrameSupportSeconds": 0.020149253731343283,
+  "conditionedUnits": [
+    "憂き"
+  ],
+  "words": [
+    {
+      "unitIndex": 0,
+      "text": "憂き",
+      "startSeconds": 212.53283582089554,
+      "endSeconds": 212.8350746268657,
+      "ctcPathScore": 0.040126024124523006,
+      "characterObservations": [
+        {
+          "internalSymbol": "u",
+          "startSeconds": 212.53283582089554,
+          "endSeconds": 212.55298507462686,
+          "score": 0.018076671287417412
+        },
+        {
+          "internalSymbol": "k",
+          "startSeconds": 212.73432835820896,
+          "endSeconds": 212.7544776119403,
+          "score": 0.009177674539387226
+        },
+        {
+          "internalSymbol": "i",
+          "startSeconds": 212.81492537313434,
+          "endSeconds": 212.8350746268657,
+          "score": 0.09312372654676437
+        }
+      ]
+    }
+  ],
+  "unforcedInternalSymbols": [],
+  "humanListening": false,
+  "inputKind": "vocal-side",
+  "normalization": "Japanese kanji contextual readings mapped to native kana solely inside acoustic model preprocessing; displayed lyrics remain original orthography. Chinese-default uroman paths are rejected.",
+  "limits": [
+    "Forced CTC placement cannot determine lexical presence.",
+    "CTC character cores may omit quiet connected prefixes or held endings.",
+    "Japanese internal romanization is model preprocessing and can differ from performed particle pronunciation; no displayed pronunciation layer is created.",
+    "Scores are uncalibrated path evidence, not timing accuracy probabilities."
+  ]
+}

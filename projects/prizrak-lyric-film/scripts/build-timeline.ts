@@ -1,5 +1,5 @@
 import {readFileSync,writeFileSync} from 'node:fs';
-import {validateTimeline,type Timeline,type Cue,type Lane,type Word} from '../src/model.ts';
+import {validateTimeline,type Timeline,type Cue,type Lane,type Word,vocalTrack} from '../src/model.ts';
 const read=(path:string)=>JSON.parse(readFileSync(path,'utf8'));
 const SR=44100,sha=read('source/recording.json').sourceSha256 ?? '8563f6b817c9b1cc39649363a52486214c691c0d98ae7bb82263021ac7363523';
 const reason='Original editorial translation: complete indicated lexical/grammatical meaning, focused on the union of its source events; no invented target-language timestamps.';
@@ -28,7 +28,8 @@ for(const proposal of report.russianPerWordProposals){
  const cue:Cue={id:proposal.phraseId,label:template.sourceText,sourceLanguage:'ru',start:words[0]!.startSample/SR,end:words.at(-1)!.endSample/SR,visibleStart:0,fullOpacityEnd:0,visibleEnd:0,words,lanes:template.lanes.map((l:Lane)=>({...l,tokens:l.tokens.map((t,i)=>({...t,id:`${proposal.phraseId}-${l.language}-${i}`}))}))};
  cues.push(cue);decisionEvents.push(...proposal.units.map((u:any,i:number)=>({wordId:words[i]!.id,language:'ru',selectedStartSample:words[i]!.startSample,selectedEndSample:words[i]!.endSample,onsetRangeSeconds:u.onsetRangeSeconds,releaseRangeSeconds:u.releaseRangeSeconds,rationale:u.rationale,rawObservations:u.observations,humanListening:false})));
 }
-const jpOccurrences:{id:string;template:string;times:[number,number][];note:string;closing?:boolean}[]=[
+const overlap=read('source/japanese-overlap-selected.json');
+const jpOccurrences:{id:string;template:string;times:[number,number][];note:string;closing?:boolean;upper?:boolean}[]=[
  {id:'JP30-001',template:'JP30-loop',times:[[20.53,21.66],[21.66,22.82],[22.82,23.38],[23.38,24.28],[25.07,27.45],[27.45,29.02]],note:'Opening fragment independently visible in bounded multilingual transcription and native-kana CTC; quiet initial vowel/body from original/stem panel; direct tails beyond CTC character cores.'},
  {id:'JP30-002',template:'JP30-loop',times:[[29.69,30.78],[30.78,32.0],[32.0,32.56],[32.56,33.43],[34.25,36.59],[36.59,38.07]],note:'Second opening repeat reviewed independently: 暁 has a new direct onset after a real gap, not the earlier mixed-model allocation in the prior なし body.'},
  {id:'JP59-001',template:'JP59-sleep',times:[[49.39,51.57],[51.57,52.83],[52.83,53.77]],note:'Quiet source entry precedes clear vowel core. Continuous native inflections grouped for complete counterfactual focus; adversative ものを remains separate.'},
@@ -37,37 +38,33 @@ const jpOccurrences:{id:string;template:string;times:[number,number][];note:stri
  {id:'JP59-005',template:'JP59-sleep',times:[[67.69,69.94],[69.94,71.18],[71.18,72.17]],note:'Second complete poem performance inspected independently; continuous counterfactual and separate regret event.'},
  {id:'JP59-006',template:'JP59-night',times:[[73.27,73.94],[73.94,76.50]],note:'Quiet independent second-night prefix; same-note low harmonic/wave pulses continue towards76.4. Provisional76.50 release protects the possible held e-vowel; direct-body versus room-decay needs listening.'},
  {id:'JP59-007-008',template:'JP59-moon',times:[[76.75,77.86],[77.86,79.62],[79.63,81.16],[82.47,83.62],[83.64,86.12]],note:'Original moon crop began too late; widened native-kana CTC verifies 79.66 core and earlier frication. Long final かな body stays lit into the Russian entrance; no cue fade truncates it.'},
- {id:'JP30-003',template:'JP30-loop',times:[[221.8,222.84],[222.84,224.03],[224.03,224.53],[224.53,225.36],[226.3,228.50],[228.50,229.96]],note:'Provisional overlapping initial Japanese vowel: physical changed vocal body and consonant sequence support ~221.8 with broad 221.65–222.12 range. Widened forced u at220.78 is rejected as borrowed Russian night. Russian body remains until222.24.',closing:true},
- {id:'JP30-004',template:'JP30-loop',times:[[230.55,231.97],[231.97,233.60],[233.60,234.47],[234.47,234.50],[235.35,237.58],[237.58,239.04]],note:'Independently measured final loop, not offset-copy. Renewed original/stem vowel body at230.55 corrects the materially late230.79 proposal; CTC u230.91 is a core, not the entrance. Final direct body/room decay split retained as uncertainty.',closing:true},
+ {id:overlap.cueId,template:overlap.templateId,times:overlap.units.map((u:any)=>[u.start,u.end]),note:overlap.basis,upper:true},
+ {id:'JP30-003',template:'JP30-loop',times:[[221.8,222.84],[222.84,224.03],[224.03,224.53],[224.53,225.36],[226.3,228.50],[228.50,229.96]],note:'Provisional overlapping initial Japanese vowel: physical changed vocal body and consonant sequence support ~221.8 with broad 221.65–222.12 range. Widened forced u at220.78 is rejected as borrowed Russian night. Russian body remains until222.24.',closing:true,upper:true},
+ {id:'JP30-004',template:'JP30-loop',times:[[230.55,231.97],[231.97,233.10],[233.10,233.60],[233.60,234.47],[235.35,237.58],[237.58,239.04]],note:'Independently measured final loop, not offset-copy. Renewed original/stem vowel body at230.55 corrects the materially late230.79 proposal; CTC u230.91 is a core, not the entrance. Final direct body/room decay split retained as uncertainty.',closing:true,upper:true},
 ];
-// Keep Japanese は separate without moving the following predicate; no artificial
-// three-hundredth-second word: the particle core precedes the independently
-// observed なし attack.
-jpOccurrences.at(-1)!.times=[[230.55,231.97],[231.97,233.1],[233.1,233.6],[233.6,234.47],[235.35,237.58],[237.58,239.04]];
 for(const occurrence of jpOccurrences){
  const template=jpTemplates.find(t=>t.templateId===occurrence.template)!;
- const words:Word[]=occurrence.times.map(([start,end],i)=>({id:`${occurrence.id}-${i+1}`,text:template.units[i]!,sourceIndex:i,startSample:Math.round(start*SR),endSample:Math.round(end*SR),confidence:occurrence.id==='JP30-003'&&i===0?'high uncertainty: mixed vocal entry':'signal/model agreement with direct-body release review; not listening approval',method:'Native-kana conditioned acoustic input + original/stem spectral inspection; original Japanese orthography on screen.'}));
+ const words:Word[]=occurrence.times.map(([start,end],i)=>({id:`${occurrence.id}-${i+1}`,text:template.units[i]!,sourceIndex:i,startSample:Math.round(start*SR),endSample:Math.round(end*SR),confidence:occurrence.id===overlap.cueId?'provisional layered vocal: broad uncertainty; perceptual review pending':occurrence.id==='JP30-003'&&i===0?'high uncertainty: mixed vocal entry':'signal/model agreement with direct-body release review; not listening approval',method:'Native-kana conditioned acoustic input + original/stem spectral inspection; original Japanese orthography on screen.'}));
  const cue:Cue={id:occurrence.id,label:template.sourceText,sourceLanguage:'ja',start:words[0]!.startSample/SR,end:words.at(-1)!.endSample/SR,visibleStart:0,fullOpacityEnd:0,visibleEnd:0,words,lanes:template.lanes.map(l=>({...l,tokens:l.tokens.map((t,i)=>({...t,id:`${occurrence.id}-${l.language}-${i}`}))}))};
  if(occurrence.closing)cue.readingPlacement='closing';
- cues.push(cue);decisionEvents.push(...words.map((w,i)=>({wordId:w.id,language:'ja',selectedStartSample:w.startSample,selectedEndSample:w.endSample,onsetRangeSeconds:occurrence.id==='JP30-003'&&i===0?[221.65,222.12]:occurrence.id==='JP30-004'&&i===0?[230.50,230.80]:[Math.max(0,w.startSample/SR-.12),w.startSample/SR+.12],releaseRangeSeconds:occurrence.id==='JP59-002'&&i===1?[57.90,58.42]:occurrence.id==='JP59-006'&&i===1?[76.25,76.70]:[w.endSample/SR-.15,w.endSample/SR+.15],rationale:occurrence.note,rangeMeaning:'Explicit review bounds; not a calibrated confidence interval or a millisecond accuracy claim.',humanListening:false})));
+ if(occurrence.upper)cue.vocalTrack='japanese-upper';
+ cues.push(cue);decisionEvents.push(...words.map((w,i)=>({wordId:w.id,language:'ja',selectedStartSample:w.startSample,selectedEndSample:w.endSample,onsetRangeSeconds:occurrence.id===overlap.cueId?overlap.units[i].onsetRange:occurrence.id==='JP30-003'&&i===0?[221.65,222.12]:occurrence.id==='JP30-004'&&i===0?[230.50,230.80]:[Math.max(0,w.startSample/SR-.12),w.startSample/SR+.12],releaseRangeSeconds:occurrence.id===overlap.cueId?overlap.units[i].releaseRange:occurrence.id==='JP59-002'&&i===1?[57.90,58.42]:occurrence.id==='JP59-006'&&i===1?[76.25,76.70]:[w.endSample/SR-.15,w.endSample/SR+.15],rationale:occurrence.note,rangeMeaning:'Explicit review bounds; not a calibrated confidence interval or a millisecond accuracy claim.',humanListening:false})));
 }
 cues.sort((a,b)=>a.start-b.start);
-for(const [index,cue] of cues.entries()){
- const previous=cues[index-1],next=cues[index+1];
- cue.visibleStart=Math.max(previous?.visibleEnd??0,cue.start-.22);
- const gap=(next?.start??255.0944217687075)-cue.end;
- if(gap<=.62){cue.fullOpacityEnd=next?.start??cue.end;cue.visibleEnd=cue.fullOpacityEnd;}
- else {cue.fullOpacityEnd=cue.end+Math.min(.75,gap-.54);cue.visibleEnd=Math.min(cue.fullOpacityEnd+.5,(next?.start??255.0944217687075)-.22);}
+for(const track of ['lead','japanese-upper'] as const){
+ const trackCues=cues.filter(c=>vocalTrack(c)===track);
+ for(const [index,cue] of trackCues.entries()){
+  const previous=trackCues[index-1],next=trackCues[index+1];
+  cue.visibleStart=Math.max(previous?.visibleEnd??0,cue.start-.22);
+  const gap=(next?.start??255.0944217687075)-cue.end;
+  if(gap<=.62){cue.fullOpacityEnd=next?.start??cue.end;cue.visibleEnd=cue.fullOpacityEnd;}
+  else {cue.fullOpacityEnd=cue.end+Math.min(.75,gap-.54);cue.visibleEnd=Math.min(cue.fullOpacityEnd+.5,(next?.start??255.0944217687075)-.22);}
+ }
 }
-// The shorter old source line is replaced by an unchanged, explicitly owned
-// simultaneous tail. The original utterance samples are never shortened.
-const jpCarry=cues.find(c=>c.id==='JP30-003')!,ruLast=cues.find(c=>c.id==='RU-027')!;
-ruLast.fullOpacityEnd=ruLast.visibleEnd=jpCarry.start;jpCarry.visibleStart=jpCarry.start;
-const priorWord=ruLast.words.at(-1)!;
-jpCarry.carry={fromCueId:ruLast.id,words:[{...priorWord,sourceIndex:0}],lanes:[lane('ru',[['ночь',[0]]]),lane('en',[['night',[0]]])],visibleEnd:ruLast.end};
-jpCarry.carry.lanes.forEach(l=>l.tokens.forEach((t,i)=>t.id=`carry-${ruLast.id}-${l.language}-${i}`));
-const timeline:Timeline={schemaVersion:2,revision:'prizrak-preview-v1',sampleRate:44100,sourceSha256:sha,sourceDuration:255.0944217687075,cues};
+// Concurrent voices own complete cues on independent reading tracks. Neither
+// language borrows another voice's timing, truncates its body or reassigns a tail.
+const timeline:Timeline={schemaVersion:2,revision:'prizrak-preview-v2',sampleRate:44100,sourceSha256:sha,sourceDuration:255.0944217687075,cues};
 validateTimeline(timeline);
 writeFileSync('public/timeline.json',JSON.stringify(timeline,null,2)+'\n');
 writeFileSync('evidence/timing-decisions.json',JSON.stringify({revision:timeline.revision,sourceSha256:sha,status:'Selected preview events; human full-speed/reduced-speed review remains pending.',sampleClock:'Original unchanged AAC decoded at44100Hz; half-open sample intervals; no global anticipation/lag compensation.',evidenceLimits:'CTC emissions ~20ms, spectral support23.22ms. Integer sample storage is precise scheduling, not guaranteed perceptual boundary accuracy. Stems are clock verified, not source authority.',wordCount:decisionEvents.length,cueCount:cues.length,events:decisionEvents},null,2)+'\n');
-console.log(`${cues.length} performed cues; ${decisionEvents.length} independently scheduled source events; closing vocal overlap preserved.`);
+console.log(`${cues.length} performed cues; ${decisionEvents.length} independently scheduled source events; independent simultaneous vocal tracks preserved.`);

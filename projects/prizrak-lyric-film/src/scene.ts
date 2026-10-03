@@ -1,4 +1,4 @@
-import {tokenActive, visibleCue, validateTimeline, type Timeline, type FeatureData, type Cue, type Lane, type Token, type Word, type Format} from './model.ts';
+import {tokenActive, visibleCue, visibleCues, vocalTrack, validateTimeline, type Timeline, type FeatureData, type Cue, type Lane, type Token, type Word, type Format} from './model.ts';
 export type {Format} from './model.ts';
 type Context = CanvasRenderingContext2D;
 export interface TextSlot {id:string;index:number;language:Lane['language'];text:string;x:number;y:number;width:number;token:Token;}
@@ -30,6 +30,7 @@ export async function loadScene():Promise<void> {
 }
 export function getLines():Cue[] {return requireTimeline().cues;}
 export function getReadingCue(time:number):Cue|undefined {return visibleCue(requireTimeline(),time);}
+export function getReadingCues(time:number):Cue[] {return visibleCues(requireTimeline(),time);}
 export function getSceneIdentity():{revision:string;sourceSha256:string} {const t=requireTimeline();return {revision:t.revision,sourceSha256:t.sourceSha256};}
 export function cueOpacity(c:Cue,time:number):number {
  if(time<c.visibleStart || time>=c.visibleEnd)return 0;
@@ -53,17 +54,19 @@ function positionLanes(ctx:Context,lanes:Lane[],wrapped:number[][][],size:number
 }
 export function layoutCue(ctx:Context,cue:Cue,format:Format):CueLayout {
  const key=`${cue.id}:${format}`;const cached=layouts.get(key);if(cached)return cached;
- const portrait=format==='portrait',three=cue.lanes.length===3;
- const width=portrait?COMPOSITION.portrait.readingWidth:COMPOSITION.landscape.readingWidth;
- const available=portrait?610:430;let size=portrait?(three?72:76):(three?64:74);let wrapped:number[][][]=[];let total=0;let fitted=false;
+ const portrait=format==='portrait',three=cue.lanes.length===3,upper=vocalTrack(cue)==='japanese-upper';
+ const dual= !upper && requireTimeline().cues.some(other=>vocalTrack(other)==='japanese-upper' && other.visibleStart<cue.visibleEnd && other.visibleEnd>cue.visibleStart);
+ const width=portrait?COMPOSITION.portrait.readingWidth:upper?1280:COMPOSITION.landscape.readingWidth;
+ const available=portrait?(upper?440:dual?290:610):430;let size=portrait?(upper||dual?64:three?72:76):(three||dual?64:74);let wrapped:number[][][]=[];let total=0;let fitted=false;
  for(;size>=(portrait?55:44);size--){wrapped=cue.lanes.map(lane=>wrapLane(ctx,lane,width,size));const rows=wrapped.reduce((sum,value)=>sum+value.length,0);total=rows*size*1.20+(cue.lanes.length-1)*size*.38;if(total<=available && cue.lanes.every(lane=>lane.tokens.every(token=>{setFont(ctx,size,lane.language);return ctx.measureText(token.text).width<=width;}))){fitted=true;break;}}
  if(!fitted)throw Error(`Complete equal-size language lanes cannot fit ${cue.id}/${format}`);
  // Both closing Japanese cues reserve the same source-aware region. Removing
  // a carried Russian voice never changes the primary block's geometry.
  const closing=cue.readingPlacement==='closing';
- const bottom=portrait?(closing?1355:COMPOSITION.portrait.readingCenter)+total/2:(closing?610:COMPOSITION.landscape.readingBottom);
+ const bottom=portrait?(upper?COMPOSITION.portrait.sourceY+COMPOSITION.portrait.sourceHeight+42+total:dual?1605:(closing?1355:COMPOSITION.portrait.readingCenter)+total/2):(upper?105+total:closing?610:COMPOSITION.landscape.readingBottom);
  const top=bottom-total;const canvasWidth=portrait?1080:1920;
  const lanes=positionLanes(ctx,cue.lanes,wrapped,size,top,canvasWidth);
+ if(upper && !portrait)for(const lane of lanes)for(const slot of lane.slots)slot.x+=240;
  const result={size,top,bottom,lanes};layouts.set(key,result);return result;
 }
 export function layoutCarry(ctx:Context,cue:Cue,format:Format):CueLayout|undefined {
@@ -116,13 +119,18 @@ function drawWords(ctx:Context,words:Word[],layout:CueLayout,time:number,opacity
 }
 export function paintScene(ctx:Context,time:number,format:Format,source:CanvasImageSource):void {
  const t=requireTimeline(),portrait=format==='portrait';ctx.clearRect(0,0,portrait?1080:1920,portrait?1920:1080);drawPicture(ctx,source,format);
- const cue=visibleCue(t,time);
+ const cues=visibleCues(t,time),upper=cues.find(c=>vocalTrack(c)==='japanese-upper');
  // Readability is a continuous composition shade, independent of cue opacity.
- if(!portrait){ctx.save();ctx.globalAlpha=1-smooth(241.9,242.65,time);const closing=cue?.readingPlacement==='closing';const top=closing?100:520,bottom=closing?650:1020;const shade=ctx.createLinearGradient(0,top,0,bottom);shade.addColorStop(0,'rgba(6,12,15,0)');shade.addColorStop(.42,'rgba(6,12,15,.14)');shade.addColorStop(.8,closing?'rgba(6,12,15,.48)':'rgba(6,12,15,.58)');shade.addColorStop(1,closing?'rgba(6,12,15,0)':'rgba(6,12,15,.48)');ctx.fillStyle=shade;ctx.fillRect(0,top,1920,bottom-top);ctx.restore();}
+ if(!portrait){ctx.save();ctx.globalAlpha=1-smooth(241.9,242.65,time);
+  const shadeRegion=(top:number,bottom:number,upperRegion:boolean)=>{const shade=ctx.createLinearGradient(0,top,0,bottom);shade.addColorStop(0,'rgba(6,12,15,0)');shade.addColorStop(.42,'rgba(6,12,15,.14)');shade.addColorStop(.8,upperRegion?'rgba(6,12,15,.48)':'rgba(6,12,15,.58)');shade.addColorStop(1,upperRegion?'rgba(6,12,15,0)':'rgba(6,12,15,.48)');ctx.fillStyle=shade;ctx.fillRect(upperRegion?480:0,top,upperRegion?1440:1920,bottom-top);};
+  if(cues.some(c=>vocalTrack(c)==='lead'))shadeRegion(520,1020,false);
+  if(upper)shadeRegion(80,430,true);
+  if(!cues.length)shadeRegion(520,1020,false);
+  ctx.restore();}
  const decoration=smooth(.1,.7,time)*(1-smooth(241.9,242.65,time));ctx.save();ctx.globalAlpha=decoration*.66;ctx.font=`500 ${portrait?27:26}px PrizrakSerif, PrizrakJP`;ctx.textAlign='center';ctx.fillStyle='#becbc5';ctx.fillText('sotode 外で · призрак',portrait?540:960,portrait?148:46);ctx.restore();
  spectrum(ctx,time,format);
- if(cue){
-  if(cue.carry && time>=cue.start && time<cue.carry.visibleEnd){const carried=layoutCarry(ctx,cue,format)!;drawWords(ctx,cue.carry.words,carried,time,1);}
-  drawWords(ctx,cue.words,layoutCue(ctx,cue,format),time,cueOpacity(cue,time));
+ for(const current of cues){
+  if(current.carry && time>=current.start && time<current.carry.visibleEnd){const carried=layoutCarry(ctx,current,format)!;drawWords(ctx,current.carry.words,carried,time,1);}
+  drawWords(ctx,current.words,layoutCue(ctx,current,format),time,cueOpacity(current,time));
  }
 }

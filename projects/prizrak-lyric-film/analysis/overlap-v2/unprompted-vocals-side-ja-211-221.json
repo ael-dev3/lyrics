@@ -1,0 +1,169 @@
+{
+  "schemaVersion": 1,
+  "status": "Unprompted lexical observations of overlapping vocals; not selected timing or human hearing.",
+  "sourceSha256": "8563f6b817c9b1cc39649363a52486214c691c0d98ae7bb82263021ac7363523",
+  "method": {
+    "model": "large-v3-turbo",
+    "checkpointSha256": "aff26ae408abcba5fbf8813c21e62b0941638c5f6eebfb145be0c9839262a19a",
+    "implementation": "stable-ts 2.19.1",
+    "language": "ja",
+    "inputKind": "vocals-side",
+    "inputFile": "analysis/overlap-v2/vocals-side-16000.wav",
+    "inputSha256": "8b6305d82804dda36fd266e5fc74efee5576c26eeccb06daeebe6294747788bc",
+    "conditioningText": null,
+    "initialPrompt": null,
+    "conditionOnPreviousText": false,
+    "suppressSilence": false,
+    "cropStartSample16000": 3380800,
+    "cropEndSample16000": 3540800,
+    "originalSourceZeroPreserved": true,
+    "humanListening": false,
+    "elapsedSeconds": 3.242227124981582
+  },
+  "result": {
+    "text": "おめでとうございます",
+    "segments": [
+      {
+        "start": 211.3,
+        "end": 215.12,
+        "text": "おめでとうございます",
+        "seek": 211.3,
+        "tokens": [
+          6117,
+          11429,
+          2474,
+          17880,
+          43808
+        ],
+        "temperature": 0,
+        "avg_logprob": -1.2257061004638672,
+        "compression_ratio": 0.7317073170731707,
+        "no_speech_prob": 1.3483866800889643e-10,
+        "words": [
+          {
+            "word": "お",
+            "start": 211.3,
+            "end": 212.72,
+            "probability": 0.007803861051797867,
+            "tokens": [
+              6117
+            ]
+          },
+          {
+            "word": "め",
+            "start": 212.72,
+            "end": 212.92,
+            "probability": 0.026449374854564667,
+            "tokens": [
+              11429
+            ]
+          },
+          {
+            "word": "で",
+            "start": 212.92,
+            "end": 213.2,
+            "probability": 0.899624764919281,
+            "tokens": [
+              2474
+            ]
+          },
+          {
+            "word": "とう",
+            "start": 213.2,
+            "end": 213.78,
+            "probability": 0.9908608198165894,
+            "tokens": [
+              17880
+            ]
+          },
+          {
+            "word": "ございます",
+            "start": 213.78,
+            "end": 215.12,
+            "probability": 0.09916273504495621,
+            "tokens": [
+              43808
+            ]
+          }
+        ]
+      }
+    ],
+    "language": "ja",
+    "ori_dict": {
+      "text": "おめでとうございます",
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0.0,
+          "start": 0.0,
+          "end": 3.82,
+          "text": "おめでとうございます",
+          "tokens": [
+            50365,
+            6117,
+            11429,
+            2474,
+            17880,
+            43808,
+            50865
+          ],
+          "temperature": 0,
+          "avg_logprob": -1.2257061004638672,
+          "compression_ratio": 0.7317073170731707,
+          "no_speech_prob": 1.3483866800889643e-10,
+          "words": [
+            {
+              "word": "お",
+              "start": 0.0,
+              "end": 1.42,
+              "probability": 0.007803861051797867,
+              "tokens": [
+                6117
+              ]
+            },
+            {
+              "word": "め",
+              "start": 1.42,
+              "end": 1.62,
+              "probability": 0.026449374854564667,
+              "tokens": [
+                11429
+              ]
+            },
+            {
+              "word": "で",
+              "start": 1.62,
+              "end": 1.9,
+              "probability": 0.899624764919281,
+              "tokens": [
+                2474
+              ]
+            },
+            {
+              "word": "とう",
+              "start": 1.9,
+              "end": 2.48,
+              "probability": 0.9908608198165894,
+              "tokens": [
+                17880
+              ]
+            },
+            {
+              "word": "ございます",
+              "start": 2.48,
+              "end": 3.82,
+              "probability": 0.09916273504495621,
+              "tokens": [
+                43808
+              ]
+            }
+          ]
+        }
+      ],
+      "language": "ja",
+      "time_scale": null
+    },
+    "regroup_history": "",
+    "nonspeech_sections": []
+  }
+}

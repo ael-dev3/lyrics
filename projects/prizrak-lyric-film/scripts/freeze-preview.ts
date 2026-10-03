@@ -2,7 +2,7 @@ import {readFileSync,writeFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import type {Timeline} from '../src/model.ts';
 const timeline=JSON.parse(readFileSync('public/timeline.json','utf8')) as Timeline;
-const files=['public/source.mp4','public/timeline.json','public/audio-features.json','source/recording.json','source/russian-editorial.json','source/japanese-selected-editorial.json','src/model.ts','src/scene.ts','src/player.ts','review/index.html','review/client.js','public/fonts/NotoSerif.ttf','public/fonts/NotoSerifJP.ttf','package-lock.json','scripts/build-timeline.ts','scripts/preview-server.ts','scripts/render-gate.ts'];
+const files=['public/source.mp4','public/timeline.json','public/audio-features.json','source/recording.json','source/russian-editorial.json','source/japanese-selected-editorial.json','source/japanese-overlap-selected.json','src/model.ts','src/scene.ts','src/player.ts','review/index.html','review/client.js','public/fonts/NotoSerif.ttf','public/fonts/NotoSerifJP.ttf','package-lock.json','scripts/build-timeline.ts','scripts/preview-server.ts','scripts/render-gate.ts'];
 const hash=(p:string)=>createHash('sha256').update(readFileSync(p)).digest('hex');
 const inputHashes=Object.fromEntries(files.map(p=>[p,hash(p)]));
 if(inputHashes['public/source.mp4']!==timeline.sourceSha256)throw Error('Source changed; cannot freeze current review identity.');

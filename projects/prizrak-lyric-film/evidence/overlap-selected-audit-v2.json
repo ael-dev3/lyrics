@@ -1,0 +1,180 @@
+{
+  "schemaVersion": 1,
+  "status": "passed",
+  "timelineRevision": "prizrak-preview-v2",
+  "timelineSha256": "9ba5386855ca1cef9a4c381d43260110be59496b971fdea0263bcb60849bd1d4",
+  "sourceSha256": "8563f6b817c9b1cc39649363a52486214c691c0d98ae7bb82263021ac7363523",
+  "scope": "Selected-event identity, independent track ownership, contributor unions and scene-opacity functions. No acoustic hearing, decoded pixel or real browser playback attestation.",
+  "counts": {
+    "cues": 38,
+    "sourceEvents": 156,
+    "historicalEventIdentitiesUnchanged": 150,
+    "russianProposalExactAgreements": 106,
+    "newJapaneseEvents": 6,
+    "activeBodyExactBoundaryAnd60fpsChecks": 10697,
+    "newJapaneseBodyChecks": 493,
+    "languageContributorChecks": 25510,
+    "exactReleaseChecks": 156,
+    "overlapWindowCheckpoints": 784,
+    "overlapWindowUnionChecks": 18607,
+    "simultaneousSelectedVoiceCheckpoints": 477,
+    "closingNightOverlapChecks": 29
+  },
+  "newJapaneseProposals": [
+    {
+      "sourceIndex": 0,
+      "text": "憂き",
+      "startSample": 9364194,
+      "endSample": 9424170,
+      "proposalExactAgreement": true,
+      "onsetRange": [
+        212.2,
+        212.6
+      ],
+      "releaseRange": [
+        213.32,
+        213.92
+      ]
+    },
+    {
+      "sourceIndex": 1,
+      "text": "もの",
+      "startSample": 9424170,
+      "endSample": 9477090,
+      "proposalExactAgreement": true,
+      "onsetRange": [
+        213.32,
+        213.92
+      ],
+      "releaseRange": [
+        214.75,
+        215.05
+      ]
+    },
+    {
+      "sourceIndex": 2,
+      "text": "は",
+      "startSample": 9477090,
+      "endSample": 9500904,
+      "proposalExactAgreement": true,
+      "onsetRange": [
+        214.75,
+        215.05
+      ],
+      "releaseRange": [
+        215.3,
+        215.6
+      ]
+    },
+    {
+      "sourceIndex": 3,
+      "text": "なし",
+      "startSample": 9500904,
+      "endSample": 9538830,
+      "proposalExactAgreement": true,
+      "onsetRange": [
+        215.3,
+        215.6
+      ],
+      "releaseRange": [
+        216.1,
+        216.5
+      ]
+    },
+    {
+      "sourceIndex": 4,
+      "text": "暁",
+      "startSample": 9567495,
+      "endSample": 9673776,
+      "proposalExactAgreement": true,
+      "onsetRange": [
+        216.8,
+        217.1
+      ],
+      "releaseRange": [
+        219.2,
+        219.5
+      ]
+    },
+    {
+      "sourceIndex": 5,
+      "text": "ばかり",
+      "startSample": 9673776,
+      "endSample": 9748746,
+      "proposalExactAgreement": true,
+      "onsetRange": [
+        219.2,
+        219.5
+      ],
+      "releaseRange": [
+        220.85,
+        221.25
+      ]
+    }
+  ],
+  "closingOverlap": {
+    "russianWordId": "RU-027-4",
+    "startSeconds": 221.39,
+    "endSeconds": 222.24,
+    "japaneseOnsetSeconds": 221.8,
+    "independentFullCueOwnership": true,
+    "carryReassignment": false
+  },
+  "artifactIdentities": [
+    {
+      "file": "public/timeline.json",
+      "sha256": "9ba5386855ca1cef9a4c381d43260110be59496b971fdea0263bcb60849bd1d4"
+    },
+    {
+      "file": "scripts/build-timeline.ts",
+      "sha256": "f1fc476a011e49e2867a50177f2cbde9d59430eafd7dc97aa28f47207443cc7b"
+    },
+    {
+      "file": "src/model.ts",
+      "sha256": "f3a3f03ce5d72a77d2e2ec9deaadef2aac7e80a3a53c547d867c3cfa503d5281"
+    },
+    {
+      "file": "src/scene.ts",
+      "sha256": "10695f8ebe6bd8b11d6e01a15492228a05de48841794a67b7b62b07ae3b4f785"
+    },
+    {
+      "file": "public/audio-features.json",
+      "sha256": "dbef98d33ccd973ff3b8640e3bf9702a24666898ee1cfd1c68bc45dc49301665"
+    },
+    {
+      "file": "source/japanese-overlap-selected.json",
+      "sha256": "b15acdff912e44f90a5ce8d673c0282e0313c99e3256ba1a63476cd29451af24"
+    },
+    {
+      "file": "evidence/overlap-acoustic-v2.json",
+      "sha256": "791946058afed28ecc07937278df8bb8c792379dc580c688b9baa4496cd447c2"
+    },
+    {
+      "file": "evidence/v1-event-identity.json",
+      "sha256": "c98c7a5633bf0b10c097093730afca8b2fe2f3cea6d9431cf5ae4b3721c762f7"
+    },
+    {
+      "file": "evidence/independent-acoustic-review.json",
+      "sha256": "e756dffacea7fdd7939a4fb6fbd350be76aecc49af953e212572fdeca97046ee"
+    },
+    {
+      "file": "analysis/overlap-v2/audit-selected.ts",
+      "sha256": "ca8631379281c3458b0cef823c8102969c42206fccd424a2bc7dc08b23770b5c"
+    }
+  ],
+  "limits": {
+    "humanListening": false,
+    "humanApproval": false,
+    "canonicalTimingModified": false,
+    "newAsrDuringThisSelectedAudit": false,
+    "scenePixelsAudited": false,
+    "realBrowserClockAudited": false,
+    "sampleSchedulingIsNotPerceptualCertainty": true
+  },
+  "remainingListeningJudgments": [
+    "Quiet initial Japanese vowel212.2–212.6 and nasal handoff213.32–213.92.",
+    "Direct low vowel versus room decay in the layered releases.",
+    "Foreground/background perceptual alignment while both voices sing."
+  ],
+  "errors": []
+}

@@ -1,16 +1,33 @@
 {
   "project": "prizrak-lyric-film",
-  "revision": "prizrak-preview-v1",
   "checkedAtUTC": "2026-10-03T13:53:54Z",
   "frozenInputCount": 17,
   "frozenInputMismatches": [],
   "typecheck": "passed",
-  "modelAndGateTests": { "passed": 6, "failed": 0 },
-  "actualSourceLayoutProof": { "cues": 37, "formats": 2, "stills": 74, "status": "passed", "evidence": "layout-proof.json" },
-  "selectedTimelineAudit": { "sourceEvents": 150, "activeBodyCheckpoints": 10204, "exclusiveReleaseChecks": 150, "languageFocusCheckpoints": 24031, "status": "passed", "evidence": "selected-timeline-audit.json" },
+  "modelAndGateTests": {
+    "passed": 6,
+    "failed": 0
+  },
+  "actualSourceLayoutProof": {
+    "cues": 37,
+    "formats": 2,
+    "stills": 74,
+    "status": "passed",
+    "evidence": "layout-proof.json"
+  },
+  "selectedTimelineAudit": {
+    "sourceEvents": 150,
+    "activeBodyCheckpoints": 10204,
+    "exclusiveReleaseChecks": 150,
+    "languageFocusCheckpoints": 24031,
+    "status": "passed",
+    "evidence": "selected-timeline-audit.json"
+  },
   "browserVerification": "browser-verification.json",
   "privatePathCredentialScan": "No personal filesystem paths or credential markers found in the proposed new project files",
   "productionGate": "Current listening review and explicit authorization missing; attempted gate validation refused before encoding",
   "productionRenderStarted": false,
-  "scope": "Technical preview validation only. Perceptual listening and current render approval remain pending."
+  "scope": "Technical preview validation only. Perceptual listening and current render approval remain pending.",
+  "historicalRevision": "prizrak-preview-v1",
+  "status": "Historical v1 validation; current v2 evidence is in overlap-browser-v2.json and overlap-selected-audit-v2.json"
 }

@@ -1,5 +1,5 @@
-import {loadScene, paintScene, getLines, getReadingCue, getSceneIdentity, cueOpacity, type Format} from './scene.ts';
-import {sourceActive,tokenActive} from './model.ts';
+import {loadScene, paintScene, getLines, getReadingCue, getReadingCues, layoutCue, getSceneIdentity, cueOpacity, type Format} from './scene.ts';
+import {sourceActive,tokenActive,vocalTrack} from './model.ts';
 
 function element<T extends HTMLElement>(id: string): T {
   const found = document.getElementById(id);
@@ -106,10 +106,10 @@ function updateControls(time = video.currentTime): void {
   if (document.activeElement !== seconds) seconds.value = time.toFixed(3);
   clock.value = `${readableTime(time)} / ${readableTime(duration())}`;
   if (sceneReady) {
-    const line = getReadingCue(time);
-    if ((line?.id ?? null) !== lastCueId) {
-      lastCueId = line?.id ?? null;
-      currentCue.value = line ? line.label : 'No lyric cue at this point';
+    const line = getReadingCue(time),lines=getReadingCues(time),key=lines.map(c=>c.id).join('|')||null;
+    if (key !== lastCueId) {
+      lastCueId = key;
+      currentCue.value = lines.length ? lines.map(c=>c.label).join(' · ') : 'No lyric cue at this point';
       cue.value = line?.id ?? '';
     }
   }
@@ -146,6 +146,7 @@ function drawDecodedFrame(): void {
     lastPaintTime = wordTime;
     canvas.dataset.wordTime = wordTime.toFixed(6);
     const reading=getReadingCue(wordTime);
+    canvas.dataset.vocalTracks=JSON.stringify(getReadingCues(wordTime).map(c=>({cueId:c.id,track:vocalTrack(c),sourceLanguage:c.sourceLanguage,opacity:cueOpacity(c,wordTime),top:layoutCue(ctx,c,format).top,bottom:layoutCue(ctx,c,format).bottom,activeSourceWords:c.words.filter(w=>sourceActive(w,wordTime)).map(w=>w.text),activeTargetWords:c.lanes.map(l=>({language:l.language,words:l.tokens.filter(w=>tokenActive(w,c.words,wordTime)).map(w=>w.text)}))})));
     canvas.dataset.lyricCue=reading?.id??'';
     canvas.dataset.lyricOpacity=(reading?cueOpacity(reading,wordTime):0).toFixed(6);
     canvas.dataset.lyricHoldEnd=reading?.fullOpacityEnd.toFixed(6)??'';

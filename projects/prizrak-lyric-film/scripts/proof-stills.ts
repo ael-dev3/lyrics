@@ -2,7 +2,7 @@ import {readFileSync,writeFileSync,mkdirSync} from 'node:fs';
 import {spawnSync} from 'node:child_process';
 import {createCanvas,GlobalFonts,loadImage} from '@napi-rs/canvas';
 import {initScene,paintScene,layoutCue,cueOpacity} from '../src/scene.ts';
-import {sourceActive,tokenActive,type Timeline} from '../src/model.ts';
+import {sourceActive,tokenActive,visibleCues,vocalTrack,type Timeline} from '../src/model.ts';
 const read=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
 const timeline=read('public/timeline.json') as Timeline;
 GlobalFonts.registerFromPath('public/fonts/NotoSerif.ttf','PrizrakSerif');
@@ -23,6 +23,15 @@ for(const cue of timeline.cues){
    const focused=word.startSample/44100;
    if(cueOpacity(cue,focused)!==1 || !sourceActive(word,focused))throw Error(`First voice frame visibility failed ${word.id}`);
    for(const lane of cue.lanes)if(!lane.tokens.some(t=>tokenActive(t,cue.words,focused)))throw Error(`Missing focused meaning ${word.id}/${lane.language}`);
+  }
+  for(const current of visibleCues(timeline,time)){
+   const upper=visibleCues(timeline,time).find(c=>vocalTrack(c)==='japanese-upper');
+   const lead=visibleCues(timeline,time).find(c=>vocalTrack(c)==='lead');
+   if(upper && lead){
+    const a=layoutCue(ctx,upper,format),b=layoutCue(ctx,lead,format);
+    if(a.bottom+30>b.top)throw Error(`Vocal blocks collide ${upper.id}/${lead.id}/${format}`);
+    if(a.size!==b.size)throw Error(`Concurrent voices have unequal optical size ${upper.id}/${lead.id}/${format}`);
+   }
   }
   paintScene(ctx,time,format,source as unknown as CanvasImageSource);
   const path=`analysis/scene-proofs/${cue.id}-${format}.jpg`;writeFileSync(path,canvas.toBuffer('image/jpeg',89));

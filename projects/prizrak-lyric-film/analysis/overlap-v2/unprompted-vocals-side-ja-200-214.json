@@ -1,0 +1,189 @@
+{
+  "schemaVersion": 1,
+  "status": "Unprompted lexical observations of overlapping vocals; not selected timing or human hearing.",
+  "sourceSha256": "8563f6b817c9b1cc39649363a52486214c691c0d98ae7bb82263021ac7363523",
+  "method": {
+    "model": "large-v3-turbo",
+    "checkpointSha256": "aff26ae408abcba5fbf8813c21e62b0941638c5f6eebfb145be0c9839262a19a",
+    "implementation": "stable-ts 2.19.1",
+    "language": "ja",
+    "inputKind": "vocals-side",
+    "inputFile": "analysis/overlap-v2/vocals-side-16000.wav",
+    "inputSha256": "8b6305d82804dda36fd266e5fc74efee5576c26eeccb06daeebe6294747788bc",
+    "conditioningText": null,
+    "initialPrompt": null,
+    "conditionOnPreviousText": false,
+    "suppressSilence": false,
+    "cropStartSample16000": 3200000,
+    "cropEndSample16000": 3432000,
+    "originalSourceZeroPreserved": true,
+    "humanListening": false,
+    "elapsedSeconds": 4.716140875010751
+  },
+  "result": {
+    "text": "おやすみなさい",
+    "segments": [
+      {
+        "start": 201.56,
+        "end": 208.26,
+        "text": "おやすみなさい",
+        "seek": 200.0,
+        "tokens": [
+          6117,
+          7355,
+          2659,
+          11362,
+          3203,
+          19557
+        ],
+        "temperature": 0,
+        "avg_logprob": -0.8528572188483344,
+        "compression_ratio": 0.7,
+        "no_speech_prob": 5.872145131258222e-11,
+        "words": [
+          {
+            "word": "お",
+            "start": 201.56,
+            "end": 203.46,
+            "probability": 7.142511458368972e-05,
+            "tokens": [
+              6117
+            ]
+          },
+          {
+            "word": "や",
+            "start": 203.46,
+            "end": 203.9,
+            "probability": 0.08450551331043243,
+            "tokens": [
+              7355
+            ]
+          },
+          {
+            "word": "す",
+            "start": 203.9,
+            "end": 206.66,
+            "probability": 0.7843827605247498,
+            "tokens": [
+              2659
+            ]
+          },
+          {
+            "word": "み",
+            "start": 206.66,
+            "end": 206.98,
+            "probability": 0.9014228582382202,
+            "tokens": [
+              11362
+            ]
+          },
+          {
+            "word": "な",
+            "start": 206.98,
+            "end": 208.0,
+            "probability": 0.8150301575660706,
+            "tokens": [
+              3203
+            ]
+          },
+          {
+            "word": "さい",
+            "start": 208.0,
+            "end": 208.26,
+            "probability": 0.8603419661521912,
+            "tokens": [
+              19557
+            ]
+          }
+        ]
+      }
+    ],
+    "language": "ja",
+    "ori_dict": {
+      "text": "おやすみなさい",
+      "segments": [
+        {
+          "id": 0,
+          "seek": 0.0,
+          "start": 1.56,
+          "end": 8.26,
+          "text": "おやすみなさい",
+          "tokens": [
+            50365,
+            6117,
+            7355,
+            2659,
+            11362,
+            3203,
+            19557,
+            51090
+          ],
+          "temperature": 0,
+          "avg_logprob": -0.8528572188483344,
+          "compression_ratio": 0.7,
+          "no_speech_prob": 5.872145131258222e-11,
+          "words": [
+            {
+              "word": "お",
+              "start": 1.56,
+              "end": 3.46,
+              "probability": 7.142511458368972e-05,
+              "tokens": [
+                6117
+              ]
+            },
+            {
+              "word": "や",
+              "start": 3.46,
+              "end": 3.9,
+              "probability": 0.08450551331043243,
+              "tokens": [
+                7355
+              ]
+            },
+            {
+              "word": "す",
+              "start": 3.9,
+              "end": 6.66,
+              "probability": 0.7843827605247498,
+              "tokens": [
+                2659
+              ]
+            },
+            {
+              "word": "み",
+              "start": 6.66,
+              "end": 6.98,
+              "probability": 0.9014228582382202,
+              "tokens": [
+                11362
+              ]
+            },
+            {
+              "word": "な",
+              "start": 6.98,
+              "end": 8.0,
+              "probability": 0.8150301575660706,
+              "tokens": [
+                3203
+              ]
+            },
+            {
+              "word": "さい",
+              "start": 8.0,
+              "end": 8.26,
+              "probability": 0.8603419661521912,
+              "tokens": [
+                19557
+              ]
+            }
+          ]
+        }
+      ],
+      "language": "ja",
+      "time_scale": null
+    },
+    "regroup_history": "",
+    "nonspeech_sections": []
+  }
+}
