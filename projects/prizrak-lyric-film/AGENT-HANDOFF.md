@@ -2,7 +2,9 @@
 
 ## Current state
 
-`prizrak-preview-v2` is a complete approved centered scene. 38 cues, 156 source events, 87 language lanes. Original picture/soundtrack remain intact. Current render authorization is recorded; separate listening-scope confirmation remains pending. No final MP4, completed upload kit or media release exists yet. Covers, publishing copy, optional captions and a gated production renderer are prepared. Keep prior-track approvals separate.
+`prizrak-preview-v2` is a complete approved centered scene. 38 cues, 156 source events, 87 language lanes. Original picture/soundtrack remain intact. Current render authorization and owner-attested full-song, reduced-speed and both-format review are complete. Both complete production exports passed full-file and decoded-scene checks. The upload kit and new Desktop copy are checksum-verified. Dedicated covers, publishing copy and optional captions are included. See separate archive receipts for backup status; repository integration does not imply public media release. Keep prior-track approvals separate.
+
+[Final-byte checks](evidence/final-verification.json) · [Visible word focus](evidence/decoded-scene-verification.json) · [Desktop receipt](evidence/desktop-delivery-receipt.json) · [Production lessons](PRODUCTION-LESSONS.md). The acquisition-time authorization field in frozen `source/recording.json` is historical; current authority is in the separately bound approval and listening records.
 
 ## Read these first
 

@@ -1,7 +1,7 @@
 {
   "version": 1,
   "reviewedOn": "2026-10-03",
-  "scope": "Featured song sections in the main README and their project README entry points; По камушку and completed films use decoded final-film frames, with historical statuses retained.",
+  "scope": "Featured song sections and project READMEs; призрак and completed films use identified decoded final-film frames, with historical statuses retained.",
   "newExtraction": {
     "fps": [
       23.976023976,
@@ -15,6 +15,28 @@
   },
   "review": "Every featured song has an associated representative image. По камушку uses the exact decoded native final frame, with listening, full-file technical and finite scene evidence recorded separately. Other editions retain their recorded provenance, statuses and limitations; Rainline scoped acceptance does not certify full acoustic review.",
   "screenshots": [
+    {
+      "song": "призрак",
+      "image": "projects/prizrak-lyric-film/evidence/final-landscape-overlap-214.300.jpg",
+      "project": "projects/prizrak-lyric-film/README.md",
+      "timestampSeconds": 214.3,
+      "frame": 12858,
+      "sourceFrame": 5357,
+      "edition": "Verified centered v2 native 1920x1080, 60 fps production film",
+      "selection": "Complete original bass-performance shot with centered independent Japanese/Russian/English upper block and Russian/English foreground, simultaneous meaning focus and fixed measured spectrum.",
+      "method": "Actual completed MP4 frames selected by zero-based decoded frame index 12858, verified PTS 214.300, full-frame JPEG quality 2; no crop, scaling, scene reconstruction or text repaint.",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 206216,
+      "sha256": "45fee9ac3eaf73b1b4d6684f539d776e19c149f48bfbf8f9bfea1f6ded496be1",
+      "encoding": "JPEG",
+      "sourceFile": "Prizrak-Sotode-YouTube-1920x1080-60fps.mp4",
+      "sourceVideoSha256": "88e1423409a6e6ccb8ac68cb1760d26a04c3bba116f7b848f35703b994dc62f5",
+      "originalMediaSha256": "8563f6b817c9b1cc39649363a52486214c691c0d98ae7bb82263021ac7363523",
+      "previewIdentitySha256": "5a4f1236af43ccd329a627e3d5ce18dbe14c34fe4d81eecf6afe3bdbc0a441d0",
+      "projectEvidence": "projects/prizrak-lyric-film/evidence/final-stills.json",
+      "reviewLimit": "A still establishes visible presentation only; owner listening attestation, complete encoded-file checks and finite all-token scene checks remain separate."
+    },
     {
       "song": "По камушку",
       "image": "projects/po-kamushku-lyric-film/evidence/final-square-58.250.jpg",

@@ -4,6 +4,7 @@ Updated 3 October 2026. Featured songs in the main README have a representative 
 
 | Song | Representative image | Time | Edition / provenance |
 | --- | --- | --- | --- |
+| призрак | [Original bass-performance shot and centered independent vocal blocks](../projects/prizrak-lyric-film/evidence/final-landscape-overlap-214.300.jpg) | 03:34.300 | Exact decoded frame 12858 from the verified centered v2 native 1920×1080, 60 fps film; original frame 5357 |
 | По камушку | [Complete stone ring, equal себя / myself focus and material response](../projects/po-kamushku-lyric-film/evidence/final-square-58.250.jpg) | 00:58.250 | Exact decoded frame 3495 from the verified native 1080×1080, 60 fps film; original frame 1456 |
 | Кометы | [Original forest, equal bilingual type and individual focus](../projects/komety-lyric-film/evidence/final-landscape-12.400.jpg) | 00:12.400 | Exact decoded frame 744 from the verified native 1920×796, 60 fps film; original frame 310 |
 | Let You Down | [Original neon corridor portrait with measured neon light and neon spectrum](../projects/let-you-down-lyric-film/evidence/preview-landscape-27.000.jpg) | 00:27.000 | Native-renderer frame before the first vocal, matching the released v1.0.0 films at that moment. Lyric frames are withheld because the edition keeps its lyric text local |
@@ -107,3 +108,9 @@ Frame 3840 at 64.000 seconds is decoded from the technically verified v1 landsca
 ## If The Sun Burns Out Tonight final source-aspect frame
 
 Frame 12042 at 200.700 seconds was decoded at native 1920×818 from the verified final landscape MP4. It preserves the complete official VALORANT source picture, English sun focus, measured solar fire and gold spectrum. Both READMEs use the byte-identical unmodified frame, with its final-video identity in the inventory. Music/performance: Grabbitz, Oli Sykes and Courtney LaPlante; original music video: VALORANT. The [final screenshot manifest](../projects/if-the-sun-burns-out-tonight-lyric-film/evidence/final/manifest.json) also records a portrait frame at 160.500 seconds.
+
+## призрак final simultaneous-vocal frame
+
+Frame 12858 at 214.300s was decoded from the verified centered v2 native film. Original source frame 5357 has PTS 214.28s; source pictures retain their 25 fps cadence while lyric focus runs on the 60 fps delivery clock. The complete bass-performance shot carries independent centered Japanese/Russian/English backing and Russian/English foreground blocks with simultaneous focus. The portrait frame preserves all source edges above the same meanings. Both stills are unmodified full-frame JPEG q2 extractions from the actual films, with creator attribution to sotode 外で.
+
+[Final-still provenance](../projects/prizrak-lyric-film/evidence/final-stills.json) binds images, actual film hashes, output/source frame indices, approved inputs and both verification reports. Native and portrait presentation were inspected. Browser captures remain historical preview evidence; covers remain separate publishing adaptations. A still proves no acoustic boundary or unsampled frame.
