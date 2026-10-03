@@ -7,6 +7,7 @@
   "checkpoints": "overlap-browser-v2-checkpoints.json",
   "screenshots": "preview-stills.json",
   "checks": [
+    "Each upper Japanese/Russian/English row and each lower Russian/English row shares the picture center axis; the native upper shade is symmetric.",
     "Both independent voices visible in native and portrait compositions at 214.300 seconds",
     "Equal concurrent 64px type; Japanese-led translations above Russian-led translations without block collision",
     "Original full sharp source window and fixed visualizer anchor retained",
@@ -18,5 +19,9 @@
   ],
   "limitations": "This is technical and visual preview evidence. It does not establish human full-song listening, perceptual certainty for masked Japanese boundaries, encoded-film verification or render authorization.",
   "humanListening": false,
-  "productionAuthorized": false
+  "productionAuthorized": false,
+  "presentation": "centered-upper-vocal-block",
+  "sceneSha256": "5f75ca586f40a56d1fde8eb831b86a7b22bafd2a3cc7058584b99be6507fabcc",
+  "checkpointScope": "Existing selected-boundary and control observations retain unchanged timing. Current centered presentation verified in native and portrait at214.300 and native source-shot transition at217.500; earlier screenshots carry their presentation labels.",
+  "geometry": "centered-layout-v2.json"
 }

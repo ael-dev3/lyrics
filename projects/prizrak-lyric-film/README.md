@@ -4,7 +4,7 @@
 
 The original [music video and unchanged soundtrack](https://www.youtube.com/watch?v=Psp5vt8BwoY) remain the entire moving picture. Cold paper/silver typography and a fixed measured spectrum follow its winter, library and practical-light imagery. Native 16:9 preserves every source edge; portrait fits the whole sharp frame above a separate readable language block, with dim source-derived atmosphere around it.
 
-![Actual browser preview with two simultaneous vocal blocks and complete translated meaning focus](evidence/browser-landscape-overlap-v2-214.300.jpg)
+![Actual browser preview with two centered simultaneous vocal blocks and complete translated meaning focus](evidence/browser-landscape-centered-v2-214.300.jpg)
 
 *Full-page screenshot of the real browser preview paused at 214.300s. A preview still, not an encoded-film frame. [Provenance](evidence/preview-stills.json).*
 
