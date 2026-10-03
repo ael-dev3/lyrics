@@ -2,7 +2,7 @@
 
 ## Current state
 
-`prizrak-preview-v2` is a complete **preview-only** scene. 38 cues, 156 source events, 87 language lanes. Original picture/soundtrack remain intact. No production authorization, final MP4, posting kit or media release exists for this song. Keep prior-track approvals separate.
+`prizrak-preview-v2` is a complete approved centered scene. 38 cues, 156 source events, 87 language lanes. Original picture/soundtrack remain intact. Current render authorization is recorded; separate listening-scope confirmation remains pending. No final MP4, completed upload kit or media release exists yet. Covers, publishing copy, optional captions and a gated production renderer are prepared. Keep prior-track approvals separate.
 
 ## Read these first
 

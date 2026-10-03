@@ -1,0 +1,1965 @@
+{
+  "schema": "prizrak/production-readiness-review/v1",
+  "status": "machine and code review passed; listening scope and encoded-file verification pending",
+  "checkedAt": "2026-10-03T15:15:59.807Z",
+  "revision": "prizrak-preview-v2",
+  "sourceSha256": "8563f6b817c9b1cc39649363a52486214c691c0d98ae7bb82263021ac7363523",
+  "approvedInputHashes": {
+    "public/source.mp4": "8563f6b817c9b1cc39649363a52486214c691c0d98ae7bb82263021ac7363523",
+    "public/timeline.json": "9ba5386855ca1cef9a4c381d43260110be59496b971fdea0263bcb60849bd1d4",
+    "public/audio-features.json": "dbef98d33ccd973ff3b8640e3bf9702a24666898ee1cfd1c68bc45dc49301665",
+    "source/recording.json": "94f8154d7e9854f9dfcc14bfbcd1306fed153cd682954bf75befbfaa807ab344",
+    "source/russian-editorial.json": "14f98c400dc3db1993a9b5662e30cf6f506517e9d47a06b7cad234b57b46e59a",
+    "source/japanese-selected-editorial.json": "ecf965914d684f10980fc6de9f2a1f43189f0e3f42b4df8d43dbbc9492307319",
+    "source/japanese-overlap-selected.json": "b15acdff912e44f90a5ce8d673c0282e0313c99e3256ba1a63476cd29451af24",
+    "src/model.ts": "f3a3f03ce5d72a77d2e2ec9deaadef2aac7e80a3a53c547d867c3cfa503d5281",
+    "src/scene.ts": "5f75ca586f40a56d1fde8eb831b86a7b22bafd2a3cc7058584b99be6507fabcc",
+    "src/player.ts": "a7e1b3ca3e9f102ef1146bef7c0340b25738205b3c13935fd5883e3ce50ba0eb",
+    "review/index.html": "00db10eb154d9a9815e42a27c8c6708a4ee2c408103f9e7668d1034582216cfe",
+    "review/client.js": "7303db6dca3efe3f57245af4f33d673da3136bb896fbab3a0e7d2ac9d4c48953",
+    "public/fonts/NotoSerif.ttf": "4d8e6761424656867019081a1a01336f3cb086982682698714054fc33f782713",
+    "public/fonts/NotoSerifJP.ttf": "2fd527ba12b6a44ec30d796d633360da0aeba6c5d4af1304ce12bb4dc15a7dfc",
+    "package-lock.json": "af4ca8f921168487ac658d72819f29b4fa232fa86a325f7153724e99fb67b59e",
+    "scripts/build-timeline.ts": "f1fc476a011e49e2867a50177f2cbde9d59430eafd7dc97aa28f47207443cc7b",
+    "scripts/preview-server.ts": "74114ee63b4e7e2eb56b9b4e2b6b8a98d5f3b9a0dcc2cff1161c6ac4a9cc9634",
+    "scripts/render-gate.ts": "f75a8b63244564e3d937b7e835890031ce7e8dd5eac0111d0b46bf2277682ee1"
+  },
+  "reviewerRole": "independent assistant source/model/layout/editorial/code audit",
+  "humanListeningClaimed": false,
+  "productionCapturePerformed": false,
+  "productionAuthority": {
+    "renderApprovalRecorded": true,
+    "currentSyncReviewPresent": false,
+    "scope": "Separate current owner listening-scope attestation remains required by the existing production gate. General render approval is recorded; this report supplies no listening attestation or exception."
+  },
+  "methods": [
+    "Read every current cue and translation mapping, checked source half-open sample intervals and translated contributor unions against an independent integer reference.",
+    "Registered the exact Latin/Cyrillic and Japanese fonts and checked all cue geometry in native and portrait formats; parsed font cmap tables directly for every displayed nonspace codepoint.",
+    "Inspected all 76 cached actual-source scene proofs and two current centered browser checkpoints. Historical late native cached geometry is explicitly excluded from claims about the current centering revision.",
+    "Read all four export/verification scripts plus clock manifest and caption/package/archive scripts; no full capture or encoding was performed.",
+    "Persisted pure exhaustive 15,306-frame cadence, source-sample and stream checks. Numerical normalization is not a lyric onset adjustment."
+  ],
+  "frozenInputs": {
+    "count": 18,
+    "currentMismatches": [],
+    "sceneSha256": "5f75ca586f40a56d1fde8eb831b86a7b22bafd2a3cc7058584b99be6507fabcc",
+    "timelineSha256": "9ba5386855ca1cef9a4c381d43260110be59496b971fdea0263bcb60849bd1d4",
+    "noCanonicalEditsDuringThisAudit": true
+  },
+  "machineChecks": {
+    "status": "passed",
+    "method": "Independent in-memory model/layout/sample-edge checks; no listening attestation or production capture",
+    "revision": "prizrak-preview-v2",
+    "sourceSha256": "8563f6b817c9b1cc39649363a52486214c691c0d98ae7bb82263021ac7363523",
+    "frozenInputCount": 18,
+    "frozenMismatches": [],
+    "cues": 38,
+    "sourceEvents": 156,
+    "tokensByLanguage": {
+      "ja": 50,
+      "ru": 164,
+      "en": 209
+    },
+    "edgeChecks": 780,
+    "meaningChecks": 5262,
+    "opacityChecks": 468,
+    "formatLayouts": 76,
+    "rowCount": 220,
+    "slotCount": 846,
+    "voicePairs": [
+      {
+        "format": "landscape",
+        "cueIds": [
+          "JP30-OVERLAP-001",
+          "RU-025"
+        ],
+        "gap": 383.0400000000001,
+        "equalSize": 64
+      },
+      {
+        "format": "landscape",
+        "cueIds": [
+          "JP30-OVERLAP-001",
+          "RU-026"
+        ],
+        "gap": 383.0400000000001,
+        "equalSize": 64
+      },
+      {
+        "format": "landscape",
+        "cueIds": [
+          "JP30-OVERLAP-001",
+          "RU-027"
+        ],
+        "gap": 383.0400000000001,
+        "equalSize": 64
+      },
+      {
+        "format": "landscape",
+        "cueIds": [
+          "JP30-003",
+          "RU-027"
+        ],
+        "gap": 383.0400000000001,
+        "equalSize": 64
+      },
+      {
+        "format": "portrait",
+        "cueIds": [
+          "JP30-OVERLAP-001",
+          "RU-025"
+        ],
+        "gap": 54.1400000000001,
+        "equalSize": 64
+      },
+      {
+        "format": "portrait",
+        "cueIds": [
+          "JP30-OVERLAP-001",
+          "RU-026"
+        ],
+        "gap": 130.94000000000005,
+        "equalSize": 64
+      },
+      {
+        "format": "portrait",
+        "cueIds": [
+          "JP30-OVERLAP-001",
+          "RU-027"
+        ],
+        "gap": 130.94000000000005,
+        "equalSize": 64
+      },
+      {
+        "format": "portrait",
+        "cueIds": [
+          "JP30-003",
+          "RU-027"
+        ],
+        "gap": 130.94000000000005,
+        "equalSize": 64
+      }
+    ],
+    "clock": {
+      "sampleRate": 44100,
+      "stereoSamples": 11249664,
+      "outputFps": 60,
+      "outputFrames": 15306,
+      "sourceFrames": 6376,
+      "sourceFps": 25,
+      "sourceGeometry": [
+        1920,
+        1080
+      ],
+      "originalAacCopyRequired": true
+    },
+    "fontCoverage": {
+      "status": "passed",
+      "method": "Direct OpenType cmap4/cmap12/cmap13 coverage of every displayed nonspace character",
+      "languages": [
+        {
+          "language": "ja",
+          "font": "public/fonts/NotoSerifJP.ttf",
+          "uniqueNonspaceCodepoints": 27,
+          "missing": []
+        },
+        {
+          "language": "ru",
+          "font": "public/fonts/NotoSerif.ttf",
+          "uniqueNonspaceCodepoints": 43,
+          "missing": []
+        },
+        {
+          "language": "en",
+          "font": "public/fonts/NotoSerif.ttf",
+          "uniqueNonspaceCodepoints": 37,
+          "missing": []
+        }
+      ]
+    }
+  },
+  "semanticReview": {
+    "status": "no supported editorial adjustment",
+    "sourceEvents": 156,
+    "displayTokens": 423,
+    "lanes": "Russian and English for Russian lead cues; original Japanese, Russian and English for Japanese cues, including the independently timed late backing phrase.",
+    "completeMeaning": "Every displayed token owns a nonempty documented source contributor set. Required grammatical completions share the corresponding source event or semantic union; no fabricated independent target timing is introduced.",
+    "inflectionAndScripts": "Japanese inflected counterfactual/regret meanings and negative-comparison poem wording are retained. Japanese uses original orthography, without romanization or pronunciation lanes. English has equal group size and focus contrast.",
+    "boundedInterpretations": [
+      {
+        "text": "Your hands through my hair",
+        "scope": "The source does not repeat a possessive before hair; my is a documented contextual inference from the adjacent comforted me phrase."
+      },
+      {
+        "text": "For your gaze beyond the moon",
+        "scope": "A defensible poetic spatial reading; the line remains semantically ambiguous and is not presented as a uniquely provable interpretation."
+      }
+    ],
+    "acousticLimits": "No source waveform, stem, CTC score, sample-edge predicate or signal image constitutes hearing. Quiet Japanese entrance and held releases remain perception-dependent; this report does not retime them."
+  },
+  "visualReview": {
+    "status": "no supported scene blocker",
+    "cuesInspected": 38,
+    "formats": 2,
+    "completeCachedSceneProofsInspected": 76,
+    "currentCenteringCheckpoints": [
+      "evidence/browser-landscape-centered-v2-214.300.jpg",
+      "evidence/browser-portrait-centered-v2-214.300.jpg"
+    ],
+    "currentGeometry": "All 220 reading rows independently center on x=960 native or x=540 portrait. Upper Japanese-led and lower Russian-led simultaneous blocks retain the same 64px optical size. The minimum machine-measured concurrent block gap is 54.14px.",
+    "sourceExtent": "Native keeps the complete 1920×1080 source extent. Portrait preserves the complete sharp source rectangle at y=214..821.5 and uses dimmed defocused imagery from the same current source frame to fill the reading area.",
+    "motionAndSpectrum": "Fixed 48-bar source-compatible light response. Spectrum travel remains separate from stable glyph geometry and voice ownership; no added camera shake or replacement scene.",
+    "evidenceLimit": "Cached late native upper-block proofs for JP30-OVERLAP-001, JP30-003 and JP30-004 show earlier +240px geometry and are historical visual evidence. Current center math and the explicit centered214.300 browser checkpoints establish the revised alignment. Final decoded-film audit must paint from current source/scene rather than compare with stale cached proofs.",
+    "priorVisualScope": "All cached cue stills support font readability, preserved source subjects, equal lane weight, fixed spectrum presence and absence of obvious clipping. A still inspection is not a whole-film motion or listening review.",
+    "layoutDetails": [
+      {
+        "cueId": "JP30-001",
+        "format": "landscape",
+        "track": "lead",
+        "size": 64,
+        "rows": [
+          {
+            "language": "ja",
+            "rows": 1
+          },
+          {
+            "language": "ru",
+            "rows": 1
+          },
+          {
+            "language": "en",
+            "rows": 1
+          }
+        ],
+        "top": 665.96,
+        "bottom": 945,
+        "minGlyphTop": 674.96,
+        "maxGlyphBottom": 947.2
+      },
+      {
+        "cueId": "JP30-002",
+        "format": "landscape",
+        "track": "lead",
+        "size": 64,
+        "rows": [
+          {
+            "language": "ja",
+            "rows": 1
+          },
+          {
+            "language": "ru",
+            "rows": 1
+          },
+          {
+            "language": "en",
+            "rows": 1
+          }
+        ],
+        "top": 665.96,
+        "bottom": 945,
+        "minGlyphTop": 674.96,
+        "maxGlyphBottom": 947.2
+      },
+      {
+        "cueId": "JP59-001",
+        "format": "landscape",
+        "track": "lead",
+        "size": 64,
+        "rows": [
+          {
+            "language": "ja",
+            "rows": 1
+          },
+          {
+            "language": "ru",
+            "rows": 1
+          },
+          {
+            "language": "en",
+            "rows": 1
+          }
+        ],
+        "top": 665.96,
+        "bottom": 945,
+        "minGlyphTop": 673.96,
+        "maxGlyphBottom": 947.2
+      },
+      {
+        "cueId": "JP59-002",
+        "format": "landscape",
+        "track": "lead",
+        "size": 64,
+        "rows": [
+          {
+            "language": "ja",
+            "rows": 1
+          },
+          {
+            "language": "ru",
+            "rows": 1
+          },
+          {
+            "language": "en",
+            "rows": 1
+          }
+        ],
+        "top": 665.96,
+        "bottom": 945,
+        "minGlyphTop": 674.96,
+        "maxGlyphBottom": 947.2
+      },
+      {
+        "cueId": "JP59-003-004",
+        "format": "landscape",
+        "track": "lead",
+        "size": 64,
+        "rows": [
+          {
+            "language": "ja",
+            "rows": 1
+          },
+          {
+            "language": "ru",
+            "rows": 2
+          },
+          {
+            "language": "en",
+            "rows": 1
+          }
+        ],
+        "top": 589.1600000000001,
+        "bottom": 945,
+        "minGlyphTop": 598.1600000000001,
+        "maxGlyphBottom": 943.2
+      },
+      {
+        "cueId": "JP59-005",
+        "format": "landscape",
+        "track": "lead",
+        "size": 64,
+        "rows": [
+          {
+            "language": "ja",
+            "rows": 1
+          },
+          {
+            "language": "ru",
+            "rows": 1
+          },
+          {
+            "language": "en",
+            "rows": 1
+          }
+        ],
+        "top": 665.96,
+        "bottom": 945,
+        "minGlyphTop": 673.96,
+        "maxGlyphBottom": 947.2
+      },
+      {
+        "cueId": "JP59-006",
+        "format": "landscape",
+        "track": "lead",
+        "size": 64,
+        "rows": [
+          {
+            "language": "ja",
+            "rows": 1
+          },
+          {
+            "language": "ru",
+            "rows": 1
+          },
+          {
+            "language": "en",
+            "rows": 1
+          }
+        ],
+        "top": 665.96,
+        "bottom": 945,
+        "minGlyphTop": 674.96,
+        "maxGlyphBottom": 947.2
+      },
+      {
+        "cueId": "JP59-007-008",
+        "format": "landscape",
+        "track": "lead",
+        "size": 64,
+        "rows": [
+          {
+            "language": "ja",
+            "rows": 1
+          },
+          {
+            "language": "ru",
+            "rows": 2
+          },
+          {
+            "language": "en",
+            "rows": 1
+          }
+        ],
+        "top": 589.1600000000001,
+        "bottom": 945,
+        "minGlyphTop": 598.1600000000001,
+        "maxGlyphBottom": 943.2
+      },
+      {
+        "cueId": "RU-001",
+        "format": "landscape",
+        "track": "lead",
+        "size": 74,
+        "rows": [
+          {
+            "language": "ru",
+            "rows": 1
+          },
+          {
+            "language": "en",
+            "rows": 1
+          }
+        ],
+        "top": 739.28,
+        "bottom": 945,
+        "minGlyphTop": 757.28,
+        "maxGlyphBottom": 942.1999999999999
+      },
+      {
+        "cueId": "RU-002",
+        "format": "landscape",
+        "track": "lead",
+        "size": 74,
+        "rows": [
+          {
+            "language": "ru",
+            "rows": 1
+          },
+          {
+            "language": "en",
+            "rows": 1
+          }
+        ],
+        "top": 739.28,
+        "bottom": 945,
+        "minGlyphTop": 757.28,
+        "maxGlyphBottom": 948.1999999999999
+      },
+      {
+        "cueId": "RU-003",
+        "format": "landscape",
+        "track": "lead",
+        "size": 74,
+        "rows": [
+          {
+            "language": "ru",
+            "rows": 1
+          },
+          {
+            "language": "en",
+            "rows": 1
+          }
+        ],
+        "top": 739.28,
+        "bottom": 945,
+        "minGlyphTop": 759.28,
+        "maxGlyphBottom": 948.1999999999999
+      },
+      {
+        "cueId": "RU-004",
+        "format": "landscape",
+        "track": "lead",
+        "size": 74,
+        "rows": [
+          {
+            "language": "ru",
+            "rows": 1
+          },
+          {
+            "language": "en",
+            "rows": 1
+          }
+        ],
+        "top": 739.28,
+        "bottom": 945,
+        "minGlyphTop": 759.28,
+        "maxGlyphBottom": 931.1999999999999
+      },
+      {
+        "cueId": "RU-005",
+        "format": "landscape",
+        "track": "lead",
+        "size": 74,
+        "rows": [
+          {
+            "language": "ru",
+            "rows": 1
+          },
+          {
+            "language": "en",
+            "rows": 1
+          }
+        ],
+        "top": 739.28,
+        "bottom": 945,
+        "minGlyphTop": 759.28,
+        "maxGlyphBottom": 948.1999999999999
+      },
+      {
+        "cueId": "RU-006",
+        "format": "landscape",
+        "track": "lead",
+        "size": 74,
+        "rows": [
+          {
+            "language": "ru",
+            "rows": 1
+          },
+          {
+            "language": "en",
+            "rows": 1
+          }
+        ],
+        "top": 739.28,
+        "bottom": 945,
+        "minGlyphTop": 755.28,
+        "maxGlyphBottom": 948.1999999999999
+      },
+      {
+        "cueId": "RU-007",
+        "format": "landscape",
+        "track": "lead",
+        "size": 74,
+        "rows": [
+          {
+            "language": "ru",
+            "rows": 1
+          },
+          {
+            "language": "en",
+            "rows": 1
+          }
+        ],
+        "top": 739.28,
+        "bottom": 945,
+        "minGlyphTop": 758.28,
+        "maxGlyphBottom": 931.1999999999999
+      },
+      {
+        "cueId": "RU-008",
+        "format": "landscape",
+        "track": "lead",
+        "size": 74,
+        "rows": [
+          {
+            "language": "ru",
+            "rows": 1
+          },
+          {
+            "language": "en",
+            "rows": 1
+          }
+        ],
+        "top": 739.28,
+        "bottom": 945,
+        "minGlyphTop": 759.28,
+        "maxGlyphBottom": 948.1999999999999
+      },
+      {
+        "cueId": "RU-009",
+        "format": "landscape",
+        "track": "lead",
+        "size": 74,
+        "rows": [
+          {
+            "language": "ru",
+            "rows": 1
+          },
+          {
+            "language": "en",
+            "rows": 1
+          }
+        ],
+        "top": 739.28,
+        "bottom": 945,
+        "minGlyphTop": 757.28,
+        "maxGlyphBottom": 948.1999999999999
+      },
+      {
+        "cueId": "RU-010",
+        "format": "landscape",
+        "track": "lead",
+        "size": 74,
+        "rows": [
+          {
+            "language": "ru",
+            "rows": 1
+          },
+          {
+            "language": "en",
+            "rows": 1
+          }
+        ],
+        "top": 739.28,
+        "bottom": 945,
+        "minGlyphTop": 757.28,
+        "maxGlyphBottom": 948.1999999999999
+      },
+      {
+        "cueId": "RU-011",
+        "format": "landscape",
+        "track": "lead",
+        "size": 74,
+        "rows": [
+          {
+            "language": "ru",
+            "rows": 1
+          },
+          {
+            "language": "en",
+            "rows": 1
+          }
+        ],
+        "top": 739.28,
+        "bottom": 945,
+        "minGlyphTop": 759.28,
+        "maxGlyphBottom": 948.1999999999999
+      },
+      {
+        "cueId": "RU-012",
+        "format": "landscape",
+        "track": "lead",
+        "size": 74,
+        "rows": [
+          {
+            "language": "ru",
+            "rows": 1
+          },
+          {
+            "language": "en",
+            "rows": 1
+          }
+        ],
+        "top": 739.28,
+        "bottom": 945,
+        "minGlyphTop": 759.28,
+        "maxGlyphBottom": 931.1999999999999
+      },
+      {
+        "cueId": "RU-013",
+        "format": "landscape",
+        "track": "lead",
+        "size": 74,
+        "rows": [
+          {
+            "language": "ru",
+            "rows": 1
+          },
+          {
+            "language": "en",
+            "rows": 1
+          }
+        ],
+        "top": 739.28,
+        "bottom": 945,
+        "minGlyphTop": 757.28,
+        "maxGlyphBottom": 948.1999999999999
+      },
+      {
+        "cueId": "RU-014",
+        "format": "landscape",
+        "track": "lead",
+        "size": 74,
+        "rows": [
+          {
+            "language": "ru",
+            "rows": 1
+          },
+          {
+            "language": "en",
+            "rows": 1
+          }
+        ],
+        "top": 739.28,
+        "bottom": 945,
+        "minGlyphTop": 759.28,
+        "maxGlyphBottom": 931.1999999999999
+      },
+      {
+        "cueId": "RU-015",
+        "format": "landscape",
+        "track": "lead",
+        "size": 74,
+        "rows": [
+          {
+            "language": "ru",
+            "rows": 1
+          },
+          {
+            "language": "en",
+            "rows": 1
+          }
+        ],
+        "top": 739.28,
+        "bottom": 945,
+        "minGlyphTop": 759.28,
+        "maxGlyphBottom": 948.1999999999999
+      },
+      {
+        "cueId": "RU-016",
+        "format": "landscape",
+        "track": "lead",
+        "size": 74,
+        "rows": [
+          {
+            "language": "ru",
+            "rows": 1
+          },
+          {
+            "language": "en",
+            "rows": 1
+          }
+        ],
+        "top": 739.28,
+        "bottom": 945,
+        "minGlyphTop": 759.28,
+        "maxGlyphBottom": 931.1999999999999
+      },
+      {
+        "cueId": "RU-017",
+        "format": "landscape",
+        "track": "lead",
+        "size": 74,
+        "rows": [
+          {
+            "language": "ru",
+            "rows": 1
+          },
+          {
+            "language": "en",
+            "rows": 1
+          }
+        ],
+        "top": 739.28,
+        "bottom": 945,
+        "minGlyphTop": 757.28,
+        "maxGlyphBottom": 948.1999999999999
+      },
+      {
+        "cueId": "RU-018",
+        "format": "landscape",
+        "track": "lead",
+        "size": 74,
+        "rows": [
+          {
+            "language": "ru",
+            "rows": 1
+          },
+          {
+            "language": "en",
+            "rows": 1
+          }
+        ],
+        "top": 739.28,
+        "bottom": 945,
+        "minGlyphTop": 757.28,
+        "maxGlyphBottom": 942.1999999999999
+      },
+      {
+        "cueId": "RU-019",
+        "format": "landscape",
+        "track": "lead",
+        "size": 74,
+        "rows": [
+          {
+            "language": "ru",
+            "rows": 1
+          },
+          {
+            "language": "en",
+            "rows": 1
+          }
+        ],
+        "top": 739.28,
+        "bottom": 945,
+        "minGlyphTop": 757.28,
+        "maxGlyphBottom": 948.1999999999999
+      },
+      {
+        "cueId": "RU-020",
+        "format": "landscape",
+        "track": "lead",
+        "size": 74,
+        "rows": [
+          {
+            "language": "ru",
+            "rows": 1
+          },
+          {
+            "language": "en",
+            "rows": 1
+          }
+        ],
+        "top": 739.28,
+        "bottom": 945,
+        "minGlyphTop": 759.28,
+        "maxGlyphBottom": 948.1999999999999
+      },
+      {
+        "cueId": "RU-021",
+        "format": "landscape",
+        "track": "lead",
+        "size": 74,
+        "rows": [
+          {
+            "language": "ru",
+            "rows": 1
+          },
+          {
+            "language": "en",
+            "rows": 1
+          }
+        ],
+        "top": 739.28,
+        "bottom": 945,
+        "minGlyphTop": 759.28,
+        "maxGlyphBottom": 931.1999999999999
+      },
+      {
+        "cueId": "RU-022",
+        "format": "landscape",
+        "track": "lead",
+        "size": 74,
+        "rows": [
+          {
+            "language": "ru",
+            "rows": 1
+          },
+          {
+            "language": "en",
+            "rows": 1
+          }
+        ],
+        "top": 739.28,
+        "bottom": 945,
+        "minGlyphTop": 759.28,
+        "maxGlyphBottom": 948.1999999999999
+      },
+      {
+        "cueId": "RU-023",
+        "format": "landscape",
+        "track": "lead",
+        "size": 74,
+        "rows": [
+          {
+            "language": "ru",
+            "rows": 1
+          },
+          {
+            "language": "en",
+            "rows": 1
+          }
+        ],
+        "top": 739.28,
+        "bottom": 945,
+        "minGlyphTop": 755.28,
+        "maxGlyphBottom": 948.1999999999999
+      },
+      {
+        "cueId": "RU-024",
+        "format": "landscape",
+        "track": "lead",
+        "size": 74,
+        "rows": [
+          {
+            "language": "ru",
+            "rows": 1
+          },
+          {
+            "language": "en",
+            "rows": 1
+          }
+        ],
+        "top": 739.28,
+        "bottom": 945,
+        "minGlyphTop": 758.28,
+        "maxGlyphBottom": 931.1999999999999
+      },
+      {
+        "cueId": "RU-025",
+        "format": "landscape",
+        "track": "lead",
+        "size": 64,
+        "rows": [
+          {
+            "language": "ru",
+            "rows": 1
+          },
+          {
+            "language": "en",
+            "rows": 1
+          }
+        ],
+        "top": 767.08,
+        "bottom": 945,
+        "minGlyphTop": 785.08,
+        "maxGlyphBottom": 947.2
+      },
+      {
+        "cueId": "JP30-OVERLAP-001",
+        "format": "landscape",
+        "track": "japanese-upper",
+        "size": 64,
+        "rows": [
+          {
+            "language": "ja",
+            "rows": 1
+          },
+          {
+            "language": "ru",
+            "rows": 1
+          },
+          {
+            "language": "en",
+            "rows": 1
+          }
+        ],
+        "top": 105,
+        "bottom": 384.03999999999996,
+        "minGlyphTop": 114,
+        "maxGlyphBottom": 386.24
+      },
+      {
+        "cueId": "RU-026",
+        "format": "landscape",
+        "track": "lead",
+        "size": 64,
+        "rows": [
+          {
+            "language": "ru",
+            "rows": 1
+          },
+          {
+            "language": "en",
+            "rows": 1
+          }
+        ],
+        "top": 767.08,
+        "bottom": 945,
+        "minGlyphTop": 783.08,
+        "maxGlyphBottom": 947.2
+      },
+      {
+        "cueId": "RU-027",
+        "format": "landscape",
+        "track": "lead",
+        "size": 64,
+        "rows": [
+          {
+            "language": "ru",
+            "rows": 1
+          },
+          {
+            "language": "en",
+            "rows": 1
+          }
+        ],
+        "top": 767.08,
+        "bottom": 945,
+        "minGlyphTop": 783.08,
+        "maxGlyphBottom": 947.2
+      },
+      {
+        "cueId": "JP30-003",
+        "format": "landscape",
+        "track": "japanese-upper",
+        "size": 64,
+        "rows": [
+          {
+            "language": "ja",
+            "rows": 1
+          },
+          {
+            "language": "ru",
+            "rows": 1
+          },
+          {
+            "language": "en",
+            "rows": 1
+          }
+        ],
+        "top": 105,
+        "bottom": 384.03999999999996,
+        "minGlyphTop": 114,
+        "maxGlyphBottom": 386.24
+      },
+      {
+        "cueId": "JP30-004",
+        "format": "landscape",
+        "track": "japanese-upper",
+        "size": 64,
+        "rows": [
+          {
+            "language": "ja",
+            "rows": 1
+          },
+          {
+            "language": "ru",
+            "rows": 1
+          },
+          {
+            "language": "en",
+            "rows": 1
+          }
+        ],
+        "top": 105,
+        "bottom": 384.03999999999996,
+        "minGlyphTop": 114,
+        "maxGlyphBottom": 386.24
+      },
+      {
+        "cueId": "JP30-001",
+        "format": "portrait",
+        "track": "lead",
+        "size": 72,
+        "rows": [
+          {
+            "language": "ja",
+            "rows": 1
+          },
+          {
+            "language": "ru",
+            "rows": 2
+          },
+          {
+            "language": "en",
+            "rows": 2
+          }
+        ],
+        "top": 1036.64,
+        "bottom": 1523.3600000000001,
+        "minGlyphTop": 1046.64,
+        "maxGlyphBottom": 1509.96
+      },
+      {
+        "cueId": "JP30-002",
+        "format": "portrait",
+        "track": "lead",
+        "size": 72,
+        "rows": [
+          {
+            "language": "ja",
+            "rows": 1
+          },
+          {
+            "language": "ru",
+            "rows": 2
+          },
+          {
+            "language": "en",
+            "rows": 2
+          }
+        ],
+        "top": 1036.64,
+        "bottom": 1523.3600000000001,
+        "minGlyphTop": 1046.64,
+        "maxGlyphBottom": 1509.96
+      },
+      {
+        "cueId": "JP59-001",
+        "format": "portrait",
+        "track": "lead",
+        "size": 72,
+        "rows": [
+          {
+            "language": "ja",
+            "rows": 1
+          },
+          {
+            "language": "ru",
+            "rows": 2
+          },
+          {
+            "language": "en",
+            "rows": 2
+          }
+        ],
+        "top": 1036.64,
+        "bottom": 1523.3600000000001,
+        "minGlyphTop": 1046.64,
+        "maxGlyphBottom": 1525.96
+      },
+      {
+        "cueId": "JP59-002",
+        "format": "portrait",
+        "track": "lead",
+        "size": 72,
+        "rows": [
+          {
+            "language": "ja",
+            "rows": 1
+          },
+          {
+            "language": "ru",
+            "rows": 1
+          },
+          {
+            "language": "en",
+            "rows": 1
+          }
+        ],
+        "top": 1123.04,
+        "bottom": 1436.96,
+        "minGlyphTop": 1133.04,
+        "maxGlyphBottom": 1439.56
+      },
+      {
+        "cueId": "JP59-003-004",
+        "format": "portrait",
+        "track": "lead",
+        "size": 72,
+        "rows": [
+          {
+            "language": "ja",
+            "rows": 1
+          },
+          {
+            "language": "ru",
+            "rows": 3
+          },
+          {
+            "language": "en",
+            "rows": 2
+          }
+        ],
+        "top": 993.4399999999999,
+        "bottom": 1566.56,
+        "minGlyphTop": 1003.44,
+        "maxGlyphBottom": 1553.1599999999999
+      },
+      {
+        "cueId": "JP59-005",
+        "format": "portrait",
+        "track": "lead",
+        "size": 72,
+        "rows": [
+          {
+            "language": "ja",
+            "rows": 1
+          },
+          {
+            "language": "ru",
+            "rows": 2
+          },
+          {
+            "language": "en",
+            "rows": 2
+          }
+        ],
+        "top": 1036.64,
+        "bottom": 1523.3600000000001,
+        "minGlyphTop": 1046.64,
+        "maxGlyphBottom": 1525.96
+      },
+      {
+        "cueId": "JP59-006",
+        "format": "portrait",
+        "track": "lead",
+        "size": 72,
+        "rows": [
+          {
+            "language": "ja",
+            "rows": 1
+          },
+          {
+            "language": "ru",
+            "rows": 1
+          },
+          {
+            "language": "en",
+            "rows": 1
+          }
+        ],
+        "top": 1123.04,
+        "bottom": 1436.96,
+        "minGlyphTop": 1133.04,
+        "maxGlyphBottom": 1439.56
+      },
+      {
+        "cueId": "JP59-007-008",
+        "format": "portrait",
+        "track": "lead",
+        "size": 72,
+        "rows": [
+          {
+            "language": "ja",
+            "rows": 1
+          },
+          {
+            "language": "ru",
+            "rows": 3
+          },
+          {
+            "language": "en",
+            "rows": 2
+          }
+        ],
+        "top": 993.4399999999999,
+        "bottom": 1566.56,
+        "minGlyphTop": 1003.44,
+        "maxGlyphBottom": 1553.1599999999999
+      },
+      {
+        "cueId": "RU-001",
+        "format": "portrait",
+        "track": "lead",
+        "size": 76,
+        "rows": [
+          {
+            "language": "ru",
+            "rows": 2
+          },
+          {
+            "language": "en",
+            "rows": 1
+          }
+        ],
+        "top": 1128.76,
+        "bottom": 1431.24,
+        "minGlyphTop": 1146.76,
+        "maxGlyphBottom": 1428.04
+      },
+      {
+        "cueId": "RU-002",
+        "format": "portrait",
+        "track": "lead",
+        "size": 76,
+        "rows": [
+          {
+            "language": "ru",
+            "rows": 2
+          },
+          {
+            "language": "en",
+            "rows": 2
+          }
+        ],
+        "top": 1083.1599999999999,
+        "bottom": 1476.84,
+        "minGlyphTop": 1101.1599999999999,
+        "maxGlyphBottom": 1479.6399999999999
+      },
+      {
+        "cueId": "RU-003",
+        "format": "portrait",
+        "track": "lead",
+        "size": 76,
+        "rows": [
+          {
+            "language": "ru",
+            "rows": 1
+          },
+          {
+            "language": "en",
+            "rows": 2
+          }
+        ],
+        "top": 1128.76,
+        "bottom": 1431.24,
+        "minGlyphTop": 1149.76,
+        "maxGlyphBottom": 1417.04
+      },
+      {
+        "cueId": "RU-004",
+        "format": "portrait",
+        "track": "lead",
+        "size": 76,
+        "rows": [
+          {
+            "language": "ru",
+            "rows": 1
+          },
+          {
+            "language": "en",
+            "rows": 1
+          }
+        ],
+        "top": 1174.3600000000001,
+        "bottom": 1385.64,
+        "minGlyphTop": 1195.3600000000001,
+        "maxGlyphBottom": 1371.44
+      },
+      {
+        "cueId": "RU-005",
+        "format": "portrait",
+        "track": "lead",
+        "size": 76,
+        "rows": [
+          {
+            "language": "ru",
+            "rows": 2
+          },
+          {
+            "language": "en",
+            "rows": 1
+          }
+        ],
+        "top": 1128.76,
+        "bottom": 1431.24,
+        "minGlyphTop": 1149.76,
+        "maxGlyphBottom": 1434.04
+      },
+      {
+        "cueId": "RU-006",
+        "format": "portrait",
+        "track": "lead",
+        "size": 76,
+        "rows": [
+          {
+            "language": "ru",
+            "rows": 2
+          },
+          {
+            "language": "en",
+            "rows": 2
+          }
+        ],
+        "top": 1083.1599999999999,
+        "bottom": 1476.84,
+        "minGlyphTop": 1100.1599999999999,
+        "maxGlyphBottom": 1462.6399999999999
+      },
+      {
+        "cueId": "RU-007",
+        "format": "portrait",
+        "track": "lead",
+        "size": 76,
+        "rows": [
+          {
+            "language": "ru",
+            "rows": 1
+          },
+          {
+            "language": "en",
+            "rows": 1
+          }
+        ],
+        "top": 1174.3600000000001,
+        "bottom": 1385.64,
+        "minGlyphTop": 1195.3600000000001,
+        "maxGlyphBottom": 1371.44
+      },
+      {
+        "cueId": "RU-008",
+        "format": "portrait",
+        "track": "lead",
+        "size": 76,
+        "rows": [
+          {
+            "language": "ru",
+            "rows": 1
+          },
+          {
+            "language": "en",
+            "rows": 2
+          }
+        ],
+        "top": 1128.76,
+        "bottom": 1431.24,
+        "minGlyphTop": 1149.76,
+        "maxGlyphBottom": 1417.04
+      },
+      {
+        "cueId": "RU-009",
+        "format": "portrait",
+        "track": "lead",
+        "size": 76,
+        "rows": [
+          {
+            "language": "ru",
+            "rows": 1
+          },
+          {
+            "language": "en",
+            "rows": 1
+          }
+        ],
+        "top": 1174.3600000000001,
+        "bottom": 1385.64,
+        "minGlyphTop": 1193.3600000000001,
+        "maxGlyphBottom": 1388.44
+      },
+      {
+        "cueId": "RU-010",
+        "format": "portrait",
+        "track": "lead",
+        "size": 76,
+        "rows": [
+          {
+            "language": "ru",
+            "rows": 1
+          },
+          {
+            "language": "en",
+            "rows": 1
+          }
+        ],
+        "top": 1174.3600000000001,
+        "bottom": 1385.64,
+        "minGlyphTop": 1193.3600000000001,
+        "maxGlyphBottom": 1388.44
+      },
+      {
+        "cueId": "RU-011",
+        "format": "portrait",
+        "track": "lead",
+        "size": 76,
+        "rows": [
+          {
+            "language": "ru",
+            "rows": 2
+          },
+          {
+            "language": "en",
+            "rows": 2
+          }
+        ],
+        "top": 1083.1599999999999,
+        "bottom": 1476.84,
+        "minGlyphTop": 1104.1599999999999,
+        "maxGlyphBottom": 1462.6399999999999
+      },
+      {
+        "cueId": "RU-012",
+        "format": "portrait",
+        "track": "lead",
+        "size": 76,
+        "rows": [
+          {
+            "language": "ru",
+            "rows": 1
+          },
+          {
+            "language": "en",
+            "rows": 1
+          }
+        ],
+        "top": 1174.3600000000001,
+        "bottom": 1385.64,
+        "minGlyphTop": 1195.3600000000001,
+        "maxGlyphBottom": 1371.44
+      },
+      {
+        "cueId": "RU-013",
+        "format": "portrait",
+        "track": "lead",
+        "size": 76,
+        "rows": [
+          {
+            "language": "ru",
+            "rows": 2
+          },
+          {
+            "language": "en",
+            "rows": 2
+          }
+        ],
+        "top": 1083.1599999999999,
+        "bottom": 1476.84,
+        "minGlyphTop": 1104.1599999999999,
+        "maxGlyphBottom": 1479.6399999999999
+      },
+      {
+        "cueId": "RU-014",
+        "format": "portrait",
+        "track": "lead",
+        "size": 76,
+        "rows": [
+          {
+            "language": "ru",
+            "rows": 1
+          },
+          {
+            "language": "en",
+            "rows": 1
+          }
+        ],
+        "top": 1174.3600000000001,
+        "bottom": 1385.64,
+        "minGlyphTop": 1195.3600000000001,
+        "maxGlyphBottom": 1371.44
+      },
+      {
+        "cueId": "RU-015",
+        "format": "portrait",
+        "track": "lead",
+        "size": 76,
+        "rows": [
+          {
+            "language": "ru",
+            "rows": 2
+          },
+          {
+            "language": "en",
+            "rows": 2
+          }
+        ],
+        "top": 1083.1599999999999,
+        "bottom": 1476.84,
+        "minGlyphTop": 1104.1599999999999,
+        "maxGlyphBottom": 1462.6399999999999
+      },
+      {
+        "cueId": "RU-016",
+        "format": "portrait",
+        "track": "lead",
+        "size": 76,
+        "rows": [
+          {
+            "language": "ru",
+            "rows": 1
+          },
+          {
+            "language": "en",
+            "rows": 1
+          }
+        ],
+        "top": 1174.3600000000001,
+        "bottom": 1385.64,
+        "minGlyphTop": 1195.3600000000001,
+        "maxGlyphBottom": 1371.44
+      },
+      {
+        "cueId": "RU-017",
+        "format": "portrait",
+        "track": "lead",
+        "size": 76,
+        "rows": [
+          {
+            "language": "ru",
+            "rows": 2
+          },
+          {
+            "language": "en",
+            "rows": 2
+          }
+        ],
+        "top": 1083.1599999999999,
+        "bottom": 1476.84,
+        "minGlyphTop": 1104.1599999999999,
+        "maxGlyphBottom": 1479.6399999999999
+      },
+      {
+        "cueId": "RU-018",
+        "format": "portrait",
+        "track": "lead",
+        "size": 76,
+        "rows": [
+          {
+            "language": "ru",
+            "rows": 2
+          },
+          {
+            "language": "en",
+            "rows": 1
+          }
+        ],
+        "top": 1128.76,
+        "bottom": 1431.24,
+        "minGlyphTop": 1146.76,
+        "maxGlyphBottom": 1428.04
+      },
+      {
+        "cueId": "RU-019",
+        "format": "portrait",
+        "track": "lead",
+        "size": 76,
+        "rows": [
+          {
+            "language": "ru",
+            "rows": 2
+          },
+          {
+            "language": "en",
+            "rows": 2
+          }
+        ],
+        "top": 1083.1599999999999,
+        "bottom": 1476.84,
+        "minGlyphTop": 1101.1599999999999,
+        "maxGlyphBottom": 1479.6399999999999
+      },
+      {
+        "cueId": "RU-020",
+        "format": "portrait",
+        "track": "lead",
+        "size": 76,
+        "rows": [
+          {
+            "language": "ru",
+            "rows": 1
+          },
+          {
+            "language": "en",
+            "rows": 2
+          }
+        ],
+        "top": 1128.76,
+        "bottom": 1431.24,
+        "minGlyphTop": 1149.76,
+        "maxGlyphBottom": 1417.04
+      },
+      {
+        "cueId": "RU-021",
+        "format": "portrait",
+        "track": "lead",
+        "size": 76,
+        "rows": [
+          {
+            "language": "ru",
+            "rows": 1
+          },
+          {
+            "language": "en",
+            "rows": 1
+          }
+        ],
+        "top": 1174.3600000000001,
+        "bottom": 1385.64,
+        "minGlyphTop": 1195.3600000000001,
+        "maxGlyphBottom": 1371.44
+      },
+      {
+        "cueId": "RU-022",
+        "format": "portrait",
+        "track": "lead",
+        "size": 76,
+        "rows": [
+          {
+            "language": "ru",
+            "rows": 2
+          },
+          {
+            "language": "en",
+            "rows": 1
+          }
+        ],
+        "top": 1128.76,
+        "bottom": 1431.24,
+        "minGlyphTop": 1149.76,
+        "maxGlyphBottom": 1434.04
+      },
+      {
+        "cueId": "RU-023",
+        "format": "portrait",
+        "track": "lead",
+        "size": 76,
+        "rows": [
+          {
+            "language": "ru",
+            "rows": 2
+          },
+          {
+            "language": "en",
+            "rows": 2
+          }
+        ],
+        "top": 1083.1599999999999,
+        "bottom": 1476.84,
+        "minGlyphTop": 1100.1599999999999,
+        "maxGlyphBottom": 1462.6399999999999
+      },
+      {
+        "cueId": "RU-024",
+        "format": "portrait",
+        "track": "lead",
+        "size": 76,
+        "rows": [
+          {
+            "language": "ru",
+            "rows": 1
+          },
+          {
+            "language": "en",
+            "rows": 1
+          }
+        ],
+        "top": 1174.3600000000001,
+        "bottom": 1385.64,
+        "minGlyphTop": 1195.3600000000001,
+        "maxGlyphBottom": 1371.44
+      },
+      {
+        "cueId": "RU-025",
+        "format": "portrait",
+        "track": "lead",
+        "size": 64,
+        "rows": [
+          {
+            "language": "ru",
+            "rows": 1
+          },
+          {
+            "language": "en",
+            "rows": 2
+          }
+        ],
+        "top": 1350.28,
+        "bottom": 1605,
+        "minGlyphTop": 1368.28,
+        "maxGlyphBottom": 1593.2
+      },
+      {
+        "cueId": "JP30-OVERLAP-001",
+        "format": "portrait",
+        "track": "japanese-upper",
+        "size": 64,
+        "rows": [
+          {
+            "language": "ja",
+            "rows": 1
+          },
+          {
+            "language": "ru",
+            "rows": 2
+          },
+          {
+            "language": "en",
+            "rows": 2
+          }
+        ],
+        "top": 863.4999999999999,
+        "bottom": 1296.1399999999999,
+        "minGlyphTop": 872.4999999999999,
+        "maxGlyphBottom": 1284.34
+      },
+      {
+        "cueId": "RU-026",
+        "format": "portrait",
+        "track": "lead",
+        "size": 64,
+        "rows": [
+          {
+            "language": "ru",
+            "rows": 1
+          },
+          {
+            "language": "en",
+            "rows": 1
+          }
+        ],
+        "top": 1427.08,
+        "bottom": 1605,
+        "minGlyphTop": 1443.08,
+        "maxGlyphBottom": 1607.1999999999998
+      },
+      {
+        "cueId": "RU-027",
+        "format": "portrait",
+        "track": "lead",
+        "size": 64,
+        "rows": [
+          {
+            "language": "ru",
+            "rows": 1
+          },
+          {
+            "language": "en",
+            "rows": 1
+          }
+        ],
+        "top": 1427.08,
+        "bottom": 1605,
+        "minGlyphTop": 1443.08,
+        "maxGlyphBottom": 1607.1999999999998
+      },
+      {
+        "cueId": "JP30-003",
+        "format": "portrait",
+        "track": "japanese-upper",
+        "size": 64,
+        "rows": [
+          {
+            "language": "ja",
+            "rows": 1
+          },
+          {
+            "language": "ru",
+            "rows": 2
+          },
+          {
+            "language": "en",
+            "rows": 2
+          }
+        ],
+        "top": 863.4999999999999,
+        "bottom": 1296.1399999999999,
+        "minGlyphTop": 872.4999999999999,
+        "maxGlyphBottom": 1284.34
+      },
+      {
+        "cueId": "JP30-004",
+        "format": "portrait",
+        "track": "japanese-upper",
+        "size": 64,
+        "rows": [
+          {
+            "language": "ja",
+            "rows": 1
+          },
+          {
+            "language": "ru",
+            "rows": 2
+          },
+          {
+            "language": "en",
+            "rows": 2
+          }
+        ],
+        "top": 863.4999999999999,
+        "bottom": 1296.1399999999999,
+        "minGlyphTop": 872.4999999999999,
+        "maxGlyphBottom": 1284.34
+      }
+    ]
+  },
+  "exportReview": {
+    "status": "code and pure clock checks passed; actual export pending",
+    "scriptHashes": {
+      "scripts/render-production.ts": "ec7a6971ab24793dcec64ca89170c1a10613f4a3163d26a94946dbc59c605e85",
+      "scripts/verify-render-clock.ts": "017dcb3725a3d4fee620c7248f65da05041127334201ae8dfba57212b9fece30",
+      "scripts/verify-final.ts": "d6dd8eae377eb2dfb61b90b93fbcab34641794d341b69908741e75c242ddd830",
+      "scripts/verify-decoded-scene.ts": "faabd0e38f7455135b270083b2a34a6c3222cf564d0f06d1a6051fa5c80f60c3",
+      "source/production-clock.json": "b1dc5be2731a101ec1f1c99fb251f4c1eb0bb5690687a84c217a0ddb060a4fe6",
+      "scripts/make-captions.ts": "aabb3039f7e0b9b75c6c20592266bd19cb1c48442deeb10dfaf09864da88397a",
+      "scripts/package-delivery.ts": "fe4ea71b0fc52147fa1b2dbcd71df60ac0e6c3340d18637ed6b59434eef546ab",
+      "scripts/archive-delivery.ts": "acf54c8cfb0953cf98038a2cd35b5b90ca30eaf8022184be8443ef03c78ed1d8"
+    },
+    "clockEvidence": "evidence/render-clock-verification.json",
+    "clock": {
+      "schema": "prizrak/render-clock-verification/v1",
+      "status": "passed",
+      "revision": "prizrak-preview-v2",
+      "sourceSha256": "8563f6b817c9b1cc39649363a52486214c691c0d98ae7bb82263021ac7363523",
+      "rendererSha256": "ec7a6971ab24793dcec64ca89170c1a10613f4a3163d26a94946dbc59c605e85",
+      "frames": 15306,
+      "sourceEvents": 156,
+      "normalizedFrames": 996,
+      "maxTimeNormalizationSeconds": 2.842170943040401e-14,
+      "correctedFocusComparisons": 6,
+      "correctedEdges": [
+        {
+          "frame": 5691,
+          "time": 94.85,
+          "wordId": "RU-002-5",
+          "sample": 4182885,
+          "unadjustedSample": 4182884.9999999995,
+          "expectedFocused": false
+        },
+        {
+          "frame": 9627,
+          "time": 160.45,
+          "wordId": "RU-015-1",
+          "sample": 7075845,
+          "unadjustedSample": 7075844.999999999,
+          "expectedFocused": false
+        },
+        {
+          "frame": 10662,
+          "time": 177.7,
+          "wordId": "RU-018-1",
+          "sample": 7836570,
+          "unadjustedSample": 7836569.999999999,
+          "expectedFocused": false
+        },
+        {
+          "frame": 10662,
+          "time": 177.7,
+          "wordId": "RU-018-2",
+          "sample": 7836570,
+          "unadjustedSample": 7836569.999999999,
+          "expectedFocused": true
+        },
+        {
+          "frame": 10782,
+          "time": 179.7,
+          "wordId": "RU-018-3",
+          "sample": 7924770,
+          "unadjustedSample": 7924769.999999999,
+          "expectedFocused": false
+        },
+        {
+          "frame": 10782,
+          "time": 179.7,
+          "wordId": "RU-018-4",
+          "sample": 7924770,
+          "unadjustedSample": 7924769.999999999,
+          "expectedFocused": true
+        }
+      ],
+      "checks": "Exact 25→60 cadence, all canonical sample focus states, final audio-tail hold, invalid frames and fragmented/truncated streams"
+    },
+    "sourceContract": {
+      "originalGeometry": [
+        1920,
+        1080
+      ],
+      "sourceFrames": 6376,
+      "sourceFps": 25,
+      "decodedStereoSamples": 11249664,
+      "sampleRate": 44100,
+      "originalPcmF32leSha256": "a164565ed790ca4fd4aede961f23bd79592d9895ec098a7b77e5305162fd13b9",
+      "aacPackets": 10986,
+      "audioEnd": 255.0944217687075
+    },
+    "outputContract": {
+      "formats": {
+        "landscape": [
+          1920,
+          1080
+        ],
+        "portrait": [
+          1080,
+          1920
+        ]
+      },
+      "fps": 60,
+      "frames": 15306,
+      "sourceFrameMapping": "min(6375,floor(n*5/12))",
+      "sourceSampleForFrame": "n*735",
+      "finalSourcePictureOutputFrames": [
+        15300,
+        15305
+      ],
+      "videoEnd": 255.1,
+      "cfrRemainderSeconds": 0.005578231292503233,
+      "audio": "Original AAC stream copy with PTS zero and no added priming compensation; verify every packet and original decoded PCM."
+    },
+    "gate": "Current checkProductionGate before any decode/paint/capture/encode, plus input/renderer/clock identity checks before finalization. Refuse existing final or partial output.",
+    "parity": "Shared unchanged initScene/paintScene with exact PrizrakSerif and PrizrakJP aliases and moving original RGBA frames. BT.709 full RGB to limited YUV420 conversion, square pixels and fast-start.",
+    "plannedEncodedEvidence": {
+      "fullTechnical": "All frames and PTS, strict complete audio/video decode, every original AAC packet and original PCM count/hash, color/SAR/fast-start, provenance/immutable inputs and no new black intervals compared with authored source.",
+      "sampledScene": "1,006 selected encoded frames, every one of 423 display tokens focused and neutral, 100 simultaneously visible vocal frames, exact current scene reconstruction and source-frame ownership. This is sampled picture/glyph evidence, not exhaustive source-pixel verification.",
+      "tolerances": "Lossy RGB scene mean error≤7 and channels over24≤4%; opaque glyph interior expected fill matches≥90% within34 RGB distance and at least6 nearer than alternate. Sparse glyph fallback has explicit correlated-pixel limits.",
+      "completion": "Combined final-verification.json and decoded-scene-verification.json become passed only after both actual formats complete and match current revision, full input vector, renderer/verifier and actual file hashes."
+    }
+  },
+  "deliveryCodeReview": {
+    "status": "supported issues corrected; execution remains pending",
+    "captions": "Six optional complete-meaning SRT/VTT files. Concurrent cues are represented in non-overlapping intervals with Japanese-led track first; Japanese sidecars contain only Japanese passages. Millisecond sidecar rounding is separate from exact source-sample film focus.",
+    "package": "Requires both complete actual-film reports and their script/input/output hashes; verifies covers, six caption files, frozen timeline binding and cover full input vector. Copies into a new project-local staging folder, hashes each copy and supplies complete manifest/checksum coverage.",
+    "archive": "Requires committed clean tracked project, exact18 frozen inputs, verified local kit, both films and receipts. Preserves tracked source and common guidance; explicitly adds ignored original MP4, frozen preview client, cover proofs and production receipts. No stems/models/dependencies or unrelated tracks. Independently decompresses and hashes all ZIP entries and frozen payloads; external ZIP hashes avoid recursive self-checksum.",
+    "correctedFindings": {
+      "archiveIdentity": true,
+      "archiveSourceUrl": true,
+      "captionTimelineBinding": true,
+      "coverInputVectorBinding": true
+    },
+    "limits": "No staging, Desktop copy, archive construction, public upload, Git/Actions operation or platform posting was performed by this audit."
+  },
+  "remainingRequirements": [
+    "Current owner listening-scope attestation, then existing production gate pass.",
+    "Actual native and portrait exports using the frozen centered revision.",
+    "Independent complete technical and selected decoded-scene verification of both finished films.",
+    "Inspect final encoded proof images, construct and independently verify the upload kit/archives, and coordinator-verified Desktop/GitHub delivery."
+  ]
+}

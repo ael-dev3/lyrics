@@ -1,6 +1,6 @@
 # призрак — sotode 外で
 
-**Complete working preview · Russian / English, with Japanese during Japanese vocals · production not authorized.**
+**Complete working preview · Russian / English, with Japanese during Japanese vocals · render authorization recorded; listening-scope confirmation pending.**
 
 The original [music video and unchanged soundtrack](https://www.youtube.com/watch?v=Psp5vt8BwoY) remain the entire moving picture. Cold paper/silver typography and a fixed measured spectrum follow its winter, library and practical-light imagery. Native 16:9 preserves every source edge; portrait fits the whole sharp frame above a separate readable language block, with dim source-derived atmosphere around it.
 
@@ -19,7 +19,7 @@ The original [music video and unchanged soundtrack](https://www.youtube.com/watc
 
 ## What remains pending
 
-This is a **preview**, not a finished production or a declaration of perfect acoustic accuracy. Current full-song normal-speed listening, uncertain boundaries at reduced speed, both-format perceptual review and explicit current-input render authorization remain pending. The [production gate](evidence/production-gate.json) is closed. Prior songs’ approvals do not apply.
+This is a **preview**, not a finished production or a declaration of perfect acoustic accuracy. [Current-input render authorization](evidence/production-authorization.json) is recorded. Separate confirmation of full-song normal-speed listening, uncertain boundaries at reduced speed and both-format perceptual review remains pending. The [production gate](evidence/production-gate.json) is closed until that scope is complete. Prior songs’ approvals do not apply.
 
 The highest-priority listening points are the Japanese held night endings at 57.9–58.42 and 76.25–76.70, the quiet Russian night prefixes, and the masked Japanese 212.20–212.60 entrance / 213.32–213.92 first-word handoff and the mixed-language 221.65–222.35 passage. CTC cores cannot resolve every direct-vowel/reverberation boundary. See the [timing record](TIMING.md) and [selected decision ledger](evidence/timing-decisions.json).
 
@@ -42,6 +42,6 @@ npm run check      # model/gate tests and 76 real-source layout stills
 npm run features   # source-bound music measurements; FFmpeg required
 ```
 
-`npm run render:production` checks current hashes, complete current-song review and explicit authorization before doing anything. No production encoder is provisioned for this preview-only project stage. Browser still exports and diagnostic frame decoding are review evidence, not full lyric-film rendering.
+The production encoder is provisioned separately from the preview. `npm run render:production -- --format landscape` and `npm run render:production -- --format portrait` check current hashes, complete current-song review and explicit authorization before decoding or capturing. `npm run check:production` validates clock and stream behavior without starting a film; `npm run verify:final` and `npm run verify:scene` inspect completed exports. Browser stills and diagnostic source decoding are review evidence, not full lyric-film rendering. [Production process](PRODUCTION-NOTES.md).
 
 [Visual brief](VISUAL-BRIEF.md) · [Source study](evidence/source-visual-study.md) · [Editorial research](evidence/editorial-research.md) · [Browser checks](evidence/overlap-browser-v2.json) · [Local validation](evidence/overlap-validation-v2.json) · [Agent handoff](AGENT-HANDOFF.md) · [Three-language workflow](../../docs/three-language-lyric-workflow.md)

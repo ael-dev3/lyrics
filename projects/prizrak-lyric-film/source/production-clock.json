@@ -1,0 +1,43 @@
+{
+  "schema": "prizrak/production-clock/v1",
+  "sha256": "8563f6b817c9b1cc39649363a52486214c691c0d98ae7bb82263021ac7363523",
+  "sourceOffsetSeconds": 0,
+  "video": {
+    "width": 1920,
+    "height": 1080,
+    "fpsNumerator": 25,
+    "fpsDenominator": 1,
+    "frameCount": 6376,
+    "durationSeconds": 255.04,
+    "lastFramePtsSeconds": 255.0,
+    "sampleAspectRatio": "1:1"
+  },
+  "audio": {
+    "sampleRate": 44100,
+    "channels": 2,
+    "decodedSamples": 11249664,
+    "decodedDurationSeconds": 255.0944217687075,
+    "containerDurationSeconds": 255.0944217687075,
+    "aacPacketCount": 10986,
+    "decodedPcmF32leSha256": "a164565ed790ca4fd4aede961f23bd79592d9895ec098a7b77e5305162fd13b9",
+    "firstPacket": {
+      "pts": 0,
+      "dts": 0,
+      "duration": 1024,
+      "side_data_list": [],
+      "data_hash": "SHA256:b1af00d729f3c4c9b2b5de166c55aa238134ffe1217a0258f826cedbeb65648c"
+    }
+  },
+  "output": {
+    "fpsNumerator": 60,
+    "fpsDenominator": 1,
+    "frames": 15306,
+    "durationSeconds": 255.1,
+    "sourceFrameMapping": "min(6375, floor(n*5/12))",
+    "sourceSampleForOutputFrame": "n*735",
+    "finalPictureFirstOutputFrame": 15300,
+    "audioTailSeconds": 0.05442176870749904,
+    "cfrRemainderSeconds": 0.005578231292503233
+  },
+  "scope": "Source-derived export clock; no acoustic, visual, listening or production authorization is granted. Original AAC starts at PTS zero without packet skip side data; no added priming compensation. Audio decoded once at its original rate into float32 for count/hash only."
+}
