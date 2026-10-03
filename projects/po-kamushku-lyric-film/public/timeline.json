@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": "po-kamushku-preview-v2-source-phonetic-review",
+  "revision": "po-kamushku-preview-v3-intro-listening-correction",
   "sampleRate": 44100,
   "sourceSha256": "f6572759f48f725497ad42b7c84cf12825824041897c47fdd36832a40ad30dd6",
   "sourceDuration": 208.82721088435375,
@@ -10,28 +10,19 @@
       "templateId": "intro",
       "sourceLanguage": "ru",
       "targetLanguage": "en",
-      "sourceText": "Яна, Яна, песенку спой, Яночка",
-      "targetText": "Yana, Yana, sing a song, Yanochka.",
-      "start": 6.127006802721088,
+      "sourceText": "Яна, песенку спой, Яночка",
+      "targetText": "Yana, sing a song, Yanochka.",
+      "start": 7.328004535147392,
       "end": 12.484988662131519,
-      "visibleStart": 5.907006802721089,
+      "visibleStart": 7.108004535147392,
       "fullOpacityEnd": 13.03,
       "visibleEnd": 13.53,
       "exitMode": "fade",
       "words": [
         {
-          "id": "PK-001:intro-s01",
-          "text": "Яна,",
-          "sourceIndex": 0,
-          "startSample": 270201,
-          "endSample": 283916,
-          "confidence": "medium",
-          "method": "Original-source signal selection with bounded Whisper/MMS competing observations"
-        },
-        {
           "id": "PK-001:intro-s01b",
           "text": "Яна,",
-          "sourceIndex": 1,
+          "sourceIndex": 0,
           "startSample": 323165,
           "endSample": 351036,
           "confidence": "medium",
@@ -40,7 +31,7 @@
         {
           "id": "PK-001:intro-s02",
           "text": "песенку",
-          "sourceIndex": 2,
+          "sourceIndex": 1,
           "startSample": 508694,
           "endSample": 524173,
           "confidence": "medium",
@@ -49,7 +40,7 @@
         {
           "id": "PK-001:intro-s03",
           "text": "спой,",
-          "sourceIndex": 3,
+          "sourceIndex": 2,
           "startSample": 524173,
           "endSample": 536918,
           "confidence": "medium",
@@ -58,7 +49,7 @@
         {
           "id": "PK-001:intro-s04",
           "text": "Яночка",
-          "sourceIndex": 4,
+          "sourceIndex": 3,
           "startSample": 537006,
           "endSample": 550588,
           "confidence": "medium",
@@ -68,78 +59,65 @@
       "targets": [
         {
           "index": 0,
-          "id": "PK-001:intro-t01",
-          "text": "Yana,",
-          "sourceIndices": [
-            0
-          ],
-          "focusSourceIndices": [
-            0
-          ],
-          "relation": "word-equivalent",
-          "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
-        },
-        {
-          "index": 1,
           "id": "PK-001:intro-t01b",
           "text": "Yana,",
           "sourceIndices": [
-            1
+            0
           ],
           "focusSourceIndices": [
-            1
+            0
           ],
           "relation": "word-equivalent",
-          "rationale": "Provisional second spoken call; independently timed and explicitly pending lexical listening review."
+          "rationale": "The audible name call follows its retained source event. The earlier provisional name allocation was rejected in targeted listening review."
         },
         {
-          "index": 2,
+          "index": 1,
           "id": "PK-001:intro-t02",
           "text": "sing",
           "sourceIndices": [
-            3
+            2
           ],
           "focusSourceIndices": [
-            3
+            2
           ],
           "relation": "word-equivalent",
           "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."
         },
         {
-          "index": 3,
+          "index": 2,
           "id": "PK-001:intro-t03",
           "text": "a",
           "sourceIndices": [
-            2
+            1
           ],
           "focusSourceIndices": [
-            2
+            1
           ],
           "relation": "grammar-completion",
           "rationale": "The indefinite article belongs to the complete noun meaning песенку, together with song."
         },
         {
-          "index": 4,
+          "index": 3,
           "id": "PK-001:intro-t04",
           "text": "song,",
           "sourceIndices": [
-            2
+            1
           ],
           "focusSourceIndices": [
-            2
+            1
           ],
           "relation": "grammar-completion",
           "rationale": "A song is the complete English noun phrase for песенку. Its affectionate diminutive does not establish a literal size."
         },
         {
-          "index": 5,
+          "index": 4,
           "id": "PK-001:intro-t05",
           "text": "Yanochka.",
           "sourceIndices": [
-            4
+            3
           ],
           "focusSourceIndices": [
-            4
+            3
           ],
           "relation": "word-equivalent",
           "rationale": "Direct meaning follows only the referenced source word; it has no invented target-language timestamp."

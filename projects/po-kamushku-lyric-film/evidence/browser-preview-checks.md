@@ -17,8 +17,14 @@ Date: 3 October 2026. Browser: Codex in-app browser.
 
 ## Scope and limitations
 
-These are sampled browser, composition and playback checks, not a complete human normal/slow listening review of every cue. The final owner's listening review and current-revision render authorization remain pending. The provisional repeated name in the quiet intro remains a lexical question.
+These are sampled browser, composition and playback checks, not a complete human normal/slow listening review of every cue. The final owner's listening review and current-revision render authorization remain pending. The provisional repeated name was a lexical question for this v2 check; the targeted v3 correction below supersedes it.
 
 The still-download control was exercised, but the in-app browser automation did not deliver a download event within its timeout. No user-facing download error was observed; successful local download is not attested by this check. The saved complete-composition diagnostics use the shared renderer and are described separately in `preview-stills.json`; they are not represented as captured browser pixels or final encoded frames.
 
 First-load mask preparation can take longer than steady playback. Following the removal of lazy mask readback at music entrances, sampled steady playback paints were 0.20–0.40 ms; observed initial/recovery paints included 27.8 and 106.4 ms. This is a small set of local observations, not a cross-device performance guarantee. All masks are prepared before the first completed picture is revealed.
+
+## V3 targeted intro correction — 3 October 2026
+
+The loaded browser identity was `po-kamushku-preview-v3-intro-listening-correction`. At 6.2 s the native composition had no lyric cue, opacity zero, and empty Russian/English focus lists. At 7.5 s it showed one `Яна` / `Yana` pair, active together, with the retained name beginning at sample 323165 (7.328004535 s). The same corrected cue and 1080×1920 geometry were inspected after switching to portrait. Seeking portrait back to 6.2 s reported no lyric cue. The source hash matched the unchanged recording.
+
+Fifteen local tests, strict type checking and 2,581,180 translated focus states over 12,530 frames passed. The targeted correction excludes one unsupported event; all 163 retained onset/release sample pairs are unchanged. It does not establish a full recording listening review or production authorization. The v2 checks and still record above remain historical evidence rather than being relabelled as new captures.

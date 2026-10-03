@@ -3,13 +3,23 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {createCanvas,GlobalFonts} from '@napi-rs/canvas';
 import {cueLayout,setSceneForProof,stoneResponse} from '../src/scene.ts';
-import {sourceActive,targetActive,validateTimeline,type Timeline,type Target,type Word} from '../src/model.ts';
+import {sourceActive,targetActive,visibleCue,validateTimeline,type Timeline,type Target,type Word} from '../src/model.ts';
 const read=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
 const t=read('public/timeline.json') as Timeline;
 test('complete performed inventory retains spoken opening, all repeats and ending',()=>{
   validateTimeline(t);assert.equal(t.cues.length,30);assert.equal(t.cues[0]!.templateId,'intro');
   assert.equal(t.cues.filter(c=>c.templateId==='refrain-pebbles').length,4);
   assert(t.cues.at(-1)!.end>190);assert(t.cues[0]!.start>5);
+});
+test('unsupported early name is absent while later audible intro remains independently timed',()=>{
+  const intro=t.cues[0]!;
+  assert.equal(visibleCue(t,6.2),undefined);
+  assert.equal(intro.words.filter(w=>w.text==='Яна,').length,1);
+  assert.equal(intro.words[0]!.startSample,323165);
+  assert(sourceActive(intro.words[0]!,323165/44100));
+  assert(targetActive(intro.targets[0]!,intro.words,323165/44100));
+  assert.equal(t.cues.reduce((n,c)=>n+c.words.length,0),163);
+  assert.equal(t.cues.reduce((n,c)=>n+c.targets.length,0),206);
 });
 test('every English lexical token has a complete justified source anchor',()=>{
   for(const c of t.cues)for(const token of c.targets){assert(token.rationale.length>0);assert(token.focusSourceIndices.length>0);for(const i of token.focusSourceIndices)assert(c.words[i]);}

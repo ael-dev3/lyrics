@@ -17,7 +17,7 @@ Complete bilingual preview. Production render and full listening approval remain
 
 ## Review priorities
 
-1. Spoken introduction: provisional repeated Yana call; tight recognizers disagree. Do not treat conditioned alignment as evidence of what was spoken.
+1. Spoken introduction: v3 removes the inaudible provisional name at 6.127 s and retains the audible 7.328 s call. See `evidence/intro-lexical-correction.json`. The historical 55-event independent proposals include the rejected event; their scope has not been rewritten. Do not treat a physical burst or conditioned alignment as proof of a spoken word.
 2. First sung warm word: a broad recognizer falsely allocated it several seconds before the direct voice. A strong CTC core is also not universally the phonetic beginning. Preserve the independently selected boundary and its original-mix context.
 3. Repeated run/carry verbs and all pebble/earth refrains: inspect each quiet opening and held vowel independently. Do not transfer the first performance's offset to later ones.
 4. Neutral line lifetime: keep readable through the reviewed held body/tail; when a gentle fade cannot fit, make a source-vocal handoff rather than a premature blank.
