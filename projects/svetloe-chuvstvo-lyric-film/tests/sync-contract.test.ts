@@ -2,8 +2,8 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {sourceActive,targetActive,readingWindow,type Word,type Target} from '../src/model.ts';
-import {cueOpacity} from '../src/scene.ts';
-import {checkCurrentProductionGate,assertRequiredPreviewInputs,requiredPreviewInputs} from '../scripts/render-gate.ts';
+import {cueOpacity,smoothWindowRows} from '../src/scene.ts';
+import {assertReviewState,assertRequiredPreviewInputs,requiredPreviewInputs} from '../scripts/render-gate.ts';
 const word=(start:number,end:number,index=0):Word=>({id:`word${index}`,text:'voice',sourceIndex:index,startSample:start,endSample:end,confidence:'test fixture',method:'sample contract fixture'});
 test('exact 60fps frame boundaries never keep the outgoing word for an extra frame',()=>{
   for(let frame=1;frame<10600;frame++){
@@ -38,12 +38,27 @@ test('complete editorial expansions keep both independently sung hook repeats an
   assert.deepEqual(contributors(cue('v1-world'),'up'),[4]);
   assert.deepEqual(contributors(cue('v1-joy'),'not'),[8]);
 });
-test('this complete preview cannot start full production',()=>{
-  assert.throws(checkCurrentProductionGate,/Preview-only: current song has no render approval/);
+test('a complete preview without explicit current approval cannot start production',()=>{
+  const state=JSON.parse(readFileSync('evidence/review-status.json','utf8'));
+  const pending={...state,renderApproval:{approved:false},productionAuthorized:false};
+  assert.throws(()=>assertReviewState(pending,state),/Preview-only: current song has no render approval/);
 });
 test('source digests cannot substitute for a missing executable preview bundle',()=>{
   const inputs=Object.fromEntries(requiredPreviewInputs.map(path=>[path,'a'.repeat(64)]));
   assert.doesNotThrow(()=>assertRequiredPreviewInputs({inputs}));
   delete inputs['review/client.js'];
   assert.throws(()=>assertRequiredPreviewInputs({inputs}),/Missing required complete-preview input: review\/client.js/);
+});
+test('soft window light preserves steady exposure and an isolated accent’s source-time center',()=>{
+  const steady=Array.from({length:41},()=>[.2,.8]);
+  for(const row of smoothWindowRows(steady,25)){
+    assert.ok(Math.abs(row[0]!-.2)<1e-12);assert.ok(Math.abs(row[1]!-.8)<1e-12);
+  }
+  const impulse=Array.from({length:41},(_,i)=>[i===20?1:0]);
+  const softened=smoothWindowRows(impulse,25).map(row=>row[0]!);
+  assert.equal(softened.indexOf(Math.max(...softened)),20);
+  assert.ok(softened.every(v=>v>=0&&v<=1));
+  assert.ok(softened[20]!<.3);
+  for(let offset=1;offset<=5;offset++)assert.ok(Math.abs(softened[20-offset]!-softened[20+offset]!)<1e-12);
+  assert.equal(softened[14],0);assert.equal(softened[26],0);
 });

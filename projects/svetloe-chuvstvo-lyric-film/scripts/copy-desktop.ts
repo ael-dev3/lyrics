@@ -1,0 +1,26 @@
+import assert from 'node:assert/strict';
+import {cpSync,existsSync,readFileSync,writeFileSync} from 'node:fs';
+import {resolve,isAbsolute,basename} from 'node:path';
+import {fileHash,root} from './render-production.ts';
+import {checkCurrentProductionGate} from './render-gate.ts';
+process.chdir(root);checkCurrentProductionGate();
+const at=process.argv.indexOf('--dest'),dest=at<0?undefined:process.argv[at+1];
+assert.ok(dest&&isAbsolute(dest),'Pass an absolute --dest folder authorized by the owner');
+assert.ok(!existsSync(dest),'Preserve any existing Desktop kit; choose a new folder');
+const receipt=JSON.parse(readFileSync('evidence/delivery-receipt.json','utf8'));
+const source=resolve(root,receipt.stagingFolder),manifest=JSON.parse(readFileSync(resolve(source,'Delivery-Manifest.json'),'utf8'));
+assert.equal(receipt.revision,manifest.revision);
+assert.equal(await fileHash(resolve(source,'Delivery-Manifest.json')),receipt.manifestSha256);
+assert.equal(await fileHash(resolve(source,'SHA256SUMS.txt')),receipt.checksumsSha256);
+const checks=readFileSync(resolve(source,'SHA256SUMS.txt'),'utf8').trimEnd().split('\n').map(line=>{
+ const match=/^([a-f0-9]{64})  (.+)$/.exec(line);assert.ok(match);assert.ok(!isAbsolute(match[2]!)&&!match[2]!.split('/').includes('..'));return {sha256:match[1]!,path:match[2]!};
+});
+assert.equal(checks.length,manifest.files.length+1);
+for(const item of checks)assert.equal(await fileHash(resolve(source,item.path)),item.sha256);
+cpSync(source,dest,{recursive:true,errorOnExist:true,force:false});
+for(const item of checks)assert.equal(await fileHash(resolve(dest,item.path)),item.sha256);
+assert.equal(await fileHash(resolve(dest,'SHA256SUMS.txt')),receipt.checksumsSha256);
+receipt.status='Desktop upload kit verified';receipt.folderLabel=basename(dest);receipt.desktopCopy={status:'passed',checkedAt:new Date().toISOString(),files:checks.length+1,scope:'Every Desktop payload, manifest and checksum file matches the verified project staging folder. Only a neutral folder label is recorded.'};
+receipt.desktopCopierSha256=await fileHash('scripts/copy-desktop.ts');
+writeFileSync('evidence/delivery-receipt.json',JSON.stringify(receipt,null,2)+'\n');
+console.log(JSON.stringify({status:'passed',folderLabel:basename(dest),files:checks.length+1}));

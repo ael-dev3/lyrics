@@ -4,7 +4,7 @@
 
 This is a meaning and contributor-mapping review of the supplied Russian text, prepared for a complete moving-video preview. It is **not** a completed acoustic listening review or production authorization. The selected source is [Settlers — Светлое чувство](https://www.youtube.com/watch?v=UANr7uyRZ3w). Acquisition identity reported by the coordinator and independently checked against the local source bytes: `public/source.mp4`, SHA-256 `9563b2098827fcf2ee18e0f1b573ded5f5e147be3faf258b5f2507162690a655`, container duration 176.776 seconds.
 
-The [draft ledger](../source/english-editorial-draft.json) contains 13 reusable text templates, 20 supplied reference lines, 100 Russian lexical units and 120 English display words across the unique templates. Each English word has explicit zero-based source contributors; every source unit has a reverse coverage row. These are editorial templates, **not** certified cue occurrences. Complete recording inventory must determine performed repetitions, omissions, altered wording, opening samples, backing voices and the final vocal. Reuse meaning templates while reviewing and timing each actual performance independently.
+The [draft ledger](../source/english-editorial-draft.json) contains 13 reusable text templates, 20 supplied reference lines, 100 Russian lexical units and 122 English display words across the unique templates. Each English word has explicit zero-based source contributors; every source unit has a reverse coverage row. These are editorial templates, **not** certified cue occurrences. Complete recording inventory must determine performed repetitions, omissions, altered wording, opening samples, backing voices and the final vocal. Reuse meaning templates while reviewing and timing each actual performance independently.
 
 Russian and English receive equal perceived size, weight, contrast and stable color-only focus. No pronunciation, romanization or syllable practice layer is included. Read the repository's [bilingual workflow](../../../docs/bilingual-lyric-workflow.md), [cross-language gate](../../../docs/cross-language-sync-gate.md) and [preview-first workflow](../../../docs/preview-before-render.md) for the actual delivery requirements.
 
@@ -20,7 +20,7 @@ Russian and English receive equal perceived size, weight, contrast and stable co
 | hook-art | Ты как искусство | You are like art |
 | hook-light | Ты яркий свет | You are a bright light |
 | v2-planet | Может, когда-то на этой планете, в самой огромной огромной беде | Maybe, someday on this planet, in the greatest, greatest trouble, |
-| v2-cottage | В самой заброшенной, ветхой избушке рядом со мной будут не те | In the most derelict, crumbling cottage, others will be next to me. |
+| v2-cottage | В самой заброшенной, ветхой избушке рядом со мной будут не те | In the most derelict, crumbling cottage, those next to me won’t be the same. |
 | v2-home | И я вспомню дом, в котором я рос | And I will remember the home where I grew up. |
 | v2-memory | Я вспомню всё, что знакомо до слёз: | I will remember everything so familiar it brings tears: |
 | v2-river | Речку, парник и твой смех за стеной | The river, the greenhouse, and your laughter behind the wall, |
@@ -45,14 +45,14 @@ Only six English display words across the unique templates use more than one Rus
 | `в котором` in three separate verse templates | **where** | The locative relative becomes one English relative adverb. |
 | `то, кем` | **who** | Natural English reduces the correlative identity construction to one relative pronoun. |
 | `самой огромной` | first **greatest** | The English superlative adjective contains the separately spoken Russian degree and adjective. **The** stays with `самой`; the repeated second adjective remains independent. |
-| `не те` | **others** | The negative demonstrative is elliptical, with its expected people unstated. One English word preserves that difference without guessing a specific relation or adding a noun. |
+| `будут не` | **won’t** | The English contraction combines future and explicit negation. Its focus is the contributor union, never a guessed English timestamp. |
 
 Use the union of only the listed contributor intervals for these target words. A gap, unrelated word or independently repeated adjective must not inherit focus from a bounding interval. Russian source events remain separately activated.
 
 ## Interpretive choices and limits
 
 - **Светлое** combines the luminous image with a positive, uplifting feeling. **Brightest** retains that metaphor; it does not certify a philosophical or author-provided meaning. The deliberate “very, very” repetition follows the supplied refrain wording.
-- **Не те** does not identify the missing or expected people. **Others** is a conservative selected reading; “the wrong people” would add a stronger judgment, while named friends, family or a beloved would invent content.
+- **Не те** does not identify the expected people. **Those next to me won’t be the same** makes the negative identity contrast explicit. **Те** supplies both the English subject **those** and the complement **the same** after grammatical recasting. The contraction **won’t** carries `будут / не` together; **be** follows `будут`. Named relations and the stronger judgment in “wrong people” are not added. A compressed **others** draft was replaced because it obscured this contrast.
 - **Дом** becomes **the home**, supported by the recalled domestic details. It does not become “my home”; the possessive is not spoken. Literal **the house** remains a reasonable alternative.
 - **Парник** can describe a greenhouse, hotbed or covered growing frame. **Greenhouse** is a broad ordinary English reading; the lyric does not establish the structure's architecture.
 - **Крепкий покой** becomes **deep peace**, an idiomatic English adjective/noun pair. The translation does not add duration or a guarantee of permanent calm.
@@ -77,7 +77,7 @@ These are editorial reading divisions. Actual entry, hold and release still foll
 
 The independent acoustic agent reports a 35-occurrence / 175-source-event inventory matching the supplied sequence, including the final five-template refrain cycle around 152–165 seconds. Bounded source observations support that closing cycle; a crop-censored first-word placement was rejected. No new lexical content was selected. The draft still does not certify individual word onsets or releases, and these inventory observations do not constitute a human listening attestation. `Парник и` remains the supplied reading pending the targeted stem check; a conflicting automated `парни, хоть` candidate is not enough to replace it.
 
-## Independent audit of the assembled canonical preview
+## Historical v1 audit of the assembled canonical preview
 
 Audited revision: **`svetloe-chuvstvo-v1-source-informed-preview`**. The assembled preview has **46 reading cues**, drawn from **35 performed reference occurrences**, with **175 Russian source events** and **221 English display words**. This section records a semantic and executable state audit, not actual listening, decoded-pixel inspection or visual acceptance.
 
@@ -105,8 +105,34 @@ Fixed semantic expectations, specified separately from the contributor table, pa
 
 The targeted acoustic agent's second-family stem observation retained the short `и` in the noun list and produced no defensible replacement for supplied `парник`. The selected text therefore remains **Речку, парник и твой смех за стеной**. This is a documented source/model selection; the articulation remains a listening priority and is not represented as human certification.
 
-**Result:** the current canonical meaning, text coverage, contributor rebase and paired focus states pass this scoped audit. Actual audible onset/release judgment, optical equality, complete moving-video recovery and both-format browser review remain separate requirements. A later source, timing, mapping or model change invalidates the corresponding state checks; a presentation change requires its own visual review. This report does not authorize production rendering.
+**Result at the v1 snapshot:** the canonical meaning, text coverage, contributor rebase and paired focus states pass this scoped audit. Actual audible onset/release judgment, optical equality, complete moving-video recovery and both-format browser review remain separate requirements. A later source, timing, mapping or model change invalidates the corresponding state checks; a presentation change requires its own visual review. This report does not authorize production rendering.
 
 ### Executable identity follow-up
 
 The final binding adds the actual served `review/client.js` digest. Preparation builds that bundle before freezing it; startup, local verification and the production gate reject a missing or changed required runtime input. The compiled bundle, timeline, model, scene, player, HTML, font, anchors and measured features remain byte-identical to the canonical audit above. All eleven current bound assets were rechecked. This corrects an identity gap without converting semantic checks into listening acceptance.
+
+## Current v2 audit — explicit companion identity
+
+Current revision: **`svetloe-chuvstvo-v2-explicit-identity`**, with **46 reading cues, 175 Russian events and 223 English words**. This supersedes the v1 cottage wording and its v1-only **others** focus expectations. The earlier audit remains evidence for its identified revision.
+
+`SV-016-p2` now reads **those next to me won’t be the same.** In the cottage followed by home-recollection context, this preserves the contrast with expected companions while leaving their relationship unnamed. It does not supply a lover, family or the stronger judgment of “wrong people.”
+
+| English word | Original source index | Rebased local index |
+| --- | --- | --- |
+| those | `те` 10 | 5 |
+| next | `рядом` 5 | 0 |
+| to | `со` 6 | 1 |
+| me | `мной` 7 | 2 |
+| won’t | `будут` 8 + `не` 9 | 3 + 4 |
+| be | `будут` 8 | 3 |
+| the / same | `те` 10 | 5 |
+
+The English subject and identity complement share `те` after grammatical recasting: **those / the / same** activate together at that source event. **Won’t** is the indivisible future/negation contraction; **be** belongs only to `будут`. Six independently specified source midpoints and **264 target-state comparisons** at exact starts, fractional samples, lexical middles, exclusive releases and the actual phrase gap passed. At the `будут` → `не` handoff, **won’t** stays active and **be** releases; at `не` → `те`, **won’t** releases and **those / the / same** activate. The two contraction contributors are adjacent in this recording, so no fictional gap was inserted or claimed as an actual-source observation. The function follows their interval union, not a newly invented English timestamp.
+
+Compared against the committed v1 timeline, **all 175 source-event objects are unchanged**, including IDs, wording, onset/release samples, confidence and method. All cue starts, ends and reading visibility/hold lifetimes are also unchanged; the recording, sample rate and duration are identical. Only `SV-016-p2` target text/contributors changed; the first cottage chunk's explanatory rationale was refreshed without changing its words or correspondence.
+
+- v1 timeline SHA-256: `b66faf257a6432478f0e44253e62e2b23612da290125f3d863d41972054b4d71`
+- Current v2 timeline SHA-256: `c202db4202554c5f29487d93fb5b53d60d9b62b5eb23afc74c2ed7391c4bbddd`
+- Current preview-input record SHA-256: `122786a0f1a8ecea6b17515ddcde6ec8ed1db04430ac9d8b55db7cf308dc9c58`
+
+All **11** declared current inputs, including the actual served `review/client.js` bundle, matched their hashes. This focused semantic/state audit passes. It does not establish listening completion, optical acceptance, encoded-file verification or render authorization; current browser review remains separate.

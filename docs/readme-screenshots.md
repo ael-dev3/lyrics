@@ -114,3 +114,10 @@ Frame 12042 at 200.700 seconds was decoded at native 1920×818 from the verified
 Frame 12858 at 214.300s was decoded from the verified centered v2 native film. Original source frame 5357 has PTS 214.28s; source pictures retain their 25 fps cadence while lyric focus runs on the 60 fps delivery clock. The complete bass-performance shot carries independent centered Japanese/Russian/English backing and Russian/English foreground blocks with simultaneous focus. The portrait frame preserves all source edges above the same meanings. Both stills are unmodified full-frame JPEG q2 extractions from the actual films, with creator attribution to sotode 外で.
 
 [Final-still provenance](../projects/prizrak-lyric-film/evidence/final-stills.json) binds images, actual film hashes, output/source frame indices, approved inputs and both verification reports. Native and portrait presentation were inspected. Browser captures remain historical preview evidence; covers remain separate publishing adaptations. A still proves no acoustic boundary or unsampled frame.
+
+## Светлое чувство v3
+
+- Native final film: `projects/svetloe-chuvstvo-lyric-film/evidence/final-native-32.500.jpg`.
+- Portrait at the same time: `projects/svetloe-chuvstvo-lyric-film/evidence/final-portrait-32.500.jpg`.
+- Both are decoded output frame 1950 at 32.500 s, native source frame 812 at 32.480 s. Russian светлое / English brightest receives the current focus. Original recording/artwork credited to Settlers and the linked source.
+- [Exact film/still hashes and attribution](../projects/svetloe-chuvstvo-lyric-film/evidence/final-stills.json). These replace the earlier preview illustration in both READMEs; older browser/shared-scene evidence retains its historical scope. Covers remain separate from film screenshots.

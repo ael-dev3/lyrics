@@ -25,5 +25,5 @@ for(let frame=0;frame<frames;frame++){
 for(const cue of timeline.cues)for(const w of cue.words){
   if(sourceActive(w,(w.startSample-.5)/44100)||!sourceActive(w,(w.startSample+.5)/44100)||sourceActive(w,(w.endSample+.5)/44100))throw Error(`Incorrect source boundary ${w.id}`);
 }
-let gate='closed';try{checkCurrentProductionGate();throw Error('Unexpected preview-only render authorization')}catch(e){if(e instanceof Error&&e.message.startsWith('Unexpected'))throw e;gate=e instanceof Error?e.message:'closed'}
+let gate='authorized for the current reviewed revision';try{checkCurrentProductionGate()}catch(e){if(!(e instanceof Error)||e.message!=='Preview-only: current song has no render approval')throw e;gate=e.message}
 console.log(JSON.stringify({revision:timeline.revision,cues:timeline.cues.length,sourceWords:timeline.cues.reduce((n,c)=>n+c.words.length,0),semanticFrameChecks:checks,focusFrames,productionGate:gate}));

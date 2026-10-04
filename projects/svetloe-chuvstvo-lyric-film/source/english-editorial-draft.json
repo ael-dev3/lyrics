@@ -1742,7 +1742,7 @@
         "не",
         "те"
       ],
-      "englishText": "In the most derelict, crumbling cottage, others will be next to me.",
+      "englishText": "In the most derelict, crumbling cottage, those next to me won’t be the same.",
       "englishTokens": [
         "In",
         "the",
@@ -1750,12 +1750,14 @@
         "derelict,",
         "crumbling",
         "cottage,",
-        "others",
-        "will",
-        "be",
+        "those",
         "next",
         "to",
-        "me."
+        "me",
+        "won’t",
+        "be",
+        "the",
+        "same."
       ],
       "englishContributors": [
         [
@@ -1777,14 +1779,7 @@
           4
         ],
         [
-          9,
           10
-        ],
-        [
-          8
-        ],
-        [
-          8
         ],
         [
           5
@@ -1794,22 +1789,35 @@
         ],
         [
           7
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          8
+        ],
+        [
+          10
+        ],
+        [
+          10
         ]
       ],
       "editorialNotes": [
-        "Избушка is a small rustic cottage/hut. Cottage preserves the domestic sense without adding a named location. Рядом / со / мной maps to next / to / me individually. Будут supplies will be. Не те is an elliptical negative demonstrative: the expected people are not named. Others preserves that difference without inventing a lover, friends, family, strangers, or the morally stronger wrong people. This selected wording remains interpretive and is not author-certified.",
+        "Избушка is a small rustic cottage/hut. Рядом / со / мной retains next / to / me independently. The elliptical negative demonstrative не те is an expected-person identity contrast, made explicit as those next to me won’t be the same. Their relationship remains unnamed; no lover, family, strangers or moral judgment is supplied. Те carries the English subject those and the identity complement the same after grammatical recasting. The contraction won’t expresses future будут and negation не together, using their exact contributor union; be follows будут. This is a contextual meaning-based translation, not an author-certified wording.",
         "Derelict renders the abandoned condition; crumbling is an ordinary English rendering of ветхий, indicating dilapidation rather than an animated collapse. Most retains самой. These shorter words protect equal lane size."
       ],
       "irreducibleConstructions": [
         {
           "sourceIndices": [
-            9,
-            10
+            8,
+            9
           ],
           "englishTokenIndices": [
-            6
+            10
           ],
-          "rationale": "The elliptical predicate не те means not those / different ones. Natural English others encodes that negative-demonstrative contrast as one word. Highlight over the union of only не and те; the Russian words remain individually focused."
+          "rationale": "Won’t is an indivisible English contraction combining the future auxiliary in будут and explicit negation не. Focus uses only their interval union, preserving any real gap; the Russian words remain individually highlighted."
         }
       ],
       "performanceStatus": "provisional-supplied-wording; exact performed wording and occurrence count pending source inventory",
@@ -1870,7 +1878,7 @@
           "sourceIndex": 5,
           "sourceText": "рядом",
           "englishTokenIndices": [
-            9
+            7
           ],
           "englishWords": [
             "next"
@@ -1880,7 +1888,7 @@
           "sourceIndex": 6,
           "sourceText": "со",
           "englishTokenIndices": [
-            10
+            8
           ],
           "englishWords": [
             "to"
@@ -1890,21 +1898,21 @@
           "sourceIndex": 7,
           "sourceText": "мной",
           "englishTokenIndices": [
-            11
+            9
           ],
           "englishWords": [
-            "me."
+            "me"
           ]
         },
         {
           "sourceIndex": 8,
           "sourceText": "будут",
           "englishTokenIndices": [
-            7,
-            8
+            10,
+            11
           ],
           "englishWords": [
-            "will",
+            "won’t",
             "be"
           ]
         },
@@ -1912,20 +1920,24 @@
           "sourceIndex": 9,
           "sourceText": "не",
           "englishTokenIndices": [
-            6
+            10
           ],
           "englishWords": [
-            "others"
+            "won’t"
           ]
         },
         {
           "sourceIndex": 10,
           "sourceText": "те",
           "englishTokenIndices": [
-            6
+            6,
+            12,
+            13
           ],
           "englishWords": [
-            "others"
+            "those",
+            "the",
+            "same."
           ]
         }
       ],
@@ -1967,10 +1979,12 @@
             8,
             9,
             10,
-            11
+            11,
+            12,
+            13
           ],
           "sourceText": "рядом со мной будут не те",
-          "englishText": "others will be next to me.",
+          "englishText": "those next to me won’t be the same.",
           "timingStatus": "semantic reading division only; acoustic entrance/release pending actual recording"
         }
       ]

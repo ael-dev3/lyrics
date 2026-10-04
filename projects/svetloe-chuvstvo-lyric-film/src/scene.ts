@@ -7,6 +7,7 @@ interface Surface {canvas:CanvasImageSource;context:Context}
 interface Slot {index:number;text:string;x:number;y:number;width:number}
 interface Layout {size:number;source:Slot[];target:Slot[];top:number;bottom:number}
 let timeline:Timeline,features:FeatureData,windows:WindowAnchor[]=[];
+let windowLights:number[][]=[];
 let materialReference:CanvasImageSource|undefined;
 let surfaceFactory:((w:number,h:number)=>Surface)|undefined;
 const masks=new Map<string,{canvas:CanvasImageSource;x:number;y:number;width:number;height:number}>();
@@ -25,13 +26,14 @@ export async function loadScene():Promise<void>{
   const receiving=await read<{sourceSha256:string;windows:WindowAnchor[]}>('/public/window-anchors.json');
   if(receiving.sourceSha256!==timeline.sourceSha256)throw Error('Window hosts belong to another artwork');windows=receiving.windows;
   validateTimeline(timeline);if(features.sourceSha256!==timeline.sourceSha256)throw Error('Different recording in spectrum');
+  prepareWindowLights();
   const font=new FontFace('Theatre',"url('/public/fonts/NotoSerif.ttf')",{weight:'500'});await font.load();document.fonts.add(font);await document.fonts.ready;
   materialReference=await new Promise<HTMLImageElement>((resolve,reject)=>{const image=new Image();image.onload=()=>resolve(image);image.onerror=()=>reject(Error('Original material reference unavailable'));image.src='/public/source-reference.png'});
   surfaceFactory=(w,h)=>{const canvas=document.createElement('canvas');canvas.width=w;canvas.height=h;const context=canvas.getContext('2d');if(!context)throw Error('Material surface unavailable');return {canvas,context}};
   prepareMasks(materialReference);
 }
 export function setSceneForProof(t:Timeline,f:FeatureData,w:WindowAnchor[],factory:(w:number,h:number)=>Surface,reference:CanvasImageSource):void {
-  validateTimeline(t);timeline=t;features=f;windows=w;layouts.clear();masks.clear();surfaceFactory=factory;materialReference=reference;prepareMasks(reference);
+  validateTimeline(t);timeline=t;features=f;windows=w;prepareWindowLights();layouts.clear();masks.clear();surfaceFactory=factory;materialReference=reference;prepareMasks(reference);
 }
 export function getLines(){return timeline.cues.map(c=>({id:c.id,label:c.sourceText,start:c.start,end:c.end}))}
 export function getReadingCue(t:number){return visibleCue(timeline,t)}
@@ -91,12 +93,31 @@ export function windowResponse(w:WindowAnchor,row:number[]):number {
   const db=10*Math.log10(Math.max(1e-12,powers.reduce((a,b)=>a+b,0)));
   return Math.pow(clamp((db+50)/34),1.25);
 }
+export const WINDOW_LIGHTING={sigmaSeconds:.08,radiusSeconds:.20,upperLeftModulation:.50} as const;
+export function smoothWindowRows(rows:readonly (readonly number[])[],frameRate:number):number[][] {
+  if(!Number.isFinite(frameRate)||frameRate<=0)throw Error('Invalid window-light frame rate');
+  if(!rows.length)return [];
+  const sigma=WINDOW_LIGHTING.sigmaSeconds*frameRate,radius=Math.max(1,Math.round(WINDOW_LIGHTING.radiusSeconds*frameRate));
+  const weights=Array.from({length:radius*2+1},(_,i)=>Math.exp(-.5*((i-radius)/sigma)**2));
+  const sum=weights.reduce((a,b)=>a+b,0);
+  // A centered source-time envelope softens flicker without a causal lag.
+  // It is prepared once, so seeking, pausing and speed changes share the same light.
+  return rows.map((row,i)=>row.map((_,pane)=>weights.reduce((total,weight,k)=>total+weight*rows[Math.max(0,Math.min(rows.length-1,i+k-radius))]![pane]!,0)/sum));
+}
+function prepareWindowLights():void {
+  windowLights=smoothWindowRows(features.rows.map(row=>windows.map(w=>windowResponse(w,row))),features.analysis.frameRate.numerator/features.analysis.frameRate.denominator);
+}
+export function windowLightAt(t:number):number[]{
+  const frame=clamp(t*features.analysis.frameRate.numerator/features.analysis.frameRate.denominator,0,windowLights.length-1);
+  const a=Math.floor(frame),b=Math.min(a+1,windowLights.length-1),u=frame-a;
+  return windowLights[a]!.map((v,i)=>v+(windowLights[b]![i]!-v)*u);
+}
 function illuminate(ctx:Context,t:number,offset:number):void {
-  const row=featureAt(t);ctx.save();ctx.translate(0,offset);
-  for(const w of windows){const mask=masks.get(w.id);if(!mask)throw Error(`Missing source window mask: ${w.id}`);const energy=windowResponse(w,row);
+  const lights=windowLightAt(t);ctx.save();ctx.translate(0,offset);
+  for(const [i,w] of windows.entries()){const mask=masks.get(w.id);if(!mask)throw Error(`Missing source window mask: ${w.id}`);const energy=lights[i]!,modulation=w.id==='pane-01'?WINDOW_LIGHTING.upperLeftModulation:1;
     // Each real opening is a measured light cell. No free-floating bar or mirrored rail.
-    ctx.save();ctx.globalCompositeOperation='multiply';ctx.globalAlpha=.36*(1-energy);ctx.drawImage(mask.canvas,mask.x,mask.y);ctx.restore();
-    ctx.save();ctx.globalCompositeOperation='screen';ctx.globalAlpha=.95*energy;ctx.drawImage(mask.canvas,mask.x,mask.y);ctx.restore();
+    ctx.save();ctx.globalCompositeOperation='multiply';ctx.globalAlpha=.36*(1-energy)*modulation;ctx.drawImage(mask.canvas,mask.x,mask.y);ctx.restore();
+    ctx.save();ctx.globalCompositeOperation='screen';ctx.globalAlpha=.95*energy*modulation;ctx.drawImage(mask.canvas,mask.x,mask.y);ctx.restore();
     // No blurred outer emission: the black paper frames and mullions remain intact.
   }ctx.restore();
 }

@@ -18,12 +18,12 @@ for(const format of ['landscape','portrait'] as Format[]){
   const grid=contact.getContext('2d');
   for(const [i,cue] of timeline.cues.entries()){
     const canvas=createCanvas(1080,format==='portrait'?1920:1080),ctx=canvas.getContext('2d') as unknown as CanvasRenderingContext2D;
-    const word=cue.words[Math.min(2,cue.words.length-1)]!,time=(word.startSample+word.endSample)/2/44100;
+    const word=cue.words[cue.id==='SV-016-p2'?cue.words.length-1:Math.min(2,cue.words.length-1)]!,time=(word.startSample+word.endSample)/2/44100;
     paintScene(ctx,time,format,reference as unknown as CanvasImageSource);
     const layout=cueLayout(ctx,cue,format);
     rows.push({cue:cue.id,format,time,size:layout.size,top:layout.top,bottom:layout.bottom,sourceRows:[...new Set(layout.source.map(s=>s.y))].length,targetRows:[...new Set(layout.target.map(s=>s.y))].length});
     const hh=format==='portrait'?640:360;grid.drawImage(canvas,(i%4)*360,Math.floor(i/4)*hh,360,hh);
-    if(i===0||cue.templateId==='hook-feeling')writeFileSync(`${folder}/${format}-${String(i+1).padStart(2,'0')}.png`,canvas.toBuffer('image/png'));
+    if(i===0||cue.templateId==='hook-feeling'||cue.id==='SV-016-p2')writeFileSync(`${folder}/${format}-${String(i+1).padStart(2,'0')}.png`,canvas.toBuffer('image/png'));
   }
   writeFileSync(`${folder}/${format}-all-cues.jpg`,contact.toBuffer('image/jpeg',84));
 }

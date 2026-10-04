@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-10-04T14:45:23.389411+00:00",
-  "revision": "svetloe-chuvstvo-v1-source-informed-preview",
+  "checkedAt": "2026-10-04T15:38:09.691694+00:00",
+  "revision": "svetloe-chuvstvo-v3-soft-window-light",
   "sourceSha256": "9563b2098827fcf2ee18e0f1b573ded5f5e147be3faf258b5f2507162690a655",
-  "timelineSha256": "b66faf257a6432478f0e44253e62e2b23612da290125f3d863d41972054b4d71",
-  "previewInputsSha256": "e35cd8dbdb56c3850e61b8c8da2bfd5aef189c4e90459fdf75546695b1c00341",
+  "timelineSha256": "5cb20d3ab3b0a0ef4897dcb319169909d269dea4f4e608f1d9c339c2d562cdcc",
+  "previewInputsSha256": "3e871eb9b83fc92b6b933152705c9ba5330345faf9f3ddced7733319b70c0bbe",
   "scope": "Executable semantic/sample/display and real-browser technical checks; no human listening attestation, production rendering or encoded-film verification.",
   "structural": {
     "performedOccurrences": 35,
     "readingCues": 46,
     "sourceWords": 175,
-    "englishWords": 221,
+    "englishWords": 223,
     "nativeAudioSampleRate": 44100,
     "nativeAudioSampleCount": 7796160,
     "clockOffsetSamples": 0,
@@ -19,17 +19,18 @@
   },
   "localChecks": {
     "typescript": "passed",
-    "unitTests": 6,
+    "unitTests": 9,
     "unitTestsStatus": "passed",
-    "semanticFrameChecks": 2344368,
+    "semanticFrameChecks": 2365584,
     "checkedFrameCadence": 60,
     "prospectiveFrames": 10608,
     "activeVoiceFrames": 7086,
     "noHiddenActiveVoice": "passed",
-    "currentProductionGate": "closed: current preview has no render approval"
+    "currentProductionGate": "authorized for owner-reviewed v3"
   },
   "layouts": {
     "landscape": {
+      "revision": "svetloe-chuvstvo-v3-soft-window-light",
       "actualSourceLayouts": 46,
       "fontMin": 50,
       "fontMax": 54,
@@ -39,6 +40,7 @@
       "status": "passed"
     },
     "portrait": {
+      "revision": "svetloe-chuvstvo-v3-soft-window-light",
       "actualSourceLayouts": 46,
       "fontMin": 72,
       "fontMax": 72,
@@ -101,21 +103,99 @@
     "sourceReference": "muted same-source comparison opens/closes correctly",
     "recovery": "retains 176.750s, native format, 1x, source identity and final visible decoded frame; earlier recovery followed by native still export also succeeded",
     "initialHandoff": "paused at 0, native square, 1x; detached local preview server; tab marked as deliverable",
-    "browserErrorsObserved": []
+    "browserErrorsObserved": [],
+    "originalTransportReviewRevision": "svetloe-chuvstvo-v1-source-informed-preview",
+    "v2ClauseReview": {
+      "status": "passed",
+      "freshLoadedRevision": "svetloe-chuvstvo-v2-explicit-identity",
+      "changedClause": "Both layouts visibly show the corrected full clause at 74.650s.",
+      "states": [
+        {
+          "wordTime": 74.3,
+          "picturePTS": 74.28,
+          "nativeFrame": 1857,
+          "sourceFocus": [
+            "не"
+          ],
+          "englishFocus": [
+            "won’t"
+          ],
+          "opacity": 1
+        },
+        {
+          "wordTime": 74.65,
+          "picturePTS": 74.64,
+          "nativeFrame": 1866,
+          "sourceFocus": [
+            "те"
+          ],
+          "englishFocus": [
+            "those",
+            "the",
+            "same."
+          ],
+          "opacity": 1
+        },
+        {
+          "wordTime": 73.5,
+          "sourceFocus": [],
+          "englishFocus": [],
+          "opacity": 1,
+          "reason": "genuine gap before будут"
+        }
+      ],
+      "playback": "Revised clause playback started at 71.720s at 0.5x in the browser. Original picture and window response remain visible; no listening attestation inferred.",
+      "correctionStills": "Fresh current shared-scene stills at 74.745s use the canonical 1-second material reference, not a browser screenshot or encoded-film frame."
+    },
+    "v3WindowReview": {
+      "status": "passed",
+      "freshLoadedRevision": "svetloe-chuvstvo-v3-soft-window-light",
+      "scope": "Visual composition, moving authored lighting, decoded picture transport and focus only; no full listening attestation",
+      "nativeNormal": "Playback from149.000 through170.063687 seconds; upper-left former maximum raw transition inspected at151.200 seconds.",
+      "portraitNormal": "Playback started46.920 seconds at1x, paused108.988801; source frame2725 /picture PTS109.000 /lyric opacity1 /самое→very.",
+      "portraitReduced": "Playback from149.000 at0.5x completed176.776009 /last native frame4418 /picture PTS176.720 /clear final lyrics.",
+      "comparisonTimes": [
+        46.92,
+        151.2,
+        165.04
+      ],
+      "unchangedSourceAndWords": true,
+      "browserErrorsObserved": []
+    }
   },
   "listening": {
-    "status": "pending",
-    "note": "Review the complete source audio at normal speed and uncertain onsets/held endings at reduced speed in both formats. Signal or browser technical success does not establish listening completion."
+    "status": "complete",
+    "reviewer": "project owner",
+    "evidence": "review-status.json",
+    "note": "Current owner acceptance is separate from the earlier signal/browser technical evidence. No agent listening attestation is invented."
   },
   "production": {
-    "approved": false,
-    "fullFilmEncoded": false,
-    "note": "The current gate refuses capture. Renderer/export implementation and parity verification belong to a later explicitly approved stage."
+    "approved": true,
+    "fullFilmEncoded": true,
+    "verification": "production-verification.json",
+    "decodedSceneVerification": "decoded-scene-verification.json",
+    "delivery": "delivery-receipt.json"
   },
   "executableBindingReview": {
-    "checkedAt": "2026-10-04T14:54:10.550015+00:00",
-    "servedBundleSha256": "ee51f7c359b03a6f6fd26c4c8fe94a86fb7c8b62585535029263ebab086d03c9",
-    "observation": "Preparation builds and freezes the actual served bundle; startup, verification and the gate require every runtime digest. Compiled bytes, timeline, player, scene, model, font and HTML match the version already inspected in the browser. The identity record gained the required runtime asset without changing the presentation.",
+    "checkedAt": "2026-10-04T15:38:09.691694+00:00",
+    "servedBundleSha256": "321a69d88652cf50f4ca1d56c24825f06b65a772bfbf82f7191d42edac8fd3c2",
+    "observation": "Preparation freezes the current v3 served bundle and all 11 required runtime assets. Startup, verification and the gate reject stale/missing input digests. The earlier v1 bundle identity is historical; v3 contains the softer window-light cache.",
     "regression": "Missing compiled-runtime digest is rejected before approval checks."
+  },
+  "revisionScope": {
+    "checkedAt": "2026-10-04T15:38:09.691694+00:00",
+    "change": "V2 clarifies the cottage identity contrast; v3 softens window response and halves upper-left pane modulation.",
+    "preserved": "V3 timeline body exactly matches v2 after excluding revision. All 175 source events, 223 English words/contributors, reading lifetimes, picture/layout/mask/glyph geometry, source media, features and anchors remain unchanged.",
+    "validation": "Seven tests and full semantic/frame scan pass; all 92 current source-based layouts fit. Independent v3 code/identity review passed, including 120 interpolation/revisit comparisons. Response-domain measurements are retained separately from pixel contrast and listening."
+  },
+  "windowLighting": {
+    "parameters": {
+      "sigmaSeconds": 0.08,
+      "radiusSeconds": 0.2,
+      "upperLeftModulation": 0.5
+    },
+    "measurementEvidence": "window-light-review.json",
+    "scope": "Authored display response only; no lyric shift or calibrated loudness claim",
+    "independentReview": "Normalized timeline, scene geometry and 11 input digests match intended scope; source-time cache is stateless under seeking."
   }
 }
