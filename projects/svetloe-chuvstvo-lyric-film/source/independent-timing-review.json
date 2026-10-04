@@ -1,0 +1,1244 @@
+{
+  "schemaVersion": 1,
+  "sourceSha256": "9563b2098827fcf2ee18e0f1b573ded5f5e147be3faf258b5f2507162690a655",
+  "baselineFile": "analysis/acoustic-pass/mms-mix-frozen-baseline.json",
+  "baselineSha256": "62d4e080bce8a8780c1f969505116e01677ab85529c6e6907ec5088d59bae922",
+  "sampleRate": 44100,
+  "sourceClockOffsetSamples": 0,
+  "humanListening": false,
+  "canonicalTimingWriter": "coordinator",
+  "scope": "Independent original/stem signal review of all35cue-final endpoints and4targeted first-verse connected openings. No broad same-family model rerun. Points are proposals, not approved canonical timing.",
+  "signalResolution": {
+    "spectralWindowSamples": 1024,
+    "spectralSupportMilliseconds": 23.219954648526077,
+    "hopSamples": 88,
+    "hopMilliseconds": 1.99546485260771,
+    "rmsWindowSamples": 441,
+    "note": "Dense plotting hops and exact integer sample storage do not certify physical or perceptual millisecond accuracy."
+  },
+  "familyIndependence": "Original/stem spectrogram and power views are complementary observations of one recording. Existing MMS stem/crop paths remain correlated; these are not additional independent model votes.",
+  "limitations": [
+    "No actual normal-speed/reduced-speed listening performed by this reviewer.",
+    "Separation can retain reflected voice or accompaniment and smear edges.",
+    "Small tail points are qualitative body/coda proposals, not calibrated uncertainty.",
+    "SV001 late frication versus breath, SV003 quiet terminal material, SV009 residual versus coda, SV025 quiet release and SV035 terminal pulse remain listening priorities.",
+    "Neutral reading holds are authored proposals and must be reconciled with the final reviewed neighboring onsets.",
+    "SV030 strong body ends around122.03; ownership of the softer trajectory until123.6 remains a body-versus-reflection ambiguity. Its wider lexical interval is not collapsed to the narrower disappearance range."
+  ],
+  "cueFinalReleases": [
+    {
+      "cueId": "SV-001",
+      "wordId": "SV-001-s09",
+      "text": "красив",
+      "beforeStartSample": 300203,
+      "beforeEndSample": 397339,
+      "candidateEndSample": 374409,
+      "candidateEndSeconds": 8.49,
+      "plausibleEndSamples": [
+        370660,
+        377055
+      ],
+      "plausibleEndSeconds": [
+        8.405,
+        8.55
+      ],
+      "endDeltaSamples": -22930,
+      "decision": "independent-signal-candidate; coordinator must reconcile",
+      "signalObservation": "The strong vowel/body falls by about8.43; mix end9.010 includes the next word. Weak3k noise8.62–8.81 could be breath or final frication and remains unresolved.",
+      "neutralReading": {
+        "mode": "hold-until-next-reviewed-vocal-or-use-gentle-fade-if-space",
+        "minimumHoldSample": 379701,
+        "fullOpacityEndSample": null,
+        "visibleEndSample": null,
+        "nextBaselineOnsetSample": 392957,
+        "scope": "Next baseline is not canonical. Use the final reviewed next onset for atomic handoff; do not compress fade or make a midpoint blackout."
+      },
+      "evidence": [
+        "analysis/independent-sync/tails-01.png",
+        "analysis/independent-sync/detail-SV-001.png"
+      ],
+      "humanListening": false
+    },
+    {
+      "cueId": "SV-002",
+      "wordId": "SV-002-s10",
+      "text": "сил",
+      "beforeStartSample": 643769,
+      "beforeEndSample": 697640,
+      "candidateEndSample": 698544,
+      "candidateEndSeconds": 15.84,
+      "plausibleEndSamples": [
+        695016,
+        701190
+      ],
+      "plausibleEndSeconds": [
+        15.76,
+        15.9
+      ],
+      "endDeltaSamples": 904,
+      "decision": "independent-signal-candidate; coordinator must reconcile",
+      "signalObservation": "Final narrow harmonics and terminal lower body survive beyond the stronger vowel; onset frication also requires earlier ownership.",
+      "neutralReading": {
+        "mode": "hold-until-next-reviewed-vocal-or-use-gentle-fade-if-space",
+        "minimumHoldSample": 703836,
+        "fullOpacityEndSample": null,
+        "visibleEndSample": null,
+        "nextBaselineOnsetSample": 723263,
+        "scope": "Next baseline is not canonical. Use the final reviewed next onset for atomic handoff; do not compress fade or make a midpoint blackout."
+      },
+      "evidence": [
+        "analysis/independent-sync/tails-01.png"
+      ],
+      "humanListening": false
+    },
+    {
+      "cueId": "SV-003",
+      "wordId": "SV-003-s09",
+      "text": "стать",
+      "beforeStartSample": 966135,
+      "beforeEndSample": 1012060,
+      "candidateEndSample": 1018710,
+      "candidateEndSeconds": 23.1,
+      "plausibleEndSamples": [
+        1012536,
+        1020915
+      ],
+      "plausibleEndSeconds": [
+        22.96,
+        23.15
+      ],
+      "endDeltaSamples": 6650,
+      "decision": "independent-signal-candidate; coordinator must reconcile",
+      "signalObservation": "Reject a strong-vowel-only cut22.64: weak lower body continues and a late fricative/release burst appears near23.03–23.09; breath-versus-coda remains uncertain.",
+      "neutralReading": {
+        "mode": "hold-until-next-reviewed-vocal-or-use-gentle-fade-if-space",
+        "minimumHoldSample": 1024002,
+        "fullOpacityEndSample": null,
+        "visibleEndSample": null,
+        "nextBaselineOnsetSample": 1050077,
+        "scope": "Next baseline is not canonical. Use the final reviewed next onset for atomic handoff; do not compress fade or make a midpoint blackout."
+      },
+      "evidence": [
+        "analysis/independent-sync/tails-01.png",
+        "analysis/independent-sync/detail-SV-003.png"
+      ],
+      "humanListening": false
+    },
+    {
+      "cueId": "SV-004",
+      "wordId": "SV-004-s11",
+      "text": "стал",
+      "beforeStartSample": 1291524,
+      "beforeEndSample": 1318057,
+      "candidateEndSample": 1318590,
+      "candidateEndSeconds": 29.9,
+      "plausibleEndSamples": [
+        1316826,
+        1320354
+      ],
+      "plausibleEndSeconds": [
+        29.86,
+        29.94
+      ],
+      "endDeltaSamples": 533,
+      "decision": "independent-signal-candidate; coordinator must reconcile",
+      "signalObservation": "Strong held vowel has a clear decline at29.89; quieter material before the next phrase does not justify extending bright lexical focus.",
+      "neutralReading": {
+        "mode": "hold-until-next-reviewed-vocal-or-use-gentle-fade-if-space",
+        "minimumHoldSample": 1323882,
+        "fullOpacityEndSample": null,
+        "visibleEndSample": null,
+        "nextBaselineOnsetSample": 1335794,
+        "scope": "Next baseline is not canonical. Use the final reviewed next onset for atomic handoff; do not compress fade or make a midpoint blackout."
+      },
+      "evidence": [
+        "analysis/independent-sync/tails-01.png"
+      ],
+      "humanListening": false
+    },
+    {
+      "cueId": "SV-005",
+      "wordId": "SV-005-s03",
+      "text": "чувство",
+      "beforeStartSample": 1459590,
+      "beforeEndSample": 1485234,
+      "candidateEndSample": 1487052,
+      "candidateEndSeconds": 33.72,
+      "plausibleEndSamples": [
+        1485288,
+        1488816
+      ],
+      "plausibleEndSeconds": [
+        33.68,
+        33.76
+      ],
+      "endDeltaSamples": 1818,
+      "decision": "independent-signal-candidate; coordinator must reconcile",
+      "signalObservation": "Last voiced syllable ends with a drop around33.69–33.72, followed by low decay before the next repeat.",
+      "neutralReading": {
+        "mode": "hold-until-next-reviewed-vocal-or-use-gentle-fade-if-space",
+        "minimumHoldSample": 1492344,
+        "fullOpacityEndSample": null,
+        "visibleEndSample": null,
+        "nextBaselineOnsetSample": 1498964,
+        "scope": "Next baseline is not canonical. Use the final reviewed next onset for atomic handoff; do not compress fade or make a midpoint blackout."
+      },
+      "evidence": [
+        "analysis/independent-sync/tails-02.png"
+      ],
+      "humanListening": false
+    },
+    {
+      "cueId": "SV-006",
+      "wordId": "SV-006-s03",
+      "text": "чувство",
+      "beforeStartSample": 1621901,
+      "beforeEndSample": 1649318,
+      "candidateEndSample": 1650222,
+      "candidateEndSeconds": 37.42,
+      "plausibleEndSamples": [
+        1648899,
+        1651986
+      ],
+      "plausibleEndSeconds": [
+        37.39,
+        37.46
+      ],
+      "endDeltaSamples": 904,
+      "decision": "independent-signal-candidate; coordinator must reconcile",
+      "signalObservation": "The final voiced pulse drops around37.40–37.43; next Ты has distinct later ownership.",
+      "neutralReading": {
+        "mode": "hold-until-next-reviewed-vocal-or-use-gentle-fade-if-space",
+        "minimumHoldSample": 1655514,
+        "fullOpacityEndSample": null,
+        "visibleEndSample": null,
+        "nextBaselineOnsetSample": 1661316,
+        "scope": "Next baseline is not canonical. Use the final reviewed next onset for atomic handoff; do not compress fade or make a midpoint blackout."
+      },
+      "evidence": [
+        "analysis/independent-sync/tails-02.png"
+      ],
+      "humanListening": false
+    },
+    {
+      "cueId": "SV-007",
+      "wordId": "SV-007-s02",
+      "text": "искусство",
+      "beforeStartSample": 1689677,
+      "beforeEndSample": 1727787,
+      "candidateEndSample": 1738422,
+      "candidateEndSeconds": 39.42,
+      "plausibleEndSamples": [
+        1736658,
+        1740186
+      ],
+      "plausibleEndSeconds": [
+        39.38,
+        39.46
+      ],
+      "endDeltaSamples": 10635,
+      "decision": "independent-signal-candidate; coordinator must reconcile",
+      "signalObservation": "Final vowel remains strong after39.179 core and drops near39.42 before following Ты.",
+      "neutralReading": {
+        "mode": "hold-until-next-reviewed-vocal-or-use-gentle-fade-if-space",
+        "minimumHoldSample": 1743714,
+        "fullOpacityEndSample": null,
+        "visibleEndSample": null,
+        "nextBaselineOnsetSample": 1742901,
+        "scope": "Next baseline is not canonical. Use the final reviewed next onset for atomic handoff; do not compress fade or make a midpoint blackout."
+      },
+      "evidence": [
+        "analysis/independent-sync/tails-02.png"
+      ],
+      "humanListening": false
+    },
+    {
+      "cueId": "SV-008",
+      "wordId": "SV-008-s02",
+      "text": "искусство",
+      "beforeStartSample": 1773034,
+      "beforeEndSample": 1808485,
+      "candidateEndSample": 1814715,
+      "candidateEndSeconds": 41.15,
+      "plausibleEndSamples": [
+        1812951,
+        1816920
+      ],
+      "plausibleEndSeconds": [
+        41.11,
+        41.2
+      ],
+      "endDeltaSamples": 6230,
+      "decision": "independent-signal-candidate; coordinator must reconcile",
+      "signalObservation": "Final vowel remains voiced after41.009 core; drop appears near41.14, followed by weaker decay.",
+      "neutralReading": {
+        "mode": "hold-until-next-reviewed-vocal-or-use-gentle-fade-if-space",
+        "minimumHoldSample": 1820007,
+        "fullOpacityEndSample": null,
+        "visibleEndSample": null,
+        "nextBaselineOnsetSample": 1824451,
+        "scope": "Next baseline is not canonical. Use the final reviewed next onset for atomic handoff; do not compress fade or make a midpoint blackout."
+      },
+      "evidence": [
+        "analysis/independent-sync/tails-02.png"
+      ],
+      "humanListening": false
+    },
+    {
+      "cueId": "SV-009",
+      "wordId": "SV-009-s02",
+      "text": "свет",
+      "beforeStartSample": 1859816,
+      "beforeEndSample": 1939387,
+      "candidateEndSample": 1924965,
+      "candidateEndSeconds": 43.65,
+      "plausibleEndSamples": [
+        1919232,
+        1932903
+      ],
+      "plausibleEndSeconds": [
+        43.52,
+        43.83
+      ],
+      "endDeltaSamples": -14422,
+      "decision": "independent-signal-candidate; coordinator must reconcile",
+      "signalObservation": "Changed low vocal body continues past strong high vowel; stem power drops sharply near43.6. The43.977 core sits near faint residual, so the body/coda endpoint remains a broader listening priority.",
+      "neutralReading": {
+        "mode": "neutral-hold-then-fade",
+        "fullOpacityEndSample": 1955835,
+        "visibleEndSample": 1977885,
+        "scope": "Authored proposal; separate from lexical focus. Root must reconcile with confirmed next vocal and layout."
+      },
+      "evidence": [
+        "analysis/independent-sync/tails-03.png",
+        "analysis/independent-sync/detail-SV-009.png"
+      ],
+      "humanListening": false
+    },
+    {
+      "cueId": "SV-010",
+      "wordId": "SV-010-s03",
+      "text": "чувство",
+      "beforeStartSample": 2110517,
+      "beforeEndSample": 2137932,
+      "candidateEndSample": 2140394,
+      "candidateEndSeconds": 48.535,
+      "plausibleEndSamples": [
+        2138409,
+        2141937
+      ],
+      "plausibleEndSeconds": [
+        48.49,
+        48.57
+      ],
+      "endDeltaSamples": 2462,
+      "decision": "independent-signal-candidate; coordinator must reconcile",
+      "signalObservation": "Final voiced pulse/transition survives beyond48.479 and drops just after48.51; residual remains before next Самое.",
+      "neutralReading": {
+        "mode": "hold-until-next-reviewed-vocal-or-use-gentle-fade-if-space",
+        "minimumHoldSample": 2145685,
+        "fullOpacityEndSample": null,
+        "visibleEndSample": null,
+        "nextBaselineOnsetSample": 2150810,
+        "scope": "Next baseline is not canonical. Use the final reviewed next onset for atomic handoff; do not compress fade or make a midpoint blackout."
+      },
+      "evidence": [
+        "analysis/independent-sync/tails-03.png"
+      ],
+      "humanListening": false
+    },
+    {
+      "cueId": "SV-011",
+      "wordId": "SV-011-s03",
+      "text": "чувство",
+      "beforeStartSample": 2269644,
+      "beforeEndSample": 2292701,
+      "candidateEndSample": 2299815,
+      "candidateEndSeconds": 52.15,
+      "plausibleEndSamples": [
+        2296728,
+        2302461
+      ],
+      "plausibleEndSeconds": [
+        52.08,
+        52.21
+      ],
+      "endDeltaSamples": 7114,
+      "decision": "independent-signal-candidate; coordinator must reconcile",
+      "signalObservation": "Final syllable begins near51.90 and continues beyond51.989; marked drop is near52.12–52.15.",
+      "neutralReading": {
+        "mode": "hold-until-next-reviewed-vocal-or-use-gentle-fade-if-space",
+        "minimumHoldSample": 2305107,
+        "fullOpacityEndSample": null,
+        "visibleEndSample": null,
+        "nextBaselineOnsetSample": 2311428,
+        "scope": "Next baseline is not canonical. Use the final reviewed next onset for atomic handoff; do not compress fade or make a midpoint blackout."
+      },
+      "evidence": [
+        "analysis/independent-sync/tails-03.png"
+      ],
+      "humanListening": false
+    },
+    {
+      "cueId": "SV-012",
+      "wordId": "SV-012-s02",
+      "text": "искусство",
+      "beforeStartSample": 2341710,
+      "beforeEndSample": 2377336,
+      "candidateEndSample": 2385810,
+      "candidateEndSeconds": 54.1,
+      "plausibleEndSamples": [
+        2383605,
+        2388015
+      ],
+      "plausibleEndSeconds": [
+        54.05,
+        54.15
+      ],
+      "endDeltaSamples": 8474,
+      "decision": "independent-signal-candidate; coordinator must reconcile",
+      "signalObservation": "Direct final vowel continues beyond53.908 to about54.09 before attenuation and the next Ты.",
+      "neutralReading": {
+        "mode": "hold-until-next-reviewed-vocal-or-use-gentle-fade-if-space",
+        "minimumHoldSample": 2391102,
+        "fullOpacityEndSample": null,
+        "visibleEndSample": null,
+        "nextBaselineOnsetSample": 2391223,
+        "scope": "Next baseline is not canonical. Use the final reviewed next onset for atomic handoff; do not compress fade or make a midpoint blackout."
+      },
+      "evidence": [
+        "analysis/independent-sync/tails-03.png"
+      ],
+      "humanListening": false
+    },
+    {
+      "cueId": "SV-013",
+      "wordId": "SV-013-s02",
+      "text": "искусство",
+      "beforeStartSample": 2421505,
+      "beforeEndSample": 2456240,
+      "candidateEndSample": 2467395,
+      "candidateEndSeconds": 55.95,
+      "plausibleEndSamples": [
+        2464308,
+        2469600
+      ],
+      "plausibleEndSeconds": [
+        55.88,
+        56.0
+      ],
+      "endDeltaSamples": 11155,
+      "decision": "independent-signal-candidate; coordinator must reconcile",
+      "signalObservation": "Direct final vowel continues after55.697, with decline near55.94 before next Ты.",
+      "neutralReading": {
+        "mode": "hold-until-next-reviewed-vocal-or-use-gentle-fade-if-space",
+        "minimumHoldSample": 2472687,
+        "fullOpacityEndSample": null,
+        "visibleEndSample": null,
+        "nextBaselineOnsetSample": 2475372,
+        "scope": "Next baseline is not canonical. Use the final reviewed next onset for atomic handoff; do not compress fade or make a midpoint blackout."
+      },
+      "evidence": [
+        "analysis/independent-sync/tails-04.png"
+      ],
+      "humanListening": false
+    },
+    {
+      "cueId": "SV-014",
+      "wordId": "SV-014-s02",
+      "text": "свет",
+      "beforeStartSample": 2508977,
+      "beforeEndSample": 2521357,
+      "candidateEndSample": 2578086,
+      "candidateEndSeconds": 58.46,
+      "plausibleEndSamples": [
+        2574558,
+        2582055
+      ],
+      "plausibleEndSeconds": [
+        58.38,
+        58.55
+      ],
+      "endDeltaSamples": 56729,
+      "decision": "independent-signal-candidate; coordinator must reconcile",
+      "signalObservation": "Held vowel and changed low coda continue well beyond57.174. Direct-body attenuation is near58.4–58.5, followed by clear reflected decay.",
+      "neutralReading": {
+        "mode": "neutral-hold-then-fade",
+        "fullOpacityEndSample": 2606310,
+        "visibleEndSample": 2628360,
+        "scope": "Authored proposal; separate from lexical focus. Root must reconcile with confirmed next vocal and layout."
+      },
+      "evidence": [
+        "analysis/independent-sync/tails-04.png"
+      ],
+      "humanListening": false
+    },
+    {
+      "cueId": "SV-015",
+      "wordId": "SV-015-s09",
+      "text": "беде",
+      "beforeStartSample": 2955980,
+      "beforeEndSample": 2970109,
+      "candidateEndSample": 2983365,
+      "candidateEndSeconds": 67.65,
+      "plausibleEndSamples": [
+        2979396,
+        2986452
+      ],
+      "plausibleEndSeconds": [
+        67.56,
+        67.72
+      ],
+      "endDeltaSamples": 13256,
+      "decision": "independent-signal-candidate; coordinator must reconcile",
+      "signalObservation": "Final stressed vowel continues after67.349; decline is near67.6–67.65 with a separate following preposition.",
+      "neutralReading": {
+        "mode": "hold-until-next-reviewed-vocal-or-use-gentle-fade-if-space",
+        "minimumHoldSample": 2988657,
+        "fullOpacityEndSample": null,
+        "visibleEndSample": null,
+        "nextBaselineOnsetSample": 3000180,
+        "scope": "Next baseline is not canonical. Use the final reviewed next onset for atomic handoff; do not compress fade or make a midpoint blackout."
+      },
+      "evidence": [
+        "analysis/independent-sync/tails-04.png"
+      ],
+      "humanListening": false
+    },
+    {
+      "cueId": "SV-016",
+      "wordId": "SV-016-s10",
+      "text": "те",
+      "beforeStartSample": 3287596,
+      "beforeEndSample": 3297324,
+      "candidateEndSample": 3309264,
+      "candidateEndSeconds": 75.04,
+      "plausibleEndSamples": [
+        3307059,
+        3311469
+      ],
+      "plausibleEndSeconds": [
+        74.99,
+        75.09
+      ],
+      "endDeltaSamples": 11940,
+      "decision": "independent-signal-candidate; coordinator must reconcile",
+      "signalObservation": "Strong final vowel continues after74.769 and drops near75.03, with following И later.",
+      "neutralReading": {
+        "mode": "hold-until-next-reviewed-vocal-or-use-gentle-fade-if-space",
+        "minimumHoldSample": 3314556,
+        "fullOpacityEndSample": null,
+        "visibleEndSample": null,
+        "nextBaselineOnsetSample": 3321713,
+        "scope": "Next baseline is not canonical. Use the final reviewed next onset for atomic handoff; do not compress fade or make a midpoint blackout."
+      },
+      "evidence": [
+        "analysis/independent-sync/tails-04.png"
+      ],
+      "humanListening": false
+    },
+    {
+      "cueId": "SV-017",
+      "wordId": "SV-017-s07",
+      "text": "рос",
+      "beforeStartSample": 3451129,
+      "beforeEndSample": 3467971,
+      "candidateEndSample": 3470670,
+      "candidateEndSeconds": 78.7,
+      "plausibleEndSamples": [
+        3467583,
+        3473316
+      ],
+      "plausibleEndSeconds": [
+        78.63,
+        78.76
+      ],
+      "endDeltaSamples": 2699,
+      "decision": "independent-signal-candidate; coordinator must reconcile",
+      "signalObservation": "Lower vowel/final frication continues after sparse78.639; next Я has separate renewal.",
+      "neutralReading": {
+        "mode": "hold-until-next-reviewed-vocal-or-use-gentle-fade-if-space",
+        "minimumHoldSample": 3475962,
+        "fullOpacityEndSample": null,
+        "visibleEndSample": null,
+        "nextBaselineOnsetSample": 3480425,
+        "scope": "Next baseline is not canonical. Use the final reviewed next onset for atomic handoff; do not compress fade or make a midpoint blackout."
+      },
+      "evidence": [
+        "analysis/independent-sync/tails-05.png"
+      ],
+      "humanListening": false
+    },
+    {
+      "cueId": "SV-018",
+      "wordId": "SV-018-s06",
+      "text": "слёз",
+      "beforeStartSample": 3605970,
+      "beforeEndSample": 3638683,
+      "candidateEndSample": 3640455,
+      "candidateEndSeconds": 82.55,
+      "plausibleEndSamples": [
+        3637809,
+        3643101
+      ],
+      "plausibleEndSeconds": [
+        82.49,
+        82.61
+      ],
+      "endDeltaSamples": 1772,
+      "decision": "independent-signal-candidate; coordinator must reconcile",
+      "signalObservation": "Vowel declines near82.5; bounded quiet terminal frication can outlast the strongest pitch body. Avoid holding into next Речку.",
+      "neutralReading": {
+        "mode": "hold-until-next-reviewed-vocal-or-use-gentle-fade-if-space",
+        "minimumHoldSample": 3645747,
+        "fullOpacityEndSample": null,
+        "visibleEndSample": null,
+        "nextBaselineOnsetSample": 3656838,
+        "scope": "Next baseline is not canonical. Use the final reviewed next onset for atomic handoff; do not compress fade or make a midpoint blackout."
+      },
+      "evidence": [
+        "analysis/independent-sync/tails-05.png"
+      ],
+      "humanListening": false
+    },
+    {
+      "cueId": "SV-019",
+      "wordId": "SV-019-s06",
+      "text": "стеной",
+      "beforeStartSample": 3769121,
+      "beforeEndSample": 3803602,
+      "candidateEndSample": 3804948,
+      "candidateEndSeconds": 86.28,
+      "plausibleEndSamples": [
+        3802302,
+        3807153
+      ],
+      "plausibleEndSeconds": [
+        86.22,
+        86.33
+      ],
+      "endDeltaSamples": 1346,
+      "decision": "independent-signal-candidate; coordinator must reconcile",
+      "signalObservation": "Held final vowel/glide declines near86.24–86.28 with clear later Тихий renewal.",
+      "neutralReading": {
+        "mode": "hold-until-next-reviewed-vocal-or-use-gentle-fade-if-space",
+        "minimumHoldSample": 3810240,
+        "fullOpacityEndSample": null,
+        "visibleEndSample": null,
+        "nextBaselineOnsetSample": 3819522,
+        "scope": "Next baseline is not canonical. Use the final reviewed next onset for atomic handoff; do not compress fade or make a midpoint blackout."
+      },
+      "evidence": [
+        "analysis/independent-sync/tails-05.png"
+      ],
+      "humanListening": false
+    },
+    {
+      "cueId": "SV-020",
+      "wordId": "SV-020-s03",
+      "text": "покой",
+      "beforeStartSample": 3930834,
+      "beforeEndSample": 4079250,
+      "candidateEndSample": 4085204,
+      "candidateEndSeconds": 92.635,
+      "plausibleEndSamples": [
+        4083219,
+        4086747
+      ],
+      "plausibleEndSeconds": [
+        92.59,
+        92.67
+      ],
+      "endDeltaSamples": 5954,
+      "decision": "independent-signal-candidate; coordinator must reconcile",
+      "signalObservation": "The crop-censored92.500 end misses the falling final glide visible until92.60–92.64; later noise is weaker before new Самое.",
+      "neutralReading": {
+        "mode": "hold-until-next-reviewed-vocal-or-use-gentle-fade-if-space",
+        "minimumHoldSample": 4090496,
+        "fullOpacityEndSample": null,
+        "visibleEndSample": null,
+        "nextBaselineOnsetSample": 4100973,
+        "scope": "Next baseline is not canonical. Use the final reviewed next onset for atomic handoff; do not compress fade or make a midpoint blackout."
+      },
+      "evidence": [
+        "analysis/independent-sync/tails-05.png",
+        "analysis/independent-sync/detail-SV-020.png"
+      ],
+      "humanListening": false
+    },
+    {
+      "cueId": "SV-021",
+      "wordId": "SV-021-s03",
+      "text": "чувство",
+      "beforeStartSample": 4222385,
+      "beforeEndSample": 4246313,
+      "candidateEndSample": 4248153,
+      "candidateEndSeconds": 96.33,
+      "plausibleEndSamples": [
+        4246389,
+        4249917
+      ],
+      "plausibleEndSeconds": [
+        96.29,
+        96.37
+      ],
+      "endDeltaSamples": 1840,
+      "decision": "independent-signal-candidate; coordinator must reconcile",
+      "signalObservation": "Final pulse drops near96.32; the96.288 core is just before that body decline.",
+      "neutralReading": {
+        "mode": "hold-until-next-reviewed-vocal-or-use-gentle-fade-if-space",
+        "minimumHoldSample": 4253445,
+        "fullOpacityEndSample": null,
+        "visibleEndSample": null,
+        "nextBaselineOnsetSample": 4265403,
+        "scope": "Next baseline is not canonical. Use the final reviewed next onset for atomic handoff; do not compress fade or make a midpoint blackout."
+      },
+      "evidence": [
+        "analysis/independent-sync/tails-06.png"
+      ],
+      "humanListening": false
+    },
+    {
+      "cueId": "SV-022",
+      "wordId": "SV-022-s03",
+      "text": "чувство",
+      "beforeStartSample": 4389537,
+      "beforeEndSample": 4415250,
+      "candidateEndSample": 4416615,
+      "candidateEndSeconds": 100.15,
+      "plausibleEndSamples": [
+        4414851,
+        4418820
+      ],
+      "plausibleEndSeconds": [
+        100.11,
+        100.2
+      ],
+      "endDeltaSamples": 1365,
+      "decision": "independent-signal-candidate; coordinator must reconcile",
+      "signalObservation": "Final pulse drops near100.13–100.15; next Ты has later separate onset.",
+      "neutralReading": {
+        "mode": "hold-until-next-reviewed-vocal-or-use-gentle-fade-if-space",
+        "minimumHoldSample": 4421907,
+        "fullOpacityEndSample": null,
+        "visibleEndSample": null,
+        "nextBaselineOnsetSample": 4429564,
+        "scope": "Next baseline is not canonical. Use the final reviewed next onset for atomic handoff; do not compress fade or make a midpoint blackout."
+      },
+      "evidence": [
+        "analysis/independent-sync/tails-06.png"
+      ],
+      "humanListening": false
+    },
+    {
+      "cueId": "SV-023",
+      "wordId": "SV-023-s02",
+      "text": "искусство",
+      "beforeStartSample": 4456305,
+      "beforeEndSample": 4489286,
+      "candidateEndSample": 4491585,
+      "candidateEndSeconds": 101.85,
+      "plausibleEndSamples": [
+        4489380,
+        4493790
+      ],
+      "plausibleEndSeconds": [
+        101.8,
+        101.9
+      ],
+      "endDeltaSamples": 2299,
+      "decision": "independent-signal-candidate; coordinator must reconcile",
+      "signalObservation": "Final pulse continues shortly beyond101.798 and drops near101.84.",
+      "neutralReading": {
+        "mode": "hold-until-next-reviewed-vocal-or-use-gentle-fade-if-space",
+        "minimumHoldSample": 4496877,
+        "fullOpacityEndSample": null,
+        "visibleEndSample": null,
+        "nextBaselineOnsetSample": 4508078,
+        "scope": "Next baseline is not canonical. Use the final reviewed next onset for atomic handoff; do not compress fade or make a midpoint blackout."
+      },
+      "evidence": [
+        "analysis/independent-sync/tails-06.png"
+      ],
+      "humanListening": false
+    },
+    {
+      "cueId": "SV-024",
+      "wordId": "SV-024-s02",
+      "text": "искусство",
+      "beforeStartSample": 4536559,
+      "beforeEndSample": 4573940,
+      "candidateEndSample": 4584416,
+      "candidateEndSeconds": 103.955,
+      "plausibleEndSamples": [
+        4582872,
+        4586400
+      ],
+      "plausibleEndSeconds": [
+        103.92,
+        104.0
+      ],
+      "endDeltaSamples": 10476,
+      "decision": "independent-signal-candidate; coordinator must reconcile",
+      "signalObservation": "Last vowel has a broad direct body through103.92–103.95 after103.717 core; next Ты begins later.",
+      "neutralReading": {
+        "mode": "hold-until-next-reviewed-vocal-or-use-gentle-fade-if-space",
+        "minimumHoldSample": 4589708,
+        "fullOpacityEndSample": null,
+        "visibleEndSample": null,
+        "nextBaselineOnsetSample": 4589079,
+        "scope": "Next baseline is not canonical. Use the final reviewed next onset for atomic handoff; do not compress fade or make a midpoint blackout."
+      },
+      "evidence": [
+        "analysis/independent-sync/tails-06.png"
+      ],
+      "humanListening": false
+    },
+    {
+      "cueId": "SV-025",
+      "wordId": "SV-025-s02",
+      "text": "свет",
+      "beforeStartSample": 4626231,
+      "beforeEndSample": 4658960,
+      "candidateEndSample": 4664898,
+      "candidateEndSeconds": 105.78,
+      "plausibleEndSamples": [
+        4658283,
+        4666221
+      ],
+      "plausibleEndSeconds": [
+        105.63,
+        105.81
+      ],
+      "endDeltaSamples": 5938,
+      "decision": "independent-signal-candidate; coordinator must reconcile",
+      "signalObservation": "Strong vowel ends near105.6; quiet terminal/release material continues into the105.7 region. The transient near106.0 lacks equivalent direct-vowel support.",
+      "neutralReading": {
+        "mode": "hold-until-next-reviewed-vocal-or-use-gentle-fade-if-space",
+        "minimumHoldSample": 4670190,
+        "fullOpacityEndSample": null,
+        "visibleEndSample": null,
+        "nextBaselineOnsetSample": 4752273,
+        "scope": "Next baseline is not canonical. Use the final reviewed next onset for atomic handoff; do not compress fade or make a midpoint blackout."
+      },
+      "evidence": [
+        "analysis/independent-sync/tails-07.png"
+      ],
+      "humanListening": false
+    },
+    {
+      "cueId": "SV-026",
+      "wordId": "SV-026-s03",
+      "text": "чувство",
+      "beforeStartSample": 4876921,
+      "beforeEndSample": 4902558,
+      "candidateEndSample": 4904361,
+      "candidateEndSeconds": 111.21,
+      "plausibleEndSamples": [
+        4902597,
+        4906566
+      ],
+      "plausibleEndSeconds": [
+        111.17,
+        111.26
+      ],
+      "endDeltaSamples": 1803,
+      "decision": "independent-signal-candidate; coordinator must reconcile",
+      "signalObservation": "Final voiced pulse falls just after111.169; weaker tail follows before next repeat.",
+      "neutralReading": {
+        "mode": "hold-until-next-reviewed-vocal-or-use-gentle-fade-if-space",
+        "minimumHoldSample": 4909653,
+        "fullOpacityEndSample": null,
+        "visibleEndSample": null,
+        "nextBaselineOnsetSample": 4920251,
+        "scope": "Next baseline is not canonical. Use the final reviewed next onset for atomic handoff; do not compress fade or make a midpoint blackout."
+      },
+      "evidence": [
+        "analysis/independent-sync/tails-07.png"
+      ],
+      "humanListening": false
+    },
+    {
+      "cueId": "SV-027",
+      "wordId": "SV-027-s03",
+      "text": "чувство",
+      "beforeStartSample": 5040524,
+      "beforeEndSample": 5067939,
+      "candidateEndSample": 5078115,
+      "candidateEndSeconds": 115.15,
+      "plausibleEndSamples": [
+        5075910,
+        5080320
+      ],
+      "plausibleEndSeconds": [
+        115.1,
+        115.2
+      ],
+      "endDeltaSamples": 10176,
+      "decision": "independent-signal-candidate; coordinator must reconcile",
+      "signalObservation": "Final voiced syllable remains strong after114.919 through~115.10; decline near115.15 precedes next Ты.",
+      "neutralReading": {
+        "mode": "hold-until-next-reviewed-vocal-or-use-gentle-fade-if-space",
+        "minimumHoldSample": 5083407,
+        "fullOpacityEndSample": null,
+        "visibleEndSample": null,
+        "nextBaselineOnsetSample": 5081686,
+        "scope": "Next baseline is not canonical. Use the final reviewed next onset for atomic handoff; do not compress fade or make a midpoint blackout."
+      },
+      "evidence": [
+        "analysis/independent-sync/tails-07.png"
+      ],
+      "humanListening": false
+    },
+    {
+      "cueId": "SV-028",
+      "wordId": "SV-028-s02",
+      "text": "искусство",
+      "beforeStartSample": 5107403,
+      "beforeEndSample": 5141988,
+      "candidateEndSample": 5144706,
+      "candidateEndSeconds": 116.66,
+      "plausibleEndSamples": [
+        5142942,
+        5146911
+      ],
+      "plausibleEndSeconds": [
+        116.62,
+        116.71
+      ],
+      "endDeltaSamples": 2718,
+      "decision": "independent-signal-candidate; coordinator must reconcile",
+      "signalObservation": "Last vowel pulse drops near116.65, shortly after116.598; following Ты remains distinct.",
+      "neutralReading": {
+        "mode": "hold-until-next-reviewed-vocal-or-use-gentle-fade-if-space",
+        "minimumHoldSample": 5149998,
+        "fullOpacityEndSample": null,
+        "visibleEndSample": null,
+        "nextBaselineOnsetSample": 5161174,
+        "scope": "Next baseline is not canonical. Use the final reviewed next onset for atomic handoff; do not compress fade or make a midpoint blackout."
+      },
+      "evidence": [
+        "analysis/independent-sync/tails-07.png"
+      ],
+      "humanListening": false
+    },
+    {
+      "cueId": "SV-029",
+      "wordId": "SV-029-s02",
+      "text": "искусство",
+      "beforeStartSample": 5187886,
+      "beforeEndSample": 5225283,
+      "candidateEndSample": 5228055,
+      "candidateEndSeconds": 118.55,
+      "plausibleEndSamples": [
+        5225850,
+        5230260
+      ],
+      "plausibleEndSeconds": [
+        118.5,
+        118.6
+      ],
+      "endDeltaSamples": 2772,
+      "decision": "independent-signal-candidate; coordinator must reconcile",
+      "signalObservation": "Last vowel pulse declines near118.53–118.55 after118.487, with later separate Ты.",
+      "neutralReading": {
+        "mode": "hold-until-next-reviewed-vocal-or-use-gentle-fade-if-space",
+        "minimumHoldSample": 5233347,
+        "fullOpacityEndSample": null,
+        "visibleEndSample": null,
+        "nextBaselineOnsetSample": 5242197,
+        "scope": "Next baseline is not canonical. Use the final reviewed next onset for atomic handoff; do not compress fade or make a midpoint blackout."
+      },
+      "evidence": [
+        "analysis/independent-sync/tails-08.png"
+      ],
+      "humanListening": false
+    },
+    {
+      "cueId": "SV-030",
+      "wordId": "SV-030-s02",
+      "text": "свет",
+      "beforeStartSample": 5278452,
+      "beforeEndSample": 5298790,
+      "candidateEndSample": 5450760,
+      "candidateEndSeconds": 123.6,
+      "plausibleEndSamples": [
+        5381082,
+        5455170
+      ],
+      "plausibleEndSeconds": [
+        122.02,
+        123.7
+      ],
+      "endDeltaSamples": 151970,
+      "decision": "independent-signal-candidate; coordinator must reconcile",
+      "signalObservation": "Strong high-register vowel until~122.03 is followed by a softer changed voice-shaped harmonic trajectory through~123.55, then predominantly lower reflected decay. Fresh quieter/backing phonation versus reflected voice cannot be established solely from the stem. Candidate focus end123.60 preserves the soft trajectory; broader possible lexical ownership122.02–123.70 and competing strong-body endpoint122.03 remain recorded. Neither120.154 nor119.974 includes even the strong body.",
+      "neutralReading": {
+        "mode": "neutral-hold-then-fade",
+        "fullOpacityEndSample": 5512500,
+        "visibleEndSample": 5534550,
+        "scope": "Authored proposal; separate from lexical focus. Root must reconcile with confirmed next vocal and layout."
+      },
+      "evidence": [
+        "analysis/independent-sync/tails-08.png",
+        "analysis/independent-sync/detail-SV-030.png"
+      ],
+      "humanListening": false,
+      "strongHarmonicBodyEndSeconds": 122.03,
+      "softTrajectoryEndSeconds": [
+        123.45,
+        123.7
+      ]
+    },
+    {
+      "cueId": "SV-031",
+      "wordId": "SV-031-s03",
+      "text": "чувство",
+      "beforeStartSample": 6826532,
+      "beforeEndSample": 6852212,
+      "candidateEndSample": 6853140,
+      "candidateEndSeconds": 155.4,
+      "plausibleEndSamples": [
+        6851376,
+        6855345
+      ],
+      "plausibleEndSeconds": [
+        155.36,
+        155.45
+      ],
+      "endDeltaSamples": 928,
+      "decision": "independent-signal-candidate; coordinator must reconcile",
+      "signalObservation": "Quiet final voiced/transition body lies around155.33–155.40; broader faint noise is not automatically more singing.",
+      "neutralReading": {
+        "mode": "hold-until-next-reviewed-vocal-or-use-gentle-fade-if-space",
+        "minimumHoldSample": 6858432,
+        "fullOpacityEndSample": null,
+        "visibleEndSample": null,
+        "nextBaselineOnsetSample": 6869075,
+        "scope": "Next baseline is not canonical. Use the final reviewed next onset for atomic handoff; do not compress fade or make a midpoint blackout."
+      },
+      "evidence": [
+        "analysis/independent-sync/tails-08.png"
+      ],
+      "humanListening": false
+    },
+    {
+      "cueId": "SV-032",
+      "wordId": "SV-032-s03",
+      "text": "чувство",
+      "beforeStartSample": 6995851,
+      "beforeEndSample": 7022448,
+      "candidateEndSample": 7023366,
+      "candidateEndSeconds": 159.26,
+      "plausibleEndSamples": [
+        7021602,
+        7025130
+      ],
+      "plausibleEndSeconds": [
+        159.22,
+        159.3
+      ],
+      "endDeltaSamples": 918,
+      "decision": "independent-signal-candidate; coordinator must reconcile",
+      "signalObservation": "Final pulse falls near159.24–159.26, immediately after159.239 core; next Ты has separate onset.",
+      "neutralReading": {
+        "mode": "hold-until-next-reviewed-vocal-or-use-gentle-fade-if-space",
+        "minimumHoldSample": 7028658,
+        "fullOpacityEndSample": null,
+        "visibleEndSample": null,
+        "nextBaselineOnsetSample": 7034504,
+        "scope": "Next baseline is not canonical. Use the final reviewed next onset for atomic handoff; do not compress fade or make a midpoint blackout."
+      },
+      "evidence": [
+        "analysis/independent-sync/tails-08.png"
+      ],
+      "humanListening": false
+    },
+    {
+      "cueId": "SV-033",
+      "wordId": "SV-033-s02",
+      "text": "искусство",
+      "beforeStartSample": 7064811,
+      "beforeEndSample": 7095118,
+      "candidateEndSample": 7096572,
+      "candidateEndSeconds": 160.92,
+      "plausibleEndSamples": [
+        7094367,
+        7099218
+      ],
+      "plausibleEndSeconds": [
+        160.87,
+        160.98
+      ],
+      "endDeltaSamples": 1454,
+      "decision": "independent-signal-candidate; coordinator must reconcile",
+      "signalObservation": "Quiet last pulse remains through160.88–160.92 after160.887 core; later floor/decay is weaker.",
+      "neutralReading": {
+        "mode": "hold-until-next-reviewed-vocal-or-use-gentle-fade-if-space",
+        "minimumHoldSample": 7101864,
+        "fullOpacityEndSample": null,
+        "visibleEndSample": null,
+        "nextBaselineOnsetSample": 7116126,
+        "scope": "Next baseline is not canonical. Use the final reviewed next onset for atomic handoff; do not compress fade or make a midpoint blackout."
+      },
+      "evidence": [
+        "analysis/independent-sync/tails-09.png"
+      ],
+      "humanListening": false
+    },
+    {
+      "cueId": "SV-034",
+      "wordId": "SV-034-s02",
+      "text": "искусство",
+      "beforeStartSample": 7144616,
+      "beforeEndSample": 7176668,
+      "candidateEndSample": 7177716,
+      "candidateEndSeconds": 162.76,
+      "plausibleEndSamples": [
+        7175511,
+        7179921
+      ],
+      "plausibleEndSeconds": [
+        162.71,
+        162.81
+      ],
+      "endDeltaSamples": 1048,
+      "decision": "independent-signal-candidate; coordinator must reconcile",
+      "signalObservation": "Quiet last pulse declines by162.74–162.77; baseline162.736 is within this indistinct endpoint interval.",
+      "neutralReading": {
+        "mode": "hold-until-next-reviewed-vocal-or-use-gentle-fade-if-space",
+        "minimumHoldSample": 7183008,
+        "fullOpacityEndSample": null,
+        "visibleEndSample": null,
+        "nextBaselineOnsetSample": 7198047,
+        "scope": "Next baseline is not canonical. Use the final reviewed next onset for atomic handoff; do not compress fade or make a midpoint blackout."
+      },
+      "evidence": [
+        "analysis/independent-sync/tails-09.png"
+      ],
+      "humanListening": false
+    },
+    {
+      "cueId": "SV-035",
+      "wordId": "SV-035-s02",
+      "text": "свет",
+      "beforeStartSample": 7232569,
+      "beforeEndSample": 7270632,
+      "candidateEndSample": 7277602,
+      "candidateEndSeconds": 165.025,
+      "plausibleEndSamples": [
+        7276059,
+        7280469
+      ],
+      "plausibleEndSeconds": [
+        164.99,
+        165.09
+      ],
+      "endDeltaSamples": 6970,
+      "decision": "independent-signal-candidate; coordinator must reconcile",
+      "signalObservation": "Strong final vowel falls earlier, but a bounded quiet terminal pulse appears near164.94–165.02. Residual through165.248 is not secure evidence of more lexical body.",
+      "neutralReading": {
+        "mode": "neutral-hold-then-fade",
+        "fullOpacityEndSample": 7320600,
+        "visibleEndSample": 7342650,
+        "scope": "Authored proposal; separate from lexical focus. Root must reconcile with confirmed next vocal and layout."
+      },
+      "evidence": [
+        "analysis/independent-sync/tails-09.png",
+        "analysis/independent-sync/detail-SV-035.png"
+      ],
+      "humanListening": false
+    }
+  ],
+  "targetedOnsets": [
+    {
+      "cueId": "SV-002",
+      "wordId": "SV-002-s05",
+      "text": "я",
+      "beforeStartSample": 536909,
+      "candidateStartSample": 523688,
+      "plausibleStartSamples": [
+        522144,
+        526554
+      ],
+      "pairedPreviousReleaseSample": 523688,
+      "pairedNextOnsetSample": 546178,
+      "decision": "independent-signal-candidate; coordinator must reconcile",
+      "signalObservation": "New voiced body occurs near11.86 before12.175 core; preceding пока release must hand off together. Independent иду point12.385 differs20ms from primary12.365 within common plausible ownership.",
+      "humanListening": false,
+      "evidence": [
+        "analysis/acoustic-pass/panels/phrase-SV-002.png"
+      ]
+    },
+    {
+      "cueId": "SV-002",
+      "wordId": "SV-002-s06",
+      "text": "иду",
+      "beforeStartSample": 555455,
+      "candidateStartSample": 546178,
+      "plausibleStartSamples": [
+        544194,
+        548163
+      ],
+      "pairedPreviousReleaseSample": 546178,
+      "pairedNextOnsetSample": null,
+      "decision": "independent-signal-candidate; coordinator must reconcile",
+      "signalObservation": "Quiet beginning/changed body belongs before the internal d-like/strong core12.595; preceding я release must follow the same selected handoff.",
+      "humanListening": false,
+      "evidence": [
+        "analysis/acoustic-pass/panels/phrase-SV-002.png"
+      ]
+    },
+    {
+      "cueId": "SV-002",
+      "wordId": "SV-002-s10",
+      "text": "сил",
+      "beforeStartSample": 643769,
+      "candidateStartSample": 637466,
+      "plausibleStartSamples": [
+        635922,
+        639009
+      ],
+      "pairedPreviousReleaseSample": 637466,
+      "pairedNextOnsetSample": null,
+      "decision": "independent-signal-candidate; coordinator must reconcile",
+      "signalObservation": "Initial s-like frication precedes14.598 strong vowel; pair the полон release. Independent14.455 differs10ms from primary14.445 within the same interval.",
+      "humanListening": false,
+      "evidence": [
+        "analysis/acoustic-pass/panels/phrase-SV-002.png"
+      ]
+    },
+    {
+      "cueId": "SV-003",
+      "wordId": "SV-003-s00",
+      "text": "Жить",
+      "beforeStartSample": 723263,
+      "candidateStartSample": 719932,
+      "plausibleStartSamples": [
+        718389,
+        721917
+      ],
+      "pairedPreviousReleaseSample": null,
+      "pairedNextOnsetSample": null,
+      "decision": "independent-signal-candidate; coordinator must reconcile",
+      "signalObservation": "Quiet initial frication/voice precedes16.401 vowel core, while accompaniment near16.0 does not establish this word. Independent point differs10ms from primary16.335.",
+      "humanListening": false,
+      "evidence": [
+        "analysis/acoustic-pass/panels/phrase-SV-003.png"
+      ]
+    }
+  ],
+  "unresolvedOnsets": [
+    {
+      "wordId": "SV-004-s01",
+      "text": "в",
+      "beforeStartSample": 1078378,
+      "note": "Broad context supports a quiet preceding event before24.453 core; /v/ versus final Мир ownership within~24.26–24.45 remains uncertain. Do not select a core solely to satisfy non-overlap."
+    },
+    {
+      "wordId": "SV-005-s00",
+      "text": "Самое",
+      "note": "Crop30.25 begins close to the30.290 first-word core; ensure full quiet s-like prefix is inspected from preceding стал. Retained broad candidate interval~30.245–30.33; no independent replacement selected."
+    }
+  ]
+}

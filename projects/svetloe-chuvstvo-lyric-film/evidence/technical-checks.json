@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-10-04T14:45:23.389411+00:00",
+  "revision": "svetloe-chuvstvo-v1-source-informed-preview",
+  "sourceSha256": "9563b2098827fcf2ee18e0f1b573ded5f5e147be3faf258b5f2507162690a655",
+  "timelineSha256": "b66faf257a6432478f0e44253e62e2b23612da290125f3d863d41972054b4d71",
+  "previewInputsSha256": "e35cd8dbdb56c3850e61b8c8da2bfd5aef189c4e90459fdf75546695b1c00341",
+  "scope": "Executable semantic/sample/display and real-browser technical checks; no human listening attestation, production rendering or encoded-film verification.",
+  "structural": {
+    "performedOccurrences": 35,
+    "readingCues": 46,
+    "sourceWords": 175,
+    "englishWords": 221,
+    "nativeAudioSampleRate": 44100,
+    "nativeAudioSampleCount": 7796160,
+    "clockOffsetSamples": 0,
+    "sourceAssetBindings": 11,
+    "status": "passed"
+  },
+  "localChecks": {
+    "typescript": "passed",
+    "unitTests": 6,
+    "unitTestsStatus": "passed",
+    "semanticFrameChecks": 2344368,
+    "checkedFrameCadence": 60,
+    "prospectiveFrames": 10608,
+    "activeVoiceFrames": 7086,
+    "noHiddenActiveVoice": "passed",
+    "currentProductionGate": "closed: current preview has no render approval"
+  },
+  "layouts": {
+    "landscape": {
+      "actualSourceLayouts": 46,
+      "fontMin": 50,
+      "fontMax": 54,
+      "minimumTop": 12,
+      "maximumBottom": 159.42,
+      "maximumReadingRows": 2,
+      "status": "passed"
+    },
+    "portrait": {
+      "actualSourceLayouts": 46,
+      "fontMin": 72,
+      "fontMax": 72,
+      "minimumTop": 111.04000000000002,
+      "maximumBottom": 478.96,
+      "maximumReadingRows": 4,
+      "status": "passed"
+    }
+  },
+  "browser": {
+    "status": "passed",
+    "surface": "Codex in-app browser",
+    "oneSourceMediaElement": "soundtrack and decoded picture; native picture PTS is separate from finer word clock",
+    "sourcePicture": "The recording contains static photographed artwork. Advancing decoded PTS and visible source plus authored window-light motion were checked; no original puppet motion is claimed.",
+    "normalPlayback": "started at 0; paused at word time 35.521792s, picture PTS 35.520s, native frame 888; original source visible and focus in both languages",
+    "slowPlayback": "0.5x started around 68.8s in portrait; completed through container audio end 176.776009s with final native picture frame 4418 retained",
+    "seeks": [
+      {
+        "seconds": 1.52,
+        "state": "no active source/target words before selected Мир onset; line reveal in progress"
+      },
+      {
+        "seconds": 1.56,
+        "state": "Мир / World active, line fully opaque"
+      },
+      {
+        "seconds": 32.494999,
+        "picturePTS": 32.48,
+        "pictureFrame": 812,
+        "state": "светлое / brightest active in both native and portrait; saved full canvas stills"
+      },
+      {
+        "seconds": 68.8,
+        "state": "long cottage clause readable in four portrait rows; заброшенной / derelict focus"
+      },
+      {
+        "seconds": 123.55,
+        "state": "свет / a light focus; full line opacity"
+      },
+      {
+        "seconds": 123.7,
+        "state": "focus clears, neutral line remains fully opaque through 125.0s"
+      },
+      {
+        "seconds": 125.6,
+        "state": "line cleared after authored fade end 125.5s"
+      },
+      {
+        "seconds": 164.4,
+        "state": "closing reprise light focus visible in native square"
+      },
+      {
+        "seconds": 176.75,
+        "picturePTS": 176.72,
+        "pictureFrame": 4418,
+        "state": "complete final native source frame retained, no missing layer"
+      }
+    ],
+    "formatSwitch": "native ↔ portrait with exact source aspect retained and paused focus preserved",
+    "sourceReference": "muted same-source comparison opens/closes correctly",
+    "recovery": "retains 176.750s, native format, 1x, source identity and final visible decoded frame; earlier recovery followed by native still export also succeeded",
+    "initialHandoff": "paused at 0, native square, 1x; detached local preview server; tab marked as deliverable",
+    "browserErrorsObserved": []
+  },
+  "listening": {
+    "status": "pending",
+    "note": "Review the complete source audio at normal speed and uncertain onsets/held endings at reduced speed in both formats. Signal or browser technical success does not establish listening completion."
+  },
+  "production": {
+    "approved": false,
+    "fullFilmEncoded": false,
+    "note": "The current gate refuses capture. Renderer/export implementation and parity verification belong to a later explicitly approved stage."
+  },
+  "executableBindingReview": {
+    "checkedAt": "2026-10-04T14:54:10.550015+00:00",
+    "servedBundleSha256": "ee51f7c359b03a6f6fd26c4c8fe94a86fb7c8b62585535029263ebab086d03c9",
+    "observation": "Preparation builds and freezes the actual served bundle; startup, verification and the gate require every runtime digest. Compiled bytes, timeline, player, scene, model, font and HTML match the version already inspected in the browser. The identity record gained the required runtime asset without changing the presentation.",
+    "regression": "Missing compiled-runtime digest is rejected before approval checks."
+  }
+}
