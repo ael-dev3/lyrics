@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 1,
+  "status": "local-cover-review-passed",
+  "revision": "svetloe-chuvstvo-v3-soft-window-light",
+  "sourceSha256": "9563b2098827fcf2ee18e0f1b573ded5f5e147be3faf258b5f2507162690a655",
+  "makerSha256": "5765fe02dc91ccb8f60c1cbed5906ed98cc102ede921f0f1f90da56c4ce8a1ef",
+  "assets": [
+    {
+      "path": "YouTube/Svetloe-Chuvstvo-Settlers-YouTube-Thumbnail-1280x720.jpg",
+      "width": 1280,
+      "height": 720,
+      "bytes": 157600,
+      "sha256": "787034f7efee81b4210870d87baa360e570cbdce953fecdba4578f8e7b2dfb9c"
+    },
+    {
+      "path": "TikTok/Svetloe-Chuvstvo-Settlers-TikTok-Cover-Profile-1200x1600.jpg",
+      "width": 1200,
+      "height": 1600,
+      "bytes": 314142,
+      "sha256": "a21cd350b20593e4080c2fcfdc57dc1a479bcc1338dca1a8c8fec43d195c0e2e"
+    }
+  ],
+  "scope": "Decoded delivered JPEGs, exact metadata, typography-bound safety margins, protected subject bounds and direct visual inspection of both small-size compositions and local 5% edge-crop simulations. No platform upload or final-film claim.",
+  "checks": {
+    "youtube1280x720": true,
+    "tiktok1200x1600Portrait": true,
+    "squarePixels": true,
+    "noExifRotationDependency": true,
+    "youtubeBelow2MB": true,
+    "fullTitleAndArtistReadableAt320x180": true,
+    "fullTitleAndArtistReadableAt150x200": true,
+    "tiktok300x400CleanEdges": true,
+    "both5PercentCropTitleArtistAndSubjectPreserved": true,
+    "sourceFigureBirdAndCompleteStagePreserved": true,
+    "noLetterboxesGuidesOrUI": true,
+    "noGeneratedReplacementArtwork": true,
+    "typecheckPassed": true
+  },
+  "visualNotes": [
+    "Charcoal serif title and rust artist lettering share the approved paper-theatre language.",
+    "Full original source square remains intact; added poster area extends only the empty upper paper.",
+    "At 150x200 the complete two-line title and artist remain readable, with the silhouette profile and bird recognizable.",
+    "Both 5% crop simulations preserve title, artist and the focal profile/bird."
+  ],
+  "proofs": [
+    {
+      "path": "Review/youtube-320x180.png",
+      "width": 320,
+      "height": 180,
+      "sha256": "6e43906c78c39dc29a78baa3337ebbeb140f9c3d584d1e3e5fd9f7234071cc24"
+    },
+    {
+      "path": "Review/youtube-center-crop-5percent.png",
+      "width": 320,
+      "height": 180,
+      "sha256": "53a195ff5107dac9eba0771027b034fba66b2b4c8f7dedae22788d1282b911ca",
+      "simulation": "Remove 5% of each edge then resize; local crop stress simulation, not platform UI."
+    },
+    {
+      "path": "Review/tiktok-150x200.png",
+      "width": 150,
+      "height": 200,
+      "sha256": "8332dde7e5578f9994905e57d829dcb0667626c75ad628a1c372aaa71447e43d"
+    },
+    {
+      "path": "Review/tiktok-300x400.png",
+      "width": 300,
+      "height": 400,
+      "sha256": "fff7d81a1d83270955dd602a91cce0b7330b8be7accb0de067fa34a9fe6da814"
+    },
+    {
+      "path": "Review/tiktok-center-crop-5percent.png",
+      "width": 300,
+      "height": 400,
+      "sha256": "da6fece95896107277ed36fb2a5ed60c36c0f3bd13f2118bfe27e5de51b0b668",
+      "simulation": "Remove 5% of each edge then resize; local crop stress simulation, not platform UI."
+    }
+  ]
+}

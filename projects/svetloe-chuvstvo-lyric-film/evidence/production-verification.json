@@ -1,0 +1,243 @@
+{
+  "schemaVersion": 1,
+  "status": "passed",
+  "checkedAt": "2026-10-04T16:04:22.171Z",
+  "revision": "svetloe-chuvstvo-v3-soft-window-light",
+  "sourceSha256": "9563b2098827fcf2ee18e0f1b573ded5f5e147be3faf258b5f2507162690a655",
+  "approvedInputHashes": {
+    "public/source.mp4": "9563b2098827fcf2ee18e0f1b573ded5f5e147be3faf258b5f2507162690a655",
+    "public/source-reference.png": "c6f7f5aca2cfa8c7c80b0b2812b1df6c5af577dbccf58708197da66e4f787da9",
+    "public/timeline.json": "5cb20d3ab3b0a0ef4897dcb319169909d269dea4f4e608f1d9c339c2d562cdcc",
+    "public/audio-features.json": "4a01a2996164c72af621cc952edd6546aa3827a6a6e0b11c95544dd687009ed4",
+    "public/window-anchors.json": "b96f1d0f7a91d4a2f251ebae3380781dc5f83dc802c0e944a1d859f46b9f3b48",
+    "public/fonts/NotoSerif.ttf": "4d8e6761424656867019081a1a01336f3cb086982682698714054fc33f782713",
+    "src/model.ts": "5f37f80220f14565f48ad48638394d837243caa827ea7e10cf03f2c20cfa8582",
+    "src/scene.ts": "f9852025c729c12ccbaddfc29914536459a79633402015b6acb6e8bfda3ab52f",
+    "src/player.ts": "4eb1270120051dfea32f0550c8428fabc908f56dde1a3008dcf64181e11765f8",
+    "review/index.html": "a3b99283642ed57e520a7ffa3ceae7b26cf8945e3bbacd5432cbb59526329b3d",
+    "review/client.js": "321a69d88652cf50f4ca1d56c24825f06b65a772bfbf82f7191d42edac8fd3c2"
+  },
+  "rendererSha256": "7f841ad246eb452e19d6de15e75327d83889a198ab69c38ac739d8cd4099153e",
+  "verifierSha256": "030f0789908e6895aed6c8c3fa75f111a29cdee7700c17dd0750e56f8466ca10",
+  "previewInputsSha256": "3e871eb9b83fc92b6b933152705c9ba5330345faf9f3ddced7733319b70c0bbe",
+  "approvalSha256": "54211d0b27314c1c29ad7e48a00a4ea6553567d0a37af0f630d960eac75b3c5d",
+  "scope": "Both complete encoded files independently decoded; every frame PTS and protected source-picture ROI checked, original AAC packets/priming and float32 PCM matched. Full-scene pixel comparisons are a separate report.",
+  "source": {
+    "videoFrames": 4419,
+    "decodedAudio": {
+      "decodedPcmF32leSha256": "9d251d1fce99d5acc61c8ab8b56a067a42035961718a726c3b5c6f7bf770a0b0",
+      "decodedSamples": 7796160,
+      "decodedBytes": 62369280,
+      "sampleRate": 44100,
+      "channels": 2,
+      "method": "Strict original-rate audio decode to interleaved little-endian float32; bytes are hashed and counted as they stream, without resampling."
+    },
+    "originalAacPackets": 7615,
+    "packetInventorySha256": "85836d067081746596904081e4d568d1749e3a4a2261ccbc147fc22b732713c8",
+    "blackScan": {
+      "intervals": [],
+      "finalPictureBlack": false,
+      "boundaryEvents": 0
+    }
+  },
+  "formats": {
+    "landscape": {
+      "file": "Svetloe-Chuvstvo-Settlers-YouTube-1080x1080-60fps.mp4",
+      "bytes": 22606845,
+      "sha256": "ec033b5419a25438e381bfd6d6bf16c73d58f37d070355985e44a50c9565ab97",
+      "metadata": {
+        "width": 1080,
+        "height": 1080,
+        "frames": 10608,
+        "framesPerSecond": 60,
+        "videoDurationSeconds": 176.8,
+        "audioDurationSeconds": 176.776009,
+        "videoCodec": "h264",
+        "audioCodec": "aac",
+        "pixelFormat": "yuv420p",
+        "colorRange": "tv",
+        "colorSpace": "bt709",
+        "colorPrimaries": "bt709",
+        "colorTransfer": "bt709",
+        "timeBase": "1/60000",
+        "sampleAspectRatio": "1:1"
+      },
+      "timestamps": {
+        "decodedFrames": 10608,
+        "allFrameTimestamps": true,
+        "maximumTimestampErrorSeconds": 3.333333467026023e-7,
+        "method": "Every decoded frame has an integer best-effort PTS exactly equal to n/60 in the stream time base; printed seconds agree within 2 microseconds."
+      },
+      "originalAac": {
+        "packetCount": 7615,
+        "packetInventorySha256": "85836d067081746596904081e4d568d1749e3a4a2261ccbc147fc22b732713c8",
+        "payloadSequenceSha256": "7bb71c81276e6ebc206b4beedfdfd51ef8cadaca533ecdcf45763f9f7e932672",
+        "exactPayloadAndClockMatch": true
+      },
+      "decodedAudio": {
+        "decodedPcmF32leSha256": "9d251d1fce99d5acc61c8ab8b56a067a42035961718a726c3b5c6f7bf770a0b0",
+        "decodedSamples": 7796160,
+        "decodedBytes": 62369280,
+        "sampleRate": 44100,
+        "channels": 2,
+        "method": "Strict original-rate audio decode to interleaved little-endian float32; bytes are hashed and counted as they stream, without resampling."
+      },
+      "blackPictures": {
+        "sourceIntervals": [],
+        "renderedIntervals": [],
+        "unexpectedIntervals": [],
+        "sourceEquivalent": true,
+        "boundaryToleranceSeconds": 0.05666666666666667,
+        "permittedSourceIntervals": [],
+        "sourceFinalPictureBlack": false,
+        "outputFinalPictureBlack": false,
+        "sourceBoundaryEvents": 0,
+        "outputBoundaryEvents": 0,
+        "method": "FFmpeg blackdetect at zero minimum duration, 2% luma threshold and 98% picture coverage. Each delivered black interval must lie within an authored source interval, allowing one native25fps plus one output60fps boundary. A source interval may extend through the required final-picture hold only when its per-frame lavfi.black_start/end metadata proves the final source picture itself is black; there is no generic ending exemption."
+      },
+      "protectedSourcePicture": {
+        "allFramesChecked": true,
+        "frames": 10608,
+        "maximumMeanLumaError": 1.8539999999999992,
+        "sourceRoi": {
+          "x": 460,
+          "y": 420,
+          "width": 140,
+          "height": 150
+        },
+        "portraitSourceOffsetY": 400,
+        "maximumPermittedMeanLumaError": 8,
+        "method": "Every decoded output frame retains the original central shadow-profile and surrounding paper ROI, independently matched to min(4418,floor(n×25/60)). This protected ROI is outside approved lyric strip and house-window masks. A fixed 8-code limited-luma tolerance permits lossy RGB/YUV conversion; blank or displaced pictures fail even when white lyrics defeat whole-picture blackdetect. Full-scene pixel parity is checked separately."
+      },
+      "mp4": {
+        "fastStart": true,
+        "bytes": 22606845,
+        "atoms": [
+          {
+            "type": "ftyp",
+            "offset": 0,
+            "size": 32
+          },
+          {
+            "type": "moov",
+            "offset": 32,
+            "size": 291610
+          },
+          {
+            "type": "free",
+            "offset": 291642,
+            "size": 8
+          },
+          {
+            "type": "mdat",
+            "offset": 291650,
+            "size": 22315195
+          }
+        ]
+      },
+      "productionReceipt": {
+        "file": "Svetloe-Chuvstvo-Settlers-YouTube-1080x1080-60fps.mp4.json",
+        "sha256": "183ea6637219182e107dda1e61117dddda7bec9c146e421eb91889bdcbf27ffe"
+      }
+    },
+    "portrait": {
+      "file": "Svetloe-Chuvstvo-Settlers-TikTok-1080x1920-60fps.mp4",
+      "bytes": 27585070,
+      "sha256": "37ad6de532ef9885d1bb081a8eb8ee6e38a29cf2c5548d31e6515cce80db66e4",
+      "metadata": {
+        "width": 1080,
+        "height": 1920,
+        "frames": 10608,
+        "framesPerSecond": 60,
+        "videoDurationSeconds": 176.8,
+        "audioDurationSeconds": 176.776009,
+        "videoCodec": "h264",
+        "audioCodec": "aac",
+        "pixelFormat": "yuv420p",
+        "colorRange": "tv",
+        "colorSpace": "bt709",
+        "colorPrimaries": "bt709",
+        "colorTransfer": "bt709",
+        "timeBase": "1/60000",
+        "sampleAspectRatio": "1:1"
+      },
+      "timestamps": {
+        "decodedFrames": 10608,
+        "allFrameTimestamps": true,
+        "maximumTimestampErrorSeconds": 3.333333467026023e-7,
+        "method": "Every decoded frame has an integer best-effort PTS exactly equal to n/60 in the stream time base; printed seconds agree within 2 microseconds."
+      },
+      "originalAac": {
+        "packetCount": 7615,
+        "packetInventorySha256": "85836d067081746596904081e4d568d1749e3a4a2261ccbc147fc22b732713c8",
+        "payloadSequenceSha256": "7bb71c81276e6ebc206b4beedfdfd51ef8cadaca533ecdcf45763f9f7e932672",
+        "exactPayloadAndClockMatch": true
+      },
+      "decodedAudio": {
+        "decodedPcmF32leSha256": "9d251d1fce99d5acc61c8ab8b56a067a42035961718a726c3b5c6f7bf770a0b0",
+        "decodedSamples": 7796160,
+        "decodedBytes": 62369280,
+        "sampleRate": 44100,
+        "channels": 2,
+        "method": "Strict original-rate audio decode to interleaved little-endian float32; bytes are hashed and counted as they stream, without resampling."
+      },
+      "blackPictures": {
+        "sourceIntervals": [],
+        "renderedIntervals": [],
+        "unexpectedIntervals": [],
+        "sourceEquivalent": true,
+        "boundaryToleranceSeconds": 0.05666666666666667,
+        "permittedSourceIntervals": [],
+        "sourceFinalPictureBlack": false,
+        "outputFinalPictureBlack": false,
+        "sourceBoundaryEvents": 0,
+        "outputBoundaryEvents": 0,
+        "method": "FFmpeg blackdetect at zero minimum duration, 2% luma threshold and 98% picture coverage. Each delivered black interval must lie within an authored source interval, allowing one native25fps plus one output60fps boundary. A source interval may extend through the required final-picture hold only when its per-frame lavfi.black_start/end metadata proves the final source picture itself is black; there is no generic ending exemption."
+      },
+      "protectedSourcePicture": {
+        "allFramesChecked": true,
+        "frames": 10608,
+        "maximumMeanLumaError": 1.847999999999999,
+        "sourceRoi": {
+          "x": 460,
+          "y": 420,
+          "width": 140,
+          "height": 150
+        },
+        "portraitSourceOffsetY": 400,
+        "maximumPermittedMeanLumaError": 8,
+        "method": "Every decoded output frame retains the original central shadow-profile and surrounding paper ROI, independently matched to min(4418,floor(n×25/60)). This protected ROI is outside approved lyric strip and house-window masks. A fixed 8-code limited-luma tolerance permits lossy RGB/YUV conversion; blank or displaced pictures fail even when white lyrics defeat whole-picture blackdetect. Full-scene pixel parity is checked separately."
+      },
+      "mp4": {
+        "fastStart": true,
+        "bytes": 27585070,
+        "atoms": [
+          {
+            "type": "ftyp",
+            "offset": 0,
+            "size": 32
+          },
+          {
+            "type": "moov",
+            "offset": 32,
+            "size": 291529
+          },
+          {
+            "type": "free",
+            "offset": 291561,
+            "size": 8
+          },
+          {
+            "type": "mdat",
+            "offset": 291569,
+            "size": 27293501
+          }
+        ]
+      },
+      "productionReceipt": {
+        "file": "Svetloe-Chuvstvo-Settlers-TikTok-1080x1920-60fps.mp4.json",
+        "sha256": "d887b90645aff758e3144aaacb176b8d5854fe0f2424acd492a1bcfb0fe75b17"
+      }
+    }
+  }
+}
