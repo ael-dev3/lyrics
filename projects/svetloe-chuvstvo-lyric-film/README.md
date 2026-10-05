@@ -1,16 +1,16 @@
 # Светлое чувство — shadow-theatre lyric film
 
-**Settlers · Russian / English · complete native-square and portrait films · v3**
+**Settlers · Russian / English · 16:9 YouTube and portrait films · v3 with aspect correction**
 
-![Verified native delivery frame with bilingual ink lyrics and music-responsive paper windows](evidence/final-native-32.500.jpg)
+![Verified widescreen delivery frame with bilingual ink lyrics and music-responsive paper windows](evidence/final-youtube-wide-32.500.jpg)
 
-*Frame1950 decoded from the verified native MP4 at 00:32.500; original source frame 812 /PTS 00:32.480. This is the actual final film, not a browser screenshot or cover. [Delivery still provenance](evidence/final-stills.json). [Portrait frame at the same time](evidence/final-portrait-32.500.jpg).*
+*Frame 1950 decoded from the verified 1920×1080 YouTube MP4 at 00:32.500. The approved square is centered without cropping. This is the actual wide film, not a browser screenshot or cover. [Wide still provenance](evidence/youtube-wide-still.json). [Portrait at the same time](evidence/final-portrait-32.500.jpg). [Historical square still](evidence/final-native-32.500.jpg).*
 
 The [original upload](https://www.youtube.com/watch?v=UANr7uyRZ3w) uses a square photograph of a paper shadow theatre. Preserve that photograph, its seated figure, bird, stars, curtains and printed title. Ink-like bilingual lyrics occupy the unoccupied pale strip above the stage; ten existing house windows carry measured musical light. No replacement scenery or free-standing spectrum is added.
 
 The complete browser preview supports the original 1080×1080 composition and a separately composed 1080×1920 portrait, normal / 0.75× / 0.5× playback, precise seeking, a muted source comparison and recovery. Portrait preserves the complete square, continues only unoccupied sky/floor material and reserves the top interface area for readable text.
 
-**Current state:** owner review and current-v3 render approval are recorded. Both complete 60 fps films passed strict decoding, every-frame timestamp and protected-picture checks, exact AAC packet/priming and decoded PCM comparisons, and 534 shared-scene encoded-frame comparisons per format. The 21-file Desktop posting kit is hash verified. No video-platform posting is recorded.
+**Current state:** the approved v3 square and portrait masters passed full production checks. A directly authorized YouTube aspect correction now supplies a 1920×1080 standard-video upload, retaining the complete square, exact word clock and window-light response. Its separate checks compare every frame's center, every timestamp and the original audio. The updated Desktop kit archives the square YouTube file and identifies the wide version as current. TikTok is unchanged. No video-platform posting is recorded.
 
 ## Reproduce
 
@@ -56,13 +56,27 @@ V3 softens all ten measured window responses with a centered source-time Gaussia
 
 ## Verified delivery
 
+### Current YouTube standard-video edition
+
+Use **YouTube/Svetloe-Chuvstvo-Settlers-YouTube-1920x1080-60fps.mp4**. The complete 1080×1080 composition occupies x420–1499, with softened, reflected material from the original photograph's outer 24 columns filling the sides. These strips contain no lyrics or focal subjects. The source scene is uncropped and unstretched; the added canvas changes neither timing nor musical response.
+
+The recording is 176.800 seconds long. YouTube categorizes square/tall uploads up to three minutes as Shorts and recommends a wider ratio such as 16:9 for standard videos. [Official guidance](https://support.google.com/youtube/answer/15424877?hl=en), checked 5 October 2026. This local export follows that route; actual platform classification has not been tested by uploading.
+
+| Current upload | Size | SHA-256 |
+| --- | --- | --- |
+| YouTube 1920×1080, 60 fps, 176.800 s | 30,649,276 bytes | `22cb0214d3fc417a772cd3e5a04537b89f3e53617ac3d1baa5270902b8c8eb51` |
+
+[Scoped authorization and aspect proof](evidence/youtube-wide-authority.json) · [Wide render identity](evidence/youtube-wide-render.json) · [Color metadata finalization](evidence/youtube-wide-color-correction.json) · [Complete wide verification](evidence/youtube-wide-verification.json) · [Current Desktop receipt](evidence/youtube-wide-delivery.json) · [Reusable format prevention](../../docs/youtube-standard-video-workflow.md).
+
+### Preserved v3 master evidence
+
 | Platform | Film | Size | SHA-256 |
 | --- | --- | --- | --- |
-| YouTube | 1080×1080 native square, 60 fps, 176.800 s | 22,606,845 bytes | `ec033b5419a25438e381bfd6d6bf16c73d58f37d070355985e44a50c9565ab97` |
+| Historical square master | 1080×1080, 60 fps, 176.800 s; archived, not the current standard-video upload | 22,606,845 bytes | `ec033b5419a25438e381bfd6d6bf16c73d58f37d070355985e44a50c9565ab97` |
 | TikTok | 1080×1920 portrait, 60 fps, 176.800 s | 27,585,070 bytes | `37ad6de532ef9885d1bb081a8eb8ee6e38a29cf2c5548d31e6515cce80db66e4` |
 
 Each film has 10,608 decoded frames and preserves all 7,796,160 original stereo samples at 44.1 kHz. Original AAC payloads, packet clocks and 1600-sample priming match exactly. No unexpected black interval or missing protected source picture was found. The 534 sampled frames per format include each word’s first, middle and last active frames; complete mean RGB error stays below 2.305 codes and reading-area error below 3.375 against the shared scene. These lossy-codec comparisons complement owner listening review; they do not establish acoustic ground truth.
 
-[Complete encoded verification](evidence/production-verification.json) · [Decoded scene comparisons](evidence/decoded-scene-verification.json) · [Desktop delivery receipt](evidence/delivery-receipt.json) · [Platform copy and covers](publishing/) · [Production method](PRODUCTION-NOTES.md).
+[Original square/portrait encoded verification](evidence/production-verification.json) · [Original decoded-scene comparisons](evidence/decoded-scene-verification.json) · [Historical 21-file Desktop receipt](evidence/delivery-receipt.json) · [Platform copy and covers](publishing/) · [Production method](PRODUCTION-NOTES.md).
 
 The local folder **Светлое чувство — Upload Kit** contains separate YouTube/TikTok films and covers, upload copy, optional Russian/English SRT/VTT, a manifest and SHA256SUMS. Full films and original media stay outside Git; reproduction data, code, workflow, acceptance records and final checksums are tracked. This source handoff does not imply a video-platform upload or public media release.

@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "status": "metadata finalized; independent full verification pending",
+  "checkedAt": "2026-10-05T12:31:36.422Z",
+  "inputSha256": "d0f9c6392566c60d7425fbaacdbeaf2ef2cd08f21da67d42ef72aa0c1d61e15a",
+  "outputSha256": "22cb0214d3fc417a772cd3e5a04537b89f3e53617ac3d1baa5270902b8c8eb51",
+  "finalizerSha256": "0f67929ea26baff30806838742b0b882714d28ad17f9a50811c6490197713b41",
+  "method": "Stream-copy remux with H264 SPS color primaries/transfer/matrix set to BT709 and limited range. No video picture or audio reencoding, filtering, trimming or clock shift.",
+  "reason": "PNG sRGB transfer metadata propagated through the overlay despite encoder color options. Full-file verification rejected that tag. Explicit H264 metadata finalization restores the intended limited BT709 signal description.",
+  "verificationRequired": "Every PTS, decoded central scene, AAC packet/priming, decoded PCM and full decode must pass after this finalization. Never weaken the color check."
+}
