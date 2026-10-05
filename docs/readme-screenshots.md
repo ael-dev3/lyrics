@@ -117,7 +117,9 @@ Frame 12858 at 214.300s was decoded from the verified centered v2 native film. O
 
 ## Светлое чувство v3
 
+- Current 16:9 YouTube film: `projects/svetloe-chuvstvo-lyric-film/evidence/final-youtube-wide-32.500.jpg`, output frame 1950 at 32.500 s. The approved square remains centered with source-material side wings. [Exact wide film/still identity and attribution](../projects/svetloe-chuvstvo-lyric-film/evidence/youtube-wide-still.json). This is now the representative image in both READMEs.
+
 - Native final film: `projects/svetloe-chuvstvo-lyric-film/evidence/final-native-32.500.jpg`.
 - Portrait at the same time: `projects/svetloe-chuvstvo-lyric-film/evidence/final-portrait-32.500.jpg`.
 - Both are decoded output frame 1950 at 32.500 s, native source frame 812 at 32.480 s. Russian светлое / English brightest receives the current focus. Original recording/artwork credited to Settlers and the linked source.
-- [Exact film/still hashes and attribution](../projects/svetloe-chuvstvo-lyric-film/evidence/final-stills.json). These replace the earlier preview illustration in both READMEs; older browser/shared-scene evidence retains its historical scope. Covers remain separate from film screenshots.
+- [Historical square/portrait film and still hashes](../projects/svetloe-chuvstvo-lyric-film/evidence/final-stills.json). These remain master evidence; older browser/shared-scene evidence retains its historical scope. Covers remain separate from film screenshots.

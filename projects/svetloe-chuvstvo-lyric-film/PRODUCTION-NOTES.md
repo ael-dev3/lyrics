@@ -64,3 +64,28 @@ The local upload kit contains both films, dedicated covers, YouTube title/descri
 Both complete films passed 10,608-frame timing and protected-picture checks. Their 7,615 AAC packets, priming side data and 7,796,160 decoded stereo samples match the source. Each format’s 534 selected decoded frames passed shared-scene checks, with maximum complete-image mean RGB error 2.305 and reading-region mean error 3.375 codes. Full decode found no unexpected black intervals. All 21 Desktop kit files match staging hashes. [Full reports](evidence/production-verification.json) · [Scene comparisons](evidence/decoded-scene-verification.json) · [Delivery](evidence/delivery-receipt.json).
 
 A verification implementation initially attempted one long flat sum of hundreds of FFmpeg `select` terms; the expression parser rejected it. The scene checker uses a balanced expression tree for a bounded parse depth. This was a diagnostic-only correction; approved scene pixels, timing, renderer and finished MP4 bytes were unchanged. Child diagnostics are collected when an early EOF appears, so a filter error is not misreported merely as missing pictures.
+
+## YouTube aspect correction — 5 October 2026
+
+The original 176.800-second square delivery falls within YouTube's square/tall, up-to-three-minute Shorts criteria. A landscape thumbnail does not change video classification. Check the desired platform delivery before deciding to keep a source-native ratio. [Official policy](https://support.google.com/youtube/answer/15424877?hl=en) · [Reusable preflight](../../docs/youtube-standard-video-workflow.md).
+
+The current YouTube upload is 1920×1080 with square pixels. The already approved square film remains sharp and complete at x420–1499; its typography, highlights, source-picture cadence and window response retain their original geometry and clock. Side wings reflect only the original photograph's outer 24 columns, excluding subjects, source lettering and the right-edge scratch. Horizontal extension initially exaggerated grain into streaks; a 24-pixel blur softens this expanded material, and a 48-pixel smoothstep blend retains its inner edge. The central picture is never blurred or stretched. Full and 640×360 proofs passed editorial and independent aspect review before encoding.
+
+This is a directly requested delivery-aspect correction of an approved master. Its [authority record](evidence/youtube-wide-authority.json) binds the exact parent, adapter, material and proof hashes without modifying the parent's complete preview/listening/render statuses. It does not authorize an unrelated redesign or claim that an aspect diagnostic supplies fresh full-song listening evidence.
+
+```sh
+node scripts/youtube-wide.ts proof
+# Inspect proofs and bind the scoped authority before encoding.
+node scripts/youtube-wide.ts render
+node scripts/finalize-youtube-color.ts
+node scripts/youtube-wide.ts verify
+node scripts/youtube-wide.ts stage
+```
+
+The adapter overlays the master at its original size on the wider material canvas, exports all 10,608 frames at 60 fps using H.264 CRF16 and copies AAC without shortening or filtering it. The new verification independently checks every frame PTS, dimensions, square pixels, zero rotation, limited BT.709 tags, exact original AAC packet clock/payload/priming, decoded PCM identity and complete decode. It compares the center of every decoded wide frame with the corresponding approved master using SSIM, including every highlight and the tail; lossy encoding changes picture bytes. No old 534-frame master evidence is relabelled as wide verification.
+
+The first encoded candidate carried the PNG background's sRGB transfer tag even though BT.709 encoder options were supplied. The verifier rejected it. A separate `finalize-youtube-color.ts` stream-copy remux explicitly sets H.264 color primaries, transfer and matrix to BT.709 with limited range. This changes metadata without reencoding picture or audio; both intermediate and final hashes are retained in [the correction record](evidence/youtube-wide-color-correction.json). All final-file verification runs on the finalized bytes. Keep the strict color check and this explicit step; matching appearance alone does not prove correct signal metadata.
+
+The original kit remains immutable in project staging. The corrected kit archives the old square master and previous guide/manifest/checksums, preserves TikTok/covers/copy/captions, and names one current YouTube upload. Desktop replacement first checks prior files and new-path collisions, preserves unknown additions and verifies all copied hashes. Historical inventories explicitly retain their former root-path scope. These are local delivery checks; no platform upload or observed YouTube classification is claimed.
+
+The finalized 30,649,276-byte film passed all 10,608 frame timestamps and central-scene comparisons. Minimum SSIM is 0.995937 and mean is 0.997944 against the approved square master; the threshold is 0.985. All 7,615 AAC packets and 7,796,160 decoded stereo samples remain identical. Full decoding found no black frames; square pixels, zero rotation, limited BT.709 and fast start pass. The corrected Desktop kit's 28 managed files match staging checksums. The new file SHA-256 is `22cb0214d3fc417a772cd3e5a04537b89f3e53617ac3d1baa5270902b8c8eb51`. [Verification](evidence/youtube-wide-verification.json) · [Delivery receipt](evidence/youtube-wide-delivery.json).

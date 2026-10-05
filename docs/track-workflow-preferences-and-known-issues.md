@@ -99,6 +99,8 @@ The explicitly commissioned [Life Letters Russian / Argentinian Spanish edition]
 
 ### Media and handoff
 
+- Follow the [YouTube standard-video workflow](youtube-standard-video-workflow.md) when a normal YouTube video is requested. Verify the current platform classification rules independently of native-aspect preservation; square or tall films up to three minutes can become Shorts. Use a deliberately composed wider edition, such as 16:9, with its own verification and current upload-file identity.
+
 - Follow the [local storage and recovery policy](storage-and-recovery.md) after completed productions: verify remote source and media coverage, preserve unique files, then clear reproducible capture caches and confirmed duplicate deliveries. Keep one usable local copy of current posting kits when practical.
 
 - Preserve the approved audio timing and source-media identity through the render pipeline.

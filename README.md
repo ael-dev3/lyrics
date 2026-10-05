@@ -12,17 +12,17 @@ Music films with synchronized lyrics, meaning-linked translations, and audio-rea
 
 ## Светлое чувство
 
-**Settlers · Russian / English · verified native-square and portrait films**
+**Settlers · Russian / English · verified 16:9 YouTube and portrait films**
 
-![Светлое чувство verified final film frame with equal bilingual ink focus and music-responsive paper-house windows](projects/svetloe-chuvstvo-lyric-film/evidence/final-native-32.500.jpg)
+![Светлое чувство verified widescreen final film with equal bilingual ink focus and music-responsive paper-house windows](projects/svetloe-chuvstvo-lyric-film/evidence/final-youtube-wide-32.500.jpg)
 
-*Verified native MP4 frame 1950 at 00:32.500, source frame 812 /PTS 00:32.480. Original artwork and soundtrack: [Settlers’ upload](https://www.youtube.com/watch?v=UANr7uyRZ3w). [Final-frame provenance](projects/svetloe-chuvstvo-lyric-film/evidence/final-stills.json).*
+*Verified 1920×1080 YouTube MP4 frame 1950 at 00:32.500; the complete approved square remains centered. Original artwork and soundtrack: [Settlers’ upload](https://www.youtube.com/watch?v=UANr7uyRZ3w). [Wide final-frame provenance](projects/svetloe-chuvstvo-lyric-film/evidence/youtube-wide-still.json).*
 
 The source’s paper shadow theatre stays intact. Stable charcoal/russet bilingual lyrics occupy its empty upper cloth, and ten existing house openings carry measured musical light without changing the figure, bird, stars or paper frames. A centered source-time envelope softens their response; the upper-left pane has half-strength modulation for a balanced, gentle scene. Portrait preserves the complete square and gives both languages larger, equal reading space. This recording’s lighting and typography are chosen from its own material rather than another song’s treatment.
 
 Thirty-five performed occurrences supply 175 Russian events and 223 English words across 46 readable bilingual phrases. Every repeated performance has its own timing; complete grammatical meanings use contributor unions. Original/stem and independent signal checks refine quiet consonants and held vowels, and retain uncertainty instead of claiming millisecond perception from integer samples. A late sung reprise after a long instrumental passage is included.
 
-The accepted v3 preview passed all 92 cue layouts, exact sample/semantic checks and real-browser transport review. Both 60 fps films then passed complete decoding, every-frame timestamps, original AAC/decoded-audio identity, no unexpected black intervals and 534 shared-scene encoded-frame checks per format. The 21-file Desktop upload kit contains separate platform videos, covers, copy, optional captions and checksums; every copied file is verified. Full media remain local; no platform posting is recorded.
+The accepted v3 preview passed all 92 cue layouts, exact sample/semantic checks and real-browser transport review. Its square and portrait masters passed full decoding, audio identity and 534 shared-scene checks each. The current YouTube edition adapts the complete square to 1920×1080 with softened outer curtain/floor material: at 2:57, a square upload qualifies as a Short. The new wide file has separate every-frame timing, central-scene and original-audio verification. The Desktop kit identifies the wide upload clearly and archives the earlier square file; TikTok remains unchanged. Full media remain local; no platform posting is recorded. [Standard-video delivery guide](docs/youtube-standard-video-workflow.md).
 
 [Project and preview setup](projects/svetloe-chuvstvo-lyric-film/README.md) · [Agent handoff](projects/svetloe-chuvstvo-lyric-film/AGENT-HANDOFF.md) · [Timing decisions](projects/svetloe-chuvstvo-lyric-film/evidence/source-signal-review.md) · [Technical evidence](projects/svetloe-chuvstvo-lyric-film/evidence/technical-checks.json)
 

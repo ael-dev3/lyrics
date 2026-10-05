@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "status": "passed",
+  "checkedAt": "2026-10-05T12:33:58.832Z",
+  "edition": "YouTube 16:9 aspect adaptation of approved v3",
+  "file": "Svetloe-Chuvstvo-Settlers-YouTube-1920x1080-60fps.mp4",
+  "sha256": "22cb0214d3fc417a772cd3e5a04537b89f3e53617ac3d1baa5270902b8c8eb51",
+  "bytes": 30649276,
+  "parentFilmSha256": "ec033b5419a25438e381bfd6d6bf16c73d58f37d070355985e44a50c9565ab97",
+  "authoritySha256": "e7c5b2264b53c582b92a1284eab4492d9705baecd5dc584ecdd9d2c80e774f17",
+  "adapterSha256": "be5c0c3abbed6e9156f2d50e2994fb736e634f8ba4f34a5892bf7c7cd3890f51",
+  "width": 1920,
+  "height": 1080,
+  "displayAspectRatio": "16:9",
+  "sampleAspectRatio": "1:1",
+  "frames": 10608,
+  "framesPerSecond": 60,
+  "durationSeconds": 176.8,
+  "rotationDegrees": 0,
+  "timestamps": {
+    "allFramesChecked": true,
+    "maximumTimestampErrorSeconds": 3.333333467026023e-7
+  },
+  "audio": {
+    "aacPackets": 7615,
+    "allPayloadClockAndPrimingIdentical": true,
+    "decodedPcm": {
+      "sha256": "9d251d1fce99d5acc61c8ab8b56a067a42035961718a726c3b5c6f7bf770a0b0",
+      "samples": 7796160
+    },
+    "inventorySha256": "85836d067081746596904081e4d568d1749e3a4a2261ccbc147fc22b732713c8"
+  },
+  "centralScene": {
+    "allFramesCompared": true,
+    "frames": 10608,
+    "minimumSsim": 0.995937,
+    "meanSsim": 0.997943637914776,
+    "threshold": 0.985,
+    "method": "Every decoded1080square center compared at identical n/60 against approved encoded master; SSIM permits lossy encoding differences. No independent acoustic accuracy claim."
+  },
+  "completeDecode": true,
+  "blackFrames": 0,
+  "fastStart": true,
+  "color": "limited BT709 YUV420P",
+  "platformRule": {
+    "checkedOn": "2026-10-05",
+    "source": "https://support.google.com/youtube/answer/15424877?hl=en",
+    "decision": "Wider-than-square1920x1080 matches recommended16:9 standard-video route; no actual platform-upload classification test."
+  }
+}
