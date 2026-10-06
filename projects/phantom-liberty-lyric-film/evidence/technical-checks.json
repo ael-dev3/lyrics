@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "revision": "phantom-liberty-preview-v2",
+  "sourceSha256": "fb3fc348c8bb7fd6f843f624ef5582cbf4a94a415cb47880e9bef2a595883bae",
+  "status": "Local technical validation passed; acoustic/listening acceptance pending.",
+  "strictTypecheck": true,
+  "testRun": {
+    "command": "npm run check",
+    "passed": 13,
+    "failed": 0,
+    "skipped": 0
+  },
+  "completeSourceInventory": {
+    "cues": 60,
+    "leadCues": 44,
+    "backingCues": 16,
+    "displayedEvents": 313
+  },
+  "sharedSceneChecks": {
+    "allCueLayoutsInBothFormats": true,
+    "allWordEntryMiddleLastActiveOpacity": true,
+    "allEnglishSourceOwnersFocused": true,
+    "lexicalReleaseExclusive": true,
+    "independentVocalBlockClearance": true,
+    "boundedSpectrumBodyBelowText": true,
+    "checkedWordStates": 1878,
+    "layoutCount": 120,
+    "overlapStateCount": 40
+  },
+  "diagnosticStills": 22,
+  "proofInputHashes": {
+    "timeline": "8ccd008f917c5c6344207611ac2f7179532449191b133b68278bf6d6dbd8fc80",
+    "features": "45ec5dd4b8c988e13e2cbf135793bdf070405f499e5216717449b2bc87957fb6",
+    "scene": "4d16254880f0e5b9d8ac02a4a853beb29400dcbf91c0d1e8df4dc297dc7478fb",
+    "model": "618f31cc431bdf27f1de48fb43cfc586641e7672ab93c61ae0ee3c1b247dcbd5",
+    "font": "acad6de1fc93436f5c0f1f4137751ef04f1aea3063e7036535970ffcfbd79f72",
+    "proofScript": "4aa832571a5c468836f52f2916293d19b2945c3f6340c6b38f98d32804bda0c1"
+  },
+  "browserEvidence": "evidence/browser-review.json",
+  "humanListening": false,
+  "productionRenderApproved": false,
+  "limits": "Checks establish source identity, deterministic focus, full opacity, layout clearance and bounded browser transport. They do not establish audibly exact word boundaries."
+}

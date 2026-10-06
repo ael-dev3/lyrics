@@ -1,0 +1,2047 @@
+{
+  "schemaVersion": 2,
+  "revision": "phantom-liberty-preview-v2",
+  "sourceSha256": "fb3fc348c8bb7fd6f843f624ef5582cbf4a94a415cb47880e9bef2a595883bae",
+  "sampleRate": 44100,
+  "humanListening": false,
+  "productionRenderApproved": false,
+  "status": "Fresh full-recording review candidate; actual listening acceptance remains pending.",
+  "coverage": {
+    "leadPhrases": 44,
+    "backingPhrases": 16,
+    "leadWords": 185,
+    "backingWords": 128,
+    "totalWords": 313,
+    "addedNonlexicalCandidate": "PL-L031v"
+  },
+  "independentScope": {
+    "leadPhrases": 43,
+    "backingPhrases": 16,
+    "suppliedWords": 312,
+    "englishContextBlocks": 7,
+    "quietOnsetSignalProposals": 9
+  },
+  "modelIdentities": [
+    {
+      "name": "torchaudio MMS_FA with_star=False",
+      "family": "Multilingual Wav2Vec2 CTC",
+      "checkpointFile": "model.pt",
+      "sha256": "20ef12963ab4924bef49ac4fc7f58ad5da2ee43b2c11bc8c853c9b90ecdbc680",
+      "role": "Historical original/side paths; rejected preview cores remain obsolete"
+    },
+    {
+      "name": "torchaudio WAV2VEC2_ASR_BASE_960H",
+      "family": "English LibriSpeech Wav2Vec2 CTC",
+      "checkpointFile": "wav2vec2_fairseq_base_ls960_asr_ls960.pth",
+      "sha256": "488fd4f16de84438ffc945334278c1b9fb9b7159a806c1080b16111a958c945d",
+      "role": "Raw 43 lead and 16 backing phrases, 7 context blocks, and 16 mid/side gain comparisons; correlated architecture with MMS, distinct from Whisper attention"
+    },
+    {
+      "name": "HTDemucs955717e8",
+      "family": "Hybrid Transformer Demucs component estimate",
+      "checkpointFile": "955717e8.safetensors",
+      "sha256": "d9fa14133cfcc034a6758923bb3a8ca9f8dfd0b582134643bbf83f72c17576dd",
+      "role": "Clock-verified estimated vocal; no lexical oracle or original audio replacement"
+    }
+  ],
+  "clockEvidence": {
+    "file": "components/clock.json",
+    "sha256": "1511eb54a5f04dbaca85a48b7252aa4f9db34adc0f6e73bc29a16ef37798a8df",
+    "vocalSamples": 15348736,
+    "offsetSeconds": 0,
+    "eightVocalWindowsPeakLagSamples": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "eightRawSumWindowsPeakLagSamples": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "physicalModelMapping": {
+    "modelSampleRate": 16000,
+    "strideSamples": 320,
+    "receptiveFieldSamples": 400,
+    "centerOffsetSamples": 199.5,
+    "canonicalSampleRate": 44100,
+    "rule": "Encoder anchors follow fixed 320-sample stride; centers retain a 199.5-sample offset. Receptive-field support and model sparsity bound interpretation. No crop-ratio stretching."
+  },
+  "quietOnsetProposals": [
+    {
+      "wordId": "PL-L001-w00",
+      "seconds": 12.535,
+      "range": [
+        12.51,
+        12.57
+      ],
+      "panel": "panels-vocals/zoom-PL-L001.png",
+      "note": "Quiet broadband f-like prefix precedes the strong voiced onset at~12.60.",
+      "onsetSample": 552794,
+      "ownershipRangeSamples": [
+        551691,
+        554337
+      ],
+      "humanListening": false,
+      "status": "Independent original/stem signal proposal; root chooses performed ownership after reconciliation"
+    },
+    {
+      "wordId": "PL-L001-w01",
+      "seconds": 13.105,
+      "range": [
+        13.08,
+        13.14
+      ],
+      "panel": "panels-vocals/zoom-PL-L001.png",
+      "note": "Changed original/stem harmonic body near13.10 precedes the emitted vowel core. Coupled preceding release shares this ownership range.",
+      "onsetSample": 577931,
+      "ownershipRangeSamples": [
+        576828,
+        579474
+      ],
+      "humanListening": false,
+      "status": "Independent original/stem signal proposal; root chooses performed ownership after reconciliation"
+    },
+    {
+      "wordId": "PL-L005-w00",
+      "seconds": 38.505,
+      "range": [
+        38.485,
+        38.53
+      ],
+      "panel": "panels-vocals/zoom-PL-L005-37.5-39.25.png",
+      "note": "Short separate voiced Be body near38.52; no evidence supports an entrance in the broad preceding gap.",
+      "onsetSample": 1698071,
+      "ownershipRangeSamples": [
+        1697189,
+        1699173
+      ],
+      "humanListening": false,
+      "status": "Independent original/stem signal proposal; root chooses performed ownership after reconciliation"
+    },
+    {
+      "wordId": "PL-L007-w00",
+      "seconds": 47.395,
+      "range": [
+        47.32,
+        47.435
+      ],
+      "panel": "panels-vocals/zoom-PL-L007-46.4-48.4.png",
+      "note": "Low-level changed body near47.36–47.40 precedes the distinct envelope burst near47.445. Earlier breath/ownership remains ambiguous; reject Tonight-borrowed44.82.",
+      "onsetSample": 2090120,
+      "ownershipRangeSamples": [
+        2086812,
+        2091884
+      ],
+      "humanListening": false,
+      "status": "Independent original/stem signal proposal; root chooses performed ownership after reconciliation"
+    },
+    {
+      "wordId": "PL-L008-w00",
+      "seconds": 55.165,
+      "range": [
+        55.135,
+        55.205
+      ],
+      "panel": "panels-vocals/zoom-PL-L008-54.5-56.1.png",
+      "note": "Separate I body precedes the closure/renewal for think near55.7. The MMS tiny I and early think path collapse this ownership.",
+      "onsetSample": 2432777,
+      "ownershipRangeSamples": [
+        2431454,
+        2434541
+      ],
+      "humanListening": false,
+      "status": "Independent original/stem signal proposal; root chooses performed ownership after reconciliation"
+    },
+    {
+      "wordId": "PL-L020-w00",
+      "seconds": 143.035,
+      "range": [
+        143,
+        143.075
+      ],
+      "panel": "panels-vocals/zoom-PL-L020-142.5-144.1.png",
+      "note": "Low voiced opening and rising upper harmonic body precede the stronger We core near143.10.",
+      "onsetSample": 6307844,
+      "ownershipRangeSamples": [
+        6306300,
+        6309607
+      ],
+      "humanListening": false,
+      "status": "Independent original/stem signal proposal; root chooses performed ownership after reconciliation"
+    },
+    {
+      "wordId": "PL-L024-w00",
+      "seconds": 170.155,
+      "range": [
+        170.13,
+        170.185
+      ],
+      "panel": "panels-vocals/zoom-PL-L024-169-171.png",
+      "note": "Short changed And body near170.15 precedes the fade frication; the earlier diffuse estimate is not independently allocated as And.",
+      "onsetSample": 7503836,
+      "ownershipRangeSamples": [
+        7502733,
+        7505159
+      ],
+      "humanListening": false,
+      "status": "Independent original/stem signal proposal; root chooses performed ownership after reconciliation"
+    },
+    {
+      "wordId": "PL-L040-w00",
+      "seconds": 314.395,
+      "range": [
+        314.365,
+        314.42
+      ],
+      "panel": "panels-vocals/zoom-PL-L040-313.6-315.05.png",
+      "note": "Short separate I body appears near314.40. The long preceding source gap is not singing.",
+      "onsetSample": 13864820,
+      "ownershipRangeSamples": [
+        13863497,
+        13865922
+      ],
+      "humanListening": false,
+      "status": "Independent original/stem signal proposal; root chooses performed ownership after reconciliation"
+    },
+    {
+      "wordId": "PL-L040-w01",
+      "seconds": 314.545,
+      "range": [
+        314.525,
+        314.575
+      ],
+      "panel": "panels-vocals/zoom-PL-L040-313.6-315.05.png",
+      "note": "Weak f-like prefix precedes the strong vowel renewal near314.635; retain the intervening attenuation rather than filling it automatically.",
+      "onsetSample": 13871435,
+      "ownershipRangeSamples": [
+        13870552,
+        13872758
+      ],
+      "humanListening": false,
+      "status": "Independent original/stem signal proposal; root chooses performed ownership after reconciliation"
+    }
+  ],
+  "heldReleaseAudit": {
+    "reviewKind": "independent signal-only original/estimated-vocal release review",
+    "criteria": {
+      "lastWordEnd": "Final physically supported lexical voiced body or final consonant; later passive reverberation is excluded. Selected integers are time representations, not one-sample acoustic accuracy claims.",
+      "ownership": "Estimated HTDemucs vocals include the sum of lead/backing vocals and separator leakage. Chorus aggregate voice release is a separate observation; no aggregate end is automatically assigned to the lead.",
+      "uncertainty": "Ranges are independently visually reviewed plausibility brackets, not model confidence intervals. No release was copied from another chorus or clamped to an old crop or next onset.",
+      "modelLimits": "Historical MMS and target-only English CTC timestamps are sparse transcript-conditioned encoder observations, not word-body ends. Scores are checkpoint-dependent and uncalibrated for singing, overlap, and tails. Context-aware model evidence was used only to anchor bridge call ownership; signal release was reviewed separately.",
+      "panelResolution": "Primary panels use1024-sample Hann windows (23.22ms support), with view-dependent pixel time steps. The additional chains diagnostic used4096 samples (92.88ms) and did not resolve ownership."
+    },
+    "counts": {
+      "leadPhrases": 43,
+      "selectedLexicalCandidates": 27,
+      "unresolvedLexicalOwnership": 16
+    },
+    "records": [
+      {
+        "phraseId": "PL-L001",
+        "text": "Found out",
+        "lastWordId": "PL-L001-w01",
+        "lastWord": "out",
+        "reviewStatus": "signal-selected-candidate",
+        "selectedLastWordEndSample": 615195,
+        "selectedLastWordEndSeconds": 13.95,
+        "plausibleLastWordEndRange": {
+          "samples": [
+            612990,
+            618282
+          ],
+          "seconds": [
+            13.9,
+            14.02
+          ]
+        },
+        "selectedVoicedBodyEndSample": 614313,
+        "selectedVoicedBodyEndSeconds": 13.93,
+        "aggregateVoiceReleaseRange": null,
+        "passiveOrUnownedTailRange": {
+          "samples": [
+            618282,
+            723240
+          ],
+          "seconds": [
+            14.02,
+            16.4
+          ]
+        },
+        "evidencePanels": [
+          "panels-vocals/PL-L001.png",
+          "panels-vocals/zoom-PL-L001-13.5-14.3.png"
+        ],
+        "rationale": "The out vowel/formant stack and envelope lose direct support around 13.93; later stationary harmonics decay. No separately resolved final t burst."
+      },
+      {
+        "phraseId": "PL-L002",
+        "text": "Treasures are always lost",
+        "lastWordId": "PL-L002-w03",
+        "lastWord": "lost",
+        "reviewStatus": "signal-selected-candidate",
+        "selectedLastWordEndSample": 965790,
+        "selectedLastWordEndSeconds": 21.9,
+        "plausibleLastWordEndRange": {
+          "samples": [
+            964026,
+            968436
+          ],
+          "seconds": [
+            21.86,
+            21.96
+          ]
+        },
+        "selectedVoicedBodyEndSample": 949473,
+        "selectedVoicedBodyEndSeconds": 21.53,
+        "aggregateVoiceReleaseRange": null,
+        "passiveOrUnownedTailRange": {
+          "samples": [
+            968436,
+            1065015
+          ],
+          "seconds": [
+            21.96,
+            24.15
+          ]
+        },
+        "evidencePanels": [
+          "panels-vocals/PL-L002.png",
+          "panels-vocals/zoom-PL-L002-21.2-22.3.png"
+        ],
+        "rationale": "Lost vowel closes around 21.53; a new high-frequency final s/t region spans 21.69–21.88 in original and stem. The low stationary continuation is decay."
+      },
+      {
+        "phraseId": "PL-L003",
+        "text": "Pleasures and rage combined",
+        "lastWordId": "PL-L003-w03",
+        "lastWord": "combined",
+        "reviewStatus": "signal-selected-candidate",
+        "selectedLastWordEndSample": 1329174,
+        "selectedLastWordEndSeconds": 30.14,
+        "plausibleLastWordEndRange": {
+          "samples": [
+            1320354,
+            1332702
+          ],
+          "seconds": [
+            29.94,
+            30.22
+          ]
+        },
+        "selectedVoicedBodyEndSample": 1306683,
+        "selectedVoicedBodyEndSeconds": 29.63,
+        "aggregateVoiceReleaseRange": null,
+        "passiveOrUnownedTailRange": {
+          "samples": [
+            1332702,
+            1409436
+          ],
+          "seconds": [
+            30.22,
+            31.96
+          ]
+        },
+        "evidencePanels": [
+          "panels-vocals/PL-L003.png",
+          "panels-vocals/zoom-PL-L003-29.3-30.4.png"
+        ],
+        "rationale": "Combined sustained vowel weakens at 29.63; the lower nasal transition and weak localized final release near 30.08 are separable from the stationary tail, but consonant ownership is less clear than lost/moves."
+      },
+      {
+        "phraseId": "PL-L004",
+        "text": "I'm watchin' you",
+        "lastWordId": "PL-L004-w02",
+        "lastWord": "you",
+        "reviewStatus": "signal-selected-candidate",
+        "selectedLastWordEndSample": 1528947,
+        "selectedLastWordEndSeconds": 34.67,
+        "plausibleLastWordEndRange": {
+          "samples": [
+            1524537,
+            1532916
+          ],
+          "seconds": [
+            34.57,
+            34.76
+          ]
+        },
+        "selectedVoicedBodyEndSample": 1527624,
+        "selectedVoicedBodyEndSeconds": 34.64,
+        "aggregateVoiceReleaseRange": null,
+        "passiveOrUnownedTailRange": {
+          "samples": [
+            1532916,
+            1689030
+          ],
+          "seconds": [
+            34.76,
+            38.3
+          ]
+        },
+        "evidencePanels": [
+          "panels-vocals/PL-L004.png"
+        ],
+        "rationale": "You has a short final pitched continuation after 34.45 and a direct envelope/formant drop near 34.65; remaining bands progressively diffuse."
+      },
+      {
+        "phraseId": "PL-L005",
+        "text": "Be careful with your moves",
+        "lastWordId": "PL-L005-w04",
+        "lastWord": "moves",
+        "reviewStatus": "signal-selected-candidate",
+        "selectedLastWordEndSample": 1832355,
+        "selectedLastWordEndSeconds": 41.55,
+        "plausibleLastWordEndRange": {
+          "samples": [
+            1830150,
+            1835883
+          ],
+          "seconds": [
+            41.5,
+            41.63
+          ]
+        },
+        "selectedVoicedBodyEndSample": 1812510,
+        "selectedVoicedBodyEndSeconds": 41.1,
+        "aggregateVoiceReleaseRange": null,
+        "passiveOrUnownedTailRange": {
+          "samples": [
+            1835883,
+            1913058
+          ],
+          "seconds": [
+            41.63,
+            43.38
+          ]
+        },
+        "evidencePanels": [
+          "panels-vocals/PL-L005.png",
+          "panels-vocals/zoom-PL-L005-40.8-41.8.png"
+        ],
+        "rationale": "Moves vowel ends near 41.10; the renewed broadband final z/s patch at 41.40–41.53 remains in both original and estimated vocal. This patch is retained as lexical release."
+      },
+      {
+        "phraseId": "PL-L006",
+        "text": "Tonight",
+        "lastWordId": "PL-L006-w00",
+        "lastWord": "Tonight",
+        "reviewStatus": "signal-selected-candidate",
+        "selectedLastWordEndSample": 1988910,
+        "selectedLastWordEndSeconds": 45.1,
+        "plausibleLastWordEndRange": {
+          "samples": [
+            1980531,
+            1994202
+          ],
+          "seconds": [
+            44.91,
+            45.22
+          ]
+        },
+        "selectedVoicedBodyEndSample": 1982295,
+        "selectedVoicedBodyEndSeconds": 44.95,
+        "aggregateVoiceReleaseRange": null,
+        "passiveOrUnownedTailRange": {
+          "samples": [
+            1994202,
+            2089899
+          ],
+          "seconds": [
+            45.22,
+            47.39
+          ]
+        },
+        "evidencePanels": [
+          "panels-vocals/PL-L006.png",
+          "panels-vocals/zoom-PL-L006-44.7-45.4.png"
+        ],
+        "rationale": "Tonight voiced stack loses fresh support around 44.95; a final t cannot be independently distinguished from the decay near 45.1. Selection is a broad lexical-release proxy rather than a measured consonant edge."
+      },
+      {
+        "phraseId": "PL-L007",
+        "text": "I think the time is right",
+        "lastWordId": "PL-L007-w05",
+        "lastWord": "right",
+        "reviewStatus": "signal-selected-candidate",
+        "selectedLastWordEndSample": 2337300,
+        "selectedLastWordEndSeconds": 53,
+        "plausibleLastWordEndRange": {
+          "samples": [
+            2329362,
+            2343474
+          ],
+          "seconds": [
+            52.82,
+            53.14
+          ]
+        },
+        "selectedVoicedBodyEndSample": 2330244,
+        "selectedVoicedBodyEndSeconds": 52.84,
+        "aggregateVoiceReleaseRange": null,
+        "passiveOrUnownedTailRange": {
+          "samples": [
+            2343474,
+            2429910
+          ],
+          "seconds": [
+            53.14,
+            55.1
+          ]
+        },
+        "evidencePanels": [
+          "panels-vocals/PL-L007.png"
+        ],
+        "rationale": "Right final vowel contracts near 52.84 and the stem envelope falls to its low residual floor near 53.0. Final t is weak; spectral decay continues after the selected bracket."
+      },
+      {
+        "phraseId": "PL-L008",
+        "text": "I think the blood has dried",
+        "lastWordId": "PL-L008-w05",
+        "lastWord": "dried",
+        "reviewStatus": "signal-selected-candidate",
+        "selectedLastWordEndSample": 2709504,
+        "selectedLastWordEndSeconds": 61.44,
+        "plausibleLastWordEndRange": {
+          "samples": [
+            2702889,
+            2715237
+          ],
+          "seconds": [
+            61.29,
+            61.57
+          ]
+        },
+        "selectedVoicedBodyEndSample": 2704212,
+        "selectedVoicedBodyEndSeconds": 61.32,
+        "aggregateVoiceReleaseRange": null,
+        "passiveOrUnownedTailRange": {
+          "samples": [
+            2715237,
+            2773890
+          ],
+          "seconds": [
+            61.57,
+            62.9
+          ]
+        },
+        "evidencePanels": [
+          "panels-vocals/PL-L008.png"
+        ],
+        "rationale": "Dried has a changing final vowel/formant trajectory through 61.3, followed by a localized attenuation into low stationary residue around 61.44. This is later than the old crop end 61.2."
+      },
+      {
+        "phraseId": "PL-L009",
+        "text": "It cries for more",
+        "lastWordId": "PL-L009-w03",
+        "lastWord": "more",
+        "reviewStatus": "signal-selected-candidate",
+        "selectedLastWordEndSample": 2914128,
+        "selectedLastWordEndSeconds": 66.08,
+        "plausibleLastWordEndRange": {
+          "samples": [
+            2908836,
+            2920302
+          ],
+          "seconds": [
+            65.96,
+            66.22
+          ]
+        },
+        "selectedVoicedBodyEndSample": 2911482,
+        "selectedVoicedBodyEndSeconds": 66.02,
+        "aggregateVoiceReleaseRange": null,
+        "passiveOrUnownedTailRange": {
+          "samples": [
+            2920302,
+            3064068
+          ],
+          "seconds": [
+            66.22,
+            69.48
+          ]
+        },
+        "evidencePanels": [
+          "panels-vocals/PL-L009.png"
+        ],
+        "rationale": "More direct harmonic stack and envelope step down around 66.0. MMS extension to 67.34 follows diffuse stationary tail rather than renewed articulation."
+      },
+      {
+        "phraseId": "PL-L010",
+        "text": "So what are we waiting for?",
+        "lastWordId": "PL-L010-w05",
+        "lastWord": "for?",
+        "reviewStatus": "signal-selected-candidate",
+        "selectedLastWordEndSample": 3180492,
+        "selectedLastWordEndSeconds": 72.12,
+        "plausibleLastWordEndRange": {
+          "samples": [
+            3176082,
+            3186225
+          ],
+          "seconds": [
+            72.02,
+            72.25
+          ]
+        },
+        "selectedVoicedBodyEndSample": 3178728,
+        "selectedVoicedBodyEndSeconds": 72.08,
+        "aggregateVoiceReleaseRange": null,
+        "passiveOrUnownedTailRange": {
+          "samples": [
+            3186225,
+            3319848
+          ],
+          "seconds": [
+            72.25,
+            75.28
+          ]
+        },
+        "evidencePanels": [
+          "panels-vocals/PL-L010.png"
+        ],
+        "rationale": "For retains a changing low final vowel/r trajectory just after 72.0, then becomes a fading stationary band. Instrument attacks later in the gap do not extend the word."
+      },
+      {
+        "phraseId": "PL-L011",
+        "text": "Wires and chains",
+        "lastWordId": "PL-L011-w02",
+        "lastWord": "chains",
+        "reviewStatus": "unresolved-lead-backing-ownership",
+        "selectedLastWordEndSample": null,
+        "selectedLastWordEndSeconds": null,
+        "plausibleLastWordEndRange": {
+          "samples": [
+            3439800,
+            3600765
+          ],
+          "seconds": [
+            78,
+            81.65
+          ]
+        },
+        "selectedVoicedBodyEndSample": null,
+        "selectedVoicedBodyEndSeconds": null,
+        "aggregateVoiceReleaseRange": {
+          "samples": [
+            3587535,
+            3600765
+          ],
+          "seconds": [
+            81.35,
+            81.65
+          ]
+        },
+        "passiveOrUnownedTailRange": {
+          "samples": [
+            3600765,
+            3664710
+          ],
+          "seconds": [
+            81.65,
+            83.1
+          ]
+        },
+        "evidencePanels": [
+          "panels-vocals/PL-L011.png",
+          "panels-vocals/zoom-PL-L011-79.5-82.8.png",
+          "panels-vocals/PL-L012.png"
+        ],
+        "rationale": "Chains initial held trajectory enters an overlapping voice sum. The backing way is independently observed near 81.1–81.45; continuation of the stem through 81.4 cannot be uniquely assigned to lead chains. No owned final ns release."
+      },
+      {
+        "phraseId": "PL-L012",
+        "text": "Starting to fade",
+        "lastWordId": "PL-L012-w02",
+        "lastWord": "fade",
+        "reviewStatus": "unresolved-lead-backing-ownership",
+        "selectedLastWordEndSample": null,
+        "selectedLastWordEndSeconds": null,
+        "plausibleLastWordEndRange": {
+          "samples": [
+            3774960,
+            3962385
+          ],
+          "seconds": [
+            85.6,
+            89.85
+          ]
+        },
+        "selectedVoicedBodyEndSample": null,
+        "selectedVoicedBodyEndSeconds": null,
+        "aggregateVoiceReleaseRange": {
+          "samples": [
+            3933720,
+            3960180
+          ],
+          "seconds": [
+            89.2,
+            89.8
+          ]
+        },
+        "passiveOrUnownedTailRange": {
+          "samples": [
+            3960180,
+            4006044
+          ],
+          "seconds": [
+            89.8,
+            90.84
+          ]
+        },
+        "evidencePanels": [
+          "panels-vocals/PL-L012.png",
+          "panels-vocals/zoom-PL-L012-86.5-90.2.png",
+          "panels-vocals/PL-L013.png"
+        ],
+        "rationale": "Fade vowel is visible from 84.8 but its later sustained ridge overlaps backing articulation and way near 89.1–89.7. No lead-owned final d boundary can be separated from that sum."
+      },
+      {
+        "phraseId": "PL-L013",
+        "text": "Feels like a game",
+        "lastWordId": "PL-L013-w03",
+        "lastWord": "game",
+        "reviewStatus": "unresolved-lead-backing-ownership",
+        "selectedLastWordEndSample": null,
+        "selectedLastWordEndSeconds": null,
+        "plausibleLastWordEndRange": {
+          "samples": [
+            4110120,
+            4303278
+          ],
+          "seconds": [
+            93.2,
+            97.58
+          ]
+        },
+        "selectedVoicedBodyEndSample": null,
+        "selectedVoicedBodyEndSeconds": null,
+        "aggregateVoiceReleaseRange": {
+          "samples": [
+            4264470,
+            4301955
+          ],
+          "seconds": [
+            96.7,
+            97.55
+          ]
+        },
+        "passiveOrUnownedTailRange": {
+          "samples": [
+            4301955,
+            4354434
+          ],
+          "seconds": [
+            97.55,
+            98.74
+          ]
+        },
+        "evidencePanels": [
+          "panels-vocals/PL-L013.png",
+          "panels-vocals/zoom-PL-L013-94.5-98.png",
+          "panels-vocals/PL-L014.png"
+        ],
+        "rationale": "Game steady vowel stack enters backing overlap. A pitch/formant change around 96.7 and subsequent attenuation through 97.4 can belong to backing way; no owned final m edge."
+      },
+      {
+        "phraseId": "PL-L014",
+        "text": "You have to play",
+        "lastWordId": "PL-L014-w03",
+        "lastWord": "play",
+        "reviewStatus": "unresolved-lead-backing-ownership",
+        "selectedLastWordEndSample": null,
+        "selectedLastWordEndSeconds": null,
+        "plausibleLastWordEndRange": {
+          "samples": [
+            4429845,
+            4628295
+          ],
+          "seconds": [
+            100.45,
+            104.95
+          ]
+        },
+        "selectedVoicedBodyEndSample": null,
+        "selectedVoicedBodyEndSeconds": null,
+        "aggregateVoiceReleaseRange": {
+          "samples": [
+            4608450,
+            4628295
+          ],
+          "seconds": [
+            104.5,
+            104.95
+          ]
+        },
+        "passiveOrUnownedTailRange": {
+          "samples": [
+            4628295,
+            4718700
+          ],
+          "seconds": [
+            104.95,
+            107
+          ]
+        },
+        "evidencePanels": [
+          "panels-vocals/PL-L014.png",
+          "panels-vocals/zoom-PL-L014-102.2-108.png"
+        ],
+        "rationale": "Play has continuous voiced sum after 100.3. Backing way near 104.35–104.57 and diffuse attenuation after 104.6 prevent assigning the aggregate end to lead play. The low stem tail to 106.9 is excluded."
+      },
+      {
+        "phraseId": "PL-L015",
+        "text": "Lights out",
+        "lastWordId": "PL-L015-w01",
+        "lastWord": "out",
+        "reviewStatus": "signal-selected-candidate",
+        "selectedLastWordEndSample": 5075910,
+        "selectedLastWordEndSeconds": 115.1,
+        "plausibleLastWordEndRange": {
+          "samples": [
+            5071500,
+            5081643
+          ],
+          "seconds": [
+            115,
+            115.23
+          ]
+        },
+        "selectedVoicedBodyEndSample": 5073264,
+        "selectedVoicedBodyEndSeconds": 115.04,
+        "aggregateVoiceReleaseRange": null,
+        "passiveOrUnownedTailRange": {
+          "samples": [
+            5081643,
+            5167197
+          ],
+          "seconds": [
+            115.23,
+            117.17
+          ]
+        },
+        "evidencePanels": [
+          "panels-vocals/PL-L015.png"
+        ],
+        "rationale": "Out pitched body and envelope fall sharply just after 115.0; later stationary components form a tail. The MMS end 115.54 is beyond that direct-body drop."
+      },
+      {
+        "phraseId": "PL-L016",
+        "text": "Is this who you really are",
+        "lastWordId": "PL-L016-w05",
+        "lastWord": "are",
+        "reviewStatus": "signal-selected-candidate",
+        "selectedLastWordEndSample": 5427387,
+        "selectedLastWordEndSeconds": 123.07,
+        "plausibleLastWordEndRange": {
+          "samples": [
+            5422536,
+            5434443
+          ],
+          "seconds": [
+            122.96,
+            123.23
+          ]
+        },
+        "selectedVoicedBodyEndSample": 5425182,
+        "selectedVoicedBodyEndSeconds": 123.02,
+        "aggregateVoiceReleaseRange": null,
+        "passiveOrUnownedTailRange": {
+          "samples": [
+            5434443,
+            5492214
+          ],
+          "seconds": [
+            123.23,
+            124.54
+          ]
+        },
+        "evidencePanels": [
+          "panels-vocals/PL-L016.png"
+        ],
+        "rationale": "Are voiced formants continue through 122.9 and contract at 123.0; the direct envelope then falls to residual floor. Late English target-only are marks locate only a portion of the vowel."
+      },
+      {
+        "phraseId": "PL-L017",
+        "text": "Can't look into your eyes",
+        "lastWordId": "PL-L017-w04",
+        "lastWord": "eyes",
+        "reviewStatus": "signal-selected-candidate",
+        "selectedLastWordEndSample": 5785038,
+        "selectedLastWordEndSeconds": 131.18,
+        "plausibleLastWordEndRange": {
+          "samples": [
+            5782392,
+            5788125
+          ],
+          "seconds": [
+            131.12,
+            131.25
+          ]
+        },
+        "selectedVoicedBodyEndSample": 5763429,
+        "selectedVoicedBodyEndSeconds": 130.69,
+        "aggregateVoiceReleaseRange": null,
+        "passiveOrUnownedTailRange": {
+          "samples": [
+            5788125,
+            5841045
+          ],
+          "seconds": [
+            131.25,
+            132.45
+          ]
+        },
+        "evidencePanels": [
+          "panels-vocals/PL-L017.png",
+          "panels-vocals/zoom-PL-L017-130.4-131.3.png"
+        ],
+        "rationale": "Eyes vowel loses direct support around 130.69; a renewed broadband z/s component is present at 130.89–131.16, so lexical release follows the vowel drop."
+      },
+      {
+        "phraseId": "PL-L018",
+        "text": "Your twisted mind",
+        "lastWordId": "PL-L018-w02",
+        "lastWord": "mind",
+        "reviewStatus": "signal-selected-candidate",
+        "selectedLastWordEndSample": 6020532,
+        "selectedLastWordEndSeconds": 136.52,
+        "plausibleLastWordEndRange": {
+          "samples": [
+            6017886,
+            6024060
+          ],
+          "seconds": [
+            136.46,
+            136.6
+          ]
+        },
+        "selectedVoicedBodyEndSample": 6015681,
+        "selectedVoicedBodyEndSeconds": 136.41,
+        "aggregateVoiceReleaseRange": null,
+        "passiveOrUnownedTailRange": {
+          "samples": [
+            6024060,
+            6107850
+          ],
+          "seconds": [
+            136.6,
+            138.5
+          ]
+        },
+        "evidencePanels": [
+          "panels-vocals/PL-L018.png",
+          "panels-vocals/zoom-PL-L018-136-136.8.png"
+        ],
+        "rationale": "Mind lower nasal/body region closes near 136.41; the following high-frequency final d region ends around 136.50. The large original attack at 136.5 is mostly instrumental and is not treated as additional phonation."
+      },
+      {
+        "phraseId": "PL-L019",
+        "text": "It's dark, so dark",
+        "lastWordId": "PL-L019-w03",
+        "lastWord": "dark",
+        "reviewStatus": "signal-selected-candidate",
+        "selectedLastWordEndSample": 6277194,
+        "selectedLastWordEndSeconds": 142.34,
+        "plausibleLastWordEndRange": {
+          "samples": [
+            6274548,
+            6280722
+          ],
+          "seconds": [
+            142.28,
+            142.42
+          ]
+        },
+        "selectedVoicedBodyEndSample": 6258231,
+        "selectedVoicedBodyEndSeconds": 141.91,
+        "aggregateVoiceReleaseRange": null,
+        "passiveOrUnownedTailRange": {
+          "samples": [
+            6280722,
+            6306300
+          ],
+          "seconds": [
+            142.42,
+            143
+          ]
+        },
+        "evidencePanels": [
+          "panels-vocals/PL-L019.png",
+          "panels-vocals/zoom-PL-L019-141.7-142.6.png"
+        ],
+        "rationale": "Dark vowel support drops near 141.91; the original/stem retain a localized final k region around 142.23–142.33. Stationary residue after that is excluded."
+      },
+      {
+        "phraseId": "PL-L020",
+        "text": "We end it now",
+        "lastWordId": "PL-L020-w03",
+        "lastWord": "now",
+        "reviewStatus": "signal-selected-candidate",
+        "selectedLastWordEndSample": 6446538,
+        "selectedLastWordEndSeconds": 146.18,
+        "plausibleLastWordEndRange": {
+          "samples": [
+            6441687,
+            6451830
+          ],
+          "seconds": [
+            146.07,
+            146.3
+          ]
+        },
+        "selectedVoicedBodyEndSample": 6444774,
+        "selectedVoicedBodyEndSeconds": 146.14,
+        "aggregateVoiceReleaseRange": null,
+        "passiveOrUnownedTailRange": {
+          "samples": [
+            6451830,
+            6528564
+          ],
+          "seconds": [
+            146.3,
+            148.04
+          ]
+        },
+        "evidencePanels": [
+          "panels-vocals/PL-L020.png"
+        ],
+        "rationale": "Now has fresh harmonic modulation through 146.1, beyond the supplied 145.9 discovery crop. Envelope and formant support drop near 146.18 into diffuse residue."
+      },
+      {
+        "phraseId": "PL-L021",
+        "text": "It ends right here, right now",
+        "lastWordId": "PL-L021-w05",
+        "lastWord": "now",
+        "reviewStatus": "signal-selected-candidate",
+        "selectedLastWordEndSample": 6786549,
+        "selectedLastWordEndSeconds": 153.89,
+        "plausibleLastWordEndRange": {
+          "samples": [
+            6780375,
+            6793605
+          ],
+          "seconds": [
+            153.75,
+            154.05
+          ]
+        },
+        "selectedVoicedBodyEndSample": 6783903,
+        "selectedVoicedBodyEndSeconds": 153.83,
+        "aggregateVoiceReleaseRange": null,
+        "passiveOrUnownedTailRange": {
+          "samples": [
+            6793605,
+            6868575
+          ],
+          "seconds": [
+            154.05,
+            155.75
+          ]
+        },
+        "evidencePanels": [
+          "panels-vocals/PL-L021.png"
+        ],
+        "rationale": "Now direct held stack and envelope weaken near 153.8–153.9; the later stationary lower bands are passive continuation, with no new lexical articulation."
+      },
+      {
+        "phraseId": "PL-L022",
+        "text": "Please tell me you brought the iron",
+        "lastWordId": "PL-L022-w06",
+        "lastWord": "iron",
+        "reviewStatus": "signal-selected-candidate",
+        "selectedLastWordEndSample": 7156989,
+        "selectedLastWordEndSeconds": 162.29,
+        "plausibleLastWordEndRange": {
+          "samples": [
+            7150815,
+            7163604
+          ],
+          "seconds": [
+            162.15,
+            162.44
+          ]
+        },
+        "selectedVoicedBodyEndSample": 7154343,
+        "selectedVoicedBodyEndSeconds": 162.23,
+        "aggregateVoiceReleaseRange": null,
+        "passiveOrUnownedTailRange": {
+          "samples": [
+            7163604,
+            7198002
+          ],
+          "seconds": [
+            162.44,
+            163.22
+          ]
+        },
+        "evidencePanels": [
+          "panels-vocals/PL-L022.png"
+        ],
+        "rationale": "Iron renewed final pitched trajectory remains through 162.2 and then drops into a gap. MMS end 160.475 is an internal forced-path observation, not the direct final-syllable release."
+      },
+      {
+        "phraseId": "PL-L023",
+        "text": "Let's light up the sky",
+        "lastWordId": "PL-L023-w04",
+        "lastWord": "sky",
+        "reviewStatus": "signal-selected-candidate",
+        "selectedLastWordEndSample": 7366464,
+        "selectedLastWordEndSeconds": 167.04,
+        "plausibleLastWordEndRange": {
+          "samples": [
+            7362054,
+            7372638
+          ],
+          "seconds": [
+            166.94,
+            167.18
+          ]
+        },
+        "selectedVoicedBodyEndSample": 7364259,
+        "selectedVoicedBodyEndSeconds": 166.99,
+        "aggregateVoiceReleaseRange": null,
+        "passiveOrUnownedTailRange": {
+          "samples": [
+            7372638,
+            7498764
+          ],
+          "seconds": [
+            167.18,
+            170.04
+          ]
+        },
+        "evidencePanels": [
+          "panels-vocals/PL-L023.png"
+        ],
+        "rationale": "Sky final held vowel has fresh harmonics through 166.9; the envelope/formants contract around 167.0. The long quiet band after 167.2 is decay."
+      },
+      {
+        "phraseId": "PL-L024",
+        "text": "And fade into the night",
+        "lastWordId": "PL-L024-w04",
+        "lastWord": "night",
+        "reviewStatus": "signal-selected-candidate",
+        "selectedLastWordEndSample": 7650909,
+        "selectedLastWordEndSeconds": 173.49,
+        "plausibleLastWordEndRange": {
+          "samples": [
+            7647822,
+            7654878
+          ],
+          "seconds": [
+            173.42,
+            173.58
+          ]
+        },
+        "selectedVoicedBodyEndSample": 7639002,
+        "selectedVoicedBodyEndSeconds": 173.22,
+        "aggregateVoiceReleaseRange": null,
+        "passiveOrUnownedTailRange": {
+          "samples": [
+            7654878,
+            7758072
+          ],
+          "seconds": [
+            173.58,
+            175.92
+          ]
+        },
+        "evidencePanels": [
+          "panels-vocals/PL-L024.png",
+          "panels-vocals/zoom-PL-L024-173-174.png"
+        ],
+        "rationale": "Night vowel closes around 173.22; a localized final t/frication region at 173.33–173.48 is retained. Isolated later source attacks have no corresponding renewed word body."
+      },
+      {
+        "phraseId": "PL-L025",
+        "text": "Wires and chains",
+        "lastWordId": "PL-L025-w02",
+        "lastWord": "chains",
+        "reviewStatus": "unresolved-lead-backing-ownership",
+        "selectedLastWordEndSample": null,
+        "selectedLastWordEndSeconds": null,
+        "plausibleLastWordEndRange": {
+          "samples": [
+            7858620,
+            8100288
+          ],
+          "seconds": [
+            178.2,
+            183.68
+          ]
+        },
+        "selectedVoicedBodyEndSample": null,
+        "selectedVoicedBodyEndSeconds": null,
+        "aggregateVoiceReleaseRange": {
+          "samples": [
+            8087940,
+            8099406
+          ],
+          "seconds": [
+            183.4,
+            183.66
+          ]
+        },
+        "passiveOrUnownedTailRange": {
+          "samples": [
+            8099406,
+            8109108
+          ],
+          "seconds": [
+            183.66,
+            183.88
+          ]
+        },
+        "evidencePanels": [
+          "panels-vocals/PL-L025.png",
+          "panels-vocals/PL-L026.png"
+        ],
+        "rationale": "Second-cycle chains held ridge overlaps the second backing entry. Original/stem continuation is independently traced into the following phrase view, where the prior voice sum attenuates around 183.5. Final ns cannot be owned by the lead."
+      },
+      {
+        "phraseId": "PL-L026",
+        "text": "Starting to fade",
+        "lastWordId": "PL-L026-w02",
+        "lastWord": "fade",
+        "reviewStatus": "unresolved-lead-backing-ownership",
+        "selectedLastWordEndSample": null,
+        "selectedLastWordEndSeconds": null,
+        "plausibleLastWordEndRange": {
+          "samples": [
+            8202600,
+            8441622
+          ],
+          "seconds": [
+            186,
+            191.42
+          ]
+        },
+        "selectedVoicedBodyEndSample": null,
+        "selectedVoicedBodyEndSeconds": null,
+        "aggregateVoiceReleaseRange": {
+          "samples": [
+            8429715,
+            8440740
+          ],
+          "seconds": [
+            191.15,
+            191.4
+          ]
+        },
+        "passiveOrUnownedTailRange": {
+          "samples": [
+            8440740,
+            8450883
+          ],
+          "seconds": [
+            191.4,
+            191.63
+          ]
+        },
+        "evidencePanels": [
+          "panels-vocals/PL-L026.png",
+          "panels-vocals/PL-L027.png"
+        ],
+        "rationale": "Second-cycle fade held body merges with backing. The following game view shows the previous aggregate stack contracting around 191.2; no distinct lead final d edge is visible."
+      },
+      {
+        "phraseId": "PL-L027",
+        "text": "Feels like a game",
+        "lastWordId": "PL-L027-w03",
+        "lastWord": "game",
+        "reviewStatus": "unresolved-lead-backing-ownership",
+        "selectedLastWordEndSample": null,
+        "selectedLastWordEndSeconds": null,
+        "plausibleLastWordEndRange": {
+          "samples": [
+            8555400,
+            8782956
+          ],
+          "seconds": [
+            194,
+            199.16
+          ]
+        },
+        "selectedVoicedBodyEndSample": null,
+        "selectedVoicedBodyEndSeconds": null,
+        "aggregateVoiceReleaseRange": {
+          "samples": [
+            8773695,
+            8782515
+          ],
+          "seconds": [
+            198.95,
+            199.15
+          ]
+        },
+        "passiveOrUnownedTailRange": {
+          "samples": [
+            8782515,
+            8790012
+          ],
+          "seconds": [
+            199.15,
+            199.32
+          ]
+        },
+        "evidencePanels": [
+          "panels-vocals/PL-L027.png",
+          "panels-vocals/PL-L028.png"
+        ],
+        "rationale": "Second-cycle game steady ridge overlaps backing words and way. The following play view contains its independent attenuation near 199.0; a final lead m edge cannot be isolated."
+      },
+      {
+        "phraseId": "PL-L028",
+        "text": "You have to play",
+        "lastWordId": "PL-L028-w03",
+        "lastWord": "play",
+        "reviewStatus": "unresolved-lead-backing-ownership",
+        "selectedLastWordEndSample": null,
+        "selectedLastWordEndSeconds": null,
+        "plausibleLastWordEndRange": {
+          "samples": [
+            8912610,
+            9089010
+          ],
+          "seconds": [
+            202.1,
+            206.1
+          ]
+        },
+        "selectedVoicedBodyEndSample": null,
+        "selectedVoicedBodyEndSeconds": null,
+        "aggregateVoiceReleaseRange": {
+          "samples": [
+            9069165,
+            9089010
+          ],
+          "seconds": [
+            205.65,
+            206.1
+          ]
+        },
+        "passiveOrUnownedTailRange": {
+          "samples": [
+            9089010,
+            9186030
+          ],
+          "seconds": [
+            206.1,
+            208.3
+          ]
+        },
+        "evidencePanels": [
+          "panels-vocals/PL-L028.png",
+          "panels-vocals/zoom-PL-L028-204.5-209.5.png"
+        ],
+        "rationale": "Second-cycle play overlaps backing through the changing trajectory near 205.5. Targeted original/stem tail view shows attenuation into diffuse residue near 205.7–206.1 and remaining low decay to 208.2; the aggregate release cannot be assigned to lead play."
+      },
+      {
+        "phraseId": "PL-L029",
+        "text": "The days when it was good are gone",
+        "lastWordId": "PL-L029-w07",
+        "lastWord": "gone",
+        "reviewStatus": "signal-selected-candidate",
+        "selectedLastWordEndSample": 9639378,
+        "selectedLastWordEndSeconds": 218.58,
+        "plausibleLastWordEndRange": {
+          "samples": [
+            9632763,
+            9645993
+          ],
+          "seconds": [
+            218.43,
+            218.73
+          ]
+        },
+        "selectedVoicedBodyEndSample": 9637173,
+        "selectedVoicedBodyEndSeconds": 218.53,
+        "aggregateVoiceReleaseRange": null,
+        "passiveOrUnownedTailRange": {
+          "samples": [
+            9645993,
+            9747423
+          ],
+          "seconds": [
+            218.73,
+            221.03
+          ]
+        },
+        "evidencePanels": [
+          "panels-vocals/PL-L029.png"
+        ],
+        "rationale": "Gone final changing vowel/n region drops sharply near 218.55 in the estimated vocal and is supported by the original. Low later activity is a tail rather than another syllable."
+      },
+      {
+        "phraseId": "PL-L030",
+        "text": "I'm tryna' see what it was for, but I'll never know",
+        "lastWordId": "PL-L030-w10",
+        "lastWord": "know",
+        "reviewStatus": "signal-selected-candidate",
+        "selectedLastWordEndSample": 10070235,
+        "selectedLastWordEndSeconds": 228.35,
+        "plausibleLastWordEndRange": {
+          "samples": [
+            10063620,
+            10076409
+          ],
+          "seconds": [
+            228.2,
+            228.49
+          ]
+        },
+        "selectedVoicedBodyEndSample": 10067589,
+        "selectedVoicedBodyEndSeconds": 228.29,
+        "aggregateVoiceReleaseRange": null,
+        "passiveOrUnownedTailRange": {
+          "samples": [
+            10076409,
+            10101546
+          ],
+          "seconds": [
+            228.49,
+            229.06
+          ]
+        },
+        "evidencePanels": [
+          "panels-vocals/PL-L030.png"
+        ],
+        "rationale": "Know fresh held harmonics weaken around 228.3 and the stem enters a low residual region before the next lyric. MMS 227.398 is too early for the visibly continued final vowel."
+      },
+      {
+        "phraseId": "PL-L031",
+        "text": "And though it's dead I hear the call",
+        "lastWordId": "PL-L031-w07",
+        "lastWord": "call",
+        "reviewStatus": "signal-selected-candidate",
+        "selectedLastWordEndSample": 10336158,
+        "selectedLastWordEndSeconds": 234.38,
+        "plausibleLastWordEndRange": {
+          "samples": [
+            10332189,
+            10341009
+          ],
+          "seconds": [
+            234.29,
+            234.49
+          ]
+        },
+        "selectedVoicedBodyEndSample": 10334835,
+        "selectedVoicedBodyEndSeconds": 234.35,
+        "aggregateVoiceReleaseRange": null,
+        "passiveOrUnownedTailRange": {
+          "samples": [
+            10341009,
+            10411128
+          ],
+          "seconds": [
+            234.49,
+            236.08
+          ]
+        },
+        "evidencePanels": [
+          "panels-vocals/PL-L031.png",
+          "panels-vocals/zoom-PL-L031-231.5-237.5.png"
+        ],
+        "rationale": "Context-aware English call observation 232.82–234.34 matches the earlier direct pitched region ending around 234.37; this ownership anchor is conditional model evidence, not listening. The later voice through 242.0 is recorded separately as wordless/melismatic vocalization and is not assigned to lexical call. Historical target-only MMS labels the later voice incorrectly."
+      },
+      {
+        "phraseId": "PL-L032",
+        "text": "Wires and chains",
+        "lastWordId": "PL-L032-w02",
+        "lastWord": "chains",
+        "reviewStatus": "unresolved-lead-backing-ownership",
+        "selectedLastWordEndSample": null,
+        "selectedLastWordEndSeconds": null,
+        "plausibleLastWordEndRange": {
+          "samples": [
+            10950030,
+            11183760
+          ],
+          "seconds": [
+            248.3,
+            253.6
+          ]
+        },
+        "selectedVoicedBodyEndSample": null,
+        "selectedVoicedBodyEndSeconds": null,
+        "aggregateVoiceReleaseRange": {
+          "samples": [
+            11169207,
+            11182878
+          ],
+          "seconds": [
+            253.27,
+            253.58
+          ]
+        },
+        "passiveOrUnownedTailRange": {
+          "samples": [
+            11182878,
+            11187288
+          ],
+          "seconds": [
+            253.58,
+            253.68
+          ]
+        },
+        "evidencePanels": [
+          "panels-vocals/PL-L032.png",
+          "panels-vocals/PL-L033.png"
+        ],
+        "rationale": "Third-cycle chains continuing ridge overlaps backing. The following fade view includes the prior voice sum through its contraction near 253.4; no owned lead final ns is resolved."
+      },
+      {
+        "phraseId": "PL-L033",
+        "text": "Starting to fade",
+        "lastWordId": "PL-L033-w02",
+        "lastWord": "fade",
+        "reviewStatus": "unresolved-lead-backing-ownership",
+        "selectedLastWordEndSample": null,
+        "selectedLastWordEndSeconds": null,
+        "plausibleLastWordEndRange": {
+          "samples": [
+            11294010,
+            11506572
+          ],
+          "seconds": [
+            256.1,
+            260.92
+          ]
+        },
+        "selectedVoicedBodyEndSample": null,
+        "selectedVoicedBodyEndSeconds": null,
+        "aggregateVoiceReleaseRange": {
+          "samples": [
+            11490255,
+            11505690
+          ],
+          "seconds": [
+            260.55,
+            260.9
+          ]
+        },
+        "passiveOrUnownedTailRange": {
+          "samples": [
+            11505690,
+            11522007
+          ],
+          "seconds": [
+            260.9,
+            261.27
+          ]
+        },
+        "evidencePanels": [
+          "panels-vocals/PL-L033.png",
+          "panels-vocals/PL-L034.png"
+        ],
+        "rationale": "Third-cycle fade held trajectory and backing share the later pitched sum. The following game view shows prior-body attenuation around 260.6–260.9; no distinct lead final d closure."
+      },
+      {
+        "phraseId": "PL-L034",
+        "text": "Feels like a game",
+        "lastWordId": "PL-L034-w03",
+        "lastWord": "game",
+        "reviewStatus": "unresolved-lead-backing-ownership",
+        "selectedLastWordEndSample": null,
+        "selectedLastWordEndSeconds": null,
+        "plausibleLastWordEndRange": {
+          "samples": [
+            11642400,
+            11848347
+          ],
+          "seconds": [
+            264,
+            268.67
+          ]
+        },
+        "selectedVoicedBodyEndSample": null,
+        "selectedVoicedBodyEndSeconds": null,
+        "aggregateVoiceReleaseRange": {
+          "samples": [
+            11834676,
+            11847024
+          ],
+          "seconds": [
+            268.36,
+            268.64
+          ]
+        },
+        "passiveOrUnownedTailRange": {
+          "samples": [
+            11847024,
+            11863782
+          ],
+          "seconds": [
+            268.64,
+            269.02
+          ]
+        },
+        "evidencePanels": [
+          "panels-vocals/PL-L034.png",
+          "panels-vocals/PL-L035.png"
+        ],
+        "rationale": "Third-cycle game steady ridge merges with backing through the next escape view. Previous aggregate stack loses direct support around 268.4–268.6; no lead-owned final m edge."
+      },
+      {
+        "phraseId": "PL-L035",
+        "text": "You can't escape",
+        "lastWordId": "PL-L035-w02",
+        "lastWord": "escape",
+        "reviewStatus": "unresolved-lead-backing-ownership",
+        "selectedLastWordEndSample": null,
+        "selectedLastWordEndSeconds": null,
+        "plausibleLastWordEndRange": {
+          "samples": [
+            11981970,
+            12209526
+          ],
+          "seconds": [
+            271.7,
+            276.86
+          ]
+        },
+        "selectedVoicedBodyEndSample": null,
+        "selectedVoicedBodyEndSeconds": null,
+        "aggregateVoiceReleaseRange": {
+          "samples": [
+            12192768,
+            12205116
+          ],
+          "seconds": [
+            276.48,
+            276.76
+          ]
+        },
+        "passiveOrUnownedTailRange": {
+          "samples": [
+            12205116,
+            12210408
+          ],
+          "seconds": [
+            276.76,
+            276.88
+          ]
+        },
+        "evidencePanels": [
+          "panels-vocals/PL-L035.png",
+          "panels-vocals/PL-L036.png"
+        ],
+        "rationale": "First escape continuation shares the backing sum. The following chains view shows prior phonation contracting around 276.5–276.7 before Wires; a lead final p closure cannot be uniquely distinguished."
+      },
+      {
+        "phraseId": "PL-L036",
+        "text": "Wires and chains",
+        "lastWordId": "PL-L036-w02",
+        "lastWord": "chains",
+        "reviewStatus": "unresolved-lead-backing-ownership",
+        "selectedLastWordEndSample": null,
+        "selectedLastWordEndSeconds": null,
+        "plausibleLastWordEndRange": {
+          "samples": [
+            12312720,
+            12533220
+          ],
+          "seconds": [
+            279.2,
+            284.2
+          ]
+        },
+        "selectedVoicedBodyEndSample": null,
+        "selectedVoicedBodyEndSeconds": null,
+        "aggregateVoiceReleaseRange": {
+          "samples": [
+            12518226,
+            12531015
+          ],
+          "seconds": [
+            283.86,
+            284.15
+          ]
+        },
+        "passiveOrUnownedTailRange": {
+          "samples": [
+            12531015,
+            12537189
+          ],
+          "seconds": [
+            284.15,
+            284.29
+          ]
+        },
+        "evidencePanels": [
+          "panels-vocals/PL-L036.png",
+          "panels-vocals/PL-L037.png"
+        ],
+        "rationale": "Fourth-cycle chains overlaps the backing entry throughout the long ridge. Following fade view shows prior sum attenuation near 283.9–284.1; lead final ns ownership remains unresolved."
+      },
+      {
+        "phraseId": "PL-L037",
+        "text": "Starting to fade",
+        "lastWordId": "PL-L037-w02",
+        "lastWord": "fade",
+        "reviewStatus": "unresolved-lead-backing-ownership",
+        "selectedLastWordEndSample": null,
+        "selectedLastWordEndSeconds": null,
+        "plausibleLastWordEndRange": {
+          "samples": [
+            12669930,
+            12866616
+          ],
+          "seconds": [
+            287.3,
+            291.76
+          ]
+        },
+        "selectedVoicedBodyEndSample": null,
+        "selectedVoicedBodyEndSeconds": null,
+        "aggregateVoiceReleaseRange": {
+          "samples": [
+            12845448,
+            12863088
+          ],
+          "seconds": [
+            291.28,
+            291.68
+          ]
+        },
+        "passiveOrUnownedTailRange": {
+          "samples": [
+            12863088,
+            12885579
+          ],
+          "seconds": [
+            291.68,
+            292.19
+          ]
+        },
+        "evidencePanels": [
+          "panels-vocals/PL-L037.png",
+          "panels-vocals/PL-L038.png"
+        ],
+        "rationale": "Fourth-cycle fade overlaps backing. The following game view shows prior voiced support contracting around 291.3–291.6; the weak final region cannot be owned as lead d."
+      },
+      {
+        "phraseId": "PL-L038",
+        "text": "Feels like a game",
+        "lastWordId": "PL-L038-w03",
+        "lastWord": "game",
+        "reviewStatus": "unresolved-lead-backing-ownership",
+        "selectedLastWordEndSample": null,
+        "selectedLastWordEndSeconds": null,
+        "plausibleLastWordEndRange": {
+          "samples": [
+            12978630,
+            13214565
+          ],
+          "seconds": [
+            294.3,
+            299.65
+          ]
+        },
+        "selectedVoicedBodyEndSample": null,
+        "selectedVoicedBodyEndSeconds": null,
+        "aggregateVoiceReleaseRange": {
+          "samples": [
+            13158558,
+            13212360
+          ],
+          "seconds": [
+            298.38,
+            299.6
+          ]
+        },
+        "passiveOrUnownedTailRange": {
+          "samples": [
+            13212360,
+            13226913
+          ],
+          "seconds": [
+            299.6,
+            299.93
+          ]
+        },
+        "evidencePanels": [
+          "panels-vocals/PL-L038.png",
+          "panels-vocals/PL-L039.png"
+        ],
+        "rationale": "Fourth-cycle game pitched sum persists into the following escape view, changing near 298.4 and declining through 299.5. Both lead body and backing way can explain those bands; no distinct lead final m edge."
+      },
+      {
+        "phraseId": "PL-L039",
+        "text": "You can't escape",
+        "lastWordId": "PL-L039-w02",
+        "lastWord": "escape",
+        "reviewStatus": "unresolved-lead-backing-ownership",
+        "selectedLastWordEndSample": null,
+        "selectedLastWordEndSeconds": null,
+        "plausibleLastWordEndRange": {
+          "samples": [
+            13340250,
+            13525470
+          ],
+          "seconds": [
+            302.5,
+            306.7
+          ]
+        },
+        "selectedVoicedBodyEndSample": null,
+        "selectedVoicedBodyEndSeconds": null,
+        "aggregateVoiceReleaseRange": {
+          "samples": [
+            13471668,
+            13525470
+          ],
+          "seconds": [
+            305.48,
+            306.7
+          ]
+        },
+        "passiveOrUnownedTailRange": {
+          "samples": [
+            13525470,
+            13613670
+          ],
+          "seconds": [
+            306.7,
+            308.7
+          ]
+        },
+        "evidencePanels": [
+          "panels-vocals/PL-L039.png",
+          "panels-vocals/zoom-PL-L039-304.5-309.png"
+        ],
+        "rationale": "Second escape held ridge overlaps backing through 305.5–306.5. Targeted tail shows gradual high-harmonic/voiced attenuation by 306.7, followed by low residual decay through 308.6. Aggregate energy is not a lead-owned final p endpoint."
+      },
+      {
+        "phraseId": "PL-L040",
+        "text": "I found out",
+        "lastWordId": "PL-L040-w02",
+        "lastWord": "out",
+        "reviewStatus": "signal-selected-candidate",
+        "selectedLastWordEndSample": 13936923,
+        "selectedLastWordEndSeconds": 316.03,
+        "plausibleLastWordEndRange": {
+          "samples": [
+            13932954,
+            13941774
+          ],
+          "seconds": [
+            315.94,
+            316.14
+          ]
+        },
+        "selectedVoicedBodyEndSample": 13935159,
+        "selectedVoicedBodyEndSeconds": 315.99,
+        "aggregateVoiceReleaseRange": null,
+        "passiveOrUnownedTailRange": {
+          "samples": [
+            13941774,
+            14033502
+          ],
+          "seconds": [
+            316.14,
+            318.22
+          ]
+        },
+        "evidencePanels": [
+          "panels-vocals/PL-L040.png"
+        ],
+        "rationale": "Out final voiced envelope drops at 316.0 after the final descending vowel trajectory; subsequent estimated-stem lower bands decay without renewed articulation."
+      },
+      {
+        "phraseId": "PL-L041",
+        "text": "Treasures are always lost",
+        "lastWordId": "PL-L041-w03",
+        "lastWord": "lost",
+        "reviewStatus": "signal-selected-candidate",
+        "selectedLastWordEndSample": 14300307,
+        "selectedLastWordEndSeconds": 324.27,
+        "plausibleLastWordEndRange": {
+          "samples": [
+            14297220,
+            14304276
+          ],
+          "seconds": [
+            324.2,
+            324.36
+          ]
+        },
+        "selectedVoicedBodyEndSample": 14287518,
+        "selectedVoicedBodyEndSeconds": 323.98,
+        "aggregateVoiceReleaseRange": null,
+        "passiveOrUnownedTailRange": {
+          "samples": [
+            14304276,
+            14379687
+          ],
+          "seconds": [
+            324.36,
+            326.07
+          ]
+        },
+        "evidencePanels": [
+          "panels-vocals/PL-L041.png",
+          "panels-vocals/zoom-PL-L041-323.5-324.5.png"
+        ],
+        "rationale": "Lost vowel closes near 323.98; the new s/t high-frequency region around 324.05–324.25 remains in both original and estimated vocal. Its release is retained beyond the vowel cutoff."
+      },
+      {
+        "phraseId": "PL-L042",
+        "text": "Pleasures are long forgotten",
+        "lastWordId": "PL-L042-w03",
+        "lastWord": "forgotten",
+        "reviewStatus": "signal-selected-candidate",
+        "selectedLastWordEndSample": 14662809,
+        "selectedLastWordEndSeconds": 332.49,
+        "plausibleLastWordEndRange": {
+          "samples": [
+            14659722,
+            14667660
+          ],
+          "seconds": [
+            332.42,
+            332.6
+          ]
+        },
+        "selectedVoicedBodyEndSample": 14661045,
+        "selectedVoicedBodyEndSeconds": 332.45,
+        "aggregateVoiceReleaseRange": null,
+        "passiveOrUnownedTailRange": {
+          "samples": [
+            14667660,
+            14727636
+          ],
+          "seconds": [
+            332.6,
+            333.96
+          ]
+        },
+        "evidencePanels": [
+          "panels-vocals/PL-L042.png",
+          "panels-vocals/zoom-PL-L042-331.2-332.9.png"
+        ],
+        "rationale": "Forgotten has a renewed final voiced syllable beginning 331.66 after a closure/frication at 331.45–331.60. Its changing envelope and harmonic support continue to 332.44; stationary residue after 332.5 is excluded. Target-only model ends near 331.5–331.7 miss that final body."
+      },
+      {
+        "phraseId": "PL-L043",
+        "text": "Who are you now",
+        "lastWordId": "PL-L043-w03",
+        "lastWord": "now",
+        "reviewStatus": "signal-selected-candidate",
+        "selectedLastWordEndSample": 14847588,
+        "selectedLastWordEndSeconds": 336.68,
+        "plausibleLastWordEndRange": {
+          "samples": [
+            14843619,
+            14853321
+          ],
+          "seconds": [
+            336.59,
+            336.81
+          ]
+        },
+        "selectedVoicedBodyEndSample": 14846706,
+        "selectedVoicedBodyEndSeconds": 336.66,
+        "aggregateVoiceReleaseRange": null,
+        "passiveOrUnownedTailRange": {
+          "samples": [
+            14853321,
+            15051330
+          ],
+          "seconds": [
+            336.81,
+            341.3
+          ]
+        },
+        "evidencePanels": [
+          "panels-vocals/PL-L043.png"
+        ],
+        "rationale": "Now direct held body stops abruptly near 336.66; the long tail to the track end progressively diffuses and does not supply a later lexical end."
+      }
+    ],
+    "separateNonLexicalVocalization": {
+      "followingPhraseId": "PL-L031",
+      "label": "wordless Ooh / later melisma",
+      "lexicalOwnership": "excluded from lexical call",
+      "selectedAggregateVoicedEndSample": 10673082,
+      "selectedAggregateVoicedEndSeconds": 242.02,
+      "plausibleVoicedEndRange": {
+        "samples": [
+          10669995,
+          10677933
+        ],
+        "seconds": [
+          241.95,
+          242.13
+        ]
+      },
+      "evidencePanels": [
+        "panels-vocals/zoom-PL-L031-231.5-237.5.png",
+        "panels-vocals/zoom-PL-L031-241.4-242.7.png"
+      ],
+      "onsetOwnership": "Supplied by root context-aware recognition and bridge review. The signal-only reviewer cannot certify the wordless onset or label by listening."
+    }
+  },
+  "limitations": [
+    "Signal inspection is not human listening.",
+    "No single model core, first-energy threshold, or strongest vowel determines all performed boundaries.",
+    "Repeated backing occurrences were independently inferred; no acoustic-identity transfer was established or used.",
+    "Lead and backing ownership can overlap; an estimated-vocal tone cannot be assigned to the lead solely because it continues.",
+    "Exact integer samples store proposed points; the retained ownership ranges describe real uncertainty.",
+    "Complete normal-speed lyric/audio review is still required before promoting these proposals to synchronization acceptance."
+  ],
+  "provenance": {
+    "primaryCandidateSha256": "1d6669db2fb982527795949f1ab0fb9ed18264a04d0ab1686c9101494fdc50c2",
+    "independentReportSha256": "900cf105dbf787f0dbd678d1e0aa992f03e877a7228f88e6b65f564f70fb225b",
+    "heldReleaseReviewSha256": "9c9e6c74d4b11b6d3e5c5dae1550b8c881b97aeeb28ccfd2acaafe55164d7e05",
+    "rawEvidenceAvailability": "Raw model/signal records remain in ignored local analysis; hashes identify those observations, not public downloadable assets.",
+    "rootReconciliation": [
+      "Classified the added wordless cue separately from supplied lexical lyrics; selected samples remain unchanged."
+    ]
+  },
+  "inventoryQuestions": [
+    {
+      "phraseId": "PL-L013",
+      "question": "Possible short IT/THE-like prefix before Feels",
+      "status": "Unresolved; no word added"
+    },
+    {
+      "phraseId": "PL-L038",
+      "question": "Possible short IT/I-like prefix before Feels",
+      "status": "Unresolved; no word added"
+    },
+    {
+      "phraseId": "PL-L031v",
+      "question": "Wordless vowel vs call melisma",
+      "status": "Separate nonlexical candidate favored by source and stem unprompted ASR; onset/label and body ownership uncertainty retained"
+    },
+    {
+      "phraseId": "PL-L003",
+      "question": "combined vs come back-like recognition",
+      "status": "Supplied text retained; unstable unprompted recognition does not establish a source-supported replacement."
+    },
+    {
+      "phraseId": "PL-L008",
+      "question": "has dried vs is dry/is dried recognition",
+      "status": "Supplied text retained; has/is consonant identity unresolved against both unprompted sources and English greedy IS."
+    },
+    {
+      "phraseId": "PL-L023",
+      "question": "Lets light vs Slide/SLATE-like recognition",
+      "status": "Supplied text retained; connected first-word lexical ownership unresolved."
+    }
+  ]
+}

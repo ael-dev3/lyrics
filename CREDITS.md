@@ -114,6 +114,10 @@ The anime footage in the immediate mashup source was reused in the landscape and
 
 “Remix” belongs to the source recording's title. This project does not claim to have created that musical remix. Our [English lyric-film upload](https://www.youtube.com/watch?v=ZWBaldEgepk) is a derivative presentation and is not an original music source.
 
+## Phantom Liberty
+
+The [official Cyberpunk 2077 upload](https://www.youtube.com/watch?v=u15tEo0wsQI) credits music to **P.T. Adamczyk and Dawid Podsiadło**, lyrics and vocals to **Dawid Podsiadło**, and orchestration and piano to **Marcin Przybyłowicz**. Original film: **CD PROJEKT RED** and the production contributors listed in that upload. Added lyric timing, typography and measured audio visualization: Ael, assisted with Codex. The complete original soundtrack and source edit are preserved in the preview. [Project provenance and review status](projects/phantom-liberty-lyric-film/README.md).
+
 ## Project contribution and AI assistance
 
 **Ael** selected the music, directed the creative revisions, reviewed the outputs and published the project. The workflow, code, lyric presentation, translation alignment, analysis and publishing assets were developed with substantial AI assistance, as described in [AI-DISCLOSURE.md](AI-DISCLOSURE.md).
