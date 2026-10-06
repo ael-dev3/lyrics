@@ -1,0 +1,462 @@
+{
+  "schemaVersion": 1,
+  "status": "passed-sampled-byte-equivalence",
+  "revision": "phantom-liberty-preview-v2",
+  "sourceSha256": "fb3fc348c8bb7fd6f843f624ef5582cbf4a94a415cb47880e9bef2a595883bae",
+  "approvedInputHashes": {
+    "public/source.mp4": "fb3fc348c8bb7fd6f843f624ef5582cbf4a94a415cb47880e9bef2a595883bae",
+    "source/recording.json": "cf5343e1d3b826dd8d40512d603250e232781563beefc259661530c4f3436269",
+    "source/lyrics-supplied.txt": "3bfa2942f61ef915c4e8b3d3693a287f340a79040dd11d6abe27a71cd5c1b36b",
+    "source/phrases.json": "40feb2ccb871fbec32dee80e07ad241919dfc5d65ed5ab846efa848591d30878",
+    "source/selected-words.json": "a08d31421194ba0f5e9556d5bba897219bd9177ec689e499547f2d373048c27f",
+    "source/portrait-framing.json": "c8ecb91a815f66f4bfac9c4eb53afeb88b457cb7b11b6044adc53f33eeb6e235",
+    "public/timeline.json": "8ccd008f917c5c6344207611ac2f7179532449191b133b68278bf6d6dbd8fc80",
+    "public/audio-features.json": "45ec5dd4b8c988e13e2cbf135793bdf070405f499e5216717449b2bc87957fb6",
+    "public/fonts/SpaceGrotesk.ttf": "acad6de1fc93436f5c0f1f4137751ef04f1aea3063e7036535970ffcfbd79f72",
+    "src/model.ts": "618f31cc431bdf27f1de48fb43cfc586641e7672ab93c61ae0ee3c1b247dcbd5",
+    "src/scene.ts": "4d16254880f0e5b9d8ac02a4a853beb29400dcbf91c0d1e8df4dc297dc7478fb",
+    "src/player.ts": "56c05a8bb00df214db2dabfc8ecd10f7586cea3f71cd80640c93d4fa7d2313a5",
+    "review/index.html": "275b81d28a5cf55cacdeedf345a42bdb3de88b862e0ac13f28bbc0177c0a5a05",
+    "review/client.js": "a74112def15ed96a1b114cfb3ba17bf96ac73cf2e67cc67b794ef39f603fea4c"
+  },
+  "format": "portrait",
+  "sceneSha256": "4d16254880f0e5b9d8ac02a4a853beb29400dcbf91c0d1e8df4dc297dc7478fb",
+  "helperFile": "scripts/cached-painter.ts",
+  "helperSha256": "58047711b610a4e8abd34559c320091c374267d45ba1ec985408f028f35a6e78",
+  "referenceProducerFile": "scripts/render-production.ts",
+  "referenceProducerSha256": "bacf5eb188325290ea7dd8254d835f36faca2af3ed473a2f07a142f77d033fe3",
+  "gateSha256": "139756c0b67b1a66e9fb266be2180698003d3c2a91b8d3b2af11446bd34793a1",
+  "outputClock": {
+    "numerator": 60000,
+    "denominator": 1001
+  },
+  "sourcePictureClock": {
+    "numerator": 30000,
+    "denominator": 1001
+  },
+  "samples": {
+    "pairedOutputGroups": 20,
+    "outputFrames": 40,
+    "distinctOriginalPictures": 19,
+    "includesFinalOutputFrame": true,
+    "finalOutputFrame": 20861,
+    "finalOriginalPicture": 10428,
+    "rgbaBytesPerFrame": 8294400
+  },
+  "comparison": "Buffer.compare against the ordinary unchanged shared painter returned zero for every RGBA byte in each selected output frame.",
+  "method": "Invoke unchanged paintScene through a transparent native-context wrapper; cache only opaque source-picture/background pixels at its third full-frame fill; restore exact RGBA for the identical repeated source buffer while forwarding context state and all dynamic painting.",
+  "relativeBenchmark": {
+    "sampledSpeedup": 1.816373697422106,
+    "scope": "Local sample-loop comparison only; separate decoding, encoding and complete production performance are not measured or predicted."
+  },
+  "rows": [
+    {
+      "pairIndex": 0,
+      "side": 0,
+      "outputFrame": 0,
+      "time": 0,
+      "sourceFrame": 0,
+      "byteEquality": true,
+      "bytes": 8294400,
+      "sha256": "ecd8c98f8fe4bdfab46e7d8c6967411a317b687eb5f402f6314d6280ac521216"
+    },
+    {
+      "pairIndex": 0,
+      "side": 1,
+      "outputFrame": 1,
+      "time": 0.016683333333333335,
+      "sourceFrame": 0,
+      "byteEquality": true,
+      "bytes": 8294400,
+      "sha256": "ecd8c98f8fe4bdfab46e7d8c6967411a317b687eb5f402f6314d6280ac521216"
+    },
+    {
+      "pairIndex": 1,
+      "side": 0,
+      "outputFrame": 28,
+      "time": 0.46713333333333334,
+      "sourceFrame": 14,
+      "byteEquality": true,
+      "bytes": 8294400,
+      "sha256": "77d21b82821bec817112b756417e90524df8406cde1387c905f0870a0044c93c"
+    },
+    {
+      "pairIndex": 1,
+      "side": 1,
+      "outputFrame": 29,
+      "time": 0.4838166666666667,
+      "sourceFrame": 14,
+      "byteEquality": true,
+      "bytes": 8294400,
+      "sha256": "78a1e00cf4b05979ea3a091f1a06545e87928e8c554fc9268293909798d6ae4f"
+    },
+    {
+      "pairIndex": 2,
+      "side": 0,
+      "outputFrame": 112,
+      "time": 1.8685333333333334,
+      "sourceFrame": 56,
+      "byteEquality": true,
+      "bytes": 8294400,
+      "sha256": "2f9a42a9a8caf92819abf2b084243aa9f4210c025862cc083e5ebd879971f8ef"
+    },
+    {
+      "pairIndex": 2,
+      "side": 1,
+      "outputFrame": 113,
+      "time": 1.8852166666666668,
+      "sourceFrame": 56,
+      "byteEquality": true,
+      "bytes": 8294400,
+      "sha256": "182cecc2024e6fb4bcd36faf8729ac40f9f3ad35145da8be22349e8bf5b1c75c"
+    },
+    {
+      "pairIndex": 3,
+      "side": 0,
+      "outputFrame": 790,
+      "time": 13.179833333333333,
+      "sourceFrame": 395,
+      "byteEquality": true,
+      "bytes": 8294400,
+      "sha256": "b504167125062d3b40d29e68491e70f8b51421bd137a1040a3b58df5f4a3853c"
+    },
+    {
+      "pairIndex": 3,
+      "side": 1,
+      "outputFrame": 791,
+      "time": 13.196516666666666,
+      "sourceFrame": 395,
+      "byteEquality": true,
+      "bytes": 8294400,
+      "sha256": "3c12693abeda6d923637ffa633efbedf29332478cfb3456df7f353a1b3ef3216"
+    },
+    {
+      "pairIndex": 4,
+      "side": 0,
+      "outputFrame": 2310,
+      "time": 38.5385,
+      "sourceFrame": 1155,
+      "byteEquality": true,
+      "bytes": 8294400,
+      "sha256": "da929b071bc7619832a4b218e62a874d4bcf96c1b6eb56053012ee23632e7a2b"
+    },
+    {
+      "pairIndex": 4,
+      "side": 1,
+      "outputFrame": 2311,
+      "time": 38.55518333333333,
+      "sourceFrame": 1155,
+      "byteEquality": true,
+      "bytes": 8294400,
+      "sha256": "18e78cef8bba7c8b66b184e5a398d11401ac63e154104fee0f03c1e8ec4bad1e"
+    },
+    {
+      "pairIndex": 5,
+      "side": 0,
+      "outputFrame": 3308,
+      "time": 55.18846666666666,
+      "sourceFrame": 1654,
+      "byteEquality": true,
+      "bytes": 8294400,
+      "sha256": "ad7fa7870d2435c852f717fce748b52433e301f2510365073191ac37f0d44a0c"
+    },
+    {
+      "pairIndex": 5,
+      "side": 1,
+      "outputFrame": 3309,
+      "time": 55.20515,
+      "sourceFrame": 1654,
+      "byteEquality": true,
+      "bytes": 8294400,
+      "sha256": "e4c5303ccedd78e0c38345e076daf62aa4ee7a756e8e640e4e15ea2f94d33cfe"
+    },
+    {
+      "pairIndex": 6,
+      "side": 0,
+      "outputFrame": 4678,
+      "time": 78.04463333333334,
+      "sourceFrame": 2339,
+      "byteEquality": true,
+      "bytes": 8294400,
+      "sha256": "382ed4b8b7dfb735269fd756364c69c485f9f9e3316c4e691cb4d2a0b2334068"
+    },
+    {
+      "pairIndex": 6,
+      "side": 1,
+      "outputFrame": 4679,
+      "time": 78.06131666666667,
+      "sourceFrame": 2339,
+      "byteEquality": true,
+      "bytes": 8294400,
+      "sha256": "bc57731f45be1236067ad0d2cfdf4c7162fcca81304afb22c78f3ae3baba7558"
+    },
+    {
+      "pairIndex": 7,
+      "side": 0,
+      "outputFrame": 5118,
+      "time": 85.3853,
+      "sourceFrame": 2559,
+      "byteEquality": true,
+      "bytes": 8294400,
+      "sha256": "8be7e8ab5fa7f3d8b6db1881af38d22eb8fa60e8460288405a988f8c72871d2f"
+    },
+    {
+      "pairIndex": 7,
+      "side": 1,
+      "outputFrame": 5119,
+      "time": 85.40198333333333,
+      "sourceFrame": 2559,
+      "byteEquality": true,
+      "bytes": 8294400,
+      "sha256": "27f867db524db5f0e6dea8fb36f8a707237b3a65651f6e60fe6169a01f72ec26"
+    },
+    {
+      "pairIndex": 8,
+      "side": 0,
+      "outputFrame": 7702,
+      "time": 128.49503333333334,
+      "sourceFrame": 3851,
+      "byteEquality": true,
+      "bytes": 8294400,
+      "sha256": "356ca8b0c3b56bd0260bfa8c979d39d6b98bea6e56b3fc8762bab507318bbe5e"
+    },
+    {
+      "pairIndex": 8,
+      "side": 1,
+      "outputFrame": 7703,
+      "time": 128.51171666666667,
+      "sourceFrame": 3851,
+      "byteEquality": true,
+      "bytes": 8294400,
+      "sha256": "105f27201ecf6bf313e83c8abfb7afbf260de7dc5d9d2ac37397a9357691f84c"
+    },
+    {
+      "pairIndex": 9,
+      "side": 0,
+      "outputFrame": 9710,
+      "time": 161.99516666666668,
+      "sourceFrame": 4855,
+      "byteEquality": true,
+      "bytes": 8294400,
+      "sha256": "11027c29d87f9fee8217b250edbd21d43372ed8836afbf673f6e7ed75e70f0eb"
+    },
+    {
+      "pairIndex": 9,
+      "side": 1,
+      "outputFrame": 9711,
+      "time": 162.01185,
+      "sourceFrame": 4855,
+      "byteEquality": true,
+      "bytes": 8294400,
+      "sha256": "e5fa4f3105a1846dff1b73f4342e1ec8eda4cb242ea3a1c85029c2c56152b44d"
+    },
+    {
+      "pairIndex": 10,
+      "side": 0,
+      "outputFrame": 10692,
+      "time": 178.3782,
+      "sourceFrame": 5346,
+      "byteEquality": true,
+      "bytes": 8294400,
+      "sha256": "cd9f4f13bfea15d45ea57ca10a79ba7dbca5b5447bf34af34591942740f7ac2a"
+    },
+    {
+      "pairIndex": 10,
+      "side": 1,
+      "outputFrame": 10693,
+      "time": 178.39488333333333,
+      "sourceFrame": 5346,
+      "byteEquality": true,
+      "bytes": 8294400,
+      "sha256": "5afa9f8430c1bd69bfdb49d6287a24c3d2b588a76954b1b905826dce522ea713"
+    },
+    {
+      "pairIndex": 11,
+      "side": 0,
+      "outputFrame": 12106,
+      "time": 201.96843333333334,
+      "sourceFrame": 6053,
+      "byteEquality": true,
+      "bytes": 8294400,
+      "sha256": "90195cc0ae7f32c137330fe221a488d1bc28f533221f88b233c16146b33befcd"
+    },
+    {
+      "pairIndex": 11,
+      "side": 1,
+      "outputFrame": 12107,
+      "time": 201.98511666666667,
+      "sourceFrame": 6053,
+      "byteEquality": true,
+      "bytes": 8294400,
+      "sha256": "86c771181918de66c5dd409ab6fa359a51baf03b1c8f1e409a892ffb81a80d8a"
+    },
+    {
+      "pairIndex": 12,
+      "side": 0,
+      "outputFrame": 13006,
+      "time": 216.98343333333332,
+      "sourceFrame": 6503,
+      "byteEquality": true,
+      "bytes": 8294400,
+      "sha256": "4dc9b0853d40f6b7d2bdfe4a12c60d9c55d6b48abe77b622792354bf4e2f3746"
+    },
+    {
+      "pairIndex": 12,
+      "side": 1,
+      "outputFrame": 13007,
+      "time": 217.00011666666666,
+      "sourceFrame": 6503,
+      "byteEquality": true,
+      "bytes": 8294400,
+      "sha256": "cbdb73249f9de0ac5c2f013a939dfeed49d9df4cf7d5659f099af1389c45924a"
+    },
+    {
+      "pairIndex": 13,
+      "side": 0,
+      "outputFrame": 14078,
+      "time": 234.86796666666666,
+      "sourceFrame": 7039,
+      "byteEquality": true,
+      "bytes": 8294400,
+      "sha256": "ad806ef55de314620b410871fa6ccaace60e4a2c5362a32e694df3dc00c4f9ab"
+    },
+    {
+      "pairIndex": 13,
+      "side": 1,
+      "outputFrame": 14079,
+      "time": 234.88465,
+      "sourceFrame": 7039,
+      "byteEquality": true,
+      "bytes": 8294400,
+      "sha256": "90101a1c8dd5bfa2f54c1681d3b07f93fe9fce14af0a5724d541b87f08d9ef52"
+    },
+    {
+      "pairIndex": 14,
+      "side": 0,
+      "outputFrame": 14792,
+      "time": 246.77986666666666,
+      "sourceFrame": 7396,
+      "byteEquality": true,
+      "bytes": 8294400,
+      "sha256": "45334f9b2886336be5bc2883e180ae5752647cac8bbd4ba9a176041e8b2cfbcd"
+    },
+    {
+      "pairIndex": 14,
+      "side": 1,
+      "outputFrame": 14793,
+      "time": 246.79655,
+      "sourceFrame": 7396,
+      "byteEquality": true,
+      "bytes": 8294400,
+      "sha256": "334543d8ffbb62c7f4d9600e717fe2df0841997ade4893deaeaa1a2e9186f939"
+    },
+    {
+      "pairIndex": 15,
+      "side": 0,
+      "outputFrame": 16602,
+      "time": 276.9767,
+      "sourceFrame": 8301,
+      "byteEquality": true,
+      "bytes": 8294400,
+      "sha256": "e4830629544e3113c5241f26e6a3b163248f55158106df813ab9b79eeeeb6d11"
+    },
+    {
+      "pairIndex": 15,
+      "side": 1,
+      "outputFrame": 16603,
+      "time": 276.9933833333333,
+      "sourceFrame": 8301,
+      "byteEquality": true,
+      "bytes": 8294400,
+      "sha256": "f8330da3718937b93d051b8e4791ced99957c2f1576cb2106691bb81a9b66e6b"
+    },
+    {
+      "pairIndex": 16,
+      "side": 0,
+      "outputFrame": 17502,
+      "time": 291.9917,
+      "sourceFrame": 8751,
+      "byteEquality": true,
+      "bytes": 8294400,
+      "sha256": "4324f44c74b22ce2f4ca7cfb900af05d15afa76cc24fa02fbec1dbdfc9eb1bb0"
+    },
+    {
+      "pairIndex": 16,
+      "side": 1,
+      "outputFrame": 17503,
+      "time": 292.0083833333333,
+      "sourceFrame": 8751,
+      "byteEquality": true,
+      "bytes": 8294400,
+      "sha256": "e4361259fdd0659d671dd5b5d409a0f16ca660ec94b3654bbd9b421123fce93c"
+    },
+    {
+      "pairIndex": 17,
+      "side": 0,
+      "outputFrame": 20018,
+      "time": 333.9669666666667,
+      "sourceFrame": 10009,
+      "byteEquality": true,
+      "bytes": 8294400,
+      "sha256": "f113bf9a975e7449d1077c7e4249fb38dd7a7d45c36b4c4ad48e9aa837d9ca41"
+    },
+    {
+      "pairIndex": 17,
+      "side": 1,
+      "outputFrame": 20019,
+      "time": 333.98365,
+      "sourceFrame": 10009,
+      "byteEquality": true,
+      "bytes": 8294400,
+      "sha256": "ffe073fbc4fd486c8a142f06172f74148298d1d839a4ece555a5ed0a44517f1d"
+    },
+    {
+      "pairIndex": 18,
+      "side": 0,
+      "outputFrame": 20856,
+      "time": 347.9476,
+      "sourceFrame": 10428,
+      "byteEquality": true,
+      "bytes": 8294400,
+      "sha256": "ecd8c98f8fe4bdfab46e7d8c6967411a317b687eb5f402f6314d6280ac521216"
+    },
+    {
+      "pairIndex": 18,
+      "side": 1,
+      "outputFrame": 20857,
+      "time": 347.96428333333336,
+      "sourceFrame": 10428,
+      "byteEquality": true,
+      "bytes": 8294400,
+      "sha256": "ecd8c98f8fe4bdfab46e7d8c6967411a317b687eb5f402f6314d6280ac521216"
+    },
+    {
+      "pairIndex": 19,
+      "side": 0,
+      "outputFrame": 20860,
+      "time": 348.01433333333335,
+      "sourceFrame": 10428,
+      "byteEquality": true,
+      "bytes": 8294400,
+      "sha256": "ecd8c98f8fe4bdfab46e7d8c6967411a317b687eb5f402f6314d6280ac521216"
+    },
+    {
+      "pairIndex": 19,
+      "side": 1,
+      "outputFrame": 20861,
+      "time": 348.0310166666667,
+      "sourceFrame": 10428,
+      "byteEquality": true,
+      "bytes": 8294400,
+      "sha256": "ecd8c98f8fe4bdfab46e7d8c6967411a317b687eb5f402f6314d6280ac521216"
+    }
+  ],
+  "limitations": [
+    "Forty selected output frames cover introduction, quiet lead, simultaneous lead/backing, sustained words, multiple original shots and the final held picture; they are not an exhaustive whole-recording byte comparison.",
+    "Cache reuse requires the same source-frame index and immutable decoder buffer identity. A changed buffer or source frame performs the complete ordinary background paint.",
+    "The helper supports only the current approved portrait background sequence, asserts one full clear, two source draws and three full fills, and requires a completely opaque cache.",
+    "Every native context state operation and dynamic lyric/signal draw is forwarded; the approved scene and selected timing remain unchanged.",
+    "Encoded-film source/audio/focus verification remains required after this optimization; sampled cache parity is not listening evidence."
+  ],
+  "recordedAt": "2026-10-06T17:02:29.604Z"
+}

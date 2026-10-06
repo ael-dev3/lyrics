@@ -104,6 +104,8 @@ Check final files at three levels:
 2. **Rendered content:** every-word focus where practical, empty-gap states, source-picture continuity, effect presence and cleanup, lyric clearance, bright/dark passages, original intro and ending. Use negative controls for automated image/focus checks to show that a known timing shift or missing layer is actually detected.
 3. **Delivery identity:** decode representative stills from the verified bytes; assemble platform-specific videos, copy, covers and optional captions; rehash the copied files at their destination. Record any verification limitations plainly.
 
+The [Phantom Liberty production record](../projects/phantom-liberty-lyric-film/PRODUCTION-NOTES.md) gives a rational-cadence example: repeat native 30000/1001 pictures into 60000/1001 output, repaint word focus at each output time, copy the original AAC and hold the final picture through its longer audio tail. Derive the source/output mapping from the actual stream counts, not rounded seconds. Its verifier checks all picture timestamps and AAC packet timing plus first, middle and last active glyph states, with deliberately shifted adjacent-word controls. Producer optimization has its own equality evidence and dependency hashes. These are encoded integrity checks; retain acoustic uncertainty and the actual owner-review scope separately.
+
 The default posting kit includes a YouTube title and description, a TikTok description, both requested video compositions, a YouTube thumbnail and a separate **1200×1600 portrait TikTok profile cover**, reviewed at 150×200. Covers are promotional assets, not substitutes for README film screenshots. Preserve prior deliveries when issuing a corrected edition.
 
 ## Leave a useful repository handoff

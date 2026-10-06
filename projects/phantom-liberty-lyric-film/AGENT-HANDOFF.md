@@ -2,9 +2,13 @@
 
 ## Current boundary
 
-Preview stage only. No complete lyric-film render, publishing kit, platform upload or binary release is authorized. Full actual-audio review and explicit approval must cover the current loaded revision before production. Follow the repository’s preview-first and synchronization gates.
+The complete v2 preview has owner acceptance and explicit authorization for local production in both layouts, a Desktop upload kit and repository source handoff. Both complete encoded masters now pass [final verification](evidence/final-verification.json), and the [delivery receipt](evidence/delivery-receipt.json) records matching copied payloads. Both have 20,862 frames at 60000/1001 fps; the original AAC remains unchanged. The approved picture, words, selected timing and scene are frozen. Platform posting and public binary release are separate permissions. Start with [the production record](PRODUCTION-NOTES.md) and the current evidence below before repeating any export.
 
-Current map: `phantom-liberty-preview-v2`, sixty cues and 313 displayed events. Start with `TIMING-METHOD.md` and `source/selected-words.json`; they separate selected numerical points from uncertainty. The added `PL-L031v` is a supplemental wordless-vowel candidate, not supplied lexical text. All 128 backing boundaries and sixteen chorus releases retain unresolved ownership; listening acceptance remains pending. Do not silently promote this preview into an accepted synchronization record.
+Current map: `phantom-liberty-preview-v2`, sixty cues and 313 displayed events. Start with `TIMING-METHOD.md` and `source/selected-words.json`; they separate selected numerical points from uncertainty. The added `PL-L031v` is a supplemental wordless-vowel candidate, not supplied lexical text. All 128 backing word intervals and sixteen chorus releases retain uncertainty. The owner reported a complete current-preview review; itemized listening checks are unlogged. Acceptance is recorded separately and does not promote model estimates into exact acoustic measurements or assistant listening evidence.
+
+`evidence/preview-inputs.json`, `evidence/owner-review.json` and `evidence/render-authorization.json` bind the current local-production decision. `scripts/render-gate.ts` rejects changed inputs or missing review/authorization. The `productionRenderApproved: false` field in the source recording record is acquisition history, not the current gate.
+
+Earlier browser, model and technical reports retain their original pending/false acceptance fields. Those are historical observations; later owner acceptance and authorization live in the separate current records above. Preserve both histories rather than rewriting model evidence as human listening.
 
 The first provisional timing map is rejected. It used multilingual CTC character cores before original/stem word-body reconciliation, which produced late entrances, short focus intervals and unstable reduced-word ownership. Treat that map as diagnostic history; do not revive it, apply a global offset or copy its chorus timings into another occurrence.
 
@@ -47,6 +51,8 @@ npm run build
 node scripts/proof-stills.ts
 node scripts/preview-server.ts
 ```
+
+For an already authorized, unchanged edition, use the commands in `PRODUCTION-NOTES.md`. The production renderer uses the same painter at 60000/1001 cadence, repeats each native picture, copies the original AAC and holds the final picture through the soundtrack tail. Final verification and Desktop-copy receipts are distinct from successful encoding. Preserve earlier deliveries and refuse silent overwrite.
 
 Keep private source/analysis caches and machine-specific acoustic adapters local. Application, timeline, audio-feature, scene and QA producers use TypeScript. Native model-library experiments are separate local tools, not application modules or production timing authorities; record their implementation/checkpoint identity in retained evidence.
 

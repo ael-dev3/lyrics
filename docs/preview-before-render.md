@@ -34,6 +34,8 @@ The subsequent [La Lune celestial correction](../projects/la-lune-acoustic-lyric
 
 The [Rainline production record](../projects/spikeriser-rainline-lyric-film/PRODUCTION-NOTES.md#5-scoped-final-exports-and-gate-distinction) preserves a further narrow case: two local X-format exports of the frozen v4 pixel-city preview received separate `owner-approved-preview` acceptance records. The normal production gate and full audio/both-format synchronization review stayed pending. The final-file checks establish delivery integrity and unchanged audio packets, not acoustic word accuracy. This record does not authorize another revision or remove the default gate.
 
+The [Phantom Liberty v2 production decision](../projects/phantom-liberty-lyric-film/PRODUCTION-NOTES.md#approved-edition) records the owner's report of complete current-preview review followed by explicit local-production authorization. Its English lead and backing edition freezes the exact accepted inputs, preserves unlogged granular listening fields and retains model uncertainty. The gate tests current owner acceptance and production scope; final encoded glyph, source-clock and soundtrack checks remain separate. This track-specific record makes no assistant listening claim and does not relax the multilingual synchronization requirement or authorize another revision.
+
 ## Enforce the boundary
 
 Every new project must keep its preview command separate from production commands. Production entry points must refuse absent, incomplete or stale review evidence and absent or stale authorization before capture, segment rendering, encoding or final-file creation. Do not hide full capture behind a command named `preview`.

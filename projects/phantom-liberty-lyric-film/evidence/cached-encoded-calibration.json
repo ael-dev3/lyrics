@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "status": "passed",
+  "revision": "phantom-liberty-preview-v2",
+  "approvedInputHashes": {
+    "public/source.mp4": "fb3fc348c8bb7fd6f843f624ef5582cbf4a94a415cb47880e9bef2a595883bae",
+    "source/recording.json": "cf5343e1d3b826dd8d40512d603250e232781563beefc259661530c4f3436269",
+    "source/lyrics-supplied.txt": "3bfa2942f61ef915c4e8b3d3693a287f340a79040dd11d6abe27a71cd5c1b36b",
+    "source/phrases.json": "40feb2ccb871fbec32dee80e07ad241919dfc5d65ed5ab846efa848591d30878",
+    "source/selected-words.json": "a08d31421194ba0f5e9556d5bba897219bd9177ec689e499547f2d373048c27f",
+    "source/portrait-framing.json": "c8ecb91a815f66f4bfac9c4eb53afeb88b457cb7b11b6044adc53f33eeb6e235",
+    "public/timeline.json": "8ccd008f917c5c6344207611ac2f7179532449191b133b68278bf6d6dbd8fc80",
+    "public/audio-features.json": "45ec5dd4b8c988e13e2cbf135793bdf070405f499e5216717449b2bc87957fb6",
+    "public/fonts/SpaceGrotesk.ttf": "acad6de1fc93436f5c0f1f4137751ef04f1aea3063e7036535970ffcfbd79f72",
+    "src/model.ts": "618f31cc431bdf27f1de48fb43cfc586641e7672ab93c61ae0ee3c1b247dcbd5",
+    "src/scene.ts": "4d16254880f0e5b9d8ac02a4a853beb29400dcbf91c0d1e8df4dc297dc7478fb",
+    "src/player.ts": "56c05a8bb00df214db2dabfc8ecd10f7586cea3f71cd80640c93d4fa7d2313a5",
+    "review/index.html": "275b81d28a5cf55cacdeedf345a42bdb3de88b862e0ac13f28bbc0177c0a5a05",
+    "review/client.js": "a74112def15ed96a1b114cfb3ba17bf96ac73cf2e67cc67b794ef39f603fea4c"
+  },
+  "scope": "Cached diagnostic media is byte-for-byte identical to independently calibrated original portrait clip; its already-verified scene/focus/negative-control result is therefore retained without a redundant identical pixel pass.",
+  "original": {
+    "file": "renders/diagnostic/Phantom-Liberty-TikTok-1080x1920-59.94fps-04678-120.mp4",
+    "sha256": "71f37692a7054aeee56d6ad9e0f6014a679bb788f617aee5bad299bcdf109537"
+  },
+  "cached": {
+    "file": "renders/diagnostic/Phantom-Liberty-TikTok-1080x1920-59.94fps-cached-04678-120.mp4",
+    "sha256": "71f37692a7054aeee56d6ad9e0f6014a679bb788f617aee5bad299bcdf109537",
+    "producerScript": "scripts/render-portrait-cached.ts",
+    "producerSha256": "9b8bd4c754f28407e12ce3dd82d8258ff1e4cb83563a9b3b4b936d919a95417f",
+    "dependencyHashes": {
+      "scripts/render-production.ts": "bacf5eb188325290ea7dd8254d835f36faca2af3ed473a2f07a142f77d033fe3",
+      "scripts/cached-painter.ts": "58047711b610a4e8abd34559c320091c374267d45ba1ec985408f028f35a6e78"
+    }
+  },
+  "calibration": {
+    "file": "evidence/encoded-calibration.json",
+    "sha256": "68942890d110234c8762963d8beeae91a020c23c29da2f9eaeef15c41bd6ea93",
+    "portraitFrames": 5
+  },
+  "encodedArtifactEquality": true,
+  "recordedAt": "2026-10-06T17:04:39.742Z"
+}

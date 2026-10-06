@@ -1,0 +1,341 @@
+{
+  "schemaVersion": 1,
+  "status": "passed",
+  "revision": "phantom-liberty-preview-v2",
+  "approvedInputHashes": {
+    "public/source.mp4": "fb3fc348c8bb7fd6f843f624ef5582cbf4a94a415cb47880e9bef2a595883bae",
+    "source/recording.json": "cf5343e1d3b826dd8d40512d603250e232781563beefc259661530c4f3436269",
+    "source/lyrics-supplied.txt": "3bfa2942f61ef915c4e8b3d3693a287f340a79040dd11d6abe27a71cd5c1b36b",
+    "source/phrases.json": "40feb2ccb871fbec32dee80e07ad241919dfc5d65ed5ab846efa848591d30878",
+    "source/selected-words.json": "a08d31421194ba0f5e9556d5bba897219bd9177ec689e499547f2d373048c27f",
+    "source/portrait-framing.json": "c8ecb91a815f66f4bfac9c4eb53afeb88b457cb7b11b6044adc53f33eeb6e235",
+    "public/timeline.json": "8ccd008f917c5c6344207611ac2f7179532449191b133b68278bf6d6dbd8fc80",
+    "public/audio-features.json": "45ec5dd4b8c988e13e2cbf135793bdf070405f499e5216717449b2bc87957fb6",
+    "public/fonts/SpaceGrotesk.ttf": "acad6de1fc93436f5c0f1f4137751ef04f1aea3063e7036535970ffcfbd79f72",
+    "src/model.ts": "618f31cc431bdf27f1de48fb43cfc586641e7672ab93c61ae0ee3c1b247dcbd5",
+    "src/scene.ts": "4d16254880f0e5b9d8ac02a4a853beb29400dcbf91c0d1e8df4dc297dc7478fb",
+    "src/player.ts": "56c05a8bb00df214db2dabfc8ecd10f7586cea3f71cd80640c93d4fa7d2313a5",
+    "review/index.html": "275b81d28a5cf55cacdeedf345a42bdb3de88b862e0ac13f28bbc0177c0a5a05",
+    "review/client.js": "a74112def15ed96a1b114cfb3ba17bf96ac73cf2e67cc67b794ef39f603fea4c"
+  },
+  "scope": "Bounded 120-frame encoded clips; shared scene parity and actual glyph focus plus intentionally wrong adjacent-word hypotheses. No full-film acceptance.",
+  "results": [
+    {
+      "format": "landscape",
+      "diagnosticFile": "Phantom-Liberty-YouTube-1920x816-59.94fps-04678-120.mp4",
+      "diagnosticSha256": "6495742bc35a729a49415a2e89759593db1cd179912bd0b0eef90a22c0ec8848",
+      "localFrame": 1,
+      "outputFrame": 4679,
+      "outputPtsSeconds": 78.06131666666667,
+      "sourceFrame": 2339,
+      "sceneGridMeanAbsoluteError": 1.0118191721132899,
+      "focused": [
+        {
+          "wordId": "PL-L011-w02",
+          "text": "chains",
+          "pixelCount": 2043,
+          "meanAbsoluteError": 1.9632892804698971,
+          "focusPreferredFraction": 1
+        },
+        {
+          "wordId": "PL-B001-w01",
+          "text": "just",
+          "pixelCount": 554,
+          "meanAbsoluteError": 2.5096269554753308,
+          "focusPreferredFraction": 1
+        }
+      ],
+      "wrongTargets": [
+        {
+          "deliberatelyWrongWordId": "PL-L011-w00",
+          "incorrectFocusPreferredFraction": 0,
+          "falseHypothesisRejected": true
+        },
+        {
+          "deliberatelyWrongWordId": "PL-B001-w02",
+          "incorrectFocusPreferredFraction": 0,
+          "falseHypothesisRejected": true
+        }
+      ]
+    },
+    {
+      "format": "landscape",
+      "diagnosticFile": "Phantom-Liberty-YouTube-1920x816-59.94fps-04678-120.mp4",
+      "diagnosticSha256": "6495742bc35a729a49415a2e89759593db1cd179912bd0b0eef90a22c0ec8848",
+      "localFrame": 13,
+      "outputFrame": 4691,
+      "outputPtsSeconds": 78.26151666666667,
+      "sourceFrame": 2345,
+      "sceneGridMeanAbsoluteError": 1.0675925925925926,
+      "focused": [
+        {
+          "wordId": "PL-L011-w02",
+          "text": "chains",
+          "pixelCount": 2043,
+          "meanAbsoluteError": 1.9939631261217163,
+          "focusPreferredFraction": 1
+        },
+        {
+          "wordId": "PL-B001-w01",
+          "text": "just",
+          "pixelCount": 554,
+          "meanAbsoluteError": 2.510228640192539,
+          "focusPreferredFraction": 1
+        }
+      ],
+      "wrongTargets": [
+        {
+          "deliberatelyWrongWordId": "PL-L011-w00",
+          "incorrectFocusPreferredFraction": 0,
+          "falseHypothesisRejected": true
+        },
+        {
+          "deliberatelyWrongWordId": "PL-B001-w02",
+          "incorrectFocusPreferredFraction": 0,
+          "falseHypothesisRejected": true
+        }
+      ]
+    },
+    {
+      "format": "landscape",
+      "diagnosticFile": "Phantom-Liberty-YouTube-1920x816-59.94fps-04678-120.mp4",
+      "diagnosticSha256": "6495742bc35a729a49415a2e89759593db1cd179912bd0b0eef90a22c0ec8848",
+      "localFrame": 40,
+      "outputFrame": 4718,
+      "outputPtsSeconds": 78.71196666666667,
+      "sourceFrame": 2359,
+      "sceneGridMeanAbsoluteError": 1.0274509803921568,
+      "focused": [
+        {
+          "wordId": "PL-B001-w02",
+          "text": "tired",
+          "pixelCount": 753,
+          "meanAbsoluteError": 2.1186365648517045,
+          "focusPreferredFraction": 1
+        }
+      ],
+      "wrongTargets": [
+        {
+          "deliberatelyWrongWordId": "PL-B001-w03",
+          "incorrectFocusPreferredFraction": 0,
+          "falseHypothesisRejected": true
+        }
+      ]
+    },
+    {
+      "format": "landscape",
+      "diagnosticFile": "Phantom-Liberty-YouTube-1920x816-59.94fps-04678-120.mp4",
+      "diagnosticSha256": "6495742bc35a729a49415a2e89759593db1cd179912bd0b0eef90a22c0ec8848",
+      "localFrame": 80,
+      "outputFrame": 4758,
+      "outputPtsSeconds": 79.3793,
+      "sourceFrame": 2379,
+      "sceneGridMeanAbsoluteError": 0.9422113289760349,
+      "focused": [
+        {
+          "wordId": "PL-B001-w04",
+          "text": "looking",
+          "pixelCount": 995,
+          "meanAbsoluteError": 2.093467336683417,
+          "focusPreferredFraction": 1
+        }
+      ],
+      "wrongTargets": [
+        {
+          "deliberatelyWrongWordId": "PL-B001-w05",
+          "incorrectFocusPreferredFraction": 0,
+          "falseHypothesisRejected": true
+        }
+      ]
+    },
+    {
+      "format": "landscape",
+      "diagnosticFile": "Phantom-Liberty-YouTube-1920x816-59.94fps-04678-120.mp4",
+      "diagnosticSha256": "6495742bc35a729a49415a2e89759593db1cd179912bd0b0eef90a22c0ec8848",
+      "localFrame": 119,
+      "outputFrame": 4797,
+      "outputPtsSeconds": 80.02995,
+      "sourceFrame": 2398,
+      "sceneGridMeanAbsoluteError": 0.9668300653594771,
+      "focused": [
+        {
+          "wordId": "PL-B001-w05",
+          "text": "the",
+          "pixelCount": 522,
+          "meanAbsoluteError": 2.682630906768838,
+          "focusPreferredFraction": 1
+        }
+      ],
+      "wrongTargets": [
+        {
+          "deliberatelyWrongWordId": "PL-B001-w06",
+          "incorrectFocusPreferredFraction": 0,
+          "falseHypothesisRejected": true
+        }
+      ]
+    },
+    {
+      "format": "portrait",
+      "diagnosticFile": "Phantom-Liberty-TikTok-1080x1920-59.94fps-04678-120.mp4",
+      "diagnosticSha256": "71f37692a7054aeee56d6ad9e0f6014a679bb788f617aee5bad299bcdf109537",
+      "localFrame": 1,
+      "outputFrame": 4679,
+      "outputPtsSeconds": 78.06131666666667,
+      "sourceFrame": 2339,
+      "sceneGridMeanAbsoluteError": 2.1817578772802655,
+      "focused": [
+        {
+          "wordId": "PL-L011-w02",
+          "text": "chains",
+          "pixelCount": 2168,
+          "meanAbsoluteError": 2.808271832718327,
+          "focusPreferredFraction": 1
+        },
+        {
+          "wordId": "PL-B001-w01",
+          "text": "just",
+          "pixelCount": 715,
+          "meanAbsoluteError": 3.1934731934731935,
+          "focusPreferredFraction": 1
+        }
+      ],
+      "wrongTargets": [
+        {
+          "deliberatelyWrongWordId": "PL-L011-w00",
+          "incorrectFocusPreferredFraction": 0,
+          "falseHypothesisRejected": true
+        },
+        {
+          "deliberatelyWrongWordId": "PL-B001-w02",
+          "incorrectFocusPreferredFraction": 0,
+          "falseHypothesisRejected": true
+        }
+      ]
+    },
+    {
+      "format": "portrait",
+      "diagnosticFile": "Phantom-Liberty-TikTok-1080x1920-59.94fps-04678-120.mp4",
+      "diagnosticSha256": "71f37692a7054aeee56d6ad9e0f6014a679bb788f617aee5bad299bcdf109537",
+      "localFrame": 13,
+      "outputFrame": 4691,
+      "outputPtsSeconds": 78.26151666666667,
+      "sourceFrame": 2345,
+      "sceneGridMeanAbsoluteError": 2.1681592039800996,
+      "focused": [
+        {
+          "wordId": "PL-L011-w02",
+          "text": "chains",
+          "pixelCount": 2168,
+          "meanAbsoluteError": 2.7739852398523985,
+          "focusPreferredFraction": 1
+        },
+        {
+          "wordId": "PL-B001-w01",
+          "text": "just",
+          "pixelCount": 715,
+          "meanAbsoluteError": 3.234032634032634,
+          "focusPreferredFraction": 1
+        }
+      ],
+      "wrongTargets": [
+        {
+          "deliberatelyWrongWordId": "PL-L011-w00",
+          "incorrectFocusPreferredFraction": 0,
+          "falseHypothesisRejected": true
+        },
+        {
+          "deliberatelyWrongWordId": "PL-B001-w02",
+          "incorrectFocusPreferredFraction": 0,
+          "falseHypothesisRejected": true
+        }
+      ]
+    },
+    {
+      "format": "portrait",
+      "diagnosticFile": "Phantom-Liberty-TikTok-1080x1920-59.94fps-04678-120.mp4",
+      "diagnosticSha256": "71f37692a7054aeee56d6ad9e0f6014a679bb788f617aee5bad299bcdf109537",
+      "localFrame": 40,
+      "outputFrame": 4718,
+      "outputPtsSeconds": 78.71196666666667,
+      "sourceFrame": 2359,
+      "sceneGridMeanAbsoluteError": 2.166708126036484,
+      "focused": [
+        {
+          "wordId": "PL-B001-w02",
+          "text": "tired",
+          "pixelCount": 876,
+          "meanAbsoluteError": 3.092085235920852,
+          "focusPreferredFraction": 1
+        }
+      ],
+      "wrongTargets": [
+        {
+          "deliberatelyWrongWordId": "PL-B001-w03",
+          "incorrectFocusPreferredFraction": 0,
+          "falseHypothesisRejected": true
+        }
+      ]
+    },
+    {
+      "format": "portrait",
+      "diagnosticFile": "Phantom-Liberty-TikTok-1080x1920-59.94fps-04678-120.mp4",
+      "diagnosticSha256": "71f37692a7054aeee56d6ad9e0f6014a679bb788f617aee5bad299bcdf109537",
+      "localFrame": 80,
+      "outputFrame": 4758,
+      "outputPtsSeconds": 79.3793,
+      "sourceFrame": 2379,
+      "sceneGridMeanAbsoluteError": 2.156716417910448,
+      "focused": [
+        {
+          "wordId": "PL-B001-w04",
+          "text": "looking",
+          "pixelCount": 1244,
+          "meanAbsoluteError": 2.680600214362272,
+          "focusPreferredFraction": 1
+        }
+      ],
+      "wrongTargets": [
+        {
+          "deliberatelyWrongWordId": "PL-B001-w05",
+          "incorrectFocusPreferredFraction": 0,
+          "falseHypothesisRejected": true
+        }
+      ]
+    },
+    {
+      "format": "portrait",
+      "diagnosticFile": "Phantom-Liberty-TikTok-1080x1920-59.94fps-04678-120.mp4",
+      "diagnosticSha256": "71f37692a7054aeee56d6ad9e0f6014a679bb788f617aee5bad299bcdf109537",
+      "localFrame": 119,
+      "outputFrame": 4797,
+      "outputPtsSeconds": 80.02995,
+      "sourceFrame": 2398,
+      "sceneGridMeanAbsoluteError": 2.1537728026533998,
+      "focused": [
+        {
+          "wordId": "PL-B001-w05",
+          "text": "the",
+          "pixelCount": 669,
+          "meanAbsoluteError": 3.118086696562033,
+          "focusPreferredFraction": 1
+        }
+      ],
+      "wrongTargets": [
+        {
+          "deliberatelyWrongWordId": "PL-B001-w06",
+          "incorrectFocusPreferredFraction": 0,
+          "falseHypothesisRejected": true
+        }
+      ]
+    }
+  ],
+  "thresholds": {
+    "sceneGridMeanAbsoluteErrorExclusive": 12,
+    "activeGlyphMeanAbsoluteErrorExclusive": 18,
+    "activeFocusFractionExclusive": 0.9,
+    "inactiveFalseFocusFractionExclusive": 0.1
+  },
+  "recordedAt": "2026-10-06T16:53:08.858Z",
+  "verifierSha256": "61b544745b22080a0688461a4ab2332c2f87364b1f17f38ab0ae50466018b5f9",
+  "rendererSha256": "bacf5eb188325290ea7dd8254d835f36faca2af3ed473a2f07a142f77d033fe3"
+}
