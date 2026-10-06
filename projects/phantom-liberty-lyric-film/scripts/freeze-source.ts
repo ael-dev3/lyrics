@@ -1,0 +1,18 @@
+import {readFileSync,writeFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+import {spawnSync} from 'node:child_process';
+import {fileURLToPath} from 'node:url';
+import {resolve} from 'node:path';
+const root=fileURLToPath(new URL('..',import.meta.url));
+const source=resolve(root,'public/source.mp4');
+const probe=JSON.parse(readFileSync(resolve(root,'source/probe.json'),'utf8')) as {streams:{codec_type:string;sample_rate?:string;channels?:number;width?:number;height?:number;avg_frame_rate:string;start_time:string;duration:string;nb_frames:string}[];format:{duration:string}};
+const audio=probe.streams.find(s=>s.codec_type==='audio'),video=probe.streams.find(s=>s.codec_type==='video');
+if(!audio||!video||Number(audio.start_time)!==0||Number(video.start_time)!==0)throw Error('Source origin requires explicit review');
+const sampleRate=Number(audio.sample_rate);
+const pcm=spawnSync('ffmpeg',['-v','error','-nostdin','-i',source,'-map','0:a:0','-ac','2','-ar',String(sampleRate),'-c:a','pcm_s16le','-f','s16le','pipe:1'],{maxBuffer:180*1024*1024});
+if(pcm.status!==0)throw Error(pcm.stderr.toString());
+const sha=(data:Buffer)=>createHash('sha256').update(data).digest('hex');
+const [numerator,denominator]=video.avg_frame_rate.split('/').map(Number);
+const identity={schemaVersion:1,recordingUrl:'https://www.youtube.com/watch?v=u15tEo0wsQI',title:'Dawid Podsiadło, P.T. Adamczyk — Phantom Liberty',sourceSha256:sha(readFileSync(source)),decodedStereoS16Sha256:sha(pcm.stdout),sampleRate,decodedSampleCount:pcm.stdout.length/4,sourceDuration:Number(probe.format.duration),pictureDuration:Number(video.duration),audioStreamDuration:Number(audio.duration),picture:{width:video.width,height:video.height,frameRate:{numerator,denominator},frameCount:Number(video.nb_frames)},originSeconds:0,sourceAudioChanged:false,acquisition:{videoFormat:'137',audioFormat:'140',operation:'stream-copy mux; no editing, normalization or speed change'},productionRenderApproved:false};
+writeFileSync(resolve(root,'source/recording.json'),JSON.stringify(identity,null,2)+'\n');
+console.log(identity);

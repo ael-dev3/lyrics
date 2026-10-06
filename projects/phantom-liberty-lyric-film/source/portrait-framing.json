@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "sourceSha256": "fb3fc348c8bb7fd6f843f624ef5582cbf4a94a415cb47880e9bef2a595883bae",
+  "revision": "portrait-framing-full-picture-v2",
+  "status": "Implemented full-picture portrait composition; earlier constant-crop samples retained as rejected bounded evidence.",
+  "studyScope": {
+    "nativeFramesReviewed": [
+      14,
+      79.8,
+      85.4,
+      176.8,
+      217,
+      248,
+      292,
+      334
+    ],
+    "overview": "Source-wide contact sheet plus shared-scene source-frame stills. Bounded visual review; no exhaustive cut reconstruction or browser playback proof."
+  },
+  "activePicture": {
+    "sourceRectangle": {
+      "x": 0,
+      "y": 132,
+      "width": 1920,
+      "height": 816
+    },
+    "nativeAspect": {
+      "numerator": 40,
+      "denominator": 17
+    },
+    "preserve": "Complete horizontal source frame; remove only baked matte rows."
+  },
+  "rejectedConstantCrop": {
+    "portraitCanvas": {
+      "width": 1080,
+      "height": 1920
+    },
+    "sourceWidth": 459,
+    "centerX": 960,
+    "sourceLeft": 730.5,
+    "sourceRight": 1189.5,
+    "retainedHorizontalFraction": 0.2390625,
+    "failure": "A full-height portrait cover retains under one quarter of the authored horizontal picture. Off-center head/hand details and widely separated conversational figures leave that crop. One central anchor cannot preserve the source edit."
+  },
+  "cropCandidateSamples": [
+    {
+      "sourceTime": 79.8,
+      "suggestedCenterX": 820,
+      "suggestedSourceLeft": 590.5,
+      "suggestedSourceRight": 1049.5,
+      "observedSubject": "Foreground seated figure is left of the current crop center. The current source-left boundary crosses the head region.",
+      "status": "Single-frame estimate only; not a tracked interval or safe interpolated camera path."
+    },
+    {
+      "sourceTime": 85.4,
+      "suggestedCenterX": 1160,
+      "suggestedSourceLeft": 930.5,
+      "suggestedSourceRight": 1389.5,
+      "observedSubject": "Foreground leaning figure occupies the right side; this differs substantially from the earlier seated framing.",
+      "status": "Single-frame estimate only; not a tracked interval or safe interpolated camera path."
+    }
+  ],
+  "recommendedPortrait": {
+    "mode": "complete-sharp-source-picture-with-source-derived-atmosphere",
+    "sharpPicture": {
+      "sourceX": 0,
+      "sourceY": 132,
+      "sourceWidth": 1920,
+      "sourceHeight": 816,
+      "destinationWidth": 1080,
+      "destinationHeight": 459,
+      "destinationX": 0,
+      "destinationY": 280
+    },
+    "background": "Only the same current decoded source frame, scaled/defocused/dimmed to fill the portrait. Root scene owns exact display settings; no generated scene, substitute poster, time-shifted clip or independently readable duplicate figure.",
+    "vocalReading": "Independent centered lead and backing regions: lead baseline 1080, backing baseline 1300. Spectrum baseline 1570, width 830, maximum authored band travel 112. Original source-word intervals stay unchanged.",
+    "cameraPolicy": "No new automatic pans or zooms. Every original scene transition remains on its source clock.",
+    "why": "Preserves both characters, gesture ownership, original framing and rapid cut structure throughout the edit; avoids a large incomplete anchor table whose gaps conceal clipped subjects."
+  },
+  "acceptanceChecks": [
+    "Inspect both scene edges, hands, faces and original titles in the sharp picture at every reviewed source change.",
+    "Check the complete moving video after seeking and format changes; still composition is not browser-picture evidence.",
+    "Keep ambient duplicates defocused and low enough to avoid a second recognizable actor competing with the sharp picture.",
+    "Verify lead/backing block clearance, inactive/active contrast and fixed spectrum footprint at realistic phone size.",
+    "Regenerate shared-scene stills and current input hashes after the portrait change."
+  ],
+  "evidencePaths": [
+    "analysis/source-contact.jpg",
+    "evidence/scene-proof-79-8-landscape.jpg",
+    "evidence/scene-proof-79-8-portrait.jpg",
+    "evidence/scene-proof-85-4-landscape.jpg",
+    "evidence/scene-proof-85-4-portrait.jpg"
+  ]
+}
