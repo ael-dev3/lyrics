@@ -8,7 +8,12 @@
     "preview": "npm run build && node scripts/preview-server.ts",
     "typecheck": "tsc --noEmit",
     "test": "node --test tests/*.test.ts",
-    "check": "npm run typecheck && npm test"
+    "check": "npm run typecheck && npm test",
+    "render:gate": "node scripts/render-gate.ts",
+    "render:production": "node scripts/render-production.ts --production",
+    "render:portrait": "node scripts/render-portrait-cached.ts --production --format portrait",
+    "verify:delivery": "node scripts/verify-delivery.ts",
+    "package:delivery": "node scripts/package-delivery.ts"
   },
   "devDependencies": {
     "@types/node": "26.6.4",
