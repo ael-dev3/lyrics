@@ -1,0 +1,30 @@
+{
+  "sourceSha256": "f3717b14729de580e7810f9d6f464d5acf91694d8781dc2ab8d4bf998f767c94",
+  "lexicalCues": 28,
+  "sourceWords": 184,
+  "targetWords": 258,
+  "wordlessVocalCandidates": [
+    {
+      "approximateInterval": [
+        76,
+        88
+      ],
+      "evidence": "Full unprompted recognition identifies repeated wordless syllables; not additional lexical lyrics."
+    },
+    {
+      "approximateInterval": [
+        151.5,
+        175.3
+      ],
+      "evidence": "Wordless refrain and instrumental transition; no unsupplied words invented."
+    }
+  ],
+  "closingVariantReview": {
+    "cue": "TN-025",
+    "suppliedWord": "нет",
+    "displayedWord": "нету",
+    "evidence": "Full alternate-recording and bounded canonical large-v3-turbo recognition both identify нету. An additional vowel after the т consonant is visible in the vocal-estimate spectrum and aligned by MMS on both original and estimated vocals.",
+    "limits": "The two recognitions use the same model family. The small model returned no text, which provides no support or contradiction. Listener review remains pending."
+  },
+  "status": "Complete recording preview; listening completeness pending"
+}
