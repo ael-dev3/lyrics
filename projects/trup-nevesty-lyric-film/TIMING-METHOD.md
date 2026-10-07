@@ -37,4 +37,10 @@ One source video supplies sound and picture. Fractional `video.currentTime` driv
 | 130.975–151.390 | Changed refrain and quiet **Я** entrance near 135.77. |
 | 175.360–197.680 | **нету** variant and closing edges after widened crops. |
 
-Wordless passages around 76–88 and 151.5–175.3 seconds remain music-led, without invented lexical lines. Review the full recording normally and uncertainties slowly in both bilingual layouts. Full human listening scope and current-song render approval remain pending.
+Wordless passages around 76–88 and 151.5–175.3 seconds remain music-led, without invented lexical lines. The owner accepted and authorized the exact current preview for production; standardized full/slow/both-layout listening scope remains separately unattested. The listed priorities therefore stay available for acoustic review rather than being marked completed by technical checks.
+
+## Encoded display evidence
+
+Production uses the same scene at output time `frame / 60`, with 735 original sample frames per output frame. An arbitrary selected sample becomes visible at the first 60 fps frame at or after that sample; integer storage does not remove the display's 16.667 ms frame quantization. Original 25 fps pictures are held using `min(5130, floor(outputFrame * 5 / 12))`, while lyric time remains fractional.
+
+The actual MP4s were decoded at the first frame before/at each entrance, the middle of each event, the last active frame and the first released frame. Integer sample comparisons independently determine expected source focus and English contributor unions; opaque glyph interiors distinguish gold from ivory. Each film passes 11,269 state checks, covers all 442 tokens in active/neutral states and rejects 63 deliberately delayed 100 ms controls. These checks catch display/capture errors in the selected map; they do not independently listen to or validate the acoustic selections.

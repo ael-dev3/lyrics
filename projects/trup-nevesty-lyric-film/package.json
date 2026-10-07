@@ -12,6 +12,7 @@
     "features": "node scripts/analyze-audio.ts",
     "proof": "node scripts/proof-scene.ts",
     "render:gate": "node scripts/render-gate.ts",
+    "render": "node scripts/render-production.ts --production",
     "identity": "node scripts/refresh-identity.ts",
     "prepare:timeline": "node scripts/build-timeline.ts"
   },
