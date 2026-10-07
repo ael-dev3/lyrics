@@ -1,9 +1,10 @@
 # README song screenshots
 
-Updated 3 October 2026. Featured songs in the main README have a representative image with its edition and preview/final status, and each song's project README has an associated image. Rendered preview references are identified separately from browser captures and decoded final-film frames. Promotional covers and supplementary frames remain separate from the representative image.
+Updated 7 October 2026. Featured songs in the main README have a representative image with its edition and preview/final status, and each song's project README has an associated image. Rendered preview references are identified separately from browser captures and decoded final-film frames. Promotional covers and supplementary frames remain separate from the representative image.
 
 | Song | Representative image | Time | Edition / provenance |
 | --- | --- | --- | --- |
+| Труп невесты | [Complete bridal illustration, equal bilingual focus and measured strings](../projects/trup-nevesty-lyric-film/evidence/final-youtube-95.200.jpg) | 01:35.200 | Exact decoded frame 5,712 from the verified v1 1920×1080, 60 fps film; original frame 2,380; scoped owner-approved preview with standardized listening scope separately unattested |
 | призрак | [Original bass-performance shot and centered independent vocal blocks](../projects/prizrak-lyric-film/evidence/final-landscape-overlap-214.300.jpg) | 03:34.300 | Exact decoded frame 12858 from the verified centered v2 native 1920×1080, 60 fps film; original frame 5357 |
 | По камушку | [Complete stone ring, equal себя / myself focus and material response](../projects/po-kamushku-lyric-film/evidence/final-square-58.250.jpg) | 00:58.250 | Exact decoded frame 3495 from the verified native 1080×1080, 60 fps film; original frame 1456 |
 | Кометы | [Original forest, equal bilingual type and individual focus](../projects/komety-lyric-film/evidence/final-landscape-12.400.jpg) | 00:12.400 | Exact decoded frame 744 from the verified native 1920×796, 60 fps film; original frame 310 |
@@ -129,3 +130,7 @@ Frame 12858 at 214.300s was decoded from the verified centered v2 native film. O
 - Portrait at the same time: `projects/svetloe-chuvstvo-lyric-film/evidence/final-portrait-32.500.jpg`.
 - Both are decoded output frame 1950 at 32.500 s, native source frame 812 at 32.480 s. Russian светлое / English brightest receives the current focus. Original recording/artwork credited to Settlers and the linked source.
 - [Historical square/portrait film and still hashes](../projects/svetloe-chuvstvo-lyric-film/evidence/final-stills.json). These remain master evidence; older browser/shared-scene evidence retains its historical scope. Covers remain separate from film screenshots.
+
+## Труп невесты final bridal frame
+
+The main and project READMEs share exact decoded YouTube frame 5,712 at 95.200 seconds, with original frame 2,380. Full composition preserves the bridal hand, golden ring, guitar and veil; paired колечко / a ring focus and fixed material-bound string response remain visible. Portrait evidence is exact frame 7,014 at 116.900 seconds. [Both final-frame identities](../projects/trup-nevesty-lyric-film/evidence/final-stills.json) distinguish final output from prior native-preview proof stills. Original artwork and soundtrack belong to Green Apelsin’s recording; no separate artist identity is inferred. Owner acceptance, pending standardized listening scope and encoded technical verification remain separate records.

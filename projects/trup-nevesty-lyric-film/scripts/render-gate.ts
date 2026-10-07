@@ -1,8 +1,5 @@
-import {readFileSync} from 'node:fs';
-import {currentIdentity,projectFile} from './project-identity.ts';
-import {productionAllowed,type Review} from '../src/review-gate.ts';
-const identity=currentIdentity();
-const review:Review=JSON.parse(readFileSync(projectFile('source/REVIEW.json'),'utf8'));
-const allowed=productionAllowed(review,identity);
-console.log(JSON.stringify({allowed,revision:identity.revision,reason:allowed?'Current-revision listening scope and explicit render approval recorded.':'Preview only. Complete current-revision bilingual listening review and explicit render approval are required before production.'}));
-if(!allowed)process.exitCode=1;
+import {checkCurrentProductionAuthorization} from './production-authorization.ts';
+try{
+ const result=checkCurrentProductionAuthorization();
+ console.log(JSON.stringify({allowed:true,revision:result.identity.revision,listeningGateComplete:result.listeningGateComplete,scope:result.listeningGateComplete?'complete listening review':'explicit owner-approved current preview; listening scope not separately attested'}));
+}catch(error){console.log(JSON.stringify({allowed:false,reason:error instanceof Error?error.message:String(error)}));process.exitCode=1}

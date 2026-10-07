@@ -41,3 +41,29 @@ The three choruses preserve beats / breaks / no heart, gentle / certain death an
 Identify actual surfaces before selecting animated nouns from the lyric sheet. Fit paths against both visible sides of an occluder; extrapolating a short segment can drift at the far edge. Keep musical energy, sung ownership, translated meaning, reading holds and decorative movement separate. Compare full animation on/off at realistic sizes; portrait active words need clear contrast.
 
 Expose exact source, timeline and visual identities in the loaded preview. Changed inputs invalidate older approval. Technical checks support listening judgment rather than certifying perception.
+
+## Accepted production identity
+
+The owner accepted the complete `trup-nevesty-preview-v1-acoustic` scene and directly requested production, a Desktop kit and source handoff. Production preserves that scene and timing. `source/PRODUCTION-AUTHORIZATION.json` locks source, timeline, scene and revision hashes; stale identities block capture. `source/REVIEW.json` retains pending standardized listening scope. The reusable strict gate is unchanged. Current-song authorization is neither a full-listening attestation nor future-song permission.
+
+## Actual movie clock and encoding
+
+The original contains 5,131 pictures at 25 fps, ending at 205.240 seconds, and 9,053,184 decoded stereo samples at 44.1 kHz, ending at 205.287619 seconds. Each output contains 12,318 frames on an exact 60 fps grid, ending at 205.300 seconds. The last picture persists through the AAC tail; `-shortest` is absent so sound cannot be truncated.
+
+Picture selection is `min(5130, floor(outputFrame * 5 / 12))`. Every native picture is decoded and held for two or three output frames without interpolation. Lyric and material animation use `outputFrame / 60`, matching the preview's independent fractional clock. Deliberate source stillness and decoded picture correspondence remain separate observations.
+
+RGBA scenes stream directly to FFmpeg without a large raw-frame cache. H.264 uses medium CRF 17, six threads, 120-frame GOP, BT.709 limited-range YUV420P, square pixels and MP4 fast-start. Original AAC packets are copied without filtering, trimming or reencoding. The renderer refuses existing completed/partial files and rechecks source, timeline, scene, approval and renderer identity before successful atomic completion.
+
+## Final-file checks
+
+`scripts/verify-final.ts` checks each completed film's dimensions, codecs, color/range, pixels, zero start, all 12,318 timestamps and strict full video/audio decode. Near-black scanning finds no missing-picture interval. All 8,841 original AAC packets match payload hashes, timing and side data; decoded PCM SHA-256 stays `0bb2bd2a139191c0bb91932943335a0ab97de261b2a4acf80bd3e6c3caf6a00c`.
+
+Each format supplies 695 decoded frames around every selected entrance/release and event middle, plus opening, instrumental and closing samples. Scene comparisons allow bounded codec differences against the held canonical reference. Independent integer-sample/contributor logic supplies expected gold/ivory glyph states. All 442 tokens appear in both states; 11,269 state checks pass per film, with at least 99.49% matching opaque interior pixels at the weakest checked token. Sixty-three deliberately delayed 100 ms controls are detected per format. Finite scene checks complement full decoding; they do not establish independent listening or millisecond acoustic exactness.
+
+README images are exact MP4 frame 5,712 at 95.200 seconds and portrait frame 7,014 at 116.900 seconds. `evidence/final-stills.json` identifies the actual encoded files and source-picture mapping; preview stills remain separately labelled.
+
+## Covers and handoff
+
+Code-composed covers preserve the official illustration and approved palette: YouTube 1280×720; TikTok 1200×1600 portrait. Alegreya 600 titles/artist are reviewed at 320×180 and 150×200. The initial TikTok title clipped in the 5% crop simulation; baselines of 230 px for title and 320 px for artist preserve full lettering. Actual title ascent must fit a 7% top margin. This poster correction leaves the accepted film untouched.
+
+The 13-file kit contains two MP4s, two covers, three copy files, three optional SRTs, README, delivery inventory and checksums. Finalization verifies film identities before copying, then hashes the complete kit. The new Desktop folder is rehashed after copying. Public Git records covers/copy/captions and delivery evidence; original/production movies remain ignored. No platform upload or public media release is recorded.
