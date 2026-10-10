@@ -6,7 +6,7 @@
 
 Original recording, lyrics and release illustration: **REDCHINAWAVE — Друг**, [official audio upload](https://www.youtube.com/watch?v=SXAReusgEC0). The upload establishes the recording's attribution; no separate illustrator identity is inferred. [Locked source identity](projects/drug-lyric-film/source/recording.json).
 
-The English translation, paired focus, added architectural window response, curved raven animation and preview tooling are AI-assisted lyric-film additions. Oswald Medium is bundled under its [SIL Open Font License](projects/drug-lyric-film/public/fonts/Oswald-OFL.txt). Original music, lyrics, illustration and source-derived stills remain third-party material. Current edition is a review preview; production and listening approval remain pending.
+The English translation, paired focus, added architectural window response, curved raven animation and production tooling are AI-assisted lyric-film additions. Oswald Medium is bundled under its [SIL Open Font License](projects/drug-lyric-film/public/fonts/Oswald-OFL.txt). Original music, lyrics, illustration and source-derived stills remain third-party material. The exact owner-approved preview is delivered as verified 16:9 and 9:16 films; granular listening checklist fields remain separately unlogged. [Production scope](projects/drug-lyric-film/PRODUCTION-DELIVERY.md).
 
 ## Кометы
 
