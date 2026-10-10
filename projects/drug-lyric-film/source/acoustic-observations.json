@@ -1,0 +1,3392 @@
+{
+  "schemaVersion": 1,
+  "sourceSha256": "6f6c867d8a97b6d3a74ed9ab0ba39209b2b520fa61fcdf3e87ed45746eb5356b",
+  "status": "Competing conditioned model cores and relative signal observations; not selected truth or a listening log.",
+  "humanListening": false,
+  "limitations": [
+    "Conditioned paths can manufacture coverage.",
+    "Whisper crop-start padding and late MMS consonant/vowel cores need original-signal ownership review.",
+    "Separated vocals retain instruments and may smear attacks.",
+    "Relative repeat similarity cannot establish absolute lexical identity."
+  ],
+  "vocalEstimate": {
+    "model": "HTDemucs 955717e8 cached safetensors",
+    "torch": "2.8.0",
+    "sampleRate": 44100,
+    "inputSamples": 6618112,
+    "vocalSamples": 6618112,
+    "channels": 2,
+    "sourceClockOffsetSeconds": 0,
+    "shifts": 1,
+    "overlap": 0.25,
+    "randomSeed": 0,
+    "elapsedSeconds": 82.53507058299147,
+    "humanListening": false,
+    "limits": "Estimated vocals can smear consonants, retain echo and leak instruments; original audio remains authoritative."
+  },
+  "whisper": [
+    {
+      "phraseId": "v1-a",
+      "crop": [
+        7.2,
+        12.03
+      ],
+      "conditioningText": [
+        "Я",
+        "тебя",
+        "запомнила",
+        "ты",
+        "та",
+        "скотина"
+      ],
+      "model": "Whisper large-v3-turbo",
+      "words": [
+        {
+          "text": "Я",
+          "start": 7.2,
+          "end": 8.64,
+          "score": 0.006970489397644997
+        },
+        {
+          "text": "тебя",
+          "start": 8.64,
+          "end": 9.04,
+          "score": 0.09508941322565079
+        },
+        {
+          "text": "запомнила",
+          "start": 9.04,
+          "end": 10.18,
+          "score": 0.7804472483694553
+        },
+        {
+          "text": "ты",
+          "start": 10.18,
+          "end": 10.56,
+          "score": 0.09382860362529755
+        },
+        {
+          "text": "та",
+          "start": 10.56,
+          "end": 10.86,
+          "score": 0.00288877310231328
+        },
+        {
+          "text": "скотина",
+          "start": 10.86,
+          "end": 11.7,
+          "score": 0.9628538886706034
+        }
+      ]
+    },
+    {
+      "phraseId": "v1-b",
+      "crop": [
+        11.6,
+        15.8
+      ],
+      "conditioningText": [
+        "Что",
+        "поселилась",
+        "внутри",
+        "головы"
+      ],
+      "model": "Whisper large-v3-turbo",
+      "words": [
+        {
+          "text": "Что",
+          "start": 11.6,
+          "end": 12.34,
+          "score": 0.48376384377479553
+        },
+        {
+          "text": "поселилась",
+          "start": 12.34,
+          "end": 13.66,
+          "score": 0.7845747570196787
+        },
+        {
+          "text": "внутри",
+          "start": 13.66,
+          "end": 14.1,
+          "score": 0.8145307898521423
+        },
+        {
+          "text": "головы",
+          "start": 14.1,
+          "end": 15.3,
+          "score": 0.9984689056873322
+        }
+      ]
+    },
+    {
+      "phraseId": "v1-c",
+      "crop": [
+        15.25,
+        19.6
+      ],
+      "conditioningText": [
+        "Будешь",
+        "теперь",
+        "мне",
+        "вместо",
+        "глицина"
+      ],
+      "model": "Whisper large-v3-turbo",
+      "words": [
+        {
+          "text": "Будешь",
+          "start": 15.25,
+          "end": 16.55,
+          "score": 0.8685793280601501
+        },
+        {
+          "text": "теперь",
+          "start": 16.55,
+          "end": 16.93,
+          "score": 0.9845826625823975
+        },
+        {
+          "text": "мне",
+          "start": 16.93,
+          "end": 17.55,
+          "score": 0.9417672157287598
+        },
+        {
+          "text": "вместо",
+          "start": 17.55,
+          "end": 18.27,
+          "score": 0.7395007610321045
+        },
+        {
+          "text": "глицина",
+          "start": 18.27,
+          "end": 19.27,
+          "score": 0.452751983422786
+        }
+      ]
+    },
+    {
+      "phraseId": "v1-d",
+      "crop": [
+        19.1,
+        23.2
+      ],
+      "conditioningText": [
+        "Не",
+        "сопротивляйся",
+        "мы",
+        "будем",
+        "дружить"
+      ],
+      "model": "Whisper large-v3-turbo",
+      "words": [
+        {
+          "text": "Не",
+          "start": 19.1,
+          "end": 19.82,
+          "score": 0.748885989189148
+        },
+        {
+          "text": "сопротивляйся",
+          "start": 19.82,
+          "end": 21.14,
+          "score": 0.9984436631202698
+        },
+        {
+          "text": "мы",
+          "start": 21.14,
+          "end": 21.46,
+          "score": 0.01682266965508461
+        },
+        {
+          "text": "будем",
+          "start": 21.46,
+          "end": 22.14,
+          "score": 0.9900286793708801
+        },
+        {
+          "text": "дружить",
+          "start": 22.14,
+          "end": 22.88,
+          "score": 0.9825570782025655
+        }
+      ]
+    },
+    {
+      "phraseId": "v1-e",
+      "crop": [
+        22.65,
+        27.2
+      ],
+      "conditioningText": [
+        "Я",
+        "тебя",
+        "люблю",
+        "это",
+        "ты",
+        "то",
+        "животное"
+      ],
+      "model": "Whisper large-v3-turbo",
+      "words": [
+        {
+          "text": "Я",
+          "start": 22.65,
+          "end": 23.63,
+          "score": 0.43782901763916016
+        },
+        {
+          "text": "тебя",
+          "start": 23.63,
+          "end": 23.93,
+          "score": 0.8978913426399231
+        },
+        {
+          "text": "люблю",
+          "start": 23.93,
+          "end": 24.47,
+          "score": 0.9978852868080139
+        },
+        {
+          "text": "это",
+          "start": 24.47,
+          "end": 25.13,
+          "score": 0.025099655613303185
+        },
+        {
+          "text": "ты",
+          "start": 25.13,
+          "end": 25.53,
+          "score": 0.9268965125083923
+        },
+        {
+          "text": "то",
+          "start": 25.53,
+          "end": 25.91,
+          "score": 0.03573129326105118
+        },
+        {
+          "text": "животное",
+          "start": 25.91,
+          "end": 26.95,
+          "score": 0.9758903384208679
+        }
+      ]
+    },
+    {
+      "phraseId": "v1-f",
+      "crop": [
+        26.7,
+        30.8
+      ],
+      "conditioningText": [
+        "Тёплое",
+        "мягкое",
+        "хочется",
+        "трогать"
+      ],
+      "model": "Whisper large-v3-turbo",
+      "words": [
+        {
+          "text": "Тёплое",
+          "start": 26.7,
+          "end": 27.98,
+          "score": 0.6011170774698258
+        },
+        {
+          "text": "мягкое",
+          "start": 27.98,
+          "end": 28.88,
+          "score": 0.6620007914801439
+        },
+        {
+          "text": "хочется",
+          "start": 28.88,
+          "end": 29.58,
+          "score": 0.8356202840805054
+        },
+        {
+          "text": "трогать",
+          "start": 29.58,
+          "end": 30.64,
+          "score": 0.9451996684074402
+        }
+      ]
+    },
+    {
+      "phraseId": "v1-g",
+      "crop": [
+        30.2,
+        34.7
+      ],
+      "conditioningText": [
+        "Хочется",
+        "чувствовать",
+        "что-то",
+        "особое"
+      ],
+      "model": "Whisper large-v3-turbo",
+      "words": [
+        {
+          "text": "Хочется",
+          "start": 30.2,
+          "end": 31.7,
+          "score": 0.9177858432133993
+        },
+        {
+          "text": "чувствовать",
+          "start": 31.7,
+          "end": 32.68,
+          "score": 0.9929559826850891
+        },
+        {
+          "text": "что-то",
+          "start": 32.68,
+          "end": 33.42,
+          "score": 0.9694687128067017
+        },
+        {
+          "text": "особое",
+          "start": 33.42,
+          "end": 34.5,
+          "score": 0.9857110381126404
+        }
+      ]
+    },
+    {
+      "phraseId": "v1-h",
+      "crop": [
+        34.1,
+        38.1
+      ],
+      "conditioningText": [
+        "Что-то",
+        "красивее",
+        "хрипов",
+        "больного"
+      ],
+      "model": "Whisper large-v3-turbo",
+      "words": [
+        {
+          "text": "Что-то",
+          "start": 34.1,
+          "end": 35.16,
+          "score": 0.7388510604699453
+        },
+        {
+          "text": "красивее",
+          "start": 35.16,
+          "end": 36.34,
+          "score": 0.984324187040329
+        },
+        {
+          "text": "хрипов",
+          "start": 36.34,
+          "end": 37.02,
+          "score": 0.5453251224632064
+        },
+        {
+          "text": "больного",
+          "start": 37.02,
+          "end": 37.86,
+          "score": 0.9788590967655182
+        }
+      ]
+    },
+    {
+      "phraseId": "v2-a",
+      "crop": [
+        67.2,
+        72.03
+      ],
+      "conditioningText": [
+        "Я",
+        "тебя",
+        "запомнила",
+        "ты",
+        "та",
+        "скотина"
+      ],
+      "model": "Whisper large-v3-turbo",
+      "words": [
+        {
+          "text": "Я",
+          "start": 67.2,
+          "end": 68.62,
+          "score": 0.015167491510510445
+        },
+        {
+          "text": "тебя",
+          "start": 68.62,
+          "end": 68.98,
+          "score": 0.351638525724411
+        },
+        {
+          "text": "запомнила",
+          "start": 68.98,
+          "end": 70.2,
+          "score": 0.792279526591301
+        },
+        {
+          "text": "ты",
+          "start": 70.2,
+          "end": 70.58,
+          "score": 0.37036389112472534
+        },
+        {
+          "text": "та",
+          "start": 70.58,
+          "end": 70.84,
+          "score": 0.008409828878939152
+        },
+        {
+          "text": "скотина",
+          "start": 70.84,
+          "end": 71.68,
+          "score": 0.9809646606445312
+        }
+      ]
+    },
+    {
+      "phraseId": "v2-b",
+      "crop": [
+        71.6,
+        75.8
+      ],
+      "conditioningText": [
+        "Что",
+        "поселилась",
+        "внутри",
+        "головы"
+      ],
+      "model": "Whisper large-v3-turbo",
+      "words": [
+        {
+          "text": "Что",
+          "start": 71.6,
+          "end": 72.36,
+          "score": 0.1978491097688675
+        },
+        {
+          "text": "поселилась",
+          "start": 72.36,
+          "end": 73.68,
+          "score": 0.5720778654019038
+        },
+        {
+          "text": "внутри",
+          "start": 73.68,
+          "end": 74.12,
+          "score": 0.8734530210494995
+        },
+        {
+          "text": "головы",
+          "start": 74.12,
+          "end": 75.32,
+          "score": 0.9975864589214325
+        }
+      ]
+    },
+    {
+      "phraseId": "v2-c",
+      "crop": [
+        75.25,
+        79.6
+      ],
+      "conditioningText": [
+        "Будешь",
+        "теперь",
+        "мне",
+        "вместо",
+        "глицина"
+      ],
+      "model": "Whisper large-v3-turbo",
+      "words": [
+        {
+          "text": "Будешь",
+          "start": 75.25,
+          "end": 76.57,
+          "score": 0.7827914953231812
+        },
+        {
+          "text": "теперь",
+          "start": 76.57,
+          "end": 76.89,
+          "score": 0.9756341576576233
+        },
+        {
+          "text": "мне",
+          "start": 76.89,
+          "end": 77.53,
+          "score": 0.9289303421974182
+        },
+        {
+          "text": "вместо",
+          "start": 77.53,
+          "end": 78.25,
+          "score": 0.7707236409187317
+        },
+        {
+          "text": "глицина",
+          "start": 78.25,
+          "end": 79.27,
+          "score": 0.41138774272985756
+        }
+      ]
+    },
+    {
+      "phraseId": "v2-d",
+      "crop": [
+        79.1,
+        83.2
+      ],
+      "conditioningText": [
+        "Не",
+        "сопротивляйся",
+        "мы",
+        "будем",
+        "дружить"
+      ],
+      "model": "Whisper large-v3-turbo",
+      "words": [
+        {
+          "text": "Не",
+          "start": 79.1,
+          "end": 79.84,
+          "score": 0.9845101237297058
+        },
+        {
+          "text": "сопротивляйся",
+          "start": 79.84,
+          "end": 81.14,
+          "score": 0.9986068904399872
+        },
+        {
+          "text": "мы",
+          "start": 81.14,
+          "end": 81.44,
+          "score": 0.00012379772670101374
+        },
+        {
+          "text": "будем",
+          "start": 81.44,
+          "end": 82.12,
+          "score": 0.9983131885528564
+        },
+        {
+          "text": "дружить",
+          "start": 82.12,
+          "end": 82.86,
+          "score": 0.999014695485433
+        }
+      ]
+    },
+    {
+      "phraseId": "v2-e",
+      "crop": [
+        82.65,
+        87.2
+      ],
+      "conditioningText": [
+        "Я",
+        "тебя",
+        "люблю",
+        "это",
+        "ты",
+        "то",
+        "животное"
+      ],
+      "model": "Whisper large-v3-turbo",
+      "words": [
+        {
+          "text": "Я",
+          "start": 82.65,
+          "end": 83.67,
+          "score": 0.7474976181983948
+        },
+        {
+          "text": "тебя",
+          "start": 83.67,
+          "end": 83.89,
+          "score": 0.8506041765213013
+        },
+        {
+          "text": "люблю",
+          "start": 83.89,
+          "end": 84.51,
+          "score": 0.9981054067611694
+        },
+        {
+          "text": "это",
+          "start": 84.51,
+          "end": 85.13,
+          "score": 0.02937452495098114
+        },
+        {
+          "text": "ты",
+          "start": 85.13,
+          "end": 85.51,
+          "score": 0.8904286623001099
+        },
+        {
+          "text": "то",
+          "start": 85.51,
+          "end": 85.91,
+          "score": 0.2147638350725174
+        },
+        {
+          "text": "животное",
+          "start": 85.91,
+          "end": 86.95,
+          "score": 0.9581008851528168
+        }
+      ]
+    },
+    {
+      "phraseId": "v2-f",
+      "crop": [
+        86.7,
+        90.8
+      ],
+      "conditioningText": [
+        "Тёплое",
+        "мягкое",
+        "хочется",
+        "трогать"
+      ],
+      "model": "Whisper large-v3-turbo",
+      "words": [
+        {
+          "text": "Тёплое",
+          "start": 86.7,
+          "end": 87.98,
+          "score": 0.7096666365861892
+        },
+        {
+          "text": "мягкое",
+          "start": 87.98,
+          "end": 88.9,
+          "score": 0.6694512994339069
+        },
+        {
+          "text": "хочется",
+          "start": 88.9,
+          "end": 89.66,
+          "score": 0.6224932074546814
+        },
+        {
+          "text": "трогать",
+          "start": 89.66,
+          "end": 90.66,
+          "score": 0.9681134422620138
+        }
+      ]
+    },
+    {
+      "phraseId": "v2-g",
+      "crop": [
+        90.2,
+        94.7
+      ],
+      "conditioningText": [
+        "Хочется",
+        "чувствовать",
+        "что-то",
+        "особое"
+      ],
+      "model": "Whisper large-v3-turbo",
+      "words": [
+        {
+          "text": "Хочется",
+          "start": 90.2,
+          "end": 91.64,
+          "score": 0.979723850886027
+        },
+        {
+          "text": "чувствовать",
+          "start": 91.64,
+          "end": 92.74,
+          "score": 0.9948026537895203
+        },
+        {
+          "text": "что-то",
+          "start": 92.74,
+          "end": 93.4,
+          "score": 0.9726935029029846
+        },
+        {
+          "text": "особое",
+          "start": 93.4,
+          "end": 94.56,
+          "score": 0.9982658326625824
+        }
+      ]
+    },
+    {
+      "phraseId": "v2-h",
+      "crop": [
+        94.1,
+        98.1
+      ],
+      "conditioningText": [
+        "Что-то",
+        "красивее",
+        "хрипов",
+        "больного"
+      ],
+      "model": "Whisper large-v3-turbo",
+      "words": [
+        {
+          "text": "Что-то",
+          "start": 94.1,
+          "end": 95.14,
+          "score": 0.9111594359079996
+        },
+        {
+          "text": "красивее",
+          "start": 95.14,
+          "end": 96.36,
+          "score": 0.9982049763202667
+        },
+        {
+          "text": "хрипов",
+          "start": 96.36,
+          "end": 97.12,
+          "score": 0.5270276864369711
+        },
+        {
+          "text": "больного",
+          "start": 97.12,
+          "end": 97.88,
+          "score": 0.5026412818115205
+        }
+      ]
+    },
+    {
+      "phraseId": "repeat-1",
+      "crop": [
+        37.7,
+        52.7
+      ],
+      "conditioningText": [
+        "Больного",
+        "Больного",
+        "Больного",
+        "Больного",
+        "Больного"
+      ],
+      "model": "Whisper large-v3-turbo",
+      "words": [
+        {
+          "text": "Больного",
+          "start": 37.7,
+          "end": 38.62,
+          "score": 0.010114799564083418
+        },
+        {
+          "text": "Больного",
+          "start": 38.62,
+          "end": 39.72,
+          "score": 0.49760171041513485
+        },
+        {
+          "text": "Больного",
+          "start": 39.72,
+          "end": 40.02,
+          "score": 0.6440075834592184
+        },
+        {
+          "text": "Больного",
+          "start": 40.02,
+          "end": 41.52,
+          "score": 0.7643709381421407
+        },
+        {
+          "text": "Больного",
+          "start": 41.52,
+          "end": 52.68,
+          "score": 0.8257852991422018
+        }
+      ]
+    },
+    {
+      "phraseId": "repeat-2",
+      "crop": [
+        97.7,
+        125.4
+      ],
+      "conditioningText": [
+        "Больного",
+        "Больного",
+        "Больного",
+        "Больного",
+        "Больного",
+        "Больного",
+        "Больного",
+        "Больного",
+        "Больного",
+        "Больного"
+      ],
+      "model": "Whisper large-v3-turbo",
+      "words": [
+        {
+          "text": "Больного",
+          "start": 97.7,
+          "end": 98.64,
+          "score": 0.00711454008705914
+        },
+        {
+          "text": "Больного",
+          "start": 98.64,
+          "end": 107.4,
+          "score": 0.4924489626622138
+        },
+        {
+          "text": "Больного",
+          "start": 107.4,
+          "end": 107.62,
+          "score": 0.7675487001736959
+        },
+        {
+          "text": "Больного",
+          "start": 107.62,
+          "end": 112.42,
+          "score": 0.8408125241597494
+        },
+        {
+          "text": "Больного",
+          "start": 112.42,
+          "end": 116.42,
+          "score": 0.872626264890035
+        },
+        {
+          "text": "Больного",
+          "start": 116.42,
+          "end": 118.08,
+          "score": 0.8814824819564819
+        },
+        {
+          "text": "Больного",
+          "start": 118.08,
+          "end": 118.26,
+          "score": 0.885846217473348
+        },
+        {
+          "text": "Больного",
+          "start": 118.26,
+          "end": 119.24,
+          "score": 0.8902716437975565
+        },
+        {
+          "text": "Больного",
+          "start": 119.24,
+          "end": 120.46,
+          "score": 0.8990947206815084
+        },
+        {
+          "text": "Больного",
+          "start": 120.46,
+          "end": 123.64,
+          "score": 0.8985615173975626
+        }
+      ]
+    }
+  ],
+  "mms": [
+    {
+      "input": "original",
+      "model": "torchaudio.pipelines.MMS_FA with_star=False",
+      "torch": "2.8.0",
+      "torchaudio": "2.8.0",
+      "records": [
+        {
+          "phraseId": "v1-a",
+          "crop": [
+            7.2,
+            12.03
+          ],
+          "conditioningText": [
+            "Я",
+            "тебя",
+            "запомнила",
+            "ты",
+            "та",
+            "скотина"
+          ],
+          "words": [
+            {
+              "sourceIndex": 0,
+              "text": "Я",
+              "start": 8.49246875,
+              "end": 8.51246875,
+              "score": 0.018149674171581864
+            },
+            {
+              "sourceIndex": 1,
+              "text": "тебя",
+              "start": 8.69246875,
+              "end": 9.052468750000001,
+              "score": 0.380645652487874
+            },
+            {
+              "sourceIndex": 2,
+              "text": "запомнила",
+              "start": 9.17246875,
+              "end": 10.15246875,
+              "score": 0.541741689046224
+            },
+            {
+              "sourceIndex": 3,
+              "text": "ты",
+              "start": 10.33246875,
+              "end": 10.43246875,
+              "score": 0.566644474864006
+            },
+            {
+              "sourceIndex": 4,
+              "text": "та",
+              "start": 10.67246875,
+              "end": 10.77246875,
+              "score": 0.5651078671216965
+            },
+            {
+              "sourceIndex": 5,
+              "text": "скотина",
+              "start": 10.91246875,
+              "end": 11.67246875,
+              "score": 0.747714604650225
+            }
+          ],
+          "encoder": {
+            "strideSamples": 320,
+            "receptiveFieldSamples": 400,
+            "centerOffsetSamples": 199.5
+          },
+          "humanListening": false
+        },
+        {
+          "phraseId": "v1-b",
+          "crop": [
+            11.6,
+            15.8
+          ],
+          "conditioningText": [
+            "Что",
+            "поселилась",
+            "внутри",
+            "головы"
+          ],
+          "words": [
+            {
+              "sourceIndex": 0,
+              "text": "Что",
+              "start": 12.15246875,
+              "end": 12.29246875,
+              "score": 0.8971842378377914
+            },
+            {
+              "sourceIndex": 1,
+              "text": "поселилась",
+              "start": 12.572468749999999,
+              "end": 13.69246875,
+              "score": 0.6647714906268649
+            },
+            {
+              "sourceIndex": 2,
+              "text": "внутри",
+              "start": 13.79246875,
+              "end": 14.19246875,
+              "score": 0.28312184079550207
+            },
+            {
+              "sourceIndex": 3,
+              "text": "головы",
+              "start": 14.392468749999999,
+              "end": 15.11246875,
+              "score": 0.602756974597772
+            }
+          ],
+          "encoder": {
+            "strideSamples": 320,
+            "receptiveFieldSamples": 400,
+            "centerOffsetSamples": 199.5
+          },
+          "humanListening": false
+        },
+        {
+          "phraseId": "v1-c",
+          "crop": [
+            15.25,
+            19.6
+          ],
+          "conditioningText": [
+            "Будешь",
+            "теперь",
+            "мне",
+            "вместо",
+            "глицина"
+          ],
+          "words": [
+            {
+              "sourceIndex": 0,
+              "text": "Будешь",
+              "start": 15.92246875,
+              "end": 16.54246875,
+              "score": 0.5807895908753077
+            },
+            {
+              "sourceIndex": 1,
+              "text": "теперь",
+              "start": 16.62246875,
+              "end": 17.16246875,
+              "score": 0.5352819077670574
+            },
+            {
+              "sourceIndex": 2,
+              "text": "мне",
+              "start": 17.24246875,
+              "end": 17.50246875,
+              "score": 0.5877038190762202
+            },
+            {
+              "sourceIndex": 3,
+              "text": "вместо",
+              "start": 17.64246875,
+              "end": 18.28246875,
+              "score": 0.5449980814009905
+            },
+            {
+              "sourceIndex": 4,
+              "text": "глицина",
+              "start": 18.342468750000002,
+              "end": 19.20246875,
+              "score": 0.2935646795667708
+            }
+          ],
+          "encoder": {
+            "strideSamples": 320,
+            "receptiveFieldSamples": 400,
+            "centerOffsetSamples": 199.5
+          },
+          "humanListening": false
+        },
+        {
+          "phraseId": "v1-d",
+          "crop": [
+            19.1,
+            23.2
+          ],
+          "conditioningText": [
+            "Не",
+            "сопротивляйся",
+            "мы",
+            "будем",
+            "дружить"
+          ],
+          "words": [
+            {
+              "sourceIndex": 0,
+              "text": "Не",
+              "start": 19.732468750000002,
+              "end": 19.79246875,
+              "score": 0.15578198060393333
+            },
+            {
+              "sourceIndex": 1,
+              "text": "сопротивляйся",
+              "start": 19.912468750000002,
+              "end": 21.15246875,
+              "score": 0.7466992867489656
+            },
+            {
+              "sourceIndex": 2,
+              "text": "мы",
+              "start": 21.33246875,
+              "end": 21.412468750000002,
+              "score": 0.1989990845322609
+            },
+            {
+              "sourceIndex": 3,
+              "text": "будем",
+              "start": 21.51246875,
+              "end": 22.11246875,
+              "score": 0.4611925080418587
+            },
+            {
+              "sourceIndex": 4,
+              "text": "дружить",
+              "start": 22.252468750000002,
+              "end": 22.85246875,
+              "score": 0.639490510736193
+            }
+          ],
+          "encoder": {
+            "strideSamples": 320,
+            "receptiveFieldSamples": 400,
+            "centerOffsetSamples": 199.5
+          },
+          "humanListening": false
+        },
+        {
+          "phraseId": "v1-e",
+          "crop": [
+            22.65,
+            27.2
+          ],
+          "conditioningText": [
+            "Я",
+            "тебя",
+            "люблю",
+            "это",
+            "ты",
+            "то",
+            "животное"
+          ],
+          "words": [
+            {
+              "sourceIndex": 0,
+              "text": "Я",
+              "start": 23.42246875,
+              "end": 23.50246875,
+              "score": 0.29219839721918106
+            },
+            {
+              "sourceIndex": 1,
+              "text": "тебя",
+              "start": 23.66246875,
+              "end": 23.98246875,
+              "score": 0.2270781397819519
+            },
+            {
+              "sourceIndex": 2,
+              "text": "люблю",
+              "start": 24.14246875,
+              "end": 24.50246875,
+              "score": 0.09219074462141309
+            },
+            {
+              "sourceIndex": 3,
+              "text": "это",
+              "start": 24.84246875,
+              "end": 25.16246875,
+              "score": 0.30337705214818317
+            },
+            {
+              "sourceIndex": 4,
+              "text": "ты",
+              "start": 25.32246875,
+              "end": 25.402468749999997,
+              "score": 0.16204482596367598
+            },
+            {
+              "sourceIndex": 5,
+              "text": "то",
+              "start": 25.702468749999998,
+              "end": 25.80246875,
+              "score": 0.3747148662805557
+            },
+            {
+              "sourceIndex": 6,
+              "text": "животное",
+              "start": 26.022468749999998,
+              "end": 27.022468749999998,
+              "score": 0.15389722834030786
+            }
+          ],
+          "encoder": {
+            "strideSamples": 320,
+            "receptiveFieldSamples": 400,
+            "centerOffsetSamples": 199.5
+          },
+          "humanListening": false
+        },
+        {
+          "phraseId": "v1-f",
+          "crop": [
+            26.7,
+            30.8
+          ],
+          "conditioningText": [
+            "Тёплое",
+            "мягкое",
+            "хочется",
+            "трогать"
+          ],
+          "words": [
+            {
+              "sourceIndex": 0,
+              "text": "Тёплое",
+              "start": 27.19246875,
+              "end": 27.97246875,
+              "score": 0.179658145022889
+            },
+            {
+              "sourceIndex": 1,
+              "text": "мягкое",
+              "start": 28.13246875,
+              "end": 28.91246875,
+              "score": 0.13771119926656997
+            },
+            {
+              "sourceIndex": 2,
+              "text": "хочется",
+              "start": 29.03246875,
+              "end": 29.83246875,
+              "score": 0.3387731075286865
+            },
+            {
+              "sourceIndex": 3,
+              "text": "трогать",
+              "start": 29.99246875,
+              "end": 30.612468749999998,
+              "score": 0.5471241424481074
+            }
+          ],
+          "encoder": {
+            "strideSamples": 320,
+            "receptiveFieldSamples": 400,
+            "centerOffsetSamples": 199.5
+          },
+          "humanListening": false
+        },
+        {
+          "phraseId": "v1-g",
+          "crop": [
+            30.2,
+            34.7
+          ],
+          "conditioningText": [
+            "Хочется",
+            "чувствовать",
+            "что-то",
+            "особое"
+          ],
+          "words": [
+            {
+              "sourceIndex": 0,
+              "text": "Хочется",
+              "start": 30.91246875,
+              "end": 31.69246875,
+              "score": 0.17654796177521348
+            },
+            {
+              "sourceIndex": 1,
+              "text": "чувствовать",
+              "start": 31.83246875,
+              "end": 32.73246875,
+              "score": 0.13626959663815796
+            },
+            {
+              "sourceIndex": 2,
+              "text": "что-то",
+              "start": 32.75246875,
+              "end": 33.29246875,
+              "score": 0.09237396903336048
+            },
+            {
+              "sourceIndex": 3,
+              "text": "особое",
+              "start": 33.59246875,
+              "end": 34.53246875,
+              "score": 0.17880191653966904
+            }
+          ],
+          "encoder": {
+            "strideSamples": 320,
+            "receptiveFieldSamples": 400,
+            "centerOffsetSamples": 199.5
+          },
+          "humanListening": false
+        },
+        {
+          "phraseId": "v1-h",
+          "crop": [
+            34.1,
+            38.1
+          ],
+          "conditioningText": [
+            "Что-то",
+            "красивее",
+            "хрипов",
+            "больного"
+          ],
+          "words": [
+            {
+              "sourceIndex": 0,
+              "text": "Что-то",
+              "start": 34.65246875,
+              "end": 35.17246875,
+              "score": 0.09529250798126061
+            },
+            {
+              "sourceIndex": 1,
+              "text": "красивее",
+              "start": 35.372468749999996,
+              "end": 36.192468749999996,
+              "score": 0.2115206029266119
+            },
+            {
+              "sourceIndex": 2,
+              "text": "хрипов",
+              "start": 36.53246875,
+              "end": 37.07246875,
+              "score": 0.08524828031659126
+            },
+            {
+              "sourceIndex": 3,
+              "text": "больного",
+              "start": 37.25246875,
+              "end": 37.67246875,
+              "score": 0.06495131685265473
+            }
+          ],
+          "encoder": {
+            "strideSamples": 320,
+            "receptiveFieldSamples": 400,
+            "centerOffsetSamples": 199.5
+          },
+          "humanListening": false
+        },
+        {
+          "phraseId": "v2-a",
+          "crop": [
+            67.2,
+            72.03
+          ],
+          "conditioningText": [
+            "Я",
+            "тебя",
+            "запомнила",
+            "ты",
+            "та",
+            "скотина"
+          ],
+          "words": [
+            {
+              "sourceIndex": 0,
+              "text": "Я",
+              "start": 67.97246875,
+              "end": 68.15246875,
+              "score": 0.13770053163170815
+            },
+            {
+              "sourceIndex": 1,
+              "text": "тебя",
+              "start": 68.45246875,
+              "end": 68.77246875,
+              "score": 0.2359004258643836
+            },
+            {
+              "sourceIndex": 2,
+              "text": "запомнила",
+              "start": 69.15246875,
+              "end": 70.17246875,
+              "score": 0.26104155286318725
+            },
+            {
+              "sourceIndex": 3,
+              "text": "ты",
+              "start": 70.31246875,
+              "end": 70.47246875,
+              "score": 0.19946088641881943
+            },
+            {
+              "sourceIndex": 4,
+              "text": "та",
+              "start": 70.67246875,
+              "end": 70.77246875,
+              "score": 0.26874181255698204
+            },
+            {
+              "sourceIndex": 5,
+              "text": "скотина",
+              "start": 70.89246875,
+              "end": 71.67246875,
+              "score": 0.4294489449156182
+            }
+          ],
+          "encoder": {
+            "strideSamples": 320,
+            "receptiveFieldSamples": 400,
+            "centerOffsetSamples": 199.5
+          },
+          "humanListening": false
+        },
+        {
+          "phraseId": "v2-b",
+          "crop": [
+            71.6,
+            75.8
+          ],
+          "conditioningText": [
+            "Что",
+            "поселилась",
+            "внутри",
+            "головы"
+          ],
+          "words": [
+            {
+              "sourceIndex": 0,
+              "text": "Что",
+              "start": 72.15246875,
+              "end": 72.27246874999999,
+              "score": 0.02076346823014319
+            },
+            {
+              "sourceIndex": 1,
+              "text": "поселилась",
+              "start": 72.55246874999999,
+              "end": 73.69246874999999,
+              "score": 0.12384937822611795
+            },
+            {
+              "sourceIndex": 2,
+              "text": "внутри",
+              "start": 73.73246875,
+              "end": 74.17246875,
+              "score": 0.10781387631626178
+            },
+            {
+              "sourceIndex": 3,
+              "text": "головы",
+              "start": 74.41246874999999,
+              "end": 75.15246875,
+              "score": 0.04354007844813168
+            }
+          ],
+          "encoder": {
+            "strideSamples": 320,
+            "receptiveFieldSamples": 400,
+            "centerOffsetSamples": 199.5
+          },
+          "humanListening": false
+        },
+        {
+          "phraseId": "v2-c",
+          "crop": [
+            75.25,
+            79.6
+          ],
+          "conditioningText": [
+            "Будешь",
+            "теперь",
+            "мне",
+            "вместо",
+            "глицина"
+          ],
+          "words": [
+            {
+              "sourceIndex": 0,
+              "text": "Будешь",
+              "start": 75.94246875,
+              "end": 76.54246875,
+              "score": 0.2684096470475197
+            },
+            {
+              "sourceIndex": 1,
+              "text": "теперь",
+              "start": 76.62246875,
+              "end": 77.16246875,
+              "score": 0.19626402989961206
+            },
+            {
+              "sourceIndex": 2,
+              "text": "мне",
+              "start": 77.24246875,
+              "end": 77.50246874999999,
+              "score": 0.26713463850319386
+            },
+            {
+              "sourceIndex": 3,
+              "text": "вместо",
+              "start": 77.66246875,
+              "end": 78.26246875,
+              "score": 0.3057175677580138
+            },
+            {
+              "sourceIndex": 4,
+              "text": "глицина",
+              "start": 78.48246875,
+              "end": 79.20246875,
+              "score": 0.1848957244073972
+            }
+          ],
+          "encoder": {
+            "strideSamples": 320,
+            "receptiveFieldSamples": 400,
+            "centerOffsetSamples": 199.5
+          },
+          "humanListening": false
+        },
+        {
+          "phraseId": "v2-d",
+          "crop": [
+            79.1,
+            83.2
+          ],
+          "conditioningText": [
+            "Не",
+            "сопротивляйся",
+            "мы",
+            "будем",
+            "дружить"
+          ],
+          "words": [
+            {
+              "sourceIndex": 0,
+              "text": "Не",
+              "start": 79.71246874999999,
+              "end": 79.77246874999999,
+              "score": 0.44841404259204865
+            },
+            {
+              "sourceIndex": 1,
+              "text": "сопротивляйся",
+              "start": 79.89246874999999,
+              "end": 81.13246874999999,
+              "score": 0.6864113508490846
+            },
+            {
+              "sourceIndex": 2,
+              "text": "мы",
+              "start": 81.31246875,
+              "end": 81.41246874999999,
+              "score": 0.8873043060302734
+            },
+            {
+              "sourceIndex": 3,
+              "text": "будем",
+              "start": 81.57246874999998,
+              "end": 82.13246874999999,
+              "score": 0.7384573757648468
+            },
+            {
+              "sourceIndex": 4,
+              "text": "дружить",
+              "start": 82.27246874999999,
+              "end": 82.85246874999999,
+              "score": 0.7046978622674942
+            }
+          ],
+          "encoder": {
+            "strideSamples": 320,
+            "receptiveFieldSamples": 400,
+            "centerOffsetSamples": 199.5
+          },
+          "humanListening": false
+        },
+        {
+          "phraseId": "v2-e",
+          "crop": [
+            82.65,
+            87.2
+          ],
+          "conditioningText": [
+            "Я",
+            "тебя",
+            "люблю",
+            "это",
+            "ты",
+            "то",
+            "животное"
+          ],
+          "words": [
+            {
+              "sourceIndex": 0,
+              "text": "Я",
+              "start": 83.38246875,
+              "end": 83.48246875,
+              "score": 0.08111937344074249
+            },
+            {
+              "sourceIndex": 1,
+              "text": "тебя",
+              "start": 83.66246875,
+              "end": 83.96246875,
+              "score": 0.13486246019601822
+            },
+            {
+              "sourceIndex": 2,
+              "text": "люблю",
+              "start": 84.14246875,
+              "end": 84.70246875000001,
+              "score": 0.12803224474191666
+            },
+            {
+              "sourceIndex": 3,
+              "text": "это",
+              "start": 84.90246875,
+              "end": 85.14246875,
+              "score": 0.3190059115489324
+            },
+            {
+              "sourceIndex": 4,
+              "text": "ты",
+              "start": 85.32246875,
+              "end": 85.46246875,
+              "score": 0.07988828234374523
+            },
+            {
+              "sourceIndex": 5,
+              "text": "то",
+              "start": 85.68246875,
+              "end": 85.86246875,
+              "score": 0.3266584500670433
+            },
+            {
+              "sourceIndex": 6,
+              "text": "животное",
+              "start": 86.02246875,
+              "end": 86.88246875,
+              "score": 0.17072739472819698
+            }
+          ],
+          "encoder": {
+            "strideSamples": 320,
+            "receptiveFieldSamples": 400,
+            "centerOffsetSamples": 199.5
+          },
+          "humanListening": false
+        },
+        {
+          "phraseId": "v2-f",
+          "crop": [
+            86.7,
+            90.8
+          ],
+          "conditioningText": [
+            "Тёплое",
+            "мягкое",
+            "хочется",
+            "трогать"
+          ],
+          "words": [
+            {
+              "sourceIndex": 0,
+              "text": "Тёплое",
+              "start": 87.19246875,
+              "end": 87.97246875,
+              "score": 0.09605671791359782
+            },
+            {
+              "sourceIndex": 1,
+              "text": "мягкое",
+              "start": 88.11246875,
+              "end": 88.95246875,
+              "score": 0.23432494220989092
+            },
+            {
+              "sourceIndex": 2,
+              "text": "хочется",
+              "start": 89.05246875,
+              "end": 89.81246875,
+              "score": 0.21806587222963572
+            },
+            {
+              "sourceIndex": 3,
+              "text": "трогать",
+              "start": 89.99246875,
+              "end": 90.61246875,
+              "score": 0.20214686542749405
+            }
+          ],
+          "encoder": {
+            "strideSamples": 320,
+            "receptiveFieldSamples": 400,
+            "centerOffsetSamples": 199.5
+          },
+          "humanListening": false
+        },
+        {
+          "phraseId": "v2-g",
+          "crop": [
+            90.2,
+            94.7
+          ],
+          "conditioningText": [
+            "Хочется",
+            "чувствовать",
+            "что-то",
+            "особое"
+          ],
+          "words": [
+            {
+              "sourceIndex": 0,
+              "text": "Хочется",
+              "start": 90.91246875,
+              "end": 91.69246875,
+              "score": 0.41520144883543253
+            },
+            {
+              "sourceIndex": 1,
+              "text": "чувствовать",
+              "start": 91.83246875,
+              "end": 92.73246875,
+              "score": 0.2841545773500746
+            },
+            {
+              "sourceIndex": 2,
+              "text": "что-то",
+              "start": 92.75246875,
+              "end": 93.29246875,
+              "score": 0.2874062980214755
+            },
+            {
+              "sourceIndex": 3,
+              "text": "особое",
+              "start": 93.59246875,
+              "end": 94.53246874999999,
+              "score": 0.38738352805376053
+            }
+          ],
+          "encoder": {
+            "strideSamples": 320,
+            "receptiveFieldSamples": 400,
+            "centerOffsetSamples": 199.5
+          },
+          "humanListening": false
+        },
+        {
+          "phraseId": "v2-h",
+          "crop": [
+            94.1,
+            98.1
+          ],
+          "conditioningText": [
+            "Что-то",
+            "красивее",
+            "хрипов",
+            "больного"
+          ],
+          "words": [
+            {
+              "sourceIndex": 0,
+              "text": "Что-то",
+              "start": 94.65246875,
+              "end": 95.21246874999999,
+              "score": 0.29449742163221043
+            },
+            {
+              "sourceIndex": 1,
+              "text": "красивее",
+              "start": 95.35246874999999,
+              "end": 96.41246874999999,
+              "score": 0.3800723133608699
+            },
+            {
+              "sourceIndex": 2,
+              "text": "хрипов",
+              "start": 96.51246875,
+              "end": 97.07246874999998,
+              "score": 0.36468395058597836
+            },
+            {
+              "sourceIndex": 3,
+              "text": "больного",
+              "start": 97.25246874999999,
+              "end": 97.69246874999999,
+              "score": 0.01781651457505567
+            }
+          ],
+          "encoder": {
+            "strideSamples": 320,
+            "receptiveFieldSamples": 400,
+            "centerOffsetSamples": 199.5
+          },
+          "humanListening": false
+        },
+        {
+          "phraseId": "repeat-1",
+          "crop": [
+            37.7,
+            52.7
+          ],
+          "conditioningText": [
+            "Больного",
+            "Больного",
+            "Больного",
+            "Больного",
+            "Больного"
+          ],
+          "words": [
+            {
+              "sourceIndex": 0,
+              "text": "Больного",
+              "start": 38.57246875,
+              "end": 39.57246875,
+              "score": 0.13246538170746394
+            },
+            {
+              "sourceIndex": 1,
+              "text": "Больного",
+              "start": 39.83246875,
+              "end": 41.21246875,
+              "score": 0.07870387179510933
+            },
+            {
+              "sourceIndex": 2,
+              "text": "Больного",
+              "start": 41.35246875,
+              "end": 46.61246875,
+              "score": 0.09047547874173947
+            },
+            {
+              "sourceIndex": 3,
+              "text": "Больного",
+              "start": 46.75246875,
+              "end": 49.63246875,
+              "score": 0.1251613274216652
+            },
+            {
+              "sourceIndex": 4,
+              "text": "Больного",
+              "start": 49.79246875,
+              "end": 51.17246875,
+              "score": 0.08376254753342696
+            }
+          ],
+          "encoder": {
+            "strideSamples": 320,
+            "receptiveFieldSamples": 400,
+            "centerOffsetSamples": 199.5
+          },
+          "humanListening": false
+        },
+        {
+          "phraseId": "repeat-2",
+          "crop": [
+            97.7,
+            125.4
+          ],
+          "conditioningText": [
+            "Больного",
+            "Больного",
+            "Больного",
+            "Больного",
+            "Больного",
+            "Больного",
+            "Больного",
+            "Больного",
+            "Больного",
+            "Больного"
+          ],
+          "words": [
+            {
+              "sourceIndex": 0,
+              "text": "Больного",
+              "start": 98.59246875,
+              "end": 100.27246875,
+              "score": 0.1800565194072468
+            },
+            {
+              "sourceIndex": 1,
+              "text": "Больного",
+              "start": 103.25246875,
+              "end": 104.25246875,
+              "score": 0.2530567421843963
+            },
+            {
+              "sourceIndex": 2,
+              "text": "Больного",
+              "start": 104.55246875,
+              "end": 106.33246875,
+              "score": 0.10751403974635261
+            },
+            {
+              "sourceIndex": 3,
+              "text": "Больного",
+              "start": 106.99246875,
+              "end": 111.19246875,
+              "score": 0.20322104267376875
+            },
+            {
+              "sourceIndex": 4,
+              "text": "Больного",
+              "start": 111.69246875,
+              "end": 113.03246874999999,
+              "score": 0.034801081022513766
+            },
+            {
+              "sourceIndex": 5,
+              "text": "Больного",
+              "start": 114.49246875,
+              "end": 116.79246875,
+              "score": 0.07807406237615007
+            },
+            {
+              "sourceIndex": 6,
+              "text": "Больного",
+              "start": 117.07246875,
+              "end": 118.09246875,
+              "score": 0.07367826146738869
+            },
+            {
+              "sourceIndex": 7,
+              "text": "Больного",
+              "start": 118.23246875,
+              "end": 119.95246875000001,
+              "score": 0.045036105306020806
+            },
+            {
+              "sourceIndex": 8,
+              "text": "Больного",
+              "start": 120.11246875,
+              "end": 122.21246875,
+              "score": 0.10811284663421768
+            },
+            {
+              "sourceIndex": 9,
+              "text": "Больного",
+              "start": 122.35246875,
+              "end": 124.65246875,
+              "score": 0.05224651637087975
+            }
+          ],
+          "encoder": {
+            "strideSamples": 320,
+            "receptiveFieldSamples": 400,
+            "centerOffsetSamples": 199.5
+          },
+          "humanListening": false
+        }
+      ]
+    },
+    {
+      "input": "vocals",
+      "model": "torchaudio.pipelines.MMS_FA with_star=False",
+      "torch": "2.8.0",
+      "torchaudio": "2.8.0",
+      "records": [
+        {
+          "phraseId": "v1-a",
+          "crop": [
+            7.2,
+            12.03
+          ],
+          "conditioningText": [
+            "Я",
+            "тебя",
+            "запомнила",
+            "ты",
+            "та",
+            "скотина"
+          ],
+          "words": [
+            {
+              "sourceIndex": 0,
+              "text": "Я",
+              "start": 8.47246875,
+              "end": 8.57246875,
+              "score": 0.2161461627110839
+            },
+            {
+              "sourceIndex": 1,
+              "text": "тебя",
+              "start": 8.69246875,
+              "end": 9.052468750000001,
+              "score": 0.4999492108821869
+            },
+            {
+              "sourceIndex": 2,
+              "text": "запомнила",
+              "start": 9.17246875,
+              "end": 10.17246875,
+              "score": 0.773363932967186
+            },
+            {
+              "sourceIndex": 3,
+              "text": "ты",
+              "start": 10.33246875,
+              "end": 10.43246875,
+              "score": 0.20153743121773005
+            },
+            {
+              "sourceIndex": 4,
+              "text": "та",
+              "start": 10.69246875,
+              "end": 10.77246875,
+              "score": 0.17381568253040314
+            },
+            {
+              "sourceIndex": 5,
+              "text": "скотина",
+              "start": 10.91246875,
+              "end": 11.69246875,
+              "score": 0.6852191707917622
+            }
+          ],
+          "encoder": {
+            "strideSamples": 320,
+            "receptiveFieldSamples": 400,
+            "centerOffsetSamples": 199.5
+          },
+          "humanListening": false
+        },
+        {
+          "phraseId": "v1-b",
+          "crop": [
+            11.6,
+            15.8
+          ],
+          "conditioningText": [
+            "Что",
+            "поселилась",
+            "внутри",
+            "головы"
+          ],
+          "words": [
+            {
+              "sourceIndex": 0,
+              "text": "Что",
+              "start": 12.15246875,
+              "end": 12.312468749999999,
+              "score": 0.8388264775276184
+            },
+            {
+              "sourceIndex": 1,
+              "text": "поселилась",
+              "start": 12.572468749999999,
+              "end": 13.69246875,
+              "score": 0.8092856274710761
+            },
+            {
+              "sourceIndex": 2,
+              "text": "внутри",
+              "start": 13.79246875,
+              "end": 14.19246875,
+              "score": 0.4017361521255225
+            },
+            {
+              "sourceIndex": 3,
+              "text": "головы",
+              "start": 14.41246875,
+              "end": 15.13246875,
+              "score": 0.6291406837602457
+            }
+          ],
+          "encoder": {
+            "strideSamples": 320,
+            "receptiveFieldSamples": 400,
+            "centerOffsetSamples": 199.5
+          },
+          "humanListening": false
+        },
+        {
+          "phraseId": "v1-c",
+          "crop": [
+            15.25,
+            19.6
+          ],
+          "conditioningText": [
+            "Будешь",
+            "теперь",
+            "мне",
+            "вместо",
+            "глицина"
+          ],
+          "words": [
+            {
+              "sourceIndex": 0,
+              "text": "Будешь",
+              "start": 15.92246875,
+              "end": 16.54246875,
+              "score": 0.9037796954313914
+            },
+            {
+              "sourceIndex": 1,
+              "text": "теперь",
+              "start": 16.62246875,
+              "end": 17.14246875,
+              "score": 0.7678427219390869
+            },
+            {
+              "sourceIndex": 2,
+              "text": "мне",
+              "start": 17.26246875,
+              "end": 17.50246875,
+              "score": 0.8179104725519816
+            },
+            {
+              "sourceIndex": 3,
+              "text": "вместо",
+              "start": 17.64246875,
+              "end": 18.30246875,
+              "score": 0.6746868789196014
+            },
+            {
+              "sourceIndex": 4,
+              "text": "глицина",
+              "start": 18.46246875,
+              "end": 19.24246875,
+              "score": 0.43414265082942116
+            }
+          ],
+          "encoder": {
+            "strideSamples": 320,
+            "receptiveFieldSamples": 400,
+            "centerOffsetSamples": 199.5
+          },
+          "humanListening": false
+        },
+        {
+          "phraseId": "v1-d",
+          "crop": [
+            19.1,
+            23.2
+          ],
+          "conditioningText": [
+            "Не",
+            "сопротивляйся",
+            "мы",
+            "будем",
+            "дружить"
+          ],
+          "words": [
+            {
+              "sourceIndex": 0,
+              "text": "Не",
+              "start": 19.712468750000003,
+              "end": 19.77246875,
+              "score": 0.050093311816453934
+            },
+            {
+              "sourceIndex": 1,
+              "text": "сопротивляйся",
+              "start": 19.912468750000002,
+              "end": 21.13246875,
+              "score": 0.7721065347466398
+            },
+            {
+              "sourceIndex": 2,
+              "text": "мы",
+              "start": 21.29246875,
+              "end": 21.412468750000002,
+              "score": 0.13431463402230293
+            },
+            {
+              "sourceIndex": 3,
+              "text": "будем",
+              "start": 21.51246875,
+              "end": 22.15246875,
+              "score": 0.46554791182279587
+            },
+            {
+              "sourceIndex": 4,
+              "text": "дружить",
+              "start": 22.252468750000002,
+              "end": 22.85246875,
+              "score": 0.5050608590245247
+            }
+          ],
+          "encoder": {
+            "strideSamples": 320,
+            "receptiveFieldSamples": 400,
+            "centerOffsetSamples": 199.5
+          },
+          "humanListening": false
+        },
+        {
+          "phraseId": "v1-e",
+          "crop": [
+            22.65,
+            27.2
+          ],
+          "conditioningText": [
+            "Я",
+            "тебя",
+            "люблю",
+            "это",
+            "ты",
+            "то",
+            "животное"
+          ],
+          "words": [
+            {
+              "sourceIndex": 0,
+              "text": "Я",
+              "start": 23.382468749999997,
+              "end": 23.522468749999998,
+              "score": 0.2438897853717208
+            },
+            {
+              "sourceIndex": 1,
+              "text": "тебя",
+              "start": 23.66246875,
+              "end": 24.00246875,
+              "score": 0.6615801174193621
+            },
+            {
+              "sourceIndex": 2,
+              "text": "люблю",
+              "start": 24.12246875,
+              "end": 24.522468749999998,
+              "score": 0.7227827310562134
+            },
+            {
+              "sourceIndex": 3,
+              "text": "это",
+              "start": 24.882468749999997,
+              "end": 25.16246875,
+              "score": 0.7978870073954264
+            },
+            {
+              "sourceIndex": 4,
+              "text": "ты",
+              "start": 25.30246875,
+              "end": 25.42246875,
+              "score": 0.8421117961406708
+            },
+            {
+              "sourceIndex": 5,
+              "text": "то",
+              "start": 25.702468749999998,
+              "end": 25.82246875,
+              "score": 0.9641149640083313
+            },
+            {
+              "sourceIndex": 6,
+              "text": "животное",
+              "start": 26.022468749999998,
+              "end": 27.00246875,
+              "score": 0.5832039243599866
+            }
+          ],
+          "encoder": {
+            "strideSamples": 320,
+            "receptiveFieldSamples": 400,
+            "centerOffsetSamples": 199.5
+          },
+          "humanListening": false
+        },
+        {
+          "phraseId": "v1-f",
+          "crop": [
+            26.7,
+            30.8
+          ],
+          "conditioningText": [
+            "Тёплое",
+            "мягкое",
+            "хочется",
+            "трогать"
+          ],
+          "words": [
+            {
+              "sourceIndex": 0,
+              "text": "Тёплое",
+              "start": 27.17246875,
+              "end": 27.97246875,
+              "score": 0.5859530903398991
+            },
+            {
+              "sourceIndex": 1,
+              "text": "мягкое",
+              "start": 28.13246875,
+              "end": 28.932468749999998,
+              "score": 0.6657679445213742
+            },
+            {
+              "sourceIndex": 2,
+              "text": "хочется",
+              "start": 29.05246875,
+              "end": 29.85246875,
+              "score": 0.6884450434396664
+            },
+            {
+              "sourceIndex": 3,
+              "text": "трогать",
+              "start": 29.97246875,
+              "end": 30.612468749999998,
+              "score": 0.7412635752310356
+            }
+          ],
+          "encoder": {
+            "strideSamples": 320,
+            "receptiveFieldSamples": 400,
+            "centerOffsetSamples": 199.5
+          },
+          "humanListening": false
+        },
+        {
+          "phraseId": "v1-g",
+          "crop": [
+            30.2,
+            34.7
+          ],
+          "conditioningText": [
+            "Хочется",
+            "чувствовать",
+            "что-то",
+            "особое"
+          ],
+          "words": [
+            {
+              "sourceIndex": 0,
+              "text": "Хочется",
+              "start": 30.91246875,
+              "end": 31.71246875,
+              "score": 0.7828066498041153
+            },
+            {
+              "sourceIndex": 1,
+              "text": "чувствовать",
+              "start": 31.83246875,
+              "end": 32.71246875,
+              "score": 0.7289609548946222
+            },
+            {
+              "sourceIndex": 2,
+              "text": "что-то",
+              "start": 32.77246875,
+              "end": 33.31246875,
+              "score": 0.4623402673751116
+            },
+            {
+              "sourceIndex": 3,
+              "text": "особое",
+              "start": 33.59246875,
+              "end": 34.53246875,
+              "score": 0.5317431949079037
+            }
+          ],
+          "encoder": {
+            "strideSamples": 320,
+            "receptiveFieldSamples": 400,
+            "centerOffsetSamples": 199.5
+          },
+          "humanListening": false
+        },
+        {
+          "phraseId": "v1-h",
+          "crop": [
+            34.1,
+            38.1
+          ],
+          "conditioningText": [
+            "Что-то",
+            "красивее",
+            "хрипов",
+            "больного"
+          ],
+          "words": [
+            {
+              "sourceIndex": 0,
+              "text": "Что-то",
+              "start": 34.65246875,
+              "end": 35.17246875,
+              "score": 0.42028830107301474
+            },
+            {
+              "sourceIndex": 1,
+              "text": "красивее",
+              "start": 35.35246875,
+              "end": 36.412468749999995,
+              "score": 0.4749266770668328
+            },
+            {
+              "sourceIndex": 2,
+              "text": "хрипов",
+              "start": 36.49246875,
+              "end": 37.092468749999995,
+              "score": 0.3039206684167896
+            },
+            {
+              "sourceIndex": 3,
+              "text": "больного",
+              "start": 37.25246875,
+              "end": 37.63246875,
+              "score": 0.07468233540255044
+            }
+          ],
+          "encoder": {
+            "strideSamples": 320,
+            "receptiveFieldSamples": 400,
+            "centerOffsetSamples": 199.5
+          },
+          "humanListening": false
+        },
+        {
+          "phraseId": "v2-a",
+          "crop": [
+            67.2,
+            72.03
+          ],
+          "conditioningText": [
+            "Я",
+            "тебя",
+            "запомнила",
+            "ты",
+            "та",
+            "скотина"
+          ],
+          "words": [
+            {
+              "sourceIndex": 0,
+              "text": "Я",
+              "start": 68.49246875,
+              "end": 68.51246875,
+              "score": 0.00955798989161849
+            },
+            {
+              "sourceIndex": 1,
+              "text": "тебя",
+              "start": 68.67246875,
+              "end": 69.03246874999999,
+              "score": 0.31030405405908823
+            },
+            {
+              "sourceIndex": 2,
+              "text": "запомнила",
+              "start": 69.17246875,
+              "end": 70.19246875,
+              "score": 0.5335644315928221
+            },
+            {
+              "sourceIndex": 3,
+              "text": "ты",
+              "start": 70.33246875,
+              "end": 70.47246875,
+              "score": 0.46659544110298157
+            },
+            {
+              "sourceIndex": 4,
+              "text": "та",
+              "start": 70.67246875,
+              "end": 70.77246875,
+              "score": 0.5324567258358002
+            },
+            {
+              "sourceIndex": 5,
+              "text": "скотина",
+              "start": 70.91246875,
+              "end": 71.69246875,
+              "score": 0.6564432041985648
+            }
+          ],
+          "encoder": {
+            "strideSamples": 320,
+            "receptiveFieldSamples": 400,
+            "centerOffsetSamples": 199.5
+          },
+          "humanListening": false
+        },
+        {
+          "phraseId": "v2-b",
+          "crop": [
+            71.6,
+            75.8
+          ],
+          "conditioningText": [
+            "Что",
+            "поселилась",
+            "внутри",
+            "головы"
+          ],
+          "words": [
+            {
+              "sourceIndex": 0,
+              "text": "Что",
+              "start": 72.15246875,
+              "end": 72.33246874999999,
+              "score": 0.8976124882698059
+            },
+            {
+              "sourceIndex": 1,
+              "text": "поселилась",
+              "start": 72.55246874999999,
+              "end": 73.69246874999999,
+              "score": 0.8447893460591634
+            },
+            {
+              "sourceIndex": 2,
+              "text": "внутри",
+              "start": 73.85246874999999,
+              "end": 74.19246874999999,
+              "score": 0.2781748487614095
+            },
+            {
+              "sourceIndex": 3,
+              "text": "головы",
+              "start": 74.41246874999999,
+              "end": 75.13246874999999,
+              "score": 0.4084612602988879
+            }
+          ],
+          "encoder": {
+            "strideSamples": 320,
+            "receptiveFieldSamples": 400,
+            "centerOffsetSamples": 199.5
+          },
+          "humanListening": false
+        },
+        {
+          "phraseId": "v2-c",
+          "crop": [
+            75.25,
+            79.6
+          ],
+          "conditioningText": [
+            "Будешь",
+            "теперь",
+            "мне",
+            "вместо",
+            "глицина"
+          ],
+          "words": [
+            {
+              "sourceIndex": 0,
+              "text": "Будешь",
+              "start": 75.94246875,
+              "end": 76.54246875,
+              "score": 0.8146134316921234
+            },
+            {
+              "sourceIndex": 1,
+              "text": "теперь",
+              "start": 76.62246875,
+              "end": 77.16246875,
+              "score": 0.4175920301117003
+            },
+            {
+              "sourceIndex": 2,
+              "text": "мне",
+              "start": 77.26246875,
+              "end": 77.50246874999999,
+              "score": 0.9280519684155782
+            },
+            {
+              "sourceIndex": 3,
+              "text": "вместо",
+              "start": 77.62246875,
+              "end": 78.28246874999999,
+              "score": 0.6945836587498585
+            },
+            {
+              "sourceIndex": 4,
+              "text": "глицина",
+              "start": 78.46246875,
+              "end": 79.22246874999999,
+              "score": 0.5069406242109835
+            }
+          ],
+          "encoder": {
+            "strideSamples": 320,
+            "receptiveFieldSamples": 400,
+            "centerOffsetSamples": 199.5
+          },
+          "humanListening": false
+        },
+        {
+          "phraseId": "v2-d",
+          "crop": [
+            79.1,
+            83.2
+          ],
+          "conditioningText": [
+            "Не",
+            "сопротивляйся",
+            "мы",
+            "будем",
+            "дружить"
+          ],
+          "words": [
+            {
+              "sourceIndex": 0,
+              "text": "Не",
+              "start": 79.15246875,
+              "end": 79.79246875,
+              "score": 0.024492631666362286
+            },
+            {
+              "sourceIndex": 1,
+              "text": "сопротивляйся",
+              "start": 79.91246874999999,
+              "end": 81.13246874999999,
+              "score": 0.7854294357821345
+            },
+            {
+              "sourceIndex": 2,
+              "text": "мы",
+              "start": 81.33246874999999,
+              "end": 81.41246874999999,
+              "score": 0.7816715836524963
+            },
+            {
+              "sourceIndex": 3,
+              "text": "будем",
+              "start": 81.57246874999998,
+              "end": 82.15246875,
+              "score": 0.7134358763694764
+            },
+            {
+              "sourceIndex": 4,
+              "text": "дружить",
+              "start": 82.25246874999999,
+              "end": 82.85246874999999,
+              "score": 0.7435232223942876
+            }
+          ],
+          "encoder": {
+            "strideSamples": 320,
+            "receptiveFieldSamples": 400,
+            "centerOffsetSamples": 199.5
+          },
+          "humanListening": false
+        },
+        {
+          "phraseId": "v2-e",
+          "crop": [
+            82.65,
+            87.2
+          ],
+          "conditioningText": [
+            "Я",
+            "тебя",
+            "люблю",
+            "это",
+            "ты",
+            "то",
+            "животное"
+          ],
+          "words": [
+            {
+              "sourceIndex": 0,
+              "text": "Я",
+              "start": 83.44246875,
+              "end": 83.52246875,
+              "score": 0.6419621706008911
+            },
+            {
+              "sourceIndex": 1,
+              "text": "тебя",
+              "start": 83.64246875,
+              "end": 83.98246875,
+              "score": 0.3432964212726802
+            },
+            {
+              "sourceIndex": 2,
+              "text": "люблю",
+              "start": 84.14246875,
+              "end": 84.52246875,
+              "score": 0.12513337922947748
+            },
+            {
+              "sourceIndex": 3,
+              "text": "это",
+              "start": 84.88246875,
+              "end": 85.16246875,
+              "score": 0.6595809161663055
+            },
+            {
+              "sourceIndex": 4,
+              "text": "ты",
+              "start": 85.32246875,
+              "end": 85.44246875,
+              "score": 0.43560830876231194
+            },
+            {
+              "sourceIndex": 5,
+              "text": "то",
+              "start": 85.68246875,
+              "end": 85.82246875,
+              "score": 0.8203654289245605
+            },
+            {
+              "sourceIndex": 6,
+              "text": "животное",
+              "start": 86.02246875,
+              "end": 87.02246875,
+              "score": 0.5209915196626551
+            }
+          ],
+          "encoder": {
+            "strideSamples": 320,
+            "receptiveFieldSamples": 400,
+            "centerOffsetSamples": 199.5
+          },
+          "humanListening": false
+        },
+        {
+          "phraseId": "v2-f",
+          "crop": [
+            86.7,
+            90.8
+          ],
+          "conditioningText": [
+            "Тёплое",
+            "мягкое",
+            "хочется",
+            "трогать"
+          ],
+          "words": [
+            {
+              "sourceIndex": 0,
+              "text": "Тёплое",
+              "start": 87.17246875,
+              "end": 87.97246875,
+              "score": 0.4052004187057416
+            },
+            {
+              "sourceIndex": 1,
+              "text": "мягкое",
+              "start": 88.11246875,
+              "end": 88.95246875,
+              "score": 0.4751618408731052
+            },
+            {
+              "sourceIndex": 2,
+              "text": "хочется",
+              "start": 89.05246875,
+              "end": 89.85246875,
+              "score": 0.5885997381061315
+            },
+            {
+              "sourceIndex": 3,
+              "text": "трогать",
+              "start": 89.99246875,
+              "end": 90.59246875,
+              "score": 0.6742914915084839
+            }
+          ],
+          "encoder": {
+            "strideSamples": 320,
+            "receptiveFieldSamples": 400,
+            "centerOffsetSamples": 199.5
+          },
+          "humanListening": false
+        },
+        {
+          "phraseId": "v2-g",
+          "crop": [
+            90.2,
+            94.7
+          ],
+          "conditioningText": [
+            "Хочется",
+            "чувствовать",
+            "что-то",
+            "особое"
+          ],
+          "words": [
+            {
+              "sourceIndex": 0,
+              "text": "Хочется",
+              "start": 90.91246875,
+              "end": 91.69246875,
+              "score": 0.6486730223352258
+            },
+            {
+              "sourceIndex": 1,
+              "text": "чувствовать",
+              "start": 91.83246875,
+              "end": 92.73246875,
+              "score": 0.644546474922787
+            },
+            {
+              "sourceIndex": 2,
+              "text": "что-то",
+              "start": 92.75246875,
+              "end": 93.31246875,
+              "score": 0.5507529775301615
+            },
+            {
+              "sourceIndex": 3,
+              "text": "особое",
+              "start": 93.61246875,
+              "end": 94.53246874999999,
+              "score": 0.42219124486049014
+            }
+          ],
+          "encoder": {
+            "strideSamples": 320,
+            "receptiveFieldSamples": 400,
+            "centerOffsetSamples": 199.5
+          },
+          "humanListening": false
+        },
+        {
+          "phraseId": "v2-h",
+          "crop": [
+            94.1,
+            98.1
+          ],
+          "conditioningText": [
+            "Что-то",
+            "красивее",
+            "хрипов",
+            "больного"
+          ],
+          "words": [
+            {
+              "sourceIndex": 0,
+              "text": "Что-то",
+              "start": 94.65246875,
+              "end": 95.17246875,
+              "score": 0.29226292483508587
+            },
+            {
+              "sourceIndex": 1,
+              "text": "красивее",
+              "start": 95.35246874999999,
+              "end": 96.39246874999999,
+              "score": 0.41582348104566336
+            },
+            {
+              "sourceIndex": 2,
+              "text": "хрипов",
+              "start": 96.51246875,
+              "end": 97.07246874999998,
+              "score": 0.28359940155808416
+            },
+            {
+              "sourceIndex": 3,
+              "text": "больного",
+              "start": 97.25246874999999,
+              "end": 97.63246874999999,
+              "score": 0.12093476259282657
+            }
+          ],
+          "encoder": {
+            "strideSamples": 320,
+            "receptiveFieldSamples": 400,
+            "centerOffsetSamples": 199.5
+          },
+          "humanListening": false
+        },
+        {
+          "phraseId": "repeat-1",
+          "crop": [
+            37.7,
+            52.7
+          ],
+          "conditioningText": [
+            "Больного",
+            "Больного",
+            "Больного",
+            "Больного",
+            "Больного"
+          ],
+          "words": [
+            {
+              "sourceIndex": 0,
+              "text": "Больного",
+              "start": 44.39246875,
+              "end": 48.59246875,
+              "score": 0.007027258098657642
+            },
+            {
+              "sourceIndex": 1,
+              "text": "Больного",
+              "start": 48.65246875,
+              "end": 49.17246875,
+              "score": 0.0065534962341189384
+            },
+            {
+              "sourceIndex": 2,
+              "text": "Больного",
+              "start": 49.232468749999995,
+              "end": 50.03246875,
+              "score": 0.006149011398000377
+            },
+            {
+              "sourceIndex": 3,
+              "text": "Больного",
+              "start": 50.05246875,
+              "end": 50.21246875,
+              "score": 0.0075743113245282856
+            },
+            {
+              "sourceIndex": 4,
+              "text": "Больного",
+              "start": 50.25246875,
+              "end": 51.15246875,
+              "score": 0.0063853527286223
+            }
+          ],
+          "encoder": {
+            "strideSamples": 320,
+            "receptiveFieldSamples": 400,
+            "centerOffsetSamples": 199.5
+          },
+          "humanListening": false
+        },
+        {
+          "phraseId": "repeat-2",
+          "crop": [
+            97.7,
+            125.4
+          ],
+          "conditioningText": [
+            "Больного",
+            "Больного",
+            "Больного",
+            "Больного",
+            "Больного",
+            "Больного",
+            "Больного",
+            "Больного",
+            "Больного",
+            "Больного"
+          ],
+          "words": [
+            {
+              "sourceIndex": 0,
+              "text": "Больного",
+              "start": 103.47246875,
+              "end": 105.43246875,
+              "score": 0.00466440268792212
+            },
+            {
+              "sourceIndex": 1,
+              "text": "Больного",
+              "start": 105.71246875,
+              "end": 106.35246875,
+              "score": 0.004490822599369234
+            },
+            {
+              "sourceIndex": 2,
+              "text": "Больного",
+              "start": 106.65246875,
+              "end": 106.91246875,
+              "score": 0.006406763119490019
+            },
+            {
+              "sourceIndex": 3,
+              "text": "Больного",
+              "start": 106.95246875,
+              "end": 107.09246875,
+              "score": 0.010072529823186674
+            },
+            {
+              "sourceIndex": 4,
+              "text": "Больного",
+              "start": 107.11246875,
+              "end": 107.29246875,
+              "score": 0.008464220778218337
+            },
+            {
+              "sourceIndex": 5,
+              "text": "Больного",
+              "start": 108.51246875,
+              "end": 109.17246875000001,
+              "score": 0.0069358965764487425
+            },
+            {
+              "sourceIndex": 6,
+              "text": "Больного",
+              "start": 110.39246875,
+              "end": 110.67246875000001,
+              "score": 0.018500296299212744
+            },
+            {
+              "sourceIndex": 7,
+              "text": "Больного",
+              "start": 110.71246875,
+              "end": 110.85246875,
+              "score": 0.01772390812402591
+            },
+            {
+              "sourceIndex": 8,
+              "text": "Больного",
+              "start": 110.87246875,
+              "end": 111.05246875,
+              "score": 0.018301755223157152
+            },
+            {
+              "sourceIndex": 9,
+              "text": "Больного",
+              "start": 111.09246875,
+              "end": 111.21246875,
+              "score": 0.006278597142746938
+            }
+          ],
+          "encoder": {
+            "strideSamples": 320,
+            "receptiveFieldSamples": 400,
+            "centerOffsetSamples": 199.5
+          },
+          "humanListening": false
+        }
+      ]
+    }
+  ],
+  "repeats": [
+    {
+      "reference": [
+        37.15,
+        37.88
+      ],
+      "peaks": [
+        [
+          0.9998422265052795,
+          37.15
+        ],
+        [
+          0.6485809683799744,
+          38.0864
+        ],
+        [
+          0.6084277033805847,
+          110.2742
+        ],
+        [
+          0.6044483184814453,
+          98.0863
+        ],
+        [
+          0.5901758074760437,
+          102.7741
+        ],
+        [
+          0.5898858308792114,
+          97.15
+        ],
+        [
+          0.5854641199111938,
+          99.0242
+        ],
+        [
+          0.5589703917503357,
+          100.8987
+        ],
+        [
+          0.5552136301994324,
+          39.0243
+        ],
+        [
+          0.5549488067626953,
+          106.5243
+        ],
+        [
+          0.5507883429527283,
+          108.3988
+        ],
+        [
+          0.5360064506530762,
+          105.5864
+        ],
+        [
+          0.535521388053894,
+          39.9613
+        ],
+        [
+          0.4546460509300232,
+          104.6485
+        ],
+        [
+          0.30722349882125854,
+          40.9197
+        ],
+        [
+          0.18194228410720825,
+          101.812
+        ],
+        [
+          0.17084906995296478,
+          41.8359
+        ],
+        [
+          0.16054558753967285,
+          109.3362
+        ],
+        [
+          0.1331731379032135,
+          103.7129
+        ],
+        [
+          0.12462862581014633,
+          42.7738
+        ],
+        [
+          0.10670777410268784,
+          100.1742
+        ],
+        [
+          0.10500830411911011,
+          111.2116
+        ]
+      ]
+    },
+    {
+      "reference": [
+        38.1,
+        39.03
+      ],
+      "peaks": [
+        [
+          0.9996262192726135,
+          38.1
+        ],
+        [
+          0.6724749803543091,
+          39.0379
+        ],
+        [
+          0.664966344833374,
+          37.1636
+        ],
+        [
+          0.6617082357406616,
+          102.7878
+        ],
+        [
+          0.6616439819335938,
+          110.2878
+        ],
+        [
+          0.6054747104644775,
+          100.9123
+        ],
+        [
+          0.5888171195983887,
+          98.0999
+        ],
+        [
+          0.5863564014434814,
+          99.0378
+        ],
+        [
+          0.5851132869720459,
+          108.4124
+        ],
+        [
+          0.5812652707099915,
+          39.9749
+        ],
+        [
+          0.5714272856712341,
+          97.1636
+        ],
+        [
+          0.5437463521957397,
+          105.6
+        ],
+        [
+          0.5408706068992615,
+          106.5379
+        ],
+        [
+          0.5304863452911377,
+          104.6621
+        ],
+        [
+          0.2359091341495514,
+          40.909
+        ],
+        [
+          0.2317781299352646,
+          101.8471
+        ],
+        [
+          0.2100299745798111,
+          109.3498
+        ],
+        [
+          0.16759967803955078,
+          111.044
+        ],
+        [
+          0.16675858199596405,
+          99.7941
+        ],
+        [
+          0.15620259940624237,
+          107.3769
+        ],
+        [
+          0.14175422489643097,
+          41.8723
+        ],
+        [
+          0.14076894521713257,
+          103.7277
+        ]
+      ]
+    },
+    {
+      "reference": [
+        40,
+        40.89
+      ],
+      "peaks": [
+        [
+          0.9994937181472778,
+          40
+        ],
+        [
+          0.7131378650665283,
+          39.063
+        ],
+        [
+          0.6991047859191895,
+          110.3128
+        ],
+        [
+          0.6807684898376465,
+          102.8127
+        ],
+        [
+          0.6555418968200684,
+          108.4374
+        ],
+        [
+          0.6234111189842224,
+          100.9373
+        ],
+        [
+          0.5871407389640808,
+          38.1251
+        ],
+        [
+          0.5843643546104431,
+          104.6871
+        ],
+        [
+          0.5809310674667358,
+          99.0629
+        ],
+        [
+          0.5806717872619629,
+          105.6212
+        ],
+        [
+          0.5607476234436035,
+          106.563
+        ],
+        [
+          0.5607404708862305,
+          97.1886
+        ],
+        [
+          0.5441374182701111,
+          98.125
+        ],
+        [
+          0.5261222720146179,
+          37.1887
+        ],
+        [
+          0.3335939645767212,
+          40.9381
+        ],
+        [
+          0.20393918454647064,
+          109.3749
+        ],
+        [
+          0.19976240396499634,
+          41.8745
+        ],
+        [
+          0.1758287400007248,
+          101.8951
+        ],
+        [
+          0.1308857798576355,
+          42.8327
+        ],
+        [
+          0.10332439094781876,
+          99.9559
+        ]
+      ]
+    },
+    {
+      "reference": [
+        97.15,
+        97.88
+      ],
+      "peaks": [
+        [
+          0.9996130466461182,
+          97.15
+        ],
+        [
+          0.8143601417541504,
+          98.0863
+        ],
+        [
+          0.744111955165863,
+          105.5864
+        ],
+        [
+          0.7327167987823486,
+          108.3987
+        ],
+        [
+          0.7252996563911438,
+          110.2742
+        ],
+        [
+          0.722957193851471,
+          100.8986
+        ],
+        [
+          0.7041301131248474,
+          106.5243
+        ],
+        [
+          0.6928056478500366,
+          102.7741
+        ],
+        [
+          0.6760438084602356,
+          99.0242
+        ],
+        [
+          0.6526801586151123,
+          104.6485
+        ],
+        [
+          0.5900210738182068,
+          37.15
+        ],
+        [
+          0.5822486281394958,
+          39.9613
+        ],
+        [
+          0.5801469087600708,
+          38.0864
+        ],
+        [
+          0.5555709004402161,
+          39.0243
+        ],
+        [
+          0.26762840151786804,
+          40.8995
+        ],
+        [
+          0.2639739513397217,
+          109.3362
+        ],
+        [
+          0.2390718311071396,
+          101.8362
+        ],
+        [
+          0.19348539412021637,
+          103.9992
+        ],
+        [
+          0.1660510152578354,
+          41.8359
+        ],
+        [
+          0.13675975799560547,
+          100.1984
+        ],
+        [
+          0.1332443505525589,
+          107.3316
+        ],
+        [
+          0.1326424479484558,
+          111.5589
+        ]
+      ]
+    }
+  ]
+}
