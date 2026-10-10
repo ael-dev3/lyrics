@@ -36,6 +36,8 @@ The [Rainline production record](../projects/spikeriser-rainline-lyric-film/PROD
 
 The [Phantom Liberty v2 production decision](../projects/phantom-liberty-lyric-film/PRODUCTION-NOTES.md#approved-edition) records the owner's report of complete current-preview review followed by explicit local-production authorization. Its English lead and backing edition freezes the exact accepted inputs, preserves unlogged granular listening fields and retains model uncertainty. The gate tests current owner acceptance and production scope; final encoded glyph, source-clock and soundtrack checks remain separate. This track-specific record makes no assistant listening claim and does not relax the multilingual synchronization requirement or authorize another revision.
 
+The [Друг v2 delivery](../projects/drug-lyric-film/PRODUCTION-DELIVERY.md#frozen-edition) records explicit owner acceptance and production direction for the complete corrected Russian/English preview. This exact edition preserves the separately unlogged granular listening fields and model uncertainty, freezes the source/timeline/scene identity, and independently verifies the encoded films and Desktop kit. Its project-specific authorization does not mark the standardized listening gate complete, transfer approval to changed inputs or authorize another song.
+
 ## Enforce the boundary
 
 Every new project must keep its preview command separate from production commands. Production entry points must refuse absent, incomplete or stale review evidence and absent or stale authorization before capture, segment rendering, encoding or final-file creation. Do not hide full capture behind a command named `preview`.

@@ -13,7 +13,10 @@
     "proof": "node scripts/proof-scene.ts",
     "render:gate": "node scripts/render-gate.ts",
     "identity": "node scripts/refresh-identity.ts",
-    "render": "node scripts/render-gate.ts"
+    "render": "node scripts/render-production.ts",
+    "verify:final": "node scripts/verify-final.ts",
+    "kit": "node scripts/prepare-upload-kit.ts",
+    "finalize": "node scripts/finalize-delivery.ts"
   },
   "devDependencies": {
     "@types/node": "26.6.4",
