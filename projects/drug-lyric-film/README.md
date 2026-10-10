@@ -2,9 +2,9 @@
 
 **Complete preview · Russian / English · 16:9 and 9:16 · v2**
 
-![Actual browser preview with source illustration, crisp paired focus and a layered city](evidence/browser-landscape-24.300.png)
+![Actual browser preview with source illustration, crisp paired focus and a layered city](evidence/browser-landscape-26.200.png)
 
-*Browser canvas at 24.300 s from the complete source-video preview. Original music and illustration: [REDCHINAWAVE's official audio](https://www.youtube.com/watch?v=SXAReusgEC0). This is preview presentation evidence, not a final encoded movie or a listening attestation.*
+*Browser canvas at 26.200 s from the complete source-video preview, with животное / animal focus. [Correction and capture provenance](evidence/animal-translation-check.json). Original music and illustration: [REDCHINAWAVE's official audio](https://www.youtube.com/watch?v=SXAReusgEC0). This is preview presentation evidence, not a final encoded movie or a listening attestation.*
 
 The original woman, ravens and city remain the center of the film. The source's red sky continues into an illustrated reading area. Three depths of fixed buildings use distinct rooftops, perspective sides, window frames and masonry. Measured music changes occupied-window light rather than moving the skyline. Three small ravens follow separate curved routes with turns, banks and varied glide/wingbeat phases. Crisp, stationary Russian and English text shares the same focus strength.
 

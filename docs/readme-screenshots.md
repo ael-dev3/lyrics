@@ -4,7 +4,7 @@ Updated 10 October 2026. Featured songs in the main README have a representative
 
 | Song | Representative image | Time | Edition / provenance |
 | --- | --- | --- | --- |
-| Друг | [Original raven illustration, paired love focus and detailed layered city](../projects/drug-lyric-film/evidence/browser-landscape-24.300.png) | 00:24.300 | Actual 1920×1080 browser canvas from complete v2 review preview; source frame 729; listening review and production rendering pending |
+| Друг | [Original raven illustration, paired animal focus and detailed layered city](../projects/drug-lyric-film/evidence/browser-landscape-26.200.png) | 00:26.200 | Actual 1920×1080 browser canvas from complete v2 review preview; source frame 786; listening review and production rendering pending |
 | Труп невесты | [Complete bridal illustration, equal bilingual focus and measured strings](../projects/trup-nevesty-lyric-film/evidence/final-youtube-95.200.jpg) | 01:35.200 | Exact decoded frame 5,712 from the verified v1 1920×1080, 60 fps film; original frame 2,380; scoped owner-approved preview with standardized listening scope separately unattested |
 | призрак | [Original bass-performance shot and centered independent vocal blocks](../projects/prizrak-lyric-film/evidence/final-landscape-overlap-214.300.jpg) | 03:34.300 | Exact decoded frame 12858 from the verified centered v2 native 1920×1080, 60 fps film; original frame 5357 |
 | По камушку | [Complete stone ring, equal себя / myself focus and material response](../projects/po-kamushku-lyric-film/evidence/final-square-58.250.jpg) | 00:58.250 | Exact decoded frame 3495 from the verified native 1080×1080, 60 fps film; original frame 1456 |

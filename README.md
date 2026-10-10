@@ -14,9 +14,9 @@ Music films with synchronized lyrics, meaning-linked translations, and audio-rea
 
 **REDCHINAWAVE · Russian / English · complete 16:9 and 9:16 review preview**
 
-![Друг actual browser preview with original raven illustration, equal bilingual focus and layered music-lit architecture](projects/drug-lyric-film/evidence/browser-landscape-24.300.png)
+![Друг actual browser preview with original raven illustration, equal bilingual focus and layered music-lit architecture](projects/drug-lyric-film/evidence/browser-landscape-26.200.png)
 
-*Actual preview canvas at 00:24.300. Original illustration and soundtrack: [REDCHINAWAVE's official audio](https://www.youtube.com/watch?v=SXAReusgEC0). [Preview identity and still provenance](projects/drug-lyric-film/evidence/browser-preview-checks.json). This is preproduction presentation evidence.*
+*Actual preview canvas at 00:26.200, with животное / animal focus. Original illustration and soundtrack: [REDCHINAWAVE's official audio](https://www.youtube.com/watch?v=SXAReusgEC0). [Preview identity and still provenance](projects/drug-lyric-film/evidence/animal-translation-check.json). This is preproduction presentation evidence.*
 
 The original woman and ravens remain intact. A fixed three-depth city continues the illustration, with perspective sides, varied rooftops and occupied windows carrying measured musical light. Added ravens travel on separate curved paths and bank through turns; typography stays crisp and stationary. Both formats preserve the complete square, with equal Russian and English emphasis.
 
