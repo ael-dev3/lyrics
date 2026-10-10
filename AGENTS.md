@@ -44,6 +44,8 @@ For every TikTok publishing kit, follow `docs/tiktok-cover-workflow.md` without 
 
 For language-switching films with three simultaneous reader lanes, use [the three-language workflow](docs/three-language-lyric-workflow.md). Audit unsupplied opening/closing samples and masked backing voices, preserve complete inflected meaning focus and simultaneous vocal ownership, and verify optical balance across scripts at phone scale. The [призрак preview](projects/prizrak-lyric-film/AGENT-HANDOFF.md) records corrected Japanese acoustic preprocessing and independent upper Japanese-led / lower Russian-led reading tracks; its times, geometry and palette are song-specific. A full backing phrase needs its own stable translated block rather than a clipped or reassigned tail.
 
+For a two-singer overlap, read [где ты?](projects/gde-ty-lyric-film/PRODUCTION-NOTES.md) and its [handoff](projects/gde-ty-lyric-film/AGENT-HANDOFF.md). Reserve full lead and backing line geometry before the incoming phrase's first visible fade. Check real glyph extents through every interval where two reader lanes remain visible, including the handoff and preceding hold. A correctly synchronized word can still collide with the preceding translation during an early line reveal; protect the complete target-language block without moving its acoustic event.
+
 ## Conservative GitHub Actions use
 
 - Follow the current user approval policy for GitHub Actions budgets and

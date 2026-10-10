@@ -1,0 +1,3 @@
+import {readFileSync} from 'node:fs';import {currentIdentity,projectFile} from './project-identity.ts';import {productionAllowed,type Review} from '../src/review-gate.ts';
+const current=currentIdentity(),review=JSON.parse(readFileSync(projectFile('source/REVIEW.json'),'utf8')) as Review;
+const allowed=productionAllowed(review,current);console.log(JSON.stringify({allowed,revision:current.revision,status:allowed?'Current recording, listening scope and render approval match.':'Preview only: current-revision listening scope and explicit render approval are pending.'}));if(!allowed)process.exitCode=1;

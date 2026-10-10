@@ -1,0 +1,22 @@
+import {readFileSync,writeFileSync,mkdirSync} from 'node:fs';import {createCanvas,GlobalFonts,loadImage} from '@napi-rs/canvas';
+import {paintScene,setSceneForProof,setEffectsEnabled,cueLayout,cueOpacity,materialResponseAt} from '../src/scene.ts';import {sourceActive,targetActive,type Timeline} from '../src/model.ts';
+const read=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
+GlobalFonts.registerFromPath('public/fonts/RoomSerif.ttf','Room');
+const timeline=read('public/timeline.json') as Timeline,reference=await loadImage('public/material-reference.png');setSceneForProof(timeline,read('public/audio-features.json'),read('public/material-anchors.json'),(w,h)=>{const c=createCanvas(w,h);return {canvas:c as unknown as CanvasImageSource,context:c.getContext('2d') as unknown as CanvasRenderingContext2D}},reference as unknown as CanvasImageSource);
+mkdirSync('analysis/scene-proofs',{recursive:true});const issues:string[]=[],stats:any[]=[];
+for(const format of ['landscape','portrait'] as const){const c=createCanvas(format==='landscape'?1920:1080,format==='landscape'?1080:1920),ctx=c.getContext('2d') as unknown as CanvasRenderingContext2D;
+ for(const cue of timeline.cues){const l=cueLayout(ctx,cue,format);for(const s of [...l.source,...l.target])if(s.x<(format==='landscape'?1110:62)||s.x+s.width>c.width-62||s.y-l.size<(format==='landscape'?150:1085)||s.y>c.height-54)issues.push(`${format}:${cue.id}:${s.text}`);
+  for(const w of cue.words){const t=(w.startSample+w.endSample)/2/timeline.sampleRate;if(cueOpacity(cue,t)<.99999)issues.push(`${format}:${w.id}:premature opacity`);if(!sourceActive(w,t)||!cue.targets.some(e=>e.focusSourceIndices.includes(w.sourceIndex)&&targetActive(e,cue.words,t)))issues.push(`${format}:${w.id}:lost correspondence`)}
+ }
+ // Check complete glyph bounds across all simultaneous reader lanes,
+ // including the incoming line's fade before the singer starts.
+ for(let i=0;i<timeline.cues.length;i++)for(let j=i+1;j<timeline.cues.length;j++){
+  const a=timeline.cues[i]!,b=timeline.cues[j]!;if(a.lane===b.lane||Math.max(a.visibleStart,b.visibleStart)>=Math.min(a.visibleEnd,b.visibleEnd))continue;
+  const boxes=(cue:typeof a)=>{const l=cueLayout(ctx,cue,format);ctx.font=`600 ${l.size}px Room`;return [...l.source,...l.target].map(s=>{const m=ctx.measureText(s.text);return {text:s.text,left:s.x-m.actualBoundingBoxLeft-3,right:s.x+m.actualBoundingBoxRight+3,top:s.y-m.actualBoundingBoxAscent-3,bottom:s.y+m.actualBoundingBoxDescent+3}})};
+  for(const x of boxes(a))for(const y of boxes(b))if(Math.max(x.left,y.left)<Math.min(x.right,y.right)&&Math.max(x.top,y.top)<Math.min(x.bottom,y.bottom))issues.push(`${format}:${a.id}/${b.id}:overlapping glyphs ${x.text}/${y.text}`);
+ }
+ const times=[0,5.2,10.9,14.71,19.5,24.95,40.9,53.7,64.8,74.4,77.8,80.4,84.7,87.9,95.4,99.3,106.4,116.5,133.6,140.1,148.4,155.9,157.4,159.4,166.5,173.7,180.8,184.6,187.2,194.5,200.5];
+ for(const t of times){setEffectsEnabled(true);paintScene(ctx,t,format,reference as unknown as CanvasImageSource);writeFileSync(`analysis/scene-proofs/${format}-${t}.png`,c.toBuffer('image/png'))}
+ for(const t of [5.2,24.95,80.4,133.6,180.8]){setEffectsEnabled(true);paintScene(ctx,t,format,reference as unknown as CanvasImageSource);const on=c.getContext('2d').getImageData(0,0,c.width,c.height).data;setEffectsEnabled(false);paintScene(ctx,t,format,reference as unknown as CanvasImageSource);const off=c.getContext('2d').getImageData(0,0,c.width,c.height).data;writeFileSync(`analysis/scene-proofs/${format}-${t}-effects-off.png`,c.toBuffer('image/png'));let changed=0,face=0;for(let y=0;y<1080;y++)for(let x=0;x<1080;x++){const sourceX=x,i=(y*c.width+sourceX)*4,delta=Math.max(Math.abs(on[i]!-off[i]!),Math.abs(on[i+1]!-off[i+1]!),Math.abs(on[i+2]!-off[i+2]!));if(delta>1){changed++;if(x>=449&&x<735&&y>=228&&y<875)face++}}if(face)issues.push(`${format}:${t}:response reaches protected subject`);stats.push({format,time:t,changedPicturePixels:changed,protectedSubjectPixelsChanged:face,meanCrystalResponse:materialResponseAt(t).slice(0,18).reduce((a,b)=>a+b,0)/18})}
+}
+setEffectsEnabled(true);writeFileSync('analysis/scene-proof-report.json',JSON.stringify({issues,stats,scope:'Shared-scene native diagnostics; every cue and word, two formats. Not listening or production rendering.'},null,2)+'\n');if(issues.length)throw Error(issues.join('\n'));console.log(`Every cue/word fits both formats with complete paired focus. ${stats.length} measured A/B proofs; subject untouched. No full video encoded.`);

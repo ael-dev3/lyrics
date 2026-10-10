@@ -8,7 +8,7 @@ Music films with synchronized lyrics, meaning-linked translations, and audio-rea
 
 **Starting another song:** use the [single-prompt template, agent quickstart and complete quality checklist](docs/source-clocked-word-effects-workflow.md), including [how to make reactive visuals belong to the picture](docs/scene-integrated-visuals.md). The [If The Sun Burns Out Tonight handoff](projects/if-the-sun-burns-out-tonight-lyric-film/AGENT-HANDOFF.md) and [production lessons](projects/if-the-sun-burns-out-tonight-lyric-film/PRODUCTION-LESSONS.md) show how exact word/phrase effects, measured intensity and dependable full-picture playback fit the shared workflow.
 
-[**Труп невесты**](#труп-невесты) · [**Phantom Liberty**](#phantom-liberty) · [**Светлое чувство**](#светлое-чувство) · [**призрак — three-language film**](#призрак--three-language-film) · [**По камушку**](#по-камушку) · [**Кометы**](#кометы) · [**Let You Down**](#let-you-down) · [**Leave It On — Warpkeep**](#leave-it-on--warpkeep) · [**Must Have Been A Dream**](#must-have-been-a-dream) · [**TAKE ME THERE**](#take-me-there) · [**Rainline**](#rainline) · [**El Tesoro — preview**](#el-tesoro--preview) · [**I'll Change for You**](#ill-change-for-you) · [**If The Sun Burns Out Tonight**](#if-the-sun-burns-out-tonight) · [**Люби меня, люби**](#люби-меня-люби) · [**Stay at Your House — Hardstyle**](#stay-at-your-house--hardstyle) · [**Ведьмы**](#ведьмы) · [**Pero es locura**](#pero-es-locura) · [**La Lune**](#la-lune) · [**каждый, кто делал тебе больно**](#каждый-кто-делал-тебе-больно) · [**Sugar Glass**](#sugar-glass) · [**Твои глаза**](#твои-глаза) · [**Прости за любовь — accepted with known gaps**](#прости-за-любовь) · [**Половинка**](#половинка) · [**Life Letters**](#life-letters) · [**Joyride**](#joyride) · [**midnight love**](#midnight-love) · [**Пожары**](#пожары) · [**Отменяй**](#отменяй) · [**Roi × Adore**](#roi--adore) · [**TikTok edition**](#tiktok-edition) · [**Tanisea**](#tanisea) · [**Build and workflow**](#build-and-workflow)
+[**Труп невесты**](#труп-невесты) · [**где ты?**](#где-ты) · [**Phantom Liberty**](#phantom-liberty) · [**Светлое чувство**](#светлое-чувство) · [**призрак — three-language film**](#призрак--three-language-film) · [**По камушку**](#по-камушку) · [**Кометы**](#кометы) · [**Let You Down**](#let-you-down) · [**Leave It On — Warpkeep**](#leave-it-on--warpkeep) · [**Must Have Been A Dream**](#must-have-been-a-dream) · [**TAKE ME THERE**](#take-me-there) · [**Rainline**](#rainline) · [**El Tesoro — preview**](#el-tesoro--preview) · [**I'll Change for You**](#ill-change-for-you) · [**If The Sun Burns Out Tonight**](#if-the-sun-burns-out-tonight) · [**Люби меня, люби**](#люби-меня-люби) · [**Stay at Your House — Hardstyle**](#stay-at-your-house--hardstyle) · [**Ведьмы**](#ведьмы) · [**Pero es locura**](#pero-es-locura) · [**La Lune**](#la-lune) · [**каждый, кто делал тебе больно**](#каждый-кто-делал-тебе-больно) · [**Sugar Glass**](#sugar-glass) · [**Твои глаза**](#твои-глаза) · [**Прости за любовь — accepted with known gaps**](#прости-за-любовь) · [**Половинка**](#половинка) · [**Life Letters**](#life-letters) · [**Joyride**](#joyride) · [**midnight love**](#midnight-love) · [**Пожары**](#пожары) · [**Отменяй**](#отменяй) · [**Roi × Adore**](#roi--adore) · [**TikTok edition**](#tiktok-edition) · [**Tanisea**](#tanisea) · [**Build and workflow**](#build-and-workflow)
 
 ## Труп невесты
 
@@ -25,6 +25,22 @@ Twenty-eight performed lines contain 184 separately selected Russian events and 
 Both complete 12,318-frame, 60 fps films pass strict full decode, every-frame timestamps, identical AAC packets/PCM and no black gaps. Each format also passes 695 selected scene frames, 11,269 glyph-state checks covering all 442 tokens in active/neutral states, and 63 deliberately delayed controls. The hash-verified 13-file Desktop kit contains both films, dedicated covers, copy, optional captions and delivery manifests. Public Git contains source and posting assets; full movies remain local.
 
 [Project and delivery](projects/trup-nevesty-lyric-film/README.md) · [Exact production process](projects/trup-nevesty-lyric-film/PRODUCTION-NOTES.md) · [Timing method and limits](projects/trup-nevesty-lyric-film/TIMING-METHOD.md) · [Agent handoff](projects/trup-nevesty-lyric-film/AGENT-HANDOFF.md)
+
+## где ты?
+
+**элли на маковом поле feat. лампабикт · Russian / English · verified wide and portrait films**
+
+![где ты? final decoded frame with the original room, warm chandelier focus and equal Russian and English lyrics](projects/gde-ty-lyric-film/evidence/final-youtube-24.950.jpg)
+
+*Exact output frame 1,497 at 00:24.950; original picture frame 623 at 00:24.920. [Source recording](https://www.youtube.com/watch?v=Dpek_5Wh6IE) · [Frame provenance](projects/gde-ty-lyric-film/evidence/final-stills.json).*
+
+The real chandelier and exposed piano keys carry a measured, restrained visualizer. The full source photograph remains present, with the wall continued into negative space for stable bilingual lyrics. Lead and backing voices hold separate complete reading blocks. The portrait master reserves both text areas before the overlapping reply begins.
+
+![Actual portrait render during the simultaneous two-singer passage](projects/gde-ty-lyric-film/evidence/final-tiktok-159.400.jpg)
+
+Forty cues cover 185 Russian events and 260 meaning-linked English tokens. Every source picture is decoded; the two masters contain 12,062 frames at 60 fps. Independent verification found identical original AAC packet data and decoded PCM, exact frame timestamps, no black intervals, and 680 sampled scene frames per format. It checked all 445 Russian and English tokens in active and neutral states, with 91 deliberately delayed controls. The encoded-glyph minimum match was 92.9% wide and 94.0% portrait. These technical checks support the separate recorded human review; they do not claim sample-level perceptual certainty.
+
+The [complete project](projects/gde-ty-lyric-film/README.md), [production record](projects/gde-ty-lyric-film/PRODUCTION-NOTES.md) and [agent handoff](projects/gde-ty-lyric-film/AGENT-HANDOFF.md) document the decisions, evidence, limitations, renderer and deliverable checks.
 
 ## Phantom Liberty
 
