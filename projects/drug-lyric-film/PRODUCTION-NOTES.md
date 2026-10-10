@@ -30,6 +30,7 @@ Russian words retain separate source events. Natural English can move focus back
 | хочется | I want to | Complete desire construction; touch/feel remain separate |
 | это + ты | you're | Union of independently measured identification events; release over any gap |
 | красивее | prettier than | Comparative morphology includes `than` |
+| животное | animal | Preserve the concrete animal meaning in both verses; a noun correction retains the existing source event |
 | больного | a sick person's | Complete singular possessive, distinct from хрипов / wheezing |
 | detached больного | someone sick | Singular person; not an invented plural noun or new verb |
 
@@ -55,3 +56,5 @@ A small fixed empty-sky patch (x=485, y=85, 30×30 in the square) supplies the d
 Five contracts cover complete correspondence, exact inclusive/exclusive state, grammar expansions, filtered coverage, reading handoff and negative production gates. Native proof checks every cue in both formats and writes explicitly labelled stills. Actual browser checks separately confirm the loaded identity, original picture, finer word clock, playback, seeks, format/speed changes, animation comparison and recovery.
 
 A representative browser still is preview evidence. It is not an encoded final frame or an acoustic review. Future production must use the same frozen scene/timeline/reference/font/features, record current listening scope and render authorization, then verify complete decode, source/audio identity, all PTS, no source gaps and encoded glyph states. Only then prepare the Desktop upload kit and update final-frame README evidence.
+
+The translation-only correction from `creature` to `animal` regenerated the timeline identity and both affected native proofs. [Current correction evidence](evidence/animal-translation-check.json) records actual paused животное / animal focus at 26.200 s in wide and 86.200 s in portrait. The earlier broader [browser transport observations](evidence/browser-preview-checks.json) retain their original identity; they are not relabelled as checks of the changed timeline.

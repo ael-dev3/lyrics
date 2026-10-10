@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "revision": "drug-preview-v2-natural-city",
+  "sourceSha256": "6f6c867d8a97b6d3a74ed9ab0ba39209b2b520fa61fcdf3e87ed45746eb5356b",
+  "timelineSha256": "6a833cee8f60ebe5f9a5aad0d592e2ff747720af45527adf2f1244e2ca00c4b4",
+  "sceneSha256": "9f58be2145071a9089148ee182acc141ac05d0c882660866f3d85f08550e30a4",
+  "sceneFiles": [
+    "src/model.ts",
+    "src/scene.ts",
+    "src/player.ts",
+    "review/index.html",
+    "public/audio-features.json",
+    "public/artwork-reference.png",
+    "public/visual-contract.json",
+    "public/fonts/Oswald-Medium.ttf"
+  ],
+  "checkedOn": "2026-10-10",
+  "scope": "Translation-only correction and finite paused browser observations. Original source events, correspondence membership, reading windows and scene bytes are unchanged. Prior broader transport evidence remains bound to its original timeline identity.",
+  "correction": {
+    "sourceWord": "животное",
+    "previousTarget": "creature",
+    "target": "animal",
+    "rationale": "Use the concrete animal meaning; the broader creature meaning does not preserve this lexical choice.",
+    "occurrences": [
+      "v1-e",
+      "v2-e"
+    ],
+    "sourceEventIndex": 6
+  },
+  "validation": {
+    "typecheck": "passed",
+    "contractTests": 5,
+    "allCueLayouts": 44,
+    "glyphPlacements": 442,
+    "firstFrameVisibility": 186,
+    "targetFocusStates": 260
+  },
+  "stills": [
+    {
+      "path": "evidence/browser-landscape-26.200.png",
+      "time": 26.2,
+      "sourceFrame": 786,
+      "cue": "v1-e",
+      "width": 1920,
+      "height": 1080,
+      "startSample": 1142631,
+      "endSample": 1194228,
+      "sourceTime": 26.2,
+      "method": "Actual visible browser canvas Download still control; unmodified PNG bytes",
+      "bytes": 803510,
+      "sha256": "53f4f938aa81cf260cf1c69a21f04010a8fc86ef24733b33dd00a5e19bf97f8b",
+      "encoding": "PNG",
+      "sourceWords": [
+        "животное"
+      ],
+      "targetWords": [
+        "animal"
+      ],
+      "opacity": 1,
+      "readyState": 4,
+      "paused": true,
+      "effects": "on",
+      "playbackRate": 1
+    },
+    {
+      "path": "evidence/browser-portrait-86.200.png",
+      "time": 86.2,
+      "sourceFrame": 2586,
+      "cue": "v2-e",
+      "width": 1080,
+      "height": 1920,
+      "startSample": 3788631,
+      "endSample": 3840008,
+      "sourceTime": 86.2,
+      "method": "Actual visible browser canvas Download still control; unmodified PNG bytes",
+      "bytes": 852303,
+      "sha256": "b7848a12dce98f265eb1992fc6daee8ab7f528eda9c1d6353d6a70ead24af212",
+      "encoding": "PNG",
+      "sourceWords": [
+        "животное"
+      ],
+      "targetWords": [
+        "animal"
+      ],
+      "opacity": 1,
+      "readyState": 4,
+      "paused": true,
+      "effects": "on",
+      "playbackRate": 1
+    }
+  ],
+  "priorBrowserEvidence": "browser-preview-checks.json",
+  "normalSpeedFullSongListening": false,
+  "reducedSpeedUncertainWordListening": false,
+  "renderAuthorized": false,
+  "productionRendered": false
+}
