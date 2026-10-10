@@ -2,6 +2,12 @@
 
 **We are not the creators of the original music, lyrics, performances, musical remixes, anime footage, characters or source illustrations. We do not take credit for that work.** Our contribution is the additional lyric-film presentation and production workflow. Artist and source-upload links below distinguish those roles; a source uploader is not necessarily the owner of every element in an upload.
 
+## Друг
+
+Original recording, lyrics and release illustration: **REDCHINAWAVE — Друг**, [official audio upload](https://www.youtube.com/watch?v=SXAReusgEC0). The upload establishes the recording's attribution; no separate illustrator identity is inferred. [Locked source identity](projects/drug-lyric-film/source/recording.json).
+
+The English translation, paired focus, added architectural window response, curved raven animation and preview tooling are AI-assisted lyric-film additions. Oswald Medium is bundled under its [SIL Open Font License](projects/drug-lyric-film/public/fonts/Oswald-OFL.txt). Original music, lyrics, illustration and source-derived stills remain third-party material. Current edition is a review preview; production and listening approval remain pending.
+
 ## Кометы
 
 Original song and official music video: POLNALYUBVI — Кометы, [official recording](https://www.youtube.com/watch?v=76BmuIf0duw). Lyrics and music: Marina Demeshchenko. Video production: FILM GODS; director: Maria Makovskaya; cinematography: Vladymyr Korovko and Sergey Archakov; edit and color: Vladymyr Korovko. [Locked source provenance](projects/komety-lyric-film/source/manifest.json).

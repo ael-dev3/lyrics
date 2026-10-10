@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "revision": "drug-preview-v2-natural-city",
+  "sourceSha256": "6f6c867d8a97b6d3a74ed9ab0ba39209b2b520fa61fcdf3e87ed45746eb5356b",
+  "timelineSha256": "63c7b4d8dd7068c58ba3418896205311cb1a89d6b4a4c2ef6c1408144a8c9a16",
+  "sceneSha256": "9f58be2145071a9089148ee182acc141ac05d0c882660866f3d85f08550e30a4",
+  "sceneFiles": [
+    "src/model.ts",
+    "src/scene.ts",
+    "src/player.ts",
+    "review/index.html",
+    "public/audio-features.json",
+    "public/artwork-reference.png",
+    "public/visual-contract.json",
+    "public/fonts/Oswald-Medium.ttf"
+  ],
+  "checkedOn": "2026-10-10",
+  "scope": "Actual source-video browser preview transport and finite visual observations; not a full human listening review or encoded final-film verification.",
+  "stills": [
+    {
+      "path": "evidence/browser-landscape-24.300.png",
+      "method": "Actual visible browser canvas Download still control; unmodified PNG bytes",
+      "time": 24.3,
+      "sourceTime": 24.3,
+      "sourceFrame": 729,
+      "width": 1920,
+      "height": 1080,
+      "bytes": 814492,
+      "sha256": "508d192373ff8519350ba1bfa9360b4189afa85fd57b2dcb29812511fe4e10dc",
+      "encoding": "PNG"
+    },
+    {
+      "path": "evidence/browser-portrait-39.350.png",
+      "method": "Actual visible browser canvas Download still control; unmodified PNG bytes",
+      "time": 39.35,
+      "sourceTime": 39.333333,
+      "sourceFrame": 1180,
+      "width": 1080,
+      "height": 1920,
+      "bytes": 870566,
+      "sha256": "43e294ec7bfcd0b29283021560aece2f8a72bca599378cb11f52f86122440029",
+      "encoding": "PNG"
+    }
+  ],
+  "observations": [
+    {
+      "check": "Paused wide paired focus",
+      "wordTime": 24.3,
+      "sourcePicturePTS": 24.3,
+      "sourceFrame": 729,
+      "sourceWords": [
+        "люблю"
+      ],
+      "targetWords": [
+        "love"
+      ],
+      "opacity": 1,
+      "readyState": 4
+    },
+    {
+      "check": "Normal-speed complete-scene playback sample",
+      "sourceVideoTime": 82.696337,
+      "paintWordTime": 82.687964,
+      "sourcePicturePTS": 82.7,
+      "sourceFrame": 2481,
+      "sourceWords": [
+        "дружить"
+      ],
+      "targetWords": [
+        "friends"
+      ],
+      "opacity": 1,
+      "paintMilliseconds": 0.8,
+      "readyState": 4,
+      "paused": false,
+      "reviewRange": [
+        24.3,
+        82.687964
+      ],
+      "humanListening": false
+    },
+    {
+      "check": "Recovery retains exact seek, portrait, reduced speed, paused state and animation comparison",
+      "time": 39.35,
+      "sourcePicturePTS": 39.333333,
+      "sourceFrame": 1180,
+      "format": [
+        1080,
+        1920
+      ],
+      "playbackRate": 0.5,
+      "paused": true,
+      "effects": "off",
+      "sourceWords": [
+        "больного"
+      ],
+      "targetWords": [
+        "someone",
+        "sick"
+      ],
+      "opacity": 1
+    },
+    {
+      "check": "Complete source ending retains last decoded picture",
+      "time": 150.070567,
+      "duration": 150.070567,
+      "sourcePicturePTS": 149.966667,
+      "sourceFrame": 4499,
+      "ended": true,
+      "paused": true,
+      "readyState": 4,
+      "sourceWords": [],
+      "targetWords": [],
+      "actualPictureVisible": true
+    },
+    {
+      "check": "Original source comparison",
+      "sameOriginalIllustrationVisible": true,
+      "referenceMuted": true,
+      "mainSoundtrackCount": 1
+    },
+    {
+      "check": "Handoff state",
+      "time": 0,
+      "format": "landscape",
+      "playbackRate": 1,
+      "effects": "on",
+      "paused": true
+    }
+  ],
+  "normalSpeedFullSongListening": false,
+  "reducedSpeedUncertainWordListening": false,
+  "renderAuthorized": false,
+  "productionRendered": false
+}

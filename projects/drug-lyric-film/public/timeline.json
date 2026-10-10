@@ -1,0 +1,2936 @@
+{
+  "schemaVersion": 1,
+  "revision": "drug-preview-v2-natural-city",
+  "sampleRate": 44100,
+  "sourceSha256": "6f6c867d8a97b6d3a74ed9ab0ba39209b2b520fa61fcdf3e87ed45746eb5356b",
+  "sourceDuration": 150.070567,
+  "cues": [
+    {
+      "id": "v1-a",
+      "templateId": "a",
+      "lane": "lead",
+      "voice": "lead",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Я тебя запомнила — ты та скотина",
+      "targetText": "I remembered you — you're that beast.",
+      "start": 8.12,
+      "end": 11.76,
+      "visibleStart": 7.8999999999999995,
+      "fullOpacityEnd": 12.05501133786848,
+      "visibleEnd": 12.05501133786848,
+      "exitMode": "vocal-handoff",
+      "words": [
+        {
+          "id": "v1-a-s0",
+          "text": "Я",
+          "sourceIndex": 0,
+          "startSample": 358092,
+          "endSample": 377055,
+          "confidence": "Provisional; actual-audio review pending",
+          "method": "Separately selected original/stem signal context with Whisper and MMS cores retained as competing observations"
+        },
+        {
+          "id": "v1-a-s1",
+          "text": "тебя",
+          "sourceIndex": 1,
+          "startSample": 377055,
+          "endSample": 399987,
+          "confidence": "Provisional; actual-audio review pending",
+          "method": "Separately selected original/stem signal context with Whisper and MMS cores retained as competing observations"
+        },
+        {
+          "id": "v1-a-s2",
+          "text": "запомнила",
+          "sourceIndex": 2,
+          "startSample": 399987,
+          "endSample": 448938,
+          "confidence": "Provisional; actual-audio review pending",
+          "method": "Separately selected original/stem signal context with Whisper and MMS cores retained as competing observations",
+          "punctuationAfter": " —"
+        },
+        {
+          "id": "v1-a-s3",
+          "text": "ты",
+          "sourceIndex": 3,
+          "startSample": 451143,
+          "endSample": 465696,
+          "confidence": "Provisional; actual-audio review pending",
+          "method": "Separately selected original/stem signal context with Whisper and MMS cores retained as competing observations"
+        },
+        {
+          "id": "v1-a-s4",
+          "text": "та",
+          "sourceIndex": 4,
+          "startSample": 466137,
+          "endSample": 478044,
+          "confidence": "Provisional; actual-audio review pending",
+          "method": "Separately selected original/stem signal context with Whisper and MMS cores retained as competing observations"
+        },
+        {
+          "id": "v1-a-s5",
+          "text": "скотина",
+          "sourceIndex": 5,
+          "startSample": 478485,
+          "endSample": 518616,
+          "confidence": "Provisional; actual-audio review pending",
+          "method": "Separately selected original/stem signal context with Whisper and MMS cores retained as competing observations"
+        }
+      ],
+      "targets": [
+        {
+          "id": "v1-a-t0",
+          "text": "I",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "individual-meaning",
+          "rationale": "Individual lexical correspondence on the same source event."
+        },
+        {
+          "id": "v1-a-t1",
+          "text": "remembered",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "individual-meaning",
+          "rationale": "Past remember verb; natural English order keeps the explicit object independent."
+        },
+        {
+          "id": "v1-a-t2",
+          "text": "you",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "individual-meaning",
+          "rationale": "Individual lexical correspondence on the same source event.",
+          "punctuationAfter": " —"
+        },
+        {
+          "id": "v1-a-t3",
+          "text": "you're",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "individual-meaning",
+          "rationale": "Russian omits the present copula; the complete English contracted copula shares ты."
+        },
+        {
+          "id": "v1-a-t4",
+          "text": "that",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "relation": "individual-meaning",
+          "rationale": "Individual lexical correspondence on the same source event."
+        },
+        {
+          "id": "v1-a-t5",
+          "text": "beast",
+          "sourceIndices": [
+            5
+          ],
+          "focusSourceIndices": [
+            5
+          ],
+          "relation": "individual-meaning",
+          "rationale": "Individual lexical correspondence on the same source event.",
+          "punctuationAfter": "."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "v1-b",
+      "templateId": "b",
+      "lane": "lead",
+      "voice": "lead",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Что поселилась внутри головы",
+      "targetText": "That settled inside my head.",
+      "start": 12.05501133786848,
+      "end": 15.36,
+      "visibleStart": 12.05501133786848,
+      "fullOpacityEnd": 15.81,
+      "visibleEnd": 15.81,
+      "exitMode": "vocal-handoff",
+      "words": [
+        {
+          "id": "v1-b-s0",
+          "text": "Что",
+          "sourceIndex": 0,
+          "startSample": 531626,
+          "endSample": 544194,
+          "confidence": "Provisional; actual-audio review pending",
+          "method": "Separately selected original/stem signal context with Whisper and MMS cores retained as competing observations"
+        },
+        {
+          "id": "v1-b-s1",
+          "text": "поселилась",
+          "sourceIndex": 1,
+          "startSample": 544635,
+          "endSample": 603729,
+          "confidence": "Provisional; actual-audio review pending",
+          "method": "Separately selected original/stem signal context with Whisper and MMS cores retained as competing observations"
+        },
+        {
+          "id": "v1-b-s2",
+          "text": "внутри",
+          "sourceIndex": 2,
+          "startSample": 604170,
+          "endSample": 625779,
+          "confidence": "Provisional; actual-audio review pending",
+          "method": "Separately selected original/stem signal context with Whisper and MMS cores retained as competing observations"
+        },
+        {
+          "id": "v1-b-s3",
+          "text": "головы",
+          "sourceIndex": 3,
+          "startSample": 626220,
+          "endSample": 677376,
+          "confidence": "Provisional; actual-audio review pending",
+          "method": "Separately selected original/stem signal context with Whisper and MMS cores retained as competing observations"
+        }
+      ],
+      "targets": [
+        {
+          "id": "v1-b-t0",
+          "text": "That",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "individual-meaning",
+          "rationale": "Individual lexical correspondence on the same source event."
+        },
+        {
+          "id": "v1-b-t1",
+          "text": "settled",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "individual-meaning",
+          "rationale": "Individual lexical correspondence on the same source event."
+        },
+        {
+          "id": "v1-b-t2",
+          "text": "inside",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "individual-meaning",
+          "rationale": "Individual lexical correspondence on the same source event."
+        },
+        {
+          "id": "v1-b-t3",
+          "text": "my",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "complete-grammar-expansion",
+          "rationale": "My is the contextual head owner in the preceding first-person clause; it shares the head event, without a fabricated possessive time."
+        },
+        {
+          "id": "v1-b-t4",
+          "text": "head",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "complete-grammar-expansion",
+          "rationale": "Individual lexical correspondence on the same source event.",
+          "punctuationAfter": "."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "v1-c",
+      "templateId": "c",
+      "lane": "lead",
+      "voice": "lead",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Будешь теперь мне вместо глицина",
+      "targetText": "Now you'll be my substitute for glycine.",
+      "start": 15.81,
+      "end": 19.28,
+      "visibleStart": 15.81,
+      "fullOpacityEnd": 19.56501133786848,
+      "visibleEnd": 19.56501133786848,
+      "exitMode": "vocal-handoff",
+      "words": [
+        {
+          "id": "v1-c-s0",
+          "text": "Будешь",
+          "sourceIndex": 0,
+          "startSample": 697221,
+          "endSample": 730296,
+          "confidence": "Provisional; actual-audio review pending",
+          "method": "Separately selected original/stem signal context with Whisper and MMS cores retained as competing observations"
+        },
+        {
+          "id": "v1-c-s1",
+          "text": "теперь",
+          "sourceIndex": 1,
+          "startSample": 730737,
+          "endSample": 756756,
+          "confidence": "Provisional; actual-audio review pending",
+          "method": "Separately selected original/stem signal context with Whisper and MMS cores retained as competing observations"
+        },
+        {
+          "id": "v1-c-s2",
+          "text": "мне",
+          "sourceIndex": 2,
+          "startSample": 757197,
+          "endSample": 773073,
+          "confidence": "Provisional; actual-audio review pending",
+          "method": "Separately selected original/stem signal context with Whisper and MMS cores retained as competing observations"
+        },
+        {
+          "id": "v1-c-s3",
+          "text": "вместо",
+          "sourceIndex": 3,
+          "startSample": 773514,
+          "endSample": 806589,
+          "confidence": "Provisional; actual-audio review pending",
+          "method": "Separately selected original/stem signal context with Whisper and MMS cores retained as competing observations"
+        },
+        {
+          "id": "v1-c-s4",
+          "text": "глицина",
+          "sourceIndex": 4,
+          "startSample": 807030,
+          "endSample": 850248,
+          "confidence": "Provisional; actual-audio review pending",
+          "method": "Separately selected original/stem signal context with Whisper and MMS cores retained as competing observations"
+        }
+      ],
+      "targets": [
+        {
+          "id": "v1-c-t0",
+          "text": "Now",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "individual-meaning",
+          "rationale": "Individual lexical correspondence on the same source event."
+        },
+        {
+          "id": "v1-c-t1",
+          "text": "you'll",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "complete-grammar-expansion",
+          "rationale": "The inflected future verb expands into the complete English you will be."
+        },
+        {
+          "id": "v1-c-t2",
+          "text": "be",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "complete-grammar-expansion",
+          "rationale": "Individual lexical correspondence on the same source event."
+        },
+        {
+          "id": "v1-c-t3",
+          "text": "my",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "individual-meaning",
+          "rationale": "Individual lexical correspondence on the same source event."
+        },
+        {
+          "id": "v1-c-t4",
+          "text": "substitute",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "complete-grammar-expansion",
+          "rationale": "Substitute for is a complete lexical equivalent of вместо."
+        },
+        {
+          "id": "v1-c-t5",
+          "text": "for",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "complete-grammar-expansion",
+          "rationale": "Individual lexical correspondence on the same source event."
+        },
+        {
+          "id": "v1-c-t6",
+          "text": "glycine",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "relation": "individual-meaning",
+          "rationale": "Individual lexical correspondence on the same source event.",
+          "punctuationAfter": "."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "v1-d",
+      "templateId": "d",
+      "lane": "lead",
+      "voice": "lead",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Не сопротивляйся, мы будем дружить",
+      "targetText": "Don't resist; we will be friends.",
+      "start": 19.56501133786848,
+      "end": 22.91,
+      "visibleStart": 19.56501133786848,
+      "fullOpacityEnd": 23.21,
+      "visibleEnd": 23.21,
+      "exitMode": "vocal-handoff",
+      "words": [
+        {
+          "id": "v1-d-s0",
+          "text": "Не",
+          "sourceIndex": 0,
+          "startSample": 862817,
+          "endSample": 873621,
+          "confidence": "Provisional; actual-audio review pending",
+          "method": "Separately selected original/stem signal context with Whisper and MMS cores retained as competing observations"
+        },
+        {
+          "id": "v1-d-s1",
+          "text": "сопротивляйся",
+          "sourceIndex": 1,
+          "startSample": 873842,
+          "endSample": 934038,
+          "confidence": "Provisional; actual-audio review pending",
+          "method": "Separately selected original/stem signal context with Whisper and MMS cores retained as competing observations",
+          "punctuationAfter": ","
+        },
+        {
+          "id": "v1-d-s2",
+          "text": "мы",
+          "sourceIndex": 2,
+          "startSample": 938007,
+          "endSample": 945504,
+          "confidence": "Provisional; actual-audio review pending",
+          "method": "Separately selected original/stem signal context with Whisper and MMS cores retained as competing observations"
+        },
+        {
+          "id": "v1-d-s3",
+          "text": "будем",
+          "sourceIndex": 3,
+          "startSample": 945945,
+          "endSample": 976815,
+          "confidence": "Provisional; actual-audio review pending",
+          "method": "Separately selected original/stem signal context with Whisper and MMS cores retained as competing observations"
+        },
+        {
+          "id": "v1-d-s4",
+          "text": "дружить",
+          "sourceIndex": 4,
+          "startSample": 977256,
+          "endSample": 1010331,
+          "confidence": "Provisional; actual-audio review pending",
+          "method": "Separately selected original/stem signal context with Whisper and MMS cores retained as competing observations"
+        }
+      ],
+      "targets": [
+        {
+          "id": "v1-d-t0",
+          "text": "Don't",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "individual-meaning",
+          "rationale": "Negative auxiliary follows the independently sung negation."
+        },
+        {
+          "id": "v1-d-t1",
+          "text": "resist",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "individual-meaning",
+          "rationale": "Individual lexical correspondence on the same source event.",
+          "punctuationAfter": ";"
+        },
+        {
+          "id": "v1-d-t2",
+          "text": "we",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "individual-meaning",
+          "rationale": "Individual lexical correspondence on the same source event."
+        },
+        {
+          "id": "v1-d-t3",
+          "text": "will",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "complete-grammar-expansion",
+          "rationale": "Future auxiliary is distinct from the explicit subject we."
+        },
+        {
+          "id": "v1-d-t4",
+          "text": "be",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "complete-grammar-expansion",
+          "rationale": "Individual lexical correspondence on the same source event."
+        },
+        {
+          "id": "v1-d-t5",
+          "text": "friends",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "relation": "individual-meaning",
+          "rationale": "Individual lexical correspondence on the same source event.",
+          "punctuationAfter": "."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "v1-e",
+      "templateId": "e",
+      "lane": "lead",
+      "voice": "lead",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Я тебя люблю — это ты то животное",
+      "targetText": "I love you — you're that creature.",
+      "start": 23.21,
+      "end": 27.08,
+      "visibleStart": 23.21,
+      "fullOpacityEnd": 27.10501133786848,
+      "visibleEnd": 27.10501133786848,
+      "exitMode": "vocal-handoff",
+      "words": [
+        {
+          "id": "v1-e-s0",
+          "text": "Я",
+          "sourceIndex": 0,
+          "startSample": 1023561,
+          "endSample": 1040760,
+          "confidence": "Provisional; actual-audio review pending",
+          "method": "Separately selected original/stem signal context with Whisper and MMS cores retained as competing observations"
+        },
+        {
+          "id": "v1-e-s1",
+          "text": "тебя",
+          "sourceIndex": 1,
+          "startSample": 1040760,
+          "endSample": 1060605,
+          "confidence": "Provisional; actual-audio review pending",
+          "method": "Separately selected original/stem signal context with Whisper and MMS cores retained as competing observations"
+        },
+        {
+          "id": "v1-e-s2",
+          "text": "люблю",
+          "sourceIndex": 2,
+          "startSample": 1060605,
+          "endSample": 1090152,
+          "confidence": "Provisional; actual-audio review pending",
+          "method": "Separately selected original/stem signal context with Whisper and MMS cores retained as competing observations",
+          "punctuationAfter": " —"
+        },
+        {
+          "id": "v1-e-s3",
+          "text": "это",
+          "sourceIndex": 3,
+          "startSample": 1092357,
+          "endSample": 1110879,
+          "confidence": "Provisional; actual-audio review pending",
+          "method": "Separately selected original/stem signal context with Whisper and MMS cores retained as competing observations"
+        },
+        {
+          "id": "v1-e-s4",
+          "text": "ты",
+          "sourceIndex": 4,
+          "startSample": 1111320,
+          "endSample": 1125873,
+          "confidence": "Provisional; actual-audio review pending",
+          "method": "Separately selected original/stem signal context with Whisper and MMS cores retained as competing observations"
+        },
+        {
+          "id": "v1-e-s5",
+          "text": "то",
+          "sourceIndex": 5,
+          "startSample": 1126314,
+          "endSample": 1142190,
+          "confidence": "Provisional; actual-audio review pending",
+          "method": "Separately selected original/stem signal context with Whisper and MMS cores retained as competing observations"
+        },
+        {
+          "id": "v1-e-s6",
+          "text": "животное",
+          "sourceIndex": 6,
+          "startSample": 1142631,
+          "endSample": 1194228,
+          "confidence": "Provisional; actual-audio review pending",
+          "method": "Separately selected original/stem signal context with Whisper and MMS cores retained as competing observations"
+        }
+      ],
+      "targets": [
+        {
+          "id": "v1-e-t0",
+          "text": "I",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "individual-meaning",
+          "rationale": "Individual lexical correspondence on the same source event."
+        },
+        {
+          "id": "v1-e-t1",
+          "text": "love",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "individual-meaning",
+          "rationale": "Individual lexical correspondence on the same source event."
+        },
+        {
+          "id": "v1-e-t2",
+          "text": "you",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "individual-meaning",
+          "rationale": "Individual lexical correspondence on the same source event.",
+          "punctuationAfter": " —"
+        },
+        {
+          "id": "v1-e-t3",
+          "text": "you're",
+          "sourceIndices": [
+            3,
+            4
+          ],
+          "focusSourceIndices": [
+            3,
+            4
+          ],
+          "relation": "copular-identification-union",
+          "rationale": "The Russian deictic identification это ты is a copular construction in natural English. You are follows the union of its two independently measured events, releasing over any gap."
+        },
+        {
+          "id": "v1-e-t4",
+          "text": "that",
+          "sourceIndices": [
+            5
+          ],
+          "focusSourceIndices": [
+            5
+          ],
+          "relation": "individual-meaning",
+          "rationale": "Individual lexical correspondence on the same source event."
+        },
+        {
+          "id": "v1-e-t5",
+          "text": "creature",
+          "sourceIndices": [
+            6
+          ],
+          "focusSourceIndices": [
+            6
+          ],
+          "relation": "individual-meaning",
+          "rationale": "Individual lexical correspondence on the same source event.",
+          "punctuationAfter": "."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "v1-f",
+      "templateId": "f",
+      "lane": "lead",
+      "voice": "lead",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Тёплое, мягкое — хочется трогать",
+      "targetText": "Warm, soft — I want to touch.",
+      "start": 27.10501133786848,
+      "end": 30.7,
+      "visibleStart": 27.10501133786848,
+      "fullOpacityEnd": 30.79501133786848,
+      "visibleEnd": 30.79501133786848,
+      "exitMode": "vocal-handoff",
+      "words": [
+        {
+          "id": "v1-f-s0",
+          "text": "Тёплое",
+          "sourceIndex": 0,
+          "startSample": 1195331,
+          "endSample": 1235903,
+          "confidence": "Provisional; actual-audio review pending",
+          "method": "Separately selected original/stem signal context with Whisper and MMS cores retained as competing observations",
+          "punctuationAfter": ","
+        },
+        {
+          "id": "v1-f-s1",
+          "text": "мягкое",
+          "sourceIndex": 1,
+          "startSample": 1237446,
+          "endSample": 1277136,
+          "confidence": "Provisional; actual-audio review pending",
+          "method": "Separately selected original/stem signal context with Whisper and MMS cores retained as competing observations",
+          "punctuationAfter": " —"
+        },
+        {
+          "id": "v1-f-s2",
+          "text": "хочется",
+          "sourceIndex": 2,
+          "startSample": 1277577,
+          "endSample": 1316826,
+          "confidence": "Provisional; actual-audio review pending",
+          "method": "Separately selected original/stem signal context with Whisper and MMS cores retained as competing observations"
+        },
+        {
+          "id": "v1-f-s3",
+          "text": "трогать",
+          "sourceIndex": 3,
+          "startSample": 1317267,
+          "endSample": 1353870,
+          "confidence": "Provisional; actual-audio review pending",
+          "method": "Separately selected original/stem signal context with Whisper and MMS cores retained as competing observations"
+        }
+      ],
+      "targets": [
+        {
+          "id": "v1-f-t0",
+          "text": "Warm",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "individual-meaning",
+          "rationale": "Individual lexical correspondence on the same source event.",
+          "punctuationAfter": ","
+        },
+        {
+          "id": "v1-f-t1",
+          "text": "soft",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "individual-meaning",
+          "rationale": "Individual lexical correspondence on the same source event.",
+          "punctuationAfter": " —"
+        },
+        {
+          "id": "v1-f-t2",
+          "text": "I",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "complete-grammar-expansion",
+          "rationale": "The impersonal desire expands into I want to; no unstated touch object is supplied."
+        },
+        {
+          "id": "v1-f-t3",
+          "text": "want",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "complete-grammar-expansion",
+          "rationale": "Individual lexical correspondence on the same source event."
+        },
+        {
+          "id": "v1-f-t4",
+          "text": "to",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "complete-grammar-expansion",
+          "rationale": "Individual lexical correspondence on the same source event."
+        },
+        {
+          "id": "v1-f-t5",
+          "text": "touch",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "individual-meaning",
+          "rationale": "Individual lexical correspondence on the same source event.",
+          "punctuationAfter": "."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "v1-g",
+      "templateId": "g",
+      "lane": "lead",
+      "voice": "lead",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Хочется чувствовать что-то особое",
+      "targetText": "I want to feel something special.",
+      "start": 30.79501133786848,
+      "end": 34.57,
+      "visibleStart": 30.79501133786848,
+      "fullOpacityEnd": 34.6,
+      "visibleEnd": 34.6,
+      "exitMode": "vocal-handoff",
+      "words": [
+        {
+          "id": "v1-g-s0",
+          "text": "Хочется",
+          "sourceIndex": 0,
+          "startSample": 1358060,
+          "endSample": 1398852,
+          "confidence": "Provisional; actual-audio review pending",
+          "method": "Separately selected original/stem signal context with Whisper and MMS cores retained as competing observations"
+        },
+        {
+          "id": "v1-g-s1",
+          "text": "чувствовать",
+          "sourceIndex": 1,
+          "startSample": 1399293,
+          "endSample": 1444275,
+          "confidence": "Provisional; actual-audio review pending",
+          "method": "Separately selected original/stem signal context with Whisper and MMS cores retained as competing observations"
+        },
+        {
+          "id": "v1-g-s2",
+          "text": "что-то",
+          "sourceIndex": 2,
+          "startSample": 1444275,
+          "endSample": 1472940,
+          "confidence": "Provisional; actual-audio review pending",
+          "method": "Separately selected original/stem signal context with Whisper and MMS cores retained as competing observations"
+        },
+        {
+          "id": "v1-g-s3",
+          "text": "особое",
+          "sourceIndex": 3,
+          "startSample": 1475145,
+          "endSample": 1524537,
+          "confidence": "Provisional; actual-audio review pending",
+          "method": "Separately selected original/stem signal context with Whisper and MMS cores retained as competing observations"
+        }
+      ],
+      "targets": [
+        {
+          "id": "v1-g-t0",
+          "text": "I",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "complete-grammar-expansion",
+          "rationale": "Complete desire construction receives one source event; feel and something special retain their separate events."
+        },
+        {
+          "id": "v1-g-t1",
+          "text": "want",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "complete-grammar-expansion",
+          "rationale": "Individual lexical correspondence on the same source event."
+        },
+        {
+          "id": "v1-g-t2",
+          "text": "to",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "complete-grammar-expansion",
+          "rationale": "Individual lexical correspondence on the same source event."
+        },
+        {
+          "id": "v1-g-t3",
+          "text": "feel",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "individual-meaning",
+          "rationale": "Individual lexical correspondence on the same source event."
+        },
+        {
+          "id": "v1-g-t4",
+          "text": "something",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "individual-meaning",
+          "rationale": "Individual lexical correspondence on the same source event."
+        },
+        {
+          "id": "v1-g-t5",
+          "text": "special",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "individual-meaning",
+          "rationale": "Individual lexical correspondence on the same source event.",
+          "punctuationAfter": "."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "v1-h",
+      "templateId": "h",
+      "lane": "lead",
+      "voice": "lead",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Что-то красивее хрипов больного",
+      "targetText": "Something prettier than a sick person's wheezing.",
+      "start": 34.6,
+      "end": 37.88,
+      "visibleStart": 34.6,
+      "fullOpacityEnd": 38.08700680272109,
+      "visibleEnd": 38.08700680272109,
+      "exitMode": "vocal-handoff",
+      "words": [
+        {
+          "id": "v1-h-s0",
+          "text": "Что-то",
+          "sourceIndex": 0,
+          "startSample": 1525860,
+          "endSample": 1552541,
+          "confidence": "Provisional; actual-audio review pending",
+          "method": "Separately selected original/stem signal context with Whisper and MMS cores retained as competing observations"
+        },
+        {
+          "id": "v1-h-s1",
+          "text": "красивее",
+          "sourceIndex": 1,
+          "startSample": 1552761,
+          "endSample": 1606342,
+          "confidence": "Provisional; actual-audio review pending",
+          "method": "Separately selected original/stem signal context with Whisper and MMS cores retained as competing observations"
+        },
+        {
+          "id": "v1-h-s2",
+          "text": "хрипов",
+          "sourceIndex": 2,
+          "startSample": 1606387,
+          "endSample": 1638315,
+          "confidence": "Provisional; actual-audio review pending",
+          "method": "Separately selected original/stem signal context with Whisper and MMS cores retained as competing observations"
+        },
+        {
+          "id": "v1-h-s3",
+          "text": "больного",
+          "sourceIndex": 3,
+          "startSample": 1638359,
+          "endSample": 1670508,
+          "confidence": "Provisional; actual-audio review pending",
+          "method": "Separately selected original/stem signal context with Whisper and MMS cores retained as competing observations"
+        }
+      ],
+      "targets": [
+        {
+          "id": "v1-h-t0",
+          "text": "Something",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "individual-meaning",
+          "rationale": "Individual lexical correspondence on the same source event."
+        },
+        {
+          "id": "v1-h-t1",
+          "text": "prettier",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "complete-grammar-expansion",
+          "rationale": "Comparative morphology supplies than; it shares the comparative."
+        },
+        {
+          "id": "v1-h-t2",
+          "text": "than",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "complete-grammar-expansion",
+          "rationale": "Individual lexical correspondence on the same source event."
+        },
+        {
+          "id": "v1-h-t3",
+          "text": "a",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "complete-grammar-expansion",
+          "rationale": "A sick person is a singular nominalized adjective; the complete possessive span shares больного."
+        },
+        {
+          "id": "v1-h-t4",
+          "text": "sick",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "complete-grammar-expansion",
+          "rationale": "Individual lexical correspondence on the same source event."
+        },
+        {
+          "id": "v1-h-t5",
+          "text": "person's",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "complete-grammar-expansion",
+          "rationale": "Individual lexical correspondence on the same source event."
+        },
+        {
+          "id": "v1-h-t6",
+          "text": "wheezing",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "individual-meaning",
+          "rationale": "Natural English word order places the individually timed wheezing after its possessor.",
+          "punctuationAfter": "."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "r1-three",
+      "templateId": "repeat",
+      "lane": "lead",
+      "voice": "filtered lead echo",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Больного, больного, больного",
+      "targetText": "Someone sick, someone sick, someone sick.",
+      "start": 38.08700680272109,
+      "end": 40.68800453514739,
+      "visibleStart": 38.08700680272109,
+      "fullOpacityEnd": 40.89800453514739,
+      "visibleEnd": 40.89800453514739,
+      "exitMode": "vocal-handoff",
+      "words": [
+        {
+          "id": "r1-three-s0",
+          "text": "Больного",
+          "punctuationAfter": ",",
+          "sourceIndex": 0,
+          "startSample": 1679637,
+          "endSample": 1711742,
+          "confidence": "Provisional filtered-repeat ownership",
+          "method": "Normalized vocal-fragment similarity and original/stem repeated harmonic context; broad forced allocations rejected"
+        },
+        {
+          "id": "r1-three-s1",
+          "text": "больного",
+          "punctuationAfter": ",",
+          "sourceIndex": 1,
+          "startSample": 1720958,
+          "endSample": 1753063,
+          "confidence": "Provisional filtered-repeat ownership",
+          "method": "Normalized vocal-fragment similarity and original/stem repeated harmonic context; broad forced allocations rejected"
+        },
+        {
+          "id": "r1-three-s2",
+          "text": "больного",
+          "punctuationAfter": "",
+          "sourceIndex": 2,
+          "startSample": 1762280,
+          "endSample": 1794341,
+          "confidence": "Provisional filtered-repeat ownership",
+          "method": "Normalized vocal-fragment similarity and original/stem repeated harmonic context; broad forced allocations rejected"
+        }
+      ],
+      "targets": [
+        {
+          "id": "r1-three-t0-0",
+          "text": "Someone",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "singular-nominalized-adjective",
+          "rationale": "Complete singular sick-person meaning; the detached refrain echoes the person rather than inventing a new verb."
+        },
+        {
+          "id": "r1-three-t0-1",
+          "text": "sick",
+          "punctuationAfter": ",",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "singular-nominalized-adjective",
+          "rationale": "Complete singular sick-person meaning; the detached refrain echoes the person rather than inventing a new verb."
+        },
+        {
+          "id": "r1-three-t1-0",
+          "text": "someone",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "singular-nominalized-adjective",
+          "rationale": "Complete singular sick-person meaning; the detached refrain echoes the person rather than inventing a new verb."
+        },
+        {
+          "id": "r1-three-t1-1",
+          "text": "sick",
+          "punctuationAfter": ",",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "singular-nominalized-adjective",
+          "rationale": "Complete singular sick-person meaning; the detached refrain echoes the person rather than inventing a new verb."
+        },
+        {
+          "id": "r1-three-t2-0",
+          "text": "someone",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "singular-nominalized-adjective",
+          "rationale": "Complete singular sick-person meaning; the detached refrain echoes the person rather than inventing a new verb."
+        },
+        {
+          "id": "r1-three-t2-1",
+          "text": "sick",
+          "punctuationAfter": ".",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "singular-nominalized-adjective",
+          "rationale": "Complete singular sick-person meaning; the detached refrain echoes the person rather than inventing a new verb."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "r1-two",
+      "templateId": "repeat",
+      "lane": "lead",
+      "voice": "filtered lead echo",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Больного, больного",
+      "targetText": "Someone sick, someone sick.",
+      "start": 40.89800453514739,
+      "end": 42.49,
+      "visibleStart": 40.89800453514739,
+      "fullOpacityEnd": 42.77,
+      "visibleEnd": 43.27,
+      "exitMode": "fade",
+      "words": [
+        {
+          "id": "r1-two-s0",
+          "text": "Больного",
+          "punctuationAfter": ",",
+          "sourceIndex": 0,
+          "startSample": 1803602,
+          "endSample": 1833899,
+          "confidence": "Provisional filtered-repeat ownership",
+          "method": "Normalized vocal-fragment similarity and original/stem repeated harmonic context; broad forced allocations rejected"
+        },
+        {
+          "id": "r1-two-s1",
+          "text": "больного",
+          "punctuationAfter": "",
+          "sourceIndex": 1,
+          "startSample": 1844968,
+          "endSample": 1873809,
+          "confidence": "Provisional filtered-repeat ownership",
+          "method": "Normalized vocal-fragment similarity and original/stem repeated harmonic context; broad forced allocations rejected"
+        }
+      ],
+      "targets": [
+        {
+          "id": "r1-two-t0-0",
+          "text": "Someone",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "singular-nominalized-adjective",
+          "rationale": "Complete singular sick-person meaning; the detached refrain echoes the person rather than inventing a new verb."
+        },
+        {
+          "id": "r1-two-t0-1",
+          "text": "sick",
+          "punctuationAfter": ",",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "singular-nominalized-adjective",
+          "rationale": "Complete singular sick-person meaning; the detached refrain echoes the person rather than inventing a new verb."
+        },
+        {
+          "id": "r1-two-t1-0",
+          "text": "someone",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "singular-nominalized-adjective",
+          "rationale": "Complete singular sick-person meaning; the detached refrain echoes the person rather than inventing a new verb."
+        },
+        {
+          "id": "r1-two-t1-1",
+          "text": "sick",
+          "punctuationAfter": ".",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "singular-nominalized-adjective",
+          "rationale": "Complete singular sick-person meaning; the detached refrain echoes the person rather than inventing a new verb."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "v2-a",
+      "templateId": "a",
+      "lane": "lead",
+      "voice": "lead",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Я тебя запомнила — ты та скотина",
+      "targetText": "I remembered you — you're that beast.",
+      "start": 68.08,
+      "end": 71.77,
+      "visibleStart": 67.86,
+      "fullOpacityEnd": 72.06501133786848,
+      "visibleEnd": 72.06501133786848,
+      "exitMode": "vocal-handoff",
+      "words": [
+        {
+          "id": "v2-a-s0",
+          "text": "Я",
+          "sourceIndex": 0,
+          "startSample": 3002328,
+          "endSample": 3023055,
+          "confidence": "Provisional; actual-audio review pending",
+          "method": "Separately selected original/stem signal context with Whisper and MMS cores retained as competing observations"
+        },
+        {
+          "id": "v2-a-s1",
+          "text": "тебя",
+          "sourceIndex": 1,
+          "startSample": 3023055,
+          "endSample": 3045546,
+          "confidence": "Provisional; actual-audio review pending",
+          "method": "Separately selected original/stem signal context with Whisper and MMS cores retained as competing observations"
+        },
+        {
+          "id": "v2-a-s2",
+          "text": "запомнила",
+          "sourceIndex": 2,
+          "startSample": 3045546,
+          "endSample": 3096041,
+          "confidence": "Provisional; actual-audio review pending",
+          "method": "Separately selected original/stem signal context with Whisper and MMS cores retained as competing observations",
+          "punctuationAfter": " —"
+        },
+        {
+          "id": "v2-a-s3",
+          "text": "ты",
+          "sourceIndex": 3,
+          "startSample": 3097143,
+          "endSample": 3112137,
+          "confidence": "Provisional; actual-audio review pending",
+          "method": "Separately selected original/stem signal context with Whisper and MMS cores retained as competing observations"
+        },
+        {
+          "id": "v2-a-s4",
+          "text": "та",
+          "sourceIndex": 4,
+          "startSample": 3112578,
+          "endSample": 3124044,
+          "confidence": "Provisional; actual-audio review pending",
+          "method": "Separately selected original/stem signal context with Whisper and MMS cores retained as competing observations"
+        },
+        {
+          "id": "v2-a-s5",
+          "text": "скотина",
+          "sourceIndex": 5,
+          "startSample": 3124485,
+          "endSample": 3165057,
+          "confidence": "Provisional; actual-audio review pending",
+          "method": "Separately selected original/stem signal context with Whisper and MMS cores retained as competing observations"
+        }
+      ],
+      "targets": [
+        {
+          "id": "v2-a-t0",
+          "text": "I",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "individual-meaning",
+          "rationale": "Individual lexical correspondence on the same source event."
+        },
+        {
+          "id": "v2-a-t1",
+          "text": "remembered",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "individual-meaning",
+          "rationale": "Past remember verb; natural English order keeps the explicit object independent."
+        },
+        {
+          "id": "v2-a-t2",
+          "text": "you",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "individual-meaning",
+          "rationale": "Individual lexical correspondence on the same source event.",
+          "punctuationAfter": " —"
+        },
+        {
+          "id": "v2-a-t3",
+          "text": "you're",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "individual-meaning",
+          "rationale": "Russian omits the present copula; the complete English contracted copula shares ты."
+        },
+        {
+          "id": "v2-a-t4",
+          "text": "that",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "relation": "individual-meaning",
+          "rationale": "Individual lexical correspondence on the same source event."
+        },
+        {
+          "id": "v2-a-t5",
+          "text": "beast",
+          "sourceIndices": [
+            5
+          ],
+          "focusSourceIndices": [
+            5
+          ],
+          "relation": "individual-meaning",
+          "rationale": "Individual lexical correspondence on the same source event.",
+          "punctuationAfter": "."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "v2-b",
+      "templateId": "b",
+      "lane": "lead",
+      "voice": "lead",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Что поселилась внутри головы",
+      "targetText": "That settled inside my head.",
+      "start": 72.06501133786848,
+      "end": 75.36501133786848,
+      "visibleStart": 72.06501133786848,
+      "fullOpacityEnd": 75.82501133786847,
+      "visibleEnd": 75.82501133786847,
+      "exitMode": "vocal-handoff",
+      "words": [
+        {
+          "id": "v2-b-s0",
+          "text": "Что",
+          "sourceIndex": 0,
+          "startSample": 3178067,
+          "endSample": 3190856,
+          "confidence": "Provisional; actual-audio review pending",
+          "method": "Separately selected original/stem signal context with Whisper and MMS cores retained as competing observations"
+        },
+        {
+          "id": "v2-b-s1",
+          "text": "поселилась",
+          "sourceIndex": 1,
+          "startSample": 3191297,
+          "endSample": 3250170,
+          "confidence": "Provisional; actual-audio review pending",
+          "method": "Separately selected original/stem signal context with Whisper and MMS cores retained as competing observations"
+        },
+        {
+          "id": "v2-b-s2",
+          "text": "внутри",
+          "sourceIndex": 2,
+          "startSample": 3250611,
+          "endSample": 3272441,
+          "confidence": "Provisional; actual-audio review pending",
+          "method": "Separately selected original/stem signal context with Whisper and MMS cores retained as competing observations"
+        },
+        {
+          "id": "v2-b-s3",
+          "text": "головы",
+          "sourceIndex": 3,
+          "startSample": 3272882,
+          "endSample": 3323597,
+          "confidence": "Provisional; actual-audio review pending",
+          "method": "Separately selected original/stem signal context with Whisper and MMS cores retained as competing observations"
+        }
+      ],
+      "targets": [
+        {
+          "id": "v2-b-t0",
+          "text": "That",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "individual-meaning",
+          "rationale": "Individual lexical correspondence on the same source event."
+        },
+        {
+          "id": "v2-b-t1",
+          "text": "settled",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "individual-meaning",
+          "rationale": "Individual lexical correspondence on the same source event."
+        },
+        {
+          "id": "v2-b-t2",
+          "text": "inside",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "individual-meaning",
+          "rationale": "Individual lexical correspondence on the same source event."
+        },
+        {
+          "id": "v2-b-t3",
+          "text": "my",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "complete-grammar-expansion",
+          "rationale": "My is the contextual head owner in the preceding first-person clause; it shares the head event, without a fabricated possessive time."
+        },
+        {
+          "id": "v2-b-t4",
+          "text": "head",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "complete-grammar-expansion",
+          "rationale": "Individual lexical correspondence on the same source event.",
+          "punctuationAfter": "."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "v2-c",
+      "templateId": "c",
+      "lane": "lead",
+      "voice": "lead",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Будешь теперь мне вместо глицина",
+      "targetText": "Now you'll be my substitute for glycine.",
+      "start": 75.82501133786847,
+      "end": 79.28501133786848,
+      "visibleStart": 75.82501133786847,
+      "fullOpacityEnd": 79.56501133786848,
+      "visibleEnd": 79.56501133786848,
+      "exitMode": "vocal-handoff",
+      "words": [
+        {
+          "id": "v2-c-s0",
+          "text": "Будешь",
+          "sourceIndex": 0,
+          "startSample": 3343883,
+          "endSample": 3376517,
+          "confidence": "Provisional; actual-audio review pending",
+          "method": "Separately selected original/stem signal context with Whisper and MMS cores retained as competing observations"
+        },
+        {
+          "id": "v2-c-s1",
+          "text": "теперь",
+          "sourceIndex": 1,
+          "startSample": 3376958,
+          "endSample": 3402977,
+          "confidence": "Provisional; actual-audio review pending",
+          "method": "Separately selected original/stem signal context with Whisper and MMS cores retained as competing observations"
+        },
+        {
+          "id": "v2-c-s2",
+          "text": "мне",
+          "sourceIndex": 2,
+          "startSample": 3403418,
+          "endSample": 3419294,
+          "confidence": "Provisional; actual-audio review pending",
+          "method": "Separately selected original/stem signal context with Whisper and MMS cores retained as competing observations"
+        },
+        {
+          "id": "v2-c-s3",
+          "text": "вместо",
+          "sourceIndex": 3,
+          "startSample": 3419735,
+          "endSample": 3452810,
+          "confidence": "Provisional; actual-audio review pending",
+          "method": "Separately selected original/stem signal context with Whisper and MMS cores retained as competing observations"
+        },
+        {
+          "id": "v2-c-s4",
+          "text": "глицина",
+          "sourceIndex": 4,
+          "startSample": 3453251,
+          "endSample": 3496469,
+          "confidence": "Provisional; actual-audio review pending",
+          "method": "Separately selected original/stem signal context with Whisper and MMS cores retained as competing observations"
+        }
+      ],
+      "targets": [
+        {
+          "id": "v2-c-t0",
+          "text": "Now",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "individual-meaning",
+          "rationale": "Individual lexical correspondence on the same source event."
+        },
+        {
+          "id": "v2-c-t1",
+          "text": "you'll",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "complete-grammar-expansion",
+          "rationale": "The inflected future verb expands into the complete English you will be."
+        },
+        {
+          "id": "v2-c-t2",
+          "text": "be",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "complete-grammar-expansion",
+          "rationale": "Individual lexical correspondence on the same source event."
+        },
+        {
+          "id": "v2-c-t3",
+          "text": "my",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "individual-meaning",
+          "rationale": "Individual lexical correspondence on the same source event."
+        },
+        {
+          "id": "v2-c-t4",
+          "text": "substitute",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "complete-grammar-expansion",
+          "rationale": "Substitute for is a complete lexical equivalent of вместо."
+        },
+        {
+          "id": "v2-c-t5",
+          "text": "for",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "complete-grammar-expansion",
+          "rationale": "Individual lexical correspondence on the same source event."
+        },
+        {
+          "id": "v2-c-t6",
+          "text": "glycine",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "relation": "individual-meaning",
+          "rationale": "Individual lexical correspondence on the same source event.",
+          "punctuationAfter": "."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "v2-d",
+      "templateId": "d",
+      "lane": "lead",
+      "voice": "lead",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Не сопротивляйся, мы будем дружить",
+      "targetText": "Don't resist; we will be friends.",
+      "start": 79.56501133786848,
+      "end": 82.91501133786848,
+      "visibleStart": 79.56501133786848,
+      "fullOpacityEnd": 83.22,
+      "visibleEnd": 83.22,
+      "exitMode": "vocal-handoff",
+      "words": [
+        {
+          "id": "v2-d-s0",
+          "text": "Не",
+          "sourceIndex": 0,
+          "startSample": 3508817,
+          "endSample": 3519842,
+          "confidence": "Provisional; actual-audio review pending",
+          "method": "Separately selected original/stem signal context with Whisper and MMS cores retained as competing observations"
+        },
+        {
+          "id": "v2-d-s1",
+          "text": "сопротивляйся",
+          "sourceIndex": 1,
+          "startSample": 3520283,
+          "endSample": 3580038,
+          "confidence": "Provisional; actual-audio review pending",
+          "method": "Separately selected original/stem signal context with Whisper and MMS cores retained as competing observations",
+          "punctuationAfter": ","
+        },
+        {
+          "id": "v2-d-s2",
+          "text": "мы",
+          "sourceIndex": 2,
+          "startSample": 3584007,
+          "endSample": 3591504,
+          "confidence": "Provisional; actual-audio review pending",
+          "method": "Separately selected original/stem signal context with Whisper and MMS cores retained as competing observations"
+        },
+        {
+          "id": "v2-d-s3",
+          "text": "будем",
+          "sourceIndex": 3,
+          "startSample": 3591945,
+          "endSample": 3623036,
+          "confidence": "Provisional; actual-audio review pending",
+          "method": "Separately selected original/stem signal context with Whisper and MMS cores retained as competing observations"
+        },
+        {
+          "id": "v2-d-s4",
+          "text": "дружить",
+          "sourceIndex": 4,
+          "startSample": 3623477,
+          "endSample": 3656552,
+          "confidence": "Provisional; actual-audio review pending",
+          "method": "Separately selected original/stem signal context with Whisper and MMS cores retained as competing observations"
+        }
+      ],
+      "targets": [
+        {
+          "id": "v2-d-t0",
+          "text": "Don't",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "individual-meaning",
+          "rationale": "Negative auxiliary follows the independently sung negation."
+        },
+        {
+          "id": "v2-d-t1",
+          "text": "resist",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "individual-meaning",
+          "rationale": "Individual lexical correspondence on the same source event.",
+          "punctuationAfter": ";"
+        },
+        {
+          "id": "v2-d-t2",
+          "text": "we",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "individual-meaning",
+          "rationale": "Individual lexical correspondence on the same source event."
+        },
+        {
+          "id": "v2-d-t3",
+          "text": "will",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "complete-grammar-expansion",
+          "rationale": "Future auxiliary is distinct from the explicit subject we."
+        },
+        {
+          "id": "v2-d-t4",
+          "text": "be",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "complete-grammar-expansion",
+          "rationale": "Individual lexical correspondence on the same source event."
+        },
+        {
+          "id": "v2-d-t5",
+          "text": "friends",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "relation": "individual-meaning",
+          "rationale": "Individual lexical correspondence on the same source event.",
+          "punctuationAfter": "."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "v2-e",
+      "templateId": "e",
+      "lane": "lead",
+      "voice": "lead",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Я тебя люблю — это ты то животное",
+      "targetText": "I love you — you're that creature.",
+      "start": 83.22,
+      "end": 87.07501133786847,
+      "visibleStart": 83.22,
+      "fullOpacityEnd": 87.10501133786848,
+      "visibleEnd": 87.10501133786848,
+      "exitMode": "vocal-handoff",
+      "words": [
+        {
+          "id": "v2-e-s0",
+          "text": "Я",
+          "sourceIndex": 0,
+          "startSample": 3670002,
+          "endSample": 3686760,
+          "confidence": "Provisional; actual-audio review pending",
+          "method": "Separately selected original/stem signal context with Whisper and MMS cores retained as competing observations"
+        },
+        {
+          "id": "v2-e-s1",
+          "text": "тебя",
+          "sourceIndex": 1,
+          "startSample": 3686760,
+          "endSample": 3706605,
+          "confidence": "Provisional; actual-audio review pending",
+          "method": "Separately selected original/stem signal context with Whisper and MMS cores retained as competing observations"
+        },
+        {
+          "id": "v2-e-s2",
+          "text": "люблю",
+          "sourceIndex": 2,
+          "startSample": 3706605,
+          "endSample": 3736152,
+          "confidence": "Provisional; actual-audio review pending",
+          "method": "Separately selected original/stem signal context with Whisper and MMS cores retained as competing observations",
+          "punctuationAfter": " —"
+        },
+        {
+          "id": "v2-e-s3",
+          "text": "это",
+          "sourceIndex": 3,
+          "startSample": 3738357,
+          "endSample": 3756879,
+          "confidence": "Provisional; actual-audio review pending",
+          "method": "Separately selected original/stem signal context with Whisper and MMS cores retained as competing observations"
+        },
+        {
+          "id": "v2-e-s4",
+          "text": "ты",
+          "sourceIndex": 4,
+          "startSample": 3757320,
+          "endSample": 3771873,
+          "confidence": "Provisional; actual-audio review pending",
+          "method": "Separately selected original/stem signal context with Whisper and MMS cores retained as competing observations"
+        },
+        {
+          "id": "v2-e-s5",
+          "text": "то",
+          "sourceIndex": 5,
+          "startSample": 3772314,
+          "endSample": 3788190,
+          "confidence": "Provisional; actual-audio review pending",
+          "method": "Separately selected original/stem signal context with Whisper and MMS cores retained as competing observations"
+        },
+        {
+          "id": "v2-e-s6",
+          "text": "животное",
+          "sourceIndex": 6,
+          "startSample": 3788631,
+          "endSample": 3840008,
+          "confidence": "Provisional; actual-audio review pending",
+          "method": "Separately selected original/stem signal context with Whisper and MMS cores retained as competing observations"
+        }
+      ],
+      "targets": [
+        {
+          "id": "v2-e-t0",
+          "text": "I",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "individual-meaning",
+          "rationale": "Individual lexical correspondence on the same source event."
+        },
+        {
+          "id": "v2-e-t1",
+          "text": "love",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "individual-meaning",
+          "rationale": "Individual lexical correspondence on the same source event."
+        },
+        {
+          "id": "v2-e-t2",
+          "text": "you",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "individual-meaning",
+          "rationale": "Individual lexical correspondence on the same source event.",
+          "punctuationAfter": " —"
+        },
+        {
+          "id": "v2-e-t3",
+          "text": "you're",
+          "sourceIndices": [
+            3,
+            4
+          ],
+          "focusSourceIndices": [
+            3,
+            4
+          ],
+          "relation": "copular-identification-union",
+          "rationale": "The Russian deictic identification это ты is a copular construction in natural English. You are follows the union of its two independently measured events, releasing over any gap."
+        },
+        {
+          "id": "v2-e-t4",
+          "text": "that",
+          "sourceIndices": [
+            5
+          ],
+          "focusSourceIndices": [
+            5
+          ],
+          "relation": "individual-meaning",
+          "rationale": "Individual lexical correspondence on the same source event."
+        },
+        {
+          "id": "v2-e-t5",
+          "text": "creature",
+          "sourceIndices": [
+            6
+          ],
+          "focusSourceIndices": [
+            6
+          ],
+          "relation": "individual-meaning",
+          "rationale": "Individual lexical correspondence on the same source event.",
+          "punctuationAfter": "."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "v2-f",
+      "templateId": "f",
+      "lane": "lead",
+      "voice": "lead",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Тёплое, мягкое — хочется трогать",
+      "targetText": "Warm, soft — I want to touch.",
+      "start": 87.10501133786848,
+      "end": 90.7,
+      "visibleStart": 87.10501133786848,
+      "fullOpacityEnd": 90.79501133786849,
+      "visibleEnd": 90.79501133786849,
+      "exitMode": "vocal-handoff",
+      "words": [
+        {
+          "id": "v2-f-s0",
+          "text": "Тёплое",
+          "sourceIndex": 0,
+          "startSample": 3841331,
+          "endSample": 3882123,
+          "confidence": "Provisional; actual-audio review pending",
+          "method": "Separately selected original/stem signal context with Whisper and MMS cores retained as competing observations",
+          "punctuationAfter": ","
+        },
+        {
+          "id": "v2-f-s1",
+          "text": "мягкое",
+          "sourceIndex": 1,
+          "startSample": 3883667,
+          "endSample": 3923357,
+          "confidence": "Provisional; actual-audio review pending",
+          "method": "Separately selected original/stem signal context with Whisper and MMS cores retained as competing observations",
+          "punctuationAfter": " —"
+        },
+        {
+          "id": "v2-f-s2",
+          "text": "хочется",
+          "sourceIndex": 2,
+          "startSample": 3923797,
+          "endSample": 3962826,
+          "confidence": "Provisional; actual-audio review pending",
+          "method": "Separately selected original/stem signal context with Whisper and MMS cores retained as competing observations"
+        },
+        {
+          "id": "v2-f-s3",
+          "text": "трогать",
+          "sourceIndex": 3,
+          "startSample": 3963267,
+          "endSample": 3999870,
+          "confidence": "Provisional; actual-audio review pending",
+          "method": "Separately selected original/stem signal context with Whisper and MMS cores retained as competing observations"
+        }
+      ],
+      "targets": [
+        {
+          "id": "v2-f-t0",
+          "text": "Warm",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "individual-meaning",
+          "rationale": "Individual lexical correspondence on the same source event.",
+          "punctuationAfter": ","
+        },
+        {
+          "id": "v2-f-t1",
+          "text": "soft",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "individual-meaning",
+          "rationale": "Individual lexical correspondence on the same source event.",
+          "punctuationAfter": " —"
+        },
+        {
+          "id": "v2-f-t2",
+          "text": "I",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "complete-grammar-expansion",
+          "rationale": "The impersonal desire expands into I want to; no unstated touch object is supplied."
+        },
+        {
+          "id": "v2-f-t3",
+          "text": "want",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "complete-grammar-expansion",
+          "rationale": "Individual lexical correspondence on the same source event."
+        },
+        {
+          "id": "v2-f-t4",
+          "text": "to",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "complete-grammar-expansion",
+          "rationale": "Individual lexical correspondence on the same source event."
+        },
+        {
+          "id": "v2-f-t5",
+          "text": "touch",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "individual-meaning",
+          "rationale": "Individual lexical correspondence on the same source event.",
+          "punctuationAfter": "."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "v2-g",
+      "templateId": "g",
+      "lane": "lead",
+      "voice": "lead",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Хочется чувствовать что-то особое",
+      "targetText": "I want to feel something special.",
+      "start": 90.79501133786849,
+      "end": 94.57501133786847,
+      "visibleStart": 90.79501133786849,
+      "fullOpacityEnd": 94.6,
+      "visibleEnd": 94.6,
+      "exitMode": "vocal-handoff",
+      "words": [
+        {
+          "id": "v2-g-s0",
+          "text": "Хочется",
+          "sourceIndex": 0,
+          "startSample": 4004060,
+          "endSample": 4044852,
+          "confidence": "Provisional; actual-audio review pending",
+          "method": "Separately selected original/stem signal context with Whisper and MMS cores retained as competing observations"
+        },
+        {
+          "id": "v2-g-s1",
+          "text": "чувствовать",
+          "sourceIndex": 1,
+          "startSample": 4045293,
+          "endSample": 4090496,
+          "confidence": "Provisional; actual-audio review pending",
+          "method": "Separately selected original/stem signal context with Whisper and MMS cores retained as competing observations"
+        },
+        {
+          "id": "v2-g-s2",
+          "text": "что-то",
+          "sourceIndex": 2,
+          "startSample": 4090496,
+          "endSample": 4119381,
+          "confidence": "Provisional; actual-audio review pending",
+          "method": "Separately selected original/stem signal context with Whisper and MMS cores retained as competing observations"
+        },
+        {
+          "id": "v2-g-s3",
+          "text": "особое",
+          "sourceIndex": 3,
+          "startSample": 4121586,
+          "endSample": 4170758,
+          "confidence": "Provisional; actual-audio review pending",
+          "method": "Separately selected original/stem signal context with Whisper and MMS cores retained as competing observations"
+        }
+      ],
+      "targets": [
+        {
+          "id": "v2-g-t0",
+          "text": "I",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "complete-grammar-expansion",
+          "rationale": "Complete desire construction receives one source event; feel and something special retain their separate events."
+        },
+        {
+          "id": "v2-g-t1",
+          "text": "want",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "complete-grammar-expansion",
+          "rationale": "Individual lexical correspondence on the same source event."
+        },
+        {
+          "id": "v2-g-t2",
+          "text": "to",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "complete-grammar-expansion",
+          "rationale": "Individual lexical correspondence on the same source event."
+        },
+        {
+          "id": "v2-g-t3",
+          "text": "feel",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "individual-meaning",
+          "rationale": "Individual lexical correspondence on the same source event."
+        },
+        {
+          "id": "v2-g-t4",
+          "text": "something",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "individual-meaning",
+          "rationale": "Individual lexical correspondence on the same source event."
+        },
+        {
+          "id": "v2-g-t5",
+          "text": "special",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "individual-meaning",
+          "rationale": "Individual lexical correspondence on the same source event.",
+          "punctuationAfter": "."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "v2-h",
+      "templateId": "h",
+      "lane": "lead",
+      "voice": "lead",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Что-то красивее хрипов больного",
+      "targetText": "Something prettier than a sick person's wheezing.",
+      "start": 94.6,
+      "end": 97.88,
+      "visibleStart": 94.6,
+      "fullOpacityEnd": 98.08600907029478,
+      "visibleEnd": 98.08600907029478,
+      "exitMode": "vocal-handoff",
+      "words": [
+        {
+          "id": "v2-h-s0",
+          "text": "Что-то",
+          "sourceIndex": 0,
+          "startSample": 4171860,
+          "endSample": 4198982,
+          "confidence": "Provisional; actual-audio review pending",
+          "method": "Separately selected original/stem signal context with Whisper and MMS cores retained as competing observations"
+        },
+        {
+          "id": "v2-h-s1",
+          "text": "красивее",
+          "sourceIndex": 1,
+          "startSample": 4199423,
+          "endSample": 4252563,
+          "confidence": "Provisional; actual-audio review pending",
+          "method": "Separately selected original/stem signal context with Whisper and MMS cores retained as competing observations"
+        },
+        {
+          "id": "v2-h-s2",
+          "text": "хрипов",
+          "sourceIndex": 2,
+          "startSample": 4252784,
+          "endSample": 4284315,
+          "confidence": "Provisional; actual-audio review pending",
+          "method": "Separately selected original/stem signal context with Whisper and MMS cores retained as competing observations"
+        },
+        {
+          "id": "v2-h-s3",
+          "text": "больного",
+          "sourceIndex": 3,
+          "startSample": 4284359,
+          "endSample": 4316508,
+          "confidence": "Provisional; actual-audio review pending",
+          "method": "Separately selected original/stem signal context with Whisper and MMS cores retained as competing observations"
+        }
+      ],
+      "targets": [
+        {
+          "id": "v2-h-t0",
+          "text": "Something",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "individual-meaning",
+          "rationale": "Individual lexical correspondence on the same source event."
+        },
+        {
+          "id": "v2-h-t1",
+          "text": "prettier",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "complete-grammar-expansion",
+          "rationale": "Comparative morphology supplies than; it shares the comparative."
+        },
+        {
+          "id": "v2-h-t2",
+          "text": "than",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "complete-grammar-expansion",
+          "rationale": "Individual lexical correspondence on the same source event."
+        },
+        {
+          "id": "v2-h-t3",
+          "text": "a",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "complete-grammar-expansion",
+          "rationale": "A sick person is a singular nominalized adjective; the complete possessive span shares больного."
+        },
+        {
+          "id": "v2-h-t4",
+          "text": "sick",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "complete-grammar-expansion",
+          "rationale": "Individual lexical correspondence on the same source event."
+        },
+        {
+          "id": "v2-h-t5",
+          "text": "person's",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "complete-grammar-expansion",
+          "rationale": "Individual lexical correspondence on the same source event."
+        },
+        {
+          "id": "v2-h-t6",
+          "text": "wheezing",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "individual-meaning",
+          "rationale": "Natural English word order places the individually timed wheezing after its possessor.",
+          "punctuationAfter": "."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "r2-three",
+      "templateId": "repeat",
+      "lane": "lead",
+      "voice": "filtered lead echo",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Больного, больного, больного",
+      "targetText": "Someone sick, someone sick, someone sick.",
+      "start": 98.08600907029478,
+      "end": 101.63199546485261,
+      "visibleStart": 98.08600907029478,
+      "fullOpacityEnd": 101.91199546485261,
+      "visibleEnd": 102.41199546485261,
+      "exitMode": "fade",
+      "words": [
+        {
+          "id": "r2-three-s0",
+          "text": "Больного",
+          "punctuationAfter": ",",
+          "sourceIndex": 0,
+          "startSample": 4325593,
+          "endSample": 4357830,
+          "confidence": "Provisional filtered-repeat ownership",
+          "method": "Normalized vocal-fragment similarity and original/stem repeated harmonic context; broad forced allocations rejected"
+        },
+        {
+          "id": "r2-three-s1",
+          "text": "больного",
+          "punctuationAfter": ",",
+          "sourceIndex": 1,
+          "startSample": 4366958,
+          "endSample": 4399196,
+          "confidence": "Provisional filtered-repeat ownership",
+          "method": "Normalized vocal-fragment similarity and original/stem repeated harmonic context; broad forced allocations rejected"
+        },
+        {
+          "id": "r2-three-s2",
+          "text": "больного",
+          "punctuationAfter": "",
+          "sourceIndex": 2,
+          "startSample": 4449646,
+          "endSample": 4481971,
+          "confidence": "Provisional filtered-repeat ownership",
+          "method": "Normalized vocal-fragment similarity and original/stem repeated harmonic context; broad forced allocations rejected"
+        }
+      ],
+      "targets": [
+        {
+          "id": "r2-three-t0-0",
+          "text": "Someone",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "singular-nominalized-adjective",
+          "rationale": "Complete singular sick-person meaning; the detached refrain echoes the person rather than inventing a new verb."
+        },
+        {
+          "id": "r2-three-t0-1",
+          "text": "sick",
+          "punctuationAfter": ",",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "singular-nominalized-adjective",
+          "rationale": "Complete singular sick-person meaning; the detached refrain echoes the person rather than inventing a new verb."
+        },
+        {
+          "id": "r2-three-t1-0",
+          "text": "someone",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "singular-nominalized-adjective",
+          "rationale": "Complete singular sick-person meaning; the detached refrain echoes the person rather than inventing a new verb."
+        },
+        {
+          "id": "r2-three-t1-1",
+          "text": "sick",
+          "punctuationAfter": ",",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "singular-nominalized-adjective",
+          "rationale": "Complete singular sick-person meaning; the detached refrain echoes the person rather than inventing a new verb."
+        },
+        {
+          "id": "r2-three-t2-0",
+          "text": "someone",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "singular-nominalized-adjective",
+          "rationale": "Complete singular sick-person meaning; the detached refrain echoes the person rather than inventing a new verb."
+        },
+        {
+          "id": "r2-three-t2-1",
+          "text": "sick",
+          "punctuationAfter": ".",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "singular-nominalized-adjective",
+          "rationale": "Complete singular sick-person meaning; the detached refrain echoes the person rather than inventing a new verb."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "r2-two",
+      "templateId": "repeat",
+      "lane": "lead",
+      "voice": "filtered lead echo",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Больного, больного",
+      "targetText": "Someone sick, someone sick.",
+      "start": 102.77399092970522,
+      "end": 105.38199546485261,
+      "visibleStart": 102.55399092970522,
+      "fullOpacityEnd": 105.58600907029478,
+      "visibleEnd": 105.58600907029478,
+      "exitMode": "vocal-handoff",
+      "words": [
+        {
+          "id": "r2-two-s0",
+          "text": "Больного",
+          "punctuationAfter": ",",
+          "sourceIndex": 0,
+          "startSample": 4532333,
+          "endSample": 4564659,
+          "confidence": "Provisional filtered-repeat ownership",
+          "method": "Normalized vocal-fragment similarity and original/stem repeated harmonic context; broad forced allocations rejected"
+        },
+        {
+          "id": "r2-two-s1",
+          "text": "больного",
+          "punctuationAfter": "",
+          "sourceIndex": 1,
+          "startSample": 4615021,
+          "endSample": 4647346,
+          "confidence": "Provisional filtered-repeat ownership",
+          "method": "Normalized vocal-fragment similarity and original/stem repeated harmonic context; broad forced allocations rejected"
+        }
+      ],
+      "targets": [
+        {
+          "id": "r2-two-t0-0",
+          "text": "Someone",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "singular-nominalized-adjective",
+          "rationale": "Complete singular sick-person meaning; the detached refrain echoes the person rather than inventing a new verb."
+        },
+        {
+          "id": "r2-two-t0-1",
+          "text": "sick",
+          "punctuationAfter": ",",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "singular-nominalized-adjective",
+          "rationale": "Complete singular sick-person meaning; the detached refrain echoes the person rather than inventing a new verb."
+        },
+        {
+          "id": "r2-two-t1-0",
+          "text": "someone",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "singular-nominalized-adjective",
+          "rationale": "Complete singular sick-person meaning; the detached refrain echoes the person rather than inventing a new verb."
+        },
+        {
+          "id": "r2-two-t1-1",
+          "text": "sick",
+          "punctuationAfter": ".",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "singular-nominalized-adjective",
+          "rationale": "Complete singular sick-person meaning; the detached refrain echoes the person rather than inventing a new verb."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "r3-three",
+      "templateId": "repeat",
+      "lane": "lead",
+      "voice": "filtered lead echo",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Больного, больного, больного",
+      "targetText": "Someone sick, someone sick, someone sick.",
+      "start": 105.58600907029478,
+      "end": 109.13199546485261,
+      "visibleStart": 105.58600907029478,
+      "fullOpacityEnd": 109.41199546485261,
+      "visibleEnd": 109.91199546485261,
+      "exitMode": "fade",
+      "words": [
+        {
+          "id": "r3-three-s0",
+          "text": "Больного",
+          "punctuationAfter": ",",
+          "sourceIndex": 0,
+          "startSample": 4656343,
+          "endSample": 4688668,
+          "confidence": "Provisional filtered-repeat ownership",
+          "method": "Normalized vocal-fragment similarity and original/stem repeated harmonic context; broad forced allocations rejected"
+        },
+        {
+          "id": "r3-three-s1",
+          "text": "больного",
+          "punctuationAfter": ",",
+          "sourceIndex": 1,
+          "startSample": 4697708,
+          "endSample": 4730078,
+          "confidence": "Provisional filtered-repeat ownership",
+          "method": "Normalized vocal-fragment similarity and original/stem repeated harmonic context; broad forced allocations rejected"
+        },
+        {
+          "id": "r3-three-s2",
+          "text": "больного",
+          "punctuationAfter": "",
+          "sourceIndex": 2,
+          "startSample": 4780396,
+          "endSample": 4812721,
+          "confidence": "Provisional filtered-repeat ownership",
+          "method": "Normalized vocal-fragment similarity and original/stem repeated harmonic context; broad forced allocations rejected"
+        }
+      ],
+      "targets": [
+        {
+          "id": "r3-three-t0-0",
+          "text": "Someone",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "singular-nominalized-adjective",
+          "rationale": "Complete singular sick-person meaning; the detached refrain echoes the person rather than inventing a new verb."
+        },
+        {
+          "id": "r3-three-t0-1",
+          "text": "sick",
+          "punctuationAfter": ",",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "singular-nominalized-adjective",
+          "rationale": "Complete singular sick-person meaning; the detached refrain echoes the person rather than inventing a new verb."
+        },
+        {
+          "id": "r3-three-t1-0",
+          "text": "someone",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "singular-nominalized-adjective",
+          "rationale": "Complete singular sick-person meaning; the detached refrain echoes the person rather than inventing a new verb."
+        },
+        {
+          "id": "r3-three-t1-1",
+          "text": "sick",
+          "punctuationAfter": ",",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "singular-nominalized-adjective",
+          "rationale": "Complete singular sick-person meaning; the detached refrain echoes the person rather than inventing a new verb."
+        },
+        {
+          "id": "r3-three-t2-0",
+          "text": "someone",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "singular-nominalized-adjective",
+          "rationale": "Complete singular sick-person meaning; the detached refrain echoes the person rather than inventing a new verb."
+        },
+        {
+          "id": "r3-three-t2-1",
+          "text": "sick",
+          "punctuationAfter": ".",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "singular-nominalized-adjective",
+          "rationale": "Complete singular sick-person meaning; the detached refrain echoes the person rather than inventing a new verb."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "r3-two",
+      "templateId": "repeat",
+      "lane": "lead",
+      "voice": "filtered lead echo",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Больного, больного",
+      "targetText": "Someone sick, someone sick.",
+      "start": 110.27399092970522,
+      "end": 111.82,
+      "visibleStart": 110.05399092970522,
+      "fullOpacityEnd": 112.1,
+      "visibleEnd": 112.6,
+      "exitMode": "fade",
+      "words": [
+        {
+          "id": "r3-two-s0",
+          "text": "Больного",
+          "punctuationAfter": ",",
+          "sourceIndex": 0,
+          "startSample": 4863083,
+          "endSample": 4895321,
+          "confidence": "Provisional filtered-repeat ownership",
+          "method": "Normalized vocal-fragment similarity and original/stem repeated harmonic context; broad forced allocations rejected"
+        },
+        {
+          "id": "r3-two-s1",
+          "text": "больного",
+          "punctuationAfter": "",
+          "sourceIndex": 1,
+          "startSample": 4904449,
+          "endSample": 4931262,
+          "confidence": "Low; faint chopped final echo needs reduced-speed review",
+          "method": "Normalized vocal-fragment similarity and original/stem repeated harmonic context; broad forced allocations rejected"
+        }
+      ],
+      "targets": [
+        {
+          "id": "r3-two-t0-0",
+          "text": "Someone",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "singular-nominalized-adjective",
+          "rationale": "Complete singular sick-person meaning; the detached refrain echoes the person rather than inventing a new verb."
+        },
+        {
+          "id": "r3-two-t0-1",
+          "text": "sick",
+          "punctuationAfter": ",",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "singular-nominalized-adjective",
+          "rationale": "Complete singular sick-person meaning; the detached refrain echoes the person rather than inventing a new verb."
+        },
+        {
+          "id": "r3-two-t1-0",
+          "text": "someone",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "singular-nominalized-adjective",
+          "rationale": "Complete singular sick-person meaning; the detached refrain echoes the person rather than inventing a new verb."
+        },
+        {
+          "id": "r3-two-t1-1",
+          "text": "sick",
+          "punctuationAfter": ".",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "singular-nominalized-adjective",
+          "rationale": "Complete singular sick-person meaning; the detached refrain echoes the person rather than inventing a new verb."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    }
+  ]
+}
