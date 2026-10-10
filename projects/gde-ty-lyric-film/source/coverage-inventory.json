@@ -1,0 +1,43 @@
+{
+  "sourceSha256": "6a269e14af0008ab944c4958a188382b1f36681402c21b99c778f8f7d33ade60",
+  "cues": 40,
+  "sourceWords": 185,
+  "targetWords": 260,
+  "independentFemaleCues": [
+    "GT-029",
+    "GT-037",
+    "GT-038",
+    "GT-039"
+  ],
+  "firstVocal": 5.04501133786848,
+  "lastVocal": 195.0780045351474,
+  "recognitionDisagreements": [
+    {
+      "cue": "GT-001",
+      "issue": "Forced Whisper placed Когда on the opening instruments. Wider CTC and source/vocal spectral evidence select the quiet first vocal body near 5 seconds; listening remains pending."
+    },
+    {
+      "cue": "GT-013",
+      "issue": "Unprompted recognition omitted Когда; wider unforced consonants support retention."
+    },
+    {
+      "cue": "GT-029",
+      "issue": "Female reply overlaps the male entry; separate reading lane preserves both complete meanings."
+    },
+    {
+      "cues": [
+        "GT-037",
+        "GT-038",
+        "GT-039"
+      ],
+      "issue": "Quiet backing voice omitted by both unprompted models. Supplied text retained provisionally with independent samples; listening needed for ownership and last question."
+    }
+  ],
+  "wordlessOpening": {
+    "cue": "GT-040",
+    "source": "А-а…",
+    "target": "Ah…",
+    "issue": "Measured second vocalization preserved, not guessed lexical text."
+  },
+  "status": "Complete-source preview with disclosed priority candidates; listening review and rendering pending"
+}
