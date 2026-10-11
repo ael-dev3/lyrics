@@ -135,3 +135,9 @@ Frame 12858 at 214.300s was decoded from the verified centered v2 native film. O
 ## Труп невесты final bridal frame
 
 The main and project READMEs share exact decoded YouTube frame 5,712 at 95.200 seconds, with original frame 2,380. Full composition preserves the bridal hand, golden ring, guitar and veil; paired колечко / a ring focus and fixed material-bound string response remain visible. Portrait evidence is exact frame 7,014 at 116.900 seconds. [Both final-frame identities](../projects/trup-nevesty-lyric-film/evidence/final-stills.json) distinguish final output from prior native-preview proof stills. Original artwork and soundtrack belong to Green Apelsin’s recording; no separate artist identity is inferred. Owner acceptance, pending standardized listening scope and encoded technical verification remain separate records.
+
+## Обнимай complete floral preview
+
+The main and project READMEs share the full unmodified 1920×1080 browser-canvas PNG at 55.430 s, with original decoded frame 1,385 at PTS 55.400 s. It preserves the complete source portrait, equal **свет / light** focus and measured light within real carnation texture. Original picture and soundtrack: [Элли на маковом поле's recording](https://www.youtube.com/watch?v=sCbyEiBZyEo). A separate photographer is not inferred.
+
+[The preview-still manifest](../projects/obnimay-lyric-film/evidence/preview-stills.json) binds the exact browser image and 34 native shared-scene proof stills to their scene/timeline/source identities. Shared-scene stills use an artwork reference decoded at 40.000 s and are explicitly distinguished from the live browser capture. Both layouts and selected phone-size images were inspected. This is a complete preproduction review preview; actual listening and render authorization remain pending. Historical and completed-film screenshot statuses are unchanged.

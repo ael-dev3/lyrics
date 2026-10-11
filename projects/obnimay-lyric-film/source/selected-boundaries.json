@@ -1,0 +1,3028 @@
+{
+  "schemaVersion": 1,
+  "revision": "obnimay-preview-v1",
+  "sourceSha256": "9a4d5f5c42b131d46eab42d072f64733ccb50a0bea97a995b757d3b00e5708e0",
+  "sampleRate": 44100,
+  "sourceDuration": 200.6,
+  "boundaryConvention": "inclusive start; exclusive end; integer source samples; no global anticipation",
+  "humanListening": false,
+  "precisionStatement": "44.1 kHz storage and 2 ms signal-view hop do not establish sample or millisecond perceptual certainty. Ownership ranges are review tolerances, not measured statistical confidence intervals.",
+  "cues": [
+    {
+      "id": "OBN-001",
+      "templateId": "hold-yourself",
+      "lane": "lead",
+      "voice": "Lead vocal",
+      "phraseId": "verse",
+      "phraseSourceOffset": 0,
+      "note": "Reject the conditioned opening allocation at source zero. Quiet opening at 5.66 s; bounded recognition supports the phrase.",
+      "status": "Provisional source-bound selection; actual listening pending",
+      "words": [
+        {
+          "sourceIndex": 0,
+          "text": "В",
+          "startSample": 249606,
+          "endSample": 255339,
+          "onsetOwnershipRangeSeconds": [
+            5.615,
+            5.7250000000000005
+          ],
+          "releaseOwnershipRangeSeconds": [
+            5.73,
+            5.88
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 1,
+          "text": "руках",
+          "startSample": 255339,
+          "endSample": 308788,
+          "onsetOwnershipRangeSeconds": [
+            5.745,
+            5.855
+          ],
+          "releaseOwnershipRangeSeconds": [
+            6.942,
+            7.092
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 2,
+          "text": "держи",
+          "startSample": 308788,
+          "endSample": 334719,
+          "onsetOwnershipRangeSeconds": [
+            6.957,
+            7.067
+          ],
+          "releaseOwnershipRangeSeconds": [
+            7.53,
+            7.68
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 3,
+          "text": "себя",
+          "startSample": 334719,
+          "endSample": 356240,
+          "onsetOwnershipRangeSeconds": [
+            7.545,
+            7.655
+          ],
+          "releaseOwnershipRangeSeconds": [
+            8.017999999999999,
+            8.168
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 4,
+          "text": "слышишь",
+          "startSample": 356240,
+          "endSample": 393989,
+          "onsetOwnershipRangeSeconds": [
+            8.033,
+            8.142999999999999
+          ],
+          "releaseOwnershipRangeSeconds": [
+            8.873999999999999,
+            9.024
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ]
+    },
+    {
+      "id": "OBN-002",
+      "templateId": "fist",
+      "lane": "lead",
+      "voice": "Lead vocal",
+      "phraseId": "verse",
+      "phraseSourceOffset": 5,
+      "note": "Original/stem phonetic context and competing paths; direct body and held release selected separately.",
+      "status": "Provisional source-bound selection; actual listening pending",
+      "words": [
+        {
+          "sourceIndex": 0,
+          "text": "В",
+          "startSample": 396988,
+          "endSample": 400163,
+          "onsetOwnershipRangeSeconds": [
+            8.957,
+            9.067
+          ],
+          "releaseOwnershipRangeSeconds": [
+            9.014,
+            9.164
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 1,
+          "text": "кулак",
+          "startSample": 400163,
+          "endSample": 449996,
+          "onsetOwnershipRangeSeconds": [
+            9.029,
+            9.139
+          ],
+          "releaseOwnershipRangeSeconds": [
+            10.144,
+            10.294
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 2,
+          "text": "собери",
+          "startSample": 449996,
+          "endSample": 473458,
+          "onsetOwnershipRangeSeconds": [
+            10.159,
+            10.269
+          ],
+          "releaseOwnershipRangeSeconds": [
+            10.676,
+            10.826
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 3,
+          "text": "что",
+          "startSample": 473458,
+          "endSample": 487349,
+          "onsetOwnershipRangeSeconds": [
+            10.691,
+            10.801
+          ],
+          "releaseOwnershipRangeSeconds": [
+            10.991,
+            11.141
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 4,
+          "text": "осталось",
+          "startSample": 487349,
+          "endSample": 531758,
+          "onsetOwnershipRangeSeconds": [
+            11.006,
+            11.116
+          ],
+          "releaseOwnershipRangeSeconds": [
+            11.998,
+            12.148
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ]
+    },
+    {
+      "id": "OBN-003",
+      "templateId": "sanity",
+      "lane": "lead",
+      "voice": "Lead vocal",
+      "phraseId": "verse",
+      "phraseSourceOffset": 10,
+      "note": "Original/stem phonetic context and competing paths; direct body and held release selected separately.",
+      "status": "Provisional source-bound selection; actual listening pending",
+      "words": [
+        {
+          "sourceIndex": 0,
+          "text": "Так",
+          "startSample": 535550,
+          "endSample": 570875,
+          "onsetOwnershipRangeSeconds": [
+            12.099,
+            12.209
+          ],
+          "releaseOwnershipRangeSeconds": [
+            12.885,
+            13.035
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 1,
+          "text": "медленно",
+          "startSample": 570875,
+          "endSample": 608845,
+          "onsetOwnershipRangeSeconds": [
+            12.9,
+            13.01
+          ],
+          "releaseOwnershipRangeSeconds": [
+            13.745999999999999,
+            13.895999999999999
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 2,
+          "text": "едет",
+          "startSample": 608845,
+          "endSample": 628293,
+          "onsetOwnershipRangeSeconds": [
+            13.761,
+            13.870999999999999
+          ],
+          "releaseOwnershipRangeSeconds": [
+            14.187,
+            14.337
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 3,
+          "text": "крыша",
+          "startSample": 628293,
+          "endSample": 660574,
+          "onsetOwnershipRangeSeconds": [
+            14.202,
+            14.312
+          ],
+          "releaseOwnershipRangeSeconds": [
+            14.918999999999999,
+            15.068999999999999
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ]
+    },
+    {
+      "id": "OBN-004",
+      "templateId": "exhaustion",
+      "lane": "lead",
+      "voice": "Lead vocal",
+      "phraseId": "verse",
+      "phraseSourceOffset": 14,
+      "note": "Soft initial body is earlier than the strong Так core; exact ownership remains a listening question.",
+      "status": "Provisional source-bound selection; actual listening pending",
+      "words": [
+        {
+          "sourceIndex": 0,
+          "text": "Так",
+          "startSample": 673936,
+          "endSample": 713362,
+          "onsetOwnershipRangeSeconds": [
+            15.237,
+            15.347
+          ],
+          "releaseOwnershipRangeSeconds": [
+            16.116,
+            16.266
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 1,
+          "text": "быстро",
+          "startSample": 713362,
+          "endSample": 736117,
+          "onsetOwnershipRangeSeconds": [
+            16.130999999999997,
+            16.241
+          ],
+          "releaseOwnershipRangeSeconds": [
+            16.632,
+            16.782
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 2,
+          "text": "приходит",
+          "startSample": 736117,
+          "endSample": 774793,
+          "onsetOwnershipRangeSeconds": [
+            16.647,
+            16.757
+          ],
+          "releaseOwnershipRangeSeconds": [
+            17.509,
+            17.659
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 3,
+          "text": "усталость",
+          "startSample": 774793,
+          "endSample": 818143,
+          "onsetOwnershipRangeSeconds": [
+            17.523999999999997,
+            17.634
+          ],
+          "releaseOwnershipRangeSeconds": [
+            18.492,
+            18.642
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ]
+    },
+    {
+      "id": "OBN-005",
+      "templateId": "reflection",
+      "lane": "lead",
+      "voice": "Lead vocal",
+      "phraseId": "verse",
+      "phraseSourceOffset": 18,
+      "note": "Original/stem phonetic context and competing paths; direct body and held release selected separately.",
+      "status": "Provisional source-bound selection; actual listening pending",
+      "words": [
+        {
+          "sourceIndex": 0,
+          "text": "Себя",
+          "startSample": 818143,
+          "endSample": 873224,
+          "onsetOwnershipRangeSeconds": [
+            18.506999999999998,
+            18.617
+          ],
+          "releaseOwnershipRangeSeconds": [
+            19.741,
+            19.891
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 1,
+          "text": "не",
+          "startSample": 873224,
+          "endSample": 884029,
+          "onsetOwnershipRangeSeconds": [
+            19.755999999999997,
+            19.866
+          ],
+          "releaseOwnershipRangeSeconds": [
+            19.986,
+            20.136
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 2,
+          "text": "узнать",
+          "startSample": 884029,
+          "endSample": 904888,
+          "onsetOwnershipRangeSeconds": [
+            20.000999999999998,
+            20.111
+          ],
+          "releaseOwnershipRangeSeconds": [
+            20.459,
+            20.608999999999998
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 3,
+          "text": "в",
+          "startSample": 904888,
+          "endSample": 908769,
+          "onsetOwnershipRangeSeconds": [
+            20.473999999999997,
+            20.584
+          ],
+          "releaseOwnershipRangeSeconds": [
+            20.547,
+            20.697
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 4,
+          "text": "отражении",
+          "startSample": 908769,
+          "endSample": 950267,
+          "onsetOwnershipRangeSeconds": [
+            20.561999999999998,
+            20.672
+          ],
+          "releaseOwnershipRangeSeconds": [
+            21.488,
+            21.637999999999998
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ]
+    },
+    {
+      "id": "OBN-006",
+      "templateId": "eyes",
+      "lane": "lead",
+      "voice": "Lead vocal",
+      "phraseId": "verse",
+      "phraseSourceOffset": 23,
+      "note": "Original/stem phonetic context and competing paths; direct body and held release selected separately.",
+      "status": "Provisional source-bound selection; actual listening pending",
+      "words": [
+        {
+          "sourceIndex": 0,
+          "text": "Сияет",
+          "startSample": 964070,
+          "endSample": 1027618,
+          "onsetOwnershipRangeSeconds": [
+            21.816,
+            21.926000000000002
+          ],
+          "releaseOwnershipRangeSeconds": [
+            23.242,
+            23.392
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 1,
+          "text": "тьма",
+          "startSample": 1027618,
+          "endSample": 1040363,
+          "onsetOwnershipRangeSeconds": [
+            23.256999999999998,
+            23.367
+          ],
+          "releaseOwnershipRangeSeconds": [
+            23.531000000000002,
+            23.681
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 2,
+          "text": "под",
+          "startSample": 1040363,
+          "endSample": 1055181,
+          "onsetOwnershipRangeSeconds": [
+            23.546,
+            23.656000000000002
+          ],
+          "releaseOwnershipRangeSeconds": [
+            23.867,
+            24.017
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 3,
+          "text": "глазами",
+          "startSample": 1055181,
+          "endSample": 1101618,
+          "onsetOwnershipRangeSeconds": [
+            23.881999999999998,
+            23.992
+          ],
+          "releaseOwnershipRangeSeconds": [
+            24.92,
+            25.07
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ]
+    },
+    {
+      "id": "OBN-007",
+      "templateId": "concrete",
+      "lane": "lead",
+      "voice": "Lead vocal",
+      "phraseId": "verse",
+      "phraseSourceOffset": 27,
+      "note": "Original/stem phonetic context and competing paths; direct body and held release selected separately.",
+      "status": "Provisional source-bound selection; actual listening pending",
+      "words": [
+        {
+          "sourceIndex": 0,
+          "text": "И",
+          "startSample": 1126667,
+          "endSample": 1133105,
+          "onsetOwnershipRangeSeconds": [
+            25.502999999999997,
+            25.613
+          ],
+          "releaseOwnershipRangeSeconds": [
+            25.634,
+            25.784
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 1,
+          "text": "мир",
+          "startSample": 1133105,
+          "endSample": 1160756,
+          "onsetOwnershipRangeSeconds": [
+            25.648999999999997,
+            25.759
+          ],
+          "releaseOwnershipRangeSeconds": [
+            26.261000000000003,
+            26.411
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 2,
+          "text": "бетоном",
+          "startSample": 1160756,
+          "endSample": 1194845,
+          "onsetOwnershipRangeSeconds": [
+            26.276,
+            26.386000000000003
+          ],
+          "releaseOwnershipRangeSeconds": [
+            27.034000000000002,
+            27.184
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 3,
+          "text": "своим",
+          "startSample": 1194845,
+          "endSample": 1226465,
+          "onsetOwnershipRangeSeconds": [
+            27.049,
+            27.159000000000002
+          ],
+          "releaseOwnershipRangeSeconds": [
+            27.751,
+            27.901
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 4,
+          "text": "на",
+          "startSample": 1226465,
+          "endSample": 1235814,
+          "onsetOwnershipRangeSeconds": [
+            27.766,
+            27.876
+          ],
+          "releaseOwnershipRangeSeconds": [
+            27.963,
+            28.113
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 5,
+          "text": "мои",
+          "startSample": 1235814,
+          "endSample": 1250191,
+          "onsetOwnershipRangeSeconds": [
+            27.977999999999998,
+            28.088
+          ],
+          "releaseOwnershipRangeSeconds": [
+            28.289,
+            28.439
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 6,
+          "text": "плечи",
+          "startSample": 1250191,
+          "endSample": 1274931,
+          "onsetOwnershipRangeSeconds": [
+            28.304,
+            28.414
+          ],
+          "releaseOwnershipRangeSeconds": [
+            28.85,
+            29
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 7,
+          "text": "давит",
+          "startSample": 1274931,
+          "endSample": 1324411,
+          "onsetOwnershipRangeSeconds": [
+            28.865,
+            28.975
+          ],
+          "releaseOwnershipRangeSeconds": [
+            29.972,
+            30.122
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ]
+    },
+    {
+      "id": "OBN-008",
+      "templateId": "hinges",
+      "lane": "lead",
+      "voice": "Lead vocal",
+      "phraseId": "pre-1",
+      "phraseSourceOffset": 0,
+      "note": "Reject 29 s crop-zero onset; initial sung body renews near 31.57 s. Consonant cores alone miss the connected lead-in.",
+      "status": "Provisional source-bound selection; actual listening pending",
+      "words": [
+        {
+          "sourceIndex": 0,
+          "text": "И",
+          "startSample": 1392413,
+          "endSample": 1415081,
+          "onsetOwnershipRangeSeconds": [
+            31.529,
+            31.639000000000003
+          ],
+          "releaseOwnershipRangeSeconds": [
+            32.028,
+            32.178000000000004
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 1,
+          "text": "я",
+          "startSample": 1415081,
+          "endSample": 1433867,
+          "onsetOwnershipRangeSeconds": [
+            32.043,
+            32.153
+          ],
+          "releaseOwnershipRangeSeconds": [
+            32.454,
+            32.604000000000006
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 2,
+          "text": "срываюсь",
+          "startSample": 1433867,
+          "endSample": 1472323,
+          "onsetOwnershipRangeSeconds": [
+            32.469,
+            32.579
+          ],
+          "releaseOwnershipRangeSeconds": [
+            33.326,
+            33.476000000000006
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 3,
+          "text": "с",
+          "startSample": 1472323,
+          "endSample": 1477571,
+          "onsetOwnershipRangeSeconds": [
+            33.341,
+            33.451
+          ],
+          "releaseOwnershipRangeSeconds": [
+            33.445,
+            33.595000000000006
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 4,
+          "text": "петель",
+          "startSample": 1477571,
+          "endSample": 1511968,
+          "onsetOwnershipRangeSeconds": [
+            33.46,
+            33.57
+          ],
+          "releaseOwnershipRangeSeconds": [
+            34.224999999999994,
+            34.375
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ]
+    },
+    {
+      "id": "OBN-009",
+      "templateId": "beast",
+      "lane": "lead",
+      "voice": "Lead vocal",
+      "phraseId": "pre-1",
+      "phraseSourceOffset": 5,
+      "note": "Original/stem phonetic context and competing paths; direct body and held release selected separately.",
+      "status": "Provisional source-bound selection; actual listening pending",
+      "words": [
+        {
+          "sourceIndex": 0,
+          "text": "Я",
+          "startSample": 1511968,
+          "endSample": 1521494,
+          "onsetOwnershipRangeSeconds": [
+            34.239999999999995,
+            34.349999999999994
+          ],
+          "releaseOwnershipRangeSeconds": [
+            34.440999999999995,
+            34.591
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 1,
+          "text": "загнанный",
+          "startSample": 1521494,
+          "endSample": 1554701,
+          "onsetOwnershipRangeSeconds": [
+            34.455999999999996,
+            34.565999999999995
+          ],
+          "releaseOwnershipRangeSeconds": [
+            35.193999999999996,
+            35.344
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 2,
+          "text": "зверь",
+          "startSample": 1554701,
+          "endSample": 1580103,
+          "onsetOwnershipRangeSeconds": [
+            35.208999999999996,
+            35.318999999999996
+          ],
+          "releaseOwnershipRangeSeconds": [
+            35.769999999999996,
+            35.92
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ]
+    },
+    {
+      "id": "OBN-010",
+      "templateId": "shadow",
+      "lane": "lead",
+      "voice": "Lead vocal",
+      "phraseId": "pre-1",
+      "phraseSourceOffset": 8,
+      "note": "Original/stem phonetic context and competing paths; direct body and held release selected separately.",
+      "status": "Provisional source-bound selection; actual listening pending",
+      "words": [
+        {
+          "sourceIndex": 0,
+          "text": "Боясь",
+          "startSample": 1580103,
+          "endSample": 1609694,
+          "onsetOwnershipRangeSeconds": [
+            35.785,
+            35.894999999999996
+          ],
+          "releaseOwnershipRangeSeconds": [
+            36.440999999999995,
+            36.591
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 1,
+          "text": "свою",
+          "startSample": 1609694,
+          "endSample": 1628216,
+          "onsetOwnershipRangeSeconds": [
+            36.455999999999996,
+            36.565999999999995
+          ],
+          "releaseOwnershipRangeSeconds": [
+            36.861,
+            37.011
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 2,
+          "text": "тень",
+          "startSample": 1628216,
+          "endSample": 1652207,
+          "onsetOwnershipRangeSeconds": [
+            36.876,
+            36.986
+          ],
+          "releaseOwnershipRangeSeconds": [
+            37.405,
+            37.55500000000001
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ]
+    },
+    {
+      "id": "OBN-011",
+      "templateId": "wildly",
+      "lane": "lead",
+      "voice": "Lead vocal",
+      "phraseId": "pre-1",
+      "phraseSourceOffset": 11,
+      "note": "Original/stem phonetic context and competing paths; direct body and held release selected separately.",
+      "status": "Provisional source-bound selection; actual listening pending",
+      "words": [
+        {
+          "sourceIndex": 0,
+          "text": "Бегу",
+          "startSample": 1652207,
+          "endSample": 1679593,
+          "onsetOwnershipRangeSeconds": [
+            37.42,
+            37.53
+          ],
+          "releaseOwnershipRangeSeconds": [
+            38.025999999999996,
+            38.176
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 1,
+          "text": "оголтело",
+          "startSample": 1679593,
+          "endSample": 1722767,
+          "onsetOwnershipRangeSeconds": [
+            38.041,
+            38.150999999999996
+          ],
+          "releaseOwnershipRangeSeconds": [
+            39.004999999999995,
+            39.155
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ]
+    },
+    {
+      "id": "OBN-012",
+      "templateId": "dark-run",
+      "lane": "lead",
+      "voice": "Lead vocal",
+      "phraseId": "pre-1",
+      "phraseSourceOffset": 13,
+      "note": "Original/stem phonetic context and competing paths; direct body and held release selected separately.",
+      "status": "Provisional source-bound selection; actual listening pending",
+      "words": [
+        {
+          "sourceIndex": 0,
+          "text": "Бегу",
+          "startSample": 1722767,
+          "endSample": 1743890,
+          "onsetOwnershipRangeSeconds": [
+            39.019999999999996,
+            39.129999999999995
+          ],
+          "releaseOwnershipRangeSeconds": [
+            39.483999999999995,
+            39.634
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 1,
+          "text": "в",
+          "startSample": 1743890,
+          "endSample": 1748433,
+          "onsetOwnershipRangeSeconds": [
+            39.498999999999995,
+            39.608999999999995
+          ],
+          "releaseOwnershipRangeSeconds": [
+            39.586999999999996,
+            39.737
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 2,
+          "text": "темноте",
+          "startSample": 1748433,
+          "endSample": 1784374,
+          "onsetOwnershipRangeSeconds": [
+            39.602,
+            39.711999999999996
+          ],
+          "releaseOwnershipRangeSeconds": [
+            40.402,
+            40.55200000000001
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ]
+    },
+    {
+      "id": "OBN-013",
+      "templateId": "cope",
+      "lane": "lead",
+      "voice": "Lead vocal",
+      "phraseId": "pre-1",
+      "phraseSourceOffset": 16,
+      "note": "Preserve the pause before но rather than filling it with bright focus.",
+      "status": "Provisional source-bound selection; actual listening pending",
+      "words": [
+        {
+          "sourceIndex": 0,
+          "text": "Не",
+          "startSample": 1791122,
+          "endSample": 1801882,
+          "onsetOwnershipRangeSeconds": [
+            40.57,
+            40.68
+          ],
+          "releaseOwnershipRangeSeconds": [
+            40.799,
+            40.949000000000005
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 1,
+          "text": "справиться",
+          "startSample": 1801882,
+          "endSample": 1839235,
+          "onsetOwnershipRangeSeconds": [
+            40.814,
+            40.924
+          ],
+          "releaseOwnershipRangeSeconds": [
+            41.646,
+            41.79600000000001
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 2,
+          "text": "мне",
+          "startSample": 1839235,
+          "endSample": 1863710,
+          "onsetOwnershipRangeSeconds": [
+            41.661,
+            41.771
+          ],
+          "releaseOwnershipRangeSeconds": [
+            42.201,
+            42.351000000000006
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 3,
+          "text": "но",
+          "startSample": 1908560,
+          "endSample": 1925891,
+          "onsetOwnershipRangeSeconds": [
+            43.233,
+            43.342999999999996
+          ],
+          "releaseOwnershipRangeSeconds": [
+            43.611,
+            43.761
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ]
+    },
+    {
+      "id": "OBN-014",
+      "templateId": "you-embrace",
+      "lane": "lead",
+      "voice": "Lead vocal",
+      "phraseId": "chorus-1",
+      "phraseSourceOffset": 0,
+      "note": "Inspect complete held vowels. Whisper allocates ты before the stressed а core of когда and обнимаешь before the prolonged меня tail; do not accept those allocations automatically.",
+      "status": "Provisional source-bound selection; actual listening pending",
+      "words": [
+        {
+          "sourceIndex": 0,
+          "text": "Когда",
+          "startSample": 1944281,
+          "endSample": 2028776,
+          "onsetOwnershipRangeSeconds": [
+            44.043,
+            44.153
+          ],
+          "releaseOwnershipRangeSeconds": [
+            45.943999999999996,
+            46.094
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 1,
+          "text": "ты",
+          "startSample": 2028776,
+          "endSample": 2041301,
+          "onsetOwnershipRangeSeconds": [
+            45.958999999999996,
+            46.068999999999996
+          ],
+          "releaseOwnershipRangeSeconds": [
+            46.227999999999994,
+            46.378
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 2,
+          "text": "меня",
+          "startSample": 2041301,
+          "endSample": 2103526,
+          "onsetOwnershipRangeSeconds": [
+            46.242999999999995,
+            46.352999999999994
+          ],
+          "releaseOwnershipRangeSeconds": [
+            47.638999999999996,
+            47.789
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 3,
+          "text": "обнимаешь",
+          "startSample": 2103526,
+          "endSample": 2184494,
+          "onsetOwnershipRangeSeconds": [
+            47.653999999999996,
+            47.763999999999996
+          ],
+          "releaseOwnershipRangeSeconds": [
+            49.474999999999994,
+            49.625
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ]
+    },
+    {
+      "id": "OBN-015",
+      "templateId": "surrounding",
+      "lane": "lead",
+      "voice": "Lead vocal",
+      "phraseId": "chorus-1",
+      "phraseSourceOffset": 4,
+      "note": "Direct lead and possible filtered вся backing retain separate lanes. The gap before эта is not English anticipation.",
+      "status": "Provisional source-bound selection; actual listening pending",
+      "words": [
+        {
+          "sourceIndex": 0,
+          "text": "То",
+          "startSample": 2184494,
+          "endSample": 2192740,
+          "onsetOwnershipRangeSeconds": [
+            49.489999999999995,
+            49.599999999999994
+          ],
+          "releaseOwnershipRangeSeconds": [
+            49.662,
+            49.812000000000005
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 1,
+          "text": "вся",
+          "startSample": 2192740,
+          "endSample": 2218539,
+          "onsetOwnershipRangeSeconds": [
+            49.677,
+            49.787
+          ],
+          "releaseOwnershipRangeSeconds": [
+            50.247,
+            50.397000000000006
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 2,
+          "text": "эта",
+          "startSample": 2276574,
+          "endSample": 2295934,
+          "onsetOwnershipRangeSeconds": [
+            51.577999999999996,
+            51.687999999999995
+          ],
+          "releaseOwnershipRangeSeconds": [
+            52.001999999999995,
+            52.152
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 3,
+          "text": "тьма",
+          "startSample": 2295934,
+          "endSample": 2321071,
+          "onsetOwnershipRangeSeconds": [
+            52.016999999999996,
+            52.126999999999995
+          ],
+          "releaseOwnershipRangeSeconds": [
+            52.571999999999996,
+            52.722
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 4,
+          "text": "вокруг",
+          "startSample": 2321071,
+          "endSample": 2350442,
+          "onsetOwnershipRangeSeconds": [
+            52.586999999999996,
+            52.696999999999996
+          ],
+          "releaseOwnershipRangeSeconds": [
+            53.238,
+            53.388000000000005
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ]
+    },
+    {
+      "id": "OBN-016",
+      "templateId": "turns-light",
+      "lane": "lead",
+      "voice": "Lead vocal",
+      "phraseId": "chorus-1",
+      "phraseSourceOffset": 9,
+      "note": "Held свет includes its final consonant beyond the shorter Whisper release.",
+      "status": "Provisional source-bound selection; actual listening pending",
+      "words": [
+        {
+          "sourceIndex": 0,
+          "text": "Превращается",
+          "startSample": 2350442,
+          "endSample": 2416415,
+          "onsetOwnershipRangeSeconds": [
+            53.253,
+            53.363
+          ],
+          "releaseOwnershipRangeSeconds": [
+            54.733999999999995,
+            54.884
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 1,
+          "text": "в",
+          "startSample": 2416415,
+          "endSample": 2426294,
+          "onsetOwnershipRangeSeconds": [
+            54.748999999999995,
+            54.858999999999995
+          ],
+          "releaseOwnershipRangeSeconds": [
+            54.958,
+            55.108000000000004
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 2,
+          "text": "свет",
+          "startSample": 2426294,
+          "endSample": 2465234,
+          "onsetOwnershipRangeSeconds": [
+            54.973,
+            55.083
+          ],
+          "releaseOwnershipRangeSeconds": [
+            55.841,
+            55.99100000000001
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ]
+    },
+    {
+      "id": "OBN-017",
+      "templateId": "i-embrace",
+      "lane": "lead",
+      "voice": "Lead vocal",
+      "phraseId": "chorus-1",
+      "phraseSourceOffset": 12,
+      "note": "The pronoun core is short inside connected voice; follow actual lexical ownership, not the entire preceding crop pad.",
+      "status": "Provisional source-bound selection; actual listening pending",
+      "words": [
+        {
+          "sourceIndex": 0,
+          "text": "Когда",
+          "startSample": 2512994,
+          "endSample": 2595020,
+          "onsetOwnershipRangeSeconds": [
+            56.939,
+            57.049
+          ],
+          "releaseOwnershipRangeSeconds": [
+            58.784,
+            58.934000000000005
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 1,
+          "text": "я",
+          "startSample": 2595020,
+          "endSample": 2608295,
+          "onsetOwnershipRangeSeconds": [
+            58.799,
+            58.909
+          ],
+          "releaseOwnershipRangeSeconds": [
+            59.085,
+            59.23500000000001
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 2,
+          "text": "тебя",
+          "startSample": 2608295,
+          "endSample": 2669197,
+          "onsetOwnershipRangeSeconds": [
+            59.1,
+            59.21
+          ],
+          "releaseOwnershipRangeSeconds": [
+            60.466,
+            60.61600000000001
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 3,
+          "text": "обнимаю",
+          "startSample": 2669197,
+          "endSample": 2747474,
+          "onsetOwnershipRangeSeconds": [
+            60.481,
+            60.591
+          ],
+          "releaseOwnershipRangeSeconds": [
+            62.241,
+            62.391000000000005
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ]
+    },
+    {
+      "id": "OBN-018",
+      "templateId": "surrounding",
+      "lane": "lead",
+      "voice": "Lead vocal",
+      "phraseId": "chorus-1",
+      "phraseSourceOffset": 16,
+      "note": "Original/stem phonetic context and competing paths; direct body and held release selected separately.",
+      "status": "Provisional source-bound selection; actual listening pending",
+      "words": [
+        {
+          "sourceIndex": 0,
+          "text": "То",
+          "startSample": 2747474,
+          "endSample": 2759028,
+          "onsetOwnershipRangeSeconds": [
+            62.256,
+            62.366
+          ],
+          "releaseOwnershipRangeSeconds": [
+            62.503,
+            62.653000000000006
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 1,
+          "text": "вся",
+          "startSample": 2759028,
+          "endSample": 2786635,
+          "onsetOwnershipRangeSeconds": [
+            62.518,
+            62.628
+          ],
+          "releaseOwnershipRangeSeconds": [
+            63.129,
+            63.279
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 2,
+          "text": "эта",
+          "startSample": 2837394,
+          "endSample": 2859709,
+          "onsetOwnershipRangeSeconds": [
+            64.295,
+            64.405
+          ],
+          "releaseOwnershipRangeSeconds": [
+            64.786,
+            64.936
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 3,
+          "text": "тьма",
+          "startSample": 2859709,
+          "endSample": 2887844,
+          "onsetOwnershipRangeSeconds": [
+            64.801,
+            64.911
+          ],
+          "releaseOwnershipRangeSeconds": [
+            65.42399999999999,
+            65.574
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 4,
+          "text": "вокруг",
+          "startSample": 2887844,
+          "endSample": 2912540,
+          "onsetOwnershipRangeSeconds": [
+            65.439,
+            65.54899999999999
+          ],
+          "releaseOwnershipRangeSeconds": [
+            65.984,
+            66.134
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ]
+    },
+    {
+      "id": "OBN-019",
+      "templateId": "turns-light",
+      "lane": "lead",
+      "voice": "Lead vocal",
+      "phraseId": "chorus-1",
+      "phraseSourceOffset": 21,
+      "note": "The low-energy conjunction remains separate; focus continues through the held свет body.",
+      "status": "Provisional source-bound selection; actual listening pending",
+      "words": [
+        {
+          "sourceIndex": 0,
+          "text": "Превращается",
+          "startSample": 2912540,
+          "endSample": 2992406,
+          "onsetOwnershipRangeSeconds": [
+            65.999,
+            66.109
+          ],
+          "releaseOwnershipRangeSeconds": [
+            67.795,
+            67.94500000000001
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 1,
+          "text": "в",
+          "startSample": 2992406,
+          "endSample": 2999858,
+          "onsetOwnershipRangeSeconds": [
+            67.81,
+            67.92
+          ],
+          "releaseOwnershipRangeSeconds": [
+            67.964,
+            68.114
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 2,
+          "text": "свет",
+          "startSample": 2999858,
+          "endSample": 3045326,
+          "onsetOwnershipRangeSeconds": [
+            67.979,
+            68.089
+          ],
+          "releaseOwnershipRangeSeconds": [
+            68.995,
+            69.14500000000001
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ]
+    },
+    {
+      "id": "OBN-020",
+      "templateId": "embrace",
+      "lane": "lead",
+      "voice": "Lead vocal",
+      "phraseId": "post-1",
+      "phraseSourceOffset": 0,
+      "note": "Filtered repeat: narrow MMS score is low and Whisper fails. Supplied phrase retained as provisional; separate post-hook echo syllables are not assigned invented events.",
+      "status": "Provisional source-bound selection; actual listening pending",
+      "words": [
+        {
+          "sourceIndex": 0,
+          "text": "Обнимай",
+          "startSample": 3119943,
+          "endSample": 3203159,
+          "onsetOwnershipRangeSeconds": [
+            70.527,
+            70.967
+          ],
+          "releaseOwnershipRangeSeconds": [
+            72.384,
+            72.884
+          ],
+          "uncertainty": "High: heavily processed, poor automatic recognition",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 1,
+          "text": "меня",
+          "startSample": 3203159,
+          "endSample": 3300709,
+          "onsetOwnershipRangeSeconds": [
+            72.414,
+            72.854
+          ],
+          "releaseOwnershipRangeSeconds": [
+            74.596,
+            75.096
+          ],
+          "uncertainty": "High: heavily processed, poor automatic recognition",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ]
+    },
+    {
+      "id": "OBN-021",
+      "templateId": "embrace",
+      "lane": "lead",
+      "voice": "Lead vocal",
+      "phraseId": "post-1",
+      "phraseSourceOffset": 2,
+      "note": "Filtered repeat under accompaniment; model disagreement remains unresolved until actual listening.",
+      "status": "Provisional source-bound selection; actual listening pending",
+      "words": [
+        {
+          "sourceIndex": 0,
+          "text": "Обнимай",
+          "startSample": 3401962,
+          "endSample": 3495983,
+          "onsetOwnershipRangeSeconds": [
+            76.922,
+            77.362
+          ],
+          "releaseOwnershipRangeSeconds": [
+            79.024,
+            79.524
+          ],
+          "uncertainty": "High: heavily processed, poor automatic recognition",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 1,
+          "text": "меня",
+          "startSample": 3495983,
+          "endSample": 3572321,
+          "onsetOwnershipRangeSeconds": [
+            79.054,
+            79.494
+          ],
+          "releaseOwnershipRangeSeconds": [
+            80.755,
+            81.255
+          ],
+          "uncertainty": "High: heavily processed, poor automatic recognition",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ]
+    },
+    {
+      "id": "OBN-022",
+      "templateId": "embrace",
+      "lane": "lead",
+      "voice": "Lead vocal",
+      "phraseId": "post-1",
+      "phraseSourceOffset": 4,
+      "note": "Renewed estimated vocal body near 81.96 s; narrow paths support a two-word phrase with uncertain internal ownership.",
+      "status": "Provisional source-bound selection; actual listening pending",
+      "words": [
+        {
+          "sourceIndex": 0,
+          "text": "Обнимай",
+          "startSample": 3614436,
+          "endSample": 3745457,
+          "onsetOwnershipRangeSeconds": [
+            81.74,
+            82.17999999999999
+          ],
+          "releaseOwnershipRangeSeconds": [
+            84.681,
+            85.181
+          ],
+          "uncertainty": "High: heavily processed, poor automatic recognition",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 1,
+          "text": "меня",
+          "startSample": 3745457,
+          "endSample": 3856060,
+          "onsetOwnershipRangeSeconds": [
+            84.711,
+            85.151
+          ],
+          "releaseOwnershipRangeSeconds": [
+            87.189,
+            87.689
+          ],
+          "uncertainty": "High: heavily processed, poor automatic recognition",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ]
+    },
+    {
+      "id": "OBN-023",
+      "templateId": "embrace",
+      "lane": "lead",
+      "voice": "Lead vocal",
+      "phraseId": "post-1",
+      "phraseSourceOffset": 6,
+      "note": "Independently selected filtered repeat; no chorus-wide shift or copied timestamps.",
+      "status": "Provisional source-bound selection; actual listening pending",
+      "words": [
+        {
+          "sourceIndex": 0,
+          "text": "Обнимай",
+          "startSample": 3896764,
+          "endSample": 4013012,
+          "onsetOwnershipRangeSeconds": [
+            88.142,
+            88.582
+          ],
+          "releaseOwnershipRangeSeconds": [
+            90.748,
+            91.248
+          ],
+          "uncertainty": "High: heavily processed, poor automatic recognition",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 1,
+          "text": "меня",
+          "startSample": 4013012,
+          "endSample": 4113957,
+          "onsetOwnershipRangeSeconds": [
+            90.778,
+            91.218
+          ],
+          "releaseOwnershipRangeSeconds": [
+            93.037,
+            93.537
+          ],
+          "uncertainty": "High: heavily processed, poor automatic recognition",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ]
+    },
+    {
+      "id": "OBN-024",
+      "templateId": "hinges",
+      "lane": "lead",
+      "voice": "Lead vocal",
+      "phraseId": "pre-2",
+      "phraseSourceOffset": 0,
+      "note": "Reject 111 s crop-zero onset; original renewed body near 119.54 s.",
+      "status": "Provisional source-bound selection; actual listening pending",
+      "words": [
+        {
+          "sourceIndex": 0,
+          "text": "И",
+          "startSample": 5271714,
+          "endSample": 5296631,
+          "onsetOwnershipRangeSeconds": [
+            119.495,
+            119.605
+          ],
+          "releaseOwnershipRangeSeconds": [
+            120.045,
+            120.19500000000001
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 1,
+          "text": "я",
+          "startSample": 5296631,
+          "endSample": 5316123,
+          "onsetOwnershipRangeSeconds": [
+            120.06,
+            120.17
+          ],
+          "releaseOwnershipRangeSeconds": [
+            120.487,
+            120.637
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 2,
+          "text": "срываюсь",
+          "startSample": 5316123,
+          "endSample": 5355857,
+          "onsetOwnershipRangeSeconds": [
+            120.502,
+            120.612
+          ],
+          "releaseOwnershipRangeSeconds": [
+            121.38799999999999,
+            121.538
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 3,
+          "text": "с",
+          "startSample": 5355857,
+          "endSample": 5361149,
+          "onsetOwnershipRangeSeconds": [
+            121.40299999999999,
+            121.51299999999999
+          ],
+          "releaseOwnershipRangeSeconds": [
+            121.508,
+            121.658
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 4,
+          "text": "петель",
+          "startSample": 5361149,
+          "endSample": 5392989,
+          "onsetOwnershipRangeSeconds": [
+            121.523,
+            121.633
+          ],
+          "releaseOwnershipRangeSeconds": [
+            122.23,
+            122.38000000000001
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ]
+    },
+    {
+      "id": "OBN-025",
+      "templateId": "beast",
+      "lane": "lead",
+      "voice": "Lead vocal",
+      "phraseId": "pre-2",
+      "phraseSourceOffset": 5,
+      "note": "Original/stem phonetic context and competing paths; direct body and held release selected separately.",
+      "status": "Provisional source-bound selection; actual listening pending",
+      "words": [
+        {
+          "sourceIndex": 0,
+          "text": "Я",
+          "startSample": 5392989,
+          "endSample": 5403617,
+          "onsetOwnershipRangeSeconds": [
+            122.245,
+            122.355
+          ],
+          "releaseOwnershipRangeSeconds": [
+            122.471,
+            122.62100000000001
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 1,
+          "text": "загнанный",
+          "startSample": 5403617,
+          "endSample": 5438412,
+          "onsetOwnershipRangeSeconds": [
+            122.486,
+            122.596
+          ],
+          "releaseOwnershipRangeSeconds": [
+            123.25999999999999,
+            123.41
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 2,
+          "text": "зверь",
+          "startSample": 5438412,
+          "endSample": 5462270,
+          "onsetOwnershipRangeSeconds": [
+            123.27499999999999,
+            123.38499999999999
+          ],
+          "releaseOwnershipRangeSeconds": [
+            123.801,
+            123.95100000000001
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ]
+    },
+    {
+      "id": "OBN-026",
+      "templateId": "shadow",
+      "lane": "lead",
+      "voice": "Lead vocal",
+      "phraseId": "pre-2",
+      "phraseSourceOffset": 8,
+      "note": "Original/stem phonetic context and competing paths; direct body and held release selected separately.",
+      "status": "Provisional source-bound selection; actual listening pending",
+      "words": [
+        {
+          "sourceIndex": 0,
+          "text": "Боясь",
+          "startSample": 5462270,
+          "endSample": 5490759,
+          "onsetOwnershipRangeSeconds": [
+            123.816,
+            123.926
+          ],
+          "releaseOwnershipRangeSeconds": [
+            124.447,
+            124.59700000000001
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 1,
+          "text": "свою",
+          "startSample": 5490759,
+          "endSample": 5509060,
+          "onsetOwnershipRangeSeconds": [
+            124.462,
+            124.572
+          ],
+          "releaseOwnershipRangeSeconds": [
+            124.862,
+            125.012
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 2,
+          "text": "тень",
+          "startSample": 5509060,
+          "endSample": 5534330,
+          "onsetOwnershipRangeSeconds": [
+            124.877,
+            124.987
+          ],
+          "releaseOwnershipRangeSeconds": [
+            125.435,
+            125.58500000000001
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ]
+    },
+    {
+      "id": "OBN-027",
+      "templateId": "wildly",
+      "lane": "lead",
+      "voice": "Lead vocal",
+      "phraseId": "pre-2",
+      "phraseSourceOffset": 11,
+      "note": "Original/stem phonetic context and competing paths; direct body and held release selected separately.",
+      "status": "Provisional source-bound selection; actual listening pending",
+      "words": [
+        {
+          "sourceIndex": 0,
+          "text": "Бегу",
+          "startSample": 5534330,
+          "endSample": 5558981,
+          "onsetOwnershipRangeSeconds": [
+            125.45,
+            125.56
+          ],
+          "releaseOwnershipRangeSeconds": [
+            125.994,
+            126.144
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 1,
+          "text": "оголтело",
+          "startSample": 5558981,
+          "endSample": 5604581,
+          "onsetOwnershipRangeSeconds": [
+            126.009,
+            126.119
+          ],
+          "releaseOwnershipRangeSeconds": [
+            127.02799999999999,
+            127.178
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ]
+    },
+    {
+      "id": "OBN-028",
+      "templateId": "dark-run",
+      "lane": "lead",
+      "voice": "Lead vocal",
+      "phraseId": "pre-2",
+      "phraseSourceOffset": 13,
+      "note": "Original/stem phonetic context and competing paths; direct body and held release selected separately.",
+      "status": "Provisional source-bound selection; actual listening pending",
+      "words": [
+        {
+          "sourceIndex": 0,
+          "text": "Бегу",
+          "startSample": 5604581,
+          "endSample": 5623808,
+          "onsetOwnershipRangeSeconds": [
+            127.04299999999999,
+            127.15299999999999
+          ],
+          "releaseOwnershipRangeSeconds": [
+            127.464,
+            127.614
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 1,
+          "text": "в",
+          "startSample": 5623808,
+          "endSample": 5628615,
+          "onsetOwnershipRangeSeconds": [
+            127.479,
+            127.589
+          ],
+          "releaseOwnershipRangeSeconds": [
+            127.573,
+            127.723
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 2,
+          "text": "темноте",
+          "startSample": 5628615,
+          "endSample": 5665395,
+          "onsetOwnershipRangeSeconds": [
+            127.588,
+            127.698
+          ],
+          "releaseOwnershipRangeSeconds": [
+            128.407,
+            128.55700000000002
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ]
+    },
+    {
+      "id": "OBN-029",
+      "templateId": "cope",
+      "lane": "lead",
+      "voice": "Lead vocal",
+      "phraseId": "pre-2",
+      "phraseSourceOffset": 16,
+      "note": "The late forced но path runs into the next phrase; trim to the original direct body and retain a real preceding pause.",
+      "status": "Provisional source-bound selection; actual listening pending",
+      "words": [
+        {
+          "sourceIndex": 0,
+          "text": "Не",
+          "startSample": 5672010,
+          "endSample": 5682638,
+          "onsetOwnershipRangeSeconds": [
+            128.572,
+            128.682
+          ],
+          "releaseOwnershipRangeSeconds": [
+            128.798,
+            128.948
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 1,
+          "text": "справиться",
+          "startSample": 5682638,
+          "endSample": 5721534,
+          "onsetOwnershipRangeSeconds": [
+            128.81300000000002,
+            128.923
+          ],
+          "releaseOwnershipRangeSeconds": [
+            129.68,
+            129.83
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 2,
+          "text": "мне",
+          "startSample": 5721534,
+          "endSample": 5745348,
+          "onsetOwnershipRangeSeconds": [
+            129.69500000000002,
+            129.805
+          ],
+          "releaseOwnershipRangeSeconds": [
+            130.22,
+            130.37
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 3,
+          "text": "но",
+          "startSample": 5789360,
+          "endSample": 5811057,
+          "onsetOwnershipRangeSeconds": [
+            131.233,
+            131.343
+          ],
+          "releaseOwnershipRangeSeconds": [
+            131.71,
+            131.86
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ]
+    },
+    {
+      "id": "OBN-030",
+      "templateId": "you-embrace",
+      "lane": "lead",
+      "voice": "Lead vocal",
+      "phraseId": "chorus-2",
+      "phraseSourceOffset": 0,
+      "note": "Original/stem phonetic context and competing paths; direct body and held release selected separately.",
+      "status": "Provisional source-bound selection; actual listening pending",
+      "words": [
+        {
+          "sourceIndex": 0,
+          "text": "Когда",
+          "startSample": 5824993,
+          "endSample": 5909929,
+          "onsetOwnershipRangeSeconds": [
+            132.04100000000003,
+            132.151
+          ],
+          "releaseOwnershipRangeSeconds": [
+            133.952,
+            134.102
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 1,
+          "text": "ты",
+          "startSample": 5909929,
+          "endSample": 5922762,
+          "onsetOwnershipRangeSeconds": [
+            133.967,
+            134.077
+          ],
+          "releaseOwnershipRangeSeconds": [
+            134.243,
+            134.393
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 2,
+          "text": "меня",
+          "startSample": 5922762,
+          "endSample": 5984414,
+          "onsetOwnershipRangeSeconds": [
+            134.258,
+            134.368
+          ],
+          "releaseOwnershipRangeSeconds": [
+            135.641,
+            135.791
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 3,
+          "text": "обнимаешь",
+          "startSample": 5984414,
+          "endSample": 6064323,
+          "onsetOwnershipRangeSeconds": [
+            135.656,
+            135.766
+          ],
+          "releaseOwnershipRangeSeconds": [
+            137.453,
+            137.603
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ]
+    },
+    {
+      "id": "OBN-031",
+      "templateId": "surrounding",
+      "lane": "lead",
+      "voice": "Lead vocal",
+      "phraseId": "chorus-2",
+      "phraseSourceOffset": 4,
+      "note": "Original/stem phonetic context and competing paths; direct body and held release selected separately.",
+      "status": "Provisional source-bound selection; actual listening pending",
+      "words": [
+        {
+          "sourceIndex": 0,
+          "text": "То",
+          "startSample": 6064323,
+          "endSample": 6071159,
+          "onsetOwnershipRangeSeconds": [
+            137.46800000000002,
+            137.578
+          ],
+          "releaseOwnershipRangeSeconds": [
+            137.608,
+            137.758
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 1,
+          "text": "вся",
+          "startSample": 6071159,
+          "endSample": 6098060,
+          "onsetOwnershipRangeSeconds": [
+            137.62300000000002,
+            137.733
+          ],
+          "releaseOwnershipRangeSeconds": [
+            138.218,
+            138.368
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 2,
+          "text": "эта",
+          "startSample": 6153626,
+          "endSample": 6176690,
+          "onsetOwnershipRangeSeconds": [
+            139.49300000000002,
+            139.603
+          ],
+          "releaseOwnershipRangeSeconds": [
+            140.001,
+            140.151
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 3,
+          "text": "тьма",
+          "startSample": 6176690,
+          "endSample": 6204297,
+          "onsetOwnershipRangeSeconds": [
+            140.01600000000002,
+            140.126
+          ],
+          "releaseOwnershipRangeSeconds": [
+            140.627,
+            140.77700000000002
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 4,
+          "text": "вокруг",
+          "startSample": 6204297,
+          "endSample": 6234726,
+          "onsetOwnershipRangeSeconds": [
+            140.64200000000002,
+            140.752
+          ],
+          "releaseOwnershipRangeSeconds": [
+            141.317,
+            141.467
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ]
+    },
+    {
+      "id": "OBN-032",
+      "templateId": "turns-light",
+      "lane": "lead",
+      "voice": "Lead vocal",
+      "phraseId": "chorus-2",
+      "phraseSourceOffset": 9,
+      "note": "Reject stem alignment placing the tail of свет inside the next когда at 145 s; original phrase renewal is independently retained.",
+      "status": "Provisional source-bound selection; actual listening pending",
+      "words": [
+        {
+          "sourceIndex": 0,
+          "text": "Превращается",
+          "startSample": 6234726,
+          "endSample": 6294040,
+          "onsetOwnershipRangeSeconds": [
+            141.33200000000002,
+            141.442
+          ],
+          "releaseOwnershipRangeSeconds": [
+            142.662,
+            142.812
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 1,
+          "text": "в",
+          "startSample": 6294040,
+          "endSample": 6304095,
+          "onsetOwnershipRangeSeconds": [
+            142.67700000000002,
+            142.787
+          ],
+          "releaseOwnershipRangeSeconds": [
+            142.89,
+            143.04
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 2,
+          "text": "свет",
+          "startSample": 6304095,
+          "endSample": 6343785,
+          "onsetOwnershipRangeSeconds": [
+            142.905,
+            143.015
+          ],
+          "releaseOwnershipRangeSeconds": [
+            143.79,
+            143.94
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ]
+    },
+    {
+      "id": "OBN-033",
+      "templateId": "i-embrace",
+      "lane": "lead",
+      "voice": "Lead vocal",
+      "phraseId": "chorus-2",
+      "phraseSourceOffset": 12,
+      "note": "Original mix MMS supports когда near 145.05 s; stem path at 145.81 s misassigns the previous свет tail.",
+      "status": "Provisional source-bound selection; actual listening pending",
+      "words": [
+        {
+          "sourceIndex": 0,
+          "text": "Когда",
+          "startSample": 6393662,
+          "endSample": 6476306,
+          "onsetOwnershipRangeSeconds": [
+            144.936,
+            145.046
+          ],
+          "releaseOwnershipRangeSeconds": [
+            146.795,
+            146.945
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 1,
+          "text": "я",
+          "startSample": 6476306,
+          "endSample": 6486493,
+          "onsetOwnershipRangeSeconds": [
+            146.81,
+            146.92
+          ],
+          "releaseOwnershipRangeSeconds": [
+            147.026,
+            147.17600000000002
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 2,
+          "text": "тебя",
+          "startSample": 6486493,
+          "endSample": 6548718,
+          "onsetOwnershipRangeSeconds": [
+            147.04100000000003,
+            147.151
+          ],
+          "releaseOwnershipRangeSeconds": [
+            148.437,
+            148.58700000000002
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 3,
+          "text": "обнимаю",
+          "startSample": 6548718,
+          "endSample": 6626201,
+          "onsetOwnershipRangeSeconds": [
+            148.45200000000003,
+            148.562
+          ],
+          "releaseOwnershipRangeSeconds": [
+            150.194,
+            150.344
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ]
+    },
+    {
+      "id": "OBN-034",
+      "templateId": "surrounding",
+      "lane": "lead",
+      "voice": "Lead vocal",
+      "phraseId": "chorus-2",
+      "phraseSourceOffset": 16,
+      "note": "Original/stem phonetic context and competing paths; direct body and held release selected separately.",
+      "status": "Provisional source-bound selection; actual listening pending",
+      "words": [
+        {
+          "sourceIndex": 0,
+          "text": "То",
+          "startSample": 6626201,
+          "endSample": 6634933,
+          "onsetOwnershipRangeSeconds": [
+            150.209,
+            150.319
+          ],
+          "releaseOwnershipRangeSeconds": [
+            150.392,
+            150.542
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 1,
+          "text": "вся",
+          "startSample": 6634933,
+          "endSample": 6662187,
+          "onsetOwnershipRangeSeconds": [
+            150.407,
+            150.517
+          ],
+          "releaseOwnershipRangeSeconds": [
+            151.01,
+            151.16
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 2,
+          "text": "эта",
+          "startSample": 6716342,
+          "endSample": 6739891,
+          "onsetOwnershipRangeSeconds": [
+            152.25300000000001,
+            152.363
+          ],
+          "releaseOwnershipRangeSeconds": [
+            152.772,
+            152.922
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 3,
+          "text": "тьма",
+          "startSample": 6739891,
+          "endSample": 6766616,
+          "onsetOwnershipRangeSeconds": [
+            152.787,
+            152.897
+          ],
+          "releaseOwnershipRangeSeconds": [
+            153.378,
+            153.528
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 4,
+          "text": "вокруг",
+          "startSample": 6766616,
+          "endSample": 6796339,
+          "onsetOwnershipRangeSeconds": [
+            153.393,
+            153.503
+          ],
+          "releaseOwnershipRangeSeconds": [
+            154.052,
+            154.202
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ]
+    },
+    {
+      "id": "OBN-035",
+      "templateId": "turns-light",
+      "lane": "lead",
+      "voice": "Lead vocal",
+      "phraseId": "chorus-2",
+      "phraseSourceOffset": 21,
+      "note": "Retain the held ending beyond the shorter conditioned release; passive stem decay is a separate review question.",
+      "status": "Provisional source-bound selection; actual listening pending",
+      "words": [
+        {
+          "sourceIndex": 0,
+          "text": "Превращается",
+          "startSample": 6796339,
+          "endSample": 6862048,
+          "onsetOwnershipRangeSeconds": [
+            154.067,
+            154.177
+          ],
+          "releaseOwnershipRangeSeconds": [
+            155.542,
+            155.692
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 1,
+          "text": "в",
+          "startSample": 6862048,
+          "endSample": 6872985,
+          "onsetOwnershipRangeSeconds": [
+            155.55700000000002,
+            155.667
+          ],
+          "releaseOwnershipRangeSeconds": [
+            155.79,
+            155.94
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 2,
+          "text": "свет",
+          "startSample": 6872985,
+          "endSample": 6934505,
+          "onsetOwnershipRangeSeconds": [
+            155.805,
+            155.915
+          ],
+          "releaseOwnershipRangeSeconds": [
+            157.185,
+            157.335
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ]
+    },
+    {
+      "id": "OBN-036",
+      "templateId": "embrace",
+      "lane": "lead",
+      "voice": "Lead vocal",
+      "phraseId": "post-2",
+      "phraseSourceOffset": 0,
+      "note": "Processed hook: narrow alignment and original renewed body support the phrase, with uncertain internal handoff.",
+      "status": "Provisional source-bound selection; actual listening pending",
+      "words": [
+        {
+          "sourceIndex": 0,
+          "text": "Обнимай",
+          "startSample": 6994304,
+          "endSample": 7132425,
+          "onsetOwnershipRangeSeconds": [
+            158.381,
+            158.821
+          ],
+          "releaseOwnershipRangeSeconds": [
+            161.483,
+            161.983
+          ],
+          "uncertainty": "High: heavily processed, poor automatic recognition",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 1,
+          "text": "меня",
+          "startSample": 7132425,
+          "endSample": 7220096,
+          "onsetOwnershipRangeSeconds": [
+            161.513,
+            161.953
+          ],
+          "releaseOwnershipRangeSeconds": [
+            163.471,
+            163.971
+          ],
+          "uncertainty": "High: heavily processed, poor automatic recognition",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ]
+    },
+    {
+      "id": "OBN-037",
+      "templateId": "embrace",
+      "lane": "lead",
+      "voice": "Lead vocal",
+      "phraseId": "post-2",
+      "phraseSourceOffset": 2,
+      "note": "Second processed occurrence has independent choices; not transferred from the first post-hook.",
+      "status": "Provisional source-bound selection; actual listening pending",
+      "words": [
+        {
+          "sourceIndex": 0,
+          "text": "Обнимай",
+          "startSample": 7275662,
+          "endSample": 7410740,
+          "onsetOwnershipRangeSeconds": [
+            164.761,
+            165.201
+          ],
+          "releaseOwnershipRangeSeconds": [
+            167.794,
+            168.294
+          ],
+          "uncertainty": "High: heavily processed, poor automatic recognition",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 1,
+          "text": "меня",
+          "startSample": 7410740,
+          "endSample": 7507937,
+          "onsetOwnershipRangeSeconds": [
+            167.824,
+            168.264
+          ],
+          "releaseOwnershipRangeSeconds": [
+            169.998,
+            170.498
+          ],
+          "uncertainty": "High: heavily processed, poor automatic recognition",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ]
+    },
+    {
+      "id": "OBN-038",
+      "templateId": "embrace",
+      "lane": "lead",
+      "voice": "Lead vocal",
+      "phraseId": "post-2",
+      "phraseSourceOffset": 4,
+      "note": "Renewed direct body follows the previous decay; filter/stem leakage limits release confidence.",
+      "status": "Provisional source-bound selection; actual listening pending",
+      "words": [
+        {
+          "sourceIndex": 0,
+          "text": "Обнимай",
+          "startSample": 7560680,
+          "endSample": 7667358,
+          "onsetOwnershipRangeSeconds": [
+            171.224,
+            171.664
+          ],
+          "releaseOwnershipRangeSeconds": [
+            173.613,
+            174.113
+          ],
+          "uncertainty": "High: heavily processed, poor automatic recognition",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 1,
+          "text": "меня",
+          "startSample": 7667358,
+          "endSample": 7796174,
+          "onsetOwnershipRangeSeconds": [
+            173.643,
+            174.083
+          ],
+          "releaseOwnershipRangeSeconds": [
+            176.534,
+            177.034
+          ],
+          "uncertainty": "High: heavily processed, poor automatic recognition",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ]
+    },
+    {
+      "id": "OBN-039",
+      "templateId": "embrace",
+      "lane": "lead",
+      "voice": "Lead vocal",
+      "phraseId": "post-2",
+      "phraseSourceOffset": 6,
+      "note": "Final processed repeat retains a separate neutral reading hold before the outro.",
+      "status": "Provisional source-bound selection; actual listening pending",
+      "words": [
+        {
+          "sourceIndex": 0,
+          "text": "Обнимай",
+          "startSample": 7841553,
+          "endSample": 7959962,
+          "onsetOwnershipRangeSeconds": [
+            177.593,
+            178.033
+          ],
+          "releaseOwnershipRangeSeconds": [
+            180.248,
+            180.748
+          ],
+          "uncertainty": "High: heavily processed, poor automatic recognition",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 1,
+          "text": "меня",
+          "startSample": 7959962,
+          "endSample": 8046089,
+          "onsetOwnershipRangeSeconds": [
+            180.278,
+            180.718
+          ],
+          "releaseOwnershipRangeSeconds": [
+            182.201,
+            182.701
+          ],
+          "uncertainty": "High: heavily processed, poor automatic recognition",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ]
+    },
+    {
+      "id": "OBN-040",
+      "templateId": "i-embrace",
+      "lane": "lead",
+      "voice": "Lead vocal",
+      "phraseId": "outro",
+      "phraseSourceOffset": 0,
+      "note": "Reject the 181.5 s crop-zero allocation. Quiet lead-in precedes the first strong core; individual held vowels remain visible.",
+      "status": "Provisional source-bound selection; actual listening pending",
+      "words": [
+        {
+          "sourceIndex": 0,
+          "text": "Когда",
+          "startSample": 8087852,
+          "endSample": 8172612,
+          "onsetOwnershipRangeSeconds": [
+            183.353,
+            183.463
+          ],
+          "releaseOwnershipRangeSeconds": [
+            185.26,
+            185.41
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 1,
+          "text": "я",
+          "startSample": 8172612,
+          "endSample": 8182049,
+          "onsetOwnershipRangeSeconds": [
+            185.275,
+            185.385
+          ],
+          "releaseOwnershipRangeSeconds": [
+            185.474,
+            185.624
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 2,
+          "text": "тебя",
+          "startSample": 8182049,
+          "endSample": 8249831,
+          "onsetOwnershipRangeSeconds": [
+            185.489,
+            185.599
+          ],
+          "releaseOwnershipRangeSeconds": [
+            187.011,
+            187.161
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 3,
+          "text": "обнимаю",
+          "startSample": 8249831,
+          "endSample": 8337546,
+          "onsetOwnershipRangeSeconds": [
+            187.026,
+            187.136
+          ],
+          "releaseOwnershipRangeSeconds": [
+            189,
+            189.15
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ]
+    },
+    {
+      "id": "OBN-041",
+      "templateId": "surrounding",
+      "lane": "lead",
+      "voice": "Lead vocal",
+      "phraseId": "outro",
+      "phraseSourceOffset": 4,
+      "note": "Original/stem phonetic context and competing paths; direct body and held release selected separately.",
+      "status": "Provisional source-bound selection; actual listening pending",
+      "words": [
+        {
+          "sourceIndex": 0,
+          "text": "То",
+          "startSample": 8337546,
+          "endSample": 8346190,
+          "onsetOwnershipRangeSeconds": [
+            189.01500000000001,
+            189.125
+          ],
+          "releaseOwnershipRangeSeconds": [
+            189.196,
+            189.346
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 1,
+          "text": "вся",
+          "startSample": 8346190,
+          "endSample": 8384248,
+          "onsetOwnershipRangeSeconds": [
+            189.211,
+            189.321
+          ],
+          "releaseOwnershipRangeSeconds": [
+            190.059,
+            190.209
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 2,
+          "text": "эта",
+          "startSample": 8430641,
+          "endSample": 8463937,
+          "onsetOwnershipRangeSeconds": [
+            191.126,
+            191.236
+          ],
+          "releaseOwnershipRangeSeconds": [
+            191.86599999999999,
+            192.016
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 3,
+          "text": "тьма",
+          "startSample": 8463937,
+          "endSample": 8497012,
+          "onsetOwnershipRangeSeconds": [
+            191.881,
+            191.99099999999999
+          ],
+          "releaseOwnershipRangeSeconds": [
+            192.61599999999999,
+            192.766
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 4,
+          "text": "вокруг",
+          "startSample": 8497012,
+          "endSample": 8542214,
+          "onsetOwnershipRangeSeconds": [
+            192.631,
+            192.74099999999999
+          ],
+          "releaseOwnershipRangeSeconds": [
+            193.641,
+            193.791
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ]
+    },
+    {
+      "id": "OBN-042",
+      "templateId": "becomes-light",
+      "lane": "lead",
+      "voice": "Lead vocal",
+      "phraseId": "outro",
+      "phraseSourceOffset": 9,
+      "note": "Preserve the low-energy gap before final свет. The forced Whisper span begins inside the last syllable of становится; MMS finds the later renewed light-word body.",
+      "status": "Provisional source-bound selection; actual listening pending",
+      "words": [
+        {
+          "sourceIndex": 0,
+          "text": "Становится",
+          "startSample": 8542214,
+          "endSample": 8627680,
+          "onsetOwnershipRangeSeconds": [
+            193.656,
+            193.766
+          ],
+          "releaseOwnershipRangeSeconds": [
+            195.579,
+            195.729
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 1,
+          "text": "свет",
+          "startSample": 8686686,
+          "endSample": 8726199,
+          "onsetOwnershipRangeSeconds": [
+            196.93200000000002,
+            197.042
+          ],
+          "releaseOwnershipRangeSeconds": [
+            197.813,
+            197.963
+          ],
+          "uncertainty": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ]
+    },
+    {
+      "id": "OBN-B01",
+      "templateId": "all-echo",
+      "lane": "backing",
+      "voice": "Filtered backing echo",
+      "phraseId": "all1-a",
+      "phraseSourceOffset": 0,
+      "note": "Supplied filtered вся echo; independent narrow alignment remains weak. Provisional backing timing requires listening.",
+      "status": "Provisional source-bound selection; actual listening pending",
+      "words": [
+        {
+          "sourceIndex": 0,
+          "text": "Вся",
+          "startSample": 2233004,
+          "endSample": 2263829,
+          "onsetOwnershipRangeSeconds": [
+            50.589999999999996,
+            50.699999999999996
+          ],
+          "releaseOwnershipRangeSeconds": [
+            51.274,
+            51.42400000000001
+          ],
+          "uncertainty": "High: heavily processed, poor automatic recognition",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ]
+    },
+    {
+      "id": "OBN-B02",
+      "templateId": "all-echo",
+      "lane": "backing",
+      "voice": "Filtered backing echo",
+      "phraseId": "all1-b",
+      "phraseSourceOffset": 0,
+      "note": "Supplied filtered вся echo; independent narrow alignment remains weak. Provisional backing timing requires listening.",
+      "status": "Provisional source-bound selection; actual listening pending",
+      "words": [
+        {
+          "sourceIndex": 0,
+          "text": "Вся",
+          "startSample": 2802246,
+          "endSample": 2835718,
+          "onsetOwnershipRangeSeconds": [
+            63.498,
+            63.608
+          ],
+          "releaseOwnershipRangeSeconds": [
+            64.242,
+            64.39200000000001
+          ],
+          "uncertainty": "High: heavily processed, poor automatic recognition",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ]
+    },
+    {
+      "id": "OBN-B03",
+      "templateId": "all-echo",
+      "lane": "backing",
+      "voice": "Filtered backing echo",
+      "phraseId": "all2-a",
+      "phraseSourceOffset": 0,
+      "note": "Supplied filtered вся echo; independent narrow alignment remains weak. Provisional backing timing requires listening.",
+      "status": "Provisional source-bound selection; actual listening pending",
+      "words": [
+        {
+          "sourceIndex": 0,
+          "text": "Вся",
+          "startSample": 6106086,
+          "endSample": 6139955,
+          "onsetOwnershipRangeSeconds": [
+            138.41500000000002,
+            138.525
+          ],
+          "releaseOwnershipRangeSeconds": [
+            139.168,
+            139.318
+          ],
+          "uncertainty": "High: heavily processed, poor automatic recognition",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ]
+    },
+    {
+      "id": "OBN-B04",
+      "templateId": "all-echo",
+      "lane": "backing",
+      "voice": "Filtered backing echo",
+      "phraseId": "all2-b",
+      "phraseSourceOffset": 0,
+      "note": "Supplied filtered вся echo; independent narrow alignment remains weak. Provisional backing timing requires listening.",
+      "status": "Provisional source-bound selection; actual listening pending",
+      "words": [
+        {
+          "sourceIndex": 0,
+          "text": "Вся",
+          "startSample": 6667347,
+          "endSample": 6706596,
+          "onsetOwnershipRangeSeconds": [
+            151.14200000000002,
+            151.252
+          ],
+          "releaseOwnershipRangeSeconds": [
+            152.017,
+            152.167
+          ],
+          "uncertainty": "High: heavily processed, poor automatic recognition",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ]
+    }
+  ]
+}

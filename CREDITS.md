@@ -124,6 +124,10 @@ The anime footage in the immediate mashup source was reused in the landscape and
 
 The [official Cyberpunk 2077 upload](https://www.youtube.com/watch?v=u15tEo0wsQI) credits music to **P.T. Adamczyk and Dawid Podsiadło**, lyrics and vocals to **Dawid Podsiadło**, and orchestration and piano to **Marcin Przybyłowicz**. Original film: **CD PROJEKT RED** and the production contributors listed in that upload. Added lyric timing, typography and measured audio visualization: Ael, assisted with Codex. The complete original soundtrack and source edit are preserved in the preview. [Project provenance and review status](projects/phantom-liberty-lyric-film/README.md).
 
+## Обнимай — Элли на маковом поле
+
+Original recording and release photograph: [the supplied Обнимай recording](https://www.youtube.com/watch?v=sCbyEiBZyEo), **Элли на маковом поле** and the original creators. Recording metadata names ONErpm, МТС Лейбл, composer/lyricist Трунова Виктория Андреевна and co-producer Элли на маковом поле. A separate photographer is not identified. Added English translation, equal bilingual word presentation, measured petal-light response and preview implementation: Ael, assisted with Codex. Noto Serif and its SIL Open Font License are bundled in the [preview project](projects/obnimay-lyric-film/README.md). The source MP4 remains local; source attribution does not establish media redistribution clearance.
+
 ## Project contribution and AI assistance
 
 **Ael** selected the music, directed the creative revisions, reviewed the outputs and published the project. The workflow, code, lyric presentation, translation alignment, analysis and publishing assets were developed with substantial AI assistance, as described in [AI-DISCLOSURE.md](AI-DISCLOSURE.md).

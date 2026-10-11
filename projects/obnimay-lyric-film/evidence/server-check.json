@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "revision": "obnimay-preview-v1",
+  "sourceSha256": "9a4d5f5c42b131d46eab42d072f64733ccb50a0bea97a995b757d3b00e5708e0",
+  "timelineSha256": "35578e46076c9acdc1ad6ae376d43cfe2ea48c01da5996c0a75f3791d9c4e037",
+  "sceneSha256": "afb2a9194bfcc608d1831f7e5dff80bbe637fd879d9fe2b91b314755fe5d8ac3",
+  "sceneFiles": [
+    "src/model.ts",
+    "src/scene.ts",
+    "src/player.ts",
+    "review/index.html",
+    "public/audio-features.json",
+    "public/artwork-reference.png",
+    "public/visual-contract.json",
+    "public/fonts/NotoSerif.ttf"
+  ],
+  "status": "passed",
+  "scope": "Local HTTP page/data, original range transport and public-asset allowlist only; no actual listening or full-film render.",
+  "checks": [
+    {
+      "name": "complete preview page",
+      "status": 200
+    },
+    {
+      "name": "current timing JSON",
+      "status": 200
+    },
+    {
+      "name": "original MP4 HEAD and MIME",
+      "status": 200
+    },
+    {
+      "name": "exact original MP4 range bytes",
+      "status": 206
+    },
+    {
+      "name": "MP4 suffix range",
+      "status": 206
+    },
+    {
+      "name": "invalid range rejection",
+      "status": 416
+    },
+    {
+      "name": "private/nonpublic route /source/REVIEW.json",
+      "status": 404
+    },
+    {
+      "name": "private/nonpublic route /analysis/stereo44100.f32",
+      "status": 404
+    },
+    {
+      "name": "private/nonpublic route /package.json",
+      "status": 404
+    },
+    {
+      "name": "private/nonpublic route /node_modules/typescript/package.json",
+      "status": 404
+    },
+    {
+      "name": "unsupported method rejection",
+      "status": 405
+    }
+  ]
+}
