@@ -1,0 +1,12 @@
+import {readFileSync,writeFileSync} from 'node:fs';
+import {execFileSync} from 'node:child_process';
+import {createHash} from 'node:crypto';
+const root=new URL('../',import.meta.url),path=(s:string)=>new URL(s,root).pathname;
+const r=JSON.parse(readFileSync(path('source/recording.json'),'utf8'));
+const sourceHash=createHash('sha256').update(readFileSync(path('public/source.mp4'))).digest('hex');if(sourceHash!==r.sourceSha256)throw Error('Changed source');
+const frames=[0,625,1950,3350,4980];
+const data=execFileSync('ffmpeg',['-v','error','-nostdin','-i',path('public/source.mp4'),'-vf','select='+frames.map(n=>`eq(n\\,${n})`).join('+'),'-fps_mode','passthrough','-pix_fmt','rgb24','-f','rawvideo','pipe:1'],{maxBuffer:32*1024*1024});
+const bytes=1080*1080*3;if(data.length!==frames.length*bytes)throw Error('Wrong selected-frame count');
+const records=frames.map((n,j)=>{let sum=0,max=0,luminance=0;const offset=j*bytes;for(let i=0;i<bytes;i++){const d=Math.abs(data[offset+i]!-data[i]!);sum+=d;max=Math.max(max,d);luminance+=data[offset+i]!;}return {frame:n,pts:n/25,meanAbsoluteDifferenceFromFrameZero:sum/bytes,maximumDifference:max,meanChannelValue:luminance/bytes}});
+const report={schemaVersion:1,sourceSha256:sourceHash,sourcePicture:[1080,1080],nativeFps:25,duration:r.duration,selectedFrames:records,scope:'Decoded distributed frames establish intentionally still original artwork, separately from live browser frame decoding. No source media is generated or replaced.'};
+writeFileSync(path('source/picture-audit.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report));

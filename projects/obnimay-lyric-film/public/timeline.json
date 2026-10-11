@@ -1,0 +1,4514 @@
+{
+  "schemaVersion": 1,
+  "revision": "obnimay-preview-v1",
+  "sampleRate": 44100,
+  "sourceSha256": "9a4d5f5c42b131d46eab42d072f64733ccb50a0bea97a995b757d3b00e5708e0",
+  "sourceDuration": 200.6,
+  "cues": [
+    {
+      "id": "OBN-001",
+      "templateId": "hold-yourself",
+      "lane": "lead",
+      "voice": "Lead vocal",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "В руках держи себя, слышишь?",
+      "targetText": "Keep yourself together, do you hear?",
+      "start": 5.66,
+      "end": 8.933990929705216,
+      "visibleStart": 5.44,
+      "fullOpacityEnd": 9.001995464852607,
+      "visibleEnd": 9.001995464852607,
+      "exitMode": "vocal-handoff",
+      "words": [
+        {
+          "id": "OBN-001-s00",
+          "text": "В",
+          "sourceIndex": 0,
+          "startSample": 249606,
+          "endSample": 255339,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-001-s01",
+          "text": "руках",
+          "sourceIndex": 1,
+          "startSample": 255339,
+          "endSample": 308788,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-001-s02",
+          "text": "держи",
+          "sourceIndex": 2,
+          "startSample": 308788,
+          "endSample": 334719,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-001-s03",
+          "text": "себя",
+          "sourceIndex": 3,
+          "startSample": 334719,
+          "endSample": 356240,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending",
+          "punctuationAfter": ","
+        },
+        {
+          "id": "OBN-001-s04",
+          "text": "слышишь",
+          "sourceIndex": 4,
+          "startSample": 356240,
+          "endSample": 393989,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending",
+          "punctuationAfter": "?"
+        }
+      ],
+      "targets": [
+        {
+          "id": "OBN-001-t00",
+          "text": "Keep",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-001-t01",
+          "text": "yourself",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-001-t02",
+          "text": "together,",
+          "sourceIndices": [
+            0,
+            1
+          ],
+          "focusSourceIndices": [
+            0,
+            1
+          ],
+          "relation": "documented semantic union",
+          "rationale": "В руках is the idiomatic complement of держи себя: together; the union keeps the two sung words separate."
+        },
+        {
+          "id": "OBN-001-t03",
+          "text": "do",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-001-t04",
+          "text": "you",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-001-t05",
+          "text": "hear?",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "OBN-002",
+      "templateId": "fist",
+      "lane": "lead",
+      "voice": "Lead vocal",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "В кулак собери, что осталось",
+      "targetText": "Gather what remains into a fist.",
+      "start": 9.001995464852607,
+      "end": 12.058004535147392,
+      "visibleStart": 9.001995464852607,
+      "fullOpacityEnd": 12.143990929705215,
+      "visibleEnd": 12.143990929705215,
+      "exitMode": "vocal-handoff",
+      "words": [
+        {
+          "id": "OBN-002-s00",
+          "text": "В",
+          "sourceIndex": 0,
+          "startSample": 396988,
+          "endSample": 400163,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-002-s01",
+          "text": "кулак",
+          "sourceIndex": 1,
+          "startSample": 400163,
+          "endSample": 449996,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-002-s02",
+          "text": "собери",
+          "sourceIndex": 2,
+          "startSample": 449996,
+          "endSample": 473458,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending",
+          "punctuationAfter": ","
+        },
+        {
+          "id": "OBN-002-s03",
+          "text": "что",
+          "sourceIndex": 3,
+          "startSample": 473458,
+          "endSample": 487349,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-002-s04",
+          "text": "осталось",
+          "sourceIndex": 4,
+          "startSample": 487349,
+          "endSample": 531758,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ],
+      "targets": [
+        {
+          "id": "OBN-002-t00",
+          "text": "Gather",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-002-t01",
+          "text": "what",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-002-t02",
+          "text": "remains",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-002-t03",
+          "text": "into",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-002-t04",
+          "text": "a",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-002-t05",
+          "text": "fist.",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "OBN-003",
+      "templateId": "sanity",
+      "lane": "lead",
+      "voice": "Lead vocal",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Так медленно едет крыша",
+      "targetText": "So slowly, sanity slips away.",
+      "start": 12.143990929705215,
+      "end": 14.979002267573696,
+      "visibleStart": 12.143990929705215,
+      "fullOpacityEnd": 15.281995464852608,
+      "visibleEnd": 15.281995464852608,
+      "exitMode": "vocal-handoff",
+      "words": [
+        {
+          "id": "OBN-003-s00",
+          "text": "Так",
+          "sourceIndex": 0,
+          "startSample": 535550,
+          "endSample": 570875,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-003-s01",
+          "text": "медленно",
+          "sourceIndex": 1,
+          "startSample": 570875,
+          "endSample": 608845,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-003-s02",
+          "text": "едет",
+          "sourceIndex": 2,
+          "startSample": 608845,
+          "endSample": 628293,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-003-s03",
+          "text": "крыша",
+          "sourceIndex": 3,
+          "startSample": 628293,
+          "endSample": 660574,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ],
+      "targets": [
+        {
+          "id": "OBN-003-t00",
+          "text": "So",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-003-t01",
+          "text": "slowly,",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-003-t02",
+          "text": "sanity",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Крыша is the idiomatic mind/sanity, not the literal roof."
+        },
+        {
+          "id": "OBN-003-t03",
+          "text": "slips",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Едет is translated within the losing-sanity idiom; no invented I or you."
+        },
+        {
+          "id": "OBN-003-t04",
+          "text": "away.",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Едет is translated within the losing-sanity idiom; no invented I or you."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "OBN-004",
+      "templateId": "exhaustion",
+      "lane": "lead",
+      "voice": "Lead vocal",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Так быстро приходит усталость",
+      "targetText": "So quickly, exhaustion arrives.",
+      "start": 15.281995464852608,
+      "end": 18.551995464852606,
+      "visibleStart": 15.281995464852608,
+      "fullOpacityEnd": 18.551995464852606,
+      "visibleEnd": 18.551995464852606,
+      "exitMode": "vocal-handoff",
+      "words": [
+        {
+          "id": "OBN-004-s00",
+          "text": "Так",
+          "sourceIndex": 0,
+          "startSample": 673936,
+          "endSample": 713362,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-004-s01",
+          "text": "быстро",
+          "sourceIndex": 1,
+          "startSample": 713362,
+          "endSample": 736117,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-004-s02",
+          "text": "приходит",
+          "sourceIndex": 2,
+          "startSample": 736117,
+          "endSample": 774793,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-004-s03",
+          "text": "усталость",
+          "sourceIndex": 3,
+          "startSample": 774793,
+          "endSample": 818143,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ],
+      "targets": [
+        {
+          "id": "OBN-004-t00",
+          "text": "So",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-004-t01",
+          "text": "quickly,",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-004-t02",
+          "text": "exhaustion",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-004-t03",
+          "text": "arrives.",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "OBN-005",
+      "templateId": "reflection",
+      "lane": "lead",
+      "voice": "Lead vocal",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Себя не узнать в отражении",
+      "targetText": "Can't recognize myself in the reflection.",
+      "start": 18.551995464852606,
+      "end": 21.548004535147392,
+      "visibleStart": 18.551995464852606,
+      "fullOpacityEnd": 21.860997732426306,
+      "visibleEnd": 21.860997732426306,
+      "exitMode": "vocal-handoff",
+      "words": [
+        {
+          "id": "OBN-005-s00",
+          "text": "Себя",
+          "sourceIndex": 0,
+          "startSample": 818143,
+          "endSample": 873224,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-005-s01",
+          "text": "не",
+          "sourceIndex": 1,
+          "startSample": 873224,
+          "endSample": 884029,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-005-s02",
+          "text": "узнать",
+          "sourceIndex": 2,
+          "startSample": 884029,
+          "endSample": 904888,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-005-s03",
+          "text": "в",
+          "sourceIndex": 3,
+          "startSample": 904888,
+          "endSample": 908769,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-005-s04",
+          "text": "отражении",
+          "sourceIndex": 4,
+          "startSample": 908769,
+          "endSample": 950267,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ],
+      "targets": [
+        {
+          "id": "OBN-005-t00",
+          "text": "Can't",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Не узнать expresses inability to recognize in this context; negation remains separate from the verb."
+        },
+        {
+          "id": "OBN-005-t01",
+          "text": "recognize",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-005-t02",
+          "text": "myself",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-005-t03",
+          "text": "in",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-005-t04",
+          "text": "the",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-005-t05",
+          "text": "reflection.",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "OBN-006",
+      "templateId": "eyes",
+      "lane": "lead",
+      "voice": "Lead vocal",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Сияет тьма под глазами",
+      "targetText": "Darkness shines beneath the eyes.",
+      "start": 21.860997732426306,
+      "end": 24.98,
+      "visibleStart": 21.860997732426306,
+      "fullOpacityEnd": 25.548004535147392,
+      "visibleEnd": 25.548004535147392,
+      "exitMode": "vocal-handoff",
+      "words": [
+        {
+          "id": "OBN-006-s00",
+          "text": "Сияет",
+          "sourceIndex": 0,
+          "startSample": 964070,
+          "endSample": 1027618,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-006-s01",
+          "text": "тьма",
+          "sourceIndex": 1,
+          "startSample": 1027618,
+          "endSample": 1040363,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-006-s02",
+          "text": "под",
+          "sourceIndex": 2,
+          "startSample": 1040363,
+          "endSample": 1055181,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-006-s03",
+          "text": "глазами",
+          "sourceIndex": 3,
+          "startSample": 1055181,
+          "endSample": 1101618,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ],
+      "targets": [
+        {
+          "id": "OBN-006-t00",
+          "text": "Darkness",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-006-t01",
+          "text": "shines",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-006-t02",
+          "text": "beneath",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-006-t03",
+          "text": "the",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "No added possessive; the source has no explicit my."
+        },
+        {
+          "id": "OBN-006-t04",
+          "text": "eyes.",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "No added possessive; the source has no explicit my."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "OBN-007",
+      "templateId": "concrete",
+      "lane": "lead",
+      "voice": "Lead vocal",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "И мир бетоном своим на мои плечи давит",
+      "targetText": "And the world weighs on my shoulders with its concrete.",
+      "start": 25.548004535147392,
+      "end": 30.031995464852606,
+      "visibleStart": 25.548004535147392,
+      "fullOpacityEnd": 30.131995464852608,
+      "visibleEnd": 30.631995464852608,
+      "exitMode": "fade",
+      "words": [
+        {
+          "id": "OBN-007-s00",
+          "text": "И",
+          "sourceIndex": 0,
+          "startSample": 1126667,
+          "endSample": 1133105,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-007-s01",
+          "text": "мир",
+          "sourceIndex": 1,
+          "startSample": 1133105,
+          "endSample": 1160756,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-007-s02",
+          "text": "бетоном",
+          "sourceIndex": 2,
+          "startSample": 1160756,
+          "endSample": 1194845,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-007-s03",
+          "text": "своим",
+          "sourceIndex": 3,
+          "startSample": 1194845,
+          "endSample": 1226465,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-007-s04",
+          "text": "на",
+          "sourceIndex": 4,
+          "startSample": 1226465,
+          "endSample": 1235814,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-007-s05",
+          "text": "мои",
+          "sourceIndex": 5,
+          "startSample": 1235814,
+          "endSample": 1250191,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-007-s06",
+          "text": "плечи",
+          "sourceIndex": 6,
+          "startSample": 1250191,
+          "endSample": 1274931,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-007-s07",
+          "text": "давит",
+          "sourceIndex": 7,
+          "startSample": 1274931,
+          "endSample": 1324411,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ],
+      "targets": [
+        {
+          "id": "OBN-007-t00",
+          "text": "And",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-007-t01",
+          "text": "the",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-007-t02",
+          "text": "world",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-007-t03",
+          "text": "weighs",
+          "sourceIndices": [
+            7
+          ],
+          "focusSourceIndices": [
+            7
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-007-t04",
+          "text": "on",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-007-t05",
+          "text": "my",
+          "sourceIndices": [
+            5
+          ],
+          "focusSourceIndices": [
+            5
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-007-t06",
+          "text": "shoulders",
+          "sourceIndices": [
+            6
+          ],
+          "focusSourceIndices": [
+            6
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-007-t07",
+          "text": "with",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Instrumental-case completion belongs to бетоном."
+        },
+        {
+          "id": "OBN-007-t08",
+          "text": "its",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-007-t09",
+          "text": "concrete.",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "OBN-008",
+      "templateId": "hinges",
+      "lane": "lead",
+      "voice": "Lead vocal",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "И я срываюсь с петель",
+      "targetText": "And I am coming off the hinges.",
+      "start": 31.573990929705214,
+      "end": 34.28498866213152,
+      "visibleStart": 31.353990929705216,
+      "fullOpacityEnd": 34.28498866213152,
+      "visibleEnd": 34.28498866213152,
+      "exitMode": "vocal-handoff",
+      "words": [
+        {
+          "id": "OBN-008-s00",
+          "text": "И",
+          "sourceIndex": 0,
+          "startSample": 1392413,
+          "endSample": 1415081,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-008-s01",
+          "text": "я",
+          "sourceIndex": 1,
+          "startSample": 1415081,
+          "endSample": 1433867,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-008-s02",
+          "text": "срываюсь",
+          "sourceIndex": 2,
+          "startSample": 1433867,
+          "endSample": 1472323,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-008-s03",
+          "text": "с",
+          "sourceIndex": 3,
+          "startSample": 1472323,
+          "endSample": 1477571,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-008-s04",
+          "text": "петель",
+          "sourceIndex": 4,
+          "startSample": 1477571,
+          "endSample": 1511968,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ],
+      "targets": [
+        {
+          "id": "OBN-008-t00",
+          "text": "And",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-008-t01",
+          "text": "I",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-008-t02",
+          "text": "am",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-008-t03",
+          "text": "coming",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-008-t04",
+          "text": "off",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-008-t05",
+          "text": "the",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-008-t06",
+          "text": "hinges.",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "OBN-009",
+      "templateId": "beast",
+      "lane": "lead",
+      "voice": "Lead vocal",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Я загнанный зверь",
+      "targetText": "I'm a cornered beast.",
+      "start": 34.28498866213152,
+      "end": 35.83,
+      "visibleStart": 34.28498866213152,
+      "fullOpacityEnd": 35.83,
+      "visibleEnd": 35.83,
+      "exitMode": "vocal-handoff",
+      "words": [
+        {
+          "id": "OBN-009-s00",
+          "text": "Я",
+          "sourceIndex": 0,
+          "startSample": 1511968,
+          "endSample": 1521494,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-009-s01",
+          "text": "загнанный",
+          "sourceIndex": 1,
+          "startSample": 1521494,
+          "endSample": 1554701,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-009-s02",
+          "text": "зверь",
+          "sourceIndex": 2,
+          "startSample": 1554701,
+          "endSample": 1580103,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ],
+      "targets": [
+        {
+          "id": "OBN-009-t00",
+          "text": "I'm",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "The Russian subject supplies the necessary English copula."
+        },
+        {
+          "id": "OBN-009-t01",
+          "text": "a",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-009-t02",
+          "text": "cornered",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-009-t03",
+          "text": "beast.",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "OBN-010",
+      "templateId": "shadow",
+      "lane": "lead",
+      "voice": "Lead vocal",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Боясь свою тень",
+      "targetText": "Fearing my own shadow,",
+      "start": 35.83,
+      "end": 37.46501133786848,
+      "visibleStart": 35.83,
+      "fullOpacityEnd": 37.46501133786848,
+      "visibleEnd": 37.46501133786848,
+      "exitMode": "vocal-handoff",
+      "words": [
+        {
+          "id": "OBN-010-s00",
+          "text": "Боясь",
+          "sourceIndex": 0,
+          "startSample": 1580103,
+          "endSample": 1609694,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-010-s01",
+          "text": "свою",
+          "sourceIndex": 1,
+          "startSample": 1609694,
+          "endSample": 1628216,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-010-s02",
+          "text": "тень",
+          "sourceIndex": 2,
+          "startSample": 1628216,
+          "endSample": 1652207,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ],
+      "targets": [
+        {
+          "id": "OBN-010-t00",
+          "text": "Fearing",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-010-t01",
+          "text": "my",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Reflexive свою refers back to the first-person agent in the surrounding clause."
+        },
+        {
+          "id": "OBN-010-t02",
+          "text": "own",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Reflexive свою refers back to the first-person agent in the surrounding clause."
+        },
+        {
+          "id": "OBN-010-t03",
+          "text": "shadow,",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "OBN-011",
+      "templateId": "wildly",
+      "lane": "lead",
+      "voice": "Lead vocal",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Бегу оголтело",
+      "targetText": "I run wildly.",
+      "start": 37.46501133786848,
+      "end": 39.065011337868484,
+      "visibleStart": 37.46501133786848,
+      "fullOpacityEnd": 39.065011337868484,
+      "visibleEnd": 39.065011337868484,
+      "exitMode": "vocal-handoff",
+      "words": [
+        {
+          "id": "OBN-011-s00",
+          "text": "Бегу",
+          "sourceIndex": 0,
+          "startSample": 1652207,
+          "endSample": 1679593,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-011-s01",
+          "text": "оголтело",
+          "sourceIndex": 1,
+          "startSample": 1679593,
+          "endSample": 1722767,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ],
+      "targets": [
+        {
+          "id": "OBN-011-t00",
+          "text": "I",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "First-person verbal inflection supplies the English subject."
+        },
+        {
+          "id": "OBN-011-t01",
+          "text": "run",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "First-person verbal inflection supplies the English subject."
+        },
+        {
+          "id": "OBN-011-t02",
+          "text": "wildly.",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "OBN-012",
+      "templateId": "dark-run",
+      "lane": "lead",
+      "voice": "Lead vocal",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Бегу в темноте",
+      "targetText": "I run in the dark.",
+      "start": 39.065011337868484,
+      "end": 40.461995464852606,
+      "visibleStart": 39.065011337868484,
+      "fullOpacityEnd": 40.61501133786848,
+      "visibleEnd": 40.61501133786848,
+      "exitMode": "vocal-handoff",
+      "words": [
+        {
+          "id": "OBN-012-s00",
+          "text": "Бегу",
+          "sourceIndex": 0,
+          "startSample": 1722767,
+          "endSample": 1743890,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-012-s01",
+          "text": "в",
+          "sourceIndex": 1,
+          "startSample": 1743890,
+          "endSample": 1748433,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-012-s02",
+          "text": "темноте",
+          "sourceIndex": 2,
+          "startSample": 1748433,
+          "endSample": 1784374,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ],
+      "targets": [
+        {
+          "id": "OBN-012-t00",
+          "text": "I",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-012-t01",
+          "text": "run",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-012-t02",
+          "text": "in",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-012-t03",
+          "text": "the",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-012-t04",
+          "text": "dark.",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "OBN-013",
+      "templateId": "cope",
+      "lane": "lead",
+      "voice": "Lead vocal",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Не справиться мне, но",
+      "targetText": "I can't cope, but…",
+      "start": 40.61501133786848,
+      "end": 43.6709977324263,
+      "visibleStart": 40.61501133786848,
+      "fullOpacityEnd": 44.08800453514739,
+      "visibleEnd": 44.08800453514739,
+      "exitMode": "vocal-handoff",
+      "words": [
+        {
+          "id": "OBN-013-s00",
+          "text": "Не",
+          "sourceIndex": 0,
+          "startSample": 1791122,
+          "endSample": 1801882,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-013-s01",
+          "text": "справиться",
+          "sourceIndex": 1,
+          "startSample": 1801882,
+          "endSample": 1839235,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-013-s02",
+          "text": "мне",
+          "sourceIndex": 2,
+          "startSample": 1839235,
+          "endSample": 1863710,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending",
+          "punctuationAfter": ","
+        },
+        {
+          "id": "OBN-013-s03",
+          "text": "но",
+          "sourceIndex": 3,
+          "startSample": 1908560,
+          "endSample": 1925891,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ],
+      "targets": [
+        {
+          "id": "OBN-013-t00",
+          "text": "I",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-013-t01",
+          "text": "can't",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-013-t02",
+          "text": "cope,",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-013-t03",
+          "text": "but…",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "OBN-014",
+      "templateId": "you-embrace",
+      "lane": "lead",
+      "voice": "Lead vocal",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Когда ты меня обнимаешь",
+      "targetText": "When you hold me,",
+      "start": 44.08800453514739,
+      "end": 49.53501133786848,
+      "visibleStart": 44.08800453514739,
+      "fullOpacityEnd": 49.53501133786848,
+      "visibleEnd": 49.53501133786848,
+      "exitMode": "vocal-handoff",
+      "words": [
+        {
+          "id": "OBN-014-s00",
+          "text": "Когда",
+          "sourceIndex": 0,
+          "startSample": 1944281,
+          "endSample": 2028776,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-014-s01",
+          "text": "ты",
+          "sourceIndex": 1,
+          "startSample": 2028776,
+          "endSample": 2041301,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-014-s02",
+          "text": "меня",
+          "sourceIndex": 2,
+          "startSample": 2041301,
+          "endSample": 2103526,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-014-s03",
+          "text": "обнимаешь",
+          "sourceIndex": 3,
+          "startSample": 2103526,
+          "endSample": 2184494,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ],
+      "targets": [
+        {
+          "id": "OBN-014-t00",
+          "text": "When",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-014-t01",
+          "text": "you",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-014-t02",
+          "text": "hold",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Hold means staying in an embrace in romantic English; it preserves the sustained comfort of обнимать in this refrain."
+        },
+        {
+          "id": "OBN-014-t03",
+          "text": "me,",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "OBN-015",
+      "templateId": "surrounding",
+      "lane": "lead",
+      "voice": "Lead vocal",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "То вся эта тьма вокруг",
+      "targetText": "Then all this surrounding darkness",
+      "start": 49.53501133786848,
+      "end": 53.29800453514739,
+      "visibleStart": 49.53501133786848,
+      "fullOpacityEnd": 53.29800453514739,
+      "visibleEnd": 53.29800453514739,
+      "exitMode": "vocal-handoff",
+      "words": [
+        {
+          "id": "OBN-015-s00",
+          "text": "То",
+          "sourceIndex": 0,
+          "startSample": 2184494,
+          "endSample": 2192740,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-015-s01",
+          "text": "вся",
+          "sourceIndex": 1,
+          "startSample": 2192740,
+          "endSample": 2218539,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-015-s02",
+          "text": "эта",
+          "sourceIndex": 2,
+          "startSample": 2276574,
+          "endSample": 2295934,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-015-s03",
+          "text": "тьма",
+          "sourceIndex": 3,
+          "startSample": 2295934,
+          "endSample": 2321071,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-015-s04",
+          "text": "вокруг",
+          "sourceIndex": 4,
+          "startSample": 2321071,
+          "endSample": 2350442,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ],
+      "targets": [
+        {
+          "id": "OBN-015-t00",
+          "text": "Then",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-015-t01",
+          "text": "all",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-015-t02",
+          "text": "this",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-015-t03",
+          "text": "surrounding",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Вокруг becomes surrounding in natural English; the reordered word keeps its own source anchor."
+        },
+        {
+          "id": "OBN-015-t04",
+          "text": "darkness",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "OBN-B01",
+      "templateId": "all-echo",
+      "lane": "backing",
+      "voice": "Filtered backing echo",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Вся",
+      "targetText": "All.",
+      "start": 50.635011337868484,
+      "end": 51.333990929705216,
+      "visibleStart": 50.415011337868485,
+      "fullOpacityEnd": 51.43399092970522,
+      "visibleEnd": 51.93399092970522,
+      "exitMode": "fade",
+      "words": [
+        {
+          "id": "OBN-B01-s00",
+          "text": "Вся",
+          "sourceIndex": 0,
+          "startSample": 2233004,
+          "endSample": 2263829,
+          "confidence": "High: heavily processed, poor automatic recognition",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ],
+      "targets": [
+        {
+          "id": "OBN-B01-t00",
+          "text": "All.",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "OBN-016",
+      "templateId": "turns-light",
+      "lane": "lead",
+      "voice": "Lead vocal",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Превращается в свет",
+      "targetText": "turns into light.",
+      "start": 53.29800453514739,
+      "end": 55.900997732426305,
+      "visibleStart": 53.29800453514739,
+      "fullOpacityEnd": 56.10099773242631,
+      "visibleEnd": 56.60099773242631,
+      "exitMode": "fade",
+      "words": [
+        {
+          "id": "OBN-016-s00",
+          "text": "Превращается",
+          "sourceIndex": 0,
+          "startSample": 2350442,
+          "endSample": 2416415,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-016-s01",
+          "text": "в",
+          "sourceIndex": 1,
+          "startSample": 2416415,
+          "endSample": 2426294,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-016-s02",
+          "text": "свет",
+          "sourceIndex": 2,
+          "startSample": 2426294,
+          "endSample": 2465234,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ],
+      "targets": [
+        {
+          "id": "OBN-016-t00",
+          "text": "turns",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-016-t01",
+          "text": "into",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-016-t02",
+          "text": "light.",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "OBN-017",
+      "templateId": "i-embrace",
+      "lane": "lead",
+      "voice": "Lead vocal",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Когда я тебя обнимаю",
+      "targetText": "When I hold you,",
+      "start": 56.983990929705215,
+      "end": 62.3009977324263,
+      "visibleStart": 56.763990929705216,
+      "fullOpacityEnd": 62.3009977324263,
+      "visibleEnd": 62.3009977324263,
+      "exitMode": "vocal-handoff",
+      "words": [
+        {
+          "id": "OBN-017-s00",
+          "text": "Когда",
+          "sourceIndex": 0,
+          "startSample": 2512994,
+          "endSample": 2595020,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-017-s01",
+          "text": "я",
+          "sourceIndex": 1,
+          "startSample": 2595020,
+          "endSample": 2608295,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-017-s02",
+          "text": "тебя",
+          "sourceIndex": 2,
+          "startSample": 2608295,
+          "endSample": 2669197,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-017-s03",
+          "text": "обнимаю",
+          "sourceIndex": 3,
+          "startSample": 2669197,
+          "endSample": 2747474,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ],
+      "targets": [
+        {
+          "id": "OBN-017-t00",
+          "text": "When",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-017-t01",
+          "text": "I",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-017-t02",
+          "text": "hold",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-017-t03",
+          "text": "you,",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "OBN-018",
+      "templateId": "surrounding",
+      "lane": "lead",
+      "voice": "Lead vocal",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "То вся эта тьма вокруг",
+      "targetText": "Then all this surrounding darkness",
+      "start": 62.3009977324263,
+      "end": 66.04399092970522,
+      "visibleStart": 62.3009977324263,
+      "fullOpacityEnd": 66.04399092970522,
+      "visibleEnd": 66.04399092970522,
+      "exitMode": "vocal-handoff",
+      "words": [
+        {
+          "id": "OBN-018-s00",
+          "text": "То",
+          "sourceIndex": 0,
+          "startSample": 2747474,
+          "endSample": 2759028,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-018-s01",
+          "text": "вся",
+          "sourceIndex": 1,
+          "startSample": 2759028,
+          "endSample": 2786635,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-018-s02",
+          "text": "эта",
+          "sourceIndex": 2,
+          "startSample": 2837394,
+          "endSample": 2859709,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-018-s03",
+          "text": "тьма",
+          "sourceIndex": 3,
+          "startSample": 2859709,
+          "endSample": 2887844,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-018-s04",
+          "text": "вокруг",
+          "sourceIndex": 4,
+          "startSample": 2887844,
+          "endSample": 2912540,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ],
+      "targets": [
+        {
+          "id": "OBN-018-t00",
+          "text": "Then",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-018-t01",
+          "text": "all",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-018-t02",
+          "text": "this",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-018-t03",
+          "text": "surrounding",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Вокруг becomes surrounding in natural English; the reordered word keeps its own source anchor."
+        },
+        {
+          "id": "OBN-018-t04",
+          "text": "darkness",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "OBN-B02",
+      "templateId": "all-echo",
+      "lane": "backing",
+      "voice": "Filtered backing echo",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Вся",
+      "targetText": "All.",
+      "start": 63.54299319727891,
+      "end": 64.30199546485261,
+      "visibleStart": 63.32299319727891,
+      "fullOpacityEnd": 64.4019954648526,
+      "visibleEnd": 64.9019954648526,
+      "exitMode": "fade",
+      "words": [
+        {
+          "id": "OBN-B02-s00",
+          "text": "Вся",
+          "sourceIndex": 0,
+          "startSample": 2802246,
+          "endSample": 2835718,
+          "confidence": "High: heavily processed, poor automatic recognition",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ],
+      "targets": [
+        {
+          "id": "OBN-B02-t00",
+          "text": "All.",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "OBN-019",
+      "templateId": "turns-light",
+      "lane": "lead",
+      "voice": "Lead vocal",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Превращается в свет",
+      "targetText": "turns into light.",
+      "start": 66.04399092970522,
+      "end": 69.05501133786848,
+      "visibleStart": 66.04399092970522,
+      "fullOpacityEnd": 69.25501133786848,
+      "visibleEnd": 69.75501133786848,
+      "exitMode": "fade",
+      "words": [
+        {
+          "id": "OBN-019-s00",
+          "text": "Превращается",
+          "sourceIndex": 0,
+          "startSample": 2912540,
+          "endSample": 2992406,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-019-s01",
+          "text": "в",
+          "sourceIndex": 1,
+          "startSample": 2992406,
+          "endSample": 2999858,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-019-s02",
+          "text": "свет",
+          "sourceIndex": 2,
+          "startSample": 2999858,
+          "endSample": 3045326,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ],
+      "targets": [
+        {
+          "id": "OBN-019-t00",
+          "text": "turns",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-019-t01",
+          "text": "into",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-019-t02",
+          "text": "light.",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "OBN-020",
+      "templateId": "embrace",
+      "lane": "lead",
+      "voice": "Lead vocal",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Обнимай меня",
+      "targetText": "Hold me.",
+      "start": 70.74700680272109,
+      "end": 74.84600907029478,
+      "visibleStart": 70.52700680272109,
+      "fullOpacityEnd": 75.02600907029479,
+      "visibleEnd": 75.52600907029479,
+      "exitMode": "fade",
+      "words": [
+        {
+          "id": "OBN-020-s00",
+          "text": "Обнимай",
+          "sourceIndex": 0,
+          "startSample": 3119943,
+          "endSample": 3203159,
+          "confidence": "High: heavily processed, poor automatic recognition",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-020-s01",
+          "text": "меня",
+          "sourceIndex": 1,
+          "startSample": 3203159,
+          "endSample": 3300709,
+          "confidence": "High: heavily processed, poor automatic recognition",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ],
+      "targets": [
+        {
+          "id": "OBN-020-t00",
+          "text": "Hold",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-020-t01",
+          "text": "me.",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "OBN-021",
+      "templateId": "embrace",
+      "lane": "lead",
+      "voice": "Lead vocal",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Обнимай меня",
+      "targetText": "Hold me.",
+      "start": 77.14199546485261,
+      "end": 81.00501133786848,
+      "visibleStart": 76.92199546485261,
+      "fullOpacityEnd": 81.18501133786849,
+      "visibleEnd": 81.68501133786849,
+      "exitMode": "fade",
+      "words": [
+        {
+          "id": "OBN-021-s00",
+          "text": "Обнимай",
+          "sourceIndex": 0,
+          "startSample": 3401962,
+          "endSample": 3495983,
+          "confidence": "High: heavily processed, poor automatic recognition",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-021-s01",
+          "text": "меня",
+          "sourceIndex": 1,
+          "startSample": 3495983,
+          "endSample": 3572321,
+          "confidence": "High: heavily processed, poor automatic recognition",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ],
+      "targets": [
+        {
+          "id": "OBN-021-t00",
+          "text": "Hold",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-021-t01",
+          "text": "me.",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "OBN-022",
+      "templateId": "embrace",
+      "lane": "lead",
+      "voice": "Lead vocal",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Обнимай меня",
+      "targetText": "Hold me.",
+      "start": 81.96,
+      "end": 87.4390022675737,
+      "visibleStart": 81.74,
+      "fullOpacityEnd": 87.6190022675737,
+      "visibleEnd": 88.1190022675737,
+      "exitMode": "fade",
+      "words": [
+        {
+          "id": "OBN-022-s00",
+          "text": "Обнимай",
+          "sourceIndex": 0,
+          "startSample": 3614436,
+          "endSample": 3745457,
+          "confidence": "High: heavily processed, poor automatic recognition",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-022-s01",
+          "text": "меня",
+          "sourceIndex": 1,
+          "startSample": 3745457,
+          "endSample": 3856060,
+          "confidence": "High: heavily processed, poor automatic recognition",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ],
+      "targets": [
+        {
+          "id": "OBN-022-t00",
+          "text": "Hold",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-022-t01",
+          "text": "me.",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "OBN-023",
+      "templateId": "embrace",
+      "lane": "lead",
+      "voice": "Lead vocal",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Обнимай меня",
+      "targetText": "Hold me.",
+      "start": 88.36199546485261,
+      "end": 93.2870068027211,
+      "visibleStart": 88.14199546485261,
+      "fullOpacityEnd": 93.4670068027211,
+      "visibleEnd": 93.9670068027211,
+      "exitMode": "fade",
+      "words": [
+        {
+          "id": "OBN-023-s00",
+          "text": "Обнимай",
+          "sourceIndex": 0,
+          "startSample": 3896764,
+          "endSample": 4013012,
+          "confidence": "High: heavily processed, poor automatic recognition",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-023-s01",
+          "text": "меня",
+          "sourceIndex": 1,
+          "startSample": 4013012,
+          "endSample": 4113957,
+          "confidence": "High: heavily processed, poor automatic recognition",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ],
+      "targets": [
+        {
+          "id": "OBN-023-t00",
+          "text": "Hold",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-023-t01",
+          "text": "me.",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "OBN-024",
+      "templateId": "hinges",
+      "lane": "lead",
+      "voice": "Lead vocal",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "И я срываюсь с петель",
+      "targetText": "And I am coming off the hinges.",
+      "start": 119.54,
+      "end": 122.29,
+      "visibleStart": 119.32000000000001,
+      "fullOpacityEnd": 122.29,
+      "visibleEnd": 122.29,
+      "exitMode": "vocal-handoff",
+      "words": [
+        {
+          "id": "OBN-024-s00",
+          "text": "И",
+          "sourceIndex": 0,
+          "startSample": 5271714,
+          "endSample": 5296631,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-024-s01",
+          "text": "я",
+          "sourceIndex": 1,
+          "startSample": 5296631,
+          "endSample": 5316123,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-024-s02",
+          "text": "срываюсь",
+          "sourceIndex": 2,
+          "startSample": 5316123,
+          "endSample": 5355857,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-024-s03",
+          "text": "с",
+          "sourceIndex": 3,
+          "startSample": 5355857,
+          "endSample": 5361149,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-024-s04",
+          "text": "петель",
+          "sourceIndex": 4,
+          "startSample": 5361149,
+          "endSample": 5392989,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ],
+      "targets": [
+        {
+          "id": "OBN-024-t00",
+          "text": "And",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-024-t01",
+          "text": "I",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-024-t02",
+          "text": "am",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-024-t03",
+          "text": "coming",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-024-t04",
+          "text": "off",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-024-t05",
+          "text": "the",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-024-t06",
+          "text": "hinges.",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "OBN-025",
+      "templateId": "beast",
+      "lane": "lead",
+      "voice": "Lead vocal",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Я загнанный зверь",
+      "targetText": "I'm a cornered beast.",
+      "start": 122.29,
+      "end": 123.8609977324263,
+      "visibleStart": 122.29,
+      "fullOpacityEnd": 123.8609977324263,
+      "visibleEnd": 123.8609977324263,
+      "exitMode": "vocal-handoff",
+      "words": [
+        {
+          "id": "OBN-025-s00",
+          "text": "Я",
+          "sourceIndex": 0,
+          "startSample": 5392989,
+          "endSample": 5403617,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-025-s01",
+          "text": "загнанный",
+          "sourceIndex": 1,
+          "startSample": 5403617,
+          "endSample": 5438412,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-025-s02",
+          "text": "зверь",
+          "sourceIndex": 2,
+          "startSample": 5438412,
+          "endSample": 5462270,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ],
+      "targets": [
+        {
+          "id": "OBN-025-t00",
+          "text": "I'm",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "The Russian subject supplies the necessary English copula."
+        },
+        {
+          "id": "OBN-025-t01",
+          "text": "a",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-025-t02",
+          "text": "cornered",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-025-t03",
+          "text": "beast.",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "OBN-026",
+      "templateId": "shadow",
+      "lane": "lead",
+      "voice": "Lead vocal",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Боясь свою тень",
+      "targetText": "Fearing my own shadow,",
+      "start": 123.8609977324263,
+      "end": 125.49501133786848,
+      "visibleStart": 123.8609977324263,
+      "fullOpacityEnd": 125.49501133786848,
+      "visibleEnd": 125.49501133786848,
+      "exitMode": "vocal-handoff",
+      "words": [
+        {
+          "id": "OBN-026-s00",
+          "text": "Боясь",
+          "sourceIndex": 0,
+          "startSample": 5462270,
+          "endSample": 5490759,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-026-s01",
+          "text": "свою",
+          "sourceIndex": 1,
+          "startSample": 5490759,
+          "endSample": 5509060,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-026-s02",
+          "text": "тень",
+          "sourceIndex": 2,
+          "startSample": 5509060,
+          "endSample": 5534330,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ],
+      "targets": [
+        {
+          "id": "OBN-026-t00",
+          "text": "Fearing",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-026-t01",
+          "text": "my",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Reflexive свою refers back to the first-person agent in the surrounding clause."
+        },
+        {
+          "id": "OBN-026-t02",
+          "text": "own",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Reflexive свою refers back to the first-person agent in the surrounding clause."
+        },
+        {
+          "id": "OBN-026-t03",
+          "text": "shadow,",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "OBN-027",
+      "templateId": "wildly",
+      "lane": "lead",
+      "voice": "Lead vocal",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Бегу оголтело",
+      "targetText": "I run wildly.",
+      "start": 125.49501133786848,
+      "end": 127.08800453514739,
+      "visibleStart": 125.49501133786848,
+      "fullOpacityEnd": 127.08800453514739,
+      "visibleEnd": 127.08800453514739,
+      "exitMode": "vocal-handoff",
+      "words": [
+        {
+          "id": "OBN-027-s00",
+          "text": "Бегу",
+          "sourceIndex": 0,
+          "startSample": 5534330,
+          "endSample": 5558981,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-027-s01",
+          "text": "оголтело",
+          "sourceIndex": 1,
+          "startSample": 5558981,
+          "endSample": 5604581,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ],
+      "targets": [
+        {
+          "id": "OBN-027-t00",
+          "text": "I",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "First-person verbal inflection supplies the English subject."
+        },
+        {
+          "id": "OBN-027-t01",
+          "text": "run",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "First-person verbal inflection supplies the English subject."
+        },
+        {
+          "id": "OBN-027-t02",
+          "text": "wildly.",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "OBN-028",
+      "templateId": "dark-run",
+      "lane": "lead",
+      "voice": "Lead vocal",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Бегу в темноте",
+      "targetText": "I run in the dark.",
+      "start": 127.08800453514739,
+      "end": 128.4670068027211,
+      "visibleStart": 127.08800453514739,
+      "fullOpacityEnd": 128.61700680272108,
+      "visibleEnd": 128.61700680272108,
+      "exitMode": "vocal-handoff",
+      "words": [
+        {
+          "id": "OBN-028-s00",
+          "text": "Бегу",
+          "sourceIndex": 0,
+          "startSample": 5604581,
+          "endSample": 5623808,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-028-s01",
+          "text": "в",
+          "sourceIndex": 1,
+          "startSample": 5623808,
+          "endSample": 5628615,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-028-s02",
+          "text": "темноте",
+          "sourceIndex": 2,
+          "startSample": 5628615,
+          "endSample": 5665395,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ],
+      "targets": [
+        {
+          "id": "OBN-028-t00",
+          "text": "I",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-028-t01",
+          "text": "run",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-028-t02",
+          "text": "in",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-028-t03",
+          "text": "the",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-028-t04",
+          "text": "dark.",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "OBN-029",
+      "templateId": "cope",
+      "lane": "lead",
+      "voice": "Lead vocal",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Не справиться мне, но",
+      "targetText": "I can't cope, but…",
+      "start": 128.61700680272108,
+      "end": 131.77,
+      "visibleStart": 128.61700680272108,
+      "fullOpacityEnd": 132.08600907029478,
+      "visibleEnd": 132.08600907029478,
+      "exitMode": "vocal-handoff",
+      "words": [
+        {
+          "id": "OBN-029-s00",
+          "text": "Не",
+          "sourceIndex": 0,
+          "startSample": 5672010,
+          "endSample": 5682638,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-029-s01",
+          "text": "справиться",
+          "sourceIndex": 1,
+          "startSample": 5682638,
+          "endSample": 5721534,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-029-s02",
+          "text": "мне",
+          "sourceIndex": 2,
+          "startSample": 5721534,
+          "endSample": 5745348,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending",
+          "punctuationAfter": ","
+        },
+        {
+          "id": "OBN-029-s03",
+          "text": "но",
+          "sourceIndex": 3,
+          "startSample": 5789360,
+          "endSample": 5811057,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ],
+      "targets": [
+        {
+          "id": "OBN-029-t00",
+          "text": "I",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-029-t01",
+          "text": "can't",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-029-t02",
+          "text": "cope,",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-029-t03",
+          "text": "but…",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "OBN-030",
+      "templateId": "you-embrace",
+      "lane": "lead",
+      "voice": "Lead vocal",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Когда ты меня обнимаешь",
+      "targetText": "When you hold me,",
+      "start": 132.08600907029478,
+      "end": 137.51299319727892,
+      "visibleStart": 132.08600907029478,
+      "fullOpacityEnd": 137.51299319727892,
+      "visibleEnd": 137.51299319727892,
+      "exitMode": "vocal-handoff",
+      "words": [
+        {
+          "id": "OBN-030-s00",
+          "text": "Когда",
+          "sourceIndex": 0,
+          "startSample": 5824993,
+          "endSample": 5909929,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-030-s01",
+          "text": "ты",
+          "sourceIndex": 1,
+          "startSample": 5909929,
+          "endSample": 5922762,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-030-s02",
+          "text": "меня",
+          "sourceIndex": 2,
+          "startSample": 5922762,
+          "endSample": 5984414,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-030-s03",
+          "text": "обнимаешь",
+          "sourceIndex": 3,
+          "startSample": 5984414,
+          "endSample": 6064323,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ],
+      "targets": [
+        {
+          "id": "OBN-030-t00",
+          "text": "When",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-030-t01",
+          "text": "you",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-030-t02",
+          "text": "hold",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Hold means staying in an embrace in romantic English; it preserves the sustained comfort of обнимать in this refrain."
+        },
+        {
+          "id": "OBN-030-t03",
+          "text": "me,",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "OBN-031",
+      "templateId": "surrounding",
+      "lane": "lead",
+      "voice": "Lead vocal",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "То вся эта тьма вокруг",
+      "targetText": "Then all this surrounding darkness",
+      "start": 137.51299319727892,
+      "end": 141.3770068027211,
+      "visibleStart": 137.51299319727892,
+      "fullOpacityEnd": 141.3770068027211,
+      "visibleEnd": 141.3770068027211,
+      "exitMode": "vocal-handoff",
+      "words": [
+        {
+          "id": "OBN-031-s00",
+          "text": "То",
+          "sourceIndex": 0,
+          "startSample": 6064323,
+          "endSample": 6071159,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-031-s01",
+          "text": "вся",
+          "sourceIndex": 1,
+          "startSample": 6071159,
+          "endSample": 6098060,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-031-s02",
+          "text": "эта",
+          "sourceIndex": 2,
+          "startSample": 6153626,
+          "endSample": 6176690,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-031-s03",
+          "text": "тьма",
+          "sourceIndex": 3,
+          "startSample": 6176690,
+          "endSample": 6204297,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-031-s04",
+          "text": "вокруг",
+          "sourceIndex": 4,
+          "startSample": 6204297,
+          "endSample": 6234726,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ],
+      "targets": [
+        {
+          "id": "OBN-031-t00",
+          "text": "Then",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-031-t01",
+          "text": "all",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-031-t02",
+          "text": "this",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-031-t03",
+          "text": "surrounding",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Вокруг becomes surrounding in natural English; the reordered word keeps its own source anchor."
+        },
+        {
+          "id": "OBN-031-t04",
+          "text": "darkness",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "OBN-B03",
+      "templateId": "all-echo",
+      "lane": "backing",
+      "voice": "Filtered backing echo",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Вся",
+      "targetText": "All.",
+      "start": 138.46,
+      "end": 139.2280045351474,
+      "visibleStart": 138.24,
+      "fullOpacityEnd": 139.3280045351474,
+      "visibleEnd": 139.8280045351474,
+      "exitMode": "fade",
+      "words": [
+        {
+          "id": "OBN-B03-s00",
+          "text": "Вся",
+          "sourceIndex": 0,
+          "startSample": 6106086,
+          "endSample": 6139955,
+          "confidence": "High: heavily processed, poor automatic recognition",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ],
+      "targets": [
+        {
+          "id": "OBN-B03-t00",
+          "text": "All.",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "OBN-032",
+      "templateId": "turns-light",
+      "lane": "lead",
+      "voice": "Lead vocal",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Превращается в свет",
+      "targetText": "turns into light.",
+      "start": 141.3770068027211,
+      "end": 143.85,
+      "visibleStart": 141.3770068027211,
+      "fullOpacityEnd": 144.04999999999998,
+      "visibleEnd": 144.54999999999998,
+      "exitMode": "fade",
+      "words": [
+        {
+          "id": "OBN-032-s00",
+          "text": "Превращается",
+          "sourceIndex": 0,
+          "startSample": 6234726,
+          "endSample": 6294040,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-032-s01",
+          "text": "в",
+          "sourceIndex": 1,
+          "startSample": 6294040,
+          "endSample": 6304095,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-032-s02",
+          "text": "свет",
+          "sourceIndex": 2,
+          "startSample": 6304095,
+          "endSample": 6343785,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ],
+      "targets": [
+        {
+          "id": "OBN-032-t00",
+          "text": "turns",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-032-t01",
+          "text": "into",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-032-t02",
+          "text": "light.",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "OBN-033",
+      "templateId": "i-embrace",
+      "lane": "lead",
+      "voice": "Lead vocal",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Когда я тебя обнимаю",
+      "targetText": "When I hold you,",
+      "start": 144.98099773242632,
+      "end": 150.25399092970522,
+      "visibleStart": 144.76099773242632,
+      "fullOpacityEnd": 150.25399092970522,
+      "visibleEnd": 150.25399092970522,
+      "exitMode": "vocal-handoff",
+      "words": [
+        {
+          "id": "OBN-033-s00",
+          "text": "Когда",
+          "sourceIndex": 0,
+          "startSample": 6393662,
+          "endSample": 6476306,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-033-s01",
+          "text": "я",
+          "sourceIndex": 1,
+          "startSample": 6476306,
+          "endSample": 6486493,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-033-s02",
+          "text": "тебя",
+          "sourceIndex": 2,
+          "startSample": 6486493,
+          "endSample": 6548718,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-033-s03",
+          "text": "обнимаю",
+          "sourceIndex": 3,
+          "startSample": 6548718,
+          "endSample": 6626201,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ],
+      "targets": [
+        {
+          "id": "OBN-033-t00",
+          "text": "When",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-033-t01",
+          "text": "I",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-033-t02",
+          "text": "hold",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-033-t03",
+          "text": "you,",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "OBN-034",
+      "templateId": "surrounding",
+      "lane": "lead",
+      "voice": "Lead vocal",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "То вся эта тьма вокруг",
+      "targetText": "Then all this surrounding darkness",
+      "start": 150.25399092970522,
+      "end": 154.1119954648526,
+      "visibleStart": 150.25399092970522,
+      "fullOpacityEnd": 154.1119954648526,
+      "visibleEnd": 154.1119954648526,
+      "exitMode": "vocal-handoff",
+      "words": [
+        {
+          "id": "OBN-034-s00",
+          "text": "То",
+          "sourceIndex": 0,
+          "startSample": 6626201,
+          "endSample": 6634933,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-034-s01",
+          "text": "вся",
+          "sourceIndex": 1,
+          "startSample": 6634933,
+          "endSample": 6662187,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-034-s02",
+          "text": "эта",
+          "sourceIndex": 2,
+          "startSample": 6716342,
+          "endSample": 6739891,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-034-s03",
+          "text": "тьма",
+          "sourceIndex": 3,
+          "startSample": 6739891,
+          "endSample": 6766616,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-034-s04",
+          "text": "вокруг",
+          "sourceIndex": 4,
+          "startSample": 6766616,
+          "endSample": 6796339,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ],
+      "targets": [
+        {
+          "id": "OBN-034-t00",
+          "text": "Then",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-034-t01",
+          "text": "all",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-034-t02",
+          "text": "this",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-034-t03",
+          "text": "surrounding",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Вокруг becomes surrounding in natural English; the reordered word keeps its own source anchor."
+        },
+        {
+          "id": "OBN-034-t04",
+          "text": "darkness",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "OBN-B04",
+      "templateId": "all-echo",
+      "lane": "backing",
+      "voice": "Filtered backing echo",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Вся",
+      "targetText": "All.",
+      "start": 151.1870068027211,
+      "end": 152.0770068027211,
+      "visibleStart": 150.9670068027211,
+      "fullOpacityEnd": 152.17700680272108,
+      "visibleEnd": 152.67700680272108,
+      "exitMode": "fade",
+      "words": [
+        {
+          "id": "OBN-B04-s00",
+          "text": "Вся",
+          "sourceIndex": 0,
+          "startSample": 6667347,
+          "endSample": 6706596,
+          "confidence": "High: heavily processed, poor automatic recognition",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ],
+      "targets": [
+        {
+          "id": "OBN-B04-t00",
+          "text": "All.",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "OBN-035",
+      "templateId": "turns-light",
+      "lane": "lead",
+      "voice": "Lead vocal",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Превращается в свет",
+      "targetText": "turns into light.",
+      "start": 154.1119954648526,
+      "end": 157.24501133786848,
+      "visibleStart": 154.1119954648526,
+      "fullOpacityEnd": 157.44501133786846,
+      "visibleEnd": 157.94501133786846,
+      "exitMode": "fade",
+      "words": [
+        {
+          "id": "OBN-035-s00",
+          "text": "Превращается",
+          "sourceIndex": 0,
+          "startSample": 6796339,
+          "endSample": 6862048,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-035-s01",
+          "text": "в",
+          "sourceIndex": 1,
+          "startSample": 6862048,
+          "endSample": 6872985,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-035-s02",
+          "text": "свет",
+          "sourceIndex": 2,
+          "startSample": 6872985,
+          "endSample": 6934505,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ],
+      "targets": [
+        {
+          "id": "OBN-035-t00",
+          "text": "turns",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-035-t01",
+          "text": "into",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-035-t02",
+          "text": "light.",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "OBN-036",
+      "templateId": "embrace",
+      "lane": "lead",
+      "voice": "Lead vocal",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Обнимай меня",
+      "targetText": "Hold me.",
+      "start": 158.6009977324263,
+      "end": 163.7209977324263,
+      "visibleStart": 158.3809977324263,
+      "fullOpacityEnd": 163.9009977324263,
+      "visibleEnd": 164.4009977324263,
+      "exitMode": "fade",
+      "words": [
+        {
+          "id": "OBN-036-s00",
+          "text": "Обнимай",
+          "sourceIndex": 0,
+          "startSample": 6994304,
+          "endSample": 7132425,
+          "confidence": "High: heavily processed, poor automatic recognition",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-036-s01",
+          "text": "меня",
+          "sourceIndex": 1,
+          "startSample": 7132425,
+          "endSample": 7220096,
+          "confidence": "High: heavily processed, poor automatic recognition",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ],
+      "targets": [
+        {
+          "id": "OBN-036-t00",
+          "text": "Hold",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-036-t01",
+          "text": "me.",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "OBN-037",
+      "templateId": "embrace",
+      "lane": "lead",
+      "voice": "Lead vocal",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Обнимай меня",
+      "targetText": "Hold me.",
+      "start": 164.98099773242632,
+      "end": 170.2480045351474,
+      "visibleStart": 164.76099773242632,
+      "fullOpacityEnd": 170.4280045351474,
+      "visibleEnd": 170.9280045351474,
+      "exitMode": "fade",
+      "words": [
+        {
+          "id": "OBN-037-s00",
+          "text": "Обнимай",
+          "sourceIndex": 0,
+          "startSample": 7275662,
+          "endSample": 7410740,
+          "confidence": "High: heavily processed, poor automatic recognition",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-037-s01",
+          "text": "меня",
+          "sourceIndex": 1,
+          "startSample": 7410740,
+          "endSample": 7507937,
+          "confidence": "High: heavily processed, poor automatic recognition",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ],
+      "targets": [
+        {
+          "id": "OBN-037-t00",
+          "text": "Hold",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-037-t01",
+          "text": "me.",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "OBN-038",
+      "templateId": "embrace",
+      "lane": "lead",
+      "voice": "Lead vocal",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Обнимай меня",
+      "targetText": "Hold me.",
+      "start": 171.44399092970522,
+      "end": 176.78399092970523,
+      "visibleStart": 171.22399092970522,
+      "fullOpacityEnd": 176.96399092970523,
+      "visibleEnd": 177.46399092970523,
+      "exitMode": "fade",
+      "words": [
+        {
+          "id": "OBN-038-s00",
+          "text": "Обнимай",
+          "sourceIndex": 0,
+          "startSample": 7560680,
+          "endSample": 7667358,
+          "confidence": "High: heavily processed, poor automatic recognition",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-038-s01",
+          "text": "меня",
+          "sourceIndex": 1,
+          "startSample": 7667358,
+          "endSample": 7796174,
+          "confidence": "High: heavily processed, poor automatic recognition",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ],
+      "targets": [
+        {
+          "id": "OBN-038-t00",
+          "text": "Hold",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-038-t01",
+          "text": "me.",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "OBN-039",
+      "templateId": "embrace",
+      "lane": "lead",
+      "voice": "Lead vocal",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Обнимай меня",
+      "targetText": "Hold me.",
+      "start": 177.8129931972789,
+      "end": 182.45099773242632,
+      "visibleStart": 177.5929931972789,
+      "fullOpacityEnd": 182.63099773242632,
+      "visibleEnd": 183.13099773242632,
+      "exitMode": "fade",
+      "words": [
+        {
+          "id": "OBN-039-s00",
+          "text": "Обнимай",
+          "sourceIndex": 0,
+          "startSample": 7841553,
+          "endSample": 7959962,
+          "confidence": "High: heavily processed, poor automatic recognition",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-039-s01",
+          "text": "меня",
+          "sourceIndex": 1,
+          "startSample": 7959962,
+          "endSample": 8046089,
+          "confidence": "High: heavily processed, poor automatic recognition",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ],
+      "targets": [
+        {
+          "id": "OBN-039-t00",
+          "text": "Hold",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-039-t01",
+          "text": "me.",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "OBN-040",
+      "templateId": "i-embrace",
+      "lane": "lead",
+      "voice": "Lead vocal",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Когда я тебя обнимаю",
+      "targetText": "When I hold you,",
+      "start": 183.39800453514738,
+      "end": 189.06,
+      "visibleStart": 183.17800453514738,
+      "fullOpacityEnd": 189.06,
+      "visibleEnd": 189.06,
+      "exitMode": "vocal-handoff",
+      "words": [
+        {
+          "id": "OBN-040-s00",
+          "text": "Когда",
+          "sourceIndex": 0,
+          "startSample": 8087852,
+          "endSample": 8172612,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-040-s01",
+          "text": "я",
+          "sourceIndex": 1,
+          "startSample": 8172612,
+          "endSample": 8182049,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-040-s02",
+          "text": "тебя",
+          "sourceIndex": 2,
+          "startSample": 8182049,
+          "endSample": 8249831,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-040-s03",
+          "text": "обнимаю",
+          "sourceIndex": 3,
+          "startSample": 8249831,
+          "endSample": 8337546,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ],
+      "targets": [
+        {
+          "id": "OBN-040-t00",
+          "text": "When",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-040-t01",
+          "text": "I",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-040-t02",
+          "text": "hold",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-040-t03",
+          "text": "you,",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "OBN-041",
+      "templateId": "surrounding",
+      "lane": "lead",
+      "voice": "Lead vocal",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "То вся эта тьма вокруг",
+      "targetText": "Then all this surrounding darkness",
+      "start": 189.06,
+      "end": 193.70099773242632,
+      "visibleStart": 189.06,
+      "fullOpacityEnd": 193.70099773242632,
+      "visibleEnd": 193.70099773242632,
+      "exitMode": "vocal-handoff",
+      "words": [
+        {
+          "id": "OBN-041-s00",
+          "text": "То",
+          "sourceIndex": 0,
+          "startSample": 8337546,
+          "endSample": 8346190,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-041-s01",
+          "text": "вся",
+          "sourceIndex": 1,
+          "startSample": 8346190,
+          "endSample": 8384248,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-041-s02",
+          "text": "эта",
+          "sourceIndex": 2,
+          "startSample": 8430641,
+          "endSample": 8463937,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-041-s03",
+          "text": "тьма",
+          "sourceIndex": 3,
+          "startSample": 8463937,
+          "endSample": 8497012,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-041-s04",
+          "text": "вокруг",
+          "sourceIndex": 4,
+          "startSample": 8497012,
+          "endSample": 8542214,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ],
+      "targets": [
+        {
+          "id": "OBN-041-t00",
+          "text": "Then",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-041-t01",
+          "text": "all",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-041-t02",
+          "text": "this",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-041-t03",
+          "text": "surrounding",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Вокруг becomes surrounding in natural English; the reordered word keeps its own source anchor."
+        },
+        {
+          "id": "OBN-041-t04",
+          "text": "darkness",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    },
+    {
+      "id": "OBN-042",
+      "templateId": "becomes-light",
+      "lane": "lead",
+      "voice": "Lead vocal",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Становится свет",
+      "targetText": "becomes light.",
+      "start": 193.70099773242632,
+      "end": 197.8729931972789,
+      "visibleStart": 193.70099773242632,
+      "fullOpacityEnd": 198.0729931972789,
+      "visibleEnd": 198.5729931972789,
+      "exitMode": "fade",
+      "words": [
+        {
+          "id": "OBN-042-s00",
+          "text": "Становится",
+          "sourceIndex": 0,
+          "startSample": 8542214,
+          "endSample": 8627680,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "id": "OBN-042-s01",
+          "text": "свет",
+          "sourceIndex": 1,
+          "startSample": 8686686,
+          "endSample": 8726199,
+          "confidence": "Moderate: connected singing, selected from competing acoustic paths",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ],
+      "targets": [
+        {
+          "id": "OBN-042-t00",
+          "text": "becomes",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        },
+        {
+          "id": "OBN-042-t01",
+          "text": "light.",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "individual source word / necessary grammatical completion",
+          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": []
+    }
+  ]
+}
