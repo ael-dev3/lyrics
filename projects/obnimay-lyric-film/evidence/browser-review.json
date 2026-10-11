@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "revision": "obnimay-preview-v1",
+  "revision": "obnimay-preview-v2",
   "sourceSha256": "9a4d5f5c42b131d46eab42d072f64733ccb50a0bea97a995b757d3b00e5708e0",
-  "timelineSha256": "35578e46076c9acdc1ad6ae376d43cfe2ea48c01da5996c0a75f3791d9c4e037",
-  "sceneSha256": "afb2a9194bfcc608d1831f7e5dff80bbe637fd879d9fe2b91b314755fe5d8ac3",
+  "timelineSha256": "279b8cf9786bf1c3af90c980482acec37550c77791efaf4566caa5a1d244eb8f",
+  "sceneSha256": "f2d2128fd075b6970b188b32947686e328b1685bb1def3a5f4770b4bb0bc02b3",
   "sceneFiles": [
     "src/model.ts",
     "src/scene.ts",
@@ -14,147 +14,152 @@
     "public/visual-contract.json",
     "public/fonts/NotoSerif.ttf"
   ],
-  "checkedOn": "2026-10-11",
-  "scope": "Manual transcription of actual CUA browser DOM/canvas observations and inspected screenshots. Transport and visual checks only; no human listening or render approval.",
-  "currentIdentityChecks": [
+  "checkedOn": "2026-10-12",
+  "scope": "Manual record of actual CUA page/canvas observations. Full original picture and musical response remain present; these are display/transport checks, not human listening.",
+  "points": [
     {
-      "check": "complete wide browser still",
+      "time": 71.1,
       "width": 1920,
       "height": 1080,
-      "time": 55.43,
-      "nativePicturePTS": 55.4,
-      "nativeFrame": 1385,
-      "activeRussian": "свет",
-      "activeEnglish": "light.",
-      "lyricOpacity": 1,
-      "capture": "evidence/browser-landscape-55.430.png"
+      "sourceTime": 71.08,
+      "reading": [],
+      "ru": [],
+      "en": []
     },
     {
-      "check": "wide tail after seek",
+      "time": 80.9,
       "width": 1920,
       "height": 1080,
-      "time": 200.59,
-      "nativePicturePTS": 200.56,
-      "nativeFrame": 5014,
-      "activeWords": [],
-      "pictureVisible": true
+      "sourceTime": 80.88,
+      "reading": [],
+      "ru": [],
+      "en": []
     },
     {
-      "check": "portrait tail after format change",
+      "time": 75,
       "width": 1080,
       "height": 1920,
-      "time": 200.59,
-      "nativePicturePTS": 200.56,
-      "nativeFrame": 5014,
-      "activeWords": [],
-      "pictureVisible": true
+      "sourceTime": 75,
+      "reading": [],
+      "ru": [],
+      "en": []
     },
     {
-      "check": "portrait current embrace wording",
-      "width": 1080,
-      "height": 1920,
-      "time": 178.2,
-      "nativePicturePTS": 178.2,
-      "nativeFrame": 4455,
-      "activeRussian": "Обнимай",
-      "activeEnglish": "Hold",
-      "lyricOpacity": 1
-    },
-    {
-      "check": "muted original-source comparison",
-      "time": 178.2,
-      "referenceTime": 178.2,
-      "referenceMuted": true,
-      "dialogVisible": true
-    },
-    {
-      "check": "complete preview recovery",
-      "time": 181.276,
+      "time": 160.93,
       "width": 1920,
       "height": 1080,
-      "paused": true,
-      "lyricOpacity": 1,
-      "activeRussian": "меня",
-      "activeEnglish": "me."
+      "sourceTime": 160.92,
+      "reading": [
+        {
+          "id": "OBN-036",
+          "lane": "lead",
+          "opacity": 1
+        }
+      ],
+      "ru": [
+        "Обнимай"
+      ],
+      "en": [
+        "Hold"
+      ]
+    },
+    {
+      "time": 160.95,
+      "width": 1920,
+      "height": 1080,
+      "sourceTime": 160.92,
+      "reading": [
+        {
+          "id": "OBN-036",
+          "lane": "lead",
+          "opacity": 1
+        }
+      ],
+      "ru": [
+        "меня"
+      ],
+      "en": [
+        "me."
+      ]
+    },
+    {
+      "time": 161.9,
+      "width": 1920,
+      "height": 1080,
+      "sourceTime": 161.88,
+      "reading": [
+        {
+          "id": "OBN-036",
+          "lane": "lead",
+          "opacity": 1
+        }
+      ],
+      "ru": [],
+      "en": []
+    },
+    {
+      "time": 168.5,
+      "width": 1920,
+      "height": 1080,
+      "sourceTime": 168.48,
+      "reading": [
+        {
+          "id": "OBN-037",
+          "lane": "lead",
+          "opacity": 1
+        }
+      ],
+      "ru": [],
+      "en": []
+    },
+    {
+      "time": 174.45,
+      "width": 1920,
+      "height": 1080,
+      "sourceTime": 174.44,
+      "reading": [
+        {
+          "id": "OBN-038",
+          "lane": "lead",
+          "opacity": 1
+        }
+      ],
+      "ru": [],
+      "en": []
+    },
+    {
+      "time": 179,
+      "width": 1920,
+      "height": 1080,
+      "sourceTime": 179,
+      "reading": [],
+      "ru": [],
+      "en": []
+    },
+    {
+      "time": 160.95,
+      "width": 1080,
+      "height": 1920,
+      "sourceTime": 160.92,
+      "reading": [
+        {
+          "id": "OBN-036",
+          "lane": "lead",
+          "opacity": 1
+        }
+      ],
+      "ru": [
+        "меня"
+      ],
+      "en": [
+        "me."
+      ]
     }
   ],
-  "earlierSameSceneChecks": {
-    "timelineSha256": "6f9b45d4eeb4b39b760965f3d47d106141abead4d77b2866e60ae08d981c961f",
-    "sceneSha256": "afb2a9194bfcc608d1831f7e5dff80bbe637fd879d9fe2b91b314755fe5d8ac3",
-    "status": "Historical before English rationale update; not current-revision listening evidence.",
-    "observations": [
-      {
-        "check": "wide word before selected light onset",
-        "wordTime": 55.01,
-        "nativePicturePTS": 55,
-        "activeRussian": "в",
-        "activeEnglish": "into",
-        "lyricOpacity": 1
-      },
-      {
-        "check": "wide word after selected light onset",
-        "wordTime": 55.025,
-        "nativePicturePTS": 55,
-        "activeRussian": "свет",
-        "activeEnglish": "light.",
-        "lyricOpacity": 1
-      },
-      {
-        "check": "portrait word before selected light onset",
-        "wordTime": 55.01,
-        "nativePicturePTS": 55,
-        "activeRussian": "в",
-        "activeEnglish": "into",
-        "lyricOpacity": 1
-      },
-      {
-        "check": "portrait word after selected light onset",
-        "wordTime": 55.025,
-        "nativePicturePTS": 55,
-        "activeRussian": "свет",
-        "activeEnglish": "light.",
-        "lyricOpacity": 1
-      },
-      {
-        "check": "portrait normal-speed decoder succession",
-        "nativePicturePTS": [
-          55.28,
-          55.32
-        ],
-        "wordTimes": [
-          55.288809,
-          55.344097
-        ],
-        "paused": false
-      },
-      {
-        "check": "portrait reduced speed",
-        "rate": 0.5,
-        "wordTime": 55.589216,
-        "nativePicturePTS": 55.56,
-        "paused": false
-      },
-      {
-        "check": "paused-clock refresh",
-        "time": 55.610019,
-        "wordTime": 55.610019,
-        "nativePicturePTS": 55.6,
-        "paused": true
-      },
-      {
-        "check": "landscape recovery",
-        "time": 167.18,
-        "wordTime": 167.18,
-        "rate": 0.5,
-        "paused": true,
-        "activeRussian": "Обнимай",
-        "activeEnglish": "Hold"
-      }
-    ]
-  },
-  "sourceStillness": "Original artwork is intentionally static. Distributed decoded source frames and advancing native browser PTS are separate checks.",
-  "consoleWarningsAndErrors": [],
+  "still": "evidence/browser-gap-still.json",
+  "historical": "evidence/history/browser-review-v1.json",
   "normalSpeedFullSongListening": false,
   "reducedSpeedListening": false,
-  "renderAuthorized": false
+  "renderAuthorized": false,
+  "consoleWarningsAndErrors": []
 }

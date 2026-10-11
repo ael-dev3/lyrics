@@ -6,12 +6,16 @@ Complete original-picture preview, Russian / English, 16:9 and 9:16. No producti
 
 Read root `AGENTS.md`, the mandatory preview-first and cross-language review guides, then this project's [README](README.md), [TIMING](TIMING.md), [visual brief](VISUAL-BRIEF.md) and [review status](evidence/cross-language-sync-review.md). Browser and shared-scene evidence have technical/visual scopes only.
 
+## Coverage correction
+
+Read `source/coverage-review.json` before any timing work. The first two v1 calls overlapped a recording-reviewed lyric-free span at 71–81 s. Five supplied candidates are now withheld; three later original-recording-supported calls retain shorter provisional spans. Do not restore missing calls from pasted repetition counts or a forced path. The builder rejects withheld IDs and lyric-line intrusion into the known negative interval. ASR omissions alone do not prove silence; withheld ambiguity and an established lyric-free interval are distinct statuses.
+
 ## Short startup
 
 1. Restore the exact MP4 as `public/source.mp4`; check `source/recording.json` SHA-256. Original media, analysis and model caches remain excluded from Git.
 2. Install with `npm ci` using Node 24. Run `npm run timeline`, `npm run identity`, `npm run check`, `npm run proof`, then `npm run preview` (default port 4338).
 3. Show the **complete** preview. Verify actual picture, correct revision hashes, active Russian/English glyphs, playing/paused seeking, format switching, reduced speed and recovery. The source artwork is intentionally still; advancing native decoded PTS is separately required.
-4. Review the full original sound at normal speed, uncertain words and held endings at reduced speed, and both-language/both-layout reading. Prioritize the processed calls at about 70–93 and 158–183 s, four faint Вся echoes, quiet opening and final held light.
+4. Review the full original sound at normal speed, uncertain words and held endings at reduced speed, and both-language/both-layout reading. Prioritize the three retained processed calls at about 159–174 s, four faint Вся echoes, quiet opening and final held light.
 5. Update selections from actual audio when warranted, preserving rejected alternatives and uncertainty. Change `source/selected-boundaries.json`, not a generated timeline or a global timing offset. Rebuild timeline, identity, checks and proofs. Changed scene/timing identities invalidate earlier review.
 
 `scripts/initialize.ts` initializes recording metadata and editorial templates from preparation files. It is **not** an ordinary startup command: rerunning it can replace later editorial work. `scripts/author-timing.ts` creates the initial selection/compact observation record and refuses existing selections by default. Do not use `--replace` to erase reviewed corrections.

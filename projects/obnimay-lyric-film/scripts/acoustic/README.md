@@ -14,3 +14,5 @@ Preparation used Python 3.12, Torch/torchaudio 2.8, stable-whisper large-v3-turb
 Private PCM/stems/emission tensors/model caches remain ignored. Initial `node scripts/author-timing.ts` preserves compact source-bound competing paths and explicit selections. It refuses to overwrite a corrected selection file without `--replace`. The current timeline reproduces independently through `node scripts/build-timeline.ts`.
 
 Do not name an adapter `coverage.py`: that shadows the installed Python coverage package during Whisper imports. Model outputs can stretch conditioned repeats into instrumentals or hallucinate closing text; original audio and an actual listener review remain decisive.
+
+- `unprompted-repeat-audit.py`: v2 coverage windows on a fresh original-mix decode and diagnostic vocal, without any supplied lyric prompt. Wide/narrow and checkpoint variants remain correlated observations; outputs cannot be promoted as actual listening.
