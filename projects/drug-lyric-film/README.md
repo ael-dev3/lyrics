@@ -22,7 +22,7 @@ The original woman, ravens and city remain the center of the film. The source's 
 
 The **REDCHINAWAVE — Друг — Upload Kit** Desktop folder contains 13 files: both complete videos, a 1920×1080 YouTube thumbnail, a 1200×1600 portrait TikTok cover, YouTube title/description, TikTok description, optional Russian/English/bilingual SRTs, README, delivery inventory and checksums. All delivered bytes match the prepared kit. [Desktop receipt](evidence/desktop-delivery.json) · [Posting files](publishing-kit/README.txt) · [Delivery inventory](publishing-kit/DELIVERY.json).
 
-Public Git contains source, features, mapping/timing, covers, copy, captions and verification receipts. Original source and full movies remain local and ignored. No platform upload or public media release is recorded.
+Public Git contains source, features, mapping/timing, covers, copy, captions and verification receipts. A [21-asset draft GitHub backup](https://github.com/ael-dev3/lyrics/releases/tag/untagged-56c41656a82fcfec96f9) additionally stores both original exports, the original recording, a frozen editable source archive, the complete upload kit and a separate **9.90 MB, 720×1280, 30 fps** portrait alternate. Large media remain outside ordinary Git history; the original Desktop kit is unchanged. [Backup inventory and download verification](RELEASE-BACKUP.md) · [Compression recipe and limits](COMPRESSION.md). No platform upload or public media release is recorded.
 
 ## Reproduce the complete preview
 
