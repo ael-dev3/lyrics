@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "verifiedAtUtc": "2026-10-11T11:30:34.672103+00:00",
+  "file": "Drug-REDCHINAWAVE-TikTok-Under-10MB.mp4",
+  "bytes": 9902066,
+  "sha256": "50f1430a908c8a88fd402bdda37b3f2682bed993d4a4c5bfb2ba778409dd33f0",
+  "maximumBytes": 10000000,
+  "limitConvention": "Decimal MB: 1 MB = 1,000,000 bytes",
+  "source": {
+    "file": "TikTok/Drug-REDCHINAWAVE-TikTok-1080x1920-60fps.mp4",
+    "bytes": 26366789,
+    "sha256": "015df8b6ff7a3414e39ca44d5b8742176fc502bf9c7e311427885fdc0780bce8"
+  },
+  "encoder": {
+    "ffmpeg": "8.1.2",
+    "videoCodec": "libx264",
+    "preset": "slow",
+    "passes": 2,
+    "targetVideoBitrateBitsPerSecond": 450000,
+    "filter": "fps=30,scale=720:1280:flags=lanczos,setsar=1",
+    "pixelFormat": "yuv420p",
+    "audioCodec": "aac",
+    "targetAudioBitrateBitsPerSecond": 64000,
+    "audioChannels": 2,
+    "fastStart": true,
+    "truncationLimitUsed": false
+  },
+  "probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "index": 0,
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 720,
+        "height": 1280,
+        "sample_aspect_ratio": "1:1",
+        "color_range": "tv",
+        "color_space": "bt709",
+        "r_frame_rate": "30/1",
+        "start_time": "0.000000",
+        "duration": "150.100000",
+        "nb_frames": "4503"
+      },
+      {
+        "index": 1,
+        "codec_name": "aac",
+        "codec_type": "audio",
+        "sample_rate": "44100",
+        "channels": 2,
+        "r_frame_rate": "0/0",
+        "start_time": "0.000000",
+        "duration": "150.070000",
+        "nb_frames": "6464"
+      }
+    ],
+    "format": {
+      "duration": "150.100000",
+      "size": "9902066",
+      "bit_rate": "527758"
+    }
+  },
+  "verification": {
+    "fullVideoAndAudioStrictDecode": "pass",
+    "decodedVideoFrames": 4503,
+    "everyFramePtsAtThirtyFps": "pass",
+    "allStreamsStartAtZero": true,
+    "sizeAtOrBelowLimit": true,
+    "desktopCopySha256Matched": true,
+    "originalUploadKitFilesUnchanged": true,
+    "representativeVisualComparisonSeconds": 86.2
+  },
+  "limits": "This size-limited alternate resamples video from 60 to 30 fps and re-encodes stereo AAC. Original full-quality films retain their separate verification and remain unchanged. The 150.1-second picture includes the complete soundtrack plus a short final-frame hold; no audio trim or time stretch is used. Sampled visual review is not an exhaustive acoustic or visual attestation."
+}

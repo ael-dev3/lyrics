@@ -22,7 +22,7 @@ The original woman and ravens remain intact. A fixed three-depth city continues 
 
 Twenty-two cues contain 93 Russian events and 128 meaning-linked English tokens. The accepted complete preview is delivered in both formats at 60 fps. Every-frame timestamps, strict complete decoding and unchanged original audio pass; 388 selected scenes and 4,043 glyph-state checks pass per film, covering every token focused and neutral. The 13-file Desktop kit includes both videos, covers, copy and optional subtitles. Granular listening fields and faint-echo model uncertainty remain separately documented.
 
-[Complete project and delivery](projects/drug-lyric-film/README.md) · [Decisions and lessons](projects/drug-lyric-film/PRODUCTION-NOTES.md) · [Agent handoff](projects/drug-lyric-film/AGENT-HANDOFF.md)
+[Complete project and delivery](projects/drug-lyric-film/README.md) · [Decisions and lessons](projects/drug-lyric-film/PRODUCTION-NOTES.md) · [Agent handoff](projects/drug-lyric-film/AGENT-HANDOFF.md) · [Complete draft backup and compressed alternate](projects/drug-lyric-film/RELEASE-BACKUP.md)
 
 ## Труп невесты
 
