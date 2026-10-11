@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": "obnimay-preview-v1",
+  "revision": "obnimay-preview-v2",
   "sampleRate": 44100,
   "sourceSha256": "9a4d5f5c42b131d46eab42d072f64733ccb50a0bea97a995b757d3b00e5708e0",
   "sourceDuration": 200.6,
@@ -2343,262 +2343,6 @@
       "targetBreaks": []
     },
     {
-      "id": "OBN-020",
-      "templateId": "embrace",
-      "lane": "lead",
-      "voice": "Lead vocal",
-      "sourceLanguage": "ru",
-      "targetLanguage": "en",
-      "sourceText": "Обнимай меня",
-      "targetText": "Hold me.",
-      "start": 70.74700680272109,
-      "end": 74.84600907029478,
-      "visibleStart": 70.52700680272109,
-      "fullOpacityEnd": 75.02600907029479,
-      "visibleEnd": 75.52600907029479,
-      "exitMode": "fade",
-      "words": [
-        {
-          "id": "OBN-020-s00",
-          "text": "Обнимай",
-          "sourceIndex": 0,
-          "startSample": 3119943,
-          "endSample": 3203159,
-          "confidence": "High: heavily processed, poor automatic recognition",
-          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
-        },
-        {
-          "id": "OBN-020-s01",
-          "text": "меня",
-          "sourceIndex": 1,
-          "startSample": 3203159,
-          "endSample": 3300709,
-          "confidence": "High: heavily processed, poor automatic recognition",
-          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
-        }
-      ],
-      "targets": [
-        {
-          "id": "OBN-020-t00",
-          "text": "Hold",
-          "sourceIndices": [
-            0
-          ],
-          "focusSourceIndices": [
-            0
-          ],
-          "relation": "individual source word / necessary grammatical completion",
-          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
-        },
-        {
-          "id": "OBN-020-t01",
-          "text": "me.",
-          "sourceIndices": [
-            1
-          ],
-          "focusSourceIndices": [
-            1
-          ],
-          "relation": "individual source word / necessary grammatical completion",
-          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
-        }
-      ],
-      "sourceBreaks": [],
-      "targetBreaks": []
-    },
-    {
-      "id": "OBN-021",
-      "templateId": "embrace",
-      "lane": "lead",
-      "voice": "Lead vocal",
-      "sourceLanguage": "ru",
-      "targetLanguage": "en",
-      "sourceText": "Обнимай меня",
-      "targetText": "Hold me.",
-      "start": 77.14199546485261,
-      "end": 81.00501133786848,
-      "visibleStart": 76.92199546485261,
-      "fullOpacityEnd": 81.18501133786849,
-      "visibleEnd": 81.68501133786849,
-      "exitMode": "fade",
-      "words": [
-        {
-          "id": "OBN-021-s00",
-          "text": "Обнимай",
-          "sourceIndex": 0,
-          "startSample": 3401962,
-          "endSample": 3495983,
-          "confidence": "High: heavily processed, poor automatic recognition",
-          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
-        },
-        {
-          "id": "OBN-021-s01",
-          "text": "меня",
-          "sourceIndex": 1,
-          "startSample": 3495983,
-          "endSample": 3572321,
-          "confidence": "High: heavily processed, poor automatic recognition",
-          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
-        }
-      ],
-      "targets": [
-        {
-          "id": "OBN-021-t00",
-          "text": "Hold",
-          "sourceIndices": [
-            0
-          ],
-          "focusSourceIndices": [
-            0
-          ],
-          "relation": "individual source word / necessary grammatical completion",
-          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
-        },
-        {
-          "id": "OBN-021-t01",
-          "text": "me.",
-          "sourceIndices": [
-            1
-          ],
-          "focusSourceIndices": [
-            1
-          ],
-          "relation": "individual source word / necessary grammatical completion",
-          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
-        }
-      ],
-      "sourceBreaks": [],
-      "targetBreaks": []
-    },
-    {
-      "id": "OBN-022",
-      "templateId": "embrace",
-      "lane": "lead",
-      "voice": "Lead vocal",
-      "sourceLanguage": "ru",
-      "targetLanguage": "en",
-      "sourceText": "Обнимай меня",
-      "targetText": "Hold me.",
-      "start": 81.96,
-      "end": 87.4390022675737,
-      "visibleStart": 81.74,
-      "fullOpacityEnd": 87.6190022675737,
-      "visibleEnd": 88.1190022675737,
-      "exitMode": "fade",
-      "words": [
-        {
-          "id": "OBN-022-s00",
-          "text": "Обнимай",
-          "sourceIndex": 0,
-          "startSample": 3614436,
-          "endSample": 3745457,
-          "confidence": "High: heavily processed, poor automatic recognition",
-          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
-        },
-        {
-          "id": "OBN-022-s01",
-          "text": "меня",
-          "sourceIndex": 1,
-          "startSample": 3745457,
-          "endSample": 3856060,
-          "confidence": "High: heavily processed, poor automatic recognition",
-          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
-        }
-      ],
-      "targets": [
-        {
-          "id": "OBN-022-t00",
-          "text": "Hold",
-          "sourceIndices": [
-            0
-          ],
-          "focusSourceIndices": [
-            0
-          ],
-          "relation": "individual source word / necessary grammatical completion",
-          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
-        },
-        {
-          "id": "OBN-022-t01",
-          "text": "me.",
-          "sourceIndices": [
-            1
-          ],
-          "focusSourceIndices": [
-            1
-          ],
-          "relation": "individual source word / necessary grammatical completion",
-          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
-        }
-      ],
-      "sourceBreaks": [],
-      "targetBreaks": []
-    },
-    {
-      "id": "OBN-023",
-      "templateId": "embrace",
-      "lane": "lead",
-      "voice": "Lead vocal",
-      "sourceLanguage": "ru",
-      "targetLanguage": "en",
-      "sourceText": "Обнимай меня",
-      "targetText": "Hold me.",
-      "start": 88.36199546485261,
-      "end": 93.2870068027211,
-      "visibleStart": 88.14199546485261,
-      "fullOpacityEnd": 93.4670068027211,
-      "visibleEnd": 93.9670068027211,
-      "exitMode": "fade",
-      "words": [
-        {
-          "id": "OBN-023-s00",
-          "text": "Обнимай",
-          "sourceIndex": 0,
-          "startSample": 3896764,
-          "endSample": 4013012,
-          "confidence": "High: heavily processed, poor automatic recognition",
-          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
-        },
-        {
-          "id": "OBN-023-s01",
-          "text": "меня",
-          "sourceIndex": 1,
-          "startSample": 4013012,
-          "endSample": 4113957,
-          "confidence": "High: heavily processed, poor automatic recognition",
-          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
-        }
-      ],
-      "targets": [
-        {
-          "id": "OBN-023-t00",
-          "text": "Hold",
-          "sourceIndices": [
-            0
-          ],
-          "focusSourceIndices": [
-            0
-          ],
-          "relation": "individual source word / necessary grammatical completion",
-          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
-        },
-        {
-          "id": "OBN-023-t01",
-          "text": "me.",
-          "sourceIndices": [
-            1
-          ],
-          "focusSourceIndices": [
-            1
-          ],
-          "relation": "individual source word / necessary grammatical completion",
-          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
-        }
-      ],
-      "sourceBreaks": [],
-      "targetBreaks": []
-    },
-    {
       "id": "OBN-024",
       "templateId": "hinges",
       "lane": "lead",
@@ -3967,10 +3711,10 @@
       "sourceText": "Обнимай меня",
       "targetText": "Hold me.",
       "start": 158.6009977324263,
-      "end": 163.7209977324263,
+      "end": 161.88,
       "visibleStart": 158.3809977324263,
-      "fullOpacityEnd": 163.9009977324263,
-      "visibleEnd": 164.4009977324263,
+      "fullOpacityEnd": 162.06,
+      "visibleEnd": 162.56,
       "exitMode": "fade",
       "words": [
         {
@@ -3978,18 +3722,18 @@
           "text": "Обнимай",
           "sourceIndex": 0,
           "startSample": 6994304,
-          "endSample": 7132425,
-          "confidence": "High: heavily processed, poor automatic recognition",
-          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+          "endSample": 7097454,
+          "confidence": "High: processed voice; broad/narrow recognizers disagree. Selected interval is provisional, not millisecond-certified.",
+          "method": "v2 original-recording unprompted coverage + source/stem signal comparison; competing narrow recognitions retained, not direct listening"
         },
         {
           "id": "OBN-036-s01",
           "text": "меня",
           "sourceIndex": 1,
-          "startSample": 7132425,
-          "endSample": 7220096,
-          "confidence": "High: heavily processed, poor automatic recognition",
-          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+          "startSample": 7097454,
+          "endSample": 7138908,
+          "confidence": "High: processed voice; broad/narrow recognizers disagree. Selected interval is provisional, not millisecond-certified.",
+          "method": "v2 original-recording unprompted coverage + source/stem signal comparison; competing narrow recognitions retained, not direct listening"
         }
       ],
       "targets": [
@@ -4031,10 +3775,10 @@
       "sourceText": "Обнимай меня",
       "targetText": "Hold me.",
       "start": 164.98099773242632,
-      "end": 170.2480045351474,
+      "end": 168.46,
       "visibleStart": 164.76099773242632,
-      "fullOpacityEnd": 170.4280045351474,
-      "visibleEnd": 170.9280045351474,
+      "fullOpacityEnd": 168.64000000000001,
+      "visibleEnd": 169.14000000000001,
       "exitMode": "fade",
       "words": [
         {
@@ -4042,18 +3786,18 @@
           "text": "Обнимай",
           "sourceIndex": 0,
           "startSample": 7275662,
-          "endSample": 7410740,
-          "confidence": "High: heavily processed, poor automatic recognition",
-          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+          "endSample": 7380576,
+          "confidence": "High: processed voice; broad/narrow recognizers disagree. Selected interval is provisional, not millisecond-certified.",
+          "method": "v2 original-recording unprompted coverage + source/stem signal comparison; competing narrow recognitions retained, not direct listening"
         },
         {
           "id": "OBN-037-s01",
           "text": "меня",
           "sourceIndex": 1,
-          "startSample": 7410740,
-          "endSample": 7507937,
-          "confidence": "High: heavily processed, poor automatic recognition",
-          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+          "startSample": 7380576,
+          "endSample": 7429086,
+          "confidence": "High: processed voice; broad/narrow recognizers disagree. Selected interval is provisional, not millisecond-certified.",
+          "method": "v2 original-recording unprompted coverage + source/stem signal comparison; competing narrow recognitions retained, not direct listening"
         }
       ],
       "targets": [
@@ -4095,10 +3839,10 @@
       "sourceText": "Обнимай меня",
       "targetText": "Hold me.",
       "start": 171.44399092970522,
-      "end": 176.78399092970523,
+      "end": 174.4,
       "visibleStart": 171.22399092970522,
-      "fullOpacityEnd": 176.96399092970523,
-      "visibleEnd": 177.46399092970523,
+      "fullOpacityEnd": 174.58,
+      "visibleEnd": 175.08,
       "exitMode": "fade",
       "words": [
         {
@@ -4106,18 +3850,18 @@
           "text": "Обнимай",
           "sourceIndex": 0,
           "startSample": 7560680,
-          "endSample": 7667358,
-          "confidence": "High: heavily processed, poor automatic recognition",
-          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+          "endSample": 7657524,
+          "confidence": "High: processed voice; broad/narrow recognizers disagree. Selected interval is provisional, not millisecond-certified.",
+          "method": "v2 original-recording unprompted coverage + source/stem signal comparison; competing narrow recognitions retained, not direct listening"
         },
         {
           "id": "OBN-038-s01",
           "text": "меня",
           "sourceIndex": 1,
-          "startSample": 7667358,
-          "endSample": 7796174,
-          "confidence": "High: heavily processed, poor automatic recognition",
-          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+          "startSample": 7657524,
+          "endSample": 7691040,
+          "confidence": "High: processed voice; broad/narrow recognizers disagree. Selected interval is provisional, not millisecond-certified.",
+          "method": "v2 original-recording unprompted coverage + source/stem signal comparison; competing narrow recognitions retained, not direct listening"
         }
       ],
       "targets": [
@@ -4135,70 +3879,6 @@
         },
         {
           "id": "OBN-038-t01",
-          "text": "me.",
-          "sourceIndices": [
-            1
-          ],
-          "focusSourceIndices": [
-            1
-          ],
-          "relation": "individual source word / necessary grammatical completion",
-          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
-        }
-      ],
-      "sourceBreaks": [],
-      "targetBreaks": []
-    },
-    {
-      "id": "OBN-039",
-      "templateId": "embrace",
-      "lane": "lead",
-      "voice": "Lead vocal",
-      "sourceLanguage": "ru",
-      "targetLanguage": "en",
-      "sourceText": "Обнимай меня",
-      "targetText": "Hold me.",
-      "start": 177.8129931972789,
-      "end": 182.45099773242632,
-      "visibleStart": 177.5929931972789,
-      "fullOpacityEnd": 182.63099773242632,
-      "visibleEnd": 183.13099773242632,
-      "exitMode": "fade",
-      "words": [
-        {
-          "id": "OBN-039-s00",
-          "text": "Обнимай",
-          "sourceIndex": 0,
-          "startSample": 7841553,
-          "endSample": 7959962,
-          "confidence": "High: heavily processed, poor automatic recognition",
-          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
-        },
-        {
-          "id": "OBN-039-s01",
-          "text": "меня",
-          "sourceIndex": 1,
-          "startSample": 7959962,
-          "endSample": 8046089,
-          "confidence": "High: heavily processed, poor automatic recognition",
-          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
-        }
-      ],
-      "targets": [
-        {
-          "id": "OBN-039-t00",
-          "text": "Hold",
-          "sourceIndices": [
-            0
-          ],
-          "focusSourceIndices": [
-            0
-          ],
-          "relation": "individual source word / necessary grammatical completion",
-          "rationale": "Direct word correspondence; required English grammar shares the performed source event."
-        },
-        {
-          "id": "OBN-039-t01",
           "text": "me.",
           "sourceIndices": [
             1

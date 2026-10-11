@@ -2,12 +2,20 @@ import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {createCanvas,loadImage,GlobalFonts} from '@napi-rs/canvas';
-import {parseTimeline,parseFeatures,sourceActive,targetActive,validateTimeline} from '../src/model.ts';
+import {parseTimeline,parseFeatures,sourceActive,targetActive,visibleCues,validateTimeline} from '../src/model.ts';
 import {initializeScene,paintScene,setEffectsEnabled} from '../src/scene.ts';
 import {assertApprovedReview} from '../scripts/production-authorization.ts';
 import {currentIdentity} from '../scripts/project-identity.ts';
 const root=new URL('../',import.meta.url),read=(p:string):unknown=>JSON.parse(readFileSync(new URL(p,root),'utf8'));
 const timeline=parseTimeline(read('public/timeline.json')),features=parseFeatures(read('public/audio-features.json'));
+
+test('recording-reviewed instrumental interval has no lyric reading or focus',()=>{
+ // Independent negative recording observation, not a model score or a copy of the builder's decisions.
+ for(let frame=71*60;frame<=81*60;frame++){
+  const t=frame/60;assert.deepEqual(visibleCues(timeline,t),[],`Unheard lyric at ${t}`);
+  assert.equal(timeline.cues.some(c=>c.words.some(w=>sourceActive(w,t))),false);
+ }
+});
 
 test('every source start is inclusive and end exclusive against an integer sample oracle',()=>{
  for(const c of timeline.cues)for(const w of c.words){

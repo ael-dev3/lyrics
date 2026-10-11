@@ -27,10 +27,6 @@ add('OBN-016','turns-light','chorus-1',9,[[53.298,54.794],[54.794,55.018],[55.01
 add('OBN-017','i-embrace','chorus-1',12,[[56.984,58.844],[58.844,59.145],[59.145,60.526],[60.526,62.301]],'The pronoun core is short inside connected voice; follow actual lexical ownership, not the entire preceding crop pad.');
 add('OBN-018','surrounding','chorus-1',16,[[62.301,62.563],[62.563,63.189],[64.340,64.846],[64.846,65.484],[65.484,66.044]]);
 add('OBN-019','turns-light','chorus-1',21,[[66.044,67.855],[67.855,68.024],[68.024,69.055]],'The low-energy conjunction remains separate; focus continues through the held свет body.');
-add('OBN-020','embrace','post-1',0,[[70.747,72.634],[72.634,74.846]],'Filtered repeat: narrow MMS score is low and Whisper fails. Supplied phrase retained as provisional; separate post-hook echo syllables are not assigned invented events.');
-add('OBN-021','embrace','post-1',2,[[77.142,79.274],[79.274,81.005]],'Filtered repeat under accompaniment; model disagreement remains unresolved until actual listening.');
-add('OBN-022','embrace','post-1',4,[[81.960,84.931],[84.931,87.439]],'Renewed estimated vocal body near 81.96 s; narrow paths support a two-word phrase with uncertain internal ownership.');
-add('OBN-023','embrace','post-1',6,[[88.362,90.998],[90.998,93.287]],'Independently selected filtered repeat; no chorus-wide shift or copied timestamps.');
 add('OBN-024','hinges','pre-2',0,[[119.540,120.105],[120.105,120.547],[120.547,121.448],[121.448,121.568],[121.568,122.290]],'Reject 111 s crop-zero onset; original renewed body near 119.54 s.');
 add('OBN-025','beast','pre-2',5,[[122.290,122.531],[122.531,123.320],[123.320,123.861]]);
 add('OBN-026','shadow','pre-2',8,[[123.861,124.507],[124.507,124.922],[124.922,125.495]]);
@@ -43,10 +39,9 @@ add('OBN-032','turns-light','chorus-2',9,[[141.377,142.722],[142.722,142.950],[1
 add('OBN-033','i-embrace','chorus-2',12,[[144.981,146.855],[146.855,147.086],[147.086,148.497],[148.497,150.254]],'Original mix MMS supports когда near 145.05 s; stem path at 145.81 s misassigns the previous свет tail.');
 add('OBN-034','surrounding','chorus-2',16,[[150.254,150.452],[150.452,151.070],[152.298,152.832],[152.832,153.438],[153.438,154.112]]);
 add('OBN-035','turns-light','chorus-2',21,[[154.112,155.602],[155.602,155.850],[155.850,157.245]],'Retain the held ending beyond the shorter conditioned release; passive stem decay is a separate review question.');
-add('OBN-036','embrace','post-2',0,[[158.601,161.733],[161.733,163.721]],'Processed hook: narrow alignment and original renewed body support the phrase, with uncertain internal handoff.');
-add('OBN-037','embrace','post-2',2,[[164.981,168.044],[168.044,170.248]],'Second processed occurrence has independent choices; not transferred from the first post-hook.');
-add('OBN-038','embrace','post-2',4,[[171.444,173.863],[173.863,176.784]],'Renewed direct body follows the previous decay; filter/stem leakage limits release confidence.');
-add('OBN-039','embrace','post-2',6,[[177.813,180.498],[180.498,182.451]],'Final processed repeat retains a separate neutral reading hold before the outro.');
+add('OBN-036','embrace','post-2',0,[[158.601,160.94],[160.94,161.88]],'Processed hook: narrow alignment and original renewed body support the phrase, with uncertain internal handoff.');
+add('OBN-037','embrace','post-2',2,[[164.981,167.36],[167.36,168.46]],'Second processed occurrence has independent choices; not transferred from the first post-hook.');
+add('OBN-038','embrace','post-2',4,[[171.444,173.64],[173.64,174.4]],'Renewed direct body follows the previous decay; filter/stem leakage limits release confidence.');
 add('OBN-040','i-embrace','outro',0,[[183.398,185.320],[185.320,185.534],[185.534,187.071],[187.071,189.060]],'Reject the 181.5 s crop-zero allocation. Quiet lead-in precedes the first strong core; individual held vowels remain visible.');
 add('OBN-041','surrounding','outro',4,[[189.060,189.256],[189.256,190.119],[191.171,191.926],[191.926,192.676],[192.676,193.701]]);
 add('OBN-042','becomes-light','outro',9,[[193.701,195.639],[196.977,197.873]],'Preserve the low-energy gap before final свет. The forced Whisper span begins inside the last syllable of становится; MMS finds the later renewed light-word body.');
@@ -74,7 +69,7 @@ const finalized=selections.map(s=>{
 });
 const destination=new URL('source/selected-boundaries.json',root);
 if(existsSync(destination)&&!process.argv.includes('--replace'))throw Error('Selections already exist. Edit the durable JSON or explicitly --replace the initial seed.');
-writeFileSync(destination,JSON.stringify({schemaVersion:1,revision:'obnimay-preview-v1',sourceSha256:recording.sourceSha256,sampleRate:44100,sourceDuration:recording.duration,
+writeFileSync(destination,JSON.stringify({schemaVersion:1,revision:'obnimay-preview-v2',sourceSha256:recording.sourceSha256,sampleRate:44100,sourceDuration:recording.duration,
  boundaryConvention:'inclusive start; exclusive end; integer source samples; no global anticipation',
  humanListening:false,precisionStatement:'44.1 kHz storage and 2 ms signal-view hop do not establish sample or millisecond perceptual certainty. Ownership ranges are review tolerances, not measured statistical confidence intervals.',
  cues:finalized},null,2)+'\n');

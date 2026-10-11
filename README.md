@@ -14,13 +14,13 @@ Music films with synchronized lyrics, meaning-linked translations, and audio-rea
 
 **Элли на маковом поле · Russian / English · complete 16:9 and 9:16 review preview**
 
-![Обнимай actual complete browser preview with original floral portrait, equal свет / light focus and measured music light inside real carnations](projects/obnimay-lyric-film/evidence/browser-landscape-55.430.png)
+![Обнимай actual complete browser preview with original floral portrait, equal свет / light focus and measured music light inside real carnations](projects/obnimay-lyric-film/evidence/preview-landscape-55.43.jpg)
 
-*Actual full browser canvas at 00:55.430, original picture frame 1,385 at 00:55.400. Original picture and soundtrack: [the supplied recording](https://www.youtube.com/watch?v=sCbyEiBZyEo). [Exact preview/still identity](projects/obnimay-lyric-film/evidence/preview-stills.json). Presentation evidence only; no production film or completed listening review.*
+*Current v2 native shared-scene proof at 00:55.430, using the original reference decoded at 00:40.000. Original picture and soundtrack: [the supplied recording](https://www.youtube.com/watch?v=sCbyEiBZyEo). [Exact preview/still identity](projects/obnimay-lyric-film/evidence/preview-stills.json). Presentation evidence only; no production film or completed listening review.*
 
 The intimate original photograph remains intact. Four existing carnations host 24 measured frequency patches: light follows their real petal texture, gradually warming through the refrains while protecting the face and embracing arms. Equal Russian/English words stay stationary in a quiet continuation of the source floral material. Both layouts preserve the whole original square. The English refrain uses **Hold me** for a sustained comforting embrace, with each meaning following its corresponding Russian event.
 
-The preview contains 46 cues, 154 Russian events and 175 meaning-linked English tokens. Local sample, focus, geometry, full-opacity and protected-portrait checks pass; complete picture playback and both formats were inspected in the browser. Initial timing selections retain explicit uncertainty, especially filtered post-chorus calls and faint echoes. Actual full-song/reduced-speed bilingual listening and current-revision render approval remain pending.
+The corrected v2 preview contains 41 cues, 144 Russian events and 165 meaning-linked English tokens. Five unsupported supplied call candidates are withheld. The recording-reviewed 01:11–01:21 interval has no lyric line or focus; three later original-recording-supported calls retain shortened provisional spans. Local sample, focus, geometry, full-opacity and protected-portrait checks pass; complete picture playback and both formats were inspected in the browser. Initial timing selections retain explicit uncertainty, especially filtered post-chorus calls and faint echoes. Actual full-song/reduced-speed bilingual listening and current-revision render approval remain pending.
 
 [Complete project and review](projects/obnimay-lyric-film/README.md) · [Visual brief](projects/obnimay-lyric-film/VISUAL-BRIEF.md) · [Timing method and translation](projects/obnimay-lyric-film/TIMING.md) · [Agent handoff](projects/obnimay-lyric-film/AGENT-HANDOFF.md)
 

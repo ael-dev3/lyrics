@@ -20,6 +20,8 @@ Unprompted recognition asks what was performed. A forced or text-conditioned ali
 
 Retain complete unprompted recognition, then independently inspect bounded gaps and speech passages when the complete result omits singing or invents words from subtitles, titles or accompaniment. Separate language-specific crops when the recording changes language. Log rejected lexical candidates and the reason for each recording addition or retained gap; an ASR omission is not proof of silence.
 
+The [Обнимай coverage correction](../projects/obnimay-lyric-film/source/coverage-review.json) records why supplied repeats must not become performed cues merely because a forced path exists. Keep recording-reviewed lyric-free windows executable in timeline/visibility checks, retain excluded candidates separately, and classify unsupported ambiguity distinctly from established no-singing intervals. A neutral line hold must not carry an invented phrase through a known music-only window.
+
 Repeated wording has separate occurrence IDs and separately measured boundaries. Transfer a repeat only when a measured audio relationship supports the same recorded clip. Retain the reference’s absolute uncertainty and inspect gain/fade exceptions. In Кометы, four late radio phrases match the earlier clip at **+79.120 s**; the final faded release is still chosen separately at **249.960 s**. This exception does not permit copying the sung refrains’ timestamps. See [the inventory and radio evidence](../projects/komety-lyric-film/evidence/translation-review.md).
 
 ## 2. Build comparisons that can expose a late core

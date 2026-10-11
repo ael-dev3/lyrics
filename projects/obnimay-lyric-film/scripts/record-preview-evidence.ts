@@ -5,7 +5,7 @@ import {currentIdentity,hashFile,projectFile} from './project-identity.ts';
 const identity=currentIdentity();
 const proof=JSON.parse(readFileSync(projectFile('evidence/scene-proof.json'),'utf8'));
 for(const key of ['revision','sourceSha256','timelineSha256','sceneSha256'] as const)if(proof[key]!==identity[key])throw Error('Stale shared-scene proof');
-const files=readdirSync(projectFile('evidence/')).filter(f=>/^preview-(landscape|portrait)-[\d.]+\.jpg$/.test(f)||f==='browser-landscape-55.430.png');
+const files=readdirSync(projectFile('evidence/')).filter(f=>/^preview-(landscape|portrait)-[\d.]+\.jpg$/.test(f));
 const screenshots=files.map(name=>{
  const p='evidence/'+name,browser=name.startsWith('browser-'),t=Number(name.match(/-([\d.]+)\.(?:png|jpg)$/)![1]);
  const probe=JSON.parse(execFileSync('ffprobe',['-v','error','-show_entries','stream=width,height,codec_name','-of','json',projectFile(p).pathname],{encoding:'utf8'}));
@@ -14,6 +14,6 @@ const screenshots=files.map(name=>{
   ...(browser?{sourceFrame:1385,sourcePicturePTS:55.4}:{referenceSourceFrame:1000,referenceSourcePTS:40}),
   originalSourceUrl:'https://www.youtube.com/watch?v=sCbyEiBZyEo',originalCreator:'Элли на маковом поле and the original picture/recording creators',scope:'Visual presentation at one selected time; no production render or acoustic listening certification.'};
 });
-const record={...identity,status:'preview only',representative:'evidence/browser-landscape-55.430.png',reviewedAtNativeAndReducedSize:true,screenshots};
+const record={...identity,status:'preview only',representative:'evidence/preview-landscape-55.43.jpg',reviewedAtNativeAndReducedSize:true,screenshots,historicalBrowser:{image:'evidence/browser-landscape-55.430.png',sourceCommit:'42882833074bc688d7a01e69f40b29287b08a7b6',scope:'Original v1 browser canvas; retained as history, excluded from current-revision proof stills.'}};
 writeFileSync(projectFile('evidence/preview-stills.json'),JSON.stringify(record,null,2)+'\n');
 console.log(JSON.stringify({screenshots:screenshots.length,representative:record.representative}));

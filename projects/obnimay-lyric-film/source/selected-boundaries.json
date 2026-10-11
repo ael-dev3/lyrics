@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": "obnimay-preview-v1",
+  "revision": "obnimay-preview-v2",
   "sourceSha256": "9a4d5f5c42b131d46eab42d072f64733ccb50a0bea97a995b757d3b00e5708e0",
   "sampleRate": 44100,
   "sourceDuration": 200.6,
@@ -1501,182 +1501,6 @@
       ]
     },
     {
-      "id": "OBN-020",
-      "templateId": "embrace",
-      "lane": "lead",
-      "voice": "Lead vocal",
-      "phraseId": "post-1",
-      "phraseSourceOffset": 0,
-      "note": "Filtered repeat: narrow MMS score is low and Whisper fails. Supplied phrase retained as provisional; separate post-hook echo syllables are not assigned invented events.",
-      "status": "Provisional source-bound selection; actual listening pending",
-      "words": [
-        {
-          "sourceIndex": 0,
-          "text": "Обнимай",
-          "startSample": 3119943,
-          "endSample": 3203159,
-          "onsetOwnershipRangeSeconds": [
-            70.527,
-            70.967
-          ],
-          "releaseOwnershipRangeSeconds": [
-            72.384,
-            72.884
-          ],
-          "uncertainty": "High: heavily processed, poor automatic recognition",
-          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
-        },
-        {
-          "sourceIndex": 1,
-          "text": "меня",
-          "startSample": 3203159,
-          "endSample": 3300709,
-          "onsetOwnershipRangeSeconds": [
-            72.414,
-            72.854
-          ],
-          "releaseOwnershipRangeSeconds": [
-            74.596,
-            75.096
-          ],
-          "uncertainty": "High: heavily processed, poor automatic recognition",
-          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
-        }
-      ]
-    },
-    {
-      "id": "OBN-021",
-      "templateId": "embrace",
-      "lane": "lead",
-      "voice": "Lead vocal",
-      "phraseId": "post-1",
-      "phraseSourceOffset": 2,
-      "note": "Filtered repeat under accompaniment; model disagreement remains unresolved until actual listening.",
-      "status": "Provisional source-bound selection; actual listening pending",
-      "words": [
-        {
-          "sourceIndex": 0,
-          "text": "Обнимай",
-          "startSample": 3401962,
-          "endSample": 3495983,
-          "onsetOwnershipRangeSeconds": [
-            76.922,
-            77.362
-          ],
-          "releaseOwnershipRangeSeconds": [
-            79.024,
-            79.524
-          ],
-          "uncertainty": "High: heavily processed, poor automatic recognition",
-          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
-        },
-        {
-          "sourceIndex": 1,
-          "text": "меня",
-          "startSample": 3495983,
-          "endSample": 3572321,
-          "onsetOwnershipRangeSeconds": [
-            79.054,
-            79.494
-          ],
-          "releaseOwnershipRangeSeconds": [
-            80.755,
-            81.255
-          ],
-          "uncertainty": "High: heavily processed, poor automatic recognition",
-          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
-        }
-      ]
-    },
-    {
-      "id": "OBN-022",
-      "templateId": "embrace",
-      "lane": "lead",
-      "voice": "Lead vocal",
-      "phraseId": "post-1",
-      "phraseSourceOffset": 4,
-      "note": "Renewed estimated vocal body near 81.96 s; narrow paths support a two-word phrase with uncertain internal ownership.",
-      "status": "Provisional source-bound selection; actual listening pending",
-      "words": [
-        {
-          "sourceIndex": 0,
-          "text": "Обнимай",
-          "startSample": 3614436,
-          "endSample": 3745457,
-          "onsetOwnershipRangeSeconds": [
-            81.74,
-            82.17999999999999
-          ],
-          "releaseOwnershipRangeSeconds": [
-            84.681,
-            85.181
-          ],
-          "uncertainty": "High: heavily processed, poor automatic recognition",
-          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
-        },
-        {
-          "sourceIndex": 1,
-          "text": "меня",
-          "startSample": 3745457,
-          "endSample": 3856060,
-          "onsetOwnershipRangeSeconds": [
-            84.711,
-            85.151
-          ],
-          "releaseOwnershipRangeSeconds": [
-            87.189,
-            87.689
-          ],
-          "uncertainty": "High: heavily processed, poor automatic recognition",
-          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
-        }
-      ]
-    },
-    {
-      "id": "OBN-023",
-      "templateId": "embrace",
-      "lane": "lead",
-      "voice": "Lead vocal",
-      "phraseId": "post-1",
-      "phraseSourceOffset": 6,
-      "note": "Independently selected filtered repeat; no chorus-wide shift or copied timestamps.",
-      "status": "Provisional source-bound selection; actual listening pending",
-      "words": [
-        {
-          "sourceIndex": 0,
-          "text": "Обнимай",
-          "startSample": 3896764,
-          "endSample": 4013012,
-          "onsetOwnershipRangeSeconds": [
-            88.142,
-            88.582
-          ],
-          "releaseOwnershipRangeSeconds": [
-            90.748,
-            91.248
-          ],
-          "uncertainty": "High: heavily processed, poor automatic recognition",
-          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
-        },
-        {
-          "sourceIndex": 1,
-          "text": "меня",
-          "startSample": 4013012,
-          "endSample": 4113957,
-          "onsetOwnershipRangeSeconds": [
-            90.778,
-            91.218
-          ],
-          "releaseOwnershipRangeSeconds": [
-            93.037,
-            93.537
-          ],
-          "uncertainty": "High: heavily processed, poor automatic recognition",
-          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
-        }
-      ]
-    },
-    {
       "id": "OBN-024",
       "templateId": "hinges",
       "lane": "lead",
@@ -2531,40 +2355,40 @@
       "voice": "Lead vocal",
       "phraseId": "post-2",
       "phraseSourceOffset": 0,
-      "note": "Processed hook: narrow alignment and original renewed body support the phrase, with uncertain internal handoff.",
+      "note": "Retained because unprompted recognition of the original mix recovers the supplied two-word call. Source renewal keeps the initial selection; the internal handoff and release are shortened from the original-mix word observations. Processed ownership and decay remain uncertain; direct listening pending.",
       "status": "Provisional source-bound selection; actual listening pending",
       "words": [
         {
           "sourceIndex": 0,
           "text": "Обнимай",
           "startSample": 6994304,
-          "endSample": 7132425,
+          "endSample": 7097454,
           "onsetOwnershipRangeSeconds": [
-            158.381,
-            158.821
+            158.461,
+            158.761
           ],
           "releaseOwnershipRangeSeconds": [
-            161.483,
-            161.983
+            160.8,
+            161.12
           ],
-          "uncertainty": "High: heavily processed, poor automatic recognition",
-          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+          "uncertainty": "High: processed voice; broad/narrow recognizers disagree. Selected interval is provisional, not millisecond-certified.",
+          "method": "v2 original-recording unprompted coverage + source/stem signal comparison; competing narrow recognitions retained, not direct listening"
         },
         {
           "sourceIndex": 1,
           "text": "меня",
-          "startSample": 7132425,
-          "endSample": 7220096,
+          "startSample": 7097454,
+          "endSample": 7138908,
           "onsetOwnershipRangeSeconds": [
-            161.513,
-            161.953
+            160.8,
+            161.1
           ],
           "releaseOwnershipRangeSeconds": [
-            163.471,
-            163.971
+            161.74,
+            162.06
           ],
-          "uncertainty": "High: heavily processed, poor automatic recognition",
-          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+          "uncertainty": "High: processed voice; broad/narrow recognizers disagree. Selected interval is provisional, not millisecond-certified.",
+          "method": "v2 original-recording unprompted coverage + source/stem signal comparison; competing narrow recognitions retained, not direct listening"
         }
       ]
     },
@@ -2575,40 +2399,40 @@
       "voice": "Lead vocal",
       "phraseId": "post-2",
       "phraseSourceOffset": 2,
-      "note": "Second processed occurrence has independent choices; not transferred from the first post-hook.",
+      "note": "Retained because unprompted recognition of the original mix recovers the supplied two-word call. Source renewal keeps the initial selection; the internal handoff and release are shortened from the original-mix word observations. Processed ownership and decay remain uncertain; direct listening pending.",
       "status": "Provisional source-bound selection; actual listening pending",
       "words": [
         {
           "sourceIndex": 0,
           "text": "Обнимай",
           "startSample": 7275662,
-          "endSample": 7410740,
+          "endSample": 7380576,
           "onsetOwnershipRangeSeconds": [
-            164.761,
-            165.201
+            164.841,
+            165.141
           ],
           "releaseOwnershipRangeSeconds": [
-            167.794,
-            168.294
+            167.22000000000003,
+            167.54000000000002
           ],
-          "uncertainty": "High: heavily processed, poor automatic recognition",
-          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+          "uncertainty": "High: processed voice; broad/narrow recognizers disagree. Selected interval is provisional, not millisecond-certified.",
+          "method": "v2 original-recording unprompted coverage + source/stem signal comparison; competing narrow recognitions retained, not direct listening"
         },
         {
           "sourceIndex": 1,
           "text": "меня",
-          "startSample": 7410740,
-          "endSample": 7507937,
+          "startSample": 7380576,
+          "endSample": 7429086,
           "onsetOwnershipRangeSeconds": [
-            167.824,
-            168.264
+            167.22000000000003,
+            167.52
           ],
           "releaseOwnershipRangeSeconds": [
-            169.998,
-            170.498
+            168.32000000000002,
+            168.64000000000001
           ],
-          "uncertainty": "High: heavily processed, poor automatic recognition",
-          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+          "uncertainty": "High: processed voice; broad/narrow recognizers disagree. Selected interval is provisional, not millisecond-certified.",
+          "method": "v2 original-recording unprompted coverage + source/stem signal comparison; competing narrow recognitions retained, not direct listening"
         }
       ]
     },
@@ -2619,84 +2443,40 @@
       "voice": "Lead vocal",
       "phraseId": "post-2",
       "phraseSourceOffset": 4,
-      "note": "Renewed direct body follows the previous decay; filter/stem leakage limits release confidence.",
+      "note": "Retained because unprompted recognition of the original mix recovers the supplied two-word call. Source renewal keeps the initial selection; the internal handoff and release are shortened from the original-mix word observations. Processed ownership and decay remain uncertain; direct listening pending.",
       "status": "Provisional source-bound selection; actual listening pending",
       "words": [
         {
           "sourceIndex": 0,
           "text": "Обнимай",
           "startSample": 7560680,
-          "endSample": 7667358,
+          "endSample": 7657524,
           "onsetOwnershipRangeSeconds": [
-            171.224,
-            171.664
+            171.304,
+            171.60399999999998
           ],
           "releaseOwnershipRangeSeconds": [
-            173.613,
-            174.113
+            173.5,
+            173.82
           ],
-          "uncertainty": "High: heavily processed, poor automatic recognition",
-          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+          "uncertainty": "High: processed voice; broad/narrow recognizers disagree. Selected interval is provisional, not millisecond-certified.",
+          "method": "v2 original-recording unprompted coverage + source/stem signal comparison; competing narrow recognitions retained, not direct listening"
         },
         {
           "sourceIndex": 1,
           "text": "меня",
-          "startSample": 7667358,
-          "endSample": 7796174,
+          "startSample": 7657524,
+          "endSample": 7691040,
           "onsetOwnershipRangeSeconds": [
-            173.643,
-            174.083
+            173.5,
+            173.79999999999998
           ],
           "releaseOwnershipRangeSeconds": [
-            176.534,
-            177.034
+            174.26000000000002,
+            174.58
           ],
-          "uncertainty": "High: heavily processed, poor automatic recognition",
-          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
-        }
-      ]
-    },
-    {
-      "id": "OBN-039",
-      "templateId": "embrace",
-      "lane": "lead",
-      "voice": "Lead vocal",
-      "phraseId": "post-2",
-      "phraseSourceOffset": 6,
-      "note": "Final processed repeat retains a separate neutral reading hold before the outro.",
-      "status": "Provisional source-bound selection; actual listening pending",
-      "words": [
-        {
-          "sourceIndex": 0,
-          "text": "Обнимай",
-          "startSample": 7841553,
-          "endSample": 7959962,
-          "onsetOwnershipRangeSeconds": [
-            177.593,
-            178.033
-          ],
-          "releaseOwnershipRangeSeconds": [
-            180.248,
-            180.748
-          ],
-          "uncertainty": "High: heavily processed, poor automatic recognition",
-          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
-        },
-        {
-          "sourceIndex": 1,
-          "text": "меня",
-          "startSample": 7959962,
-          "endSample": 8046089,
-          "onsetOwnershipRangeSeconds": [
-            180.278,
-            180.718
-          ],
-          "releaseOwnershipRangeSeconds": [
-            182.201,
-            182.701
-          ],
-          "uncertainty": "High: heavily processed, poor automatic recognition",
-          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+          "uncertainty": "High: processed voice; broad/narrow recognizers disagree. Selected interval is provisional, not millisecond-certified.",
+          "method": "v2 original-recording unprompted coverage + source/stem signal comparison; competing narrow recognitions retained, not direct listening"
         }
       ]
     },

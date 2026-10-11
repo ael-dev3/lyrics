@@ -1,0 +1,1420 @@
+{
+  "schemaVersion": 1,
+  "revision": "obnimay-preview-v2",
+  "sourceSha256": "9a4d5f5c42b131d46eab42d072f64733ccb50a0bea97a995b757d3b00e5708e0",
+  "checkedOn": "2026-10-12",
+  "baseline": {
+    "sourceCommit": "42882833074bc688d7a01e69f40b29287b08a7b6",
+    "selectedBoundariesSha256": "ffaeeceef753ffee8c840e5ccdc8f760fa182dff6788a1a5da87bf92319b4041",
+    "timelineSha256": "35578e46076c9acdc1ad6ae376d43cfe2ea48c01da5996c0a75f3791d9c4e037"
+  },
+  "scope": "Coverage correction using a recording-review negative interval, original mixed-audio and estimated-vocal diagnostics. No direct assistant audio audition or complete human listening review.",
+  "knownLyricFreeWindows": [
+    {
+      "id": "first-instrumental-negative",
+      "startSample": 3131100,
+      "endSample": 3572100,
+      "reason": "Recording review establishes no singing in this interval; neither bright focus nor neutral lyric lines may appear."
+    }
+  ],
+  "withheldCandidates": [
+    {
+      "id": "OBN-020",
+      "decision": "Rejected: overlaps established lyric-free recording interval",
+      "originalCandidate": {
+        "id": "OBN-020",
+        "templateId": "embrace",
+        "lane": "lead",
+        "voice": "Lead vocal",
+        "phraseId": "post-1",
+        "phraseSourceOffset": 0,
+        "note": "Filtered repeat: narrow MMS score is low and Whisper fails. Supplied phrase retained as provisional; separate post-hook echo syllables are not assigned invented events.",
+        "status": "Provisional source-bound selection; actual listening pending",
+        "words": [
+          {
+            "sourceIndex": 0,
+            "text": "Обнимай",
+            "startSample": 3119943,
+            "endSample": 3203159,
+            "onsetOwnershipRangeSeconds": [
+              70.527,
+              70.967
+            ],
+            "releaseOwnershipRangeSeconds": [
+              72.384,
+              72.884
+            ],
+            "uncertainty": "High: heavily processed, poor automatic recognition",
+            "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+          },
+          {
+            "sourceIndex": 1,
+            "text": "меня",
+            "startSample": 3203159,
+            "endSample": 3300709,
+            "onsetOwnershipRangeSeconds": [
+              72.414,
+              72.854
+            ],
+            "releaseOwnershipRangeSeconds": [
+              74.596,
+              75.096
+            ],
+            "uncertainty": "High: heavily processed, poor automatic recognition",
+            "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+          }
+        ]
+      }
+    },
+    {
+      "id": "OBN-021",
+      "decision": "Rejected: overlaps established lyric-free recording interval",
+      "originalCandidate": {
+        "id": "OBN-021",
+        "templateId": "embrace",
+        "lane": "lead",
+        "voice": "Lead vocal",
+        "phraseId": "post-1",
+        "phraseSourceOffset": 2,
+        "note": "Filtered repeat under accompaniment; model disagreement remains unresolved until actual listening.",
+        "status": "Provisional source-bound selection; actual listening pending",
+        "words": [
+          {
+            "sourceIndex": 0,
+            "text": "Обнимай",
+            "startSample": 3401962,
+            "endSample": 3495983,
+            "onsetOwnershipRangeSeconds": [
+              76.922,
+              77.362
+            ],
+            "releaseOwnershipRangeSeconds": [
+              79.024,
+              79.524
+            ],
+            "uncertainty": "High: heavily processed, poor automatic recognition",
+            "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+          },
+          {
+            "sourceIndex": 1,
+            "text": "меня",
+            "startSample": 3495983,
+            "endSample": 3572321,
+            "onsetOwnershipRangeSeconds": [
+              79.054,
+              79.494
+            ],
+            "releaseOwnershipRangeSeconds": [
+              80.755,
+              81.255
+            ],
+            "uncertainty": "High: heavily processed, poor automatic recognition",
+            "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+          }
+        ]
+      }
+    },
+    {
+      "id": "OBN-022",
+      "decision": "Withheld: supplied words have no reliable unprompted original-recording support; not a proof that all vocal sound is absent.",
+      "originalCandidate": {
+        "id": "OBN-022",
+        "templateId": "embrace",
+        "lane": "lead",
+        "voice": "Lead vocal",
+        "phraseId": "post-1",
+        "phraseSourceOffset": 4,
+        "note": "Renewed estimated vocal body near 81.96 s; narrow paths support a two-word phrase with uncertain internal ownership.",
+        "status": "Provisional source-bound selection; actual listening pending",
+        "words": [
+          {
+            "sourceIndex": 0,
+            "text": "Обнимай",
+            "startSample": 3614436,
+            "endSample": 3745457,
+            "onsetOwnershipRangeSeconds": [
+              81.74,
+              82.17999999999999
+            ],
+            "releaseOwnershipRangeSeconds": [
+              84.681,
+              85.181
+            ],
+            "uncertainty": "High: heavily processed, poor automatic recognition",
+            "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+          },
+          {
+            "sourceIndex": 1,
+            "text": "меня",
+            "startSample": 3745457,
+            "endSample": 3856060,
+            "onsetOwnershipRangeSeconds": [
+              84.711,
+              85.151
+            ],
+            "releaseOwnershipRangeSeconds": [
+              87.189,
+              87.689
+            ],
+            "uncertainty": "High: heavily processed, poor automatic recognition",
+            "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+          }
+        ]
+      }
+    },
+    {
+      "id": "OBN-023",
+      "decision": "Withheld: supplied words have no reliable unprompted original-recording support; not a proof that all vocal sound is absent.",
+      "originalCandidate": {
+        "id": "OBN-023",
+        "templateId": "embrace",
+        "lane": "lead",
+        "voice": "Lead vocal",
+        "phraseId": "post-1",
+        "phraseSourceOffset": 6,
+        "note": "Independently selected filtered repeat; no chorus-wide shift or copied timestamps.",
+        "status": "Provisional source-bound selection; actual listening pending",
+        "words": [
+          {
+            "sourceIndex": 0,
+            "text": "Обнимай",
+            "startSample": 3896764,
+            "endSample": 4013012,
+            "onsetOwnershipRangeSeconds": [
+              88.142,
+              88.582
+            ],
+            "releaseOwnershipRangeSeconds": [
+              90.748,
+              91.248
+            ],
+            "uncertainty": "High: heavily processed, poor automatic recognition",
+            "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+          },
+          {
+            "sourceIndex": 1,
+            "text": "меня",
+            "startSample": 4013012,
+            "endSample": 4113957,
+            "onsetOwnershipRangeSeconds": [
+              90.778,
+              91.218
+            ],
+            "releaseOwnershipRangeSeconds": [
+              93.037,
+              93.537
+            ],
+            "uncertainty": "High: heavily processed, poor automatic recognition",
+            "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+          }
+        ]
+      }
+    },
+    {
+      "id": "OBN-039",
+      "decision": "Withheld: supplied words have no reliable unprompted original-recording support; not a proof that all vocal sound is absent.",
+      "originalCandidate": {
+        "id": "OBN-039",
+        "templateId": "embrace",
+        "lane": "lead",
+        "voice": "Lead vocal",
+        "phraseId": "post-2",
+        "phraseSourceOffset": 6,
+        "note": "Final processed repeat retains a separate neutral reading hold before the outro.",
+        "status": "Provisional source-bound selection; actual listening pending",
+        "words": [
+          {
+            "sourceIndex": 0,
+            "text": "Обнимай",
+            "startSample": 7841553,
+            "endSample": 7959962,
+            "onsetOwnershipRangeSeconds": [
+              177.593,
+              178.033
+            ],
+            "releaseOwnershipRangeSeconds": [
+              180.248,
+              180.748
+            ],
+            "uncertainty": "High: heavily processed, poor automatic recognition",
+            "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+          },
+          {
+            "sourceIndex": 1,
+            "text": "меня",
+            "startSample": 7959962,
+            "endSample": 8046089,
+            "onsetOwnershipRangeSeconds": [
+              180.278,
+              180.718
+            ],
+            "releaseOwnershipRangeSeconds": [
+              182.201,
+              182.701
+            ],
+            "uncertainty": "High: heavily processed, poor automatic recognition",
+            "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+          }
+        ]
+      }
+    }
+  ],
+  "retainedChangedCandidates": [
+    {
+      "id": "OBN-036",
+      "decision": "Retain recording-supported lexical candidate; shorten unsupported overhang. Direct word ownership remains provisional.",
+      "before": [
+        {
+          "sourceIndex": 0,
+          "text": "Обнимай",
+          "startSample": 6994304,
+          "endSample": 7132425,
+          "onsetOwnershipRangeSeconds": [
+            158.381,
+            158.821
+          ],
+          "releaseOwnershipRangeSeconds": [
+            161.483,
+            161.983
+          ],
+          "uncertainty": "High: heavily processed, poor automatic recognition",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 1,
+          "text": "меня",
+          "startSample": 7132425,
+          "endSample": 7220096,
+          "onsetOwnershipRangeSeconds": [
+            161.513,
+            161.953
+          ],
+          "releaseOwnershipRangeSeconds": [
+            163.471,
+            163.971
+          ],
+          "uncertainty": "High: heavily processed, poor automatic recognition",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ],
+      "after": [
+        {
+          "sourceIndex": 0,
+          "text": "Обнимай",
+          "startSample": 6994304,
+          "endSample": 7097454,
+          "onsetOwnershipRangeSeconds": [
+            158.461,
+            158.761
+          ],
+          "releaseOwnershipRangeSeconds": [
+            160.8,
+            161.12
+          ],
+          "uncertainty": "High: processed voice; broad/narrow recognizers disagree. Selected interval is provisional, not millisecond-certified.",
+          "method": "v2 original-recording unprompted coverage + source/stem signal comparison; competing narrow recognitions retained, not direct listening"
+        },
+        {
+          "sourceIndex": 1,
+          "text": "меня",
+          "startSample": 7097454,
+          "endSample": 7138908,
+          "onsetOwnershipRangeSeconds": [
+            160.8,
+            161.1
+          ],
+          "releaseOwnershipRangeSeconds": [
+            161.74,
+            162.06
+          ],
+          "uncertainty": "High: processed voice; broad/narrow recognizers disagree. Selected interval is provisional, not millisecond-certified.",
+          "method": "v2 original-recording unprompted coverage + source/stem signal comparison; competing narrow recognitions retained, not direct listening"
+        }
+      ]
+    },
+    {
+      "id": "OBN-037",
+      "decision": "Retain recording-supported lexical candidate; shorten unsupported overhang. Direct word ownership remains provisional.",
+      "before": [
+        {
+          "sourceIndex": 0,
+          "text": "Обнимай",
+          "startSample": 7275662,
+          "endSample": 7410740,
+          "onsetOwnershipRangeSeconds": [
+            164.761,
+            165.201
+          ],
+          "releaseOwnershipRangeSeconds": [
+            167.794,
+            168.294
+          ],
+          "uncertainty": "High: heavily processed, poor automatic recognition",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 1,
+          "text": "меня",
+          "startSample": 7410740,
+          "endSample": 7507937,
+          "onsetOwnershipRangeSeconds": [
+            167.824,
+            168.264
+          ],
+          "releaseOwnershipRangeSeconds": [
+            169.998,
+            170.498
+          ],
+          "uncertainty": "High: heavily processed, poor automatic recognition",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ],
+      "after": [
+        {
+          "sourceIndex": 0,
+          "text": "Обнимай",
+          "startSample": 7275662,
+          "endSample": 7380576,
+          "onsetOwnershipRangeSeconds": [
+            164.841,
+            165.141
+          ],
+          "releaseOwnershipRangeSeconds": [
+            167.22000000000003,
+            167.54000000000002
+          ],
+          "uncertainty": "High: processed voice; broad/narrow recognizers disagree. Selected interval is provisional, not millisecond-certified.",
+          "method": "v2 original-recording unprompted coverage + source/stem signal comparison; competing narrow recognitions retained, not direct listening"
+        },
+        {
+          "sourceIndex": 1,
+          "text": "меня",
+          "startSample": 7380576,
+          "endSample": 7429086,
+          "onsetOwnershipRangeSeconds": [
+            167.22000000000003,
+            167.52
+          ],
+          "releaseOwnershipRangeSeconds": [
+            168.32000000000002,
+            168.64000000000001
+          ],
+          "uncertainty": "High: processed voice; broad/narrow recognizers disagree. Selected interval is provisional, not millisecond-certified.",
+          "method": "v2 original-recording unprompted coverage + source/stem signal comparison; competing narrow recognitions retained, not direct listening"
+        }
+      ]
+    },
+    {
+      "id": "OBN-038",
+      "decision": "Retain recording-supported lexical candidate; shorten unsupported overhang. Direct word ownership remains provisional.",
+      "before": [
+        {
+          "sourceIndex": 0,
+          "text": "Обнимай",
+          "startSample": 7560680,
+          "endSample": 7667358,
+          "onsetOwnershipRangeSeconds": [
+            171.224,
+            171.664
+          ],
+          "releaseOwnershipRangeSeconds": [
+            173.613,
+            174.113
+          ],
+          "uncertainty": "High: heavily processed, poor automatic recognition",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        },
+        {
+          "sourceIndex": 1,
+          "text": "меня",
+          "startSample": 7667358,
+          "endSample": 7796174,
+          "onsetOwnershipRangeSeconds": [
+            173.643,
+            174.083
+          ],
+          "releaseOwnershipRangeSeconds": [
+            176.534,
+            177.034
+          ],
+          "uncertainty": "High: heavily processed, poor automatic recognition",
+          "method": "Explicit initial choice after original/stem signal and model comparison; not automatic CTC-core promotion; listening pending"
+        }
+      ],
+      "after": [
+        {
+          "sourceIndex": 0,
+          "text": "Обнимай",
+          "startSample": 7560680,
+          "endSample": 7657524,
+          "onsetOwnershipRangeSeconds": [
+            171.304,
+            171.60399999999998
+          ],
+          "releaseOwnershipRangeSeconds": [
+            173.5,
+            173.82
+          ],
+          "uncertainty": "High: processed voice; broad/narrow recognizers disagree. Selected interval is provisional, not millisecond-certified.",
+          "method": "v2 original-recording unprompted coverage + source/stem signal comparison; competing narrow recognitions retained, not direct listening"
+        },
+        {
+          "sourceIndex": 1,
+          "text": "меня",
+          "startSample": 7657524,
+          "endSample": 7691040,
+          "onsetOwnershipRangeSeconds": [
+            173.5,
+            173.79999999999998
+          ],
+          "releaseOwnershipRangeSeconds": [
+            174.26000000000002,
+            174.58
+          ],
+          "uncertainty": "High: processed voice; broad/narrow recognizers disagree. Selected interval is provisional, not millisecond-certified.",
+          "method": "v2 original-recording unprompted coverage + source/stem signal comparison; competing narrow recognitions retained, not direct listening"
+        }
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "id": "first-transition",
+      "provenance": {
+        "sourceSha256": "9a4d5f5c42b131d46eab42d072f64733ccb50a0bea97a995b757d3b00e5708e0",
+        "input": "mix",
+        "model": "large-v3-turbo",
+        "inputSha256": "e34a718ef889911cf621330f822033f238a4d94025626d17ba5001951a52a082",
+        "crop": [
+          64,
+          96
+        ],
+        "conditioningText": null,
+        "humanListening": false
+      },
+      "segments": [
+        {
+          "start": 64.44,
+          "end": 68.5,
+          "text": " Эта тьма вокруг превращается в свет.",
+          "words": [
+            {
+              "text": "Эта",
+              "start": 64.44,
+              "end": 64.84,
+              "score": 0.49900291542871855
+            },
+            {
+              "text": "тьма",
+              "start": 64.84,
+              "end": 65.32,
+              "score": 0.9906995296478271
+            },
+            {
+              "text": "вокруг",
+              "start": 65.32,
+              "end": 65.86,
+              "score": 0.9749455451965332
+            },
+            {
+              "text": "превращается",
+              "start": 65.86,
+              "end": 67.3,
+              "score": 0.9981053868929545
+            },
+            {
+              "text": "в",
+              "start": 67.3,
+              "end": 68.06,
+              "score": 0.8355861306190491
+            },
+            {
+              "text": "свет.",
+              "start": 68.06,
+              "end": 68.5,
+              "score": 0.6623980402946472
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "instrumental-gap",
+      "provenance": {
+        "sourceSha256": "9a4d5f5c42b131d46eab42d072f64733ccb50a0bea97a995b757d3b00e5708e0",
+        "input": "mix",
+        "model": "large-v3-turbo",
+        "inputSha256": "e34a718ef889911cf621330f822033f238a4d94025626d17ba5001951a52a082",
+        "crop": [
+          95,
+          120
+        ],
+        "conditioningText": null,
+        "humanListening": false
+      },
+      "segments": [
+        {
+          "start": 97.4,
+          "end": 103.38,
+          "text": " Музыка",
+          "words": [
+            {
+              "text": "Музыка",
+              "start": 97.4,
+              "end": 103.38,
+              "score": 0.565316871565301
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "second-transition",
+      "provenance": {
+        "sourceSha256": "9a4d5f5c42b131d46eab42d072f64733ccb50a0bea97a995b757d3b00e5708e0",
+        "input": "mix",
+        "model": "large-v3-turbo",
+        "inputSha256": "e34a718ef889911cf621330f822033f238a4d94025626d17ba5001951a52a082",
+        "crop": [
+          152,
+          186
+        ],
+        "conditioningText": null,
+        "humanListening": false
+      },
+      "segments": [
+        {
+          "start": 152.44,
+          "end": 156.66,
+          "text": " Эта тьма вокруг превращается в свет.",
+          "words": [
+            {
+              "text": "Эта",
+              "start": 152.44,
+              "end": 152.84,
+              "score": 0.5015946882776916
+            },
+            {
+              "text": "тьма",
+              "start": 152.84,
+              "end": 153.34,
+              "score": 0.984785795211792
+            },
+            {
+              "text": "вокруг",
+              "start": 153.34,
+              "end": 153.86,
+              "score": 0.8219786882400513
+            },
+            {
+              "text": "превращается",
+              "start": 153.86,
+              "end": 155.44,
+              "score": 0.9930050373077393
+            },
+            {
+              "text": "в",
+              "start": 155.44,
+              "end": 155.88,
+              "score": 0.9858270883560181
+            },
+            {
+              "text": "свет.",
+              "start": 155.88,
+              "end": 156.66,
+              "score": 0.8205946683883667
+            }
+          ]
+        },
+        {
+          "start": 159.56,
+          "end": 161.88,
+          "text": " Обнимай меня.",
+          "words": [
+            {
+              "text": "Обнимай",
+              "start": 159.56,
+              "end": 160.94,
+              "score": 0.7672913273175558
+            },
+            {
+              "text": "меня.",
+              "start": 160.94,
+              "end": 161.88,
+              "score": 0.9750765562057495
+            }
+          ]
+        },
+        {
+          "start": 165.74,
+          "end": 168.46,
+          "text": " Обнимай меня.",
+          "words": [
+            {
+              "text": "Обнимай",
+              "start": 165.74,
+              "end": 167.36,
+              "score": 0.9767354130744934
+            },
+            {
+              "text": "меня.",
+              "start": 167.36,
+              "end": 168.46,
+              "score": 0.9799996614456177
+            }
+          ]
+        },
+        {
+          "start": 171.44,
+          "end": 174.4,
+          "text": " Обнимай меня.",
+          "words": [
+            {
+              "text": "Обнимай",
+              "start": 171.44,
+              "end": 173.64,
+              "score": 0.9910184144973755
+            },
+            {
+              "text": "меня.",
+              "start": 173.64,
+              "end": 174.4,
+              "score": 0.9928446412086487
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "first-early",
+      "provenance": {
+        "sourceSha256": "9a4d5f5c42b131d46eab42d072f64733ccb50a0bea97a995b757d3b00e5708e0",
+        "input": "mix",
+        "model": "large-v3-turbo",
+        "inputSha256": "e34a718ef889911cf621330f822033f238a4d94025626d17ba5001951a52a082",
+        "crop": [
+          70,
+          81.5
+        ],
+        "conditioningText": null,
+        "humanListening": false
+      },
+      "segments": [
+        {
+          "start": 71.24,
+          "end": 76.66,
+          "text": " Субтитры создавал DimaTorzok",
+          "words": [
+            {
+              "text": "Субтитры",
+              "start": 71.24,
+              "end": 74.4,
+              "score": 0.6454447317926679
+            },
+            {
+              "text": "создавал",
+              "start": 74.4,
+              "end": 75.04,
+              "score": 0.7796205878257751
+            },
+            {
+              "text": "DimaTorzok",
+              "start": 75.04,
+              "end": 76.66,
+              "score": 0.998699019352595
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "first-late-a",
+      "provenance": {
+        "sourceSha256": "9a4d5f5c42b131d46eab42d072f64733ccb50a0bea97a995b757d3b00e5708e0",
+        "input": "mix",
+        "model": "large-v3-turbo",
+        "inputSha256": "e34a718ef889911cf621330f822033f238a4d94025626d17ba5001951a52a082",
+        "crop": [
+          80.5,
+          87.8
+        ],
+        "conditioningText": null,
+        "humanListening": false
+      },
+      "segments": [
+        {
+          "start": 81.2,
+          "end": 87.78,
+          "text": " Субтитры создавал DimaTorzok",
+          "words": [
+            {
+              "text": "Субтитры",
+              "start": 81.2,
+              "end": 83.08,
+              "score": 0.6509732125443406
+            },
+            {
+              "text": "создавал",
+              "start": 83.08,
+              "end": 86.28,
+              "score": 0.7615705827871958
+            },
+            {
+              "text": "DimaTorzok",
+              "start": 86.28,
+              "end": 87.78,
+              "score": 0.998283714056015
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "first-late-b",
+      "provenance": {
+        "sourceSha256": "9a4d5f5c42b131d46eab42d072f64733ccb50a0bea97a995b757d3b00e5708e0",
+        "input": "mix",
+        "model": "large-v3-turbo",
+        "inputSha256": "e34a718ef889911cf621330f822033f238a4d94025626d17ba5001951a52a082",
+        "crop": [
+          87.5,
+          94
+        ],
+        "conditioningText": null,
+        "humanListening": false
+      },
+      "segments": [
+        {
+          "start": 88.36,
+          "end": 93.98,
+          "text": " Субтитры создавал DimaTorzok",
+          "words": [
+            {
+              "text": "Субтитры",
+              "start": 88.36,
+              "end": 90.28,
+              "score": 0.6514108463888988
+            },
+            {
+              "text": "создавал",
+              "start": 90.28,
+              "end": 92.08,
+              "score": 0.8094551265239716
+            },
+            {
+              "text": "DimaTorzok",
+              "start": 92.08,
+              "end": 93.98,
+              "score": 0.9985666076342264
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "second-a",
+      "provenance": {
+        "sourceSha256": "9a4d5f5c42b131d46eab42d072f64733ccb50a0bea97a995b757d3b00e5708e0",
+        "input": "mix",
+        "model": "large-v3-turbo",
+        "inputSha256": "e34a718ef889911cf621330f822033f238a4d94025626d17ba5001951a52a082",
+        "crop": [
+          157.3,
+          164
+        ],
+        "conditioningText": null,
+        "humanListening": false
+      },
+      "segments": [
+        {
+          "start": 157.7,
+          "end": 162.34,
+          "text": " А великий рай, не великий рай",
+          "words": [
+            {
+              "text": "А",
+              "start": 157.7,
+              "end": 158.96,
+              "score": 0.0022614349145442247
+            },
+            {
+              "text": "великий",
+              "start": 158.96,
+              "end": 160.28,
+              "score": 0.24107688665390015
+            },
+            {
+              "text": "рай,",
+              "start": 160.28,
+              "end": 160.9,
+              "score": 0.2902607321739197
+            },
+            {
+              "text": "не",
+              "start": 161.2,
+              "end": 161.4,
+              "score": 0.19065752625465393
+            },
+            {
+              "text": "великий",
+              "start": 161.4,
+              "end": 162.02,
+              "score": 0.43660061806440353
+            },
+            {
+              "text": "рай",
+              "start": 162.02,
+              "end": 162.34,
+              "score": 0.019749656319618225
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "second-b",
+      "provenance": {
+        "sourceSha256": "9a4d5f5c42b131d46eab42d072f64733ccb50a0bea97a995b757d3b00e5708e0",
+        "input": "mix",
+        "model": "large-v3-turbo",
+        "inputSha256": "e34a718ef889911cf621330f822033f238a4d94025626d17ba5001951a52a082",
+        "crop": [
+          164,
+          170.7
+        ],
+        "conditioningText": null,
+        "humanListening": false
+      },
+      "segments": [
+        {
+          "start": 164.34,
+          "end": 168,
+          "text": " Аминь, аминь.",
+          "words": [
+            {
+              "text": "Аминь,",
+              "start": 164.34,
+              "end": 166.34,
+              "score": 0.5152215735870413
+            },
+            {
+              "text": "аминь.",
+              "start": 166.68,
+              "end": 168,
+              "score": 0.745980629697442
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "second-c",
+      "provenance": {
+        "sourceSha256": "9a4d5f5c42b131d46eab42d072f64733ccb50a0bea97a995b757d3b00e5708e0",
+        "input": "mix",
+        "model": "large-v3-turbo",
+        "inputSha256": "e34a718ef889911cf621330f822033f238a4d94025626d17ba5001951a52a082",
+        "crop": [
+          170.5,
+          177.2
+        ],
+        "conditioningText": null,
+        "humanListening": false
+      },
+      "segments": [
+        {
+          "start": 171.86,
+          "end": 177.18,
+          "text": " Возьмите, Возьмите, Возьмите",
+          "words": [
+            {
+              "text": "Возьмите,",
+              "start": 171.86,
+              "end": 172.98,
+              "score": 0.41293143574148417
+            },
+            {
+              "text": "Возьмите,",
+              "start": 172.98,
+              "end": 174.38,
+              "score": 0.8337841212749482
+            },
+            {
+              "text": "Возьмите",
+              "start": 174.48,
+              "end": 177.18,
+              "score": 0.9021404027938843
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "second-d",
+      "provenance": {
+        "sourceSha256": "9a4d5f5c42b131d46eab42d072f64733ccb50a0bea97a995b757d3b00e5708e0",
+        "input": "mix",
+        "model": "large-v3-turbo",
+        "inputSha256": "e34a718ef889911cf621330f822033f238a4d94025626d17ba5001951a52a082",
+        "crop": [
+          176.8,
+          183.4
+        ],
+        "conditioningText": null,
+        "humanListening": false
+      },
+      "segments": [
+        {
+          "start": 177.46,
+          "end": 183.36,
+          "text": " Субтитры создавал DimaTorzok",
+          "words": [
+            {
+              "text": "Субтитры",
+              "start": 177.46,
+              "end": 181.58,
+              "score": 0.6908591010374948
+            },
+            {
+              "text": "создавал",
+              "start": 181.58,
+              "end": 182.22,
+              "score": 0.7474231918652853
+            },
+            {
+              "text": "DimaTorzok",
+              "start": 182.22,
+              "end": 183.36,
+              "score": 0.9991593460241953
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "first-early",
+      "provenance": {
+        "sourceSha256": "9a4d5f5c42b131d46eab42d072f64733ccb50a0bea97a995b757d3b00e5708e0",
+        "input": "mix",
+        "model": "small",
+        "inputSha256": "e34a718ef889911cf621330f822033f238a4d94025626d17ba5001951a52a082",
+        "crop": [
+          70,
+          81.5
+        ],
+        "conditioningText": null,
+        "humanListening": false
+      },
+      "segments": []
+    },
+    {
+      "id": "first-late-a",
+      "provenance": {
+        "sourceSha256": "9a4d5f5c42b131d46eab42d072f64733ccb50a0bea97a995b757d3b00e5708e0",
+        "input": "mix",
+        "model": "small",
+        "inputSha256": "e34a718ef889911cf621330f822033f238a4d94025626d17ba5001951a52a082",
+        "crop": [
+          80.5,
+          87.8
+        ],
+        "conditioningText": null,
+        "humanListening": false
+      },
+      "segments": [
+        {
+          "start": 80.5,
+          "end": 87.72,
+          "text": " СПОКОЙНАЯ МУЗЫКА",
+          "words": [
+            {
+              "text": "СПОКОЙНАЯ",
+              "start": 80.5,
+              "end": 85.56,
+              "score": 0.6814745179809896
+            },
+            {
+              "text": "МУЗЫКА",
+              "start": 85.56,
+              "end": 87.72,
+              "score": 0.9531813859939575
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "first-late-b",
+      "provenance": {
+        "sourceSha256": "9a4d5f5c42b131d46eab42d072f64733ccb50a0bea97a995b757d3b00e5708e0",
+        "input": "mix",
+        "model": "small",
+        "inputSha256": "e34a718ef889911cf621330f822033f238a4d94025626d17ba5001951a52a082",
+        "crop": [
+          87.5,
+          94
+        ],
+        "conditioningText": null,
+        "humanListening": false
+      },
+      "segments": [
+        {
+          "start": 88.98,
+          "end": 93.48,
+          "text": " Смешно",
+          "words": [
+            {
+              "text": "Смешно",
+              "start": 88.98,
+              "end": 93.48,
+              "score": 0.140037738106912
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "second-a",
+      "provenance": {
+        "sourceSha256": "9a4d5f5c42b131d46eab42d072f64733ccb50a0bea97a995b757d3b00e5708e0",
+        "input": "mix",
+        "model": "small",
+        "inputSha256": "e34a718ef889911cf621330f822033f238a4d94025626d17ba5001951a52a082",
+        "crop": [
+          157.3,
+          164
+        ],
+        "conditioningText": null,
+        "humanListening": false
+      },
+      "segments": [
+        {
+          "start": 157.3,
+          "end": 161.94,
+          "text": " Я вернусь в тебя",
+          "words": [
+            {
+              "text": "Я",
+              "start": 157.3,
+              "end": 159.22,
+              "score": 0.0015762521652504802
+            },
+            {
+              "text": "вернусь",
+              "start": 159.22,
+              "end": 160.94,
+              "score": 0.43927060067653656
+            },
+            {
+              "text": "в",
+              "start": 160.94,
+              "end": 161.54,
+              "score": 0.39965271949768066
+            },
+            {
+              "text": "тебя",
+              "start": 161.54,
+              "end": 161.94,
+              "score": 0.2677956223487854
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "second-b",
+      "provenance": {
+        "sourceSha256": "9a4d5f5c42b131d46eab42d072f64733ccb50a0bea97a995b757d3b00e5708e0",
+        "input": "mix",
+        "model": "small",
+        "inputSha256": "e34a718ef889911cf621330f822033f238a4d94025626d17ba5001951a52a082",
+        "crop": [
+          164,
+          170.7
+        ],
+        "conditioningText": null,
+        "humanListening": false
+      },
+      "segments": []
+    },
+    {
+      "id": "second-c",
+      "provenance": {
+        "sourceSha256": "9a4d5f5c42b131d46eab42d072f64733ccb50a0bea97a995b757d3b00e5708e0",
+        "input": "mix",
+        "model": "small",
+        "inputSha256": "e34a718ef889911cf621330f822033f238a4d94025626d17ba5001951a52a082",
+        "crop": [
+          170.5,
+          177.2
+        ],
+        "conditioningText": null,
+        "humanListening": false
+      },
+      "segments": [
+        {
+          "start": 170.5,
+          "end": 174.48,
+          "text": " Я не знаю, где ты.",
+          "words": [
+            {
+              "text": "Я",
+              "start": 170.5,
+              "end": 172.02,
+              "score": 0.0010283268056809902
+            },
+            {
+              "text": "не",
+              "start": 172.02,
+              "end": 172.6,
+              "score": 0.3568686246871948
+            },
+            {
+              "text": "знаю,",
+              "start": 172.6,
+              "end": 173.62,
+              "score": 0.2119559943675995
+            },
+            {
+              "text": "где",
+              "start": 173.62,
+              "end": 174.22,
+              "score": 0.15937885642051697
+            },
+            {
+              "text": "ты.",
+              "start": 174.22,
+              "end": 174.48,
+              "score": 0.8226954936981201
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "second-d",
+      "provenance": {
+        "sourceSha256": "9a4d5f5c42b131d46eab42d072f64733ccb50a0bea97a995b757d3b00e5708e0",
+        "input": "mix",
+        "model": "small",
+        "inputSha256": "e34a718ef889911cf621330f822033f238a4d94025626d17ba5001951a52a082",
+        "crop": [
+          176.8,
+          183.4
+        ],
+        "conditioningText": null,
+        "humanListening": false
+      },
+      "segments": [
+        {
+          "start": 178.08,
+          "end": 182.58,
+          "text": " Время, время, время",
+          "words": [
+            {
+              "text": "Время,",
+              "start": 178.08,
+              "end": 178.62,
+              "score": 0.2751353527031218
+            },
+            {
+              "text": "время,",
+              "start": 178.62,
+              "end": 180.58,
+              "score": 0.7041183412075043
+            },
+            {
+              "text": "время",
+              "start": 180.58,
+              "end": 182.58,
+              "score": 0.8123652537663778
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "first-transition",
+      "provenance": {
+        "sourceSha256": "9a4d5f5c42b131d46eab42d072f64733ccb50a0bea97a995b757d3b00e5708e0",
+        "input": "vocals",
+        "model": "large-v3-turbo",
+        "inputSha256": "83ad4c4af46f9f9f784e54bdad6f79754d9047deb33b4121e1fcfc09cb93fb97",
+        "crop": [
+          64,
+          96
+        ],
+        "conditioningText": null,
+        "humanListening": false
+      },
+      "segments": [
+        {
+          "start": 64.36,
+          "end": 68.4,
+          "text": " Эта тьма вокруг превращается в свет.",
+          "words": [
+            {
+              "text": "Эта",
+              "start": 64.36,
+              "end": 64.84,
+              "score": 0.4962072497000918
+            },
+            {
+              "text": "тьма",
+              "start": 64.84,
+              "end": 65.28,
+              "score": 0.9878217180569967
+            },
+            {
+              "text": "вокруг",
+              "start": 65.28,
+              "end": 65.82,
+              "score": 0.9654693603515625
+            },
+            {
+              "text": "превращается",
+              "start": 65.82,
+              "end": 67.3,
+              "score": 0.9988336364428202
+            },
+            {
+              "text": "в",
+              "start": 67.3,
+              "end": 68.06,
+              "score": 0.9147555232048035
+            },
+            {
+              "text": "свет.",
+              "start": 68.06,
+              "end": 68.4,
+              "score": 0.6887521147727966
+            }
+          ]
+        },
+        {
+          "start": 74.3,
+          "end": 95.98,
+          "text": " ПЕСНЯ",
+          "words": [
+            {
+              "text": "ПЕСНЯ",
+              "start": 74.3,
+              "end": 95.98,
+              "score": 0.5693832442630082
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "instrumental-gap",
+      "provenance": {
+        "sourceSha256": "9a4d5f5c42b131d46eab42d072f64733ccb50a0bea97a995b757d3b00e5708e0",
+        "input": "vocals",
+        "model": "large-v3-turbo",
+        "inputSha256": "83ad4c4af46f9f9f784e54bdad6f79754d9047deb33b4121e1fcfc09cb93fb97",
+        "crop": [
+          95,
+          120
+        ],
+        "conditioningText": null,
+        "humanListening": false
+      },
+      "segments": [
+        {
+          "start": 97.92,
+          "end": 101.58,
+          "text": " Музыка",
+          "words": [
+            {
+              "text": "Музыка",
+              "start": 97.92,
+              "end": 101.58,
+              "score": 0.5816699234419502
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "second-transition",
+      "provenance": {
+        "sourceSha256": "9a4d5f5c42b131d46eab42d072f64733ccb50a0bea97a995b757d3b00e5708e0",
+        "input": "vocals",
+        "model": "large-v3-turbo",
+        "inputSha256": "83ad4c4af46f9f9f784e54bdad6f79754d9047deb33b4121e1fcfc09cb93fb97",
+        "crop": [
+          152,
+          186
+        ],
+        "conditioningText": null,
+        "humanListening": false
+      },
+      "segments": [
+        {
+          "start": 152.48,
+          "end": 156.36,
+          "text": " Эта тьма вокруг превращается в свет.",
+          "words": [
+            {
+              "text": "Эта",
+              "start": 152.48,
+              "end": 152.82,
+              "score": 0.48931632190942764
+            },
+            {
+              "text": "тьма",
+              "start": 152.82,
+              "end": 153.4,
+              "score": 0.9651922384897867
+            },
+            {
+              "text": "вокруг",
+              "start": 153.4,
+              "end": 153.84,
+              "score": 0.9864532351493835
+            },
+            {
+              "text": "превращается",
+              "start": 153.84,
+              "end": 155.44,
+              "score": 0.9840633273124695
+            },
+            {
+              "text": "в",
+              "start": 155.44,
+              "end": 155.88,
+              "score": 0.9825311303138733
+            },
+            {
+              "text": "свет.",
+              "start": 155.88,
+              "end": 156.36,
+              "score": 0.7090334892272949
+            }
+          ]
+        },
+        {
+          "start": 183.94,
+          "end": 185.5,
+          "text": " Академия",
+          "words": [
+            {
+              "text": "Академия",
+              "start": 183.94,
+              "end": 185.5,
+              "score": 0.4786633149487898
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "Forced alignment cannot establish that a supplied repeated phrase was sung.",
+    "An estimated vocal can retain instruments and long reverb; its energy is not a lexical label.",
+    "Recognition variants use related Whisper models and correlated crops, not independent votes.",
+    "Absence of ASR text alone does not prove silence. Withheld candidates are distinct from the recording-reviewed negative window.",
+    "No normal/reduced-speed full-song listening attestation or production approval is recorded."
+  ]
+}

@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "revision": "obnimay-preview-v1",
+  "revision": "obnimay-preview-v2",
   "sourceSha256": "9a4d5f5c42b131d46eab42d072f64733ccb50a0bea97a995b757d3b00e5708e0",
-  "timelineSha256": "35578e46076c9acdc1ad6ae376d43cfe2ea48c01da5996c0a75f3791d9c4e037",
-  "sceneSha256": "afb2a9194bfcc608d1831f7e5dff80bbe637fd879d9fe2b91b314755fe5d8ac3",
+  "timelineSha256": "279b8cf9786bf1c3af90c980482acec37550c77791efaf4566caa5a1d244eb8f",
+  "sceneSha256": "f2d2128fd075b6970b188b32947686e328b1685bb1def3a5f4770b4bb0bc02b3",
   "sceneFiles": [
     "src/model.ts",
     "src/scene.ts",
@@ -15,24 +15,9 @@
     "public/fonts/NotoSerif.ttf"
   ],
   "status": "preview only",
-  "representative": "evidence/browser-landscape-55.430.png",
+  "representative": "evidence/preview-landscape-55.43.jpg",
   "reviewedAtNativeAndReducedSize": true,
   "screenshots": [
-    {
-      "image": "evidence/browser-landscape-55.430.png",
-      "timestampSeconds": 55.43,
-      "width": 1920,
-      "height": 1080,
-      "encoding": "PNG",
-      "bytes": 3529811,
-      "sha256": "468023ff249f5dc5c00bc8b6a302a5ceba727317ab84f1799c231a0a2d2c8954",
-      "method": "Actual decoded-video browser canvas, Download still control; full unmodified PNG.",
-      "sourceFrame": 1385,
-      "sourcePicturePTS": 55.4,
-      "originalSourceUrl": "https://www.youtube.com/watch?v=sCbyEiBZyEo",
-      "originalCreator": "Элли на маковом поле and the original picture/recording creators",
-      "scope": "Visual presentation at one selected time; no production render or acoustic listening certification."
-    },
     {
       "image": "evidence/preview-landscape-0.00.jpg",
       "timestampSeconds": 0,
@@ -264,8 +249,8 @@
       "width": 1920,
       "height": 1080,
       "encoding": "JPEG",
-      "bytes": 307326,
-      "sha256": "0d09bc4843b3d9596424c4f2f77a85445386b441ce42eae6b43981370a328ce4",
+      "bytes": 294140,
+      "sha256": "3cef8c942cc520f2a67d38a42a841acd4fc1ae4984755f7bbcb695f2461aa8a5",
       "method": "Native shared-scene proof canvas, original artwork reference decoded at 40.000 s; complete JPEG quality 88.",
       "referenceSourceFrame": 1000,
       "referenceSourcePTS": 40,
@@ -279,8 +264,8 @@
       "width": 1920,
       "height": 1080,
       "encoding": "JPEG",
-      "bytes": 308260,
-      "sha256": "77ffc9b6eefd82927eec5a5d299d0df247b4ea37f7389e5676d08a956de2a9bf",
+      "bytes": 294142,
+      "sha256": "97a5b79405aade4db5218de1859c0cd58ac46778cee9dd409debd6faf9c0c9a9",
       "method": "Native shared-scene proof canvas, original artwork reference decoded at 40.000 s; complete JPEG quality 88.",
       "referenceSourceFrame": 1000,
       "referenceSourcePTS": 40,
@@ -519,8 +504,8 @@
       "width": 1080,
       "height": 1920,
       "encoding": "JPEG",
-      "bytes": 290094,
-      "sha256": "00f0fca768a271d7384e2378e007e8756dfb94b28541d9fc80f9cca5a9b240c6",
+      "bytes": 275477,
+      "sha256": "1e697f154b0b446643e21527d577f1ce22d5e65716f9ffe245fda944ba371843",
       "method": "Native shared-scene proof canvas, original artwork reference decoded at 40.000 s; complete JPEG quality 88.",
       "referenceSourceFrame": 1000,
       "referenceSourcePTS": 40,
@@ -534,8 +519,8 @@
       "width": 1080,
       "height": 1920,
       "encoding": "JPEG",
-      "bytes": 291185,
-      "sha256": "e55f141b03da6a3ce9f3745c1b3421f9f1c413fce3ea181908441bcfa06b6b2b",
+      "bytes": 275489,
+      "sha256": "69e9e422e4bdd909a9ad67be5ddb48f7835357c83eab6db0d3e681555af232ee",
       "method": "Native shared-scene proof canvas, original artwork reference decoded at 40.000 s; complete JPEG quality 88.",
       "referenceSourceFrame": 1000,
       "referenceSourcePTS": 40,
@@ -543,5 +528,10 @@
       "originalCreator": "Элли на маковом поле and the original picture/recording creators",
       "scope": "Visual presentation at one selected time; no production render or acoustic listening certification."
     }
-  ]
+  ],
+  "historicalBrowser": {
+    "image": "evidence/browser-landscape-55.430.png",
+    "sourceCommit": "42882833074bc688d7a01e69f40b29287b08a7b6",
+    "scope": "Original v1 browser canvas; retained as history, excluded from current-revision proof stills."
+  }
 }
