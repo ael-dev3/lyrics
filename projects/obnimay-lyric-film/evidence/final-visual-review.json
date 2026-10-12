@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "status": "pass",
+  "identity": {
+    "schemaVersion": 1,
+    "revision": "obnimay-preview-v2",
+    "sourceSha256": "9a4d5f5c42b131d46eab42d072f64733ccb50a0bea97a995b757d3b00e5708e0",
+    "timelineSha256": "279b8cf9786bf1c3af90c980482acec37550c77791efaf4566caa5a1d244eb8f",
+    "sceneSha256": "f2d2128fd075b6970b188b32947686e328b1685bb1def3a5f4770b4bb0bc02b3",
+    "sceneFiles": [
+      "src/model.ts",
+      "src/scene.ts",
+      "src/player.ts",
+      "review/index.html",
+      "public/audio-features.json",
+      "public/artwork-reference.png",
+      "public/visual-contract.json",
+      "public/fonts/NotoSerif.ttf"
+    ]
+  },
+  "basis": "Direct inspection of the actual final-film JPEGs, two complete 12-frame contact sheets and a 360×640 portrait simulation. No assistant direct audio audition or full-motion visual listening is claimed.",
+  "nativeInspected": [
+    "evidence/final-youtube-55.433.jpg",
+    "evidence/final-tiktok-55.433.jpg",
+    "evidence/final-youtube-75.000.jpg"
+  ],
+  "contactSheets": [
+    {
+      "path": "analysis/final-review/youtube-contact.png",
+      "width": 1536,
+      "height": 720,
+      "finalFrames": 12,
+      "sha256": "ad4419cc6d019355d67b047eee297b527ce8b473ec1ea70fe5d7f5b3e7e10d1a"
+    },
+    {
+      "path": "analysis/final-review/tiktok-contact.png",
+      "width": 864,
+      "height": 1224,
+      "finalFrames": 12,
+      "sha256": "3b5b3ef9f4ec09481898ed4a7975769eed315d2930ad4f31af5a85f6049c8a86"
+    }
+  ],
+  "phoneProof": {
+    "path": "analysis/final-review/tiktok-360x640.png",
+    "width": 360,
+    "height": 640,
+    "sha256": "f57211c9f5081843919a4356f11112812bdd41c097bbd3fd3017431c37012c2f"
+  },
+  "observations": [
+    "Original face, embracing arms and floral artwork remain visible.",
+    "Russian and English remain equally sized and legible; active light is clear at phone size.",
+    "Complete lyric blocks sit inside the intended reading space; selected frames have no clipping or cue-shaped panels.",
+    "The 75.000 s final frame has no lyric line in either format.",
+    "Intro, neutral pauses, later calls, refrains and tail preserve the accepted layout."
+  ],
+  "limits": "Finite still review supports composition and phone-size legibility. Owner-attested listening review and encoded whole-file checks are separate."
+}

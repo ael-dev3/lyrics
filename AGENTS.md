@@ -46,6 +46,8 @@ For language-switching films with three simultaneous reader lanes, use [the thre
 
 For a two-singer overlap, read [где ты?](projects/gde-ty-lyric-film/PRODUCTION-NOTES.md) and its [handoff](projects/gde-ty-lyric-film/AGENT-HANDOFF.md). Reserve full lead and backing line geometry before the incoming phrase's first visible fade. Check real glyph extents through every interval where two reader lanes remain visible, including the handoff and preceding hold. A correctly synchronized word can still collide with the preceding translation during an early line reveal; protect the complete target-language block without moving its acoustic event.
 
+For processed repeats and artwork-bound light, read [Обнимай's production record](projects/obnimay-lyric-film/PRODUCTION-NOTES.md). Establish performed coverage before forced alignment, preserve withheld candidates separately and make known lyric-free windows executable against neutral reading as well as active focus. Final encoded glyph verification must inspect every simultaneously visible lead/backing block, every source/target token in focused and neutral states, and deliberately delayed timing controls. Its petal geometry, palette and warmth intervals belong to that recording; the reusable lessons are material integration, source preservation and distinct owner/model/technical evidence.
+
 ## Conservative GitHub Actions use
 
 - Follow the current user approval policy for GitHub Actions budgets and

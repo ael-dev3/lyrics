@@ -1,0 +1,49 @@
+{
+  "status": "pass",
+  "file": "Obnimay-Elli-Na-Makovom-Pole-YouTube-1920x1080-60fps.mp4",
+  "sha256": "3124326afbfacd90730b9d6daec5823f5a98116ada4c0eb395b4d1beb6fbcc71",
+  "format": "landscape",
+  "width": 1920,
+  "height": 1080,
+  "frames": 12036,
+  "fps": 60,
+  "videoDurationSeconds": 200.6,
+  "audioDurationSeconds": 200.6,
+  "sourceAudioPackets": 8641,
+  "audioPacketsIdentical": true,
+  "decodedPcmHash": "SHA256=e9061ebf78ca53c00e0a1745c691f3a0230f12ee520a26bb6abd56a8e8591253",
+  "decodedPcmIdentical": true,
+  "everyFramePtsVerified": true,
+  "fullStrictDecode": true,
+  "blackIntervals": [],
+  "selectedSceneFrames": 1101,
+  "glyphStateChecks": 4462,
+  "allSourceAndTargetTokensSeenFocusedAndNeutral": 309,
+  "deliberatelyDelayedTimingControls": 309,
+  "minimumMatchingGlyphFraction": 0.9931972789115646,
+  "maximumSceneMeanAbsoluteRgbError": 1.3756995884773662,
+  "maximumSceneFractionChannelsOver24": 0.00024112654320987653,
+  "knownInstrumentalGapFrames": 601,
+  "maximumGapReadingAreaMeanAbsoluteRgbError": 0.5119874804381847,
+  "maximumGapReadingAreaFractionChannelsOver24": 0,
+  "sceneComparisonReference": "Actual first source picture for output frames 0–2 and actual 1080-square source picture 1000 thereafter; deliberately static artwork. Production decodes all 5015 native pictures; finite scene comparisons do not establish moving-shot correspondence.",
+  "sourceSha256": "9a4d5f5c42b131d46eab42d072f64733ccb50a0bea97a995b757d3b00e5708e0",
+  "revision": "obnimay-preview-v2",
+  "timelineSha256": "279b8cf9786bf1c3af90c980482acec37550c77791efaf4566caa5a1d244eb8f",
+  "sceneSha256": "f2d2128fd075b6970b188b32947686e328b1685bb1def3a5f4770b4bb0bc02b3",
+  "producerAdapters": [
+    {
+      "path": "scripts/render-production.ts",
+      "sha256": "b006323531f862997471ad9c2c8227bb34d1a4660e1b564789651c8ef44fa444"
+    },
+    {
+      "path": "scripts/production-authorization.ts",
+      "sha256": "c532eea5aa0498bb9138c70a4d1437a2cadb3df250485e9091881499b7efebfb"
+    },
+    {
+      "path": "scripts/project-identity.ts",
+      "sha256": "1545dbd7fc88dcd6479dec2603cb1a9c1ec649f50a23473697bf7010f18d1ba3"
+    }
+  ],
+  "limits": "Encoded technical checks verify selected timing display and preserved audio; they do not certify millisecond acoustic perception or a complete listening attestation."
+}
