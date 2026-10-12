@@ -1,0 +1,197 @@
+{
+  "schemaVersion": 1,
+  "edition": "volchya-pesnya-approved-v1-production",
+  "preparedAtUtc": "2026-10-12T12:18:53.681Z",
+  "identity": {
+    "schemaVersion": 1,
+    "revision": "volchya-pesnya-preview-v1",
+    "sourceSha256": "3809a0d61ca86341156c4184e0f221b83c205a9687333ead8f192e0d7e3494d1",
+    "timelineSha256": "11a8793267a365c43686f19c17a498df544ef1b94f28d4f65f2c2eb4dfa9e4c4",
+    "sceneSha256": "e9e2796ec616ac74de9431e0088c6093c6feff56a527fc58c523ddfe9f05dc14",
+    "sceneFiles": [
+      "src/model.ts",
+      "src/scene.ts",
+      "src/player.ts",
+      "review/index.html",
+      "public/audio-features.json",
+      "public/artwork-reference.png",
+      "public/visual-contract.json",
+      "public/fonts/Alegreya.ttf"
+    ]
+  },
+  "productionScope": "Exact owner-accepted current v1 with explicit direction to render without further confirmation. Granular listening scope remains unattested; model observations and encoded checks are separate.",
+  "movies": [
+    {
+      "file": "YouTube/Volchya-Pesnya-Lunny-Bard-YouTube-1920x1080-60fps.mp4",
+      "bytes": 83463267,
+      "sha256": "422e4ab9349c00f8eeade1c1355821a9b4be471242d9222d82e1fbcad4460cdc",
+      "width": 1920,
+      "height": 1080,
+      "fps": 60,
+      "videoDurationSeconds": 259.6,
+      "audioDurationSeconds": 259.591995,
+      "verification": "evidence/final-landscape-verification.json",
+      "audio": "Original AAC packets and decoded PCM identical.",
+      "technicalStatus": "pass"
+    },
+    {
+      "file": "TikTok/Volchya-Pesnya-Lunny-Bard-TikTok-1080x1920-60fps.mp4",
+      "bytes": 83461068,
+      "sha256": "71fb9e3bc5e25c373ed64ce3294982daa51183b237aef681fb927af869e5d3af",
+      "width": 1080,
+      "height": 1920,
+      "fps": 60,
+      "videoDurationSeconds": 259.6,
+      "audioDurationSeconds": 259.591995,
+      "verification": "evidence/final-portrait-verification.json",
+      "audio": "Original AAC packets and decoded PCM identical.",
+      "technicalStatus": "pass"
+    }
+  ],
+  "covers": [
+    {
+      "kind": "youtube",
+      "path": "YouTube/Volchya-Pesnya-YouTube-Thumbnail-1280x720.jpg",
+      "width": 1280,
+      "height": 720,
+      "bytes": 335641,
+      "sha256": "906d309751c0b711a02463aff63f0074f93a5ef6f8b1d66a17591cda3f583efa",
+      "textBoxes": [
+        {
+          "text": "Волчья",
+          "x": 850.5500030517578,
+          "y": 233,
+          "right": 1149.4499969482422,
+          "bottom": 304,
+          "fontSize": 100
+        },
+        {
+          "text": "песня",
+          "x": 858.7700042724609,
+          "y": 352,
+          "right": 1141.229995727539,
+          "bottom": 411,
+          "fontSize": 112
+        },
+        {
+          "text": "лунный бард",
+          "x": 863.5850067138672,
+          "y": 460,
+          "right": 1136.4149932861328,
+          "bottom": 512,
+          "fontSize": 49
+        }
+      ]
+    },
+    {
+      "kind": "tiktok",
+      "path": "TikTok/Volchya-Pesnya-TikTok-Cover-Profile-1200x1600.jpg",
+      "width": 1200,
+      "height": 1600,
+      "bytes": 625258,
+      "sha256": "fb82dea8d97b15690a8a9c8379600f038e055fd87fd6ab7ea72d8c4ef28284e5",
+      "textBoxes": [
+        {
+          "text": "Волчья песня",
+          "x": 194.66000366210938,
+          "y": 1253,
+          "right": 1005.3399963378906,
+          "bottom": 1353,
+          "fontSize": 142
+        },
+        {
+          "text": "лунный бард",
+          "x": 366.14500427246094,
+          "y": 1392,
+          "right": 833.8549957275391,
+          "bottom": 1478,
+          "fontSize": 84
+        }
+      ]
+    }
+  ],
+  "files": [
+    {
+      "file": "Captions/Bilingual.srt",
+      "bytes": 6218,
+      "sha256": "607aff4e0c7c2b30de8c6faff208d027fbcdb546d38fa7cea94db15e478ec414"
+    },
+    {
+      "file": "Captions/English.srt",
+      "bytes": 3722,
+      "sha256": "5ea0a5cfc3279831c0a2094b7b46cdaed4fa9a8d119ab1127448d5ff8d594876"
+    },
+    {
+      "file": "Captions/Russian.srt",
+      "bytes": 4492,
+      "sha256": "eaa4aba672885576e4f53df912a12d15c2775d3c88c9a62eaf72a1c358258f47"
+    },
+    {
+      "file": "README.txt",
+      "bytes": 1391,
+      "sha256": "4d1326abb7065f2feaf386715c2c7ad3950caa1eea6c906283bc995851badb30"
+    },
+    {
+      "file": "TikTok/Description.txt",
+      "bytes": 431,
+      "sha256": "01db71507d568e52a9d54c11b0e062b6fa5cfea72a057f01ae505fb1e41cea84"
+    },
+    {
+      "file": "TikTok/Volchya-Pesnya-Lunny-Bard-TikTok-1080x1920-60fps.mp4",
+      "bytes": 83461068,
+      "sha256": "71fb9e3bc5e25c373ed64ce3294982daa51183b237aef681fb927af869e5d3af"
+    },
+    {
+      "file": "TikTok/Volchya-Pesnya-TikTok-Cover-Profile-1200x1600.jpg",
+      "bytes": 625258,
+      "sha256": "fb82dea8d97b15690a8a9c8379600f038e055fd87fd6ab7ea72d8c4ef28284e5"
+    },
+    {
+      "file": "YouTube/Description.txt",
+      "bytes": 885,
+      "sha256": "6a3e4a1591dbc7c583eff1ab5bc723cf667373a75c4d067522acbc306c409fba"
+    },
+    {
+      "file": "YouTube/Title.txt",
+      "bytes": 77,
+      "sha256": "9bc6b0ba7b2acd1b8feab2e83deea1eff31482f8a549332db9fc50be93810bb5"
+    },
+    {
+      "file": "YouTube/Volchya-Pesnya-Lunny-Bard-YouTube-1920x1080-60fps.mp4",
+      "bytes": 83463267,
+      "sha256": "422e4ab9349c00f8eeade1c1355821a9b4be471242d9222d82e1fbcad4460cdc"
+    },
+    {
+      "file": "YouTube/Volchya-Pesnya-YouTube-Thumbnail-1280x720.jpg",
+      "bytes": 335641,
+      "sha256": "906d309751c0b711a02463aff63f0074f93a5ef6f8b1d66a17591cda3f583efa"
+    }
+  ],
+  "verificationSummary": [
+    {
+      "format": "landscape",
+      "fullStrictDecode": true,
+      "everyFramePts": true,
+      "originalAudioPacketsAndPcm": true,
+      "blackIntervals": [],
+      "selectedSceneFrames": 1223,
+      "glyphStateChecks": 8591,
+      "allTokensFocusedAndNeutral": 534,
+      "deliberatelyDelayedTimingControls": 534,
+      "sampledReadingGapFrames": 381
+    },
+    {
+      "format": "portrait",
+      "fullStrictDecode": true,
+      "everyFramePts": true,
+      "originalAudioPacketsAndPcm": true,
+      "blackIntervals": [],
+      "selectedSceneFrames": 1223,
+      "glyphStateChecks": 8591,
+      "allTokensFocusedAndNeutral": 534,
+      "deliberatelyDelayedTimingControls": 534,
+      "sampledReadingGapFrames": 381
+    }
+  ],
+  "posting": "Prepared for manual platform uploading; no platform upload or public media release is recorded."
+}

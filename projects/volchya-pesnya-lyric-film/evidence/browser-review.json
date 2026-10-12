@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "identity": {
+    "schemaVersion": 1,
+    "revision": "volchya-pesnya-preview-v1",
+    "sourceSha256": "3809a0d61ca86341156c4184e0f221b83c205a9687333ead8f192e0d7e3494d1",
+    "timelineSha256": "11a8793267a365c43686f19c17a498df544ef1b94f28d4f65f2c2eb4dfa9e4c4",
+    "sceneSha256": "e9e2796ec616ac74de9431e0088c6093c6feff56a527fc58c523ddfe9f05dc14",
+    "sceneFiles": [
+      "src/model.ts",
+      "src/scene.ts",
+      "src/player.ts",
+      "review/index.html",
+      "public/audio-features.json",
+      "public/artwork-reference.png",
+      "public/visual-contract.json",
+      "public/fonts/Alegreya.ttf"
+    ]
+  },
+  "actualBrowser": "Codex in-app Chromium browser",
+  "nativeCanvasEvidence": [
+    {
+      "format": "landscape",
+      "time": 50.2,
+      "nativeSourceFrame": 1255,
+      "nativeSourcePts": 50.2,
+      "browserFile": "evidence/browser-landscape-50.200.png",
+      "sha256": "98ca909867393cd92e9e34ecef50225f5db0ffd21d5630733dfdcd98c4bf9499",
+      "width": 1920,
+      "height": 1080,
+      "referenceProof": "evidence/preview-landscape-50.20.jpg",
+      "meanAbsoluteRgbDifference": 3.885038097993827,
+      "fractionChannelsDifferenceOver24": 0.008976337448559671,
+      "method": "Unmodified native canvas PNG saved through the actual browser Download still control; comparison includes JPEG compression and browser rasterization."
+    },
+    {
+      "format": "portrait",
+      "time": 253.9,
+      "nativeSourceFrame": 6347,
+      "nativeSourcePts": 253.88,
+      "browserFile": "evidence/browser-portrait-253.900.png",
+      "sha256": "4c6d94e05d701c45b020168b9e5463fe85138162a996c356020eafa6b850dbba",
+      "width": 1080,
+      "height": 1920,
+      "referenceProof": "evidence/preview-portrait-253.90.jpg",
+      "meanAbsoluteRgbDifference": 3.80393180941358,
+      "fractionChannelsDifferenceOver24": 0.0076684670781893005,
+      "method": "Unmodified native canvas PNG saved through the actual browser Download still control; comparison includes JPEG compression and browser rasterization."
+    }
+  ],
+  "fontLoaded": true,
+  "sourceReadyState": 4,
+  "landscape": {
+    "wordTime": 50.2,
+    "picturePts": 50.2,
+    "activeSource": "Наперегонки",
+    "activeTarget": "Racing"
+  },
+  "portrait": {
+    "wordTime": 253.9,
+    "picturePts": 253.88,
+    "activeSource": "наперегонки",
+    "activeTarget": "racing"
+  },
+  "reducedSpeedTransport": {
+    "rate": 0.5,
+    "observedAdvancingNativePts": [
+      162.4,
+      257
+    ],
+    "observedWordTimes": [
+      162.411407,
+      257.0168
+    ],
+    "scope": "Clock transport only; no direct assistant listening claimed."
+  },
+  "recovery": {
+    "observedRetainedTime": 257.0168,
+    "rate": 0.5,
+    "format": "portrait",
+    "muted": true,
+    "effects": "on",
+    "result": "Complete source/canvas restored with retained state."
+  },
+  "mainPreview": "Owner accepted complete current v1 and directly authorized production."
+}

@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 1,
+  "receipts": [
+    {
+      "status": "encoded; independent final-file checks pending",
+      "file": "Volchya-Pesnya-Lunny-Bard-YouTube-1920x1080-60fps.mp4",
+      "format": "landscape",
+      "width": 1920,
+      "height": 1080,
+      "sourceFrames": 6489,
+      "outputFrames": 15576,
+      "sourceEnd": 259.56,
+      "audioEnd": 259.591995,
+      "outputFps": 60,
+      "outputDurationSeconds": 259.6,
+      "sourcePictureMapping": "min(6488, floor(outputFrame*5/12))",
+      "sourcePicture": "All 6489 native decoded pictures; source frame chosen on the original 25 fps clock.",
+      "audio": "Original AAC packets copied without filtering, trimming or reencoding.",
+      "color": "Limited-range BT.709 YUV420P; square pixels.",
+      "identity": {
+        "schemaVersion": 1,
+        "revision": "volchya-pesnya-preview-v1",
+        "sourceSha256": "3809a0d61ca86341156c4184e0f221b83c205a9687333ead8f192e0d7e3494d1",
+        "timelineSha256": "11a8793267a365c43686f19c17a498df544ef1b94f28d4f65f2c2eb4dfa9e4c4",
+        "sceneSha256": "e9e2796ec616ac74de9431e0088c6093c6feff56a527fc58c523ddfe9f05dc14",
+        "sceneFiles": [
+          "src/model.ts",
+          "src/scene.ts",
+          "src/player.ts",
+          "review/index.html",
+          "public/audio-features.json",
+          "public/artwork-reference.png",
+          "public/visual-contract.json",
+          "public/fonts/Alegreya.ttf"
+        ]
+      },
+      "listeningGateComplete": false,
+      "productionScope": "Owner accepted the complete current v1 preview and explicitly directed production without further confirmation; granular listening scope remains unattested. No assistant direct audition claimed.",
+      "adapters": [
+        {
+          "path": "scripts/render-production.ts",
+          "sha256": "30df1431162086a386e008e74442521b6b413c740a91b1c97d8e954abb570737"
+        },
+        {
+          "path": "scripts/production-authorization.ts",
+          "sha256": "76329d84aef0e22c65fc4167c5bbedc5bcf6b2c0386ee62487c7ef444315f3d8"
+        },
+        {
+          "path": "scripts/project-identity.ts",
+          "sha256": "38726d9a7a353954df76778b8497b2adf4f7b0af1cc3c0412d7542055abd88d3"
+        }
+      ],
+      "sha256": "422e4ab9349c00f8eeade1c1355821a9b4be471242d9222d82e1fbcad4460cdc",
+      "bytes": 83463267,
+      "elapsedSeconds": 240.94
+    },
+    {
+      "status": "encoded; independent final-file checks pending",
+      "file": "Volchya-Pesnya-Lunny-Bard-TikTok-1080x1920-60fps.mp4",
+      "format": "portrait",
+      "width": 1080,
+      "height": 1920,
+      "sourceFrames": 6489,
+      "outputFrames": 15576,
+      "sourceEnd": 259.56,
+      "audioEnd": 259.591995,
+      "outputFps": 60,
+      "outputDurationSeconds": 259.6,
+      "sourcePictureMapping": "min(6488, floor(outputFrame*5/12))",
+      "sourcePicture": "All 6489 native decoded pictures; source frame chosen on the original 25 fps clock.",
+      "audio": "Original AAC packets copied without filtering, trimming or reencoding.",
+      "color": "Limited-range BT.709 YUV420P; square pixels.",
+      "identity": {
+        "schemaVersion": 1,
+        "revision": "volchya-pesnya-preview-v1",
+        "sourceSha256": "3809a0d61ca86341156c4184e0f221b83c205a9687333ead8f192e0d7e3494d1",
+        "timelineSha256": "11a8793267a365c43686f19c17a498df544ef1b94f28d4f65f2c2eb4dfa9e4c4",
+        "sceneSha256": "e9e2796ec616ac74de9431e0088c6093c6feff56a527fc58c523ddfe9f05dc14",
+        "sceneFiles": [
+          "src/model.ts",
+          "src/scene.ts",
+          "src/player.ts",
+          "review/index.html",
+          "public/audio-features.json",
+          "public/artwork-reference.png",
+          "public/visual-contract.json",
+          "public/fonts/Alegreya.ttf"
+        ]
+      },
+      "listeningGateComplete": false,
+      "productionScope": "Owner accepted the complete current v1 preview and explicitly directed production without further confirmation; granular listening scope remains unattested. No assistant direct audition claimed.",
+      "adapters": [
+        {
+          "path": "scripts/render-production.ts",
+          "sha256": "30df1431162086a386e008e74442521b6b413c740a91b1c97d8e954abb570737"
+        },
+        {
+          "path": "scripts/production-authorization.ts",
+          "sha256": "76329d84aef0e22c65fc4167c5bbedc5bcf6b2c0386ee62487c7ef444315f3d8"
+        },
+        {
+          "path": "scripts/project-identity.ts",
+          "sha256": "38726d9a7a353954df76778b8497b2adf4f7b0af1cc3c0412d7542055abd88d3"
+        }
+      ],
+      "sha256": "71fb9e3bc5e25c373ed64ce3294982daa51183b237aef681fb927af869e5d3af",
+      "bytes": 83461068,
+      "elapsedSeconds": 238.873
+    }
+  ]
+}

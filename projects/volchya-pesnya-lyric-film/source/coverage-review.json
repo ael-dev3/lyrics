@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "revision": "volchya-pesnya-preview-v1",
+  "sourceSha256": "3809a0d61ca86341156c4184e0f221b83c205a9687333ead8f192e0d7e3494d1",
+  "lexicalCues": 59,
+  "sourceWordEvents": 228,
+  "targetTokens": 306,
+  "source": "Supplied timestamped transcript plus bounded acoustic observations; transcription remains an editorial reading, not verified author lyrics.",
+  "selectedTextVariants": [
+    {
+      "supplied": "замеляет",
+      "selected": "Завиляет",
+      "basis": "Unconstrained vocal recognition and narrowed original/vocal windows support the normal verb; competing recognizer misspellings remain diagnostic."
+    },
+    {
+      "supplied": "моих жизни часов",
+      "selected": "моей жизни часов",
+      "basis": "Narrow original/vocal and full original passes favor the singular possessive; conditioned likelihood alone is not a listener verdict."
+    },
+    {
+      "supplied": "Сердце ледяной тайги",
+      "selected": "В сердце ледяной тайги",
+      "basis": "Quiet initial preposition is consistent across full/narrow original and vocal recognizers; character confidence is low, retained as interpretive uncertainty."
+    }
+  ],
+  "nonlyricSoundTreatment": [
+    {
+      "kind": "Opening guitar",
+      "treatment": "Preserved original soundtrack; title and illustration, no lexical lyric events."
+    },
+    {
+      "kind": "Wordless vowel/howling passages between repetitions",
+      "treatment": "Preserved and ornament responds. No invented independent vowel-word timestamps or asserted count."
+    },
+    {
+      "kind": "Closing birds and source tail",
+      "treatment": "Preserved source sound/picture, no recognizer-invented continuation caption."
+    }
+  ],
+  "ownerAcceptance": true,
+  "granularListeningScopeAttested": false,
+  "assistantDirectAudition": false,
+  "limits": "Unconstrained recognition, conditioned attention, MMS cores, signal diagnostics and source/target invariants support the selected preview. Same-family variants are correlated. Acceptance and encoded evidence are distinct from millisecond acoustic certification."
+}
