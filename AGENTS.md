@@ -48,6 +48,8 @@ For a two-singer overlap, read [где ты?](projects/gde-ty-lyric-film/PRODUCT
 
 For processed repeats and artwork-bound light, read [Обнимай's production record](projects/obnimay-lyric-film/PRODUCTION-NOTES.md). Establish performed coverage before forced alignment, preserve withheld candidates separately and make known lyric-free windows executable against neutral reading as well as active focus. Final encoded glyph verification must inspect every simultaneously visible lead/backing block, every source/target token in focused and neutral states, and deliberately delayed timing controls. Its petal geometry, palette and warmth intervals belong to that recording; the reusable lessons are material integration, source preservation and distinct owner/model/technical evidence.
 
+For printed illustration films, read [Волчья песня's production record](projects/volchya-pesnya-lyric-film/PRODUCTION-NOTES.md). It uses existing pigment in knots, leaves and berries as the measured visualizer while protecting the central subject, and equal dark ink for phone-readable bilingual focus. Its held-vowel corrections distinguish character cores, attention silence allocation, lexical release and neutral reading. Exact decoded source-picture comparisons and every-token active/neutral plus delayed controls verify final encoding. Source audio tails require a deliberate last-picture hold. The rectangles, palette and event times are recording-specific; preserve the shared future-song listening and preview gates.
+
 ## Conservative GitHub Actions use
 
 - Follow the current user approval policy for GitHub Actions budgets and

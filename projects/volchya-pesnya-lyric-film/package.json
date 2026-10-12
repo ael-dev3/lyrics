@@ -1,0 +1,32 @@
+{
+  "name": "volchya-pesnya-lyric-film",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "esbuild src/player.ts --bundle --format=esm --outfile=review/client.js",
+    "preview": "npm run build && node scripts/preview-server.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test tests/*.test.ts",
+    "check": "npm run typecheck && npm test",
+    "features": "node scripts/analyze-audio.ts",
+    "timeline": "node scripts/build-timeline.ts",
+    "identity": "node scripts/refresh-identity.ts",
+    "render:gate": "node scripts/render-gate.ts",
+    "proof": "node scripts/proof-scene.ts",
+    "editorial": "node scripts/author-editorial.ts",
+    "render:landscape": "node scripts/render-production.ts --format landscape --production",
+    "render:portrait": "node scripts/render-production.ts --format portrait --production",
+    "verify:landscape": "node scripts/verify-final.ts --format landscape",
+    "verify:portrait": "node scripts/verify-final.ts --format portrait",
+    "covers": "node scripts/make-covers.ts",
+    "publishing": "node scripts/make-publishing-copy.ts",
+    "finalize": "node scripts/finalize-delivery.ts"
+  },
+  "devDependencies": {
+    "@types/node": "26.6.4",
+    "esbuild": "0.28.2",
+    "typescript": "7.0.2",
+    "@napi-rs/canvas": "1.0.10"
+  }
+}

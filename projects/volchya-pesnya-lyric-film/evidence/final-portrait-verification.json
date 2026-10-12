@@ -1,0 +1,51 @@
+{
+  "status": "pass",
+  "file": "Volchya-Pesnya-Lunny-Bard-TikTok-1080x1920-60fps.mp4",
+  "sha256": "71fb9e3bc5e25c373ed64ce3294982daa51183b237aef681fb927af869e5d3af",
+  "format": "portrait",
+  "width": 1080,
+  "height": 1920,
+  "frames": 15576,
+  "fps": 60,
+  "videoDurationSeconds": 259.6,
+  "audioDurationSeconds": 259.591995,
+  "sourceAudioPackets": 11182,
+  "audioPacketsIdentical": true,
+  "decodedPcmHash": "SHA256=7ab6e9104244fa21aeb13e5c370d7230ae8c0ee4f13e36952bb16d7f7cdc196b",
+  "decodedPcmIdentical": true,
+  "everyFramePtsVerified": true,
+  "fullStrictDecode": true,
+  "blackIntervals": [],
+  "selectedSceneFrames": 1223,
+  "glyphStateChecks": 8591,
+  "allSourceAndTargetTokensSeenFocusedAndNeutral": 534,
+  "deliberatelyDelayedTimingControls": 534,
+  "minimumMatchingGlyphFraction": 0.9966996699669967,
+  "maximumSceneMeanAbsoluteRgbError": 2.1939441872427983,
+  "maximumSceneFractionChannelsOver24": 0.0004218106995884774,
+  "sampledReadingGapFrames": 381,
+  "maximumGapReadingAreaMeanAbsoluteRgbError": 1.956385641025641,
+  "maximumGapReadingAreaFractionChannelsOver24": 0.0002194871794871795,
+  "sceneComparisonReference": "Exact original decoded source picture min(6488, floor(outputFrame*5/12)) for every selected encoded output frame. All 6489 native pictures are decoded in production; the final real picture covers the AAC tail.",
+  "nativeSourceComparisonPictures": 1049,
+  "listeningGateComplete": false,
+  "sourceSha256": "3809a0d61ca86341156c4184e0f221b83c205a9687333ead8f192e0d7e3494d1",
+  "revision": "volchya-pesnya-preview-v1",
+  "timelineSha256": "11a8793267a365c43686f19c17a498df544ef1b94f28d4f65f2c2eb4dfa9e4c4",
+  "sceneSha256": "e9e2796ec616ac74de9431e0088c6093c6feff56a527fc58c523ddfe9f05dc14",
+  "producerAdapters": [
+    {
+      "path": "scripts/render-production.ts",
+      "sha256": "30df1431162086a386e008e74442521b6b413c740a91b1c97d8e954abb570737"
+    },
+    {
+      "path": "scripts/production-authorization.ts",
+      "sha256": "76329d84aef0e22c65fc4167c5bbedc5bcf6b2c0386ee62487c7ef444315f3d8"
+    },
+    {
+      "path": "scripts/project-identity.ts",
+      "sha256": "38726d9a7a353954df76778b8497b2adf4f7b0af1cc3c0412d7542055abd88d3"
+    }
+  ],
+  "limits": "Encoded technical checks verify selected timing display and preserved audio; they do not certify millisecond acoustic perception or a complete listening attestation."
+}
