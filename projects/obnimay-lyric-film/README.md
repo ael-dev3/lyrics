@@ -1,25 +1,25 @@
 # Обнимай
 
-**Элли на маковом поле · Russian / English · complete 16:9 and 9:16 review preview**
+**Элли на маковом поле · Russian / English · verified 16:9 and 9:16 films**
 
-![Complete browser preview with the original floral portrait, equal свет / light focus and measured light inside actual carnation petals](evidence/preview-landscape-55.43.jpg)
+![Decoded final film with the original floral portrait, equal свет / light focus and measured light inside actual carnation petals](evidence/final-youtube-55.433.jpg)
 
-*Current native shared-scene preview at 00:55.430, using the original reference decoded at 00:40.000. [Capture identity and provenance](evidence/preview-stills.json). Original picture and soundtrack: [the supplied recording](https://www.youtube.com/watch?v=sCbyEiBZyEo). A still documents presentation, not acoustic accuracy.*
+*Exact decoded YouTube frame 3,326 at 00:55.433333, original picture 1,385 at 00:55.400. [Final-film identity and provenance](evidence/final-stills.json). Original picture and soundtrack: [the supplied recording](https://www.youtube.com/watch?v=sCbyEiBZyEo). A still documents presentation, not acoustic accuracy.*
 
 The original intimate photograph remains the subject. Four existing carnations host the visualizer: measured frequency energy changes light inside their real folds, while the face, embracing arms and dress remain protected. Silver light gradually warms through the refrains. The complete square stays intact in both layouts; its floral material continues into a quiet reading space. Russian and English receive equal size, weight, contrast and color-only focus.
 
 The corrected v2 preview contains 41 cues, 144 Russian events and 165 meaning-linked English tokens, including four separately positioned **вся / all** backing candidates. Five unsupported supplied call candidates are withheld; the recording-reviewed 01:11–01:21 interval has no lyric line or focus. Three original-recording-supported calls in the later break have shorter word spans. The English refrain uses **Hold me** in the romantic sense of a sustained embrace. Each translated word follows its own Russian event, including reordered pronouns and required English grammar.
 
-**Status: preview only.** Normal-speed full-song listening, uncertain words and held endings at reduced speed, and both-format bilingual listening review remain pending. The heavily filtered post-chorus calls and faint backing echoes are the highest-priority review areas. Their selected boundaries are provisional; additional echo ownership is not established. No production film, upload kit or public media release has been created for this song.
+**Status: delivered.** The owner attested comprehensive review of the corrected v2 and explicitly authorized both formats. Both 200.600 s films pass every-frame PTS, strict full decoding and unchanged AAC/PCM checks. Per film, 1,101 selected decoded scenes, 4,462 glyph states and all 309 tokens focused/neutral pass. All 601 output frames in the 71–81 s break have a clear reading area. The verified 13-file Desktop kit contains both videos, dedicated covers, publishing copy and optional captions. Processed-call and faint-echo model uncertainty remains recorded; no itemized listening telemetry or assistant direct audition is claimed. No platform upload or public media release is recorded.
 
-## Open the complete preview
+## Replay the complete preview
 
 The local review runs at [127.0.0.1:4338](http://127.0.0.1:4338/). It includes original audio and decoded picture, all visual layers, both layouts, speed controls, cue seeking, animation comparison, a muted original-source comparison and position-preserving recovery.
 
 ```sh
 npm ci
 npm run timeline
-npm run identity
+# Run identity only when restoring or changing inputs; it resets local review.
 npm run check
 npm run proof
 npm run preview
@@ -29,7 +29,12 @@ Use Node 24. The locked source MP4 must be restored as `public/source.mp4` befor
 
 ## Evidence and handoff
 
-- [Agent quickstart and remaining work](AGENT-HANDOFF.md)
+- [Agent quickstart](AGENT-HANDOFF.md)
+- [Exact production process and reusable lessons](PRODUCTION-NOTES.md)
+- [Verified upload kit](evidence/upload-kit.json), [Desktop copy](evidence/desktop-delivery.json) and [checksums](publishing-kit/CHECKSUMS.sha256)
+- [Final landscape verification](evidence/final-landscape-verification.json), [portrait verification](evidence/final-portrait-verification.json) and [visible presentation review](evidence/final-visual-review.json)
+- [Dedicated covers and profile/crop review](evidence/cover-assets.json)
+- [Owner-attested acceptance bound to v2](evidence/owner-acceptance.json)
 - [Visual brief, geometry and response](VISUAL-BRIEF.md)
 - [Timing preparation, editorial decisions and limits](TIMING.md)
 - [Synchronization review status](evidence/cross-language-sync-review.md)
@@ -41,7 +46,7 @@ Use Node 24. The locked source MP4 must be restored as `public/source.mp4` befor
 - [Complete correspondence ledger](source/correspondence-ledger.json)
 - [Intentionally still source-picture audit](source/picture-audit.json) and [diagnostic stem clock check](source/vocal-clock-check.json)
 
-TypeScript owns timeline authoring, scene drawing, preview, identity and verification. [Native acoustic adapters](scripts/acoustic/README.md) retain small documented exceptions for PyTorch, Demucs, Whisper, torchaudio and SciPy. Passing deterministic checks does not complete actual listening. The production gate rejects missing, stale, incomplete or unauthorized review.
+TypeScript owns timeline authoring, scene drawing, preview, identity and verification. [Native acoustic adapters](scripts/acoustic/README.md) retain small documented exceptions for PyTorch, Demucs, Whisper, torchaudio and SciPy. Deterministic checks and owner-attested listening remain distinct evidence. The production gate rejects missing, stale, incomplete or unauthorized review.
 
 ## Credits
 

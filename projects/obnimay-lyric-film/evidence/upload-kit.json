@@ -1,0 +1,205 @@
+{
+  "schemaVersion": 1,
+  "edition": "obnimay-approved-v2-production",
+  "preparedAtUtc": "2026-10-12T08:19:16.836Z",
+  "identity": {
+    "schemaVersion": 1,
+    "revision": "obnimay-preview-v2",
+    "sourceSha256": "9a4d5f5c42b131d46eab42d072f64733ccb50a0bea97a995b757d3b00e5708e0",
+    "timelineSha256": "279b8cf9786bf1c3af90c980482acec37550c77791efaf4566caa5a1d244eb8f",
+    "sceneSha256": "f2d2128fd075b6970b188b32947686e328b1685bb1def3a5f4770b4bb0bc02b3",
+    "sceneFiles": [
+      "src/model.ts",
+      "src/scene.ts",
+      "src/player.ts",
+      "review/index.html",
+      "public/audio-features.json",
+      "public/artwork-reference.png",
+      "public/visual-contract.json",
+      "public/fonts/NotoSerif.ttf"
+    ]
+  },
+  "productionScope": "Exact owner-approved v2; comprehensive listening review attested by owner. No itemized per-cue telemetry or assistant direct audition claimed.",
+  "movies": [
+    {
+      "file": "YouTube/Obnimay-Elli-Na-Makovom-Pole-YouTube-1920x1080-60fps.mp4",
+      "bytes": 69944776,
+      "sha256": "3124326afbfacd90730b9d6daec5823f5a98116ada4c0eb395b4d1beb6fbcc71",
+      "width": 1920,
+      "height": 1080,
+      "fps": 60,
+      "videoDurationSeconds": 200.6,
+      "audioDurationSeconds": 200.6,
+      "verification": "evidence/final-landscape-verification.json",
+      "audio": "Original AAC packets and decoded PCM identical.",
+      "technicalStatus": "pass"
+    },
+    {
+      "file": "TikTok/Obnimay-Elli-Na-Makovom-Pole-TikTok-1080x1920-60fps.mp4",
+      "bytes": 68420351,
+      "sha256": "53c419ccf85508a3adb9ff9fbc56004de2a641520c827f624b309eaf551dec07",
+      "width": 1080,
+      "height": 1920,
+      "fps": 60,
+      "videoDurationSeconds": 200.6,
+      "audioDurationSeconds": 200.6,
+      "verification": "evidence/final-portrait-verification.json",
+      "audio": "Original AAC packets and decoded PCM identical.",
+      "technicalStatus": "pass"
+    }
+  ],
+  "covers": [
+    {
+      "kind": "youtube",
+      "path": "YouTube/Obnimay-Elli-Na-Makovom-Pole-YouTube-Thumbnail-1280x720.jpg",
+      "width": 1280,
+      "height": 720,
+      "bytes": 236483,
+      "sha256": "fc369ba54a2bc24fac7b496f9f5f4ed08dd289fea485bc1442b935352289881e",
+      "textBoxes": [
+        {
+          "text": "Обнимай",
+          "x": 795.4799957275391,
+          "y": 266,
+          "right": 1174.520004272461,
+          "bottom": 329,
+          "fontSize": 80
+        },
+        {
+          "text": "Элли на",
+          "x": 900.4100036621094,
+          "y": 384,
+          "right": 1069.5899963378906,
+          "bottom": 414,
+          "fontSize": 42
+        },
+        {
+          "text": "маковом поле",
+          "x": 834.4949951171875,
+          "y": 451,
+          "right": 1135.5050048828125,
+          "bottom": 474,
+          "fontSize": 42
+        }
+      ]
+    },
+    {
+      "kind": "tiktok",
+      "path": "TikTok/Obnimay-Elli-Na-Makovom-Pole-TikTok-Cover-Profile-1200x1600.jpg",
+      "width": 1200,
+      "height": 1600,
+      "bytes": 483683,
+      "sha256": "c92fa6eba2a3a2c803f996628de5e0c5bbf65bf1d637922a860818ef070264e4",
+      "textBoxes": [
+        {
+          "text": "Обнимай",
+          "x": 270.7099914550781,
+          "y": 1182,
+          "right": 929.2900085449219,
+          "bottom": 1291,
+          "fontSize": 139
+        },
+        {
+          "text": "Элли на",
+          "x": 475.12999725341797,
+          "y": 1335,
+          "right": 724.870002746582,
+          "bottom": 1381,
+          "fontSize": 62
+        },
+        {
+          "text": "маковом поле",
+          "x": 377.8249969482422,
+          "y": 1421,
+          "right": 822.1750030517578,
+          "bottom": 1456,
+          "fontSize": 62
+        }
+      ]
+    }
+  ],
+  "files": [
+    {
+      "file": "Captions/Bilingual.srt",
+      "bytes": 4501,
+      "sha256": "5fbbeb502d8435fd4176eb69e1802194706a4d101099b8397ea8484cd65c1d32"
+    },
+    {
+      "file": "Captions/English.srt",
+      "bytes": 2730,
+      "sha256": "47befb8ff135d4e220f3756a6f7867cf401188c2a9b6db8b90102457846c5416"
+    },
+    {
+      "file": "Captions/Russian.srt",
+      "bytes": 3291,
+      "sha256": "f56ed921902946b23c1e5da29f78808e9e5f37feae62c24a0baea169fea86604"
+    },
+    {
+      "file": "README.txt",
+      "bytes": 1147,
+      "sha256": "ffd783327e8536e762c52a347bcccfbb2b1920fd8482d07ee2bbf1f6a985b99c"
+    },
+    {
+      "file": "TikTok/Description.txt",
+      "bytes": 477,
+      "sha256": "7148dbd2d80fbb95665ddcdcd11819ccf427b9a2ea1fd815b82b69945f4fddee"
+    },
+    {
+      "file": "TikTok/Obnimay-Elli-Na-Makovom-Pole-TikTok-1080x1920-60fps.mp4",
+      "bytes": 68420351,
+      "sha256": "53c419ccf85508a3adb9ff9fbc56004de2a641520c827f624b309eaf551dec07"
+    },
+    {
+      "file": "TikTok/Obnimay-Elli-Na-Makovom-Pole-TikTok-Cover-Profile-1200x1600.jpg",
+      "bytes": 483683,
+      "sha256": "c92fa6eba2a3a2c803f996628de5e0c5bbf65bf1d637922a860818ef070264e4"
+    },
+    {
+      "file": "YouTube/Description.txt",
+      "bytes": 924,
+      "sha256": "360ec825ad7c857079f2b7f1a804efb324e648ba505647702f5bf00d18ea966c"
+    },
+    {
+      "file": "YouTube/Obnimay-Elli-Na-Makovom-Pole-YouTube-1920x1080-60fps.mp4",
+      "bytes": 69944776,
+      "sha256": "3124326afbfacd90730b9d6daec5823f5a98116ada4c0eb395b4d1beb6fbcc71"
+    },
+    {
+      "file": "YouTube/Obnimay-Elli-Na-Makovom-Pole-YouTube-Thumbnail-1280x720.jpg",
+      "bytes": 236483,
+      "sha256": "fc369ba54a2bc24fac7b496f9f5f4ed08dd289fea485bc1442b935352289881e"
+    },
+    {
+      "file": "YouTube/Title.txt",
+      "bytes": 84,
+      "sha256": "a734b32f3dd7c6cc712f53659f6c0860095555632d3fc9b66e46f93e781dc00e"
+    }
+  ],
+  "verificationSummary": [
+    {
+      "format": "landscape",
+      "fullStrictDecode": true,
+      "everyFramePts": true,
+      "originalAudioPacketsAndPcm": true,
+      "blackIntervals": [],
+      "selectedSceneFrames": 1101,
+      "glyphStateChecks": 4462,
+      "allTokensFocusedAndNeutral": 309,
+      "deliberatelyDelayedTimingControls": 309,
+      "knownInstrumentalGapFrames": 601
+    },
+    {
+      "format": "portrait",
+      "fullStrictDecode": true,
+      "everyFramePts": true,
+      "originalAudioPacketsAndPcm": true,
+      "blackIntervals": [],
+      "selectedSceneFrames": 1101,
+      "glyphStateChecks": 4462,
+      "allTokensFocusedAndNeutral": 309,
+      "deliberatelyDelayedTimingControls": 309,
+      "knownInstrumentalGapFrames": 601
+    }
+  ],
+  "posting": "Prepared for manual platform uploading; no platform upload or public media release is recorded."
+}

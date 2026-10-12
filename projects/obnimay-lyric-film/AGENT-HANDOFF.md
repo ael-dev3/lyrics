@@ -2,9 +2,9 @@
 
 ## Current state
 
-Complete original-picture preview, Russian / English, 16:9 and 9:16. No production render, upload kit or media release. Listening review and explicit current-revision render authorization are pending. The final English embrace wording is **Hold me**; retain the contextual rationale in the templates. Do not silently switch to a literal dictionary equivalent or alter Russian timings when editing English prose.
+Completed original-picture production, Russian / English, 16:9 and 9:16 at 60 fps, 200.600 s. Both encoded films and the 13-file Desktop upload kit are verified. The owner attested comprehensive listening review and separately authorized the exact corrected v2. No itemized per-cue playback telemetry or assistant direct audition is claimed. Original media stays local; no public media release or platform upload is recorded. The final English embrace wording is **Hold me**; retain the contextual rationale in the templates. Do not silently switch to a literal dictionary equivalent or alter Russian timings when editing English prose.
 
-Read root `AGENTS.md`, the mandatory preview-first and cross-language review guides, then this project's [README](README.md), [TIMING](TIMING.md), [visual brief](VISUAL-BRIEF.md) and [review status](evidence/cross-language-sync-review.md). Browser and shared-scene evidence have technical/visual scopes only.
+Read root `AGENTS.md`, the mandatory preview-first and cross-language review guides, then this project's [README](README.md), [TIMING](TIMING.md), [visual brief](VISUAL-BRIEF.md) and [review status](evidence/cross-language-sync-review.md). Read [PRODUCTION-NOTES](PRODUCTION-NOTES.md) for exact export commands, final identities and reuse lessons. Browser/shared-scene proof, encoded technical checks, owner acceptance and model uncertainty have separate scopes.
 
 ## Coverage correction
 
@@ -13,7 +13,7 @@ Read `source/coverage-review.json` before any timing work. The first two v1 call
 ## Short startup
 
 1. Restore the exact MP4 as `public/source.mp4`; check `source/recording.json` SHA-256. Original media, analysis and model caches remain excluded from Git.
-2. Install with `npm ci` using Node 24. Run `npm run timeline`, `npm run identity`, `npm run check`, `npm run proof`, then `npm run preview` (default port 4338).
+2. Install with `npm ci` using Node 24. Run `npm run check`, then `npm run preview` (default port 4338). Restore/generate the ignored preview identity when needed, but note that `npm run identity` also resets the local listening/approval record. Never run it casually on an accepted local revision. Canonical timeline authoring uses `npm run timeline`; changes require renewed identity/review.
 3. Show the **complete** preview. Verify actual picture, correct revision hashes, active Russian/English glyphs, playing/paused seeking, format switching, reduced speed and recovery. The source artwork is intentionally still; advancing native decoded PTS is separately required.
 4. Review the full original sound at normal speed, uncertain words and held endings at reduced speed, and both-language/both-layout reading. Prioritize the three retained processed calls at about 159–174 s, four faint Вся echoes, quiet opening and final held light.
 5. Update selections from actual audio when warranted, preserving rejected alternatives and uncertainty. Change `source/selected-boundaries.json`, not a generated timeline or a global timing offset. Rebuild timeline, identity, checks and proofs. Changed scene/timing identities invalidate earlier review.
@@ -37,7 +37,7 @@ Keep template changes reproducible in `scripts/initialize.ts` when appropriate. 
 
 `npm run identity` binds revision, original MP4, timeline and scene inputs. It generates ignored `public/preview-identity.json` and local `source/REVIEW.json`; a changed identity resets review to pending. Record only completed actual checks or direct owner attestation, then obtain explicit production approval for that exact preview. Positive design feedback and test fixtures are not approval.
 
-`npm run render:gate` currently fails by design. There is no full-film encoder in this preview-only project yet. After the required review and authorization, implement capture/encoding with the same scene, original audio, source aspect preservation, every-frame verification and native/phone checks. Follow the established Desktop-kit, platform-cover and final-source handoff guides; do not infer production authorization from a merged preview PR.
+`npm run render:gate` passed for this accepted local v2. The renderer checks the bound review before capture, requires explicit `--production`, refuses existing output and rechecks frozen inputs/producer hashes at completion. `render:landscape` and `render:portrait` share the exact scene and original audio. `verify:landscape` and `verify:portrait` inspect final MP4s independently, including all visible lead/backing blocks, all 601 gap frames, AAC/PCM identity and deliberately delayed focus controls. `covers`, `publishing` and `finalize` prepare the kit only after verified output. `scripts/deliver-desktop.ts --destination <new-folder>` verifies every copied file and refuses existing Desktop folders. Published acceptance is evidence for the existing delivery, not a portable permission to render another revision or fabricated local review. Do not infer production authorization from a merged source PR.
 
 ## GitHub and storage
 

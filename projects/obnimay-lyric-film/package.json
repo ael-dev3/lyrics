@@ -15,7 +15,14 @@
     "identity": "node scripts/refresh-identity.ts",
     "render:gate": "node scripts/render-gate.ts",
     "evidence:stills": "node scripts/record-preview-evidence.ts",
-    "verify:server": "node scripts/verify-preview-server.ts"
+    "verify:server": "node scripts/verify-preview-server.ts",
+    "render:landscape": "node scripts/render-production.ts --format landscape --production",
+    "render:portrait": "node scripts/render-production.ts --format portrait --production",
+    "verify:landscape": "node scripts/verify-final.ts --format landscape",
+    "verify:portrait": "node scripts/verify-final.ts --format portrait",
+    "covers": "node scripts/make-covers.ts",
+    "publishing": "node scripts/make-publishing-copy.ts",
+    "finalize": "node scripts/finalize-delivery.ts"
   },
   "devDependencies": {
     "@types/node": "26.6.4",

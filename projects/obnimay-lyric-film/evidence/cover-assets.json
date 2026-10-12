@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 1,
+  "status": "visually inspected; pass",
+  "identity": {
+    "schemaVersion": 1,
+    "revision": "obnimay-preview-v2",
+    "sourceSha256": "9a4d5f5c42b131d46eab42d072f64733ccb50a0bea97a995b757d3b00e5708e0",
+    "timelineSha256": "279b8cf9786bf1c3af90c980482acec37550c77791efaf4566caa5a1d244eb8f",
+    "sceneSha256": "f2d2128fd075b6970b188b32947686e328b1685bb1def3a5f4770b4bb0bc02b3",
+    "sceneFiles": [
+      "src/model.ts",
+      "src/scene.ts",
+      "src/player.ts",
+      "review/index.html",
+      "public/audio-features.json",
+      "public/artwork-reference.png",
+      "public/visual-contract.json",
+      "public/fonts/NotoSerif.ttf"
+    ]
+  },
+  "makerSha256": "7e37195d359fb1183f16c6a06650da7143b6aac8d47b733e366aa0c12fb8cf08",
+  "method": "Code-native recomposition of the original floral photograph with approved Noto Serif, warm ivory and silver. Original subject retained; no generated replacement artwork.",
+  "sourceArtwork": "public/artwork-reference.png",
+  "files": [
+    {
+      "kind": "youtube",
+      "path": "YouTube/Obnimay-Elli-Na-Makovom-Pole-YouTube-Thumbnail-1280x720.jpg",
+      "width": 1280,
+      "height": 720,
+      "bytes": 236483,
+      "sha256": "fc369ba54a2bc24fac7b496f9f5f4ed08dd289fea485bc1442b935352289881e",
+      "textBoxes": [
+        {
+          "text": "Обнимай",
+          "x": 795.4799957275391,
+          "y": 266,
+          "right": 1174.520004272461,
+          "bottom": 329,
+          "fontSize": 80
+        },
+        {
+          "text": "Элли на",
+          "x": 900.4100036621094,
+          "y": 384,
+          "right": 1069.5899963378906,
+          "bottom": 414,
+          "fontSize": 42
+        },
+        {
+          "text": "маковом поле",
+          "x": 834.4949951171875,
+          "y": 451,
+          "right": 1135.5050048828125,
+          "bottom": 474,
+          "fontSize": 42
+        }
+      ]
+    },
+    {
+      "kind": "tiktok",
+      "path": "TikTok/Obnimay-Elli-Na-Makovom-Pole-TikTok-Cover-Profile-1200x1600.jpg",
+      "width": 1200,
+      "height": 1600,
+      "bytes": 483683,
+      "sha256": "c92fa6eba2a3a2c803f996628de5e0c5bbf65bf1d637922a860818ef070264e4",
+      "textBoxes": [
+        {
+          "text": "Обнимай",
+          "x": 270.7099914550781,
+          "y": 1182,
+          "right": 929.2900085449219,
+          "bottom": 1291,
+          "fontSize": 139
+        },
+        {
+          "text": "Элли на",
+          "x": 475.12999725341797,
+          "y": 1335,
+          "right": 724.870002746582,
+          "bottom": 1381,
+          "fontSize": 62
+        },
+        {
+          "text": "маковом поле",
+          "x": 377.8249969482422,
+          "y": 1421,
+          "right": 822.1750030517578,
+          "bottom": 1456,
+          "fontSize": 62
+        }
+      ]
+    }
+  ],
+  "proofs": [
+    {
+      "path": "analysis/covers/youtube-320x180.png",
+      "width": 320,
+      "height": 180,
+      "sha256": "70600b9b1db3bc50e6d1c6cbc082d80fbefbd55a48c81c06cdd4793e7b17d0ea"
+    },
+    {
+      "path": "analysis/covers/tiktok-150x200.png",
+      "width": 150,
+      "height": 200,
+      "sha256": "07611092060e27f673c1241f222d7eb3eeab57c9d937bf3d949097487ce7fa2a"
+    },
+    {
+      "path": "analysis/covers/tiktok-300x400.png",
+      "width": 300,
+      "height": 400,
+      "sha256": "6a7db18ebbf6c4203d87c7ccf61c9bad1acdcca416d732cf7e2b15abab6603c2"
+    },
+    {
+      "path": "analysis/covers/tiktok-center-crop-5percent.png",
+      "width": 300,
+      "height": 400,
+      "sha256": "a6fafa003c3f7f562a433e27f93915ebaff71747a6ae593460a243cf32fe1f3b"
+    }
+  ],
+  "limits": "Local profile-size and 5% center-crop simulations; no actual platform upload preview claimed.",
+  "visualReview": {
+    "method": "Direct inspection of local YouTube 320×180, TikTok 150×200 and 300×400 5%-center-crop simulations.",
+    "fullTitleAndArtistReadable": true,
+    "focalSubjectPreserved": true,
+    "cropSimulationPass": true,
+    "actualPlatformUploadPreview": false
+  }
+}
