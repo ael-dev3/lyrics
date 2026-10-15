@@ -1,0 +1,2174 @@
+{
+  "schemaVersion": 1,
+  "revision": "nemereno-rebuild-v4.3",
+  "policy": "Every English token has an explicit source meaning and complete grammatical focus. Groups are limited to documented compounds or constructions. All repeats use independent acoustic events.",
+  "templates": {
+    "open-words": {
+      "en": "Words cannot describe the beauty.",
+      "targets": [
+        {
+          "token": "Words",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "cannot",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "describe",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "the",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "beauty",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        }
+      ]
+    },
+    "open-courtyard": {
+      "en": "That I saw today in the courtyard of the house.",
+      "targets": [
+        {
+          "token": "That",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "I",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "saw",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "today",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "in",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "the",
+          "sourceIndices": [
+            5
+          ],
+          "focusSourceIndices": [
+            5
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "courtyard",
+          "sourceIndices": [
+            5
+          ],
+          "focusSourceIndices": [
+            5
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "of",
+          "sourceIndices": [
+            6
+          ],
+          "focusSourceIndices": [
+            6
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "the",
+          "sourceIndices": [
+            6
+          ],
+          "focusSourceIndices": [
+            6
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "house",
+          "sourceIndices": [
+            6
+          ],
+          "focusSourceIndices": [
+            6
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        }
+      ]
+    },
+    "why-speak": {
+      "en": "So why should I speak, then?",
+      "targets": [
+        {
+          "token": "So",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "why",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "should",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "I",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "speak",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "then",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        }
+      ]
+    },
+    "familiar": {
+      "en": "That will not make it any more familiar to you.",
+      "targets": [
+        {
+          "token": "That",
+          "sourceIndices": [
+            0,
+            1
+          ],
+          "focusSourceIndices": [
+            0,
+            1
+          ],
+          "rationale": "От того is a causal construction: that is the consequence of speaking, not an added addressee."
+        },
+        {
+          "token": "will",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "not",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "make",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "it",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "any",
+          "sourceIndices": [
+            6
+          ],
+          "focusSourceIndices": [
+            6
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "more",
+          "sourceIndices": [
+            6
+          ],
+          "focusSourceIndices": [
+            6
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "familiar",
+          "sourceIndices": [
+            7
+          ],
+          "focusSourceIndices": [
+            7
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "to",
+          "sourceIndices": [
+            5
+          ],
+          "focusSourceIndices": [
+            5
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "you",
+          "sourceIndices": [
+            5
+          ],
+          "focusSourceIndices": [
+            5
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        }
+      ]
+    },
+    "familiar-repeat": {
+      "en": "Any more familiar.",
+      "targets": [
+        {
+          "token": "Any",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "more",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "familiar",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        }
+      ]
+    },
+    "tend-love": {
+      "en": "I will keep this love warm and nurture it, so…",
+      "targets": [
+        {
+          "token": "I",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "will",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "keep",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "this",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "love",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "warm",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "and",
+          "sourceIndices": [
+            5
+          ],
+          "focusSourceIndices": [
+            5
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "nurture",
+          "sourceIndices": [
+            6
+          ],
+          "focusSourceIndices": [
+            6
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "it",
+          "sourceIndices": [
+            6
+          ],
+          "focusSourceIndices": [
+            6
+          ],
+          "rationale": "English needs the object of nurture; it resumes the already explicit love and follows вынашивать, not a new sung token."
+        },
+        {
+          "token": "so",
+          "sourceIndices": [
+            7
+          ],
+          "focusSourceIndices": [
+            7
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        }
+      ]
+    },
+    "tree": {
+      "en": "that it grows within me into a tree…",
+      "targets": [
+        {
+          "token": "that",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "it",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "grows",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "within",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "me",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "into",
+          "sourceIndices": [
+            5
+          ],
+          "focusSourceIndices": [
+            5
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "a",
+          "sourceIndices": [
+            5
+          ],
+          "focusSourceIndices": [
+            5
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "tree",
+          "sourceIndices": [
+            5
+          ],
+          "focusSourceIndices": [
+            5
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        }
+      ]
+    },
+    "fingertips": {
+      "en": "so the fingertips become colored by it…",
+      "targets": [
+        {
+          "token": "so",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "the",
+          "sourceIndices": [
+            1,
+            2
+          ],
+          "focusSourceIndices": [
+            1,
+            2
+          ],
+          "rationale": "Кончики пальцев forms the compound noun fingertips; its article follows the same union of the two source intervals."
+        },
+        {
+          "token": "fingertips",
+          "sourceIndices": [
+            1,
+            2
+          ],
+          "focusSourceIndices": [
+            1,
+            2
+          ],
+          "rationale": "Кончики пальцев is the irreducible English compound fingertips; original words remain independently focused."
+        },
+        {
+          "token": "become",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "colored",
+          "sourceIndices": [
+            5
+          ],
+          "focusSourceIndices": [
+            5
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "by",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "it",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        }
+      ]
+    },
+    "measure": {
+      "en": "and for it to be within me beyond measure.",
+      "targets": [
+        {
+          "token": "and",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "for",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "it",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "to",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "be",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "within",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "me",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "beyond",
+          "sourceIndices": [
+            5
+          ],
+          "focusSourceIndices": [
+            5
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "measure",
+          "sourceIndices": [
+            5
+          ],
+          "focusSourceIndices": [
+            5
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        }
+      ]
+    },
+    "measure-repeat": {
+      "en": "Beyond measure…",
+      "targets": [
+        {
+          "token": "Beyond",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "measure",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        }
+      ]
+    },
+    "keep-it": {
+      "en": "Keep it, and keep it, and keep it deep within yourself.",
+      "targets": [
+        {
+          "token": "Keep",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "it",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "and",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "keep",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "it",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "rationale": "The object is elliptical in the second Russian храни; English completes the imperative at that verb."
+        },
+        {
+          "token": "and",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "keep",
+          "sourceIndices": [
+            5
+          ],
+          "focusSourceIndices": [
+            5
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "it",
+          "sourceIndices": [
+            5
+          ],
+          "focusSourceIndices": [
+            5
+          ],
+          "rationale": "The object is elliptical in the third Russian храни; English completes the imperative at that verb."
+        },
+        {
+          "token": "deep",
+          "sourceIndices": [
+            6
+          ],
+          "focusSourceIndices": [
+            6
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "within",
+          "sourceIndices": [
+            7
+          ],
+          "focusSourceIndices": [
+            7
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "yourself",
+          "sourceIndices": [
+            8
+          ],
+          "focusSourceIndices": [
+            8
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        }
+      ]
+    },
+    "warmer": {
+      "en": "It is warmer and softer there.",
+      "targets": [
+        {
+          "token": "It",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "is",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "warmer",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "and",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "softer",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "there",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        }
+      ]
+    },
+    "linen": {
+      "en": "There she is in her snow-white underwear.",
+      "targets": [
+        {
+          "token": "There",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "she",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "is",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "in",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "her",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "snow-white",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "underwear",
+          "sourceIndices": [
+            5
+          ],
+          "focusSourceIndices": [
+            5
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        }
+      ]
+    },
+    "quietly": {
+      "en": "Softly, softly, she cries with happiness.",
+      "targets": [
+        {
+          "token": "Softly",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "softly",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "she",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "rationale": "The feminine personification is established in the preceding source line; the necessary English subject follows the inflected verb плачет."
+        },
+        {
+          "token": "cries",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "with",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "happiness",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        }
+      ]
+    },
+    "share": {
+      "en": "I'd shelter her, I'd embrace her, I'd share her.",
+      "targets": [
+        {
+          "token": "I'd",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "rationale": "The conditional бы expresses the narrator’s wish; English supplies I would without guessing a beloved."
+        },
+        {
+          "token": "shelter",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "her",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "I'd",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "rationale": "The repeated conditional remains independent and receives its own English contraction."
+        },
+        {
+          "token": "embrace",
+          "sourceIndices": [
+            5
+          ],
+          "focusSourceIndices": [
+            5
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "her",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "I'd",
+          "sourceIndices": [
+            7
+          ],
+          "focusSourceIndices": [
+            7
+          ],
+          "rationale": "The third conditional remains independent and receives its own English contraction."
+        },
+        {
+          "token": "share",
+          "sourceIndices": [
+            8
+          ],
+          "focusSourceIndices": [
+            8
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "her",
+          "sourceIndices": [
+            6
+          ],
+          "focusSourceIndices": [
+            6
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        }
+      ]
+    },
+    "enough": {
+      "en": "God grant that it will be enough.",
+      "targets": [
+        {
+          "token": "God",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "grant",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "that",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "it",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "will",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "be",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "enough",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        }
+      ]
+    },
+    "lose-stars": {
+      "en": "However much you lose—stars fall that way…",
+      "targets": [
+        {
+          "token": "However",
+          "sourceIndices": [
+            0,
+            1,
+            3
+          ],
+          "focusSourceIndices": [
+            0,
+            1,
+            3
+          ],
+          "rationale": "Сколько бы … ни is a concessive construction. However follows only its contributing source intervals, excluding intervening you."
+        },
+        {
+          "token": "much",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "you",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "lose",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "stars",
+          "sourceIndices": [
+            7
+          ],
+          "focusSourceIndices": [
+            7
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "fall",
+          "sourceIndices": [
+            6
+          ],
+          "focusSourceIndices": [
+            6
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "that",
+          "sourceIndices": [
+            5
+          ],
+          "focusSourceIndices": [
+            5
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "way",
+          "sourceIndices": [
+            5
+          ],
+          "focusSourceIndices": [
+            5
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        }
+      ]
+    },
+    "blue-sky": {
+      "en": "shining again in the blue sky.",
+      "targets": [
+        {
+          "token": "shining",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "again",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "in",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "the",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "blue",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "sky",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        }
+      ]
+    },
+    "heart-breaks": {
+      "en": "However often your heart breaks into pieces…",
+      "targets": [
+        {
+          "token": "However",
+          "sourceIndices": [
+            0,
+            1,
+            6
+          ],
+          "focusSourceIndices": [
+            0,
+            1,
+            6
+          ],
+          "rationale": "Сколько бы … не/ни expresses concession here, not negation of the heart breaking; focus is the union of contributing words."
+        },
+        {
+          "token": "often",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "your",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "heart",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "breaks",
+          "sourceIndices": [
+            7
+          ],
+          "focusSourceIndices": [
+            7
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "into",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "pieces",
+          "sourceIndices": [
+            5
+          ],
+          "focusSourceIndices": [
+            5
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        }
+      ]
+    },
+    "new-strength": {
+      "en": "It will bloom again with new strength.",
+      "targets": [
+        {
+          "token": "It",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "will",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "bloom",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "again",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "with",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "new",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "strength",
+          "sourceIndices": [
+            5
+          ],
+          "focusSourceIndices": [
+            5
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        }
+      ]
+    },
+    "keep-light": {
+      "en": "Keep your light…",
+      "targets": [
+        {
+          "token": "Keep",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "your",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "light",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        }
+      ]
+    },
+    "hand-full": {
+      "en": "for your palm will not grow empty…",
+      "targets": [
+        {
+          "token": "for",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "your",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "palm",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "will",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "not",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "grow",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "empty",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        }
+      ]
+    },
+    "as-long-as-a": {
+      "en": "as long as you are love, as long as you are love…",
+      "targets": [
+        {
+          "token": "as",
+          "sourceIndices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "focusSourceIndices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "rationale": "До тех пор, пока is one temporal construction, as long as. Focus uses the union, not an enclosing span."
+        },
+        {
+          "token": "long",
+          "sourceIndices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "focusSourceIndices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "rationale": "The complete temporal expression follows its four contributing source words."
+        },
+        {
+          "token": "as",
+          "sourceIndices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "focusSourceIndices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "rationale": "The complete temporal expression follows its four contributing source words."
+        },
+        {
+          "token": "you",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "are",
+          "sourceIndices": [
+            5
+          ],
+          "focusSourceIndices": [
+            5
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "love",
+          "sourceIndices": [
+            5
+          ],
+          "focusSourceIndices": [
+            5
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "as",
+          "sourceIndices": [
+            6
+          ],
+          "focusSourceIndices": [
+            6
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "long",
+          "sourceIndices": [
+            6
+          ],
+          "focusSourceIndices": [
+            6
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "as",
+          "sourceIndices": [
+            6
+          ],
+          "focusSourceIndices": [
+            6
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "you",
+          "sourceIndices": [
+            7
+          ],
+          "focusSourceIndices": [
+            7
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "are",
+          "sourceIndices": [
+            8
+          ],
+          "focusSourceIndices": [
+            8
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "love",
+          "sourceIndices": [
+            8
+          ],
+          "focusSourceIndices": [
+            8
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        }
+      ]
+    },
+    "as-long-as-b": {
+      "en": "as long as you are love.",
+      "targets": [
+        {
+          "token": "as",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "long",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "as",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "you",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "are",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "love",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        }
+      ]
+    },
+    "because-i": {
+      "en": "For I…",
+      "targets": [
+        {
+          "token": "For",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "I",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        }
+      ]
+    },
+    "bloom-again": {
+      "en": "She will bloom again, she will bloom again.",
+      "targets": [
+        {
+          "token": "She",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "will",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "bloom",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "again",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "she",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "will",
+          "sourceIndices": [
+            5
+          ],
+          "focusSourceIndices": [
+            5
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "bloom",
+          "sourceIndices": [
+            5
+          ],
+          "focusSourceIndices": [
+            5
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "again",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        }
+      ]
+    },
+    "backing-keep-a": {
+      "en": "Keep it, keep it, keep it deep within yourself.",
+      "targets": [
+        {
+          "token": "Keep",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "it",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "keep",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "it",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "keep",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "it",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "deep",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "within",
+          "sourceIndices": [
+            5
+          ],
+          "focusSourceIndices": [
+            5
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "yourself",
+          "sourceIndices": [
+            6
+          ],
+          "focusSourceIndices": [
+            6
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        }
+      ]
+    },
+    "backing-ah": {
+      "en": "Ah…",
+      "targets": [
+        {
+          "token": "Ah",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        }
+      ]
+    },
+    "backing-keep-b": {
+      "en": "Keep it, keep it, and keep it.",
+      "targets": [
+        {
+          "token": "Keep",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "it",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "keep",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "it",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "and",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "keep",
+          "sourceIndices": [
+            5
+          ],
+          "focusSourceIndices": [
+            5
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        },
+        {
+          "token": "it",
+          "sourceIndices": [
+            5
+          ],
+          "focusSourceIndices": [
+            5
+          ],
+          "rationale": "Explicit source meaning; English grammatical completions share this source event and have no invented timing."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "revision": "nemereno-rebuild-v3",
+  "sourceSha256": "aad4f48816923b53b246a3d58a6e03ca3dcf55ca73ef3ed513b8a9f8822b664d",
+  "materials": {
+    "original": {
+      "relativePrivateFile": "analysis/original.wav",
+      "sampleRate": 44100,
+      "channels": 2,
+      "frames": 9036224,
+      "duration": 204.90303854875285,
+      "sha256": "197c15ab231639e852a9237d30cac535f6e5a04895162fe0be8db9229ca6c5a9"
+    },
+    "vocals": {
+      "relativePrivateFile": "analysis/separated/htdemucs/original/vocals.wav",
+      "sampleRate": 44100,
+      "channels": 2,
+      "frames": 9036224,
+      "duration": 204.90303854875285,
+      "sha256": "24b5ba7979fe49ac7c56bf627bfeb1bed2a316bafea92a5d49e734f47e6e29a5"
+    },
+    "accompaniment": {
+      "relativePrivateFile": "analysis/separated/htdemucs/original/no_vocals.wav",
+      "sampleRate": 44100,
+      "channels": 2,
+      "frames": 9036224,
+      "duration": 204.90303854875285,
+      "sha256": "7ba4aff01488e2d53b2f9119551f52d5881a993ad92aaa18a7845e7a13999ff0"
+    }
+  },
+  "stemClockCheck": {
+    "interval": [
+      65,
+      77
+    ],
+    "decimationForLagSearch": 8,
+    "peakLagSourceSamples": 0,
+    "zeroLagCorrelation": 0.9976264294089126,
+    "scope": "Clock conservation check for the decoded mix and recombined estimates; not a vocal onset or listening check."
+  },
+  "observations": {
+    "whisper": "large-v3-turbo via stable-ts on bounded source and vocal-estimate crops",
+    "characterAlignment": "TorchAudio MMS_FA on per-phrase and wider context crops, source and vocal estimate",
+    "characterEncoderStrideSourceSeconds": 0.02,
+    "characterEncoderReceptiveFieldSeconds": 0.025,
+    "signalSpectrogramWindowSeconds": 0.032,
+    "signalSpectrogramHopSeconds": 0.002,
+    "coordinateSampleRate": 44100,
+    "precisionLimit": "Sample-indexed display is deterministic. Character cores and signal windows do not certify sub-millisecond perceptual word boundaries."
+  },
+  "listeningReviewed": false
+}

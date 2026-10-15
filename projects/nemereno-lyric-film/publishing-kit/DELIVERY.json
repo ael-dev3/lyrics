@@ -1,0 +1,307 @@
+{
+  "schemaVersion": 1,
+  "edition": "nemereno-approved-v4.3-production",
+  "preparedAtUtc": "2026-10-15T23:49:30.901Z",
+  "identity": {
+    "schemaVersion": 1,
+    "revision": "nemereno-rebuild-v4.3",
+    "sourceSha256": "aad4f48816923b53b246a3d58a6e03ca3dcf55ca73ef3ed513b8a9f8822b664d",
+    "timelineSha256": "652bd0b9b0b127ca8d5b5116dd00e4befc63531f3c0106f604ea170bc6710ace",
+    "sceneSha256": "a6d6001fb0b1bd8f6676c77f1f8ffb1c085241cebea00fb0c33a3cd699981350",
+    "sceneFiles": [
+      "src/model.ts",
+      "src/scene.ts",
+      "src/player.ts",
+      "review/index.html",
+      "public/audio-features.json",
+      "public/artwork-reference.png",
+      "public/visual-contract.json",
+      "public/fonts/Literata.ttf",
+      "public/fonts/Literata-OFL.txt"
+    ]
+  },
+  "review": "Complete current-edition normal-speed, uncertain-event reduced-speed and both-layout human review attested by the owner; explicit rendering and repository handoff authorized.",
+  "movies": [
+    {
+      "file": "YouTube/Nemereno-Lampabikt-Elli-YouTube-1920x1080-60fps.mp4",
+      "bytes": 53956686,
+      "sha256": "a42d2c97929ff8309996ae89651bca7478def15eceb2a93f1e4cbc915ea31566",
+      "width": 1920,
+      "height": 1080,
+      "fps": 60,
+      "videoDurationSeconds": 204.9,
+      "audioDurationSeconds": 204.9,
+      "verification": "evidence/final-landscape-verification.json",
+      "audio": "Original AAC packets and decoded PCM identical.",
+      "status": "pass"
+    },
+    {
+      "file": "TikTok/Nemereno-Lampabikt-Elli-TikTok-1080x1920-60fps.mp4",
+      "bytes": 52256983,
+      "sha256": "7f89277337417740289ee41a998d9f62ea24f7b8da0fe0c58e0a69a93a6aa287",
+      "width": 1080,
+      "height": 1920,
+      "fps": 60,
+      "videoDurationSeconds": 204.9,
+      "audioDurationSeconds": 204.9,
+      "verification": "evidence/final-portrait-verification.json",
+      "audio": "Original AAC packets and decoded PCM identical.",
+      "status": "pass"
+    },
+    {
+      "file": "Farcaster/Nemereno-Farcaster-1920x1080-60fps.mp4",
+      "bytes": 53956686,
+      "sha256": "a42d2c97929ff8309996ae89651bca7478def15eceb2a93f1e4cbc915ea31566",
+      "width": 1920,
+      "height": 1080,
+      "fps": 60,
+      "videoDurationSeconds": 204.9,
+      "byteIdenticalTo": "YouTube/Nemereno-Lampabikt-Elli-YouTube-1920x1080-60fps.mp4",
+      "status": "pass"
+    }
+  ],
+  "covers": [
+    {
+      "platform": "YouTube",
+      "path": "YouTube/Nemereno-YouTube-Thumbnail-1280x720.jpg",
+      "width": 1280,
+      "height": 720,
+      "bytes": 257562,
+      "sha256": "822c11e82347ad61629f2644632254b97c5fe2966e4ca616fb192bc27628337e",
+      "textBoxes": [
+        {
+          "text": "немерено",
+          "left": 751.2599945068359,
+          "top": 272,
+          "right": 1158.930191040039,
+          "bottom": 334,
+          "size": 85
+        },
+        {
+          "text": "лампабикт",
+          "left": 849.4000015258789,
+          "top": 360,
+          "right": 1059.5265274047852,
+          "bottom": 392,
+          "size": 38
+        },
+        {
+          "text": "Элли на маковом поле",
+          "left": 794.0500030517578,
+          "top": 418,
+          "right": 1115.9004669189453,
+          "bottom": 438,
+          "size": 29
+        },
+        {
+          "text": "RUSSIAN / ENGLISH LYRICS",
+          "left": 836.7600021362305,
+          "top": 488,
+          "right": 1074.069450378418,
+          "bottom": 504,
+          "size": 17
+        }
+      ]
+    },
+    {
+      "platform": "TikTok",
+      "path": "TikTok/Nemereno-TikTok-Cover-Profile-1200x1600.jpg",
+      "width": 1200,
+      "height": 1600,
+      "bytes": 499943,
+      "sha256": "0ad85ea514c35a13d68b31779ccaa4abe016b18d9bf4d8a660f350f48c11a47a",
+      "textBoxes": [
+        {
+          "text": "немерено",
+          "left": 129.97500610351562,
+          "top": 1208,
+          "right": 1070.1674499511719,
+          "bottom": 1353,
+          "size": 196
+        },
+        {
+          "text": "лампабикт",
+          "left": 438.82000732421875,
+          "top": 1375,
+          "right": 759.4864501953125,
+          "bottom": 1421,
+          "size": 58
+        },
+        {
+          "text": "Элли на маковом поле",
+          "left": 332.94500732421875,
+          "top": 1446,
+          "right": 867.1460571289062,
+          "bottom": 1482,
+          "size": 48
+        }
+      ]
+    },
+    {
+      "platform": "Farcaster",
+      "path": "Farcaster/Nemereno-Farcaster-Thumbnail-1280x720.jpg",
+      "width": 1280,
+      "height": 720,
+      "bytes": 260675,
+      "sha256": "f4fe676ff3f78901c4fdde53e6ce574c7c3277348017dd405379ba4066bdbd98",
+      "textBoxes": [
+        {
+          "text": "немерено",
+          "left": 751.2599945068359,
+          "top": 272,
+          "right": 1158.930191040039,
+          "bottom": 334,
+          "size": 85
+        },
+        {
+          "text": "лампабикт",
+          "left": 849.4000015258789,
+          "top": 360,
+          "right": 1059.5265274047852,
+          "bottom": 392,
+          "size": 38
+        },
+        {
+          "text": "Элли на маковом поле",
+          "left": 794.0500030517578,
+          "top": 418,
+          "right": 1115.9004669189453,
+          "bottom": 438,
+          "size": 29
+        },
+        {
+          "text": "RUSSIAN / ENGLISH LYRICS",
+          "left": 836.7600021362305,
+          "top": 488,
+          "right": 1074.069450378418,
+          "bottom": 504,
+          "size": 17
+        },
+        {
+          "text": "AI-assisted lyric edition",
+          "left": 831.4800033569336,
+          "top": 596,
+          "right": 1077.9547958374023,
+          "bottom": 618,
+          "size": 22
+        }
+      ]
+    }
+  ],
+  "files": [
+    {
+      "file": "Captions/Bilingual.srt",
+      "bytes": 5987,
+      "sha256": "6e706a8fbc8e19337b6a4e43403c12822b9b72aca0f80df945b72fa7220be52c"
+    },
+    {
+      "file": "Captions/English.srt",
+      "bytes": 3336,
+      "sha256": "38e3facb97676d9e36ab242cbaaa62c09e2e957e8317446a4f98f272007a308a"
+    },
+    {
+      "file": "Captions/Russian.srt",
+      "bytes": 4205,
+      "sha256": "91f40ceb2fb7633af6d1f1721b1b31c17277e8f588639714c035748928c2b1ed"
+    },
+    {
+      "file": "Farcaster/Caption.txt",
+      "bytes": 258,
+      "sha256": "3b3c1ac4e93f7ad5fb23999dd5291aa17f58fc384b910e4b90045dfb428e4bb6"
+    },
+    {
+      "file": "Farcaster/Nemereno-Farcaster-1920x1080-60fps.mp4",
+      "bytes": 53956686,
+      "sha256": "a42d2c97929ff8309996ae89651bca7478def15eceb2a93f1e4cbc915ea31566"
+    },
+    {
+      "file": "Farcaster/Nemereno-Farcaster-Thumbnail-1280x720.jpg",
+      "bytes": 260675,
+      "sha256": "f4fe676ff3f78901c4fdde53e6ce574c7c3277348017dd405379ba4066bdbd98"
+    },
+    {
+      "file": "README.txt",
+      "bytes": 1372,
+      "sha256": "fc4449702ec3f76cf21a1eba88e489264540fe20d855851f29ad6badfae9bf06"
+    },
+    {
+      "file": "TikTok/Description.txt",
+      "bytes": 503,
+      "sha256": "8a5ab26290e001b3b7317d8e755e0ffcf2648c7eaf46be206779f85f140e6357"
+    },
+    {
+      "file": "TikTok/Nemereno-Lampabikt-Elli-TikTok-1080x1920-60fps.mp4",
+      "bytes": 52256983,
+      "sha256": "7f89277337417740289ee41a998d9f62ea24f7b8da0fe0c58e0a69a93a6aa287"
+    },
+    {
+      "file": "TikTok/Nemereno-TikTok-Cover-Profile-1200x1600.jpg",
+      "bytes": 499943,
+      "sha256": "0ad85ea514c35a13d68b31779ccaa4abe016b18d9bf4d8a660f350f48c11a47a"
+    },
+    {
+      "file": "TikTok/Title.txt",
+      "bytes": 84,
+      "sha256": "9d2da922ab416d388433a9a00c014467c7643f52a3517d4f48dd1c10e18d44a7"
+    },
+    {
+      "file": "YouTube/Description.txt",
+      "bytes": 1007,
+      "sha256": "91a76ed7ed6b93b92c66ee79fec96510ddf2fbb035460f6f768306ca8240a290"
+    },
+    {
+      "file": "YouTube/Nemereno-Lampabikt-Elli-YouTube-1920x1080-60fps.mp4",
+      "bytes": 53956686,
+      "sha256": "a42d2c97929ff8309996ae89651bca7478def15eceb2a93f1e4cbc915ea31566"
+    },
+    {
+      "file": "YouTube/Nemereno-YouTube-Thumbnail-1280x720.jpg",
+      "bytes": 257562,
+      "sha256": "822c11e82347ad61629f2644632254b97c5fe2966e4ca616fb192bc27628337e"
+    },
+    {
+      "file": "YouTube/Title.txt",
+      "bytes": 111,
+      "sha256": "e5edf3b5e33fb35f2e04b13dec5bc16aeed1c9e35c3d771e68a982c0d500e7ca"
+    }
+  ],
+  "verificationSummary": [
+    {
+      "format": "landscape",
+      "fullStrictDecode": true,
+      "everyFramePts": true,
+      "originalAudioPacketsAndPcm": true,
+      "blackIntervals": [],
+      "selectedSceneFrames": 1114,
+      "glyphStateChecks": 14952,
+      "allTokensVerified": 605,
+      "tokensFocusedAndNeutral": 603,
+      "continuousFocusTokens": [
+        "NEM-backing-ah-R01",
+        "NEM-backing-ah-E01"
+      ],
+      "clearStateGlyphChecks": 4,
+      "deliberatelyDelayedTimingControls": 605,
+      "sampledReadingGapFrames": 201
+    },
+    {
+      "format": "portrait",
+      "fullStrictDecode": true,
+      "everyFramePts": true,
+      "originalAudioPacketsAndPcm": true,
+      "blackIntervals": [],
+      "selectedSceneFrames": 1114,
+      "glyphStateChecks": 14952,
+      "allTokensVerified": 605,
+      "tokensFocusedAndNeutral": 603,
+      "continuousFocusTokens": [
+        "NEM-backing-ah-R01",
+        "NEM-backing-ah-E01"
+      ],
+      "clearStateGlyphChecks": 4,
+      "deliberatelyDelayedTimingControls": 605,
+      "sampledReadingGapFrames": 201
+    }
+  ],
+  "posting": "Files prepared for manual uploading; no social-media post or platform upload performed."
+}

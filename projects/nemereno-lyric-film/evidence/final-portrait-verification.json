@@ -1,0 +1,62 @@
+{
+  "status": "pass",
+  "verifierSha256": "2587800ab6c0fc467aeae0fb4ac036dfeb4eb25e8fe1c0046befa774face424a",
+  "file": "Nemereno-Lampabikt-Elli-TikTok-1080x1920-60fps.mp4",
+  "sha256": "7f89277337417740289ee41a998d9f62ea24f7b8da0fe0c58e0a69a93a6aa287",
+  "format": "portrait",
+  "width": 1080,
+  "height": 1920,
+  "frames": 12294,
+  "fps": 60,
+  "videoDurationSeconds": 204.9,
+  "audioDurationSeconds": 204.9,
+  "sourceAudioPackets": 8826,
+  "audioPacketsIdentical": true,
+  "decodedPcmHash": "SHA256=ae0673a8bd4b75a25fea6049af2b326ab90d2de2df4646a69dafe36cc9894516",
+  "decodedPcmIdentical": true,
+  "everyFramePtsVerified": true,
+  "fullStrictDecode": true,
+  "blackIntervals": [],
+  "selectedSceneFrames": 1114,
+  "glyphStateChecks": 14952,
+  "sourceAndTargetTokensVerified": 605,
+  "tokensSeenFocusedAndNeutral": 603,
+  "continuousFocusTokens": [
+    "NEM-backing-ah-R01",
+    "NEM-backing-ah-E01"
+  ],
+  "clearStateGlyphChecks": 4,
+  "allVisibleTokenFocusStatesCovered": true,
+  "deliberatelyDelayedTimingControls": 605,
+  "minimumMatchingGlyphFraction": 0.9574468085106383,
+  "minimumDecisiveGlyphFraction": 0.8510158013544018,
+  "minimumNearReferenceGlyphFraction": 0.9574468085106383,
+  "classificationMethod": "At least 75% of chroma-aware eroded glyph samples must be decisive; at least 90% of decisive samples must favor the expected focus and 90% of all samples must match the painted reference. Word colors are tested from 95% line opacity; complete selected-scene comparisons cover fades.",
+  "maximumSceneMeanAbsoluteRgbError": 2.3854726080246915,
+  "maximumSceneFractionChannelsOver24": 0.0006989454732510288,
+  "sampledReadingGapFrames": 201,
+  "maximumGapReadingAreaMeanAbsoluteRgbError": 2.3208140350877193,
+  "maximumGapReadingAreaFractionChannelsOver24": 0,
+  "sceneComparisonReference": "Exact original decoded source picture min(5121, floor(outputFrame*5/12)) for every selected encoded output frame. All 5122 native pictures are decoded in production; the final real picture covers the AAC tail.",
+  "nativeSourceComparisonPictures": 934,
+  "listeningGateComplete": true,
+  "sourceSha256": "aad4f48816923b53b246a3d58a6e03ca3dcf55ca73ef3ed513b8a9f8822b664d",
+  "revision": "nemereno-rebuild-v4.3",
+  "timelineSha256": "652bd0b9b0b127ca8d5b5116dd00e4befc63531f3c0106f604ea170bc6710ace",
+  "sceneSha256": "a6d6001fb0b1bd8f6676c77f1f8ffb1c085241cebea00fb0c33a3cd699981350",
+  "producerAdapters": [
+    {
+      "path": "scripts/render-production.ts",
+      "sha256": "bc03a8108550a40481288f95d4e5481518a08d418cc9ae8f6ea13b782fd22f2c"
+    },
+    {
+      "path": "scripts/production-authorization.ts",
+      "sha256": "b9ed8fa005d3e9eeac722a66a1984b25954c91d81c27c64a246af29c43ffe659"
+    },
+    {
+      "path": "scripts/project-identity.ts",
+      "sha256": "eec72557ae115bb1a1e1f8cce63f9f3a5b1cf25aaf0f1b7b09f2c80315eaaa92"
+    }
+  ],
+  "limits": "Encoded technical checks verify selected timing display and preserved audio; they do not certify millisecond acoustic perception or a complete listening attestation."
+}

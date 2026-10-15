@@ -2,6 +2,12 @@
 
 This is an **AI-assisted lyric-film and workflow project**. It should not be described as entirely hand-coded, manually timed or hand-illustrated.
 
+## немерено production
+
+OpenAI Codex assisted with the English translation, complete meaning links, reconciliation of acoustic candidates, TypeScript presentation and visualizer, rendering/verification tooling, cover typography and posting copy. Bounded Whisper, independent MMS_FA and source/vocal signal observations support the selected events, with model disagreement and uncertainty preserved. The owner explicitly attested full normal-speed review, reduced-speed uncertain-word/held-ending review and both layouts for the exact v4.3 inputs before production. This is human attestation, not assistant listening or invented playback telemetry.
+
+The original photograph and AAC recording remain the source. No replacement photograph or synthesized vocals were generated. Covers combine the actual source photograph and code-composed typography. The Farcaster package combines the title, an explicit AI-assisted role disclosure and original-source credit in one ready-to-post caption. [Approved identity](projects/nemereno-lyric-film/evidence/approved-preview.json) · [Production process](projects/nemereno-lyric-film/PRODUCTION-NOTES.md) · [Posting disclosure guide](docs/ai-disclosure-publishing.md).
+
 ## Кометы production
 
 This POLNALYUBVI bilingual edition uses OpenAI Codex assistance for translation and meaning correspondence, TypeScript composition, acoustic candidate reconciliation, visual inspection, rendering verification, publishing assets and documentation. Bounded Whisper and MMS_FA observations, original waveform/spectral views and a source-clock-verified estimated vocal support the retained timing choices. Their precision and disagreement remain explicit; they do not certify uniquely measurable phonetic boundaries.

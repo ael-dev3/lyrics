@@ -2,6 +2,12 @@
 
 **We are not the creators of the original music, lyrics, performances, musical remixes, anime footage, characters or source illustrations. We do not take credit for that work.** Our contribution is the additional lyric-film presentation and production workflow. Artist and source-upload links below distinguish those roles; a source uploader is not necessarily the owner of every element in an upload.
 
+## немерено — лампабикт feat. Элли на маковом поле
+
+Original recording, performers and source photograph: [the supplied немерено upload](https://www.youtube.com/watch?v=sPw-_Of_LgQ), лампабикт feat. Элли на маковом поле and the original creators. Separate photographer/composer credits have not been independently verified. The original AAC soundtrack is retained; the photographed figure is preserved through deliberate uniform crops.
+
+Added English translation, bilingual word presentation, restrained measured spectrum, code-composed covers and publishing copy: Ael / Lyrics workflow, assisted by OpenAI Codex. The [project](projects/nemereno-lyric-film/README.md) bundles Literata with its [SIL Open Font License](projects/nemereno-lyric-film/public/fonts/Literata-OFL.txt). Original music, lyrics, imagery and source-derived covers remain excluded from the repository's scoped licence.
+
 ## Друг
 
 Original recording, lyrics and release illustration: **REDCHINAWAVE — Друг**, [official audio upload](https://www.youtube.com/watch?v=SXAReusgEC0). The upload establishes the recording's attribution; no separate illustrator identity is inferred. [Locked source identity](projects/drug-lyric-film/source/recording.json).
