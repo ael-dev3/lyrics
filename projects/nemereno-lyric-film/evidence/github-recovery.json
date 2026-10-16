@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "checkedAtUtc": "2026-10-16T00:01:00.586369+00:00",
+  "status": "pass",
+  "repository": "ael-dev3/lyrics",
+  "release": {
+    "assets": [
+      {
+        "digest": "sha256:ec4d75dc8c7131d68d87e083c2f3918cad1ae29d40901b5faac00faa5e1ce4b6",
+        "id": 645556638,
+        "name": "BACKUP.json",
+        "size": 108738,
+        "state": "uploaded"
+      },
+      {
+        "digest": "sha256:3a87661936b04892cbd5422fc1f704949bbe1fe28a86c8e0a05429a26c0f81d8",
+        "id": 645556636,
+        "name": "Nemereno-v4.3-Media-Recovery.zip",
+        "size": 315967321,
+        "state": "uploaded"
+      },
+      {
+        "digest": "sha256:6013ebfd218e4e6c29e0133ab96f5b77e597b398abb5d16146313eb68a670172",
+        "id": 645556637,
+        "name": "Nemereno-v4.3-Source.zip",
+        "size": 10845084,
+        "state": "uploaded"
+      },
+      {
+        "digest": "sha256:879bd99df52f14c9d9a0fbca1a30339753eb12bc76b12d56a9b9acbd2ea653d1",
+        "id": 645556639,
+        "name": "Nemereno-v4.3-Upload-Kit.zip",
+        "size": 158875030,
+        "state": "uploaded"
+      }
+    ],
+    "draft": true,
+    "html_url": "https://github.com/ael-dev3/lyrics/releases/tag/untagged-b5ddb265df47d065f05a",
+    "id": 414386062,
+    "tag_name": "nemereno-v4.3-recovery-2026-10-16",
+    "target_commitish": "aa0660e870f8d24b0713f6cba982e693632dc53c"
+  },
+  "sourceCommit": "aa0660e870f8d24b0713f6cba982e693632dc53c",
+  "identity": {
+    "schemaVersion": 1,
+    "revision": "nemereno-rebuild-v4.3",
+    "sourceSha256": "aad4f48816923b53b246a3d58a6e03ca3dcf55ca73ef3ed513b8a9f8822b664d",
+    "timelineSha256": "652bd0b9b0b127ca8d5b5116dd00e4befc63531f3c0106f604ea170bc6710ace",
+    "sceneSha256": "a6d6001fb0b1bd8f6676c77f1f8ffb1c085241cebea00fb0c33a3cd699981350",
+    "sceneFiles": [
+      "src/model.ts",
+      "src/scene.ts",
+      "src/player.ts",
+      "review/index.html",
+      "public/audio-features.json",
+      "public/artwork-reference.png",
+      "public/visual-contract.json",
+      "public/fonts/Literata.ttf",
+      "public/fonts/Literata-OFL.txt"
+    ]
+  },
+  "archiveManifests": [
+    {
+      "file": "Nemereno-v4.3-Source.zip",
+      "bytes": 10845084,
+      "sha256": "6013ebfd218e4e6c29e0133ab96f5b77e597b398abb5d16146313eb68a670172",
+      "payloadFiles": 192,
+      "manifest": "BACKUP-METADATA/Nemereno-v4.3-Source-manifest.json"
+    },
+    {
+      "file": "Nemereno-v4.3-Media-Recovery.zip",
+      "bytes": 315967321,
+      "sha256": "3a87661936b04892cbd5422fc1f704949bbe1fe28a86c8e0a05429a26c0f81d8",
+      "payloadFiles": 396,
+      "manifest": "BACKUP-METADATA/Nemereno-v4.3-Media-Recovery-manifest.json"
+    },
+    {
+      "file": "Nemereno-v4.3-Upload-Kit.zip",
+      "bytes": 158875030,
+      "sha256": "879bd99df52f14c9d9a0fbca1a30339753eb12bc76b12d56a9b9acbd2ea653d1",
+      "payloadFiles": 17,
+      "manifest": "BACKUP-METADATA/Nemereno-v4.3-Upload-Kit-manifest.json"
+    }
+  ],
+  "downloadedBackupJson": {
+    "file": "BACKUP.json",
+    "bytes": 108738,
+    "sha256": "ec4d75dc8c7131d68d87e083c2f3918cad1ae29d40901b5faac00faa5e1ce4b6"
+  },
+  "remoteDigestAndSizeMatch": true,
+  "freshDownload": true,
+  "restoreVerification": {
+    "status": "pass",
+    "archives": 3,
+    "payloadHashesVerified": 605,
+    "uniqueProjectFilesCovered": 506,
+    "freshRestoreVerified": true,
+    "sourceCommit": "aa0660e870f8d24b0713f6cba982e693632dc53c",
+    "identity": {
+      "schemaVersion": 1,
+      "revision": "nemereno-rebuild-v4.3",
+      "sourceSha256": "aad4f48816923b53b246a3d58a6e03ca3dcf55ca73ef3ed513b8a9f8822b664d",
+      "timelineSha256": "652bd0b9b0b127ca8d5b5116dd00e4befc63531f3c0106f604ea170bc6710ace",
+      "sceneSha256": "a6d6001fb0b1bd8f6676c77f1f8ffb1c085241cebea00fb0c33a3cd699981350",
+      "sceneFiles": [
+        "src/model.ts",
+        "src/scene.ts",
+        "src/player.ts",
+        "review/index.html",
+        "public/audio-features.json",
+        "public/artwork-reference.png",
+        "public/visual-contract.json",
+        "public/fonts/Literata.ttf",
+        "public/fonts/Literata-OFL.txt"
+      ]
+    }
+  },
+  "restoredAuthorizationGateTest": "pass; exact current approval accepted and missing/stale/incomplete/unapproved cases rejected",
+  "dependencies": "node_modules omitted; package-lock.json retained; no full dependency install or second production render claimed",
+  "scope": "Authenticated unpublished draft recovery assets. Original media and full films excluded from public Git tree. Separate source publication contains the post-backup verification receipt. No platform upload performed.",
+  "desktopFiles": 17,
+  "farcasterPost": "Single Caption.txt combines title, AI-assisted roles, human direction/review and original-source credit."
+}

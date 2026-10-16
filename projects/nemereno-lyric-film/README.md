@@ -40,6 +40,7 @@ The checksum-verified 17-file upload kit contains YouTube 1920×1080, TikTok 108
 - [Owner review and identity](source/REVIEW.json) · [landscape checks](evidence/final-landscape-verification.json) · [portrait checks](evidence/final-portrait-verification.json)
 - [Delivery inventory](evidence/upload-kit.json) · [Desktop verification](evidence/desktop-delivery.json) · [covers](evidence/cover-assets.json) · [publishing copy](evidence/publishing-copy.json)
 - [Exact production and reusable lessons](PRODUCTION-NOTES.md) · [recovery procedure and agent handoff](AGENT-HANDOFF.md)
+- [Verified GitHub backup and fresh restore](RELEASE-BACKUP.md)
 
 ## Records and status
 

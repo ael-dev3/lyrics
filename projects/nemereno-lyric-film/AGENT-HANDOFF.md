@@ -78,6 +78,8 @@ The strict renderer requires current complete listening evidence and explicit ap
 
 ## Recovery archive procedure
 
+The delivered archive identities and successful remote download/fresh restore are recorded in [RELEASE-BACKUP.md](RELEASE-BACKUP.md) and [the recovery receipt](evidence/github-recovery.json). The procedure below describes how to make a future recovery revision; do not overwrite the existing immutable assets.
+
 First commit the finished project and public documentation. From this project, select new directories outside the project for archives, downloaded copies and fresh restore:
 
 ```sh
