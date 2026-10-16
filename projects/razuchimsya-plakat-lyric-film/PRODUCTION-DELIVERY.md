@@ -41,7 +41,7 @@ The final-file verifier checks every picture timestamp, a strict full audio/vide
 
 The upload kit includes both films, dedicated YouTube and tall TikTok covers, titles/descriptions, optional Russian/English/bilingual SRTs, and a Farcaster copy with one combined title/disclosure/source-credit file. The original photograph and focal subject remain intact. Cover typography is composed in code; local 320×180 wide, 150×200 / 300×400 tall and 5% crop proofs retain the full title and artist. These are local crop checks, not a claim about an actual platform upload.
 
-The final delivery and Desktop-copy receipts identify exact bytes. Full original media, editable production source, retained analysis and the upload kit belong in an authenticated unpublished recovery set. Public Git receives code, neutral process notes and verification evidence. No social-media upload or public media release is implied by creating the kit.
+The final delivery and Desktop-copy receipts identify exact bytes. Full original media, editable production source, retained analysis and the upload kit are backed up in [a verified authenticated unpublished recovery set](RELEASE-BACKUP.md), independently downloaded and restored. Public Git receives code, neutral process notes and verification evidence. No social-media upload or public media release is implied by creating the kit.
 
 ## Reproduction
 

@@ -36,7 +36,7 @@ The original is identified in [source/recording.json](source/recording.json). It
 - Source Opus becomes checked Apple AAC LC at 320 kb/s: zero measured offset, gain 0.994308 and waveform SNR 30.91 dB. The first AAC export failed quality checks and was replaced without changing a single video packet.
 - The **17-file Desktop kit** contains YouTube/TikTok films and covers, posting text, optional SRTs and a Farcaster copy with a single disclosure/caption file. [Delivery manifest](evidence/upload-kit.json) · [Desktop hash verification](evidence/desktop-delivery.json).
 
-[Production adapter, audio correction and delivery process](PRODUCTION-DELIVERY.md) · [Final landscape checks](evidence/final-landscape-verification.json) · [Final portrait checks](evidence/final-portrait-verification.json) · [Authenticated recovery backup](RELEASE-BACKUP.md)
+[Production adapter, audio correction and delivery process](PRODUCTION-DELIVERY.md) · [Final landscape checks](evidence/final-landscape-verification.json) · [Final portrait checks](evidence/final-portrait-verification.json) · [Verified GitHub backup and fresh restore](RELEASE-BACKUP.md)
 
 [Production notes and exact decisions](PRODUCTION-NOTES.md) · [Agent handoff](AGENT-HANDOFF.md) · [Held-release audit](HELD-RELEASE-REVIEW.md) · [Timing selections](evidence/timing-selections.json) · [Raw model comparisons](evidence/acoustic-observations.json) · [Technical checks](evidence/technical-preview-checks.json) · [Current review identity](source/REVIEW.json)
 
