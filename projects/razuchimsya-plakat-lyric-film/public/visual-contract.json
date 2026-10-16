@@ -1,10 +1,64 @@
 {
   "schemaVersion": 1,
   "sourceSha256": "1a2efa9d95b57fe72ff56e8028a39793ef1a69e0d10a8ed47fbcf25885ed855c",
-  "role": "Measured musical response in existing bedspread embroidery",
-  "views": {"landscape": [0,300,1080,607.5], "portrait": [106,0,607.5,1080]},
-  "material": {"rectangle": [12,854,632,45], "bands": 24, "mask": "Actual rust pigment with inward feather; fixed canonical reference; precomputed before playback", "blend": "screen", "maximumOpacity": 0.72},
-  "response": {"featureRateHz": 50, "attackSeconds": 0.065, "releaseSeconds": 0.30, "displayDbRange": [-61,-20], "neighborSmoothing": [1,2,1]},
-  "reading": {"font": "Cormorant Garamond Semibold, static weight 600", "sameFontAndColorBothLanguages": true, "focus": "color only; exact union of source events", "cameraMotion": false},
-  "sourceProtection": "Single real source draw; no repeated extension; figure outside both lyric blocks, shading and material response"
+  "role": "Single smooth supporting music line below the lyrics, over the original carpet",
+  "views": {
+    "landscape": [
+      0,
+      300,
+      1080,
+      607.5
+    ],
+    "portrait": [
+      106,
+      0,
+      607.5,
+      1080
+    ]
+  },
+  "response": {
+    "featureRateHz": 50,
+    "attackSeconds": 0.06,
+    "releaseSeconds": 0.28,
+    "displayDbRange": [
+      -61,
+      -20
+    ],
+    "neighborSmoothing": [
+      1,
+      2,
+      1
+    ]
+  },
+  "reading": {
+    "font": "Cormorant Garamond Semibold, static weight 600",
+    "sameFontAndColorBothLanguages": true,
+    "focus": "color only; exact union of source events",
+    "cameraMotion": false
+  },
+  "sourceProtection": "Single real source draw; figure outside lyric blocks, shading and spectrum footprint",
+  "musicLine": {
+    "landscape": {
+      "center": 960,
+      "baseline": 403,
+      "width": 620,
+      "points": 73,
+      "strokeWidth": 3.4,
+      "maxDeviation": 20
+    },
+    "portrait": {
+      "center": 540,
+      "baseline": 880,
+      "width": 650,
+      "points": 73,
+      "strokeWidth": 4.4,
+      "maxDeviation": 26
+    },
+    "measurements": 24,
+    "display": "One quadratic-smoothed path; fixed two-cycle spatial profile modulated by 24 measured frequency bands, tapered to fixed endpoints. Neither raw waveform nor pitch trace.",
+    "color": "#ded3b7",
+    "maximumOpacity": 0.88,
+    "edge": "small local shadow; no filled area, duplicate rail, bars, panel or broad glow",
+    "idleMotion": false
+  }
 }

@@ -10,10 +10,13 @@ export interface Layout {size:number;source:Slot[];target:Slot[];top:number;bott
 export const SOURCE_VIEWS={landscape:[0,300,1080,607.5],portrait:[106,0,607.5,1080]} as const;
 export const FIGURE_GUARD=[128,548,554,303] as const;
 export const COMPOSITION={
- landscape:{width:1920,height:1080,reading:[190,58,1540,350]},
+ landscape:{width:1920,height:1080,reading:[190,26,1540,338]},
  portrait:{width:1080,height:1920,reading:[124,246,832,550]},
 } as const;
-export const WEAVE={left:12,top:854,width:632,height:45,bands:24} as const;
+export const MUSIC_LINE={
+ landscape:{center:960,baseline:403,width:620,points:73,strokeWidth:3.4,maxDeviation:20},
+ portrait:{center:540,baseline:880,width:650,points:73,strokeWidth:4.4,maxDeviation:26},
+} as const;
 const clamp=(x:number,a=0,b=1)=>Math.max(a,Math.min(b,x));
 const smooth=(a:number,b:number,t:number)=>{const u=clamp((t-a)/(b-a));return u*u*(3-2*u)};
 const font=(n:number)=>`600 ${n}px Cormorant`;
@@ -22,7 +25,7 @@ let timeline:Timeline,features:FeatureData;
 let identity:{revision:string;sourceSha256:string;timelineSha256?:string;sceneSha256?:string}|undefined;
 let effectsEnabled=true,responses:number[][]=[];
 const layouts=new Map<string,Layout>();
-let masks:{canvas:CanvasImageSource;x:number;y:number;band:number;pixels:number}[]=[];
+let lastVisualizer={enabled:true,points:0,kind:'continuous-line',opacity:0,peakDeviation:0};
 const shades=new Map<Format,CanvasImageSource>();
 
 export function screenFigureGuard(format:Format){
@@ -37,45 +40,40 @@ function prepareResponse(){
   const raw=Array.from({length:24},(_,i)=>Math.pow(clamp((-96+row[i+2]!*96/255+61)/41),1.25)*gate);
   const spatial=raw.map((value,i)=>(value*2+raw[Math.max(0,i-1)]!+raw[Math.min(23,i+1)]!)/4);
   responses.push(spatial.map((value,i)=>{
-   const tau=value>prior[i]!?.065:.30;
+   const tau=value>prior[i]!?.060:.280;
    prior[i]=prior[i]!+(value-prior[i]!)*(1-Math.exp(-1/(hz*tau)));return prior[i]!;
   }));
  }
 }
-function prepareMasks(factory:(w:number,h:number)=>Surface,reference:CanvasImageSource){
- const all=factory(1080,1080);all.context.drawImage(reference,0,0,1080,1080);
- const pixels=all.context.getImageData(0,0,1080,1080).data;masks=[];
- for(let band=0;band<24;band++){
-  const left=Math.floor(WEAVE.left+WEAVE.width*band/24),right=Math.ceil(WEAVE.left+WEAVE.width*(band+1)/24);
-  const tile=factory(right-left,WEAVE.height),data=tile.context.createImageData(right-left,WEAVE.height);let count=0;
-  for(let y=0;y<WEAVE.height;y++)for(let x=0;x<right-left;x++){
-   const sx=left+x,sy=WEAVE.top+y,k=(sy*1080+sx)*4,j=(y*(right-left)+x)*4;
-   const r=pixels[k]!,g=pixels[k+1]!,b=pixels[k+2]!;
-   // Existing rust thread, not the pale cloth, skin, wall or wooden bed frame.
-   const pigment=smooth(7,36,r-g)*smooth(14,48,r-b)*smooth(26,74,r);
-   const inward=smooth(0,7,y)*(1-smooth(WEAVE.height-12,WEAVE.height,y));
-   const edge=smooth(0,8,sx-WEAVE.left)*(1-smooth(WEAVE.left+WEAVE.width-14,WEAVE.left+WEAVE.width,sx));
-   const alpha=pigment*inward*edge;
-   data.data[j]=210;data.data[j+1]=141;data.data[j+2]=96;data.data[j+3]=Math.round(alpha*255);
-   if(alpha>.05)count++;
-  }
-  tile.context.putImageData(data,0,0);masks.push({canvas:tile.canvas,x:left,y:WEAVE.top,band,pixels:count});
- }
+export function visualizerGeometry(t:number,format:Format='landscape'){
+ const p=clamp(t*features.analysis.frameRate.numerator/features.analysis.frameRate.denominator,0,responses.length-1),i=Math.floor(p),u=p-i,j=Math.min(i+1,responses.length-1),spec=MUSIC_LINE[format];
+ const ending=1-smooth(timeline.sourceDuration-1.4,timeline.sourceDuration-.06,t);
+ const rms=-96+(features.rows[i]![0]!*(1-u)+features.rows[j]![0]!*u)*96/255;
+ const opacity=.88*smooth(-62,-42,rms)*ending;
+ const points=Array.from({length:spec.points},(_,index)=>{
+  // One authored ribbon profile, modulated by 24 measured bands. This is
+  // neither an oscilloscope waveform nor a pitch trace; no idle oscillation.
+  const position=index/(spec.points-1),band=position*23,lo=Math.floor(band),hi=Math.min(23,lo+1),mix=band-lo;
+  const at=(b:number)=>responses[i]![b]!*(1-u)+responses[j]![b]!*u;
+  const level=at(lo)*(1-mix)+at(hi)*mix;
+  const deviation=-Math.sin(position*Math.PI*4)*Math.pow(Math.sin(position*Math.PI),.75)*level*spec.maxDeviation;
+  return {index,bandPosition:band,x:spec.center-spec.width/2+position*spec.width,y:spec.baseline+deviation,deviation,level};
+ });
+ return {points,opacity};
 }
-export function weaveGeometry(t:number){
- const p=clamp(t*features.analysis.frameRate.numerator/features.analysis.frameRate.denominator,0,responses.length-1),i=Math.floor(p),u=p-i,j=Math.min(i+1,responses.length-1);
- const end=1-smooth(timeline.sourceDuration-1.4,timeline.sourceDuration-.06,t);
- return masks.map(m=>({band:m.band,x:m.x,y:m.y,pixels:m.pixels,level:(responses[i]![m.band]!*(1-u)+responses[j]![m.band]!*u)*end}));
-}
-function weave(ctx:Context,t:number,format:Format){
- if(!effectsEnabled)return;
- const view=SOURCE_VIEWS[format],scale=COMPOSITION[format].width/view[2],levels=weaveGeometry(t);
- ctx.save();ctx.scale(scale,scale);ctx.translate(-view[0],-view[1]);ctx.globalCompositeOperation='screen';
- for(const [i,m] of masks.entries()){
-  // Fixed material, gentle exposure only. No traveling object or invented beat.
-  ctx.globalAlpha=levels[i]!.level*.72;
-  if(ctx.globalAlpha>.001)ctx.drawImage(m.canvas,m.x,m.y);
- }
+export function getVisualizerState(){return {...lastVisualizer}}
+function musicLine(ctx:Context,t:number,format:Format){
+ const geometry=visualizerGeometry(t,format);
+ lastVisualizer={enabled:effectsEnabled,kind:'continuous-line',points:effectsEnabled?geometry.points.length:0,opacity:effectsEnabled?geometry.opacity:0,peakDeviation:effectsEnabled?Math.max(...geometry.points.map(p=>Math.abs(p.deviation))):0};
+ if(!effectsEnabled||geometry.opacity<.002)return;
+ ctx.save();ctx.globalAlpha=geometry.opacity;ctx.strokeStyle='#ded3b7';
+ // A single smooth supporting line in reserved carpet space, with fixed
+ // endpoints, no duplicate rail, filled area, broad bloom or ticking bars.
+ ctx.shadowColor='rgba(5,15,9,.9)';ctx.shadowBlur=2;ctx.shadowOffsetY=1;
+ ctx.lineWidth=MUSIC_LINE[format].strokeWidth;ctx.lineCap='round';ctx.lineJoin='round';
+ const pts=geometry.points;ctx.beginPath();ctx.moveTo(pts[0]!.x,pts[0]!.y);
+ for(let i=1;i<pts.length-1;i++){const a=pts[i]!,b=pts[i+1]!;ctx.quadraticCurveTo(a.x,a.y,(a.x+b.x)/2,(a.y+b.y)/2)}
+ const last=pts.at(-1)!;ctx.lineTo(last.x,last.y);ctx.stroke();
  ctx.restore();
 }
 function prepareShades(factory:(w:number,h:number)=>Surface){
@@ -92,9 +90,9 @@ function prepareShades(factory:(w:number,h:number)=>Surface){
  shades.set(format,surface.canvas);
  }
 }
-export function initializeScene(t:Timeline,f:FeatureData,factory:(w:number,h:number)=>Surface,reference:CanvasImageSource,previewIdentity?:typeof identity){
+export function initializeScene(t:Timeline,f:FeatureData,factory:(w:number,h:number)=>Surface,_reference:CanvasImageSource,previewIdentity?:typeof identity){
  validateTimeline(t);if(t.sourceSha256!==f.sourceSha256)throw Error('Recording/feature mismatch');
- timeline=t;features=f;identity=previewIdentity;layouts.clear();prepareResponse();prepareMasks(factory,reference);prepareShades(factory);
+ timeline=t;features=f;identity=previewIdentity;layouts.clear();prepareResponse();prepareShades(factory);
 }
 export async function loadScene(){
  const json=async(path:string)=>{const r=await fetch(path,{cache:'no-store'});if(!r.ok)throw Error('Missing preview asset '+path);return r.json() as Promise<unknown>};
@@ -156,6 +154,6 @@ function lyrics(ctx:Context,c:Cue,t:number,format:Format){
 }
 export function paintScene(ctx:Context,t:number,format:Format,source:CanvasImageSource){
  const p=COMPOSITION[format],v=SOURCE_VIEWS[format];ctx.save();ctx.clearRect(0,0,p.width,p.height);
- ctx.drawImage(source,v[0],v[1],v[2],v[3],0,0,p.width,p.height);ctx.drawImage(shades.get(format)!,0,0);weave(ctx,t,format);
+ ctx.drawImage(source,v[0],v[1],v[2],v[3],0,0,p.width,p.height);ctx.drawImage(shades.get(format)!,0,0);musicLine(ctx,t,format);
  for(const c of visibleCues(timeline,t))lyrics(ctx,c,t,format);ctx.restore();
 }
