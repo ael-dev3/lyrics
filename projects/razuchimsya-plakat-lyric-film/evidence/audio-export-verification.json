@@ -1,0 +1,32 @@
+{
+  "status": "pass",
+  "sourceCodec": "Opus",
+  "deliveryCodec": "AAC LC",
+  "sampleRate": 48000,
+  "channels": 2,
+  "requestedBitrate": 320000,
+  "sourceDecodedFrames": 10899504,
+  "outputDecodedFrames": 10900416,
+  "paddedEndFrames": 912,
+  "bestLagSamples": 0,
+  "lagSearchSamples": [
+    -24,
+    24
+  ],
+  "correlation": 0.9996063091747047,
+  "gain": 0.9943075427124539,
+  "snrDb": 30.908148300996277,
+  "packetIdentical": false,
+  "scope": "Original recording retained without edits, filtering or gain processing; upload-compatible AAC is lossy and is checked for zero offset and bounded difference.",
+  "sourceSha256": "1a2efa9d95b57fe72ff56e8028a39793ef1a69e0d10a8ed47fbcf25885ed855c",
+  "derivedAudioSha256": "8d192ce8eebd917b3cbc42e179f414538b3fd04753f39533884d0908759bddb5",
+  "encoder": "Apple AudioToolbox AAC, quality 2, 320 kb/s. Native codec-service access is required on macOS.",
+  "padding": "Original 10,899,504 samples remain intact. Final AAC packet valid duration is explicitly bounded; 912 decoder padding samples may remain outside the track duration.",
+  "streamDurationSeconds": 227.073,
+  "rejectedInitialExport": {
+    "encoder": "FFmpeg native AAC 320 kb/s",
+    "gain": 0.9497800650253257,
+    "snrDb": 22.93324157945459,
+    "reason": "Did not meet selected level/waveform quality checks."
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "status": "pass",
+  "verifierSha256": "753ff22c59a2a3e1c7a123c1c9d6b6e54c4cc05fb7b4a36356943f99b6279acb",
+  "file": "Razuchimsya-Plakat-Settlers-YouTube-1920x1080-60fps.mp4",
+  "sha256": "6eeccd31d2710f0e51a414baf6e4ab27c4fe383584cf28e834a576ead974ddf5",
+  "format": "landscape",
+  "width": 1920,
+  "height": 1080,
+  "frames": 13625,
+  "fps": 60,
+  "videoDurationSeconds": 227.083333,
+  "audioDurationSeconds": 227.073,
+  "audioVerification": {
+    "status": "pass",
+    "sourceCodec": "Opus",
+    "deliveryCodec": "AAC LC",
+    "sampleRate": 48000,
+    "channels": 2,
+    "requestedBitrate": 320000,
+    "sourceDecodedFrames": 10899504,
+    "outputDecodedFrames": 10900416,
+    "paddedEndFrames": 912,
+    "bestLagSamples": 0,
+    "lagSearchSamples": [
+      -24,
+      24
+    ],
+    "correlation": 0.9996063091747047,
+    "gain": 0.9943075427124539,
+    "snrDb": 30.908148300996277,
+    "packetIdentical": false,
+    "scope": "Original recording retained without edits, filtering or gain processing; upload-compatible AAC is lossy and is checked for zero offset and bounded difference."
+  },
+  "everyFramePtsVerified": true,
+  "fullStrictDecode": true,
+  "blackIntervals": [],
+  "selectedSceneFrames": 547,
+  "glyphStateChecks": 5062,
+  "sourceAndTargetTokensVerified": 282,
+  "tokensSeenFocusedAndNeutral": 282,
+  "continuousFocusTokens": [],
+  "clearStateGlyphChecks": 0,
+  "allVisibleTokenFocusStatesCovered": true,
+  "deliberatelyDelayedTimingControls": 282,
+  "minimumMatchingGlyphFraction": 1,
+  "minimumDecisiveGlyphFraction": 0.9682539682539683,
+  "minimumNearReferenceGlyphFraction": 1,
+  "classificationMethod": "At least 75% of chroma-aware eroded glyph samples must be decisive; at least 90% of decisive samples must favor the expected focus and 90% of all samples must match the painted reference. Word colors are tested from 95% line opacity; complete selected-scene comparisons cover fades.",
+  "maximumSceneMeanAbsoluteRgbError": 1.9126157407407407,
+  "maximumSceneFractionChannelsOver24": 0.0003690843621399177,
+  "sampledReadingGapFrames": 108,
+  "maximumGapReadingAreaMeanAbsoluteRgbError": 1.9283152744691205,
+  "maximumGapReadingAreaFractionChannelsOver24": 0.0000025615410230794845,
+  "sceneComparisonReference": "Exact original decoded source picture min(5675, floor(outputFrame*5/12)) for every selected encoded output frame. All 5676 native pictures are decoded in production; the final real picture covers the complete source audio tail.",
+  "nativeSourceComparisonPictures": 468,
+  "listeningGateComplete": false,
+  "sourceSha256": "1a2efa9d95b57fe72ff56e8028a39793ef1a69e0d10a8ed47fbcf25885ed855c",
+  "revision": "razuchimsya-plakat-v1.1-preview",
+  "timelineSha256": "3d3620a4372e2bf5a0e438a5b37b537cd5b4a37c31f8bc3de2695924a7a7fb7d",
+  "sceneSha256": "73ce70780bc765e90d03cdabb90ad5709feb2a15d255b8d95df99b06a17bed90",
+  "producerAdapters": [
+    {
+      "path": "analysis/initial-render-production.ts",
+      "sha256": "32b6a858f03a75697c4b01177c9f93a00787255c816f25a9fc427098d520317b"
+    },
+    {
+      "path": "scripts/remux-upload-audio.ts",
+      "sha256": "88e995c8e8ff4feb783252a8fb29f3ba96853c5dd54cb14135500b7d7d7c71c8"
+    },
+    {
+      "path": "scripts/production-authorization.ts",
+      "sha256": "df040f10b30302b7c205bce23d31e00b4f6b6b68c1a188fe8ddd10582f1dcabb"
+    },
+    {
+      "path": "scripts/project-identity.ts",
+      "sha256": "e890e1283a34a9f2a8d9f821a35b8b97c03862de09eff471e8cab9e4cca72ca1"
+    },
+    {
+      "path": "scripts/prepare-upload-audio.ts",
+      "sha256": "80a7c785544a16b987ff3ef1d109ea6a77dbdb31e160ff4106ca44d9c276b13e"
+    },
+    {
+      "path": "scripts/verify-audio.ts",
+      "sha256": "2239b07b54846c4487e49cec5270762ff9dec6f9412eecf0c19a78e8415a0c3c"
+    },
+    {
+      "path": "analysis/upload-audio.m4a",
+      "sha256": "8d192ce8eebd917b3cbc42e179f414538b3fd04753f39533884d0908759bddb5"
+    }
+  ],
+  "limits": "Encoded technical checks verify selected timing display and preserved audio; they do not certify millisecond acoustic perception or a complete listening attestation."
+}

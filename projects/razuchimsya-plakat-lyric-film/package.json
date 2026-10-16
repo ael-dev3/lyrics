@@ -12,7 +12,14 @@
     "identity": "node scripts/refresh-identity.ts",
     "stills": "node scripts/preview-stills.ts",
     "prepare": "python3 scripts/prepare-source.py",
-    "gate": "node scripts/check-production-gate.ts"
+    "gate": "node scripts/check-production-gate.ts",
+    "test:gate": "node tests/render-gate.test.ts",
+    "render:production": "node scripts/render-production.ts --production",
+    "verify:final": "node scripts/verify-final.ts",
+    "covers": "node scripts/make-covers.ts",
+    "publishing": "node scripts/make-publishing-copy.ts",
+    "finalize": "node scripts/finalize-delivery.ts",
+    "prepare:audio": "node scripts/prepare-upload-audio.ts"
   },
   "devDependencies": {
     "@types/node": "26.6.4",

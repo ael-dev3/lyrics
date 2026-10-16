@@ -1,0 +1,360 @@
+{
+  "schemaVersion": 1,
+  "edition": "razuchimsya-plakat-approved-v1.1-production",
+  "preparedAtUtc": "2026-10-16T21:47:25.148Z",
+  "identity": {
+    "schemaVersion": 1,
+    "revision": "razuchimsya-plakat-v1.1-preview",
+    "sourceSha256": "1a2efa9d95b57fe72ff56e8028a39793ef1a69e0d10a8ed47fbcf25885ed855c",
+    "timelineSha256": "3d3620a4372e2bf5a0e438a5b37b537cd5b4a37c31f8bc3de2695924a7a7fb7d",
+    "sceneSha256": "73ce70780bc765e90d03cdabb90ad5709feb2a15d255b8d95df99b06a17bed90",
+    "sceneFiles": [
+      "src/model.ts",
+      "src/scene.ts",
+      "src/player.ts",
+      "review/index.html",
+      "review/client.js",
+      "public/audio-features.json",
+      "public/artwork-reference.png",
+      "public/visual-contract.json",
+      "public/fonts/Cormorant.ttf",
+      "public/fonts/Cormorant-OFL.txt"
+    ]
+  },
+  "review": "Owner reported completed current-preview review and explicitly directed production, Desktop delivery and GitHub integration. Granular listening fields remain unlogged; acceptance is bound to the frozen v1.1 inputs.",
+  "movies": [
+    {
+      "file": "YouTube/Razuchimsya-Plakat-Settlers-YouTube-1920x1080-60fps.mp4",
+      "bytes": 83356722,
+      "sha256": "6eeccd31d2710f0e51a414baf6e4ab27c4fe383584cf28e834a576ead974ddf5",
+      "width": 1920,
+      "height": 1080,
+      "fps": 60,
+      "videoDurationSeconds": 227.083333,
+      "audioDurationSeconds": 227.073,
+      "verification": "evidence/final-landscape-verification.json",
+      "audio": {
+        "status": "pass",
+        "sourceCodec": "Opus",
+        "deliveryCodec": "AAC LC",
+        "sampleRate": 48000,
+        "channels": 2,
+        "requestedBitrate": 320000,
+        "sourceDecodedFrames": 10899504,
+        "outputDecodedFrames": 10900416,
+        "paddedEndFrames": 912,
+        "bestLagSamples": 0,
+        "lagSearchSamples": [
+          -24,
+          24
+        ],
+        "correlation": 0.9996063091747047,
+        "gain": 0.9943075427124539,
+        "snrDb": 30.908148300996277,
+        "packetIdentical": false,
+        "scope": "Original recording retained without edits, filtering or gain processing; upload-compatible AAC is lossy and is checked for zero offset and bounded difference."
+      },
+      "status": "pass"
+    },
+    {
+      "file": "TikTok/Razuchimsya-Plakat-Settlers-TikTok-1080x1920-60fps.mp4",
+      "bytes": 81038743,
+      "sha256": "8b9eda8a68e0f3fe527054f5d92b51b67d230804b1ea038564306bc671955533",
+      "width": 1080,
+      "height": 1920,
+      "fps": 60,
+      "videoDurationSeconds": 227.083333,
+      "audioDurationSeconds": 227.073,
+      "verification": "evidence/final-portrait-verification.json",
+      "audio": {
+        "status": "pass",
+        "sourceCodec": "Opus",
+        "deliveryCodec": "AAC LC",
+        "sampleRate": 48000,
+        "channels": 2,
+        "requestedBitrate": 320000,
+        "sourceDecodedFrames": 10899504,
+        "outputDecodedFrames": 10900416,
+        "paddedEndFrames": 912,
+        "bestLagSamples": 0,
+        "lagSearchSamples": [
+          -24,
+          24
+        ],
+        "correlation": 0.9996063091747047,
+        "gain": 0.9943075427124539,
+        "snrDb": 30.908148300996277,
+        "packetIdentical": false,
+        "scope": "Original recording retained without edits, filtering or gain processing; upload-compatible AAC is lossy and is checked for zero offset and bounded difference."
+      },
+      "status": "pass"
+    },
+    {
+      "file": "Farcaster/Razuchimsya-Plakat-Farcaster-1920x1080-60fps.mp4",
+      "bytes": 83356722,
+      "sha256": "6eeccd31d2710f0e51a414baf6e4ab27c4fe383584cf28e834a576ead974ddf5",
+      "width": 1920,
+      "height": 1080,
+      "fps": 60,
+      "videoDurationSeconds": 227.08333333333334,
+      "byteIdenticalTo": "YouTube/Razuchimsya-Plakat-Settlers-YouTube-1920x1080-60fps.mp4",
+      "status": "pass"
+    }
+  ],
+  "covers": [
+    {
+      "platform": "YouTube",
+      "path": "YouTube/Razuchimsya-Plakat-YouTube-Thumbnail-1280x720.jpg",
+      "width": 1280,
+      "height": 720,
+      "bytes": 366248,
+      "sha256": "952d3c3c3135a90d9c819cde2e5fb6ec368b84c480c01fcda5ac4ba3fa598bb2",
+      "textBoxes": [
+        {
+          "text": "Разучимся",
+          "left": 449.1699981689453,
+          "top": 81,
+          "right": 831.5003814697266,
+          "bottom": 166,
+          "size": 94
+        },
+        {
+          "text": "плакать",
+          "left": 474.19500732421875,
+          "top": 185,
+          "right": 806.7951049804688,
+          "bottom": 231,
+          "size": 108
+        },
+        {
+          "text": "SETTLERS",
+          "left": 552.5,
+          "top": 253,
+          "right": 728.2198333740234,
+          "bottom": 280,
+          "size": 40
+        }
+      ]
+    },
+    {
+      "platform": "TikTok",
+      "path": "TikTok/Razuchimsya-Plakat-TikTok-Cover-Profile-1200x1600.jpg",
+      "width": 1200,
+      "height": 1600,
+      "bytes": 634087,
+      "sha256": "80d58517d82d21d62edbc4c735173e673bc18a5aed52067b3660518b8fd8b669",
+      "textBoxes": [
+        {
+          "text": "Разучимся",
+          "left": 315.32000732421875,
+          "top": 242,
+          "right": 884.6204223632812,
+          "bottom": 368,
+          "size": 140
+        },
+        {
+          "text": "плакать",
+          "left": 333.0400085449219,
+          "top": 428,
+          "right": 868.8400573730469,
+          "bottom": 501,
+          "size": 174
+        },
+        {
+          "text": "SETTLERS",
+          "left": 417.0500030517578,
+          "top": 574,
+          "right": 784.3624420166016,
+          "bottom": 631,
+          "size": 84
+        }
+      ]
+    },
+    {
+      "platform": "Farcaster",
+      "path": "Farcaster/Razuchimsya-Plakat-Farcaster-Thumbnail-1280x720.jpg",
+      "width": 1280,
+      "height": 720,
+      "bytes": 366248,
+      "sha256": "952d3c3c3135a90d9c819cde2e5fb6ec368b84c480c01fcda5ac4ba3fa598bb2",
+      "textBoxes": [
+        {
+          "text": "Разучимся",
+          "left": 449.1699981689453,
+          "top": 81,
+          "right": 831.5003814697266,
+          "bottom": 166,
+          "size": 94
+        },
+        {
+          "text": "плакать",
+          "left": 474.19500732421875,
+          "top": 185,
+          "right": 806.7951049804688,
+          "bottom": 231,
+          "size": 108
+        },
+        {
+          "text": "SETTLERS",
+          "left": 552.5,
+          "top": 253,
+          "right": 728.2198333740234,
+          "bottom": 280,
+          "size": 40
+        }
+      ]
+    }
+  ],
+  "files": [
+    {
+      "file": "Captions/Bilingual.srt",
+      "bytes": 3033,
+      "sha256": "059e301c82f579a8934f8df05483acffbc8781ebbaef0c615acfc60c61560971"
+    },
+    {
+      "file": "Captions/English.srt",
+      "bytes": 1652,
+      "sha256": "f18c499d2ba86b2da63aeb2308606504b3cc8effa79d04aa3fbfcdd1180d028a"
+    },
+    {
+      "file": "Captions/Russian.srt",
+      "bytes": 2255,
+      "sha256": "8c20133a17991a7dd3c21fa17651189960177acd578838cf0ef066bad25bac8e"
+    },
+    {
+      "file": "Farcaster/Caption.txt",
+      "bytes": 195,
+      "sha256": "f2837325bfeaa1503904a973b1098a24cd48c3dd04aeca10eb6bde874d2151d3"
+    },
+    {
+      "file": "Farcaster/Razuchimsya-Plakat-Farcaster-1920x1080-60fps.mp4",
+      "bytes": 83356722,
+      "sha256": "6eeccd31d2710f0e51a414baf6e4ab27c4fe383584cf28e834a576ead974ddf5"
+    },
+    {
+      "file": "Farcaster/Razuchimsya-Plakat-Farcaster-Thumbnail-1280x720.jpg",
+      "bytes": 366248,
+      "sha256": "952d3c3c3135a90d9c819cde2e5fb6ec368b84c480c01fcda5ac4ba3fa598bb2"
+    },
+    {
+      "file": "README.txt",
+      "bytes": 1177,
+      "sha256": "559844b51ec7218b41dc39dbc9a9a7ca2c4e9db606d90f1cb6ae124e7505cc25"
+    },
+    {
+      "file": "TikTok/Description.txt",
+      "bytes": 412,
+      "sha256": "da886e7d17d067147ead8e6c292f4e62be43f7ec93e650824b86319c27ac6655"
+    },
+    {
+      "file": "TikTok/Razuchimsya-Plakat-Settlers-TikTok-1080x1920-60fps.mp4",
+      "bytes": 81038743,
+      "sha256": "8b9eda8a68e0f3fe527054f5d92b51b67d230804b1ea038564306bc671955533"
+    },
+    {
+      "file": "TikTok/Razuchimsya-Plakat-TikTok-Cover-Profile-1200x1600.jpg",
+      "bytes": 634087,
+      "sha256": "80d58517d82d21d62edbc4c735173e673bc18a5aed52067b3660518b8fd8b669"
+    },
+    {
+      "file": "TikTok/Title.txt",
+      "bytes": 47,
+      "sha256": "b70cc6c9e34c23f3f9eaeab4a65f595204b7708ad2b1e4c4bb8c63ee97a720b0"
+    },
+    {
+      "file": "YouTube/Description.txt",
+      "bytes": 928,
+      "sha256": "4b2511400bd2a0a0052f4fffb33c0bc559a4a9279be72ab6d7f3d360c9cd92bf"
+    },
+    {
+      "file": "YouTube/Razuchimsya-Plakat-Settlers-YouTube-1920x1080-60fps.mp4",
+      "bytes": 83356722,
+      "sha256": "6eeccd31d2710f0e51a414baf6e4ab27c4fe383584cf28e834a576ead974ddf5"
+    },
+    {
+      "file": "YouTube/Razuchimsya-Plakat-YouTube-Thumbnail-1280x720.jpg",
+      "bytes": 366248,
+      "sha256": "952d3c3c3135a90d9c819cde2e5fb6ec368b84c480c01fcda5ac4ba3fa598bb2"
+    },
+    {
+      "file": "YouTube/Title.txt",
+      "bytes": 74,
+      "sha256": "9b267cd93f4afb8557a57e17c483a75f203840bdb26111e03df1c8a0e1c63656"
+    }
+  ],
+  "verificationSummary": [
+    {
+      "format": "landscape",
+      "fullStrictDecode": true,
+      "everyFramePts": true,
+      "audioZeroOffset": true,
+      "audioVerification": {
+        "status": "pass",
+        "sourceCodec": "Opus",
+        "deliveryCodec": "AAC LC",
+        "sampleRate": 48000,
+        "channels": 2,
+        "requestedBitrate": 320000,
+        "sourceDecodedFrames": 10899504,
+        "outputDecodedFrames": 10900416,
+        "paddedEndFrames": 912,
+        "bestLagSamples": 0,
+        "lagSearchSamples": [
+          -24,
+          24
+        ],
+        "correlation": 0.9996063091747047,
+        "gain": 0.9943075427124539,
+        "snrDb": 30.908148300996277,
+        "packetIdentical": false,
+        "scope": "Original recording retained without edits, filtering or gain processing; upload-compatible AAC is lossy and is checked for zero offset and bounded difference."
+      },
+      "blackIntervals": [],
+      "selectedSceneFrames": 547,
+      "glyphStateChecks": 5062,
+      "allTokensVerified": 282,
+      "tokensFocusedAndNeutral": 282,
+      "continuousFocusTokens": [],
+      "clearStateGlyphChecks": 0,
+      "deliberatelyDelayedTimingControls": 282,
+      "sampledReadingGapFrames": 108
+    },
+    {
+      "format": "portrait",
+      "fullStrictDecode": true,
+      "everyFramePts": true,
+      "audioZeroOffset": true,
+      "audioVerification": {
+        "status": "pass",
+        "sourceCodec": "Opus",
+        "deliveryCodec": "AAC LC",
+        "sampleRate": 48000,
+        "channels": 2,
+        "requestedBitrate": 320000,
+        "sourceDecodedFrames": 10899504,
+        "outputDecodedFrames": 10900416,
+        "paddedEndFrames": 912,
+        "bestLagSamples": 0,
+        "lagSearchSamples": [
+          -24,
+          24
+        ],
+        "correlation": 0.9996063091747047,
+        "gain": 0.9943075427124539,
+        "snrDb": 30.908148300996277,
+        "packetIdentical": false,
+        "scope": "Original recording retained without edits, filtering or gain processing; upload-compatible AAC is lossy and is checked for zero offset and bounded difference."
+      },
+      "blackIntervals": [],
+      "selectedSceneFrames": 547,
+      "glyphStateChecks": 5062,
+      "allTokensVerified": 282,
+      "tokensFocusedAndNeutral": 282,
+      "continuousFocusTokens": [],
+      "clearStateGlyphChecks": 0,
+      "deliberatelyDelayedTimingControls": 282,
+      "sampledReadingGapFrames": 108
+    }
+  ],
+  "posting": "Files prepared for manual uploading; no social-media post or platform upload performed."
+}

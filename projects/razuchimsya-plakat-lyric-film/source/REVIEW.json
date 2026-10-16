@@ -22,10 +22,18 @@
     "uncertainWordsAndHeldEndingsAtReducedSpeed": false,
     "layouts": [],
     "languages": [],
-    "evidence": "Acoustic diagnostics and visual/transport checks support preview review; they are not listener approval."
+    "evidence": "Owner reported that the current preview was checked and accepted. The standardized granular speed/layout checklist was not separately logged and remains unasserted. Source/model diagnostics and technical evidence are retained separately."
   },
   "renderApproval": {
-    "approved": false,
-    "status": "Preview only; no current-revision render authorization."
+    "approved": true,
+    "actorRole": "owner",
+    "recordedAtUtc": "2026-10-16T21:31:51.680120+00:00",
+    "status": "Explicit current-preview production and delivery authorization."
+  },
+  "acceptance": {
+    "status": "owner-reviewed-current-preview",
+    "actorRole": "owner",
+    "recordedAtUtc": "2026-10-16T21:31:51.680120+00:00",
+    "basis": "Owner reported completed review of the current preview, accepted it and explicitly directed rendering, Desktop delivery and GitHub integration without another confirmation request."
   }
 }

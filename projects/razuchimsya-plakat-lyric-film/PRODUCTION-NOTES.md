@@ -68,7 +68,7 @@ Downscaled on/off differences confirm that the line contributes visible pixels a
 
 The real in-app browser decoded the 1080-square source, played with unmuted original audio, advanced native picture PTS separately from word time, sought into later repeats, switched layouts and played at half speed. Recovery retained time, format and sound state. Browser-exported canvas images document actual preview presentation. Full normal-speed and uncertain-word listening review is not claimed by those transport observations.
 
-No full film or platform upload kit has been created. Keep the current identity pending until the owner reviews and explicitly approves production. Future capture must compare browser/native glyphs and current source frames, preserve the original audio tail with a final-picture hold, validate decoded output and prepare separate covers/copy under the repository workflow.
+The owner subsequently accepted this exact v1.1 preview and directed production. Both full films and the upload kit now pass encoded-file and Desktop-copy checks. [The production record](PRODUCTION-DELIVERY.md) documents authorization scope, representative browser/native parity, complete native-picture coverage, the AAC correction, encoded glyph states and delivery. Owner acceptance, unlogged granular listening fields and technical verification remain separately identified.
 
 ## Reusable lessons
 

@@ -2,7 +2,7 @@
 
 ## State
 
-Complete preview v1.1 at **http://127.0.0.1:4341/**. Original song: Settlers, supplied source `24oIDKiYaFs`. Russian/English, 26 cues, 118 source events, 164 English tokens. **Preview review and full production authorization remain pending. No film render is authorized by the initial request.**
+Complete preview v1.1 at **http://127.0.0.1:4341/**. Original song: Settlers, supplied source `24oIDKiYaFs`. Russian/English, 26 cues, 118 source events, 164 English tokens. **Approved and rendered as frozen v1.1; both films and the 17-file Desktop kit pass final verification.** The owner reported completed preview review and explicitly directed this delivery. Granular speed/layout listening fields remain unlogged, with a separately scoped owner authorization; do not invent detailed listening telemetry.
 
 Read root `AGENTS.md`, `README.md` here, `PRODUCTION-NOTES.md`, `HELD-RELEASE-REVIEW.md`, `source/REVIEW.json` and the existing preview/synchronization gates. Preserve original media and the source identity. Do not reuse previous-song acceptance.
 
@@ -18,7 +18,10 @@ Read root `AGENTS.md`, `README.md` here, `PRODUCTION-NOTES.md`, `HELD-RELEASE-RE
 - `src/player.ts`: one native video supplies sound/picture; word time and native PTS stay separate; seeking/recovery and pause refresh.
 - `npm run check`: both-layout geometry and painted word-state checks.
 - `npm run build`, then `npm run identity`: refresh the actual preview inputs after changes; reload the visible browser.
-- `npm run gate`: must fail until current full listening review and explicit production approval are documented. A future render entry point must call this same guard before capture or encoding.
+- `npm run gate`: accepts the exact owner-approved current-preview scope. The strict standardized checklist remains separate and fails when granular scope is incomplete. `npm run test:gate` rejects missing, stale or unauthorized owner records.
+- `scripts/render-production.ts`, `scripts/prepare-upload-audio.ts`, `scripts/verify-final.ts`: native 25→60 fps picture mapping, checked Apple AAC, full final-file/glyph verification.
+- `PRODUCTION-DELIVERY.md`, `evidence/upload-kit.json`, `evidence/desktop-delivery.json`: production parameters and verified delivery.
+- `scripts/archive-delivery.py`, `RELEASE-BACKUP.md`: authenticated unpublished backup and fresh-restore verification.
 
 ## Review priorities
 
@@ -30,4 +33,8 @@ The visualizer is now one continuous warm-ivory line below the lyrics. It adapts
 
 Source work may be integrated under the standing workflow. Before push/PR/merge, inspect current UTC-day Actions across all workflows, branches, actors, statuses and old rerun attempts, and estimate resulting runs/minutes. Unknown monthly usage stays unknown. Do not bypass checks or alter triggers.
 
-After owner review and render authorization, implement/verify capture parity, render both compositions, check full decode/timestamps/source audio and every glyph state, prepare a new Desktop upload kit with dedicated platform covers, then finish GitHub integration through verified merge. Do not publish original binaries or make platform posts as part of this preview-only handoff.
+The current production is complete: both 13,625-frame files pass full decode, every timestamp, 547 selected scenes, 5,062 glyph states and all 282 source/target tokens focused/neutral. Audio is Apple AAC LC 320 kb/s with zero measured lag; explicit final-packet duration preserves the complete original audio extent. The initial native AAC export was rejected for attenuation; all H.264 packets remain unchanged in the corrected files. The 17-file Desktop copy is checksum-verified. Future revisions need current input acceptance, production authorization and fresh verification. Keep original binaries and full delivery files in authenticated draft recovery assets. No public media release or platform post has been requested.
+
+## Verified remote recovery
+
+The authenticated draft recovery release is `razuchimsya-plakat-v1.1-recovery-2026-10-16` (ID 415411506). Source checkpoint `7ae5097f64c563d7785c013bb00c557fa4b13de7` is immutable and must remain in merge ancestry. Independent download and fresh restore passed 442 payload hashes and 343 project-file hashes; restored input identity and current-owner authorization also match. See [RELEASE-BACKUP.md](RELEASE-BACKUP.md) and [the exact receipt](evidence/github-recovery.json). Keep recovery archives outside the source tree and preserve prior remote assets. No public media release or social post was made.
