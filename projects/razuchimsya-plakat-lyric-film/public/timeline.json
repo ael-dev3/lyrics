@@ -1,0 +1,3684 @@
+{
+  "schemaVersion": 1,
+  "revision": "razuchimsya-plakat-v1.0-preview",
+  "sampleRate": 48000,
+  "sourceSha256": "1a2efa9d95b57fe72ff56e8028a39793ef1a69e0d10a8ed47fbcf25885ed855c",
+  "sourceDuration": 227.074,
+  "cues": [
+    {
+      "id": "RZ-001",
+      "templateId": "sun",
+      "lane": "lead",
+      "voice": "Settlers lead",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Может, только солнце знает,",
+      "targetText": "Perhaps only the sun knows,",
+      "start": 0.74,
+      "end": 22.04,
+      "words": [
+        {
+          "id": "RZ-001-s00",
+          "text": "Может",
+          "sourceIndex": 0,
+          "startSample": 35520,
+          "endSample": 180480,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores",
+          "punctuationAfter": ","
+        },
+        {
+          "id": "RZ-001-s01",
+          "text": "только",
+          "sourceIndex": 1,
+          "startSample": 324960,
+          "endSample": 409920,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores"
+        },
+        {
+          "id": "RZ-001-s02",
+          "text": "солнце",
+          "sourceIndex": 2,
+          "startSample": 611040,
+          "endSample": 725760,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores"
+        },
+        {
+          "id": "RZ-001-s03",
+          "text": "знает",
+          "sourceIndex": 3,
+          "startSample": 897600,
+          "endSample": 1057920,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores",
+          "punctuationAfter": ","
+        }
+      ],
+      "targets": [
+        {
+          "text": "Perhaps",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-001-t00"
+        },
+        {
+          "text": "only",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-001-t01"
+        },
+        {
+          "text": "the",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-001-t02"
+        },
+        {
+          "text": "sun",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-001-t03"
+        },
+        {
+          "text": "knows",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-001-t04",
+          "punctuationAfter": ","
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": [],
+      "visibleStart": 0.5,
+      "fullOpacityEnd": 23.2,
+      "visibleEnd": 23.2,
+      "exitMode": "vocal-handoff"
+    },
+    {
+      "id": "RZ-002",
+      "templateId": "dawn",
+      "lane": "lead",
+      "voice": "Settlers lead",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Когда после ночи заря,",
+      "targetText": "When dawn comes after night,",
+      "start": 23.2,
+      "end": 25.77,
+      "words": [
+        {
+          "id": "RZ-002-s00",
+          "text": "Когда",
+          "sourceIndex": 0,
+          "startSample": 1113600,
+          "endSample": 1134720,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores"
+        },
+        {
+          "id": "RZ-002-s01",
+          "text": "после",
+          "sourceIndex": 1,
+          "startSample": 1134720,
+          "endSample": 1158720,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores"
+        },
+        {
+          "id": "RZ-002-s02",
+          "text": "ночи",
+          "sourceIndex": 2,
+          "startSample": 1158720,
+          "endSample": 1188480,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores"
+        },
+        {
+          "id": "RZ-002-s03",
+          "text": "заря",
+          "sourceIndex": 3,
+          "startSample": 1188480,
+          "endSample": 1236960,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores",
+          "punctuationAfter": ","
+        }
+      ],
+      "targets": [
+        {
+          "text": "When",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-002-t00"
+        },
+        {
+          "text": "dawn",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-002-t01"
+        },
+        {
+          "text": "comes",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-002-t02"
+        },
+        {
+          "text": "after",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-002-t03"
+        },
+        {
+          "text": "night",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-002-t04",
+          "punctuationAfter": ","
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": [],
+      "visibleStart": 23.2,
+      "fullOpacityEnd": 26.72,
+      "visibleEnd": 27.369999999999997,
+      "exitMode": "fade"
+    },
+    {
+      "id": "RZ-003",
+      "templateId": "cry",
+      "lane": "lead",
+      "voice": "Settlers lead",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Когда мы разучимся плакать,",
+      "targetText": "When we forget how to cry,",
+      "start": 29.21,
+      "end": 33.08,
+      "words": [
+        {
+          "id": "RZ-003-s00",
+          "text": "Когда",
+          "sourceIndex": 0,
+          "startSample": 1402080,
+          "endSample": 1423200,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores"
+        },
+        {
+          "id": "RZ-003-s01",
+          "text": "мы",
+          "sourceIndex": 1,
+          "startSample": 1423200,
+          "endSample": 1436640,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores"
+        },
+        {
+          "id": "RZ-003-s02",
+          "text": "разучимся",
+          "sourceIndex": 2,
+          "startSample": 1436640,
+          "endSample": 1492800,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores"
+        },
+        {
+          "id": "RZ-003-s03",
+          "text": "плакать",
+          "sourceIndex": 3,
+          "startSample": 1492800,
+          "endSample": 1587840,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores",
+          "punctuationAfter": ","
+        }
+      ],
+      "targets": [
+        {
+          "text": "When",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-003-t00"
+        },
+        {
+          "text": "we",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-003-t01"
+        },
+        {
+          "text": "forget",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-003-t02"
+        },
+        {
+          "text": "how",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-003-t03"
+        },
+        {
+          "text": "to",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-003-t04"
+        },
+        {
+          "text": "cry",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-003-t05",
+          "punctuationAfter": ","
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": [],
+      "visibleStart": 28.970000000000002,
+      "fullOpacityEnd": 34.03,
+      "visibleEnd": 34.68,
+      "exitMode": "fade"
+    },
+    {
+      "id": "RZ-004",
+      "templateId": "february",
+      "lane": "lead",
+      "voice": "Settlers lead",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Когда после туч февраля",
+      "targetText": "When, after February’s clouds,",
+      "start": 35.26,
+      "end": 38.65,
+      "words": [
+        {
+          "id": "RZ-004-s00",
+          "text": "Когда",
+          "sourceIndex": 0,
+          "startSample": 1692480,
+          "endSample": 1714560,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores"
+        },
+        {
+          "id": "RZ-004-s01",
+          "text": "после",
+          "sourceIndex": 1,
+          "startSample": 1714560,
+          "endSample": 1740960,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores"
+        },
+        {
+          "id": "RZ-004-s02",
+          "text": "туч",
+          "sourceIndex": 2,
+          "startSample": 1740960,
+          "endSample": 1762080,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores"
+        },
+        {
+          "id": "RZ-004-s03",
+          "text": "февраля",
+          "sourceIndex": 3,
+          "startSample": 1762080,
+          "endSample": 1855200,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores"
+        }
+      ],
+      "targets": [
+        {
+          "text": "When",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-004-t00",
+          "punctuationAfter": ","
+        },
+        {
+          "text": "after",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-004-t01"
+        },
+        {
+          "text": "February’s",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-004-t02"
+        },
+        {
+          "text": "clouds",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-004-t03",
+          "punctuationAfter": ","
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": [],
+      "visibleStart": 35.019999999999996,
+      "fullOpacityEnd": 39.6,
+      "visibleEnd": 40.25,
+      "exitMode": "fade"
+    },
+    {
+      "id": "RZ-005",
+      "templateId": "slush",
+      "lane": "lead",
+      "voice": "Settlers lead",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Наступит весенняя слякоть.",
+      "targetText": "Spring’s slush will arrive.",
+      "start": 41.3,
+      "end": 44.82,
+      "words": [
+        {
+          "id": "RZ-005-s00",
+          "text": "Наступит",
+          "sourceIndex": 0,
+          "startSample": 1982400,
+          "endSample": 2018400,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores"
+        },
+        {
+          "id": "RZ-005-s01",
+          "text": "весенняя",
+          "sourceIndex": 1,
+          "startSample": 2018400,
+          "endSample": 2070240,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores"
+        },
+        {
+          "id": "RZ-005-s02",
+          "text": "слякоть",
+          "sourceIndex": 2,
+          "startSample": 2070240,
+          "endSample": 2151360,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores",
+          "punctuationAfter": "."
+        }
+      ],
+      "targets": [
+        {
+          "text": "Spring’s",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-005-t00"
+        },
+        {
+          "text": "slush",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-005-t01"
+        },
+        {
+          "text": "will",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-005-t02"
+        },
+        {
+          "text": "arrive",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-005-t03",
+          "punctuationAfter": "."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": [],
+      "visibleStart": 41.059999999999995,
+      "fullOpacityEnd": 45.77,
+      "visibleEnd": 46.42,
+      "exitMode": "fade"
+    },
+    {
+      "id": "RZ-006",
+      "templateId": "shard",
+      "lane": "lead",
+      "voice": "Settlers lead",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Когда я пойму, как любить мне каждый посуды осколок,",
+      "targetText": "When will I understand how to love every shard of crockery,",
+      "start": 47.28,
+      "end": 57.65,
+      "words": [
+        {
+          "id": "RZ-006-s00",
+          "text": "Когда",
+          "sourceIndex": 0,
+          "startSample": 2269440,
+          "endSample": 2295840,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores"
+        },
+        {
+          "id": "RZ-006-s01",
+          "text": "я",
+          "sourceIndex": 1,
+          "startSample": 2295840,
+          "endSample": 2309280,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores"
+        },
+        {
+          "id": "RZ-006-s02",
+          "text": "пойму",
+          "sourceIndex": 2,
+          "startSample": 2309280,
+          "endSample": 2340000,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores",
+          "punctuationAfter": ","
+        },
+        {
+          "id": "RZ-006-s03",
+          "text": "как",
+          "sourceIndex": 3,
+          "startSample": 2340000,
+          "endSample": 2356800,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores"
+        },
+        {
+          "id": "RZ-006-s04",
+          "text": "любить",
+          "sourceIndex": 4,
+          "startSample": 2356800,
+          "endSample": 2489280,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores"
+        },
+        {
+          "id": "RZ-006-s05",
+          "text": "мне",
+          "sourceIndex": 5,
+          "startSample": 2560320,
+          "endSample": 2571360,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores"
+        },
+        {
+          "id": "RZ-006-s06",
+          "text": "каждый",
+          "sourceIndex": 6,
+          "startSample": 2571360,
+          "endSample": 2604000,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores"
+        },
+        {
+          "id": "RZ-006-s07",
+          "text": "посуды",
+          "sourceIndex": 7,
+          "startSample": 2604000,
+          "endSample": 2643840,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores"
+        },
+        {
+          "id": "RZ-006-s08",
+          "text": "осколок",
+          "sourceIndex": 8,
+          "startSample": 2643840,
+          "endSample": 2767200,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores",
+          "punctuationAfter": ","
+        }
+      ],
+      "targets": [
+        {
+          "text": "When",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-006-t00"
+        },
+        {
+          "text": "will",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-006-t01"
+        },
+        {
+          "text": "I",
+          "sourceIndices": [
+            1,
+            5
+          ],
+          "focusSourceIndices": [
+            1,
+            5
+          ],
+          "relation": "grammatical-construction",
+          "rationale": "Russian nominative я and infinitive-subject dative мне refer to the same speaker; English expresses that subject once. Focus returns to I at the independently sung мне.",
+          "id": "RZ-006-t02"
+        },
+        {
+          "text": "understand",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-006-t03"
+        },
+        {
+          "text": "how",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-006-t04"
+        },
+        {
+          "text": "to",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-006-t05"
+        },
+        {
+          "text": "love",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-006-t06"
+        },
+        {
+          "text": "every",
+          "sourceIndices": [
+            6
+          ],
+          "focusSourceIndices": [
+            6
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-006-t07"
+        },
+        {
+          "text": "shard",
+          "sourceIndices": [
+            8
+          ],
+          "focusSourceIndices": [
+            8
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-006-t08"
+        },
+        {
+          "text": "of",
+          "sourceIndices": [
+            7
+          ],
+          "focusSourceIndices": [
+            7
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-006-t09"
+        },
+        {
+          "text": "crockery",
+          "sourceIndices": [
+            7
+          ],
+          "focusSourceIndices": [
+            7
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-006-t10",
+          "punctuationAfter": ","
+        }
+      ],
+      "sourceBreaks": [
+        5
+      ],
+      "targetBreaks": [
+        7
+      ],
+      "visibleStart": 47.04,
+      "fullOpacityEnd": 58.6,
+      "visibleEnd": 59.11,
+      "exitMode": "fade"
+    },
+    {
+      "id": "RZ-007",
+      "templateId": "dear",
+      "lane": "lead",
+      "voice": "Settlers lead",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Насколько мне сильно он дорог,",
+      "targetText": "How very dear it is to me,",
+      "start": 59.35,
+      "end": 63.11,
+      "words": [
+        {
+          "id": "RZ-007-s00",
+          "text": "Насколько",
+          "sourceIndex": 0,
+          "startSample": 2848800,
+          "endSample": 2889120,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores"
+        },
+        {
+          "id": "RZ-007-s01",
+          "text": "мне",
+          "sourceIndex": 1,
+          "startSample": 2889120,
+          "endSample": 2903520,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores"
+        },
+        {
+          "id": "RZ-007-s02",
+          "text": "сильно",
+          "sourceIndex": 2,
+          "startSample": 2903520,
+          "endSample": 2939040,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores"
+        },
+        {
+          "id": "RZ-007-s03",
+          "text": "он",
+          "sourceIndex": 3,
+          "startSample": 2939040,
+          "endSample": 2951040,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores"
+        },
+        {
+          "id": "RZ-007-s04",
+          "text": "дорог",
+          "sourceIndex": 4,
+          "startSample": 2951040,
+          "endSample": 3029280,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores",
+          "punctuationAfter": ","
+        }
+      ],
+      "targets": [
+        {
+          "text": "How",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-007-t00"
+        },
+        {
+          "text": "very",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-007-t01"
+        },
+        {
+          "text": "dear",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-007-t02"
+        },
+        {
+          "text": "it",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-007-t03"
+        },
+        {
+          "text": "is",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-007-t04"
+        },
+        {
+          "text": "to",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-007-t05"
+        },
+        {
+          "text": "me",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-007-t06",
+          "punctuationAfter": ","
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": [],
+      "visibleStart": 59.11,
+      "fullOpacityEnd": 64.06,
+      "visibleEnd": 64.71000000000001,
+      "exitMode": "fade"
+    },
+    {
+      "id": "RZ-008",
+      "templateId": "live",
+      "lane": "lead",
+      "voice": "Settlers lead",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Насколько мне хочется жить.",
+      "targetText": "How much I long to live.",
+      "start": 65.38,
+      "end": 68.12,
+      "words": [
+        {
+          "id": "RZ-008-s00",
+          "text": "Насколько",
+          "sourceIndex": 0,
+          "startSample": 3138240,
+          "endSample": 3175200,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores"
+        },
+        {
+          "id": "RZ-008-s01",
+          "text": "мне",
+          "sourceIndex": 1,
+          "startSample": 3175200,
+          "endSample": 3188640,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores"
+        },
+        {
+          "id": "RZ-008-s02",
+          "text": "хочется",
+          "sourceIndex": 2,
+          "startSample": 3188640,
+          "endSample": 3229440,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores"
+        },
+        {
+          "id": "RZ-008-s03",
+          "text": "жить",
+          "sourceIndex": 3,
+          "startSample": 3229440,
+          "endSample": 3269760,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores",
+          "punctuationAfter": "."
+        }
+      ],
+      "targets": [
+        {
+          "text": "How",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-008-t00"
+        },
+        {
+          "text": "much",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-008-t01"
+        },
+        {
+          "text": "I",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-008-t02"
+        },
+        {
+          "text": "long",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-008-t03"
+        },
+        {
+          "text": "to",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-008-t04"
+        },
+        {
+          "text": "live",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-008-t05",
+          "punctuationAfter": "."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": [],
+      "visibleStart": 65.14,
+      "fullOpacityEnd": 69.07000000000001,
+      "visibleEnd": 69.72000000000001,
+      "exitMode": "fade"
+    },
+    {
+      "id": "RZ-009",
+      "templateId": "live",
+      "lane": "lead",
+      "voice": "Settlers lead",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Насколько мне хочется жить.",
+      "targetText": "How much I long to live.",
+      "start": 71.42,
+      "end": 74.14,
+      "words": [
+        {
+          "id": "RZ-009-s00",
+          "text": "Насколько",
+          "sourceIndex": 0,
+          "startSample": 3428160,
+          "endSample": 3465600,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores"
+        },
+        {
+          "id": "RZ-009-s01",
+          "text": "мне",
+          "sourceIndex": 1,
+          "startSample": 3465600,
+          "endSample": 3478560,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores"
+        },
+        {
+          "id": "RZ-009-s02",
+          "text": "хочется",
+          "sourceIndex": 2,
+          "startSample": 3478560,
+          "endSample": 3524160,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores"
+        },
+        {
+          "id": "RZ-009-s03",
+          "text": "жить",
+          "sourceIndex": 3,
+          "startSample": 3524160,
+          "endSample": 3558720,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores",
+          "punctuationAfter": "."
+        }
+      ],
+      "targets": [
+        {
+          "text": "How",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-009-t00"
+        },
+        {
+          "text": "much",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-009-t01"
+        },
+        {
+          "text": "I",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-009-t02"
+        },
+        {
+          "text": "long",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-009-t03"
+        },
+        {
+          "text": "to",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-009-t04"
+        },
+        {
+          "text": "live",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-009-t05",
+          "punctuationAfter": "."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": [],
+      "visibleStart": 71.18,
+      "fullOpacityEnd": 75.09,
+      "visibleEnd": 75.74000000000001,
+      "exitMode": "fade"
+    },
+    {
+      "id": "RZ-010",
+      "templateId": "live",
+      "lane": "lead",
+      "voice": "Settlers lead",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Насколько мне хочется жить.",
+      "targetText": "How much I long to live.",
+      "start": 77.49,
+      "end": 80.29,
+      "words": [
+        {
+          "id": "RZ-010-s00",
+          "text": "Насколько",
+          "sourceIndex": 0,
+          "startSample": 3719520,
+          "endSample": 3753600,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores"
+        },
+        {
+          "id": "RZ-010-s01",
+          "text": "мне",
+          "sourceIndex": 1,
+          "startSample": 3753600,
+          "endSample": 3766560,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores"
+        },
+        {
+          "id": "RZ-010-s02",
+          "text": "хочется",
+          "sourceIndex": 2,
+          "startSample": 3766560,
+          "endSample": 3812160,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores"
+        },
+        {
+          "id": "RZ-010-s03",
+          "text": "жить",
+          "sourceIndex": 3,
+          "startSample": 3812160,
+          "endSample": 3853920,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores",
+          "punctuationAfter": "."
+        }
+      ],
+      "targets": [
+        {
+          "text": "How",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-010-t00"
+        },
+        {
+          "text": "much",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-010-t01"
+        },
+        {
+          "text": "I",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-010-t02"
+        },
+        {
+          "text": "long",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-010-t03"
+        },
+        {
+          "text": "to",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-010-t04"
+        },
+        {
+          "text": "live",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-010-t05",
+          "punctuationAfter": "."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": [],
+      "visibleStart": 77.25,
+      "fullOpacityEnd": 81.24000000000001,
+      "visibleEnd": 81.89000000000001,
+      "exitMode": "fade"
+    },
+    {
+      "id": "RZ-011",
+      "templateId": "live",
+      "lane": "lead",
+      "voice": "Settlers lead",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Насколько мне хочется жить.",
+      "targetText": "How much I long to live.",
+      "start": 83.52,
+      "end": 87.02,
+      "words": [
+        {
+          "id": "RZ-011-s00",
+          "text": "Насколько",
+          "sourceIndex": 0,
+          "startSample": 4008960,
+          "endSample": 4045920,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores"
+        },
+        {
+          "id": "RZ-011-s01",
+          "text": "мне",
+          "sourceIndex": 1,
+          "startSample": 4045920,
+          "endSample": 4057920,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores"
+        },
+        {
+          "id": "RZ-011-s02",
+          "text": "хочется",
+          "sourceIndex": 2,
+          "startSample": 4057920,
+          "endSample": 4103040,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores"
+        },
+        {
+          "id": "RZ-011-s03",
+          "text": "жить",
+          "sourceIndex": 3,
+          "startSample": 4103040,
+          "endSample": 4176960,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores",
+          "punctuationAfter": "."
+        }
+      ],
+      "targets": [
+        {
+          "text": "How",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-011-t00"
+        },
+        {
+          "text": "much",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-011-t01"
+        },
+        {
+          "text": "I",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-011-t02"
+        },
+        {
+          "text": "long",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-011-t03"
+        },
+        {
+          "text": "to",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-011-t04"
+        },
+        {
+          "text": "live",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-011-t05",
+          "punctuationAfter": "."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": [],
+      "visibleStart": 83.28,
+      "fullOpacityEnd": 87.97,
+      "visibleEnd": 88.62,
+      "exitMode": "fade"
+    },
+    {
+      "id": "RZ-012",
+      "templateId": "sky",
+      "lane": "lead",
+      "voice": "Settlers lead",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Может, только небо видит,",
+      "targetText": "Perhaps only the sky sees,",
+      "start": 91.28,
+      "end": 110.64,
+      "words": [
+        {
+          "id": "RZ-012-s00",
+          "text": "Может",
+          "sourceIndex": 0,
+          "startSample": 4381440,
+          "endSample": 4516320,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores",
+          "punctuationAfter": ","
+        },
+        {
+          "id": "RZ-012-s01",
+          "text": "только",
+          "sourceIndex": 1,
+          "startSample": 4672320,
+          "endSample": 4747200,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores"
+        },
+        {
+          "id": "RZ-012-s02",
+          "text": "небо",
+          "sourceIndex": 2,
+          "startSample": 4962240,
+          "endSample": 5043840,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores"
+        },
+        {
+          "id": "RZ-012-s03",
+          "text": "видит",
+          "sourceIndex": 3,
+          "startSample": 5248800,
+          "endSample": 5310720,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores",
+          "punctuationAfter": ","
+        }
+      ],
+      "targets": [
+        {
+          "text": "Perhaps",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-012-t00"
+        },
+        {
+          "text": "only",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-012-t01"
+        },
+        {
+          "text": "the",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-012-t02"
+        },
+        {
+          "text": "sky",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-012-t03"
+        },
+        {
+          "text": "sees",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-012-t04",
+          "punctuationAfter": ","
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": [],
+      "visibleStart": 91.04,
+      "fullOpacityEnd": 111.59,
+      "visibleEnd": 112.24000000000001,
+      "exitMode": "fade"
+    },
+    {
+      "id": "RZ-013",
+      "templateId": "moon",
+      "lane": "lead",
+      "voice": "Settlers lead",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Когда после солнца луна,",
+      "targetText": "When the moon comes after the sun,",
+      "start": 113.7,
+      "end": 116.27,
+      "words": [
+        {
+          "id": "RZ-013-s00",
+          "text": "Когда",
+          "sourceIndex": 0,
+          "startSample": 5457600,
+          "endSample": 5481600,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores"
+        },
+        {
+          "id": "RZ-013-s01",
+          "text": "после",
+          "sourceIndex": 1,
+          "startSample": 5481600,
+          "endSample": 5506560,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores"
+        },
+        {
+          "id": "RZ-013-s02",
+          "text": "солнца",
+          "sourceIndex": 2,
+          "startSample": 5506560,
+          "endSample": 5533440,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores"
+        },
+        {
+          "id": "RZ-013-s03",
+          "text": "луна",
+          "sourceIndex": 3,
+          "startSample": 5533440,
+          "endSample": 5580960,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores",
+          "punctuationAfter": ","
+        }
+      ],
+      "targets": [
+        {
+          "text": "When",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-013-t00"
+        },
+        {
+          "text": "the",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-013-t01"
+        },
+        {
+          "text": "moon",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-013-t02"
+        },
+        {
+          "text": "comes",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-013-t03"
+        },
+        {
+          "text": "after",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-013-t04"
+        },
+        {
+          "text": "the",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-013-t05"
+        },
+        {
+          "text": "sun",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-013-t06",
+          "punctuationAfter": ","
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": [],
+      "visibleStart": 113.46000000000001,
+      "fullOpacityEnd": 117.22,
+      "visibleEnd": 117.87,
+      "exitMode": "fade"
+    },
+    {
+      "id": "RZ-014",
+      "templateId": "believe",
+      "lane": "lead",
+      "voice": "Settlers lead",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Когда мы научимся верить,",
+      "targetText": "When we will learn to believe,",
+      "start": 119.8,
+      "end": 123.2,
+      "words": [
+        {
+          "id": "RZ-014-s00",
+          "text": "Когда",
+          "sourceIndex": 0,
+          "startSample": 5750400,
+          "endSample": 5772480,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores"
+        },
+        {
+          "id": "RZ-014-s01",
+          "text": "мы",
+          "sourceIndex": 1,
+          "startSample": 5772480,
+          "endSample": 5786880,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores"
+        },
+        {
+          "id": "RZ-014-s02",
+          "text": "научимся",
+          "sourceIndex": 2,
+          "startSample": 5786880,
+          "endSample": 5841120,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores"
+        },
+        {
+          "id": "RZ-014-s03",
+          "text": "верить",
+          "sourceIndex": 3,
+          "startSample": 5841120,
+          "endSample": 5913600,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores",
+          "punctuationAfter": ","
+        }
+      ],
+      "targets": [
+        {
+          "text": "When",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-014-t00"
+        },
+        {
+          "text": "we",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-014-t01"
+        },
+        {
+          "text": "will",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-014-t02"
+        },
+        {
+          "text": "learn",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-014-t03"
+        },
+        {
+          "text": "to",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-014-t04"
+        },
+        {
+          "text": "believe",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-014-t05",
+          "punctuationAfter": ","
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": [],
+      "visibleStart": 119.56,
+      "fullOpacityEnd": 124.15,
+      "visibleEnd": 124.80000000000001,
+      "exitMode": "fade"
+    },
+    {
+      "id": "RZ-015",
+      "templateId": "cup",
+      "lane": "lead",
+      "voice": "Settlers lead",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Когда чаша будет полна.",
+      "targetText": "When the cup will be full.",
+      "start": 125.8,
+      "end": 128.4,
+      "words": [
+        {
+          "id": "RZ-015-s00",
+          "text": "Когда",
+          "sourceIndex": 0,
+          "startSample": 6038400,
+          "endSample": 6061440,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores"
+        },
+        {
+          "id": "RZ-015-s01",
+          "text": "чаша",
+          "sourceIndex": 1,
+          "startSample": 6061440,
+          "endSample": 6093120,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores"
+        },
+        {
+          "id": "RZ-015-s02",
+          "text": "будет",
+          "sourceIndex": 2,
+          "startSample": 6093120,
+          "endSample": 6120480,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores"
+        },
+        {
+          "id": "RZ-015-s03",
+          "text": "полна",
+          "sourceIndex": 3,
+          "startSample": 6120480,
+          "endSample": 6163200,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores",
+          "punctuationAfter": "."
+        }
+      ],
+      "targets": [
+        {
+          "text": "When",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-015-t00"
+        },
+        {
+          "text": "the",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-015-t01"
+        },
+        {
+          "text": "cup",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-015-t02"
+        },
+        {
+          "text": "will",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-015-t03"
+        },
+        {
+          "text": "be",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-015-t04"
+        },
+        {
+          "text": "full",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-015-t05",
+          "punctuationAfter": "."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": [],
+      "visibleStart": 125.56,
+      "fullOpacityEnd": 129.35,
+      "visibleEnd": 130.0,
+      "exitMode": "fade"
+    },
+    {
+      "id": "RZ-016",
+      "templateId": "heart",
+      "lane": "lead",
+      "voice": "Settlers lead",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Кому же мне сердце доверить?",
+      "targetText": "Who, then, can I trust with my heart?",
+      "start": 131.9,
+      "end": 135.0,
+      "words": [
+        {
+          "id": "RZ-016-s00",
+          "text": "Кому",
+          "sourceIndex": 0,
+          "startSample": 6331200,
+          "endSample": 6349440,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores"
+        },
+        {
+          "id": "RZ-016-s01",
+          "text": "же",
+          "sourceIndex": 1,
+          "startSample": 6349440,
+          "endSample": 6360000,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores"
+        },
+        {
+          "id": "RZ-016-s02",
+          "text": "мне",
+          "sourceIndex": 2,
+          "startSample": 6360000,
+          "endSample": 6373440,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores"
+        },
+        {
+          "id": "RZ-016-s03",
+          "text": "сердце",
+          "sourceIndex": 3,
+          "startSample": 6373440,
+          "endSample": 6407520,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores"
+        },
+        {
+          "id": "RZ-016-s04",
+          "text": "доверить",
+          "sourceIndex": 4,
+          "startSample": 6407520,
+          "endSample": 6480000,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores",
+          "punctuationAfter": "?"
+        }
+      ],
+      "targets": [
+        {
+          "text": "Who",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-016-t00",
+          "punctuationAfter": ","
+        },
+        {
+          "text": "then",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-016-t01",
+          "punctuationAfter": ","
+        },
+        {
+          "text": "can",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-016-t02"
+        },
+        {
+          "text": "I",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-016-t03"
+        },
+        {
+          "text": "trust",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-016-t04"
+        },
+        {
+          "text": "with",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-016-t05"
+        },
+        {
+          "text": "my",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "lexical",
+          "rationale": "English uses a possessive for the speaker’s own heart; it does not add a beloved or another person.",
+          "id": "RZ-016-t06"
+        },
+        {
+          "text": "heart",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-016-t07",
+          "punctuationAfter": "?"
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": [],
+      "visibleStart": 131.66,
+      "fullOpacityEnd": 135.95,
+      "visibleEnd": 136.6,
+      "exitMode": "fade"
+    },
+    {
+      "id": "RZ-017",
+      "templateId": "shard",
+      "lane": "lead",
+      "voice": "Settlers lead",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Когда я пойму, как любить мне каждый посуды осколок,",
+      "targetText": "When will I understand how to love every shard of crockery,",
+      "start": 137.86,
+      "end": 147.93,
+      "words": [
+        {
+          "id": "RZ-017-s00",
+          "text": "Когда",
+          "sourceIndex": 0,
+          "startSample": 6617280,
+          "endSample": 6639360,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores"
+        },
+        {
+          "id": "RZ-017-s01",
+          "text": "я",
+          "sourceIndex": 1,
+          "startSample": 6639360,
+          "endSample": 6655680,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores"
+        },
+        {
+          "id": "RZ-017-s02",
+          "text": "пойму",
+          "sourceIndex": 2,
+          "startSample": 6655680,
+          "endSample": 6684960,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores",
+          "punctuationAfter": ","
+        },
+        {
+          "id": "RZ-017-s03",
+          "text": "как",
+          "sourceIndex": 3,
+          "startSample": 6684960,
+          "endSample": 6701760,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores"
+        },
+        {
+          "id": "RZ-017-s04",
+          "text": "любить",
+          "sourceIndex": 4,
+          "startSample": 6701760,
+          "endSample": 6816480,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores"
+        },
+        {
+          "id": "RZ-017-s05",
+          "text": "мне",
+          "sourceIndex": 5,
+          "startSample": 6904320,
+          "endSample": 6916800,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores"
+        },
+        {
+          "id": "RZ-017-s06",
+          "text": "каждый",
+          "sourceIndex": 6,
+          "startSample": 6916800,
+          "endSample": 6947040,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores"
+        },
+        {
+          "id": "RZ-017-s07",
+          "text": "посуды",
+          "sourceIndex": 7,
+          "startSample": 6947040,
+          "endSample": 6986880,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores"
+        },
+        {
+          "id": "RZ-017-s08",
+          "text": "осколок",
+          "sourceIndex": 8,
+          "startSample": 6986880,
+          "endSample": 7100640,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores",
+          "punctuationAfter": ","
+        }
+      ],
+      "targets": [
+        {
+          "text": "When",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-017-t00"
+        },
+        {
+          "text": "will",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-017-t01"
+        },
+        {
+          "text": "I",
+          "sourceIndices": [
+            1,
+            5
+          ],
+          "focusSourceIndices": [
+            1,
+            5
+          ],
+          "relation": "grammatical-construction",
+          "rationale": "Russian nominative я and infinitive-subject dative мне refer to the same speaker; English expresses that subject once. Focus returns to I at the independently sung мне.",
+          "id": "RZ-017-t02"
+        },
+        {
+          "text": "understand",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-017-t03"
+        },
+        {
+          "text": "how",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-017-t04"
+        },
+        {
+          "text": "to",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-017-t05"
+        },
+        {
+          "text": "love",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-017-t06"
+        },
+        {
+          "text": "every",
+          "sourceIndices": [
+            6
+          ],
+          "focusSourceIndices": [
+            6
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-017-t07"
+        },
+        {
+          "text": "shard",
+          "sourceIndices": [
+            8
+          ],
+          "focusSourceIndices": [
+            8
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-017-t08"
+        },
+        {
+          "text": "of",
+          "sourceIndices": [
+            7
+          ],
+          "focusSourceIndices": [
+            7
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-017-t09"
+        },
+        {
+          "text": "crockery",
+          "sourceIndices": [
+            7
+          ],
+          "focusSourceIndices": [
+            7
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-017-t10",
+          "punctuationAfter": ","
+        }
+      ],
+      "sourceBreaks": [
+        5
+      ],
+      "targetBreaks": [
+        7
+      ],
+      "visibleStart": 137.62,
+      "fullOpacityEnd": 148.88,
+      "visibleEnd": 149.53,
+      "exitMode": "fade"
+    },
+    {
+      "id": "RZ-018",
+      "templateId": "dear",
+      "lane": "lead",
+      "voice": "Settlers lead",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Насколько мне сильно он дорог,",
+      "targetText": "How very dear it is to me,",
+      "start": 149.88,
+      "end": 153.62,
+      "words": [
+        {
+          "id": "RZ-018-s00",
+          "text": "Насколько",
+          "sourceIndex": 0,
+          "startSample": 7194240,
+          "endSample": 7233600,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores"
+        },
+        {
+          "id": "RZ-018-s01",
+          "text": "мне",
+          "sourceIndex": 1,
+          "startSample": 7233600,
+          "endSample": 7248480,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores"
+        },
+        {
+          "id": "RZ-018-s02",
+          "text": "сильно",
+          "sourceIndex": 2,
+          "startSample": 7248480,
+          "endSample": 7282560,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores"
+        },
+        {
+          "id": "RZ-018-s03",
+          "text": "он",
+          "sourceIndex": 3,
+          "startSample": 7282560,
+          "endSample": 7298400,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores"
+        },
+        {
+          "id": "RZ-018-s04",
+          "text": "дорог",
+          "sourceIndex": 4,
+          "startSample": 7298400,
+          "endSample": 7373760,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores",
+          "punctuationAfter": ","
+        }
+      ],
+      "targets": [
+        {
+          "text": "How",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-018-t00"
+        },
+        {
+          "text": "very",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-018-t01"
+        },
+        {
+          "text": "dear",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-018-t02"
+        },
+        {
+          "text": "it",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-018-t03"
+        },
+        {
+          "text": "is",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-018-t04"
+        },
+        {
+          "text": "to",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-018-t05"
+        },
+        {
+          "text": "me",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-018-t06",
+          "punctuationAfter": ","
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": [],
+      "visibleStart": 149.64,
+      "fullOpacityEnd": 154.57,
+      "visibleEnd": 155.22,
+      "exitMode": "fade"
+    },
+    {
+      "id": "RZ-019",
+      "templateId": "live",
+      "lane": "lead",
+      "voice": "Settlers lead",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Насколько мне хочется жить.",
+      "targetText": "How much I long to live.",
+      "start": 155.92,
+      "end": 160.69,
+      "words": [
+        {
+          "id": "RZ-019-s00",
+          "text": "Насколько",
+          "sourceIndex": 0,
+          "startSample": 7484160,
+          "endSample": 7521600,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores"
+        },
+        {
+          "id": "RZ-019-s01",
+          "text": "мне",
+          "sourceIndex": 1,
+          "startSample": 7521600,
+          "endSample": 7536000,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores"
+        },
+        {
+          "id": "RZ-019-s02",
+          "text": "хочется",
+          "sourceIndex": 2,
+          "startSample": 7536000,
+          "endSample": 7580160,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores"
+        },
+        {
+          "id": "RZ-019-s03",
+          "text": "жить",
+          "sourceIndex": 3,
+          "startSample": 7580160,
+          "endSample": 7713120,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores",
+          "punctuationAfter": "."
+        }
+      ],
+      "targets": [
+        {
+          "text": "How",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-019-t00"
+        },
+        {
+          "text": "much",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-019-t01"
+        },
+        {
+          "text": "I",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-019-t02"
+        },
+        {
+          "text": "long",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-019-t03"
+        },
+        {
+          "text": "to",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-019-t04"
+        },
+        {
+          "text": "live",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-019-t05",
+          "punctuationAfter": "."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": [],
+      "visibleStart": 155.67999999999998,
+      "fullOpacityEnd": 162.01,
+      "visibleEnd": 162.01,
+      "exitMode": "vocal-handoff"
+    },
+    {
+      "id": "RZ-020",
+      "templateId": "live",
+      "lane": "lead",
+      "voice": "Settlers lead",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Насколько мне хочется жить.",
+      "targetText": "How much I long to live.",
+      "start": 162.01,
+      "end": 166.45,
+      "words": [
+        {
+          "id": "RZ-020-s00",
+          "text": "Насколько",
+          "sourceIndex": 0,
+          "startSample": 7776480,
+          "endSample": 7814880,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores"
+        },
+        {
+          "id": "RZ-020-s01",
+          "text": "мне",
+          "sourceIndex": 1,
+          "startSample": 7814880,
+          "endSample": 7824000,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores"
+        },
+        {
+          "id": "RZ-020-s02",
+          "text": "хочется",
+          "sourceIndex": 2,
+          "startSample": 7824000,
+          "endSample": 7874880,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores"
+        },
+        {
+          "id": "RZ-020-s03",
+          "text": "жить",
+          "sourceIndex": 3,
+          "startSample": 7874880,
+          "endSample": 7989600,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores",
+          "punctuationAfter": "."
+        }
+      ],
+      "targets": [
+        {
+          "text": "How",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-020-t00"
+        },
+        {
+          "text": "much",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-020-t01"
+        },
+        {
+          "text": "I",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-020-t02"
+        },
+        {
+          "text": "long",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-020-t03"
+        },
+        {
+          "text": "to",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-020-t04"
+        },
+        {
+          "text": "live",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-020-t05",
+          "punctuationAfter": "."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": [],
+      "visibleStart": 162.01,
+      "fullOpacityEnd": 168.1,
+      "visibleEnd": 168.1,
+      "exitMode": "vocal-handoff"
+    },
+    {
+      "id": "RZ-021",
+      "templateId": "live",
+      "lane": "lead",
+      "voice": "Settlers lead",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Насколько мне хочется жить.",
+      "targetText": "How much I long to live.",
+      "start": 168.1,
+      "end": 172.28,
+      "words": [
+        {
+          "id": "RZ-021-s00",
+          "text": "Насколько",
+          "sourceIndex": 0,
+          "startSample": 8068800,
+          "endSample": 8105280,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores"
+        },
+        {
+          "id": "RZ-021-s01",
+          "text": "мне",
+          "sourceIndex": 1,
+          "startSample": 8105280,
+          "endSample": 8118240,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores"
+        },
+        {
+          "id": "RZ-021-s02",
+          "text": "хочется",
+          "sourceIndex": 2,
+          "startSample": 8118240,
+          "endSample": 8161920,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores"
+        },
+        {
+          "id": "RZ-021-s03",
+          "text": "жить",
+          "sourceIndex": 3,
+          "startSample": 8161920,
+          "endSample": 8269440,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores",
+          "punctuationAfter": "."
+        }
+      ],
+      "targets": [
+        {
+          "text": "How",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-021-t00"
+        },
+        {
+          "text": "much",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-021-t01"
+        },
+        {
+          "text": "I",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-021-t02"
+        },
+        {
+          "text": "long",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-021-t03"
+        },
+        {
+          "text": "to",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-021-t04"
+        },
+        {
+          "text": "live",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-021-t05",
+          "punctuationAfter": "."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": [],
+      "visibleStart": 168.1,
+      "fullOpacityEnd": 173.23,
+      "visibleEnd": 173.88,
+      "exitMode": "fade"
+    },
+    {
+      "id": "RZ-022",
+      "templateId": "live",
+      "lane": "lead",
+      "voice": "Settlers lead",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Насколько мне хочется жить.",
+      "targetText": "How much I long to live.",
+      "start": 174.12,
+      "end": 178.37,
+      "words": [
+        {
+          "id": "RZ-022-s00",
+          "text": "Насколько",
+          "sourceIndex": 0,
+          "startSample": 8357760,
+          "endSample": 8395200,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores"
+        },
+        {
+          "id": "RZ-022-s01",
+          "text": "мне",
+          "sourceIndex": 1,
+          "startSample": 8395200,
+          "endSample": 8407680,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores"
+        },
+        {
+          "id": "RZ-022-s02",
+          "text": "хочется",
+          "sourceIndex": 2,
+          "startSample": 8407680,
+          "endSample": 8455680,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores"
+        },
+        {
+          "id": "RZ-022-s03",
+          "text": "жить",
+          "sourceIndex": 3,
+          "startSample": 8455680,
+          "endSample": 8561760,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores",
+          "punctuationAfter": "."
+        }
+      ],
+      "targets": [
+        {
+          "text": "How",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-022-t00"
+        },
+        {
+          "text": "much",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-022-t01"
+        },
+        {
+          "text": "I",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-022-t02"
+        },
+        {
+          "text": "long",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-022-t03"
+        },
+        {
+          "text": "to",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-022-t04"
+        },
+        {
+          "text": "live",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-022-t05",
+          "punctuationAfter": "."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": [],
+      "visibleStart": 173.88,
+      "fullOpacityEnd": 179.32,
+      "visibleEnd": 179.84,
+      "exitMode": "fade"
+    },
+    {
+      "id": "RZ-023",
+      "templateId": "live",
+      "lane": "lead",
+      "voice": "Settlers lead",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Насколько мне хочется жить.",
+      "targetText": "How much I long to live.",
+      "start": 180.08,
+      "end": 184.45,
+      "words": [
+        {
+          "id": "RZ-023-s00",
+          "text": "Насколько",
+          "sourceIndex": 0,
+          "startSample": 8643840,
+          "endSample": 8682240,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores"
+        },
+        {
+          "id": "RZ-023-s01",
+          "text": "мне",
+          "sourceIndex": 1,
+          "startSample": 8682240,
+          "endSample": 8695200,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores"
+        },
+        {
+          "id": "RZ-023-s02",
+          "text": "хочется",
+          "sourceIndex": 2,
+          "startSample": 8695200,
+          "endSample": 8740800,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores"
+        },
+        {
+          "id": "RZ-023-s03",
+          "text": "жить",
+          "sourceIndex": 3,
+          "startSample": 8740800,
+          "endSample": 8853600,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores",
+          "punctuationAfter": "."
+        }
+      ],
+      "targets": [
+        {
+          "text": "How",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-023-t00"
+        },
+        {
+          "text": "much",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-023-t01"
+        },
+        {
+          "text": "I",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-023-t02"
+        },
+        {
+          "text": "long",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-023-t03"
+        },
+        {
+          "text": "to",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-023-t04"
+        },
+        {
+          "text": "live",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-023-t05",
+          "punctuationAfter": "."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": [],
+      "visibleStart": 179.84,
+      "fullOpacityEnd": 185.39999999999998,
+      "visibleEnd": 185.89999999999998,
+      "exitMode": "fade"
+    },
+    {
+      "id": "RZ-024",
+      "templateId": "live",
+      "lane": "lead",
+      "voice": "Settlers lead",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Насколько мне хочется жить.",
+      "targetText": "How much I long to live.",
+      "start": 186.14,
+      "end": 190.42,
+      "words": [
+        {
+          "id": "RZ-024-s00",
+          "text": "Насколько",
+          "sourceIndex": 0,
+          "startSample": 8934720,
+          "endSample": 8973120,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores"
+        },
+        {
+          "id": "RZ-024-s01",
+          "text": "мне",
+          "sourceIndex": 1,
+          "startSample": 8973120,
+          "endSample": 8985120,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores"
+        },
+        {
+          "id": "RZ-024-s02",
+          "text": "хочется",
+          "sourceIndex": 2,
+          "startSample": 8985120,
+          "endSample": 9031680,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores"
+        },
+        {
+          "id": "RZ-024-s03",
+          "text": "жить",
+          "sourceIndex": 3,
+          "startSample": 9031680,
+          "endSample": 9140160,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores",
+          "punctuationAfter": "."
+        }
+      ],
+      "targets": [
+        {
+          "text": "How",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-024-t00"
+        },
+        {
+          "text": "much",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-024-t01"
+        },
+        {
+          "text": "I",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-024-t02"
+        },
+        {
+          "text": "long",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-024-t03"
+        },
+        {
+          "text": "to",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-024-t04"
+        },
+        {
+          "text": "live",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-024-t05",
+          "punctuationAfter": "."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": [],
+      "visibleStart": 185.89999999999998,
+      "fullOpacityEnd": 191.36999999999998,
+      "visibleEnd": 191.97,
+      "exitMode": "fade"
+    },
+    {
+      "id": "RZ-025",
+      "templateId": "live",
+      "lane": "lead",
+      "voice": "Settlers lead",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Насколько мне хочется жить.",
+      "targetText": "How much I long to live.",
+      "start": 192.21,
+      "end": 196.47,
+      "words": [
+        {
+          "id": "RZ-025-s00",
+          "text": "Насколько",
+          "sourceIndex": 0,
+          "startSample": 9226080,
+          "endSample": 9262080,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores"
+        },
+        {
+          "id": "RZ-025-s01",
+          "text": "мне",
+          "sourceIndex": 1,
+          "startSample": 9262080,
+          "endSample": 9273600,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores"
+        },
+        {
+          "id": "RZ-025-s02",
+          "text": "хочется",
+          "sourceIndex": 2,
+          "startSample": 9273600,
+          "endSample": 9306720,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores"
+        },
+        {
+          "id": "RZ-025-s03",
+          "text": "жить",
+          "sourceIndex": 3,
+          "startSample": 9306720,
+          "endSample": 9430560,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores",
+          "punctuationAfter": "."
+        }
+      ],
+      "targets": [
+        {
+          "text": "How",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-025-t00"
+        },
+        {
+          "text": "much",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-025-t01"
+        },
+        {
+          "text": "I",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-025-t02"
+        },
+        {
+          "text": "long",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-025-t03"
+        },
+        {
+          "text": "to",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-025-t04"
+        },
+        {
+          "text": "live",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-025-t05",
+          "punctuationAfter": "."
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": [],
+      "visibleStart": 191.97,
+      "fullOpacityEnd": 197.42,
+      "visibleEnd": 198.03,
+      "exitMode": "fade"
+    },
+    {
+      "id": "RZ-026",
+      "templateId": "final",
+      "lane": "lead",
+      "voice": "Settlers lead",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Ну как же мне хочется жить!",
+      "targetText": "Oh, how I long to live!",
+      "start": 198.27,
+      "end": 202.02,
+      "words": [
+        {
+          "id": "RZ-026-s00",
+          "text": "Ну",
+          "sourceIndex": 0,
+          "startSample": 9516960,
+          "endSample": 9525600,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores"
+        },
+        {
+          "id": "RZ-026-s01",
+          "text": "как",
+          "sourceIndex": 1,
+          "startSample": 9525600,
+          "endSample": 9541920,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores"
+        },
+        {
+          "id": "RZ-026-s02",
+          "text": "же",
+          "sourceIndex": 2,
+          "startSample": 9541920,
+          "endSample": 9555360,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores"
+        },
+        {
+          "id": "RZ-026-s03",
+          "text": "мне",
+          "sourceIndex": 3,
+          "startSample": 9555360,
+          "endSample": 9569760,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores"
+        },
+        {
+          "id": "RZ-026-s04",
+          "text": "хочется",
+          "sourceIndex": 4,
+          "startSample": 9569760,
+          "endSample": 9602880,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores"
+        },
+        {
+          "id": "RZ-026-s05",
+          "text": "жить",
+          "sourceIndex": 5,
+          "startSample": 9602880,
+          "endSample": 9696960,
+          "confidence": "preview proposal; listening pending",
+          "method": "selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores",
+          "punctuationAfter": "!"
+        }
+      ],
+      "targets": [
+        {
+          "text": "Oh",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-026-t00",
+          "punctuationAfter": ","
+        },
+        {
+          "text": "how",
+          "sourceIndices": [
+            1,
+            2
+          ],
+          "focusSourceIndices": [
+            1,
+            2
+          ],
+          "relation": "grammatical-construction",
+          "rationale": "Emphatic как же is one English exclamatory how; both independently sung source words activate that complete meaning.",
+          "id": "RZ-026-t01"
+        },
+        {
+          "text": "I",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-026-t02"
+        },
+        {
+          "text": "long",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-026-t03"
+        },
+        {
+          "text": "to",
+          "sourceIndices": [
+            5
+          ],
+          "focusSourceIndices": [
+            5
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-026-t04"
+        },
+        {
+          "text": "live",
+          "sourceIndices": [
+            5
+          ],
+          "focusSourceIndices": [
+            5
+          ],
+          "relation": "lexical",
+          "rationale": "Direct lexical correspondence or required English grammar carried by that source word.",
+          "id": "RZ-026-t05",
+          "punctuationAfter": "!"
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": [],
+      "visibleStart": 198.03,
+      "fullOpacityEnd": 203.32000000000002,
+      "visibleEnd": 203.97000000000003,
+      "exitMode": "fade"
+    }
+  ]
+}

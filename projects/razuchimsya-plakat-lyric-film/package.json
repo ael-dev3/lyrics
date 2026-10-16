@@ -1,0 +1,23 @@
+{
+  "name": "razuchimsya-plakat-lyric-film",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "esbuild src/player.ts --bundle --format=esm --outfile=review/client.js",
+    "preview": "npm run build && npm run identity && node scripts/preview-server.ts",
+    "typecheck": "tsc --noEmit",
+    "check": "npm run typecheck && npm run build && node tests/verify.ts",
+    "features": "node scripts/analyze-audio.ts",
+    "identity": "node scripts/refresh-identity.ts",
+    "stills": "node scripts/preview-stills.ts",
+    "prepare": "python3 scripts/prepare-source.py",
+    "gate": "node scripts/check-production-gate.ts"
+  },
+  "devDependencies": {
+    "@types/node": "26.6.4",
+    "esbuild": "0.28.2",
+    "typescript": "7.0.2",
+    "@napi-rs/canvas": "1.0.10"
+  }
+}
