@@ -30,7 +30,7 @@ Music and source imagery belong to their creators.
 #немерено #лампабикт #ЭллиНаМаковомПоле #RussianMusic #EnglishTranslation`);
 const cast=`${title}
 
-AI-assisted translation, timing, added visuals and caption; human-directed and reviewed.
+AI-assisted translation, timing and visuals. Human-directed and reviewed.
 Original recording/artwork: https://youtu.be/sPw-_Of_LgQ`;
 assert(Buffer.byteLength(cast,'utf8')<=320,'Combined Farcaster post exceeds the conservative local byte budget.');
 save('Farcaster/Caption.txt',cast);
@@ -56,5 +56,5 @@ for(const language of ['Russian','English','Bilingual']){
  const rows=timeline.cues.map((c,i)=>`${i+1}\n${stamp(c.start)} --> ${stamp(c.end)}\n${language==='Russian'?c.sourceText:language==='English'?c.targetText:c.sourceText+'\n'+c.targetText}`);
  assert.equal(rows.length,46);save(`Captions/${language}.srt`,rows.join('\n\n'));
 }
-writeFileSync(resolve(root,'evidence/publishing-copy.json'),JSON.stringify({schemaVersion:1,source,captionCues:46,farcasterCaptionUtf8Bytes:Buffer.byteLength(cast,'utf8'),disclosure:'One copy-and-paste post combines the song title, explicit AI-assisted roles, human direction/review and original-source credit.',policyBasis:'Current in-app notice supplied for this delivery on 16 October 2026; no mandated exact disclosure wording is asserted.',referenceClientSnapshot:'https://github.com/farcasterxyz/client',youtubeStandardAspectReference:'https://support.google.com/youtube/answer/15424877?hl=en',platformUploadPerformed:false},null,2)+'\n');
+writeFileSync(resolve(root,'evidence/publishing-copy.json'),JSON.stringify({schemaVersion:1,source,captionCues:46,farcasterCopyRevision:2,farcasterCaptionUtf8Bytes:Buffer.byteLength(cast,'utf8'),disclosure:'One ready-to-post file combines factual title/credits, explicit AI-assisted translation/timing/visuals, actual human direction/review and original-source credit. No promotional descriptive caption is included.',policyBasis:'Current official client notice and Network Code checked 16 October 2026. Undisclosed AI content is prohibited; repeatedly presenting AI writing as one\'s own is listed as a bannable offense. No mandatory disclosure phrase or title-credit exemption is asserted.',policyUrl:'https://farcaster.xyz/~/code',noticeUrl:'https://farcaster.xyz/~/vote',referenceClientSnapshot:'https://github.com/farcasterxyz/client',youtubeStandardAspectReference:'https://support.google.com/youtube/answer/15424877?hl=en',platformUploadPerformed:false},null,2)+'\n');
 console.log(JSON.stringify({status:'publishing text and optional captions prepared',farcasterBytes:Buffer.byteLength(cast,'utf8')}));
