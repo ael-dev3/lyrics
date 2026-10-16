@@ -1,0 +1,24 @@
+{
+  "sourceSha256": "1a2efa9d95b57fe72ff56e8028a39793ef1a69e0d10a8ed47fbcf25885ed855c",
+  "sourceReference": "User supplied timestamped Russian transcript, privately preserved unchanged.",
+  "analysis": "Original mix decoded to 48 kHz stereo PCM and 16 kHz mono model input. Demucs htdemucs estimates vocals; source mix alone supplies preview audio.",
+  "stemClock": {
+    "sourceRate": 48000,
+    "stemRate": 44100,
+    "stemFrames": 10013919,
+    "decodedMixFramesAtStemRate": 10013920,
+    "recombinationCrossCorrelationLagSamples": 0,
+    "relativeRecombinationRmsError": 0.15364184975624084,
+    "humanListening": false
+  },
+  "modelPasses": [
+    "Unprompted large-v3-turbo, overlapping bounded source and estimated-stem crops",
+    "Unprompted small model, four targeted crops on mix/stem",
+    "Ten shorter large-v3-turbo source crops to recover repeated lines omitted by broad ASR",
+    "MMS_FA CTC character cores on all 26 independently bounded phrases",
+    "Stable-ts/large-v3-turbo conditioned attention comparison on all 26 phrases"
+  ],
+  "manualSynthesis": "Individually selected preview word and release proposals; no uniform chorus advance and no copied repeat timing. Per-word selected samples and raw model bounds remain separate.",
+  "humanListening": false,
+  "currentLimit": "Full listener review of the current complete preview, especially stretched intros and held releases, remains pending."
+}

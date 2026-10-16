@@ -1,0 +1,1773 @@
+{
+  "sourceSha256": "1a2efa9d95b57fe72ff56e8028a39793ef1a69e0d10a8ed47fbcf25885ed855c",
+  "packages": {
+    "stable-ts": "2.19.1",
+    "openai-whisper": "20250625",
+    "torch": "2.8.0",
+    "torchaudio": "2.8.0",
+    "demucs": "4.1.0",
+    "uroman": "1.3.1.1"
+  },
+  "encoder": {
+    "strideMs": 20,
+    "receptiveFieldMs": 25,
+    "firstCenterMs": 12.46875
+  },
+  "records": [
+    {
+      "id": "RZ-001",
+      "crop": [
+        0.0,
+        22.9
+      ],
+      "mmsWords": [
+        {
+          "sourceIndex": 0,
+          "text": "Может",
+          "firstEncoderCenter": 0.77246875,
+          "lastEncoderCenter": 3.69246875,
+          "score": 0.3335203028594454
+        },
+        {
+          "sourceIndex": 1,
+          "text": "только",
+          "firstEncoderCenter": 6.79246875,
+          "lastEncoderCenter": 8.07246875,
+          "score": 0.3834456230203311
+        },
+        {
+          "sourceIndex": 2,
+          "text": "солнце",
+          "firstEncoderCenter": 12.75246875,
+          "lastEncoderCenter": 14.19246875,
+          "score": 0.3974240656409945
+        },
+        {
+          "sourceIndex": 3,
+          "text": "знает",
+          "firstEncoderCenter": 18.73246875,
+          "lastEncoderCenter": 21.87246875,
+          "score": 0.42403348386287687
+        }
+      ],
+      "attentionWords": [
+        {
+          "text": "Может",
+          "start": 8.0,
+          "end": 8.0
+        },
+        {
+          "text": "только",
+          "start": 9.46,
+          "end": 9.46
+        },
+        {
+          "text": "солнце",
+          "start": 18.88,
+          "end": 20.0
+        },
+        {
+          "text": "знает",
+          "start": 20.0,
+          "end": 21.08
+        }
+      ],
+      "attentionStatus": "Rejected: collapsed/zero-length allocations across stretched words and long gaps",
+      "humanListening": false
+    },
+    {
+      "id": "RZ-002",
+      "crop": [
+        22.9,
+        28.0
+      ],
+      "mmsWords": [
+        {
+          "sourceIndex": 0,
+          "text": "Когда",
+          "firstEncoderCenter": 23.23246875,
+          "lastEncoderCenter": 23.53246875,
+          "score": 0.989737617969513
+        },
+        {
+          "sourceIndex": 1,
+          "text": "после",
+          "firstEncoderCenter": 23.792468749999998,
+          "lastEncoderCenter": 24.132468749999997,
+          "score": 0.9605001330375671
+        },
+        {
+          "sourceIndex": 2,
+          "text": "ночи",
+          "firstEncoderCenter": 24.25246875,
+          "lastEncoderCenter": 24.652468749999997,
+          "score": 0.711058480044206
+        },
+        {
+          "sourceIndex": 3,
+          "text": "заря",
+          "firstEncoderCenter": 24.85246875,
+          "lastEncoderCenter": 25.35246875,
+          "score": 0.8494647860527038
+        }
+      ],
+      "attentionWords": [
+        {
+          "text": "Когда",
+          "start": 22.9,
+          "end": 23.54
+        },
+        {
+          "text": "после",
+          "start": 23.54,
+          "end": 24.08
+        },
+        {
+          "text": "ночи",
+          "start": 24.08,
+          "end": 24.779999999999998
+        },
+        {
+          "text": "заря",
+          "start": 24.779999999999998,
+          "end": 25.659999999999997
+        }
+      ],
+      "attentionStatus": "Comparison only; crop-edge starts and short held endings are not accepted automatically",
+      "humanListening": false
+    },
+    {
+      "id": "RZ-003",
+      "crop": [
+        28.5,
+        34.5
+      ],
+      "mmsWords": [
+        {
+          "sourceIndex": 0,
+          "text": "Когда",
+          "firstEncoderCenter": 29.23246875,
+          "lastEncoderCenter": 29.592468750000002,
+          "score": 0.3938049390912056
+        },
+        {
+          "sourceIndex": 1,
+          "text": "мы",
+          "firstEncoderCenter": 29.81246875,
+          "lastEncoderCenter": 29.89246875,
+          "score": 0.4622596916524344
+        },
+        {
+          "sourceIndex": 2,
+          "text": "разучимся",
+          "firstEncoderCenter": 29.99246875,
+          "lastEncoderCenter": 31.01246875,
+          "score": 0.6700650589032606
+        },
+        {
+          "sourceIndex": 3,
+          "text": "плакать",
+          "firstEncoderCenter": 31.23246875,
+          "lastEncoderCenter": 33.67246875,
+          "score": 0.4879186029623573
+        }
+      ],
+      "attentionWords": [
+        {
+          "text": "Когда",
+          "start": 28.5,
+          "end": 29.52
+        },
+        {
+          "text": "мы",
+          "start": 29.52,
+          "end": 29.92
+        },
+        {
+          "text": "разучимся",
+          "start": 29.92,
+          "end": 30.98
+        },
+        {
+          "text": "плакать",
+          "start": 30.98,
+          "end": 32.9
+        }
+      ],
+      "attentionStatus": "Comparison only; crop-edge starts and short held endings are not accepted automatically",
+      "humanListening": false
+    },
+    {
+      "id": "RZ-004",
+      "crop": [
+        34.8,
+        40.6
+      ],
+      "mmsWords": [
+        {
+          "sourceIndex": 0,
+          "text": "Когда",
+          "firstEncoderCenter": 35.29246874999999,
+          "lastEncoderCenter": 35.632468749999994,
+          "score": 0.9564168453216553
+        },
+        {
+          "sourceIndex": 1,
+          "text": "после",
+          "firstEncoderCenter": 35.872468749999996,
+          "lastEncoderCenter": 36.232468749999995,
+          "score": 0.9070645332336426
+        },
+        {
+          "sourceIndex": 2,
+          "text": "туч",
+          "firstEncoderCenter": 36.372468749999996,
+          "lastEncoderCenter": 36.692468749999996,
+          "score": 0.8032551527023315
+        },
+        {
+          "sourceIndex": 3,
+          "text": "февраля",
+          "firstEncoderCenter": 36.79246874999999,
+          "lastEncoderCenter": 37.452468749999994,
+          "score": 0.7156416943616932
+        }
+      ],
+      "attentionWords": [
+        {
+          "text": "Когда",
+          "start": 34.8,
+          "end": 35.58
+        },
+        {
+          "text": "после",
+          "start": 35.58,
+          "end": 36.199999999999996
+        },
+        {
+          "text": "туч",
+          "start": 36.199999999999996,
+          "end": 36.68
+        },
+        {
+          "text": "февраля",
+          "start": 36.68,
+          "end": 38.059999999999995
+        }
+      ],
+      "attentionStatus": "Comparison only; crop-edge starts and short held endings are not accepted automatically",
+      "humanListening": false
+    },
+    {
+      "id": "RZ-005",
+      "crop": [
+        40.8,
+        46.1
+      ],
+      "mmsWords": [
+        {
+          "sourceIndex": 0,
+          "text": "Наступит",
+          "firstEncoderCenter": 41.33246875,
+          "lastEncoderCenter": 42.01246875,
+          "score": 0.7902060244232416
+        },
+        {
+          "sourceIndex": 1,
+          "text": "весенняя",
+          "firstEncoderCenter": 42.092468749999995,
+          "lastEncoderCenter": 42.99246874999999,
+          "score": 0.7308225877583027
+        },
+        {
+          "sourceIndex": 2,
+          "text": "слякоть",
+          "firstEncoderCenter": 43.17246874999999,
+          "lastEncoderCenter": 45.812468749999994,
+          "score": 0.5279015926311591
+        }
+      ],
+      "attentionWords": [
+        {
+          "text": "Наступит",
+          "start": 40.8,
+          "end": 42.04
+        },
+        {
+          "text": "весенняя",
+          "start": 42.04,
+          "end": 43.18
+        },
+        {
+          "text": "слякоть",
+          "start": 43.18,
+          "end": 44.81999999999999
+        }
+      ],
+      "attentionStatus": "Comparison only; crop-edge starts and short held endings are not accepted automatically",
+      "humanListening": false
+    },
+    {
+      "id": "RZ-006",
+      "crop": [
+        46.8,
+        58.6
+      ],
+      "mmsWords": [
+        {
+          "sourceIndex": 0,
+          "text": "Когда",
+          "firstEncoderCenter": 47.312468749999994,
+          "lastEncoderCenter": 47.79246874999999,
+          "score": 0.6896805047988892
+        },
+        {
+          "sourceIndex": 1,
+          "text": "я",
+          "firstEncoderCenter": 47.952468749999994,
+          "lastEncoderCenter": 48.052468749999996,
+          "score": 0.8584199845790863
+        },
+        {
+          "sourceIndex": 2,
+          "text": "пойму",
+          "firstEncoderCenter": 48.232468749999995,
+          "lastEncoderCenter": 48.632468749999994,
+          "score": 0.7282071456313133
+        },
+        {
+          "sourceIndex": 3,
+          "text": "как",
+          "firstEncoderCenter": 48.812468749999994,
+          "lastEncoderCenter": 49.07246874999999,
+          "score": 0.9768072962760925
+        },
+        {
+          "sourceIndex": 4,
+          "text": "любить",
+          "firstEncoderCenter": 49.15246875,
+          "lastEncoderCenter": 51.692468749999996,
+          "score": 0.670971036888659
+        },
+        {
+          "sourceIndex": 5,
+          "text": "мне",
+          "firstEncoderCenter": 53.372468749999996,
+          "lastEncoderCenter": 53.53246874999999,
+          "score": 0.9417719841003418
+        },
+        {
+          "sourceIndex": 6,
+          "text": "каждый",
+          "firstEncoderCenter": 53.632468749999994,
+          "lastEncoderCenter": 54.232468749999995,
+          "score": 0.8007930820541722
+        },
+        {
+          "sourceIndex": 7,
+          "text": "посуды",
+          "firstEncoderCenter": 54.33246875,
+          "lastEncoderCenter": 54.97246874999999,
+          "score": 0.6434521311894059
+        },
+        {
+          "sourceIndex": 8,
+          "text": "осколок",
+          "firstEncoderCenter": 55.192468749999996,
+          "lastEncoderCenter": 57.772468749999994,
+          "score": 0.545721080819411
+        }
+      ],
+      "attentionWords": [
+        {
+          "text": "Когда",
+          "start": 46.8,
+          "end": 47.66
+        },
+        {
+          "text": "я",
+          "start": 47.66,
+          "end": 48.059999999999995
+        },
+        {
+          "text": "пойму",
+          "start": 48.059999999999995,
+          "end": 48.699999999999996
+        },
+        {
+          "text": "как",
+          "start": 48.699999999999996,
+          "end": 49.059999999999995
+        },
+        {
+          "text": "любить",
+          "start": 49.059999999999995,
+          "end": 51.78
+        },
+        {
+          "text": "мне",
+          "start": 51.78,
+          "end": 53.54
+        },
+        {
+          "text": "каждый",
+          "start": 53.54,
+          "end": 54.16
+        },
+        {
+          "text": "посуды",
+          "start": 54.16,
+          "end": 55.099999999999994
+        },
+        {
+          "text": "осколок",
+          "start": 55.099999999999994,
+          "end": 56.699999999999996
+        }
+      ],
+      "attentionStatus": "Comparison only; crop-edge starts and short held endings are not accepted automatically",
+      "humanListening": false
+    },
+    {
+      "id": "RZ-007",
+      "crop": [
+        58.8,
+        64.8
+      ],
+      "mmsWords": [
+        {
+          "sourceIndex": 0,
+          "text": "Насколько",
+          "firstEncoderCenter": 59.39246874999999,
+          "lastEncoderCenter": 60.17246874999999,
+          "score": 0.5654355308506638
+        },
+        {
+          "sourceIndex": 1,
+          "text": "мне",
+          "firstEncoderCenter": 60.25246874999999,
+          "lastEncoderCenter": 60.43246874999999,
+          "score": 0.8371233145395914
+        },
+        {
+          "sourceIndex": 2,
+          "text": "сильно",
+          "firstEncoderCenter": 60.592468749999995,
+          "lastEncoderCenter": 61.17246874999999,
+          "score": 0.5407019166275859
+        },
+        {
+          "sourceIndex": 3,
+          "text": "он",
+          "firstEncoderCenter": 61.33246875,
+          "lastEncoderCenter": 61.43246874999999,
+          "score": 0.4414700587512925
+        },
+        {
+          "sourceIndex": 4,
+          "text": "дорог",
+          "firstEncoderCenter": 61.552468749999996,
+          "lastEncoderCenter": 64.23246875,
+          "score": 0.5008586167823523
+        }
+      ],
+      "attentionWords": [
+        {
+          "text": "Насколько",
+          "start": 58.8,
+          "end": 60.14
+        },
+        {
+          "text": "мне",
+          "start": 60.14,
+          "end": 60.459999999999994
+        },
+        {
+          "text": "сильно",
+          "start": 60.459999999999994,
+          "end": 61.12
+        },
+        {
+          "text": "он",
+          "start": 61.12,
+          "end": 61.58
+        },
+        {
+          "text": "дорог",
+          "start": 61.58,
+          "end": 62.519999999999996
+        }
+      ],
+      "attentionStatus": "Comparison only; crop-edge starts and short held endings are not accepted automatically",
+      "humanListening": false
+    },
+    {
+      "id": "RZ-008",
+      "crop": [
+        64.8,
+        70.8
+      ],
+      "mmsWords": [
+        {
+          "sourceIndex": 0,
+          "text": "Насколько",
+          "firstEncoderCenter": 65.43246875,
+          "lastEncoderCenter": 66.13246874999999,
+          "score": 0.8824022486805916
+        },
+        {
+          "sourceIndex": 1,
+          "text": "мне",
+          "firstEncoderCenter": 66.21246875,
+          "lastEncoderCenter": 66.37246875,
+          "score": 0.6591606140136719
+        },
+        {
+          "sourceIndex": 2,
+          "text": "хочется",
+          "firstEncoderCenter": 66.47246874999999,
+          "lastEncoderCenter": 67.23246875,
+          "score": 0.5965650528669357
+        },
+        {
+          "sourceIndex": 3,
+          "text": "жить",
+          "firstEncoderCenter": 67.35246875,
+          "lastEncoderCenter": 67.85246875,
+          "score": 0.3953789174556732
+        }
+      ],
+      "attentionWords": [
+        {
+          "text": "Насколько",
+          "start": 64.8,
+          "end": 66.1
+        },
+        {
+          "text": "мне",
+          "start": 66.1,
+          "end": 66.42
+        },
+        {
+          "text": "хочется",
+          "start": 66.42,
+          "end": 67.14
+        },
+        {
+          "text": "жить",
+          "start": 67.14,
+          "end": 67.66
+        }
+      ],
+      "attentionStatus": "Comparison only; crop-edge starts and short held endings are not accepted automatically",
+      "humanListening": false
+    },
+    {
+      "id": "RZ-009",
+      "crop": [
+        70.8,
+        76.8
+      ],
+      "mmsWords": [
+        {
+          "sourceIndex": 0,
+          "text": "Насколько",
+          "firstEncoderCenter": 71.47246874999999,
+          "lastEncoderCenter": 72.19246874999999,
+          "score": 0.43039039243012667
+        },
+        {
+          "sourceIndex": 1,
+          "text": "мне",
+          "firstEncoderCenter": 72.25246874999999,
+          "lastEncoderCenter": 72.41246874999999,
+          "score": 0.27892523010571796
+        },
+        {
+          "sourceIndex": 2,
+          "text": "хочется",
+          "firstEncoderCenter": 72.51246875,
+          "lastEncoderCenter": 73.31246875,
+          "score": 0.22132550375536084
+        },
+        {
+          "sourceIndex": 3,
+          "text": "жить",
+          "firstEncoderCenter": 73.51246875,
+          "lastEncoderCenter": 75.81246875,
+          "score": 0.2398232575505972
+        }
+      ],
+      "attentionWords": [
+        {
+          "text": "Насколько",
+          "start": 70.8,
+          "end": 72.1
+        },
+        {
+          "text": "мне",
+          "start": 72.1,
+          "end": 72.44
+        },
+        {
+          "text": "хочется",
+          "start": 72.44,
+          "end": 73.24
+        },
+        {
+          "text": "жить",
+          "start": 73.24,
+          "end": 73.92
+        }
+      ],
+      "attentionStatus": "Comparison only; crop-edge starts and short held endings are not accepted automatically",
+      "humanListening": false
+    },
+    {
+      "id": "RZ-010",
+      "crop": [
+        76.8,
+        82.8
+      ],
+      "mmsWords": [
+        {
+          "sourceIndex": 0,
+          "text": "Насколько",
+          "firstEncoderCenter": 77.55246874999999,
+          "lastEncoderCenter": 78.21246875,
+          "score": 0.21985919447615743
+        },
+        {
+          "sourceIndex": 1,
+          "text": "мне",
+          "firstEncoderCenter": 78.23246875,
+          "lastEncoderCenter": 78.41246874999999,
+          "score": 0.45170351668881875
+        },
+        {
+          "sourceIndex": 2,
+          "text": "хочется",
+          "firstEncoderCenter": 78.53246874999999,
+          "lastEncoderCenter": 79.33246874999999,
+          "score": 0.42722656759433447
+        },
+        {
+          "sourceIndex": 3,
+          "text": "жить",
+          "firstEncoderCenter": 79.57246875,
+          "lastEncoderCenter": 81.01246875,
+          "score": 0.242001635953784
+        }
+      ],
+      "attentionWords": [
+        {
+          "text": "Насколько",
+          "start": 76.8,
+          "end": 78.17999999999999
+        },
+        {
+          "text": "мне",
+          "start": 78.17999999999999,
+          "end": 78.52
+        },
+        {
+          "text": "хочется",
+          "start": 78.52,
+          "end": 79.17999999999999
+        },
+        {
+          "text": "жить",
+          "start": 79.17999999999999,
+          "end": 79.92
+        }
+      ],
+      "attentionStatus": "Comparison only; crop-edge starts and short held endings are not accepted automatically",
+      "humanListening": false
+    },
+    {
+      "id": "RZ-011",
+      "crop": [
+        82.8,
+        88.8
+      ],
+      "mmsWords": [
+        {
+          "sourceIndex": 0,
+          "text": "Насколько",
+          "firstEncoderCenter": 83.57246875,
+          "lastEncoderCenter": 84.27246874999999,
+          "score": 0.2626652291510254
+        },
+        {
+          "sourceIndex": 1,
+          "text": "мне",
+          "firstEncoderCenter": 84.37246875,
+          "lastEncoderCenter": 84.47246874999999,
+          "score": 0.29854390723630786
+        },
+        {
+          "sourceIndex": 2,
+          "text": "хочется",
+          "firstEncoderCenter": 84.61246874999999,
+          "lastEncoderCenter": 85.37246875,
+          "score": 0.22890052595175803
+        },
+        {
+          "sourceIndex": 3,
+          "text": "жить",
+          "firstEncoderCenter": 85.59246875,
+          "lastEncoderCenter": 86.97246874999999,
+          "score": 0.2618967853486538
+        }
+      ],
+      "attentionWords": [
+        {
+          "text": "Насколько",
+          "start": 82.8,
+          "end": 84.2
+        },
+        {
+          "text": "мне",
+          "start": 84.2,
+          "end": 84.58
+        },
+        {
+          "text": "хочется",
+          "start": 84.58,
+          "end": 85.3
+        },
+        {
+          "text": "жить",
+          "start": 85.3,
+          "end": 85.96
+        }
+      ],
+      "attentionStatus": "Comparison only; crop-edge starts and short held endings are not accepted automatically",
+      "humanListening": false
+    },
+    {
+      "id": "RZ-012",
+      "crop": [
+        89.0,
+        113.0
+      ],
+      "mmsWords": [
+        {
+          "sourceIndex": 0,
+          "text": "Может",
+          "firstEncoderCenter": 91.33246874999999,
+          "lastEncoderCenter": 93.69246874999999,
+          "score": 0.22764526618023714
+        },
+        {
+          "sourceIndex": 1,
+          "text": "только",
+          "firstEncoderCenter": 97.39246874999999,
+          "lastEncoderCenter": 98.77246875,
+          "score": 0.21911439299583435
+        },
+        {
+          "sourceIndex": 2,
+          "text": "небо",
+          "firstEncoderCenter": 103.43246875,
+          "lastEncoderCenter": 104.47246874999999,
+          "score": 0.4820672459900379
+        },
+        {
+          "sourceIndex": 3,
+          "text": "видит",
+          "firstEncoderCenter": 109.41246875,
+          "lastEncoderCenter": 110.25246874999999,
+          "score": 0.3527101449668407
+        }
+      ],
+      "attentionWords": [
+        {
+          "text": "Может",
+          "start": 98.5,
+          "end": 98.5
+        },
+        {
+          "text": "только",
+          "start": 109.84,
+          "end": 109.92
+        },
+        {
+          "text": "небо",
+          "start": 112.58,
+          "end": 112.58
+        },
+        {
+          "text": "видит",
+          "start": 112.58,
+          "end": 112.98
+        }
+      ],
+      "attentionStatus": "Rejected: collapsed/zero-length allocations across stretched words and long gaps",
+      "humanListening": false
+    },
+    {
+      "id": "RZ-013",
+      "crop": [
+        113.0,
+        118.8
+      ],
+      "mmsWords": [
+        {
+          "sourceIndex": 0,
+          "text": "Когда",
+          "firstEncoderCenter": 113.75246874999999,
+          "lastEncoderCenter": 114.09246875,
+          "score": 0.635540745779872
+        },
+        {
+          "sourceIndex": 1,
+          "text": "после",
+          "firstEncoderCenter": 114.37246875,
+          "lastEncoderCenter": 114.67246875,
+          "score": 0.7036928683519363
+        },
+        {
+          "sourceIndex": 2,
+          "text": "солнца",
+          "firstEncoderCenter": 114.77246875,
+          "lastEncoderCenter": 115.21246875,
+          "score": 0.5935546071268618
+        },
+        {
+          "sourceIndex": 3,
+          "text": "луна",
+          "firstEncoderCenter": 115.37246875,
+          "lastEncoderCenter": 115.79246875,
+          "score": 0.778256967663765
+        }
+      ],
+      "attentionWords": [
+        {
+          "text": "Когда",
+          "start": 113.0,
+          "end": 114.14
+        },
+        {
+          "text": "после",
+          "start": 114.14,
+          "end": 114.66
+        },
+        {
+          "text": "солнца",
+          "start": 114.66,
+          "end": 115.26
+        },
+        {
+          "text": "луна",
+          "start": 115.26,
+          "end": 115.96
+        }
+      ],
+      "attentionStatus": "Comparison only; crop-edge starts and short held endings are not accepted automatically",
+      "humanListening": false
+    },
+    {
+      "id": "RZ-014",
+      "crop": [
+        118.8,
+        124.8
+      ],
+      "mmsWords": [
+        {
+          "sourceIndex": 0,
+          "text": "Когда",
+          "firstEncoderCenter": 119.85246875,
+          "lastEncoderCenter": 120.23246875,
+          "score": 0.5172001292929054
+        },
+        {
+          "sourceIndex": 1,
+          "text": "мы",
+          "firstEncoderCenter": 120.43246875,
+          "lastEncoderCenter": 120.51246875,
+          "score": 0.018426653230562806
+        },
+        {
+          "sourceIndex": 2,
+          "text": "научимся",
+          "firstEncoderCenter": 120.61246874999999,
+          "lastEncoderCenter": 121.59246875,
+          "score": 0.489990438753739
+        },
+        {
+          "sourceIndex": 3,
+          "text": "верить",
+          "firstEncoderCenter": 121.81246875,
+          "lastEncoderCenter": 122.31246875,
+          "score": 0.24413992826011963
+        }
+      ],
+      "attentionWords": [
+        {
+          "text": "Когда",
+          "start": 118.8,
+          "end": 120.25999999999999
+        },
+        {
+          "text": "мы",
+          "start": 120.25999999999999,
+          "end": 120.56
+        },
+        {
+          "text": "научимся",
+          "start": 120.56,
+          "end": 121.61999999999999
+        },
+        {
+          "text": "верить",
+          "start": 121.61999999999999,
+          "end": 123.08
+        }
+      ],
+      "attentionStatus": "Comparison only; crop-edge starts and short held endings are not accepted automatically",
+      "humanListening": false
+    },
+    {
+      "id": "RZ-015",
+      "crop": [
+        124.8,
+        130.8
+      ],
+      "mmsWords": [
+        {
+          "sourceIndex": 0,
+          "text": "Когда",
+          "firstEncoderCenter": 125.85246875,
+          "lastEncoderCenter": 126.17246875,
+          "score": 0.4607160296291113
+        },
+        {
+          "sourceIndex": 1,
+          "text": "чаша",
+          "firstEncoderCenter": 126.45246875,
+          "lastEncoderCenter": 126.87246875,
+          "score": 0.6989105635633072
+        },
+        {
+          "sourceIndex": 2,
+          "text": "будет",
+          "firstEncoderCenter": 127.03246874999999,
+          "lastEncoderCenter": 127.47246874999999,
+          "score": 0.5775248423218727
+        },
+        {
+          "sourceIndex": 3,
+          "text": "полна",
+          "firstEncoderCenter": 127.57246875,
+          "lastEncoderCenter": 128.09246875,
+          "score": 0.5233549190685153
+        }
+      ],
+      "attentionWords": [
+        {
+          "text": "Когда",
+          "start": 124.8,
+          "end": 126.22
+        },
+        {
+          "text": "чаша",
+          "start": 126.22,
+          "end": 126.88
+        },
+        {
+          "text": "будет",
+          "start": 126.88,
+          "end": 127.34
+        },
+        {
+          "text": "полна",
+          "start": 127.34,
+          "end": 128.22
+        }
+      ],
+      "attentionStatus": "Comparison only; crop-edge starts and short held endings are not accepted automatically",
+      "humanListening": false
+    },
+    {
+      "id": "RZ-016",
+      "crop": [
+        130.8,
+        136.8
+      ],
+      "mmsWords": [
+        {
+          "sourceIndex": 0,
+          "text": "Кому",
+          "firstEncoderCenter": 131.95246875,
+          "lastEncoderCenter": 132.23246875,
+          "score": 0.8296275585889816
+        },
+        {
+          "sourceIndex": 1,
+          "text": "же",
+          "firstEncoderCenter": 132.35246875,
+          "lastEncoderCenter": 132.47246875000002,
+          "score": 0.5748828252156576
+        },
+        {
+          "sourceIndex": 2,
+          "text": "мне",
+          "firstEncoderCenter": 132.55246875000003,
+          "lastEncoderCenter": 132.73246875,
+          "score": 0.8287773927052816
+        },
+        {
+          "sourceIndex": 3,
+          "text": "сердце",
+          "firstEncoderCenter": 132.83246875000003,
+          "lastEncoderCenter": 133.43246875000003,
+          "score": 0.6103891879320145
+        },
+        {
+          "sourceIndex": 4,
+          "text": "доверить",
+          "firstEncoderCenter": 133.55246875000003,
+          "lastEncoderCenter": 136.27246875000003,
+          "score": 0.5894194002903532
+        }
+      ],
+      "attentionWords": [
+        {
+          "text": "Кому",
+          "start": 130.8,
+          "end": 132.3
+        },
+        {
+          "text": "же",
+          "start": 132.3,
+          "end": 132.48000000000002
+        },
+        {
+          "text": "мне",
+          "start": 132.48000000000002,
+          "end": 132.74
+        },
+        {
+          "text": "сердце",
+          "start": 132.74,
+          "end": 133.44
+        },
+        {
+          "text": "доверить",
+          "start": 133.44,
+          "end": 134.76000000000002
+        }
+      ],
+      "attentionStatus": "Comparison only; crop-edge starts and short held endings are not accepted automatically",
+      "humanListening": false
+    },
+    {
+      "id": "RZ-017",
+      "crop": [
+        136.8,
+        148.8
+      ],
+      "mmsWords": [
+        {
+          "sourceIndex": 0,
+          "text": "Когда",
+          "firstEncoderCenter": 137.91246875000002,
+          "lastEncoderCenter": 138.29246875,
+          "score": 0.6465148052200675
+        },
+        {
+          "sourceIndex": 1,
+          "text": "я",
+          "firstEncoderCenter": 138.51246875,
+          "lastEncoderCenter": 138.61246875000003,
+          "score": 0.7605102360248566
+        },
+        {
+          "sourceIndex": 2,
+          "text": "пойму",
+          "firstEncoderCenter": 138.75246875000002,
+          "lastEncoderCenter": 139.09246875000002,
+          "score": 0.674971317499876
+        },
+        {
+          "sourceIndex": 3,
+          "text": "как",
+          "firstEncoderCenter": 139.33246875000003,
+          "lastEncoderCenter": 139.59246875000002,
+          "score": 0.6238069434960684
+        },
+        {
+          "sourceIndex": 4,
+          "text": "любить",
+          "firstEncoderCenter": 139.67246875000004,
+          "lastEncoderCenter": 143.69246875000002,
+          "score": 0.6956559614433596
+        },
+        {
+          "sourceIndex": 5,
+          "text": "мне",
+          "firstEncoderCenter": 143.89246875000003,
+          "lastEncoderCenter": 144.05246875000003,
+          "score": 0.5869616021712621
+        },
+        {
+          "sourceIndex": 6,
+          "text": "каждый",
+          "firstEncoderCenter": 144.17246875000004,
+          "lastEncoderCenter": 144.71246875000003,
+          "score": 0.6541654004582337
+        },
+        {
+          "sourceIndex": 7,
+          "text": "посуды",
+          "firstEncoderCenter": 144.81246875000002,
+          "lastEncoderCenter": 145.47246875000002,
+          "score": 0.4315808819762121
+        },
+        {
+          "sourceIndex": 8,
+          "text": "осколок",
+          "firstEncoderCenter": 145.69246875000002,
+          "lastEncoderCenter": 148.29246875,
+          "score": 0.4939530196050847
+        }
+      ],
+      "attentionWords": [
+        {
+          "text": "Когда",
+          "start": 136.8,
+          "end": 138.20000000000002
+        },
+        {
+          "text": "я",
+          "start": 138.20000000000002,
+          "end": 138.62
+        },
+        {
+          "text": "пойму",
+          "start": 138.62,
+          "end": 139.20000000000002
+        },
+        {
+          "text": "как",
+          "start": 139.20000000000002,
+          "end": 139.56
+        },
+        {
+          "text": "любить",
+          "start": 139.56,
+          "end": 141.92000000000002
+        },
+        {
+          "text": "мне",
+          "start": 141.92000000000002,
+          "end": 144.08
+        },
+        {
+          "text": "каждый",
+          "start": 144.08,
+          "end": 144.62
+        },
+        {
+          "text": "посуды",
+          "start": 144.62,
+          "end": 145.62
+        },
+        {
+          "text": "осколок",
+          "start": 145.62,
+          "end": 147.16000000000003
+        }
+      ],
+      "attentionStatus": "Comparison only; crop-edge starts and short held endings are not accepted automatically",
+      "humanListening": false
+    },
+    {
+      "id": "RZ-018",
+      "crop": [
+        148.8,
+        155.0
+      ],
+      "mmsWords": [
+        {
+          "sourceIndex": 0,
+          "text": "Насколько",
+          "firstEncoderCenter": 149.93246875000003,
+          "lastEncoderCenter": 150.69246875000002,
+          "score": 0.5966010088450275
+        },
+        {
+          "sourceIndex": 1,
+          "text": "мне",
+          "firstEncoderCenter": 150.77246875000003,
+          "lastEncoderCenter": 150.93246875000003,
+          "score": 0.5934063692887624
+        },
+        {
+          "sourceIndex": 2,
+          "text": "сильно",
+          "firstEncoderCenter": 151.11246875000003,
+          "lastEncoderCenter": 151.67246875000004,
+          "score": 0.3637734353542328
+        },
+        {
+          "sourceIndex": 3,
+          "text": "он",
+          "firstEncoderCenter": 151.91246875000002,
+          "lastEncoderCenter": 151.93246875000003,
+          "score": 0.1568545955233276
+        },
+        {
+          "sourceIndex": 4,
+          "text": "дорог",
+          "firstEncoderCenter": 152.17246875000004,
+          "lastEncoderCenter": 154.67246875000004,
+          "score": 0.35192209370434285
+        }
+      ],
+      "attentionWords": [
+        {
+          "text": "Насколько",
+          "start": 148.8,
+          "end": 150.66000000000003
+        },
+        {
+          "text": "мне",
+          "start": 150.66000000000003,
+          "end": 150.98000000000002
+        },
+        {
+          "text": "сильно",
+          "start": 150.98000000000002,
+          "end": 151.66000000000003
+        },
+        {
+          "text": "он",
+          "start": 151.66000000000003,
+          "end": 152.20000000000002
+        },
+        {
+          "text": "дорог",
+          "start": 152.20000000000002,
+          "end": 152.92000000000002
+        }
+      ],
+      "attentionStatus": "Comparison only; crop-edge starts and short held endings are not accepted automatically",
+      "humanListening": false
+    },
+    {
+      "id": "RZ-019",
+      "crop": [
+        155.0,
+        161.0
+      ],
+      "mmsWords": [
+        {
+          "sourceIndex": 0,
+          "text": "Насколько",
+          "firstEncoderCenter": 155.97246875000002,
+          "lastEncoderCenter": 156.69246875000002,
+          "score": 0.7720118039287627
+        },
+        {
+          "sourceIndex": 1,
+          "text": "мне",
+          "firstEncoderCenter": 156.77246875,
+          "lastEncoderCenter": 156.93246875,
+          "score": 0.9093247652053833
+        },
+        {
+          "sourceIndex": 2,
+          "text": "хочется",
+          "firstEncoderCenter": 157.03246875000002,
+          "lastEncoderCenter": 157.81246875000002,
+          "score": 0.5316065919818357
+        },
+        {
+          "sourceIndex": 3,
+          "text": "жить",
+          "firstEncoderCenter": 158.01246875,
+          "lastEncoderCenter": 160.61246875,
+          "score": 0.44899094849824905
+        }
+      ],
+      "attentionWords": [
+        {
+          "text": "Насколько",
+          "start": 155.0,
+          "end": 156.66
+        },
+        {
+          "text": "мне",
+          "start": 156.66,
+          "end": 156.96
+        },
+        {
+          "text": "хочется",
+          "start": 156.96,
+          "end": 157.74
+        },
+        {
+          "text": "жить",
+          "start": 157.74,
+          "end": 158.38
+        }
+      ],
+      "attentionStatus": "Comparison only; crop-edge starts and short held endings are not accepted automatically",
+      "humanListening": false
+    },
+    {
+      "id": "RZ-020",
+      "crop": [
+        161.0,
+        167.0
+      ],
+      "mmsWords": [
+        {
+          "sourceIndex": 0,
+          "text": "Насколько",
+          "firstEncoderCenter": 162.07246875,
+          "lastEncoderCenter": 162.79246875,
+          "score": 0.31963906390592456
+        },
+        {
+          "sourceIndex": 1,
+          "text": "мне",
+          "firstEncoderCenter": 162.89246875,
+          "lastEncoderCenter": 162.99246875,
+          "score": 0.1877609589137137
+        },
+        {
+          "sourceIndex": 2,
+          "text": "хочется",
+          "firstEncoderCenter": 163.01246875,
+          "lastEncoderCenter": 163.93246875,
+          "score": 0.2604816055623814
+        },
+        {
+          "sourceIndex": 3,
+          "text": "жить",
+          "firstEncoderCenter": 164.17246875,
+          "lastEncoderCenter": 166.85246875,
+          "score": 0.12048213253729045
+        }
+      ],
+      "attentionWords": [
+        {
+          "text": "Насколько",
+          "start": 161.0,
+          "end": 162.74
+        },
+        {
+          "text": "мне",
+          "start": 162.74,
+          "end": 163.04
+        },
+        {
+          "text": "хочется",
+          "start": 163.04,
+          "end": 163.86
+        },
+        {
+          "text": "жить",
+          "start": 163.86,
+          "end": 164.52
+        }
+      ],
+      "attentionStatus": "Comparison only; crop-edge starts and short held endings are not accepted automatically",
+      "humanListening": false
+    },
+    {
+      "id": "RZ-021",
+      "crop": [
+        167.0,
+        173.0
+      ],
+      "mmsWords": [
+        {
+          "sourceIndex": 0,
+          "text": "Насколько",
+          "firstEncoderCenter": 168.15246875,
+          "lastEncoderCenter": 168.85246875,
+          "score": 0.31875101022887975
+        },
+        {
+          "sourceIndex": 1,
+          "text": "мне",
+          "firstEncoderCenter": 168.95246875,
+          "lastEncoderCenter": 169.09246875000002,
+          "score": 0.16464071534574032
+        },
+        {
+          "sourceIndex": 2,
+          "text": "хочется",
+          "firstEncoderCenter": 169.17246875,
+          "lastEncoderCenter": 169.93246875,
+          "score": 0.22122135199606419
+        },
+        {
+          "sourceIndex": 3,
+          "text": "жить",
+          "firstEncoderCenter": 170.17246875,
+          "lastEncoderCenter": 171.59246875000002,
+          "score": 0.14714623428881168
+        }
+      ],
+      "attentionWords": [
+        {
+          "text": "Насколько",
+          "start": 167.0,
+          "end": 168.8
+        },
+        {
+          "text": "мне",
+          "start": 168.8,
+          "end": 169.12
+        },
+        {
+          "text": "хочется",
+          "start": 169.12,
+          "end": 169.86
+        },
+        {
+          "text": "жить",
+          "start": 169.86,
+          "end": 170.56
+        }
+      ],
+      "attentionStatus": "Comparison only; crop-edge starts and short held endings are not accepted automatically",
+      "humanListening": false
+    },
+    {
+      "id": "RZ-022",
+      "crop": [
+        173.0,
+        179.0
+      ],
+      "mmsWords": [
+        {
+          "sourceIndex": 0,
+          "text": "Насколько",
+          "firstEncoderCenter": 174.17246875,
+          "lastEncoderCenter": 174.89246875,
+          "score": 0.307019327650778
+        },
+        {
+          "sourceIndex": 1,
+          "text": "мне",
+          "firstEncoderCenter": 174.97246875000002,
+          "lastEncoderCenter": 175.11246875,
+          "score": 0.37764320770899457
+        },
+        {
+          "sourceIndex": 2,
+          "text": "хочется",
+          "firstEncoderCenter": 175.21246875,
+          "lastEncoderCenter": 176.07246875,
+          "score": 0.3321003777324222
+        },
+        {
+          "sourceIndex": 3,
+          "text": "жить",
+          "firstEncoderCenter": 176.29246875,
+          "lastEncoderCenter": 177.47246875000002,
+          "score": 0.19553020177409053
+        }
+      ],
+      "attentionWords": [
+        {
+          "text": "Насколько",
+          "start": 173.0,
+          "end": 174.82
+        },
+        {
+          "text": "мне",
+          "start": 174.82,
+          "end": 175.14
+        },
+        {
+          "text": "хочется",
+          "start": 175.14,
+          "end": 176.0
+        },
+        {
+          "text": "жить",
+          "start": 176.0,
+          "end": 176.68
+        }
+      ],
+      "attentionStatus": "Comparison only; crop-edge starts and short held endings are not accepted automatically",
+      "humanListening": false
+    },
+    {
+      "id": "RZ-023",
+      "crop": [
+        179.0,
+        185.0
+      ],
+      "mmsWords": [
+        {
+          "sourceIndex": 0,
+          "text": "Насколько",
+          "firstEncoderCenter": 180.13246875000002,
+          "lastEncoderCenter": 180.87246875000002,
+          "score": 0.2489374759607017
+        },
+        {
+          "sourceIndex": 1,
+          "text": "мне",
+          "firstEncoderCenter": 180.95246875,
+          "lastEncoderCenter": 181.07246875,
+          "score": 0.2885332877437274
+        },
+        {
+          "sourceIndex": 2,
+          "text": "хочется",
+          "firstEncoderCenter": 181.21246875,
+          "lastEncoderCenter": 182.01246875,
+          "score": 0.2147371530532837
+        },
+        {
+          "sourceIndex": 3,
+          "text": "жить",
+          "firstEncoderCenter": 182.21246875,
+          "lastEncoderCenter": 184.79246875,
+          "score": 0.190431107301265
+        }
+      ],
+      "attentionWords": [
+        {
+          "text": "Насколько",
+          "start": 179.0,
+          "end": 180.84
+        },
+        {
+          "text": "мне",
+          "start": 180.84,
+          "end": 181.12
+        },
+        {
+          "text": "хочется",
+          "start": 181.12,
+          "end": 181.94
+        },
+        {
+          "text": "жить",
+          "start": 181.94,
+          "end": 182.5
+        }
+      ],
+      "attentionStatus": "Comparison only; crop-edge starts and short held endings are not accepted automatically",
+      "humanListening": false
+    },
+    {
+      "id": "RZ-024",
+      "crop": [
+        185.0,
+        191.0
+      ],
+      "mmsWords": [
+        {
+          "sourceIndex": 0,
+          "text": "Насколько",
+          "firstEncoderCenter": 186.19246875000002,
+          "lastEncoderCenter": 186.93246875,
+          "score": 0.197302277199924
+        },
+        {
+          "sourceIndex": 1,
+          "text": "мне",
+          "firstEncoderCenter": 187.01246875,
+          "lastEncoderCenter": 187.15246875,
+          "score": 0.1251834325181941
+        },
+        {
+          "sourceIndex": 2,
+          "text": "хочется",
+          "firstEncoderCenter": 187.23246875,
+          "lastEncoderCenter": 188.07246875,
+          "score": 0.25527817379916085
+        },
+        {
+          "sourceIndex": 3,
+          "text": "жить",
+          "firstEncoderCenter": 188.27246875,
+          "lastEncoderCenter": 188.71246875,
+          "score": 0.19906382774934173
+        }
+      ],
+      "attentionWords": [
+        {
+          "text": "Насколько",
+          "start": 185.0,
+          "end": 186.88
+        },
+        {
+          "text": "мне",
+          "start": 186.88,
+          "end": 187.18
+        },
+        {
+          "text": "хочется",
+          "start": 187.18,
+          "end": 187.96
+        },
+        {
+          "text": "жить",
+          "start": 187.96,
+          "end": 188.6
+        }
+      ],
+      "attentionStatus": "Comparison only; crop-edge starts and short held endings are not accepted automatically",
+      "humanListening": false
+    },
+    {
+      "id": "RZ-025",
+      "crop": [
+        191.0,
+        197.0
+      ],
+      "mmsWords": [
+        {
+          "sourceIndex": 0,
+          "text": "Насколько",
+          "firstEncoderCenter": 192.27246875,
+          "lastEncoderCenter": 192.93246875,
+          "score": 0.23634079261682928
+        },
+        {
+          "sourceIndex": 1,
+          "text": "мне",
+          "firstEncoderCenter": 193.03246875000002,
+          "lastEncoderCenter": 193.15246875,
+          "score": 0.08190247292319934
+        },
+        {
+          "sourceIndex": 2,
+          "text": "хочется",
+          "firstEncoderCenter": 193.25246875000002,
+          "lastEncoderCenter": 193.71246875,
+          "score": 0.13408206054009497
+        },
+        {
+          "sourceIndex": 3,
+          "text": "жить",
+          "firstEncoderCenter": 193.97246875000002,
+          "lastEncoderCenter": 194.29246875,
+          "score": 0.04616165021434426
+        }
+      ],
+      "attentionWords": [
+        {
+          "text": "Насколько",
+          "start": 191.0,
+          "end": 192.9
+        },
+        {
+          "text": "мне",
+          "start": 192.9,
+          "end": 193.2
+        },
+        {
+          "text": "хочется",
+          "start": 193.2,
+          "end": 194.02
+        },
+        {
+          "text": "жить",
+          "start": 194.02,
+          "end": 194.64
+        }
+      ],
+      "attentionStatus": "Comparison only; crop-edge starts and short held endings are not accepted automatically",
+      "humanListening": false
+    },
+    {
+      "id": "RZ-026",
+      "crop": [
+        197.5,
+        205.0
+      ],
+      "mmsWords": [
+        {
+          "sourceIndex": 0,
+          "text": "Ну",
+          "firstEncoderCenter": 198.31246875000002,
+          "lastEncoderCenter": 198.37246875000002,
+          "score": 0.19560348242521286
+        },
+        {
+          "sourceIndex": 1,
+          "text": "как",
+          "firstEncoderCenter": 198.53246875000002,
+          "lastEncoderCenter": 198.71246875,
+          "score": 0.5348994756738344
+        },
+        {
+          "sourceIndex": 2,
+          "text": "же",
+          "firstEncoderCenter": 198.89246875,
+          "lastEncoderCenter": 199.01246875,
+          "score": 0.1650792888055245
+        },
+        {
+          "sourceIndex": 3,
+          "text": "мне",
+          "firstEncoderCenter": 199.15246875,
+          "lastEncoderCenter": 199.31246875000002,
+          "score": 0.13445359468460083
+        },
+        {
+          "sourceIndex": 4,
+          "text": "хочется",
+          "firstEncoderCenter": 199.43246875,
+          "lastEncoderCenter": 200.79246875,
+          "score": 0.2509900604374707
+        },
+        {
+          "sourceIndex": 5,
+          "text": "жить",
+          "firstEncoderCenter": 200.87246875000002,
+          "lastEncoderCenter": 201.55246875,
+          "score": 0.12394509185105562
+        }
+      ],
+      "attentionWords": [
+        {
+          "text": "Ну",
+          "start": 197.5,
+          "end": 198.42
+        },
+        {
+          "text": "как",
+          "start": 198.42,
+          "end": 198.88
+        },
+        {
+          "text": "же",
+          "start": 198.88,
+          "end": 199.04
+        },
+        {
+          "text": "мне",
+          "start": 199.04,
+          "end": 199.32
+        },
+        {
+          "text": "хочется",
+          "start": 199.32,
+          "end": 200.02
+        },
+        {
+          "text": "жить",
+          "start": 200.02,
+          "end": 200.86
+        }
+      ],
+      "attentionStatus": "Comparison only; crop-edge starts and short held endings are not accepted automatically",
+      "humanListening": false
+    }
+  ],
+  "evidenceLimit": "Original/stem variants and model sizes within Whisper are correlated, not independent votes. MMS supplies a different model family. Neither establishes a listening attestation."
+}

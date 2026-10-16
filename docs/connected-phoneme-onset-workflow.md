@@ -40,6 +40,10 @@ Waveform and spectrum describe the same recording. Multiple crops, stems or spel
 
 Use retained model evidence before launching another broad sweep. When competing paths already show unstable ownership, additional same-family variants may redistribute the vowels without resolving them. A targeted original/stem review can decide which plausible interval needs reopening while keeping the model disagreement intact.
 
+### Repetition coverage before conditioned timing
+
+Broad recognition can compress identical performed lines, including when source and estimated-stem passes appear to agree. The [Разучимся плакать preview](../projects/razuchimsya-plakat-lyric-film/PRODUCTION-NOTES.md#2-performed-coverage-before-alignment) recovered omitted repeats with shorter original-source crops before alignment. Keep these within-family observations separate from independent model evidence. Its stretched openings also produced collapsed/zero-length attention allocations; reject those paths instead of moving or deleting performed words to fit them. Crop lengths and lyric counts are recording-specific.
+
 ## 3. Resolve connected lexical ownership
 
 An onset is the beginning of the performed word, including its quiet initial consonant or vowel. Sparse CTC character emission can favor a stronger later vowel or consonant. For example, the obvious closure inside огонь may belong to its internal consonant, after its initial vowel has already begun.
