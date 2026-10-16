@@ -1,4 +1,4 @@
-import {loadScene, paintScene, getLines, getReadingCue, getReadingCues, getSceneIdentity, cueOpacity, setEffectsEnabled, getEffectsEnabled, type Format} from './scene.ts';
+import {loadScene, paintScene, getLines, getReadingCue, getReadingCues, getSceneIdentity, cueOpacity, setEffectsEnabled, getEffectsEnabled, getVisualizerState, type Format} from './scene.ts';
 import {sourceActive,targetActive,SOURCE_FPS} from './model.ts';
 
 function element<T extends HTMLElement>(id: string): T {
@@ -145,6 +145,7 @@ function drawDecodedFrame(): void {
     const wordTime = video.ended ? duration() : video.currentTime;
     paintScene(ctx, wordTime, format, video);
     canvas.dataset.paintMilliseconds = (performance.now() - paintStarted).toFixed(2);
+    canvas.dataset.visualizer = JSON.stringify(getVisualizerState());
     lastPaintTime = wordTime;
     canvas.dataset.wordTime = wordTime.toFixed(6);
     const reading=getReadingCue(wordTime),readings=getReadingCues(wordTime);

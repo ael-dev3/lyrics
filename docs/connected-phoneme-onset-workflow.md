@@ -97,6 +97,8 @@ else:
 
 Кометы’s 0.42–0.50 s fade and 0.22 s reading lead are authored settings. Choose them for the next composition rather than treating them as acoustic constants. Never squeeze a fade into a tiny gap, reserve a midpoint blackout, or extend bright lexical focus solely to make the line remain readable.
 
+The [Разучимся плакать held-release audit](../projects/razuchimsya-plakat-lyric-film/HELD-RELEASE-REVIEW.md) found 29 premature endpoints even though the original preview passed every painted-word test. Inspect whether the original/stem still carries strong changing vocal harmonics at the selected cutoff, then follow the direct body to its release. Keep amplitude thresholds diagnostic: they cannot distinguish a held vowel from every tonal echo. Add independently selected late-body anchors after the old cutoff, with the complete translated meaning, so the former timeline demonstrably fails. Freeze the original baseline before applying corrections; do not repeatedly extend generated endpoints. Its window, hop and time selections are recording-specific.
+
 ## 5. Complete both languages’ meaning
 
 An article, auxiliary or phrasal completion may share one source event. Орёл activates both **an eagle**; родится activates **will be born**, while independently sung не activates **not**. Neither an arbitrary one-to-one target rule nor invented translation timestamps preserves that meaning.

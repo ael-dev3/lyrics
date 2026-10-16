@@ -4,7 +4,7 @@
 
 The supplied original is 1080×1080 AV1 at 25 fps with stereo 48 kHz Opus. Its SHA-256 is `1a2efa9d95b57fe72ff56e8028a39793ef1a69e0d10a8ed47fbcf25885ed855c`; size 16,160,865 bytes. Video contains 5,676 frames through 227.040 s. Container/audio duration is 227.074 s; FFmpeg decodes 10,899,504 audio frames, or 227.073 s. The decoder handles 312-sample Opus pre-skip; applying another offset would misalign the words.
 
-The first decoded source picture is the fixed material-mask reference. Its pixels were compared exactly with the preparation reference. The preview still draws the actual native video at its current source time; the reference only defines the receiving pigment. Original source decoding and source identity are distinct from screenshot or model checks.
+The first decoded source picture is the fixed crop/protection reference. Its pixels were compared exactly with the preparation reference. The preview still draws the actual native video at its current source time; the reference supports exact pixel and local illustration checks. Original source decoding and source identity are distinct from screenshot or model checks.
 
 Demucs `htdemucs` supplies an estimated vocal for analysis only. It returns 44.1 kHz stems. Recombination cross-correlation found zero lag; rounded output length differs by one 44.1 kHz sample. Recombined stem RMS differs from the original by about 15.4%, so the stem is not treated as an amplitude-exact replacement or production soundtrack. Original stereo measurements drive the visualizer.
 
@@ -26,6 +26,10 @@ The selected preview proposals in `scripts/build-timeline.py` synthesize the ori
 
 Lexical focus, neutral reading hold and fade are separate. A complete bilingual block stays opaque throughout its word events. Where a gentle fade has room, it follows the neutral hold; short gaps use a mutually exclusive handoff at the next vocal. The incoming first focused glyph is fully opaque. Paused playback repaints at the actual stopped media time.
 
+### v1.1 held-release correction
+
+A second source/stem pass inspected 34 separated held positions with 64 ms spectral windows and 5 ms plotting hops. It extended 29 focus ends, retained five and preserved every onset. The old cutoff sometimes occurred near full vocal level. The selected layer retains each reason and diagnostic value, applies once against the committed baseline and feeds the complete English meaning as well as Russian. [The full audit](HELD-RELEASE-REVIEW.md) distinguishes direct vocal, passive decay and neutral reading. A 5 ms view hop is not a physical-precision claim or a listening attestation.
+
 ## 4. Translation and meaning focus
 
 Both languages use the same static Cormorant Garamond Semibold font, size, resting linen and brighter warm-gold focus. English receives equal reading space and event precision. Words stay in place; only their color changes.
@@ -36,17 +40,27 @@ The extended shard construction stays one complete reading block with a semantic
 
 The closing emphatic **как же** shares English **how**; both separately sung contributors remain active in the original language. The heart passage uses natural English body-part possession, with its mapping documented. These are grammatical decisions, not a license to group whole lines for convenience.
 
-## 5. Composition and measured embroidery
+## 5. Composition and one continuous music line
 
 - Landscape: one source crop `[0,300,1080,607.5]`, uniformly scaled to 1920×1080.
 - Portrait: one source crop `[106,0,607.5,1080]`, uniformly scaled to 1080×1920. The full figure stays within the crop.
-- Reading stays above the head. Portrait uses 832 px of centered reading width, leaving 124 px side margins. Longer thoughts reflow at the same size in both languages.
+- Reading stays above the head. Portrait uses 832 px of centered reading width with 124 px side margins. Both languages retain the same 64 px Semibold setting; long thoughts reflow equally.
 - A continuous elliptical carpet exposure shade fades to zero before the person. It is independent of lyric visibility and has no hard rectangular edge.
-- Twenty-four receiving masks occupy actual rust pigment at source rectangle `[12,854,632,45]`. They exclude the pale cloth, skin, wall, furniture and floor. Every mask is prepared before the first preview frame.
-- Original stereo power is measured at 50 Hz in 24 logarithmic bands. Its centered 2,048-sample / 22.05 kHz spectral window spans about 93 ms; this musical display does not certify a word or beat onset. Fixed display range −61 to −20 dB, three-band spatial smoothing and 65 ms attack / 300 ms release produce restrained exposure changes. Maximum screen-blend opacity is 0.72. These are artistic display settings, not measured vocal boundaries.
-- Anchors and silhouettes never move. No artificial branch, window, floating object, reflected strip, added scenery or simulated beat is needed. The receiving cloth’s own texture carries the motion.
+- One **warm-ivory continuous line** (`#ded3b7`) sits in reserved space below every lyric block. Its endpoints and width remain fixed. A small local dark shadow supplies contrast; no filled area, second rail, broad bloom, moving camera or fabricated material lighting is added.
+- Original stereo power is measured at 50 Hz in 24 logarithmic bands. Its centered 2,048-sample / 22.05 kHz spectral window spans about 93 ms. Display range −61 to −20 dB, `[1,2,1]` neighboring-band smoothing, 60 ms attack and 280 ms release soften motion. The RMS activity gate and source-ending fade control visibility. These are artistic display settings, separate from word focus.
+- Seventy-three control points interpolate the 24 measured bands. A fixed two-cycle spatial profile, tapered to zero at each endpoint, turns their levels into small vertical bends; quadratic smoothing joins them into one path. This adapts the [continuous ribbon lesson](../lyubi-menya-lyubi-lyric-film/PRODUCTION-LESSONS.md#a-continuous-ribbon-can-carry-restrained-musical-motion). It is an authored musical contour, neither a physical waveform nor a vocal-pitch trace. There is no independent idle oscillation.
 
-The material response is intended to support the voice. Technical anchoring and correct power lookup do not establish creative acceptance with sound; that remains part of complete-preview review.
+| Geometry | Landscape | Portrait |
+| --- | ---: | ---: |
+| Center x / baseline y | 960 / 403 | 540 / 880 |
+| Width | 620 | 650 |
+| Maximum deviation in either direction | 20 | 26 |
+| Stroke width | 3.4 | 4.4 |
+| Maximum opacity | 0.88 | 0.88 |
+
+The initial rust-pigment response blended into the bedspread and did not read clearly as a visualizer. A trial bar row made the response obvious but introduced too many sharp edges for the gentle recording. The adopted single line keeps a clear musical presence with less visual clutter. The old v1 evidence keeps its original revision; current browser stills show the new line.
+
+Downscaled on/off differences confirm that the line contributes visible pixels at 480 px landscape and 320 px portrait. Numerical deltas alone do not establish artistic fit: the former pigment also produced measurable differences. Inspect the complete real browser at player size, both quietly and in stronger passages, with the original recording.
 
 ## 6. Display and transport verification
 
@@ -60,6 +74,7 @@ No full film or platform upload kit has been created. Keep the current identity 
 
 1. Repeated lyric coverage can disappear in broad ASR even when multiple runs agree. Recheck individual performances before alignment.
 2. A model can produce confident-looking output for an unusable stretched-word path. Keep the disagreement and reject collapsed allocations.
-3. Existing textile pigment can host musical response without changing the photographed object’s silhouette or introducing new scenery.
-4. Precompute masks and use a fixed-weight font to remove avoidable seek stalls and cross-renderer weight ambiguity.
-5. Frame-fit, semantic focus, actual painted glyphs, listening review and production approval answer different questions. Preserve each evidence scope.
+3. A plausible material response may still be too hard to recognize. Compare a single continuous line when a gentle song and busy photo make individual bars feel cluttered. Choose the form by the recording, not an assumed engagement result.
+4. Precompute measured display envelopes and use a fixed-weight font to remove avoidable seek stalls and cross-renderer weight ambiguity.
+5. Passing glyph tests can conceal a wrong acoustic release. Add independent late-body anchors that fail the former cutoff, while keeping signal inspection and listening review distinct.
+6. Frame-fit, semantic focus, actual painted glyphs, listening review and production approval answer different questions. Preserve each evidence scope.

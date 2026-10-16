@@ -12,17 +12,17 @@ Music films with synchronized lyrics, meaning-linked translations, and audio-rea
 
 ## Разучимся плакать
 
-**Settlers · Russian / English · complete 16:9 and 9:16 preview**
+**Settlers · Russian / English · complete 16:9 and 9:16 preview v1.1**
 
-![Разучимся плакать actual browser preview: equal bilingual lyrics above the original room portrait, with measured light in existing embroidery](projects/razuchimsya-plakat-lyric-film/evidence/browser-wide-55.600.jpg)
+![Разучимся плакать actual browser preview: complete held bilingual focus and one gentle music line above the original room portrait](projects/razuchimsya-plakat-lyric-film/evidence/browser-wide-v1.1-33.500.jpg)
 
-*Actual browser canvas at 00:55.600, resized for this page. Original picture and soundtrack: [the supplied Settlers recording](https://www.youtube.com/watch?v=24oIDKiYaFs). [Preview-still provenance](projects/razuchimsya-plakat-lyric-film/evidence/preview-stills.json). No full production render yet; separate photographer credit is unverified.*
+*Actual browser canvas at 00:33.500, resized for this page. Original picture and soundtrack: [the supplied Settlers recording](https://www.youtube.com/watch?v=24oIDKiYaFs). [Preview-still provenance](projects/razuchimsya-plakat-lyric-film/evidence/preview-stills.json). No full production render yet; separate photographer credit is unverified.*
 
-The original carpet and seated figure remain the setting. Equal warm linen/gold words occupy the carpet above the subject, while 24 measured frequency bands gently brighten the bedspread’s existing rust embroidery. One uniform crop fills each format; no repeated image extension, added scenery or camera shake is used.
+The original carpet and seated figure remain the setting. Equal warm linen/gold words occupy the carpet above the subject, with one smooth warm-ivory music line below them. Twenty-four measured bands control small bends in a fixed, restrained contour. One uniform crop fills each format; no repeated image extension, added scenery or camera shake is used.
 
-The complete map contains 26 cues, 118 Russian word events and 164 English tokens. Short source crops recover repeated lines omitted by broad ASR; stretched-word model failures and held-release uncertainty remain separate from the selected sample proposals. Both-format painted-word and transport checks pass. Listening review and explicit production approval remain pending.
+The complete map contains 26 cues, 118 Russian word events and 164 English tokens. The held-release pass extends 29 endings, retains five and preserves all starts. Complete English meanings follow each revised hold, including **to cry** and **to live**. Both-format painted-word and transport checks pass. Signal/threshold diagnostics, full listening review and production approval remain separate; the latter two are pending for this preview.
 
-[Project and complete preview](projects/razuchimsya-plakat-lyric-film/README.md) · [Process and reusable lessons](projects/razuchimsya-plakat-lyric-film/PRODUCTION-NOTES.md) · [Next-agent handoff](projects/razuchimsya-plakat-lyric-film/AGENT-HANDOFF.md)
+[Project and complete preview](projects/razuchimsya-plakat-lyric-film/README.md) · [Held-release correction record](projects/razuchimsya-plakat-lyric-film/HELD-RELEASE-REVIEW.md) · [Process and reusable lessons](projects/razuchimsya-plakat-lyric-film/PRODUCTION-NOTES.md) · [Next-agent handoff](projects/razuchimsya-plakat-lyric-film/AGENT-HANDOFF.md)
 
 ## немерено
 

@@ -1,24 +1,27 @@
 {
-  "revision": "razuchimsya-plakat-v1.0-preview",
-  "sceneSha256": "758093e6f6dbe5d6aead3f5e71d8c5c510ec6de7f385108c3e2237735d5b30f7",
+  "revision": "razuchimsya-plakat-v1.1-preview",
+  "sceneSha256": "73ce70780bc765e90d03cdabb90ad5709feb2a15d255b8d95df99b06a17bed90",
+  "timelineSha256": "3d3620a4372e2bf5a0e438a5b37b537cd5b4a37c31f8bc3de2695924a7a7fb7d",
   "sourceSha256": "1a2efa9d95b57fe72ff56e8028a39793ef1a69e0d10a8ed47fbcf25885ed855c",
   "browser": "Codex in-app browser",
   "status": "passed",
   "observed": [
-    "Source AV1 picture decoded to 1080x1080; media readyState 4",
-    "Unmuted 1x playback advanced source picture PTS and independent word time",
-    "Paused word-clock refresh, seek and landscape/portrait switching",
-    "0.5x playback controls",
-    "Recovery retained 194.500 s, portrait format and unmuted state",
-    "At 194.500 s active Russian жить and English to/live; picture PTS 194.480 s",
-    "At 55.600 s active Russian осколок and English shard; picture PTS 55.600 s",
-    "Original muted source-reference dialog",
-    "End at 227.074 s kept the original picture; no lyric cue or blank replacement"
+    "Reloaded complete current scene; actual canvas identity matched source, timeline and scene hashes",
+    "Original AV1 picture decoded to 1080x1080, native readyState 4; unchanged soundtrack unmuted",
+    "At 33.500 s actual Russian плакать and complete English to/cry remained focused, picture PTS 33.480 s",
+    "At 205.200 s actual Russian жить and complete English to/live remained focused at full opacity",
+    "Reduced-speed playback advanced word time to 205.311232 and native picture PTS to 205.320 s, with the continuous line present",
+    "Normal-speed portrait playback at 165.051993 s advanced native PTS to 165.040 s; single-line peak deviation 22.1365 px",
+    "Portrait recovery retained 205.337 s, 0.5x, format, sound and current lyric state",
+    "Both layouts visually inspected with one warm-ivory path below the lyrics; no bar row or pigment-only response remains",
+    "At 227.074 s native picture PTS 227.000 remained available, all lyrics clear and added line opacity zero",
+    "Final preview left at 31.000 s, landscape, paused, 1x, effects on and sound on",
+    "No error entries in current browser log"
   ],
   "observedPaintMilliseconds": [
     0.2,
-    0.3
+    0.4
   ],
-  "scope": "Technical transport/display observations and selected states only; not full-recording listening or creative acceptance.",
+  "scope": "Technical transport and selected actual-display observations only; not full-recording listening or owner creative acceptance.",
   "humanListening": false
 }

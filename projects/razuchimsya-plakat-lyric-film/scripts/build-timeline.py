@@ -36,6 +36,9 @@ starts=[
 ends=[22.04,25.77,33.08,38.65,44.82,57.65,63.11,68.12,74.14,80.29,87.02,110.64,116.27,123.20,128.40,135.00,147.93,153.62,160.69,166.45,172.28,178.37,184.45,190.42,196.47,202.02]
 # The stretched syllables are not blanket-transferred between repetitions.
 internal_ends={0:{0:3.76,1:8.54,2:15.12},5:{4:51.86},11:{0:94.09,1:98.90,2:105.08},16:{4:142.01}}
+correction_layer=json.loads((root/'source/held-release-corrections-v1.1.json').read_text())
+assert correction_layer['sourceSha256']==sha and correction_layer['sampleRate']==rate
+corrections={r['id']:r for r in correction_layer['records']}
 rows=[];cues=[]
 for i,p in enumerate(ed['phrases']):
  template=ed['templates'][p['templateId']];tokens=template['sourceText'].split();assert len(tokens)==len(starts[i]),p['id']
@@ -43,16 +46,20 @@ for i,p in enumerate(ed['phrases']):
  for j,(text,onset) in enumerate(zip(tokens,starts[i])):
   release=starts[i][j+1] if j+1<len(tokens) else ends[i]
   release=internal_ends.get(i,{}).get(j,release)
+  correction=corrections.get(f"{p['id']}-s{j:02d}")
+  if correction:
+   assert round(release*rate)==correction['oldEndSample'], 'Correction layer must apply once against the frozen baseline'
+   release=correction['selectedEndSample']/rate
   bare=text.rstrip(',!.?');punct=text[len(bare):];w={'id':f"{p['id']}-s{j:02d}",'text':bare,'sourceIndex':j,'startSample':round(onset*rate),'endSample':round(release*rate),'confidence':'preview proposal; listening pending','method':'selected source-clock proposal from original/stem activity, bounded unprompted Whisper and MMS CTC cores'}
   if punct:w['punctuationAfter']=punct
   words.append(w);m=model['words'][j]
-  rows.append({'id':w['id'],'text':bare,'selectedStartSample':w['startSample'],'selectedEndSample':w['endSample'],'mmsFirstCenterSeconds':m['startSeconds'],'mmsLastCenterSeconds':m['endSeconds'],'mmsScore':m['score'],'onsetUncertainty':'Model-supported preview proposal; a unique physical boundary has not been certified','releaseStatus':'Individually selected direct-body proposal; passive tail belongs to reading hold.','humanListening':False})
+  rows.append({'id':w['id'],'text':bare,'selectedStartSample':w['startSample'],'selectedEndSample':w['endSample'],'mmsFirstCenterSeconds':m['startSeconds'],'mmsLastCenterSeconds':m['endSeconds'],'mmsScore':m['score'],'onsetUncertainty':'Model-supported preview proposal; a unique physical boundary has not been certified','releaseStatus':correction['reason'] if correction else 'Connected ownership handoff retained.','humanListening':False})
  targets=[]
  for j,t in enumerate(template['targets']):
   bare=t['text'].rstrip(',!.?');q={**t,'id':f"{p['id']}-t{j:02d}",'text':bare};punct=t['text'][len(bare):]
   if punct:q['punctuationAfter']=punct
   targets.append(q)
- c={'id':p['id'],'templateId':p['templateId'],'lane':'lead','voice':'Settlers lead','sourceLanguage':'ru','targetLanguage':'en','sourceText':template['sourceText'],'targetText':' '.join(t['text'] for t in template['targets']),'start':starts[i][0],'end':ends[i],'words':words,'targets':targets,'sourceBreaks':[5] if p['templateId']=='shard' else [],'targetBreaks':[7] if p['templateId']=='shard' else []}
+ c={'id':p['id'],'templateId':p['templateId'],'lane':'lead','voice':'Settlers lead','sourceLanguage':'ru','targetLanguage':'en','sourceText':template['sourceText'],'targetText':' '.join(t['text'] for t in template['targets']),'start':starts[i][0],'end':words[-1]['endSample']/rate,'words':words,'targets':targets,'sourceBreaks':[5] if p['templateId']=='shard' else [],'targetBreaks':[7] if p['templateId']=='shard' else []}
  cues.append(c)
 prior=0
 for i,c in enumerate(cues):
@@ -65,7 +72,7 @@ for i,c in enumerate(cues):
   c.update(visibleStart=max(prior,c['start']-.24),fullOpacityEnd=nxt,visibleEnd=nxt,exitMode='vocal-handoff')
  prior=c['visibleEnd']
  assert c['fullOpacityEnd']>=c['end']
-result={'schemaVersion':1,'revision':'razuchimsya-plakat-v1.0-preview','sampleRate':rate,'sourceSha256':sha,'sourceDuration':duration,'cues':cues}
+result={'schemaVersion':1,'revision':'razuchimsya-plakat-v1.1-preview','sampleRate':rate,'sourceSha256':sha,'sourceDuration':duration,'cues':cues}
 (root/'public/timeline.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')
 (root/'evidence/timing-selections.json').write_text(json.dumps({'schemaVersion':1,'sourceSha256':sha,'sampleRate':rate,'status':'Technical/model-supported preview proposals; complete human listening review pending','events':rows},ensure_ascii=False,indent=2)+'\n')
 print(len(cues),'cues;',len(rows),'source-word events;',sum(len(c['targets']) for c in cues),'translated tokens')
