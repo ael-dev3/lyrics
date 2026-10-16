@@ -4,7 +4,7 @@ The complete approved production is backed up in authenticated, unpublished draf
 
 The archive source commit is **`aa0660e870f8d24b0713f6cba982e693632dc53c`**. Preserve it in the merged branch ancestry. Later source commits add the remote verification receipt; the immutable production archives deliberately remain pinned to this completed source revision rather than recursively archiving their own receipts.
 
-Posting-copy revision 2 shortens the Farcaster disclosure to the factual title, AI-assisted translation/timing/visuals, actual human review and source credit. The current caption and matching `DELIVERY.json` / `CHECKSUMS.sha256` are retained in the latest public source. The immutable upload-kit ZIP preserves the preceding copy revision; both revisions use identical films and covers. When recovering the current posting kit, restore the original assets and then overlay these three current files from the latest source. Private voting signatures and account transaction details are excluded.
+Posting-copy revision 3 keeps the factual title, AI-assisted translation/timing/visuals/caption, actual human review and source credit. It explicitly discloses the caption's AI assistance. The current caption and matching `DELIVERY.json` / `CHECKSUMS.sha256` are retained in the latest public source. The immutable upload-kit ZIP preserves the original copy revision; all revisions use identical films and covers. When recovering the current posting kit, restore the original assets and then overlay these three current files from the latest source. Private voting signatures and account transaction details are excluded.
 
 | Asset | Bytes | Payload files | SHA-256 |
 | --- | ---: | ---: | --- |
