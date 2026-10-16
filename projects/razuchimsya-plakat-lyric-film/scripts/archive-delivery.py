@@ -81,6 +81,7 @@ def verify(directory, restore=None):
             'sourceCommit': receipt['sourceCommit'], 'identity': receipt['identity']}
 
 def create(destination):
+    assert destination != PROJECT and PROJECT not in destination.parents, 'Archive destination must be outside the project to avoid including its own files.'
     assert not destination.exists(), 'Archive directory already exists.'
     assert not subprocess.check_output(['git', 'diff', 'HEAD', '--', PREFIX], cwd=REPO), 'Project has uncommitted tracked edits.'
     destination.mkdir(parents=True)
