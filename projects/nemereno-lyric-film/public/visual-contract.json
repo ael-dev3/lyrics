@@ -1,0 +1,140 @@
+{
+  "schemaVersion": 3,
+  "revision": "nemereno-rebuild-v4.3",
+  "sourceSha256": "aad4f48816923b53b246a3d58a6e03ca3dcf55ca73ef3ed513b8a9f8822b664d",
+  "status": "Complete preview; technical checks complete, listener review and production approval pending.",
+  "picture": {
+    "mode": "One original source-frame draw, one deliberate crop, one uniform scale.",
+    "forbiddenForThisRevision": [
+      "mirrored or repeated source edges",
+      "stretched image extension",
+      "synthesized replacement scenery",
+      "background blur extension",
+      "camera shake"
+    ],
+    "sourceKind": "Static forest photograph held in the complete original recording.",
+    "figureGuardSourceCoordinates": [
+      215,
+      230,
+      335,
+      558
+    ],
+    "sourceReference": "The complete original image is available in the muted Source reference control."
+  },
+  "layouts": {
+    "landscape": {
+      "width": 1920,
+      "height": 1080,
+      "sourceCrop": [
+        0,
+        194,
+        1080,
+        607.5
+      ],
+      "readingCenterX": 1465,
+      "readingWidth": 790,
+      "soloRegionY": [
+        100,
+        970
+      ],
+      "duetRegionsY": [
+        [
+          60,
+          480
+        ],
+        [
+          548,
+          968
+        ]
+      ]
+    },
+    "portrait": {
+      "width": 1080,
+      "height": 1920,
+      "sourceCrop": [
+        168,
+        0,
+        607.5,
+        1080
+      ],
+      "readingCenterX": 540,
+      "readingWidth": 940,
+      "soloRegionY": [
+        1450,
+        1860
+      ],
+      "duetRegionsY": [
+        [
+          42,
+          367
+        ],
+        [
+          1450,
+          1860
+        ]
+      ]
+    }
+  },
+  "visualizer": {
+    "role": "A compact supporting graphic beneath the lyrics. The source forest stays visually steady.",
+    "shape": "24 separate single-sided straight bars on one fixed baseline. Square ends, muted ivory cores and a tiny local dark shadow.",
+    "measurement": "24 logarithmic bands from 40 to 10000 Hz, measured on the exact original mix at 50 observations per second. No extra or mirrored frequency channels.",
+    "normalization": {
+      "dbFloor": -70,
+      "dbCeiling": -18,
+      "exponent": 1.4,
+      "perFrameRenormalization": false
+    },
+    "motion": {
+      "attackSeconds": 0.05,
+      "releaseSeconds": 0.24,
+      "gateReleaseSeconds": 0.18,
+      "spatialSmoothing": "Five-band triangular weights 1,2,3,2,1.",
+      "interpolation": "Adjacent 50 Hz observations interpolate on the original source clock.",
+      "minimumHeightPixels": 2,
+      "maximumOpacity": 0.76
+    },
+    "layouts": {
+      "landscape": {
+        "centerX": 1465,
+        "width": 640,
+        "baseline": 1030,
+        "maximumHeight": 46,
+        "barWidth": 8
+      },
+      "portrait": {
+        "centerX": 540,
+        "width": 720,
+        "baseline": 1882,
+        "maximumHeight": 42,
+        "barWidth": 10
+      }
+    },
+    "color": "#d4d0c2",
+    "ending": "400 ms entrance and 1.72-second closing fade; silent input has zero opacity.",
+    "pictureTreatment": "No reactive foliage exposure, branch contour, emitted glow or autonomous decorative movement. Reading exposure is neutral and feathered.",
+    "precisionLimit": "The 92.88 ms FFT window is centered. Display smoothing and 50 Hz interpolation are artistic controls, not exact physical transient or phoneme measurements. Lyric events are separate and unchanged.",
+    "seeking": "Precomputed source-time history gives the same pose on direct seeking and uninterrupted playback.",
+    "verification": "Actual spectrum-region activity and time variation in both formats, fixed width and baseline, complete glyph clearance, unchanged figure pixels and exact original-crop equality with effects disabled."
+  },
+  "type": {
+    "family": "Literata",
+    "weight": 500,
+    "license": "Bundled official Google Fonts font and OFL license.",
+    "languages": "Equal Russian/English weight, size, resting color, focus color and contrast. Stable words receive color-only focus.",
+    "geometry": "Complete-cue reservation protects all duet entrances, exits and held readings. Portrait countervoice above the figure; lead below. Wide voices occupy separate clearing blocks."
+  },
+  "palette": {
+    "rest": "#e1e4d6",
+    "focus": "#ffdf9b",
+    "shadow": "#07100b",
+    "spectrum": "#d4d0c2"
+  },
+  "timing": "V3 rebuilt acoustic decisions retained unchanged: 267 source events, 338 English tokens, 46 display cues. Complete meaning anchors and separate neutral holds share the original 44.1 kHz song clock.",
+  "reviewTargets": [
+    "Quiet final duet 160–181 seconds.",
+    "Independently repeated endings, quiet prefixes and full held releases.",
+    "Both complete layouts and the lyric-free bridge 104–120.8 seconds."
+  ],
+  "productionApproved": false
+}

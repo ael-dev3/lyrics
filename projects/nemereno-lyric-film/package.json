@@ -1,0 +1,30 @@
+{
+  "name": "nemereno-lyric-film",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "esbuild src/player.ts --bundle --format=esm --outfile=review/client.js",
+    "preview": "npm run build && node scripts/preview-server.ts",
+    "typecheck": "tsc --noEmit",
+    "check": "npm run typecheck && npm run build",
+    "verify-preview": "node scripts/verify-preview.ts",
+    "stills": "node scripts/preview-stills.ts",
+    "features": "node scripts/analyze-audio.ts",
+    "timeline": "python3 scripts/build-timeline.py",
+    "identity": "node scripts/refresh-identity.ts",
+    "transcribe": "stable-whisper",
+    "render:production": "node scripts/render-production.ts --production",
+    "verify:final": "node scripts/verify-final.ts",
+    "covers": "node scripts/make-covers.ts",
+    "publishing": "node scripts/make-publishing-copy.ts",
+    "finalize": "node scripts/finalize-delivery.ts",
+    "test:gate": "node tests/render-gate.test.ts"
+  },
+  "devDependencies": {
+    "@types/node": "26.6.4",
+    "esbuild": "0.28.2",
+    "typescript": "7.0.2",
+    "@napi-rs/canvas": "1.0.10"
+  }
+}

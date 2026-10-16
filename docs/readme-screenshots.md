@@ -1,9 +1,10 @@
 # README song screenshots
 
-Updated 10 October 2026. Featured songs in the main README have a representative image with its edition and preview/final status, and each song's project README has an associated image. Rendered preview references are identified separately from browser captures and decoded final-film frames. Promotional covers and supplementary frames remain separate from the representative image.
+Updated 16 October 2026. Featured songs in the main README have a representative image with its edition and preview/final status, and each song's project README has an associated image. Rendered preview references are identified separately from browser captures and decoded final-film frames. Promotional covers and supplementary frames remain separate from the representative image.
 
 | Song | Representative image | Time | Edition / provenance |
 | --- | --- | --- | --- |
+| немерено | [Original seated figure, equal bilingual words and restrained spectrum](../projects/nemereno-lyric-film/evidence/final-youtube-33.250.jpg) | 00:33.250 | Exact decoded frame 1,995 from the verified approved v4.3 1920×1080, 60 fps film; original picture 831 |
 | Друг | [Original raven illustration, paired animal focus and detailed layered city](../projects/drug-lyric-film/evidence/final-youtube-26.200.jpg) | 00:26.200 | Exact decoded frame 1,572 from verified v2 1920×1080, 60 fps film; original frame 786; exact owner-approved preview with granular listening checklist separately unlogged |
 | Труп невесты | [Complete bridal illustration, equal bilingual focus and measured strings](../projects/trup-nevesty-lyric-film/evidence/final-youtube-95.200.jpg) | 01:35.200 | Exact decoded frame 5,712 from the verified v1 1920×1080, 60 fps film; original frame 2,380; scoped owner-approved preview with standardized listening scope separately unattested |
 | призрак | [Original bass-performance shot and centered independent vocal blocks](../projects/prizrak-lyric-film/evidence/final-landscape-overlap-214.300.jpg) | 03:34.300 | Exact decoded frame 12858 from the verified centered v2 native 1920×1080, 60 fps film; original frame 5357 |
@@ -34,6 +35,12 @@ Updated 10 October 2026. Featured songs in the main README have a representative
 | Tanisea | [Square composition and English focus](../assets/tanisea-vnext-hero.png) | 00:48.000 | Historical square vNext reference; time visible in frame |
 
 The [structured inventory](../assets/readme-screenshots.json) records image dimensions, hashes, project associations and selection reasons. Original-creator credits remain with the song entries and project documentation.
+
+## немерено final forest frame
+
+The main and project READMEs share complete decoded YouTube frame 1,995 at 33.250 seconds, original picture 831 at 33.240 seconds. The native 1920×1080 JPEG preserves the original seated figure, stable equal bilingual typography and compact muted-ivory spectrum. It is an exact final-film extraction without cropping, recoloring or replaced text. Original recording and photograph: [the supplied upload](https://www.youtube.com/watch?v=sPw-_Of_LgQ), лампабикт feat. Элли на маковом поле and the original creators; a separate photographer is not inferred.
+
+[Final-still provenance](../projects/nemereno-lyric-film/evidence/final-stills.json) binds 26 unmodified decoded JPEGs to both final movies and the approved source/timeline/scene hashes. The wide representative, portrait duet and final original-picture tail were inspected. The structured inventory records the representative image's actual JPEG encoding, bytes and SHA-256. Human listening acceptance, technical full-file verification and finite screenshot presentation remain separate evidence.
 
 ## По камушку final stone-surface frame
 
