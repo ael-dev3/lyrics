@@ -1,0 +1,201 @@
+{
+  "schemaVersion": 1,
+  "receipts": [
+    {
+      "status": "encoded; independent final-file checks pending",
+      "file": "Razuchimsya-Plakat-Settlers-YouTube-1920x1080-60fps.mp4",
+      "format": "landscape",
+      "width": 1920,
+      "height": 1080,
+      "sourceFrames": 5676,
+      "outputFrames": 13625,
+      "sourceEnd": 227.04,
+      "audioEnd": 227.074,
+      "outputFps": 60,
+      "outputDurationSeconds": 227.08333333333334,
+      "sourcePictureMapping": "min(5675, floor(outputFrame*5/12))",
+      "sourcePicture": "All 5676 native decoded pictures; source frame chosen on the original 25 fps clock.",
+      "audio": "Checked Apple AAC LC 320 kb/s export, copied without further encoding or timing shift; track end bounded to the complete source decoded samples.",
+      "color": "Limited-range BT.709 YUV420P; square pixels.",
+      "identity": {
+        "schemaVersion": 1,
+        "revision": "razuchimsya-plakat-v1.1-preview",
+        "sourceSha256": "1a2efa9d95b57fe72ff56e8028a39793ef1a69e0d10a8ed47fbcf25885ed855c",
+        "timelineSha256": "3d3620a4372e2bf5a0e438a5b37b537cd5b4a37c31f8bc3de2695924a7a7fb7d",
+        "sceneSha256": "73ce70780bc765e90d03cdabb90ad5709feb2a15d255b8d95df99b06a17bed90",
+        "sceneFiles": [
+          "src/model.ts",
+          "src/scene.ts",
+          "src/player.ts",
+          "review/index.html",
+          "review/client.js",
+          "public/audio-features.json",
+          "public/artwork-reference.png",
+          "public/visual-contract.json",
+          "public/fonts/Cormorant.ttf",
+          "public/fonts/Cormorant-OFL.txt"
+        ]
+      },
+      "listeningGateComplete": false,
+      "productionScope": "Owner reported completed current-preview review and explicitly authorized this frozen v1.1 composition. Standardized granular listening fields remain unlogged; no assistant direct audition claimed.",
+      "adapters": [
+        {
+          "path": "analysis/initial-render-production.ts",
+          "sha256": "32b6a858f03a75697c4b01177c9f93a00787255c816f25a9fc427098d520317b"
+        },
+        {
+          "path": "scripts/remux-upload-audio.ts",
+          "sha256": "88e995c8e8ff4feb783252a8fb29f3ba96853c5dd54cb14135500b7d7d7c71c8"
+        },
+        {
+          "path": "scripts/production-authorization.ts",
+          "sha256": "df040f10b30302b7c205bce23d31e00b4f6b6b68c1a188fe8ddd10582f1dcabb"
+        },
+        {
+          "path": "scripts/project-identity.ts",
+          "sha256": "e890e1283a34a9f2a8d9f821a35b8b97c03862de09eff471e8cab9e4cca72ca1"
+        },
+        {
+          "path": "scripts/prepare-upload-audio.ts",
+          "sha256": "80a7c785544a16b987ff3ef1d109ea6a77dbdb31e160ff4106ca44d9c276b13e"
+        },
+        {
+          "path": "scripts/verify-audio.ts",
+          "sha256": "2239b07b54846c4487e49cec5270762ff9dec6f9412eecf0c19a78e8415a0c3c"
+        },
+        {
+          "path": "analysis/upload-audio.m4a",
+          "sha256": "8d192ce8eebd917b3cbc42e179f414538b3fd04753f39533884d0908759bddb5"
+        }
+      ],
+      "sha256": "6eeccd31d2710f0e51a414baf6e4ab27c4fe383584cf28e834a576ead974ddf5",
+      "bytes": 83356722,
+      "elapsedSeconds": 260.952,
+      "videoRender": {
+        "initialArtifactSha256": "5dd1ccfb35166754dc065ca376d955852a32f0fb608e30323a1fcf8eeb52dc96",
+        "initialAdapterSha256": "32b6a858f03a75697c4b01177c9f93a00787255c816f25a9fc427098d520317b",
+        "unchangedVideoPackets": 13625,
+        "packetMetadataAndPayloadSha256": "161f9c52cea3dc98173f19a70d3542f7bb6453233d719f9ecbbb3b99b2268385"
+      },
+      "audioVerification": {
+        "status": "pass",
+        "sourceCodec": "Opus",
+        "deliveryCodec": "AAC LC",
+        "sampleRate": 48000,
+        "channels": 2,
+        "requestedBitrate": 320000,
+        "sourceDecodedFrames": 10899504,
+        "outputDecodedFrames": 10900416,
+        "paddedEndFrames": 912,
+        "bestLagSamples": 0,
+        "lagSearchSamples": [
+          -24,
+          24
+        ],
+        "correlation": 0.9996063091747047,
+        "gain": 0.9943075427124539,
+        "snrDb": 30.908148300996277,
+        "packetIdentical": false,
+        "scope": "Original recording retained without edits, filtering or gain processing; upload-compatible AAC is lossy and is checked for zero offset and bounded difference."
+      }
+    },
+    {
+      "status": "encoded; independent final-file checks pending",
+      "file": "Razuchimsya-Plakat-Settlers-TikTok-1080x1920-60fps.mp4",
+      "format": "portrait",
+      "width": 1080,
+      "height": 1920,
+      "sourceFrames": 5676,
+      "outputFrames": 13625,
+      "sourceEnd": 227.04,
+      "audioEnd": 227.074,
+      "outputFps": 60,
+      "outputDurationSeconds": 227.08333333333334,
+      "sourcePictureMapping": "min(5675, floor(outputFrame*5/12))",
+      "sourcePicture": "All 5676 native decoded pictures; source frame chosen on the original 25 fps clock.",
+      "audio": "Checked Apple AAC LC 320 kb/s export, copied without further encoding or timing shift; track end bounded to the complete source decoded samples.",
+      "color": "Limited-range BT.709 YUV420P; square pixels.",
+      "identity": {
+        "schemaVersion": 1,
+        "revision": "razuchimsya-plakat-v1.1-preview",
+        "sourceSha256": "1a2efa9d95b57fe72ff56e8028a39793ef1a69e0d10a8ed47fbcf25885ed855c",
+        "timelineSha256": "3d3620a4372e2bf5a0e438a5b37b537cd5b4a37c31f8bc3de2695924a7a7fb7d",
+        "sceneSha256": "73ce70780bc765e90d03cdabb90ad5709feb2a15d255b8d95df99b06a17bed90",
+        "sceneFiles": [
+          "src/model.ts",
+          "src/scene.ts",
+          "src/player.ts",
+          "review/index.html",
+          "review/client.js",
+          "public/audio-features.json",
+          "public/artwork-reference.png",
+          "public/visual-contract.json",
+          "public/fonts/Cormorant.ttf",
+          "public/fonts/Cormorant-OFL.txt"
+        ]
+      },
+      "listeningGateComplete": false,
+      "productionScope": "Owner reported completed current-preview review and explicitly authorized this frozen v1.1 composition. Standardized granular listening fields remain unlogged; no assistant direct audition claimed.",
+      "adapters": [
+        {
+          "path": "analysis/initial-render-production.ts",
+          "sha256": "32b6a858f03a75697c4b01177c9f93a00787255c816f25a9fc427098d520317b"
+        },
+        {
+          "path": "scripts/remux-upload-audio.ts",
+          "sha256": "88e995c8e8ff4feb783252a8fb29f3ba96853c5dd54cb14135500b7d7d7c71c8"
+        },
+        {
+          "path": "scripts/production-authorization.ts",
+          "sha256": "df040f10b30302b7c205bce23d31e00b4f6b6b68c1a188fe8ddd10582f1dcabb"
+        },
+        {
+          "path": "scripts/project-identity.ts",
+          "sha256": "e890e1283a34a9f2a8d9f821a35b8b97c03862de09eff471e8cab9e4cca72ca1"
+        },
+        {
+          "path": "scripts/prepare-upload-audio.ts",
+          "sha256": "80a7c785544a16b987ff3ef1d109ea6a77dbdb31e160ff4106ca44d9c276b13e"
+        },
+        {
+          "path": "scripts/verify-audio.ts",
+          "sha256": "2239b07b54846c4487e49cec5270762ff9dec6f9412eecf0c19a78e8415a0c3c"
+        },
+        {
+          "path": "analysis/upload-audio.m4a",
+          "sha256": "8d192ce8eebd917b3cbc42e179f414538b3fd04753f39533884d0908759bddb5"
+        }
+      ],
+      "sha256": "8b9eda8a68e0f3fe527054f5d92b51b67d230804b1ea038564306bc671955533",
+      "bytes": 81038743,
+      "elapsedSeconds": 261.606,
+      "videoRender": {
+        "initialArtifactSha256": "755994344cc5181e4a590717aef1c689a5e0be3bb265597cfc00506c8b5dff1b",
+        "initialAdapterSha256": "32b6a858f03a75697c4b01177c9f93a00787255c816f25a9fc427098d520317b",
+        "unchangedVideoPackets": 13625,
+        "packetMetadataAndPayloadSha256": "3c0768ee3eff38a158be39d75584c66c290b047d70f76746017b4dd6bd14725b"
+      },
+      "audioVerification": {
+        "status": "pass",
+        "sourceCodec": "Opus",
+        "deliveryCodec": "AAC LC",
+        "sampleRate": 48000,
+        "channels": 2,
+        "requestedBitrate": 320000,
+        "sourceDecodedFrames": 10899504,
+        "outputDecodedFrames": 10900416,
+        "paddedEndFrames": 912,
+        "bestLagSamples": 0,
+        "lagSearchSamples": [
+          -24,
+          24
+        ],
+        "correlation": 0.9996063091747047,
+        "gain": 0.9943075427124539,
+        "snrDb": 30.908148300996277,
+        "packetIdentical": false,
+        "scope": "Original recording retained without edits, filtering or gain processing; upload-compatible AAC is lossy and is checked for zero offset and bounded difference."
+      }
+    }
+  ]
+}
