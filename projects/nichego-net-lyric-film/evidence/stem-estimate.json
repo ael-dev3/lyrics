@@ -1,0 +1,19 @@
+{
+  "schema": "lyric-film/stem-estimate/v1",
+  "model": "htdemucs (demucs 4.1.0)",
+  "settings": {
+    "shifts": 0,
+    "overlap": 0.25,
+    "split": true,
+    "device": "cpu",
+    "torch": "2.8.0"
+  },
+  "sourceSha256": "66c561c05b04ed0ca3a92af98db609ee835f84d6494a0562f0ad87261486ca4a",
+  "samplesPerChannel": 8600074,
+  "vocalsSha256": "d3a07db8a547db2f4768ebc0aa55d9d21197e2a42c5afabd0d1c106fb0dbc3b3",
+  "accompanimentSha256": "7b233721838749d475cbd3c482431b1f85f5ed86dc8609db09ec7bd36f652c2d",
+  "limitations": [
+    "Estimated separation. Accompaniment and reverb leak into the vocal stem; breaths and backing vocals are not isolated.",
+    "Used for timing evidence and vocal-energy display only. Never delivered."
+  ]
+}
