@@ -44,7 +44,7 @@ The kit contains the two full films; dedicated 1280×720 YouTube and 1200×1600 
 
 Cover text is composed in code over a crop of the real source photograph. The full title, artist and mask subject were checked at wide 320×180 and portrait 150×200 / 300×400, including a 5% edge-crop simulation. The tall artist baseline was raised before acceptance to retain the lower safe margin. These are local visual checks, not platform upload previews.
 
-`DELIVERY.json` and `CHECKSUMS.sha256` bind all 17 kit files. The Desktop-copy receipt independently hashes copied payloads and the checksum manifest. Public Git stores compact source, notes and evidence. Original media, retained analysis and final films use an authenticated unpublished recovery set, documented separately once download-and-restore verification completes. No platform upload or social post is performed by preparing the kit.
+`DELIVERY.json` and `CHECKSUMS.sha256` bind all 17 kit files. The Desktop-copy receipt independently hashes copied payloads and the checksum manifest. Public Git stores compact source, notes and evidence. Original media, retained analysis and final films are covered by [the verified authenticated unpublished recovery set](RELEASE-BACKUP.md), independently downloaded and restored. No platform upload or social post is performed by preparing the kit.
 
 ## Reproduction
 

@@ -16,7 +16,7 @@ The complete 3:15 recording pairs Russian lyrics with meaning-linked English, in
 - Desktop kit: **17 checksum-verified files**, with both films, 3 covers, YouTube/TikTok copy, Farcaster wide copy and combined caption/disclosure, 3 subtitle options and delivery receipts.
 - Every-frame timestamps and strict full decode passed; no black interval. Per format, 624 decoded scene frames, 5,076 glyph-state checks, all 307 tokens in focused/neutral states, 307 delayed controls and 121 lyric-free reading frames passed.
 
-[Production delivery and reproduction](PRODUCTION-DELIVERY.md) · [Editorial, timing and visual process](PRODUCTION-NOTES.md) · [Agent handoff](AGENT-HANDOFF.md) · [Desktop receipt](evidence/desktop-delivery.json) · [Upload manifest](evidence/upload-kit.json).
+[Production delivery and reproduction](PRODUCTION-DELIVERY.md) · [Editorial, timing and visual process](PRODUCTION-NOTES.md) · [Agent handoff](AGENT-HANDOFF.md) · [Desktop receipt](evidence/desktop-delivery.json) · [Upload manifest](evidence/upload-kit.json) · [Verified authenticated recovery](RELEASE-BACKUP.md).
 
 The owner explicitly accepted this current preview and commissioned production. Detailed standardized speed/layout listening fields remain unlogged in `source/REVIEW.json`; they are not inferred from acceptance or technical checks. The hash-bound owner authorization covers these unchanged inputs alone. No platform upload or public media release is performed by preparing this delivery.
 
