@@ -1,32 +1,37 @@
-# ничего нет — bilingual lyric preview
+# ничего нет — bilingual lyric film
 
-**забей, лерочка · Russian / English · v1.1 · preview only**
+**забей, лерочка · Russian / English · approved silver v1.1 · verified 16:9 and 9:16 films**
 
-![Complete bilingual preview over the original monochrome photograph](evidence/preview-landscape-18.800.jpg)
+![Final film: original winter photograph, equal pearl-white lyric focus and silver box-edge filament](evidence/final-youtube-18.800.jpg)
 
-*Shared-scene diagnostic at 00:18.800, not a frame from an encoded film. Original picture and soundtrack: [забей, лерочка’s supplied recording](https://www.youtube.com/watch?v=ghRP43_z5N8). No photographer identity is inferred.*
+*Decoded final YouTube frame 1,128 at 00:18.800, original picture 470; uniform documentation downscale without crop or repaint. Original picture and soundtrack: [забей, лерочка’s supplied recording](https://www.youtube.com/watch?v=ghRP43_z5N8). A separate photographer is not inferred.*
 
-The complete 3:15 recording has equal Russian/English word focus, a monochrome silver treatment and a small measured music filament along the photographed gift-box rim. One real source crop fills each independently composed 16:9 and 9:16 view. No image extension, replacement artwork, bars, camera shake or flashing on the photographed objects.
+The complete 3:15 recording pairs Russian lyrics with meaning-linked English, independently selected sustained-word intervals and a quiet measured silver filament along the real gift-box rim. One source crop fills each independently composed view. Pearl-white focus and stone-grey resting words retain the monochrome winter photograph without image extension or a colored filter.
 
-## Review
+## Delivery
 
-Run `npm ci`, place the exact source in `public/source.mp4`, then:
+- YouTube: **1920×1080, 60 fps, H.264**, 35,943,224 bytes.
+- TikTok: **1080×1920, 60 fps, H.264**, 38,849,563 bytes.
+- Full original audio extent: **195.013 s**; film **195.016667 s**. Checked Apple AAC has zero selected offset relative to the original recording.
+- Desktop kit: **17 checksum-verified files**, with both films, 3 covers, YouTube/TikTok copy, Farcaster wide copy and combined caption/disclosure, 3 subtitle options and delivery receipts.
+- Every-frame timestamps and strict full decode passed; no black interval. Per format, 624 decoded scene frames, 5,076 glyph-state checks, all 307 tokens in focused/neutral states, 307 delayed controls and 121 lyric-free reading frames passed.
+
+[Production delivery and reproduction](PRODUCTION-DELIVERY.md) · [Editorial, timing and visual process](PRODUCTION-NOTES.md) · [Agent handoff](AGENT-HANDOFF.md) · [Desktop receipt](evidence/desktop-delivery.json) · [Upload manifest](evidence/upload-kit.json).
+
+The owner explicitly accepted this current preview and commissioned production. Detailed standardized speed/layout listening fields remain unlogged in `source/REVIEW.json`; they are not inferred from acceptance or technical checks. The hash-bound owner authorization covers these unchanged inputs alone. No platform upload or public media release is performed by preparing this delivery.
+
+## Complete preview and source recovery
+
+Run `npm ci`, restore the exact original to `public/source.mp4`, then:
 
 ```sh
 python3 scripts/prepare-source.py
 npm run features
 npm run check
+npm run test:gate
 npm run preview
 ```
 
-Open `http://127.0.0.1:4342/`. Start at zero; switch formats, seek by cue/seconds and compare normal, 0.75× and 0.5× playback. Restore preview reloads source media while retaining position, speed, format and sound preference. Source reference shows the unaltered recording with one active soundtrack.
+Open `http://127.0.0.1:4342/`. The complete original source, both formats, normal/reduced speed, cue seeking and media recovery remain available. The photograph is intentionally still while native video decoding advances. Restore preview retains position, speed, layout and sound preference.
 
-The original AV1 1080×1080 25 fps / Opus stereo file is 9,265,424 bytes, SHA-256 `66c561c05b04ed0ca3a92af98db609ee835f84d6494a0562f0ad87261486ca4a`. Source formats were YouTube 399 + 251. The original media and regenerable analysis files are local, ignored inputs; no public media release or full film has been made.
-
-## Status and evidence
-
-- 39 reading cues, 129 source events and 178 English tokens.
-- Original/stem recognition, independent MMS character paths and all-cue source/stem spectral inspection support timing proposals. They do not establish a complete human listening review.
-- 387 boundary checks, 781 semantic states, 3,290 painted glyph states, 106 deliberately delayed controls and 26,160 exact sampled source-mask pixels passed across both layouts.
-- Full current-revision listening review and production approval remain pending in `source/REVIEW.json`. Rendering is guarded before any capture or encoding.
-- [Production notes](PRODUCTION-NOTES.md) · [Agent handoff](AGENT-HANDOFF.md) · [Review scope and open questions](evidence/cross-language-sync-review.md).
+Original source: AV1 1080×1080 at 25 fps / Opus stereo, YouTube formats 399 + 251, **9,265,424 bytes**, SHA-256 `66c561c05b04ed0ca3a92af98db609ee835f84d6494a0562f0ad87261486ca4a`. Ignored media, retained analysis and final deliveries are preserved separately from compact public Git source. Historical preview screenshots remain labeled in their original manifest; the READMEs now show a decoded final-film frame.

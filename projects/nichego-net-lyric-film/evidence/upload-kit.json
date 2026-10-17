@@ -1,0 +1,360 @@
+{
+  "schemaVersion": 1,
+  "edition": "nichego-net-approved-v1.1-production",
+  "preparedAtUtc": "2026-10-17T23:35:59.865Z",
+  "identity": {
+    "schemaVersion": 1,
+    "revision": "nichego-net-v1.1-preview",
+    "sourceSha256": "66c561c05b04ed0ca3a92af98db609ee835f84d6494a0562f0ad87261486ca4a",
+    "timelineSha256": "d2dfc9958e3124adeb509bceee0048bb82d18811e5ac52738cc0d4cfedb87ab7",
+    "sceneSha256": "329ab98e5563e0ffcc0da865138990f9cf7e69f9b6c9a34ceebb3611bc2c66e3",
+    "sceneFiles": [
+      "src/model.ts",
+      "src/scene.ts",
+      "src/player.ts",
+      "review/index.html",
+      "review/client.js",
+      "public/audio-features.json",
+      "public/artwork-reference.png",
+      "public/visual-contract.json",
+      "public/fonts/Cormorant.ttf",
+      "public/fonts/Cormorant-OFL.txt"
+    ]
+  },
+  "review": "Owner explicitly accepted the current complete preview and directed production, Desktop delivery and GitHub integration. Granular listening fields remain unlogged; acceptance is bound to the frozen v1.1 inputs.",
+  "movies": [
+    {
+      "file": "YouTube/Nichego-Net-Zabey-Lerochka-YouTube-1920x1080-60fps.mp4",
+      "bytes": 35943224,
+      "sha256": "b055e1b24f54d35d933a4f88fe03600212df1bafadaf4e6fd6fefb3d80da2e4b",
+      "width": 1920,
+      "height": 1080,
+      "fps": 60,
+      "videoDurationSeconds": 195.016667,
+      "audioDurationSeconds": 195.013,
+      "verification": "evidence/final-landscape-verification.json",
+      "audio": {
+        "status": "pass",
+        "sourceCodec": "Opus",
+        "deliveryCodec": "AAC LC",
+        "sampleRate": 48000,
+        "channels": 2,
+        "requestedBitrate": 320000,
+        "sourceDecodedFrames": 9360624,
+        "outputDecodedFrames": 9361344,
+        "paddedEndFrames": 720,
+        "bestLagSamples": 0,
+        "lagSearchSamples": [
+          -24,
+          24
+        ],
+        "correlation": 0.999877253181905,
+        "gain": 0.9973661269080517,
+        "snrDb": 36.00007341331656,
+        "packetIdentical": false,
+        "scope": "Original recording retained without edits, filtering or gain processing; upload-compatible AAC is lossy and is checked for zero offset and bounded difference."
+      },
+      "status": "pass"
+    },
+    {
+      "file": "TikTok/Nichego-Net-Zabey-Lerochka-TikTok-1080x1920-60fps.mp4",
+      "bytes": 38849563,
+      "sha256": "289b532f6feec2db7877f9357cc3d3074cfe5ff7d6fb8c3086c57d151c208f6e",
+      "width": 1080,
+      "height": 1920,
+      "fps": 60,
+      "videoDurationSeconds": 195.016667,
+      "audioDurationSeconds": 195.013,
+      "verification": "evidence/final-portrait-verification.json",
+      "audio": {
+        "status": "pass",
+        "sourceCodec": "Opus",
+        "deliveryCodec": "AAC LC",
+        "sampleRate": 48000,
+        "channels": 2,
+        "requestedBitrate": 320000,
+        "sourceDecodedFrames": 9360624,
+        "outputDecodedFrames": 9361344,
+        "paddedEndFrames": 720,
+        "bestLagSamples": 0,
+        "lagSearchSamples": [
+          -24,
+          24
+        ],
+        "correlation": 0.999877253181905,
+        "gain": 0.9973661269080517,
+        "snrDb": 36.00007341331656,
+        "packetIdentical": false,
+        "scope": "Original recording retained without edits, filtering or gain processing; upload-compatible AAC is lossy and is checked for zero offset and bounded difference."
+      },
+      "status": "pass"
+    },
+    {
+      "file": "Farcaster/Nichego-Net-Farcaster-1920x1080-60fps.mp4",
+      "bytes": 35943224,
+      "sha256": "b055e1b24f54d35d933a4f88fe03600212df1bafadaf4e6fd6fefb3d80da2e4b",
+      "width": 1920,
+      "height": 1080,
+      "fps": 60,
+      "videoDurationSeconds": 195.01666666666668,
+      "byteIdenticalTo": "YouTube/Nichego-Net-Zabey-Lerochka-YouTube-1920x1080-60fps.mp4",
+      "status": "pass"
+    }
+  ],
+  "covers": [
+    {
+      "platform": "YouTube",
+      "path": "YouTube/Nichego-Net-YouTube-Thumbnail-1280x720.jpg",
+      "width": 1280,
+      "height": 720,
+      "bytes": 201352,
+      "sha256": "f9feaccf6c918e7aff6978a76dbc4f5536b3c0f2a69b8bc027ba65733c241870",
+      "textBoxes": [
+        {
+          "text": "ничего",
+          "left": 494.1750030517578,
+          "top": 88,
+          "right": 785.3350982666016,
+          "bottom": 134,
+          "size": 108
+        },
+        {
+          "text": "нет",
+          "left": 564.120002746582,
+          "top": 182,
+          "right": 716.3919448852539,
+          "bottom": 231,
+          "size": 116
+        },
+        {
+          "text": "забей, лерочка",
+          "left": 506.88499450683594,
+          "top": 252,
+          "right": 774.7910614013672,
+          "bottom": 299,
+          "size": 46
+        }
+      ]
+    },
+    {
+      "platform": "TikTok",
+      "path": "TikTok/Nichego-Net-TikTok-Cover-Profile-1200x1600.jpg",
+      "width": 1200,
+      "height": 1600,
+      "bytes": 411161,
+      "sha256": "a9be9be9eec01524f2d8c99dc271f850d6599274012d674a6bce743dcbc2dda0",
+      "textBoxes": [
+        {
+          "text": "ничего",
+          "left": 397.3000030517578,
+          "top": 1180,
+          "right": 801.8002166748047,
+          "bottom": 1242,
+          "size": 150
+        },
+        {
+          "text": "нет",
+          "left": 508.8000030517578,
+          "top": 1322,
+          "right": 691.6800994873047,
+          "bottom": 1382,
+          "size": 140
+        },
+        {
+          "text": "забей, лерочка",
+          "left": 392.0850067138672,
+          "top": 1401,
+          "right": 810.6771392822266,
+          "bottom": 1475,
+          "size": 72
+        }
+      ]
+    },
+    {
+      "platform": "Farcaster",
+      "path": "Farcaster/Nichego-Net-Farcaster-Thumbnail-1280x720.jpg",
+      "width": 1280,
+      "height": 720,
+      "bytes": 201352,
+      "sha256": "f9feaccf6c918e7aff6978a76dbc4f5536b3c0f2a69b8bc027ba65733c241870",
+      "textBoxes": [
+        {
+          "text": "ничего",
+          "left": 494.1750030517578,
+          "top": 88,
+          "right": 785.3350982666016,
+          "bottom": 134,
+          "size": 108
+        },
+        {
+          "text": "нет",
+          "left": 564.120002746582,
+          "top": 182,
+          "right": 716.3919448852539,
+          "bottom": 231,
+          "size": 116
+        },
+        {
+          "text": "забей, лерочка",
+          "left": 506.88499450683594,
+          "top": 252,
+          "right": 774.7910614013672,
+          "bottom": 299,
+          "size": 46
+        }
+      ]
+    }
+  ],
+  "files": [
+    {
+      "file": "Captions/Bilingual.srt",
+      "bytes": 3573,
+      "sha256": "8174db0182e1296e4cd2f370182cec7d5db1619d3b0782d023c106e3bfe009e7"
+    },
+    {
+      "file": "Captions/English.srt",
+      "bytes": 2229,
+      "sha256": "7a92119257cdeee053571e3cd8d33b9700ee937b43f694100e2045bb06a4b470"
+    },
+    {
+      "file": "Captions/Russian.srt",
+      "bytes": 2660,
+      "sha256": "f7b003152c17a14a4168206957048f04aa070be6262fbf494a2439a98f2d3d56"
+    },
+    {
+      "file": "Farcaster/Caption.txt",
+      "bytes": 195,
+      "sha256": "1c0ad0be86b4b1a6583ae9648084ef3d6146fa7b3845a952b96a71e5301afef8"
+    },
+    {
+      "file": "Farcaster/Nichego-Net-Farcaster-1920x1080-60fps.mp4",
+      "bytes": 35943224,
+      "sha256": "b055e1b24f54d35d933a4f88fe03600212df1bafadaf4e6fd6fefb3d80da2e4b"
+    },
+    {
+      "file": "Farcaster/Nichego-Net-Farcaster-Thumbnail-1280x720.jpg",
+      "bytes": 201352,
+      "sha256": "f9feaccf6c918e7aff6978a76dbc4f5536b3c0f2a69b8bc027ba65733c241870"
+    },
+    {
+      "file": "README.txt",
+      "bytes": 1073,
+      "sha256": "acd2acd5a7feb743a46984cc98b58ea90ca71fc264049b2ed2d02ed17bea133a"
+    },
+    {
+      "file": "TikTok/Description.txt",
+      "bytes": 410,
+      "sha256": "792c2659899904e00112680162f18dca159e618943e369d2c9737ecd57c7442e"
+    },
+    {
+      "file": "TikTok/Nichego-Net-TikTok-Cover-Profile-1200x1600.jpg",
+      "bytes": 411161,
+      "sha256": "a9be9be9eec01524f2d8c99dc271f850d6599274012d674a6bce743dcbc2dda0"
+    },
+    {
+      "file": "TikTok/Nichego-Net-Zabey-Lerochka-TikTok-1080x1920-60fps.mp4",
+      "bytes": 38849563,
+      "sha256": "289b532f6feec2db7877f9357cc3d3074cfe5ff7d6fb8c3086c57d151c208f6e"
+    },
+    {
+      "file": "TikTok/Title.txt",
+      "bytes": 51,
+      "sha256": "628506639498986534e3263ad133d3aa4c949054edb59a60bfa5f147fe0d4f84"
+    },
+    {
+      "file": "YouTube/Description.txt",
+      "bytes": 953,
+      "sha256": "9bfac24b01c2e0ad8f3db14434b214c95195b6016ce70725498badbf6b9585fa"
+    },
+    {
+      "file": "YouTube/Nichego-Net-YouTube-Thumbnail-1280x720.jpg",
+      "bytes": 201352,
+      "sha256": "f9feaccf6c918e7aff6978a76dbc4f5536b3c0f2a69b8bc027ba65733c241870"
+    },
+    {
+      "file": "YouTube/Nichego-Net-Zabey-Lerochka-YouTube-1920x1080-60fps.mp4",
+      "bytes": 35943224,
+      "sha256": "b055e1b24f54d35d933a4f88fe03600212df1bafadaf4e6fd6fefb3d80da2e4b"
+    },
+    {
+      "file": "YouTube/Title.txt",
+      "bytes": 78,
+      "sha256": "de3270caf410264fc0417244037a0d024b9bc50fa987dcdeaee422b9cd685261"
+    }
+  ],
+  "verificationSummary": [
+    {
+      "format": "landscape",
+      "fullStrictDecode": true,
+      "everyFramePts": true,
+      "audioZeroOffset": true,
+      "audioVerification": {
+        "status": "pass",
+        "sourceCodec": "Opus",
+        "deliveryCodec": "AAC LC",
+        "sampleRate": 48000,
+        "channels": 2,
+        "requestedBitrate": 320000,
+        "sourceDecodedFrames": 9360624,
+        "outputDecodedFrames": 9361344,
+        "paddedEndFrames": 720,
+        "bestLagSamples": 0,
+        "lagSearchSamples": [
+          -24,
+          24
+        ],
+        "correlation": 0.999877253181905,
+        "gain": 0.9973661269080517,
+        "snrDb": 36.00007341331656,
+        "packetIdentical": false,
+        "scope": "Original recording retained without edits, filtering or gain processing; upload-compatible AAC is lossy and is checked for zero offset and bounded difference."
+      },
+      "blackIntervals": [],
+      "selectedSceneFrames": 624,
+      "glyphStateChecks": 5076,
+      "allTokensVerified": 307,
+      "tokensFocusedAndNeutral": 307,
+      "continuousFocusTokens": [],
+      "clearStateGlyphChecks": 0,
+      "deliberatelyDelayedTimingControls": 307,
+      "sampledReadingGapFrames": 121
+    },
+    {
+      "format": "portrait",
+      "fullStrictDecode": true,
+      "everyFramePts": true,
+      "audioZeroOffset": true,
+      "audioVerification": {
+        "status": "pass",
+        "sourceCodec": "Opus",
+        "deliveryCodec": "AAC LC",
+        "sampleRate": 48000,
+        "channels": 2,
+        "requestedBitrate": 320000,
+        "sourceDecodedFrames": 9360624,
+        "outputDecodedFrames": 9361344,
+        "paddedEndFrames": 720,
+        "bestLagSamples": 0,
+        "lagSearchSamples": [
+          -24,
+          24
+        ],
+        "correlation": 0.999877253181905,
+        "gain": 0.9973661269080517,
+        "snrDb": 36.00007341331656,
+        "packetIdentical": false,
+        "scope": "Original recording retained without edits, filtering or gain processing; upload-compatible AAC is lossy and is checked for zero offset and bounded difference."
+      },
+      "blackIntervals": [],
+      "selectedSceneFrames": 624,
+      "glyphStateChecks": 5076,
+      "allTokensVerified": 307,
+      "tokensFocusedAndNeutral": 307,
+      "continuousFocusTokens": [],
+      "clearStateGlyphChecks": 0,
+      "deliberatelyDelayedTimingControls": 307,
+      "sampledReadingGapFrames": 121
+    }
+  ],
+  "posting": "Files prepared for manual uploading; no social-media post or platform upload performed."
+}

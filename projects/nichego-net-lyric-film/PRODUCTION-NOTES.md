@@ -1,4 +1,4 @@
-# ничего нет — preview production record
+# ничего нет — production record
 
 ## Source and clocks
 
@@ -48,6 +48,18 @@ The visualizer is a supporting silver filament following the real right-hand gif
 
 `npm run check` verifies strict schema/intervals, complete semantic unions, independently specified held-body anchors, actual focused/neutral glyph colors in both formats, deliberately delayed controls, exact sampled protected source pixels and measured visualizer geometry. A test expectation can validate a wrong acoustic choice; signal review and listening remain separate.
 
-`npm run test:gate` checks missing identity, stale source/timeline/scene/revision, incomplete listening scope, missing language/layout and missing approval. `render:production` invokes that gate before capture/encoding and currently refuses the pending preview. A production profile is intentionally not prepared until commissioning the approved edition.
+`npm run test:gate` checks missing identity, stale source/timeline/scene/revision, incomplete listening scope, missing language/layout and missing approval. Its strict standardized checklist remains separate from the exact current-owner scope described in [the production delivery](PRODUCTION-DELIVERY.md#frozen-scope). The production adapter refuses absent, unauthorized or stale records before capture/encoding and rechecks the frozen inputs afterward.
 
-Browser checks use the complete original media, actual canvas picture, one soundtrack, seeks, layout switches, slowed playback and recovery. Screenshots and the loaded identity are retained separately from model evidence. No technical/model report is a listening attestation. Full recording at normal speed, uncertain words/held endings at reduced speed and both delivery layouts still require review before production.
+Browser checks use the complete original media, actual canvas picture, one soundtrack, seeks, layout switches, slowed playback and recovery. Screenshots and the loaded identity are retained separately from model evidence. No technical/model report is a listening attestation. The owner subsequently accepted this complete silver preview and explicitly commissioned production; the standardized speed/layout listening fields remain unlogged, rather than being inferred from that acceptance.
+
+## Reusable decisions from this edition
+
+- Derive the palette from the source photograph before adding chromatic accents. Here neutral silver fits the white bulbs and paper objects better than the earlier warm highlight.
+- A quiet arrangement can support one narrow measured trace along a real material edge. Preserve a fixed anchor, small tapered travel, smooth release and readable words; additional light effects are not a quality requirement.
+- Keep long vowels separate from sparse model character cores and from neutral reading holds. Inspect silence on both sides: avoiding premature release must not create focus over an instrumental gap.
+- Inspect complete translated meaning through every state. A held negative needs the full English negative construction, even when necessary English grammar has no separate Russian syllable.
+- Verify states that actually exist. A token that enters focused and clears directly at a vocal handoff has no neutral lifetime; test its focused and cleared pixels rather than fabricating a neutral interval.
+- Preserve the full source audio tail and hold the last real picture. Native video duration and decoded audio duration are separate limits.
+- Review covers at their smallest intended display size. The tall artist line was raised before acceptance to retain the lower safe margin.
+
+Production encoding, final-file evidence, posting-kit contents and reproduction commands are recorded in [PRODUCTION-DELIVERY.md](PRODUCTION-DELIVERY.md).

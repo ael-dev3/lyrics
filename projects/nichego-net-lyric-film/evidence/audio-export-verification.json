@@ -1,0 +1,26 @@
+{
+  "status": "pass",
+  "sourceCodec": "Opus",
+  "deliveryCodec": "AAC LC",
+  "sampleRate": 48000,
+  "channels": 2,
+  "requestedBitrate": 320000,
+  "sourceDecodedFrames": 9360624,
+  "outputDecodedFrames": 9361344,
+  "paddedEndFrames": 720,
+  "bestLagSamples": 0,
+  "lagSearchSamples": [
+    -24,
+    24
+  ],
+  "correlation": 0.999877253181905,
+  "gain": 0.9973661269080517,
+  "snrDb": 36.00007341331656,
+  "packetIdentical": false,
+  "scope": "Original recording retained without edits, filtering or gain processing; upload-compatible AAC is lossy and is checked for zero offset and bounded difference.",
+  "sourceSha256": "66c561c05b04ed0ca3a92af98db609ee835f84d6494a0562f0ad87261486ca4a",
+  "derivedAudioSha256": "0ef5811f3ce64ba5d37af1868df92b568949daf9ae506ed4c9bd0b7e4921e2b9",
+  "encoder": "Apple AudioToolbox AAC, quality 2, 320 kb/s. Native codec-service access is required on macOS.",
+  "padding": "Original 9,360,624 samples remain intact. Final AAC packet valid duration is explicitly bounded; Decoder padding remains outside the declared track duration; its measured count is recorded above.",
+  "streamDurationSeconds": 195.013
+}

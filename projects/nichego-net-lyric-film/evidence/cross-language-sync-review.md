@@ -1,4 +1,4 @@
-# Synchronization review — preview only
+# Synchronization evidence and production acceptance
 
 Current identity: `public/preview-identity.json`; review authority: `source/REVIEW.json`.
 
@@ -11,11 +11,11 @@ Current identity: `public/preview-identity.json`; review authority: `source/REVI
 - Both layouts checked through actual glyph paint, full focused/neutral token states and deliberately shifted controls. The source-mask region stays exact sampled picture pixels.
 - Complete live preview has original soundtrack, source picture, measured filament, seeking, reduced speed, both formats and recovery.
 
-## Pending before production
+## Standardized listening scope remains unlogged
 
 - [ ] Full recording with actual audio at normal speed.
 - [ ] Uncertain entrances, held endings and outro variants at reduced speed.
 - [ ] Both 16:9 and 9:16 full review, including bilingual meaning and mobile readability.
-- [ ] Explicit render approval bound to the current inputs.
+- [x] Explicit acceptance and render approval bound to the current inputs in `source/PRODUCTION-AUTHORIZATION.json`.
 
-Model/signal inspection is not human listening. Browser technical playback is not a full-song listening attestation. The preview is reviewable; production remains closed.
+Model/signal inspection is not human listening. Browser technical playback is not a full-song listening attestation. The owner accepted the complete current preview and explicitly directed production, Desktop delivery and GitHub integration without another confirmation. This exact edition uses that narrowly bound owner scope; it does not mark the three unlogged listening fields above complete or authorize changed inputs. Final encoding checks are recorded separately from acoustic review.
