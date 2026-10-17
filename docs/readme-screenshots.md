@@ -1,9 +1,10 @@
 # README song screenshots
 
-Updated 16 October 2026. Featured songs in the main README have a representative image with its edition and preview/final status, and each song's project README has an associated image. Rendered preview references are identified separately from browser captures and decoded final-film frames. Promotional covers and supplementary frames remain separate from the representative image.
+Updated 18 October 2026. Featured songs in the main README have a representative image with its edition and preview/final status, and each song's project README has an associated image. Rendered preview references are identified separately from browser captures and decoded final-film frames. Promotional covers and supplementary frames remain separate from the representative image.
 
 | Song | Representative image | Time | Edition / provenance |
 | --- | --- | --- | --- |
+| ничего нет | [Monochrome winter artwork, equal pearl-white lyric focus and silver edge filament](../projects/nichego-net-lyric-film/evidence/preview-landscape-18.800.jpg) | 00:18.800 | Native shared-scene diagnostic, v1.1 preview; no encoded film. Source/still hashes and separate real-browser captures in the project preview manifest. |
 | немерено | [Original seated figure, equal bilingual words and restrained spectrum](../projects/nemereno-lyric-film/evidence/final-youtube-33.250.jpg) | 00:33.250 | Exact decoded frame 1,995 from the verified approved v4.3 1920×1080, 60 fps film; original picture 831 |
 | Друг | [Original raven illustration, paired animal focus and detailed layered city](../projects/drug-lyric-film/evidence/final-youtube-26.200.jpg) | 00:26.200 | Exact decoded frame 1,572 from verified v2 1920×1080, 60 fps film; original frame 786; exact owner-approved preview with granular listening checklist separately unlogged |
 | Труп невесты | [Complete bridal illustration, equal bilingual focus and measured strings](../projects/trup-nevesty-lyric-film/evidence/final-youtube-95.200.jpg) | 01:35.200 | Exact decoded frame 5,712 from the verified v1 1920×1080, 60 fps film; original frame 2,380; scoped owner-approved preview with standardized listening scope separately unattested |

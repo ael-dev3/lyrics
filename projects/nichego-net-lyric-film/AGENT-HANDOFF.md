@@ -1,0 +1,12 @@
+# Resume nothing-net v1.1
+
+1. Read root `AGENTS.md`, `PRODUCTION-NOTES.md`, `source/recording.json`, `source/acoustic-provenance.json` and `source/REVIEW.json`.
+2. Current output is the complete **preview only** at port **4342**. No full lyric film, Desktop upload kit or public media release exists. Do not copy another song’s authorization.
+3. Exact original source is local `public/source.mp4` (ignored). `python3 scripts/prepare-source.py` verifies its SHA before extraction. Rebuild measured features with `npm run features` when required. `npm ci` installs the pinned JavaScript dependencies.
+4. `npm run check`, `npm run test:gate`, `npm run identity`, `npm run preview`. Keep the preview server alive; local loopback permission may be needed. `Restore preview` is available even without a reported media error.
+5. `scripts/create-editorial.py` owns text/mappings/crops; `scripts/build-timeline.py` owns selected sample intervals and separate visibility. Do not overwrite intervals from a raw MMS/Whisper result. Full signal intermediates are in ignored `analysis/`; condensed evidence is committed.
+6. Acoustic reproduction requires Python torch/torchaudio, stable-ts, demucs, uroman, scipy, numpy and soundfile; cached official models were used. Order: prepare source → estimate stems → resample estimated vocal to 16 kHz → unprompted crops → MMS and attention observations → original/stem spectral panels → per-occurrence selections. Original soundtrack remains unchanged.
+7. Pending listening points: first quiet entrances, long «навсегда», each independent held «нет», isolated «Ничего» vs added model «нет» in the outro, and final voice vs resonant instrumental decay. Confirm the poetic dawn/year translations in context. Technical checks are already separate from these decisions.
+8. Match new changes to the locked source clock, stable silver glyphs and source-space box-rim filament. Both languages stay equal. Preserve actual source media in both layouts; this source intentionally shows still artwork.
+9. Material changes invalidate current review hashes. Obtain explicit approval of this song and revision before any full render; leave synchronization and authorization pending until their actual scopes are established.
+10. Before a push, PR mutation, merge or release trigger, inspect current-UTC-day Actions history across all branches/actors/workflows/statuses and older rerun attempts. Preserve unknown monthly usage and inspect changed service chains. Complete authorized source handoff through verified merge, with no abandoned PR.

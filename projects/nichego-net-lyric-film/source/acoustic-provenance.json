@@ -1,0 +1,67 @@
+{
+  "sourceSha256": "66c561c05b04ed0ca3a92af98db609ee835f84d6494a0562f0ad87261486ca4a",
+  "modelEvidence": [
+    "Unprompted original-source Whisper large-v3-turbo, whole-recording bounded windows and targeted gaps",
+    "Estimated vocal crops with the same Whisper family; correlated observations",
+    "Small-model Whisper targeted outro windows, same family",
+    "torchaudio MMS_FA, separate CTC model family, 320-sample stride and 400-sample receptive field",
+    "Text-conditioned Whisper attention paths, not lexical coverage proof"
+  ],
+  "separation": "HTDemucs, shifts=0, overlap=.25, CPU; source-locked stem lag check = 0 samples at 16 kHz",
+  "signalReview": "39 original / vocal spectral panels; 64 ms Hann windows, 5 ms view hop. Dense plot sampling is not 5 ms physical certainty.",
+  "humanListening": false,
+  "reviewStatus": "Full normal/reduced-speed listening and both-layout owner review pending",
+  "coverageDecisions": [
+    {
+      "interval": [
+        0,
+        16.18
+      ],
+      "decision": "No displayed words during prelude. Broad ASR compressed/hallucinated Засыпай at 0.3–9.98; short crop identifies music, stem energy supports later voice entrance."
+    },
+    {
+      "interval": [
+        23.68,
+        30.44
+      ],
+      "decision": "Two source lines share one complete English sentence so the actual fleeting-winds subject is retained without an invented agent."
+    },
+    {
+      "interval": [
+        47.88,
+        58.88
+      ],
+      "decision": "One nonlexical vowel display, separate from preceding навсегда. Full held body, not sparse character endpoints."
+    },
+    {
+      "interval": [
+        84.33,
+        86.35
+      ],
+      "decision": "Ничего alone. No additional нет promoted from repeated recognizer templates."
+    },
+    {
+      "interval": [
+        121.78,
+        132.83
+      ],
+      "decision": "One sustained nonlexical vowel display; original/stem context retained."
+    },
+    {
+      "interval": [
+        161.88,
+        187.6
+      ],
+      "decision": "Preserve supplied alternation of Ничего alone and Ничего нет. Broad vocal ASR inserted нет after multiple isolated Ничего; bounded original small-model observations, original/stem panels and supplied reference retain the uncertainty rather than auto-promoting it."
+    },
+    {
+      "interval": [
+        187.6,
+        195.013
+      ],
+      "decision": "Final vocal decay / instrumental tail. No new lexical words. Ooh recognizer hypothesis near 189 is retained as an observation, not a new cue."
+    }
+  ],
+  "estimatedVocal16kSha256": "692d6d8327f1d42b3e9f12854409adabefe4cdfcd9ffb36666847dda5e7338f0",
+  "stemReceipt": "evidence/stem-estimate.json"
+}

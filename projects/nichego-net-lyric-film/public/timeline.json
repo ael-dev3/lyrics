@@ -1,0 +1,4199 @@
+{
+  "schemaVersion": 1,
+  "revision": "nichego-net-v1.1-preview",
+  "sampleRate": 48000,
+  "sourceSha256": "66c561c05b04ed0ca3a92af98db609ee835f84d6494a0562f0ad87261486ca4a",
+  "sourceDuration": 195.013,
+  "cues": [
+    {
+      "id": "NN-001",
+      "templateId": "sleep",
+      "lane": "lead",
+      "voice": "забей, лерочка lead",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Засыпай на моих плечах",
+      "targetText": "Fall asleep on my shoulders",
+      "start": 16.18,
+      "end": 19.53,
+      "words": [
+        {
+          "id": "NN-001-s00",
+          "text": "Засыпай",
+          "sourceIndex": 0,
+          "startSample": 776640,
+          "endSample": 831360,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        },
+        {
+          "id": "NN-001-s01",
+          "text": "на",
+          "sourceIndex": 1,
+          "startSample": 835200,
+          "endSample": 846720,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        },
+        {
+          "id": "NN-001-s02",
+          "text": "моих",
+          "sourceIndex": 2,
+          "startSample": 846720,
+          "endSample": 876000,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        },
+        {
+          "id": "NN-001-s03",
+          "text": "плечах",
+          "sourceIndex": 3,
+          "startSample": 876000,
+          "endSample": 937440,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        }
+      ],
+      "targets": [
+        {
+          "text": "Fall",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Individual lexical correspondence; required English grammar shares the same source event.",
+          "id": "NN-001-t00"
+        },
+        {
+          "text": "asleep",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Individual lexical correspondence; required English grammar shares the same source event.",
+          "id": "NN-001-t01"
+        },
+        {
+          "text": "on",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Individual lexical correspondence; required English grammar shares the same source event.",
+          "id": "NN-001-t02"
+        },
+        {
+          "text": "my",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Individual lexical correspondence; required English grammar shares the same source event.",
+          "id": "NN-001-t03"
+        },
+        {
+          "text": "shoulders",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Individual lexical correspondence; required English grammar shares the same source event.",
+          "id": "NN-001-t04"
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": [],
+      "visibleStart": 15.98,
+      "fullOpacityEnd": 19.94,
+      "visibleEnd": 19.94,
+      "exitMode": "vocal-handoff"
+    },
+    {
+      "id": "NN-002",
+      "templateId": "stay",
+      "lane": "lead",
+      "voice": "забей, лерочка lead",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Оставайся здесь навсегда",
+      "targetText": "Stay here forever",
+      "start": 19.94,
+      "end": 23.43,
+      "words": [
+        {
+          "id": "NN-002-s00",
+          "text": "Оставайся",
+          "sourceIndex": 0,
+          "startSample": 957120,
+          "endSample": 1023360,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        },
+        {
+          "id": "NN-002-s01",
+          "text": "здесь",
+          "sourceIndex": 1,
+          "startSample": 1023360,
+          "endSample": 1036800,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        },
+        {
+          "id": "NN-002-s02",
+          "text": "навсегда",
+          "sourceIndex": 2,
+          "startSample": 1036800,
+          "endSample": 1124640,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        }
+      ],
+      "targets": [
+        {
+          "text": "Stay",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Individual lexical correspondence; required English grammar shares the same source event.",
+          "id": "NN-002-t00"
+        },
+        {
+          "text": "here",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Individual lexical correspondence; required English grammar shares the same source event.",
+          "id": "NN-002-t01"
+        },
+        {
+          "text": "forever",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Individual lexical correspondence; required English grammar shares the same source event.",
+          "id": "NN-002-t02"
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": [],
+      "visibleStart": 19.94,
+      "fullOpacityEnd": 23.68,
+      "visibleEnd": 23.68,
+      "exitMode": "vocal-handoff"
+    },
+    {
+      "id": "NN-003",
+      "templateId": "winds",
+      "lane": "lead",
+      "voice": "забей, лерочка lead",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Украдут нас с тобой во снах Ускользающие ветра",
+      "targetText": "The fleeting winds will steal you and me away in dreams",
+      "start": 23.68,
+      "end": 30.44,
+      "words": [
+        {
+          "id": "NN-003-s00",
+          "text": "Украдут",
+          "sourceIndex": 0,
+          "startSample": 1136640,
+          "endSample": 1189440,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        },
+        {
+          "id": "NN-003-s01",
+          "text": "нас",
+          "sourceIndex": 1,
+          "startSample": 1189440,
+          "endSample": 1199040,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        },
+        {
+          "id": "NN-003-s02",
+          "text": "с",
+          "sourceIndex": 2,
+          "startSample": 1199040,
+          "endSample": 1201920,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        },
+        {
+          "id": "NN-003-s03",
+          "text": "тобой",
+          "sourceIndex": 3,
+          "startSample": 1201920,
+          "endSample": 1229760,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        },
+        {
+          "id": "NN-003-s04",
+          "text": "во",
+          "sourceIndex": 4,
+          "startSample": 1229760,
+          "endSample": 1241280,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        },
+        {
+          "id": "NN-003-s05",
+          "text": "снах",
+          "sourceIndex": 5,
+          "startSample": 1241280,
+          "endSample": 1296960,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        },
+        {
+          "id": "NN-003-s06",
+          "text": "Ускользающие",
+          "sourceIndex": 6,
+          "startSample": 1310400,
+          "endSample": 1404000,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        },
+        {
+          "id": "NN-003-s07",
+          "text": "ветра",
+          "sourceIndex": 7,
+          "startSample": 1404000,
+          "endSample": 1461120,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        }
+      ],
+      "targets": [
+        {
+          "text": "The",
+          "sourceIndices": [
+            7
+          ],
+          "focusSourceIndices": [
+            7
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Complete two-line sentence. English subject precedes the verb; you / with / us remain individually anchored. No fabricated English syllable times.",
+          "id": "NN-003-t00"
+        },
+        {
+          "text": "fleeting",
+          "sourceIndices": [
+            6
+          ],
+          "focusSourceIndices": [
+            6
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Complete two-line sentence. English subject precedes the verb; you / with / us remain individually anchored. No fabricated English syllable times.",
+          "id": "NN-003-t01"
+        },
+        {
+          "text": "winds",
+          "sourceIndices": [
+            7
+          ],
+          "focusSourceIndices": [
+            7
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Complete two-line sentence. English subject precedes the verb; you / with / us remain individually anchored. No fabricated English syllable times.",
+          "id": "NN-003-t02"
+        },
+        {
+          "text": "will",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Complete two-line sentence. English subject precedes the verb; you / with / us remain individually anchored. No fabricated English syllable times.",
+          "id": "NN-003-t03"
+        },
+        {
+          "text": "steal",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Complete two-line sentence. English subject precedes the verb; you / with / us remain individually anchored. No fabricated English syllable times.",
+          "id": "NN-003-t04"
+        },
+        {
+          "text": "you",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Complete two-line sentence. English subject precedes the verb; you / with / us remain individually anchored. No fabricated English syllable times.",
+          "id": "NN-003-t05"
+        },
+        {
+          "text": "and",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Complete two-line sentence. English subject precedes the verb; you / with / us remain individually anchored. No fabricated English syllable times.",
+          "id": "NN-003-t06"
+        },
+        {
+          "text": "me",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Complete two-line sentence. English subject precedes the verb; you / with / us remain individually anchored. No fabricated English syllable times.",
+          "id": "NN-003-t07"
+        },
+        {
+          "text": "away",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Complete two-line sentence. English subject precedes the verb; you / with / us remain individually anchored. No fabricated English syllable times.",
+          "id": "NN-003-t08"
+        },
+        {
+          "text": "in",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Complete two-line sentence. English subject precedes the verb; you / with / us remain individually anchored. No fabricated English syllable times.",
+          "id": "NN-003-t09"
+        },
+        {
+          "text": "dreams",
+          "sourceIndices": [
+            5
+          ],
+          "focusSourceIndices": [
+            5
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Complete two-line sentence. English subject precedes the verb; you / with / us remain individually anchored. No fabricated English syllable times.",
+          "id": "NN-003-t10"
+        }
+      ],
+      "sourceBreaks": [
+        6
+      ],
+      "targetBreaks": [],
+      "visibleStart": 23.68,
+      "fullOpacityEnd": 31.06,
+      "visibleEnd": 31.06,
+      "exitMode": "vocal-handoff"
+    },
+    {
+      "id": "NN-004",
+      "templateId": "years",
+      "lane": "lead",
+      "voice": "забей, лерочка lead",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Исчезают со снегом пусть Непрожитые впрок года",
+      "targetText": "Let the unlived years saved for later vanish with the snow",
+      "start": 31.06,
+      "end": 37.94,
+      "words": [
+        {
+          "id": "NN-004-s00",
+          "text": "Исчезают",
+          "sourceIndex": 0,
+          "startSample": 1490880,
+          "endSample": 1556160,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        },
+        {
+          "id": "NN-004-s01",
+          "text": "со",
+          "sourceIndex": 1,
+          "startSample": 1556160,
+          "endSample": 1564320,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        },
+        {
+          "id": "NN-004-s02",
+          "text": "снегом",
+          "sourceIndex": 2,
+          "startSample": 1564320,
+          "endSample": 1599360,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        },
+        {
+          "id": "NN-004-s03",
+          "text": "пусть",
+          "sourceIndex": 3,
+          "startSample": 1599360,
+          "endSample": 1648800,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        },
+        {
+          "id": "NN-004-s04",
+          "text": "Непрожитые",
+          "sourceIndex": 4,
+          "startSample": 1664640,
+          "endSample": 1736640,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        },
+        {
+          "id": "NN-004-s05",
+          "text": "впрок",
+          "sourceIndex": 5,
+          "startSample": 1736640,
+          "endSample": 1761120,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        },
+        {
+          "id": "NN-004-s06",
+          "text": "года",
+          "sourceIndex": 6,
+          "startSample": 1761120,
+          "endSample": 1821120,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        }
+      ],
+      "targets": [
+        {
+          "text": "Let",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Complete poetic inversion. Непрожитые is one orthographic word; впрок retains the sense of provision for later.",
+          "id": "NN-004-t00"
+        },
+        {
+          "text": "the",
+          "sourceIndices": [
+            6
+          ],
+          "focusSourceIndices": [
+            6
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Complete poetic inversion. Непрожитые is one orthographic word; впрок retains the sense of provision for later.",
+          "id": "NN-004-t01"
+        },
+        {
+          "text": "unlived",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Complete poetic inversion. Непрожитые is one orthographic word; впрок retains the sense of provision for later.",
+          "id": "NN-004-t02"
+        },
+        {
+          "text": "years",
+          "sourceIndices": [
+            6
+          ],
+          "focusSourceIndices": [
+            6
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Complete poetic inversion. Непрожитые is one orthographic word; впрок retains the sense of provision for later.",
+          "id": "NN-004-t03"
+        },
+        {
+          "text": "saved",
+          "sourceIndices": [
+            5
+          ],
+          "focusSourceIndices": [
+            5
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Complete poetic inversion. Непрожитые is one orthographic word; впрок retains the sense of provision for later.",
+          "id": "NN-004-t04"
+        },
+        {
+          "text": "for",
+          "sourceIndices": [
+            5
+          ],
+          "focusSourceIndices": [
+            5
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Complete poetic inversion. Непрожитые is one orthographic word; впрок retains the sense of provision for later.",
+          "id": "NN-004-t05"
+        },
+        {
+          "text": "later",
+          "sourceIndices": [
+            5
+          ],
+          "focusSourceIndices": [
+            5
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Complete poetic inversion. Непрожитые is one orthographic word; впрок retains the sense of provision for later.",
+          "id": "NN-004-t06"
+        },
+        {
+          "text": "vanish",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Complete poetic inversion. Непрожитые is one orthographic word; впрок retains the sense of provision for later.",
+          "id": "NN-004-t07"
+        },
+        {
+          "text": "with",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Complete poetic inversion. Непрожитые is one orthographic word; впрок retains the sense of provision for later.",
+          "id": "NN-004-t08"
+        },
+        {
+          "text": "the",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Complete poetic inversion. Непрожитые is one orthographic word; впрок retains the sense of provision for later.",
+          "id": "NN-004-t09"
+        },
+        {
+          "text": "snow",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Complete poetic inversion. Непрожитые is one orthographic word; впрок retains the sense of provision for later.",
+          "id": "NN-004-t10"
+        }
+      ],
+      "sourceBreaks": [
+        4
+      ],
+      "targetBreaks": [
+        7
+      ],
+      "visibleStart": 31.06,
+      "fullOpacityEnd": 38.5,
+      "visibleEnd": 38.5,
+      "exitMode": "vocal-handoff"
+    },
+    {
+      "id": "NN-005",
+      "templateId": "lips",
+      "lane": "lead",
+      "voice": "забей, лерочка lead",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "И срывается с моих уст",
+      "targetText": "And from my lips it slips",
+      "start": 38.5,
+      "end": 41.72,
+      "words": [
+        {
+          "id": "NN-005-s00",
+          "text": "И",
+          "sourceIndex": 0,
+          "startSample": 1848000,
+          "endSample": 1854240,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        },
+        {
+          "id": "NN-005-s01",
+          "text": "срывается",
+          "sourceIndex": 1,
+          "startSample": 1854240,
+          "endSample": 1918080,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        },
+        {
+          "id": "NN-005-s02",
+          "text": "с",
+          "sourceIndex": 2,
+          "startSample": 1918080,
+          "endSample": 1923840,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        },
+        {
+          "id": "NN-005-s03",
+          "text": "моих",
+          "sourceIndex": 3,
+          "startSample": 1923840,
+          "endSample": 1957920,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        },
+        {
+          "id": "NN-005-s04",
+          "text": "уст",
+          "sourceIndex": 4,
+          "startSample": 1957920,
+          "endSample": 2002560,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        }
+      ],
+      "targets": [
+        {
+          "text": "And",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Individual lexical correspondence; required English grammar shares the same source event.",
+          "id": "NN-005-t00"
+        },
+        {
+          "text": "from",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Individual lexical correspondence; required English grammar shares the same source event.",
+          "id": "NN-005-t01"
+        },
+        {
+          "text": "my",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Individual lexical correspondence; required English grammar shares the same source event.",
+          "id": "NN-005-t02"
+        },
+        {
+          "text": "lips",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Individual lexical correspondence; required English grammar shares the same source event.",
+          "id": "NN-005-t03"
+        },
+        {
+          "text": "it",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Individual lexical correspondence; required English grammar shares the same source event.",
+          "id": "NN-005-t04"
+        },
+        {
+          "text": "slips",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Individual lexical correspondence; required English grammar shares the same source event.",
+          "id": "NN-005-t05"
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": [],
+      "visibleStart": 38.5,
+      "fullOpacityEnd": 42.1,
+      "visibleEnd": 42.1,
+      "exitMode": "vocal-handoff"
+    },
+    {
+      "id": "NN-006",
+      "templateId": "stay",
+      "lane": "lead",
+      "voice": "забей, лерочка lead",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Оставайся здесь навсегда",
+      "targetText": "Stay here forever",
+      "start": 42.1,
+      "end": 46.72,
+      "words": [
+        {
+          "id": "NN-006-s00",
+          "text": "Оставайся",
+          "sourceIndex": 0,
+          "startSample": 2020800,
+          "endSample": 2086560,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        },
+        {
+          "id": "NN-006-s01",
+          "text": "здесь",
+          "sourceIndex": 1,
+          "startSample": 2086560,
+          "endSample": 2100480,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        },
+        {
+          "id": "NN-006-s02",
+          "text": "навсегда",
+          "sourceIndex": 2,
+          "startSample": 2100480,
+          "endSample": 2242560,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        }
+      ],
+      "targets": [
+        {
+          "text": "Stay",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Individual lexical correspondence; required English grammar shares the same source event.",
+          "id": "NN-006-t00"
+        },
+        {
+          "text": "here",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Individual lexical correspondence; required English grammar shares the same source event.",
+          "id": "NN-006-t01"
+        },
+        {
+          "text": "forever",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Individual lexical correspondence; required English grammar shares the same source event.",
+          "id": "NN-006-t02"
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": [],
+      "visibleStart": 42.1,
+      "fullOpacityEnd": 47.08,
+      "visibleEnd": 47.68,
+      "exitMode": "fade"
+    },
+    {
+      "id": "NN-007",
+      "templateId": "ooh",
+      "lane": "lead",
+      "voice": "забей, лерочка lead",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "У-у",
+      "targetText": "Ooh",
+      "start": 47.88,
+      "end": 58.88,
+      "words": [
+        {
+          "id": "NN-007-s00",
+          "text": "У-у",
+          "sourceIndex": 0,
+          "startSample": 2298240,
+          "endSample": 2826240,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        }
+      ],
+      "targets": [
+        {
+          "text": "Ooh",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Nonlexical sung vowel, not a lexical repeat or an English invention.",
+          "id": "NN-007-t00"
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": [],
+      "visibleStart": 47.68,
+      "fullOpacityEnd": 59.36,
+      "visibleEnd": 59.36,
+      "exitMode": "vocal-handoff"
+    },
+    {
+      "id": "NN-008",
+      "templateId": "dawn",
+      "lane": "lead",
+      "voice": "забей, лерочка lead",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Пусть ночь озарит рассвет",
+      "targetText": "Let dawn light up the night",
+      "start": 59.36,
+      "end": 61.77,
+      "words": [
+        {
+          "id": "NN-008-s00",
+          "text": "Пусть",
+          "sourceIndex": 0,
+          "startSample": 2849280,
+          "endSample": 2876640,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        },
+        {
+          "id": "NN-008-s01",
+          "text": "ночь",
+          "sourceIndex": 1,
+          "startSample": 2881920,
+          "endSample": 2899200,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        },
+        {
+          "id": "NN-008-s02",
+          "text": "озарит",
+          "sourceIndex": 2,
+          "startSample": 2899200,
+          "endSample": 2930400,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        },
+        {
+          "id": "NN-008-s03",
+          "text": "рассвет",
+          "sourceIndex": 3,
+          "startSample": 2930400,
+          "endSample": 2964960,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        }
+      ],
+      "targets": [
+        {
+          "text": "Let",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Poetic inversion interpreted as dawn illuminating night. Both ночь and рассвет have ambiguous case forms; preserve the plausible alternative in translation notes.",
+          "id": "NN-008-t00"
+        },
+        {
+          "text": "dawn",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Poetic inversion interpreted as dawn illuminating night. Both ночь and рассвет have ambiguous case forms; preserve the plausible alternative in translation notes.",
+          "id": "NN-008-t01"
+        },
+        {
+          "text": "light",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Poetic inversion interpreted as dawn illuminating night. Both ночь and рассвет have ambiguous case forms; preserve the plausible alternative in translation notes.",
+          "id": "NN-008-t02"
+        },
+        {
+          "text": "up",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Poetic inversion interpreted as dawn illuminating night. Both ночь and рассвет have ambiguous case forms; preserve the plausible alternative in translation notes.",
+          "id": "NN-008-t03"
+        },
+        {
+          "text": "the",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Poetic inversion interpreted as dawn illuminating night. Both ночь and рассвет have ambiguous case forms; preserve the plausible alternative in translation notes.",
+          "id": "NN-008-t04"
+        },
+        {
+          "text": "night",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Poetic inversion interpreted as dawn illuminating night. Both ночь and рассвет have ambiguous case forms; preserve the plausible alternative in translation notes.",
+          "id": "NN-008-t05"
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": [],
+      "visibleStart": 59.36,
+      "fullOpacityEnd": 61.94,
+      "visibleEnd": 61.94,
+      "exitMode": "vocal-handoff"
+    },
+    {
+      "id": "NN-009",
+      "templateId": "pain",
+      "lane": "lead",
+      "voice": "забей, лерочка lead",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Ведь боли больше нет, нет",
+      "targetText": "For there is no more pain, no more",
+      "start": 61.94,
+      "end": 66.44,
+      "words": [
+        {
+          "id": "NN-009-s00",
+          "text": "Ведь",
+          "sourceIndex": 0,
+          "startSample": 2973120,
+          "endSample": 2986080,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        },
+        {
+          "id": "NN-009-s01",
+          "text": "боли",
+          "sourceIndex": 1,
+          "startSample": 2986080,
+          "endSample": 3007680,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        },
+        {
+          "id": "NN-009-s02",
+          "text": "больше",
+          "sourceIndex": 2,
+          "startSample": 3007680,
+          "endSample": 3028800,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        },
+        {
+          "id": "NN-009-s03",
+          "text": "нет",
+          "sourceIndex": 3,
+          "startSample": 3028800,
+          "endSample": 3108960,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence.",
+          "punctuationAfter": ","
+        },
+        {
+          "id": "NN-009-s04",
+          "text": "нет",
+          "sourceIndex": 4,
+          "startSample": 3117120,
+          "endSample": 3189120,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        }
+      ],
+      "targets": [
+        {
+          "text": "For",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "English existential grammar belongs to нет, pain to боли, more to больше; the separately sung second нет has its own complete no-more event.",
+          "id": "NN-009-t00"
+        },
+        {
+          "text": "there",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "English existential grammar belongs to нет, pain to боли, more to больше; the separately sung second нет has its own complete no-more event.",
+          "id": "NN-009-t01"
+        },
+        {
+          "text": "is",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "English existential grammar belongs to нет, pain to боли, more to больше; the separately sung second нет has its own complete no-more event.",
+          "id": "NN-009-t02"
+        },
+        {
+          "text": "no",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "English existential grammar belongs to нет, pain to боли, more to больше; the separately sung second нет has its own complete no-more event.",
+          "id": "NN-009-t03"
+        },
+        {
+          "text": "more",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "English existential grammar belongs to нет, pain to боли, more to больше; the separately sung second нет has its own complete no-more event.",
+          "id": "NN-009-t04"
+        },
+        {
+          "text": "pain",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "English existential grammar belongs to нет, pain to боли, more to больше; the separately sung second нет has its own complete no-more event.",
+          "id": "NN-009-t05",
+          "punctuationAfter": ","
+        },
+        {
+          "text": "no",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "English existential grammar belongs to нет, pain to боли, more to больше; the separately sung second нет has its own complete no-more event.",
+          "id": "NN-009-t06"
+        },
+        {
+          "text": "more",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "English existential grammar belongs to нет, pain to боли, more to больше; the separately sung second нет has its own complete no-more event.",
+          "id": "NN-009-t07"
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": [],
+      "visibleStart": 61.94,
+      "fullOpacityEnd": 66.81,
+      "visibleEnd": 66.81,
+      "exitMode": "vocal-handoff"
+    },
+    {
+      "id": "NN-010",
+      "templateId": "warmth",
+      "lane": "lead",
+      "voice": "забей, лерочка lead",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Ты моим теплом согрет",
+      "targetText": "You are warmed by my warmth",
+      "start": 66.81,
+      "end": 69.22,
+      "words": [
+        {
+          "id": "NN-010-s00",
+          "text": "Ты",
+          "sourceIndex": 0,
+          "startSample": 3206880,
+          "endSample": 3226560,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        },
+        {
+          "id": "NN-010-s01",
+          "text": "моим",
+          "sourceIndex": 1,
+          "startSample": 3239040,
+          "endSample": 3261600,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        },
+        {
+          "id": "NN-010-s02",
+          "text": "теплом",
+          "sourceIndex": 2,
+          "startSample": 3261600,
+          "endSample": 3283200,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        },
+        {
+          "id": "NN-010-s03",
+          "text": "согрет",
+          "sourceIndex": 3,
+          "startSample": 3283200,
+          "endSample": 3322560,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        }
+      ],
+      "targets": [
+        {
+          "text": "You",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Individual lexical correspondence; required English grammar shares the same source event.",
+          "id": "NN-010-t00"
+        },
+        {
+          "text": "are",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Individual lexical correspondence; required English grammar shares the same source event.",
+          "id": "NN-010-t01"
+        },
+        {
+          "text": "warmed",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Individual lexical correspondence; required English grammar shares the same source event.",
+          "id": "NN-010-t02"
+        },
+        {
+          "text": "by",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Individual lexical correspondence; required English grammar shares the same source event.",
+          "id": "NN-010-t03"
+        },
+        {
+          "text": "my",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Individual lexical correspondence; required English grammar shares the same source event.",
+          "id": "NN-010-t04"
+        },
+        {
+          "text": "warmth",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Individual lexical correspondence; required English grammar shares the same source event.",
+          "id": "NN-010-t05"
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": [],
+      "visibleStart": 66.81,
+      "fullOpacityEnd": 69.34,
+      "visibleEnd": 69.34,
+      "exitMode": "vocal-handoff"
+    },
+    {
+      "id": "NN-011",
+      "templateId": "pain",
+      "lane": "lead",
+      "voice": "забей, лерочка lead",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Ведь боли больше нет, нет",
+      "targetText": "For there is no more pain, no more",
+      "start": 69.34,
+      "end": 73.14,
+      "words": [
+        {
+          "id": "NN-011-s00",
+          "text": "Ведь",
+          "sourceIndex": 0,
+          "startSample": 3328320,
+          "endSample": 3340320,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        },
+        {
+          "id": "NN-011-s01",
+          "text": "боли",
+          "sourceIndex": 1,
+          "startSample": 3340320,
+          "endSample": 3360480,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        },
+        {
+          "id": "NN-011-s02",
+          "text": "больше",
+          "sourceIndex": 2,
+          "startSample": 3360480,
+          "endSample": 3382080,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        },
+        {
+          "id": "NN-011-s03",
+          "text": "нет",
+          "sourceIndex": 3,
+          "startSample": 3382080,
+          "endSample": 3463680,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence.",
+          "punctuationAfter": ","
+        },
+        {
+          "id": "NN-011-s04",
+          "text": "нет",
+          "sourceIndex": 4,
+          "startSample": 3471840,
+          "endSample": 3510720,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        }
+      ],
+      "targets": [
+        {
+          "text": "For",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "English existential grammar belongs to нет, pain to боли, more to больше; the separately sung second нет has its own complete no-more event.",
+          "id": "NN-011-t00"
+        },
+        {
+          "text": "there",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "English existential grammar belongs to нет, pain to боли, more to больше; the separately sung second нет has its own complete no-more event.",
+          "id": "NN-011-t01"
+        },
+        {
+          "text": "is",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "English existential grammar belongs to нет, pain to боли, more to больше; the separately sung second нет has its own complete no-more event.",
+          "id": "NN-011-t02"
+        },
+        {
+          "text": "no",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "English existential grammar belongs to нет, pain to боли, more to больше; the separately sung second нет has its own complete no-more event.",
+          "id": "NN-011-t03"
+        },
+        {
+          "text": "more",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "English existential grammar belongs to нет, pain to боли, more to больше; the separately sung second нет has its own complete no-more event.",
+          "id": "NN-011-t04"
+        },
+        {
+          "text": "pain",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "English existential grammar belongs to нет, pain to боли, more to больше; the separately sung second нет has its own complete no-more event.",
+          "id": "NN-011-t05",
+          "punctuationAfter": ","
+        },
+        {
+          "text": "no",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "English existential grammar belongs to нет, pain to боли, more to больше; the separately sung second нет has its own complete no-more event.",
+          "id": "NN-011-t06"
+        },
+        {
+          "text": "more",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "English existential grammar belongs to нет, pain to боли, more to больше; the separately sung second нет has its own complete no-more event.",
+          "id": "NN-011-t07"
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": [],
+      "visibleStart": 69.34,
+      "fullOpacityEnd": 73.26,
+      "visibleEnd": 73.26,
+      "exitMode": "vocal-handoff"
+    },
+    {
+      "id": "NN-012",
+      "templateId": "nothing",
+      "lane": "lead",
+      "voice": "забей, лерочка lead",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Ничего нет",
+      "targetText": "There is nothing",
+      "start": 73.26,
+      "end": 75.94,
+      "words": [
+        {
+          "id": "NN-012-s00",
+          "text": "Ничего",
+          "sourceIndex": 0,
+          "startSample": 3516480,
+          "endSample": 3552000,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        },
+        {
+          "id": "NN-012-s01",
+          "text": "нет",
+          "sourceIndex": 1,
+          "startSample": 3552000,
+          "endSample": 3645120,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        }
+      ],
+      "targets": [
+        {
+          "text": "There",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Russian negative concord: ничего introduces nothing; нет completes its negative existential meaning. Keep nothing focused across both events, so the held нет highlights the complete There is nothing rather than an affirmative There is.",
+          "id": "NN-012-t00"
+        },
+        {
+          "text": "is",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Russian negative concord: ничего introduces nothing; нет completes its negative existential meaning. Keep nothing focused across both events, so the held нет highlights the complete There is nothing rather than an affirmative There is.",
+          "id": "NN-012-t01"
+        },
+        {
+          "text": "nothing",
+          "sourceIndices": [
+            0,
+            1
+          ],
+          "focusSourceIndices": [
+            0,
+            1
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Russian negative concord: ничего introduces nothing; нет completes its negative existential meaning. Keep nothing focused across both events, so the held нет highlights the complete There is nothing rather than an affirmative There is.",
+          "id": "NN-012-t02"
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": [],
+      "visibleStart": 73.26,
+      "fullOpacityEnd": 76.93,
+      "visibleEnd": 76.93,
+      "exitMode": "vocal-handoff"
+    },
+    {
+      "id": "NN-013",
+      "templateId": "nothing",
+      "lane": "lead",
+      "voice": "забей, лерочка lead",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Ничего нет",
+      "targetText": "There is nothing",
+      "start": 76.93,
+      "end": 79.75,
+      "words": [
+        {
+          "id": "NN-013-s00",
+          "text": "Ничего",
+          "sourceIndex": 0,
+          "startSample": 3692640,
+          "endSample": 3735360,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        },
+        {
+          "id": "NN-013-s01",
+          "text": "нет",
+          "sourceIndex": 1,
+          "startSample": 3735360,
+          "endSample": 3828000,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        }
+      ],
+      "targets": [
+        {
+          "text": "There",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Russian negative concord: ничего introduces nothing; нет completes its negative existential meaning. Keep nothing focused across both events, so the held нет highlights the complete There is nothing rather than an affirmative There is.",
+          "id": "NN-013-t00"
+        },
+        {
+          "text": "is",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Russian negative concord: ничего introduces nothing; нет completes its negative existential meaning. Keep nothing focused across both events, so the held нет highlights the complete There is nothing rather than an affirmative There is.",
+          "id": "NN-013-t01"
+        },
+        {
+          "text": "nothing",
+          "sourceIndices": [
+            0,
+            1
+          ],
+          "focusSourceIndices": [
+            0,
+            1
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Russian negative concord: ничего introduces nothing; нет completes its negative existential meaning. Keep nothing focused across both events, so the held нет highlights the complete There is nothing rather than an affirmative There is.",
+          "id": "NN-013-t02"
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": [],
+      "visibleStart": 76.93,
+      "fullOpacityEnd": 80.63,
+      "visibleEnd": 80.63,
+      "exitMode": "vocal-handoff"
+    },
+    {
+      "id": "NN-014",
+      "templateId": "nothing",
+      "lane": "lead",
+      "voice": "забей, лерочка lead",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Ничего нет",
+      "targetText": "There is nothing",
+      "start": 80.63,
+      "end": 83.46,
+      "words": [
+        {
+          "id": "NN-014-s00",
+          "text": "Ничего",
+          "sourceIndex": 0,
+          "startSample": 3870240,
+          "endSample": 3912960,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        },
+        {
+          "id": "NN-014-s01",
+          "text": "нет",
+          "sourceIndex": 1,
+          "startSample": 3912960,
+          "endSample": 4006080,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        }
+      ],
+      "targets": [
+        {
+          "text": "There",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Russian negative concord: ничего introduces nothing; нет completes its negative existential meaning. Keep nothing focused across both events, so the held нет highlights the complete There is nothing rather than an affirmative There is.",
+          "id": "NN-014-t00"
+        },
+        {
+          "text": "is",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Russian negative concord: ничего introduces nothing; нет completes its negative existential meaning. Keep nothing focused across both events, so the held нет highlights the complete There is nothing rather than an affirmative There is.",
+          "id": "NN-014-t01"
+        },
+        {
+          "text": "nothing",
+          "sourceIndices": [
+            0,
+            1
+          ],
+          "focusSourceIndices": [
+            0,
+            1
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Russian negative concord: ничего introduces nothing; нет completes its negative existential meaning. Keep nothing focused across both events, so the held нет highlights the complete There is nothing rather than an affirmative There is.",
+          "id": "NN-014-t02"
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": [],
+      "visibleStart": 80.63,
+      "fullOpacityEnd": 84.33,
+      "visibleEnd": 84.33,
+      "exitMode": "vocal-handoff"
+    },
+    {
+      "id": "NN-015",
+      "templateId": "nothing-alone",
+      "lane": "lead",
+      "voice": "забей, лерочка lead",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Ничего",
+      "targetText": "Nothing",
+      "start": 84.33,
+      "end": 86.35,
+      "words": [
+        {
+          "id": "NN-015-s00",
+          "text": "Ничего",
+          "sourceIndex": 0,
+          "startSample": 4047840,
+          "endSample": 4144800,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        }
+      ],
+      "targets": [
+        {
+          "text": "Nothing",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Individual lexical correspondence; required English grammar shares the same source event.",
+          "id": "NN-015-t00"
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": [],
+      "visibleStart": 84.33,
+      "fullOpacityEnd": 86.71,
+      "visibleEnd": 87.30999999999999,
+      "exitMode": "fade"
+    },
+    {
+      "id": "NN-016",
+      "templateId": "touch",
+      "lane": "lead",
+      "voice": "забей, лерочка lead",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Свет касается твоих плеч",
+      "targetText": "Light touches your shoulders",
+      "start": 90.0,
+      "end": 93.58,
+      "words": [
+        {
+          "id": "NN-016-s00",
+          "text": "Свет",
+          "sourceIndex": 0,
+          "startSample": 4320000,
+          "endSample": 4337280,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        },
+        {
+          "id": "NN-016-s01",
+          "text": "касается",
+          "sourceIndex": 1,
+          "startSample": 4337280,
+          "endSample": 4399680,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        },
+        {
+          "id": "NN-016-s02",
+          "text": "твоих",
+          "sourceIndex": 2,
+          "startSample": 4399680,
+          "endSample": 4434240,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        },
+        {
+          "id": "NN-016-s03",
+          "text": "плеч",
+          "sourceIndex": 3,
+          "startSample": 4434240,
+          "endSample": 4491840,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        }
+      ],
+      "targets": [
+        {
+          "text": "Light",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Individual lexical correspondence; required English grammar shares the same source event.",
+          "id": "NN-016-t00"
+        },
+        {
+          "text": "touches",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Individual lexical correspondence; required English grammar shares the same source event.",
+          "id": "NN-016-t01"
+        },
+        {
+          "text": "your",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Individual lexical correspondence; required English grammar shares the same source event.",
+          "id": "NN-016-t02"
+        },
+        {
+          "text": "shoulders",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Individual lexical correspondence; required English grammar shares the same source event.",
+          "id": "NN-016-t03"
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": [],
+      "visibleStart": 89.8,
+      "fullOpacityEnd": 93.82,
+      "visibleEnd": 93.82,
+      "exitMode": "vocal-handoff"
+    },
+    {
+      "id": "NN-017",
+      "templateId": "sleep-day",
+      "lane": "lead",
+      "voice": "забей, лерочка lead",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Но ты спи, будто день ушёл",
+      "targetText": "But you sleep as though the day has gone",
+      "start": 93.82,
+      "end": 97.22,
+      "words": [
+        {
+          "id": "NN-017-s00",
+          "text": "Но",
+          "sourceIndex": 0,
+          "startSample": 4503360,
+          "endSample": 4513920,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        },
+        {
+          "id": "NN-017-s01",
+          "text": "ты",
+          "sourceIndex": 1,
+          "startSample": 4513920,
+          "endSample": 4520640,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        },
+        {
+          "id": "NN-017-s02",
+          "text": "спи",
+          "sourceIndex": 2,
+          "startSample": 4520640,
+          "endSample": 4549440,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence.",
+          "punctuationAfter": ","
+        },
+        {
+          "id": "NN-017-s03",
+          "text": "будто",
+          "sourceIndex": 3,
+          "startSample": 4558080,
+          "endSample": 4579200,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        },
+        {
+          "id": "NN-017-s04",
+          "text": "день",
+          "sourceIndex": 4,
+          "startSample": 4579200,
+          "endSample": 4604640,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        },
+        {
+          "id": "NN-017-s05",
+          "text": "ушёл",
+          "sourceIndex": 5,
+          "startSample": 4604640,
+          "endSample": 4666560,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        }
+      ],
+      "targets": [
+        {
+          "text": "But",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Individual lexical correspondence; required English grammar shares the same source event.",
+          "id": "NN-017-t00"
+        },
+        {
+          "text": "you",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Individual lexical correspondence; required English grammar shares the same source event.",
+          "id": "NN-017-t01"
+        },
+        {
+          "text": "sleep",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Individual lexical correspondence; required English grammar shares the same source event.",
+          "id": "NN-017-t02"
+        },
+        {
+          "text": "as",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Individual lexical correspondence; required English grammar shares the same source event.",
+          "id": "NN-017-t03"
+        },
+        {
+          "text": "though",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Individual lexical correspondence; required English grammar shares the same source event.",
+          "id": "NN-017-t04"
+        },
+        {
+          "text": "the",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Individual lexical correspondence; required English grammar shares the same source event.",
+          "id": "NN-017-t05"
+        },
+        {
+          "text": "day",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Individual lexical correspondence; required English grammar shares the same source event.",
+          "id": "NN-017-t06"
+        },
+        {
+          "text": "has",
+          "sourceIndices": [
+            5
+          ],
+          "focusSourceIndices": [
+            5
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Individual lexical correspondence; required English grammar shares the same source event.",
+          "id": "NN-017-t07"
+        },
+        {
+          "text": "gone",
+          "sourceIndices": [
+            5
+          ],
+          "focusSourceIndices": [
+            5
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Individual lexical correspondence; required English grammar shares the same source event.",
+          "id": "NN-017-t08"
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": [],
+      "visibleStart": 93.82,
+      "fullOpacityEnd": 97.54,
+      "visibleEnd": 97.54,
+      "exitMode": "vocal-handoff"
+    },
+    {
+      "id": "NN-018",
+      "templateId": "guard",
+      "lane": "lead",
+      "voice": "забей, лерочка lead",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Я останусь тебя беречь",
+      "targetText": "I will stay to keep you safe",
+      "start": 97.54,
+      "end": 100.96,
+      "words": [
+        {
+          "id": "NN-018-s00",
+          "text": "Я",
+          "sourceIndex": 0,
+          "startSample": 4681920,
+          "endSample": 4692960,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        },
+        {
+          "id": "NN-018-s01",
+          "text": "останусь",
+          "sourceIndex": 1,
+          "startSample": 4692960,
+          "endSample": 4748160,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        },
+        {
+          "id": "NN-018-s02",
+          "text": "тебя",
+          "sourceIndex": 2,
+          "startSample": 4748160,
+          "endSample": 4774560,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        },
+        {
+          "id": "NN-018-s03",
+          "text": "беречь",
+          "sourceIndex": 3,
+          "startSample": 4774560,
+          "endSample": 4846080,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        }
+      ],
+      "targets": [
+        {
+          "text": "I",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Infinitive беречь supplies to keep safe; тебя remains the independently mapped you.",
+          "id": "NN-018-t00"
+        },
+        {
+          "text": "will",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Infinitive беречь supplies to keep safe; тебя remains the independently mapped you.",
+          "id": "NN-018-t01"
+        },
+        {
+          "text": "stay",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Infinitive беречь supplies to keep safe; тебя remains the independently mapped you.",
+          "id": "NN-018-t02"
+        },
+        {
+          "text": "to",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Infinitive беречь supplies to keep safe; тебя remains the independently mapped you.",
+          "id": "NN-018-t03"
+        },
+        {
+          "text": "keep",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Infinitive беречь supplies to keep safe; тебя remains the independently mapped you.",
+          "id": "NN-018-t04"
+        },
+        {
+          "text": "you",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Infinitive беречь supplies to keep safe; тебя remains the independently mapped you.",
+          "id": "NN-018-t05"
+        },
+        {
+          "text": "safe",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Infinitive беречь supplies to keep safe; тебя remains the independently mapped you.",
+          "id": "NN-018-t06"
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": [],
+      "visibleStart": 97.54,
+      "fullOpacityEnd": 101.16,
+      "visibleEnd": 101.16,
+      "exitMode": "vocal-handoff"
+    },
+    {
+      "id": "NN-019",
+      "templateId": "alright",
+      "lane": "lead",
+      "voice": "забей, лерочка lead",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "С нами всё будет хорошо",
+      "targetText": "Everything will be alright with us",
+      "start": 101.16,
+      "end": 104.3,
+      "words": [
+        {
+          "id": "NN-019-s00",
+          "text": "С",
+          "sourceIndex": 0,
+          "startSample": 4855680,
+          "endSample": 4859520,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        },
+        {
+          "id": "NN-019-s01",
+          "text": "нами",
+          "sourceIndex": 1,
+          "startSample": 4859520,
+          "endSample": 4876320,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        },
+        {
+          "id": "NN-019-s02",
+          "text": "всё",
+          "sourceIndex": 2,
+          "startSample": 4876320,
+          "endSample": 4910880,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        },
+        {
+          "id": "NN-019-s03",
+          "text": "будет",
+          "sourceIndex": 3,
+          "startSample": 4910880,
+          "endSample": 4933920,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        },
+        {
+          "id": "NN-019-s04",
+          "text": "хорошо",
+          "sourceIndex": 4,
+          "startSample": 4933920,
+          "endSample": 5006400,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        }
+      ],
+      "targets": [
+        {
+          "text": "Everything",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Individual lexical correspondence; required English grammar shares the same source event.",
+          "id": "NN-019-t00"
+        },
+        {
+          "text": "will",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Individual lexical correspondence; required English grammar shares the same source event.",
+          "id": "NN-019-t01"
+        },
+        {
+          "text": "be",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Individual lexical correspondence; required English grammar shares the same source event.",
+          "id": "NN-019-t02"
+        },
+        {
+          "text": "alright",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Individual lexical correspondence; required English grammar shares the same source event.",
+          "id": "NN-019-t03"
+        },
+        {
+          "text": "with",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Individual lexical correspondence; required English grammar shares the same source event.",
+          "id": "NN-019-t04"
+        },
+        {
+          "text": "us",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Individual lexical correspondence; required English grammar shares the same source event.",
+          "id": "NN-019-t05"
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": [],
+      "visibleStart": 101.16,
+      "fullOpacityEnd": 104.89,
+      "visibleEnd": 104.89,
+      "exitMode": "vocal-handoff"
+    },
+    {
+      "id": "NN-020",
+      "templateId": "snow",
+      "lane": "lead",
+      "voice": "забей, лерочка lead",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Пусть сотрёт все подсказки снег",
+      "targetText": "Let the snow erase every clue",
+      "start": 104.89,
+      "end": 108.24,
+      "words": [
+        {
+          "id": "NN-020-s00",
+          "text": "Пусть",
+          "sourceIndex": 0,
+          "startSample": 5034720,
+          "endSample": 5049600,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        },
+        {
+          "id": "NN-020-s01",
+          "text": "сотрёт",
+          "sourceIndex": 1,
+          "startSample": 5049600,
+          "endSample": 5079360,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        },
+        {
+          "id": "NN-020-s02",
+          "text": "все",
+          "sourceIndex": 2,
+          "startSample": 5086080,
+          "endSample": 5100480,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        },
+        {
+          "id": "NN-020-s03",
+          "text": "подсказки",
+          "sourceIndex": 3,
+          "startSample": 5100480,
+          "endSample": 5139840,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        },
+        {
+          "id": "NN-020-s04",
+          "text": "снег",
+          "sourceIndex": 4,
+          "startSample": 5139840,
+          "endSample": 5195520,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        }
+      ],
+      "targets": [
+        {
+          "text": "Let",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Individual lexical correspondence; required English grammar shares the same source event.",
+          "id": "NN-020-t00"
+        },
+        {
+          "text": "the",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Individual lexical correspondence; required English grammar shares the same source event.",
+          "id": "NN-020-t01"
+        },
+        {
+          "text": "snow",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Individual lexical correspondence; required English grammar shares the same source event.",
+          "id": "NN-020-t02"
+        },
+        {
+          "text": "erase",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Individual lexical correspondence; required English grammar shares the same source event.",
+          "id": "NN-020-t03"
+        },
+        {
+          "text": "every",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Individual lexical correspondence; required English grammar shares the same source event.",
+          "id": "NN-020-t04"
+        },
+        {
+          "text": "clue",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Individual lexical correspondence; required English grammar shares the same source event.",
+          "id": "NN-020-t05"
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": [],
+      "visibleStart": 104.89,
+      "fullOpacityEnd": 108.57,
+      "visibleEnd": 108.57,
+      "exitMode": "vocal-handoff"
+    },
+    {
+      "id": "NN-021",
+      "templateId": "trace",
+      "lane": "lead",
+      "voice": "забей, лерочка lead",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Не оставит им ни следа",
+      "targetText": "Will leave no trace of them",
+      "start": 108.57,
+      "end": 111.79,
+      "words": [
+        {
+          "id": "NN-021-s00",
+          "text": "Не",
+          "sourceIndex": 0,
+          "startSample": 5211360,
+          "endSample": 5226720,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        },
+        {
+          "id": "NN-021-s01",
+          "text": "оставит",
+          "sourceIndex": 1,
+          "startSample": 5226720,
+          "endSample": 5280960,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        },
+        {
+          "id": "NN-021-s02",
+          "text": "им",
+          "sourceIndex": 2,
+          "startSample": 5280960,
+          "endSample": 5290080,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        },
+        {
+          "id": "NN-021-s03",
+          "text": "ни",
+          "sourceIndex": 3,
+          "startSample": 5290080,
+          "endSample": 5302080,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        },
+        {
+          "id": "NN-021-s04",
+          "text": "следа",
+          "sourceIndex": 4,
+          "startSample": 5302080,
+          "endSample": 5365920,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        }
+      ],
+      "targets": [
+        {
+          "text": "Will",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Не…ни is a discontinuous negation; no follows its exact two-event union, not an enclosing interval. Им refers to the clues, not an invented person.",
+          "id": "NN-021-t00"
+        },
+        {
+          "text": "leave",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Не…ни is a discontinuous negation; no follows its exact two-event union, not an enclosing interval. Им refers to the clues, not an invented person.",
+          "id": "NN-021-t01"
+        },
+        {
+          "text": "no",
+          "sourceIndices": [
+            0,
+            3
+          ],
+          "focusSourceIndices": [
+            0,
+            3
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Не…ни is a discontinuous negation; no follows its exact two-event union, not an enclosing interval. Им refers to the clues, not an invented person.",
+          "id": "NN-021-t02"
+        },
+        {
+          "text": "trace",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Не…ни is a discontinuous negation; no follows its exact two-event union, not an enclosing interval. Им refers to the clues, not an invented person.",
+          "id": "NN-021-t03"
+        },
+        {
+          "text": "of",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Не…ни is a discontinuous negation; no follows its exact two-event union, not an enclosing interval. Им refers to the clues, not an invented person.",
+          "id": "NN-021-t04"
+        },
+        {
+          "text": "them",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Не…ни is a discontinuous negation; no follows its exact two-event union, not an enclosing interval. Им refers to the clues, not an invented person.",
+          "id": "NN-021-t05"
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": [],
+      "visibleStart": 108.57,
+      "fullOpacityEnd": 112.37,
+      "visibleEnd": 112.37,
+      "exitMode": "vocal-handoff"
+    },
+    {
+      "id": "NN-022",
+      "templateId": "hide",
+      "lane": "lead",
+      "voice": "забей, лерочка lead",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "И мы спрячемся ото всех",
+      "targetText": "And we will hide from everyone",
+      "start": 112.37,
+      "end": 115.75,
+      "words": [
+        {
+          "id": "NN-022-s00",
+          "text": "И",
+          "sourceIndex": 0,
+          "startSample": 5393760,
+          "endSample": 5400000,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        },
+        {
+          "id": "NN-022-s01",
+          "text": "мы",
+          "sourceIndex": 1,
+          "startSample": 5400000,
+          "endSample": 5407200,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        },
+        {
+          "id": "NN-022-s02",
+          "text": "спрячемся",
+          "sourceIndex": 2,
+          "startSample": 5407200,
+          "endSample": 5471520,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        },
+        {
+          "id": "NN-022-s03",
+          "text": "ото",
+          "sourceIndex": 3,
+          "startSample": 5471520,
+          "endSample": 5493120,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        },
+        {
+          "id": "NN-022-s04",
+          "text": "всех",
+          "sourceIndex": 4,
+          "startSample": 5493120,
+          "endSample": 5556000,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        }
+      ],
+      "targets": [
+        {
+          "text": "And",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Individual lexical correspondence; required English grammar shares the same source event.",
+          "id": "NN-022-t00"
+        },
+        {
+          "text": "we",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Individual lexical correspondence; required English grammar shares the same source event.",
+          "id": "NN-022-t01"
+        },
+        {
+          "text": "will",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Individual lexical correspondence; required English grammar shares the same source event.",
+          "id": "NN-022-t02"
+        },
+        {
+          "text": "hide",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Individual lexical correspondence; required English grammar shares the same source event.",
+          "id": "NN-022-t03"
+        },
+        {
+          "text": "from",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Individual lexical correspondence; required English grammar shares the same source event.",
+          "id": "NN-022-t04"
+        },
+        {
+          "text": "everyone",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Individual lexical correspondence; required English grammar shares the same source event.",
+          "id": "NN-022-t05"
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": [],
+      "visibleStart": 112.37,
+      "fullOpacityEnd": 115.88,
+      "visibleEnd": 115.88,
+      "exitMode": "vocal-handoff"
+    },
+    {
+      "id": "NN-023",
+      "templateId": "infinite",
+      "lane": "lead",
+      "voice": "забей, лерочка lead",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "В бесконечное навсегда",
+      "targetText": "Into an endless forever",
+      "start": 115.88,
+      "end": 120.98,
+      "words": [
+        {
+          "id": "NN-023-s00",
+          "text": "В",
+          "sourceIndex": 0,
+          "startSample": 5562240,
+          "endSample": 5567040,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        },
+        {
+          "id": "NN-023-s01",
+          "text": "бесконечное",
+          "sourceIndex": 1,
+          "startSample": 5567040,
+          "endSample": 5643840,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        },
+        {
+          "id": "NN-023-s02",
+          "text": "навсегда",
+          "sourceIndex": 2,
+          "startSample": 5643840,
+          "endSample": 5807040,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        }
+      ],
+      "targets": [
+        {
+          "text": "Into",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Individual lexical correspondence; required English grammar shares the same source event.",
+          "id": "NN-023-t00"
+        },
+        {
+          "text": "an",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Individual lexical correspondence; required English grammar shares the same source event.",
+          "id": "NN-023-t01"
+        },
+        {
+          "text": "endless",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Individual lexical correspondence; required English grammar shares the same source event.",
+          "id": "NN-023-t02"
+        },
+        {
+          "text": "forever",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Individual lexical correspondence; required English grammar shares the same source event.",
+          "id": "NN-023-t03"
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": [],
+      "visibleStart": 115.88,
+      "fullOpacityEnd": 121.78,
+      "visibleEnd": 121.78,
+      "exitMode": "vocal-handoff"
+    },
+    {
+      "id": "NN-024",
+      "templateId": "ooh",
+      "lane": "lead",
+      "voice": "забей, лерочка lead",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "У-у",
+      "targetText": "Ooh",
+      "start": 121.78,
+      "end": 132.83,
+      "words": [
+        {
+          "id": "NN-024-s00",
+          "text": "У-у",
+          "sourceIndex": 0,
+          "startSample": 5845440,
+          "endSample": 6375840,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        }
+      ],
+      "targets": [
+        {
+          "text": "Ooh",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Nonlexical sung vowel, not a lexical repeat or an English invention.",
+          "id": "NN-024-t00"
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": [],
+      "visibleStart": 121.78,
+      "fullOpacityEnd": 133.25,
+      "visibleEnd": 133.25,
+      "exitMode": "vocal-handoff"
+    },
+    {
+      "id": "NN-025",
+      "templateId": "dawn",
+      "lane": "lead",
+      "voice": "забей, лерочка lead",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Пусть ночь озарит рассвет",
+      "targetText": "Let dawn light up the night",
+      "start": 133.25,
+      "end": 135.71,
+      "words": [
+        {
+          "id": "NN-025-s00",
+          "text": "Пусть",
+          "sourceIndex": 0,
+          "startSample": 6396000,
+          "endSample": 6423840,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        },
+        {
+          "id": "NN-025-s01",
+          "text": "ночь",
+          "sourceIndex": 1,
+          "startSample": 6429120,
+          "endSample": 6445440,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        },
+        {
+          "id": "NN-025-s02",
+          "text": "озарит",
+          "sourceIndex": 2,
+          "startSample": 6445440,
+          "endSample": 6475680,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        },
+        {
+          "id": "NN-025-s03",
+          "text": "рассвет",
+          "sourceIndex": 3,
+          "startSample": 6475680,
+          "endSample": 6514080,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        }
+      ],
+      "targets": [
+        {
+          "text": "Let",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Poetic inversion interpreted as dawn illuminating night. Both ночь and рассвет have ambiguous case forms; preserve the plausible alternative in translation notes.",
+          "id": "NN-025-t00"
+        },
+        {
+          "text": "dawn",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Poetic inversion interpreted as dawn illuminating night. Both ночь and рассвет have ambiguous case forms; preserve the plausible alternative in translation notes.",
+          "id": "NN-025-t01"
+        },
+        {
+          "text": "light",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Poetic inversion interpreted as dawn illuminating night. Both ночь and рассвет have ambiguous case forms; preserve the plausible alternative in translation notes.",
+          "id": "NN-025-t02"
+        },
+        {
+          "text": "up",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Poetic inversion interpreted as dawn illuminating night. Both ночь and рассвет have ambiguous case forms; preserve the plausible alternative in translation notes.",
+          "id": "NN-025-t03"
+        },
+        {
+          "text": "the",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Poetic inversion interpreted as dawn illuminating night. Both ночь and рассвет have ambiguous case forms; preserve the plausible alternative in translation notes.",
+          "id": "NN-025-t04"
+        },
+        {
+          "text": "night",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Poetic inversion interpreted as dawn illuminating night. Both ночь and рассвет have ambiguous case forms; preserve the plausible alternative in translation notes.",
+          "id": "NN-025-t05"
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": [],
+      "visibleStart": 133.25,
+      "fullOpacityEnd": 135.82,
+      "visibleEnd": 135.82,
+      "exitMode": "vocal-handoff"
+    },
+    {
+      "id": "NN-026",
+      "templateId": "pain",
+      "lane": "lead",
+      "voice": "забей, лерочка lead",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Ведь боли больше нет, нет",
+      "targetText": "For there is no more pain, no more",
+      "start": 135.82,
+      "end": 140.3,
+      "words": [
+        {
+          "id": "NN-026-s00",
+          "text": "Ведь",
+          "sourceIndex": 0,
+          "startSample": 6519360,
+          "endSample": 6530880,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        },
+        {
+          "id": "NN-026-s01",
+          "text": "боли",
+          "sourceIndex": 1,
+          "startSample": 6530880,
+          "endSample": 6551040,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        },
+        {
+          "id": "NN-026-s02",
+          "text": "больше",
+          "sourceIndex": 2,
+          "startSample": 6551040,
+          "endSample": 6571200,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        },
+        {
+          "id": "NN-026-s03",
+          "text": "нет",
+          "sourceIndex": 3,
+          "startSample": 6571200,
+          "endSample": 6652800,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence.",
+          "punctuationAfter": ","
+        },
+        {
+          "id": "NN-026-s04",
+          "text": "нет",
+          "sourceIndex": 4,
+          "startSample": 6662400,
+          "endSample": 6734400,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        }
+      ],
+      "targets": [
+        {
+          "text": "For",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "English existential grammar belongs to нет, pain to боли, more to больше; the separately sung second нет has its own complete no-more event.",
+          "id": "NN-026-t00"
+        },
+        {
+          "text": "there",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "English existential grammar belongs to нет, pain to боли, more to больше; the separately sung second нет has its own complete no-more event.",
+          "id": "NN-026-t01"
+        },
+        {
+          "text": "is",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "English existential grammar belongs to нет, pain to боли, more to больше; the separately sung second нет has its own complete no-more event.",
+          "id": "NN-026-t02"
+        },
+        {
+          "text": "no",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "English existential grammar belongs to нет, pain to боли, more to больше; the separately sung second нет has its own complete no-more event.",
+          "id": "NN-026-t03"
+        },
+        {
+          "text": "more",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "English existential grammar belongs to нет, pain to боли, more to больше; the separately sung second нет has its own complete no-more event.",
+          "id": "NN-026-t04"
+        },
+        {
+          "text": "pain",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "English existential grammar belongs to нет, pain to боли, more to больше; the separately sung second нет has its own complete no-more event.",
+          "id": "NN-026-t05",
+          "punctuationAfter": ","
+        },
+        {
+          "text": "no",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "English existential grammar belongs to нет, pain to боли, more to больше; the separately sung second нет has its own complete no-more event.",
+          "id": "NN-026-t06"
+        },
+        {
+          "text": "more",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "English existential grammar belongs to нет, pain to боли, more to больше; the separately sung second нет has its own complete no-more event.",
+          "id": "NN-026-t07"
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": [],
+      "visibleStart": 135.82,
+      "fullOpacityEnd": 140.65,
+      "visibleEnd": 140.65,
+      "exitMode": "vocal-handoff"
+    },
+    {
+      "id": "NN-027",
+      "templateId": "warmth",
+      "lane": "lead",
+      "voice": "забей, лерочка lead",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Ты моим теплом согрет",
+      "targetText": "You are warmed by my warmth",
+      "start": 140.65,
+      "end": 143.09,
+      "words": [
+        {
+          "id": "NN-027-s00",
+          "text": "Ты",
+          "sourceIndex": 0,
+          "startSample": 6751200,
+          "endSample": 6772320,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        },
+        {
+          "id": "NN-027-s01",
+          "text": "моим",
+          "sourceIndex": 1,
+          "startSample": 6784320,
+          "endSample": 6808320,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        },
+        {
+          "id": "NN-027-s02",
+          "text": "теплом",
+          "sourceIndex": 2,
+          "startSample": 6808320,
+          "endSample": 6829440,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        },
+        {
+          "id": "NN-027-s03",
+          "text": "согрет",
+          "sourceIndex": 3,
+          "startSample": 6829440,
+          "endSample": 6868320,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        }
+      ],
+      "targets": [
+        {
+          "text": "You",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Individual lexical correspondence; required English grammar shares the same source event.",
+          "id": "NN-027-t00"
+        },
+        {
+          "text": "are",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Individual lexical correspondence; required English grammar shares the same source event.",
+          "id": "NN-027-t01"
+        },
+        {
+          "text": "warmed",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Individual lexical correspondence; required English grammar shares the same source event.",
+          "id": "NN-027-t02"
+        },
+        {
+          "text": "by",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Individual lexical correspondence; required English grammar shares the same source event.",
+          "id": "NN-027-t03"
+        },
+        {
+          "text": "my",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Individual lexical correspondence; required English grammar shares the same source event.",
+          "id": "NN-027-t04"
+        },
+        {
+          "text": "warmth",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Individual lexical correspondence; required English grammar shares the same source event.",
+          "id": "NN-027-t05"
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": [],
+      "visibleStart": 140.65,
+      "fullOpacityEnd": 143.21,
+      "visibleEnd": 143.21,
+      "exitMode": "vocal-handoff"
+    },
+    {
+      "id": "NN-028",
+      "templateId": "pain",
+      "lane": "lead",
+      "voice": "забей, лерочка lead",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Ведь боли больше нет, нет",
+      "targetText": "For there is no more pain, no more",
+      "start": 143.21,
+      "end": 147.01,
+      "words": [
+        {
+          "id": "NN-028-s00",
+          "text": "Ведь",
+          "sourceIndex": 0,
+          "startSample": 6874080,
+          "endSample": 6886080,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        },
+        {
+          "id": "NN-028-s01",
+          "text": "боли",
+          "sourceIndex": 1,
+          "startSample": 6886080,
+          "endSample": 6906240,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        },
+        {
+          "id": "NN-028-s02",
+          "text": "больше",
+          "sourceIndex": 2,
+          "startSample": 6906240,
+          "endSample": 6929760,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        },
+        {
+          "id": "NN-028-s03",
+          "text": "нет",
+          "sourceIndex": 3,
+          "startSample": 6929760,
+          "endSample": 7011840,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence.",
+          "punctuationAfter": ","
+        },
+        {
+          "id": "NN-028-s04",
+          "text": "нет",
+          "sourceIndex": 4,
+          "startSample": 7018560,
+          "endSample": 7056480,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        }
+      ],
+      "targets": [
+        {
+          "text": "For",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "English existential grammar belongs to нет, pain to боли, more to больше; the separately sung second нет has its own complete no-more event.",
+          "id": "NN-028-t00"
+        },
+        {
+          "text": "there",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "English existential grammar belongs to нет, pain to боли, more to больше; the separately sung second нет has its own complete no-more event.",
+          "id": "NN-028-t01"
+        },
+        {
+          "text": "is",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "English existential grammar belongs to нет, pain to боли, more to больше; the separately sung second нет has its own complete no-more event.",
+          "id": "NN-028-t02"
+        },
+        {
+          "text": "no",
+          "sourceIndices": [
+            3
+          ],
+          "focusSourceIndices": [
+            3
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "English existential grammar belongs to нет, pain to боли, more to больше; the separately sung second нет has its own complete no-more event.",
+          "id": "NN-028-t03"
+        },
+        {
+          "text": "more",
+          "sourceIndices": [
+            2
+          ],
+          "focusSourceIndices": [
+            2
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "English existential grammar belongs to нет, pain to боли, more to больше; the separately sung second нет has its own complete no-more event.",
+          "id": "NN-028-t04"
+        },
+        {
+          "text": "pain",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "English existential grammar belongs to нет, pain to боли, more to больше; the separately sung second нет has its own complete no-more event.",
+          "id": "NN-028-t05",
+          "punctuationAfter": ","
+        },
+        {
+          "text": "no",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "English existential grammar belongs to нет, pain to боли, more to больше; the separately sung second нет has its own complete no-more event.",
+          "id": "NN-028-t06"
+        },
+        {
+          "text": "more",
+          "sourceIndices": [
+            4
+          ],
+          "focusSourceIndices": [
+            4
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "English existential grammar belongs to нет, pain to боли, more to больше; the separately sung second нет has its own complete no-more event.",
+          "id": "NN-028-t07"
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": [],
+      "visibleStart": 143.21,
+      "fullOpacityEnd": 147.12,
+      "visibleEnd": 147.12,
+      "exitMode": "vocal-handoff"
+    },
+    {
+      "id": "NN-029",
+      "templateId": "nothing",
+      "lane": "lead",
+      "voice": "забей, лерочка lead",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Ничего нет",
+      "targetText": "There is nothing",
+      "start": 147.12,
+      "end": 150.34,
+      "words": [
+        {
+          "id": "NN-029-s00",
+          "text": "Ничего",
+          "sourceIndex": 0,
+          "startSample": 7061760,
+          "endSample": 7105920,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        },
+        {
+          "id": "NN-029-s01",
+          "text": "нет",
+          "sourceIndex": 1,
+          "startSample": 7105920,
+          "endSample": 7216320,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        }
+      ],
+      "targets": [
+        {
+          "text": "There",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Russian negative concord: ничего introduces nothing; нет completes its negative existential meaning. Keep nothing focused across both events, so the held нет highlights the complete There is nothing rather than an affirmative There is.",
+          "id": "NN-029-t00"
+        },
+        {
+          "text": "is",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Russian negative concord: ничего introduces nothing; нет completes its negative existential meaning. Keep nothing focused across both events, so the held нет highlights the complete There is nothing rather than an affirmative There is.",
+          "id": "NN-029-t01"
+        },
+        {
+          "text": "nothing",
+          "sourceIndices": [
+            0,
+            1
+          ],
+          "focusSourceIndices": [
+            0,
+            1
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Russian negative concord: ничего introduces nothing; нет completes its negative existential meaning. Keep nothing focused across both events, so the held нет highlights the complete There is nothing rather than an affirmative There is.",
+          "id": "NN-029-t02"
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": [],
+      "visibleStart": 147.12,
+      "fullOpacityEnd": 150.74,
+      "visibleEnd": 150.74,
+      "exitMode": "vocal-handoff"
+    },
+    {
+      "id": "NN-030",
+      "templateId": "nothing",
+      "lane": "lead",
+      "voice": "забей, лерочка lead",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Ничего нет",
+      "targetText": "There is nothing",
+      "start": 150.74,
+      "end": 154.15,
+      "words": [
+        {
+          "id": "NN-030-s00",
+          "text": "Ничего",
+          "sourceIndex": 0,
+          "startSample": 7235520,
+          "endSample": 7281600,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        },
+        {
+          "id": "NN-030-s01",
+          "text": "нет",
+          "sourceIndex": 1,
+          "startSample": 7281600,
+          "endSample": 7399200,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        }
+      ],
+      "targets": [
+        {
+          "text": "There",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Russian negative concord: ничего introduces nothing; нет completes its negative existential meaning. Keep nothing focused across both events, so the held нет highlights the complete There is nothing rather than an affirmative There is.",
+          "id": "NN-030-t00"
+        },
+        {
+          "text": "is",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Russian negative concord: ничего introduces nothing; нет completes its negative existential meaning. Keep nothing focused across both events, so the held нет highlights the complete There is nothing rather than an affirmative There is.",
+          "id": "NN-030-t01"
+        },
+        {
+          "text": "nothing",
+          "sourceIndices": [
+            0,
+            1
+          ],
+          "focusSourceIndices": [
+            0,
+            1
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Russian negative concord: ничего introduces nothing; нет completes its negative existential meaning. Keep nothing focused across both events, so the held нет highlights the complete There is nothing rather than an affirmative There is.",
+          "id": "NN-030-t02"
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": [],
+      "visibleStart": 150.74,
+      "fullOpacityEnd": 154.5,
+      "visibleEnd": 154.5,
+      "exitMode": "vocal-handoff"
+    },
+    {
+      "id": "NN-031",
+      "templateId": "nothing",
+      "lane": "lead",
+      "voice": "забей, лерочка lead",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Ничего нет",
+      "targetText": "There is nothing",
+      "start": 154.5,
+      "end": 157.97,
+      "words": [
+        {
+          "id": "NN-031-s00",
+          "text": "Ничего",
+          "sourceIndex": 0,
+          "startSample": 7416000,
+          "endSample": 7479360,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        },
+        {
+          "id": "NN-031-s01",
+          "text": "нет",
+          "sourceIndex": 1,
+          "startSample": 7479360,
+          "endSample": 7582560,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        }
+      ],
+      "targets": [
+        {
+          "text": "There",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Russian negative concord: ничего introduces nothing; нет completes its negative existential meaning. Keep nothing focused across both events, so the held нет highlights the complete There is nothing rather than an affirmative There is.",
+          "id": "NN-031-t00"
+        },
+        {
+          "text": "is",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Russian negative concord: ничего introduces nothing; нет completes its negative existential meaning. Keep nothing focused across both events, so the held нет highlights the complete There is nothing rather than an affirmative There is.",
+          "id": "NN-031-t01"
+        },
+        {
+          "text": "nothing",
+          "sourceIndices": [
+            0,
+            1
+          ],
+          "focusSourceIndices": [
+            0,
+            1
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Russian negative concord: ничего introduces nothing; нет completes its negative existential meaning. Keep nothing focused across both events, so the held нет highlights the complete There is nothing rather than an affirmative There is.",
+          "id": "NN-031-t02"
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": [],
+      "visibleStart": 154.5,
+      "fullOpacityEnd": 158.11,
+      "visibleEnd": 158.11,
+      "exitMode": "vocal-handoff"
+    },
+    {
+      "id": "NN-032",
+      "templateId": "nothing",
+      "lane": "lead",
+      "voice": "забей, лерочка lead",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Ничего нет",
+      "targetText": "There is nothing",
+      "start": 158.11,
+      "end": 161.75,
+      "words": [
+        {
+          "id": "NN-032-s00",
+          "text": "Ничего",
+          "sourceIndex": 0,
+          "startSample": 7589280,
+          "endSample": 7633920,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        },
+        {
+          "id": "NN-032-s01",
+          "text": "нет",
+          "sourceIndex": 1,
+          "startSample": 7633920,
+          "endSample": 7764000,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        }
+      ],
+      "targets": [
+        {
+          "text": "There",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Russian negative concord: ничего introduces nothing; нет completes its negative existential meaning. Keep nothing focused across both events, so the held нет highlights the complete There is nothing rather than an affirmative There is.",
+          "id": "NN-032-t00"
+        },
+        {
+          "text": "is",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Russian negative concord: ничего introduces nothing; нет completes its negative existential meaning. Keep nothing focused across both events, so the held нет highlights the complete There is nothing rather than an affirmative There is.",
+          "id": "NN-032-t01"
+        },
+        {
+          "text": "nothing",
+          "sourceIndices": [
+            0,
+            1
+          ],
+          "focusSourceIndices": [
+            0,
+            1
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Russian negative concord: ничего introduces nothing; нет completes its negative existential meaning. Keep nothing focused across both events, so the held нет highlights the complete There is nothing rather than an affirmative There is.",
+          "id": "NN-032-t02"
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": [],
+      "visibleStart": 158.11,
+      "fullOpacityEnd": 161.88,
+      "visibleEnd": 161.88,
+      "exitMode": "vocal-handoff"
+    },
+    {
+      "id": "NN-033",
+      "templateId": "nothing-alone",
+      "lane": "lead",
+      "voice": "забей, лерочка lead",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Ничего",
+      "targetText": "Nothing",
+      "start": 161.88,
+      "end": 165.31,
+      "words": [
+        {
+          "id": "NN-033-s00",
+          "text": "Ничего",
+          "sourceIndex": 0,
+          "startSample": 7770240,
+          "endSample": 7934880,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        }
+      ],
+      "targets": [
+        {
+          "text": "Nothing",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Individual lexical correspondence; required English grammar shares the same source event.",
+          "id": "NN-033-t00"
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": [],
+      "visibleStart": 161.88,
+      "fullOpacityEnd": 165.56,
+      "visibleEnd": 165.56,
+      "exitMode": "vocal-handoff"
+    },
+    {
+      "id": "NN-034",
+      "templateId": "nothing",
+      "lane": "lead",
+      "voice": "забей, лерочка lead",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Ничего нет",
+      "targetText": "There is nothing",
+      "start": 165.56,
+      "end": 169.13,
+      "words": [
+        {
+          "id": "NN-034-s00",
+          "text": "Ничего",
+          "sourceIndex": 0,
+          "startSample": 7946880,
+          "endSample": 8014080,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        },
+        {
+          "id": "NN-034-s01",
+          "text": "нет",
+          "sourceIndex": 1,
+          "startSample": 8014080,
+          "endSample": 8118240,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        }
+      ],
+      "targets": [
+        {
+          "text": "There",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Russian negative concord: ничего introduces nothing; нет completes its negative existential meaning. Keep nothing focused across both events, so the held нет highlights the complete There is nothing rather than an affirmative There is.",
+          "id": "NN-034-t00"
+        },
+        {
+          "text": "is",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Russian negative concord: ничего introduces nothing; нет completes its negative existential meaning. Keep nothing focused across both events, so the held нет highlights the complete There is nothing rather than an affirmative There is.",
+          "id": "NN-034-t01"
+        },
+        {
+          "text": "nothing",
+          "sourceIndices": [
+            0,
+            1
+          ],
+          "focusSourceIndices": [
+            0,
+            1
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Russian negative concord: ничего introduces nothing; нет completes its negative existential meaning. Keep nothing focused across both events, so the held нет highlights the complete There is nothing rather than an affirmative There is.",
+          "id": "NN-034-t02"
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": [],
+      "visibleStart": 165.56,
+      "fullOpacityEnd": 169.24,
+      "visibleEnd": 169.24,
+      "exitMode": "vocal-handoff"
+    },
+    {
+      "id": "NN-035",
+      "templateId": "nothing-alone",
+      "lane": "lead",
+      "voice": "забей, лерочка lead",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Ничего",
+      "targetText": "Nothing",
+      "start": 169.24,
+      "end": 172.82,
+      "words": [
+        {
+          "id": "NN-035-s00",
+          "text": "Ничего",
+          "sourceIndex": 0,
+          "startSample": 8123520,
+          "endSample": 8295360,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        }
+      ],
+      "targets": [
+        {
+          "text": "Nothing",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Individual lexical correspondence; required English grammar shares the same source event.",
+          "id": "NN-035-t00"
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": [],
+      "visibleStart": 169.24,
+      "fullOpacityEnd": 172.94,
+      "visibleEnd": 172.94,
+      "exitMode": "vocal-handoff"
+    },
+    {
+      "id": "NN-036",
+      "templateId": "nothing",
+      "lane": "lead",
+      "voice": "забей, лерочка lead",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Ничего нет",
+      "targetText": "There is nothing",
+      "start": 172.94,
+      "end": 176.5,
+      "words": [
+        {
+          "id": "NN-036-s00",
+          "text": "Ничего",
+          "sourceIndex": 0,
+          "startSample": 8301120,
+          "endSample": 8365440,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        },
+        {
+          "id": "NN-036-s01",
+          "text": "нет",
+          "sourceIndex": 1,
+          "startSample": 8365440,
+          "endSample": 8472000,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        }
+      ],
+      "targets": [
+        {
+          "text": "There",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Russian negative concord: ничего introduces nothing; нет completes its negative existential meaning. Keep nothing focused across both events, so the held нет highlights the complete There is nothing rather than an affirmative There is.",
+          "id": "NN-036-t00"
+        },
+        {
+          "text": "is",
+          "sourceIndices": [
+            1
+          ],
+          "focusSourceIndices": [
+            1
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Russian negative concord: ничего introduces nothing; нет completes its negative existential meaning. Keep nothing focused across both events, so the held нет highlights the complete There is nothing rather than an affirmative There is.",
+          "id": "NN-036-t01"
+        },
+        {
+          "text": "nothing",
+          "sourceIndices": [
+            0,
+            1
+          ],
+          "focusSourceIndices": [
+            0,
+            1
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Russian negative concord: ничего introduces nothing; нет completes its negative existential meaning. Keep nothing focused across both events, so the held нет highlights the complete There is nothing rather than an affirmative There is.",
+          "id": "NN-036-t02"
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": [],
+      "visibleStart": 172.94,
+      "fullOpacityEnd": 176.61,
+      "visibleEnd": 176.61,
+      "exitMode": "vocal-handoff"
+    },
+    {
+      "id": "NN-037",
+      "templateId": "nothing-alone",
+      "lane": "lead",
+      "voice": "забей, лерочка lead",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Ничего",
+      "targetText": "Nothing",
+      "start": 176.61,
+      "end": 180.18,
+      "words": [
+        {
+          "id": "NN-037-s00",
+          "text": "Ничего",
+          "sourceIndex": 0,
+          "startSample": 8477280,
+          "endSample": 8648640,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        }
+      ],
+      "targets": [
+        {
+          "text": "Nothing",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Individual lexical correspondence; required English grammar shares the same source event.",
+          "id": "NN-037-t00"
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": [],
+      "visibleStart": 176.61,
+      "fullOpacityEnd": 180.32,
+      "visibleEnd": 180.32,
+      "exitMode": "vocal-handoff"
+    },
+    {
+      "id": "NN-038",
+      "templateId": "nothing-alone",
+      "lane": "lead",
+      "voice": "забей, лерочка lead",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Ничего",
+      "targetText": "Nothing",
+      "start": 180.32,
+      "end": 183.9,
+      "words": [
+        {
+          "id": "NN-038-s00",
+          "text": "Ничего",
+          "sourceIndex": 0,
+          "startSample": 8655360,
+          "endSample": 8827200,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        }
+      ],
+      "targets": [
+        {
+          "text": "Nothing",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Individual lexical correspondence; required English grammar shares the same source event.",
+          "id": "NN-038-t00"
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": [],
+      "visibleStart": 180.32,
+      "fullOpacityEnd": 184.02,
+      "visibleEnd": 184.02,
+      "exitMode": "vocal-handoff"
+    },
+    {
+      "id": "NN-039",
+      "templateId": "nothing-alone",
+      "lane": "lead",
+      "voice": "забей, лерочка lead",
+      "sourceLanguage": "ru",
+      "targetLanguage": "en",
+      "sourceText": "Ничего",
+      "targetText": "Nothing",
+      "start": 184.02,
+      "end": 187.6,
+      "words": [
+        {
+          "id": "NN-039-s00",
+          "text": "Ничего",
+          "sourceIndex": 0,
+          "startSample": 8832960,
+          "endSample": 9004800,
+          "confidence": "source/model-supported preview selection; listening review pending",
+          "method": "Original and clock-verified estimated-vocal spectrum/energy, bounded unprompted Whisper and independent MMS character cores; ownership selected per occurrence."
+        }
+      ],
+      "targets": [
+        {
+          "text": "Nothing",
+          "sourceIndices": [
+            0
+          ],
+          "focusSourceIndices": [
+            0
+          ],
+          "relation": "lexical or necessary English grammar",
+          "rationale": "Individual lexical correspondence; required English grammar shares the same source event.",
+          "id": "NN-039-t00"
+        }
+      ],
+      "sourceBreaks": [],
+      "targetBreaks": [],
+      "visibleStart": 184.02,
+      "fullOpacityEnd": 188.72,
+      "visibleEnd": 189.32,
+      "exitMode": "fade"
+    }
+  ]
+}
