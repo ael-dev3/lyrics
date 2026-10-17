@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "status": "pass",
+  "verifiedAtUtc": "2026-10-17T23:45:46.219187+00:00",
+  "releaseId": 416132724,
+  "releaseTag": "nichego-net-v1.1-recovery-2026-10-18",
+  "url": "https://github.com/ael-dev3/lyrics/releases/tag/untagged-3ddb7bf00102e72a66c3",
+  "draft": true,
+  "access": "Authenticated unpublished recovery set; no public media release.",
+  "sourceCommit": "4bd9ea865176e7d56b7e61958c4ba0724e40fab1",
+  "assets": [
+    {
+      "name": "BACKUP.json",
+      "assetId": 651906533,
+      "bytes": 79331,
+      "sha256": "6c21ac728c5fb525f1207694b119ee7812f0b9a2387d2a697365393c8df9dde7",
+      "serverDigest": "sha256:6c21ac728c5fb525f1207694b119ee7812f0b9a2387d2a697365393c8df9dde7"
+    },
+    {
+      "name": "Nichego-Net-v1.1-Media-Recovery.zip",
+      "assetId": 651906531,
+      "bytes": 278970398,
+      "sha256": "56ca8c12e9e6a590df77611e95bd610a64fe573cea1d931915868a1a36beaef0",
+      "serverDigest": "sha256:56ca8c12e9e6a590df77611e95bd610a64fe573cea1d931915868a1a36beaef0"
+    },
+    {
+      "name": "Nichego-Net-v1.1-Source.zip",
+      "assetId": 651906534,
+      "bytes": 6769022,
+      "sha256": "26c1c3f91bb135078704a334c7d28d039e89076715111cba4219b1bdb823d836",
+      "serverDigest": "sha256:26c1c3f91bb135078704a334c7d28d039e89076715111cba4219b1bdb823d836"
+    },
+    {
+      "name": "Nichego-Net-v1.1-Upload-Kit.zip",
+      "assetId": 651906530,
+      "bytes": 109882221,
+      "sha256": "cc38da04b3dcda78ad50bd6214d1d91edd9142799dbeeb39d502a999fa64f708",
+      "serverDigest": "sha256:cc38da04b3dcda78ad50bd6214d1d91edd9142799dbeeb39d502a999fa64f708"
+    }
+  ],
+  "downloadVerification": "All four assets independently downloaded; local SHA-256 matches original sealed files and GitHub server digests.",
+  "restoreVerification": {
+    "status": "pass",
+    "archives": 3,
+    "payloadHashesVerified": 480,
+    "uniqueProjectFilesCovered": 381,
+    "freshRestoreVerified": true,
+    "sourceCommit": "4bd9ea865176e7d56b7e61958c4ba0724e40fab1",
+    "identity": {
+      "schemaVersion": 1,
+      "revision": "nichego-net-v1.1-preview",
+      "sourceSha256": "66c561c05b04ed0ca3a92af98db609ee835f84d6494a0562f0ad87261486ca4a",
+      "timelineSha256": "d2dfc9958e3124adeb509bceee0048bb82d18811e5ac52738cc0d4cfedb87ab7",
+      "sceneSha256": "329ab98e5563e0ffcc0da865138990f9cf7e69f9b6c9a34ceebb3611bc2c66e3",
+      "sceneFiles": [
+        "src/model.ts",
+        "src/scene.ts",
+        "src/player.ts",
+        "review/index.html",
+        "review/client.js",
+        "public/audio-features.json",
+        "public/artwork-reference.png",
+        "public/visual-contract.json",
+        "public/fonts/Cormorant.ttf",
+        "public/fonts/Cormorant-OFL.txt"
+      ]
+    }
+  },
+  "restoredProductionGate": {
+    "status": "authorized",
+    "revision": "nichego-net-v1.1-preview",
+    "listeningGateComplete": false,
+    "scope": "owner-approved-current-preview"
+  },
+  "dependencyRecovery": "Installed node_modules excluded; pinned package-lock retained. Existing local dependency runtime linked only for the restore test.",
+  "retention": "Desktop upload kit and original working files preserved; no cleanup requested or performed."
+}

@@ -1,0 +1,88 @@
+{
+  "status": "pass",
+  "verifierSha256": "11e305636fb4761b2af780c5e8ba139f1a2776e55a56a921aa0d0f7a49dbd419",
+  "file": "Nichego-Net-Zabey-Lerochka-TikTok-1080x1920-60fps.mp4",
+  "sha256": "289b532f6feec2db7877f9357cc3d3074cfe5ff7d6fb8c3086c57d151c208f6e",
+  "format": "portrait",
+  "width": 1080,
+  "height": 1920,
+  "frames": 11701,
+  "fps": 60,
+  "videoDurationSeconds": 195.016667,
+  "audioDurationSeconds": 195.013,
+  "audioVerification": {
+    "status": "pass",
+    "sourceCodec": "Opus",
+    "deliveryCodec": "AAC LC",
+    "sampleRate": 48000,
+    "channels": 2,
+    "requestedBitrate": 320000,
+    "sourceDecodedFrames": 9360624,
+    "outputDecodedFrames": 9361344,
+    "paddedEndFrames": 720,
+    "bestLagSamples": 0,
+    "lagSearchSamples": [
+      -24,
+      24
+    ],
+    "correlation": 0.999877253181905,
+    "gain": 0.9973661269080517,
+    "snrDb": 36.00007341331656,
+    "packetIdentical": false,
+    "scope": "Original recording retained without edits, filtering or gain processing; upload-compatible AAC is lossy and is checked for zero offset and bounded difference."
+  },
+  "everyFramePtsVerified": true,
+  "fullStrictDecode": true,
+  "blackIntervals": [],
+  "selectedSceneFrames": 624,
+  "glyphStateChecks": 5076,
+  "sourceAndTargetTokensVerified": 307,
+  "tokensSeenFocusedAndNeutral": 307,
+  "continuousFocusTokens": [],
+  "clearStateGlyphChecks": 0,
+  "allVisibleTokenFocusStatesCovered": true,
+  "deliberatelyDelayedTimingControls": 307,
+  "minimumMatchingGlyphFraction": 1,
+  "minimumDecisiveGlyphFraction": 1,
+  "minimumNearReferenceGlyphFraction": 1,
+  "classificationMethod": "At least 75% of chroma-aware eroded glyph samples must be decisive; at least 90% of decisive samples must favor the expected focus and 90% of all samples must match the painted reference. Word colors are tested from 95% line opacity; complete selected-scene comparisons cover fades.",
+  "maximumSceneMeanAbsoluteRgbError": 1.7936496913580247,
+  "maximumSceneFractionChannelsOver24": 0.00011638374485596708,
+  "sampledReadingGapFrames": 121,
+  "maximumGapReadingAreaMeanAbsoluteRgbError": 1.7520138408304498,
+  "maximumGapReadingAreaFractionChannelsOver24": 0,
+  "sceneComparisonReference": "Exact original decoded source picture min(4873, floor(outputFrame*5/12)) for every selected encoded output frame. All 4874 native pictures are decoded in production; the final real picture covers the complete source audio tail.",
+  "nativeSourceComparisonPictures": 521,
+  "listeningGateComplete": false,
+  "sourceSha256": "66c561c05b04ed0ca3a92af98db609ee835f84d6494a0562f0ad87261486ca4a",
+  "revision": "nichego-net-v1.1-preview",
+  "timelineSha256": "d2dfc9958e3124adeb509bceee0048bb82d18811e5ac52738cc0d4cfedb87ab7",
+  "sceneSha256": "329ab98e5563e0ffcc0da865138990f9cf7e69f9b6c9a34ceebb3611bc2c66e3",
+  "producerAdapters": [
+    {
+      "path": "scripts/render-production.ts",
+      "sha256": "7ecaab9e510748c7ad7cd761a315698590f0c6095c40ce926f726a41271d9e0e"
+    },
+    {
+      "path": "scripts/production-authorization.ts",
+      "sha256": "df040f10b30302b7c205bce23d31e00b4f6b6b68c1a188fe8ddd10582f1dcabb"
+    },
+    {
+      "path": "scripts/project-identity.ts",
+      "sha256": "e890e1283a34a9f2a8d9f821a35b8b97c03862de09eff471e8cab9e4cca72ca1"
+    },
+    {
+      "path": "scripts/prepare-upload-audio.ts",
+      "sha256": "c2fcee80d0503546b1fe795b2b1df594b91b2cbed9e6d6deae991d9a8660fd0d"
+    },
+    {
+      "path": "scripts/verify-audio.ts",
+      "sha256": "2239b07b54846c4487e49cec5270762ff9dec6f9412eecf0c19a78e8415a0c3c"
+    },
+    {
+      "path": "analysis/upload-audio.m4a",
+      "sha256": "0ef5811f3ce64ba5d37af1868df92b568949daf9ae506ed4c9bd0b7e4921e2b9"
+    }
+  ],
+  "limits": "Encoded technical checks verify selected timing display and preserved audio; they do not certify millisecond acoustic perception or a complete listening attestation."
+}

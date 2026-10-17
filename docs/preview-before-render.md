@@ -40,6 +40,8 @@ The [Друг v2 delivery](../projects/drug-lyric-film/PRODUCTION-DELIVERY.md#fr
 
 The [Разучимся плакать v1.1 production record](../projects/razuchimsya-plakat-lyric-film/PRODUCTION-DELIVERY.md#frozen-scope) binds a further explicit current-preview production instruction to the accepted single-line edition. It preserves unlogged granular listening fields and the strict standardized checklist, while independently verifying the rendered files and Desktop kit. This authorization covers the frozen edition alone.
 
+The [ничего нет v1.1 production record](../projects/nichego-net-lyric-film/PRODUCTION-DELIVERY.md#frozen-scope) likewise records explicit acceptance of the complete current silver preview followed by production and delivery instructions. Its source, timing and scene hashes remain unchanged. The strict standardized listening checklist stays separately unlogged; the current-owner authorization, encoded glyph checks and audio comparison do not fabricate that evidence or authorize a later revision.
+
 ## Enforce the boundary
 
 Every new project must keep its preview command separate from production commands. Production entry points must refuse absent, incomplete or stale review evidence and absent or stale authorization before capture, segment rendering, encoding or final-file creation. Do not hide full capture behind a command named `preview`.
